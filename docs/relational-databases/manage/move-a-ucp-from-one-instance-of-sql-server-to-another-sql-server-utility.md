@@ -1,5 +1,6 @@
 ---
 title: Mover um UCP de uma instância do SQL Server para outra (Utilitário do SQL Server) | Microsoft Docs
+description: Saiba como usar o SQL Server Management Studio para mover um UCP (ponto de controle do utilitário) de uma instância do SQL Server para outra.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bffc65e8586e8a158c58f7afb5cfb244835e8c86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4eef85ed3e12c5ba25d5ba778c83914dfb69c245
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784068"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Mover um UCP de uma instância do SQL Server para outra (Utilitário do SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como usar as etapas a seguir para mover um UCP (ponto de controle do utilitário) de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
@@ -31,7 +32,7 @@ ms.locfileid: "68115387"
   
 3.  Remova todas as instâncias gerenciadas do UCP antigo. Para obter mais informações, veja [Remover uma instância do SQL Server do Utilitário do SQL Server](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
-4.  Faça backup do data warehouse de gerenciamento do utilitário (UMDW) do UCP antigo. O nome de arquivo é Sysutility_mdw_\<GUID>_DATA e a localização padrão do banco de dados é \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, em que \<System drive> geralmente é a unidade C:\. Para obter mais informações, veja [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
+4.  Faça backup do data warehouse de gerenciamento do utilitário (UMDW) do UCP antigo. O nome de arquivo é Sysutility_mdw_\<GUID>_DATA e a localização padrão do banco de dados é \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nome_do_UCP>\MSSQL\Data\\, em que \<System drive> geralmente é a unidade C:\. Para obter mais informações, veja [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 5.  Restaure o backup do UMDW no novo UCP. Para obter mais informações, veja [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   

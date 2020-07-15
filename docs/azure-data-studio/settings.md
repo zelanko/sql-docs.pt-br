@@ -1,29 +1,28 @@
 ---
 title: Configurações do Workspace e do Usuário
-titleSuffix: Azure Data Studio
 description: Como personalizar o Azure Data Studio modificando as Configurações do Usuário e do Workspace.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758384"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificar Configurações do Workspace e do Usuário
 
-É fácil configurar o [!INCLUDE[name-sos](../includes/name-sos-short.md)] de acordo com suas preferências usando as configurações. Quase todas as partes do editor, da interface do usuário e do comportamento funcional do [!INCLUDE[name-sos](../includes/name-sos-short.md)] têm opções que podem ser modificadas.
+É fácil configurar o Azure Data Studio de acordo com suas preferências usando as configurações. Quase todas as partes do editor, da interface do usuário e do comportamento funcional do Azure Data Studio têm opções que podem ser modificadas.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece dois escopos diferentes para as configurações:
+O Azure Data Studio oferece dois escopos diferentes para as configurações:
 
-* **Usuário** Essas configurações se aplicam globalmente a qualquer instância de [!INCLUDE[name-sos](../includes/name-sos-short.md)] que você abrir.
+* **Usuário** Essas configurações se aplicam globalmente a qualquer instância do Azure Data Studio que você abre.
 * **Workspace** Configurações do workspace são configurações específicas a uma pasta em seu computador e só estão disponíveis quando a pasta está aberta na barra lateral do Explorer. Configurações definidas nesse escopo substituem o escopo do usuário.
 
 ## <a name="creating-user-and-workspace-settings"></a>Criando Configurações do Workspace e do Usuário
@@ -36,9 +35,10 @@ O exemplo a seguir desabilita números de linha no editor e configura as linhas 
 
 ![Configurações de exemplo](media/settings/sample-settings.png)
 
-Alterações nas configurações são recarregadas por [!INCLUDE[name-sos](../includes/name-sos-short.md)] após o arquivo `settings.json` modificado ser salvo.
+As alterações nas configurações são recarregadas pelo Azure Data Studio depois que o arquivo modificado `settings.json` é salvo.
 
->**Observação:** as configurações do workspace são úteis para compartilhar configurações específicas do projeto com uma equipe.
+> [!NOTE] 
+> as configurações do workspace são úteis para compartilhar configurações específicas do projeto com uma equipe.
 
 ## <a name="settings-file-locations"></a>Locais do arquivo de configurações
 
@@ -48,7 +48,7 @@ Dependendo de sua plataforma, o arquivo de configurações do usuário fica loca
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-O arquivo de configuração do workspace fica localizado na pasta `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` de seu projeto.
+O arquivo de configuração do workspace fica localizado na pasta `.Azure Data Studio` de seu projeto.
 
 ## <a name="hot-exit"></a>Hot Exit
 
@@ -63,4 +63,4 @@ Para simplificar a identificação das conexões com que você está trabalhando
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Como o [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda a funcionalidade de configurações do usuário e do workspace do Visual Studio Code, há informações detalhadas sobre as configurações no artigo [Configurações para o Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).
+Como o Azure Data Studio herda a funcionalidade de configurações do usuário e do workspace do Visual Studio Code, há informações detalhadas sobre as configurações no artigo [Configurações para o Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).

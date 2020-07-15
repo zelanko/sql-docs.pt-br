@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786474"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabelas sem índices clusterizados)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Heap é uma tabela sem índice clusterizado. Podem ser criados um ou mais índices não clusterizados em tabelas armazenadas como um heap. Dados são armazenados no heap sem especificar uma ordem. Normalmente, os dados são armazenados inicialmente na ordem em que as linhas são inseridas na tabela, mas o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode mover os dados no heap para armazenar as linhas de forma eficaz; portanto, a ordem de dados não pode ser prevista. Para garantir a ordem de linhas retornadas de um heap, você deve usar a cláusula `ORDER BY`. Para especificar uma ordem lógica permanente para armazenar as linhas, crie um índice clusterizado na tabela, de modo que a tabela não seja um heap.  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220701"
 > Às vezes, há boas razões para deixar uma tabela como heap em vez de criar um índice clusterizado, mas usar heaps efetivamente é uma habilidade avançada. A maioria das tabelas deve ter um índice clusterizado cuidadosamente escolhido, a menos que haja uma boa razão boa para deixar a tabela como heap.  
   
 ## <a name="when-to-use-a-heap"></a>Quando usar um heap  
-Quando uma tabela é armazenada como heap, linhas individuais são identificadas por referência a um RID (identificador de linha) de 8 bytes, que é composto pelo número do arquivo, pelo número da página de dados e pelo local na página (FileID:PageID:SlotID). A ID da linha é uma estrutura pequena e eficiente. Às vezes, os profissionais de dados usam heaps quando os dados são sempre acessados por índices não clusterizados e o RID é menor que uma chave de índice clusterizado. Os heaps também são usados para   
- 
+Quando uma tabela é armazenada como heap, linhas individuais são identificadas por referência a um RID (identificador de linha) de 8 bytes, que é composto pelo número do arquivo, pelo número da página de dados e pelo local na página (FileID:PageID:SlotID). A ID da linha é uma estrutura pequena e eficiente. 
+
+Os heaps podem ser usados como tabelas de preparo para operações de inserção grandes e não ordenadas. Como os dados são inseridos sem impor uma ordem estrita, a operação de inserção é geralmente mais rápida do que a inserção equivalente em um índice clusterizado. Se os dados do heap forem lidos e processados em um destino final, talvez seja útil criar um índice não clusterizado estreito que aborde o predicado de pesquisa usado pela consulta de leitura. 
+
+> [!NOTE]  
+> Os dados são recuperados de um heap na ordem das páginas de dados, mas não necessariamente a ordem na qual os dados foram inseridos. 
+
+Às vezes, os profissionais de dados também usam heaps quando os dados são sempre acessados por índices não clusterizados e o RID é menor que uma chave de índice clusterizado. 
+
 Se uma tabela for um heap e não tiver um índice clusterizado, a tabela inteira deverá ser lida (uma verificação de tabela) para localizar as linhas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode buscar um RID diretamente no heap. Isso pode ser aceitável quando a tabela é pequena.  
   
 ## <a name="when-not-to-use-a-heap"></a>Quando não usar um heap  

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 32c1f0e8-db70-4836-95b2-8833be9e0ad1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df9cdae6fc21d073dfc69f392232a20ca2d0377
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0bf5ca87b879c85d223f83d40a8b39cf26c0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780917"
 ---
 # <a name="mssqlserver_17067"></a>MSSQLSERVER_17067
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|17067|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLASSERT_MESG|  
-|Texto da mensagem|Declaração do SQL Server: arquivo: \<%s>, linha = %d %s. Talvez esse erro esteja relacionado à temporização. Se o erro persistir após a repetição da instrução, use DBCC CHECKDB para verificar a integridade estrutural do banco de dados ou reinicie o servidor para assegurar que as estruturas de dados na memória não estejam corrompidas.|  
+|Texto da mensagem|Asserção do SQL Server: Arquivo: \<%s>, linha = %d %s. Talvez esse erro esteja relacionado à temporização. Se o erro persistir após a repetição da instrução, use DBCC CHECKDB para verificar a integridade estrutural do banco de dados ou reinicie o servidor para assegurar que as estruturas de dados na memória não estejam corrompidas.|  
   
 ## <a name="explanation"></a>Explicação  
 Talvez o erro seja causado por erros transitórios relacionados à temporização ou por dados corrompidos na memória ou no disco.  

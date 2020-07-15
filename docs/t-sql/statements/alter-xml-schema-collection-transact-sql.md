@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 832b8a0c0d66a1e9754366e7735ebbac84b3ac7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68055961"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895554"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona novos componentes de esquema a uma coleção de esquema XML existente.  
   
@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>Comentários  
  Use ALTER XML SCHEMA COLLECTION para adicionar novos esquemas XML cujos namespaces ainda não estejam na coleção de esquema XML ou para adicionar novos componentes a namespaces existentes na coleção.  
   
- O exemplo a seguir adiciona um novo \<element> ao namespace `https://MySchema/test_xml_schema` existente na coleção `MyColl`.  
+ O exemplo a seguir adiciona um novo \<element> ao namespace existente `https://MySchema/test_xml_schema` na coleção `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  

@@ -1,5 +1,6 @@
 ---
 title: LocalDB do SQL Server Express | Microsoft Docs
+description: Familiarize-se com o LocalDB do SQL Server Express. Os desenvolvedores podem usar esse Mecanismo de Banco de Dados leve para escrever e testar código Transact-SQL.
 ms.custom: ''
 ms.date: 04/17/2019
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771784"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O LocalDB do Microsoft SQL Server Express é um recurso do [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) voltado para desenvolvedores. Ele está disponível no SQL Server Express com Advanced Services.
 
@@ -120,7 +121,7 @@ REM Gather information about the instance of LocalDB
 |Nome|`LocalDBApp1`|
 |Versão|\<Current Version>|
 |Nome compartilhado|""|
-|Proprietário|“\<Your Windows User>”|
+|Proprietário|"\<Your Windows User>"|
 |Criar automaticamente|Não|
 |Estado|executando|
 |Hora da última inicialização|\<Date and Time>|

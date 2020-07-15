@@ -1,5 +1,6 @@
 ---
 title: Configuração de rede do cliente | Microsoft Docs
+description: Descubra como computadores cliente se conectam a uma instância do SQL Server em uma rede. Saiba mais sobre as ferramentas que você pode usar para gerenciar clientes.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759174"
 ---
 # <a name="client-network-configuration"></a>Configuração de rede de cliente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O software cliente permite que os computadores cliente se conectem a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma rede. Um "cliente" é um aplicativo front-end que usa os serviços fornecidos por um servidor como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O computador que hospeda esse aplicativo é denominado *computador cliente*.  
   
  No nível mais simples, um cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode residir na mesma máquina que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Geralmente, porém, um cliente se conecta com um ou mais servidores remotos em uma rede. A arquitetura cliente/servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que ele gerencie clientes vários clientes e servidores em uma rede. As configurações padrão do cliente são satisfeitas na maioria das situações.  

@@ -1,5 +1,6 @@
 ---
 title: Instalar o Mecanismo de Banco de Dados do SQL Server | Microsoft Docs
+description: Saiba mais sobre os recursos que podem ser instalados quando você seleciona o Mecanismo de Banco de Dados do SQL Server na página Componentes a Serem Instalados do Assistente de Instalação do SQL Server.
 ms.custom: ''
 ms.date: 07/26/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91a8515417d25c2ef9f23d1698811a5f872227db
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664275"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883254"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## <a name="overview"></a>Visão geral
 O componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o principal serviço para armazenamento, processamento e proteção de dados. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados em sua empresa.  

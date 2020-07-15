@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216676"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895308"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Começando com o [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] é compatível no Linux e no Windows. Como as implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Windows, os bancos de dados e as instâncias do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] precisam estar altamente disponíveis no Linux. Este artigo aborda os aspectos técnicos do planejamento e da implantação de instâncias e bancos de dados do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseados no Linux altamente disponíveis, bem como algumas das diferenças das instalações baseadas no Windows. Como o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pode ser novo para profissionais do Linux e o Linux pode ser novo para profissionais do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], às vezes, o artigo apresenta conceitos que podem ser familiares para alguns e desconhecidos para outros.
 
@@ -169,10 +169,13 @@ Um WSFC e um cluster do Pacemaker têm o conceito de um recurso. Um recurso é u
 
 O Pacemaker tem recursos padrão e de clone. Os recursos de clone são aqueles executados simultaneamente em todos os nós. Um exemplo seria um endereço IP que é executado em vários nós para fins de balanceamento de carga. Qualquer recurso criado para FCIs usa um recurso padrão, já que apenas um nó pode hospedar uma FCI em um determinado momento.
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 Quando um AG é criado, ele requer uma forma especializada de um recurso de clone chamado de recurso de vários estados. Embora um AG tenha apenas uma réplica primária, o AG em si está em execução em todos os nós em que está configurado para trabalhar e pode, potencialmente, permitir ações como o acesso somente leitura. Como esse é um uso "dinâmico" do nó, os recursos têm o conceito de dois estados: mestre e subordinado. Para obter mais informações, confira [Recursos de vários estados: recursos que têm vários modos](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>Grupos/conjuntos de recursos
-Semelhante às funções em um WSFC, um cluster do Pacemaker tem o conceito de um grupo de recursos. Um grupo de recursos (chamado de um conjunto no SLES) é uma coleção de recursos que funcionam juntos e podem fazer failover de um nó para outro como uma única unidade. Grupos de recursos não podem conter recursos que são configurados como mestre/subordinado. Portanto, eles não podem ser usados para AGs. Embora um grupo de recursos possa ser usado para FCIs, esta geralmente não é uma configuração recomendada.
+
+Semelhante às funções em um WSFC, um cluster do Pacemaker tem o conceito de um grupo de recursos. Um grupo de recursos (chamado de _conjunto_ no SLES) é uma coleção de recursos que funcionam juntos e podem fazer failover de um nó para outro como uma só unidade. Grupos de recursos não podem conter recursos configurados como mestre nem subordinado. Portanto, eles não podem ser usados para AGs. Embora um grupo de recursos possa ser usado para FCIs, esta geralmente não é uma configuração recomendada.
 
 #### <a name="constraints"></a>Restrições
 WSFCs têm vários parâmetros para recursos, bem como dependências, que dizem ao WSFC de uma relação pai/filho entre dois recursos diferentes. Uma dependência é apenas uma regra que informa ao WSFC qual recurso precisa estar online primeiro.

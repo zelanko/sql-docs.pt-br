@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23617c6179216e9d932fea5f5b239dc17652df01
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761865"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (índices XML seletivos)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica um índice XML seletivo existente. A instrução ALTER INDEX altera um ou mais dos seguintes itens:  
   
@@ -135,7 +135,7 @@ identifier
 -   **Use REMOVE para remover um caminho.** Ao usar REMOVE para remover um caminho, forneça o nome que foi atribuído ao caminho quando ele foi criado.  
   
  [WITH **(** \<index_options> **)** ]  
- Você só pode especificar \<index_options> quando usar ALTER INDEX sem a cláusula FOR. Quando você usar ALTER INDEX para adicionar ou remover caminhos no índice, as opções de índice não serão argumentos válidos. Para obter informações sobre as opções de índice, veja [CREATE XML INDEX &#40;índices XML seletivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ Você só pode especificar \<index_options> quando usa ALTER INDEX sem a cláusula FOR. Quando você usar ALTER INDEX para adicionar ou remover caminhos no índice, as opções de índice não serão argumentos válidos. Para obter informações sobre as opções de índice, veja [CREATE XML INDEX &#40;índices XML seletivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Comentários  
   

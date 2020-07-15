@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_10060 | Microsoft Docs
+description: O cliente do SQL Server não pode se conectar ao servidor. Veja uma explicação do erro e as possíveis resoluções.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05d10406c4eb3e0a854942084047c4c42b576062
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b952019acc3643baf10d5a69310ab4b9c2629d3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781554"
 ---
 # <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|10060|  
 |Origem do Evento|MSSQLSERVER|  

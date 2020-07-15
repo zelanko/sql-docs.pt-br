@@ -1,5 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
+description: Saiba mais sobre o Service Broker. Veja como ele fornece suporte nativo para mensagens no Mecanismo de Banco de Dados do SQL Server e na Instância Gerenciada do Banco de Dados SQL do Azure.
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - SQL Server Service Broker
 - Service Broker
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764043"
 ---
 # <a name="service-broker"></a>Agente de Serviço
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fornece suporte nativo a mensagens e enfileiramento no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Dessa maneira, fica mais fácil para os desenvolvedores a criação de aplicativos sofisticados que usam os componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para comunicação entre bancos de dados díspares e a criação de aplicativos distribuídos confiáveis.  
   

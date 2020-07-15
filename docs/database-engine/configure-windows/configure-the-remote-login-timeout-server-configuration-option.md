@@ -1,5 +1,6 @@
 ---
 title: Configurar a opção de configuração de servidor remote login timeout | Microsoft Docs
+description: Saiba mais sobre a opção "remote login tomeout". Veja como ela limita o número de segundos que o SQL Server aloca para se conectar a um servidor remoto.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c21a98e1bdd9a16a2f42e8c03bba1a6e1327931
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad4989bc64fa9460a97a0e4363deddb74605e9e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785692"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurar a opção de configuração de servidor remote login timeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **remote login timeout** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **remote login timeout** especifica quantos segundos será necessário esperar antes de retornar de uma tentativa malsucedida para fazer logon em um servidor remoto. Por exemplo, se você está tentando fazer logon em um servidor remoto e esse servidor está inoperante, o **remote login timeout** ajuda a assegurar que não seja necessário aguardar indefinidamente antes do computador cessar as tentativas de fazer logon. O valor padrão desta opção é 10 segundos. Um valor 0 permite uma espera infinita.  
   

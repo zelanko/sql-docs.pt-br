@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8247b0fe0e17ae717fddd89ff4a608481e0777ad
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c307a383d97691a49f437822e4a92cf64fcfb832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633979"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892516"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Cria uma fila nova em um banco de dados. Enfileira mensagens de repositório. Quando uma mensagem chega para um serviço, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] coloca a mensagem na fila associada ao serviço.
 
@@ -86,7 +86,7 @@ ACTIVATION Especifica informações sobre qual procedimento armazenado que você
 
 STATUS (Ativação) Especifica se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicia o procedimento armazenado. Quando o STATUS = ON, a fila começa o procedimento armazenado especificado com PROCEDURE_NAME quando o número de procedimentos atualmente sendo executados for menos que MAX_QUEUE_READERS e quando as mensagens chegarem à fila mais rápido do que os procedimentos armazenados recebam as mensagens. Quando o STATUS = OFF, a fila não inicia o procedimento armazenado. Se essa cláusula não for especificada, o padrão será ON.
 
-PROCEDURE_NAME = \<procedimento> Especifica o nome do procedimento armazenado para começar a processar as mensagens nessa fila. Esse valor deve ser um identificador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+PROCEDURE_NAME = \<procedure> Especifica o nome do procedimento armazenado para começar a processar as mensagens nessa fila. Esse valor deve ser um identificador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 *database_name*(procedimento) É o nome do banco de dados que contém o procedimento armazenado.
 
@@ -128,7 +128,7 @@ Uma fila é um objeto possuído por esquema. As filas aparecem na exibição do 
 
 A tabela a seguir lista as colunas em uma fila.
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|
+|Nome da coluna|Tipo de dados|Descrição|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|Status da mensagem. A instrução RECEIVE retorna todas as mensagens que têm um status igual a **1**. Se a retenção de mensagens estiver ativada, o status será definido como 0. Se a retenção de mensagens estiver desativada, a mensagem será excluída da fila. As mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0** = Mensagem recebida retida<br /><br /> **1** = Pronta para receber<br /><br /> **2** = Ainda não concluída<br /><br /> **3** = Mensagem enviada retida|
 |priority|**tinyint**|O nível de prioridade atribuído a essa mensagem.|

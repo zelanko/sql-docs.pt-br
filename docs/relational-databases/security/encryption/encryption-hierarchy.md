@@ -1,5 +1,6 @@
 ---
 title: Hierarquia de criptografia | Microsoft Docs
+description: Saiba mais sobre a criptografia hierárquica e a infraestrutura de gerenciamento de chaves no SQL Server. Armazene chaves em um módulo de Gerenciamento extensível de chaves.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765000"
 ---
 # <a name="encryption-hierarchy"></a>Hierarquia de criptografia
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografa dados com uma criptografia hierárquica e infraestrutura de gerenciamento de chaves. Cada camada criptografa a camada abaixo dela usando uma combinação de certificados, chaves assimétricas e chaves simétricas. Chaves assimétricas e chaves simétricas podem ser armazenadas fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um módulo EKM (Gerenciamento Extensível de Chaves).  
   
  A ilustração a seguir mostra que cada camada da hierarquia de criptografia criptografa a camada abaixo dela e exibe as configurações de criptografia mais comuns. O acesso ao início da hierarquia normalmente é protegido por uma senha.  

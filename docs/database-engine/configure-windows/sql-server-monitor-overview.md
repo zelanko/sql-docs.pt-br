@@ -1,5 +1,6 @@
 ---
 title: Visão geral do SQL Server Monitor | Microsoft Docs
+description: Saiba mais sobre o SQL Server Monitor. Veja como usar os módulos Monitor de Replicação e Monitor de Espelhamento de Banco de Dados. Veja as permissões que são necessárias para seu uso.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb99ef49e22c578ec1ebd8cc715a6e70e5bb6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771792"
 ---
 # <a name="sql-server-monitor-overview"></a>Visão geral do SQL Server Monitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O SQL Server Monitor não realiza funções de monitoramento, mas hospeda módulos que as realizam. Os módulos do SQL Server Monitor incluem o Replication Monitor e o Monitor de Espelhamento de Banco de Dados.  
   
  Para usar um desses módulos, selecione o módulo no menu **Ir** . O módulo presentemente selecionado possui o conteúdo de navegação e os painéis de detalhes, interação de usuário nos painéis de detalhes e as consultas de conteúdo e status.  

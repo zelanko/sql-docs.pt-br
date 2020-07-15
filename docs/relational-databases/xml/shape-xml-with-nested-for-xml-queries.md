@@ -1,5 +1,6 @@
 ---
 title: Formar XML com consultas FOR XML aninhadas | Microsoft Docs
+description: Veja um exemplo de uso de consultas FOR XML aninhadas para formar o XML resultante.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d3e3b9e0636e9164e5be3181ee2a24070fc4323
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6fe40251156c3a668a0f5c78c2a8aaddb80322e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758533"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Formar XML com consultas FOR XML aninhadas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   O exemplo a seguir consulta a tabela `Production.Product` para recuperar os valores de `ListPrice` e `StandardCost` de um produto específico. Para tornar a consulta interessante, os dois preços são retornados em um elemento <`Price`> e cada elemento <`Price`> tem um atributo `PriceType`.  
   
 ## <a name="example"></a>Exemplo  

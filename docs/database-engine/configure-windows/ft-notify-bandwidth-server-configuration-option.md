@@ -1,5 +1,6 @@
 ---
 title: Opção de configuração de servidor ft notify bandwidth | Microsoft Docs
+description: Saiba mais sobre a opção "ft notify bandwidth". Veja como ela afeta o número de buffers que SQL Server mantém no pool de buffers de memória pequenos.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - small memory buffers
 - memory [SQL Server], buffers
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6b0589f5b3622d4271f6307427f49d804b76c4e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb6bf13a1f8e71f419350946d156f2504274b6d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772463"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>Opção ft notify bandwidth de configuração de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use a opção **ft notify bandwidth** para especificar o tamanho a que pode crescer o pool de buffers de memória pequenos. Buffers de memória pequenos têm 64 KB (quilobytes). O valor do parâmetro *max* especifica o número máximo de buffers que o gerenciador de memória de texto completo deve manter em um pool de buffers pequenos. Se o valor de **max** for zero, não haverá limite máximo ao número de buffers no pool de buffers pequenos.  
   

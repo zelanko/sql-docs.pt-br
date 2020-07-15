@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165744"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881223"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Cenários de uso da tabela temporal
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Tabelas temporais geralmente são úteis em cenários que exigem o acompanhamento do histórico de alterações de dados. Recomendamos que você considere as tabelas temporais nos seguintes casos de uso visando mais benefícios de produtividade.
 
@@ -141,8 +141,8 @@ Usar AT TIME ZONE é útil em todos os outros cenários em que tabelas com contr
 
 > [!TIP]
 > As condições de filtragem especificadas nas cláusulas temporais com FOR SYSTEM_TIME são habilitadas para SARG (isto é, o SQL Server pode utilizar o índice clusterizado subjacente para realizar uma busca em vez de uma operação de varredura.
-> Se você consultar a tabela de histórico diretamente, verifique se a condição de filtragem também está habilitada para SARG especificando filtros na forma \<coluna de período> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
-> Se você aplicar AT TIME ZONE a colunas de período, o SQL Server executará uma verificação de tabela/índice, que pode ser muito caro. Evite esse tipo de condição em suas consultas: \<coluna de período> AT TIME ZONE '\<seu fuso horário>' > {< | > | =, ...} date_condition.
+> Se você consultar a tabela de histórico diretamente, verifique se a condição de filtragem também está habilitada para SARG especificando filtros na forma de \<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
+> Se você aplicar AT TIME ZONE a colunas de período, o SQL Server executará uma verificação de tabela/índice, que pode ser muito caro. Evite esse tipo de condição em suas consultas: \<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition.
 
 Consulte também: [Consultar dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).
 

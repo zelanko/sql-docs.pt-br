@@ -1,5 +1,6 @@
 ---
 title: Definir a opção de banco de dados AUTO_CLOSE como OFF | Microsoft Docs
+description: Verifique se a opção AUTO_CLOSE está definida como OFF. A opção AUTO_CLOSE tem implicações para o desempenho no SQL Server.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: acadbc6e8834c32983ae366133b2fbd5c96a586e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0dbcc137a97af6d447dafd44c71bdb8181c69577
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774202"
 ---
 # <a name="set-the-auto_close-database-option-to-off"></a>Definir a opção do banco de dados AUTO_CLOSE como OFF
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica se a opção AUTO_ CLOSE é definida como OFF. Quando a opção AUTO_CLOSE está definido como ON, pode causar degradação do desempenho em bancos de dados acessados com frequência, por causa do aumento da sobrecarga ao abrir e fechar o banco de dados após cada conexão. AUTO_CLOSE também libera o cache de procedimento depois de cada conexão.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

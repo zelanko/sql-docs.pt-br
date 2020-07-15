@@ -1,5 +1,6 @@
 ---
 title: Pool de buffers híbrido | Microsoft Docs
+description: Veja como o pool de buffers híbrido torna os dispositivos de memória persistente acessíveis por meio do barramento de memória. Ative ou desative este recurso do SQL Server 2019 e veja as melhores práticas.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772426"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de Buffers Híbrido
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O pool de buffers híbrido permite que objetos do pool de buffers façam referência a páginas de dados em arquivos de banco de dados que residem em dispositivos de memória persistente (PMEM), em vez de cópias das páginas de dados armazenadas em cache na DRAM volátil. Esse recurso foi introduzido no [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Melhores práticas para o pool de buffers híbrido
 
-Ao formatar seu dispositivo PMEM no Windows, use o maior tamanho de unidade de alocação disponível para NTFS (2 MB no Windows Server 2019) e verifique se o dispositivo foi formatado para o DAX (Direct Access).
+ - Ao formatar seu dispositivo PMEM no Windows, use o maior tamanho de unidade de alocação disponível para NTFS (2 MB no Windows Server 2019) e verifique se o dispositivo foi formatado para o DAX (Direct Access).
 
-Usar [Páginas bloqueadas na memória](./enable-the-lock-pages-in-memory-option-windows.md) no Windows.
+ - Usar [Páginas bloqueadas na memória](./enable-the-lock-pages-in-memory-option-windows.md) no Windows.
 
-Os tamanhos de arquivos devem ser um múltiplo de 2 MB (2 MB de módulo deve igual a zero).
+ - Os tamanhos de arquivos devem ser um múltiplo de 2 MB (2 MB de módulo deve igual a zero).
 
-Se a configuração com escopo do servidor para o pool de buffers híbrido for desabilitada, o recurso não será usado por nenhum banco de dados de usuário.
+ - Se a configuração com escopo do servidor para o pool de buffers híbrido for desabilitada, o recurso não será usado por nenhum banco de dados de usuário.
 
-Se a configuração com escopo do servidor para o pool de buffers híbrido estiver habilitada, você poderá usar a configuração com escopo do banco de dados para desabilitar o recurso para bancos de dados de usuário individuais.
+ - Se a configuração com escopo do servidor para o pool de buffers híbrido estiver habilitada, você poderá usar a configuração com escopo do banco de dados para desabilitar o recurso para bancos de dados de usuário individuais.

@@ -1,5 +1,6 @@
 ---
 title: Configurar um servidor para escutar em um pipe alternativo | Microsoft Docs
+description: Descubra como configurar o pipe nomeado no qual o Mecanismo de Banco de Dados do SQL Server escuta. Saiba como conectar um aplicativo cliente a um pipe nomeado específico.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - pipes [SQL Server], alternate
 - alternate pipes [SQL Server]
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb0d7b15cf17ac1af60dbb55382dc1886fcca9a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789777"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>Configurar um servidor para escutar em um pipe alternativo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como configurar um servidor para escutar em um pipe alternativo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta em um pipe chamado \\\\.\pipe\sql\query. As instâncias nomeadas do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e do [!INCLUDE[ssEW](../../includes/ssew-md.md)] escutam em outros pipes.  
   
  Há três modos de se conectar a um pipe nomeado específico com um aplicativo cliente:  
@@ -38,7 +39,7 @@ ms.locfileid: "68012914"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Configurar o pipe nomeado usado pelo Mecanismo de Banco de Dados do SQL Server  
   
-1.  No SQL Server Configuration Manager, no painel do console, expanda **Configuração de Rede do SQL Server** e, em seguida, clique nela para expandir **Protocolos de** *\<nome da instância>* .  
+1.  No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server** e clique para expandir **Protocolos para** *\<instance name>* .  
   
 2.  No painel de detalhes, clique com o botão direito do mouse em **Pipes Nomeados**e clique em **Propriedades**.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68012914"
   
 4.  No painel do console, clique em **Serviços do SQL Server**.  
   
-5.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (** \<instance name> **)** e, depois, clique em **Reiniciar** para parar e reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (** \<instance name> **)** e depois clique em **Reiniciar** para interromper e reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando em um pipe alternativo, há três modos de se conectar a um pipe nomeado específico com um aplicativo cliente:  
   

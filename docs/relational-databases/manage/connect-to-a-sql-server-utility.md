@@ -1,5 +1,6 @@
 ---
 title: Conectar a um Utilitário do SQL Server | Microsoft Docs
+description: Saiba como se conectar a um Utilitário do SQL Server para que você possa gerenciar a integridade de recursos do SQL Server. É possível conectar-se por meio do SSMS (SQL Server Management Studio).
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d2ea96cc97f84a342c12ea841a263c8bf06adc0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776010"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Conectar a um Utilitário do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para que você possa se conectar a um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é necessário criar um UCP (ponto de controle do utilitário). Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  Para exibir e gerenciar a integridade de recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) para conectar-se a um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

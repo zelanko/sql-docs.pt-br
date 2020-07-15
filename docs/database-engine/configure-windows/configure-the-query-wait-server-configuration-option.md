@@ -1,5 +1,6 @@
 ---
 title: Configurar a opção de configuração de servidor query wait | Microsoft Docs
+description: Saiba mais sobre a opção query wait. Veja como usá-la para especificar o número de segundos que uma consulta do SQL Server aguardará por recursos antes de atingir o tempo limite.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - time [SQL Server], query wait time
 - query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bcba6def4229175c46a981dd03037006bfba2aa2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdf9a2f14547eeda95b49a3f7705823e62f8b538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785857"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurar a opção de configuração de servidor query wait
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **query wait** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. As consultas que solicitam muita memória (como as que envolvem classificação e hash) são enfileiradas quando não há memória disponível executar a consulta. A opção **espera de consulta** especifica o tempo em segundos (de 0 a 2147483647) que uma consulta deve esperar por recursos antes de o tempo limite ser excedido. O valor padrão dessa opção é -1. Isso significa que o tempo limite é calculado como 25 vezes o custo de consulta estimado.  
   

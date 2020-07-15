@@ -1,6 +1,6 @@
 ---
 title: Assinantes de replicação e grupos de disponibilidade (SQL Server)
-description: Saiba como configurar um assinante de replicação com um grupo de disponibilidade Always On do SQL Server.
+description: Saiba o que acontece quando um grupo de disponibilidade Always On contendo um banco de dados que é um assinante de replicação faz failover no SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3c6fdff473202222a83006a6d1a0ff217aed8a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235568"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893132"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Assinantes de replicação e Grupos de Disponibilidade AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Quando um grupo de disponibilidade AlwaysOn contendo um banco de dados que é um assinante de replicação executar failover, a assinatura de replicação poderá falhar. Para assinantes por push de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade. Para assinantes por pull de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade e o servidor original do assinante estiver em execução. Isso ocorre porque os trabalhos de agente de distribuição são criados somente no assinante original (réplica primária do grupo de disponibilidade). Para mesclar assinantes, um administrador de replicação deve reconfigurar o assinante manualmente, recriando a assinatura.  
   

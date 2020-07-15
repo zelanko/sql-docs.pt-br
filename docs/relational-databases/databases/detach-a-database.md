@@ -1,5 +1,6 @@
 ---
 title: Desanexar um banco de dados | Microsoft Docs
+description: Saiba como desanexar um banco de dados no SQL Server usando o SQL Server Management Studio ou Transact-SQL. Os arquivos podem ser anexados novamente ou anexados a outro servidor.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1780847dda15ac7171473d4a163443bedd9bdf8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756169"
 ---
 # <a name="detach-a-database"></a>Desanexar um banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como desanexar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os arquivos desanexados permanecem e podem ser anexados novamente com o uso de CREATE DATABASE com a opção FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Os arquivos podem ser movidos para outro servidor, onde podem ser anexados.  
   
  **Neste tópico**  
@@ -79,7 +80,7 @@ ms.locfileid: "68006195"
      Por padrão, a operação desanexar mantém qualquer catálogo de texto completo que esteja associado ao banco de dados. Para removê-los, desmarque a caixa de seleção **Manter Catálogos de Texto Completo** . Essa opção é exibida apenas quando você está atualizando um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Status**  
-     Exibe um dos seguintes estados: **Pronto** ou **Não pronto**.  
+     Exibe um dos estados a seguir: **Pronto** ou **Não pronto**.  
   
      **Mensagem**  
      A coluna **Mensagem** pode exibir informações sobre o banco de dados, da seguinte forma:  
@@ -93,7 +94,7 @@ ms.locfileid: "68006195"
 4.  Quando você estiver pronto para desanexar o banco de dados, clique em **OK**.  
   
 > [!NOTE]  
->  O banco de dados recém-desanexado permanecerá visível no nó **Bancos de Dados** do Pesquisador de Objetos até que a exibição seja atualizada. Você pode atualizar a exibição a qualquer momento: Clique no painel Pesquisador de Objetos e, na barra de menus, selecione **Exibir** e, depois, **Atualizar**.  
+>  O banco de dados recém-desanexado permanecerá visível no nó **Bancos de Dados** do Pesquisador de Objetos até que a exibição seja atualizada. Você pode atualizar a exibição a qualquer momento: clique no painel Pesquisador de Objetos e, na barra de menus, selecione **Exibir** e, depois, **Atualizar**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

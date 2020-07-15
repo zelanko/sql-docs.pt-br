@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 349df4ebe6e7787e6415d60d0ed4988b280deac0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321273"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886028"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Gerar automaticamente filtros de junção entre artigos de mesclagem
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Gere automaticamente um conjunto de filtros de junção na página **Filtrar Linhas da Tabela** no Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Gere automaticamente um conjunto de filtros de junção na página **Filtrar Linhas da Tabela** no Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação – \<Publication>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
->  Se você gerar automaticamente um conjunto de filtros de junção na caixa de diálogo **Propriedades de Publicação – \<Publicação>** após assinaturas à publicação terem sido inicializadas, deverá gerar um novo instantâneo e reinicializar todas as assinaturas após a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+>  Se você gerar automaticamente um conjunto de filtros de junção na caixa de diálogo **Propriedades de Publicação – \<Publication>** após assinaturas a publicação tenham sido inicializadas, será preciso gerar um novo instantâneo e reinicializar todas as assinaturas após fazer a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
  Os filtros de junção podem ser criados manualmente para um conjunto de tabelas ou a replicação pode gerar os filtros automaticamente com base em relações de chave estrangeira para chave primária definidas nas tabelas. Para obter mais informações sobre como criar filtros de junção manualmente, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>Para automaticamente gerar um conjunto de filtros de junção entre artigos de mesclagem  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades de Publicação – \<Publicação>** , clique em **Adicionar** e, em seguida, clique em **Gerar Filtros Automaticamente**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades de Publicação – \<Publication>** , clique em **Adicionar** e clique em **Gerar Filtros Automaticamente**.  
   
     > [!NOTE]  
     >  Gerando filtros automaticamente exclui quaisquer filtros de linha ou filtros de junção existentes na publicação. Você pode adicionar filtros depois de gerar um conjunto de filtros automaticamente.  
@@ -59,7 +59,7 @@ ms.locfileid: "75321273"
   
     3.  Especifique as opções de filtro.  
   
-         Selecione a opção que corresponde a como os dados serão compartilhados entre os Assinantes: **Uma linha desta tabela irá para várias assinaturas** ou **Uma linha desta tabela irá para apenas uma assinatura**. Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem pode otimizar o desempenho armazenando e processando uma quantia menor de metadados. No entanto, será necessário certificar-se de que os dados são particionados de forma que uma linha não seja replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+         Selecione a opção que corresponde ao modo em que os dados serão compartilhados entre Assinantes: **Uma linha desta tabela vai para várias assinaturas** ou **Uma linha desta tabela vai para apenas uma assinatura**. Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem pode otimizar o desempenho armazenando e processando uma quantia menor de metadados. No entanto, será necessário certificar-se de que os dados são particionados de forma que uma linha não seja replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -67,11 +67,11 @@ ms.locfileid: "75321273"
   
      Depois de a instrução ser analisada, a replicação cria os filtros de junção necessários e os mostra no painel **Tabelas Filtradas** na página **Filtrar Linhas** de **Tabela ou Filtrar Linhas** . Se você estiver gerando filtros a partir do Assistente para Novas Publicações e ainda não tiver configurado o Distribuidor para o Publicador ao qual o assistente está sendo executado, será solicitado a fazer a configuração.  
   
-4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
+4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publication>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Para modificar um filtro que foi gerado automaticamente  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas** e clique em **Editar**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publication>** , selecione um filtro no painel **Tabelas Filtradas** e clique em **Editar**.  
   
 2.  Na caixa de diálogo do **Editar Filtro** ou **Editar Junção** , modifique o filtro.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75321273"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>Para excluir um filtro que foi gerado automaticamente  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas** e clique em **Excluir**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publication>** , selecione um filtro no painel **Tabelas Filtradas** e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   

@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d4c229d7e0dcb2111a6e9685eed5b7d07dbd0bbd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 489a53c9dba5cb645652fe9cf04f96563d1529fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81295536"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882098"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuração e segurança do PolyBase para Hadoop
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Este artigo fornece uma referência para várias definições de configuração que afetam a conectividade do PolyBase com o Hadoop. Para obter instruções de como usar o PolyBase com o Hadoop, consulte [Configurar o PolyBase para acessar dados externos no Hadoop](polybase-configure-hadoop.md).
 
@@ -161,7 +161,7 @@ Para se conectar a um cluster Hadoop protegido por Kerberos usando MIT KDC:
    |**#**|**Arquivo de configuração**|**Chave de configuração**|**Ação**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|Especifique o nome de host do KDC. Por exemplo: kerberos.your-realm.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Especifique o realm do Kerberos. Por exemplo:  YOUR-REALM.COM|  
+   |2|core-site.xml|polybase.kerberos.realm|Especifique o realm do Kerberos. Por exemplo:  YOUR-REALM.COM <br><br>**Observação da configuração**: o nome de realm deve ser escrito em letras maiúsculas.|  
    |3|core-site.xml|hadoop.security.authentication|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo:  KERBEROS<br></br>**Observação de segurança:** KERBEROS deve ser escrito em letras maiúsculas. Se for escrito em letras minúsculas, talvez ele não seja ativado.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: mapred/_HOST@YOUR-REALM.COM|  

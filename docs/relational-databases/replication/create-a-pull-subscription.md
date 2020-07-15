@@ -1,5 +1,6 @@
 ---
 title: Criar uma assinatura pull | Microsoft Docs
+description: Saiba como criar uma assinatura pull no SQL Server usando SQL Server Management Studio, Transact-SQL ou Replication Management Objects.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773932"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 
@@ -33,7 +34,7 @@ No article in 2016+ should ever have the moniker 'sql-server-2014' on its metada
 Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
 -->
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Este tópico descreve como criar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
   
  A configuração de uma assinatura pull para a replicação de P2P é possível por script, mas não está disponível por meio do assistente.  
@@ -81,7 +82,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  Clique com o botão direito do mouse na pasta **Assinaturas Locais** e depois clique em **Novas Assinaturas**.  
   
-4.  Na página **Publicação** do Assistente para Nova Assinatura, selecione **\<Encontrar publicador do SQL Server>** ou **\<Encontrar publicador do Oracle>** na lista suspensa **Publicador**.  
+4.  Na página **Publicação** do Assistente para Nova Assinatura, selecione **\<Find SQL Server Publisher>** ou **\<Find Oracle Publisher>** na lista suspensa **Editor**.  
   
 5.  Conecte-se ao Publicador na caixa de diálogo **Conectar ao Servidor** .  
   

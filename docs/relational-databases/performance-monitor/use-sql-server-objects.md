@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773152"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece objetos e contadores que podem ser usados pelo Monitor do Sistema para monitorar a atividade em computadores que executem uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um objeto é qualquer recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como um bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um processo do Windows. Cada objeto contém um ou mais contadores, que determinam vários aspectos dos objetos a monitorar. Por exemplo, o objeto **SQL Server Locks** contém contadores chamados **Número de deadlocks/segundo** e **Tempos limite de bloqueio/segundo**.  
   
- Alguns objetos terão várias instâncias se existirem vários recursos de um determinado tipo no computador. Por exemplo, o tipo de objeto **Processor** terá várias instâncias se o sistema tiver vários processadores. O tipo de objeto **Databases** tem uma instância para cada banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alguns tipos de objeto (por exemplo, o objeto **Memory Manager** ) têm só uma instância. Se um tipo de objeto tiver várias instâncias, você poderá adicionar contadores para rastrear as estatísticas de cada instância ou, em muitos casos, de todas as instâncias de uma só vez. Os contadores da instância padrão aparecem no formato **SQLServer:** _\<object name>_ . Os contadores das instâncias nomeadas aparecem no formato **MSSQL$** _\<<instance name_ **:** _\<counter name>_ ou **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ .  
+ Alguns objetos terão várias instâncias se existirem vários recursos de um determinado tipo no computador. Por exemplo, o tipo de objeto **Processor** terá várias instâncias se o sistema tiver vários processadores. O tipo de objeto **Databases** tem uma instância para cada banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alguns tipos de objeto (por exemplo, o objeto **Memory Manager** ) têm só uma instância. Se um tipo de objeto tiver várias instâncias, você poderá adicionar contadores para rastrear as estatísticas de cada instância ou, em muitos casos, de todas as instâncias de uma só vez. Os contadores da instância padrão aparecem no formato **SQLServer:** _\<object name>_ . Os contadores das instâncias nomeadas aparecem no formato **MSSQL$** _\<instance name>_ **:** _\<counter name>_ ou **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ .  
   
 Os valores do contador de desempenho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são gerados usando o mecanismo do WPC (Contador de Desempenho do Windows). Alguns valores do contador não são calculados diretamente por [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece valores de base para o mecanismo do WPC, que executará os cálculos necessários (como percentuais). A exibição de gerenciamento dinâmico [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) fornece todos os contadores com o valor original gerado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A coluna `cntr_type` indica o tipo de contador. A maneira como o mecanismo do WPC processa os valores do contador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende desse tipo. Para obter mais informações sobre os tipos de contadores de desempenho, confira a [Documentação do WMI](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
   

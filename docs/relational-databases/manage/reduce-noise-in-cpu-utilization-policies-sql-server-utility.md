@@ -1,5 +1,6 @@
 ---
 title: Reduzir o ruído em políticas de utilização da CPU (Utilitário do SQL Server) | Microsoft Docs
+description: Ver estratégias para reduzir o ruído e violações indesejadas nos resultados do Utilitário do SQL Server. Veja quais opções de política afetam os relatórios de utilização do processador.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9fc6db57277044267a89cc89e6c196c782ea920
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3617249a1309a86c5ff0a083f3c0db15ee91299d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773542"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Reduzir o ruído em políticas de utilização da CPU (Utilitário do SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use as estratégias a seguir para reduzir o relato de ruídos e violações indesejáveis em políticas de utilização de recursos do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>Qual deve ser a frequência de violação na utilização do processador para relatá-lo como superutilizado?  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908155"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882242"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificar propriedades de Replicação de Mesclagem
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Este tópico explica como especificar várias propriedades para sua replicação de mesclagem. 
 
 ## <a name="merge-article-is-download-only"></a>Artigo de mesclagem é somente para download
@@ -38,13 +38,13 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
   
 #### <a name="on-the-properties-tab-of-the-article-properties"></a>Na guia Propriedades das Propriedades do Artigo  
   
-1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione uma tabela e clique em **Propriedades do Artigo**.    
+1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione uma tabela e clique em **Propriedades do Artigo**.    
 2.  Clique em **Definir Propriedades do Artigo Realçado na Tabela** ou **Definir as Propriedades de Todos os Artigos de Tabela**.  
   
-3.  Na seção **Objeto de Destino** da guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Artigo>** , especifique um dos valores a seguir para **Direção de sincronização**:    
+3.  Na seção **Objeto de Destino** da guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Article>** , especifique um dos seguintes valores para a **Direção de sincronização**:    
     -   **Download para Assinante, proibir alterações do Assinante**    
     -   **Download para Assinante, permitir alterações do Assinante**    
-4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
+4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publication>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
 
 ###  <a name="use-transact-sql"></a>Usar o Transact-SQL  
   
@@ -84,12 +84,12 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Habilitar a resolução de conflitos interativa para um artigo  
   
-1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação – \<Publicação>** , selecione uma tabela. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).   
+1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione uma tabela. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).   
 2.  Clique em **Propriedades de Artigos**e então clique em **Definir Propriedades do Artigo Realçado da Tabela** ou **Definir Propriedades de Todos os Artigos da Tabela**.    
-3.  Na página **Propriedades do Artigo – \<Artigo>** ou **Propriedades do Artigo – \<ArticleType>** , clique na guia **Resolvedor**.    
+3.  Na página **Propriedades do Artigo – \<Article>** ou **Propriedades do Artigo –\<ArticleType>** , clique na guia **Resolvedor**.    
 4.  Selecione **Permitir que o Assinante resolva conflitos interativamente durante a sincronização sob demanda**    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
+6.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publication>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Especificar que uma assinatura deve usar a resolução de conflitos interativa  
   
@@ -127,14 +127,14 @@ Este tópico descreve como especificar o nível de rastreamento e resolução de
 -   Com controle em nível de linha e de coluna, a resolução de conflito é sempre feita em nível de linha: a linha vencedora substitui a perdedora. A replicação de mesclagem também permite especificar que os conflitos sejam rastreados e resolvidos em nível de registro lógico, mas essas opções não estão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obter informações sobre como definir essas opções de procedimentos armazenados de [replicação, consulte definir uma relação de registro lógico](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)entre artigos de tabela de mesclagem.  
   
 ### <a name="use-sql-server-management-studio"></a>Usar o SQL Server Management Studio  
- Especifique o nível de linha ou coluna de rastreamento para mesclar artigos na guia **Propriedades** da caixa de diálogo **Propriedades do artigo**, que está disponível no Assistente para Nova Publicação e a caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Especifique o nível de linha ou coluna de rastreamento para mesclar artigos na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo**, que está disponível no Assistente para Nova Publicação e a caixa de diálogo **Propriedades da Publicação – \<Publication>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="specify-row--or-column-level-tracking"></a>Especificar acompanhamento em nível de linha ou de coluna  
   
-1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação – \<Publicação>** , selecione uma tabela.  
+1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione uma tabela.  
 2.  Clique em **Propriedades de Artigos**e então clique em **Definir Propriedades do Artigo Realçado da Tabela** ou **Definir Propriedades de Todos os Artigos da Tabela**.   
-3.  Na guia **Propriedades** da caixa de diálogo **Propriedade do Artigo \<Artigo>** , selecione um dos seguintes valores para a propriedade **Nível de rastreamento**: **Rastreamento em nível de linha** ou **Rastreamento em nível de coluna**.   
-4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
+3.  Na guia **Propriedades** da caixa de diálogo **Propriedade do Artigo \<Article>** , selecione um dos seguintes valores para a propriedade **Nível de acompanhamento**: **Acompanhamento de nível de linha** ou **Acompanhamento em nível de coluna**.   
+4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publication>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 ### <a name="use-transact-sql"></a>Usar o Transact-SQL  
   

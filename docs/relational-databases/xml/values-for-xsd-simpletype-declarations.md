@@ -1,5 +1,6 @@
 ---
 title: Valores para declarações &lt;xsd:simpleType&gt; | Microsoft Docs
+description: Veja uma tabela das restrições que são aplicadas para todos os valores reconhecidos da declaração < xsd:simpleType >.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2bd50eb728047b911f25ea644d36adbd88f5097a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2738ba3387ac167eeadc83071dcce1f4a59304bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775518"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valores para declarações &lt;xsd:simpleType&gt;
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A tabela a seguir descreve as restrições aplicadas com base em todas as enumerações de tipo simples XSD reconhecidas.  
   
- Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte para o valor NaN nas declarações **\<<xsd:simpleType>** . Esquemas que incluem valores NaN são rejeitados pelo servidor.  
+ Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte ao valor NaN em declarações **\<xsd:simpleType>** . Esquemas que incluem valores NaN são rejeitados pelo servidor.  
   
 |Tipo simples|Limitações|  
 |-----------------|----------------|  

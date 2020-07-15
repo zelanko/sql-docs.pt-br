@@ -17,15 +17,15 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd315f75626b337c2183f34121aeb7660e0ed66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786873"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obter informações sobre gatilhos DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este tópico descreve como obter informações sobre os gatilhos DML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essas informações podem incluir os tipos de gatilhos em uma tabela, o nome de um gatilho, seu proprietário e a data em que foi criado ou modificado. Se o gatilho não tiver sido criptografado quando foi criado, você obterá a definição do gatilho. A definição ajudará a entender como um gatilho afeta a tabela na qual está definido. Além disso, você pode descobrir os objetos que um gatilho específico usa. Com essas informações, você pode identificar os objetos que afetam o gatilho se eles são alterados ou excluídos do banco de dados.  
   
  **Neste tópico**  
@@ -49,7 +49,7 @@ ms.locfileid: "72909288"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Requer associação à função **pública** . A definição de objetos de usuário é visível ao proprietário do objeto e aos que possuírem qualquer uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Requer associação à função **pública** . A definição de objetos de usuário é visível ao proprietário do objeto e às entidades autorizadas que têm uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Requer permissão VIEW DEFINITION no banco de dados e permissão SELECT em **sys.sql_expression_dependencies** para o banco de dados. Por padrão, a permissão SELECT é concedida somente a membros da função de banco de dados fixa **db_owner** . Quando são concedidas permissões SELECT e VIEW DEFINITION a outro usuário, o usuário autorizado pode exibir todas as dependências no banco de dados.  
@@ -72,9 +72,9 @@ ms.locfileid: "72909288"
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho desejado e clique em **Exibir Dependências**.  
   
-4.  Na janela **Dependências de objeto**, para exibir os objetos que dependem do gatilho DML, selecione **Objetos que dependem de \<nome do gatilho DML>** . Os objetos aparecem na área **Dependências** .  
+4.  Na janela **Dependências de Objeto**, para exibir os objetos que dependem do gatilho DML, selecione **Objetos que dependem de \<DML trigger name>** . Os objetos aparecem na área **Dependências** .  
   
-     Para exibir os objetos dos quais o DML depende, selecione **Objetos que dependem de \<nome do gatilho DML>** . Os objetos aparecem na área **Dependências** . Expanda cada nó para ver todos os objetos.  
+     Para ver os objetos dos quais o DML depende, selecione **Objetos dos quais \<DML trigger name> depende**. Os objetos aparecem na área **Dependências** . Expanda cada nó para ver todos os objetos.  
   
 5.  Para obter informações sobre um objeto que aparece na área **Dependências** , clique no objeto. No campo **Objeto selecionado** , as informações são fornecidas nas caixas **Nome**, **Tipo**e **Tipo de dependência** .  
   

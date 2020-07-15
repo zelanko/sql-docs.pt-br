@@ -1,5 +1,6 @@
 ---
 title: Bancos de dados independentes | Microsoft Docs
+description: Saiba mais sobre bancos de dados independentes, os benefícios e as limitações de bancos de dados parcialmente independentes e como o SQL Server 2019 trabalha para isolar bancos de dados.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756341"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Um *banco de dados independente* é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ajuda o usuário a isolar seu banco de dados da instância de 4 maneiras.  
   

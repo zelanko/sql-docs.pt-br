@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0433232412135256e98e6f3292fd88fa58bef62d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 91df6d2f20f7ba5a18a5dbdff30712d17b8c0e24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633686"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880359"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>Permissões de entidade de segurança do servidor GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede permissões em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,7 +65,7 @@ GRANT permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Especifica a função de servidor definida pelo usuário ao qual a permissão está sendo concedida. O qualificador de escopo ( **::** ) é obrigatório.  
   
- TO \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a função de servidor ao qual a permissão está sendo concedida.  
+ TO \<server_principal> Especifica o logon ou função de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual a permissão está sendo concedida.  
   
  *SQL_Server_login*  
  Especifica o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

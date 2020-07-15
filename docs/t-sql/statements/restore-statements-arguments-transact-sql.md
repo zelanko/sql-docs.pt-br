@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922215"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896010"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instruções RESTORE – argumentos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tópico documenta os argumentos descritos nas seções de Sintaxe da instrução RESTORE {DATABASE|LOG} e do conjunto associado de instruções auxiliares: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. Há suporte para a maioria dos argumentos apenas por um subconjunto dessas seis instruções. O suporte a cada argumento é indicado na descrição do argumento.  
   
@@ -116,15 +116,15 @@ PAGE
  [ **,** ...*n* ]  
  É um espaço reservado que indica que vários arquivos, grupos de arquivos e páginas podem ser especificados em uma lista separada por vírgulas. O número é ilimitado.  
   
-FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } Normalmente, especifica os dispositivos de backup do qual restaurar o backup. Como alternativa, em uma instrução RESTORE DATABASE, a cláusula FROM pode especificar o nome de um instantâneo do banco de dados para o qual você está revertendo o banco de dados e, nesse caso, nenhuma cláusula WITH é permitida.  
+FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } Normalmente, especifica os dispositivos de backup dos quais restaurar o backup. Como alternativa, em uma instrução RESTORE DATABASE, a cláusula FROM pode especificar o nome de um instantâneo do banco de dados para o qual você está revertendo o banco de dados e, nesse caso, nenhuma cláusula WITH é permitida.  
   
  Se a cláusula FROM for omitida, a restauração de um backup não ocorrerá. Em vez disso, o banco de dados é recuperado. Isso permite recuperar um banco de dados que foi restaurado com a opção NORECOVERY ou reverter para um servidor em espera. Se a cláusula FROM for omitida, NORECOVERY, RECOVERY ou STANDBY devem ser especificados na cláusula WITH.  
   
- \<backup_device> [ **,** ...*n* ] Especifica os dispositivos de backup lógicos ou físicos a serem usados para a operação de restauração.  
+ \<backup_device> [ **,** ...*n* ] Especifica os dispositivos de backup lógicos ou físicos a serem usados na operação de restauração.  
   
  **Com suporte de:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<backup_device>::= Especifica um dispositivo de backup lógico ou físico a ser usado para a operação de backup, da seguinte maneira:  
+ \<backup_device>::= Especifica um dispositivo de backup lógico ou físico a ser usado na operação de backup, da seguinte maneira:  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  É o nome lógico que deve seguir as regras de identificadores dos dispositivos de backup criados por **sp_addumpdevice** dos quais o banco de dados é restaurado. Se for fornecido como uma variável ( **@** _logical\_backup\_device\_name\_var_), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) ou como uma variável do tipo de dados string, exceto os tipos de dados **ntext** ou **text**.  
@@ -469,7 +469,7 @@ Use KEEP_REPLICATION ao configurar a replicação para trabalhar com envio de lo
   
  Para obter informações sobre como usar a captura de dados de alterações com o espelhamento de banco de dados, consulte [Change Data Capture e outros recursos do SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  Ativa ou desativa a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou define um novo identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Essa opção será relevante apenas se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] estava habilitado (ativado) para o banco de dados quando o backup foi criado.  
   
  { ENABLE_BROKER | ERROR_BROKER_CONVERSATIONS | NEW_BROKER }  
@@ -484,7 +484,7 @@ Use KEEP_REPLICATION ao configurar a replicação para trabalhar com envio de lo
  NEW_BROKER  
  Especifica que o banco de dados seja atribuído a um novo identificador do Service Broker. Como o banco de dados é considerado um novo Service Broker, as conversas existentes nele são imediatamente removidas sem produzir mensagens de caixa de diálogo de término. Qualquer rota que referencia o antigo identificador do Service Broker deverá ser recriada com o novo identificador.  
   
-#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **Com suporte de:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) e apenas para os modelos de recuperação bulk-logged ou completa.  
   
  Você pode restaurar um banco de dados para uma transação ou momento específico, especificando o ponto de recuperação de destino em uma cláusula STOPAT, STOPATMARK ou STOPBEFOREMARK. Uma transação ou momento especificado sempre é restaurado a partir de um backup de log. Em cada instrução RESTORE LOG da sequência de restauração, você deve especificar a transação ou o tempo de destino em uma cláusula STOPAT, STOPATMARK ou STOPBEFOREMARK idêntica.  

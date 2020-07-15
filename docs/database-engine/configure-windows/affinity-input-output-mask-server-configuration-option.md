@@ -1,5 +1,6 @@
 ---
 title: Opção de configuração de servidor affinity Input-Output mask | Microsoft Docs
+description: Saiba mais sobre a opção affinity I/O mask. Use-a para aprimorar o desempenho dos threads do SQL Server que emitem E/S associando a E/S do disco a CPUs especificadas.
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0f7af8a254bea06745c85cfdd0442b28eef876de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fa19cdc7db8b5966eb5ab89a5df8103e7f417244
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789850"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Opção de configuração do servidor de máscara de Entrada-Saída de afinidade
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Para realizar multitarefas, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] , às vezes, movem threads de processos entre processadores diferentes. Embora seja eficiente de um ponto de vista de sistema operacional, essa atividade pode reduzir o desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob cargas de sistema pesadas, à medida que cada cache do processador é recarregado repetidamente com os dados. Atribuir processadores a threads específicos poderá melhorar o desempenho sob estas condições eliminando recargas de processador; tal associação entre um thread e um processador é chamada de afinidade de processador.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68013222"
   
  1 bit no padrão de Afinidade E/S especifica que a CPU correspondente é elegível para executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operações E/S de disco; um 0 bit especifica que nenhuma operação E/S de disco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deveria ser programada para a CPU correspondente. Quando todos os bits são definidos para zero ou a **affinity I/O mask** não é especificada, a E/S de disco do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é agendada para quaisquer das CPUs qualificadas para processar threads do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Como a configuração da opção [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]máscara de E/S de afinidade**do** é uma operação especializada, ela deve ser usada apenas quando necessário. Na maioria dos casos, a afinidade padrão de Windows 2000 ou Windows Server 2003 provê o melhor desempenho.  
+ Como a configuração da opção **máscara de E/S de afinidade** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma operação especializada, ela deve ser usada apenas quando necessário. Na maioria dos casos, a afinidade padrão de Windows 2000 ou Windows Server 2003 provê o melhor desempenho.  
   
  Ao especificar a opção **affinity I/O mask** , você deve usá-la com a opção de configuração **affinity mask** . Não habilite a mesma CPU nas opções **affinity I/O mask** e **affinity mask** . Os bits que correspondem a cada CPU deveriam estar em um dos três estados seguintes:  
   

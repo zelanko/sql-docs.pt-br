@@ -1,5 +1,6 @@
 ---
 title: Data warehouse de gerenciamento | Microsoft Docs
+description: O data warehouse de gerenciamento no SQL Server é um banco de dados relacional que contém os dados que são coletados de um servidor de destino.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3699812972a7119552a53b76c73a373a89dc0622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758101"
 ---
 # <a name="management-data-warehouse"></a>data warehouse de gerenciamento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O data warehouse de gerenciamento é um banco de dados relacional que contém os dados coletados de um servidor representa o destino da coleta de dados. Esses dados são usados para gerar os relatórios dos conjuntos de coleta de Dados do Sistema e também podem ser usados para criar relatórios personalizados.  
   
  A infraestrutura do coletor de dados define os trabalhos e os planos de manutenção necessários para implementar as políticas de retenção definidas pelo administrador do banco de dados.  
@@ -39,7 +40,7 @@ ms.locfileid: "68133617"
   
  A tabela a seguir descreve as tabelas de banco de dados no esquema principal. Essas tabelas de banco de dados permitem que o coletor de dados rastreie o local de origem dos dados, quem os inseriu e quando foram carregados no data warehouse.  
   
-|Nome da tabela|DESCRIÇÃO|  
+|Nome da tabela|Descrição|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Armazena informações sobre como os relatórios do data warehouse de gerenciamento devem agrupar e agregar contadores de desempenho.|  
 |core.snapshots_internal|Identifica cada novo instantâneo. Uma nova linha é inserida nessa tabela sempre que um pacote de carregamento inicia o carregamento de um novo lote de dados.|  

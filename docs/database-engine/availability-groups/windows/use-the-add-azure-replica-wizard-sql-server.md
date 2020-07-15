@@ -1,6 +1,6 @@
 ---
 title: Configurar a VM do Azure como uma réplica secundária em um grupo de disponibilidade
-description: Use o Assistente para Adicionar Réplica do Azure para criar uma nova VM do Azure em TI híbrida e configurá-la como uma réplica secundária para um grupo de disponibilidade Always On novo ou existente.
+description: Use o Assistente para Adicionar Réplica do Azure para criar uma VM do Azure na TI híbrida e configurá-la como uma réplica secundária para um grupo de disponibilidade Always On novo ou existente.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822664"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894178"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configurar a VM do Azure como uma réplica secundária em um grupo de disponibilidade
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use o Assistente para Adicionar Réplica do Azure para criar uma nova VM do Azure em TI híbrida e configurá-la como uma réplica secundária para um grupo de disponibilidade Always On novo ou existente.  
   
 

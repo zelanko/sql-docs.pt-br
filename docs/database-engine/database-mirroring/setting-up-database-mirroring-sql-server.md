@@ -1,5 +1,6 @@
 ---
 title: Configurando o espelhamento de banco de dados (SQL Server) | Microsoft Docs
+description: Saiba mais sobre os pré-requisitos, as recomendações e as etapas para configurar o espelhamento de banco de dados no SQL Server, incluindo uma visão geral de uma sessão de espelhamento de banco de dados.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 290d968f4b0333357b7f8ed3e61aa50c962c2461
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789633"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configurando o espelhamento de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta seção descreve os pré-requisitos, as recomendações e as etapas para configuração do espelhamento de banco de dados. Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!IMPORTANT]  
@@ -32,7 +33,7 @@ ms.locfileid: "68048091"
   
 1.  O servidor principal, o servidor espelho e o servidor testemunha, se houver, devem ser hospedadas por instâncias de servidor separadas que devem estar em sistemas host separados. Cada instância de servidor exige um ponto de extremidade de espelhamento de banco de dados. Se você precisar criar um ponto de extremidade de espelhamento de banco de dados, verifique se está acessível a outras instâncias de servidor.  
   
-     A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
+     A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: Autenticação do Windows ou autenticação baseada em certificado. Para obter mais informações, consulte [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
      Os requisitos de acesso à rede são específicos ao formulário de autenticação, da seguinte maneira:  
   
@@ -48,7 +49,7 @@ ms.locfileid: "68048091"
   
 3.  Na instância de servidor que hospedará o banco de dados espelho, configure o restante do ambiente que é necessário para o banco de dados espelhado. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Visão geral: estabelecendo uma sessão de espelhamento de banco de dados  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Visão geral: estabelecer uma sessão de espelhamento de banco de dados  
  As etapas básicas para estabelecer uma sessão de espelhamento são as seguintes:  
   
 1.  Crie o banco de dados espelho restaurando os seguintes backups, usando RESTORE WITH NORECOVERY em cada operação de restauração:  
@@ -90,12 +91,12 @@ ms.locfileid: "68048091"
          Alternativamente, se você não quiser failover automático e preferir enfatizar o desempenho em vez da disponibilidade, desative a segurança de transação. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  Em modo de alto desempenho, WITNESS precisa ser definido como OFF. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  Em modo de alto desempenho, WITNESS precisa ser definido como OFF. Para obter mais informações, confira [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  Para obter um exemplo de como usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar o espelhamento de banco de dados usando a autenticação do Microsoft Windows, consulte [Exemplo: Configurando espelhamento de banco de dados usando a autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Para obter um exemplo do uso do [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar o espelhamento de banco de dados usando a Autenticação do Microsoft Windows, veja [Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  Para obter um exemplo de como usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar o espelhamento de banco de dados usando segurança baseada em certificado, consulte [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  Para obter um exemplo do uso do [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar o espelhamento de banco de dados usando a segurança baseada em certificado, veja [Exemplo: Configurar o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
@@ -111,10 +112,10 @@ ms.locfileid: "68048091"
  [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
  Descreve as etapas [!INCLUDE[tsql](../../includes/tsql-md.md)] de configuração do espelhamento de banco de dados.  
   
- [Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [Exemplo: configurar o espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Contém um exemplo de todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a Autenticação do Windows.  
   
- [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [Exemplo: Configurar o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  Contém um exemplo de todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a autenticação baseada em certificado.  
   
  [Configurar contas de logon para espelhamento de banco de dados ou para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
@@ -154,7 +155,7 @@ ms.locfileid: "68048091"
   
 ## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Espelhamento de banco de dados: Interoperabilidade e Coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   

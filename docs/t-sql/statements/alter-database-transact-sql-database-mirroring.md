@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b778cf08b4d017916ea9249eeddeb1cdf6afb422
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628826"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895666"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Espelhamento de banco de dados de ALTER DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].
 
-Controla o espelhamento de um banco de dados. Valores especificados com as opções de espelhamento de banco de dados aplicam-se a ambas as cópias do banco de dados e à sessão de espelhamento de banco de dados como um todo. Apenas um \<database_mirroring_option> é permitido por instrução ALTER DATABASE.
+Controla o espelhamento de um banco de dados. Valores especificados com as opções de espelhamento de banco de dados aplicam-se a ambas as cópias do banco de dados e à sessão de espelhamento de banco de dados como um todo. Apenas uma \<database_mirroring_option> é permitida por instrução ALTER DATABASE.
 
 > [!NOTE]
 > Recomendamos configurar um espelhamento de banco de dados fora do período do pico de atividade, pois a configuração pode comprometer o desempenho.
@@ -95,8 +95,8 @@ TCP **://** _\<system-address>_ **:** _\<port>_
 
 onde
 
-- *\<system-address>* é uma cadeia de caracteres, como um nome do sistema, um nome de domínio totalmente qualificado ou um endereço IP, que identifica de forma exclusiva o sistema do computador de destino.
-- *\<port>* é um número de porta associado ao ponto de extremidade de espelhamento da instância de servidor parceiro.
+- *\<system-address>* é uma cadeia de caracteres, como um nome de sistema, um nome de domínio totalmente qualificado ou um endereço IP, que identifica sem ambiguidade o sistema do computador de destino.
+- *\<port>* é o número da porta associado ao ponto de extremidade de espelhamento da instância de servidor parceiro.
 
 Para obter mais informações, consulte [Especificar um endereço de rede do servidor – espelhamento de banco de dados](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 

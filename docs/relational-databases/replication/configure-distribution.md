@@ -1,5 +1,6 @@
 ---
 title: Configurar a distribuição | Microsoft Docs
+description: O Distribuidor do SQL Server hospeda o banco de dados de distribuição, que armazena metadados e histórico para replicação e transações para replicação transacional.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 66e6135ee2144de5936c041c34450d7fd0ce3d62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21364f104674ec081da5c49d229a5c04a09af016
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774033"
 ---
 # <a name="configure-distribution"></a>Configurar a distribuição
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   O Distribuidor é um servidor que contém o banco de dados de distribuição, que armazena metadados e dados de histórico para todos os tipos de replicação e transações para replicação transacional. Para configurar a replicação, deve-se configurar um Distribuidor. Cada Publicador pode ser atribuído a uma única instância do Distribuidor, mas vários publicadores podem compartilhar um Distribuidor. O Distribuidor usa esses recursos adicionais no servidor onde fica localizado:  
   
 -   Espaço em disco adicional, se os arquivos de instantâneo para a publicação forem armazenados no Distribuidor (o que geralmente acontece).  

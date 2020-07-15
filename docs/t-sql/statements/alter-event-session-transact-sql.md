@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 08454c76591d7cfb12eff07d3a05d706bd7bfe44
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ada5b781b129b56aa7b4cee63c6649fa647f9654
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895672"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inicia ou interrompe uma sessão de evento ou altera uma configuração de sessão de evento.  
   
@@ -129,11 +129,11 @@ ON SERVER
 |*event_field_name*|É o nome do campo de evento que identifica a origem do predicado.|  
 |[event_module_guid].event_package_name.predicate_source_name|É o nome da origem do predicado global onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de predicado.<br />-   *predicate_source_name* é definido na exibição sys.dm_xe_objects como object_type 'pred_source'.|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|É o nome do objeto de predicado a ser associado à sessão de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de predicado.<br />-   *predicate_compare_name* é uma origem global definida na exibição sys.dm_xe_objects como object_type 'pred_compare'.|  
-|DROP EVENT \<event_specifier>|Remove o evento identificado por *\<event_specifier>* . \<event_specifier> deve ser válido na sessão do evento.|  
+|DROP EVENT \<event_specifier>|Descarta o evento identificado por *\<event_specifier>* . \<event_specifier> precisa ser válido na sessão do evento.|  
 |ADD TARGET \<event_target_specifier>|Associa o destino identificado por \<event_target_specifier> à sessão de evento.|
 |[*event_module_guid*].*event_package_name*.*target_name*|É o nome do destino na sessão de evento, onde:<br /><br /> -   *event_module_guid* é o GUID do módulo que contém o evento.<br />-   *event_package_name* é o pacote que contém o objeto de ação.<br />-   *target_name* é a ação. As ações aparecem na exibição sys.dm_xe_objects como object_type “destino”.|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Define um parâmetro de destino. Os parâmetros de destino são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *target_name*.<br /><br /> **OBSERVAÇÃO!** Se você estiver usando o destino de buffer de anel, recomendamos definir o parâmetro de destino max_memory como 2.048 KB (kilobytes) para ajudar a evitar um possível truncamento de dados da saída XML. Para obter mais informações sobre como usar os diferentes tipos de destino, consulte [Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
-|DROP TARGET \<event_target_specifier>|Remove o destino identificado por \<event_target_specifier>. \<event_target_specifier> deve ser válido na sessão do evento.|  
+|DROP TARGET \<event_target_specifier>|Descarta o destino identificado por \<event_target_specifier>. \<event_target_specifier> precisa ser válido na sessão do evento.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Especifica o modo de retenção do evento para usar em tratamento de perda de evento.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Um evento pode ser perdido da sessão. Um único evento será descartado somente quando todos os buffers de evento estiverem cheios. A perda de um único evento quando os buffers de evento estão cheios permite características de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitáveis, enquanto minimiza a perda de dados no fluxo de evento processado.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> Buffers de evento cheios que contêm vários eventos podem ser perdidos da sessão. O número de eventos perdidos depende do tamanho de memória alocado à sessão, do particionamento da memória e do tamanho dos eventos no buffer. Essa opção minimiza o impacto do desempenho no servidor quando buffers de evento são rapidamente enchidos, mas grandes números de eventos podem ser perdidos da sessão.<br /><br /> NO_EVENT_LOSS<br /> Nenhuma perda de evento é permitida. Essa opção assegura que todos os eventos gerados sejam retidos. O uso dessa opção força todas as tarefas que acionam eventos a esperar até que haja espaço disponível em um buffer de evento. Isso pode causar problemas de desempenho detectáveis enquanto a sessão de evento está ativa. As conexões de usuário poderão parar enquanto esperam a liberação de eventos do buffer.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Especifica a quantidade de tempo em que os eventos serão colocados no buffer de memória antes que sejam despachados para destinos de sessão de evento. O valor mínimo de latência é 1 segundo. No entanto, o valor 0 pode ser usado para especificar a latência INFINITE. Por padrão, este valor é definido como 30 segundos.<br /><br /> *seconds* SECONDS<br /> O tempo, em segundos, a esperar antes de liberar buffers para os destinos. *seconds* é um número inteiro.<br /><br /> **INFINITE**<br /> Libera buffers para os destinos somente quando eles estão cheios ou quando a sessão de evento é fechada.<br /><br /> **OBSERVAÇÃO!** MAX_DISPATCH_LATENCY = 0 SECONDS é equivalente a MAX_DISPATCH_LATENCY = INFINITE.|  
 |MAX_EVENT_SIZE =*size* [ KB &#124; **MB** ]|Especifica o tamanho máximo permitido para eventos. MAX_EVENT_SIZE deverá ser definido apenas para permitir eventos únicos maiores que MAX_MEMORY; sua definição como menos que MAX_MEMORY irá gerar um erro. *size* é um número inteiro e pode ser um valor de KB (kilobyte) ou MB (megabyte). Se *size* for especificado em kilobytes, o tamanho mínimo permitido será de 64 KB. Quando MAX_EVENT_SIZE é definido, dois buffers de *size* são criados, além de MAX_MEMORY. Isso significa que a memória total usada para buffer de evento é MAX_MEMORY + 2 * MAX_EVENT_SIZE.|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0d347983e2dd02fa22d88610e7432f26b2dcc6fb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f1d843feede96fbecb75575f3899491931c95598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766806"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Nega permissões em um Grupo de Disponibilidade AlwaysOn no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

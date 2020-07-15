@@ -1,19 +1,14 @@
 ---
-title: ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL) | Microsoft Docs
-ms.date: 03/25/2019
-ms.reviewer: ''
+title: ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
-ms.custom: ''
-ms.manager: craigg
-ms.author: giladm
-author: giladmit
+author: DavidTrigano
+ms.author: datrigan
+ms.reviewer: vanto
 f1_keywords:
 - ADD SENSITIVITY CLASSIFICATION
 - ADD_SENSITIVITY_CLASSIFICATION
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SENSITIVITY CLASSIFICATION statement
 - add labels
@@ -24,13 +19,15 @@ helpviewer_keywords:
 - information types
 - data classification
 - rank
+ms.custom: ''
+ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: e3b5ba45e03a27f8b07f854cd94f515daefa5dec
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b8bfbab9ab06d57bdbb2b3efe3d23690f4d2f0e3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811871"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
 
@@ -42,12 +39,12 @@ Para o SQL Server, isso foi introduzido no SQL Server 2019.
 
 A classificação de dados confidenciais em seu ambiente de banco de dados ajuda a obter visibilidade estendida e melhor proteção. Informações adicionais podem ser encontradas em [Introdução à Proteção de Informações do SQL](https://aka.ms/sqlip)
 
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
 
 ```syntaxsql
-ADD SENSITIVITY CLASSIFICATION TO
+    ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )
 
 <object_name> ::=
 {
@@ -55,14 +52,16 @@ ADD SENSITIVITY CLASSIFICATION TO
 }
 
 <sensitivity_option> ::=  
-{   
+{
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString | 
+    INFORMATION_TYPE_ID = guidOrString |
     RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
-```  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos  
 
@@ -93,32 +92,30 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 É um identificador baseado em um conjunto de valores predefinidos que definem a classificação de sensibilidade. Usado por outros serviços como a Proteção Avançada contra Ameaças para detectar anomalias com base em sua classificação.
 
-
 ## <a name="remarks"></a>Comentários  
 
 - Apenas uma classificação pode ser adicionada a um único objeto. Adicionar uma classificação a um objeto que já foi classificado sobrescreverá a classificação existente.
 - Vários objetos podem ser classificados usando uma única instrução `ADD SENSITIVITY CLASSIFICATION`.
 - A visualização do sistema [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) pode ser usada para recuperar as informações de classificação de confidencialidade de um banco de dados.
 
-
 ## <a name="permissions"></a>Permissões
 
 Requer a permissão ALTERAR QUALQUER CLASSIFICAÇÃO DE CONFIDENCIALIDADE. A ALTER ANY SENSITIVITY CLASSIFICATION está implícita na permissão de banco de dados ALTER ou pelo servidor de permissão CONTROL SERVER.
-
 
 ## <a name="examples"></a>Exemplos  
 
 ### <a name="a-classifying-two-columns"></a>a. Classificação de duas colunas
 
-O exemplo a seguir classifica as colunas **dbo.sales.price** e **dbo.sales.discount** com o rótulo de confidencialidade **Altamente Confidencial** e o Tipo de Informações como **Financeiro**.
+O exemplo a seguir classifica as colunas **dbo.sales.price** e **dbo.sales.discount** com o rótulo de confidencialidade **Altamente Confidencial**, a classificação **Crítico** e o Tipo de Informações **Financeiro**.
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
 ```  
 
 ### <a name="b-classifying-only-a-label"></a>B. Classificação com apenas um rótulo
+
 O exemplo a seguir classifica a coluna **dbo.customer.comments** com o rótulo **Confidencial** e a ID do rótulo **643f7acd-776a-438d-890c-79c3f2a520d6**. O tipo de informação não foi classificado para esta coluna.
 
 ```sql
@@ -127,12 +124,9 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Confidential', LABEL_ID='643f7acd-776a-438d-890c-79c3f2a520d6' )
 ```  
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
 
-[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
-
-[sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
-
-[Permissões (Mecanismo de Banco de Dados)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
-
-[Introdução à Proteção de Informações do SQL](https://aka.ms/sqlip)
+- [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+- [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
+- [Permissões (Mecanismo de Banco de Dados)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
+- [Introdução à Proteção de Informações do SQL](https://aka.ms/sqlip)

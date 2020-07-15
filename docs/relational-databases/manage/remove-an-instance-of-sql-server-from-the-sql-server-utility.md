@@ -1,5 +1,6 @@
 ---
 title: Remover uma instância do SQL Server por meio do Utilitário do SQL Server | Microsoft Docs
+description: Saiba como remover uma instância do SQL Server do Utilitário do SQL Server. Você pode executar um script do PowerShell ou usar o SQL Server Management Studio para essa tarefa.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b0f36dd95146ec93819177b91d8abed1f0cc8c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773499"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Remover uma instância do SQL Server do Utilitário do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use as etapas a seguir para remover uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este procedimento remove a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da exibição de lista do UCP e a coleta de dados do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é interrompida. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é desinstalada.  
   
 > [!IMPORTANT]  
@@ -30,7 +31,7 @@ ms.locfileid: "72908653"
   
 2.  Na coluna **Nome de Instância do SQL Server** da exibição de lista, selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser removida do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Clique com o botão direito do mouse na instância a ser removida e selecione **Remover Instância Gerenciada...** .  
   
-3.  Especifique as credenciais com privilégios de administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: clique em **Conectar...** , verifique as informações na caixa de diálogo **Conectar ao Servidor** e clique em **Conectar**. Você verá as informações de logon na caixa de diálogo **Remover Instância Gerenciada** .  
+3.  Especifique as credenciais com privilégios de administrador para a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Clique em **Conectar...** , verifique as informações na caixa de diálogo **Conectar ao Servidor** e clique em **Conectar**. Você verá as informações de logon na caixa de diálogo **Remover Instância Gerenciada** .  
   
 4.  Para confirmar a operação, clique em **OK**. Para encerrar a operação, clique em **Cancelar**.  
 

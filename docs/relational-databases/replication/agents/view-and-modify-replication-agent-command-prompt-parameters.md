@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10ef5b2c2e873d3f17085137134aabd8db57b059
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321626"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893791"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Exibir e modificar parâmetros do prompt de comando de agentes de replicação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes são executados nas etapas de trabalho do Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, portanto, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** . Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes são executados nas etapas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de trabalho do Agente, assim sendo, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do trabalho – \<Job>** . Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 > [!NOTE]  
 >  As alterações do parâmetro de agente entrarão em vigor na próxima vez o agente for iniciado. Se o agente ficar executando continuamente, será necessário parar e reiniciar o agente.  
@@ -39,11 +39,11 @@ ms.locfileid: "75321626"
 |Merge Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Merge Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Distribution Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Distribution Agent para assinaturas pull|**\<Publicador>-\<PublicationDatabase>-\<Publicação>-\<Assinante>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Distribution Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Distribution Agent para assinaturas push para Assinantes não SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Queue Reader Agent|**[\<Distributor>].\<integer>**|[Agente de Leitor de Fila de Replicação](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Em assinaturas push para publicações Oracle, é **\<Publisher>-\<Publisher**> em vez de **\<Publisher>-\<PublicationDatabase>**  
+ \*Para assinaturas push para publicações Oracle, é **\<Publisher>-\<Publisher**> em vez de **\<Publisher>-\<PublicationDatabase>**  
   
  \*\*Para assinaturas pull para publicações Oracle, é **\<Publisher>-\<DistributionDatabase**> em vez de **\<Publisher>-\<PublicationDatabase>**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75321626"
   
 3.  Clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
   
-4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , selecione a etapa **Executar agente** e clique em **Editar**.  
+4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Job>** , selecione a etapa **Executar agente** e clique em **Editar**.  
   
 5.  Na caixa de diálogo **Propriedades da Etapa do Trabalho – Executar agente** , edite o campo **Comando** .  
   
@@ -73,9 +73,9 @@ ms.locfileid: "75321626"
   
 3.  Clique com o botão direito do mouse em uma assinatura e clique em **Exibir Detalhes**.  
   
-4.  Na janela **Assinatura <SubscriptionName>** , clique em **Ação** e depois em **Propriedades do Trabalho de \<AgentName>** .  
+4.  Na janela **Assinatura <NomeDaAssinatura>** , clique em **Ação** e depois em **Propriedades do Trabalho de \<AgentName>** .  
   
-5.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , selecione a etapa **Executar agente** e clique em **Editar**.  
+5.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Job>** , selecione a etapa **Executar agente** e clique em **Editar**.  
   
 6.  Na caixa de diálogo **Propriedades da Etapa do Trabalho – Executar agente** , edite o campo **Comando** .  
   
@@ -89,7 +89,7 @@ ms.locfileid: "75321626"
   
 3.  Clique com o botão direito do mouse em um agente na grade e em **Propriedades**.  
   
-4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , selecione a etapa **Executar agente** e clique em **Editar**.  
+4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Job>** , selecione a etapa **Executar agente** e clique em **Editar**.  
   
 5.  Na caixa de diálogo **Propriedades da Etapa do Trabalho – Executar agente** , edite o campo **Comando** .  
   

@@ -1,5 +1,6 @@
 ---
 title: Classe de evento Blocked Process Report | Microsoft Docs
+description: A classe de evento Blocked Process Report indica que uma tarefa foi bloqueada por um período mais longo que o especificado no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce090a9018327d1808cf891b5ba6c068d37ccb73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 677e19c19ce569af91af282ef2a280c69161c9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763050"
 ---
 # <a name="blocked-process-report-event-class"></a>classe de evento Blocked Process Report
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Blocked Process Report** indica que uma tarefa foi bloqueada por um período mais longo que o especificado. Essa classe de evento não inclui tarefas de sistema ou tarefas que estejam esperando em recursos não detectáveis por deadlock.  
   
  Para configurar o limite e a frequência de geração dos relatórios, use o comando **sp_configure** para configurar a opção **blocked process threshold** , que pode ser definida em segundos. Por padrão, não são produzidos relatórios de processo bloqueado. Para obter mais informações sobre como configurar a opção **blocked process threshold** , veja [Opção blocked process threshold de configuração de servidor](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
@@ -29,7 +30,7 @@ ms.locfileid: "76516457"
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Colunas de dados da classe de evento Blocked Process Report  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados no qual foi adquirido o bloqueio. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**Duration**|**bigint**|O intervalo de tempo (em microssegundos) que o processo ficou bloqueado.|13|Sim|  

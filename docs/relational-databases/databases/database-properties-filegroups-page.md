@@ -1,5 +1,6 @@
 ---
 title: Propriedades do banco de dados (página Grupos de Arquivos) | Microsoft Docs
+description: Saiba como usar a guia Grupos de arquivos na caixa de diálogo Propriedades do Banco de Dados para ver os grupos de arquivo de um banco de dados ou para adicionar um novo grupo de arquivos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f44fd1c87cb1ed27e0d2d52fe658e97ec2edda7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756219"
 ---
 # <a name="database-properties-filegroups-page"></a>Propriedades do banco de dados (página Grupos de Arquivos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use esta página para exibir os grupos de arquivos ou para adicionar um grupo de arquivos novo ao banco de dados selecionado. Os tipos de grupos de arquivos estão separados em grupos de arquivos *row* , dados FILESTREAM e grupos de arquivos com otimização de memória.  
   
  Os grupos de arquivos tipo linha contêm dados e arquivos de log normais. Os grupos de arquivos de dados FILESTREAM contêm arquivos de dados FILESTREAM. Esses arquivos de dados armazenam informações sobre como os dados de objetos binários grandes (BLOB) são salvos no sistema de arquivos quando usar o armazenamento FILESTREAM. As opções são as mesmas para os dois tipos de grupos de arquivos.  
@@ -41,7 +42,7 @@ ms.locfileid: "68099624"
  **Somente leitura**  
  Selecione para definir o grupo de arquivos com o status de somente leitura.  
   
- **Padrão**  
+ **Default**  
  Selecione para tornar este grupo de arquivos o grupo de arquivos padrão. Você pode ter um grupo de arquivos padrão para linha e outro para os dados do FILESTREAM.  
   
  **Adicionar**  

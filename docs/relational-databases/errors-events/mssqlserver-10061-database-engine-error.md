@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_10061 | Microsoft Docs
+description: O servidor não respondeu à solicitação do cliente no SQL Server. Veja uma explicação do erro e as possíveis resoluções.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47392f77ac3131a47a6f2a5f02f71d6a07e103be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc775781dfce666ef663b2b3d36b4633524b30e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68068310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781545"
 ---
 # <a name="mssqlserver_10061"></a>MSSQLSERVER_10061
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|10061|  
 |Origem do Evento|MSSQLSERVER|  

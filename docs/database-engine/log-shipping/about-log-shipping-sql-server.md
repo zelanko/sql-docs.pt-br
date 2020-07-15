@@ -1,5 +1,6 @@
 ---
 title: Sobre o envio de logs (SQL Server) | Microsoft Docs
+description: Saiba mais sobre o envio de logs do SQL Server, que envia backups de log de transações de um banco de dados primário em uma instância de servidor primário para bancos de dados secundários.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -25,16 +26,16 @@ ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3909f2e2ce97bcfb02efe850cf4d9456ed396464
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68057915"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883504"
 ---
 # <a name="about-log-shipping-sql-server"></a>Sobre o envio de logs (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um *banco de dados primário* em uma instância do *servidor primário* para um ou mais *banco de dados secundário* em outras instâncias de *servidor secundário* . Os backups de logs de transação são aplicados individualmente aos bancos de dados secundários. Uma terceira instância de servidor opcional, conhecida como *servidor monitor*, registra o histórico e o status das operações de backup e restauração e, opcionalmente, emite alertas se essas operações não forem executadas como foram agendadas.  
   

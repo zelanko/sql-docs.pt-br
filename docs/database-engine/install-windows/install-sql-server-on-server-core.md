@@ -1,7 +1,8 @@
 ---
 title: Instalar o SQL Server no Server Core | Microsoft Docs
+description: Você pode instalar o SQL Server em uma instalação do Server Core. A opção de instalação do Server Core oferece um ambiente mínimo para a execução de funções de servidor específicas.
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: edde54e4f64f55bac2b3e25912a256b3c3b99bdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872790"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883560"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Instale o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.   
   
@@ -65,7 +66,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 ## <a name="supported-scenarios"></a>Cenários com suporte  
  A tabela a seguir mostra a matriz de cenários com suporte para a instalação do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] em um Server Core.  
   
-|||  
+| Instalação | Destino válido |  
 |-|-|  
 |Edições do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todas as edições de 64 bits do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] |  
 |Idioma do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todos os idiomas|  
@@ -118,7 +119,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
      Para instalar recursos específicos usando a opção de instalação do prompt de comando, use o parâmetro /FEATURES e especifique o recurso pai ou os valores de recursos listados. Um exemplo de como usar os parâmetros a partir da linha de comando é apresentado a seguir:  
   
-    ```  
+    ```console
     Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
@@ -129,44 +130,44 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
     - Instalação do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
     
     O seguinte exemplo mostra como instalar uma nova instância autônoma que inclui o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
-  
-        ```  
-        ; SQL Server Configuration File  
-        [OPTIONS]  
-  
-        ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
-  
-        ACTION="Install"  
-  
-        ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
-  
-        FEATURES=SQLENGINE  
-  
-        ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
-  
-        INSTANCENAME="MSSQLSERVER"  
-  
-        ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
-  
-        INSTANCEID="MSSQLSERVER"  
-  
-        ; Account for ssNoVersion service: Domain\User or system account.   
-  
-        SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
-  
-        ; Windows account(s) to provision as ssNoVersion system administrators.   
-  
-        SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
-  
-        ; Accept the License agreement to continue with Installation  
-  
-        IAcceptSQLServerLicenseTerms="True"  
-  
-        ```  
-  
+
+    ```console
+    ; SQL Server Configuration File  
+    [OPTIONS]  
+    
+    ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
+    
+    ACTION="Install"  
+    
+    ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
+    
+    FEATURES=SQLENGINE  
+    
+    ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
+    
+    INSTANCENAME="MSSQLSERVER"  
+    
+    ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
+    
+    INSTANCEID="MSSQLSERVER"  
+    
+    ; Account for ssNoVersion service: Domain\User or system account.   
+    
+    SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
+    
+    ; Windows account(s) to provision as ssNoVersion system administrators.   
+    
+    SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
+    
+    ; Accept the License agreement to continue with Installation  
+    
+    IAcceptSQLServerLicenseTerms="True"  
+    
+    ```
+
     -   Instalação dos componentes de conectividade. O exemplo a seguir mostra como instalar os componentes de conectividade:  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
   
@@ -188,7 +189,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
         O exemplo a seguir mostra como instalar todos os recursos com suporte do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] no Server Core:  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
         ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
@@ -242,13 +243,13 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
          Para especificar o arquivo de configuração no prompt de comando:  
   
-        ```  
+        ```console
         Setup.exe /QS /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
          Para especificar senhas no prompt de comando em vez de no arquivo de configuração:  
   
-        ```  
+        ```console
         Setup.exe /QS /SQLSVCPASSWORD="************" /ASSVCPASSWORD="************"  /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
@@ -265,12 +266,12 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 
 Para habilitar conexões remotas, use o SQLCMD.exe localmente e execute as instruções a seguir na instância do Server Core:  
 
-   ```Transact-SQL
-   EXEC sys.sp_configure N'remote access', N'1'  
-   GO
-   RECONFIGURE WITH OVERRIDE
-   GO
-   ```  
+```sql
+EXEC sys.sp_configure N'remote access', N'1'  
+GO
+RECONFIGURE WITH OVERRIDE
+GO
+```  
   
 ### <a name="enable-and-start-the-ssnoversion-browser-service"></a>Habilitar e iniciar o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Por padrão, o serviço Navegador está desabilitado.  Se ele estiver desabilitado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução no Server Core, execute o seguinte comando no prompt de comando para habilitá-lo:  
@@ -308,7 +309,7 @@ $Tcp
   
  Para desinstalar uma instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-```  
+```console
 Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
 ```  
   

@@ -1,6 +1,6 @@
 ---
 title: Algumas réplicas síncronas não são sincronizadas
-description: Descreve algumas causas e soluções possíveis para quando uma réplica síncrona não está sincronizada com um grupo de disponibilidade Always On
+description: Descreve algumas causas e soluções possíveis para quando uma réplica síncrona não está sincronizada com um grupo de disponibilidade Always On.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 494d772f7eff9ccf8ba9783885d5c62e49fddbbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76c8ce29a0061f32fe7c7a42bb44b2156406b493
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822597"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883104"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Algumas réplicas síncronas não são sincronizadas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introdução  
   
@@ -33,7 +33,7 @@ ms.locfileid: "74822597"
 |**Categoria**|**Aviso**|  
 |**Faceta**|grupo de disponibilidade|  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Essa política acumula o estado de sincronização de dados de todas as réplicas de disponibilidade e verifica se há réplicas de disponibilidade que não estão no estado de sincronização esperado. A política está em um estado não íntegro quando o estado de qualquer réplica assíncrona não é SYNCHRONIZING e o estado de qualquer réplica síncrona não é SYNCHRONIZED. Caso contrário, o estado da política é íntegro.  
   
 > [!NOTE]  

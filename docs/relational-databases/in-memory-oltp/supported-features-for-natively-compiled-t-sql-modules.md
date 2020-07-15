@@ -1,7 +1,8 @@
 ---
 title: Recursos para módulos T-SQL compilados nativamente
+description: Saiba mais sobre a área de superfície do T-SQL e os recursos com suporte no corpo de módulos T-SQL compilados nativamente, como procedimentos armazenados e funções escalares definidas pelo usuário.
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286660"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834717"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Recursos com suporte para módulos T-SQL compilados nativamente
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Este tópico contém uma lista da área da superfície do T-SQL e os recursos com suporte no corpo de módulos T-SQL compilados nativamente, como procedimentos armazenados ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), gatilhos, funções escalares definidas pelo usuário e funções embutidas com valor de tabela.  
 
  Para ver os recursos com suporte na definição de módulos nativos, consulte [DDL com suporte para módulos nativamente compilados do T-SQL](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
-
--   [Área da superfície da consulta em módulos nativos](#qsancsp)  
-
--   [Modificação de dados](#dml)  
-
--   [Linguagem de controle de fluxo](#cof)  
-
--   [Operadores com suporte](#so)  
-
--   [Funções internas em módulos compilados nativamente](#bfncsp)  
-
--   [Auditoria](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [Dicas de tabela e de consulta](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [Limitações na classificação](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  Para obter informações completas sobre construções sem suporte e sobre como resolver problemas de alguns recursos sem suporte em módulos compilados nativamente, consulte [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Para mais informações sobre os recursos sem suporte, veja [Constructos do Transact-SQL sem suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
@@ -66,7 +51,7 @@ Cláusula SELECT:
     - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], há suporte para o operador DISTINCT em módulos compilados nativamente.
 
-              DISTINCT aggregates are not supported.  
+        - Não há suporte para agregações de DISTINCT.  
 
 -   UNION e UNION ALL
     - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -76,9 +61,9 @@ Cláusula SELECT:
 
 Cláusula FROM:  
 
--   FROM \<tabela com otimização de memória ou variável de tabela>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<TVF embutida compilada nativamente>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN e INNER JOIN.
     - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -169,7 +154,7 @@ Há suporte para as instruções DML a seguir.
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - Para obter um desempenho ideal, use um único bloco TRY/CATCH para um módulo T-SQL nativamente compilado inteiro.  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -184,7 +169,7 @@ Há suporte para as instruções DML a seguir.
 
 -   Operadores binários (*, /, +, -, % (módulo)).  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - O operador de adição (+) tem suporte em números e cadeias de caracteres.  
 
 -   Operadores lógicos (AND, OR, NOT).  
 

@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c11f154d37543488cebbc0bf6bafb1f002253f9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014483"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888090"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>Página Progresso (Assistentes do Grupo de Disponibilidade AlwaysOn)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Use esta caixa de diálogo para exibir o progresso de um assistente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que você está executando no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A barra de progresso indica o progresso relativo das etapas que o assistente está executando.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Mais detalhes**  
  Clique na seta para baixo para exibir uma grade de progresso que lista todas as etapas concluídas, em ordem, seguidas pela operação em andamento no momento. A grade contém as seguintes colunas:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68014483"
  **Status**  
  Indica o resultado das etapas concluídas e o percentual de conclusão da etapa atual, da seguinte maneira:  
   
-|Result|DESCRIÇÃO|  
+|Result|Descrição|  
 |------------|-----------------|  
 |**Erro**|Indica que a operação desta etapa experimentou um erro. Clique no link para exibir uma caixa de diálogo de mensagem que descreve o erro.|  
 |**Em andamento (** *percentual concluído* **)**|Indica que a operação está ocorrendo agora e estima o percentual desta etapa que foi concluída.|  

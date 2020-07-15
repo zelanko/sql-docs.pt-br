@@ -1,25 +1,24 @@
 ---
 title: Criar extensões
-titleSuffix: Azure Data Studio
 description: Aprender a criar e adicionar extensões ao Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774631"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Estender a funcionalidade criando extensões do Azure Data Studio
 
-As extensões em [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornecem uma maneira fácil de adicionar mais funcionalidade à instalação básica do [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+As extensões no Azure Data Studio fornecem uma forma fácil de adicionar mais funcionalidade à instalação básica do Azure Data Studio.
 
 As extensões são fornecidas pela equipe de Azure Data Studio (Microsoft), bem como pela comunidade de terceiros (você!).
 
@@ -43,7 +42,7 @@ Para iniciar sua nova extensão, você pode usar o gerador de Extensão do Azure
 
 **Referências de Extensibilidade**
 
-Para saber mais sobre a Extensibilidade do Azure Data Studio, confira [Visão geral de extensibilidade](extensibility.md). Você também pode ver exemplos de como usar a API em [amostras](https://github.com/Microsoft/azuredatastudio/tree/master/samples) existentes.
+Para saber mais sobre a Extensibilidade do Azure Data Studio, confira [Visão geral de extensibilidade](extensibility.md). Você também pode ver exemplos de como usar a API em [amostras](https://github.com/Microsoft/azuredatastudio/tree/main/samples) existentes.
 
 
 ## <a name="debug-an-extension"></a>Depurar uma extensão

@@ -1,5 +1,6 @@
 ---
 title: Opções de inicialização do serviço do Mecanismo de Banco de Dados | Microsoft Docs
+description: Familiarize-se com opções de inicialização do Mecanismo de Banco de Dados do SQL Server. Veja dicas sobre como usá-las e saiba mais sobre a finalidade de cada opção.
 ms.custom: ''
 ms.date: 08/01/2019
 ms.prod: sql
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5cd9b549123545920c890616945156b37fd762b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772626"
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 As opções de inicialização designam certos locais de arquivos necessários durante inicialização e especificam algumas condições que abrangem o servidor. A maioria dos usuários não precisa especificar opções de inicialização a menos que você esteja solucionando problemas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou tenha um problema incomum e é instruído a usar uma opção de inicialização pelo Suporte de Cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -1,5 +1,6 @@
 ---
 title: Usar o Assistente de Plano de Manutenção | Microsoft Docs
+description: Saiba como criar um plano de manutenção de um servidor ou de vários servidores usando o Assistente de Plano de Manutenção no SQL Server.
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,15 +35,15 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758982"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como criar um plano de manutenção de um único servidor ou de vários servidores usando o Assistente de Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Assistente de Plano de Manutenção cria um plano de manutenção que pode ser executado regularmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso permite executar várias tarefas de administração de banco de dados, incluindo backups, verificações de integridade de banco de dados ou atualizações de estatísticas de banco de dados em intervalos especificados.  
     
  
@@ -374,7 +375,7 @@ Caixa de seleção**Incluir índices**
      Especifique o nome do contêiner de Armazenamento do Microsoft Azure  
   
      **Prefixo da URL:**  
-     Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<conta de armazenamento>.blob.core.windows.net**.  
+     Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<storage account>.blob.core.windows.net**.  
   
      Caixa**Extensão do arquivo de backup**  
      Especifique a extensão a ser usada para os arquivos de backup. O padrão é .bak.  

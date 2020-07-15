@@ -18,15 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812641"
 ---
 # <a name="how-online-index-operations-work"></a>Como funcionam as operações de índice online
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Esse tópico define as estruturas que existem durante uma operação de índice online e mostra as atividades associadas a elas.  
   
@@ -65,12 +65,14 @@ ms.locfileid: "67909751"
 |Build<br /><br /> Fase principal|Os dados são digitalizados, classificados, mesclados e inseridos na origem em operações de carregamento em massa.<br /><br /> As operações de usuário simultâneas de exclusão, atualização, inserção e seleção são aplicadas aos índices preexistentes e a quaisquer outros novos índices compilados.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Final<br /><br /> Fase curta|Todas as transações atualizadas não confirmadas devem ser concluídas antes do início desta fase. Dependendo do bloqueio adquirido, todas as novas transações de usuário de leitura ou gravação devem ser bloqueadas por um período curto até que essa fase seja concluída.<br /><br /> Os metadados do sistema estão atualizados para substituir a origem pelo destino.<br /><br /> Se necessário, a origem será removida. Por exemplo, depois de recompilar e remover um índice clusterizado.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S na tabela se estiver criando um índice não clusterizado.\*<br /><br /> SCH-M (Schema Modification) se qualquer estrutura de origem (índice ou tabela) for removida.\*|  
   
- \* A operação de índice aguarda a conclusão de transações de atualização não confirmadas antes de adquirir o bloqueio S ou SCH-M na tabela.  
+ \* A operação de índice aguarda a conclusão de transações de atualização não confirmadas antes de adquirir o bloqueio S ou SCH-M na tabela. Se uma consulta de execução prolongada estiver ocorrendo, a operação de índice online aguardará até que a consulta seja concluída.
   
  ** O bloqueio de recurso INDEX_BUILD_INTERNAL_RESOURCE previne a execução de operações DDL (linguagem de definição de dados) simultâneas nas estruturas de origem e preexistentes enquanto a operação de índice está em andamento. Por exemplo, esse bloqueio evita a recompilação simultânea de dois índices na mesma tabela. Embora esse bloqueio de recurso esteja associado ao bloqueio Sch-M, ele não evita as instruções de manipulação de dados.  
   
  A tabela anterior mostra um único bloqueio Shared (S) adquirido durante a fase de compilação de uma operação de índice online que envolve um único índice. Quando índices clusterizados e não clusterizados são compilados ou recompilados em uma única operação de índice online (por exemplo, durante a criação de índice clusterizado inicial em uma tabela que contém um ou mais índices não clusterizados), dois bloqueios S de curto prazo são adquiridos durante a fase de compilação, seguidos de bloqueios IS (Tentativa Compartilhada) de longo prazo. Um bloqueio S é adquirido primeiramente para a criação de índice clusterizado e, quando a criação do índice clusterizado é concluída, um bloqueio S de curta duração é adquirido para a criação dos índices não clusterizados. Depois que os índices não clusterizados são criados, ocorre o downgrade do bloqueio S para um bloqueio IS até a fase final da operação de índice online.  
-  
+
+Para obter mais informações sobre como os bloqueios são usados e como você pode gerenciá-los, confira [Argumentos](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments).
+
 ### <a name="target-structure-activities"></a>Atividades da estrutura de destino  
  A tabela a seguir lista as atividades que envolvem as estruturas destino durante cada fase da operação de índice e a estratégia de bloqueio correspondente.  
   
@@ -91,4 +93,6 @@ ms.locfileid: "67909751"
   
  [Diretrizes para operações de índice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
-  
+## <a name="next-steps"></a>Próximas etapas
+
+[Opções de índice ALTER TABLE](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d389b0de6e00095729fdf3636ed7a0db872c7055
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2424982eebaed7a4d9b3d73ea7d4475b7ec758c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634821"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892569"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Altera um assembly pela modificação das propriedades do catálogo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um assembly. ALTER ASSEMBLY o atualiza para a cópia mais recente dos módulos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contêm a implementação e adiciona ou remove os arquivos associados a ele. Os assemblies são criados usando [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -74,7 +74,7 @@ ALTER ASSEMBLY assembly_name
  FROM \<client_assembly_specifier> | \<assembly_bits>  
  Atualiza um assembly à cópia mais recente dos módulos do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contêm sua implementação. Esta opção pode ser usada somente se não houver nenhum arquivo associado ao assembly especificado.  
   
- \<client_assembly_specifier> especifica o local de rede ou a localização local onde reside o assembly que está sendo atualizado. O local da rede inclui o nome do computador, o nome do compartilhamento e um caminho dentro desse compartilhamento. *manifest_file_name* especifica o nome do arquivo que contém o manifesto do assembly.  
+ \<client_assembly_specifier> especifica a localização, na rede ou no local, onde fica o assembly que está sendo atualizado. O local da rede inclui o nome do computador, o nome do compartilhamento e um caminho dentro desse compartilhamento. *manifest_file_name* especifica o nome do arquivo que contém o manifesto do assembly.  
 
 > [!IMPORTANT]
 > O Banco de Dados SQL do Azure não é compatível com a referência a um arquivo.

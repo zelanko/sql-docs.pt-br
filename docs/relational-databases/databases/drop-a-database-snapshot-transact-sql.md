@@ -1,5 +1,6 @@
 ---
 title: Remover um instantâneo de banco de dados (Transact-SQL) | Microsoft Docs
+description: Saiba como remover um instantâneo do banco de dados usando Transact-SQL, que exclui o instantâneo do SQL Server e os arquivos esparsos que são usados pelo instantâneo.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ae40c8d9b4a93ff1f035953207caae5addb56b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756164"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>Descartar um instantâneo do banco de dados (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A remoção de um instantâneo do banco de dados exclui o instantâneo do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos esparsos utilizados pelo instantâneo. Quando um instantâneo do banco de dados é removido, todas as conexões de usuário com ele são encerradas.  
   
 ## <a name="security"></a>Segurança  

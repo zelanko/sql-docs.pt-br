@@ -1,5 +1,6 @@
 ---
 title: Configurar publicação e distribuição | Microsoft Docs
+description: Saiba como configurar a publicação e a distribuição no SQL Server usando o SQL Server Management Studio, o Transact-SQL ou o Replication Management Objects.
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774003"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  Este tópico descreve como configurar publicação e distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar 
@@ -32,7 +33,7 @@ ms.locfileid: "76284879"
 Confira mais informações em [Exibir e modificar as configurações de replicação de segurança](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio 
-Configure a distribuição, usando o Assistente para Novas Publicações ou o Assistente para Configurar a Distribuição. Depois que o Distribuidor estiver configurado, exiba e modifique as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** . Use o Assistente para Configurar Distribuição se você desejar configurar um Distribuidor para que os membros de funções de banco de dados fixas `db_owner` possam criar publicações ou para configurar um Distribuidor remoto que não seja um Publicador.
+Configure a distribuição, usando o Assistente para Novas Publicações ou o Assistente para Configurar a Distribuição. Depois que o Distribuidor estiver configurado, veja e modifique as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** . Use o Assistente para Configurar Distribuição se você desejar configurar um Distribuidor para que os membros de funções de banco de dados fixas `db_owner` possam criar publicações ou para configurar um Distribuidor remoto que não seja um Publicador.
 
 #### <a name="to-configure-distribution"></a>Para configurar a distribuição 
 

@@ -1,6 +1,6 @@
 ---
 title: Adicionar réplica a um grupo de disponibilidade (SSMS)
-ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
+description: Adicione uma réplica a um grupo de disponibilidade Always On usando o assistente encontrado no SQL Server Management Studio.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1df0c28e1d7919b1694802b2b5f024cf5e6dcf6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244977"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880243"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Adicionar uma réplica ao grupo de disponibilidade Always On usando o Assistente de Grupo de Disponibilidade no SQL Server Management
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use o **Assistente para Adicionar Réplica ao Grupo de Disponibilidade** para ajudá-lo a adicionar uma nova réplica secundária a um grupo de disponibilidade AlwaysOn existente.  
   
 > [!NOTE]  
@@ -70,14 +70,14 @@ ms.locfileid: "75244977"
   
 3.  Clique com o botão direito do mouse no grupo de disponibilidade ao qual uma réplica secundária está sendo adicionada e selecione **Adicionar Réplica** . Isso inicia o Assistente para Adicionar Réplica ao Grupo de Disponibilidade.  
   
-4.  Na página **Conectar a Réplicas Secundárias Existentes** , conecte-se a cada réplica secundária do grupo de disponibilidade. Para obter mais informações, veja [Conectar à página Réplicas Secundárias Existentes &#40;Assistente para Adicionar Réplica: Assistente para Adicionar Bancos de Dados&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+4.  Na página **Conectar a Réplicas Secundárias Existentes** , conecte-se a cada réplica secundária do grupo de disponibilidade. Para obter mais informações, confira [Página Conectar-se às Réplicas Secundárias Existentes &#40;Assistente para Adicionar Réplica: Assistente para Adicionar Bancos de Dados&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-5.  Na página **Especificar Réplicas** , especifique e configure uma ou mais novas réplicas secundárias para o grupo de disponibilidade. Essa página contém três guias. A tabela a seguir apresenta essas guias. Para obter mais informações, veja [Página Especificar Réplicas &#40;Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+5.  Na página **Especificar Réplicas** , especifique e configure uma ou mais novas réplicas secundárias para o grupo de disponibilidade. Essa página contém três guias. A tabela a seguir apresenta essas guias. Para obter mais informações, confira [Página Especificar Réplicas &#40;Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Tab|Breve descrição|  
     |---------|-----------------------|  
     |**Réplicas**|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará uma nova réplica secundária.|  
-    |**Pontos de extremidade**|Use esta guia para verificar o ponto de extremidade de espelhamento de banco de dados existente, se houver, para cada nova réplica secundária. Se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows, o assistente tentará criar o ponto de extremidade automaticamente.<br /><br /> <br /><br /> Observação: se alguma instância de servidor estiver sendo executada em uma conta de usuário que não pertença a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
+    |**Pontos de extremidade**|Use esta guia para verificar o ponto de extremidade de espelhamento de banco de dados existente, se houver, para cada nova réplica secundária. Se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows, o assistente tentará criar o ponto de extremidade automaticamente.<br /><br /> <br /><br /> Observação: Se alguma instância de servidor estiver sendo executada em uma conta de usuário que não pertence a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
     |**Preferências de backup**|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo, se você deseja modificar a configuração atual, e para especificar suas prioridades de backup para as réplicas de disponibilidade individuais.|  
   
 6.  Se as réplicas selecionadas contiverem bancos de dados que têm uma chave mestra de banco de dados, insira as senhas das chaves mestras de banco de dados na coluna **Senha**. A coluna **Status** indica **Senha necessária** para os bancos de dados que têm uma chave mestra de banco de dados. **Próximo** fica esmaecido até que a senha correta seja inserida na coluna **Senha**. Depois de inserir as senhas, clique em **Atualizar**. Se você tiver digitado as senhas corretamente, a coluna Status indicará **Senha digitada** e a opção **Próximo** se tornará disponível.  
@@ -116,7 +116,7 @@ ms.locfileid: "75244977"
      Quando o assistente for concluído, clique em **Fechar** para sair.  
   
 > [!IMPORTANT]  
->  Depois de adicionar uma réplica, veja a seção “Acompanhamento: depois de adicionar uma réplica secundária” em [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  Depois de adicionar uma réplica, confira a seção "Acompanhamento: Após a adição de uma réplica" em [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   

@@ -1,5 +1,6 @@
 ---
 title: Monitor do Espelhamento de Banco de Dados (página Status) | Microsoft Docs
+description: Use esta página do Monitor de Espelhamento de Banco de Dados somente leitura para exibir o status de espelhamento das instâncias de servidor principal e espelho de um banco de dados selecionado.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81cf4f45b3c3a1cd647f007179655c08995d1a1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789670"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de Espelhamento de Banco de Dados (página Status)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Essa página somente leitura exibe o status mais recente de espelhamento das instâncias de servidor principal e espelho do banco de dados selecionadas atualmente na árvore de navegação. Se as informações sobre uma instância estiverem indisponíveis atualmente, algumas das células na grade **Status** correspondente a essa instância ficarão esmaecidas e exibirão o status **Desconhecido**.  
   
  **Para usar o SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
@@ -37,16 +38,16 @@ ms.locfileid: "70212355"
   
  As colunas são apresentadas assim:  
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**Instância do Servidor**|Nome da instância de servidor cujo status é exibido na linha **Status** .|  
 |**Função Atual**|Função atual da instância de servidor, que é **Principal** ou **Espelho**.|  
-|**Estado de Espelhamento**|O estado de espelhamento informado pela instância de servidor e um ícone que indica a severidade do estado. Os possíveis status e seus ícones associados são os seguintes:<br /><br /> Ícone: -, status **Desconhecido**. O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.<br /><br /> Ícone: ícone de aviso, status **Sincronizando**. O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente. No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.<br /><br /> Ícone: cilindro do banco de dados padrão, o status **Sincronizado**. Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal estiver enviando alterações ao servidor espelho e esse estiver aplicando alterações ao banco de dados espelho.  Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.  No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .<br /><br /> Ícone: ícone de aviso, status **Suspenso**. <br />                            O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.<br /><br /> Ícone: ícone de erro, status **Desconectado**. A instância do servidor não pode se conectar ao seu parceiro.|  
+|**Estado de Espelhamento**|O estado de espelhamento informado pela instância de servidor e um ícone que indica a severidade do estado. Os possíveis status e seus ícones associados são os seguintes:<br /><br /> Ícone: -, status **Desconhecido**. O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.<br /><br /> Ícone: Ícone de aviso, status **Sincronizando**. O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente. No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.<br /><br /> Ícone: cilindro do banco de dados padrão, o status **Sincronizado**. Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal estiver enviando alterações ao servidor espelho e esse estiver aplicando alterações ao banco de dados espelho.  Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.  No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .<br /><br /> Ícone: ícone de aviso, status **Suspenso**. <br />                            O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.<br /><br /> Ícone: ícone de erro, status **Desconectado**. A instância do servidor não pode se conectar ao seu parceiro.|  
 |**Conexão de Testemunha**|Status de conexão da testemunha, precedido por um ícone de status, **Desconhecido**, **Conectado**ou **Desconectado**.|  
 |**Histórico**|Clique para exibir o histórico de espelhamento na instância de servidor. Isso abre a caixa de diálogo **Histórico do Espelhamento de Banco de Dados** , que exibe o histórico de status e as estatísticas de espelhamento de um banco de dados espelho em uma determinada instância de servidor.<br /><br /> O botão **Histórico** ficará esmaecido se o monitor não for conectado à instância de servidor.|  
   
  **Log principal (** *\<time>* **)**  
- Status do log na instância do servidor principal a partir da hora local da instância do servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
+ Status do log da instância de servidor principal a partir da hora local da instância de servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
   
  **Log não enviado**  
  A quantidade de log em espera na fila de envio (em quilobytes).  
@@ -64,7 +65,7 @@ ms.locfileid: "70212355"
  Taxa em que as transações de entrada estão sendo inseridas no log do servidor principal, em KB por segundo. Para determinar se o espelhamento está atrasado, ativo ou atualizado, compare esse valor ao valor do **Tempo para enviar o log (estimado)** .  
   
  **Log espelhado (** *\<time>* **)**  
- Status do log na instância do servidor espelhado a partir da hora local da instância do servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
+ Status do log da instância de servidor espelho a partir da hora local da instância de servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
   
  **Log não restaurado**  
  A quantidade de log esperando na fila de restauração (em KB).  
@@ -94,7 +95,7 @@ ms.locfileid: "70212355"
 -   **Alta segurança com failover automático (síncrono)**  
   
 ## <a name="remarks"></a>Comentários  
- Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (** _\<time>_ **)** e **Log espelhado (** _\<time>_ **)** .  
+ Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode olhar para os horários nos rótulos do **Log principal (** _\<time>_ **)** e do **Log espelhado (** _\<time>_ **)** .  
   
  Se esse trabalho não existir ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver parado, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão espelhada. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   

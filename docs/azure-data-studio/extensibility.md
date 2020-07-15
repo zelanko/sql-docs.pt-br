@@ -1,25 +1,24 @@
 ---
 title: Adicionando funcionalidade adicional por meio de extensibilidade
-titleSuffix: Azure Data Studio
 description: Saiba mais sobre o modelo de extensibilidade e as principais áreas de extensibilidade para estender a funcionalidade do Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774655"
 ---
-# <a name="getting-started-with-name-sos-extensibility"></a>Introdução à extensibilidade do [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="azure-data-studio-extensibility"></a>Extensibilidade do Azure Data Studio
 
-O [!INCLUDE[name-sos](../includes/name-sos.md)] tem vários mecanismos de extensibilidade para personalizar a experiência do usuário e tornar essas personalizações disponíveis para toda a comunidade de usuários. A plataforma [!INCLUDE[name-sos](../includes/name-sos.md)] principal se baseia em Visual Studio Code, portanto, a maioria das APIs de extensibilidade do Visual Studio Code está disponível. Além disso, fornecemos pontos de extensibilidade adicionais para atividades específicas de gerenciamento de dados.
+O Azure Data Studio tem vários mecanismos de extensibilidade para personalizar a experiência do usuário e disponibilizar essas personalizações para toda a comunidade de usuários. A plataforma principal do Azure Data Studio se baseia no Visual Studio Code. Portanto, a maioria das APIs de extensibilidade do Visual Studio Code está disponível. Além disso, fornecemos pontos de extensibilidade adicionais para atividades específicas de gerenciamento de dados.
 
 Alguns dos principais pontos de extensibilidade são:
 
@@ -32,7 +31,7 @@ Alguns dos principais pontos de extensibilidade são:
 
 ## <a name="visual-studio-code-extensibility-apis"></a>APIs de extensibilidade do Visual Studio Code
 
-Como a plataforma [!INCLUDE[name-sos](../includes/name-sos.md)] principal se baseia em Visual Studio Code, detalhes sobre as APIs de extensibilidade do Visual Studio Code são encontrados na documentação de [Criação de Extensão](https://code.visualstudio.com/docs/extensions/overview) e [API de Extensão](https://code.visualstudio.com/docs/extensionAPI/overview) no site do Visual Studio Code.
+Como a plataforma principal do Azure Data Studio se baseia no Visual Studio Code, detalhes sobre as APIs de extensibilidade do Visual Studio Code são encontrados na documentação de [Criação de Extensão](https://code.visualstudio.com/docs/extensions/overview) e [API de Extensão](https://code.visualstudio.com/docs/extensionAPI/overview) no site do Visual Studio Code.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Gerenciar contribuições do painel da guia Painéis
 

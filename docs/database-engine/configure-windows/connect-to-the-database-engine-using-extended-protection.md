@@ -1,5 +1,6 @@
 ---
 title: Conectar-se ao Mecanismo de Banco de Dados usando a Proteção Estendida | Microsoft Docs
+description: Saiba como a Proteção Estendida usa a associação de serviço e de canal para ajudar a evitar ataques de retransmissão de autenticação. Veja como habilitar esse recurso.
 ms.custom: ''
 ms.date: 05/21/2019
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772634"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  
   
 > [!IMPORTANT]  
@@ -86,7 +87,7 @@ ms.locfileid: "68012103"
   
 1.  No menu **Iniciar** , escolha **Todos os Programas**, aponte para **Microsoft SQL Server** e clique em **SQL Server Configuration Manager**.  
   
-2.  Expanda **Configuração de Rede do SQL Server** e clique com o botão direito do mouse em **Protocolos para** _\<_NomeDaInstância *>* e em **Propriedades**.  
+2.  Expanda **Configuração de Rede do SQL Server** e clique com o botão direito do mouse em **Protocolos para** _\<_InstanceName*>* e em **Propriedades**.  
   
 3.  Para associação de canal e associação de serviço, na guia **Avançado** , defina a **Proteção Estendida** com a configuração apropriada.  
   

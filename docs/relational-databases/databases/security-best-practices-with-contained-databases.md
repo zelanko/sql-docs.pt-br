@@ -1,5 +1,6 @@
 ---
 title: Práticas recomendadas de segurança com bancos de dados independentes | Microsoft Docs
+description: Entenda e reduza as ameaças exclusivas aos bancos de dados independentes, incluindo aquelas relacionadas ao processo de autenticação USER WITH PASSWORD no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
-ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b864e61050b4bd49582d5579f222091e8c7329
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759004"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Práticas recomendadas de segurança com bancos de dados independentes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Bancos de dados independentes têm algumas ameaças exclusivas que devem ser entendidas e mitigadas pelos administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . A maioria das ameaças está relacionada ao processo de autenticação **USER WITH PASSWORD** que move o limite de autenticação do nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o nível do banco de dados.  
   
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Criando um usuário que duplica um logon  
  Se um usuário de banco de dados independente com senha for criado com o mesmo nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectar especificando o banco de dados independente como catálogo inicial, o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá se conectar. A conexão será avaliada como a entidade do usuário com senha no banco de dados independente em vez de como um usuário baseado no logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso pode provocar uma negação intencional ou acidental do serviço para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Como uma prática recomendada, membros da função de servidor fixa **sysadmin** devem sempre considerar conectar-se com o uso da opção de catálogo inicial. Isso conecta o logon ao banco de dados mestre e evita qualquer tentativa de um proprietário de banco de dados usar indevidamente a tentativa de logon. Em seguida, o administrador pode mudar para o banco de dados independente usando a instrução **USE** _\<bancodedados>_ . Também é possível definir o banco de dados padrão do logon para o banco de dados independente, o que conclui o logon no **mestre**e, em seguida, transfere o logon para o banco de dados independente.  
+-   Como uma prática recomendada, membros da função de servidor fixa **sysadmin** devem sempre considerar conectar-se com o uso da opção de catálogo inicial. Isso conecta o logon ao banco de dados mestre e evita qualquer tentativa de um proprietário de banco de dados usar indevidamente a tentativa de logon. Em seguida, o administrador pode mudar para o banco de dados independente usando a instrução **USE** _\<database>_ . Também é possível definir o banco de dados padrão do logon para o banco de dados independente, o que conclui o logon no **mestre**e, em seguida, transfere o logon para o banco de dados independente.  
   
 -   Como uma prática recomendada, não crie usuários de banco de dados independente com senhas que tenham o mesmo nome que logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

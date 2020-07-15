@@ -1,6 +1,6 @@
 ---
 title: Failover de um grupo de disponibilidade
-description: Descreve como executar um failover manual planejado ou forçado de um grupo de disponibilidade Always On com o SSMS (SQL Server Management Studio), o T-SQL (Transact-SQL) ou o SQL PowerShell.
+description: Descreve como executar um failover manual planejado/forçado de um grupo de disponibilidade Always On com o SQL Server Management Studio, o Transact-SQL ou o SQL PowerShell.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5010c559ffc7e1f89ebce87129c0b16a6853753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882399"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como fazer um failover manual planejado ou um failover manual forçado (failover forçado) em um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Se você fizer failover em uma réplica secundária no estado SYNCHRONIZED, o assistente fará um failover manual planejado (sem perda de dados). Se você fizer failover em uma réplica secundária no estado UNSYNCHRONIZED ou NOT SYNCHRONIZING, o assistente executará um failover manual forçado, também conhecido como *failover forçado* (com possível perda de dados). As duas formas de failover manual fazem a transição da réplica secundária à qual você está conectado para a função primária. Um failover manual planejado faz a transição da réplica primária antiga para a função secundária. Após um failover forçado, quando a réplica primária antiga ficar online, ela fará a transição para a função secundária.  
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Antes de seu primeiro failover manual planejado, consulte a seção "Antes de começar" em [Executar um failover manual planejado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Antes do primeiro failover forçado, consulte as seções "Antes de começar" e "Acompanhamento: tarefas essenciais depois de um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Antes do primeiro failover forçado, confira as seções "Antes de começar" e "Acompanhamento: tarefas essenciais após um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74821940"
   
      Para obter mais informações, veja [Página Resultados &#40;Assistentes do Grupo de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
   
-11. Após um failover forçado, consulte a seção “Acompanhamento: após um failover forçado” em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Após um failover forçado, confira a seção "Acompanhamento: após um failover forçado" em [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Ajuda para páginas que são exclusivas deste assistente  
  Esta seção descreve as páginas que são exclusivas do [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  
@@ -106,7 +106,7 @@ ms.locfileid: "74821940"
  **Status do Quorum**  
  Para o tipo de cluster WSFC, exibe o status do quorum da réplica de disponibilidade:  
   
-   |Valor|DESCRIÇÃO|  
+   |Valor|Descrição|  
    |-----------|-----------------|  
    |**Quorum normal**|O cluster foi iniciado com quorum normal.|  
    |**Quorum forçado**|O cluster foi iniciado com quorum forçado.|  
@@ -128,7 +128,7 @@ ms.locfileid: "74821940"
  **Modo de Disponibilidade**  
  Exibe o modo de disponibilidade da instância de servidor:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Confirmação síncrona**|No modo de confirmação síncrona, antes de confirmar transações, uma réplica primária de confirmação síncrona espera que uma réplica secundária de confirmação síncrona confirme que concluiu a proteção do log. O modo de confirmação síncrona garante que, quando um determinado banco de dados secundário é sincronizado com o banco de dados primário, as transações confirmadas sejam totalmente protegidas.|  
 |**Confirmação assíncrona**|No modo de confirmação assíncrona, a réplica primária confirma as transações sem esperar a confirmação de que uma réplica secundária de confirmação assíncrona protegeu o log. O modo de confirmação assíncrona minimiza a latência de transações nos bancos de dados secundários, mas permite que elas atrasem os bancos de dados primários, possibilitando a perda de dados.|  
@@ -138,7 +138,7 @@ ms.locfileid: "74821940"
  **Modo de Failover**  
  Exibe o modo de failover da instância de servidor:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Automático**|Uma réplica secundária configurada para failover automático também oferece suporte a failover manual planejado sempre que a réplica secundária é sincronizada com a réplica primária.|  
 |**Manual**|Existem dois tipos de failover manual: planejado (sem perda de dados) e forçado (com possível perda de dados). Em uma réplica secundária específica, há suporte para somente um desses tipos, dependendo do modo de disponibilidade e, no modo de confirmação síncrono, o estado de sincronização da réplica secundária. Para determinar qual forma de failover manual tem suporte em uma determinada réplica secundária, consulte a coluna **Prontidão de Failover** desta grade.|  
@@ -148,7 +148,7 @@ ms.locfileid: "74821940"
  **Prontidão de Failover**  
  Exibe a prontidão de failover da réplica secundária:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Sem perda de dados**|Há suporte para esta réplica secundária no failover planejado. Este valor só ocorre quando uma réplica secundária no modo de confirmação síncrona está sincronizada com a réplica primária.|  
 |**Perda de dados, Avisos (** _#_ **)**|Há suporte para esta réplica secundária no failover forçado (com possível perda de dados). Este valor ocorre sempre que a réplica secundária não está sincronizada com a réplica primária. Clique no link de avisos de perda de dados referente às informações sobre a possível perda de dados.|  

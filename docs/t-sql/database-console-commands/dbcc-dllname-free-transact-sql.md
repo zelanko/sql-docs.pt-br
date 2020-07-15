@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aeac2877165b3d0b00d33fd62e8e81086d951f0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101954"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894881"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Descarrega o procedimento armazenado estendido DLL especificado da memória.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -65,7 +65,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir considera que `xp_sample` esteja implementado como xp_sample.dll e tenha sido executado. DBCC \<*dllname*> (FREE) descarrega o arquivo xp_sample.dll associado ao procedimento estendido `xp_sample`.
+O exemplo a seguir considera que `xp_sample` esteja implementado como xp_sample.dll e tenha sido executado. O DBCC \<*dllname*> (FREE) descarrega o arquivo xp_sample.dll, associado ao procedimento estendido `xp_sample`.
   
 ```sql  
 DBCC xp_sample (FREE);  

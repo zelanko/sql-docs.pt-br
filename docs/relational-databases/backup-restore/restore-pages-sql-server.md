@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759127"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve como restaurar páginas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meta da restauração de uma página é restaurar uma ou mais páginas danificadas sem restaurar todo o banco de dados. Geralmente, as páginas candidatas à restauração foram marcadas como "suspeitas" por causa de um erro encontrado durante seu acesso. Páginas suspeitas são identificadas na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) do banco de dados **msdb** .  
   
@@ -136,7 +136,7 @@ ms.locfileid: "82823671"
     |Cabeçalho|Valores|  
     |------------|------------|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Componente**|o componente de backup: **Banco de Dados**, **Arquivo** ou **\<em branco>** (para logs de transação).|  
+    |**Componente**|o componente de backup: **Banco de dados**, **Arquivo** ou **\<blank>** (para logs de transações).|  
     |**Tipo**|O tipo de backup realizado: **Total**, **Diferencial** ou **Log de Transações**.|  
     |**Servidor**|O nome da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  

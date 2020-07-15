@@ -1,5 +1,6 @@
 ---
 title: Criar um alias de tipo de dados definido pelo usuário | Microsoft Docs
+description: Saiba como criar um alias de tipo de dados definido pelo usuário no SQL Server 2019 usando o SQL Server Management Studio ou Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bea30f3fac2eaacf612839903ab65f668f412ed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756291"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este tópico descreve como criar um novo alias de tipo de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -64,7 +65,7 @@ ms.locfileid: "72909117"
      **Data type**  
      Selecione o tipo de dados base na caixa de listagem. A caixa de listagem exibe todos os tipos de dados, com exceção do tipo de dados **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** e **xml** . O tipo de dados definido pelo usuário existente não é editável.  
   
-     **Padrão**  
+     **Default**  
      Opcionalmente, selecione um padrão para associar ao alias do tipo de dados definido pelo usuário.  
   
      **Comprimento/Precisão**  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 918821dfcdbddcd694b751d328332178f9f5770c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 668a7355cd1a2530b9f60a624391c2199724a62b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633687"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880390"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>Permissões de servidor GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede permissões em um servidor. 
   
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ]
   
  TO \<grantee_principal> Especifica a entidade de segurança para a qual a permissão está sendo concedida.  
   
- AS \<grantor_principal> Especifica a entidade de segurança da qual a entidade de segurança que executa essa consulta obtém seu direito de conceder a permissão.  
+ AS \<grantor_principal> Especifica a entidade de segurança da qual a entidade de segurança que executa esta consulta deriva o direito dela de conceder a permissão.  
   
  WITH GRANT OPTION  
  Indica que o principal também terá a capacidade de conceder a permissão especificada a outros principais.  

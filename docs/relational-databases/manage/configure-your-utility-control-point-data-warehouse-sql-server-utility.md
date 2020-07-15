@@ -1,5 +1,6 @@
 ---
 title: Configurar seu data warehouse do ponto de controle do utilitário (Utilitário do SQL Server) | Microsoft Docs
+description: Saiba mais sobre o data warehouse de gerenciamento do utilitário, em que as instâncias do SQL Server armazenam dados. Saiba como configurar o período de retenção de dados e o diretório.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: c2c6f050-8cdb-4b8e-ad38-4aae0a949847
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f71e3ce611c8bf4b9ecfdd0cdafdafe4ca771874
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e35e6e779a138633c8ea15c79a2d1370c1b3edcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775993"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Configurar o data warehouse a partir do ponto de controle do utilitário (Utilitário do SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dados coletados por instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são armazenados no UMDW (data warehouse de gerenciamento do utilitário); o nome de arquivo UMDW é sysutility_mdw.  
   
  É possível configurar o período de retenção de dados do UMDW. Para obter mais informações, veja [Administração do Utilitário &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d).  
@@ -27,9 +28,9 @@ ms.locfileid: "68115474"
   
 -   Nome do UMDW: Sysutility_mdw.  
   
--   Frequência de carregamento do conjunto de coleta: a cada 15 minutos.  
+-   Frequência de upload do conjunto de coleta: a cada 15 minutos.  
   
- O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> normalmente é a unidade C:\. O arquivo de log Sysutility_mdw_\<GUID>_LOG, está localizado no mesmo diretório.  
+ O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nome_do_UCP>\MSSQL\Data\\, em que \<System drive>, normalmente, é a unidade C:\. O arquivo de log Sysutility_mdw_\<GUID>_LOG está localizado no mesmo diretório.  
   
 > [!NOTE]  
 >  O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  

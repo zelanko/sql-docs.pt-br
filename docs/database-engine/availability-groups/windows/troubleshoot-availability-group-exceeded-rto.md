@@ -1,5 +1,6 @@
 ---
 title: 'Solução de problemas: o grupo de disponibilidade excedeu o RTO (SQL Server) | Microsoft Docs'
+description: Saiba como solucionar problemas de failover em um grupo de disponibilidade Always On quando o failover demora mais do que o objetivo de tempo de recuperação no SQL Server.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013756"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888025"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solução de problemas: o grupo de disponibilidade excedeu o RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Após um failover automático ou um failover manual planejado sem perda de dados em um grupo de disponibilidade, você descobre que o tempo de failover excedeu o RTO (objetivo de tempo de recuperação). Ou, quando você calcula o tempo de failover de uma réplica secundária de confirmação síncrona (como um parceiro de failover automático) usando o método em [Monitorar o desempenho de Grupos de Disponibilidade Always On](monitor-performance-for-always-on-availability-groups.md), você descobre que ele excede o RTO.  
   
  Se o failover automático ainda não foi concluído, veja [Solução de problemas de failover automático em ambientes de Always On do SQL Server 2012](https://support.microsoft.com/kb/2833707).  

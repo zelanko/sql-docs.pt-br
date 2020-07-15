@@ -1,5 +1,6 @@
 ---
 title: Defina a opção do banco de dados PAGE_VERIFY como CHECKSUM | Microsoft Docs
+description: Verifique se a opção PAGE_VERIFY é CHECKSUM, que controla se o Mecanismo de Banco de Dados do SQL Server calcula uma soma de verificação para ajudar a fornecer a integridade do arquivo de dados.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 686b9a4a-ea61-4263-9ab8-f444a3077679
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6d0491eb44eb2880927aef006ccc705230ab1940
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f296dc9aedf96c3258dc256d9bc8fc8fdf05f12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774170"
 ---
 # <a name="set-the-page_verify-database-option-to-checksum"></a>Definir a opção do banco de dados PAGE_VERIFY como CHECKSUM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica se a opção do banco de dados PAGE_VERIFY está definida como CHECKSUM. Quando CHECKSUM é habilitado para a opção do banco de dados PAGE_VERIFY, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] calcula uma soma de verificação nos conteúdos da página inteira e armazena o valor no cabeçalho da página, quando uma página é gravada em disco. Quando a página é lida pelo disco, a soma de verificação é recalculada e comparada ao valor da soma de verificação armazenado no cabeçalho da página. Isso ajuda a fornecer um alto nível de integridade de arquivo de dados.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

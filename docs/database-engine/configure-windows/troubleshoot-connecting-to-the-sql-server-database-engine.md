@@ -1,5 +1,6 @@
 ---
 title: Solucionar problemas de conexão com o Mecanismo de Banco de Dados do SQL Server | Microsoft Docs
+description: Descubra como solucionar problemas de conexão. Veja as etapas a serem seguidas quando não for possível usar TCP/IP para se conectar a um Mecanismo de Banco de Dados do SQL Server em um servidor único.
 ms.custom: sqlfreshmay19
 ms.date: 11/25/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763961"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo lista as técnicas de solução de problemas a ser usadas quando você não pode se conectar a uma instância do Mecanismo de Banco de Dados do SQL Server em um único servidor.
 

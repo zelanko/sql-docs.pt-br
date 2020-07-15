@@ -1,5 +1,6 @@
 ---
-title: 'Exemplos: usando o modo AUTO | Microsoft Docs'
+title: 'Exemplos: Usando o modo AUTO | Microsoft Docs'
+description: Veja exemplos de consultas que usam o modo FOR XML AUTO.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 782da9544dd1cf6e084793754fb31f81109d1810
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 68dfbbf0d1e2a2cf160b728b5f0acd9553be7922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775576"
 ---
-# <a name="examples-using-auto-mode"></a>Exemplos: Usando modo AUTO
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-auto-mode"></a>Exemplos: uso do modo AUTO
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Os exemplos a seguir ilustram o uso do modo AUTO. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna da tabela ProductModel no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemplo: Recuperando informações de cliente, pedido e detalhes do pedido  
@@ -114,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas em modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas no modo AUTO  
  Essa consulta retorna nomes de clientes individuais concatenados e informações de pedido. Porque a coluna computada é atribuída ao nível interno encontrado naquele ponto, o elemento <`SOH`> neste exemplo. Os nomes concatenados dos clientes são adicionados como atributos do elemento <`SOH`> no resultado.  
   
 ```  

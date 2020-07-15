@@ -1,5 +1,6 @@
 ---
 title: Espelhamento e replicação de banco de dados (SQL Server) | Microsoft Docs
+description: Saiba como usar o espelhamento de banco de dados em conjunto com a replicação para aprimorar a disponibilidade do banco de dados de publicação no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789689"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O espelhamento do banco de dados pode ser usado junto com a replicação para aprimorar a disponibilidade ao banco de dados de publicação. O espelhamento do banco de dados compreende duas cópias de um único banco de dados que geralmente reside em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados principal. As atualizações realizadas pelos clientes no banco de dados principal são aplicadas à outra cópia do banco de dados, conhecida como banco de dados espelho. O espelhamento envolve a aplicação do log de transações de cada inserção, atualização ou exclusão efetuada no banco de dados principal, para o banco de dados espelho.  
   
  O failover de replicação para um espelho tem o suporte total para os bancos de dados de publicação, com suporte limitado para bancos de dados de assinatura. O espelhamento de banco de dados não tem suporte para bancos de dados de distribuição. Para obter informações sobre como recuperar um banco de dados de distribuição ou banco de dados de assinatura sem precisar reconfigurar a replicação, veja [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e066a82da2994c14a23ad647c103402232a7d1c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321211"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882089"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir uma relação de registro lógico entre artigos da tabela de mesclagem
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como definir uma relação de registro lógico entre artigos de tabela de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects).  
   
  A replicação de mesclagem permite definir uma relação entre linhas relacionadas em tabelas diferentes. Essas linhas podem então ser processadas como uma unidade transacional durante a sincronização. Um registro lógico pode ser definido entre dois artigos se eles tiverem ou não uma relação de filtro de junção. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -52,13 +52,13 @@ ms.locfileid: "75321211"
 -   Se você adicionar, modificar ou excluir um registro lógico após a inicialização de assinaturas na publicação, será preciso gerar um novo instantâneo e reinicializar todas as assinaturas depois de fazer a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Defina registros lógicos na caixa de diálogo **Adicionar Junção**, disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Defina registros lógicos na caixa de diálogo **Adicionar Junção**, disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades da Publicação – \<Publication>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Os registros lógicos podem ser definidos na caixa de diálogo **Adicionar Junção** apenas se aplicados a um filtro de junção em uma publicação de mesclagem, e se a publicação atender os requisitos para uso de partições pré-calculadas. Para definir os registros lógicos que não se aplicam a filtros de junção e para definir a detecção e resolução de conflitos no nível do registro lógico, é preciso usar procedimentos armazenados.  
   
 #### <a name="to-define-a-logical-record-relationship"></a>Para definir uma relação de registro lógico.  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione um filtro de linha no painel **Tabelas Filtradas**.  
   
      Uma relação de registro lógico é associada a um filtro de junção que estende um filtro de linha. Por isso, é preciso definir o filtro de linha antes de poder estender o filtro com uma junção e aplicar uma relação de registro lógico. Após definir o filtro de junção é possível estendê-lo com outro filtro de junção. Para obter mais informações sobre como definir filtros de junção, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75321211"
   
 3.  Defina um filtro de junção na caixa de diálogo **Adicionar Junção** , depois marque a caixa de seleção **Registro Lógico**.  
   
-4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
+4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publication>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>Para excluir uma relação de registro lógico  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75321211"
   
      Para excluir apenas a relação de registro lógico:  
   
-    1.  Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione o filtro de junção associado à relação de registo lógico no painel **Tabelas Filtradas** e clique em **Editar**.  
+    1.  Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione o filtro de junção associado à relação de registo lógico no painel **Tabelas Filtradas** e clique em **Editar**.  
   
     2.  Na caixa de diálogo **Editar Junção** , desmarque o caixa de seleção **Registro Lógico**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75321211"
   
      Para excluir a relação de registro lógico e o filtro de junção a ela associado:  
   
-    -   Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas** e, em seguida, clique em **Excluir**. Caso o próprio filtro excluído seja estendido por outras junções, essas junções também serão excluídas.  
+    -   Na página **Filtrar Linhas** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione um filtro no painel **Tabelas Filtradas** e clique em **Excluir**. Caso o próprio filtro excluído seja estendido por outras junções, essas junções também serão excluídas.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  É possível especificar relações de registro lógico de forma programática entre artigos que usem procedimentos armazenados de replicação.  

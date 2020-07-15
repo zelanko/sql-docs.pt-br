@@ -1,5 +1,6 @@
 ---
 title: Definir limites de aviso | Microsoft Docs
+description: Saiba como usar a caixa de diálogo Definir Limites de Aviso para habilitar e configurar limites de aviso para bancos de dados espelhados selecionados no SQL Server.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789641"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
   
  A caixa de diálogo tenta se conectar a ambas as instâncias do servidor. Essas conexões são assincronamente estabelecidas. A caixa de diálogo mostra o status da conexão de cada parceiro. Se o parceiro não estiver conectado, você poderá clicar em **Conectar**.  
@@ -66,17 +67,17 @@ ms.locfileid: "68025209"
  **Warnings**  
  Relaciona os avisos que têm suporte:  
   
-|Aviso|DESCRIÇÃO|  
+|Aviso|Descrição|  
 |-------------|-----------------|  
 |**Avisar se o log não enviado exceder o limite**|O limite indica o número de quilobytes (KB) do log não enviado na fila principal de envios de log.|  
 |**Avisar se o log não restaurado exceder o limite**|O limite indica o número de KBs da fila de restauração na instância de servidor espelho.|  
 |**Avisar se a idade da transação não enviada mais antiga exceder o limite**|O limite indica o número de minutos de transações que ainda não foram enviadas da fila de envio para a instância de servidor de espelho. Esse valor ajuda a medir o potencial de perda de dados em termos de tempo.|  
 |**Avisar se a sobrecarga espelhada confirmada exceder o limite**|O limite indica o número de milissegundos de retardo por transação (pertinente só em modo de alta segurança). Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração.|  
   
- **Habilitado em '** *\<instância do servidor>* **'**  
+ **Habilitado em '** *\<server instance>* **'**  
  Uma caixa de seleção em branco indica que o aviso está desabilitado presentemente na instância de servidor. Para habilitar um aviso, clique em sua caixa de seleção.  
   
- **Limite em '** *\<instância do servidor>* **'**  
+ **Limite em '** *\<server instance>* **'**  
  Quando um aviso for habilitado, defina o limite no lado esquerdo dessa coluna. Um evento ocorrerá se o limite especificado tiver sido atingido quando a tabela de status for atualizada. Se você desabilitar um limite depois de configurar um valor, o valor permanecerá no campo e será usado quando você reabilitar o aviso.  
   
  Quando um aviso não for habilitado, o campo permanecerá inativo.  

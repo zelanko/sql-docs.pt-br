@@ -1,5 +1,6 @@
 ---
 title: Especificar agendas de sincronização | Microsoft Docs
+description: Saiba como especificar agendas de sincronização no SQL Server usando o SQL Server Management Studio, o Transact-SQL ou o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783116"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar agendas de sincronização
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Este tópico descreve como especificar agendas de sincronização no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Quando criar uma assinatura, você pode definir uma agenda de sincronização que controla quando o agente de replicação para a assinatura executará. Se você não especificar os parâmetros de programação, a assinatura usará a agenda padrão.  
   
  Assinaturas são sincronizadas pelo Agente de Distribuição (para replicação transacional e de instantâneo) ou pelo Agente de Mesclagem (para replicação de mesclagem). Os agentes podem ser executados continuamente, sob demanda ou em um agendamento.  
@@ -54,7 +55,7 @@ ms.locfileid: "76287118"
 |Distribution Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
 |Distribution Agent para assinaturas push para Assinantes não SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Em assinaturas push para publicações Oracle, é **\<Publisher>-\<Publisher**> em vez de **\<Publisher>-\<PublicationDatabase>**  
+ <sup>1</sup> Para assinaturas push para publicações Oracle, é **\<Publisher>-\<Publisher**> em vez de **\<Publisher>-\<PublicationDatabase>**  
   
  <sup>2</sup> Para assinaturas pull para publicações Oracle, é **\<Publisher>-\<DistributionDatabase**> em vez de **\<Publisher>-\<PublicationDatabase>**  
   
@@ -66,9 +67,9 @@ ms.locfileid: "76287118"
   
     -   **Executar somente sob demanda**  
   
-    -   **\<Definir Agendamento...>**  
+    -   **\<Define Schedule...>**  
   
-2.  Se você selecionar **\<Definir Agendamento...>** , especifique uma agenda na caixa de diálogo **Propriedades da Agenda de Trabalho** e clique em **OK**.  
+2.  Se você selecionar **\<Define Schedule...>** , especifique uma agenda na caixa de diálogo **Propriedades da Agenda de Trabalho** e, então, clique em **OK**.  
   
 3.  Conclua o assistente.  
 
@@ -80,7 +81,7 @@ ms.locfileid: "76287118"
   
 3.  Clique com o botão direito do mouse em uma assinatura e clique em **Exibir Detalhes**.  
   
-4.  Na janela **Assinatura <SubscriptionName>** , clique em **Ação** e depois em **Propriedades do Trabalho de \<AgentName>** .  
+4.  Na janela **Assinatura <NomeDaAssinatura>** , clique em **Ação** e depois em **Propriedades do Trabalho de \<AgentName>** .  
   
 5.  Na página **Agendas** da caixa de diálogo **Propriedades do Trabalho – \<JobName>** , clique em **Editar.**  
   

@@ -1,5 +1,6 @@
 ---
 title: Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade | Microsoft Docs
+description: Saiba como usar o SQL Server Management Studio para monitorar e gerenciar grupos de disponibilidade Always On, réplicas de disponibilidade e bancos de dados de disponibilidade existentes.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013633"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894161"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como usar o painel **Detalhes do Pesquisador de Objetos** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para monitorar e gerenciar grupos de disponibilidade AlwaysOn, réplicas de disponibilidade e bancos de dados de disponibilidade existentes.  
   
 > [!NOTE]  
@@ -74,7 +75,7 @@ ms.locfileid: "68013633"
   
  Os valores possíveis são os seguintes:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Não Permitir Conexões**|Nenhuma conexão direta é permitida para os bancos de dados de disponibilidade quando essa réplica de disponibilidade está agindo como uma réplica secundária. Os bancos de dados secundários não estão disponíveis para acesso de leitura.|  
 |**Permitir Somente Conexões de Intenção de Leitura**|Apenas conexões diretas somente leitura são permitidas quando essa réplica está agindo como uma réplica secundária. Todos os bancos de dados na réplica estão disponíveis para acesso de leitura.|  
@@ -83,7 +84,7 @@ ms.locfileid: "68013633"
  **Estado da Conexão**  
  Indica se uma réplica secundária está conectada atualmente à réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Desconectado**|Para uma réplica de disponibilidade remota, indica que ela está desconectada da réplica de disponibilidade local. A resposta da réplica local ao estado Desconectado depende de sua função, da seguinte forma:<br /><br /> na réplica primária, se uma réplica secundária estiver desconectada, os bancos de dados secundários serão marcados como **Não Sincronizado** na réplica primária, e a réplica primária esperará que a secundária seja reconectada.<br /><br /> Na réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.|  
 |**Conectado**|Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.|  
@@ -92,10 +93,10 @@ ms.locfileid: "68013633"
  **Estado da Sincronização**  
  Indica se uma réplica secundária está sincronizada no momento com a réplica primária. Os valores possíveis são os seguintes:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Não Sincronizado**|O banco de dados não está sincronizado ou ainda não foi unido ao grupo de disponibilidade.|  
-|**Sincronizado**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
+|**Sincronizado**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: Em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
 |**NULL**|Estado desconhecido. Este valor ocorre quando a instância do servidor local não pode se comunicar com o cluster de failover do WSFC (isto é, o nó local não faz parte do quorum do WSFC).|  
   
 > [!NOTE]  
@@ -112,15 +113,15 @@ ms.locfileid: "68013633"
   
  Os estados de sincronização possíveis são:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: no modo de confirmação assíncrona, o estado da sincronização é sempre **Sincronizando**.|  
+|Sincronizando|O banco de dados secundário recebeu os registros do log de transações do banco de dados primário que ainda não estão gravados no disco (protegidos).<br /><br /> Observação: Em modo de confirmação assíncrona, o estado da sincronização é sempre **Sincronizando**.|  
 |||  
   
  **Suspenso**  
  Indica se o banco de dados de disponibilidade está online no momento. Os valores possíveis são os seguintes:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Suspenso**|Esse estado indica que o banco de dados está suspenso localmente e precisa ser retomado manualmente.<br /><br /> Na réplica primária, o valor não é confiável para um banco de dados secundário. Para determinar com confiança se um banco de dados secundário está suspenso, consulte-o na réplica secundária que hospeda o banco de dados.|  
 |**Não Unido**|Indica que o banco de dados secundário não foi unido ao grupo de disponibilidade ou foi removido do grupo.|  

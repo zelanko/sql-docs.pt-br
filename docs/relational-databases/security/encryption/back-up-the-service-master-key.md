@@ -1,5 +1,6 @@
 ---
 title: Fazer backup da chave mestra de serviço | Microsoft Docs
+description: Saiba como fazer backup da chave mestra de serviço no SQL Server usando Transact-SQL. A chave mestra de serviço é a raiz da hierarquia de criptografia.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c333346b0c8ef728966f8e0b6d42a5be53d1b187
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895911"
 ---
 # <a name="back-up-the-service-master-key"></a>Fazer backup da chave mestra de serviço
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este artigo descreve como fazer backup da Chave mestra de serviço no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A chave mestra de serviço é a raiz da hierarquia de criptografia. Ela deve ter seu backup feito e armazenado em um local seguro, fora do site. Criar este backup deveria ser uma das primeiras ações administrativas executadas no servidor.  
 
 ## <a name="before-you-begin"></a>Antes de começar  

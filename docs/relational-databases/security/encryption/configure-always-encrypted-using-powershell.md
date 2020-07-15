@@ -1,5 +1,6 @@
 ---
 title: Configurar o Always Encrypted usando o PowerShell | Microsoft Docs
+description: Saiba como importar e usar o módulo SqlServer do PowerShell, que fornece cmdlets para configurar o Always Encrypted no Banco de Dados SQL do Azure e no SQL Server.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93cc3ccad555d366593632b3fc9975d070a67a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765125"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configurar Always Encrypted usando o PowerShell
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 O módulo do SqlServer PowerShell fornece cmdlets para configurar o [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) no [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -30,7 +31,7 @@ Você pode usar o PowerShell para gerenciar chaves Always Encrypted com e sem se
 
  Para obter recomendações adicionais, consulte [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Considerações de segurança para o Gerenciamento de Chaves).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Instalar o [módulo do SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) em um computador seguro que NÃO seja um computador que hospeda a instância do SQL Server. O módulo pode ser instalado diretamente da Galeria do PowerShell.  Consulte as instruções de [download](../../../ssms/download-sql-server-ps-module.md) para ver mais detalhes.
 
@@ -121,7 +122,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 
 Os cmdlets do PowerShell a seguir estão disponíveis para o Always Encrypted:
 
-|CMDLET |DESCRIÇÃO
+|CMDLET |Descrição
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Executa a autenticação no Azure e adquire um token de autenticação.
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |Adiciona um novo valor criptografado para um objeto de chave de criptografia da coluna existente no banco de dados.

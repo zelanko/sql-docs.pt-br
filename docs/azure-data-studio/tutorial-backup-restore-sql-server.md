@@ -1,25 +1,24 @@
 ---
 title: Backup e restauração de um banco de dados
-titleSuffix: Azure Data Studio
 description: Saiba como fazer backup e restauração de um banco de dados usando o Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758292"
 ---
-# <a name="backup-and-restore-databases-using-name-sos"></a>Backup e restauração de bancos de dados usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Fazer backup e restaurar bancos de dados usando o Azure Data Studio
 
-Neste tutorial, você aprenderá a usar o [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
+Neste tutorial, você aprenderá a usar o Azure Data Studio para:
 > [!div class="checklist"]
 > * Fazer backup de um banco de dados 
 > * Exibir o status do backup do banco de dados
@@ -27,7 +26,7 @@ Neste tutorial, você aprenderá a usar o [!INCLUDE[name-sos](../includes/name-s
 > * Restaurar um banco de dados
 > * Exibir o status da tarefa de restauração
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este tutorial requer o *TutorialDB* do SQL Server. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
 

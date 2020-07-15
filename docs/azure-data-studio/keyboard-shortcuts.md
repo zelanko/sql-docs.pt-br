@@ -1,37 +1,34 @@
 ---
 title: Criar e personalizar atalhos de teclado
-titleSuffix: Azure Data Studio
 description: Saiba como criar e personalizar atalhos de teclado no Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774569"
 ---
-# <a name="keyboard-shortcuts-in-name-sos"></a>Atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-azure-data-studio"></a>Atalhos de teclado no Azure Data Studio
 
-Este artigo apresenta as etapas para exibir, editar e criar rapidamente atalhos de teclado no [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Este artigo apresenta as etapas para ver, editar e criar rapidamente atalhos de teclado no Azure Data Studio.
 
-Uma vez que o [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua funcionalidade de associação de teclas do Visual Studio Code, informações detalhadas sobre personalizações avançadas usando diferentes layouts de teclado etc. estão no artigo [Associações de teclas para o Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings). Alguns recursos de associação de teclas podem não estar disponíveis (por exemplo, não há suporte para extensões de mapa de teclas no [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
-
+Uma vez que o Azure Data Studio herda a funcionalidade de associação de teclas do Visual Studio Code, informações detalhadas sobre personalizações avançadas usando diferentes layouts de teclado etc. estão no artigo [Associações de teclas para o Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings). Alguns recursos de associação de teclas podem não estar disponíveis (por exemplo, não há suporte para extensões de mapa de teclas no Azure Data Studio).
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>Abrir o editor de Atalhos de Teclado
 
 Para exibir todos os atalhos de teclado definidos no momento:
 
-Abra o editor de **Atalhos de Teclado** no menu **Arquivo**: **Arquivo** > **Preferências** > **Atalhos de Teclado** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  > **Preferências** > **Atalhos de Teclado** em Mac).
+Abra o editor de **Atalhos de Teclado** no menu **Arquivo**: **Arquivo** > **Preferências** > **Atalhos de Teclado** (**Azure Data Studio** > **Preferências** > **Atalhos de Teclado** no Mac).
 
 Além de exibir as associações de teclas atuais, o editor de **Atalhos de Teclado** lista os comandos disponíveis que não têm atalhos de teclado definidos. O editor de **Atalhos de Teclado** permite que você altere, remova, redefina e defina facilmente novas associações de teclas.  
-
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>Editar atalhos de teclado existentes
 
@@ -41,11 +38,11 @@ Para alterar a associação de teclas para um atalho de teclado existente:
    > [!TIP]
    > Pesquise por tecla, por comando, por fonte etc. para retornar todos os atalhos de teclado relevantes.
 
-1. Clique com o botão direito do mouse na entrada desejada e selecione **Alterar Associação de Teclas**
+2. Clique com o botão direito do mouse na entrada desejada e selecione **Alterar Associação de Teclas**
 
    ![editar atalho de teclado](media/keyboard-shortcuts/change-keybinding.png)
 
-1. Pressione a combinação de teclas desejada e pressione **Enter** para salvá-la. 
+3. Pressione a combinação de teclas desejada e pressione **Enter** para salvá-la. 
 
    ![salvar atalho de teclado](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -57,6 +54,4 @@ Para criar novos atalhos de teclado:
 
    ![criar atalho de teclado](media/keyboard-shortcuts/add-keybinding.png)
 
-1. Pressione a combinação de teclas desejada e pressione **Enter** para salvá-la.
-
-
+2. Pressione a combinação de teclas desejada e pressione **Enter** para salvá-la.

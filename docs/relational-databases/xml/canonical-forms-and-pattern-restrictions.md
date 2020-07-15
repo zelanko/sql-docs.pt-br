@@ -1,5 +1,6 @@
 ---
 title: Formas canônicas e restrições de padrões | Microsoft Docs
+description: Saiba como evitar problemas que ocorrem quando a representação canônica de tipos de valores primitivos não está em conformidade com as restrições de padrão de uma faceta de padrão XSD.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a3720cfa4ee72df832b77ad4cab08013ddc8e0c7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1e6042ae1a63b61cd47fa42470c0707877625c5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775622"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formas canônicas e restrições de padrões
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A faceta de padrão XSD permite restringir o espaço léxico de tipos simples. Quando uma restrição de padrão é colocada em um tipo para o qual há mais de uma representação léxica possível, alguns valores podem provocar comportamento inesperado na validação.  
   
  Esse comportamento ocorre porque representações léxicas desses valores não são armazenados no banco de dados. Portanto os valores são convertidos em suas representações canônicas quando serializados como saída. Se um documento contiver um valor cuja forma canônica não está em conformidade com a restrição de padrão de seu tipo, o documento será rejeitado se um usuário tentar reinseri-lo.  

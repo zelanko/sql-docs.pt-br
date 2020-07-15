@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558435"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892330"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o cluster do SLES para o Grupo de Disponibilidade do SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este guia fornece instruções para criar um cluster de três nós para o SQL Server no SLES (SUSE Linux Enterprise Server) 12 SP2. Para alta disponibilidade, um grupo de disponibilidade em Linux exige três nós – consulte [Alta disponibilidade e proteção de dados para configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering baseia-se no [HAE (Extensão de Alta Disponibilidade)](https://www.suse.com/products/highavailability) do SUSE criado com base no [Pacemaker](https://clusterlabs.org/). 
 
@@ -28,6 +28,7 @@ Para obter mais informações sobre configuração de cluster, opções do agent
 >[!NOTE]
 >Neste ponto, a integração do SQL Server com o Pacemaker em Linux não está tão acoplada quanto a do WSFC em Windows. O serviço SQL Server em Linux não reconhece clusters. O Pacemaker controla toda a orquestração dos recursos de cluster, incluindo o recurso de grupo de disponibilidade. No Linux, você não deve confiar em DMVs (exibições de gerenciamento dinâmico) do Grupo de Disponibilidade Always On que fornecem informações de cluster como sys.dm_hadr_cluster. Além disso, o nome da rede virtual é específico do WSFC; não há equivalente ao mesmo no Pacemaker. Você ainda poderá criar um ouvinte para usá-lo para reconexão transparente após o failover, mas será necessário registrar manualmente o nome do ouvinte no servidor DNS com o IP usado para criar o recurso de IP virtual (conforme explicado nas seções a seguir).
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>Roteiro
 
@@ -313,8 +314,8 @@ A restrição de colocalização tem uma restrição de ordenação implícita. 
 1. O usuário emite a migração do recurso para o mestre do grupo de disponibilidade de node1 para node2.
 2. O recurso de IP virtual é interrompido no nó 1.
 3. O recurso de IP virtual é iniciado no nó 2. Neste ponto, o endereço IP aponta temporariamente para o nó 2, enquanto o nó 2 ainda é um secundário de pré-failover. 
-4. O mestre do grupo de disponibilidade no nó 1 é rebaixado a servidor subordinado.
-5. O servidor subordinado do grupo de disponibilidade no nó 2 é promovido a mestre. 
+4. O mestre do grupo de disponibilidade no nó 1 é rebaixado.
+5. O grupo de disponibilidade no nó 2 é promovido a mestre. 
 
 Para impedir que o endereço IP aponte temporariamente para o nó com o secundário de pré-failover, adicione uma restrição de ordenação. Para adicionar uma restrição de ordenação, execute o comando a seguir em um nó: 
 

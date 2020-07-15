@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557921"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882060"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenção e solução de problemas do Conector do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Informações complementares sobre o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são fornecidos neste tópico. Para obter mais informações sobre o conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41; (Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) e [Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -37,14 +37,14 @@ ms.locfileid: "75557921"
   
  Eis o modo como isso seria feito para TDE:  
   
--   **No PowerShell:** crie uma chave assimétrica (com um nome diferente da sua chave assimétrica de TDE atual) no Cofre de Chaves.  
+-   **No PowerShell:** crie uma chave assimétrica (com um nome diferente da sua chave assimétrica de TDE atual) no Key Vault.  
   
     ```powershell  
     Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou sqlcmd.exe:** Use as instruções a seguir, conforme mostrado na etapa 3, seção 3.  
+-   **Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou sqlcmd.exe:** use as instruções a seguir, conforme mostrado na etapa 3, seção 3.  
   
      Importe a nova chave assimétrica.  
   
@@ -153,7 +153,7 @@ Resumindo, estas são as etapas:
 * Conceder permissões para a entidade de serviço do SQL Server usar esse novo cofre.  
 * Modificar a credencial do SQL Server usada pelo Mecanismo de Banco de Dados para refletir o nome do novo cofre (se necessário).  
   
-Backups de chaves podem ser restaurados em regiões do Azure, desde que eles permaneçam na mesma região geográfica ou nuvem nacional: EUA, Canadá, Japão, Austrália, Índia, APAC, Europa, Brasil, China, Governo dos EUA ou Alemanha.  
+Os backups de chaves podem ser restaurados em todas as regiões do Azure, contanto que permaneçam na mesma região geográfica ou nuvem nacional: Alemanha, APAC, Austrália, Brasil, Canadá, China, EUA, Europa, Governo dos EUA, Índia ou Japão.  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Perguntas frequentes  
@@ -167,7 +167,7 @@ Backups de chaves podem ser restaurados em regiões do Azure, desde que eles per
   
 ### <a name="on-configuring-ssnoversion"></a>Em Configurando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Quais são os pontos de extremidade que o Conector do SQL Server precisa acessar?** O Conector se comunica com dois pontos de extremidade que precisam ser incluídos na lista de permissões. A única porta necessária para comunicação de saída a esses outros serviços é 443 para Https:
+**Quais são os pontos de extremidade que o Conector do SQL Server precisa acessar?** O Conector se comunica com dois pontos de extremidade que precisam ser permitidos. A única porta necessária para comunicação de saída a esses outros serviços é 443 para Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 
@@ -206,7 +206,7 @@ Para saber mais sobre o Active Directory, leia [Como a assinatura do Azure está
 ##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explicações de Código de Erro do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Códigos de erro do provedor:**  
   
-Código do erro  |Símbolo  |DESCRIÇÃO    
+Código do erro  |Símbolo  |Descrição    
 ---------|---------|---------  
 0 | scp_err_Success | Êxito na operação.    
 1 | scp_err_Failure | A operação falhou.    
@@ -256,7 +256,7 @@ Se você não vir o código de erro nesta tabela, aqui estão algumas outras raz
   
 -   Se você receber um erro “Não é possível carregar a biblioteca”, verifique se você tem a versão apropriada do Visual Studio C++ Redistributable instalada com base na versão do SQL Server que está sendo executada. A tabela abaixo especifica qual versão será instalada por meio do Centro de Download da Microsoft.   
 
-O log de eventos do Windows também registra em log os erros associados ao Conector do SQL Server, que pode ajudar com um contexto adicional sobre o motivo real do erro. A origem no Log de Eventos do Aplicativo do Windows será "Conector do SQL Server para Microsoft Azure Key Vault".
+O log de eventos do Windows também registra em log os erros associados ao Conector do SQL Server, que podem ajudar oferecendo um contexto adicional sobre o motivo real do erro. A origem no Log de Eventos do Aplicativo do Windows será "Conector do SQL Server para Microsoft Azure Key Vault".
   
 Versão do SQL Server  |Link de instalação redistribuível    
 ---------|--------- 

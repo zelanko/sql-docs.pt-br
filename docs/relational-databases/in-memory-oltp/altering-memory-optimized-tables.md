@@ -1,5 +1,6 @@
 ---
 title: Alterando tabelas com otimização de memória | Microsoft Docs
+description: Saiba como a instrução ALTER TABLE executa alterações de esquema e de índice em tabelas com otimização de memória. Combine as operações ADD, DROP e ALTER em uma só instrução.
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776071"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Alterações de esquema e de índice em tabelas com otimização de memória podem ser executadas usando a instrução ALTER TABLE. No SQL Server 2016 e no Banco de Dados SQL do Azure as operações ALTER TABLE em tabelas com otimização de memória são OFFLINE, o que significa que a tabela não está disponível para consulta enquanto a operação está em andamento. O aplicativo de banco de dados pode continuar em execução e qualquer operação que acessa a tabela será bloqueada até que o processo de alteração seja concluído. É possível combinar várias operações ADD, DROP ou ALTER em uma única instrução ALTER TABLE.
 

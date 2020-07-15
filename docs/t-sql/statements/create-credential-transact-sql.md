@@ -24,16 +24,16 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 94b2e39d9767a8f75660b533231e5fe4ac16d8de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5a83ae08c7392dcd26b22c304442c2872dc9213d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633251"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881923"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Cria uma credencial no nível do servidor. Uma credencial é um registro que contém as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. A maioria das credenciais inclui um usuário e uma senha do Windows. Por exemplo, salvar um backup de banco de dados em um local pode exigir que o SQL Server forneça credenciais especiais para acessar esse local. Para obter mais informações, consulte [Credenciais (Mecanismo de Banco de Dados)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
@@ -65,7 +65,7 @@ IDENTITY **='** _identity\_name_ **'** Especifica o nome da conta a ser usada ao
 
 SECRET **='** _secret_ **'** Especifica o segredo necessário para a autenticação de saída.
 
-Quando a credencial é usada para acessar o Azure Key Vault, o argumento **SECRET** de **CREATE CREDENTIAL** exige que a *\<Client ID>* (sem hifens) e o *\<Secret>* de uma **Entidade de Serviço** no Azure Active Directory sejam passados juntos sem um espaço entre eles. Veja o exemplo C a seguir. Quando a credencial usa uma assinatura de acesso compartilhado, o **SECRET** é o token de assinatura de acesso compartilhado. Veja o exemplo D abaixo. Confira informações sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure na [Lição 1: Criar uma política de acesso armazenado e uma Assinatura de Acesso Compartilhado em um contêiner do Azure](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
+Quando a credencial é usada para acessar o Azure Key Vault, o argumento **SECRET** de **CREATE CREDENTIAL** exige que *\<Client ID>* (sem hifens) e *\<Secret>* de uma **Entidade de Serviço** no Azure Active Directory sejam passados juntos sem um espaço entre eles. Veja o exemplo C a seguir. Quando a credencial usa uma assinatura de acesso compartilhado, o **SECRET** é o token de assinatura de acesso compartilhado. Veja o exemplo D abaixo. Confira informações sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure na [Lição 1: Criar uma política de acesso armazenado e uma Assinatura de Acesso Compartilhado em um contêiner do Azure](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
 
 FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* Especifica o nome de um *provedor EKM (Gerenciamento Extensível de Chaves)* . Para obter mais informações sobre o Gerenciamento de Chaves, consulte [EKM &#40;Gerenciamento Extensível de Chaves&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
@@ -117,7 +117,7 @@ ADD CREDENTIAL CredentialForEKM;
 O exemplo a seguir cria uma credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para uso ao acessar o Azure Key Vault com o **Conector do SQL Server para Microsoft Azure Key Vault**. Para obter um exemplo completo de como usar o Conector do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Gerenciamento extensível de chaves usando o Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).
 
 > [!IMPORTANT]
-> O argumento **IDENTITY** de **CREATE CREDENTIAL** requer o nome da chave de cofre. O argumento **SECRET** de **CREATE CREDENTIAL** exige que a *\<Client ID>* (sem hifens) e o *\<Secret>* sejam passados juntos sem um espaço entre eles.
+> O argumento **IDENTITY** de **CREATE CREDENTIAL** requer o nome da chave de cofre. O argumento **SECRET** de **CREATE CREDENTIAL** exige que *\<Client ID>* (sem hifens) e *\<Secret>* sejam passados juntos sem um espaço entre eles.
 
  No exemplo a seguir, a **ID do cliente** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) não tem hifens e foi inserida como a cadeia de caracteres `EF5C8E094D2A4A769998D93440D8115D` , e **Secret** é representado pela cadeia de caracteres *SECRET_DBEngine*.
 

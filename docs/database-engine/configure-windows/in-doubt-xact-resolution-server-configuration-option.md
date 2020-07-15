@@ -1,5 +1,6 @@
 ---
 title: Opção de configuração de servidor in-doubt xact resolution | Microsoft Docs
+description: Familiarize-se com a opção "in-doubt xact resolution". Veja como ela determina o resultado padrão para transações incertas no SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,23 +13,23 @@ helpviewer_keywords:
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 946f36bb379e5fde01f4232b01699405dd63aa8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772416"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>Opção de configuração de servidor in-doubt xact resolution
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use a opção **in-doubt xact resolution** para controlar o resultado padrão de transações que o MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) não pode resolver. A incapacidade de resolver transações pode estar relacionada ao tempo de desligamento do MS DTC ou a um resultado de transação desconhecido no momento da recuperação.  
   
  A tabela seguinte lista os possíveis valores de resultado para resolver uma transação incerta.  
   
-|Valor de resultado|DESCRIÇÃO|  
+|Valor de resultado|Descrição|  
 |-------------------|-----------------|  
 |0|Nenhuma suposição. Recuperação falhará se o MS DTC não puder resolver nenhuma transação incerta.|  
 |1|Suponha confirmação. Supõe-se que qualquer transação incerta de MS DTC esteja confirmada.|  

@@ -1,5 +1,6 @@
 ---
 title: Registros de auditoria do SQL Server | Microsoft Docs
+description: As auditorias do SQL Server são compostas por itens de ação de auditoria, que são registrados em um destino de auditoria. Verifique neste resumo os registros que podem ser enviados a um destino.
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8728bdea0ce2dd5650a1f3ea8adf224b58424b
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922190"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885319"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   O recurso Auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite examinar grupos de eventos e eventos individuais no nível do servidor e no nível do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Auditorias consistem em zero ou mais itens de ação de auditoria registrados em um *destino*de auditoria. O destino de auditoria pode ser um arquivo binário, o log de eventos de Aplicativo do Windows ou o log de eventos de Segurança do Windows. Os registros enviados ao destino podem conter os elementos descritos na tabela a seguir:  
   
-|Nome da coluna|DESCRIÇÃO|Type|Sempre disponível|  
+|Nome da coluna|Descrição|Type|Sempre disponível|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data/hora em que a ação auditável é acionada.|**datetime2**|Sim|  
 |**sequence_no**|Rastreia a sequência de registros dentro de um único registro de auditoria que é muito grande para se ajustar no buffer de gravação das auditorias.|**int**|Sim|  
-|**action_id**|ID da ação<br /><br /> Dica: para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres para um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|**varchar(4)**|Sim|  
+|**action_id**|ID da ação<br /><br /> Dica: Para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres em um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|**varchar(4)**|Sim|  
 |**succeeded**|Indica se a verificação de permissão da ação que aciona o evento de auditoria teve êxito ou falhou. |**bit**<br /> - 1 = êxito, <br />0 = Falha|Sim|  
 |**permission_bitmask**|Quando aplicável, mostra as permissões concedidas, negadas ou revogadas|**bigint**|Não|  
 |**is_column_permission**|Sinalizador que indica uma permissão no nível da coluna|**bit** <br />-1 = True, <br />0 = False|Não|  

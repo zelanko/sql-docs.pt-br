@@ -1,5 +1,6 @@
 ---
 title: Configurar a opção de configuração de servidor remote access | Microsoft Docs
+description: Saiba mais sobre as alternativas à opção remote access preterida. Veja outras fontes para solucionar problemas com conexões do SQL Server.
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785799"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurar a opção remote access de configuração de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico é sobre o recurso "Acesso Remoto". Essa opção de configuração é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obscuro para o recurso de comunicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foi preterido e talvez você não deva usá-lo. Se você chegou a esta página porque está com problemas para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte um dos tópicos a seguir:  
   

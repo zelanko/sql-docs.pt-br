@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 5c43d6da25aa93b146346ff45057edba9445ebab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a37a0b4c0f474323680213d3719ae85cff7a5ecc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628990"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895679"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81628990"
 
 Esse comando permite várias definições de configuração de banco de dados no nível do **banco de dados individual**. 
 
-As configurações a seguir têm suporte no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: 
+As seguintes configurações têm suporte no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], conforme indicado pelo pela linha **APLICA-SE A** de cada configuração na seção [Argumentos](#arguments): 
 
 - Limpar o cache de procedimento.
 - Definir o parâmetro MAXDOP para um valor arbitrário (1, 2,...) para o banco de dados primário com base naquilo que funciona melhor para esse banco de dados específico e definir um valor diferente (como 0) para todos os bancos de dados secundários usados (como para consultas de relatórios).
@@ -56,6 +56,7 @@ As configurações a seguir têm suporte no [!INCLUDE[sssdsfull](../../includes/
 - Habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`.
 - Habilitar ou desabilitar a coleta do último plano de execução real em [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Especifique o número de minutos que uma operação de índice retomável em pausa permanece assim antes de ser anulada automaticamente pelo mecanismo do SQL Server.
+- Habilitar ou desabilitar a espera por bloqueios de baixa prioridade para a atualização de estatísticas assíncrona
 
 Essa configuração está disponível apenas no Azure Synapse Analytics (anteriormente conhecido como SQL DW).
 - Definir o nível de compatibilidade de um banco de dados de usuário
@@ -101,6 +102,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
@@ -110,8 +112,8 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` foi alterado para `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` foi alterado para `BATCH_MODE_ADAPTIVE_JOINS`
 
-```syntaxsql
--- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+```SQL
+-- Syntax for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -121,7 +123,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
 }
 ```
 
@@ -397,7 +399,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Permite que você controle se um predicado da [RLS](../../relational-databases/security/row-level-security.md) (Segurança em Nível de Linha) é afetado pela cardinalidade do plano de execução da consulta geral do usuário. Quando ISOLATE_SECURITY_POLICY_CARDINALITY está ON, um predicado RLS não afeta a cardinalidade de um plano de execução. Por exemplo, considere uma tabela que contém 1 milhão linhas e um predicado RLS que restringe o resultado a 10 linhas para um usuário específico que emite a consulta. Com essa configuração com escopo de banco de dados definida como OFF, a estimativa de cardinalidade desse predicado será 10. Quando essa configuração com escopo do banco de dados estiver definida como ON, a otimização de consulta estimará 1 milhão linhas. É recomendável usar o valor padrão para a maioria das cargas de trabalho.
 
-DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 **APLICA-SE A**: Somente ao Azure Synapse Analytics (anteriormente conhecido como SQL DW)
 
@@ -405,13 +407,19 @@ Define Transact-SQL e os comportamentos de processamento de consulta para que se
 
 |Nível de Compatibilidade    |   Comentários|  
 |-----------------------|--------------|
-|**AUTO**| Padrão.  Seu valor é igual ao nível de compatibilidade com suporte mais recente.|
+|**AUTO**| Padrão.  Seu valor é atualizado automaticamente pelo mecanismo do Synapse Analytics.  O valor atual é 20.|
 |**10**| Exercita os comportamentos de processamento de consulta e Transact-SQL antes da introdução do suporte em nível de compatibilidade.|
 |**20**| Primeiro nível de compatibilidade que inclui os comportamentos de processamento de consulta e Transact-SQL restritos. |
 
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+
+**APLICA-SE A**: Banco de Dados SQL do Azure somente (o recurso está em versão prévia pública)
+
+Se a atualização de estatísticas assíncrona estiver habilitada, habilitar essa configuração fará com que a solicitação em segundo plano de atualização das estatísticas aguarde um bloqueio Sch-M em uma fila de baixa prioridade, a fim de evitar o bloqueio de outras sessões em cenários de alta simultaneidade. Para obter mais informações, confira [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
+
 ## <a name="permissions"></a><a name="Permissions"></a> Permissões
 
-Requer `ALTER ANY DATABASE SCOPE CONFIGURATION` no banco de dados. Essa permissão pode ser concedida por um usuário com a permissão CONTROL em um banco de dados.
+Requer `ALTER ANY DATABASE SCOPED CONFIGURATION` no banco de dados. Essa permissão pode ser concedida por um usuário com a permissão CONTROL em um banco de dados.
 
 ## <a name="general-remarks"></a>Comentários gerais
 
@@ -419,7 +427,7 @@ Embora seja possível configurar bancos de dados secundários para com definiç�
 
 Executar essa instrução limpa o cache de procedimento no banco de dados atual, que significa que todas as consultas precisarão ser recompiladas.
 
-Para consultas de nome de três partes, as configurações da conexão de banco de dados atual da consulta são cumpridas, já para os módulos SQL (como procedimentos, funções e gatilhos), que são compilados no contexto atual do banco de dados, são usadas as opções do banco de dados no qual eles residem.
+Para consultas de nome de três partes, as configurações da conexão de banco de dados atual da consulta são cumpridas, exceto para os módulos SQL (como procedimentos, funções e gatilhos) que são compilados em outro contexto de banco de dados e, portanto, usam as opções do banco de dados no qual residem. Da mesma forma, ao atualizar estatísticas de maneira assíncrona, a configuração de ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY para o banco de dados em que as estatísticas residem é cumprida.
 
 O evento `ALTER_DATABASE_SCOPED_CONFIGURATION` é adicionado como um evento DDL que pode ser usado para acionar um gatilho DDL e é um filho do grupo do gatilho `ALTER_DATABASE_EVENTS`.
 

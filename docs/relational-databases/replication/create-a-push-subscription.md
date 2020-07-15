@@ -1,5 +1,6 @@
 ---
 title: Criar uma assinatura push | Microsoft Docs
+description: Saiba como criar uma assinatura push no SQL Server usando SQL Server Management Studio, Transact-SQL ou Replication Management Objects.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70059298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773953"
 ---
 # <a name="create-a-push-subscription"></a>Criar uma assinatura push
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   Este tópico descreve como criar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects). Para saber mais sobre como criar uma assinatura push para um assinante não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Criar uma assinatura para um assinante não SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -74,7 +75,7 @@ Crie uma assinatura push no Publicador ou Assinante, usando o Assistente para No
   
 3. Clique com o botão direito do mouse na pasta **Assinaturas Locais** e depois selecione **Novas Assinaturas**.  
   
-4. Na página **Publicação** do Assistente para Nova Assinatura, selecione **\<Encontrar publicador do SQL Server>** ou **\<Encontrar publicador do Oracle>** na lista suspensa **Publicador**.  
+4. Na página **Publicação** do Assistente para Nova Assinatura, selecione **\<Find SQL Server Publisher>** ou **\<Find Oracle Publisher>** na lista suspensa **Editor**.  
   
 5. Conecte-se ao Publicador na caixa de diálogo **Conectar ao Servidor** .  
   

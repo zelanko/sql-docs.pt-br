@@ -1,23 +1,22 @@
 ---
 title: Usar widgets de Insight para monitorar servidores e bancos de dados
-titleSuffix: Azure Data Studio
 description: Saiba mais sobre widgets de insights no Azure Data Studio
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774599"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>Gerenciar servidores e bancos de dados com widgets de insights no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Gerenciar servidores e bancos de dados com widgets de insight no Azure Data Studio
 
 Os widgets de insight usam as consultas Transact-SQL (T-SQL) que você usa para monitorar servidores e bancos de dados e as transforma em visualizações repletas de insights.
 
@@ -36,7 +35,7 @@ Para começar a criar diferentes tipos de widgets de insights, confira os seguin
 
 ## <a name="sql-queries"></a>Consultas SQL
 
-O [!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta evitar a introdução de mais um idioma ou interface do usuário pesada, assim, ele tenta usar o T-SQL o máximo possível com a configuração de JSON mínima. A configuração de widgets de insight com o T-SQL aproveita as incontáveis fontes existentes de consultas T-SQL úteis que podem ser transformadas em widgets mais sofisticados.
+O Azure Data Studio tenta evitar a introdução de mais um idioma ou uma interface do usuário pesada, assim, ele tenta usar o T-SQL o máximo possível com a configuração de JSON mínima. A configuração de widgets de insight com o T-SQL aproveita as incontáveis fontes existentes de consultas T-SQL úteis que podem ser transformadas em widgets mais sofisticados.
 
 Os widgets de insight são compostos por uma ou duas consultas T-SQL:
 * A *consulta do widget de insight* é obrigatória e é a consulta que retorna os dados que aparecem no widget.
@@ -44,7 +43,7 @@ Os widgets de insight são compostos por uma ou duas consultas T-SQL:
 
 Uma consulta do widget de insight define um conjunto de dados que renderiza uma conta, um quadro ou um gráfico. A consulta de detalhes de insights é usada para listar informações relevantes de detalhes de insight em um formato tabular no painel de detalhes do insight. 
 
-O [!INCLUDE[name-sos](../includes/name-sos-short.md)] executa consultas do widget de insight e mapeia o conjunto de resultados da consulta para o conjunto de dados do gráfico e então o renderiza. Quando os usuários abrem os detalhes de um insight, ele executa a consulta de detalhes do insight e imprime o resultado em um modo de exibição de grade dentro da caixa de diálogo.
+O Azure Data Studio executa consultas do widget de insight e mapeia o conjunto de resultados da consulta para o conjunto de dados do gráfico e então o renderiza. Quando os usuários abrem os detalhes de um insight, ele executa a consulta de detalhes do insight e imprime o resultado em um modo de exibição de grade dentro da caixa de diálogo.
 
 A ideia básica é escrever uma consulta T-SQL de forma que possa ser usada como um conjunto de dados de um widget de contagem, quadro e gráfico. 
 

@@ -24,20 +24,20 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181087"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834667"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Executa operações de inserção, atualização ou exclusão em uma tabela de destino usando os resultados de uma união com uma tabela de origem. Por exemplo, sincronize duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela.  
   
-**Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir ou atualizando uma linha se ela tiver correspondência. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, melhore o desempenho e a escalabilidade com as instruções básicas INSERT, UPDATE e DELETE. Por exemplo:   
+**Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir ou atualizando uma linha se ela tiver correspondência. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, melhore o desempenho e a escalabilidade com as instruções básicas INSERT, UPDATE e DELETE. Por exemplo:  
   
 ```sql
 INSERT tbl_A (col, col2)  
@@ -78,41 +78,12 @@ MERGE
     { [ <table_hint_limited> [ ,...n ] ]  
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
-  
-<table_source> ::=
-{  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
-        [ WITH ( table_hint [ [ , ]...n ] ) ]
-  | rowset_function [ [ AS ] table_alias ]
-        [ ( bulk_column_alias [ ,...n ] ) ]
-  | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
-  | <joined_table>
-  | <pivoted_table>
-  | <unpivoted_table>
-}  
-  
+
 <merge_search_condition> ::=  
     <search_condition>  
   
 <merge_matched>::=  
     { UPDATE SET <set_clause> | DELETE }  
-  
-<set_clause>::=  
-SET  
-  { column_name = { expression | DEFAULT | NULL }  
-  | { udt_column_name.{ { property_name = expression  
-                        | field_name = expression }  
-                        | method_name ( argument [ ,...n ] ) }  
-    }  
-  | column_name { .WRITE ( expression , @Offset , @Length ) }  
-  | @variable = expression  
-  | @variable = column = expression  
-  | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
@@ -122,58 +93,7 @@ SET
 }  
   
 <clause_search_condition> ::=  
-    <search_condition>  
-  
-<search condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-
-<search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> )
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
-[ ,...n ]  
-
-<predicate> ::=
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
-    | string_expression [ NOT ] LIKE string_expression
-  [ ESCAPE 'escape_character' ]
-    | expression [ NOT ] BETWEEN expression AND expression
-    | expression IS [ NOT ] NULL
-    | CONTAINS
-  ( { column | * } , '< contains_search_condition >' )
-    | FREETEXT ( { column | * } , 'freetext_string' )
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
-  { ALL | SOME | ANY} ( subquery )
-    | EXISTS ( subquery ) }
-
-<graph_search_pattern> ::=
-    { <node_alias> {
-                      { <-( <edge_alias> )- }
-                    | { -( <edge_alias> )-> }
-                    <node_alias>
-                   }
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
-
-<output_clause>::=  
-{  
-    [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
-        [ (column_list) ] ]  
-    [ OUTPUT <dml_select_list> ]  
-}  
-  
-<dml_select_list>::=  
-    { <column_name> | scalar_expression }
-        [ [AS] column_alias_identifier ] [ ,...n ]  
-  
-<column_name> ::=  
-    { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
+    <search_condition> 
 ```  
   
 ## <a name="arguments"></a>Argumentos
@@ -205,7 +125,7 @@ Se *target_table* for uma exibição, qualquer ação com ela deverá atender à
 Um nome alternativo para fazer referência a uma tabela.  
   
 USING \<table_source>  
-Especifica a fonte de dados que é compatível com as linhas de dados em *target_table* com base em \<merge_search condition>. O resultado dessa correspondência dita as ações a serem tomadas pelas cláusulas WHEN da instrução MERGE. \<table_source> pode ser uma tabela remota ou uma tabela derivada que acessa tabelas remotas.
+Especifica a fonte de dados que corresponde às linhas de dados em *target_table* com base em \<merge_search condition>. O resultado dessa correspondência dita as ações a serem tomadas pelas cláusulas WHEN da instrução MERGE. \<table_source> pode ser uma tabela remota ou uma tabela derivada que acessa tabelas remotas.
   
 \<table_source> pode ser uma tabela derivada que usa o [construtor de valor de tabela](../../t-sql/queries/table-value-constructor-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] para construir uma tabela especificando várias linhas.  
   
@@ -220,15 +140,15 @@ Especifica as condições nas quais \<table_source> se une a *target_table* para
 WHEN MATCHED THEN \<merge_matched>  
 Especifica que todas as linhas de *target_table, que correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer condição de pesquisa adicional, são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
   
-A instrução MERGE pode ter, no máximo, duas cláusulas WHEN MATCHED. Se duas cláusulas forem especificadas, a primeira deverá ser acompanhada de uma cláusula AND \<search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN MATCHED será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN MATCHED, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Quando UPDATE for especificada na cláusula \<merge_matched> e mais de uma linha de \<table_source> corresponder a uma linha em *target_table* com base em \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. A instrução MERGE não pode atualizar a mesma linha mais de uma vez, nem atualizar e excluir a mesma linha.  
+A instrução MERGE pode ter, no máximo, duas cláusulas WHEN MATCHED. Se duas cláusulas forem especificadas, a primeira deverá ser acompanhada de uma cláusula AND \<search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN MATCHED será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN MATCHED, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Quando UPDATE for especificado na cláusula \<merge_matched> e mais de uma linha de \<table_source> corresponder a uma linha em *target_table* com base em \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. A instrução MERGE não pode atualizar a mesma linha mais de uma vez, nem atualizar e excluir a mesma linha.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
 Especifica que uma linha é inserida em *target_table* para cada linha retornada por \<table_source> ON \<merge_search_condition> que não corresponde a uma linha em *target_table*, mas atende a um condição de pesquisa adicional, se houver. Os valores a serem inseridos são especificados pela cláusula \<merge_not_matched>. A instrução MERGE só pode ter uma cláusula WHEN NOT MATCHED [ BY TARGET ].
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
-Especifica que todas as linhas de *target_table que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer condição de pesquisa adicional são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
+Especifica que todas as linhas de *target_table, que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e que atendem a qualquer condição de pesquisa adicional, são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
   
-A instrução MERGE pode ter, no máximo, duas cláusulas WHEN NOT MATCHED BY SOURCE. Se forem especificadas duas cláusulas, a primeira deverá ser acompanhada por uma cláusula AND \<clause_search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN NOT MATCHED BY SOURCE será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN NOT MATCHED BY SOURCE, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Somente as colunas da tabela de destino podem ser referenciadas na \<clause_search_condition>.  
+A instrução MERGE pode ter, no máximo, duas cláusulas WHEN NOT MATCHED BY SOURCE. Se duas cláusulas forem especificadas, então a primeira deverá ser acompanhada de uma cláusula AND \<clause_search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN NOT MATCHED BY SOURCE será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN NOT MATCHED BY SOURCE, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Somente as colunas da tabela de destino podem ser referenciadas em \<clause_search_condition>.  
   
 Quando nenhuma linha é retornada por \<table_source>, não é possível acessar as colunas na tabela de origem. Se a ação de atualização ou exclusão especificada na cláusula \<merge_matched> referenciar colunas na tabela de origem, o erro 207 (Nome de coluna inválido) será retornado. Por exemplo, a cláusula `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` pode fazer a instrução falhar porque não é possível acessar `Col1` na tabela de origem.  
   
@@ -255,7 +175,7 @@ OPTION ( \<query_hint> [ ,...n ] )
 Especifica que dicas do otimizador são usadas para personalizar o modo como o Mecanismo de Banco de Dados processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 \<merge_matched>  
-Especifica a ação de atualização ou exclusão que é aplicada a todas as linhas de *target_table* que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer condição de pesquisa adicional.  
+Especifica a ação de atualização ou exclusão aplicada a todas as linhas de *target_table* que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e que atendem a qualquer condição de pesquisa adicional.  
   
 UPDATE SET \<set_clause>  
 Especifica a lista de nomes de colunas ou de variáveis a serem atualizados na tabela de destino e os valores com os quais eles devem ser atualizados.  
@@ -279,7 +199,7 @@ Força a linha inserida a conter os valores padrão definidos para cada coluna.
   
 Para obter mais informações sobre essa cláusula, veja [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
-\<search condition>  
+\<search_condition>  
 Especifica os critérios de pesquisa para especificar \<merge_search_condition> ou \<clause_search_condition>. Para obter mais informações sobre os argumentos para essa cláusula, veja [Condição de pesquisa &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
 
 \<graph search pattern>  

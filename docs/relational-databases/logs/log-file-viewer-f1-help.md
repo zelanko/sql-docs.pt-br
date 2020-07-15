@@ -1,5 +1,6 @@
 ---
 title: Ajuda F1 do Visualizador do Arquivo de Log | Microsoft Docs
+description: Obtenha diretrizes da Ajuda F1 para colunas exibidas com frequência, permissões e outras opções para o Visualizador do Arquivo de Log no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caa7cb4a5a6f5e5f2d3b951f56c3fde0b30978c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784042"
 ---
 # <a name="log-file-viewer-f1-help"></a>Ajuda F1 do Visualizador do Arquivo de Log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O Visualizador do Arquivo de Log exibe informações de muitos componentes diferentes. Quando o Visualizador do Arquivo de Log estiver aberto, use o painel **Selecionar logs** para selecionar os logs que deseja exibir. Cada log exibe as colunas adequadas àquele tipo de log.  
   
  Os logs disponíveis dependem de como o Visualizador do Arquivo de Log é aberto. Para obter mais informações, consulte [Abrir o Visualizador do Arquivo de Log](../../relational-databases/logs/open-log-file-viewer.md).  
@@ -49,7 +50,7 @@ ms.locfileid: "68084091"
  Interrompe o carregamento das entradas do arquivo de log. Por exemplo, você poderá usar essa opção se um arquivo de log remoto ou offline demorar muito tempo para ser carregado e você desejar exibir apenas as entradas mais recentes.  
   
  **Resumo do arquivo de log**  
- Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o texto **Filtrar entradas do log, em que:**  \<critérios do filtro>.  
+ Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log em que:** \<filter criteria>.  
   
  **Detalhes da linha selecionada**  
  Selecione uma linha para exibir detalhes adicionais sobre a linha de evento selecionada na parte inferior da página. As colunas podem ser reordenadas arrastando-as para locais novos na grade. As colunas podem ser redimensionadas arrastando para a esquerda ou direta as barras separadoras de coluna no cabeçalho de grade. Clique duas vezes nas barras separadoras de coluna no cabeçalho da grade para dimensionar automaticamente a coluna para a largura do conteúdo.  

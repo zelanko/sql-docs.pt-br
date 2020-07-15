@@ -1,5 +1,6 @@
 ---
 title: Usar Repositório de Consultas após a atualização
+description: Este artigo explica o local de uso do repositório de consultas para estabelecer uma linha de base e alterar o nível de compatibilidade do banco de dados em uma atualização do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251545"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895396"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Alterar o nível de compatibilidade do banco de dados e usar o Repositório de Consultas
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, algumas alterações são habilitadas somente quando o [nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) é alterado. Isso foi feito por vários motivos:  
   

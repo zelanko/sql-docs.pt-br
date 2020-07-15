@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d1c21bafa36dc929ef5dbc5f6e57bce27cc791b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762015"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Altera um Grupo de Disponibilidade AlwaysOn existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A maioria dos argumentos ALTER AVAILABILITY GROUP só têm suporte na réplica primária atual. Entretanto, os argumentos JOIN, FAILOVER e FORCE_FAILOVER_ALLOW_DATA_LOSS só têm suporte na réplica secundária.  
   

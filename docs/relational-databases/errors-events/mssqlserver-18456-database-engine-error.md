@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
+description: Uma tentativa de conexão é rejeitada devido a uma falha com uma senha ou um nome de usuário inválidos no SQL Server. Veja uma explicação do erro e as possíveis resoluções.
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3e1ad2ab6cda565e59268b063494c17941a81e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780634"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|18456|  
 |Origem do Evento|MSSQLSERVER|  

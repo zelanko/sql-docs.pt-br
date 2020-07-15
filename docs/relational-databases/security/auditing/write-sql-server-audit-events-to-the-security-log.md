@@ -1,5 +1,6 @@
 ---
 title: Escrever eventos de auditoria do SQL Server no log de segurança | Microsoft Docs
+description: Saiba como gravar eventos de auditoria do SQL Server no log de Segurança do Windows. Conheça as limitações e as restrições de uso desse log.
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095097"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884831"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 em um ambiente de alta segurança, o log de Segurança do Windows é o local apropriado para gravar eventos que registram o acesso a objetos. Outros locais de auditoria têm suporte, mas estão mais sujeitos a falsificações.  
   

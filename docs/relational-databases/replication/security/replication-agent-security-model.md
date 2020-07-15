@@ -1,5 +1,6 @@
 ---
 title: Modelo de segurança do agente de replicação | Microsoft Docs
+description: No SQL Server, o modelo de segurança do agente de replicação permite um controle refinado das contas nas quais os agentes de replicação executam e efetuam conexões.
 ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768474"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882073"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O modelo de segurança do agente de replicação proporciona um controle refinado nas contas sob as quais os agentes de replicação executam e fazem conexões: uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, confira [Controle de acesso e identidade para replicação](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  O modelo de segurança do agente de replicação permite um controle refinado das contas nas quais os agentes de replicação executam e efetuam conexões: Uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, confira [Controle de acesso e identidade para replicação](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
 O modelo de segurança do agente de replicação é um pouco diferente para instâncias gerenciadas do Banco de Dados SQL do Azure, pois não há contas do Windows sob as quais os agentes serão executados. Em vez disso, tudo deve ser feito por meio da autenticação do SQL Server. 
   
@@ -38,11 +39,11 @@ O modelo de segurança do agente de replicação é um pouco diferente para inst
   
  Os agentes de replicação, como todos os executáveis, são executados sob o contexto de uma conta do Windows. Os agentes fazem conexões de Segurança Integrada do Windows usando essa conta. A conta sob a qual o agente executa depende de como o agente é iniciado:  
   
--   Iniciando o agente de um trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, o padrão: quando um trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é usado para iniciar um agente de replicação, o agente executa sob o contexto de uma conta que é especificada quando a replicação é configurada. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e replicação, consulte a seção "Segurança do Agente sob SQL Server Agent", mais adiante nesse tópico. Para obter informações sobre as permissões necessárias para a conta na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é executado, consulte [Configurar o SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
+-   Iniciando o agente de um trabalho do Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o padrão: quando um trabalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é usado para iniciar um agente de replicação, o agente executa sob o contexto de uma conta que é especificada quando a replicação é configurada. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e replicação, consulte a seção "Segurança do Agente sob SQL Server Agent", mais adiante nesse tópico. Para obter informações sobre as permissões necessárias para a conta na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é executado, consulte [Configurar o SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
--   Iniciando o agente de uma linha de comando MS-DOS, diretamente ou através de um script: o agente executa sob o contexto da conta do usuário que estiver executando o agente na linha de comando.  
+-   Iniciando o agente de uma linha de comando do MS-DOS, seja diretamente ou por meio de um script: O agente é executado no contexto da conta do usuário que está executando o agente na linha de comando.  
   
--   Iniciando o agente de um aplicativo que usa o RMO (Replication Management Objects) ou um controle ActiveX: o agente executa sob o contexto do aplicativo que estiver chamando o RMO ou o controle ActiveX.  
+-   Iniciando o agente de um aplicativo que usa objetos RMO ( Replication Management Objects) ou um controle ActiveX: O agente é executado no contexto do aplicativo que está chamando o RMO ou o controle ActiveX.  
   
     > [!NOTE]  
     >  Os controles ActiveX são preteridos.  
@@ -76,13 +77,13 @@ O modelo de segurança do agente de replicação é um pouco diferente para inst
 |Merge Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
 |Merge Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |Distribution Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
-|Distribution Agent para assinaturas pull|**\<Publicador>-\<PublicationDatabase>-\<Publicação>-\<Assinante>-\<SubscriptionDatabase>-\<GUID>**|  
+|Distribution Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|  
 |Distribution Agent para assinaturas push para Assinantes não SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |Queue Reader Agent|**[\<Distributor>].\<integer>**|  
   
- \*Para assinaturas push de publicações Oracle, o nome do trabalho é **\<Publisher>-\<Publisher**> em vez de **\<Publisher>-\<PublicationDatabase>** .  
+ \*Para assinaturas push em publicações Oracle, o nome do trabalho é **\<Publisher>-\<Publisher**> em vez de **\<Publisher>-\<PublicationDatabase>** .  
   
- \*\*Para assinaturas pull de publicações Oracle, o nome do trabalho é **\<Publisher>-\<DistributionDatabase**> em vez de **\<Publisher>-\<PublicationDatabase>** .  
+ \*\*Para assinaturas pull em publicações Oracle, o nome do trabalho é **\<Publisher>-\<DistributionDatabase**> em vez de **\<Publisher>-\<PublicationDatabase>** .  
   
  Ao configurar a replicação, você especifica as contas sob as quais os agentes devem executar. Porém, todas as etapas do trabalho executam sob o contexto de segurança de um *proxy*; portanto, a replicação realiza internamente os seguintes mapeamentos para as contas de agentes que você especificar:  
   

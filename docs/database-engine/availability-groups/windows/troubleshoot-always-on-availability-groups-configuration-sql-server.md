@@ -1,6 +1,6 @@
 ---
 title: Problemas comuns e resoluções com grupos de disponibilidade
-description: Saiba como identificar e resolver problemas comuns com o grupos de disponibilidade Always On no SQL Server.
+description: Solucione problemas típicos com a configuração de instâncias de servidor para grupos de disponibilidade Always On no SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068ccbd9e7f4d94ebba52ffc824efb70b9623f06
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5e4972b2e6207a2ffcd33be6f0a95a848d8d8bdc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925340"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882413"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico fornece informações para ajudar a solucionar problemas típicos ao configurar instâncias de servidor para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Os problemas de configuração típicos incluem: o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está desabilitado, as contas estão configuradas incorretamente, o ponto de extremidade de espelhamento de banco de dados não existe, o ponto de extremidade está inacessível (Erro 1418 do SQL Server), o acesso à rede não existe e falha no comando de junção de banco de dados (Erro 35250 do SQL Server).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "82925340"
   
  **Neste tópico:**  
   
-|Seção|DESCRIÇÃO|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |[Os grupos de disponibilidade AlwaysOn não estão habilitados](#IsHadrEnabled)|Se uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não estiver habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a instância não dará suporte à criação de grupo de disponibilidade e não poderá hospedar nenhuma réplica de disponibilidade.|  
 |[Contas](#Accounts)|Discute os requisitos para configurar corretamente as contas nas quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será executado.|  
@@ -163,7 +163,7 @@ ms.locfileid: "82925340"
   
 -   [Cluster de failover Get-ClusterLog do cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

@@ -1,6 +1,6 @@
 ---
 title: Como uma testemunha afeta a disponibilidade do banco de dados
-description: Descreve como um espelhamento de banco de dados afeta o quorum e a disponibilidade do banco de dados.
+description: Saiba como o espelhamento de banco de dados afeta o quorum e a disponibilidade do banco de dados. O quorum assegura que um banco de dados tem a propriedade de apenas um parceiro de cada vez.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c28e70d2f66dffc00ff2ac9138f97dc8d0e08991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789660"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Como uma testemunha afeta a disponibilidade do banco de dados ( Espelhamento de banco de dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum* . Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
   
  Se uma determinada instância do servidor for desconectada da sessão de espelhamento, aquela instância perderá o quorum. Se nenhuma instância do servidor estiver conectada, a sessão perderá quorum e o banco de dados ficará indisponível. Há três tipos possíveis de quorum:  

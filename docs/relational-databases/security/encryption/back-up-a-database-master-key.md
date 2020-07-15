@@ -1,5 +1,6 @@
 ---
 title: Fazer backup de uma chave mestra de banco de dados | Microsoft Docs
+description: Saiba como fazer backup de uma chave mestra do banco de dados no SQL Server usando Transact-SQL. Essa chave essencial criptografa outras chaves e certificados.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957493"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892434"
 ---
 # <a name="back-up-a-database-master-key"></a>Fazer backup da chave mestra de um banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como fazer o backup de uma chave mestra de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A chave mestra de banco de dados é usada para criptografar outras chaves e certificados dentro de um banco de dados. Se ela for excluída ou estiver corrompida, é possível que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não consiga descriptografar essas chaves e os dados criptografados com elas poderão ser efetivamente perdidos. Por esta razão, faça backup da chave mestra de banco de dados e armazene o backup em um local externo seguro.  
   
 ## <a name="before-you-begin"></a>Antes de começar  

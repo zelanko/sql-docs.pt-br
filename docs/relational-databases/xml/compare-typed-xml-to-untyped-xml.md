@@ -1,5 +1,6 @@
 ---
 title: Comparar XML tipado com XML não tipado | Microsoft Docs
+description: Saiba mais sobre as diferenças entre XML tipado e não tipado.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775556"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   É possível criar variáveis, parâmetros e colunas do tipo **xml** . Opcionalmente, é possível associar uma coleção de esquemas XML a uma variável, parâmetro ou coluna de tipo **xml** . Nesse caso, a instância do tipo de dados **xml** é chamada *com tipo*. Caso contrário, a instância XML é chamada *sem-tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML bem formado e o tipo de dados xml  
@@ -68,14 +69,14 @@ ms.locfileid: "80664679"
   
  Nos exemplos a seguir, uma convenção de nomenclatura de duas partes é usada para especificar o nome da coleção de esquema XML. A primeira parte é o nome do esquema e a segunda parte é o nome da coleção de esquema XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemplo: Associando uma coleção de esquema com uma variável de tipo xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemplo: Associando uma coleção de esquemas com uma variável do tipo xml  
  O exemplo a seguir cria uma variável de tipo **xml** e associa uma coleção de esquema a ela. A coleção de esquema especificada no exemplo já está importada no banco de dados **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemplo: Especificando um esquema para uma coluna de tipo xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemplo: Especificando um esquema para uma coluna do tipo xml  
  O exemplo a seguir cria uma tabela com uma coluna de tipo **xml** e especifica um esquema para a coluna:  
   
 ```  
@@ -106,7 +107,7 @@ AS
   
  Na hierarquia de tipo de dados, o tipo de dados **xml** aparece abaixo dos tipos de dados **sql_variant** e definidos pelo usuário, mas acima de qualquer tipo interno.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemplo: Especificando facetas para restringir uma coluna xml com tipo  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemplo: Especificando facetas para restringir uma coluna xml tipada  
  Para colunas **xml** com tipo, é possível restringir a coluna para permitir que apenas elementos únicos de nível superior de cada instância sejam armazenados nela. Isso é feito especificando a faceta opcional `DOCUMENT` ao criar uma tabela, conforme mostrado no exemplo a seguir:  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: Serviço SQL Server Browser (Mecanismo de Banco de Dados e SSAS) | Microsoft Docs
+description: Saiba mais sobre o SQL Server Browser. Esse serviço escuta solicitações para recursos do SQL Server e fornece informações sobre as instâncias do SQL Server instaladas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57d41e12084ca4a9873abeaeb3275ee671ae45d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79375553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789747"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Serviço SQL Server Browser (Mecanismo de Banco de Dados e SSAS)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
   
 -   Navegando em uma lista de servidores disponíveis  
@@ -126,7 +127,7 @@ ms.locfileid: "79375553"
  As instâncias ocultas são instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte apenas a conexões de memória compartilhada. Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina o sinalizador de `HideInstance` para indicar que o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não deve responder com informações sobre essa instância de servidor.  
   
 ### <a name="using-a-firewall"></a>Usando um firewall  
- Para comunicar-se com o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor por trás de um firewall, abra a porta UDP 1434, além da porta TCP usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, 1433). Para obter informações sobre como trabalhar com um firewall, consulte "Como configurar um firewall para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Para comunicar-se com o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor por trás de um firewall, abra a porta UDP 1434, além da porta TCP usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, 1433). Para obter informações sobre como trabalhar com um firewall, veja "Como configurar um Firewall para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acesso" em Manuais Online [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)  

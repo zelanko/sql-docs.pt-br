@@ -1,5 +1,6 @@
 ---
 title: Monitorando o espelhamento de banco de dados (SQL Server) | Microsoft Docs
+description: Saiba mais sobre o Monitor de Espelhamento de Banco de Dados, os procedimentos armazenados do sistema e como funciona o monitoramento do espelhamento de banco de dados, incluindo o trabalho do Monitor de Espelhamento de Banco de Dados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8479b88d100f9687469ad615d0b92c50aedb6ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771825"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta seção apresenta o Monitor de Espelhamento de Banco de Dados e os procedimentos armazenados do sistema **sp_dbmmonitor** , explica como funciona o monitoramento de espelhamento de banco de dados (incluindo o **Trabalho de Monitor de Espelhamento de Banco de Dados)** e resume as informações sobre as sessões de espelhamento de banco de dados que podem ser monitoradas. Além disso, esta seção apresenta como definir limites de avisos para um conjunto de eventos de espelhamento de banco de dados predefinido e como configurar alertas em qualquer evento de espelhamento de banco de dados.  
   
  Você pode monitorar um banco de dados espelho durante uma sessão de espelhamento para verificar se e como os dados estão fluindo. Para definir e gerenciar o monitoramento de um ou mais dos bancos de dados espelhados em uma instância do servidor, você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados do sistema **sp_dbmmonitor** .  
@@ -83,7 +84,7 @@ ms.locfileid: "70212292"
   
      A tabela a seguir apresenta os procedimentos armazenados para administrar e usar o monitoramento de espelhamento de banco de dados independentemente do Monitor de Espelhamento de Banco de Dados.  
   
-    |Procedimento|DESCRIÇÃO|  
+    |Procedimento|Descrição|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Cria uma tarefa que atualiza periodicamente as informações de status para cada banco de dados espelho na instância do servidor.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Altera o valor de um parâmetro de monitoração de espelhamento de banco de dados.|  
@@ -131,7 +132,7 @@ ms.locfileid: "70212292"
      Administradores do sistema podem usar o procedimento armazenado do sistema **sp_dbmmonitorresults** para exibir e, opcionalmente, atualizar a tabela de status, caso não tenha sido atualizada nos 15 segundos anteriores. Esse procedimento chama o procedimento **sp_dbmmonitorupdate** e retorna uma ou mais linhas do histórico, dependendo da quantidade solicitada na chamada de procedimento. Para obter informações sobre o status em seu conjunto de resultados, veja [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Monitorando o status de espelhamento de banco de dados (por membros dbm_monitor)  
- Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (** _\<time>_ **)** e **Log espelhado (** _\<time>_ **)** na página **Status**.  
+ Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode verificar os horários nos rótulos **Log principal (** _\<time>_ **)** e **Log espelhado (** _\<time>_ **)** na página **Status**.  
   
  Membros da função de banco de dados fixa **dbm_monitor** dependem do **Trabalho de Monitor de Espelhamento de Banco de Dados** para atualizar a tabela de status em intervalos regulares. Se o trabalho não existir ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for interrompido, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão de espelhamento. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   

@@ -1,25 +1,24 @@
 ---
 title: Terminal integrado
-titleSuffix: Azure Data Studio
 description: Saiba mais sobre o terminal integrado no Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774594"
 ---
 # <a name="integrated-terminal"></a>Terminal Integrado
 
-No [!INCLUDE[name-sos](../includes/name-sos-short.md)], você pode abrir um terminal integrado inicialmente começando na raiz de seu workspace. Isso pode ser conveniente, pois você não precisa alternar janelas nem alterar o estado de um terminal existente para executar uma tarefa de linha de comando rápida.
+No Azure Data Studio, você pode abrir um terminal integrado inicialmente começando na raiz de seu workspace. Isso pode ser conveniente, pois você não precisa alternar janelas nem alterar o estado de um terminal existente para executar uma tarefa de linha de comando rápida.
 
 Para abrir o terminal:
 
@@ -30,7 +29,7 @@ Para abrir o terminal:
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> Você ainda pode abrir um shell externo com o comando do Explorer **Abrir no prompt de comando** (**Abrir no Terminal** no Mac ou no Linux) se preferir trabalhar fora do [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> Você ainda poderá abrir um shell externo com o comando do Explorer **Abrir no prompt de comando** (**Abrir no Terminal** no Mac ou no Linux) se preferir trabalhar fora do Azure Data Studio.
 
 ## <a name="managing-multiple-terminals"></a>Como gerenciar vários terminais
 
@@ -66,7 +65,7 @@ Configurar corretamente o Shell no Windows é uma questão de localizar o execut
 > Para ser usado como um terminal integrado, o executável do shell deve ser um aplicativo de console para que o `stdin/stdout/stderr` possa ser redirecionado.
 
 > [!TIP]
-> O shell de terminal integrado está sendo executado com as permissões de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Se você precisar executar um comando do shell com permissões elevadas (administrador) ou diferentes, poderá usar utilitários de plataforma como `runas.exe` em um terminal.
+> O shell de terminal integrado está sendo executado com as permissões do Azure Data Studio. Se você precisar executar um comando do shell com permissões elevadas (administrador) ou diferentes, poderá usar utilitários de plataforma como `runas.exe` em um terminal.
 
 ### <a name="shell-arguments"></a>Argumentos de Shell
 
@@ -149,5 +148,5 @@ As sessões do Terminal Integrado agora podem ser renomeadas usando o comando **
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Como forçar associações de teclas a passarem pelo terminal
 
-Embora o foco esteja no terminal integrado, muitas associações de teclas não funcionarão porque os pressionamentos de tecla são passados e consumidos pelo próprio terminal. A configuração `terminal.integrated.commandsToSkipShell` pode ser usada para contornar isso. Ela contém uma matriz de nomes de comando cujas associações de teclas ignoram o processamento pelo shell e, em vez disso, são processadas pelo sistema de associação de teclas [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Por padrão, isso inclui todas as associações de teclas de terminal, além de uma seleção de algumas associações de teclas usadas com frequência.
+Embora o foco esteja no terminal integrado, muitas associações de teclas não funcionarão porque os pressionamentos de tecla são passados e consumidos pelo próprio terminal. A configuração `terminal.integrated.commandsToSkipShell` pode ser usada para contornar isso. Ela contém uma matriz de nomes de comando cujas associações de teclas ignoram o processamento pelo shell e, em vez disso, são processadas pelo sistema de associação de teclas do Azure Data Studio. Por padrão, isso inclui todas as associações de teclas de terminal, além de uma seleção de algumas associações de teclas usadas com frequência.
 

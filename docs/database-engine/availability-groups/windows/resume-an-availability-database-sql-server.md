@@ -1,6 +1,6 @@
 ---
 title: Retomar um banco de dados do grupo de disponibilidade
-description: Etapas para retomar um banco de dados que foi colocado em pausa em um grupo de disponibilidade Always On usando o SSMS (SQL Server Management Studio), o T-SQL (Transact-SQL) ou o SQL PowerShell.
+description: Retome um banco de dados de disponibilidade suspenso nos grupos de disponibilidade Always On usando o SQL Server Management Studio, o Transact-SQL ou o PowerShell no SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e44e677210316a74f44d8300ad0e10d8feece9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822605"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893122"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Retomar um banco de dados de disponibilidade (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Você pode retomar um banco de dados de disponibilidade suspenso no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A retomada de um banco de dados suspenso coloca o banco de dados no estado SYNCHRONIZING. A retomada do banco de dados primário também retoma todos os bancos de dados secundários que foram suspensos devido à suspensão do banco de dados primário. Se um banco de dados secundário foi suspenso localmente, na instância de servidor que hospeda a réplica secundária, o banco de dados secundário deverá ser retomado localmente. Quando um determinado banco de dados secundário e o banco de dados primário correspondente estiverem no estado SYNCHRONIZING, a sincronização de dados é retomada no banco de dados secundário.  
   
 > [!NOTE]  

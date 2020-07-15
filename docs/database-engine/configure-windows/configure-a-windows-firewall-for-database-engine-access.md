@@ -1,5 +1,6 @@
 ---
 title: Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados | Microsoft Docs
+description: Saiba como configurar um Firewall do Windows para que os computadores cliente possam acessar uma instância do Mecanismo de Banco de Dados do SQL Server por meio do firewall.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784142"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
   Este tópico descreve como configurar um firewall de Windows para acesso ao Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Para acessar uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] através de um firewall, é necessário configurar o firewall no computador que estiver executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -96,6 +97,6 @@ ms.locfileid: "68012888"
 7.  Na caixa de diálogo **Nome**, digite um nome e uma descrição para essa regra, e clique em **Concluir**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Como: definir as configurações do Firewall (Banco de Dados SQL do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [Como: definir as configurações do firewall (Banco de Dados SQL do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

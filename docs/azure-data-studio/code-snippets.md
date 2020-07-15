@@ -1,27 +1,26 @@
 ---
 title: Criar snippets de código reutilizáveis
-titleSuffix: Azure Data Studio
 description: Saiba como criar e usar snippets de código do SQL no Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774689"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>Criar e usar snippets de código para criar scripts T-SQL (Transact-SQL) rapidamente no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Criar e usar snippets de código para criar scripts T-SQL (Transact-SQL) rapidamente no Azure Data Studio
 
-Os snippets de código do [!INCLUDE[name-sos](../includes/name-sos-short.md)] são modelos que facilitam a criação de bancos de dados e objetos de banco de dados. 
+Os snippets de código no Azure Data Studio são modelos que facilitam a criação de bancos de dados e objetos de banco de dados. 
 
-O [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece vários snippets T-SQL para ajudá-lo a gerar rapidamente a sintaxe correta. 
+O Azure Data Studio fornece vários snippets T-SQL para ajudar você a gerar rapidamente a sintaxe correta. 
 
 Snippets de código definidos pelo usuário também podem ser criados.
 
@@ -58,7 +57,7 @@ Você pode definir seus próprios snippets. Para abrir o arquivo de snippet SQL 
 1. Selecione **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua funcionalidade de snippet de código do Visual Studio Code e, portanto, este artigo aborda especificamente o uso de snippets SQL. Para obter informações mais detalhadas, confira [Como criar seus próprios snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) na documentação do Visual Studio Code. 
+   > O Azure Data Studio herda a funcionalidade de snippet de código do Visual Studio Code e, portanto, este artigo aborda especificamente o uso de snippets SQL. Para obter informações mais detalhadas, confira [Como criar seus próprios snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) na documentação do Visual Studio Code. 
 
    ![substituir campo de modelo](media/code-snippets/select-sql.png)
 

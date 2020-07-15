@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767124"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cria uma sessão de Eventos Estendidos que identifica a origem dos eventos, os destinos da sessão de evento e as opções da sessão de evento.
 
@@ -117,7 +117,7 @@ ADD EVENT [ *guid_do_módulo_de_evento* ]. *nome_do_pacote_de_evento*.*nome_do_e
 
 Eventos aparecem na exibição sys.dm_xe_objects como object_type “evento”.
 
-SET { *atributo_personalizável_de_evento*= \<valor> [ ,...*n*] } Permite atributos personalizáveis para o evento a ser definido. Os atributos personalizáveis são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *event_name*.
+SET { *event_customizable_attribute*= \<value> [ ,...*n*] } Permite que atributos personalizáveis para o evento sejam definidos. Os atributos personalizáveis são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *event_name*.
 
 ACTION ( { [*guid_do_módulo_de_evento*].*nome_do_pacote_de_evento*.*nome_da_ação* [ **,** ...*n*] }) A ação a ser associada à sessão de evento, onde:
 
@@ -153,7 +153,7 @@ ADD TARGET [*guid_do_módulo_de_evento*].*nome_do_pacote_de_evento*.*nome_do_des
 - *event_package_name* é o pacote que contém o objeto de ação.
 - *target_name* é o destino. Os destinos aparecem na exibição sys.dm_xe_objects como object_type ‘destino’.
 
-SET { *nome_do_parâmetro_de_destino*= \<valor> [, ...*n*] } Define um parâmetro de destino. Os parâmetros de destino são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *target_name*.
+SET { *target_parameter_name*= \<value> [, ...*n*] } Define um parâmetro de destino. Os parâmetros de destino são mostrados na exibição sys.dm_xe_object_columns como column_type 'personalizável' e object_name = *target_name*.
 
 > [!IMPORTANT]
 > Se você estiver usando o destino de buffer de anel, recomendamos definir o parâmetro de destino max_memory como 2.048 KB (kilobytes) para ajudar a evitar um possível truncamento de dados da saída XML. Para obter mais informações sobre como usar os diferentes tipos de destino, consulte [Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).

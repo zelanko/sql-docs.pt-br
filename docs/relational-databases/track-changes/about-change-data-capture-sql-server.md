@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d87d1a080fe85bd2be3805b113c5799667d47b0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889155"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!NOTE]
 > Agora o CDC é compatível com o SQL Server 2017 no Linux a partir do CU18 e o SQL Server 2019 no Linux.

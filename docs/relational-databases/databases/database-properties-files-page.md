@@ -1,5 +1,6 @@
 ---
 title: Propriedades do banco de dados (página Arquivos) | Microsoft Docs
+description: Descubra como exibir ou modificar as propriedades de um banco de dados e como criar um banco de dados no SQL Server Management Studio.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756182"
 ---
 # <a name="database-properties-files-page"></a>Propriedades do Banco de Dados (página Arquivos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use esta página para criar um novo banco de dados ou para exibir ou modificar as propriedades do banco de dados selecionado. Este tópico se aplica às **Propriedades do Banco de Dados (página Arquivos)** de bancos de dados existentes e ao **Novo Banco de Dados (página Geral)** .  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome do banco de dados**  
  Adicione ou exiba o nome do banco de dados.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68099615"
  Para adicionar arquivos (contêineres) a um grupo de arquivos de dados de Filestream, o FILESTREAM deve estar habilitado. Você pode habilitar o FILESTREAM usando a caixa de diálogo [Propriedades do Servidor (página Avançado)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Grupo de arquivos**  
- Selecione o grupo de arquivos do arquivo na lista. Por padrão, o grupo de arquivos é PRIMARY. É possível criar um novo grupo de arquivos selecionando **\<novo grupo de arquivos>** e inserindo informações sobre ele na caixa de diálogo **Novo grupo de arquivos**. Um novo grupo de arquivos também pode ser criado na página **Grupo de Arquivos** . Você não pode modificar o grupo de arquivos de um arquivo existente.  
+ Selecione o grupo de arquivos do arquivo na lista. Por padrão, o grupo de arquivos é PRIMARY. Você pode criar um grupo de arquivos selecionando **\<new filegroup>** e inserindo informações sobre ele na caixa de diálogo **Novo Grupo de Arquivos**. Um novo grupo de arquivos também pode ser criado na página **Grupo de Arquivos** . Você não pode modificar o grupo de arquivos de um arquivo existente.  
   
  Ao adicionar arquivos (contêineres) a um grupo de arquivos com otimização de memória, o campo de **Grupo de Arquivos** será preenchido com o nome do grupo de arquivos com otimização de memória do banco de dados.  
   

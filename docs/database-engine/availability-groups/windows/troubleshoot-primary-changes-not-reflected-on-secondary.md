@@ -1,6 +1,6 @@
 ---
 title: As alterações não são visíveis na réplica do grupo de disponibilidade secundário
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: Saiba como determinar por que as alterações em uma réplica primária não são refletidas na réplica secundária para um grupo de disponibilidade Always On.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243008"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888000"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determine por que as alterações da réplica primária não são refletidas na réplica secundária de um Grupo de Disponibilidade AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida. Esse caso presume que sua disponibilidade está com um estado de sincronização íntegro. Na maioria dos casos, esse comportamento se resolve após alguns minutos.  
   
  Se as alterações ainda não estiverem refletidas na réplica secundária depois de alguns minutos, poderá haver um gargalo no fluxo de trabalho de sincronização. O local do gargalo depende de se a réplica secundária está definida como confirmação síncrona ou confirmação assíncrona.  
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  Se o thread refazer estiver realmente atrasado, será necessário investigar a causa raiz da degradação do desempenho na réplica secundária. Se houver uma contenção de E/S com a carga de trabalho de relatório, você poderá usar o [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar os ciclos de CPU que são usados pela carga de trabalho de relatório para controlar indiretamente os ciclos de E/S executados, até certo ponto. Por exemplo, se sua carga de trabalho de relatório estiver consumindo 10% da CPU, mas a carga de trabalho estiver associada a E/S, você poderá usar o Resource Governor para limitar o uso de recursos de CPU a 5% a fim de limitar a carga de trabalho de leitura, minimizando o impacto na E/S.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Solução de problemas de desempenho no SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
+ [Solução de problemas de desempenho no SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
   
   

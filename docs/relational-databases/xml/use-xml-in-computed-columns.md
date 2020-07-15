@@ -1,5 +1,6 @@
 ---
 title: Usar XML em colunas computadas | Microsoft Docs
+description: Veja exemplos de como usar instâncias XML e colunas XML com colunas computadas no SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b11588e7f8a1e075b5091e73fe71879c7b035fd4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fcd9657ce64ef5be2cd1210eebb21f6b4e1d113c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775531"
 ---
 # <a name="use-xml-in-computed-columns"></a>Usar XML em colunas computadas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Instâncias XML ser exibidas como uma origem de uma coluna computada ou como um tipo de coluna computada. Os exemplos neste tópico mostram como usar XML com colunas computadas.  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>Criando colunas computadas de colunas XML  
@@ -86,7 +87,7 @@ FROM T
   
 ### <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Promover valores XML frequentemente usados com colunas computadas](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Descreve como usar promoção de propriedades com colunas computadas e tabelas de propriedades.|  
   

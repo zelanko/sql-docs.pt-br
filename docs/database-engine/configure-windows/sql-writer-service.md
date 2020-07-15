@@ -1,5 +1,6 @@
 ---
 title: Serviço Gravador do SQL | Microsoft Docs
+description: Saiba mais sobre o Serviço Gravador do SQL. Veja como ele fornece funcionalidades de backup e restauração adicionais no SQL Server por meio da estrutura do Serviço de Cópias de Sombra de Volume.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 940bdce1d104627850aed3532754429c5ceef050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764021"
 ---
 # <a name="sql-writer-service"></a>Serviço do gravador do SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O Serviço Gravador do SQL oferece funcionalidade adicional para fazer backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio da estrutura do Serviço de Cópias de Sombra de Volume.  
   
  O Serviço Gravador do SQL é instalado automaticamente. Deve estar em execução quando o aplicativo VSS (Volume Shadow Copy Service) pedir um backup ou uma restauração. Para configurar o serviço, use o miniaplicativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Windows Services. O Serviço Gravador do SQL é instalado em todos os sistemas operacionais.  

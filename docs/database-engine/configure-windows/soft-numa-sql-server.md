@@ -1,5 +1,6 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
+description: Saiba mais sobre o soft-NUMA no SQL Server 2014 SP2 e versões mais recentes. Veja como usar o soft-NUMA automático e como configurar manualmente o SQL Server para usar o soft-NUMA.
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789764"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Os processadores modernos têm vários núcleos por soquete. Cada soquete é representado, em geral, como um único nó NUMA. O mecanismo de banco de dados do SQL Server particiona diversas estruturas internas e particiona threads de serviço para cada nó NUMA.  Com processadores contendo 10 ou mais núcleos por soquete, o uso de software NUMA para dividir nós NUMA de hardware geralmente aumenta a escalabilidade e o desempenho. Antes do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, o soft-NUMA (NUMA baseado em software) exigia a edição do Registro para adicionar uma máscara de afinidade de configuração de nó e era configurado no nível do host e não por instância. Desde o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o soft-NUMA passou a ser configurado automaticamente no nível da instância do banco de dados quando o serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é iniciado.  
   

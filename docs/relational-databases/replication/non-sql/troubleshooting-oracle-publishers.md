@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a2bbbbc6bb18e3239091e0d2902bf65b85deec2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907962"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883216"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionando problemas de Publicadores Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico lista diversos problemas que poderiam surgir ao configurar e usar um Publicador Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>É gerado um erro relativo ao software de rede e de cliente Oracle  
@@ -67,9 +67,9 @@ ms.locfileid: "72907962"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>O Publicador Oracle está associado a outro Distribuidor  
  Um Publicador Oracle só pode estar associado a um Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se um Distribuidor diferente estiver associado ao Publicador Oracle, ele deve ser descartado antes que o outro Distribuidor possa ser usado. Se o Distribuidor não for descartado primeiro, você receberá uma das seguintes mensagens de erro:  
   
--   “Instância do servidor Oracle ' \<*OraclePublisherName*>' foi configurado anteriormente para usar '\<*SQLServerDistributorName*>' como Distribuidor. Para começar a usar '\<*NewSQLServerDistributorName*>' como Distribuidor, você deve remover a configuração de replicação atual na instância de servidor Oracle, o que excluirá todas as publicações nessa instância de servidor."  
+-   "A instância de servidor Oracle '\<*OraclePublisherName*>' foi configurada previamente para usar '\<*SQLServerDistributorName*>' como seu Distribuidor. Para começar a usar '\<*NewSQLServerDistributorName*>' como Distribuidor, você deve remover a configuração de replicação atual na instância de servidor Oracle, o que excluirá todas as publicações nessa instância de servidor."  
   
--   “Servidor Oracle '\<*OracleServerName*>' já está definido como publicador '\<*OraclePublisherName*>' no distribuidor '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '. Remova o publicador ou o sinônimo público ' *\<SynonymName>* ' para recriar.”  
+-   "O servidor Oracle '\<*OracleServerName*>' já está definido como publicador '\<*OraclePublisherName*>' no distribuidor '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '. Remova o editor ou o sinônimo público ' *\<SynonymName>* ' para recriar."  
   
  Quando um Publicador Oracle é descartado, os objetos de replicação no banco de dados Oracle são automaticamente limpos. No entanto, a limpeza manual dos objetos de replicação Oracle é necessária em alguns casos. Para limpar manualmente objetos de replicação Oracle criados por replicação:  
   
@@ -82,14 +82,14 @@ ms.locfileid: "72907962"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>É gerado o erro SQL Server 21663, relativo à falta de uma chave primária  
  Os artigos em publicações transacionais devem ter uma chave primária válida. Se não tiverem uma chave primária válida, você receberá a seguinte mensagem de erro ao tentar adicionar um artigo:  
   
- “Nenhuma chave primária válida foi encontrada para a tabela de origem [\<*TableOwner*>].[\<*TableName*>]”  
+ "Não foi encontrada nenhuma chave primária válida para a tabela de origem [\<*TableOwner*>].[\<*TableName*>]"  
   
  Para obter informações sobre requisitos para chaves primárias, consulte a seção "Índices e Restrições Exclusivos" no tópico [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>É gerado o erro SQL Server 21642, relativo a um logon de servidor vinculado duplicado  
  Quando um Publicador Oracle é configurado inicialmente, uma entrada de servidor vinculado é criada para a conexão entre o Publicador e o Distribuidor. O servidor vinculado tem o mesmo nome que o serviço TNS Oracle. Se você tentar criar um servidor vinculado com o mesmo nome, a seguinte mensagem de erro será mostrada:  
   
- "Os publicadores heterogêneos exigem um servidor vinculado. Um servidor vinculado chamado ' *\<LinkedServerName>* ' já existe. Remova o servidor vinculado ou escolha um nome de publicador diferente."  
+ "Os publicadores heterogêneos exigem um servidor vinculado. Já existe um servidor vinculado nomeado ' *\<LinkedServerName>* '. Remova o servidor vinculado ou escolha um nome de publicador diferente."  
   
  Esse erro pode ocorrer se você tentar criar o servidor vinculado diretamente ou se tiver previamente descartado a relação entre o Publicador Oracle e o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e estiver agora tentando reconfigurá-lo. Se receber esse erro ao tentar reconfigurar o Publicador, remova o servidor vinculado com [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   

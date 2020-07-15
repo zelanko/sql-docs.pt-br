@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1a3b5d1dfdf3a5e8556058cee750a4e2e08476a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e25f13cbfe2512b293224c5f35d0da7338006423
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896148"
 ---
 # <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Alterar o modo de disponibilidade de uma réplica dentro de um grupo de disponibilidade Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como alterar o modo de disponibilidade de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. O modo de disponibilidade é uma propriedade de réplica que controla se a réplica confirma de forma assíncrona ou síncrona. O*modo de confirmação assíncrona* maximiza o desempenho às custas da alta disponibilidade e dá suporte apenas ao failover manual forçado (com possível perda de dados), que costuma ser chamado de *failover forçado*. O*modo de confirmação síncrona* enfatiza a alta disponibilidade sobre o desempenho e, quando a réplica secundária é sincronizada, dá suporte ao failover manual e, opcionalmente, ao failover automático.  
     
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
@@ -51,27 +51,21 @@ Você deve estar conectado à instância do servidor que hospeda a réplica prim
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
   
-2.  Use a instrução [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , da seguinte maneira:  
+2.  Use a instrução [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md), como no seguinte exemplo:  
   
+     ```sql
      ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-  
-     WITH ( {  
-  
-     AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
-  
-     | FAILOVER_MODE = { AUTOMATIC | MANUAL }  
-  
-     } )  
-  
-     em que *group_name* é o nome do grupo de disponibilidade e *server_name* é o nome da instância do servidor que hospeda a réplica a ser modificada.  
+     WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT , FAILOVER_MODE = MANUAL );  
+     ```
+     
+     Em que *group_name* é o nome do grupo de disponibilidade e *server_name* é o nome da instância do servidor que hospeda a réplica a ser modificada.  
   
     > [!NOTE]  
-    >  FAILOVER_MODE = AUTOMATIC terá suporte apenas se você também especificar AVAILABILITY_MODE = SYNCHRONOUS_COMMIT.  
+    > `FAILOVER_MODE = AUTOMATIC` tem suporte apenas quando você também especifica `AVAILABILITY_MODE = SYNCHRONOUS_COMMIT`.  
   
      O exemplo a seguir, inserido na réplica primária do grupo de disponibilidade `AccountsAG` , altera os modos de disponibilidade e de failover para confirmação síncrona e failover automático, respectivamente, para a réplica hospedada pela instância de servidor `INSTANCE09` .  
   
-    ```  
-  
+    ```sql
     ALTER AVAILABILITY GROUP AccountsAG MODIFY REPLICA ON 'INSTANCE09'  
        WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);  
     ALTER AVAILABILITY GROUP AccountsAG MODIFY REPLICA ON 'INSTANCE09'  
@@ -87,13 +81,13 @@ Você deve estar conectado à instância do servidor que hospeda a réplica prim
   
      Por exemplo, o comando a seguir modifica a réplica `MyReplica` no grupo de disponibilidade `MyAg` para usar o modo de disponibilidade de confirmação síncrona e para oferecer suporte ao failover automático.  
   
-    ```  
+    ```powershell  
     Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o cmdlet **Get-Help** no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    > Para exibir a sintaxe de um cmdlet, use o cmdlet **Get-Help** no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   

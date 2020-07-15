@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb8847a7aaf7aaa9b21a64ed6736738da6df9dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882208"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Criar uma publicação de um banco de dados Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como criar uma publicação no a partir de um banco de dados Oracle no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -45,7 +45,7 @@ ms.locfileid: "72908595"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Crie uma publicação de instantâneo ou transacional a partir de um banco de dados Oracle com o Assistente de Nova Publicação.  
   
- A primeira vez que você cria uma publicação de um banco de dados Oracle, você deve identificar o Editor Oracle no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (não é necessário fazer isso em publicações subsequentes do mesmo banco de dados). A identificação do publicador Oracle pode ser realizada usando o Assistente para Nova Publicação ou a caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** . Este tópico mostra a caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** .  
+ A primeira vez que você cria uma publicação de um banco de dados Oracle, você deve identificar o Editor Oracle no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (não é necessário fazer isso em publicações subsequentes do mesmo banco de dados). A identificação do Editor Oracle pode ser feita no Assistente para Nova Publicação ou na caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** ; este tópico mostra a caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** .  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>Para identificar o Editor Oracle no Distribuidor do SQL Server  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72908595"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e em seguida clique em **Propriedades do Distribuidor**.  
   
-3.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** , clique em **Adicionar** e, em seguida, em **Adicionar Publicador Oracle**.  
+3.  Na página **Editores** da caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** , clique em **Adicionar** e em **Adicionar Editor Oracle**.  
   
 4.  Na caixa de diálogo **Conectar ao Servidor** , clique no botão **Opções** .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72908595"
   
      A opção **Completa** é projetada para fornecer publicações transacionais e de instantâneo com o conjunto completo de recursos com suporte para publicações Oracle. A opção **Gateway** fornece otimizações de projeto específicas para aprimorar o desempenho de casos em que a replicação serve como um gateway entre sistemas. A opção **Gateway** não poderá ser usada se você planejar publicar a mesma tabela em várias publicações transacionais. Uma tabela pode aparecer no máximo em uma publicação transacional e em qualquer número de publicações de instantâneo se você selecionar **Gateway**.  
   
-7.  Clique em **Conectar**, que cria uma conexão com o Editor Oracle e o configura para replicação. A caixa de diálogo **Conectar ao Servidor** é fechada e você retorna para a caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** .  
+7.  Clique em **Conectar**, que cria uma conexão com o Editor Oracle e o configura para replicação. A caixa de diálogo **Conectar-se ao Servidor** é fechada e você retorna para a caixa de diálogo **Propriedades do Distribuidor – \<Distributor>** .  
   
     > [!NOTE]  
     >  Se houver qualquer problema com a configuração de rede, você receberá um aviso de erro nesse momento. Se experimentar problemas ao se conectar ao banco de dados Oracle, consulte a seção "O Distribuidor do SQL Server não pode se conectar à instância de banco de dados Oracle" em [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  

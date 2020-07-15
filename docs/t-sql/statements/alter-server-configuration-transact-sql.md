@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09eb8b767ce5995dede2b69efca3423a91c02b31
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ddf8e31e274280f2fb53ee3b2a8f5c5a8e1884f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631830"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895568"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Modifica as definições da configuração global do servidor atual no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -153,7 +153,7 @@ OFF
 Interrompe o log de dados diagnóstico.  
   
 PATH = { 'os_file_path' | DEFAULT }  
-Caminho que indica o local dos logs de diagnóstico. O local padrão é \<\MSSQL\Log> dentro da pasta de instalação da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Caminho que indica o local dos logs de diagnóstico. A localização padrão é \<\MSSQL\Log> dentro da pasta de instalação da instância do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
 Tamanho máximo em megabytes que o log de diagnóstico pode atingir. O padrão é 100 MB.  

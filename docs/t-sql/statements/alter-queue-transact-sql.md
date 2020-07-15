@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c66d78878bb5710d95799e2ad6d731f8d7234ee
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7c712c08c6ad766a701fc47d45fae8ce69008d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895631"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Altera as propriedades de uma fila.  
   

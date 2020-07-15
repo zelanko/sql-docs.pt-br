@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - ALTER_EXTERNAL_RESOURCE_POOL_TSQL
@@ -17,15 +17,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 47898e97b678478528c6359487efe70817127706
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d1759d67fda0f9cef5290a4b93a5b3b712b49a73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761917"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Altera um pool externo do Resource Governor que especifica os recursos que podem ser usados por processos externos. 
 
@@ -73,7 +73,7 @@ Especifica a média máxima de largura de banda de CPU que todas as solicitaçõ
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 Anexe o pool de recursos externos a CPUs específicas.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** mapeia o pool de recursos externos para as CPUs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas pelas CPU_IDs fornecidas. Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , o pool de recursos é relacionado por afinidade com as CPUs físicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que correspondem ao nó NUMA ou ao intervalo de nós fornecido.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** mapeia o pool de recursos externos para as CPUs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas pelas CPU_IDs fornecidas. Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , o pool de recursos externos é relacionado por afinidade com as CPUs físicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que correspondem ao nó NUMA ou ao intervalo de nós fornecido.
 
 MAX_MEMORY_PERCENT =*value*  
 Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos externos. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.

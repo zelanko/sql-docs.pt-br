@@ -1,5 +1,6 @@
 ---
 title: Replicação de scripts | Microsoft Docs
+description: Um script contém procedimentos armazenados do sistema em Transact-SQL necessários para implementar os componentes de Replicação do SQL Server, como uma publicação ou assinatura.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8cda2b7729f205da7908fa481b2e1a5639a095a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 88f805876602f30cfd53defa93257a4102eaf52c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765192"
 ---
 # <a name="scripting-replication"></a>Replicação de script
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre  e os scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema Transact-SQL necessários para implementar os componentes de replicação incluídos no script, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o Assistente para Nova Publicação) ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois de você criar um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada.  
   
  O script de um componente deve ser refeito caso alguma propriedade seja alterada. Se você usar procedimentos armazenados com replicação transacional, uma cópia de cada procedimento deve ser armazenada com os scripts; a cópia deve ser atualizada se o procedimento for alterado (os procedimentos são normalmente alterados devido a mudanças no esquema ou nos requisitos de aplicativo). Para mais informações sobre procedimentos personalizados, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -84,7 +85,7 @@ ms.locfileid: "76287309"
   
 3.  Clique com o botão direito do mouse em uma publicação ou assinatura e então clique em **Gerar Scripts**.  
   
-4.  Especifique as opções na caixa de diálogo **Gerar Script SQL – \<ReplicationObject>** .  
+4.  Especifique opções na caixa de diálogo **Gerar Script SQL – \<ReplicationObject>** .  
   
 5.  Clique em **Script para Arquivo**.  
   

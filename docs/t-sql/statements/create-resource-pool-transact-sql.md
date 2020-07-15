@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d2c0278199684db2355d76c624ed6349e8aefda
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b043443f84ceb3b98484f88f4384c9e8e0a10442
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633948"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892523"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cria um pool de recursos do Administrador de Recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um pool de recursos representa um subconjunto dos recursos físicos (memória, CPUs e E/S) de uma instância do Mecanismo de Banco de Dados. O Administrador de Recursos permite que um administrador de banco de dados distribua recursos de servidor entre pools de recursos, até um máximo de 64 pools. O Administrador de Recursos não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -81,9 +81,9 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 Anexe o pool de recursos a agendadores específicos. O valor padrão é AUTO.  
   
-O AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** mapeia o pool de recursos para as agendas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas pelos IDs especificados. Essas IDs são mapeadas para os valores na coluna scheduler_id em [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** mapeia o pool de recursos para os agendamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificados pelas IDs especificadas. Essas IDs são mapeadas para os valores na coluna scheduler_id em [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
-Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , o pool de recursos é agrupado com os agendadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são mapeados para as CPUs físicas que correspondem ao nó NUMA ou ao intervalo de nós fornecido. Você pode usar a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , o pool de recursos é agrupado com os agendadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são mapeados para as CPUs físicas correspondentes ao nó NUMA ou ao intervalo de nós fornecido. Você pode usar a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  

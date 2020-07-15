@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 05039c9634d62366cc8730a90a80bc4c2d3ab76f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786561"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Inspeciona a integridade de uma restrição especificada ou de todas as restrições em uma tabela especificada no banco de dados atual.
   
@@ -90,7 +90,7 @@ DBCC CHECKCONSTRAINTS verifica a integridade das restrições FOREIGN KEY e CHEC
   
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior
   
-Se *table_name* ou *table_id* for especificado e estiver habilitado para controle de versão do sistema, DBCC CHECKCONSTRAINTS também executará as verificações de consistência de dados temporais na tabela especificada. Quando *NO_INFOMSGS* não for especificado, esse comando retornará cada violação de consistência na saída em uma linha separada. O formato da saída será ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<o que há de errado com o registro da tabela temporal>.
+Se *table_name* ou *table_id* for especificado e estiver habilitado para controle de versão do sistema, DBCC CHECKCONSTRAINTS também executará as verificações de consistência de dados temporais na tabela especificada. Quando *NO_INFOMSGS* não for especificado, esse comando retornará cada violação de consistência na saída em uma linha separada. O formato da saída será ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   
 |Verificação|Informações adicionais na saída se a verificação falhar|  
 |-----------|-----------------------------------------------|  

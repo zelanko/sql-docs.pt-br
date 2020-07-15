@@ -1,5 +1,6 @@
 ---
 title: Tarefa Backup de Banco de Dados (plano de manutenção) | Microsoft Docs
+description: Saiba como adicionar uma tarefa de backup a um plano de manutenção no SQL Server usando a tarefa Backup de Banco de Dados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774403"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opções da tarefa Fazer Backup do Banco de Dados no plano de manutenção
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use a caixa de diálogo **Tarefa Fazer Backup de Banco de Dados** para adicionar uma tarefa de backup ao plano de manutenção. O backup do banco de dados é importante no caso de falha do sistema ou hardware (ou erros do usuário) que levem o banco de dados a ser danificado de alguma forma, exigindo assim que uma cópia de backup seja restaurada. Essa tarefa lhe permite executar arquivos completos, diferenciais, e grupos de arquivos e backups de log de transações.  
   
  **Para criar uma tarefa de banco de dados de backup**  

@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767096"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cria uma função definida pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Uma função definida pelo usuário é uma rotina [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR (Common Language Runtime) que aceita parâmetros, executa uma ação, como um cálculo complexo, e retorna o resultado dessa ação como um valor. O valor de retorno pode ser um valor escalar (único) ou uma tabela. Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:
 
@@ -326,7 +326,7 @@ Em TVFs embutidas, o valor retornado TABLE é definido por meio de uma única in
 
 *select_stmt* É a única instrução SELECT que define o valor retornado de uma TVF (função com valor de tabela) embutida.
 
-ORDER (\<order_clause>) Especifica a ordem na qual os resultados são retornados da função com valor de tabela. Para obter mais informações, consulte a seção, "[Usando a ordem de classificação em função com valor de tabela CLR](#using-sort-order-in-clr-table-valued-functions)", mais adiante neste tópico.
+ORDER (\<order_clause>) Especifica a ordem na qual os resultados estão sendo retornados da função com valor de tabela. Para obter mais informações, consulte a seção, "[Usando a ordem de classificação em função com valor de tabela CLR](#using-sort-order-in-clr-table-valued-functions)", mais adiante neste tópico.
 
 EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e posterior)
@@ -352,7 +352,7 @@ Um exemplo típico, para MyFood.DLL, em que todos os tipos estão no namespace M
 > - Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode executar código CLR. Você pode criar, modificar e remover objetos de banco de dados que referenciam módulos do Common Language Runtime; entretanto, não pode executar essas referências no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até habilitar a [opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar essa opção, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 > - Essa opção não está disponível em um banco de dados independente.
 
-*\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.
 
 *\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
 

@@ -1,6 +1,6 @@
 ---
 title: Espelhamento de banco de dados e instantâneos de banco de dados
-description: Saiba mais sobre a interoperabilidade do uso de instantâneos de banco de dados com espelhamento de banco de dados.
+description: Saiba mais sobre a interoperabilidade do uso de instantâneos de banco de dados com espelhamento de banco de dados para descarregar relatórios no SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0a3e349633184bf838f2d9dc599d8355db6b100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789706"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Espelhamento de banco de dados e instantâneos de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Você pode tirar proveito de um banco de dados espelho que você está mantendo para fins de disponibilidade para descarregar relatórios. Para usar um banco de dados espelho para relatórios, você pode criar um instantâneo do banco de dados no banco de dados espelho e direcionar as solicitações de conexão de clientes para o instantâneo mais recente. Um instantâneo do banco de dados é um instantâneo consistente de transações, estático e somente leitura de seu banco de dados de origem tal como ele estava no momento da criação do instantâneo. Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no estado de espelhamento sincronizado.  
   
  Ao contrário do próprio banco de dados espelho, um instantâneo do banco de dados está acessível aos clientes. Contanto que o servidor espelho esteja se comunicando com o servidor principal, você pode dirigir os clientes que estejam inserindo informações para que se conectem a um instantâneo. Observe que devido ao fato de o instantâneo do banco de dados ser estático, os novos dados não estão disponíveis. Para tornar dados relativamente recentes disponíveis a seus usuários, você precisa criar periodicamente um novo instantâneo do banco de dados e fazer com que os aplicativos dirijam as conexões de entrada de clientes para o instantâneo mais recente.  

@@ -1,5 +1,6 @@
 ---
 title: Ordenações de banco de dados independentes | Microsoft Docs
+description: Saiba como a ordenação funciona nos bancos de dados independentes e dependentes. Veja os problemas que podem surgir quando as sessões cruzam entre contextos dependentes e independentes.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763628"
 ---
 # <a name="contained-database-collations"></a>Ordenações de banco de dados independentes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha da ordenação dos dados. Para obter uma discussão mais detalhada sobre as ordenações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  As ordenações se aplicam não apenas aos dados armazenados nas tabelas de usuário, mas também a todo o texto tratado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo metadados, objetos temporários, nomes de variável etc. O tratamento deles varia nos bancos de dados dependentes e independentes. Essa alteração não afetará muitos usuários, mas ajuda a fornecer independência de instância e uniformidade. Mas isso também pode causar alguma confusão, bem como problemas em sessões que acessam bancos de dados contidos e não contidos.  
@@ -132,7 +133,7 @@ END;
 |Dados temp (padrão)|Ordenação TempDB|DATABASE_DEFAULT|  
 |Metadados|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
 |Metadados temporários|Ordenação tempdb|CATALOG_DEFAULT|  
-|variáveis|Ordenação de instância|CATALOG_DEFAULT|  
+|Variáveis|Ordenação de instância|CATALOG_DEFAULT|  
 |Rótulos Goto|Ordenação de instância|CATALOG_DEFAULT|  
 |Nomes de cursor|Ordenação de instância|CATALOG_DEFAULT|  
   

@@ -1,5 +1,6 @@
 ---
 title: Inscrever uma instância do SQL Server (Utilitário do SQL Server) | Microsoft Docs
+description: Comece a monitorar o desempenho e a configuração de uma instância do SQL Server inscrevendo-a em um Utilitário do SQL Server existente.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776003"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Inscreva uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para monitorar o desempenho e a configuração como uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O UCP (ponto de controle de utilitário) coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. Dados de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar gargalos no uso de recursos e oportunidades de consolidação.  
   
  Nesta versão, o UCP e todas as instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem atender aos seguintes requisitos:  
@@ -170,7 +171,7 @@ ms.locfileid: "68115418"
 >   
 >  Ocorreu uma exceção ao executar uma instrução ou um lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informações adicionais:  não foi possível obter informações sobre o grupo/usuário do Windows NT ‘\<NomeDeDomínio\NomeDeConta>', código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
+>  Informações adicionais:  Não foi possível obter informações sobre o grupo/usuário do Windows NT '\<DomainName\AccountName>', código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
 >   
 >  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   

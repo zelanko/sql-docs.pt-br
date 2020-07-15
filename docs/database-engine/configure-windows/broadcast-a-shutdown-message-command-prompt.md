@@ -1,5 +1,6 @@
 ---
 title: Difundir uma mensagem de desligamento (prompt de comando) | Microsoft Docs
+description: Descubra como usar o comando net send para difundir uma mensagem no SQL Server. Veja como determinar quais usuários estão atualmente conectados ao SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - default instances [SQL Server], broadcasting shutdown messages
 - stopping SQL Server
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 89fcc63741b4322501c640453971c67d5a9a02fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85d2bac016287afd060cdf727eeea47a6b78d725
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759211"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>Difundir uma mensagem de desligamento (prompt de comando)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como difundir uma mensagem de desligamento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o comando **net send** . Na mensagem, inclua a hora em que a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será interrompida de forma que os usuários possam terminar suas tarefas.  
   
 ##  <a name="SSMSProcedure"></a>  

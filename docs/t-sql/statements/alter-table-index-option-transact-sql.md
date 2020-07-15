@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba0e9f1edc59b6f1b51bff6afa040fa489cd9858
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 054782a6b6dd4ee381c0a70b857a945c72a66372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760949"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica um conjunto de opções que podem ser aplicadas a um índice que faz parte de uma definição de restrição criada com [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -213,13 +213,13 @@ Especifica se a contenção de inserção de última página será ou não otimi
   
  Para obter mais informações sobre compactação, consulte [Compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posteriores.  
   
  Especifica as partições às quais se aplica a configuração DATA_COMPRESSION. Se a tabela não for particionada, o argumento ON PARTITIONS gerará um erro. Se a cláusula ON PARTITIONS não for fornecida, a opção DATA_COMPRESSION será aplicada a todas as partições de uma tabela particionada.  
   
 \<partition_number_expression> pode ser especificado das seguintes maneiras:  
   
--   Forneça o número para uma partição, por exemplo: ON PARTITIONS (2).  
+-   Forneça o número de uma partição, por exemplo: ON PARTITIONS (2).  
 -   Forneça os números de várias partições individuais separados por vírgulas, por exemplo: ON PARTITIONS (1, 5).  
 -   Forneça os intervalos e as partições individuais, por exemplo: ON PARTITIONS (2, 4, 6 TO 8).  
   

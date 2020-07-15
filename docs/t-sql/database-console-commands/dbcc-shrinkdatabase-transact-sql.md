@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 8af6e4e5e3b159249e9437c48791b0519821cbb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757207"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Reduz o tamanho dos arquivos de dados e de log do banco de dados especificado.
   
@@ -78,7 +78,7 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as colunas do conjunto de resultados.
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**DbId**|Número de identificação do banco de dados do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
 |**FileId**|Número de identificação do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
@@ -120,7 +120,7 @@ Por exemplo, se você especificar um _target\_percent_ igual a 25 para a reduç�
   
 Considere que o arquivo de dados de **mydb** contém 7 MB de dados. Especificar um _target\_percent_ igual a 30 permite que esse arquivo de dados seja reduzido para um percentual livre igual a 30. No entanto, especificar um_target\_percent_ igual a 40 não reduz o arquivo de dados porque o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não reduzirá um arquivo para um tamanho menor do que aquele que os dados ocuparem no momento. 
 
-Você também pode pensar nessa questão de outra forma: um arquivo de dados com 40 por cento de espaço livre desejado + 70 por cento de espaço cheio de dados (7 MB de 10 MB) é igual a mais de 100 por cento. Qualquer _target\_size_ maior que 30 não reduzirá o arquivo de dados. Ele não será reduzido porque o percentual de espaço que você deseja mais o percentual atual ocupado pelo arquivo de dados soma mais de 100%.
+Você também pode pensar neste assunto outro modo: um arquivo de dados com 40 por cento de espaço livre desejado + 70 por cento de espaço cheio de dados (7 MB de 10 MB) dá mais que 100 por cento. Qualquer _target\_size_ maior que 30 não reduzirá o arquivo de dados. Ele não será reduzido porque o percentual de espaço que você deseja mais o percentual atual ocupado pelo arquivo de dados soma mais de 100%.
   
 Para arquivos de log, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa _target\_percent_ para calcular o tamanho de destino do log inteiro. É por isso que _target\_percent_ é a quantidade de espaço livre no log após a operação de redução. O tamanho designado do log inteiro é convertido no tamanho designado de cada arquivo de log.
   
@@ -130,12 +130,12 @@ Um arquivo de log só pode ser reduzido para um limite de arquivo de log virtual
   
 ## <a name="best-practices"></a>Práticas Recomendadas  
 Considere as seguintes informações ao planejar reduzir um banco de dados:
--   Uma operação de redução é mais eficaz depois de uma operação. Essa operação cria espaço não utilizado, assim como uma operação TRUNCATE TABLE ou DROP TABLE.  
+-   Uma operação de redução é mais eficiente depois de uma operação que cria espaço não utilizado, como operações truncate table ou drop table.
 -   A maioria dos bancos de dados exige algum espaço livre disponível para operações comuns rotineiras. Você pode reduzir um banco de dados repetidamente e observar que o tamanho do banco de dados cresce novamente. Esse crescimento indica que o espaço reduzido é necessário para operações regulares. Nesse caso, reduzir repetidamente um banco de dados é uma operação inútil.  
 -   Uma operação de redução não preserva o estado de fragmentação de índices do banco de dados e, em geral, aumenta o nível de fragmentação. Esse resultado é outra razão para não reduzir o banco de dados repetidamente.  
 -   A menos que você tenha um requisito específico, não defina a opção de banco de dados AUTO_SHRINK como ON.  
   
-## <a name="troubleshooting"></a>solução de problemas  
+## <a name="troubleshooting"></a>Solução de problemas  
 É possível bloquear operações de redução por uma transação que está esteja executada em um [nível de isolamento baseado em controle de versão de linha](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Por exemplo, se uma grande operação de exclusão estiver sendo executada em um nível de isolamento de controle de versão de linha quando uma operação DBCC SHRINK DATABASE é executada. Quando essa situação ocorrer, a operação de redução aguardará a operação de exclusão ser concluída para então reduzir os arquivos. Quando essa operação de redução aguarda, as operações DBCC SHRINKFILE e DBCC SHRINKDATABASE emitem uma mensagem informativa (5202 para SHRINKDATABASE e 5203 para SHRINKFILE). Essa mensagem é registrada no log de erros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada cinco minutos na primeira hora e, posteriormente, a cada hora. Por exemplo, se o log de erros contiver a seguinte mensagem de erro:  
   
 ```sql

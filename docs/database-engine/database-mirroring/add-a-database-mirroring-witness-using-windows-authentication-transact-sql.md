@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d62bfb55e8024e70f94f23eb1f9273fb91f3caa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763937"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para definir uma testemunha para um banco de dados, o proprietário do banco de dados nomeia uma instância do Mecanismo de Banco de Dados para a função de servidor testemunha. A instância do servidor testemunha pode ser executada no mesmo computador que a instância do servidor principal ou espelho, mas isso reduz a robustez de failover automático substancialmente.  
   
  A localização da testemunha em um computador separado é altamente recomendável. Uma determinada instância do servidor pode participar de várias sessões de espelhamento de banco de dados simultâneos com os mesmos ou diferentes parceiros. Um determinado servidor pode ser um parceiro em algumas sessões e uma testemunha em outras sessões.  
@@ -46,7 +46,7 @@ ms.locfileid: "74822303"
     ```  
   
     > [!IMPORTANT]  
-    >  Se um ponto de extremidade do espelhamento de banco de dados já existir e estiver em uso, recomendamos que você use esse ponto de extremidade para cada sessão na instância do servidor. Descartando um ponto de extremidade em uso atrapalha o funcionamento das conexões das sessões existentes. Se uma testemunha foi definida para uma sessão, descartar o ponto de extremidade do espelhamento de banco de dados poderá fazer com que o servidor principal daquela sessão perca quorum; se isso acontecer, o banco de dados será colocado offline e seus usuários serão desconectados. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Se um ponto de extremidade do espelhamento de banco de dados já existir e estiver em uso, recomendamos que você use esse ponto de extremidade para cada sessão na instância do servidor. Descartando um ponto de extremidade em uso atrapalha o funcionamento das conexões das sessões existentes. Se uma testemunha foi definida para uma sessão, descartar o ponto de extremidade do espelhamento de banco de dados poderá fazer com que o servidor principal daquela sessão perca quorum; se isso acontecer, o banco de dados será colocado offline e seus usuários serão desconectados. Para obter mais informações, confira [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Se a testemunha não tiver um ponto de extremidade, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74822303"
   
      TCP<b>://</b> _\<system-address>_ <b>:</b> _\<port>_  
   
-     em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define a testemunha. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER3 (o nome do sistema testemunha) e a porta usada pelo ponto de extremidade de espelhamento do banco de dados da testemunha é `7022`:  
   

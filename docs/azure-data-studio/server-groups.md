@@ -1,23 +1,22 @@
 ---
 title: Grupos de servidores
-titleSuffix: Azure Data Studio
 description: Saiba mais sobre grupos de servidores no Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfdc9f3c80b61d65d164b8328122a4785b37ba54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758392"
 ---
-# <a name="server-groups-in-name-sos"></a>Grupos de servidores no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="server-groups-in-azure-data-studio"></a>Grupos de servidores no Azure Data Studio
 
 Grupos de servidores proporcionam uma maneira de organizar suas conexões com os servidores e bancos de dados com que trabalha. Quando você cria grupos de servidores, os detalhes da configuração são salvos nas *Configurações do Usuário*.
 

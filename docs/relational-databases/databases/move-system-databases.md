@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763219"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve como mover bancos de dados do sistema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover bancos de dados do sistema pode ser útil nas seguintes situações:  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68100458"
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Movendo o banco de dados de recursos  
- A localização do banco de dados Resource é \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. O banco de dados não pode ser movido.  
+ A localização do banco de dados de recursos é \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. O banco de dados não pode ser movido.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Acompanhamento: depois de mover todos os bancos de dados do sistema  
  Se você moveu todos os bancos de dados do sistema para uma nova unidade ou volume ou para outro servidor com uma letra de unidade diferente, faça as atualizações a seguir.  
@@ -204,7 +204,7 @@ ms.locfileid: "68100458"
   
 2.  Clique com o botão direito do mouse em **Logs de Erros** e clique em **Configurar**.  
   
-3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. A localização padrão é C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\.  
+3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. A localização padrão é C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<nome_da_instância>\MSSQL\Log\\.  
   
 #### <a name="change-the-database-default-location"></a>Altere o local padrão do banco de dados  
   

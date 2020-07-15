@@ -1,5 +1,6 @@
 ---
 title: Iniciar o SQL Server no modo de usuário único | Microsoft Docs
+description: Saiba mais sobre o modo de usuário único no SQL Server. Veja quando ele é útil e como usar a opção de inicialização "-m" para iniciar uma instância do SQL Server nesse modo.
 ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68037157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764003"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar o SQL Server no modo de usuário único
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Em determinadas circunstâncias, pode ser necessário iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único usando a **opção de inicialização -m.** Por exemplo, você pode querer mudar as opções de configuração de servidor ou recuperar um banco de dados mestre danificado ou outro banco de dados do sistema. As duas ações exigem iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único.  
   
  Iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único permite que qualquer membro do grupo de Administradores locais do computador se conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um membro da função de servidor fixa sysadmin. Para obter mais informações, veja [Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  

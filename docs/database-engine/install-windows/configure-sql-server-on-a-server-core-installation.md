@@ -1,5 +1,6 @@
 ---
 title: Configurar a Instalação do Server Core
+description: Este artigo aborda detalhes da configuração do SQL Server em uma instalação do Server Core, incluindo ferramentas de solução de problemas.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251592"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883260"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar o SQL Server em uma instalação do Server Core
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Este artigo abrange detalhes sobre a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.  
 
@@ -39,7 +40,7 @@ Para obter mais informações sobre como configurar e gerenciar remotamente uma 
   
 - [Instalar funções de servidor e recursos em um servidor Windows Server 2012 R2 do Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Gerenciando uma instalação do Server Core: Visão geral](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Gerenciando uma instalação Server Core: Visão geral](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Administrando uma instalação do Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -109,7 +110,7 @@ Estas etapas devem ser realizadas em um computador que executa a edição de cli
   
 5. Clique duas vezes em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
-6. No **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, clique em **Serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , clique com o botão direito do mouse em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), em que \<instance name> é o nome de uma instância de servidor local na qual você deseja habilitar os Grupos de Disponibilidade AlwaysOn e clique em Propriedades.  
+6. No **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, clique em **Serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , clique com o botão direito do mouse em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), em que \<instance name> é o nome de uma instância de servidor local na qual você deseja habilitar os Grupos de Disponibilidade Always On e clique em Propriedades.  
   
 7. Selecione a guia **Alta Disponibilidade AlwaysOn** .  
   
@@ -215,7 +216,7 @@ $Tcp
 |[Utilitário dtexec](../../integration-services/packages/dtexec-utility.md)|Usado para configurar e executar um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Utilitário dtutil](../../integration-services/dtutil-utility.md)|Usado para gerenciar pacotes SSIS.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Utilitário osql](../../tools/osql-utility.md)|Permite a inserção de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedimentos do sistema e arquivos de script no prompt de comando.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Aplicativo sqlagent90](../../tools/sqlagent90-application.md)|Usado para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a partir de um prompt de comando.|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
+|[Aplicativo sqlagent90](../../tools/sqlagent90-application.md)|Usado para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a partir de um prompt de comando.|\<drive>:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
 |[Utilitário sqlcmd](../../tools/sqlcmd-utility.md)|Permite a inserção de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedimentos do sistema e arquivos de script no prompt de comando.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilitário SQLdiag](../../tools/sqldiag-utility.md)|Usado para coletar informações de diagnóstico para o Suporte e Atendimento ao Cliente [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilitário sqlmaint](../../tools/sqlmaint-utility.md)|Usado para executar planos de manutenção de banco de dados criados em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|\<drive>:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
@@ -225,7 +226,7 @@ $Tcp
 ##  <a name="use-troubleshooting-tools"></a><a name="BKMK_troubleshoot"></a> Usar ferramentas de solução de problemas  
  É possível usar o [Utilitário SQLdiag](../../tools/sqldiag-utility.md) para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O SQLdiag foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Suporte Técnico da Microsoft.  
   
- Você pode iniciar o utilitário no prompt de comando do administrador no Server Core, usando a sintaxe especificada no artigo: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Inicie o utilitário no prompt de comando do administrador no Server Core, usando a sintaxe especificada no artigo: [Utilitário SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalar o SQL Server no Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768076"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de Armazenamento de Blobs do Microsoft Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. Essas diferenças e alguns exemplos de código estão incluídos neste tópico.  
   
@@ -50,7 +50,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
   
  **Contêiner:** Um contêiner fornece o agrupamento de um conjunto de blobs e pode armazenar um número ilimitado de blobs. Para gravar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Armazenamento de Blobs do Microsoft Azure, pelo menos o contêiner raiz deve ter sido criado. Você pode gerar um token de Assinatura de Acesso Compartilhado em um contêiner e conceder acesso a objetos apenas em um contêiner específico.  
   
- **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no serviço de Armazenamento de Blobs do Microsoft Azure: blobs de blocos e de páginas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o backup pode usar qualquer tipo de blob, dependendo da sintaxe Transact-SQL usada. Blobs são endereçáveis por meio do seguinte formato de URL: https://\<conta de armazenamento>.blob.core.windows.net/\<contêiner>/\<blob>. Para saber mais sobre o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Como usar o Armazenamento de Blobs no .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) Para saber mais sobre blobs de páginas e de blocos, confira [Noções básicas sobre blobs de blocos e blobs de páginas](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
+ **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no serviço de Armazenamento de Blobs do Microsoft Azure: blobs de blocos e de páginas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o backup pode usar qualquer tipo de blob, dependendo da sintaxe Transact-SQL usada. Os blobs são endereçados através do seguinte formato de URL: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>. Para saber mais sobre o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Como usar o Armazenamento de Blobs no .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) Para saber mais sobre blobs de páginas e de blocos, confira [Noções básicas sobre blobs de blocos e blobs de páginas](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
  ![Armazenamento de Blobs do Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Armazenamento do Blobs do Azure")  
   
@@ -59,7 +59,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
 ###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Componentes  
  **URL:** Uma URL especifica um URI (Uniform Resource Identifier) para um arquivo de backup exclusivo. A URL é usada para fornecer o local e o nome do arquivo de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A URL deve apontar para um blob real, e não apenas para um contêiner. Se o blob não existir, ele será criado. Se um blob existente for especificado, o BACKUP falhará, a não ser que a opção “WITH FORMAT” seja especificada a fim de substituir o arquivo de backup existente no blob.  
   
- Este é um valor de URL de exemplo: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. O HTTPS não é obrigatório, mas é recomendado.  
+ Aqui está um valor de exemplo de URL: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. O HTTPS não é obrigatório, mas é recomendado.  
   
  **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. Aqui, os processos de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a credencial para autenticação no serviço de Armazenamento de Blobs do Microsoft Azure e em seus objetos de contêiner e de blob. A Credencial armazena o nome da conta de armazenamento e os valores de **chave de acesso** da conta de armazenamento, ou a URL do contêiner e seu token de Assinatura de Acesso Compartilhado. Após a criação da credencial, a sintaxe das instruções BACKUP/RESTORE determinará o tipo de blob e as credenciais necessárias.  
   
@@ -196,7 +196,7 @@ O backup de um banco de dados grande para o armazenamento de blobs está sujeito
   
  Para obter mais informações sobre os argumentos de restauração, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-##  <a name="back-up-up-with-ssms"></a><a name="BackupTaskSSMS"></a> Fazer backup com o SSMS  
+##  <a name="back-up-with-ssms"></a><a name="BackupTaskSSMS"></a> Fazer backup com o SSMS  
 Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de Backup no SQL Server Management Studio usando uma credencial do SQL Server.  
   
 > [!NOTE]  

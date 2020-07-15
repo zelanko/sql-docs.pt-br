@@ -1,5 +1,6 @@
 ---
 title: Pré-processar um esquema para mesclar esquemas incluídos | Microsoft Docs
+description: Saiba como esquemas XML que contêm a diretiva xsd:include podem ser pré-processados para copiar e mesclar o conteúdo de qualquer esquema incluído em um esquema.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757515"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pré-processar um esquema para mesclar esquemas incluídos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   O elemento **include** do W3C XSD dá suporte à modularidade de esquema na qual um esquema XML pode ser particionado em mais de um arquivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atualmente, não dá suporte a esse elemento. Esquemas XML que incluem esse elemento serão rejeitados pelo servidor.  
   
- Como uma solução, os esquemas XML que incluem a diretiva \<xsd:include> podem ser pré-processados para copiar e mesclar o conteúdo dos esquemas incluídos em um único esquema para upload no servidor. O código C# a seguir pode ser usado para pré-processamento. Os comentários na parte anterior do código fornecem informações sobre como usar isso.  
+ Como uma solução, os esquemas XML que incluem a diretiva \<xsd:include> podem ser pré-processados para copiar e mesclar o conteúdo de qualquer esquema incluído em único esquema para carregamento no servidor. O código C# a seguir pode ser usado para pré-processamento. Os comentários na parte anterior do código fornecem informações sobre como usar isso.  
   
 ```  
 // XSD Schema Include Normalizer  

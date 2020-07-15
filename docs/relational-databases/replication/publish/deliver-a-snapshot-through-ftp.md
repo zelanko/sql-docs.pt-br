@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2ff609e78a0076cd3d6c0ff15348869cc717cfe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710997"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893283"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar um instantâneo pelo FTP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como entregar um instantâneo pelo FTP no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
 
 Por padrão, os instantâneos são armazenados em pastas definidas como compartilhamentos de Convenção Universal de Nomenclatura (UNC). A replicação também permite que especifique um compartilhamento de Protocolo de Transferência de Arquivo (FTP) ao invés de um compartilhamento de UNC. Para usar o FTP, é necessário configurar um servidor de FTP e em seguida configurar uma publicação ou uma ou mais assinaturas para usarem o FTP. Para obter mais informações sobre como configurar um servidor de FTP, consulte a documentação dos Serviços de Informações da Internet (IIS). Se especificar informações de FTP para uma publicação, as assinaturas para aquela publicação usarão o FTP por padrão. O FTP é usado somente com a sincronização da Web quando o computador que está executando o IIS estiver separado de um Distribuidor por um firewall. Neste caso o FTP é usado para transferir um instantâneo do Distribuidor e do computador que está executando o IIS. (O instantâneo é sempre transferido ao Assinante usando o HTTPS.)  
@@ -35,7 +35,7 @@ Por padrão, os instantâneos são armazenados em pastas definidas como comparti
   
 -   O Snapshot Agent deve ter permissões de gravação para o diretório que você especificar, e o Distribution Agent ou Merge Agent devem ter permissões de leitura. Se forem usadas assinaturas pull, será necessário especificar um diretório compartilhado como um caminho UNC, como \\\ftpserver\home\snapshots. Para obter mais informações, consulte [Proteger a pasta de instantâneos](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Para transferir arquivos de instantâneo que usam Protocolo de Transferência de Arquivo (FTP), deve-se, em primeiro lugar, configurar um servidor de FTP. Para obter mais informações, consulte a documentação [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Serviços de Informações da Internet (IIS).  
   
@@ -47,11 +47,11 @@ Por padrão, os instantâneos são armazenados em pastas definidas como comparti
  Quando possível, solicite que os usuários insiram suas credenciais em runtime. Se você armazenar credenciais em um arquivo de script, será necessário proteger o arquivo.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Depois que o servidor FTP for configurado, especifique informações de diretório e de segurança para esse servidor na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Depois que o servidor de FTP for configurado, especifique as informações de diretório e de segurança desse servidor na caixa de diálogo **Propriedades de Publicação \<Publication>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Para especificar informações de FTP  
   
-1.  Na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione **Permitir que os Assinantes baixem os arquivos de instantâneo usando FTP** de uma das seguintes páginas:  
+1.  Na caixa de diálogo **Propriedades de Publicação – \<Publication>** , selecione **Permitir que os Assinantes baixem arquivos de instantâneo usando FTP** de uma das seguintes páginas:  
   
     -   A página **Instantâneo de FTP** para publicações de instantâneo e transacionais e publicações de mesclagem para Publicadores executando versões anteriores ao [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

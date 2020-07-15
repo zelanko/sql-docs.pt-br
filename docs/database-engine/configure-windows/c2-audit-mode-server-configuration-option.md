@@ -1,5 +1,6 @@
 ---
 title: Opção de configuração de servidor c2 audit mode | Microsoft Docs
+description: Familiarize-se com o modo de auditoria C2, uma opção de configuração do SQL Server que pode ajudá-lo a analisar a atividade do sistema e acompanhar possíveis violações da política de segurança.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - C2 Audit Mode option
 - recording attempts
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52e39eda53e08a4267ac97faa3b691ffcd7acaad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d92dcad571574310c1b64a9992a54b166fe8ad8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759199"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>Opção c2 audit mode de configuração de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   O modo de auditoria C2 pode ser configurado pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou com a opção **modo de auditoria c2** no **sp_configure**. Selecionar esta opção configurará o servidor para registrar tentativas com falha e com êxito ao acessar instruções e objetos. Essas informações podem ajudá-lo a determinar o perfil da atividade do sistema e rastrear possíveis violações na política de segurança.  
   

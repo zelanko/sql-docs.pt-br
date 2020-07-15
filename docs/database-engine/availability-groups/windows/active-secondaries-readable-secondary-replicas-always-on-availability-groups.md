@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784627"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882998"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarregar a carga de trabalho somente leitura na réplica secundária de um grupo de disponibilidade Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para acesso somente leitura para uma ou mais réplicas secundárias (*réplicas secundárias legíveis*). Uma réplica secundária legível pode estar no modo de disponibilidade de confirmação síncrona ou no modo de disponibilidade de confirmação assíncrona. Uma réplica secundária legível permite acesso somente leitura a todos os seus bancos de dados secundários. No entanto, os bancos de dados secundários legíveis não são definidos como somente leitura. Eles são dinâmicos. Um banco de dados secundário determinado muda conforme as alterações nos dados do banco de dados primário correspondente são aplicadas ao banco de dados secundário. Para uma réplica secundária típica, os dados, incluindo tabelas com otimização de memória durável, nos bancos de dados secundários estão quase em tempo real. Além disso, os índices de texto completo são sincronizados com os bancos de dados secundários. Em muitas circunstâncias, a latência de dados entre um banco de dados primário e o banco de dados secundário correspondente é de somente alguns segundos.  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784627"
      O administrador de banco de dados precisa configurar uma ou mais réplicas de forma que, ao ser executado sob a função secundária, eles permitem todas as conexões (apenas para acesso somente leitura) ou apenas conexões de intenção de leitura.  
   
     > [!NOTE]  
-    >  Como opção, o administrador de banco de dados pode configurar qualquer réplica de disponibilidade para excluir conexões somente leitura ao executar sob a função primária.  
+    >  Como opção, o administrador de banco de dados pode configurar qualquer réplica de disponibilidade para excluir conexões somente leitura ao executar sob a função primária.
   
      Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+  
+    >[!WARNING]
+    >  Somente as réplicas que estão no mesmo build principal do SQL Server poderão ser lidas. Confira [Noções básicas sobre atualização sem interrupção](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags) para obter mais informações.
+  
   
 -   **Ouvinte de grupo de disponibilidade**  
   

@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_4104 | Microsoft Docs
+description: O identificador de várias partes especificado não pôde ser mapeado para uma entidade existente. Veja uma explicação do erro e as possíveis resoluções.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d3cac9c566928baac5a32fe0aa318fbb823c57d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763073"
 ---
 # <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|4104|  
 |Origem do Evento|MSSQLSERVER|  

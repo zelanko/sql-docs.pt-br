@@ -1,5 +1,6 @@
 ---
 title: Opção de configuração de servidor disallow results from triggers | Microsoft Docs
+description: Saiba mais sobre a opção 'disallow results from triggers'. Veja como ela pode evitar problemas em aplicativos que não são projetados para funcionar com conjuntos de resultados.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - result sets [SQL Server], triggers
 - disallow results from triggers option
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28bf3b201d54798f26c9e887e86a9d0bed78ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8cbe799b72a88da9785e778cb0688fe3ff1a3f44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772530"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>Opção de configuração de servidor disallow results from triggers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use a opção **rejeitar resultados dos gatilhos** para controlar se os gatilhos retornam conjuntos de resultados. Os gatilhos que retornam conjuntos de resultados podem causar um comportamento inesperado em aplicativos que não são projetados para trabalhar com eles.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68011865"
   
  Ao definir como 1, a opção **rejeitar resultados dos gatilhos** será definida como ON. A configuração padrão para esta opção é 0 (OFF). Se esta opção estiver definida para 1 (ON), qualquer tentativa feita por um gatilho para retornar um conjunto de resultados falhará e o usuário receberá a seguinte mensagem de erro:  
   
- "Msg 524, Level 16, State 1, Procedure \<Procedure Name>, Line \<Line#>  
+ "Mensagem 524, Nível 16, Estado 1, Procedimento \<Procedure Name>, Linha \<Line#>  
   
  "Um gatilho retornou um conjunto de resultados e a opção do servidor 'disallow_results_from_triggers' é verdadeira."  
   

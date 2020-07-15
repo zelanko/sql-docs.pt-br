@@ -1,6 +1,6 @@
 ---
 title: 'Assistente do grupo de disponibilidade: Especificar opções do grupo de disponibilidade'
-ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
+description: Descreve as opções encontradas na página "Especificar Nome do Grupo de Disponibilidade" do Assistente do Grupo de Disponibilidade no SQL Server Management Studio.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 202493fb2ee8a05408f82927f82f2b696aa19331
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822570"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883094"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Página Especificar Opções do Grupo de Disponibilidade de um Grupo de Disponibilidade AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve as opções da página **Especificar nome de grupo de disponibilidade** . Este tópico é usado pelo [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e pelo [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> Especificar opções do grupo de disponibilidade  

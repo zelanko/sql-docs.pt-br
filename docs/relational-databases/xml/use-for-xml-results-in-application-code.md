@@ -1,5 +1,6 @@
 ---
 title: Usar resultados de FOR XML no código do aplicativo | Microsoft Docs
+description: Saiba como usar os resultados de uma consulta SQL com cláusulas FOR XML em um aplicativo.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9927e5a4477961fbd7122ae96b05e42c74bf2196
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 430c7118d4185f123973c0ca7b00b02fb8ba39a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775542"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Usando cláusulas FOR XML com consultas SQL, é possível recuperar e até converter resultados de consultas como dados XML. Essa funcionalidade permite fazer o seguinte quando os resultados da consulta FOR XML podem ser usados no código do aplicativo XML:  
   
 -   Consultar tabelas SQL para instâncias de valores de [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -154,19 +155,19 @@ ms.locfileid: "80665055"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Processamento do lado do cliente do documento XML MyDataIsle  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales:** 1.500.000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue:** 150.000  
   
 -   **BankName:** Primary International  
   
--   **BusinessType:** OS  
+-   **BusinessType:** Sistema operacional  
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Specialty:** Rodoviário  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet:** 38.000  
   
 -   **Brands:** 3  
   

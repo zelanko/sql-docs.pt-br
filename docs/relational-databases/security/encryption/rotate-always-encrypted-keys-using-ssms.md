@@ -1,5 +1,6 @@
 ---
 title: Girar chaves do Always Encrypted usando o SQL Server Management Studio | Microsoft Docs
+description: Saiba mais sobre girar chaves mestras de coluna e chaves de criptografia de coluna do Always Encrypted com o SQL Server Management Studio.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767544"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Girar chaves do Always Encrypted usando o SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Este artigo descreve as tarefas usadas para girar chaves mestras de coluna e chaves de criptografia de coluna do Always Encrypted com o [SSMS (SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md).
 

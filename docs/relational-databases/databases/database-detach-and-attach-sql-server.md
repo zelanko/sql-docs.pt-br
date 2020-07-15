@@ -1,8 +1,8 @@
 ---
-title: Anexar e desanexar bancos de dados (SQL Server) | Microsoft Docs
+title: Anexar e desanexar bancos de dados (SQL Server)
 description: Você pode desanexar e reanexar os arquivos de log de transações e de dados de um banco do SQL Server a fim de alterar o banco de dados para outra instância ou movê-lo.
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756285"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anexar e desanexar bancos de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Os dados e os arquivos de log de transações de um banco de dados podem ser desanexados e, em seguida, reanexados à mesma ou a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desanexar e anexar um banco de dados é útil se você deseja alterar o banco de dados a uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador ou mover o banco de dados.  
   
   
@@ -63,7 +63,13 @@ Você não poderá desanexar um banco de dados se alguma das seguintes opções 
   
     > [!NOTE]  
     > Um instantâneo do banco de dados não pode ser desanexado ou anexado.  
+
+-   O banco de dados faz parte de um grupo de disponibilidade Always On.  
   
+    O banco de dados não poderá ser desanexado até que seja removido do grupo de disponibilidade. Para obter mais informações, confira [Remover um banco de dados primário de um grupo de disponibilidade Always On](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   O banco de dados está sendo espelhado em uma sessão de espelhamento de banco de dados.  
   
     O banco de dados não pode ser desanexado, a menos que a sessão seja encerrada. Para obter mais informações, veja [Removendo o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  

@@ -1,24 +1,24 @@
 ---
 title: Gerenciar o failover do grupo de disponibilidade – SQL Server em Linux
 description: 'Este artigo descreve os tipos de failover: automático, failover manual planejado e failover manual forçado. Os tipos automático e manual planejado preservam todos os seus dados.'
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216845"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892305"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover do grupo de disponibilidade Always On no Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dentro do contexto de um AG (grupo de disponibilidade), as funções primária e secundária das réplicas de disponibilidade, normalmente, são intercambiáveis em um processo conhecido como failover. Existem três formas de failover: failover automático (sem perda de dados), failover manual planejado (sem perda de dados) e failover manual forçado (com possível perda de dados), geralmente chamado de *failover forçado*. Os failovers automáticos e manuais planejados preservam todos os seus dados. Um AG faz failover no nível da réplica de disponibilidade. Ou seja, um AG faz failover em uma de suas réplicas secundárias (o destino de failover atual). 
 
@@ -81,14 +81,29 @@ Durante um failover manual, o comando `move` do `pcs` ou o comando `migrate` do 
 Um exemplo da restrição criada devido a um failover manual. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > O nome do recurso do AG em clusters Pacemaker no Red Hat Enterprise Linux 8.x e no Ubuntu 18.04 pode se parecer com *ag_cluster clone*, pois a nomenclatura relacionada aos recursos tem evoluído para usar o *clone passível de promoção*. 
+
 - **Exemplo do RHEL/Ubuntu**
 
    No comando a seguir, `cli-prefer-ag_cluster-master` é a ID da restrição que precisa ser removida. `sudo pcs constraint list --full` retorna essa ID. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   Ou
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   Como alternativa, você pode executar a movimentação e a limpeza das restrições geradas automaticamente em uma só linha, da maneira exibida a seguir. O exemplo a seguir usa a terminologia *clonar*, de acordo com o Red Hat Enterprise Linux 8.x. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **Exemplo do SLES**
 
    No comando a seguir, `cli-prefer-ms-ag_cluster` é a ID da restrição. `crm config show` retorna essa ID. 

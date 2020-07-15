@@ -1,5 +1,6 @@
 ---
 title: Referência de erros e eventos (Mecanismo de Banco de Dados) | Microsoft Docs
+description: Saiba mais sobre as mensagens de erro selecionadas do Mecanismo de Banco de Dados do SQL Server que precisam de mais explicações e use links para recursos externos.
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bf4de57b77e3f036cb842e53efe816de862559
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 89907738aa2e496e082a633f00882a72de5c07aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781593"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referência de erros e eventos (Mecanismo de Banco de Dados)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Esta seção contém mensagens de erro do [!INCLUDE[ssDE](../../includes/ssde-md.md)] selecionadas que precisam de explicações detalhadas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -38,7 +39,7 @@ ms.locfileid: "72908686"
 |Recurso|Descrição|  
 |--------------|-----------------|  
 |[SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Esse site contém links para grupos de notícias e fóruns monitorados pela comunidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Também lista fontes de informações da comunidade, como blogs e sites da Web. A comunidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é muito útil ao responder perguntas, embora não haja nenhuma garantia para as respostas dadas.|  
-|[SQL Server Developer Center Community](/sql/sql-server/index.yml)|Esse site enfoca grupos de notícias, fóruns e outros recursos de comunidade que são úteis a desenvolvedores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[SQL Server Developer Center Community](/sql/sql-server/)|Esse site enfoca grupos de notícias, fóruns e outros recursos de comunidade que são úteis a desenvolvedores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Ajuda e Suporte da Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Você pode usar esse site da Web para abrir um caso com um profissional de suporte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

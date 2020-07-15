@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68476295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760805"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   As seções neste tópico referem-se a várias propriedades de índice que estão disponíveis usando caixas de diálogo do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68476295"
  Exibe o nome do índice. Este campo é somente leitura para um índice existente. Ao criar um novo índice, digite o nome do índice.  
   
  **Tipo de índice**  
- Indica o tipo de índice. Para novos índices, indica o tipo de índice selecionado ao abrir a caixa de diálogo. Os índices podem ser: **Clusterizado**, **Não Clusterizado**, **XML Primário**, **XML Secundário**, **Espacial**, **Columnstore clusterizado**ou **Columnstore não clusterizado**.  
+ Indica o tipo de índice. Para novos índices, indica o tipo de índice selecionado ao abrir a caixa de diálogo. Os índices podem ser: **Clusterizado**, **Não clusterizado**, **XML primário**, **XML secundário**, **Espacial**, **Columnstore clusterizado** ou **Columnstore não clusterizado**.  
   
  **Observação** É permitido somente um índice clusterizado para cada tabela. É permitido somente um índice columnstore xVelocity de memória otimizada para cada tabela.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476295"
  Exibe se a coluna que participa da chave de índice permite armazenar valores NULL na tabela ou coluna de exibição.  
   
  **Adicionar**  
- Adiciona uma coluna à chave de índice. Selecione colunas de tabela na caixa de diálogo **Selecionar Colunas de** *\<nome da tabela>* exibida ao clicar em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
+ Adiciona uma coluna à chave de índice. Selecione colunas de tabela na caixa de diálogo **Selecionar Colunas de** *\<table name>* que aparece quando você clica em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
   
  **Remover**  
  Remove a coluna selecionada da participação na chave de índice.  

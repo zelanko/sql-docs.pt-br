@@ -1,5 +1,6 @@
 ---
 title: Conexão de diagnóstico para administradores de banco de dados | Microsoft Docs
+description: Saiba mais sobre a conexão de DAC ( administrador dedicada). Veja as restrições, instruções sobre como estabelecê-la e exemplos que demonstram o uso.
 ms.custom: ''
 ms.date: 02/27/2019
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a7843b981dbad450e49f0c1f5cf27b175ce635e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772539"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma conexão diagnóstica especial para administradores quando conexões padrão com o servidor não são possíveis. Esta conexão diagnóstica permite que um administrador acesse o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar consultas diagnósticas e resolver problemas mesmo quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está respondendo às solicitações de conexão padrão.  
   
  Esta conexão de administrador dedicada (DAC) oferece suporte à criptografia e outros recursos de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O DAC só permite alterar o contexto de usuário para outro usuário admin.  
@@ -83,7 +84,7 @@ ms.locfileid: "82588102"
   
 - Comandos DBCC básicos como [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) e [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Não execute comandos que usem muitos recursos, como [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) ou [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
-- [!INCLUDE[tsql](../../includes/tsql-md.md)] Comando KILL *\<spid>* . Dependendo do estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o comando KILL nem sempre pode ter êxito; assim, a única opção pode ser reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A seguir, algumas diretrizes gerais:  
+- Comando [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* . Dependendo do estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o comando KILL nem sempre pode ter êxito; assim, a única opção pode ser reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A seguir, algumas diretrizes gerais:  
   
     - Verifique se o SPID foi realmente interrompido consultando `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Se nenhuma linha for retornada, significa que a sessão foi interrompida.  
   

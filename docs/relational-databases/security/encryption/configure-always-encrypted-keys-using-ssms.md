@@ -1,5 +1,6 @@
 ---
 title: Provisionar chaves do Always Encrypted usando o SQL Server Management Studio | Microsoft Docs
+description: Saiba como provisionar chaves mestras de coluna e chaves de criptografia de coluna para o Always Encrypted usando o SQL Server Management Studio.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765142"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Provisionar chaves Always Encrypted usando o SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Este artigo fornece as etapas usadas para provisionar chaves mestras de coluna e chaves de criptografia de coluna para o Always Encrypted usando o [SSMS (SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md).
 

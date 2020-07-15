@@ -1,5 +1,6 @@
 ---
 title: Esquema de FileTable | Microsoft Docs
+description: Saiba mais sobre o esquema predefinido e fixo de FileTables, um recurso do SQL Server que usa uma estrutura de diretório para armazenar arquivos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49199c617f916413e79a5c6ffc71e6c4f21a69e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767972"
 ---
 # <a name="filetable-schema"></a>Esquema da FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Descreve o esquema predefinido e fixo de uma FileTable.  
   
-|Nome do atributo do arquivo|type|Tamanho|Padrão|DESCRIÇÃO|Acessibilidade do sistema de arquivos|  
+|Nome do atributo do arquivo|type|Tamanho|Padrão|Descrição|Acessibilidade do sistema de arquivos|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variável|Um **hierarchyid** que identifica a posição desse item.|A posição deste nó no FileNamespace hierárquico.<br /><br /> Chave primária da tabela.|Pode ser criada e modificada por meio da definição de valores de caminho do Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Um valor retornado pela função **NEWID()** .|Uma ID exclusiva para os dados FILESTREAM.|Não aplicável.|  

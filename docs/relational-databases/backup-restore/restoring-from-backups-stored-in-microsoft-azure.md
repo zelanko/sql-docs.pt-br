@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b608af9a25b6a4fe14078043276e0689990e6246
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759106"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restaurando de backups armazenados no Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve o que você precisa considerar ao restaurar um banco de dados usando um backup armazenado no serviço de Armazenamento de Blobs do Azure. Isso se aplica aos backups criados através do Backup do SQL Server para URL ou pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  É recomendável analisar este tópico se você tiver backups armazenados no serviço de Armazenamento de Blobs do Azure que pretende restaurar e, em seguida, analisar os tópicos que descrevem as etapas de restauração de um banco de dados, que são as mesmas para backups locais e do Azure.  

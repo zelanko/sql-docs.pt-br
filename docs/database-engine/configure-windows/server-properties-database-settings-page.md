@@ -1,5 +1,6 @@
 ---
 title: Propriedades do servidor (página Configurações do Banco de Dados) | Microsoft Docs
+description: Familiarize-se com as configurações de banco de dados no SQL Server. Saiba mais sobre as opções que controlam o comportamento de backup, os fatores de preenchimento, os locais de arquivo e outras propriedades.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -8,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a4f5a0dacaeeeadf0446df9e4d3cdf54fcad7be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784132"
 ---
 # <a name="server-properties---database-settings-page"></a>Propriedades do servidor – página Configurações do Banco de Dados
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use esta página para exibir ou modificar suas configurações de banco de dados.  
   
 ## <a name="options"></a>Opções
@@ -73,7 +74,7 @@ Essa opção permite ativar/desativar a configuração sp_configure para o *padr
 
 Define o número máximo de minutos por banco de dados para a recuperação de bancos de dados. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, essa opção significa um tempo de recuperação inferior a um minuto e um ponto de verificação com um intervalo de aproximadamente um minuto para bancos de dados ativos. Para obter mais informações, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
-### <a name="data"></a>data
+### <a name="data"></a>Dados
 
 Especifica o local padrão para arquivos de dados. Clique no botão Procurar para navegar para um novo local padrão. As alterações não entram em vigor enquanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é reinicializado.  
   

@@ -1,6 +1,6 @@
 ---
 title: 'Assistente para configurar a segurança: Escolher servidores'
-descriptoin: Describes the properties found on the the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'.
+description: Descreve as propriedades encontradas na página "Escolher Servidores" do "Assistente para configurar segurança de espelhamento de banco de dados".
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cfb2396e97c4cceee534472c07c285aa2a8a371e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84ab26e4de120d64e398bff50cf4a5c409e4cd83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763632"
 ---
 # <a name="configure-database-mirroring-wizard-choose-servers-to-configure"></a>Configurar o assistente para espelhamento do banco de dados: Escolher servidores a serem configurados 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use essa página para especificar quais instâncias de servidor serão configuradas no momento. É preciso selecionar no mínimo uma instância de servidor antes de prosseguir com o assistente.  
   
  Se você desmarcar a caixa de seleção de uma instância de servidor, o assistente não fará nenhuma alteração nessa instância. O assistente, porém, solicitará que você insira informações sobre essa instância e salvará as informações como parte da configuração das outras instâncias de servidor. Por exemplo, se você desmarcar a caixa de seleção da instância de servidor testemunha, o assistente solicitará a inserção da conta de serviços da testemunha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , uma vez que um logon para essa conta precisará ser criado como parte da configuração de segurança salva nas instâncias do servidor principal e de espelhamento.  

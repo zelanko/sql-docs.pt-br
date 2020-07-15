@@ -1,5 +1,6 @@
 ---
 title: Opção de configuração de servidor optimize for ad hoc workloads | Microsoft Docs
+description: Saiba mais sobre a opção "optimize for ad hoc workloads". Use-a para aprimorar a eficiência do cache de planos do SQL Server quando as cargas de trabalho contiverem muitos lotes ad hoc de uso único.
 ms.custom: ''
 ms.date: 11/17/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - optimize for ad hoc workloads option
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c66a4d3826493d10974ab4ce8363e3adde1bd0fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d93df848459f003fa4e2c2be0b88ddd9973422c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781858"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>Opção de configuração de servidor optimize for ad hoc workloads
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A opção **otimizar para cargas de trabalho ad hoc** é usada para aperfeiçoar a eficiência do cache de planos para cargas de trabalho que contêm muitos lotes ad hoc de uso exclusivo. Quando essa opção está definida como 1, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena um pequeno stub de plano compilado no cache de planos quando um lote é compilado pela primeira vez, em vez do plano compilado completo. Isso ajuda a aliviar a pressão sobre a memória não permitindo que o cache de planos fique cheio de planos compilados que não serão reutilizados. 
   

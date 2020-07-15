@@ -1,5 +1,6 @@
 ---
 title: Configurar a opção de configuração de servidor query governor cost limit | Microsoft Docs
+description: Saiba mais sobre a opção query governor cost limit. Veja como usá-lo para limitar a execução a consultas que o SQL Server estima que serão concluídas dentro de um determinado tempo.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - query governor cost limit option [SQL Server]
 - time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 133f98c2a050c6c271f4bfdcb7565d9ccaa33354
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785872"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurar a opção query governor cost limit de configuração de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **query governor cost limit** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção query governor cost limit especifica um limite máximo no intervalo de tempo durante o qual poderá ser executada uma consulta. Custo da consulta se refere a um tempo decorrido estimado, em segundos, que é exigido para concluir uma consulta em uma configuração de hardware específica. O valor padrão para esta opção é 0, que define o administrador de consultas como desativado. Isso permite que todas as consultas sejam executadas sem limite de tempo. Se você especificar um valor que não seja zero nem negativo, o administrador de consultas proibirá a execução de qualquer consulta com um custo estimado que exceda esse valor.  
   

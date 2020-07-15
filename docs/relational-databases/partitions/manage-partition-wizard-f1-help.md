@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787558"
 ---
 # <a name="manage-partition-wizard"></a>Assistente para Gerenciar Partição 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use o **Assistente para Gerenciar Partição** para gerenciar e modificar as tabelas particionadas existentes por meio da troca de partição ou pela implementação de um cenário de janela deslizante. Esse assistente pode facilitar o gerenciamento das partições e simplificar a migração regular de dados de e para as tabelas.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Para iniciar o Assistente para Gerenciar Partição  
@@ -76,7 +76,7 @@ ms.locfileid: "82220408"
 ### <a name="sliding-window-scenario"></a>Cenário de janela deslizante  
  Para gerenciar as partições em um cenário da janela deslizante, selecione **Gerenciar dados particionados em um cenário de janela deslizante**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Criar uma tabela de preparo para alternar partições**  
  Cria uma tabela de preparação para os dados que você está ativando ou desativando na tabela particionada existente.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "82220408"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Selecione as Opções de Inserção de Partição  
  Use a página **Selecione as opções de Inserção de Partição** para selecionar a tabela de preparo que você está ativando na tabela particionada.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Mostrar Todas as Partições**  
  Selecione para mostrar todas as partições, inclusive as partições que estão na tabela particionada no momento.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "82220408"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Selecione as Opções de Extração de Partição  
  Use a página **Selecione as opções de Extração de Partição** para selecionar a partição e a tabela de preparo para reter os dados particionados que você está desativando na tabela particionada.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Grade de partição**  
  Exibe o nome da partição, o **Limite esquerdo**, o **Limite direito**, o **Grupo de arquivos**e a **Contagem de linhas** das partições selecionadas.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "82220408"
   
  Também é possível criar os mesmos índices na tabela de preparação existente na partição de origem. A tabela de preparação contém automaticamente uma restrição que se baseia nos elementos da partição de origem. Normalmente, essa restrição é gerada a partir do valor de limite da partição de origem.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome da tabela de preparação**  
  Crie um nome para a tabela de preparação ou aceite o nome padrão exibido na caixa de edição.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "82220408"
 ##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use a página **Resumo** para examinar as opções selecionadas nas páginas anteriores.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Examinar as seleções**  
  Exibe as seleções feitas em cada página do assistente. Clique em um nó para expandir e exibir as opções selecionadas anteriormente.  
   

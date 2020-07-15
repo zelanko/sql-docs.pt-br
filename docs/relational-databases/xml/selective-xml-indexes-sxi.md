@@ -1,5 +1,6 @@
 ---
 title: SXI (índices XML seletivos) | Microsoft Docs
+description: Saiba como usar SXI (índices XML seletivos) para aprimorar o desempenho da consulta, dar suporte à indexação mais rápida e reduzir os custos de armazenamento de índices XML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 548bb347bb71c9819f8a36213ce896aec92e3b50
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757493"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI (índices XML seletivos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Os índices XML seletivos são outro tipo de índice XML que está disponível para você além de índices XML comuns. Os objetivos do recurso de índice XML seletivo são os seguintes:  
   
 -   Melhorar o desempenho das consultas em dados XML armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -120,7 +121,7 @@ FOR
   
 -   Indexação de nós com tipos XS binários: por exemplo, base64Binary e hexBinary.  
   
--   Especificação dos nós a serem indexados com expressões XPath que contêm o caractere curinga `*` ao final: por exemplo,  `/a/b/c/*`, `/a//b/*`ou `/a/b/*:c`.  
+-   Especificação dos nós a serem indexados com expressões XPath que contêm o caractere curinga `*` no final: Por exemplo, `/a/b/c/*`, `/a//b/*` ou `/a/b/*:c`.  
   
 -   Indexação de qualquer eixo que não seja o filho, o atributo ou o descendente. A ocorrência `//<step>` é permitida como um caso especial.  
   

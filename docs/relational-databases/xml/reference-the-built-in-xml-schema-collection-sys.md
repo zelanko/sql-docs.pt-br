@@ -1,5 +1,6 @@
 ---
 title: Referenciar a coleção de esquemas XML interna (sys) | Microsoft Docs
+description: Saiba como fazer referência ao sys interno da coleção de esquemas XML que é predefinido para cada banco de dados que você cria.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e243b1cf39458824ae7116d490287f87af3ba071
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 152e26ed07bc9da524d74695e13c58962719d317
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757506"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Referenciar a coleção de esquemas XML interna (sys)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Todo banco de dados que você cria tem uma coleção de esquema XML **sys** predefinido no esquema relacional **sys** . Ele reserva esses esquemas predefinidos que podem ser acessados de qualquer outra coleção de esquema XML criada pelo usuário. Os prefixos usados nesses esquemas predefinidos são significativos em XQuery. Apenas **xml** é um prefixo reservado.  
   
 ```  

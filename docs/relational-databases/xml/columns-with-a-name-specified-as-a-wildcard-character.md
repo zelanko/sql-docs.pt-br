@@ -1,5 +1,6 @@
 ---
 title: Especificar uma coluna com um caractere curinga (SQLXML) | Microsoft Docs
+description: Saiba como os nomes de coluna especificados como um caractere curinga afetam os resultados de um XQuery.
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 0820b0d43c51dd7aeabf773f5f9809b7a8005d68
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 915bd2824f6e3a706587769413c0f116df859f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775584"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colunas com um nome especificado como um caractere curinga
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Se o nome da coluna especificado for um caractere curinga (\*), o conteúdo dessa coluna será inserido como se não houvesse nenhum nome de coluna especificado. Se essa for uma coluna de tipo não**xml** , o conteúdo da coluna será inserido como um nó de texto, conforme mostrado no exemplo a seguir:  
   

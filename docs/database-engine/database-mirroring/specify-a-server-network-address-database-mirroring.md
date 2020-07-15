@@ -1,6 +1,6 @@
 ---
 title: Especificar um endereço de rede do servidor (espelhamento de banco de dados)
-description: Especifique o endereço de rede do servidor para um ponto de extremidade de espelhamento de banco de dados.
+description: Saiba como especificar o endereço de rede do servidor para um ponto de extremidade de espelhamento de banco de dados. Uma sessão de espelhamento de banco de dados requer um endereço para cada instância de servidor.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789609"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A configuração de uma sessão de espelhamento de banco de dados requer um endereço de rede de servidor para cada uma das instâncias de servidor. O endereço de rede de servidor de uma instância de servidor deve identificar a instância de forma inequívoca fornecendo um endereço de sistema e número de porta na qual a instância está escutando.  
   
  Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  

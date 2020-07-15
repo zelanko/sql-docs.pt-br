@@ -28,15 +28,15 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766942"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 Cria um gatilho DML, DDL ou de logon. Um gatilho é um tipo especial de procedimento armazenado executado automaticamente quando um evento ocorre no servidor de banco de dados. Os gatilhos DML são executados quando um usuário tenta modificar dados por meio de um evento DML (linguagem de manipulação de dados). Os eventos DML são instruções INSERT, UPDATE ou DELETE em uma tabela ou exibição. Esses gatilhos são disparados quando qualquer evento válido é acionado, sejam as linhas da tabela afetadas ou não. Para obter mais informações, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
@@ -264,7 +264,8 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite a atualizaç
   
 Para gatilhos em tabelas com otimização de memória, a única *sql_statement* permitida no nível superior é um bloco ATOMIC. O T-SQL permitido dentro do bloco ATOMIC é limitado pelo T-SQL permitido dentro de procedimentos nativos.  
   
-\< method_specifier > **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+\< method_specifier > 
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posteriores.  
   
 Para um gatilho CLR, especifica o método de associação de um assembly ao gatilho. O método não deve usar nenhum argumento e deve retornar nulo. *class_name* deve ser um identificador válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve existir como uma classe no assembly com visibilidade do assembly. Se a classe tiver um nome qualificado de namespace que use '.' para separar partes do namespace, o nome da classe deverá ser delimitado com [ ] ou " ". A classe não pode ser aninhada.  
   

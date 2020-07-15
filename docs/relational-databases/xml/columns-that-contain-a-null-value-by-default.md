@@ -1,5 +1,6 @@
 ---
 title: Colunas que contêm um valor nulo por padrão | Microsoft Docs
+description: Saiba como trabalhar com colunas que contêm um valor nulo por padrão usando a frase de palavra-chave ELEMENTS XSINIL no SQL.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f7672d59b2355c0733a5e26da6217fbabf729c6a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d6962f6117a857ed5875d503c259b4d54e8dd84d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775606"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Colunas que contêm um valor nulo por padrão
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Por padrão, um valor nulo em uma coluna é mapeado para a ausência do atributo, nó ou elemento. Esse comportamento padrão pode ser substituído com o uso da frase de palavra-chave ELEMENTS XSINIL. Essa frase solicita o XML centrado em elemento. Isso significa que os valores nulos são explicitamente indicados nos resultados retornados. Esses elementos não terão nenhum valor.
 

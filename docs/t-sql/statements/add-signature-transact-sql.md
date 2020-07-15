@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813157"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Adiciona uma assinatura digital a um procedimento armazenado, função, assembly ou gatilho. Além disso, adiciona uma referenda a um procedimento armazenado, uma função, um assembly ou um gatilho.  
-  
-  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+Adiciona uma assinatura digital a um procedimento armazenado, função, assembly ou gatilho. Além disso, adiciona uma referenda a um procedimento armazenado, uma função, um assembly ou um gatilho.
+
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>Sintaxe
+
 ```syntaxsql
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>Argumentos  
- *module_class*  
- É a classe do módulo ao qual a assinatura é adicionada. O padrão para módulos de escopo de esquema é OBJECT.  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
+*module_class*  
+É a classe do módulo ao qual a assinatura é adicionada. O padrão para módulos de escopo de esquema é OBJECT.  
   
  *module_name*  
  É o nome de um procedimento armazenado, função, assembly ou gatilho a serem assinados ou referendados.  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  É o nome de uma chave assimétrica com a qual assinar ou referendar o procedimento armazenado, função, assembly ou gatilho.  
   
-## <a name="remarks"></a>Comentários  
- O módulo que é assinado ou referendado e o certificado ou chave assimétrica usados para assiná-lo já devem existir. Todo caractere no módulo é incluído no cálculo de assinatura. Isso inclui retornos de carro à esquerda e alimentação de linha.  
+## <a name="remarks"></a>Comentários
+
+O módulo que é assinado ou referendado e o certificado ou chave assimétrica usados para assiná-lo já devem existir. Todo caractere no módulo é incluído no cálculo de assinatura. Isso inclui retornos de carro à esquerda e alimentação de linha.  
   
  Um módulo pode ser assinado e referendado por qualquer número de certificados e chaves assimétricas.  
   
@@ -75,35 +79,37 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  Se um módulo tiver uma cláusula EXECUTE AS, a SID (ID de segurança) do principal também será incluída como parte do processo de assinatura.  
   
-> [!CAUTION]  
->  A assinatura de módulo só deve ser usada para conceder permissões, e nunca para negar ou revogar permissões.  
+> [!CAUTION]
+> A assinatura de módulo só deve ser usada para conceder permissões, e nunca para negar ou revogar permissões.  
   
  Funções embutidas com valor de tabela não podem ser assinadas.  
   
  As informações sobre assinaturas são visíveis na exibição do catálogo sys.crypt_properties.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Ao recriar um procedimento para a assinatura, todas as instruções no lote original devem corresponder ao lote de recriação. Se qualquer parte do lote for diferente, mesmo em espaços ou comentários, a assinatura resultante será diferente.  
   
 ## <a name="countersignatures"></a>Referendas  
- Ao executar um módulo assinado, as assinaturas serão adicionadas temporariamente ao token do SQL, mas as assinaturas serão perdidas se o módulo executar outro módulo ou se o módulo terminar a execução. Uma referenda é uma forma especial de assinatura. Por si só, uma referenda não concede permissões, porém, permite que as assinaturas feitas pelo mesmo certificado ou chave assimétrica sejam mantidas enquanto durar a chamada feita ao objeto referendado.  
+ Ao executar um módulo assinado, as assinaturas serão adicionadas temporariamente ao token do SQL, mas as assinaturas serão perdidas se o módulo executar outro módulo ou se o módulo terminar a execução. Uma referenda é uma forma especial de assinatura. Por si só, uma referenda não concede permissões, porém permite que as assinaturas feitas pelo mesmo certificado ou chave assimétrica sejam mantidas enquanto durar a chamada feita ao objeto referendado.  
   
- Por exemplo, presuma que a usuária Alice chame o procedimento ProcSelectT1ForAlice, que chama o procedimento procSelectT1, que seleciona da tabela T1. Alice tem permissão de EXECUTE em ProcSelectT1ForAlice e procSelectT1, mas ela não tem permissão de SELECT em T1 e nenhum encadeamento de propriedade é envolvido nesta cadeia inteira. Alice não pode acessar a tabela T1 diretamente ou pelo uso de ProcSelectT1ForAlice e procSelectT1. Considerando que desejamos que Alice use sempre ProcSelectT1ForAlice para obter acesso, não desejamos conceder permissão a ela para executar procSelectT1. Como podemos fazer isso?  
+ Por exemplo, presuma que a usuária Alice chame o procedimento ProcSelectT1ForAlice, que chama o procedimento procSelectT1, que seleciona da tabela T1. Alice tem permissão EXECUTE em ProcSelectT1ForAlice e procSelectT1, mas ela não tem permissão SELECT em T1 e nenhum encadeamento de propriedade está envolvido nessa cadeia inteira. Alice não pode acessar a tabela T1 diretamente ou pelo uso de ProcSelectT1ForAlice e procSelectT1. Considerando que desejamos que Alice use sempre ProcSelectT1ForAlice para obter acesso, não desejamos conceder permissão a ela para executar procSelectT1. Como podemos fazer isso?  
   
 -   Se nós assinarmos procSelectT1, de modo que procSelectT1 acesse T1, Alice poderá invocar procSelectT1 diretamente e não terá que chamar ProcSelectT1ForAlice.  
   
--   Poderíamos negar permissão de EXECUTE em procSelectT1 para Alice, porém Alice também não poderia chamar procSelectT1 através de ProcSelectT1ForAlice.  
+-   Poderíamos negar permissão de EXECUTE em procSelectT1 para Alice, porém Alice também não poderia chamar procSelectT1 por meio de ProcSelectT1ForAlice.
   
 -   Assinar ProcSelectT1ForAlice não funcionaria por si só, porque a assinatura seria perdida na chamada para procSelectT1.  
   
 Porém, ao referendar procSelectT1 com o mesmo certificado usado para assinar ProcSelectT1ForAlice, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manterá a assinatura na cadeia de chamada e permitirá o acesso a T1. Se Alice tentar chamar procSelectT1 diretamente, ela não poderá acessar T1, porque a referenda não concede nenhum direito. O exemplo C abaixo mostra o [!INCLUDE[tsql](../../includes/tsql-md.md)] para este exemplo.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão ALTER no objeto e a permissão CONTROL no certificado ou chave assimétrica. Se uma chave privada associada estiver protegida por uma senha, o usuário também precisará ter a senha.  
+
+Requer a permissão ALTER no objeto e a permissão CONTROL no certificado ou chave assimétrica. Se uma chave privada associada estiver protegida por uma senha, o usuário também precisará ter a senha.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>a. Assinando um procedimento armazenado com um certificado  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>a. Assinando um procedimento armazenado com um certificado
+
  O exemplo a seguir assina o procedimento armazenado `HumanResources.uspUpdateEmployeeLogin` com o certificado `HumanResourcesDP`.  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Assinando um procedimento armazenado com um BLOB assinado  
- O exemplo a seguir cria um novo banco de dados e cria um certificado para uso no exemplo. O exemplo cria e assina um procedimento armazenado simples e recupera o BLOB de assinatura de `sys.crypt_properties`. A assinatura é então descartada e adicionada novamente. O exemplo assina o procedimento usando a sintaxe WITH SIGNATURE.  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Assinando um procedimento armazenado com um BLOB assinado
+
+O exemplo a seguir cria um novo banco de dados e cria um certificado para uso no exemplo. O exemplo cria e assina um procedimento armazenado simples e recupera o BLOB de assinatura de `sys.crypt_properties`. A assinatura é então descartada e adicionada novamente. O exemplo assina o procedimento usando a sintaxe WITH SIGNATURE.  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Acessando um procedimento usando uma referenda  
- O exemplo a seguir mostra como a referenda pode ajudar a controlar o acesso a um objeto.  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Acessando um procedimento usando uma referenda
+
+O exemplo a seguir mostra como a referenda pode ajudar a controlar o acesso a um objeto.  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

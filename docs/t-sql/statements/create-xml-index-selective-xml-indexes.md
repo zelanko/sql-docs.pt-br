@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766909"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (índices XML seletivos)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Cria um novo índice XML seletivo secundário em um único caminho que já foi indexado por um índice XML seletivo existente. Também é possível criar índices XML seletivos primários. Para obter informações, consulte [Criar, alterar e remover índices XML seletivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
@@ -83,9 +83,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  Nome do índice XML seletivo existente.  
   
- FOR **(** \<xquery_or_sql_values_path> **)** É o nome do caminho indexado no qual o índice XML seletivo secundário será criado. O caminho a ser indexado é o nome atribuído da instrução CREATE SELECTIVE XML INDEX. Para obter mais informações, veja [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ FOR **(** \<xquery_or_sql_values_path> **)** Nome do caminho indexado no qual criar o índice XML seletivo secundário. O caminho a ser indexado é o nome atribuído da instrução CREATE SELECTIVE XML INDEX. Para obter mais informações, veja [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
- WITH \<index_options> Para obter informações sobre as opções de índice, consulte [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH \<index_options> Para obter informações sobre as opções de índice, confira [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Comentários  
  Pode haver vários índices XML seletivos secundários em cada coluna XML na tabela base.  

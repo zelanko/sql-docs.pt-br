@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001096"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892318"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o cluster do Ubuntu e o recurso do grupo de disponibilidade
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este documento explica como criar um cluster de três nós no Ubuntu e adicionar um grupo de disponibilidade criado anteriormente como um recurso no cluster. Para alta disponibilidade, um grupo de disponibilidade em Linux exige três nós – consulte [Alta disponibilidade e proteção de dados para configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md).
 

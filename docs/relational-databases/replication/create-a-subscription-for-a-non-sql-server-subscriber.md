@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773901"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como criar uma assinatura para um Assinante não SQL Server no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A replicação transacional e de instantâneos dão suporte à publicação de dados para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre plataformas de Assinantes com suporte, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **Neste tópico**  
@@ -47,7 +47,7 @@ ms.locfileid: "75321993"
   
          Você cria o instantâneo após a publicação estar habilitada para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para garantir que o Snapshot Agent gere scripts de instantâneo e de inicialização adequados para os Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Habilite a publicação para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a caixa de diálogo **Propriedades da Publicação – \<PublicationName>** . Consulte [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) para obter mais informações sobre essa etapa.  
+3.  Habilite a publicação para Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a caixa de diálogo **Propriedades de Publicação – \<PublicationName>** . Consulte [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) para obter mais informações sobre essa etapa.  
   
 4.  Crie uma assinatura usando o Assistente para Nova Assinatura. Esse tópico proporciona mais informações sobre essa etapa.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75321993"
   
 2.  Clique com o botão direito do mouse em uma publicação e clique em **Exibir Status do Snapshot Agent**.  
   
-3.  Na caixa de diálogo **Exibir Status do Snapshot Agent – \<Publicação>** , clique em **Iniciar**.  
+3.  Na caixa de diálogo **Exibir Status do Agente de Instantâneo – \<Publication>** , clique em **Iniciar**.  
   
  Quando o Agente de Instantâneo terminar de gerar o instantâneo, uma mensagem será exibida, como "[100%] Um instantâneo de 17 artigos foi gerado".  
   

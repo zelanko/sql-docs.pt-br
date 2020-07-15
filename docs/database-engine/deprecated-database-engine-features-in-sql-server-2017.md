@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759135"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   Este tópico descreve os recursos substituídos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
   
@@ -325,7 +325,7 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 
 | Recurso substituído | Substituição | Nome do recurso |
 |--------------------|-------------|--------------|
-| Sequência da chamada de função :: | Substituída por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | sintaxe '::' de chamada de função |
+| Sequência da chamada de função :: | Substituído por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | sintaxe '::' de chamada de função |
 | Referências de coluna de três e quatro partes. | Nomes com duas partes são o comportamento em conformidade com o padrão.|Nome de coluna com mais de duas partes |
 | Uma cadeia de caracteres entre aspas usada como um alias de coluna para uma expressão em uma lista SELECT:<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | Literais de cadeia de caracteres como aliases de coluna |
 | Procedimentos numerados | Nenhum. Não use. | ProcNums |

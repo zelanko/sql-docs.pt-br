@@ -1,5 +1,6 @@
 ---
 title: Criar um banco de dados habilitado para FILESTREAM | Microsoft Docs
+description: Configure um banco de dados para compatibilidade com FILESTREAM usando a cláusula CONTAINS FILESTREAM ao criar ou alterar o banco de dados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 033e90cbccbb6db9a454183ae982ed2a898c2054
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d5f43aa7846f20ad6c3d723b1415450bbc0915f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768026"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Criar um banco de dados habilitado para FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico mostra como criar um banco de dados que oferece suporte a FILESTREAM. Como o FILESTREAM usa um tipo especial de grupo de arquivos, ao criar o banco de dados, será preciso especificar a cláusula CONTAINS FILESTREAM para pelo menos um grupo de arquivos.  
   
  Um grupo de arquivos FILESTREAM pode conter mais de um arquivo. Para ver um exemplo de código que demonstra como criar um grupo de arquivos FILESTREAM que contém vários arquivos, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
