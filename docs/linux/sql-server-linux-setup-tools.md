@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: Este artigo descreve como instalar as Ferramentas do SQL Server no Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288780"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897331"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar sqlcmd e bcp, as ferramentas de linha de comando do SQL Server no Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 As etapas a seguir instalam as ferramentas de linha de comando, os drivers ODBC da Microsoft e as dependências deles. O pacote **mssql-tools** contém:
 
@@ -36,7 +36,7 @@ Instale as ferramentas para a plataforma:
 
 Este artigo descreve como instalar as ferramentas de linha de comando. Se você estiver procurando exemplos de como usar o **sqlcmd** ou o **bcp**, confira os [links](#next-steps) no final deste tópico.
 
-## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Instalar ferramentas no RHEL 7
+## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>Instalar ferramentas no RHEL 8
 
 Use as seguintes etapas a seguir para instalar o **mssql-tools** no Red Hat Enterprise Linux. 
 
@@ -49,7 +49,7 @@ Use as seguintes etapas a seguir para instalar o **mssql-tools** no Red Hat Ente
 1. Baixe o arquivo de configuração do repositório do Red Hat da Microsoft.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. Saia do modo de superusuário.
@@ -185,11 +185,11 @@ Uma versão prévia do **sqlcmd** e do **bcp** está agora disponível no macOS.
 
 *Instale o [Homebrew](https://brew.sh) se você ainda não o tiver:*
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Para instalar as ferramentas El Capitan e Sierra para Mac, use os seguintes comandos:
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
@@ -218,7 +218,7 @@ Se você [executar o SQL Server em um contêiner do Docker](quickstart-install-c
 
    | Distribuição do Linux | Localização dos pacotes ODBC |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 

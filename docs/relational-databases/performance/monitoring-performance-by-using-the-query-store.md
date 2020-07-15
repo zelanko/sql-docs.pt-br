@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816369"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006216"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de runtime e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -153,29 +153,11 @@ Aqui estão alguns exemplos de como você pode obter mais informações sobre su
 
 ## <a name="configuration-options"></a><a name="Options"></a> Opções de configuração
 
-As opções a seguir estão disponíveis para configurar os parâmetros de Repositório de Consultas.
-
-*OPERATION_MODE* Pode ser **READ_WRITE** (padrão) ou READ_ONLY.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* Configure o argumento `STALE_QUERY_THRESHOLD_DAYS` para especificar o número de dias que os dados devem ser mantidos no Repositório de Consultas. O valor padrão é 30. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **7** dias.
-
-*DATA_FLUSH_INTERVAL_SECONDS* Determina a frequência na qual os dados gravados no Repositório de Consultas são persistidos no disco. Para otimizar o desempenho, os dados coletados pelo repositório de consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada via `DATA_FLUSH_INTERVAL_SECONDS`. O valor padrão é **900** (15 min).
-
-*MAX_STORAGE_SIZE_MB* Configura o tamanho máximo do Repositório de Consultas. Se os dados no Repositório de Consultas atingirem o limite `MAX_STORAGE_SIZE_MB`, o Repositório de Consultas alterará automaticamente o estado de somente gravação para somente leitura e interromperá a coleta de novos dados. O valor padrão é **100 MB** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante, o valor padrão é **1 GB**. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition, o padrão é **1 GB** e, para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **10 MB**.
-
-*INTERVAL_LENGTH_MINUTES* Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixa. Essa janela de tempo fixa é configurada usando `INTERVAL_LENGTH_MINUTES`. O valor padrão é **60**.
-
-*SIZE_BASED_CLEANUP_MODE* Controla se o processo de limpeza será ativado automaticamente quando a quantidade total de dados ficar mais próxima do tamanho máximo. Pode ser **AUTO** (padrão) ou OFF.
-
-*QUERY_CAPTURE_MODE* Indica se o Repositório de Consultas captura todas as consultas ou consultas relevantes com base no consumo de recursos e na contagem de execuções, ou se ele para de adicionar novas consultas e rastreia apenas as consultas atuais. Pode ser **ALL** (capturar todas as consultas), AUTO (ignorar incomum e consultas com duração de compilação e execução insignificante), CUSTOM (política de captura definida pelo usuário) ou NONE (parar de capturar novas consultas). O valor padrão é **ALL** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante, o valor padrão é **AUTO**. O valor padrão de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é **AUTO**.
-
-*MAX_PLANS_PER_QUERY* Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O valor padrão é **200**.
-
-*WAIT_STATS_CAPTURE_MODE* Controla se o Repositório de Consultas captura informações de estatísticas de espera. Pode ser OFF ou **ON** (padrão).
+Para obter as opções disponíveis a fim de configurar os parâmetros do Repositório de Consultas, confira [Opções ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Consulte a exibição **sys.database_query_store_options** para determinar as opções atuais do Repositório de Consultas. Para obter mais informações sobre os valores, consulte [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-Para obter mais informações sobre como definir opções usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [Gerenciamento de opção](#OptionMgmt).
+Para obter exemplos de como definir as opções de configuração usando as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], confira o [Gerenciamento de opções](#OptionMgmt).
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Exibições, Funções e Procedimentos Relacionados
 

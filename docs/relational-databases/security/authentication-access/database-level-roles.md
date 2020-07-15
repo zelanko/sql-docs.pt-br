@@ -1,9 +1,10 @@
 ---
 title: Funções de nível de banco de dados | Microsoft Docs
+description: O SQL Server fornece várias funções que são entidades de segurança que agrupam outras entidades de segurança para gerenciar permissões nos seus bancos de dados.
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, azure-synapse, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -38,20 +39,20 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664460"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005677"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Para gerenciar facilmente as permissões em seus bancos de dados, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece várias *funções* , que são entidades de segurança que agrupam outras entidades. Elas são como ***grupos*** no sistema operacional [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. As funções de nível de banco de dados são permitidas em todo banco de dados em seus escopos de permissões.  
 
-Para adicionar e remover usuários de uma função de banco de dados, use as opções `ADD MEMBER` e `DROP MEMBER` da instrução [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] não dá suporte ao uso de `ALTER ROLE`. Em vez disso, use os antigos procedimentos [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
+Para adicionar e remover usuários de uma função de banco de dados, use as opções `ADD MEMBER` e `DROP MEMBER` da instrução [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . O [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] e o Azure Synapse não dão suporte ao uso de `ALTER ROLE`. Em vez disso, use os antigos procedimentos [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) e [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
   
  Há dois tipos de funções no nível do banco de dados: *funções de banco de dados fixas* , que são predefinidas no banco de dados, e *funções de banco de dados definidas por usuário* , que você pode criar.  
   
@@ -64,7 +65,7 @@ Para adicionar e remover usuários de uma função de banco de dados, use as op�
 
 As permissões de funções de banco de dados definidas pelo usuário podem ser personalizadas com instruções GRANT, DENY e REVOKE. Para obter mais informações, consulte [Permissões (Mecanismo de Banco de Dados)](../../../relational-databases/security/permissions-database-engine.md).
 
-Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do Mecanismo de Banco de Dados](https://aka.ms/sql-permissions-poster) . (As permissões em nível de servidor não podem ser concedidas às funções de banco de dados. Logons e outras entidades em nível de servidor – como funções de servidor – não podem ser adicionados às funções de banco de dados. Para a segurança em nível de servidor no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [funções de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md) . As permissões em nível de servidor não podem ser concedidas por meio das funções no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do Mecanismo de Banco de Dados](https://aka.ms/sql-permissions-poster) . As permissões em nível de servidor não podem ser concedidas às funções de banco de dados. Logons e outras entidades em nível de servidor – como funções de servidor – não podem ser adicionados às funções de banco de dados. Para a segurança em nível de servidor no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [funções de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md) . As permissões em nível de servidor não podem ser concedidas por meio das funções no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e no Azure Synapse.
 
 ## <a name="fixed-database-roles"></a>funções de banco de dados fixas
   
@@ -72,7 +73,7 @@ Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do 
   
 |Nome da função de banco de dados fixa|Descrição|  
 |-------------------------------|-----------------|  
-|**db_owner**|Os membros da função de banco de dados fixa **db_owner** podem executar todas as atividades de configuração e manutenção no banco de dados, bem como remover o banco de dados no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (No [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], algumas atividades de manutenção exigem permissões em nível de servidor e não podem ser executadas por **db_owners**.)|  
+|**db_owner**|Os membros da função de banco de dados fixa **db_owner** podem executar todas as atividades de configuração e manutenção no banco de dados, bem como remover o banco de dados no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (No [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e no Azure Synapse, algumas atividades de manutenção exigem permissões em nível de servidor e não podem ser executadas por **db_owners**.)|  
 |**db_securityadmin**|Os membros da função de banco de dados fixa **db_securityadmin** podem modificar a associação de função somente para funções personalizadas e gerenciar permissões. Membros dessa função têm o potencial de elevar seus privilégios e suas ações devem ser monitoradas.|  
 |**db_accessadmin**|Os membros da função de banco de dados fixa **db_accessadmin** podem adicionar ou remover o acesso ao banco de dados para logons do Windows, grupos do Windows e logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Os membros da função de banco de dados fixa **db_backupoperator** podem fazer backup do banco de dados.|  
@@ -86,7 +87,7 @@ As permissões atribuídas às funções de banco de dados fixas não podem ser 
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>Funções especiais para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-azure-synapse"></a>Funções Especiais para o [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e o Azure Synapse
 
 Essas funções de banco de dados existem somente no banco de dados mestre virtual. As permissões são restritas às ações executadas no mestre. Somente os usuários de banco de dados no mestre podem ser adicionados a essas funções. Logons não podem ser adicionados a essas funções, mas é possível criar usuários com base nos logons e esses usuários podem ser adicionados às funções. Os usuários de banco de dados contidos no mestre também podem ser adicionados a essas funções. No entanto, os usuários de banco de dados adicionados contidos na função **dbmanager** no mestre não podem ser usados para criar novos bancos de dados.
 
@@ -96,7 +97,7 @@ Essas funções de banco de dados existem somente no banco de dados mestre virtu
 |**loginmanager** | Pode criar e excluir logons no banco de dados mestre virtual.|
 
 > [!NOTE]
-> A entidade de segurança em nível de servidor e o Administrador do Azure Active Directory (se estiver configurado) têm todas as permissões no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sem precisar ser membros das funções. Saiba mais em [Autenticação e autorização do Banco de Dados SQL: concessão de acesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> A entidade de segurança no nível do servidor e o Administrador do Azure Active Directory (se estiver configurado) têm todas as permissões no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e no Azure Synapse sem precisar ser membros das funções. Saiba mais em [Autenticação e autorização do Banco de Dados SQL: concessão de acesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Funções msdb  
  O banco de dados msdb contém as funções com finalidade especial que são mostradas na tabela a seguir.  
@@ -128,8 +129,8 @@ Essas funções de banco de dados existem somente no banco de dados mestre virtu
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Comando|Remove uma função do banco de dados.|  
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Comando|Cria uma nova função de banco de dados no banco de dados atual.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Comando|Remove uma função de banco de dados do banco de dados atual.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Adiciona um usuário de banco de dados, uma função de banco de dados, o logon do Windows ou um grupo do Windows em uma função de banco de dados no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , devem usar o `ALTER ROLE` em vez disso.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Remove uma conta de segurança de uma função do SQL Server no banco de dados atual. Todas as plataformas, exceto [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , devem usar o `ALTER ROLE` em vez disso.|
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Adiciona um usuário de banco de dados, uma função de banco de dados, o logon do Windows ou um grupo do Windows em uma função de banco de dados no banco de dados atual. Todas as plataformas, exceto o [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] e o Azure Synapse, devem usar o `ALTER ROLE` em vez disso.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Remove uma conta de segurança de uma função do SQL Server no banco de dados atual. Todas as plataformas, exceto o [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] e o Azure Synapse, devem usar o `ALTER ROLE` em vez disso.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissões | Adiciona a permissão a uma função.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissões | Nega uma permissão a uma função.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissões | Remove uma permissão concedida ou negada anteriormente.

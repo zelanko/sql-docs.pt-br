@@ -20,16 +20,16 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c150b7ef2aa07da9bc9ba36b663bc3eb644102a9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 185b3e77666739c92239adbb9c569683970b71f0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633752"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006282"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>Permissões de banco de dados GRANT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Concede permissões em um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -61,13 +61,13 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* Especifica uma permissão que pode ser concedida em um banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.
 
-ALL Esta opção não concede todas as permissões possíveis. Conceder ALL é equivalente a conceder as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+ALL Esta opção não concede todas as permissões possíveis. A concessão ALL é equivalente a conceder as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
 PRIVILEGES Incluídos para conformidade com ISO. Não altera o comportamento de ALL.
 
 WITH GRANT OPTION Indica que a entidade de segurança também terá a capacidade de conceder a permissão especificada a outros principais.
 
-AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de conceder a permissão.
+AS \<database_principal> Especifica uma entidade de segurança da qual a entidade de segurança que executa esta consulta deriva seu direito de conceder a permissão.
 
 *Database_user* Especifica um usuário de banco de dados.
 
@@ -103,7 +103,7 @@ Especifica um usuário do banco de dados mapeado para uma chave assimétrica.
 ## <a name="remarks"></a>Comentários
 
 > [!IMPORTANT]
-> Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.
+> Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo:  Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.
 
 Um banco de dados é um protegível contido no servidor pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.
 

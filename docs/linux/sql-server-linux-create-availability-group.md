@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896550"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para SQL Server em Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este tutorial aborda como criar e configurar um AG (grupo de disponibilidade) para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux. Ao contrário de [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] e anteriores no Windows, você pode habilitar AGs com ou sem criar o cluster subjacente do Pacemaker primeiro. A integração com o cluster, se necessário, não é feita até mais tarde.
 
@@ -582,7 +582,9 @@ Um cluster de alta disponibilidade do Pacemaker subjacente a [!INCLUDE[ssnoversi
 
 Depois que um grupo de disponibilidade foi criado no [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], os recursos correspondentes devem ser criados no Pacemaker quando um tipo de cluster Externo é especificado. Há dois recursos associados a um AG: o AG em si e um endereço IP. Configurar o recurso de endereço IP é opcional se você não está usando a funcionalidade do ouvinte, mas é recomendado.
 
-O recurso AG criado é um tipo especial de recurso chamado de clone. Basicamente, o recurso AG tem cópias em cada nó e há um recurso de controle chamado mestre. O mestre está associado ao servidor que hospeda a réplica primária. As réplicas secundárias (regulares ou somente de configuração) são consideradas servidores subordinados e podem ser promovidas para mestre em um failover.
+O recurso AG criado é um tipo especial de recurso chamado de clone. Basicamente, o recurso AG tem cópias em cada nó e há um recurso de controle chamado mestre. O mestre está associado ao servidor que hospeda a réplica primária. Os outros recursos hospedam réplicas secundárias (regulares ou somente de configuração) e podem ser promovidos para mestre em um failover.
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  Crie o recurso do AG com a seguinte sintaxe:
 

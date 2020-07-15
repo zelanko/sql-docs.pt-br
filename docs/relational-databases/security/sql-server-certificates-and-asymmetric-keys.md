@@ -1,5 +1,6 @@
 ---
 title: Certificados e chaves assimétricas do SQL Server | Microsoft Docs
+description: Saiba mais sobre certificados e chaves assimétricas no SQL Server, incluindo certificados gerados externamente ou pelo SQL Server, ferramentas e tarefas relacionadas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153121"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001020"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados e chaves assimétricas do SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  A Public Key Cryptography é uma forma de sigilo nas mensagens na qual um usuário cria uma chave *pública* e uma chave *privada*. A chave privada é mantida em segredo, enquanto que a chave pública pode ser distribuída a outros. Embora as chaves estejam matematicamente relacionadas, a chave privada não pode ser obtida facilmente usando a chave pública. A chave pública pode ser usada para criptografar os dados que somente a chave privada correspondente será capaz de descriptografar. Isso pode ser usado para criptografar mensagens para o proprietário da chave privada. Da mesma forma, o proprietário de uma chave privada pode criptografar dados que só podem ser descriptografados com a chave pública. Esse uso constitui a base de certificados digitais em que informações contidas no certificado são criptografadas pelo proprietário de uma chave privada, permitindo que o autor tenha certeza sobre o conteúdo. Devido às chaves de criptografia e de descriptografia serem diferentes, elas são conhecidas como chaves *assimétricas*.
   

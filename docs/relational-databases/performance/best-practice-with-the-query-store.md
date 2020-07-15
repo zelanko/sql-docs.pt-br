@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287570"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006006"
 ---
 # <a name="best-practices-with-query-store"></a>Melhores prática com o Repositório de Consultas
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Este artigo descreve as melhores práticas para usar o Repositório de Consultas do SQL Server com sua carga de trabalho.
 
@@ -34,9 +34,9 @@ Para ver uma descrição rápida sobre como usar o Repositório de Consultas em 
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Usar a Análise de Desempenho de Consultas no banco de dados SQL do Azure
 
-Se você executar o Repositório de Consultas no Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], poderá usar a [Análise de Desempenho de Consultas](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) para analisar o consumo de recurso ao longo do tempo. Embora você possa usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) para obter o consumo de recursos detalhado de todas as suas consultas, como CPU, memória e E/S, a Análise de Desempenho de Consultas fornece uma maneira rápida e eficiente para determinar seu impacto sobre o consumo de DTU geral do banco de dados. Para obter mais informações, consulte [Análise de Desempenho de Consultas do Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Caso execute o Repositório de Consultas no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você poderá usar a [Análise de Desempenho de Consultas](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) para analisar o consumo de recursos ao longo do tempo. Embora você possa usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o [Azure Data Studio](../../azure-data-studio/what-is.md) para obter o consumo de recursos detalhado de todas as suas consultas, como CPU, memória e E/S, a Análise de Desempenho de Consultas fornece uma maneira rápida e eficiente para determinar seu impacto sobre o consumo de DTU geral do banco de dados. Para obter mais informações, consulte [Análise de Desempenho de Consultas do Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
-Esta seção descreve os padrões de configuração ideais que são projetados para garantir a operação confiável do Repositório de Consultas, bem como recursos dependentes. A configuração padrão é otimizada para coleta de dados contínua, ou seja, tempo mínimo gasto nos estados OFF/READ_ONLY.
+Esta seção descreve os padrões de configuração ideais que são projetados para garantir a operação confiável do Repositório de Consultas, bem como recursos dependentes. A configuração padrão é otimizada para coleta de dados contínua, ou seja, tempo mínimo gasto nos estados OFF/READ_ONLY. Para obter mais informações sobre todas as opções de Repositório de Consultas disponíveis, confira [Opções do ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 | Configuração | Descrição | Padrão | Comentário |
 | --- | --- | --- | --- |
@@ -49,11 +49,14 @@ Esta seção descreve os padrões de configuração ideais que são projetados p
 | | | | |
 
 > [!IMPORTANT]
-> Esses padrões são aplicados automaticamente no estágio final da ativação do Repositório de Consultas em todos os bancos de dados SQL do Azure (veja a importante observação anterior). Após essa iluminação, o Banco de Dados SQL do Azure não vai alterar os valores de configuração definidos por clientes, a menos que afete negativamente as operações confiáveis de armazenamento de consulta ou carga de trabalho principal no Repositório de Consultas.
+> Esses padrões serão aplicados automaticamente na fase final de ativação do Repositório de Consultas em todos os [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Depois de habilitado, o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não alterará os valores de configuração definidos pelos clientes, a menos que eles afetem negativamente a carga de trabalho primária ou as operações confiáveis do Repositório de Consultas.
 
-Se você quiser manter suas configurações personalizadas, use [ALTER DATABASE com opções de Repositório de Consultas](https://msdn.microsoft.com/library/bb522682.aspx) para reverter a configuração ao estado anterior. Confira as [Práticas recomendadas com o Repositório de Consultas](https://msdn.microsoft.com/library/mt604821.aspx) para saber como escolher os parâmetros de configuração ideais.
+> [!NOTE]  
+> O Repositório de Consultas não pode ser desabilitado no banco de dados individual do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e no Pool Elástico. Executar `ALTER DATABASE [database] SET QUERY_STORE = OFF` retornará o aviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
-## <a name="use-query-store-with-elastic-pool-databases"></a>Usar o Repositório de Consultas com bancos de dados de pools elásticos
+Se você quiser manter suas configurações personalizadas, use [ALTER DATABASE com opções de Repositório de Consultas](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) para reverter a configuração ao estado anterior. Confira [Práticas recomendadas com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md) para saber como escolher os parâmetros de configuração ideais.
+
+## <a name="use-query-store-with-elastic-pool-databases"></a>Usar o Repositório de Consultas com os bancos de dados de Pool Elástico
 
 Você pode usar o Repositório de Consultas em todos os bancos de dados sem problemas, mesmo em pools densamente compactados. Todos os problemas relacionados ao uso excessivo de recursos, que podem ter ocorrido quando o Repositório de Consultas foi habilitado para o grande número de bancos de dados nos pools elásticos, foram resolvidos.
 
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 

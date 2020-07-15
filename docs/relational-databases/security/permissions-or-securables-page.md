@@ -1,5 +1,6 @@
 ---
 title: Página Permissões ou Protegíveis | Microsoft Docs
+description: Use a página Permissões ou a página Protegíveis para exibir ou definir as permissões para os protegíveis no SQL Server.
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8109779b1afe4badd7c44bd30b264a07503c5fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076618"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000554"
 ---
 # <a name="permissions-or-securables-page"></a>Página Permissões ou Protegíveis
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Use a página **Permissões** ou a página **Protegíveis** para exibir ou definir as permissões para protegíveis. Essa página pode ser aberta de muitos locais. O conteúdo da página pode ser ligeiramente alterado, dependendo de como a página é aberta e do que contém. A grade na parte superior da página pode estar populada quando a página é aberta ou pode estar vazia. Para adicionar itens à grade superior, clique em **Pesquisar**. Na grade superior, selecione um item e, depois, defina as permissões apropriadas na guia **Explícita** . Para exibir as permissões adicionadas, use a guia **Efetiva** .  
   
  Para entender as combinações possíveis de protegíveis e as entidades, confira os links de sintaxe específica de protegíveis no tópico [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md). Para obter mais informações, consulte [Securables](../../relational-databases/security/securables.md).  

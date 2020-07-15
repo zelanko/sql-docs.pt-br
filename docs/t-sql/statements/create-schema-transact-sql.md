@@ -24,15 +24,15 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 586848ae7fceda7e31b3002e8e1d9a3c63259006
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 9fe651c706bcbe41ea688d0f9e661ff483a70d72
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138255"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001496"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cria um esquema no banco de dados atual. A transação CREATE SCHEMA também pode criar tabelas e exibições no novo esquema e definir permissões GRANT, DENY ou REVOKE nesses objetos.  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Esse comportamento é necessário para permitir que usuários com base em grupos do Windows criem e possuam objetos. No entanto, isso pode resultar na criação não intencional de esquemas e usuários. Para evitar criar usuários e esquemas implicitamente, sempre que possível crie entidades de banco de dados explicitamente e atribua um esquema padrão. Ou declare explicitamente um esquema existente ao criar objetos em um banco de dados usando nomes de objetos de duas ou três partes.  
 
 > [!NOTE]
->  A criação implícita de um usuário do Azure Active Directory não é possível no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como a criação de um usuário do Azure AD por meio de um provedor externo deve verificar o status de usuários no AAD, a criação do usuário falha com o erro 2760: **O nome do esquema especificado "\<user_name@domain>" não existe ou você não tem permissão para usá-lo.** E, em seguida, o erro 2759: **Falha em CREATE SCHEMA devido a erros anteriores.** Para resolver esses erros, crie o usuário do Azure AD por meio do provedor externo primeiro e, em seguida, execute novamente a instrução, criando o objeto.
+>  A criação implícita de um usuário do Azure Active Directory não é possível no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como a criação de um usuário do Azure AD de um provedor externo precisa verificar o status de usuários no AAD, a criação do usuário falhará com o erro 2760: **O nome do esquema especificado "\<user_name@domain>" não existe ou você não tem permissão para usá-lo.** E, em seguida, o erro 2759: **Falha em CREATE SCHEMA devido a erros anteriores.** Para resolver esses erros, crie o usuário do Azure AD por meio do provedor externo primeiro e, em seguida, execute novamente a instrução, criando o objeto.
  
   
 ## <a name="deprecation-notice"></a>Aviso de substituição  

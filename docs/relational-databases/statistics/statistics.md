@@ -1,7 +1,7 @@
 ---
 title: Estatísticas | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -23,15 +23,15 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cda8a71b0023cfc5cb7e697bf98e06b4e8955f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286730"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012232"
 ---
 # <a name="statistics"></a>Estatísticas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   O otimizador de consulta usa estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade. Em alguns casos, é necessário criar estatísticas adicionais ou modificar o design da consulta para obter melhores resultados. Este tópico aborda os conceitos de estatísticas e fornece diretrizes para o uso eficiente de estatísticas de otimização de consultas.  
   
 ##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Componentes e conceitos  
@@ -137,7 +137,11 @@ Para saber mais sobre como controlar AUTO_UPDATE_STATISTICS, confira [Controland
 * Seu aplicativo executa frequentemente a mesma consulta, consultas semelhantes ou planos de consulta em cache semelhantes. Os tempos de resposta de consulta podem ser mais previsíveis com atualizações de estatísticas assíncronas do que com atualizações de estatísticas síncronas, pois o otimizador de consulta pode executar consultas de entrada sem aguardar estatísticas atualizadas. Isso evita o atraso de algumas consultas e não de outras.  
   
 * Seu aplicativo excedeu o tempo limite de solicitações do cliente pelo fato de uma ou mais consultas estarem aguardando a atualização de estatísticas. Em alguns casos, a espera por estatísticas síncronas pode gerar falhas em aplicativos com tempo limite restrito.  
-  
+
+A atualização de estatísticas assíncronas é executada por uma solicitação em segundo plano. Quando a solicitação estiver pronta para gravar estatísticas atualizadas no banco de dados, ela tentará adquirir um bloqueio de modificação de esquema no objeto de metadados de estatísticas. Caso uma sessão diferente já esteja mantendo um bloqueio no mesmo objeto, a atualização de estatísticas assíncronas será bloqueada até que o bloqueio de modificação do esquema possa ser adquirido. Da mesma forma, as sessões que precisam adquirir um bloqueio de estabilidade do esquema no objeto de metadados de estatísticas para compilar uma consulta poderão ser bloqueadas pela sessão em segundo plano da atualização de estatísticas assíncronas, pois ela já está aguardando para adquirir o bloqueio de modificação do esquema. Portanto, para cargas de trabalho com compilações de consulta muito frequentes e atualizações de estatísticas frequentes, usar estatísticas assíncronas poderá aumentar a probabilidade de ocorrer problemas de simultaneidade devido ao bloqueio.
+
+No Banco de Dados SQL do Azure você pode evitar possíveis problemas de simultaneidade usando a atualização de estatísticas assíncronas caso habilite a [configuração no escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY. Com essa configuração habilitada, a solicitação em segundo plano aguardará para adquirir o bloqueio de modificação do esquema em uma fila de baixa prioridade separada, permitindo que outras solicitações continuem compilando consultas com as estatísticas existentes. Quando nenhuma outra sessão estiver mantendo um bloqueio no objeto de metadados de estatísticas, a solicitação em segundo plano adquirirá um bloqueio de modificação de esquema e uma atualização de estatísticas. Na hipótese improvável em que a solicitação em segundo plano não possa adquirir o bloqueio dentro de um período de tempo limite de vários minutos, a atualização de estatísticas assíncronas será anulada e as estatísticas não serão atualizadas até que outra atualização de estatísticas automática seja disparada ou até que as estatísticas sejam [atualizadas manualmente](update-statistics.md).
+
 #### <a name="incremental"></a>INCREMENTAL  
  Quando a opção INCREMENTAL de CREATE STATISTICS for ON, as estatísticas serão criadas de acordo com as estatísticas da partição. Quando estiver OFF, a árvore de estatísticas será ignorada e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recomputará as estatísticas. O padrão é OFF. Essa configuração substitui a propriedade INCREMENTAL de nível de banco de dados. Para obter informações sobre como criar estatísticas incrementais, consulte [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Para obter mais informações sobre como criar estatísticas por partição automaticamente, consulte [Propriedades de banco de dados &#40;página Opções&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) e [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
@@ -202,7 +206,7 @@ Neste exemplo, o objeto de estatísticas `LastFirst` apresenta densidades para o
 ### <a name="query-selects-from-a-subset-of-data"></a>A consulta faz seleções em um subconjunto de dados  
 Quando o otimizador de consulta cria estatísticas para colunas únicas e índices, as estatísticas são criadas para os valores em todas as linhas. Quando as consultas fazem seleções em um subconjunto de linhas e esse subconjunto tem uma distribuição de dados exclusiva, as estatísticas filtradas podem aprimorar os planos de consulta. É possível criar estatísticas filtradas usando a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a cláusula [WHERE](../../t-sql/queries/where-transact-sql.md) para definir a expressão de predicado de filtro.  
   
-Por exemplo, usando o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto da tabela `Production.Product` pertence a uma das quatro categorias da tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
+Por exemplo, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto na tabela `Production.Product` pertence a uma das quatro categorias na tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
   
 Usando Bicicletas como um exemplo, as estatísticas filtradas em todos os pesos de bicicleta fornecerão estatísticas mais precisas ao otimizador de consulta e podem melhorar a qualidade do plano de consulta comparadas com as estatísticas de tabela completa ou estatísticas inexistentes na coluna Peso. A coluna de peso das bicicletas é uma boa candidata para estatísticas filtradas, mas não necessariamente para um índice filtrado se o número de pesquisas de peso for relativamente pequeno. O ganho de desempenho que um índice filtrado oferece às pesquisas pode não compensar os custos adicionais com a manutenção e o custo de armazenamento exigidos para adicionar um índice filtrado ao banco de dados.  
   

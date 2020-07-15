@@ -1,5 +1,6 @@
 ---
 title: Criar uma credencial | Microsoft Docs
+description: Saiba como criar uma credencial no SQL Server usando o SQL Server Management Studio ou o Transact-SQL. Descubra como trabalhar dentro das limitações e restrições.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 675e152dfffa6bfce8decf37dc1716e7149bae83
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 541b8fc68dd5ae92864612b017f04d619fe444c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095046"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900625"
 ---
 # <a name="create-a-credential"></a>Create a Credential
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como criar uma credencial no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  As credenciais oferecem um modo para permitir que os usuários de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenham uma identidade fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Isso é usado principalmente para executar código em Assemblies com conjunto de permissões EXTERNAL_ACCESS. As credenciais podem também ser usadas quando um usuário de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisa acessar recursos de um domínio, como o local de um arquivo para armazenar um backup.  

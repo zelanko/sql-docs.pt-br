@@ -1,7 +1,7 @@
 ---
 title: Consultando dados em uma tabela temporal com controle de versão do sistema | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402680"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002336"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Como consultar dados em uma tabela temporal com controle da versão do sistema
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Quando quiser obter o estado mais recente (real) dos dados em uma tabela temporal, você pode fazer uma consulta exatamente da mesma maneira que consulta uma tabela não temporal. Se as colunas PERIOD não estiverem ocultas, seus valores aparecerão em uma consulta SELECT \* . Se você tiver especificado as colunas **PERIOD** como ocultas, seus valores não aparecerão na consulta SELECT \*. Quando as colunas **PERIOD** estiverem ocultas, faça referência às colunas **PERIOD** especificamente na cláusula SELECT para retornar os valores para essas colunas.
 
@@ -32,7 +32,7 @@ Para executar qualquer tipo de análise baseada em tempo, use a nova cláusula *
 - CONTAINED IN (<sdata_hora_inicial> , <data_hora_final>)
 - ALL
 
-**FOR SYSTEM_TIME** pode ser especificada independentemente para cada tabela em uma consulta. Ela pode ser usada dentro de expressões de tabela comuns, funções com valor de tabela e procedimentos armazenados. Ao usar um alias de tabela com tabelas temporais, a cláusula **FOR SYSTEM_TIME** deve ser incluída entre o nome da tabela temporal e o alias; confira o segundo exemplo em [Consultar um horário específico usando a subcláusula AS OF](#query-for-a-specific-time-using-the-as-of-sub-clause).
+**FOR SYSTEM_TIME** pode ser especificada independentemente para cada tabela em uma consulta. Ela pode ser usada dentro de expressões de tabela comuns, funções com valor de tabela e procedimentos armazenados. Ao usar um alias de tabela com tabelas temporais, a cláusula **FOR SYSTEM_TIME** precisa ser incluída entre o nome da tabela temporal e o alias (consulte o segundo exemplo em "Consultar um horário específico usando a subcláusula AS OF", abaixo).
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Consultar um horário específico usando a subcláusula AS OF
 

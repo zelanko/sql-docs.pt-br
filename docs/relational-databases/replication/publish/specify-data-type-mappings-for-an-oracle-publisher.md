@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75320757"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900649"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar mapeamentos de tipo de dados para um Publicador Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como especificar mapeamentos de tipo de dados para um Publicador Oracle no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Embora um conjunto de mapeamentos de tipo de dados padrão seja fornecidos para Publicadores Oracle, pode ser necessário especificar diferentes mapeamentos para determinada publicação.  
   
  **Neste tópico**  
@@ -35,15 +35,15 @@ ms.locfileid: "75320757"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Especifique mapeamentos de tipo de dados na guia **Mapeamento de Dados** da caixa de diálogo **Propriedades do Artigo – \<Artigo>** . Isso está disponível na página **Artigos** do Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma Publicação de um Banco de Dados Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Especifique mapeamentos de tipo de dados na guia **Mapeamento de Dados** da caixa de diálogo **Propriedades do Artigo – \<Article>** . Isso está disponível na página **Artigos** do Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação – \<Publication>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma Publicação de um Banco de Dados Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Para especificar um mapeamento de tipo de dados  
   
-1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione uma tabela e clique em **Propriedades do Artigo**.  
+1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione uma tabela e clique em **Propriedades do Artigo**.  
   
 2.  Clique em **Definir as Propriedades do Artigo Realçado da Tabela**.  
   
-3.  Na guia **Mapeamento de Dados** da caixa de diálogo **Propriedades do Artigo – \<Artigo>** , selecione os mapeamentos da coluna **Tipo de Dados de Assinante**:  
+3.  Na guia **Mapeamento de Dados** da caixa de diálogo **Propriedades do Artigo – \<Article>** , selecione os mapeamentos na coluna **Tipo de Dados do Assinante**:  
   
     -   Para alguns tipos de dados, há somente um mapeamento possível; em tal caso, a coluna na grade de propriedades é somente leitura.  
   

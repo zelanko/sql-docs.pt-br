@@ -1,5 +1,6 @@
 ---
 title: Agente de Mesclagem de Replicação | Microsoft Docs
+description: O Agente de Mesclagem de Replicação aplica o instantâneo inicial mantido nas tabelas de banco de dados aos Assinantes, mescla alterações de dados incrementais e reconcilia conflitos.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ddbb30c678599cafcde7e5cb8888a904b9cf7b58
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529400"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897888"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   O Agente de Mesclagem de Replicação é um executável utilitário que aplica o instantâneo inicial contido nas tabelas do banco de dados aos Assinantes. Ele também mescla as alterações incrementais de dados que ocorreram no Publicador depois que o instantâneo inicial foi criado e reconcilia conflitos de acordo com as regras que você configura ou usando um resolvedor personalizado que você cria.  
   
 > [!NOTE]  

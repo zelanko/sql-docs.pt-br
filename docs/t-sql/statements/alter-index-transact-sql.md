@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588224"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000717"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifica uma tabela ou índice de exibição existente (rowstore, columnstore ou XML) desabilitando, recriando ou reorganizando o índice, ou definindo opções no índice.  
   
@@ -399,7 +399,7 @@ Quando estiver **ON**, as estatísticas serão criadas conforme as estatísticas
 -   Estatísticas criadas em tabelas internas  
 -   Estatísticas criadas com índices espaciais ou índices XML  
   
- ONLINE **=** { ON | **OFF** } \<conforme se aplica a rebuild_index_option>  
+ ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF.  
   
  Para um índice XML ou índice espacial, só há suporte para `ONLINE = OFF` e, se ONLINE for definido como ON, um erro será gerado.  
@@ -566,7 +566,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON | **OFF** } \<conforme se aplica a single_partition_rebuild_index_option>  
+ ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  Especifica se um índice ou partição do índice de uma tabela subjacente pode ser recriado online ou offline. Se **REBUILD** for executada online (**ON**), os dados nessa tabela estarão disponíveis para consultas e modificação de dados durante a operação de índice.  O padrão é **OFF**.  
   
  ATIVADO  
@@ -704,7 +704,7 @@ Online index rebuild é especificado como retomável usando a opção RESUMABLE=
 -  A opção RESUMABLE não persiste nos metadados para um determinado índice e se aplica somente à duração de uma instrução DDL atual. Portanto, a cláusula RESUMABLE = ON deve ser especificada explicitamente para habilitar a capacidade de retomada.
 -  A opção MAX_DURATION é compatível com a opção RESUMABLE=ON ou com a opção de argumento **low_priority_lock_wait**. 
    -  A opção MAX_DURATION para RESUMABLE especifica o intervalo para um índice que está sendo recompilado. Depois que esse tempo é consumido, a recompilação de índice é colocada em pausa ou conclui sua execução. O usuário decide quando uma recompilação de um índice em pausa pode ser retomada. O **tempo** em minutos para MAX_DURATION deve ser maior que 0 minutos e menor ou igual uma semana (7 \* 24 \* 60 = 10080 minutos). Ter uma longa pausa para uma operação de índice pode afetar o desempenho de DML em uma tabela específica, bem como a capacidade de disco de banco de dados, já que tanto o original quanto o recém-criado exigem espaço em disco e precisam ser atualizados durante as operações DML. Se a opção MAX_DURATION for omitida, a operação de índice continuará até sua conclusão ou até que ocorra uma falha. 
-   -  A opção de argumento \<low_priority_lock_wait > permite que você decida como a operação de índice pode continuar quando bloqueada no bloqueio SCH-M.
+   -  A opção de argumento \<low_priority_lock_wait> permite que você decida como a operação de índice pode continuar quando bloqueada no bloqueio SCH-M.
  
 -  Executar novamente a instrução ALTER INDEX REBUILD original com os mesmos parâmetros retoma uma operação de recompilação de índice em pausa. Você também pode retomar uma operação de recompilação de índice em pausa executando a instrução ALTER INDEX RESUME.
 -  A opção SORT_IN_TEMPDB=ON não é compatível com índice retomável 
@@ -751,8 +751,8 @@ A seguinte funcionalidade está desabilitada para operações de recompilação 
 As restrições a seguir se aplicam a índices particionados:  
   
 -   Ao usar ALTER INDEX ALL ..., não será possível alterar a configuração de compactação de uma única partição se a tabela tiver índices não alinhados.  
--   O ALTER INDEX \<index>... REBUILD PARTITION ... recria a partição especificada do índice.  
--   O ALTER INDEX \<index>... REBUILD WITH... recria todas as partições do índice.  
+-   O ALTER INDEX \<index>… REBUILD PARTITION ... recria a partição especificada do índice.  
+-   O ALTER INDEX \<index>… REBUILD WITH... recria todas as partições do índice.  
   
 ## <a name="statistics"></a>Estatísticas  
  Quando você executar **ALTER INDEX ALL...** em uma tabela, somente as estatísticas associadas aos índices serão atualizadas. As estatísticas automáticas ou manuais criadas na tabela (em vez de um índice) não são atualizadas.  

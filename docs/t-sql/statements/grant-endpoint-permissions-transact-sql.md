@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c6fcbf78c03bd1f4d9f880abf216c977fcfc309d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bdc9730bc5a13a9d6f97fe88a973a95d68b3af0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899921"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede permissões em um ponto de extremidade.  
 

@@ -5,21 +5,21 @@ description: Este início rápido mostra como instalar o SQL Server 2017 ou o SQ
 author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 55bdeab8f54b8aca9aea83cc0e4b1cb2c780da56
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 136f2ec1b7bc795db2b95561f4fad31f8dfff42f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760642"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901574"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Red Hat
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -39,7 +39,19 @@ Neste início rápido, você instala o SQL Server 2019 no Red Hat Enterprise Lin
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-É necessário ter um computador RHEL 7.3, 7.4, 7.5, 7.6 ou 8 com **pelo menos 2 GB** de memória.
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+É necessário ter um computador RHEL 7.3 a 7.8 ou 8.0 a 8.2 com **pelo menos 2 GB** de memória.
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+É necessário ter um computador RHEL 7.3, 7.4, 7.5, 7.6 ou 8.0 com **pelo menos 2 GB** de memória.
+
+::: moniker-end
 
 Para instalar o Red Hat Enterprise Linux em seu próprio computador, acesse [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Também é possível criar máquinas virtuais RHEL no Azure. Confira [Criar e gerenciar VMs do Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) e use `--image RHEL` na chamada para `az vm create`.
 

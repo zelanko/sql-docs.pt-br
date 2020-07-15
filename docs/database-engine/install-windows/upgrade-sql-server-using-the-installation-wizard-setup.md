@@ -1,5 +1,6 @@
 ---
 title: 'Atualização: Assistente de Instalação (Configuração)'
+description: O Assistente de Instalação do SQL Server fornece uma árvore de recursos para a atualização in-loco de componentes do SQL Server para a última versão do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900203"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recursos para a atualização in-loco de componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -97,7 +98,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento.  
   
     > [!NOTE]  
-    >  Se você optou por fazer upgrade dos recursos compartilhados selecionando **\<Fazer upgrade somente de recursos compartilhados>** na página **Selecionar Instância**, todos os recursos compartilhados são pré-selecionados na página Seleção de Recursos. Todos os componentes compartilhados são atualizados ao mesmo tempo.  
+    >  Se você optou por atualizar os recursos compartilhados selecionando **\<Upgrade shared features only>** na página **Selecionar Instância**, todos os recursos compartilhados serão pré-selecionados na página Seleção de Recursos. Todos os componentes compartilhados são atualizados ao mesmo tempo.  
   
 12. Na página Configuração da Instância, especifique a ID da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

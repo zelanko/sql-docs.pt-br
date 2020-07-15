@@ -1,5 +1,6 @@
 ---
 title: Criar um esquema de banco de dados | Microsoft Docs
+description: Saiba como criar um esquema em um SQL Server usando o SQL Server Management Studio ou o Transact-SQL, incluindo limitações e restrições.
 ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903753"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005703"
 ---
 # <a name="create-a-database-schema"></a>Criar um esquema de banco de dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Este tópico descreve como criar um esquema no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
@@ -57,7 +58,7 @@ ms.locfileid: "72903753"
   
 4.  Na caixa de diálogo **Esquema – Novo** , na página **Geral** , insira um nome do novo esquema na caixa **Nome do esquema** .  
   
-5.  Na caixa **Proprietário do esquema** , digite o nome de um usuário de banco de dados ou função para ser o proprietário da propriedade do esquema. Como alternativa, clique em **Pesquisar** para abrir a caixa de diálogo **Pesquisar Funções e Usuários**.  
+5.  Na caixa **Proprietário do esquema** , digite o nome de um usuário de banco de dados ou função para ser o proprietário da propriedade do esquema. Como alternativa, clique em **Pesquisar** para abrir a caixa de diálogo **Pesquisar Funções e Usuários** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
@@ -65,7 +66,7 @@ ms.locfileid: "72903753"
 > Uma caixa de diálogo não aparecerá se você estiver criando um esquema usando o SSMS em relação a um **Banco de Dados SQL do Azure** ou um **SQL Data Warehouse do Azure**. Você precisará executar a Instrução T-SQL Criar Modelo de Esquema que é gerada.
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Esquema – Novo** também oferece opções em duas páginas adicionais: **Permissões** e **Propriedades Estendidas**.  
+ A caixa de diálogo **Schema- New** também oferece opções em duas páginas adicionais: **Permissões** e **Propriedades Estendidas**.  
   
 -   A página **Permissões** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
   

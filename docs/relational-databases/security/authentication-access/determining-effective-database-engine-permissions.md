@@ -1,5 +1,6 @@
 ---
 title: Determinando permissões de mecanismo de banco de dados eficiente | Microsoft Docs
+description: Saiba como determinar quem tem permissões para vários objetos no Mecanismo de Banco de Dados do SQL Server, incluindo os sistemas de permissão atuais e anteriores.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488025"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005627"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Este artigo descreve como determinar quem tem permissões para vários objetos no Mecanismo de Banco de Dados do SQL Server. O SQL Server implementa dois sistemas de permissão para o mecanismo de banco de dados. Um sistema mais antigo de funções fixas tem permissões pré-configuradas. Está disponível, a partir do SQL Server 2005, um sistema mais flexível e preciso. (As informações neste artigo se aplicam ao SQL Server, a partir do 2005. Alguns tipos de permissões não estão disponíveis em algumas versões do SQL Server.)
 

@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d99f732d76bda9f44c20701818e61a2b2af98e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633163"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010746"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>Permissões de banco de dados DENY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Nega permissões em um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -58,13 +58,13 @@ DENY <permission> [ ,...n ]
 
 *permission* Especifica uma permissão que pode ser negada em um banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.
 
-ALL Esta opção não nega todas as permissões possíveis. Negar ALL é equivalente a negar as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+ALL Esta opção não nega todas as permissões possíveis. Negar ALL é equivalente a negar as permissões a seguir: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
 PRIVILEGES Incluídos para conformidade com ISO. Não altera o comportamento de ALL.
 
 CASCADE Indica que a permissão também será negada às entidades às quais a entidade de segurança especificada a concedeu.
 
-AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de negar a permissão.
+AS \<database_principal> especifica uma entidade de segurança da qual deriva o direito da entidade de segurança que está executando esta consulta de negar a permissão.
 
 *Database_user* Especifica um usuário de banco de dados.
 

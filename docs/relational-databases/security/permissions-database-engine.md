@@ -1,5 +1,6 @@
 ---
 title: Permissões (Mecanismo de Banco de Dados) | Microsoft Docs
+description: Consulte esta lista completa de permissões do SQL Server para saber mais sobre quais permissões se aplicam a plataformas que você usa.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995849"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009389"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Todo protegível do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões associadas que podem ser concedidas a uma entidade de segurança. As permissões no [!INCLUDE[ssDE](../../includes/ssde-md.md)] são gerenciadas no nível do servidor atribuídas a funções de logon e de servidor, e no nível do banco de dados atribuídas a funções de usuários do banco de dados e funções de banco de dados. O modelo para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tem o mesmo sistema para as permissões de banco de dados, mas as permissões no nível do servidor não estão disponíveis. Este tópico contém a lista completa de permissões. Para obter uma implementação típica das permissões, veja [Introdução às permissões do Mecanismo de Banco de Dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -51,11 +52,11 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
   
      Confere a capacidade de alterar as propriedades, menos a propriedade de um protegível específico. Quando concedido em um escopo, ALTER também concede a capacidade de alterar, criar ou descartar qualquer protegível contido naquele escopo. Por exemplo, a permissão ALTER em um esquema inclui a capacidade de criar, alterar e descartar objetos do esquema.  
   
--   ALTER ANY \<*Server Securable*>, em que *Server Securable* pode ser qualquer protegível do servidor.  
+-   ALTERAR ANY \<*Server Securable*>, em que *Protegível do Servidor* pode ser qualquer protegível do servidor.  
   
      Confere a capacidade de criar, alterar ou remover instâncias individuais do *Protegível de Servidor*. Por exemplo, ALTER ANY LOGIN confere a capacidade de criar, alterar ou descartar qualquer logon na instância.  
   
--   ALTER ANY \<*Database Securable*>, em que *Database Securable* pode ser qualquer protegível no nível de banco de dados.  
+-   ALTERAR ANY \<*Database Securable*>, em que *Protegível do Banco de Dados* pode ser qualquer protegível no nível do banco de dados.  
   
      Confere a capacidade de criar, alterar ou remover instâncias individuais do *Protegível do Banco de Dados*. Por exemplo, ALTER ANY SCHEMA confere a capacidade de criar, alterar ou descartar qualquer esquema no banco de dados.  
   
@@ -63,11 +64,11 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
   
      Habilita o usuário autorizado a assumir propriedade do protegível no qual é concedido.  
   
--   IMPERSONATE \<*Logon*>  
+-   IMPERSONATE \<*Login*>  
   
      Permite que o usuário autorizado represente o logon.  
   
--   IMPERSONATE \<*Usuário*>  
+-   IMPERSONATE \<*User*>  
   
      Permite que o usuário autorizado represente o usuário.  
   
@@ -102,8 +103,8 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |Permissão|Aplica-se a|  
 |----------------|----------------|  
 |ALTER|Todas as classes de objetos, exceto TYPE.|  
-|CONTROL|Todas as classes de objetos: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW e<br />XML SCHEMA COLLECTION|  
-|Delete (excluir)|Todas as classes de objetos, exceto DATABASE SCOPED CONFIGURATION e SERVER.|  
+|CONTROL|Todas as classes de objetos: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW e<br />XML SCHEMA COLLECTION|  
+|Delete (excluir)|Todas as classes de objetos, exceto DATABASE SCOPED CONFIGURATION, SERVER e TYPE.|  
 |Execute|Tipos de CLR, scripts externos, procedimentos ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funções escalares e de agregação ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinônimos|  
 |IMPERSONATE|Logons e usuários|  
 |INSERT|Sinônimos, tabelas e colunas, exibições e colunas. A permissão pode ser concedida em nível de banco de dados, de esquema ou de objeto.|  
@@ -417,7 +418,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Considerações especiais para permissões no nível da coluna
 
-Permissões em nível de coluna são concedidas com a sintaxe *<table_name>(\<column _name>)* . Por exemplo:
+As permissões em nível de coluna são concedidas com a sintaxe *<table_name>(\<column _name>)* . Por exemplo:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

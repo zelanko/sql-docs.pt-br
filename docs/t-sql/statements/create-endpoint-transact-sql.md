@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4352a1b050bc27be18d490c8790f793f57e1839
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632160"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902291"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria pontos de extremidade e define suas propriedades, incluindo os métodos disponíveis para os aplicativos clientes. Para obter informações sobre permissões relacionadas, consulte [Permissões GRANT de ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "81632160"
   
      Nessa parte, você define a carga útil que tem suporte no ponto de extremidade. A carga útil pode ser uma de vários tipos com suporte: [!INCLUDE[tsql](../../includes/tsql-md.md)], agente de serviços, espelhamento de banco de dados. Nesta parte, você inclui também informações específicas de linguagem.  
   
-> **OBSERVAÇÃO:** serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **OBSERVAÇÃO:** Os Serviços Web XML nativos (pontos de extremidade SOAP/HTTP) foram removidos do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Para opções específicas do SERVICE_BROKER, consulte "Opções SERVICE_BROKER", posteriormente nesta seção. Para opções específicas de DATABASE_MIRRORING, consulte "Opções DATABASE_MIRRORING", posteriormente nesta seção.  
   
- AUTHENTICATION **=** \<authentication_options> Especifica os requisitos de autenticação de TCP/IP para conexões desse ponto de extremidade. O padrão é WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Especifica os requisitos de autenticação TCP/IP em conexões desse ponto de extremidade. O padrão é WINDOWS.  
   
  Os métodos de autenticação com suporte incluem NTLM e ou Kerberos ou ambos.  
   

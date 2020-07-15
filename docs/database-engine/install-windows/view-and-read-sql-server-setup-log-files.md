@@ -1,5 +1,6 @@
 ---
 title: Exibir e ler arquivos de log da Instalação do SQL Server | Microsoft Docs
+description: Este artigo descreve os arquivos de log que a Instalação do SQL Server cria. Os arquivos de log são colocados em uma pasta com carimbo de data/hora.
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929131"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900171"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Exibir e ler arquivos de log da Instalação do SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 A Instalação do SQL Server cria arquivos de log em uma pasta com carimbo de data/hora em **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** por padrão, em que *nnn* são números que correspondem à versão do SQL que está sendo instalada. O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de log são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
 
@@ -82,14 +83,14 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 
 
   >[!NOTE]
-  > Observe que ao aplicar patches, pode haver diversas subpastas (uma para cada instância que está sendo corrigida e uma para recursos compartilhados) que contêm um conjunto similar de arquivos (ou seja, %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM > \MSSQLSERVER). 
+  > Observe que ao aplicar patches, pode haver diversas subpastas (uma para cada instância na qual o patch está sendo aplicado e uma para recursos compartilhados) que contêm um conjunto similar de arquivos (ou seja, %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### <a name="location"></a>Location  
  O arquivo summary.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
  Para localizar erros no arquivo de texto resumido, pesquise o arquivo usando as palavras-chave "error" ou "failed".
   
-## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Arquivo Summary_\<MachineName>_YYYYMMDD_HHMMss.txt
+## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file
   
 ### <a name="overview"></a>Visão geral  
  O arquivo de base summary_engine é semelhante ao arquivo de resumo e é gerado durante o fluxo de trabalho principal.
@@ -115,9 +116,9 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
   
  Tipos de arquivos de log MSI:
   
--   \<Recurso>_\<Arquitetura>\_\<Interação>.log   
--   \<Recurso>_\<Arquitetura>\_\<Idioma>\_\<Interação>.log   
--   \<Recurso>_\<Arquitetura>\_\<Interação>\_\<Fluxo de trabalho>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>Location  
  Os arquivos de log MSI estão localizados em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  

@@ -9,16 +9,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47c2e816219ebbb4a4b3fefea2974ef511cdaee2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558331"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897283"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar a instância de cluster de failover – NFS – SQL Server em Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este artigo explica como configurar o armazenamento NFS para uma FCI (instância de cluster de failover) no Linux. 
 
@@ -96,7 +96,7 @@ Verifique se seus padrões de segurança foram impostos para acesso. Ao configur
     ls TempDir
     ```
 
-    \<TempDir> é o nome da pasta da etapa D.
+    \<TempDir> é o nome da pasta da Etapa d.
 
    * Exclua os arquivos do diretório de dados do SQL Server existente. Você não receberá nenhuma confirmação se tiver êxito.
 
@@ -118,9 +118,9 @@ Verifique se seus padrões de segurança foram impostos para acesso. Ao configur
     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você usará 
+    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você vai usar 
 
-    \<FolderOnNFSServer> é o nome do compartilhamento NFS. A sintaxe de exemplo a seguir corresponde às informações de NFS da Etapa 2.
+    \<FolderOnNFSServer> é o nome do compartilhamento de NFS. A sintaxe de exemplo a seguir corresponde às informações de NFS da Etapa 2.
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -180,11 +180,11 @@ Verifique se seus padrões de segurança foram impostos para acesso. Ao configur
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você usará
+    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você vai usar
 
-    \<FolderOnNFSServer> é o nome do compartilhamento NFS
+    \<FolderOnNFSServer> é o nome do compartilhamento de NFS
 
-    \<FolderMountedIn > é a pasta criada na etapa anterior. 
+    \<FolderMountedIn> é a pasta criada na etapa anterior. 
 
 4. Para outros itens que não os bancos de dados do sistema, como bancos de dados de usuário ou backups, siga estas etapas. Se estiver usando apenas a localização padrão, vá para a Etapa 5.
 
@@ -212,11 +212,11 @@ Verifique se seus padrões de segurança foram impostos para acesso. Ao configur
     Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você usará
+    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você vai usar
 
-    \<FolderOnNFSServer> é o nome do compartilhamento NFS
+    \<FolderOnNFSServer> é o nome do compartilhamento de NFS
 
-    \<FolderToMountIn > é a pasta criada na etapa anterior. Veja abaixo um exemplo. 
+    \<FolderToMountIn> é a pasta criada na etapa anterior. Veja abaixo um exemplo. 
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
@@ -236,11 +236,11 @@ Verifique se seus padrões de segurança foram impostos para acesso. Ao configur
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você usará
+    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você vai usar
     
-    \<FolderOnNFSServer> é o nome do compartilhamento NFS
+    \<FolderOnNFSServer> é o nome do compartilhamento de NFS
 
-    \<FolderMountedIn > é a pasta criada na etapa anterior. Veja abaixo um exemplo. 
+    \<FolderMountedIn> é a pasta criada na etapa anterior. Veja abaixo um exemplo. 
  
 5. Repita as etapas nos outros nós.
 

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7629abf8e458ccbc2cb1b24624d0cbb91918830
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625632"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896587"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Instruções RESTORE – REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retrocede e fecha os dispositivos de fita especificados deixados abertos pelas instruções BACKUP ou RESTORE com a opção NOREWIND. Só há suporte para este comando em dispositivos de fita.  
   
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  É o nome lógico que deve seguir as regras para identificadores dos dispositivos de backup criados por **sp_addumpdevice** dos quais o banco de dados é restaurado. Se for fornecido como uma variável ( **@** _logical\_backup\_device\_name\_var_), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) ou como uma variável do tipo de dados string, exceto os tipos de dados **ntext** ou **text**.  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- Permite restaurar backups do disco nomeado ou dispositivo de fita. Os tipos de dispositivo de disco e de fita devem ser especificados com o nome real (por exemplo, o caminho e o nome do arquivo completos) do dispositivo: DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\.\TAPE0'. Se for especificado como uma variável ( **@** _physical\_backup\_device\_name\_var_), o nome do dispositivo poderá ser especificado como uma constante de cadeia de caracteres ( **@** _physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') ou como uma variável do tipo de dados String, exceto para os tipos de dados **ntext** ou **text**.  
+ Permite restaurar backups do disco nomeado ou dispositivo de fita. Os tipos de dispositivo de disco e fita devem ser especificados com o nome real (por exemplo, caminho completo e nome de arquivo) do dispositivo: DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou FITA = '\\\\.\TAPE0'. Se for especificado como uma variável ( **@** _physical\_backup\_device\_name\_var_), o nome do dispositivo poderá ser especificado como uma constante de cadeia de caracteres ( **@** _physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') ou como uma variável do tipo de dados String, exceto para os tipos de dados **ntext** ou **text**.  
   
  Se usando um servidor de rede com um nome de UNC (que deve conter o nome de máquina), especifique um tipo de dispositivo de disco. Para obter mais informações de como usar os nomes UNC, confira [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -89,7 +89,7 @@ FROM <backup_device> [ ,...n ]
  Especifica que a fita não descarregada automaticamente da unidade de fita após RESTORE. NOUNLOAD permanece definido até que UNLOAD seja especificado.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- RESTORE REWINDONLY é uma alternativa a RESTORE LABELONLY FROM TAPE = \<nome > WITH REWIND. Você pode obter uma lista de unidades de fita abertas na exibição de gerenciamento dinâmico [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
+ RESTORE REWINDONLY é uma alternativa a RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. Você pode obter uma lista de unidades de fita abertas na exibição de gerenciamento dinâmico [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
   
 ## <a name="security"></a>Segurança  
   

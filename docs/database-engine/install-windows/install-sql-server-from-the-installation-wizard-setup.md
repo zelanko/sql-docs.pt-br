@@ -1,5 +1,6 @@
 ---
 title: Instalar usando a interface gráfica do usuário
+description: Este artigo fornece um procedimento passo a passo para instalar uma nova instância do SQL Server usando o Assistente de Instalação do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76934198"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899703"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Este artigo explica como instalar o SQL Server com o Assistente de Instalação. Aplica-se ao [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e ao [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
@@ -191,7 +192,7 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
   
 1. Use a página **Configuração do Distributed Replay Client** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Client.  
   
-     * O **nome do controlador** é opcional. O valor padrão é \<*em branco*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client:  
+     * O **nome do controlador** é opcional. O valor padrão é \<*blank*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client:  
   
        * Se já configurou um controlador, digite o respectivo nome enquanto configura cada cliente.  
   
@@ -369,7 +370,7 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
   
 1. Use a página **Configuração do Distributed Replay Client** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Client.  
   
-     * O **nome do controlador** é opcional. O valor padrão é \<*em branco*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client:  
+     * O **nome do controlador** é opcional. O valor padrão é \<*blank*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client:  
   
        * Se já configurou um controlador, digite o respectivo nome enquanto configura cada cliente.  
   

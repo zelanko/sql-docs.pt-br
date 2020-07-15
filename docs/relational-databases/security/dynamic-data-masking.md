@@ -1,5 +1,6 @@
 ---
 title: Mascaramento de dados dinâmicos | Microsoft Docs
+description: Saiba mais sobre a Máscara Dinâmica de Dados que limita a exposição de dados confidenciais por meio do mascaramento dos dados para usuários sem privilégios. Ela pode simplificar muito a segurança no SQL Server.
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997718"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005592"
 ---
 # <a name="dynamic-data-masking"></a>Máscara de Dados Dinâmicos
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![Mascaramento de dados dinâmicos](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -40,7 +41,7 @@ O mascaramento de dados dinâmicos está disponível em [!INCLUDE[ssSQL15](../..
 ## <a name="defining-a-dynamic-data-mask"></a>Definir uma máscara de dados dinâmicos
  Uma regra de mascaramento pode ser definida em uma coluna de tabela para ocultar os dados dessa coluna. Há quatro tipos de máscaras disponíveis.  
   
-|Função|DESCRIÇÃO|Exemplos|  
+|Função|Descrição|Exemplos|  
 |--------------|-----------------|--------------|  
 |Padrão|Mascaramento completo de acordo com os tipos de dados dos campos designados.<br /><br /> Para os tipos de dados string, use XXXX ou menos Xs se o tamanho do campo for inferior a quatro caracteres (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Para os tipos de dados numeric, use um valor zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Para os tipos de dados data e hora, use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Para os tipos de dados binary, use um único byte de valor ASCII 0 (**binary**, **varbinary**, **image**).|Exemplo da sintaxe de definição de coluna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|O método de mascaramento que expõe a primeira letra de um endereço de email e o sufixo constante ".com", na forma de um endereço de email. `aXXX@XXXX.com`.|Exemplo da sintaxe de definição: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemplo de sintaxe de alteração: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
@@ -93,7 +94,7 @@ WHERE is_masked = 1;
  A adição de uma máscara de dados dinâmicos é implementada como uma alteração de esquema na tabela subjacente e, portanto, não pode ser realizada em uma coluna com dependências. Para contornar essa restrição, você pode primeiro remover a dependência e adicionar a máscara de dados dinâmicos e, em seguida, recriar a dependência. Por exemplo, se a dependência ocorre devido a um índice dependente nessa coluna, você poderá remover o índice, adicionar a máscara e, em seguida, recriar o índice dependente.
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Observação de segurança: ignorar o mascaramento usa técnicas de inferência ou força bruta
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Observação de segurança: ignorar a máscara usando técnicas de inferência ou força bruta
 
 O Mascaramento de dados dinâmicos foi projetado para simplificar o desenvolvimento de aplicativos, limitando a exposição de dados em um conjunto de consultas predefinidas usadas pelo aplicativo. Embora o Mascaramento de dados dinâmicos também possa ser útil para evitar a exposição acidental de dados confidenciais ao acessar diretamente um banco de dados de produção, é importante observar que usuários sem privilégios com permissões de consulta ad hoc podem aplicar técnicas para acessar os dados reais. Se houver a necessidade de conceder esse acesso ad hoc, a Auditoria deve ser usada para monitorar todas as atividades do banco de dados e reduzir esse cenário.
  

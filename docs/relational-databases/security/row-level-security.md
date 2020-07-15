@@ -1,5 +1,6 @@
 ---
 title: Segurança em nível de linha | Microsoft Docs
+description: Saiba como a Segurança em Nível de Linha permite que você use o contexto de execução ou a associação de grupo para controlar o acesso às linhas em uma tabela de banco de dados no SQL Server.
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288972"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000530"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Gráfico de Segurança em Nível de Linha](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de Segurança em Nível de Linha")  
   
@@ -41,7 +42,7 @@ Implemente a RLS usando a instrução [CREATE SECURITY POLICY](../../t-sql/state
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obter](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> O SQL Data Warehouse do Azure só dá suporte para predicados de filtro. Os predicados de bloqueio não têm suporte no SQL Data Warehouse do Azure no momento.
+> O Azure Synapse dá suporte somente para predicados de filtro. Os predicados de bloqueio não têm suporte atualmente no Azure Synapse.
 
 ## <a name="description"></a><a name="Description"></a> Descrição
 
@@ -159,7 +160,7 @@ A RLS permite dois tipos de predicado de segurança.
   
 - **Filestream:** a RLS não é compatível com Filestream.  
   
-- **PolyBase:** a RLS é compatível com tabelas externas do Polybase somente no SQL Data Warehouse do Azure.
+- **PolyBase:** A RLS é compatível com tabelas externas do Polybase somente no Azure Synapse.
 
 - **Tabelas com otimização de memória:** a função com valor de tabela embutida usada como um predicado de segurança em uma tabela com otimização de memória deve ser definida usando a opção `WITH NATIVE_COMPILATION`. Com essa opção, os recursos de linguagem não permitidos pelas tabelas com otimização de memória serão banidos e o erro apropriado será emitido no momento da criação. Para obter mais informações, veja a seção **Segurança em nível de linha em tabelas com otimização de memória** em [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -185,8 +186,6 @@ A RLS permite dois tipos de predicado de segurança.
   
  Crie três contas de usuário que demonstrem os diferentes recursos de acesso.  
 
-> [!NOTE]
-> O SQL Data Warehouse do Azure não dá suporte para EXECUTE AS USER. Dessa maneira, é necessário usar CREATE LOGIN para cada usuário com antecedência. Posteriormente, você fará logon como o usuário apropriado para testar esse comportamento.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> O SQL Data Warehouse do Azure não dá suporte para EXECUTE AS USER. Desse modo, faça logon como o usuário apropriado para testar o comportamento acima.
-
 O gerente deve ver todas as seis linhas. Os usuários Vendas1 e Vendas2 deverão ver apenas suas próprias vendas.
 
 Altere a política de segurança para desabilitar a política específica.
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Cenários de uso de Segurança em Nível de Linha em uma tabela externa do SQL Data Warehouse do Azure
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Cenários de uso de Segurança em Nível de Linha em uma tabela externa do Azure Synapse
 
 Esse pequeno exemplo cria três usuários e uma tabela externa com seis linhas. Em seguida, ele cria uma função com valor de tabela embutida e uma política de segurança para a tabela externa. O exemplo mostra como as instruções select são filtrados para os diversos usuários.
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Crie uma tabela externa do SQL Data Warehouse do Azure na tabela de Vendas criada.
+Crie uma tabela externa do Azure Synapse na tabela de Vendas criada.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 Agora, os usuários Vendas1 e Vendas2 podem ver todas as seis linhas.
 
-Conectar ao banco de dados do SQL Data Warehouse para limpar recursos
+Conectar-se ao banco de dados do Azure Synapse para limpar recursos
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Cenário para usuários que se conectam ao banco de dados por meio de um aplicativo de camada intermediária
 
 > [!NOTE]
-> Neste exemplo, atualmente a função de predicados de bloco não é compatível com o SQL Data Warehouse do Azure, portanto, a inserção de linhas para o ID de usuário errado não é bloqueada no Azure SQL Data Warehouse.
+> Neste exemplo, atualmente a funcionalidade de predicados de bloco não é compatível com o Azure Synapse, portanto, a inserção de linhas para a ID de usuário errado não é bloqueada no Azure Synapse.
 
 Este exemplo mostra como um aplicativo de camada intermediária pode implementar a filtragem de conexão, onde os usuários do aplicativo (ou locatários) compartilham o mesmo usuário de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o aplicativo). O aplicativo define a ID do usuário do aplicativo atual em [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) depois de se conectar ao banco de dados e, em seguida, as políticas de segurança filtram de modo transparente as linhas que não devem ficar visíveis para essa ID, além de impedir o usuário de inserir linhas para a ID de usuário incorreta. Não é necessária nenhuma outra alteração de aplicativo.  
   

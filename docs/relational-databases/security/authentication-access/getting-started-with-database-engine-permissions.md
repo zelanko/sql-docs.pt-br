@@ -1,5 +1,6 @@
 ---
 title: Guia de Introdução às permissões do mecanismo de banco de dados | Microsoft Docs
+description: Examine alguns conceitos básicos de segurança no SQL Server e saiba mais sobre uma implementação típica das permissões do Mecanismo de Banco de Dados.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903017"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005649"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   As permissões no [!INCLUDE[ssDE](../../../includes/ssde-md.md)] são gerenciadas no nível do servidor por meio de funções de logon e de servidor, e no nível do banco de dados por meio de funções de usuários do banco de dados e funções de banco de dados. O modelo para o [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] expõe o mesmo sistema dentro de cada banco de dados, mas as permissões no nível do servidor não estão disponíveis. Este tópico examina alguns conceitos básicos de segurança e descreve uma implementação comum das permissões.  
   
@@ -228,7 +229,7 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Próximas etapas  
  Para conferir mais tópicos introdutórios, consulte:  
   
--   [Tutorial: introdução ao Mecanismo de Banco de Dados](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+-   [Tutorial: Introdução ao Mecanismo de Banco de Dados](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [Criando um banco de dados &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   

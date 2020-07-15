@@ -1,5 +1,6 @@
 ---
 title: Protegíveis | Microsoft Docs
+description: Saiba mais sobre os escopos protegíveis, que o sistema de autorização do Mecanismo de Banco de Dados do SQL Server usa para regular o acesso aos protegíveis.
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -19,19 +20,19 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0d87132c7a0d0d6b9f44e28ca3d797d20fb4b32
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986569"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999602"
 ---
 # <a name="securables"></a>Protegíveis
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Protegíveis são os recursos cujo acesso é regulado pelo sistema de autorização do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por exemplo, uma tabela é um protegível. Alguns protegíveis podem ser contidos dentro de outros, criando hierarquias aninhadas chamadas "escopos" que podem ser protegidos. Os escopos protegíveis são **servidor**, **banco de dados**e **esquema**.  
   
-## <a name="securable-scope-server"></a>Escopo protegível: servidor  
+## <a name="securable-scope-server"></a>Escopo protegível: Servidor  
  O escopo protegível **servidor** contém os seguintes protegíveis:  
   
 -   grupo de disponibilidade  
@@ -44,7 +45,7 @@ ms.locfileid: "67986569"
   
 -   Banco de dados  
   
-## <a name="securable-scope-database"></a>Escopo protegível: banco de dados  
+## <a name="securable-scope-database"></a>Escopo protegível: Banco de dados  
  O escopo protegível **banco de dados** contém os seguintes protegíveis:  
   
 -   Função de aplicativo  
@@ -79,7 +80,7 @@ ms.locfileid: "67986569"
   
 -   Usuário  
   
-## <a name="securable-scope-schema"></a>Escopo protegível: esquema  
+## <a name="securable-scope-schema"></a>Escopo protegível: Esquema  
  O escopo protegível **esquema** contém os seguintes protegíveis:  
   
 -   Type  

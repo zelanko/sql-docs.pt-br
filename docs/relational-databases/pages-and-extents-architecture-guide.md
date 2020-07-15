@@ -14,15 +14,15 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7eefffe6d401c401c7fffa290000a63f4947f0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288270"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006221"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A página é a unidade fundamental de armazenamento de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Uma extensão consiste em uma coleção de oito páginas fisicamente contíguas. As extensões ajudam a gerenciar páginas de maneira eficaz. Este guia descreve as estruturas de dados que são usadas para gerenciar páginas e extensões em todas as versões do SQL Server. Entender a arquitetura de páginas e extensões é importante para projetar e desenvolver bancos de dados que tenham um desempenho eficiente.
 
@@ -42,7 +42,7 @@ A tabela a seguir mostra os tipos de página usados nos arquivos de dados de um 
 
 |Tipo de página | Conteúdo |
 |-------|-------|
-|data |Linhas de dados com todos os dados, exceto os dados de texto, ntext, imagem, nvarchar (max), varchar (max), varbinary (max) e xml, quando o texto na linha estiver definido como ON. |
+|Dados |Linhas de dados com todos os dados, exceto os dados de texto, ntext, imagem, nvarchar (max), varchar (max), varbinary (max) e xml, quando o texto na linha estiver definido como ON. |
 |Índice |Entradas de índice. |
 |Texto/Imagem |Tipos de dados de objeto grandes: (dados de texto, ntext, image, nvarchar(max), varchar(max), varbinary(max) e xml) <br> Colunas de comprimento variável quando a linha de dados exceder 8 KB: (varchar, nvarchar, varbinary e sql_variant) |
 |Global Allocation Map, Shared Global Allocation Map |Informações sobre alocação de extensões. |
@@ -162,7 +162,7 @@ Uma página IAM cobre um intervalo de 4 GB em um arquivo e tem a mesma cobertura
 As páginas IAM são alocadas conforme exigido para cada unidade de alocação e ficam localizadas aleatoriamente no arquivo. A exibição de sistema, sys.system_internals_allocation_units, aponta para a primeira página IAM de uma unidade de alocação. Todas as páginas IAM para aquela unidade de alocação são vinculadas em uma cadeia.
 
 > [!IMPORTANT]
-> A exibição de sistema `sys.system_internals_allocation_units` é destinada apenas para uso interno e está sujeita a alterações. A compatibilidade não é garantida.
+> A exibição de sistema `sys.system_internals_allocation_units` é destinada apenas para uso interno e está sujeita a alterações. A compatibilidade não é garantida. Esta exibição não está disponível no Banco de Dados SQL do Azure. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  

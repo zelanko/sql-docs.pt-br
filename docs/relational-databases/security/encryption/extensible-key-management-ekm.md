@@ -1,5 +1,6 @@
 ---
 title: EKM (Gerenciamento extensível de chaves) | Microsoft Docs
+description: Saiba como configurar e usar o Gerenciamento extensível de chaves e como ele se encaixa nos recursos de criptografia de dados para o SQL Server.
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896796"
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece funcionalidades de criptografia de dados com o *EKM* (Gerenciador Extensível de Chaves), usando o provedor *Microsoft Cryptographic API* (MSCAPI) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Com a crescente demanda de conformidade reguladora e referente à privacidade dos dados, as organizações estão tirando vantagem da criptografia como meio de oferecer uma solução de "defesa aprofundada". Essa abordagem geralmente não é muito prática se usar só as ferramentas de gerenciamento de criptografia do banco de dados. Os fornecedores de hardware fornecem produtos que corrigem o gerenciamento de chave empresarial, usando o *HSM* (módulos de segurança do hardware). Os dispositivos HSM armazenam chaves de criptografia em módulos de software ou hardware. É uma solução mais segura porque as chaves de criptografia não estão com dados de criptografia.  
@@ -90,7 +91,7 @@ GO
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>Nome do usuário/senha de Autenticação Básica Específica do Dispositivo EKM  
  Para esses módulos EKM que dão suporte à autenticação Básica usando um par *nome de usuário/senha* , o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece autenticação transparente que usa credenciais. Para mais informações sobre credenciais, consulte [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- É possível criar uma credencial para um provedor EKM e mapear (ambas as contas do Windows e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) para acessar um módulo EKM por logon. O campo da credencial *Identify* contém o nome do usuário; o campo *secret* contém uma senha para conectar a um módulo de EKM.  
+ É possível criar uma credencial para um provedor EKM e mapear (ambas as contas do Windows e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) para acessar um módulo EKM por logon. O campo *identidade* da credencial contém o nome do usuário; o campo *segredo* contém uma senha para se conectar a um módulo de EKM.  
   
  Se não houver nenhuma credencial mapeada de logon para o provedor EKM, a credencial mapeada para conta de serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será usada.  
   

@@ -11,16 +11,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892581"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900241"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Atualizar Power Pivot para SharePoint
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Este tópico resume as etapas necessárias para atualizar uma implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para o [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. As etapas específicas dependem da versão do SharePoint que seu ambiente estiver executando e inclui o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**).  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68892581"
 Get-PowerPivotSystemService  
 ```  
   
- Verifique a **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é a versão 13.0.\<major build>.\<minor build>  
+ Verifique a **CurrentSolutionVersion**. O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é a versão 13.0.\<major build>.\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Verificar a versão do serviço Windows do Analysis Services  
  Se você só atualizou alguns dos servidores do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em um farm do SharePoint 2010, a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em servidores não atualizados será mais antiga do que a versão esperada no farm. Você precisará atualizar todos os seus servidores para a mesma versão para que eles sejam utilizáveis. Use um dos métodos a seguir para verificar a versão do serviço Windows do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) em cada computador.  
@@ -260,7 +260,7 @@ Get-PowerPivotSystemService
   
 3.  Clique em **Detalhes**.  
   
-4.  A versão de arquivo do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve ser 13.00.\<major build>.\<minor build>.  
+4.  A versão do arquivo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve ser 13.00.\<major build>.\<minor build>.  
   
 5.  Verifique se esse número é idêntico à versão da solução do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e do serviço do sistema.  
   

@@ -1,5 +1,6 @@
 ---
 title: Configuração de visibilidade de metadados | Microsoft Docs
+description: Saiba como configurar a visibilidade de metadados para protegíveis que um usuário tem ou ao qual recebeu permissão no SQL Server.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661212"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979372"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuração de visibilidade de metadados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A visibilidade de metadados é limitada aos protegíveis que pertencem a um usuário ou sobre os quais recebeu alguma permissão. Por exemplo, a consulta a seguir retornará uma linha se o usuário recebeu uma permissão SELECT ou INSERT na tabela `myTable`.  
   
 ```  

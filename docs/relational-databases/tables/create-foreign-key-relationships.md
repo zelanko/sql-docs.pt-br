@@ -1,10 +1,10 @@
 ---
 title: Criar relações de chaves estrangeiras | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2017
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,28 +13,34 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d38aba87edf5737e93d9477abfadddcc969c55f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123752"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002174"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Este artigo descreve como criar relações de chaves estrangeiras no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você cria uma relação entre duas tabelas quando deseja associar linhas de uma tabela com linhas de outra.
 
-## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Antes de começar! Limitações e restrições
+## <a name="permissions"></a>Permissões
 
-- Uma restrição de chave estrangeira não precisa estar vinculada apenas a uma restrição de chave primária em outra tabela; ela também pode ser definida para referenciar as colunas de uma restrição UNIQUE em outra tabela.
-- Quando um valor diferente de NULL é inserido na coluna de uma restrição FOREIGN KEY, o valor deve existir na coluna referenciada; caso contrário, será retornada uma mensagem de erro de violação de chave estrangeira. Para garantir que todos os valores de uma restrição FOREIGN KEY composta foram verificados, especifique NOT NULL em todas as colunas participantes.
+A criação de uma tabela com uma chave estrangeira requer a permissão [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) no banco de dados e a permissão [ALTER](../../t-sql/statements/alter-schema-transact-sql.md) no esquema no qual a tabela está sendo criada.
+
+Criar uma chave estrangeira em uma tabela existente requer a permissão [ALTER](../../t-sql/statements/alter-table-transact-sql.md) na tabela.
+
+## <a name="limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Limitações e restrições
+
+- Uma restrição de chave estrangeira não precisa estar vinculada somente a uma restrição de chave primária em outra tabela. As chaves estrangeiras também podem ser definidas para fazer referência às colunas de uma restrição UNIQUE em outra tabela.
+- Quando um valor diferente de NULL é inserido na coluna de uma restrição FOREIGN KEY, o valor precisa existir na coluna referenciada. Caso contrário, uma mensagem de erro de violação de chave estrangeira será retornada. Para garantir que todos os valores de uma restrição FOREIGN KEY composta foram verificados, especifique NOT NULL em todas as colunas participantes.
 - As restrições FOREIGN KEY só podem fazer referência a tabelas que estão no mesmo banco de dados e no mesmo servidor. A integridade referencial em todos os bancos de dados deve ser implementada por gatilhos. Para mais informações, veja [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
-- As restrições FOREIGN KEY podem fazer referência a outra coluna da mesma tabela. Isso se chama autorreferência.
+- As restrições FOREIGN KEY podem fazer referência à outra coluna da mesma tabela e são autorreferenciadas.
 - Uma restrição FOREIGN KEY especificada no nível da coluna pode listar apenas uma coluna de referência. Essa coluna deve ter o mesmo tipo de dados da coluna na qual a restrição foi definida.
 - Uma restrição FOREIGN KEY especificada no nível da tabela deve ter o mesmo número de colunas de referência da lista de colunas de restrição. O tipo de dados de cada coluna de referência também deve ser igual ao da coluna correspondente na lista de colunas.
-- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não tem um limite predefinido quanto ao número de restrições FOREIGN KEY que uma tabela pode conter para referenciar outras tabelas nem quanto ao número de restrições FOREIGN KEY que são propriedade de outras tabelas e fazem referência a uma tabela específica. Entretanto, o número real de restrições FOREIGN KEY que pode ser usado é limitado pela configuração do hardware e pelo design do banco de dados e do aplicativo. Uma tabela pode fazer referência a no máximo 253 outras tabelas e colunas como chaves estrangeiras (referências de saída). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta de 253 para 10.000 o limite para o número de outras tabelas e colunas que podem fazer referência a colunas em uma única tabela (referências de entrada). (Requer, no mínimo, o nível de compatibilidade 130.) O aumento tem as seguintes restrições:
+- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não tem um limite predefinido do número de restrições FOREIGN KEY que uma tabela pode conter para fazer referência a outras tabelas. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] também não limita o número de restrições FOREIGN KEY pertencentes a outras tabelas que fazem referência a uma tabela específica. Entretanto, o número real de restrições FOREIGN KEY usado é limitado pela configuração do hardware e pelo design do banco de dados e do aplicativo. Uma tabela pode fazer referência a no máximo 253 outras tabelas e colunas como chaves estrangeiras (referências de saída). O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior aumenta de 253 para 10.000 o limite para o número de outras tabelas e colunas que podem fazer referência a colunas em uma tabela (referências de entrada). (Requer, no mínimo, o nível de compatibilidade 130.) O aumento tem as seguintes restrições:
 
   - Há suporte para mais de 253 referências de chave estrangeira em operações DELETE and UPDATE DML. Não há suporte para operações MERGE.
   - Uma tabela com uma referência de chave estrangeira a ela mesma ainda é limitada a 253 referências de chave estrangeira.
@@ -44,30 +50,25 @@ Este artigo descreve como criar relações de chaves estrangeiras no [!INCLUDE[s
 - Se a chave estrangeira for definida em uma coluna de tipo de dados CLR definido pelo usuário, a implementação do tipo deverá oferecer suporte a uma ordenação binária. Para obter mais informações, veja [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 - Uma coluna do tipo **varchar(max)** poderá participar de uma restrição FOREIGN KEY somente se a chave primária à qual ela fizer referência também estiver definida como tipo **varchar(max)** .
 
-## <a name="permissions"></a>Permissões
-
-A criação de uma nova tabela com uma chave estrangeira requer a permissão CREATE TABLE no banco de dados e a permissão ALTER no esquema no qual a tabela está sendo criada.
-
-Criar uma chave estrangeira em uma tabela existente requer a permissão ALTER na tabela.
-
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>Criar uma relação de chave estrangeira no Designer de Tabela
 
 ### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
 
 1. No Pesquisador de Objetos, clique com o botão direito do mouse na tabela que estará ao lado da chave estrangeira da relação e clique em **Design**.
 
-   A tabela é aberta no **Designer de Tabela**.
+   A tabela é aberta no [**Designer de Tabela**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md).
 2. No menu **Designer de Tabela** , clique em **Relações**.
 3. Na caixa de diálogo **Relações de Chave Estrangeira** , clique em **Adicionar**.
 
-   A relação é exibida na lista **Relação Selecionada** com um nome fornecido pelo sistema no formato FK_\<*tablename*>_\<*tablename*>, em que *tablename* é o nome da tabela de chave estrangeira.
+   A relação aparece na lista **Relação Selecionada** com um nome fornecido pelo sistema no formato FK_\<*tablename*>_\<*tablename*>, em que *tablename* é o nome da tabela de chave estrangeira.
 4. Clique na relação na lista **Relação Selecionada** .
 5. Clique em **Especificação de Tabelas e Colunas** na grade à direita e clique nas reticências ( **...** ) à direita da propriedade.
 6. Na caixa de diálogo **Tabelas e Colunas** , na lista suspensa **Chave Primária** , escolha a tabela que estará ao lado da chave primária da relação.
-7. Na grade inferior, escolha as colunas que contribuem para chave primária da tabela. Na célula da grade adjacente à esquerda de cada coluna, escolha a coluna da chave estrangeira correspondente da tabela da chave estrangeira.
+7. Na grade inferior, escolha as colunas que contribuem para chave primária da tabela. Na célula da grade adjacente à direita de cada coluna, escolha a coluna da chave estrangeira correspondente da tabela da chave estrangeira.
 
    O**Designer de Tabela** sugere um nome para a relação. Para mudar esse nome, edite o conteúdo da caixa de texto **Nome da Relação** .
 8. Escolha **OK** para criar a relação.
+9. Feche a janela do designer de tabela e **salve** as suas alterações para que a alteração da relação de chave estrangeira entre em vigor.
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>Criar uma chave estrangeira em uma nova tabela
 
@@ -101,8 +102,13 @@ ALTER TABLE Sales.TempSalesReason
       ON UPDATE CASCADE
 ;
 ```
+
+## <a name="next-steps"></a>Próximas etapas
+
 Para obter mais informações, consulte:
 
+- [Restrições de chave primária e chave estrangeira](primary-and-foreign-key-constraints.md)
+- [Permissões de banco de dados GRANT](../../t-sql/statements/grant-database-permissions-transact-sql.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).
+- [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).

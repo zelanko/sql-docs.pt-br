@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151555"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091620"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria um novo grupo de disponibilidade, se a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for habilitada para o recurso [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -162,7 +162,7 @@ CREATE AVAILABILITY GROUP group_name
  Os valores FAILURE_CONDITION_LEVEL e HEALTH_CHECK_TIMEOUT definem uma *política de failover flexível* para determinado grupo. Essa política de failover flexível permite a você um controle granular sobre quais condições devem causar um failover automático. Para obter mais informações, consulte [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Especifica o tempo de espera (em milissegundos) para que o procedimento armazenado do sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retorne informações da integridade do servidor antes de o cluster WSFC supor que a instância do servidor está lenta ou travou. HEALTH_CHECK_TIMEOUT é definido no nível do grupo, mas é apenas relevante em réplicas de disponibilidade configuradas para o modo de disponibilidade de confirmação síncrona com failover automático (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Além disso, o tempo limite da verificação de integridade apenas poderá disparar um failover automático se as réplicas primárias e secundárias estiverem configuradas para o modo de failover automático (FAILOVER_MODE **=** AUTOMATIC) e a réplica secundária estiver sincronizada com a réplica primária no momento.  
+ Especifica o tempo de espera (em milissegundos) para o procedimento armazenado do sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retornar informações sobre a integridade do servidor antes que o cluster WSFC presuma que a instância do servidor está lenta ou não está respondendo. HEALTH_CHECK_TIMEOUT é definido no nível do grupo, mas é apenas relevante em réplicas de disponibilidade configuradas para o modo de disponibilidade de confirmação síncrona com failover automático (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Além disso, o tempo limite da verificação de integridade apenas poderá disparar um failover automático se as réplicas primárias e secundárias estiverem configuradas para o modo de failover automático (FAILOVER_MODE **=** AUTOMATIC) e a réplica secundária estiver sincronizada com a réplica primária no momento.  
   
  O valor HEALTH_CHECK_TIMEOUT padrão é 30.000 milissegundos (30 segundos). O valor mínimo é 15000 milissegundos (15 segundos) e o máximo é 4294967295 milissegundos.  
   
@@ -207,7 +207,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Se você especificar menos de quatro réplicas secundárias ao criar um grupo de disponibilidade, poderá criar uma réplica secundária adicional a qualquer momento por meio da instrução [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Também é possível usar essa instrução para remover qualquer réplica secundária de um grupo de disponibilidade existente.  
   
- \<server_instance> Especifica o endereço da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é o host de uma réplica. O formato de endereço depende se a instância é a instância padrão ou uma instância nomeada, e se é uma instância autônoma ou uma instância de cluster de failover (FCI), da seguinte maneira:  
+ \<server_instance> especifica o endereço da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda uma réplica. O formato de endereço depende se a instância é a instância padrão ou uma instância nomeada, e se é uma instância autônoma ou uma instância de cluster de failover (FCI), da seguinte maneira:  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
@@ -339,7 +339,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Todas as conexões são permitidas com os bancos de dados na réplica primária. Esse é o comportamento padrão.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n*] **)** | NONE} Especifica uma lista separada por vírgula de instâncias de servidor que hospedam réplicas de disponibilidade desse grupo de disponibilidade que atendam aos seguintes requisitos ao serem executadas na função secundária:  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } Especifica uma lista separada por vírgula de instâncias do servidor que hospedam réplicas para este grupo de disponibilidade que atendem aos seguintes requisitos ao serem executadas na função secundária:  
   
 -   Ser configurado para permitir todas as conexões ou conexões somente leitura (veja o argumento ALLOW_CONNECTIONS da opção SECONDARY_ROLE acima).  
   
@@ -347,7 +347,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Os valores READ_ONLY_ROUTING_LIST são os seguintes:  
   
- \<server_instance> Especifica o endereço da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é o host de uma réplica que é uma réplica secundária legível quando é executada na função secundária.  
+ \<server_instance> especifica o endereço da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda uma réplica secundária para leitura ao ser executada na função secundária.  
   
  Use uma lista separada por vírgulas para especificar todas as instâncias de servidor que podem hospedar uma réplica secundária legível. O roteamento somente leitura segue a ordem na qual as instâncias de servidor são especificadas na lista. Se você incluir uma instância de servidor de host de uma réplica na lista de roteamento somente leitura da réplica, colocar esta instância de servidor no final da lista geralmente é uma boa prática, de forma que as conexões de intenção de leitura vão para uma réplica secundária, se houver.  
   
@@ -378,7 +378,7 @@ Confira mais informações em [Redirecionamento de conexão leitura/gravação d
   
  Você precisa unir o grupo de disponibilidade secundário ao grupo de disponibilidade distribuído. Para obter mais informações, consulte [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
- \<ag_name> Especifica o nome do grupo de disponibilidade que constitui uma metade do grupo de disponibilidade distribuído.  
+ \<ag_name> especifica o nome do grupo de disponibilidade que compõe metade do grupo de disponibilidade distribuído.  
   
  LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Especifica o caminho da URL para o ouvinte associado ao grupo de disponibilidade.  
@@ -422,7 +422,7 @@ Confira mais informações em [Redirecionamento de conexão leitura/gravação d
  MANUAL  
  Especifica a propagação manual (padrão). Esse método exige que você crie um backup do banco de dados na réplica primária e restaure manualmente esse backup nas réplicas do grupo de disponibilidade secundário.  
   
- LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Define um novo ouvinte do grupo de disponibilidade para esse grupo de disponibilidade. LISTENER é um argumento opcional.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Define um novo ouvinte do grupo de disponibilidade para este grupo de disponibilidade. LISTENER é um argumento opcional.  
   
 > [!IMPORTANT]
 >  Antes de criar seu primeiro ouvinte, é altamente recomendável que você leia [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -442,7 +442,7 @@ Confira mais informações em [Redirecionamento de conexão leitura/gravação d
 > [!IMPORTANT]  
 >  O NetBIOS reconhece somente os primeiros 15 caracteres no dns_name. Se você tiver dois clusters WSFC que sejam controlados pelo mesmo Active Directory e tentar criar ouvintes do grupo de disponibilidade nos dois clusters usando nomes com mais de 15 caracteres e um prefixo idêntico de 15 caracteres, ocorrerá um erro relatando que o recurso de nome de rede virtual não pôde ser colocado online. Para obter informações sobre regras da nomenclatura de prefixos para nomes DNS, consulte [Atribuindo nomes de domínio](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
- \<listener_option> LISTENER usa uma das seguintes opções de \<listener_option>: 
+ \<listener_option> LISTENER obtém uma das seguintes opções de \<listener_option>: 
   
  WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Especifica que o ouvinte do grupo de disponibilidade usa o protocolo DHCP.  Opcionalmente, use a cláusula ON para identificar a rede na qual esse ouvinte foi criado. DHCP é limitado a uma única sub-rede que é usada para toda instância de servidor que hospeda uma réplica no grupo de disponibilidade.  
@@ -496,7 +496,7 @@ Confira mais informações em [Redirecionamento de conexão leitura/gravação d
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Essa preferência de backup automatizado indica que os backups devem ocorrer em uma réplica secundária, exceto quando a réplica primária for a única réplica online (comportamento padrão). Para que a configuração AUTOMATED_BACKUP_PREFERENCE tenha efeito, é preciso executar o script dos trabalhos de backup nos bancos de dados de disponibilidade para levar em conta a preferência de backup automatizado.|  
 |FAILURE_CONDITION_LEVEL|3|Essa configuração de nível de condição de falha especifica que um failover automático deve ser iniciado em erros internos críticos do SQL Server, como spinlocks órfãos, violações do acesso de gravação graves ou muito descarte.|  
-|HEALTH_CHECK_TIMEOUT|600000|Esse valor de tempo limite de verificação da integridade, 60 segundos, especifica que o cluster WSFC aguarda 60.000 milissegundos para o procedimento armazenado do sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retornar as informações de integridade do servidor de uma instância de servidor que hospeda uma réplica de confirmação síncrona com backup automático antes de o cluster considerar que a instância de servidor host está lenta ou travada. (O valor padrão é 30000 milissegundos.)|  
+|HEALTH_CHECK_TIMEOUT|600000|Este valor temporal de verificação de integridade, 60 segundos, especifica que o cluster WSFC aguarda 60.000 milissegundos para o procedimento armazenado do sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retornar informações sobre a integridade do servidor e a respeito de uma instância do servidor que hospeda uma réplica de confirmação síncrona com failover automático. Tudo isso antes que o cluster presuma que a instância do servidor host está lenta ou não está respondendo. (O valor padrão é 30000 milissegundos.)|  
   
  Três réplicas de disponibilidade devem ser hospedadas pelas instâncias de servidor padrão nos computadores denominados `COMPUTER01`, `COMPUTER02`e `COMPUTER03`. A tabela a seguir resume os valores especificados para as opções de réplica de cada réplica.  
   
@@ -584,6 +584,3 @@ GO
  [Solucionar problemas de configuração de Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

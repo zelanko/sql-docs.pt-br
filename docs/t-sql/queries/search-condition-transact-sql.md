@@ -37,15 +37,15 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b35445b9b04eafb6d8d302c8627c08ca90bd745e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635526"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999817"
 ---
 # <a name="search-condition-transact-sql"></a>Critério de pesquisa (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   É uma combinação de um ou mais predicados que usam os operadores lógicos AND, OR e NOT.  
   
@@ -189,13 +189,13 @@ ms.locfileid: "81635526"
  Especifica a pesquisa de uma expressão, com base na inclusão ou exclusão da expressão em uma lista. A expressão da pesquisa pode ser uma constante ou um nome de coluna, e a lista pode ser um conjunto de constantes ou, normalmente, uma subconsulta. Inclua a lista de valores em parênteses. Para obter mais informações, consulte [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Pode ser considerada uma instrução SELECT restrita e é semelhante a \<query_expresssion> na instrução SELECT. A cláusula ORDER BY e a palavra-chave INTO não são permitidas. Para obter mais informações, consulte [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Ela pode ser considerada uma instrução SELECT restrita e é semelhante a \<query_expression> na instrução SELECT. A cláusula ORDER BY e a palavra-chave INTO não são permitidas. Para obter mais informações, consulte [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
- Usado com um operador de comparação e uma subconsulta. Retorna TRUE para \<predicate> quando todos os valores recuperados para a subconsulta atendem à operação de comparação ou FALSE quando nem todos os valores atendem à comparação ou quando a subconsulta não retorna nenhuma linha para a instrução externa. Para obter mais informações, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
+ Usado com um operador de comparação e uma subconsulta. Retorna TRUE para \<predicate> quando todos os valores recuperados para a subconsulta atendem à operação de comparação; ou FALSE quando nem todos os valores atendem à comparação ou a subconsulta não retorna nenhuma linha para a instrução externa. Para obter mais informações, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
   
  { SOME | ANY }  
- Usado com um operador de comparação e uma subconsulta. Retorna TRUE para \<predicate> quando qualquer valor recuperado para a subconsulta atende à operação de comparação ou FALSE quando nenhum valor na subconsulta atende à comparação, ou quando a subconsulta não retorna nenhuma linha para a instrução externa. Caso contrário, a expressão é UNKNOWN. Para obter mais informações, consulte [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Usado com um operador de comparação e uma subconsulta. Retorna TRUE para \<predicate> quando nenhum valor recuperado para a subconsulta atende à operação de comparação; ou FALSE quando nenhum valor na subconsulta atende à comparação ou a subconsulta não retorna nenhuma linha para a instrução externa. Caso contrário, a expressão é UNKNOWN. Para obter mais informações, consulte [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
  EXISTS  
  Usada com uma subconsulta para testar para a existência de linhas retornadas pela subconsulta. Para obter mais informações, consulte [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  

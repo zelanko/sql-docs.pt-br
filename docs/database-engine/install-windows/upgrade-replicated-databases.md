@@ -1,5 +1,6 @@
 ---
 title: Atualizar ou aplicar patch a bancos de dados replicados | Microsoft Docs
+description: O SQL Server dá suporte à atualização de bancos de dados replicados de versões anteriores do SQL Server sem interromper a atividade em outros nós.
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008460"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900223"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Atualizar ou aplicar patches a bancos de dados replicados
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   O [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] suporta a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante a atualização de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  
   
@@ -36,7 +37,7 @@ ms.locfileid: "72008460"
     - Um assinante de uma publicação de mesclagem pode ser todas as versões iguais ou anteriores à versão do publicador com suporte, de acordo com o ciclo de vida de suporte das versões.  
  
 O caminho de atualização para o SQL Server é diferente dependendo do padrão de implantação. O SQL Server oferece dois caminhos de atualização em geral:
-- Lado a lado: implantar um ambiente paralelo e mover bancos de dados juntamente com os objetos de nível de instância associada, como logons, trabalhos, etc. para o novo ambiente. 
+- Lado a lado: Implantar um ambiente paralelo e mover bancos de dados juntamente com os objetos de nível de instância associada, como logons, trabalhos, etc. para o novo ambiente. 
 - Atualização in-loco: permitir que a mídia de instalação do SQL Server atualize a instalação do SQL Server existente, substituindo os bits do SQL Server e atualizando os objetos de banco de dados. Para ambientes que executam Grupos de Disponibilidade AlwaysOn ou Instâncias do Cluster de Failover, uma atualização in-loco é combinada com uma [atualização sem interrupção](choose-a-database-engine-upgrade-method.md#rolling-upgrade) para minimizar o tempo de inatividade. 
 
 Uma abordagem comum que tem sido adotada para atualizações lado a lado de topologias de replicação é mover os pares publicador-assinante em partes para o novo ambiente lado a lado em vez de uma movimentação de toda a topologia. Essa abordagem em fases ajuda a controlar o tempo de inatividade e a minimizar o impacto a uma determinada medida para o negócio dependente de replicação.  

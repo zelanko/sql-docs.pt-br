@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (versão prévia)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use a instrução COPY no SQL Data Warehouse do Azure para carregar de contas de armazenamento externo.
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 455e75d13c8b083d37bbab1c6a15916871b1ffba
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987432"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091670"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versão prévia)
 
@@ -44,28 +44,34 @@ Este artigo explica como usar a instrução COPY no SQL Data Warehouse do Azure 
 > [!NOTE]  
 > Atualmente, a instrução COPY está em visualização pública.
 
+Visite a seguinte documentação para obter exemplos abrangentes e guias de início rápido usando a instrução COPY:
+
+- [Início Rápido: dados de carregamento em massa usando a instrução COPY](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Início Rápido: exemplos usando a instrução COPY e métodos de autenticação compatíveis](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Início Rápido: como criar a instrução COPY usando uma interface do usuário avançada do Synapse Studio (versão prévia do workspace)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
 ## <a name="syntax"></a>Sintaxe  
 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]  
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 
@@ -125,7 +131,7 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
 - ORC: Especifica um formato ORC (Optimized Row Columnar).
 
 >[!NOTE]  
-> O tipo de arquivo “ Texto Delimitado” no Polybase é substituído pelo formato de arquivo “CSV”, no qual o delimitador de vírgula padrão pode ser configurado por meio do parâmetro FIELDTERMINATOR. 
+>O tipo de arquivo “ Texto Delimitado” no Polybase é substituído pelo formato de arquivo “CSV”, no qual o delimitador de vírgula padrão pode ser configurado por meio do parâmetro FIELDTERMINATOR. 
 
 *FILE_FORMAT = external_file_format_name*</br>
 *FILE_FORMAT* aplica-se somente a arquivos Parquet e ORC e especifica o nome do objeto de formato de arquivo externo que armazena o tipo de arquivo e o método de compactação dos dados externos. Para criar um formato de arquivo externo, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
@@ -356,7 +362,7 @@ WITH (
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_FORMAT = myFileFormat
+    FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -369,7 +375,7 @@ FROM
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
     'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-    FILE_TYPE = 'CSV'
+    FILE_TYPE = 'CSV',
     CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
     FIELDTERMINATOR = '|'
 )

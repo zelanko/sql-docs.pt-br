@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922170"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032442"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -326,7 +326,7 @@ A reversão é controlada pela instrução RESTORE nas opções [ RECOVERY | NOR
 Backups do **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
-> Nenhum backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser restaurado para uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a não ser na versão na qual o backup foi criado.
+> Nenhum backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser restaurado para uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] além da versão na qual o backup foi criado.
 
 Cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um caminho padrão diferente das versões anteriores. Assim, para restaurar um banco de dados que foi criado no local padrão dos backups de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, consulte [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 

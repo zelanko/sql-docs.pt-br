@@ -1,5 +1,6 @@
 ---
 title: Escolher um método de upgrade do mecanismo de banco de dados | Microsoft Docs
+description: Este artigo descreve os caminhos de atualização para o Mecanismo de Banco de Dados no SQL Server, incluindo a atualização in-loco, migração para uma nova instalação e uma atualização sem interrupção.
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7331bc542db301e519b8a75c43b47129c845bb45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287040"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901587"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [planejar e testar o Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   

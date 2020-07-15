@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 25574476947c3232c8491923d1e5c69b87c43960
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902248"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -83,13 +83,15 @@ Fornece o protocolo de conectividade e o caminho para a fonte de dados externa.
 | Fonte de dados externa    | Prefixo de local | Caminho de local                                         | Locais com suporte por produto/serviço |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera ou Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]                       |
-| Armazenamento do Blobs do Azure      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]                       |
+| Conta de Armazenamento do Azure (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Iniciando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Namespace Hierárquico **sem** suporte |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | MongoDB ou CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | ODBCODBC                    | `odbc`          | `<server_name>[:port]`                                | Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] – somente Windows        |
 | Operações em Massa         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | A partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
+| Hub do Edge         | `edgehub`         | Não Aplicável | O EdgeHub é sempre local para a instância do [SQL do Azure no Edge](/azure/azure-sql-edge/overview/). Como tal, não é necessário especificar um valor de porta ou caminho. Disponível somente no SQL do Azure no Edge.                      |
+| Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Disponível somente no SQL do Azure no Edge.                      |
 
 Caminho de local:
 
@@ -106,7 +108,9 @@ Observações e orientação adicionais ao definir o local:
 - Use a mesma fonte de dados externa para todas as tabelas ao consultar o Hadoop para garantir semântica de consulta consistente.
 - Você pode usar o prefixo de localização `sqlserver` para conectar [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ou para o Azure Synapse Analytics.
 - Especifique o `Driver={<Name of Driver>}` ao se conectar por meio de `ODBC`.
-- `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão TLS/SSL segura.
+- `wasbs` é opcional, mas recomendado, para acessar as Contas de Armazenamento do Azure, pois os dados serão enviados usando uma conexão TLS/SSL segura.
+- As APIs `abfs` ou `abfss` não têm suporte ao acessar as Contas de Armazenamento do Azure.
+- Não há suporte para a opção de Namespace Hierárquico para as Contas de Armazenamento do Azure (V2). Verifique se essa opção permanece **desabilitada**.
 - Para garantir consultas do PolyBase com êxito durante um failover `Namenode` do Hadoop, considere usar um endereço IP virtual para o `Namenode` do cluster do Hadoop. Se você não fizer isso, execute um comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para apontar para o novo local.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -131,13 +135,13 @@ Especifica uma credencial no escopo do banco de dados para a autenticação na f
 
 Observações e orientações adicionais ao criar uma credencial:
 
-- `CREDENTIAL` será necessário apenas se o blob tiver sido protegido. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
-- Quando o `TYPE` = `BLOB_STORAGE`, credencial usada precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Além disso, o token SAS deve ser configurado da seguinte maneira:
+- `CREDENTIAL` será necessário apenas se os dados tiverem sido protegidos. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
+- Quando `TYPE` = `BLOB_STORAGE`, a credencial precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Além disso, o token SAS deve ser configurado da seguinte maneira:
   - Excluir o `?` à esquerda quando configurado como o segredo
   - Ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`)
   - Use um período de término válido (todas as datas estão no horário UTC).
 
-Para obter um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, confira [Criar uma fonte de dados externa para executar operações em massa e recuperar dados do Armazenamento de Blobs do Azure no Banco de Dados SQL](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+Para obter um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, confira [Criar uma fonte de dados externa para executar operações em massa e recuperar dados do Armazenamento do Azure no Banco de Dados SQL](#i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
 Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -145,13 +149,13 @@ Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCO
 
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
-- Use HADOOP quando a fonte de dados externa for Cloudera, Hortonworks ou Armazenamento de Blobs do Azure.
-- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset] com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Use o HADOOP quando a fonte de dados externa for Cloudera, Hortonworks ou uma conta de Armazenamento do Azure.
+- Use BLOB_STORAGE ao executar operações em massa da conta de Armazenamento do Azure usando [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset] com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
 
-Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, confira [Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
+Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados de uma conta de Armazenamento do Azure, confira [Criar fonte de dados externa para acessar dados no Armazenamento do Azure usando a interface wasb://](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface) <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -276,11 +280,10 @@ WITH
   );
 ```
 
-### <a name="e-create-external-data-source-to-reference-azure-blob-storage"></a>E. Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure
+### <a name="e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>E. Criar fonte de dados externa para acessar dados no Armazenamento do Azure usando a interface wasb://
+Neste exemplo, a fonte de dados externa é uma conta de Armazenamento do Azure V2 chamada `logs`. O contêiner é chamado `daily`. A fonte de dados externa do Armazenamento do Azure destina-se somente a transferência de dados. Não dá suporte a aplicação de predicado. Não há suporte para namespaces hierárquicos ao acessar dados por meio da interface `wasb://`.
 
-Neste exemplo, a fonte de dados externa é um contêiner do Armazenamento de Blobs do Azure chamado `daily` na conta de Armazenamento do Azure chamada `logs`. A fonte de dados externa do armazenamento do Azure destina-se somente a transferência de dados. Não dá suporte a aplicação de predicado.
-
-Este exemplo mostra como criar a credencial no escopo do banco de dados para autenticação no Armazenamento do Azure. Especifique a chave de conta de Armazenamento do Azure no segredo da credencial do banco de dados. Você pode especificar qualquer cadeia de caracteres na identidade da credencial no escopo do banco de dados, pois ela não será usada durante a autenticação no Armazenamento do Azure.
+Este exemplo mostra como criar a credencial no escopo do banco de dados para autenticação na conta de Armazenamento do Azure V2. Especifique a chave de conta de Armazenamento do Azure no segredo da credencial do banco de dados. Você pode especificar qualquer cadeia de caracteres na identidade da credencial no escopo do banco de dados, pois ela não será usada durante a autenticação no Armazenamento do Azure.
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -297,7 +300,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
@@ -324,12 +327,36 @@ WITH (
 ) ;
 ```
 
+### <a name="g-create-external-data-source-to-reference-kafka"></a>G. Criar uma fonte de dados externa para referenciar o Kafka
+
+Neste exemplo, a fonte de dados externa é um servidor Kafak com o endereço IP xxx.xxx.xxx.xxx e escuta na porta 1900. A fonte de dados externa do Kafka é apenas para streaming de dados e não dá suporte a push de predicado.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
+    LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
+)
+go
+```
+
+### <a name="h-create-external-data-source-to-reference-edgehub"></a>H. Criar uma fonte de dados externa para referenciar o EdgeHub
+
+Neste exemplo, a fonte de dados externa é um EdgeHub em execução no mesmo dispositivo de borda que o SQL do Azure no Edge. A fonte de dados externa do edgeHub é apenas para streaming de dados e não dá suporte a push de predicado.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
+    LOCATION = 'edgehub://'
+)
+go
+```
+
 ## <a name="examples-bulk-operations"></a>Exemplos: Operações em Massa
 
 > [!IMPORTANT]
 > Não adicione parâmetros de assinatura de acesso compartilhado, nome de arquivo ou **/** à direita no fim da URL `LOCATION` ao configurar uma fonte de dados externa para operações em massa.
 
-### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
+### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento do Azure
 
 **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Use a seguinte fonte de dados para operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
@@ -363,7 +390,7 @@ Para ver esse exemplo em uso, confira o exemplo [BULK INSERT][bulk_insert_exampl
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -447,14 +474,14 @@ Especifica uma credencial no escopo do banco de dados para a autenticação na f
 
 Observações e orientações adicionais ao criar uma credencial:
 
-- Para carregar dados do Armazenamento de Blobs do Azure no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use uma Chave de Armazenamento do Azure.
-- `CREDENTIAL` será necessário apenas se o blob tiver sido protegido. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
+- Para carregar dados do Armazenamento do Azure no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use uma Chave de Armazenamento do Azure.
+- `CREDENTIAL` será necessário apenas se os dados tiverem sido protegidos. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
 - Quando o `TYPE` = `BLOB_STORAGE`, credencial usada precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Além disso, o token SAS deve ser configurado da seguinte maneira:
   - Excluir o `?` à esquerda quando configurado como o segredo
   - Ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`)
   - Use um período de término válido (todas as datas estão no horário UTC).
 
-Para obter um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, confira [Criar uma fonte de dados externa para executar operações em massa e recuperar dados do Armazenamento de Blobs do Azure no Banco de Dados SQL](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+Para obter um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e `TYPE` = `BLOB_STORAGE`, confira [Criar uma fonte de dados externa para executar operações em massa e recuperar dados do Armazenamento do Azure no Banco de Dados SQL](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
 Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -548,7 +575,7 @@ Para obter um tutorial passo a passo sobre o RDBMS, confira [Introdução às co
 > [!IMPORTANT]
 > Não adicione parâmetros de assinatura de acesso compartilhado, nome de arquivo ou **/** à direita no fim da URL `LOCATION` ao configurar uma fonte de dados externa para operações em massa.
 
-### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
+### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>C. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento do Azure
 
 Use a seguinte fonte de dados para operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
 
@@ -580,7 +607,7 @@ Para ver esse exemplo em uso, confira [BULK INSERT][bulk_insert_example].
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
@@ -643,9 +670,9 @@ Fornece o protocolo de conectividade e o caminho para a fonte de dados externa.
 
 | Fonte de dados externa        | Prefixo de local | Caminho de local                                         |
 | --------------------------- | --------------- | ----------------------------------------------------- |
-| Armazenamento do Blobs do Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Storage Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
 | Azure Data Lake Storage Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Conta de Armazenamento do Azure V2    | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Caminho de local:
 
@@ -657,7 +684,8 @@ Observações e orientação adicionais ao definir o local:
 - A opção padrão é usar `enable secure SSL connections` ao provisionar o Azure Data Lake Storage Gen2. Quando estiver habilitado, você deverá usar `abfss` ao selecionar uma conexão TLS/SSL segura. Observe que `abfss` também funciona em conexões TSL não seguras.
 - O Azure Synapse não verifica a existência da fonte de dados externa quando o objeto é criado. . Para validar, crie uma tabela externa usando a fonte de dados externa.
 - Use a mesma fonte de dados externa para todas as tabelas ao consultar o Hadoop para garantir semântica de consulta consistente.
-- `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão TSL segura.
+- `wasbs` é recomendado, pois os dados serão enviados usando uma conexão TLS segura
+- Não há suporte para Namespaces Hierárquicos com as Contas de Armazenamento do Azure V2 ao acessar dados por meio do PolyBase usando a interface wasb://.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -665,8 +693,8 @@ Especifica uma credencial no escopo do banco de dados para a autenticação na f
 
 Observações e orientações adicionais ao criar uma credencial:
 
-- Para carregar dados do Armazenamento de Blobs do Azure ou do ADLS (Azure Data Lake Storage) Gen 2 no SQL DW, use uma Chave de Armazenamento do Azure.
-- `CREDENTIAL` será necessário apenas se o blob tiver sido protegido. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
+- Para carregar dados do Armazenamento do Azure ou do ADLS (Azure Data Lake Storage) Gen 2 no SQL DW, use uma Chave de Armazenamento do Azure.
+- `CREDENTIAL` será necessário apenas se os dados tiverem sido protegidos. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
 
 Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -674,12 +702,9 @@ Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCO
 
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
-- Use HADOOP quando a fonte de dados externa for Armazenamento de Blobs do Azure, ADLS Gen 1 ou ADLS Gen 2.
+- Use o HADOOP quando a fonte de dados externa for Armazenamento do Azure, ADLS Gen 1 ou ADLS Gen 2.
 
-> [!IMPORTANT]
-> Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
-
-Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, confira [Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#a-create-external-data-source-to-reference-azure-blob-storage).
+Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento do Azure, confira [Criar uma fonte de dados externa para referenciar o Azure Data Lake Storage Gen 1 ou 2 usando uma entidade de serviço](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal).
 
 ## <a name="permissions"></a>Permissões
 
@@ -701,9 +726,8 @@ No momento, não há suporte para um token SAS com o tipo `HADOOP`. Ele só é c
 
 ## <a name="examples"></a>Exemplos:
 
-### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>a. Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure
-
-Neste exemplo, a fonte de dados externa é um contêiner do Armazenamento de Blobs do Azure chamado `daily` na conta de Armazenamento do Azure chamada `logs`. A fonte de dados externa do armazenamento do Azure destina-se somente a transferência de dados. Não dá suporte a aplicação de predicado.
+### <a name="a-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>a. Criar fonte de dados externa para acessar dados no Armazenamento do Azure usando a interface wasb://
+Neste exemplo, a fonte de dados externa é uma conta de Armazenamento do Azure V2 chamada `logs`. O contêiner é chamado `daily`. A fonte de dados externa do Armazenamento do Azure destina-se somente a transferência de dados. Não dá suporte a aplicação de predicado. Não há suporte para namespaces hierárquicos ao acessar dados por meio da interface `wasb://`.
 
 Este exemplo mostra como criar a credencial no escopo do banco de dados para autenticação no Armazenamento do Azure. Especifique a chave de conta de Armazenamento do Azure no segredo da credencial do banco de dados. Você pode especificar qualquer cadeia de caracteres na identidade da credencial no escopo do banco de dados, pois ela não será usada durante a autenticação no Armazenamento do Azure.
 
@@ -722,13 +746,13 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
 ### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. Criar fonte de dados externa para referenciar o Azure Data Lake Storage Gen 1 ou 2 usando uma entidade de serviço
 
-A conectividade do Azure Data Lake Storage pode estar baseada no URI do ADLS e na entidade de serviço do aplicativo do Azure Active Directory. A documentação para criar esse aplicativo pode ser encontrada em [Autenticação do Data Lake Storage usando o Active Directory][azure_ad[].
+A conectividade do Azure Data Lake Storage pode ser baseada no URI do ADLS e na entidade de serviço do Aplicativo do Azure Active Directory. A documentação para criar esse aplicativo pode ser encontrada em [Autenticação do Data Lake Storage usando o Active Directory][azure_ad].
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -790,7 +814,7 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. Criar uma fonte de dados externa para referenciar a conectividade do Polybase com o Azure Data Lake Storage Gen 2
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2-using-abfs"></a>D. Criar uma fonte de dados externa para referenciar a conectividade do Polybase com o Azure Data Lake Storage Gen 2 usando ABFS://
 
 Não há necessidade de especificar SECRET ao se conectar à conta do Azure Data Lake Storage Gen2 com o mecanismo de [Identidade Gerenciada](/azure/active-directory/managed-identities-azure-resources/overview
 ).
@@ -827,7 +851,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -895,7 +919,7 @@ Fornece o protocolo de conectividade e o caminho para a fonte de dados externa.
 | Fonte de dados externa    | Prefixo de local | Caminho de local                                         |
 | ----------------------- | --------------- | ----------------------------------------------------- |
 | Cloudera ou Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
-| Armazenamento do Blobs do Azure      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| Conta de Armazenamento do Azure   | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Caminho de local:
 
@@ -908,7 +932,8 @@ Observações e orientação adicionais ao definir o local:
 
 - O mecanismo do PDW não verifica a existência da fonte de dados externa quando o objeto é criado. Para validar, crie uma tabela externa usando a fonte de dados externa.
 - Use a mesma fonte de dados externa para todas as tabelas ao consultar o Hadoop para garantir semântica de consulta consistente.
-- `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão TSL segura.
+- `wasbs` é recomendado, pois os dados serão enviados usando uma conexão TLS segura.
+- Não há suporte para Namespaces Hierárquicos quando usados com contas de Armazenamento do Azure em wasb://.
 - Para garantir consultas do PolyBase com êxito durante um failover `Namenode` do Hadoop, considere usar um endereço IP virtual para o `Namenode` do cluster do Hadoop. Se você não fizer isso, execute um comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para apontar para o novo local.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
@@ -917,19 +942,16 @@ Especifica uma credencial no escopo do banco de dados para a autenticação na f
 
 Observações e orientações adicionais ao criar uma credencial:
 
-- Para carregar dados do armazenamento de Blobs do Azure ou do ADLS (Azure Data Lake Storage) Gen 2 no SQL DW ou no PDW, use uma Chave de Armazenamento do Azure.
-- `CREDENTIAL` será necessário apenas se o blob tiver sido protegido. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
+- Para carregar dados do Armazenamento do Azure no Azure Synapse, use uma Chave de Armazenamento do Azure.
+- `CREDENTIAL` será necessário apenas se os dados tiverem sido protegidos. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
 
 ### <a name="type---hadoop-"></a>TYPE = *[ HADOOP ]*
 
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
-- Use HADOOP quando a fonte de dados externa for Cloudera, Hortonworks ou Armazenamento de Blobs do Azure.
+- Use HADOOP quando a fonte de dados externa for Cloudera, Hortonworks ou Armazenamento do Azure.
 
-> [!IMPORTANT]
-> Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
-
-Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, confira [Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
+Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento do Azure, confira [Criar uma fonte de dados externa para referenciar o Hadoop](#a-create-external-data-source-to-reference-hadoop).
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -1028,9 +1050,9 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Criar uma fonte de dados externa para referenciar o Armazenamento de Blobs do Azure
+### <a name="d-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>D. Criar fonte de dados externa para acessar dados no Armazenamento do Azure usando a interface wasb://
 
-Neste exemplo, a fonte de dados externa é um contêiner do Armazenamento de Blobs do Azure chamado `daily` na conta de Armazenamento do Azure chamada `logs`. A fonte de dados externa do armazenamento do Azure destina-se somente a transferência de dados. Não dá suporte a aplicação de predicado.
+Neste exemplo, a fonte de dados externa é uma conta de Armazenamento do Azure V2 chamada `logs`. O contêiner é chamado `daily`. A fonte de dados externa do Armazenamento do Azure destina-se somente a transferência de dados. Não dá suporte a aplicação de predicado. Não há suporte para namespaces hierárquicos ao acessar dados por meio da interface `wasb://`.
 
 Este exemplo mostra como criar a credencial no escopo do banco de dados para autenticação no Armazenamento do Azure. Especifique a chave de conta de Armazenamento do Azure no segredo da credencial do banco de dados. Você pode especificar qualquer cadeia de caracteres na identidade da credencial no escopo do banco de dados, pois ela não será usada durante a autenticação no Armazenamento do Azure.
 
@@ -1049,9 +1071,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/'
     CREDENTIAL = AzureStorageCredential
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
+
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -1064,7 +1087,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql

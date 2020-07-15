@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634186"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999760"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT – Cláusula OVER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determina o particionamento e a ordenação de um conjunto de linhas antes da aplicação da função de janela associada. Isto é, a cláusula OVER defines uma janela ou conjunto de linhas especificado pelo usuário em um conjunto de resultados de consulta. Uma função de janela computa um valor para cada linha na janela. Você pode usar a cláusula OVER com funções para computar valores agregados como médias móveis, agregações cumulativas, somas acumuladas ou os primeiros N resultados por grupo.  
   
@@ -160,7 +160,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Especifica que a janela termina na última linha da partição. UNBOUNDED FOLLOWING só pode ser especificado como ponto de extremidade da janela. Por exemplo RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING define uma janela que inicia com a linha atual e termina com a última linha da partição.  
   
  \<unsigned value specification> FOLLOWING  
- Especificado com \<unsigned value specification> para indicar o número de linhas ou valores após a linha atual. Quando \<unsigned value specification> FOLLOWING é especificado como o ponto de partida da janela, o ponto de extremidade deve ser \<unsigned value specification>FOLLOWING. Por exemplo, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING define uma janela que começa com a segunda linha após a linha atual e termina com a décima linha após a linha atual. Essa especificação não é permitida para RANGE.  
+ Especificado com \<unsigned value specification> para indicar o número de linhas ou valores que sucede a linha atual. Quando \<unsigned value specification> FOLLOWING é especificado como o ponto de partida da janela, o ponto de término precisa ser \<unsigned value specification>FOLLOWING. Por exemplo, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING define uma janela que começa com a segunda linha após a linha atual e termina com a décima linha após a linha atual. Essa especificação não é permitida para RANGE.  
   
  Um literal de inteiro sem sinal  
 **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
@@ -174,7 +174,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>Importante:
 
-Se ROWS/RANGE for especificado e \<window frame preceding> for usado para \<window frame extent> (sintaxe curta), essa especificação será usada para o ponto de partida de limite de quadro de janela e CURRENT ROW será usado para o ponto de extremidade do limite. Por exemplo "ROWS 5 PRECEDING" é igual a "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
+Se ROWS/RANGE for especificado e \<window frame preceding> for usado para \<window frame extent> (sintaxe curta), essa especificação será usada para o ponto de partida de limite de quadro de janela e CURRENT ROW será usado para o ponto de término do limite. Por exemplo "ROWS 5 PRECEDING" é igual a "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
   
 > [!NOTE]
 > Se ORDER BY não for especificado, toda a partição será usada para um quadro de janela. Isso só se aplica a funções que não requerem a cláusula ORDER BY. Se ROWS/RANGE não for especificado, mas ORDER BY for especificado, RANGE UNBOUNDED PRECEDING AND CURRENT ROW é usado como padrão para quadro de janela. Isso só se aplica a funções que podem aceitar a especificação de ROWS/RANGE opcional. Por exemplo, as funções de classificação não podem aceitar ROWS/RANGE, portanto, esse quadro de janela não é aplicado, mesmo que ORDER BY esteja presente e ROWS/RANGE não.  
@@ -182,9 +182,9 @@ Se ROWS/RANGE for especificado e \<window frame preceding> for usado para \<wind
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  A cláusula OVER não pode ser usada com a função de agregação CHECKSUM.  
   
- RANGE não pode ser usado com \<unsigned value specification> PRECEDING ou \<unsigned value specification> FOLLOWING.  
+ O RANGE não pode ser usado com \<unsigned value specification> PRECEDING ou \<unsigned value specification> FOLLOWING.  
   
- Dependendo da função de classificação, agregação ou analítica usada com a cláusula OVER, talvez não haja suporte para \<ORDER BY clause> e/ou \<ROWS and RANGE clause>.  
+ Dependendo da função de classificação, de agregação ou analítica usada com a cláusula OVER, talvez não haja suporte para \<ORDER BY clause> e/ou \<ROWS and RANGE clause>.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -396,9 +396,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

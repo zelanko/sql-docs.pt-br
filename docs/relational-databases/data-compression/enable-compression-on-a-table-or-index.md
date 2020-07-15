@@ -23,16 +23,16 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488005"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003915"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este tópico descreve como habilitar a compactação em uma tabela ou índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -146,7 +146,7 @@ ms.locfileid: "81488005"
   
                 -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro** ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
         2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
@@ -202,7 +202,11 @@ ms.locfileid: "81488005"
      Quando terminar, clique em **Fechar**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
-  
+
+### <a name="sql-server"></a>SQL Server
+
+No SQL Server, execute `sp_estimate_data_compression_savings` e habilite a compactação na tabela ou no índice. Confira as seções a seguir. 
+
 #### <a name="to-enable-compression-on-a-table"></a>Para permitir a compactação em uma tabela  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -245,7 +249,47 @@ ms.locfileid: "81488005"
   
     ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
     GO  
+    ``` 
+    
+### <a name="on-azure-sql-database"></a>No Banco de Dados SQL do Azure
+
+O Banco de Dados SQL do Azure não é compatível com `sp_estimate_data_compression`. Os scripts a seguir habilitam a compactação sem estimar o valor de compactação. 
+
+#### <a name="to-enable-compression-on-a-table"></a>Para permitir a compactação em uma tabela  
+  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
+  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo permite a compactação ROW em todas as partições na tabela especificada.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
     ```  
+  
+#### <a name="to-enable-compression-on-an-index"></a>Para permitir a compactação em um índice  
+  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Na barra Padrão, clique em **Nova Consulta**.  
+  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Primeiro, o exemplo consulta a exibição de catálogo `sys.indexes` para retornar o nome e o `index_id` para cada índice na tabela `Production.TransactionHistory` . Por fim, o exemplo recria o ID do índice 2 (`IX_TransactionHistory_ProductID`), especificando a compactação PAGE.  
+  
+    ```sql  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+    
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ``` 
   
  Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

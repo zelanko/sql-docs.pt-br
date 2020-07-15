@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981724"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007597"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT – Cláusula INTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT…INTO cria uma tabela no grupo de arquivos padrão e insere nela as linhas resultantes da consulta. Para exibir a sintaxe completa de SELECT, confira [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,9 @@ A instrução `SELECT...INTO` opera em duas partes – a nova tabela é criada e
  Quando uma coluna computada é incluída na lista de seleção, a coluna correspondente na nova tabela não é uma coluna computada. Os valores na nova coluna são os que foram calculados no momento em que a `SELECT...INTO` foi executada.  
   
 ## <a name="logging-behavior"></a>Comportamento de log  
- A quantidade de registro em log para `SELECT...INTO` depende do modelo de recuperação em vigor para o banco de dados. Nos modelos de recuperação simples ou bulk-logged, as operações em massa são registradas minimamente. Com o log mínimo, usar a instrução `SELECT...INTO` pode ser mais eficiente do que criar uma tabela e então preenchê-la usando uma instrução INSERT. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ A quantidade de registro em log para `SELECT...INTO` depende do modelo de recuperação em vigor para o banco de dados. Nos modelos de recuperação simples ou bulk-logged, as operações em massa são registradas minimamente. Com o log mínimo, usar a instrução `SELECT...INTO` pode ser mais eficiente do que criar uma tabela e então preenchê-la usando uma instrução INSERT. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
+ 
+As instruções `SELECT...INTO` que contêm UDFs (funções definidas pelo usuário) são operações totalmente registradas em log. Caso as funções definidas pelo usuário usadas na instrução `SELECT...INTO` não executem nenhuma operação de acesso a dados, será possível especificar a cláusula SCHEMABINDING para as funções definidas pelo usuário. Elas definirão a propriedade derivada UserDataAccess como 0 para essas funções definidas pelo usuário. Após essa alteração, as instruções `SELECT...INTO` serão minimamente registradas em log. Caso a instrução `SELECT...INTO` ainda referencie ao menos uma função definida pelo usuário que tenha essa propriedade definida como 1, a operação será totalmente registrada em log.
   
 ## <a name="permissions"></a>Permissões  
  Exige permissão CREATE DATABASE no banco de dados de destino.  

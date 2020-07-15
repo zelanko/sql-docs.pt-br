@@ -1,5 +1,6 @@
 ---
 title: Criar um usuário de banco de dados | Microsoft Docs
+description: Saiba como criar os tipos mais comuns de usuários de banco de dados usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
@@ -24,15 +25,15 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981936"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005696"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este tópico descreve como criar os tipos mais comuns de usuários de banco de dados. Há onze tipos de usuários. A lista completa é fornecida no tópico [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Todas as variedades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dão suporte a usuários de banco de dados, mas não necessariamente todos os tipos de usuários.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "73981936"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Usuário do Banco de Dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis** e **Propriedades Estendidas**.  
+ A caixa de diálogo **Usuário de banco de dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis** e **Propriedades Estendidas**.  
   
 -   A página **Esquemas Proprietários** lista todos os possíveis esquemas que podem ser possuídos pelo novo usuário de banco de dados. Para adicionar esquemas a ou removê-los de um usuário de banco de dados, sob **Esquemas possuídos por este usuário**, marque ou desmarque as caixas de seleção ao lado dos esquemas.  
   

@@ -1,5 +1,6 @@
 ---
 title: Injeção de SQL | Microsoft Docs
+description: Saiba como funcionam os ataques de injeção de SQL. Mitigue esses ataques validando a entrada e examinando o código para injeção de SQL no SQL Server.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e1cffa7f2d8c388b391a3bcb8cbe51ebd6ff1c2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126862"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001034"
 ---
 # <a name="sql-injection"></a>Injeção de SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A injeção de SQL é um ataque em que o código mal-intencionado é inserido em cadeias de caracteres, passadas posteriormente para uma instância do SQL Server para análise e execução. Qualquer procedimento que construa instruções SQL deve ser verificado quanto a vulnerabilidades de injeção porque o SQL Server executará todas as consultas sintaticamente válidas que receber. Mesmo dados com parâmetros podem ser manipulados por um invasor qualificado e determinado.  
   
 ## <a name="how-sql-injection-works"></a>Como funciona a injeção de SQL  
@@ -85,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Nunca concatene entrada de usuário que não seja validada. A concatenação de cadeia de caracteres é o ponto principal de entrada de injeção de script.  
   
--   Não aceite as seguintes cadeias de caracteres em campos dos quais nomes de arquivos podem ser construídos: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
+-   Não aceite as seguintes cadeias de caracteres nos campos dos quais os nomes de arquivo podem ser criados: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL e PRN.  
   
  Sempre que puder, rejeite entrada que contenha os caracteres a seguir.  
   

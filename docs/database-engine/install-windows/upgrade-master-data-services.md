@@ -1,5 +1,6 @@
 ---
 title: Fazer upgrade do Master Data Services | Microsoft Docs
+description: Descubra os quatro cenários para atualizar o Microsoft SQL Server Master Data Services. Saiba mais sobre os locais de arquivos e a solução de problemas para atualizações.
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900272"
 ---
 # <a name="upgrade-master-data-services"></a>Atualizar o Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Veja a seguir os cenários de upgrade do Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
@@ -112,7 +113,7 @@ ms.locfileid: "67934820"
   
  **Para atualizar com a atualização do Mecanismo de Banco de Dados**  
   
-1.  **Somente para o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] apenas**: abra o **Painel de Controle** > **Programas e Recursos** e desinstale o Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Faça upgrade do mecanismo de banco de dados para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Para obter mais informações, consulte [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
@@ -148,7 +149,7 @@ ms.locfileid: "67934820"
   
 3.  Atualize o esquema de banco de dados do MDS, crie um aplicativo Web e associe o novo aplicativo Web com o banco de dados do MDS atualizado. Para obter instruções, confira as etapas 2 a 4 em [Atualizar sem a atualização do Mecanismo de Banco de Dados](#noengine)  
   
-## <a name="troubleshooting"></a>solução de problemas  
+## <a name="troubleshooting"></a>Solução de problemas  
  **Problema:** ao abrir o aplicativo Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a mensagem de erro "a versão de cliente não é compatível com a versão de banco de dados" é exibida.  
   
  **Solução:** esse problema ocorre quando um aplicativo Web do Master Data Manager do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tenta acessar um banco de dados que foi atualizado para o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Use um ou um aplicativo Web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  

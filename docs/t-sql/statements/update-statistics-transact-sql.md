@@ -21,15 +21,15 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0aa0779fda49749c2ab3c35cbb5ccc37e94526cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5197708ff1e12aae5b2df32bc82b08cd48f1222c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636247"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009625"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Atualiza estatísticas de otimização de consulta de uma tabela ou exibição indexada. Por padrão, o otimizador de consulta já atualiza estatísticas conforme necessário para melhorar o plano de consulta, em alguns casos, é possível melhorar o desempenho de consulta usando `UPDATE STATISTICS` ou o procedimento armazenado [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) para atualizar estatísticas com mais frequência do que as atualizações padrão.  
   
@@ -133,7 +133,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
  
  **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 em diante) e posterior (no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 em diante).  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] Força as estatísticas no nível folha que abrangem as partições especificadas na cláusula ON PARTITIONS a serem recalculadas e, em seguida, mescladas para criar as estatísticas globais. WITH RESAMPLE é necessário porque as estatísticas de partições criadas com taxas de amostragem diferentes não podem ser mescladas em conjunto.  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] força as estatísticas de nível folha que abrangem as partições especificadas na cláusula ON PARTITIONS a serem recalculadas e mescladas para criar as estatísticas globais. WITH RESAMPLE é necessário porque as estatísticas de partições criadas com taxas de amostragem diferentes não podem ser mescladas em conjunto.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
   
@@ -166,7 +166,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
 
 MAXDOP = *max_degree_of_parallelism*  
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação estatística. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   

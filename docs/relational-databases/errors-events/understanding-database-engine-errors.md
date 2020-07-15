@@ -1,5 +1,6 @@
 ---
 title: Compreendendo os erros do Mecanismo de Banco de Dados | Microsoft Docs
+description: Saiba mais sobre os atributos de erros gerados pelo Mecanismo de Banco de Dados do SQL Server e como acessar todas as mensagens de erro definidas pelo usuário e do sistema em sys.messages.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49e62b7fc66a462701ea65a537edee84c9735b86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903749"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009213"
 ---
 # <a name="understanding-database-engine-errors"></a>Compreendendo os erros do Mecanismo de Banco de Dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Os erros acionados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] têm os atributos descritos na tabela a seguir.  
   
 |Atributo|Descrição|  

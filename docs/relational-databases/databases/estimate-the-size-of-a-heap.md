@@ -1,5 +1,6 @@
 ---
 title: Estimar o tamanho de um heap | Microsoft Docs
+description: Use este procedimento para estimar a quantidade de espaço exigida para armazenar dados em um heap no SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909050"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002959"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar o tamanho de um heap
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Você pode usar as seguintes etapas para estimar a quantidade de espaço exigida para armazenar dados em um heap:  
   
 1.  Especifique o número de linhas que estarão presentes na tabela:  
@@ -46,7 +47,7 @@ ms.locfileid: "72909050"
   
 3.  Parte da linha, conhecida como bitmap nulo, é reservada para gerenciar a nulabilidade da coluna. Calcule seu tamanho:  
   
-     **_Null_Bitmap_** = 2 + (( **_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_** = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Somente a parte do inteiro dessa expressão deve ser usada. Descarte todo o restante.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "72909050"
   
      Se houver colunas de comprimento variável na tabela, determine quanto espaço será usado para armazenar as colunas dentro da linha:  
   
-     **_Variable_Data_Size_** = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_** = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      Os bytes adicionados a **_Max_Var_Size_** servem para acompanhar cada coluna de tamanho variável. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usado, pode ajustar o valor **_Max_Var_Size_** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
@@ -65,19 +66,19 @@ ms.locfileid: "72909050"
   
 5.  Calcule o tamanho total da linha:  
   
-     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      O valor 4 na fórmula é a sobrecarga do cabeçalho da linha de dados.  
   
 6.  Calcule o número de linhas por página (8.096 bytes livres por página):  
   
-     **_Rows_Per_Page_** = 8096 / ( **_Row_Size_** + 2)  
+     **_Rows_Per_Page_** = 8096 / (**_Row_Size_** + 2)  
   
      Como as linhas não se estendem por mais de uma página, o número de linhas por página deve ser arredondado para baixo, para a linha inteira mais próxima. O valor 2 na fórmula é para a entrada da linha na matriz de slot da página.  
   
 7.  Calcule o número de páginas necessário para armazenar todas as linhas:  
   
-     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      O número de páginas estimado deve ser arredondado para cima, até a página inteira mais próxima.  
   

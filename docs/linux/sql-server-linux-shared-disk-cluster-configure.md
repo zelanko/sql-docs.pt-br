@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558321"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897275"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar a instância de cluster de failover – SQL Server em Linux (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Uma instância de cluster de failover de disco compartilhado de dois nós do SQL Server fornece redundância no nível do servidor para alta disponibilidade. Neste tutorial, você aprenderá a criar uma instância de cluster de failover de dois nós do SQL Server em Linux. As etapas específicas que serão concluídas incluem:
 
@@ -35,7 +35,7 @@ Este artigo explica como criar uma FCI (instância de cluster de failover) de di
 
 Para obter informações conceituais, confira [FCI (instância de cluster de failover) do SQL Server no Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir o cenário de ponta a ponta a seguir, você precisará de dois computadores para implantar o cluster de dois nós e outro servidor para armazenamento. As etapas abaixo descrevem como esses servidores serão configurados.
 
@@ -133,8 +133,8 @@ Você precisa fornecer um armazenamento ao qual ambos os nós possam ter acesso.
 
    > Se você estiver usando outro firewall que não tenha uma configuração de alta disponibilidade interna, as portas a seguir precisarão ser abertas para que o Pacemaker possa se comunicar com outros nós no cluster
    >
-   > * TCP: portas 2224, 3121, 21064
-   > * UDP: porta 5405
+   > * TCP: Portas 2224, 3121 e 21064
+   > * UDP: Porta 5405
 
 1. Instale os pacotes do Pacemaker em cada nó.
 
@@ -197,9 +197,9 @@ Este exemplo criará uma FCI no grupo NewLinFCIGrp. O nome do grupo de recursos 
 
     \<NFSDIskResourceName> é o nome do recurso associado ao compartilhamento NFS
 
-    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você usará
+    \<IPAddressOfNFSServer> é o endereço IP do servidor NFS que você vai usar
 
-    \<FolderOnNFSServer> é o nome do compartilhamento NFS
+    \<FolderOnNFSServer> é o nome do compartilhamento de NFS
 
     \<FolderToMountNFSShare> é a pasta para montar o disco (para bancos de dados do sistema e a localização padrão, ela é /var/opt/mssql/data)
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a8dc7b925b493dda94257e65d21508a1543959e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082286"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897055"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade REVOKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revoga permissões concedidas ou negadas em um ponto de extremidade.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68082286"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  
@@ -54,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  ON ENDPOINT **::** _endpoint_name_  
  Especifica o ponto de extremidade no qual a permissão está sendo concedida. O qualificador de escopo ( **::** ) é obrigatório.  
   
- { FROM | TO } \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do qual a permissão está sendo revogada.  
+ { FROM | TO } \<server_principal> Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual a permissão está sendo revogada.  
   
  *SQL_Server_login*  
  Especifica o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

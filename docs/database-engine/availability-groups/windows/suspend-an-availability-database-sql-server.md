@@ -1,6 +1,6 @@
 ---
 title: Suspender um banco de dados de disponibilidade
-description: Saiba mais sobre como suspender a movimentação de dados para um banco de dados dentro de um grupo de disponibilidade Always On usando o SSMS (SQL Server Management Studio), o T-SQL (Transact-SQL) ou o PowerShell.
+description: Saiba mais sobre como suspender a movimentação de dados para um banco de dados dentro de um grupo de disponibilidade Always On usando o SQL Server Management Studio, o Transact-SQL ou o PowerShell.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251271"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900714"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender um banco de dados de disponibilidade (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Você pode suspender um banco de dados de disponibilidade no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Observe que um comando para suspender precisa ser emitido na instância do servidor que hospeda o banco de dados para ser suspenso ou retomado.  
   
  O efeito de um comando de suspensão depende de se você suspende um banco de dados secundário ou um banco de dados primário, da seguinte maneira:  
   
 |Banco de dados suspenso|Efeito do comando de suspensão|  
 |------------------------|-------------------------------|  
-|Banco de dados secundário|Somente o banco de dados secundário local é suspenso e seu estado de sincronização torna-se NOT SYNCHRONIZING. Outros bancos de dados secundários não são afetados. O banco de dados suspenso para de receber e aplicar dados (registros de log) e começa ficar desatualizado em relação ao banco de dados primário. Conexões existentes nas secundários legíveis permanecem utilizáveis. Novas conexões para o banco de dados suspenso na secundário legível não serão permitidas até que o movimento de dados seja continuado.<br /><br /> O banco de dados primário permanece disponível. Se você suspender cada um dos bancos de dados secundários correspondentes, o banco de dados primário será executado exposto.<br /><br /> **\*\* Importante \*\*** Enquanto um banco de dados secundário permanece suspenso, a fila de envio do banco de dados primário correspondente acumula registros de log de transação não enviados. As conexões para a réplica secundária retornam dados que estavam disponíveis no momento em que o movimento de dados foi suspenso.|  
+|Banco de dados secundário|Somente o banco de dados secundário local é suspenso e seu estado de sincronização torna-se NOT SYNCHRONIZING. Outros bancos de dados secundários não são afetados. O banco de dados suspenso para de receber e aplicar dados (registros de log) e começa ficar desatualizado em relação ao banco de dados primário. Conexões existentes nas secundários legíveis permanecem utilizáveis. Novas conexões para o banco de dados suspenso na secundário legível não serão permitidas até que o movimento de dados seja continuado. Esse comportamento se aplica somente quando as conexões são abertas usando o ouvinte e o roteamento somente leitura.<br /><br /> O banco de dados primário permanece disponível. Se você suspender cada um dos bancos de dados secundários correspondentes, o banco de dados primário será executado exposto.<br /><br /> **\*\* Importante \*\*** Enquanto um banco de dados secundário permanece suspenso, a fila de envio do banco de dados primário correspondente acumula registros de log de transação não enviados. As conexões para a réplica secundária retornam dados que estavam disponíveis no momento em que o movimento de dados foi suspenso.|  
 |Banco de dados primário|O banco de dados primário para o movimento de dados para todos os bancos de dados secundários conectados. O banco de dados primário continua sendo executado em um modo exposto. O banco de dados primário permanece disponível para clientes, e as conexões existentes em um banco de dados secundário legível permanecem utilizáveis e novas conexões podem ser feitas.|  
   
 > [!NOTE]  

@@ -20,16 +20,16 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f72290faba54a8130c42b0736945c6d1a2f39448
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631862"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007630"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set Operators – UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Concatena os resultados de duas consultas em um único conjunto de resultados. Você controla se o conjunto de resultados inclui linhas duplicadas:
 
@@ -59,7 +59,7 @@ A seguir são apresentadas as regras básicas de combinação dos conjuntos de r
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<query_specification> | ( \<query_expression> ) é uma especificação de consulta ou uma expressão de consulta que retorna dados a serem combinados com os dados de outra especificação de consulta ou expressão de consulta. As definições das colunas que fazem parte de uma operação UNION não precisam ser iguais, mas devem ser compatíveis por meio de conversão implícita. Quando os tipos de dados diferirem, o tipo de dados resultante será determinado com base nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md). Quando os tipos são iguais mas diferem em precisão, escala ou extensão, o resultado se baseia nas mesmas regras para combinação de expressões. Para obter mais informações, confira [Precisão, escala e comprimento (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | (\<query_expression>) É uma especificação ou expressão de consulta que retorna dados a serem combinados com os dados de outra especificação ou expressão de consulta. As definições das colunas que fazem parte de uma operação UNION não precisam ser iguais, mas devem ser compatíveis por meio de conversão implícita. Quando os tipos de dados diferirem, o tipo de dados resultante será determinado com base nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md). Quando os tipos são iguais mas diferem em precisão, escala ou extensão, o resultado se baseia nas mesmas regras para combinação de expressões. Para obter mais informações, confira [Precisão, escala e comprimento (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 As colunas do tipo de dados **xml** precisam ser iguais. Todas as colunas devem ter tipo para um esquema XML ou sem-tipo. Se tiverem tipo, elas deverão ter o tipo igual ao da coleção de esquema XML.  
   

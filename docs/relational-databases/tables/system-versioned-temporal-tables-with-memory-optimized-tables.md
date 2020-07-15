@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165464"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984384"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 As tabelas temporais com controle da versão do sistema para [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) são projetadas para fornecer uma solução econômica para cenários nos quais há a necessidade de [auditoria de dados e análise pontual](https://msdn.microsoft.com/library/mt631669.aspx) sobre os dados coletados com cargas de trabalho OLTP in-memory. Elas fornecem alta taxa de transferência transacional, simultaneidade livre de bloqueios e, ao mesmo tempo, a capacidade de armazenar grande quantidade de dados de histórico que podem ser consultados facilmente.
 
@@ -54,7 +54,7 @@ A tabela de preparo com otimização de memória interna é um objeto interno cr
 
 - O nome da tabela é gerado no seguinte formato: **Memory_Optimized_History_Table_<object_id>** em que *<object_id>* é o identificador da tabela temporal atual.
 - A tabela replica o esquema da tabela temporal atual mais uma coluna BIGINT. Essa coluna adicional garante a exclusividade das linhas movidas para o buffer de histórico interno.
-- A coluna adicional tem o seguinte formato de nome: **Change_ID[_<suffix>]** , em que *_\<sufixo>* é adicionado, opcionalmente, caso a tabela já tenha uma coluna *Change_ID*.
+- A coluna adicional tem o seguinte formato de nome: **Change_ID[_<suffix>]** , em que *_\<suffix>* é adicionado, opcionalmente, caso a tabela já tenha uma coluna *Change_ID*.
 - O tamanho máximo de linha para uma tabela com otimização de memória com controle da versão do sistema é reduzido em oito bytes, devido à coluna BIGINT adicional na tabela de preparo. O novo valor máximo agora é 8052 bytes.
 - A tabela de preparo interna com otimização de memória não é representada no Pesquisador de Objetos do SQL Server Management Studio.
 - Os metadados sobre essa tabela, bem como sua conexão com a tabela temporal atual, podem ser encontrados em [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md).

@@ -54,16 +54,16 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1cede57088f5d42041b28c00239ba29822f6c401
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632486"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010789"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Cria um índice relacional em uma tabela ou exibição. Também chamado de um índice rowstore porque é um índice de árvore B clusterizado ou não clusterizado. Você pode criar um índice rowstore antes que haja dados na tabela. Use um índice rowstore para melhorar o desempenho de consulta, especialmente quando as consultas forem selecionadas de colunas específicas ou exigirem que os valores sejam classificados em uma ordem específica.
 
@@ -723,9 +723,9 @@ As colunas não chave, chamadas de colunas incluídas, podem ser adicionadas ao 
 ## <a name="specifying-index-options"></a>Especificando opções de índice
 O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu novas opções de índice e também modifica o modo como as opções são especificadas. Na sintaxe compatível com versões anteriores, WITH *option_name* é equivalente a WITH **(** \<option_name> **= ON )** . Ao definir as opções de índice, aplicam-se as seguintes regras:
 
-- Novas opções de índice só podem ser especificadas usando WITH ( **_option\_name_ = ON | OFF**).
+- Novas opções de índice só podem ser especificadas usando WITH (**_option\_name_ = ON | OFF**).
 - As opções não podem ser especificadas com o uso de sintaxe compatível com versões anteriores e nova sintaxe na mesma instrução. Por exemplo, especificar WITH (**DROP_EXISTING, ONLINE = ON**) faz a instrução falhar.
-- Ao criar um índice XML, as opções devem ser especificadas usando WITH ( **_option_name_= ON | OFF**).
+- Ao criar um índice XML, as opções devem ser especificadas usando WITH (**_option_name_= ON | OFF**).
 
 ## <a name="drop_existing-clause"></a>Cláusula DROP_EXISTING
 É possível usar a cláusula DROP_EXISTING para recriar o índice, adicionar ou descartar colunas, modificar opções, modificar a ordem de classificação de colunas, ou alterar o esquema de partição ou o grupo de arquivos.
@@ -814,8 +814,8 @@ Compactação de dados é descrita no tópico [Compactação de dados](../../rel
 As restrições a seguir se aplicam a índices particionados:
 
 - Não será possível alterar a configuração de compactação de uma única partição se a tabela tiver índices não alinhados.
-- O ALTER INDEX \<index>... REBUILD PARTITION ... recria a partição especificada do índice.
-- O ALTER INDEX \<index>... REBUILD WITH... recria todas as partições do índice.
+- O ALTER INDEX \<index>… REBUILD PARTITION ... recria a partição especificada do índice.
+- O ALTER INDEX \<index>… REBUILD WITH... recria todas as partições do índice.
 
 Para avaliar como a alteração do estado de compactação afetará uma tabela, um índice ou uma partição, use o procedimento armazenado [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 

@@ -1,5 +1,6 @@
 ---
 title: Credenciais (Mecanismo de Banco de Dados) | Microsoft Docs
+description: Saiba mais sobre as credenciais no SQL Server. Familiarize-se com as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
@@ -22,16 +23,16 @@ ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a73728345ba30fefe755bbab53c185804080dc3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f6be70be8c7f2d03c55c5df53fd9f27a32b35fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094922"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005665"
 ---
 # <a name="credentials-database-engine"></a>Credenciais (Mecanismo de Banco de Dados)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Uma credencial é um registro que contém as informações de autenticação(credenciais) necessárias para conectar-se a um recurso fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Essas informações são usadas internamente pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A maioria das credenciais contém um nome e uma senha de usuário do Windows.  
   

@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 20039429b5368dc560baba68061c4f42c73b95a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8af2373969353597036a3c538d0a8ab8945ae24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901272"
 ---
 # <a name="pushdown-computations-in-polybase"></a>Cálculos de aplicação no PolyBase
 
 ## <a name="dmv"></a>DMV
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 A computação de aplicação melhora o desempenho de consultas em seu cluster do Hadoop.
 
@@ -55,7 +55,7 @@ SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_bal
 
 O SQL Server permite os seguintes operadores e expressões básicas para a aplicação de predicado.
 
-+ Operadores de comparação binária ( \<, >, =, !=, <>, >=, <= ) para valores de hora, data e numéricos.
++ Operadores de comparação binária (\<, >, =, !=, <>, >=, <=) para valores temporais, de dada e numéricos.
 
 + Operadores aritméticos ( +, -, *, /, % ).
 

@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217107"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901284"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Para instalar uma versão de avaliação do SQL Server, vá para [avaliações do SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
@@ -181,7 +181,7 @@ A instalação do PolyBase do SQL Server cria as seguintes regras de firewall no
    
 - PolyBase do SQL Server – Mecanismo de Banco de Dados – \<SQLServerInstanceName> (TCP-In)  
    
-- PolyBase do SQL Server – Serviços do PolyBase – \<SQLServerInstanceName> (TCP-In)  
+- PolyBase do SQL Server– Serviços PolyBase – \<SQLServerInstanceName> (TCP-In)  
 
 - PolyBase do SQL Server – Navegador do SQL – (UDP-In)  
    

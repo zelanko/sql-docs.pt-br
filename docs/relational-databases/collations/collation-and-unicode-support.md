@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831810"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091902"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e Unicode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 As ordenações em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. As ordenações usadas com tipos de dados de caractere, como **char** e **varchar**, determinam a página de código e os caracteres correspondentes que podem ser representados para esse tipo de dados. 
 
 Independentemente de você estar instalando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurando um backup de banco de dados ou conectando o servidor a bancos de dados cliente, é importante estar ciente dos requisitos de localidade, da ordem de classificação e da diferenciação de maiúsculas e minúsculas e de acentos dos dados com os quais você está trabalhando. Para listar as ordenações disponíveis na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -178,12 +178,12 @@ A seguinte tabela mostra as designações de ordenação padrão conforme determ
 |Árabe (Iêmen)|0x2401|0x0401|Arabic_CI_AS|
 |Armênio (Armênia)|0x042b|0x0419|Latin1_General_CI_AS|
 |Assamês (Índia)|0x044d|0x044d|Indisponível no nível do servidor|
-|Azeri (Azerbaijão, cirílico)|0x082c|0x082c|Preterido, não disponível no nível do servidor|
-|Azeri (Azerbaijão, latino)|0x042c|0x042c|Preterido, não disponível no nível do servidor|
+|Azerbaijano (Azerbaijão, cirílico)|0x082c|0x082c|Preterido, não disponível no nível do servidor|
+|Azerbaijano (Azerbaijão, latino)|0x042c|0x042c|Preterido, não disponível no nível do servidor|
 |Bashkir (Rússia)|0x046d|0x046d|Latin1_General_CI_AI|
 |Basco (País Basco)|0x042d|0x0409|Latin1_General_CI_AS|
 |Bielorrusso (Belarus)|0x0423|0x0419|Cyrillic_General_CI_AS|
-|Bengali (Bangladesh)|0x0845|0x0445|Indisponível no nível do servidor|
+|Bangla (Bangladesh)|0x0845|0x0445|Indisponível no nível do servidor|
 |Bengali (India)|0x0445|0x0439|Indisponível no nível do servidor|
 |Bósnio (Bósnia e Herzegovina, Cirílico)|0x201a|0x201a|Latin1_General_CI_AI|
 |Bósnio (Bósnia e Herzegovina, Latino)|0x141a|0x141a|Latin1_General_CI_AI|
@@ -235,7 +235,7 @@ A seguinte tabela mostra as designações de ordenação padrão conforme determ
 |Francês (Mônaco)|0x180c|0x040c|French_CI_AS|
 |Francês (Suíça)|0x100c|0x040c|French_CI_AS|
 |Frisão (Holanda)|0x0462|0x0462|Latin1_General_CI_AI|
-|Galego (Espanha)|0x0456|0x0409|Latin1_General_CI_AS|
+|Galego|0x0456|0x0409|Latin1_General_CI_AS|
 |Georgiano (Geórgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Georgiano (Geórgia)|0x0437|0x0419|Latin1_General_CI_AS|
 |Alemão – classificação do catálogo telefônico (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ A seguinte tabela mostra as designações de ordenação padrão conforme determ
 |Lituano (Lituânia)|0x0427|0x0427|Lithuanian_CI_AS|
 |Sorábio baixo (Alemanha)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxemburguês (Luxemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedônio (Macedônia, Antiga República Iugoslava da Macedônia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedônio (Macedônia do Norte, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malaio (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malaio (Malásia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malaiala (Índia)|0x044c|0x0439|Indisponível no nível do servidor|
@@ -303,6 +303,7 @@ A seguinte tabela mostra as designações de ordenação padrão conforme determ
 |Romeno (Romênia)|0x0418|0x0418|Romanian_CI_AS|
 |Romanche (Suíça)|0x0417|0x0417|Latin1_General_CI_AI|
 |Russo (Rússia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sahka (Rússia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Sami (Inari, Finlândia)|0x243b|0x083b|Latin1_General_CI_AI|
 |Sami (Lule, Noruega)|0x103b|0x043b|Latin1_General_CI_AI|
 |Sami (Lule, Suécia)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ A seguinte tabela mostra as designações de ordenação padrão conforme determ
 |Galês (Reino Unido)|0x0452|0x0452|Latin1_General_CI_AI|
 |uolofe (Senegal)|0x0488|0x040c|French_CI_AS|
 |Xhosa/isiXhosa (África do Sul)|0x0434|0x0409|Latin1_General_CI_AS|
-|Yakut (Rússia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Yi (RPC)|0x0478|0x0409|Latin1_General_CI_AS|
 |Ioruba (Nigéria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (África do Sul)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -656,4 +656,3 @@ Para obter mais informações, confira o seguinte conteúdo relacionado:
 [Escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [Conjuntos de caracteres multibyte e de byte único](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

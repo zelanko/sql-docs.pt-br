@@ -1,5 +1,6 @@
 ---
 title: Restaurar a chave mestra de serviço | Microsoft Docs
+description: Saiba como restaurar a chave mestra de serviço no SQL Server usando Transact-SQL. A chave mestra de serviço é a raiz da hierarquia de criptografia do SQL Server.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957371"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898024"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurar a chave mestra de serviço
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como restaurar a chave mestra de serviço no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  

@@ -1,5 +1,6 @@
 ---
 title: Mapeamento de tipo de dados para Publicadores Oracle | Microsoft Docs
+description: Saiba mais sobre mapeamentos padrão de tipos de dados entre o Oracle e o SQL Server quando os dados são movidos do Publicador do Oracle para o Distribuidor do SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d7063beae88d6bbf0de9af735e6e5d87c94a15a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901125"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896802"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapeamento de tipo de dados para Publicadores Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Os tipos de dados Oracle e os tipos de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nem sempre são correspondências exatas. Onde possível, o tipo de dados correspondente é selecionado automaticamente ao publicar uma tabela de Oracle. Em casos em que o mapeamento de um único tipo de dados não é claro, mapeamentos alternativos de tipo de dados são fornecidos. Para obter informações sobre como selecionar mapeamentos alternativos, consulte "Especificando Mapeamentos Alternativos de Tipos de Dados”, mais adiante neste tópico.  
   
  A tabela a seguir mostra como os tipos de dados são mapeados por padrão entre o Oracle e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando os dados são movidos de um Publicador Oracle para o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A coluna de Alternativas indica se mapeamentos alternativos estão disponíveis.  
@@ -82,7 +83,7 @@ ms.locfileid: "67901125"
 ### <a name="float-and-number-types"></a>Tipos FLOAT e NUMBER  
  A escala e precisão especificadas durante o mapeamento de tipos de dados FLOAT e NUMBER dependem da escala e precisão especificadas para a coluna usando o tipo de dados no banco de dados do Oracle. A precisão é o número de dígitos em um número. A escala é o número de dígitos à direita da casa decimal em um número. Por exemplo, o número 123,45 tem uma precisão de 5 e uma escala de 2.  
   
- O Oracle permite números a serem definidos com a escala maior que a precisão, tal como NUMBER(4,5), mas o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requer que a precisão seja igual ou maior que a escala. Para garantir que não há truncamento de dados, se a escala for maior que a precisão no Publicador Oracle, a precisão é definida igual à escala quando o tipo de dados for mapeado: NUMBER (4,5) ele seria mapeado como NUMERIC (5,5).  
+ O Oracle permite números a serem definidos com a escala maior que a precisão, tal como NUMBER(4,5), mas o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requer que a precisão seja igual ou maior que a escala. Para que não haja truncamento de dados, se a escala for maior que a precisão no Publicador Oracle, a precisão será definida igual à escala quando o tipo de dados for mapeado: NUMBER (4,5) seria mapeado como NUMERIC (5,5).  
   
 > [!NOTE]  
 >  Se você não especificar a escala e a precisão para NUMBER, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa o padrão máximo de escala (8) e precisão (38). É recomendável que você defina uma escala e precisão específicas no Oracle para melhor armazenamento e desempenho quando os dados forem replicados.  

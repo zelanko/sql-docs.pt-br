@@ -1,5 +1,6 @@
 ---
 title: Entidades de segurança (mecanismo de banco de dados) | Microsoft Docs
+description: Saiba mais sobre entidades de segurança no Mecanismo de Banco de Dados, que são entidades que podem solicitar recursos do SQL Server. Há entidades de segurança no nível de SQL Server e no nível de banco de dados.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -29,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68344602"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005613"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade depende do escopo de sua definição: Windows, servidor, banco de dados e, se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança). Este tópico aplica-se a todas as versões do SQL Server, mas há algumas restrições para entidade de segurança no nível do servidor no banco de dados SQL ou no SQL Data Warehouse. 
+  *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade de segurança depende do escopo da definição da entidade de segurança: Windows, servidor, banco de dados e se a entidade de segurança é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança). Este tópico aplica-se a todas as versões do SQL Server, mas há algumas restrições para entidades de segurança no nível do servidor no Banco de Dados SQL ou no SQL Data Warehouse. 
   
 ## <a name="sql-server-level-principals"></a>Entidades de segurança no nível do SQL Server  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68344602"
 - Função de aplicativo
   
 ## <a name="sa-login"></a>Logon sa  
- O logon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do `sa` é uma entidade de segurança no nível do servidor. Por padrão, ele é criado quando uma instância é instalada. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o banco de dados padrão de sa é o mestre. Essa é uma alteração de comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O logon `sa` é membro da função de nível do servidor fixa `sysadmin`. O logon `sa` tem todas as permissões no servidor e não pode ser limitado. O logon `sa` não pode ser descartado, mas pode ser desabilitado para que ninguém possa usá-lo.
+ O logon `sa` do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma entidade de segurança no nível do servidor. Por padrão, ele é criado quando uma instância é instalada. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o banco de dados padrão de sa é o mestre. Essa é uma alteração de comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O logon `sa` é membro da função de nível do servidor fixa `sysadmin`. O logon `sa` tem todas as permissões no servidor e não pode ser limitado. O logon `sa` não pode ser descartado, mas pode ser desabilitado para que ninguém possa usá-lo.
 
 ## <a name="dbo-user-and-dbo-schema"></a>Usuário dbo e esquema dbo
 

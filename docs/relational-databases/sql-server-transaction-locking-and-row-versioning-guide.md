@@ -19,15 +19,15 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287170"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053742"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Em um banco de dados, o gerenciamento incorreto de transações normalmente leva a problemas de contenção e de desempenho em sistemas com muitos usuários. À medida que o número de usuários que acessam os dados aumenta, torna-se importante ter aplicativos que utilizem as transações de maneira eficaz. Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente.  
   
@@ -238,7 +238,7 @@ GO
   
 -   **Leituras ausentes e duplicadas provocadas por atualizações de linha**  
   
-    -   Perdendo uma linha atualizada ou vendo uma linha atualizada várias vezes  
+    -   Ignorar ou ver uma linha atualizada várias vezes  
   
          Transações que estejam sendo executadas no nível `READ UNCOMMITTED` não emitem bloqueios compartilhados para impedir que outras transações modifiquem os dados lidos pela transação atual. Transações que estejam sendo executadas no nível READ COMMITTED emitem bloqueios compartilhados, mas os bloqueios de linha ou de página são liberados depois que a linha é lida. Em qualquer dos dois casos, quando você estiver percorrendo um índice, se outro usuário alterar a coluna de chave de índice da linha durante sua leitura, a linha poderia aparecer novamente se a alteração de chave movesse a linha para uma posição à frente de sua leitura. De maneira semelhante, a linha poderia não aparecer se a alteração de chave movesse a linha para uma posição no índice que você já tinha lido. Para evitar isso, use a dica `SERIALIZABLE` ou `HOLDLOCK` ou o controle de versão de linha. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   

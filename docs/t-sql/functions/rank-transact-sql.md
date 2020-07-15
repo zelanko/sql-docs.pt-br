@@ -21,15 +21,15 @@ ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 986f5149824ab645a1ff383284fccb420b516b8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1aa1ab1466776af502249c43d005af896827de85
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823739"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003761"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Retorna a classificação de cada linha na partição de um conjunto de resultados. A classificação de uma linha é um mais o número de classificações que vêm antes da linha em questão.  
 
@@ -48,7 +48,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="arguments"></a>Argumentos  
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. _order\_by\_clause_ determina a ordem dos dados antes de a função ser aplicada. *order_by_clause* é obrigatória. A \<cláusula rows ou range/> da cláusula OVER não pode ser especificada para a função RANK. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. _order\_by\_clause_ determina a ordem dos dados antes de a função ser aplicada. *order_by_clause* é obrigatória. A \<rows or range clause/> da cláusula OVER não pode ser especificada para a função RANK. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint**  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C. Classificando linhas dentro de uma partição  
+### <a name="c-ranking-rows-within-a-partition"></a>C: Classificando linhas dentro de uma partição  
  O exemplo a seguir classifica os representantes de vendas em cada região de vendas de acordo com seu total de vendas. O conjunto de linhas é particionado por `SalesTerritoryGroup` e ordenado por `SalesAmountQuota`.  
   
 ```sql  

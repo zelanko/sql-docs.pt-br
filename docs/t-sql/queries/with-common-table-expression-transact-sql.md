@@ -27,15 +27,15 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c4d512136ef0ecee8550d27b95acce0d91c3749
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8bc1a652b84aeb088046d6b76d40cbd5227d3672
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632847"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011355"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE (expressão de tabela comum). Ela é derivada de uma consulta simples e definida no escopo de execução de uma única instrução SELECT, INSERT, UPDATE, DELETE ou MERGE. Esta cláusula também pode ser usada em uma instrução CREATE VIEW como parte da instrução SELECT que a define. Uma expressão de tabela comum pode incluir referências a si mesma. É o que chamamos de expressão de tabela comum recursiva.  
   
@@ -54,7 +54,7 @@ Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE
   
 ## <a name="arguments"></a>Argumentos  
  *expression_name*  
-É um identificador válido para a expressão de tabela comum. *expression_name* deve ser diferente do nome de qualquer outra expressão de tabela comum definida na mesma cláusula WITH \<common_table_expression>, mas *expression_name* pode ser o mesmo que o nome de uma tabela base ou exibição. Qualquer referência a *expression_name* na consulta usa a expressão de tabela comum, e não o objeto base.
+É um identificador válido para a expressão de tabela comum. *expression_name* deverá ser diferente do nome de qualquer outra expressão de tabela comum definida na mesma cláusula WITH \<common_table_expression>, porém *expression_name* poderá ser igual ao nome de uma exibição ou tabela base. Qualquer referência a *expression_name* na consulta usa a expressão de tabela comum, e não o objeto base.
   
  *column_name*  
  Especifica um nome de coluna na expressão de tabela comum. Não são permitidos nomes duplicados em uma única definição de CTE. O número de nomes de coluna especificado deve corresponder ao número de colunas no conjunto de resultados da *CTE_query_definition*. A lista de nomes de colunas será opcional somente se forem fornecidos nomes distintos para todas as colunas resultantes na definição da consulta.  

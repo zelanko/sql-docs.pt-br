@@ -11,16 +11,16 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd858693ed429fd7b776a20f9300657337fa0f8
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 9eec9c506d6026bef09a3cd6415a786a8a4f01af
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107967"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002481"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Como modificar dados em uma tabela temporal com controle da versão do sistema
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Os dados em uma tabela temporal com controle da versão do sistema são modificados usando as instruções DML regulares com uma diferença importante: os dados de coluna do período não podem ser modificados diretamente. Quando os dados são atualizados, eles recebem a versão anterior de cada linha atualizada inserida na tabela de histórico. Quando dados são excluídos, a exclusão é lógica, com a linha movida para a tabela de histórico da tabela atual - ele não será excluído permanentemente.
 
@@ -150,7 +150,7 @@ Se você tentar realizar o PARTITION SWITCH de uma tabela sem definição de per
 
 ## <a name="updating-data"></a>Atualizar dados
 
-Atualize os dados na tabela atual com uma instrução **UPDATE** regular. Você pode atualizar dados na tabela atual da tabela de histórico para o cenário de "ops". No entanto, não é possível atualizar as colunas **PERIOD** e não pode atualizar dados diretamente na tabela de histórico enquanto **SYSTEM_VERSIONING = ON**.
+Atualize os dados na tabela atual com uma instrução **UPDATE** regular. Você pode atualizar dados na tabela atual da tabela de histórico para o cenário de "oops". No entanto, não é possível atualizar as colunas **PERIOD** nem atualizar dados diretamente na tabela de histórico enquanto **SYSTEM_VERSIONING = ON**.
 
 Defina **SYSTEM_VERSIONING = OFF** e atualize as linhas da tabela atual e de histórico, mas tenha em mente que, dessa maneira, o sistema não guardará o histórico de alterações.
 

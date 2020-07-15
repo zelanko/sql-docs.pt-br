@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2b277707c8da44d141036c7e19055383c6c56a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907184"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900015"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   As publicações dos Editores Oracle são criadas da mesma forma que são criados os instantâneos e as publicações transacionais mas, antes de criar uma publicação de um Publicador Oracle, você deverá completar as etapas a seguir (etapas um, três e quatro que estão detalhadamente descritas neste tópico):  
   
 1.  Crie um usuário administrativo de replicação no banco de dados do Oracle, usando o script fornecido.  
@@ -56,7 +56,7 @@ ms.locfileid: "72907184"
 > [!NOTE]  
 >  Remover o sinônimo público **MSSQLSERVERDISTRIBUTOR** e o usuário de replicação Oracle configurado com a opção **CASCADE** fará com que todos os objetos de replicação do Publicador Oracle sejam removidos.  
   
- Um script de amostra foi fornecido para ajudar na instalação do esquema de usuário de replicação Oracle. O script está disponível no seguinte diretório após a instalação de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unidade>* :\\\Arquivos de Programas\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Também está incluído no tópico [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
+ Um script de amostra foi fornecido para ajudar na instalação do esquema de usuário de replicação Oracle. O script está disponível no seguinte diretório após a instalação de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Também está incluído no tópico [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
  Conecte-se ao banco de dados Oracle usando uma conta com privilégios DBA e execute o script. Os prompts de script do usuário e senha para o esquema de usuário administrativo de replicação, assim como o espaço de tabela padrão, no qual os objetos serão criados (o espaço de tabela já deve existir no banco de dados Oracle). Para obter informações sobre como especificar outros espaços de tabela para objetos, consulte [Gerenciar espaços de tabela Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Escolha um nome de usuário e uma senha forte e anote ambas as informações, pois você deve fornecê-las depois que o banco de dados Oracle estiver configurado como um Publicador. É recomendado que o esquema seja usado apenas para objetos exigidos pelo aplicativo, não crie tabelas para serem publicadas nesse esquema.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72907184"
   
  No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-|Informações|DESCRIÇÃO|  
+|Informações|Descrição|  
 |-----------------|-----------------|  
 |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
 |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
@@ -97,7 +97,7 @@ ms.locfileid: "72907184"
   
  Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-|Ação|DESCRIÇÃO|  
+|Ação|Descrição|  
 |------------|-----------------|  
 |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
 |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. Você também fornece esse alias quando identifica o banco de dados Oracle como um Publicador no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  

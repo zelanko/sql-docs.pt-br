@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdf3eb4e217ded2eef041a1cec910abedc6dadf4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 90bb787880cf212cfeb4a70b8e76b265f59e532a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635500"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902228"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Permissões de principal do servidor DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Nega permissões concedidas em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
