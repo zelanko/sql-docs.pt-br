@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 834f3e28b8e368b29c2465f44f6a23528ad32626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f26d4324170b6a8c35b1785865c0ba614a3a181c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781088"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279071"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,12 +35,15 @@ ms.locfileid: "85781088"
 ## <a name="explanation"></a>Explicação  
 Esse erro ocorre quando uma variável é usada em um script SQL sem primeiro declarar a variável. O exemplo a seguir retorna o erro 137 para as instruções SET e SELECT porque **\@mycol** não é declarada.  
   
+```sql
 SET @mycol = 'ContactName';  
   
-SELECT @mycol;  
+SELECT @mycol; 
+```
   
 Uma das causas mais complexas desse erro inclui o uso de uma variável que é declarada fora da instrução EXECUTE. Por exemplo, a variável **\@mycol** especificada na instrução SELECT é local na instrução SELECT, por isso está fora da instrução EXECUTE.  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
@@ -49,13 +52,15 @@ DECLARE @mycol nvarchar(20);
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT @mycol FROM Production.Product;');  
+EXECUTE ('SELECT @mycol FROM Production.Product;'); 
+```
   
 ## <a name="user-action"></a>Ação do usuário  
 Verifique se alguma das variáveis usadas em um script SQL foi declarada antes de ser usada em outro lugar no script.  
   
 Reescreva o script de modo que ele não faça referência a variáveis na instrução EXECUTE que estejam declaradas fora dela. Por exemplo:  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
@@ -64,7 +69,8 @@ DECLARE @mycol nvarchar(20) ;
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
+EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;
+```
   
 ## <a name="see-also"></a>Consulte Também  
 [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)  

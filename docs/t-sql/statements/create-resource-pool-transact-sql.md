@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b043443f84ceb3b98484f88f4384c9e8e0a10442
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eacfc8eee49f959f0164c9d802cc3f789aed4401
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892523"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392844"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,9 @@ CREATE RESOURCE POOL pool_name
 { NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID }[,...n]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *pool_name*  
 É o nome definido pelo usuário para o pool de recursos. *pool_name* é alfanumérico, pode ter até 128 caracteres, deve ser exclusivo dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   

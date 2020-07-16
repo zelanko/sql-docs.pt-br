@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e71924aa85d4761448c340f1f0554c383df288d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632913"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279507"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (SQL Data Warehouse do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CTAS (CREATE TABLE AS SELECT) é um dos recursos mais importantes do T-SQL disponíveis. É uma operação totalmente em paralelo que cria uma nova tabela com base na saída de uma instrução SELECT. CTAS é a maneira mais rápida e simples de criar uma cópia de uma tabela.   
  
@@ -136,7 +136,6 @@ Para obter detalhes, confira [Comentários gerais](https://msdn.microsoft.com/li
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
-O SQL Data Warehouse do Azure ainda não é compatível com as estatísticas de criação automática nem de atualização automática.  Para obter o melhor desempenho nas consultas, é importante criar estatísticas em todas as colunas de todas as tabelas depois de executar CTAS e depois que ocorrerem alterações significativas nos dados. Para obter mais informações, veja [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
 Um índice columnstore clusterizado ordenado pode ser criado em colunas de qualquer tipo de dados com suporte no SQL Data Warehouse do Azure, exceto por colunas de cadeia de caracteres.  
 

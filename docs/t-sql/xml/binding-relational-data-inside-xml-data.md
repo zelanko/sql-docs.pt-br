@@ -1,5 +1,5 @@
 ---
-title: Associando dados relacionais dentro de dados XML | Microsoft Docs
+title: Associando dados relacionais dentro de dados XML
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a3dfe3480b6f2756ebff68f27574c8b72f6ae61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751440"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392834"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Associando dados relacionais dentro de dados XML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85751440"
   
  Além disso, essa associação destina-se apenas a finalidades somente leitura. Isto é, você não pode gravar dados em colunas que usam essas funções. Por exemplo, sql:variable ("\@x") = "*alguma expressão"* não é permitido.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemplo: Consulta entre domínios que usam sql:variable ()  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemplo: Consulta entre domínios que usam sql:variable()  
  Este exemplo mostra como **sql:variable()** pode permitir que um aplicativo parametrize uma consulta. O ISBN é passado usando uma variável SQL @isbn. Substituindo a constante por **sql:variable()** , a consulta pode ser usada para pesquisar qualquer ISBN e não apenas aquele cujo ISBN é 0-7356-1588-2.  
   
 ```  
