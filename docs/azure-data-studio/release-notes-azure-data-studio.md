@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758417"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406249"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="july-2020"></a>Julho de 2020
+
+15 de julho de 2020 &nbsp; / &nbsp; versão: 1.20.0
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Novo recurso de tour adicionado | Na página inicial e na paleta de comandos, os usuários agora podem usar o tour para ver um passo a passo dos recursos mais usados, incluindo as visualizações de Conexões, Notebooks e o Marketplace de Extensões |
+| Novos recursos de notebook | &bull; &nbsp; Compatibilidade com cabeçalho na barra de ferramentas de Markdown<br/> &bull; &nbsp; Visualização lado a lado do Markdown nas células de texto
+| Arrastar e soltar colunas e tabelas no Editor de Consultas | Agora os usuários podem arrastar e soltar colunas e tabelas diretamente da visualização de Conexões no editor de consultas |
+| Ícone de conta do Azure adicionado à barra de atividades | Mais detectável para entrar no Azure |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>Junho de 2020
 
