@@ -1,5 +1,5 @@
 ---
-title: Diretrizes de uso dos métodos de tipo de dados xml | Microsoft Docs
+title: Diretrizes para usar métodos de tipo de dados xml
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bddba19824a9c66d12d290f2212396724d88082f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731079"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393074"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Diretrizes para usar métodos de tipo de dados xml
 
@@ -71,7 +71,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma combinação **node()** -**value()** para extrair valores de atributo pode não exigir a especificação ordinal. Isso é demonstrado no próximo exemplo.
 
-### <a name="example-known-singleton"></a>Exemplo: Singleton conhecido
+### <a name="example-known-singleton"></a>Exemplo: singleton conhecido
 
 Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento `<book>`. O método **value()** , avaliado em um nó `<book>`, extrai o valor de `@genre` e, sendo um atributo, é um singleton.
 
@@ -84,7 +84,7 @@ O esquema de XML é usado para verificação de tipo de XML digitado. Se um nó 
 
 É importante ficar atento à diferença entre `//first-name[1]` e `(//first-name)[1]` para a verificação de tipo. O primeiro retorna uma sequência de nós `<first-name>`, em que cada nó é o nó `<first-name>` na extremidade mais à esquerda entre seus irmãos. O segundo retorna o primeiro nó singleton `<first-name>` em ordem de documento na instância de XML.
 
-### <a name="example-using-value"></a>Exemplo: Usando value()
+### <a name="example-using-value"></a>Exemplo: usando value()
 
 A seguinte consulta em uma coluna XML não tipada resulta em um erro estático e de compilação. Isso ocorre porque **value()** espera um nó singleton como o primeiro argumento e o compilador não pode determinar se apenas um nó de `<last-name>` ocorrerá em tempo de execução:
 

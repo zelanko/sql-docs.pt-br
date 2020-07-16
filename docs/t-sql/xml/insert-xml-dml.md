@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Microsoft Docs
+title: inserir (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731069"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393064"
 ---
 # <a name="insert-xml-dml"></a>inserir (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *Expression1*  
  Identifica um ou mais nós para inserir. Pode ser uma instância XML constante, uma referência a uma instância do tipo de dados XML tipada da mesma coleção de esquema XML em que o método modificado está sendo aplicado, uma instância do tipo de dados XML não tipada que usa a função autônoma **sql:column()** /**sql:variable()** ou uma expressão XQuery. A expressão pode resultar em um nó, e também um nó de texto, ou em uma sequência ordenada de nós. Não pode ser resolvida no nó de raiz (/). Se a expressão resultar em um valor ou sequência de valores, os valores serão inseridos como um único nó de texto com um espaço separando cada valor na sequência. Se você especificar vários nós como constantes, os nós serão incluídos em parênteses e separados por vírgulas. Não é possível inserir sequências heterogêneas como uma sequência de elementos, atributos ou valores. Se a *Expression1* for resolvida para uma sequência vazia, não ocorrerá nenhuma inserção e nenhum erro será retornado.  
   

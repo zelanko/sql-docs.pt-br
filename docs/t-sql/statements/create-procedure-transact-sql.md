@@ -1,5 +1,5 @@
 ---
-title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
+title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ee4bfb4884fe649993eeefde51ea9c329ad696
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010786"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392884"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -140,6 +140,8 @@ CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
 AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -341,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 
 Chame o procedimento de armazenamento com a instrução: `EXEC What_DB_is_this;`
 
-Um pouco mais complexo é fornecer um parâmetro de entrada para tornar o procedimento mais flexível. Por exemplo: 
+Um pouco mais complexo é fornecer um parâmetro de entrada para tornar o procedimento mais flexível. Por exemplo:
 
 ```sql
 CREATE PROC What_DB_is_that @ID int
@@ -401,13 +403,16 @@ A instrução CREATE PROCEDURE não pode ser combinada com outras instruções [
 
 As instruções a seguir não podem ser usadas em qualquer lugar no corpo de um procedimento armazenado.
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|
-|CREATE DEFAULT|CREATE ou ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE ou ALTER FUNCTION|CREATE ou ALTER VIEW|USE *database_name*|
-|CREATE ou ALTER PROCEDURE|SET PARSEONLY||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | SET SHOWPLAN_TEXT | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | SET PARSEONLY |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE ou ALTER TRIGGER |
+| CREATE ou ALTER FUNCTION |
+| CREATE ou ALTER PROCEDURE |
+| CREATE ou ALTER VIEW |
 
  Um procedimento pode referenciar tabelas que ainda não existem. No momento da criação, apenas a verificação de sintaxe é executada. O procedimento não é compilado até ser executado pela primeira vez. Somente durante a compilação todos os objetos referenciados no procedimento são resolvidos. Portanto, um procedimento sintaticamente correto que referencie tabelas que não existem pode ser criado com êxito; entretanto, ele falhará no tempo de execução se as tabelas referenciadas não existirem.
 

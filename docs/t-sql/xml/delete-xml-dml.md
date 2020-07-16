@@ -1,5 +1,5 @@
 ---
-title: delete (XML DML) | Microsoft Docs
+title: excluir (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e06e1679a8a416bbcdba8d1a2930ccd50f4ce74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765640"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393094"
 ---
 # <a name="delete-xml-dml"></a>excluir (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85765640"
 delete Expression  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *Expression*  
  É uma expressão XQuery que identifica os nós a serem excluídos. Todos os nós selecionados pela expressão, e também todos os nós ou valores que estão contidos nos nós selecionados, são excluídos. Conforme descrito em [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), essa referência deve ser a um nó existente no documento. Não pode ser um nó construído. A expressão não pode ser o nó de raiz (/). Se a expressão retornar uma sequência vazia, nenhuma exclusão ocorrerá e nenhum erro será retornado.  
   

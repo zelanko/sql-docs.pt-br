@@ -1,5 +1,5 @@
 ---
-title: XML (Transact-SQL) | Microsoft Docs
+title: xml (Transact-SQL)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66e49e14785f3e99bde79c1de987ea5ac38d06d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b06e817cd649937b48c95fb6dc31e2ae38978c7a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754790"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393234"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "85754790"
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  CONTENT  
  Restringe a instância de **XML** a ser um fragmento XML bem formado. Os dados XML podem conter vários zeros ou mais elementos no nível superior. Também são permitidos nós de texto no nível superior.  
   

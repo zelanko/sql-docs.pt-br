@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Microsoft Docs
+title: substituir o valor de (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731040"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393044"
 ---
 # <a name="replace-value-of-xml-dml"></a>substituir o valor de (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *Expression1*  
 Identifica um nó cujo valor será atualizado. Deve identificar apenas um único nó. Ou seja, a *Expression1* precisa ser um singleton estático. Se o XML for digitado, o tipo do nó deverá ser um tipo simples. Quando forem selecionados vários nós, um erro será gerado. Se *Expression1* retornar uma sequência vazia, não ocorrerá nenhuma substituição de valor e nenhum erro será retornado. *Expression1* precisa retornar um único elemento que tenha um conteúdo de tipo simples (tipos de lista ou atômicos), um nó de texto ou um nó de atributo. *Expression1* não pode ser um tipo de união, um tipo complexo, uma instrução de processamento, um nó de documento nem um nó de comentário ou um erro será retornado.  
   

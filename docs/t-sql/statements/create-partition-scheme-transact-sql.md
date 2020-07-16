@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9475e53b10fc68763471441163a7905d2bcfc5bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735771"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392974"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,9 @@ AS PARTITION partition_function_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *partition_scheme_name*  
  É o nome do esquema de partição. Os nomes de esquemas de partição devem ser exclusivos no banco de dados e obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   

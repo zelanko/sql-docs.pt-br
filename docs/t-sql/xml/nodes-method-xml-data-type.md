@@ -1,5 +1,5 @@
 ---
-title: Método nodes() (tipo de dados xml) | Microsoft Docs
+title: Método de nós() (Tipo de dados xml)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731046"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393054"
 ---
 # <a name="nodes-method-xml-data-type"></a>Método de nós() (Tipo de dados xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ Você pode recuperar vários valores do conjunto de linhas. Por exemplo, você p
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *XQuery*  
 É uma cadeia de caracteres literal, uma expressão XQuery. Se a expressão de consulta construir nós, esses nós construídos serão expostos no conjunto de linhas resultante. Se a expressão de consulta resultar em uma sequência vazia, o conjunto de linhas também será vazio. Se a expressão de consulta resultar estaticamente em uma sequência que contém valores atômicos em vez de nós, um erro estático será gerado.  
   

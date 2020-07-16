@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4ac4f35b0d7099147c12e8a1a05f72e7e70a215d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 881e474fb34edbb438d626a23dbaa507f86fb2b6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892528"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392864"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,9 @@ CREATE REMOTE SERVICE BINDING binding_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *binding_name*  
  É o nome da associação de serviço remoto a ser criada. Os nomes de servidor, banco de dados e esquema não podem ser especificados. O *binding_name* deve ser um **sysname** válido.  
   
