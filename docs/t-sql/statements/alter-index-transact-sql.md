@@ -46,14 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000717"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381210"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifica uma tabela ou índice de exibição existente (rowstore, columnstore ou XML) desabilitando, recriando ou reorganizando o índice, ou definindo opções no índice.  
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 
  *index_name*  
@@ -677,8 +681,8 @@ Quando `ALLOW_ROW_LOCKS = OFF` e `ALLOW_PAGE_LOCK = OFF`, o bloqueio em nível d
   
 Se ALL for especificado quando as opções de bloqueio de linha ou de página forem definidas, as configurações serão aplicadas a todos os índices. Quando a tabela subjacente é um heap, as configurações são aplicadas das seguintes maneiras:  
   
-|||  
-|-|-|  
+|Opção|Detalhes|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON ou OFF|Ao heap e a quaisquer índices não clusterizados associados.|  
 |ALLOW_PAGE_LOCKS = ON|Ao heap e a quaisquer índices não clusterizados associados.|  
 |ALLOW_PAGE_LOCKS = OFF|Totalmente aos índices não clusterizados. Isso significa que todos os bloqueios de página não são permitidos nos índices não clusterizados. No heap, somente os bloqueios S (compartilhados), U (atualização) e X (exclusivos) da página não são permitidos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] ainda pode adquirir um bloqueio de página intencional (IS, IU ou IX) para fins internos.|  

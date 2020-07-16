@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 86929dce661a83067ceb8ecb4d0dc9f74e5a802a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9cc3706e371f1c9c4fcc031fd4665459e65937ca
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895580"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381110"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,10 @@ ALTER SERVICE MASTER KEY
     { WITH NEW_ACCOUNT = 'account_name' , NEW_PASSWORD = 'password' }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  FORCE  
  Indica que a chave mestra de serviço deve ser regenerada, mesmo com o risco de perda de dados. Para obter mais informações, veja [Alterando a conta de serviço do SQL Server](#_changing) mais adiante neste tópico.  
   

@@ -22,16 +22,17 @@ helpviewer_keywords:
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30f81401f3f322f44d71df139e4f9cfafa6c9de8
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: e983b85c4017ab282988142010770cc3f1e16378
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629378"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381220"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   Altera a senha usada para criptografar a chave privada de um certificado, remove a chave privada ou importa a chave privada, caso nenhuma esteja presente. Altera a disponibilidade de um certificado para [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -58,10 +59,13 @@ ALTER CERTIFICATE certificate_name
          [ DECRYPTION BY PASSWORD = 'current_password' ]  
          [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
       }  
-```  
-  
-```  
--- Syntax for Parallel Data Warehouse  
+``` 
+ 
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+ 
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -72,7 +76,10 @@ ALTER CERTIFICATE certificate_name
 }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *certificate_name*  
  É o nome exclusivo pelo qual o certificado é conhecido no banco de dados.  
   
