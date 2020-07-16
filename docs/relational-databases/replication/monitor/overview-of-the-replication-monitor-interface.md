@@ -14,15 +14,15 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4906f088a20b6028958bf1d613e839dbfe568f26
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286913"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159784"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Visão geral da interface do Replication Monitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor apresenta uma exibição voltada para o Publicador ou para o Distribuidor de todas as atividades de replicação em um formato de dois painéis. Você adiciona um Publicador ao monitor no painel esquerdo e, no painel direito, o monitor exibe informações sobre o Publicador, suas publicações, as assinaturas para essas publicações e os diversos agentes de replicação. Além de apresentar informações sobre a topologia de replicação, o Replication Monitor permite que você execute várias tarefas, como iniciar e interromper agentes e validar dados.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Exibindo informações para toda a topologia  
@@ -227,7 +227,7 @@ ms.locfileid: "76286913"
   
      Essa caixa de diálogo permite: alterar as propriedades dos perfis, criar e excluir perfis, especificar um perfil padrão e especificar que todos os agentes de um tipo específico (como os Agente de Instantâneos) devem usar um determinado perfil.  
   
--   **Propriedades de \<AgentProfileName>**  
+-   **\<AgentProfileName> Propriedades**  
   
      Essa caixa de diálogo permite exibir e editar os parâmetros de configuração em um perfil.  
   

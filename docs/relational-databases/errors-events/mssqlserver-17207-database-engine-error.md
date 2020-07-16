@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 362f907187d7fe738216ea2000f2a5c48eca7b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780782"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279608"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ As informações de erro do sistema operacional impressas nessas mensagens de er
         Impersonating: DomainName\UserName
         ```
   
-1. Se você estiver obtendo o erro de SO ```The system cannot find the file specified``` = 3:
+1. Se você estiver obtendo o erro de SO `The system cannot find the file specified` = 3:
    - Examine o caminho completo da mensagem de erro.
    - Verifique se a unidade de disco e o caminho da pasta estão visíveis e acessíveis no Windows Explorer.
    - Examine o log de eventos do Windows para descobrir se existem problemas com essa unidade de disco.
@@ -113,7 +113,7 @@ As informações de erro do sistema operacional impressas nessas mensagens de er
      - Se o arquivo que produziu o erro for um arquivo de log de transações, examine as informações nas seções "FOR ATTACH" e "FOR ATTACH_REBUILD_LOG" do tópico [CRIAR BANCO DE DADOS (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) para entender como você pode recriar os arquivos de log de transações ausentes.
    - Verifique se alguma localização de rede ou disco [como unidade iSCSI] está disponível antes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente acessar os arquivos de banco de dados nesses locais. Se necessário, crie as dependências exigidas no Administrador de Cluster ou no Gerenciador de Controle de Serviço.
 
-1. Se você estiver recebendo o erro de sistema operacional ```The process cannot access the file because it is being used by another process``` = 32:
+1. Se você estiver recebendo o erro de sistema operacional `The process cannot access the file because it is being used by another process` = 32:
    - Use uma ferramenta como o [Explorador de Processos](https://docs.microsoft.com/sysinternals/downloads/process-explorer) ou o [Identificador](https://docs.microsoft.com/sysinternals/downloads/handle) do Windows Sysinternals para descobrir se outro processo ou serviço adquiriu bloqueio exclusivo nesse arquivo de banco de dados.
    - Interrompa o acesso desse processo aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arquivos de banco de dados. Exemplos comuns incluem programas antivírus (confira as diretrizes para exclusões de arquivo no [artigo da base de dados](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) a seguir).
    - Em um ambiente de cluster, verifique se o processo sqlservr.exe do nó proprietário anterior realmente liberou os identificadores para os arquivos de banco de dados. Normalmente, isso não ocorre, mas as configurações incorretas do cluster ou dos caminhos de E/S podem levar a esses problemas.
