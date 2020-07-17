@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896550"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196734"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para SQL Server em Linux
 
@@ -326,7 +326,7 @@ Esta seção mostra como criar um AG com um tipo de cluster Externo usando o SSM
 
 3.  Na caixa de diálogo Especificar Opções do Grupo de Disponibilidade, insira um nome para o grupo de disponibilidade e selecione um tipo de cluster EXTERNO ou NENHUM no menu suspenso. Externo deve ser usado quando o Pacemaker for ser implantado. Nenhum é para cenários especializados, como expansão de leitura. Selecionar a opção de detecção de integridade no nível do banco de dados é opcional. Para obter mais informações sobre essa opção, confira [Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Clique em **Próximo**.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Criar grupo de disponibilidade 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  Na caixa de diálogo Selecionar Bancos de Dados, selecione os bancos de dados que participarão do AG. Cada banco de dados deve ter um backup completo antes que possa ser adicionado a um AG. Clique em **Próximo**.
 
@@ -340,17 +340,17 @@ Esta seção mostra como criar um AG com um tipo de cluster Externo usando o SSM
 
     O exemplo a seguir mostra um AG com duas réplicas, um tipo de cluster Externo e uma réplica somente de configuração.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Criar grupo de disponibilidade 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     O exemplo a seguir mostra um AG com duas réplicas, um tipo de cluster Nenhum e uma réplica somente de configuração.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Criar grupo de disponibilidade 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  Se você quiser alterar as preferências de backup, clique na guia Preferências de Backup. Para obter mais informações sobre as preferências de backup com o AGs, confira [Configurar o backup em réplicas de disponibilidade](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. Se estiver usando secundários legíveis ou criando um AG com um tipo de cluster de Nenhum para escala de leitura, você poderá criar um ouvinte selecionando a guia Ouvinte. Um ouvinte também pode ser adicionado posteriormente. Para criar um ouvinte, escolha a opção **Criar um ouvinte de grupo de disponibilidade** e insira um nome, uma porta TCP/IP e se deseja usar um endereço IP DHCP atribuído automaticamente ou estático. Lembre-se de que, para um AG com um tipo de cluster de Nenhum, o IP deve ser estático e definido como o endereço IP do primário.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Criar grupo de disponibilidade 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. Se um ouvinte for criado para cenários legíveis, o SSMS 17.3 ou posterior permitirá a criação do roteamento somente leitura no assistente. Ele também pode ser adicionado posteriormente por meio de SSMS ou Transact-SQL. Para adicionar o roteamento somente leitura agora:
 

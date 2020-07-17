@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,14 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902291"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392734"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria pontos de extremidade e define suas propriedades, incluindo os métodos disponíveis para os aplicativos clientes. Para obter informações sobre permissões relacionadas, consulte [Permissões GRANT de ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *endPointName*  
  É o nome atribuído ao ponto de extremidade que está sendo criado. Use ao atualizar ou excluir o ponto de extremidade.  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Especifica que o ponto de extremidade deve ser conectado usando o protocolo de Autenticação do Windows para autenticar os pontos de extremidade. Esse é o padrão.  
   
  Se você especificar um método de autorização (NTLM ou KERBEROS), esse método sempre será usado como o protocolo de autenticação. O valor padrão, NEGOTIATE, faz o ponto de extremidade usar o protocolo de negociação Windows para escolher NTLM ou Kerberos.  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  Especifica que o ponto de extremidade destina-se a autenticar a conexão usando o certificado especificado por *certificate_name* para estabelecer a identidade para autorização. Os pontos de extremidade distantes devem ter um certificado com a chave pública correspondente à chave privada do certificado especificado.  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Especifica que ponto de extremidade deve tentar conexão usando a Autenticação do Windows e, se essa tentativa falhar, tentar o certificado especificado.  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Especifica que ponto de extremidade deve tentar conexão usando certificado especificado e, se essa tentativa falhar, tentar a Autenticação do Windows.  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  Especifica se a criptografia deve usada no processo. O padrão é REQUIRED.  
   
  DISABLED  

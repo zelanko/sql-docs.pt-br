@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1e78db0d3844ee7581bd57da1e57f14ee80e29cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286383"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159624"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Exibir informações e executar tarefas usando o Replication Monitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 O Replication Monitor fornece uma série de guias e opções para exibir informações e realizar diversas tarefas. Este artigo descreve os diferentes itens que podem ser exibidos e realizados ao usar o Replication Monitor. 
 
 
@@ -97,7 +97,7 @@ O Replication Monitor fornece as seguintes guias que exibem informações sobre 
   
 1.  Expanda um Grupo do publicador no painel esquerdo e clique em um Publicador.    
 2.  Para exibir informações sobre assinaturas, clique na guia **Lista de Observação da Assinatura** .    
-3.  Selecione o tipo de assinatura a ser exibido da lista suspensa **Mostrar \<Assinaturas <SubscriptionType>** . Para exibir somente as assinaturas em um determinado estado, por exemplo, em sincronização, selecione uma opção da lista suspensa **Mostrar** .    
+3.  Selecione o tipo de assinatura a ser exibido na lista suspensa **Mostrar Assinaturas \<SubscriptionType>** . Para exibir somente as assinaturas em um determinado estado, por exemplo, em sincronização, selecione uma opção da lista suspensa **Mostrar** .    
 4.  Para exibir e modificar as propriedades da assinatura, clique com o botão direito do mouse na assinatura  e, então, clique em **Propriedades**. Também é possível acessar informações mais detalhadas e executar tarefas nessa guia. 
   
   

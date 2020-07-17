@@ -17,15 +17,15 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287616"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159884"
 ---
 # <a name="manage-identity-columns"></a>Gerenciar colunas de identidade
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Este tópico descreve como gerenciar colunas de identidade no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando as inserções de Assinante são replicadas de volta ao Publicador, as colunas de identidade devem ser gerenciadas para evitar a atribuição do mesmo valor de identidade para o Assinante e o Publicador. A Replicação pode gerenciar intervalos de identidade automaticamente ou você pode escolher controlar o gerenciamento de intervalo de identidade manualmente.  Para obter informações sobre as opções de gerenciamento de intervalos de identidade fornecidas pela replicação, consulte [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **Neste tópico**  
@@ -49,13 +49,13 @@ ms.locfileid: "76287616"
 -   Para criar um número incrementado automaticamente, que possa ser usado em várias tabelas ou ser chamado de aplicativos, sem referenciar tabelas, consulte [Números de Sequência](../../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Especifique uma opção de gerenciamento de colunas de identidade na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Artigo>** do Assistente para Nova Publicação. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md). No Assistente para Nova Publicação:  
+ Especifique uma opção de gerenciamento de colunas de identidade na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Article>** do Assistente para Nova Publicação. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md). No Assistente para Nova Publicação:  
   
 -   Se você selecionar **Publicação de mesclagem** ou **Publicação transacional com assinaturas atualizáveis** na página **Tipo de Publicação** , selecione gerenciamento automático ou manual do intervalo de identidades (automático, o padrão, é o recomendado). Depois que a tabela é publicada, a propriedade não pode ser modificada, mas outras propriedades relacionadas a ela, sim.  
   
 -   Se você selecionar outros tipos de publicação, o gerenciamento de intervalo de identidade deve ser definido como manual.  
   
- Modifique os intervalos e limites de identidade na guia **Propriedades** de **Propriedades do Artigo –\<Artigo>** , que está disponível na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Modifique os intervalos e limites de identidade na guia **Propriedades** de **Propriedades do Artigo –\<Article>** , que está disponível na caixa de diálogo **Propriedades da Publicação – \<Publication>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>Para especificar uma opção de gerenciamento de coluna de identidade  
   
@@ -65,15 +65,15 @@ ms.locfileid: "76287616"
   
 3.  Clique em **Propriedades do Artigo**e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
   
-4.  Na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Artigo>** , na seção **Gerenciamento de Intervalos de Identidade**, defina a propriedade **Gerenciar automaticamente os intervalos de identidades** como **Automático** ou **Manual** (para Publicadores que executam o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior) ou **Verdadeiro** ou **Falso** (para Publicadores que executam uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
+4.  Na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Article>** , na seção **Gerenciamento de Intervalos de Identidade**, defina a propriedade **Gerenciar automaticamente os intervalos de identidades** como **Automático** ou **Manual** (para Publicadores que executam o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior) ou **Verdadeiro** ou **Falso** (para Publicadores que executam uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
 5.  Se você selecionou **Automático** ou **Verdadeiro** na etapa 4, digite valores para as opções na tabela a seguir. Para obter mais informações sobre como essas configurações são usadas, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    |Opção|Valor|DESCRIÇÃO|  
+    |Opção|Valor|Descrição|  
     |------------|-----------|-----------------|  
     |**Tamanho do intervalo do Publicador**|Valor inteiro para o tamanho do intervalo (por exemplo, 20000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Tamanho do intervalo do assinante**|Valor inteiro para tamanho de intervalo (por exemplo, 10000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-    |**Porcentagem do limite de intervalo**|Valor inteiro para porcentagem do limite (por exemplo, 90 equivale a 90 por cento).|Porcentagem de valores de identidade totais usados em um nó antes que um novo intervalo de identidade seja atribuído.<br /><br /> <br /><br /> Observação: esse valor deve ser especificado, mas é usado somente por: Assinantes usando assinaturas de atualização enfileiradas, e Assinantes para publicações de mesclagem executando [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou versões anteriores de outras edições do SQL Server. Para obter mais informações, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+    |**Porcentagem do limite de intervalo**|Valor inteiro para porcentagem do limite (por exemplo, 90 equivale a 90 por cento).|Porcentagem de valores de identidade totais usados em um nó antes que um novo intervalo de identidade seja atribuído.<br /><br /> <br /><br /> Observação: Observação: esse valor deve ser especificado, mas é usado somente por: assinantes usando assinaturas de atualização enfileiradas e Assinantes para publicações de mesclagem executando [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou versões anteriores de outras edições do SQL Server. Para obter mais informações, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Valor inicial do intervalo seguinte**|Valor inteiro. Somente leitura.|O valor no qual o próximo intervalo terá início. Por exemplo, se o intervalo atual for 5001-6000, esse valor será 6001.|  
     |**Valor de identidade máximo**|Valor inteiro. Somente leitura.|O valor maior para a coluna de identidade. Determinado pelo tipo de dados base da coluna.|  
     |**Incremento**|Valor inteiro. Somente leitura.|A quantidade pela qual o número na coluna de identidade deve ser aumentado ou diminuído para cada inserção: normalmente definido como 1.|  
@@ -82,15 +82,15 @@ ms.locfileid: "76287616"
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>Para modificar intervalos de identidade e limites depois que uma tabela é publicada  
   
-1.  Na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione uma tabela com uma coluna de identidade.  
+1.  Na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione uma tabela com uma coluna de identidade.  
   
 2.  Clique em **Propriedades do Artigo**e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
   
-3.  Na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Artigo>** , na seção **Gerenciamento de Intervalos de Identidade**, insira valores para uma ou mais das seguintes propriedades: **Tamanho do intervalo do Publicador**, **Tamanho do intervalo do Assinante** e **Percentual do limite de intervalo**.  
+3.  Na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Article>** , na seção **Gerenciamento de Intervalos de Identidade**, insira valores para uma ou mais das seguintes propriedades: **Tamanho do intervalo do Publicador**, **Tamanho do intervalo do Assinante** e **Percentual do limite de intervalo**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **OK** na caixa de diálogo **Propriedades da Publicação – \<Publicação >** .  
+5.  Clique em **OK** na caixa de diálogo **Propriedades da Publicação – \<Publication>** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode usar os procedimentos armazenados de replicação para especificar as opções de gerenciamento de intervalo da identidade, quando um artigo é criado.  

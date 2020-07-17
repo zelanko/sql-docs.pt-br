@@ -1,5 +1,5 @@
 ---
-title: Ajuda F1 do Gerenciador do Utilitário | Microsoft Docs
+title: Ajuda de F1 do Gerenciador do Utilitário
 description: Familiarize-se com a funcionalidade oferecida em várias áreas do Utilitário do SQL Server. Saiba mais sobre as exibições, o dashboard e as guias de administração do utilitário.
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640411"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197273"
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   As seções a seguir documentam a funcionalidade do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as operações associadas.  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640411"
  Exibição Lista  
  A exibição de lista no painel superior exibe dados sobre aplicativos da camada de dados individuais. Os ícones do estado de integridade fornecem o status resumido de cada aplicativo da camada de dados por categoria de utilização:  
   
--   Marca de seleção verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): número de aplicativos da camada de dados que não estão violando as políticas de utilização de recursos. Os recursos estão bem-utilizados.  
+-   Marca de verificação verde – :::image type="icon" source="media/well-utilized.png" border="false"::: – Número de aplicativos da camada de dados que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): os recursos estão subutilizados.  
+-   Seta para baixo verde – ![seta para baixo](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): os recursos estão subutilizados.  
   
--   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![seta para cima](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640411"
   
  Os ícones do estado de integridade fornecem o status resumido de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por categoria de utilização:  
   
--   Marca de seleção verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando as políticas de utilização de recursos. Os recursos estão bem-utilizados.  
+-   Marca de seleção verde – ![marca de seleção verde](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando as políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): os recursos estão subutilizados.  
+-   Seta para baixo verde – ![seta para baixo](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): os recursos estão subutilizados.  
   
--   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![seta para cima](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   

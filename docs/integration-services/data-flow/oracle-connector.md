@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 9ee026ab80e7afcd801b96411575f5ef4a61afd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868434"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196064"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector para Oracle
 
@@ -36,6 +36,7 @@ As seguintes versões do Oracle Database de fontes de dados têm suporte:
 - Oracle 11.x
 - Oracle 12c
 - Oracle 18c (sem o suporte à Autenticação do Windows)
+- Oracle 19c (sem o suporte à Autenticação do Windows)
 
 O Oracle Database tem suporte em todos os sistemas operacionais e plataformas.
 > [!NOTE]

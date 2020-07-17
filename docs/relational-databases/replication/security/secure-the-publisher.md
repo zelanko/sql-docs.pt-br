@@ -18,15 +18,15 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6f3b56ec2a45420e56add4d3e746bcca5fb6eba
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287256"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159494"
 ---
 # <a name="secure-the-publisher"></a>Proteger o Publicador
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   
 Os seguintes agentes de replicação se conectam ao Publicador:  
   
@@ -43,7 +43,7 @@ Os seguintes agentes de replicação se conectam ao Publicador:
  A PAL é o mecanismo principal para proteger publicações no Publicador. A PAL funciona de modo semelhante à lista de controle de acesso do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Quando você cria uma publicação, a replicação cria uma PAL para a publicação. A PAL pode ser configurada para conter uma lista de logons e grupos com acesso concedido à publicação. Quando um agente se conecta ao Publicador ou ao Distribuidor e solicita acesso à publicação, as informações de autenticação na PAL são comparadas com o logon no Publicador fornecido por aquele agente. Esse processo fornece segurança adicional ao Publicador, impedindo que o logon do Publicador e do Distribuidor seja usado por uma ferramenta cliente para executar modificações diretamente no Publicador.  
   
 > [!NOTE]  
->  A replicação cria uma função no Publicador para cada publicação impor a associação à PAL. A função tem um nome no formato **Msmerge_** _\<PublicationID>_ para a replicação de mesclagem e **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ para a replicação transacional e de instantâneo.  
+>  A replicação cria uma função no Publicador para cada publicação impor a associação à PAL. A função tem um nome no formato **Msmerge_** _\<PublicationID>_ para replicação de mesclagem e **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ para replicação transacional e de instantâneo.  
   
  Por padrão, os seguintes logons são incluídos na PAL: os membros da função de servidor fixa **sysadmin** no momento em que a publicação é criada e o logon usado para criar a publicação. Por padrão, todos os logons que são membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** no banco de dados de publicação podem assinar uma publicação sem serem adicionados explicitamente à PAL.  
   

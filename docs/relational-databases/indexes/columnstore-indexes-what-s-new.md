@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d2e90088d844bbd897f2a0efae9379e9a1a585
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007480"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279187"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Índices columnstore – novidades
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +49,9 @@ ms.locfileid: "86007480"
 |O índice columnstore pode ter uma coluna computada não persistente||||sim|||   
   
  <sup>1</sup> Para criar um índice columnstore não clusterizado somente leitura, armazene o índice em um grupo de arquivos somente leitura.  
+ 
+> [!NOTE]
+> O DOP (grau de paralelismo) para operações no [modo de lote](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) é limitado a 2 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edição Standard e a 1 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edições Web e Express. Refere-se a índices de columnstore criados em tabelas baseadas em disco e tabelas com otimização de memória.
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] adiciona esses novos recursos.
@@ -85,22 +88,26 @@ ms.locfileid: "86007480"
   
 -   O columnstore oferece suporte à desfragmentação de índice por meio da remoção de linhas excluídas, sem a necessidade de recriar explicitamente o índice. A instrução `ALTER INDEX ... REORGANIZE` remove do columnstore as linhas excluídas, com base em uma política definida internamente, como uma operação online  
   
--   Os índices columnstore podem ser acessados em uma réplica secundária legível do AlwaysOn. Você pode melhorar o desempenho da análise operacional descarregando as consultas de análise para uma réplica secundária do AlwaysOn.  
+-   Os índices columnstore podem ser acessados em uma réplica secundária para leitura do AlwaysOn. Você pode melhorar o desempenho da análise operacional descarregando as consultas de análise para uma réplica secundária Always On.  
   
--   Para melhorar o desempenho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calcula as funções de agregação `MIN`, `MAX`, `SUM`, `COUNT` e `AVG` durante as verificações de tabela, quando o tipo de dados usa, no máximo, 8 bytes e não é do tipo cadeia de caracteres. Há suporte para aplicação agregada com ou sem a cláusula Group By tanto para índices columnstore clusterizados quanto para índices columnstore não clusterizados.  
+-   A aplicação agregada calcula as funções de agregação `MIN`, `MAX`, `SUM`, `COUNT` e `AVG` durante as verificações de tabela, quando o tipo de dados usa, no máximo, 8 bytes e não é do tipo de dados String. A aplicação agregada é compatível com ou sem a cláusula `GROUP BY` tanto para índices columnstore clusterizados quanto para índices columnstore não clusterizados. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa melhoria é reservada para a edição Enterprise.
   
--   A aplicação de predicado acelera as consultas que comparam cadeias de caracteres do tipo [v]archar ou n[v]archar. Isso se aplica aos operadores de comparação comuns e inclui operadores como LIKE, que usam filtros de bitmap. Isso funciona com todas as ordenações com suporte do SQL Server.  
+-   A aplicação de predicado de cadeia de caracteres acelera as consultas que comparam cadeias de caracteres do tipo VARCHAR/CHAR ou NVARCHAR/NCHAR. Isso se aplica aos operadores de comparação comuns e inclui operadores como `LIKE`, que usam filtros de bitmap. Isso funciona com todos os agrupamentos compatíveis. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa melhoria é reservada para a Edição Enterprise. 
+
+-   Aprimoramentos para operações do modo de lote aproveitando os recursos de hardware baseados em vetor. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta o nível de suporte de CPU para extensões de hardware AVX 2 (extensões de vetor avançadas) e SSE 4 (Extensões SIMD de Streaming 4) e as usa, se compatíveis. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa melhoria é reservada para a edição Enterprise.
   
 ### <a name="performance-for-database-compatibility-level-130"></a>Desempenho do nível de compatibilidade do banco de dados 130  
   
 -   Novo suporte à execução em modo de lote para consultas que usam qualquer uma dessas operações:  
-    -   SORT  
-    -   Realiza agregações com várias funções diferentes. Alguns exemplos: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG` e `STDEV/STDEVP`.  
-    -   Funções de agregação de janela: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX` e `CLR`.  
-    -   Agregações de janela definidas pelo usuário: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP` e `GROUPING`.  
-    -   Funções analíticas de agregação de janela: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST` e `PERCENT_RANK`.  
+    -   `SORT`  
+    -   Realiza agregações com várias funções diferentes. Alguns exemplos: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG` e `STDEV/STDEVP`  
+    -   Funções de agregação de janela: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX` e `CLR`  
+    -   Agregações de janela definidas pelo usuário: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP` e `GROUPING`  
+    -   Funções analíticas de agregação de janela: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST` e `PERCENT_RANK`  
+
 -   Consultas single-threaded em execução em `MAXDOP 1` ou com um plano de consulta serial são executadas no modo de lote. Anteriormente, somente consultas multithread executavam com a execução de lote.  
--   Consultas de tabela com otimização de memória podem ter planos paralelos no modo de interoperabilidade de SQL ao acessar dados em rowstore ou no índice columnstore  
+
+-   Consultas de tabela com otimização de memória podem ter planos paralelos no modo de interoperabilidade de SQL ao acessar dados em rowstore ou no índice columnstore.
   
 ### <a name="supportability"></a>Suporte  
 Esses modos de exibição do sistema são novos no columnstore:  

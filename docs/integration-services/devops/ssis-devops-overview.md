@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091777"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196068"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services)
 
@@ -313,9 +313,9 @@ O esquema JSON de configuração tem três camadas:
 
 |Propriedade  |Descrição  |Observações  |
 |---------|---------|---------|
-|name|Nome do parâmetro.|O parâmetro pode ser um *parâmetro de projeto* ou um *parâmetro de pacote*. <br> O parâmetro será ignorado se ele não existir no projeto pai.|
-|contêiner|Contêiner do parâmetro.|<li>Se o parâmetro for um parâmetro de projeto, o *contêiner* deverá ser o nome do projeto. <li>Se for um parâmetro de pacote, o *contêiner* deverá ser o nome do pacote com a extensão **.dtsx**. <li> Se o parâmetro for uma propriedade do gerenciador de conexões, o nome deverá estar neste formato: **CM.\<Connection Manager Name>.\<Property Name>** .|
-|value|Valor do parâmetro.|<li>Quando *valueType* é *referenciado*: O valor é uma referência a uma variável de ambiente no tipo *cadeia de caracteres*. <li> Quando *valueType* é *literal*: Esse atributo dá suporte a qualquer valor JSON *booliano*, de *número* e *cadeia de caracteres* válido. <br> O valor será convertido para o tipo de parâmetro de destino. O erro ocorrerá se não for possível convertê-lo.<li> O valor de *null* é inválido. A tarefa ignorará esse objeto de parâmetro e emitir um aviso.|
+|name|Nome do parâmetro.|<li>O parâmetro pode ser um parâmetro de projeto ou um parâmetro de pacote. <li>O parâmetro será ignorado se ele não existir. <li>Se o parâmetro for uma propriedade do gerenciador de conexões, o nome deverá estar no formato **CM.\<Connection Manager Name>.\<Property Name>** . |
+|contêiner|Contêiner do parâmetro.|<li>Se o parâmetro for um parâmetro de projeto, o *contêiner* deverá ser o nome do projeto. <li>Se for um parâmetro de pacote, o *contêiner* deverá ser o nome do pacote com a extensão **.dtsx**.|
+|value|Valor do parâmetro.|<li>Quando *valueType* é *referenciado*: O valor é uma referência a uma variável de ambiente no tipo *cadeia de caracteres*. <li> Quando *valueType* é *literal*: Esse atributo dá suporte a qualquer valor JSON *booliano*, de *número* e *cadeia de caracteres* válido. <li> O valor será convertido para o tipo de parâmetro de destino. O erro ocorrerá se não for possível convertê-lo.<li> O valor de *null* é inválido. A tarefa ignorará esse objeto de parâmetro e emitir um aviso.|
 |valueType|Tipo do valor do parâmetro.|Os tipos válidos são: <br> *literal*: a atributo *valor* representa um valor literal. <br> *referenciado*: o atributo *valor* representa uma referência a uma variável de ambiente.|
 
 ##### <a name="reference-attributes"></a>Atributo de referência

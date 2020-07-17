@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b37932efe96f0892e5e2e3ce6c30c4adf1de557d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002790"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380879"
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
 
@@ -82,7 +82,7 @@ A ilustração a seguir mostra a arquitetura de criptografia da TDE. Somente os 
 
 ![A arquitetura Transparent Database Encryption](../../../relational-databases/security/encryption/media/tde-architecture.png)
 
-## <a name="using-transparent-data-encryption"></a>Usando Transparent Data Encryption
+## <a name="enable-tde"></a>Habilitar a TDE
 
 Para usar a TDE, execute estes procedimentos.
 
@@ -171,7 +171,7 @@ Se você usar um banco de dados no espelhamento de banco de dados ou no envio de
 > [!TIP]
 > Para monitorar alterações no status de TDE do banco de dados, use a Auditoria do SQL Server ou a auditoria de Banco de Dados SQL. Para o SQL Server, o TDE é controlado no grupo de ações de auditoria DATABASE_CHANGE_GROUP, que você pode encontrar em [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
 
-### <a name="restrictions"></a>Restrições
+## <a name="restrictions"></a>Restrições
 
 As seguintes operações são proibidas durante criptografia de banco de dados inicial, alteração de chave ou descriptografia de banco de dados:
 
@@ -223,7 +223,29 @@ Quando os arquivos de banco de dados são criados, a inicialização instantâne
 
 Para criptografar a chave de criptografia do banco de dados com uma chave assimétrica, a chave assimétrica deve estar em um provedor de gerenciamento extensível de chaves.
 
-### <a name="transparent-data-encryption-and-transaction-logs"></a>Transparent Data Encryption e logs de transação
+## <a name="tde-scan"></a>Verificação da TDE
+
+Para habilitar o TDE em um banco de dados, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve fazer uma verificação de criptografia. A verificação lê cada página dos arquivos de dados no pool de buffers e, em seguida, grava as páginas criptografadas de volta no disco.
+
+Para fornecer a você mais controle sobre a verificação de criptografia, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] apresenta a verificação de TDE, que tem uma sintaxe de suspensão e de retomada. Você pode pausar a verificação, enquanto a carga de trabalho no sistema é pesada ou durante horários críticos para os negócios e então retomar a verificação mais tarde.
+
+Use a sintaxe a seguir para pausar a verificação de criptografia de TDE:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+Da mesma forma, use a seguinte sintaxe para retomar a verificação de criptografia TDE:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+A coluna encryption_scan_state foi adicionada à exibição de gerenciamento dinâmico sys.dm_database_encryption_keys. Ela mostra o estado atual da verificação de criptografia. Há também uma nova coluna chamada encryption_scan_modify_date, que contém a data e a hora da última alteração de estado de verificação de criptografia.
+
+Se a instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for reiniciada enquanto sua verificação de criptografia estiver suspensa, uma mensagem será registrada no log de erros na inicialização. A mensagem indica que uma verificação existente foi colocada em pausa.
+
+## <a name="tde-and-transaction-logs"></a>TDE e logs de transações
 
 Deixar um banco de dados usar TDE remove a parte restante do log de transações virtual atual. A remoção força a criação do próximo log de transações. Esse comportamento garante que nenhum texto não criptografado seja deixado nos logs depois que o banco de dados for definido para criptografia.
 
@@ -246,11 +268,11 @@ Antes de uma chave de criptografia de banco de dados ser alterada, a chave de cr
 
 Se você alterar uma chave de criptografia de banco de dados duas vezes, deverá fazer um backup de log antes de poder alterar a chave de criptografia de banco de dados novamente.
 
-### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption e o banco de dados do sistema tempdb
+## <a name="tde-and-the-tempdb-system-database"></a>TDE e o banco de dados de sistema tempdb
 
 O banco de dados do sistema **tempdb** será criptografado se qualquer outro banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for criptografado usando TDE. Essa criptografia poderá ter um efeito de desempenho em bancos de dados não criptografados na mesma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o banco de dados do sistema **tempdb**, confira [Banco de dados tempdb](../../../relational-databases/databases/tempdb-database.md).
 
-### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption e replicação
+## <a name="tde-and-replication"></a>TDE e replicação
 
 A replicação não replica automaticamente os dados de um banco de dados habilitado para TDE em um formulário criptografado. Habilite separadamente a TDE se quiser proteger a distribuição e os bancos de dados dos assinantes.
 
@@ -258,39 +280,39 @@ A replicação de instantâneo pode armazenar dados em arquivos intermediários 
 
 Para obter mais informações, confira [Habilitar conexões criptografadas para o mecanismo de banco de dados (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
-### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption e dados FILESTREAM
+## <a name="tde-and-always-on"></a>TDE e Always On    
+Você pode [adicionar um banco de dados criptografado a um grupo de disponibilidade Always On](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md).  
+
+Para criptografar bancos de dados que fazem parte de um grupo de disponibilidade, crie a chave mestra e os certificados ou a chave assimétrica (EKM) em todas as réplicas secundárias antes de criar a [chave de criptografia de banco de dados](../../../t-sql/statements/create-database-encryption-key-transact-sql.md) na réplica primária.  
+
+Se um certificado for usado para proteger a DEK (chave de criptografia de banco de dados), [faça backup do certificado](../../../t-sql/statements/backup-certificate-transact-sql.md) criado na réplica primária e, em seguida, [crie o certificado de um arquivo](../../../t-sql/statements/create-certificate-transact-sql.md) em todas as réplicas secundárias antes de criar a chave de criptografia de banco de dados na réplica primária. 
+
+## <a name="tde-and-filestream-data"></a>TDE e os dados FILESTREAM
 
 Os dados **FILESTREAM** não são criptografados mesmo quando você habilita TDE.
 
 <a name="scan-suspend-resume"></a>
 
-## <a name="transparent-data-encryption-scan"></a>Verificação de Transparent Data Encryption
+## <a name="remove-tde"></a>Remover a TDE
 
-Para habilitar o TDE em um banco de dados, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve fazer uma verificação de criptografia. A verificação lê cada página dos arquivos de dados no pool de buffers e, em seguida, grava as páginas criptografadas de volta no disco.
-
-Para fornecer a você mais controle sobre a verificação de criptografia, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] apresenta a verificação de TDE, que tem uma sintaxe de suspensão e de retomada. Você pode pausar a verificação, enquanto a carga de trabalho no sistema é pesada ou durante horários críticos para os negócios e então retomar a verificação mais tarde.
-
-Use a sintaxe a seguir para pausar a verificação de criptografia de TDE:
+Remova a criptografia do banco de dados usando a instrução `ALTER DATABASE`.
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-Da mesma forma, use a seguinte sintaxe para retomar a verificação de criptografia TDE:
+Para exibir o estado do banco de dados, use a exibição de gerenciamento dinâmico [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
+Aguarde a conclusão da descriptografia antes de remover a chave de criptografia de banco de dados usando [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
 
-A coluna encryption_scan_state foi adicionada à exibição de gerenciamento dinâmico sys.dm_database_encryption_keys. Ela mostra o estado atual da verificação de criptografia. Há também uma nova coluna chamada encryption_scan_modify_date, que contém a data e a hora da última alteração de estado de verificação de criptografia.
+> [!IMPORTANT]
+> Faça backup da chave mestra e do certificado que são usados para a TDE em uma localização segura. A chave mestra e o certificado são necessários para restaurar backups que foram feitos quando o banco de dados foi criptografado com a TDE. Depois de remover a chave de criptografia de banco de dados, faça um backup de log seguido de um novo backup completo do banco de dados descriptografado. 
 
-Se a instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for reiniciada enquanto sua verificação de criptografia estiver suspensa, uma mensagem será registrada no log de erros na inicialização. A mensagem indica que uma verificação existente foi colocada em pausa.
-
-## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparent Data Encryption e extensão do pool de buffers
+## <a name="tde-and-buffer-pool-extension"></a>TDE e extensão do pool de buffers
 
 Quando você criptografa um banco de dados usando TDE, os arquivos relacionados à BPE (extensão do pool de buffers) não são criptografados. Para esses arquivos, use ferramentas de criptografia como BitLocker ou EFS no nível do sistema de arquivos.
 
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption e OLTP na memória
+## <a name="tde-and-in-memory-oltp"></a>TDE e OLTP in-memory
 
 Você pode habilitar a TDE em um banco de dados que tem objetos OLTP in-memory. No [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], os dados e os registros de log do OLTP in-memory serão criptografados se a TDE estiver habilitada. No [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], os registros de log do OLTP in-memory serão criptografados se você habilitar a TDE, mas os arquivos no grupo de arquivos MEMORY_OPTIMIZED_DATA ficarão descriptografados.
 

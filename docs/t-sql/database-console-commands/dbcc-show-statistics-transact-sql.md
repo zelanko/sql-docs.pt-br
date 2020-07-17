@@ -33,14 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003437"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197434"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS exibe as estatísticas de otimização de consulta atuais de uma tabela ou exibição indexada. O otimizador de consulta usa as estatísticas para calcular a cardinalidade ou o número de linhas no resultado da consulta, o que permite a esse otimizador criar um plano de consulta de alta qualidade. Por exemplo, o otimizador de consulta pode usar estimativas de cardinalidade para escolher o operador de busca do índice, em vez do operador de verificação do índice no plano de consulta, melhorando o desempenho da consulta ao evitar uma verificação de índice que consome muitos recursos.
@@ -53,8 +54,8 @@ Para obter mais informações, consulte [Estatísticas](../../relational-databas
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Sintaxe  
-  
+## <a name="syntax"></a>Sintaxe
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -69,10 +70,13 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>Argumentos  
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
  *table_or_indexed_view_name*  
  O nome da tabela ou exibição indexada das quais exibir informações de estatísticas.  
   
@@ -86,12 +90,12 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
- A especificação de um ou mais desses parâmetros limita os conjuntos de resultados retornados pela instrução para a opção ou as opções especificadas. Se nenhuma opção for especificada, todas as informações de estatísticas serão retornadas.  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ **,** _n_ ] A especificação de um ou mais desses parâmetros limita os conjuntos de resultados retornados pela instrução para a opção ou as opções especificadas. Se nenhuma opção for especificada, todas as informações de estatísticas serão retornadas.  
+
  STATS_STREAM é [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="result-sets"></a>Conjuntos de resultados  
+## <a name="result-sets"></a>Conjuntos de resultados
+
 A tabela a seguir descreve as colunas retornadas no conjunto de resultados quando STAT_HEADER está especificado.
   
 |Nome da coluna|Descrição|  
@@ -130,14 +134,15 @@ A tabela a seguir descreve as colunas retornadas no conjunto de resultados quand
 
 A data de atualização de estatísticas é armazenada no [objeto de blob de estatísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics), junto com o [histograma](#histogram) e o [vetor de densidade](#density), não nos metadados. Quando nenhum dado é lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não fica disponível e a coluna *updated* é NULL. Esse é o caso para estatísticas filtradas para as quais o predicado não retorna nenhuma linha ou para novas tabelas vazias.
   
-## <a name="histogram"></a><a name="histogram"></a> Histograma  
+## <a name="histogram"></a><a name="histogram"></a> Histograma
+
 Um histograma mede a frequência de ocorrência de cada valor distinto em um conjunto de dados. O otimizador de consulta calcula um histograma com base nos valores de coluna na primeira coluna de chave do objeto de estatísticas, selecionando os valores de coluna por amostragem estatística das linhas ou pela execução de uma verificação completa de todas as linhas na tabela ou na exibição. Se o histograma for criado com base em um conjunto amostrado de linhas, os totais armazenados para o número de linhas e o número de valores distintos são estimativas e não precisam ser números inteiros.
   
 Para criar o histograma, o otimizador de consulta classifica os valores de colunas, calcula o número de valores que correspondem a cada valor de coluna distinta e agrega os valores de colunas em um máximo de 200 etapas de histograma contíguas. Cada etapa inclui uma gama de valores de colunas seguidos por um valor de coluna associada superior. O intervalo inclui todos os possíveis valores de coluna entre valores de limite, excluindo-se os próprios valores de limite em si. O mais baixo dos valores de coluna classificados é o valor do limite superior da primeira etapa do histograma.
   
 O diagrama a seguir mostra um histograma com seis etapas: A área à esquerda do primeiro valor do limite superior corresponde à primeira etapa.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![Histograma](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 Para cada etapa do histograma:
 -   A linha em negrito representa o valor do limite superior (RANGE_HI_KEY) e o número de vezes que ele ocorre (EQ_ROWS)  

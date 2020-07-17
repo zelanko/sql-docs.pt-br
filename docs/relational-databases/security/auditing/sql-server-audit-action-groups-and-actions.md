@@ -2,7 +2,7 @@
 title: Ações e grupos de ações de auditoria do SQL Server | Microsoft Docs
 description: Saiba mais sobre os grupos de ações no nível do servidor, do banco de dados e da auditoria, bem como sobre as ações individuais na auditoria do SQL Server.
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885601"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301884"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885601"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Esse evento é gerado sempre que uma senha é alterada por uma função de aplicativo. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Esse evento é gerado sempre que uma auditoria é criada, modificada ou excluída. Esse evento é gerado sempre que qualquer especificação de auditoria é criada, modificada ou excluída. Qualquer alteração em uma auditoria é auditada nessa auditoria. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Esse evento é gerado sempre que um comando de backup ou restauração é emitido. Equivalente à [classe de evento Audit Backup and Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
-|BATCH_COMPLETED_GROUP|Esse evento é gerado sempre que qualquer operação de lote de texto, procedimento armazenado ou de gerenciamento de transações conclui a execução. Ele é gerado depois que o lote é concluído e audita o lote inteiro ou o texto do procedimento armazenado, conforme enviado do cliente, incluindo o resultado.|  
-|BATCH_STARTED_GROUP|Esse evento é gerado sempre que qualquer operação de lote de texto, procedimento armazenado ou gerenciamento de transações começa a ser executada. Ele é gerado antes da execução e audita o lote inteiro ou o texto do procedimento armazenado, conforme enviado do cliente.|  
+|BATCH_COMPLETED_GROUP|Esse evento é gerado sempre que qualquer operação de lote de texto, procedimento armazenado ou de gerenciamento de transações conclui a execução. Ele é gerado depois que o lote é concluído e audita o lote inteiro ou o texto do procedimento armazenado, conforme enviado do cliente, incluindo o resultado. **Adicionado no SQL Server 2019.**|  
+|BATCH_STARTED_GROUP|Esse evento é gerado sempre que qualquer operação de lote de texto, procedimento armazenado ou gerenciamento de transações começa a ser executada. Ele é gerado antes da execução e audita o lote inteiro ou o texto do procedimento armazenado, conforme enviado do cliente. **Adicionado no SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Esse evento é gerado para relatar mensagens de auditoria relacionadas à segurança de transporte do Service Broker. Equivalente a [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Esse evento é gerado quando um banco de dados é criado, alterado ou descartado. Esse evento é gerado sempre que um banco de dados é criado, alterado ou descartado. Equivalente a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados.|  

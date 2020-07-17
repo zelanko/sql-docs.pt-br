@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774052"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159824"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ Depois que um banco de dados de distribuição no AG for configurado com base na
    >[!NOTE]
    >Antes de executar um dos procedimentos armazenados de replicação (por exemplo – `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb`, `sp_adddistpublisher`) na réplica secundária, verifique se a réplica está totalmente sincronizada.
 
-- Todas as réplicas secundárias em um AG do banco de dados de distribuição devem ser legíveis.
+- Todas as réplicas secundárias em um AG do banco de dados de distribuição devem ser legíveis. Se uma réplica secundária não for legível, as propriedades do distribuidor no SQL Server Management Studio dessa réplica secundária específica não poderão ser acessadas, no entanto, a replicação continuará funcionando corretamente. 
 - Todos os nós no AG do banco de dados de distribuição precisam usar a mesma conta de domínio para executar o SQL Server Agent, e essa conta de domínio precisa ter o mesmo privilégio em cada nó.
 - Se os agentes de replicação forem executados em uma conta proxy, ela precisará existir em cada nó do AG do banco de dados de distribuição e ter o mesmo privilégio em cada nó.
 - Faça alterações nas propriedades do distribuidor ou do banco de dados de distribuição em todas as réplicas que participam do AG do banco de dados de distribuição.
@@ -117,12 +117,18 @@ Este exemplo configura um novo distribuidor e publicador e coloca o banco de dad
 
    O valor de `@working_directory` deve ser um caminho de rede independente de DIST1, DIST2 e DIST3.
 
-1. No DIST2 e DIST3, execute:  
+1. No DIST2 e DIST3, se a réplica for legível como secundária, execute:  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Se uma réplica não for legível como secundária, execute o failover de modo que a réplica se torne a primária e execute 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    O valor de `@working_directory` deve ser o mesmo da etapa anterior.
 
 ### <a name="publisher-workflow"></a>Fluxo de trabalho do fornecedor
@@ -196,12 +202,18 @@ Este exemplo adiciona um novo distribuidor a uma configuração de replicação 
    sp_adddistributiondb 'distribution'
    ```
 
-4. No DIST3, execute: 
+4. No DIST3, se a réplica for legível como secundária, execute: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Se a réplica não for legível como secundária, execute o failover de modo que a réplica se torne a primária e execute:
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    O valor de `@working_directory` deve ser o mesmo especificado para DIST1 e DIST2.
 
 4. Em DIST3, você precisa recriar servidores vinculados aos assinantes.

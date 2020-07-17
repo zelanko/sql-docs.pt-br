@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262095"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279502"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Data de vencimento do conjunto de backup.|  
 |**Compactado**|**BIT(1)**|Se o conjunto de backup é compactado com compactação de software:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
 |**Posição**|**smallint**|Posição do conjunto de backup no volume (para uso com o FILE = opção).|  
-|**DeviceType**|**tinyint**|Número que corresponde ao dispositivo usado na operação de backup.<br /><br /> Disco:<br /><br /> **2** = Lógico<br /><br /> **102** = Físico<br /><br /> Fita:<br /><br /> **5** = Lógico<br /><br /> **105** = Físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Lógico<br /><br /> **107** = Físico<br /><br /> Os nomes de dispositivo lógico e os números de dispositivo estão em **sys.backup_devices**; para obter mais informações, consulte [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Número que corresponde ao dispositivo usado na operação de backup.<br /><br /> Disco:<br /><br /> **2** = Lógico<br /><br /> **102** = Físico<br /><br /> Fita:<br /><br /> **5** = Lógico<br /><br /> **105** = Físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Lógico<br /><br /> **107** = Físico<br /><br /> URL<br /><br /> **9** = Lógico<br /><br /> **109** = Físico<br /><br />  Os nomes de dispositivo lógico e os números de dispositivo estão em **sys.backup_devices**; para obter mais informações, consulte [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Nome do usuário que realizou a operação de backup.|  
 |**ServerName**|**nvarchar(128)**|Nome do servidor que gravou o conjunto de backup.|  
 |**DatabaseName**|**nvarchar(128)**|Nome do banco de dados cujo backup foi feito.|  
@@ -151,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> O tipo de criptografador usado: Certificado ou Chave Assimétrica. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
   
 > [!NOTE]  
->  Se as senhas forem definidas para os conjuntos de backup, RESTORE HEADERONLY mostrará informações completas apenas para o conjunto de backup cuja senha corresponda à opção PASSWORD especificada do comando. RESTORE HEADERONLY também mostra informações completas de conjuntos de backup desprotegidos. A coluna **BackupName** dos outros conjuntos de backup protegidos por senha na mídia é definida como " **_Protegida por Senha_** ", e todas as outras colunas são NULL.  
+>  Se as senhas forem definidas para os conjuntos de backup, RESTORE HEADERONLY mostrará informações completas apenas para o conjunto de backup cuja senha corresponda à opção PASSWORD especificada do comando. RESTORE HEADERONLY também mostra informações completas de conjuntos de backup desprotegidos. A coluna **BackupName** dos outros conjuntos de backup protegidos por senha na mídia é definida como "**_Protegida por Senha_**", e todas as outras colunas são NULL.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Um cliente pode usar RESTORE HEADERONLY para recuperar todas as informações do cabeçalho de todos os backups em um dispositivo de backup particular. Para cada backup no dispositivo de backup, o servidor envia as informações de cabeçalho como uma linha.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883081"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279332"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85883081"
 
 ### <a name="service-master-key"></a>Chave mestra de serviço
   
- A Chave Mestra de Serviço é a raiz da hierarquia de criptografia do SQL Server. A SMK é gerada automaticamente na primeira vez que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é iniciada, e é usada para criptografar a senha, as credenciais e a chave mestra de banco de dados de um servidor vinculado. A SMK é criptografada com a chave do computador local usando a DPAPI (API de Proteção de Dados do Windows). A DPAPI usa uma chave derivada das credenciais do Windows da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e das credenciais do computador. A chave mestra de serviço só pode ser descriptografada pela conta de serviço sob a qual foi criada ou por um principal que tenha acesso às credenciais da máquina.
+ A Chave Mestra de Serviço é a raiz da hierarquia de criptografia do SQL Server. A SMK é gerada automaticamente na primeira vez que a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é iniciada e é usada para criptografar a senha, as credenciais e a chave mestra de banco de dados de um servidor vinculado em cada banco de dados. A SMK é criptografada com a chave do computador local usando a DPAPI (API de Proteção de Dados do Windows). A DPAPI usa uma chave derivada das credenciais do Windows da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e das credenciais do computador. A chave mestra de serviço só pode ser descriptografada pela conta de serviço sob a qual foi criada ou por um principal que tenha acesso às credenciais da máquina.
 
 A chave mestra de serviço só pode ser aberta pela conta de serviço do Windows na qual ela foi criada ou por uma entidade que tenha acesso ao nome e à senha da conta de serviço.
 

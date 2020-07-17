@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c86cfa1337323ed03cdb8b22cae9c951c110a139
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286953"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159394"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artigos transacionais – Especificar como as alterações são propagadas
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   A replicação transacional permite que você especifique como as alterações de dados são propagadas do Publicador aos Assinantes. Para cada tabela publicada, você pode especificar uma das quatro maneiras em que cada operação (INSERT, UPDATE ou DELETE) deverá ser propagada ao Assinante:  
   
 -   Especifique que a replicação transacional deverá gerar script e subsequentemente chamar um procedimento armazenado para propagar alterações aos Assinantes (o padrão).  
@@ -40,13 +40,13 @@ ms.locfileid: "76286953"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimentos armazenados padrão e personalizados  
  Os três procedimentos que a replicação cria por padrão para cada artigo de tabela são:  
   
--   **sp_MSins_\<** *tablename* **>** , que manipula inserções.  
+-   **sp_MSins_\<** *tablename* **>** , que trata de inserções.  
   
--   **sp_MSupd_\<** *tablename* **>** , que manipula atualizações.  
+-   **sp_MSupd_\<** *tablename* **>** , que trata de atualizações.  
   
--   **sp_MSdel_\<** *tablename* **>** , que manipula exclusões.  
+-   **sp_MSdel_\<** *tablename* **>** , que trata de exclusões.  
   
- O **\<** _tablename_ **>** usado no procedimento depende de como o artigo foi adicionado à publicação e se o banco de dados de assinatura contém uma tabela de mesmo nome com um proprietário diferente.  
+ O **\<**_tablename_**>** usado no procedimento depende de como o artigo foi adicionado à publicação e se o banco de dados de assinatura contém uma tabela do mesmo nome com um proprietário diferente.  
   
  Qualquer um desses procedimentos pode ser substituído com um procedimento personalizado que você especifica ao adicionar um artigo a uma publicação. Os procedimentos personalizados são usados se um aplicativo requerer lógica personalizada, como inserir dados em uma tabela de auditoria quando uma linha é atualizada em um Assinante. Para obter mais informações sobre como especificar procedimentos armazenados personalizados, consulte os tópicos de instruções relacionados acima.  
   

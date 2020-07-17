@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203553"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196164"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -52,7 +52,7 @@ No PolyBase, quando uma autenticação é solicitada em qualquer recurso protegi
 1. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volta para o KDC, passa o TGT novamente e solicita um ST para acessar o recurso protegido específico. O ST é criptografado usando a chave privada protegida do serviço.
 1. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encaminha o ST para o Hadoop e é autenticado para criar uma sessão nesse serviço.
 
-![](./media/polybase-sqlserver.png)
+![SQL Server do PolyBase](./media/polybase-sqlserver.png)
 
 Problemas com a autenticação se encaixam em uma ou mais das quatro etapas acima. Para acelerar a depuração, o PolyBase introduziu uma ferramenta de diagnóstico integrada para ajudar a identificar o ponto de falha.
 

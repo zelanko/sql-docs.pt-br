@@ -14,15 +14,15 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 19ad038e69144b4f9f570ef9d647a5f528945542
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c53fe453c141af32e1b31aad4ec15dc29351d96
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288333"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158904"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Executar trabalhos de manutenção de replicação (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   A replicação usa os seguintes trabalhos de manutenção:  
   
 -   **Reinicializar assinaturas com falha na validação de dados**  
@@ -37,7 +37,7 @@ ms.locfileid: "76288333"
   
 -   **Limpeza de assinaturas expiradas**  
   
- Inicie e pare esses trabalhos na pasta **Trabalhos** do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** do Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Exiba e modifique propriedades de cada trabalho na caixa de diálogo **Propriedades do trabalho – \<Trabalho>** , que está disponível na mesma pasta e guia.  
+ Inicie e pare esses trabalhos na pasta **Trabalhos** do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** do Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Exiba e modifique propriedades de cada trabalho na caixa de diálogo **Propriedades do trabalho – \<Job>** , que está disponível na mesma pasta e guia.  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>Para iniciar ou parar um trabalho de manutenção de replicação no Management Studio  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76288333"
   
 3.  Clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , altere as propriedades se necessário e então clique em **OK**.  
+4.  Na caixa de diálogo **Propriedades do Trabalho – \<Job>** , se necessário, altere qualquer propriedade e então clique em **OK**.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>Para exibir e modificar propriedades de um trabalho de manutenção de replicação no Replication Monitor  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76288333"
   
 3.  Clique com o botão direito do mouse em um trabalho na grade e então clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , altere as propriedades se necessário e então clique em **OK**.  
+4.  Na caixa de diálogo **Propriedades do Trabalho – \<Job>** , se necessário, altere qualquer propriedade e então clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar e interromper um agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

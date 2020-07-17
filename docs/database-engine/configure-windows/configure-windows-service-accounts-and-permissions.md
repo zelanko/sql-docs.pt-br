@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728678"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196933"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 
@@ -83,6 +83,9 @@ Dependendo dos componentes que você decidir instalar, a Instalação do [!INCLU
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** – fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. O arquivo executável é \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** – gerencia, executa, cria, agenda e entrega relatórios. O arquivo executável é \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** – fornece suporte de gerenciamento para o armazenamento e a execução de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. O caminho do executável é \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode incluir serviços adicionais para implantações de expansão. Saiba mais no [Passo a passo: Configurar o SSIS (Integration Services Scale Out)](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md).
+
 - **Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : o serviço de resolução de nomes que especifica informações de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para computadores cliente. O caminho do executável é c:\Arquivos de Programas (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe
 - **Pesquisa de texto completo** : cria rapidamente índices de texto completo sobre conteúdo e propriedades de dados estruturados e semiestruturados para fornecer filtragem de documentos e separação de palavras para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - **Gravador do SQL** : permite que aplicativos de backup e restauração operem na estrutura do VSS (Serviço de Cópias de Sombra de Volume).

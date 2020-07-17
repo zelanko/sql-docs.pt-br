@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9baaecd792c2dae1d23a47fa6ab7a72933412a55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0346aa532756905d04cdd1f7938962ac6be39cc
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760946"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381100"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "85760946"
 }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  CONSTRAINT  
  Especifica o início de uma definição para uma restrição PRIMARY KEY, UNIQUE, FOREIGN KEY ou CHECK, ou um DEFAULT.  
   
@@ -107,7 +109,7 @@ ms.locfileid: "85760946"
  *ref_column*  
  É uma coluna ou lista de colunas entre parênteses referenciadas pela nova restrição FOREIGN KEY.  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Especifica a ação que acontece nas linhas da tabela alterada, se essas linhas tiverem uma relação referencial e a linha referenciada for excluída da tabela pai. O padrão é NO ACTION.  
   
  NO ACTION  
@@ -132,7 +134,7 @@ ms.locfileid: "85760946"
   
  Entretanto, se NO ACTION for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gerará um erro e reverterá a ação de exclusão da linha **Vendor** quando houver pelo menos uma linha da tabela **ProductVendor** que a referencie.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Especifica a ação que ocorre nas linhas da tabela alterada, quando essas linhas têm uma relação referencial e a linha referenciada for atualizada na tabela pai. O padrão é NO ACTION.  
   
  NO ACTION  

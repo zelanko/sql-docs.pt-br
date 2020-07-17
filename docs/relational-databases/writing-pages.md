@@ -13,12 +13,12 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f9bf3a75323a18b500c5bec35e0a01cb48fa754e
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998308"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302005"
 ---
 # <a name="writing-pages"></a>Gravando páginas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ Uma página suja é gravada no disco de três formas:
  O gravador lento é um processo de sistema que mantém buffers livres disponíveis ao remover páginas usadas raramente do cache do buffer. As páginas sujas são gravadas primeiramente no disco. 
 
 * Gravação adiantada   
- O processo de gravação ávida grava páginas de dados de alterações associadas com operações não registradas, como inserção em massa e seleção em. Esse processo permite a criação e a gravação em paralelo de páginas novas. Ou seja, a operação de chamada não precisa esperar até o término da operação inteira antes de gravar as páginas no disco.
+ O processo de gravação adiantado grava páginas de dados de alterações associadas com operações minimamente registradas, como inserção em massa e seleção. Esse processo permite a criação e a gravação em paralelo de páginas novas. Ou seja, a operação de chamada não precisa esperar até o término da operação inteira antes de gravar as páginas no disco.
 
 * Ponto de verificação   
  O processo de ponto de verificação examina o cache do buffer periodicamente para buffers com páginas de um banco de dados especificado e grava todas as páginas sujas no disco. Os pontos de verificação economizam tempo durante uma recuperação posterior, pois criam um ponto em que todas as páginas sujas são gravadas no disco. O usuário pode solicitar uma operação de ponto de verificação usando o comando CHECKPOINT, ou o [!INCLUDE[ssDE](../includes/ssde-md.md)] pode gerar pontos de verificação automáticos com base na quantidade de espaço de log usado e o tempo decorrido desde o último ponto de verificação. Além disso, um ponto de verificação é gerado quando ocorrem determinadas atividades. Por exemplo, quando um arquivo de dados ou de log é adicionado ou removido de um banco de dados, ou quando a instância do SQL Server é interrompida. Para saber mais, veja [Pontos de verificação e a parte ativa do log](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

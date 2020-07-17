@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719559"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279632"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ Para obter mais informações sobre a sobrecarga de desempenho da criação de p
 
 > [!NOTE]
 > Eventos estendidos que aproveitam a criação de perfil leve usarão informações da criação de perfil padrão se a infraestrutura de criação de perfil padrão já estiver habilitada. Por exemplo, uma sessão de evento estendido usando `query_post_execution_showplan` está em execução e outra sessão usando `query_post_execution_plan_profile` é iniciada. A segunda sessão ainda usará informações de criação de perfil padrão.
+
+> [!NOTE]
+> Em [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], a criação de perfil leve fica desativada por padrão, mas é ativada quando um rastreamento XEvent que depende de `query_post_execution_plan_profile` é iniciado e é desativado novamente quando o rastreamento é interrompido. Como consequência, se os rastreamentos de XEvent com base em `query_post_execution_plan_profile` são frequentemente iniciados e interrompidos em uma instância de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], é altamente recomendável ativar a criação de perfil leve em nível global com o sinalizador de rastreamento 7412 para evitar a sobrecarga de ativação/desativação repetida. 
 
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

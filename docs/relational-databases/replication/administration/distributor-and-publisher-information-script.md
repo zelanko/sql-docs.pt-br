@@ -15,15 +15,15 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dba4e3db3c34dd836e92cf3bc33d5a3517d534cf
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7cd1c20e9fc0dd126fe74a7f9ae02bfd9343fc93
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807974"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159334"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script de informações do Distribuidor e Publicador
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Esse script usa tabelas de sistema e replicação de procedimentos armazenados para responder as perguntas frequentes sobre objetos no Distribuidor e no Publicador. O script pode ser usado assim como é, e pode fornecer também a base para scripts personalizados. O script poderá exigir duas modificações para ser executado em seu ambiente:  
   
 -   Altere a linha `use AdventureWorks2012` para usar o nome de seu banco de dados de publicação.  

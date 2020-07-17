@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895308"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196835"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -146,7 +146,7 @@ Todas as distribuições com suporte no momento enviam um complemento/extensão 
 
 Essa solução é, de alguma forma, semelhante à implantação de configurações clusterizadas usando o Windows, mas diferente de várias maneiras. No Windows, a forma de disponibilidade de clustering, chamada de WSFC (cluster de failover do Windows Server), é incorporada ao sistema operacional e o recurso que permite a criação de um WSFC, clustering de failover, é desabilitado por padrão. No Windows, os AGs e as FCIs são criados sobre um WSFC e compartilham uma forte integração devido à DLL de recurso específica fornecida pelo [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Essa solução totalmente acoplada é possível, de modo geral, por ser toda de um único fornecedor.
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![Noções básicas de HA](./media/sql-server-linux-ha-basics/image1.png)
 
 No Linux, embora cada distribuição com suporte tenha o Pacemaker disponível, cada distribuição pode personalizar e ter implementações e versões ligeiramente diferentes. Algumas das diferenças serão refletidas nas instruções neste artigo. A camada de clustering é de software livre, portanto, embora seja fornecida com as distribuições, ela não é totalmente integrada da mesma maneira que um WSFC está sob o Windows. Por esse motivo, a Microsoft fornece *mssql-server-ha*, de modo que o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e a pilha do Pacemaker possam fornecer quase, mas não exatamente, a mesma experiência para AGs e FCIs como no Windows.
 

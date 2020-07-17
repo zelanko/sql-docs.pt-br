@@ -9,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901553"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196959"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar instâncias de cluster de failover e grupos de disponibilidade Always On com várias sub-redes
 
@@ -28,17 +28,17 @@ Quando um grupo de disponibilidade Always On ou FCI (instância de cluster de fa
 
 A criação do endereço IP para o AG ou FCI é feita na VLAN. No exemplo a seguir, a VLAN tem uma sub-rede de 192.168.3.*x*, portanto, o endereço IP criado para o AG ou FCI é 192.168.3.104. Nenhuma configuração adicional é necessária, já que há um único endereço IP atribuído ao grupo de disponibilidade ou FCI.
 
-![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
+![Configurar várias sub-redes 01](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
 ## <a name="configuration-with-pacemaker"></a>Configuração com o Pacemaker
 
 No mundo do Windows, o WSFC (Cluster de Failover do Windows Server) dá suporte nativamente a várias sub-redes e manipula vários endereços IP por meio de uma dependência OR no endereço IP. No Linux, não há nenhuma dependência OR, mas há uma maneira de obter uma configuração com várias sub-redes adequada nativamente com o Pacemaker, conforme mostrado a seguir. Não é possível fazer isso simplesmente usando a linha de comando normal do Pacemaker para modificar um recurso. Você precisa modificar o CIB (base de informações do cluster). O CIB é um arquivo XML com a configuração do Pacemaker.
 
-![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
+![Configurar várias sub-redes 02](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
 ### <a name="update-the-cib"></a>Atualize o CIB
 
-1.  Exporte o CIB.
+1. Exporte o CIB.
 
     **RHEL (Red Hat Enterprise Linux) e Ubuntu**
 
@@ -54,7 +54,7 @@ No mundo do Windows, o WSFC (Cluster de Failover do Windows Server) dá suporte 
 
     Em que *filename* é o nome pelo qual você deseja chamar o CIB.
 
-2.  Edite o arquivo que foi gerado. Procure a seção `<resources>`. Você verá os vários recursos que foram criados para o AG ou o FCI. Localize aquele associado ao endereço IP. Adicione uma seção `<instance attributes>` com as informações para o segundo endereço IP acima ou abaixo do existente, mas antes de `<operations>`. Ela é semelhante à seguinte sintaxe:
+2. Edite o arquivo que foi gerado. Procure a seção `<resources>`. Você verá os vários recursos que foram criados para o AG ou o FCI. Localize aquele associado ao endereço IP. Adicione uma seção `<instance attributes>` com as informações para o segundo endereço IP acima ou abaixo do existente, mas antes de `<operations>`. Ela é semelhante à seguinte sintaxe:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -80,7 +80,7 @@ No mundo do Windows, o WSFC (Cluster de Failover do Windows Server) dá suporte 
     </instance attributes>
     ```
 
-3.  Importe o CIB modificado e reconfigure o Pacemaker.
+3. Importe o CIB modificado e reconfigure o Pacemaker.
 
     **RHEL/Ubuntu**
     
@@ -98,7 +98,7 @@ No mundo do Windows, o WSFC (Cluster de Failover do Windows Server) dá suporte 
 
 ### <a name="check-and-verify-failover"></a>Checar e verificar o failover
 
-1.  Depois que o CIB for aplicado com êxito com a configuração atualizada, execute ping no nome DNS associado ao recurso de endereço IP no Pacemaker. Ele deve refletir o endereço IP associado à sub-rede que atualmente hospeda o grupo de disponibilidade ou o FCI.
-2.  Faça failover do grupo de disponibilidade ou do FCI para a outra sub-rede.
-3.  Depois que o grupo de disponibilidade ou o FCI estiver totalmente online, execute ping no nome DNS associado ao endereço IP. Ele deve refletir o endereço IP na segunda sub-rede.
-4.  Se desejar, faça failback do grupo de disponibilidade ou FCI para a sub-rede original.
+1. Depois que o CIB for aplicado com êxito com a configuração atualizada, execute ping no nome DNS associado ao recurso de endereço IP no Pacemaker. Ele deve refletir o endereço IP associado à sub-rede que atualmente hospeda o grupo de disponibilidade ou o FCI.
+2. Faça failover do grupo de disponibilidade ou do FCI para a outra sub-rede.
+3. Depois que o grupo de disponibilidade ou o FCI estiver totalmente online, execute ping no nome DNS associado ao endereço IP. Ele deve refletir o endereço IP na segunda sub-rede.
+4. Se desejar, faça failback do grupo de disponibilidade ou FCI para a sub-rede original.

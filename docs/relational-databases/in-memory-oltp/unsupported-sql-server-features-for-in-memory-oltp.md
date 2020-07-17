@@ -12,12 +12,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 611fb6d081167053240bcf105d28e63b74c69ada
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753171"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279203"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Recursos do SQL Server sem suporte para OLTP na Memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a segui
 |Servidor vinculado|Você não pode acessar servidores vinculados na mesma consulta ou transação como tabelas com otimização de memória. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Registro em massa|Independentemente do modelo de recuperação do banco de dados, todas as operações nas tabelas duráveis com otimização de memória sempre são completamente registradas.|  
 |Log mínimo|O log mínimo não tem suporte para tabelas com otimização de memória. Para obter mais informações sobre log mínimo, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Pré-requisitos para log mínimo na importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|controle de alterações|O controle de alterações não pode ser habilitado em um banco de dados com objetos OLTP in-memory. |
+|controle de alterações|O controle de alterações não é compatível com as tabelas com otimização de memória. |
 | gatilhos DDL | Os gatilhos DDL no nível de servidor e de banco de dados não têm suporte com tabelas OLTP in-memory e módulos compilados nativamente. |  
 | Change Data Capture (CDC) | O SQL Server 2017 CU15 e o suporte superior habilitam o CDC em um banco de dados com tabelas otimizadas para memória. Isso só é aplicável ao banco de dados e a todas as tabelas em disco no banco de dados. Nas versões anteriores do SQL Server, o CDC não pode ser usado com um banco de dados com tabelas com otimização de memória, pois o CDC usa internamente um gatilho DDL para DROP TABLE. |  
 | Modo fibra | O modo fibra não tem suporte em tabelas com otimização de memória:<br /><br />Se o modo fibra estiver ativo, não será possível criar bancos de dados com grupos de arquivos com otimização de memória ou adicionar grupos de arquivos com otimização de memória a bancos de dados existentes.<br /><br />Você pode habilitar o modo fibra se houver bancos de dados com grupos de arquivos com otimização de memória. No entanto, habilitar o modo fibra exige a reinicialização do servidor. Nessa situação, haverá falha na recuperação dos bancos de dados com grupos de arquivos com otimização de memória. Em seguida, uma mensagem de erro sugerirá que você desabilite o modo fibra para usar bancos de dados com grupos de arquivos com otimização de memória.<br /><br />Haverá falha ao anexar e restaurar bancos de dados com grupos de arquivos com otimização de memória se o modo fibra estiver ativo. Os bancos de dados será marcado como suspeito.<br /><br />Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  

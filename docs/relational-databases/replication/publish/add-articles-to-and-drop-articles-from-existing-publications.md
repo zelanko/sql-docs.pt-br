@@ -21,15 +21,15 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1bd5e9d25a2f45718e7ac03de1edced942702198
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfaa32b87c5e7cffa60f3eef9d5b20ae85a747e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286518"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159914"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Depois que uma publicação é criada, é possível adicionar e descartar artigos. Os artigos podem ser adicionados a qualquer hora, mas as ações necessárias para descartar artigos dependem do tipo de replicação e de quando o artigo é descartado.  
   
 ## <a name="adding-articles"></a>adicionando artigos  
@@ -59,7 +59,7 @@ ms.locfileid: "76286518"
 ## <a name="dropping-articles"></a>descartando artigos  
  Os artigos podem ser descartados de uma publicação a qualquer hora, mas é necessário levar em conta os seguintes comportamentos:  
   
--   Descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use DROP \<Objeto> para remover esses objetos, se necessário. Ao remover um artigo relacionado a outros artigos publicados por meio de restrições de chave estrangeira, recomendamos remover manualmente a tabela no Assinante ou usando uma execução de script sob demanda: especifique o script que inclua as instruções DROP \<Objeto> apropriadas. Para obter mais informações, consulte [Executar scripts durante a sincronização &#40;Programação do Transact-SQL de Replicação&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use DROP \<Object> para remover esses objetos, se necessário. Ao remover um artigo relacionado a outros artigos publicados por meio de restrições de chave estrangeira, recomendamos remover manualmente a tabela no Assinante ou usando uma execução de script sob demanda: especifique o script que inclua as instruções DROP \<Object> apropriadas. Para obter mais informações, consulte [Executar scripts durante a sincronização &#40;Programação do Transact-SQL de Replicação&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   Para publicações de mesclagem com nível de compatibilidade 90RTM ou superior, os artigos podem ser descartados a qualquer hora, porém um novo instantâneo é requerido. Adicionalmente:  
   

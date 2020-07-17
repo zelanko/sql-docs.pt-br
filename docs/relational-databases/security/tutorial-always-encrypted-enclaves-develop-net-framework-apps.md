@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595481"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279352"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Tutorial: Desenvolver um aplicativo .NET Framework usando o Always Encrypted com enclaves seguros
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Este tutorial ensina como desenvolver um aplicativo simples que emite consultas de banco de dados que usam um enclave seguro no lado do servidor para o [Always Encrypted com enclaves seguros](encryption/always-encrypted-enclaves.md). 
 
@@ -54,22 +54,22 @@ Para usar o Always Encrypted com enclaves seguros em um aplicativo .NET Framewor
 
 7. Abra o arquivo de configuração do aplicativo do projeto.
 
-8. Localize a seção de \<configuração\> e adicione ou atualize as seções \<configSections\>.
+8. Localize a seção \<configuration\> e adicione ou atualize as seções \<configSections\>.
 
-   a. Se a seção de \<configuração\>**não** contiver a seção \<configSections\>, adicione o conteúdo a seguir imediatamente abaixo da \<configuração\>.
+   a. Se a seção de \<configuration\> **não** contiver a seção \<configSections\>, adicione o conteúdo a seguir imediatamente abaixo de \<configuration\>.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. Se a seção de \<configuração\> já contiver a seção \<configSections\>, adicione a seguinte linha dentro de \<configSections\>:
+   b. Se a seção \<configruation\> já contiver a seção \<configSections\>, adicione a seguinte linha dentro de \<configSections\>:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. Dentro da seção de configuração, abaixo de \<configSections\>, adicione a seguinte seção, que especifica um provedor de enclave a ser usado para atestar e interagir com enclaves VBS:
+9. Dentro da seção de configuração, abaixo de \<configSections\>, adicione a seguinte seção, que especifica um provedor de enclave a ser usado para atestar e interagir com os enclaves VBS:
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>

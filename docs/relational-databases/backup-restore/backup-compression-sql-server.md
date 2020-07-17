@@ -2,7 +2,7 @@
 title: Compactação de backup (SQL Server) | Microsoft Docs
 description: Saiba mais sobre a compactação de backups do SQL Server, incluindo restrições, compensações de desempenho, a configuração da compactação de backup e a taxa de compactação.
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728536"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196932"
 ---
 # <a name="backup-compression-sql-server"></a>Compactação de backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,15 +82,24 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
      Normalmente, se uma página contém várias linhas com um campo contendo o mesmo valor, poderá ocorrer uma compactação significativa para esse valor. Por outro lado, para um banco de dados que contém dados aleatórios ou contém somente uma grande linha por página, um backup compactado pode ser tão grande quanto um backup não compactado.  
   
--   Se os dados são criptografados.  
+-   Se os dados são criptografados  
   
-     A compactação de dados criptografados é significativamente menor do que a compactação de dados equivalentes não criptografados. Se criptografia transparente de dados for usada para criptografar um banco de dados inteiro, a compactação de backup talvez não reduza muito o tamanho, se reduzir.  
-  
+     A compactação de dados criptografados é significativamente menor do que a compactação de dados equivalentes não criptografados. Por exemplo, se os dados forem criptografados no nível da coluna com Always Encrypted ou com outra criptografia no nível do aplicativo, a compactação dos backups poderá não reduzir significativamente o tamanho.
+
+     Para obter mais informações relacionadas à compactação de bancos de dados criptografados com a tecnologia TDE (Transparent Data Encryption), confira a [Compactação de backup com TDE](#backup-compression-with-tde).
+
 -   Se o banco de dados é compactado.  
   
      Se o banco de dados for compactado, a compactação de backups poderá não reduzir muito o seu tamanho.  
-  
-  
+
+## <a name="backup-compression-with-tde"></a>Compactação de backup com TDE
+
+Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], definir `MAXTRANSFERSIZE` **maior que 65.536 (64 KB)** permite um algoritmo de compactação otimizada para bancos de dados criptografados com [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) que primeiro descriptografa uma página, compacta-a e, depois, criptografa-a novamente. Se `MAXTRANSFERSIZE` não for especificado ou se `MAXTRANSFERSIZE = 65536` (64 KB) for usado, a compactação de backup com bancos de dados criptografados com TDE compactará diretamente as páginas criptografadas e poderá não resultar em taxas de compactação satisfatórias. Para obter mais informações, consulte [Compactação de backup para bancos de dados habilitados para TDE](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
+Do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 em diante, a configuração de `MAXTRANSFERSIZE` não é mais necessária para habilitar esse algoritmo de compactação otimizado com TDE. Se o comando backup for especificado `WITH COMPRESSION` ou a configuração de servidor *padrão de compactação de backup* for definido como 1, `MAXTRANSFERSIZE` será automaticamente aumentado para 128 K para habilitar o algoritmo otimizado. Se `MAXTRANSFERSIZE` for especificado no comando de backup com um valor > 64 K, o valor fornecido será respeitado. Em outras palavras, o SQL Server nunca diminuirá o valor automaticamente, ele somente o aumentará. Se você precisar fazer backup de um banco de dados criptografado com TDE com `MAXTRANSFERSIZE = 65536`, será preciso especificar `WITH NO_COMPRESSION` ou garantir que a configuração de servidor *padrão de compactação de backup* seja definida como 0.
+
+Para obter mais informações, confira [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
+
 ##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Alocação de espaço para o arquivo de backup  
  Para backups compactados, o tamanho do arquivo de backup final depende de como os dados são compactáveis e isto é desconhecido antes da conclusão da operação de backup.  Portanto, por padrão, ao fazer backup de um banco de dados usando compactação, o Mecanismo de Banco de Dados usa um algoritmo de pré-alocação para o arquivo de backup. Este algoritmo pré-aloca um percentual predefinido do tamanho do banco de dados para o arquivo de backup. Se for necessário mais espaço durante a operação de backup, o Mecanismo de Banco de Dados crescerá o arquivo. Se o tamanho final for menor que o espaço alocado, no final da operação de backup, o Mecanismo de Banco de Dados reduzirá o arquivo para o tamanho final real do backup.  
   
