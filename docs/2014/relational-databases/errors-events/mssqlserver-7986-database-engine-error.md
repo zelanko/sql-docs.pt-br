@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05577850e65e7bb180aebf2d535d7d59e3fb1986
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 87a6fc35b72b608e57fe3f3eb4b9273a13eab40c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032023"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553261"
 ---
 # <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|7986|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|Texto da mensagem|Verificações prévias de tabela do sistema: a ID de objeto O_ID tem vínculos de cadeia entre objetos. A página P_ID1 aponta para P_ID2 na ID de unidade de alocação A_ID1 (deve ser A_ID2). Instrução de verificação encerrada devido a erro irreparável.|  
+|Texto da mensagem|Verificações prévias de tabela do sistema: A ID do objeto O_ID tem vínculos de cadeia entre objetos. A página P_ID1 aponta para P_ID2 na ID de unidade de alocação A_ID1 (deve ser A_ID2). Instrução de verificação encerrada devido a erro irreparável.|  
   
 ## <a name="explanation"></a>Explicação  
  A primeira fase de um DBCC CHECKDB envolve a execução de verificações primitivas nas páginas de dados das tabelas de sistema críticas. Se forem encontrados erros, não será possível corrigi-los; por isso, DBCC CHECKDB é encerrado imediatamente. O ponteiro de próxima página da página *P_ID1* no nível de dados do objeto especificado aponta para uma página, a *P_ID2*, em um objeto diferente.  

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 1b23850ffcaf7ae4e4d63775cd6a7c112ef44e00
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969520"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553781"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|1505|  
@@ -58,7 +58,7 @@ ms.locfileid: "84969520"
   
 -   Selecione colunas definidas como NOT NULL quando escolher colunas para um índice exclusivo ou para uma restrição exclusiva. Isso elimina a possibilidade de ocorrer uma violação de exclusividade gerada quando mais de uma linha contiver NULL nos valores de chave.  
   
--   Se os valores duplicados forem o resultado de erros de entrada de dados, corrija os dados manualmente e, em seguida, crie o índice ou a restrição. Para obter informações sobre como remover linhas duplicadas de uma tabela, consulte o artigo 139444 da Base de Dados de Conhecimento: [Como remover linhas duplicadas de uma tabela no SQL Server](https://support.microsoft.com/kb/139444).  
+-   Se os valores duplicados forem o resultado de erros de entrada de dados, corrija os dados manualmente e, em seguida, crie o índice ou a restrição. Para obter informações sobre como remover linhas duplicadas de uma tabela, veja o artigo 139444 da base de dados de conhecimento: [Como remover linhas duplicadas de uma tabela no SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

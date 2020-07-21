@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7d650bbf-c583-4af8-9e22-993ee2880d95
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8c2bc421fb969e4f24e49871ff97047be9040ae0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b4c364e30b12a0d3e2dfc3a7bcb56d8b5a9f78b2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967906"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553704"
 ---
 # <a name="mssqlserver_17066"></a>MSSQLSERVER_17066
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|17066|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLASSERT_ONLY|  
-|Texto da mensagem|SQL Server asserção: arquivo: \<%s> , linha =% d falha na asserção = '% s'. Talvez esse erro esteja relacionado à temporização. Se o erro persistir após a repetição da instrução, use DBCC CHECKDB para verificar a integridade estrutural do banco de dados ou reinicie o servidor para assegurar que as estruturas de dados na memória não estejam corrompidas.|  
+|Texto da mensagem|Asserção do SQL Server: Arquivo: \<%s>, line=%d Declaração com Falha = '%s'. Talvez esse erro esteja relacionado à temporização. Se o erro persistir após a repetição da instrução, use DBCC CHECKDB para verificar a integridade estrutural do banco de dados ou reinicie o servidor para assegurar que as estruturas de dados na memória não estejam corrompidas.|  
   
 ## <a name="explanation"></a>Explicação  
  Talvez o erro seja causado por erros transitórios relacionados à temporização ou por dados corrompidos na memória ou no disco.  

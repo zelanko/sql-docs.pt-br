@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bf33ef7895ebeae9af158e0b7d8c3c4447805893
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: ed9c25be4a4e3cfa6b0c00c9dc790214415d3593
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969889"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554231"
 ---
 # <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|-1|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
-|Texto da mensagem|Ocorreu um erro ao estabelecer uma conexão com o servidor.  Ao estabelecer conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa falha pode ser causada pelo fato de que as configurações padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permitem conexões remotas. provedor: Interfaces de Rede do SQL, erro: 28 - O servidor não oferece suporte ao protocolo solicitado) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Erro: -1)|  
+|Texto da mensagem|Ocorreu um erro ao estabelecer uma conexão com o servidor.  Ao estabelecer conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa falha pode ser causada pelo fato de que as configurações padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permitem conexões remotas. (provedor: adaptadores de rede do SQL, erro: 28 – O servidor não é compatível com o protocolo solicitado) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], erro: -1)|  
   
 ## <a name="explanation"></a>Explicação  
  O cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode se conectar com o servidor. Esse erro pode ser causado por um dos seguintes motivos:  
@@ -61,6 +61,6 @@ ms.locfileid: "84969889"
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configuração de rede do cliente](../../database-engine/configure-windows/client-network-configuration.md)   
  [Configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md)   
- [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
+ [Habilitar ou desabilitar um protocolo de rede do servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
   

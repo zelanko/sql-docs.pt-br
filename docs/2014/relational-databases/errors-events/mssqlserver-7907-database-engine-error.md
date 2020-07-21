@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3717030dff33b2e67ceae427b7fd42178a0597d
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: baaaaf3966841fb1ff97e9b8b29bb115ff0b4be4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032450"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553358"
 ---
 # <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|7907|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: o diretório 'DIRECTORY' na ID de partição PN_ID não é um diretório de Filestream válido.|  
+|Texto da mensagem|Erro de tabela: o diretório 'DIRECTORY' na ID de partição PN_ID não é um diretório de Fluxo de arquivos válido.|  
   
 ## <a name="explanation"></a>Explicação  
  O nome de um diretório de coluna é a ID de coluna de mecanismo relacional da partição. Se o nome de um diretório de coluna não puder ser convertido em uma ID de coluna, o diretório não será um diretório de coluna válido.  

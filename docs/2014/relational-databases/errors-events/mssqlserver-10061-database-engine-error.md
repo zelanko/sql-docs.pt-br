@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1b93e48814a1d092e2d39982f198c1779c8396e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 293bc57fa85b62f538399e703e7478c5bf7e850e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969846"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554181"
 ---
 # <a name="mssqlserver_10061"></a>MSSQLSERVER_10061
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|10061|  
@@ -40,7 +40,7 @@ ms.locfileid: "84969846"
  Verifique se o servidor está iniciado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciar os serviços de Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
+ [Gerenciar os serviços do Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configuração de rede do cliente](../../database-engine/configure-windows/client-network-configuration.md)   

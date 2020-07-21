@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 32c1f0e8-db70-4836-95b2-8833be9e0ad1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff3de7ed2fbe54a32aaa501979a3acb6b452947
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 2bd9a9d7e2c8b9d03c3fdaefd1364102cbd7ba56
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967896"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553691"
 ---
 # <a name="mssqlserver_17067"></a>MSSQLSERVER_17067
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|17067|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLASSERT_MESG|  
-|Texto da mensagem|Asserção de SQL Server: arquivo: \<%s> , linha =% d% s. Talvez esse erro esteja relacionado à temporização. Se o erro persistir após a repetição da instrução, use DBCC CHECKDB para verificar a integridade estrutural do banco de dados ou reinicie o servidor para assegurar que as estruturas de dados na memória não estejam corrompidas.|  
+|Texto da mensagem|Asserção do SQL Server: Arquivo: \<%s>, linha = %d %s. Talvez esse erro esteja relacionado à temporização. Se o erro persistir após a repetição da instrução, use DBCC CHECKDB para verificar a integridade estrutural do banco de dados ou reinicie o servidor para assegurar que as estruturas de dados na memória não estejam corrompidas.|  
   
 ## <a name="explanation"></a>Explicação  
  Talvez o erro seja causado por erros transitórios relacionados à temporização ou por dados corrompidos na memória ou no disco.  

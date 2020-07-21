@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 277d660051608405a6d6e484bbf84c184d4d320f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fb7fcdaf626ac2956d14d22864e72834dd9d3e58
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053571"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553199"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|8645|  
@@ -41,7 +41,7 @@ ms.locfileid: "85053571"
   
 1.  Verifique se outros aplicativos ou serviços estão consumindo memória neste servidor. Reconfigure os aplicativos ou serviços menos críticos de maneira que eles consumam menos memória.  
   
-2.  Comece a coletar contadores do monitor de desempenho relativos a **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
+2.  Comece a coletar contadores do monitor de desempenho para o **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
   
 3.  Verifique os seguintes parâmetros de configuração da memória do SQL Server:  
   

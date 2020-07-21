@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1cef90ef-9c39-44e6-bc7f-316c8f53c10c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 900707634a016ecfd29f9f676e68b4d2f557ccea
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c6ff7823f868882db8ed260aabb3fc1bb05c4f42
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034277"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552034"
 ---
 # <a name="mssqlserver_2527"></a>MSSQLSERVER_2527
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|2527|  
@@ -40,7 +40,7 @@ ms.locfileid: "85034277"
  Restaure o arquivo offline de um backup.  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys. master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

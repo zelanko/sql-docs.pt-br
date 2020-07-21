@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 53d4d63a-61e3-441f-bfe9-9d44f7a05fd4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 231024ce36caa8a715d56da256a8a98307bc7911
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: a2cba735b515cc7b3baffe519edd339e60a1bfc8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968096"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554011"
 ---
 # <a name="mssqlserver_11001"></a>MSSQLSERVER_11001
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|11001|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
-|Texto da mensagem|Ocorreu um erro ao estabelecer uma conexão com o servidor.  Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor TCP, erro: 0 – Nenhum host desse tipo é conhecido.) (Provedor de Dados .NET SqlClient)|  
+|Texto da mensagem|Ocorreu um erro ao estabelecer uma conexão com o servidor.  Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor TCP, erro: 0 – nenhum host desse tipo é conhecido.) (Provedor de Dados SqlClient do .Net)|  
   
 ## <a name="explanation"></a>Explicação  
  O cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode se conectar com o servidor. Esse erro pode ocorrer porque o cliente não pode resolver o nome do servidor ou o nome do servidor está incorreto.  

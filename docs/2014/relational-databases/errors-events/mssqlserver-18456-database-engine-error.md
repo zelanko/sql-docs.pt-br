@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d0f1216bf1b617a80288c6e5112674c2447979f4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034965"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552241"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|18456|  
@@ -76,7 +76,7 @@ ms.locfileid: "85034965"
   
  **Outra possível causa incomum**  
   
- O motivo do erro **falha na tentativa de logon usando a autenticação do SQL. O servidor está configurado somente para autenticação do Windows.** pode ser retornado nas situações a seguir.  
+ A razão de erro **Falha em uma tentativa de logon com a Autenticação do SQL Server. O servidor está configurado apenas para a autenticação do Windows.** pode ser retornado nas situações a seguir.  
   
 -   Quando o servidor é configurado para a autenticação de modo misto e uma conexão ODBC usa o protocolo TCP, e a conexão não especificar explicitamente que a conexão deve usar uma conexão confiável.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "85034965"
 |2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [CLIENTE: \<ip address>]|  
   
 > [!NOTE]  
->  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso causa o erro de Estado 7: "falha no logon para o usuário ' sa '." Para habilitar o logon **SA** , consulte [alterar o modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso causa o erro de estado 7: "Falha no logon do usuário 'sa'." Para habilitar o logon **sa**, consulte [Alterar modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Ação do usuário  
  Se você estiver tentando se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado no Modo de Autenticação Mista.  
@@ -108,6 +108,6 @@ ms.locfileid: "85034965"
   
  Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferecer suporte a bancos de dados independentes, confirme que o logon não foi excluído após a migração para um usuário de banco de dados independente.  
   
- Durante a conexão local a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as conexões de serviços executados em **NT AUTHORITY\NETWORK SERVICE** deverão ser autenticadas com o uso do nome de domínio totalmente qualificado dos computadores. Para obter mais informações, consulte [Como usar a conta de serviço de rede para acessar recursos no ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
+ Durante a conexão local a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as conexões de serviços executados em **NT AUTHORITY\NETWORK SERVICE** deverão ser autenticadas com o uso do nome de domínio totalmente qualificado dos computadores. Para saber mais, confira [Como usar a conta de serviço de rede para acessar recursos no ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 29b967b8-de30-4618-99a8-8b1155e69026
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62e5d41248aa5f79f5f0537c794d20b92f0e096f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 30b9e0daa53341b60e524daea061536f826f3603
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032007"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553241"
 ---
 # <a name="mssqlserver_7988"></a>MSSQLSERVER_7988
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|7988|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|Texto da mensagem|Verificações prévias de tabela do sistema: ID de objeto O_ID. Detectado loop na cadeia de dados em P_ID. Instrução de verificação encerrada devido a um erro irreparável.|  
+|Texto da mensagem|Verificações prévias de tabela do sistema: ID do objeto O_ID. Detectado loop na cadeia de dados em P_ID. Instrução de verificação encerrada devido a um erro irreparável.|  
   
 ## <a name="explanation"></a>Explicação  
  A primeira fase de um DBCC CHECKDB envolve a execução de verificações primitivas nas páginas de dados das tabelas de sistema críticas. Se algum erro for encontrado, eles não poderão ser reparados, portanto, o DBCC CHECKDB será encerrado imediatamente. Foi detectado um loop de ligação de página na página *P_ID*. Esse tipo de loop ocorre quando os próximos ponteiros de uma página futuramente retornam a ela.  

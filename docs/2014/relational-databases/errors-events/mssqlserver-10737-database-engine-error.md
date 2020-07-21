@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 208af6ed-b271-4ab8-803e-7666025385c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df8a4de014552d3aca00b3eb244f7ff8df56756b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 60b577640518b10183cb7f61464871f7cef95d18
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969746"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554051"
 ---
 # <a name="mssqlserver_10737"></a>MSSQLSERVER_10737
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|MSSQLSERVER|  
 |ID do evento|10737|  
@@ -32,6 +32,6 @@ ms.locfileid: "84969746"
 |Texto da mensagem|Em uma instrução ALTER TABLE REBUILD ou ALTER INDEX REBUILD, quando uma partição é especificada em uma cláusula DATA_COMPRESSION, especifique PARTITION=ALL. A cláusula PARTITION=ALL é usada para reforçar que todas as partições da tabela ou do índice serão reconstruídas, mesmo que apenas um subconjunto seja especificado na cláusula DATA_COMPRESSION.|  
   
 ## <a name="user-action"></a>Ação do usuário  
- Adicione a cláusula PARTITION=ALL à instrução ALTER TABLE ou ALTER INDEX. Ou, para recriar uma partição específica, use recriar partição = \<partition-number-expr> com (DATA_COMPRESSION = {on | OFF}).  
+ Adicione a cláusula PARTITION=ALL à instrução ALTER TABLE ou ALTER INDEX. Se preferir, recompile uma partição específica e use REBUILD PARTITION = \<partition-number-expr> WITH (DATA_COMPRESSION={ON | OFF}).  
   
   
