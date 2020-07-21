@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd78df21c50951991b048d767faacb01d8677b3a
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c8a071caf6eb989758564731fd68f424821b6681
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032520"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551066"
 ---
 # <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|7903|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_ORPHANED_FILE|  
-|Texto da mensagem|Erro de tabela: o arquivo órfão 'FILE' encontrado no diretório Filestream da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de coluna C_ID.|  
+|Texto da mensagem|Erro de tabela: O arquivo órfão 'FILE' encontrado no diretório Filestream da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de coluna C_ID.|  
   
 ## <a name="explanation"></a>Explicação  
  Um arquivo de FILESTREAM foi encontrado em um diretório de coluna FILESTREAM; entretanto, o valor de coluna correspondente na partição está ausente.  

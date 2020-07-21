@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f40ac3a566280526757bd8b83c784954ba3dde
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 33302a6bccca3d83ef16172eaac7dcfc156ec3a8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032801"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551261"
 ---
 # <a name="mssqlserver_5231"></a>MSSQLSERVER_5231
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|5231|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC4_DEADLOCK_SKIPPED_OBJECT|  
-|Texto da mensagem|ID do objeto O_ID (objeto 'NAME'): ocorreu um deadlock ao tentar bloquear este objeto para verificação. Esse objeto foi ignorado e não será processado.|  
+|Texto da mensagem|ID de objeto O_ID (objeto 'NAME'): Ocorreu um deadlock ao tentar bloquear este objeto para verificação. Esse objeto foi ignorado e não será processado.|  
   
 ## <a name="explanation"></a>Explicação  
  Ocorreu um deadlock quando DBCC estava tentando bloquear o objeto, e DBCC foi escolhido como vítima do deadlock. O objeto não será processado.  

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 52ed02b755d18191eba31fe771168932e8f2ab0c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f4fac1af45571023b718ec474cb69a78a272d0ad
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032192"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551014"
 ---
 # <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|7933|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Filestream F_ID para uma partição, mas a partição correspondente não existe no banco de dados.|  
+|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Fluxo de arquivos F_ID para uma partição, mas a partição correspondente não existe no banco de dados.|  
   
 ## <a name="explanation"></a>Explicação  
  Durante DBCC CHECKDB, foi encontrado um diretório de conjunto de linhas no espaço de dados FILESTREAM; entretanto, a partição correspondente não foi localizada no banco de dados.  

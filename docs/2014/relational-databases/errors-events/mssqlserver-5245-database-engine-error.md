@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f98c831642580587552bf60c604d84c38fffca8c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 2cea5c900150a26ecde783e50b953cc4a035a8ff
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032633"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551212"
 ---
 # <a name="mssqlserver_5245"></a>MSSQLSERVER_5245
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|5245|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|Texto da mensagem|ID de objeto O_ID (objeto 'NAME'): DBCC não pôde obter um bloqueio nesse objeto porque o tempo limite da solicitação de bloqueio foi ultrapassado. Esse objeto foi ignorado e não será processado.|  
+|Texto da mensagem|ID de objeto O_ID (objeto 'NAME'): o DBCC não pôde obter um bloqueio nesse objeto porque o tempo limite da solicitação de bloqueio foi ultrapassado. Esse objeto foi ignorado e não será processado.|  
   
 ## <a name="explanation"></a>Explicação  
  O limite de tempo do bloqueio expirou enquanto DBCC estava aguardando um bloqueio de tabela para o objeto especificado.  

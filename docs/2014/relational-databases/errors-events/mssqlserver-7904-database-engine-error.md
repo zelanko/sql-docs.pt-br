@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b3ff8ccff569dd1b00335e3b418cf985454c74f7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 7a97063e21f0f9989177f60d68067e8e852dd26d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032560"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551051"
 ---
 # <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|7904|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_MISSING_FILE|  
-|Texto da mensagem|Erro de tabela: o arquivo de Filestream da ID de coluna C_ID, ROWGUID RG_ID na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não foi localizado.|  
+|Texto da mensagem|Erro de tabela: O arquivo de fluxo de arquivos da ID de coluna C_ID, ROWGUID RG_ID na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não foi localizado.|  
   
 ## <a name="explanation"></a>Explicação  
  Um valor de coluna de uma partição não tem um arquivo de FILESTREAM correspondente no diretório de coluna FILESTREAM correspondente.  

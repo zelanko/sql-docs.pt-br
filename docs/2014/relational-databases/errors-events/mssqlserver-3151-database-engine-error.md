@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c34414754ea9d25ad89f6aba767197eb1dfc10d0
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b427188ddf7b65511971c44ea0bf718f546484a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033919"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551792"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|3151|  
@@ -35,6 +35,6 @@ ms.locfileid: "85033919"
  Essa é uma mensagem de erro geral que indica vários problemas com o banco de dados **mestre**.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Verifique os logs de erros para obter mais informações. Para criar um banco de dados **mestre** utilizável, execute Setup.exe com a opção REBUILDDATABASE. Para obter mais informações, consulte “Como instalar o SQL Server a partir do prompt de comando” nos Manuais Online do SQL Server.  
+ Verifique os logs de erros para obter mais informações. Para criar um banco de dados **mestre** utilizável, execute Setup.exe com a opção REBUILDDATABASE. Para saber mais, consulte "Como: instalar o SQL Server a partir do prompt de comando” nos Manuais Online do SQL Server.  
   
   

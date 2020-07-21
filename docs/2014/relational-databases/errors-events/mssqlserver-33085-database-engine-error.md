@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdb5fbdc59baadcbc315dc0fe19aaae9dbe40bb9
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d422e448a4f67daca7a5214f344cb1797c2b6758
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033755"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551661"
 ---
 # <a name="mssqlserver_33085"></a>MSSQLSERVER_33085
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|33085|  
@@ -34,7 +34,7 @@ ms.locfileid: "85033755"
 ## <a name="explanation"></a>Explicação  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde usar o provedor criptográfico listado na mensagem de erro. O provedor criptográfico não deu suporte a um método exigido. O estado do erro indica qual método não foi encontrado.  
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  

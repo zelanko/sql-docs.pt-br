@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8da0c0aabbda01ea73d28002d84a1769ae02cd1e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 453a34eb45010daecf635e941b61181f0f627c55
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033803"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551674"
 ---
 # <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|33028|  
@@ -34,7 +34,7 @@ ms.locfileid: "85033803"
 ## <a name="explanation"></a>Explicação  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde abrir o provedor criptográfico listado na mensagem de erro. O provedor criptográfico forneceu o código de erro listado. Você talvez precise contatar seu provedor criptográfico para obter mais informações sobre o erro.  
   
-|Código do erro|DESCRIÇÃO|  
+|Código do erro|Descrição|  
 |----------------|-----------------|  
 |0|Sucesso. Nenhum erro.|  
 |1|Falha. Ocorreu um erro não especificado ou inesperado. Não há informações adicionais disponíveis.|  

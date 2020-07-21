@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1183b787e38821592e9fb3da81e07ba3c6ecd551
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: dca357f63065940963bad899086f9ac88dfdbaf6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032200"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550970"
 ---
 # <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Atributo|Valor|  
 |-|-|  
 |Nome do Produto|SQL Server|  
 |ID do evento|7935|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_MISSING_COLUMN|  
-|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Filestream F_ID para uma coluna da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, mas essa coluna não existe na partição.|  
+|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Fluxo de arquivos F_ID para uma coluna da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, mas essa coluna não existe na partição.|  
   
 ## <a name="explanation"></a>Explicação  
  Durante a execução de DBCC CHECKDB, foi encontrado um diretório de FILESTREAM para uma coluna do objeto especificado, porém essa coluna não existe nos metadados correspondentes da partição.  
