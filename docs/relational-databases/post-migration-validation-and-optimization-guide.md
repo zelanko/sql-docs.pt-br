@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 82b9b9b02931aee0a7ea5411cb367b394c1d1d74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774058"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914422"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 A etapa pós-migração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é crucial para reconciliar a precisão e a integridade dos dados, bem como descobrir problemas de desempenho com a carga de trabalho.
 

@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 02892e3768a01ee834598d620300962f1a2bbb56
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 85c2d413207778f4d0195f86df74b2d834047f6e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742320"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86909994"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Funções – dm_execution_performance_counters
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
   Retorna a estatística de desempenho para uma execução que está em execução no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

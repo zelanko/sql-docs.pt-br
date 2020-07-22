@@ -12,12 +12,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 86bdd7d12b662850a86621220cbe25a3160358c2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1c7d3419d7dfe087dfbae8ce11d8afd68f461892
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635928"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914042"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,7 +55,9 @@ Removing results for a diagnostics session:
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *diagnostics_name*  
  O nome da sessão de diagnóstico. os nomes de sessão de diagnóstico podem incluir somente caracteres a-z, A-Z e 0-9. Além disso, os nomes de sessão de diagnóstico precisam começar com um caractere. *diagnostics_name* é limitado a 127 caracteres.  
   
