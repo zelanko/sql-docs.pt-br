@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7754190fe629412ddc08e7087626b05ff2c093d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3a321893f6764eb2d6d8de97cf2d3d1dc5fbc65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700829"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555697"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consorti
 .AsTextZM ()  
 ```  
   
-## <a name="return-types"></a>Tipos de retorno  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipos de retorno
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
  Tipo de retorno do CLR: **SqlChars**  

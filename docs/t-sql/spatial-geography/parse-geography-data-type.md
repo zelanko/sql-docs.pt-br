@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 75e5083f3009a09e7b0ba347ab2a9982c852593f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6e2dcc0cf6ade3cb8f4e9c82b81e650ca7622a2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705853"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555839"
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Esse método de tipo de dados de **geography** é compatível com instâncias **
 Parse ( 'geography_tagged_text' )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *geography_tagged_text*  
  É a representação WKT da instância de **geography** a ser retornada. *geography_tagged_text* é uma expressão **nvarchar**.  
   

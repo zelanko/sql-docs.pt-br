@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bd65f185f2fac61c85eb6b21ab22c3d1d9abf622
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37008718b66d96ba604a72b49a5f082cc29766bc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748821"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555617"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo de dados geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ Retorna uma instância de **LineString** com dois pontos que representam a dist�
 .ShortestLineTo ( geometry_other )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *geometry_other*  
  A segunda instância de **geometry** para a qual a instância de **geometry** de chamada está tentando determinar a distância mais curta.  
   

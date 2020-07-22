@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fbc5bd95c10c89da4fb6fc6cbd1400f2e310927b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dfb1988f2f1405b2e69459824ee47983295ad31
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738198"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556196"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (Mecanismo de Banco de Dados)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna a raiz da árvore hierárquica. GetRoot() é um método estático.
@@ -40,7 +41,9 @@ hierarchyid::GetRoot ( )
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Tipos de retorno  
 **Tipo de retorno do SQL Server: hierarchyid**
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2948e131d27437ca09fc11aee7d2d3805db7e372
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a70e75cb86187c01f37738efbae8d5ead6bd35e8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762567"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554307"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retorna o anel exterior de uma instância de **geometry**, que é um polígono.
 .STExteriorRing ( )  
 ```  
   
-## <a name="return-types"></a>Tipos de retorno  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipos de retorno
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de retorno do CLR: **SqlGeometry**  

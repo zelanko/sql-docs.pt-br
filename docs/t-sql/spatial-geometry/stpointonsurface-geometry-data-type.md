@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8f3e3296ec37048fbb2bf6ba20d75db0f3b46283
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 50e842f2fdba29cbc5349566201449e4e4533ad9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762209"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555942"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retorna um ponto arbitrário localizado no interior de uma instância de **geome
 .STPointOnSurface ( )  
 ```  
   
-## <a name="return-types"></a>Tipos de retorno  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipos de retorno
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de retorno do CLR: **SqlGeometry**  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dfd1140f4d42ccb4f46d2efa6657876a559d72a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af6fdaff361ae845000455bf53cb952466a0ef30
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762539"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554271"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retornará 1 se uma instância de **geometry** representar o mesmo conjunto de p
 .STEquals ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *other_geometry*  
  É outra instância de **geometry** a ser comparada com a instância na qual `STEquals()` é invocado.  
   

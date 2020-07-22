@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9622a762b8ac7e40dfcbd61c9ff4acdbe2aef67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 33752578feb12ce8471e9f7bf01b6138e2e8b8e7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748884"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552815"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Um método que testa se a instância de **geometry** é igual ao tipo especifica
 .InstanceOf (geometry_type )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *geometry_type*  
 Cadeia de caracteres **nvarchar(4000)** que especifica um dos 15 tipos expostos na hierarquia de tipo **geometry**.  
   

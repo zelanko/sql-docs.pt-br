@@ -27,12 +27,12 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8bc1a652b84aeb088046d6b76d40cbd5227d3672
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c5feec859ede608fd732099c7cfdb1219e013741
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011355"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552932"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,9 @@ Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE
     ( CTE_query_definition )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *expression_name*  
 É um identificador válido para a expressão de tabela comum. *expression_name* deverá ser diferente do nome de qualquer outra expressão de tabela comum definida na mesma cláusula WITH \<common_table_expression>, porém *expression_name* poderá ser igual ao nome de uma exibição ou tabela base. Qualquer referência a *expression_name* na consulta usa a expressão de tabela comum, e não o objeto base.
   

@@ -17,18 +17,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 149c0e80cc64c1511c074a60595b26b668cfae8e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 74725f71656141c4e441f80b4ba059012b4b65bb
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83605698"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552751"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
-## <a name="click-a-product"></a>Clique em um produto!
-
-Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique exibe conteúdo diferente aqui nesta página da Web, apropriado para qualquer produto no qual você clicar.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -48,7 +46,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ||||
 |---|---|---|
-|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)| **_Instância gerenciada do \*Banco de Dados SQL<br /> \*_** &nbsp;|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|**_Instância gerenciada do \*Banco de Dados SQL<br /> \*_** &nbsp;|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 ||||
 
 &nbsp;

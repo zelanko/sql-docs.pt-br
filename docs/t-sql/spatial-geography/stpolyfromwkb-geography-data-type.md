@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c2a3191e96d70cff0be0dfa2b3f0944b449c995a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f83894fc743a9d1d9c779dc44c1243eb27696da
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701959"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555320"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retorna uma instância de **geographyPolygon** de uma representação WKB (Well-
 STPolyFromWKB ( 'WKB_polygon' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *WKB_polygon*  
  É a representação WKB da instância de **geographyPolygon** que você deseja retornar. *WKB_polygon* é uma expressão **varbinary(max)** .  
   

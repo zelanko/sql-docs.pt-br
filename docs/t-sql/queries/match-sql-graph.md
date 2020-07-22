@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 576e026f19310ac596e4808b104e21bfb94cee7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731252"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555577"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -113,7 +113,9 @@ n -  positive integer only.
  
 ```
 
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *graph_search_pattern*  
 Especifica o padrão a ser pesquisado ou o caminho a ser percorrido no gráfico. Esse padrão usa a sintaxe de arte ASCII para percorrer um caminho no gráfico. O padrão varia de um nó para outro por meio de uma borda, na direção da seta fornecida. Os nomes de borda ou aliases são fornecidos em parênteses. Os nomes de nó ou os aliases são exibidos nas duas extremidades da seta. A seta pode apontar para qualquer direção no padrão.
 

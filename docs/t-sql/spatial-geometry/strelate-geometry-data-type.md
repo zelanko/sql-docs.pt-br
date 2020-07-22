@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 274b14dc7d4feaedfd4f32221312762eddedc005
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d884f29122b9b8afda3c994cba4a07290bb059b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762183"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555612"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo de dados geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762183"
 .STRelate ( other_geometry, intersection_pattern_matrix )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *other_geometry*  
  É outra instância de **geometry** a ser comparada com a instância na qual `STRelate()` é invocado.  
   

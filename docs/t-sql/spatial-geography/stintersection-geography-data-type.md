@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ec264773787fd89f8cb36ba2e2386a186dc78816
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9107a97c775aaf5b249ee0a16e8e916c700d00a4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736125"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554382"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (tipo de dados geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85736125"
 .STIntersection ( other_geography )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *other_geography*  
  É outra instância de **geography** a ser comparada com a instância na qual STIntersection() está sendo invocado.  
   

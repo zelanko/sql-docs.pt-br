@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e68559c2f795a16bd9257d53a92f1cb5899d711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3394e41418a45c56625af084e4dca0afeefa50b8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729619"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554781"
 ---
 # <a name="write-database-engine"></a>Write (Mecanismo de Banco de Dados)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,10 @@ O método Write grava uma representação binária de **SqlHierarchyId** no **Bi
 ```sql
 void Write( BinaryWriter w )   
 ```  
-  
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *w*  
 Um objeto **BinaryWriter** no qual a representação binária deste nó **hierarchyid** será gravada.
   

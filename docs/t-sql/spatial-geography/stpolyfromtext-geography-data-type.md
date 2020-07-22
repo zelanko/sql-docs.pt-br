@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d44b0ea05b2917235c89d6f98f496a4b6dcfac51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6fb63e1a853c96c972578a1be757dfcefd87751
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701970"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555319"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retorna uma instância de **geography** de uma representação WKT (Well-Known T
 STPolyFromText ( 'polygon_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *polygon_tagged_text*  
  É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)** .  
   

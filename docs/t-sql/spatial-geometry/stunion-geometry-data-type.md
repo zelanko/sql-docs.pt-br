@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2fab8310cf59a2d6209f6c4111241071c648df46
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad2ad92952a3848982c9cf8873f70217db654ee8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762129"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554879"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo de dados geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retorna um objeto que representa a união de uma instância de **geometry** com 
 .STUnion ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *other_geometry*  
  É outra instância de **geometry** para formar uma união com a instância na qual `STUnion()` está sendo invocado.  
   

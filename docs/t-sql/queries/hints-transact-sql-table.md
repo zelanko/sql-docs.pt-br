@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731331"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555851"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 Com algumas exceções, há suporte para dicas de tabela na cláusula FROM somente quando elas são especificadas com a palavra-chave WITH. Dicas de tabela também devem ser especificadas com parênteses.  
   
@@ -393,18 +395,20 @@ O otimizador de consulta não considerará uma dica de índice se as opções SE
 NOEXPAND aplica-se somente a *exibições indexadas*. Uma exibição indexada é uma exibição com um índice clusterizado exclusivo criado nela. Se uma consulta tiver referências a colunas presentes em uma exibição indexada e em tabelas base, e o otimizador de consulta determinar que o uso da exibição indexada oferece o melhor método para a execução da consulta, o otimizador de consulta usará o índice na exibição. Essa funcionalidade é chamada de *correspondência de exibição indexada*. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, o uso automático de uma exibição indexada pelo otimizador de consulta era compatível apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 No entanto, para que o otimizador considere exibições indexadas para correspondência ou uso de uma exibição indexada que é referenciada com a dica NOEXPAND, as seguintes opções SET devem ser definidas como ON.  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > O [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é compatível com o automático de exibições indexadas sem especificar a dica NOEXPAND.
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ARITHABORT é definido implicitamente como ON quando ANSI_WARNINGS é definido como ON. Portanto, você não precisa ajustar essa configuração manualmente.  
-  
- Além disso, a opção NUMERIC_ROUNDABORT deve ser definida como OFF.  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ARITHABORT é definido implicitamente como ON quando ANSI_WARNINGS é definido como ON. Portanto, você não precisa ajustar essa configuração manualmente.  
+
+Além disso, a opção NUMERIC_ROUNDABORT deve ser definida como OFF.  
   
  Para forçar o otimizador a usar um índice para uma exibição indexada, especifique a opção NOEXPAND. Essa dica poderá ser usada apenas se a exibição também estiver nomeada na consulta. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma dica para forçar o uso de uma exibição indexada específica em uma consulta que não nomeie a exibição diretamente na cláusula FROM. No entanto, o otimizador de consulta considera o uso de exibições indexadas, mesmo que elas não sejam referenciadas diretamente na consulta. O SQL Server apenas criará automaticamente as estatísticas em uma exibição indexada quando uma dica de tabela NOEXPAND for usada. A omissão dessa dica pode resultar em avisos de plano de execução sobre as estatísticas ausentes que não podem ser resolvidas com a criação manual de estatísticas. Durante a otimização da consulta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará as estatísticas de exibição que foram criadas automaticamente ou manualmente quando a consulta referenciar a exibição diretamente e a dica NOEXPAND for usada.    
   

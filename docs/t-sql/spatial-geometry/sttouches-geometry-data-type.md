@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: da644e6be773b96855e5e6fb4090ab84d822992d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40363a9c7f3f7a59f5da35930990c16eedf753f8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762137"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554568"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retornará 1 se uma instância de **geometry** tocar espacialmente outra instân
 .STTouches ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *other_geometry*  
  É outra instância de **geometry** a ser comparada com a instância na qual `STTouches()` é invocado.  
   
