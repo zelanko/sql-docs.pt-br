@@ -1,6 +1,6 @@
 ---
 title: CompoundCurve | Microsoft Docs
-ms.date: 06/02/2016
+ms.date: 07/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,21 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6250f45a50721d322bc29b1b2655b9d2d66edc4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ada315623e41e188a93eb7bef8df2295e437429
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751136"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438188"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Uma **CompoundCurve** é uma coleção de zero ou mais instâncias **CircularString** ou **LineString** contínuas dos tipos geometry ou geography.  
   
-> [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos novos recursos espaciais nesta versão, incluindo o subtipo **CompoundCurve** , baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
-  
- Pode ser criada uma instância **CompoundCurve** vazia, mas para que **CompoundCurve** seja válida, ela deverá atender aos seguintes critérios:  
+Pode ser criada uma instância **CompoundCurve** vazia, mas para que **CompoundCurve** seja válida, ela deverá atender aos seguintes critérios:  
   
 1.  Deve conter, pelo menos, uma instância **CircularString** ou **LineString** .  
   

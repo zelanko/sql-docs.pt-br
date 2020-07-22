@@ -28,12 +28,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: ebe438104f953d657ef79042994cc87f4d8637a3
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279523"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483508"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -64,7 +64,9 @@ DBCC SHRINKDATABASE
 
 ```  
 
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 _database\_name_ | _database\_id_ | 0  
 É o nome ou a ID do banco de dados a ser reduzido. Se 0 for especificado, o banco de dados atual será usado.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2fada5e47738dd39285f9171fce254147f144a82
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 296f30c5e8a6f8b296f09c5e9360ad4e81b7d2bf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766689"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484807"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>Permissões de texto completo DENY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ DENY permission [ ,...n ] ON
         [ AS denying_principal ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   

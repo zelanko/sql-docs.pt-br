@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f350f2d2a9b1f4b90030f928792570cc80653916
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: fae3e0c336af71fc73e8b39fd52d8ded0b478237
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392954"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465263"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 
@@ -253,8 +253,9 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`is_cached`|`1`|  
 |`current_value`|`-9223372036854775808`|  
   
-### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Criando uma sequência com um tipo de dados específico  
- O exemplo a seguir cria uma sequência usando o tipo de dados **smallint**, com um intervalo de -32.768 a 32.767.  
+### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Criando uma sequência com um tipo de dados específico
+
+O exemplo a seguir cria uma sequência usando o tipo de dados **smallint**, com um intervalo de -32.768 a 32.767.  
   
 ```sql  
 CREATE SEQUENCE SmallSeq 

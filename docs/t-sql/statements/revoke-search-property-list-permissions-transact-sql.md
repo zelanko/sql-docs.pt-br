@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1ccb7e5313ed36ad6fd3b08b030a9e60d3118bf6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 337ee4188d85ef83814ae6beb9095b835767dcb2
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894538"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483901"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>Permissões de lista de propriedades de pesquisa REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
     [ AS revoking_principal ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  GRANT OPTION FOR  
  Indica que o direito de conceder a permissão especificada a outros principais será revogado. A permissão em si não será revogada.  
   

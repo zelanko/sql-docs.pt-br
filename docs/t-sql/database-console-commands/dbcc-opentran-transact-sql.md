@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfea3cb27b67208179dcb7dcce8a0352f369b84c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748923"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484271"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,9 @@ DBCC OPENTRAN
 ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *database_name* | *database_id*| 0  
  É o nome ou a ID do banco de dados para o qual exibir as informações de transação mais antigas. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Os nomes de banco de dados precisam estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   

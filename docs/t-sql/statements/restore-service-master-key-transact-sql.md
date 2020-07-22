@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c374478297dac43375ae2958430e1ac87fa4968a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8565124ea527b5c9de885a5b342d6368b99149d6
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897826"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482867"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,9 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
     DECRYPTION BY PASSWORD = 'password' [FORCE]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  FILE **='** _path\_to\_file_ **'**  
  Especifica o caminho completo, inclusive o nome do arquivo, para a chave mestra do serviço. *path_to_file* pode ser um caminho local ou um caminho UNC para um local de rede.  
   

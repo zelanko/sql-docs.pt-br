@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735683"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483703"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Cláusula EXECUTE AS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,9 @@ DDL Triggers with Database Scope
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **CALLER**  
  Especifica que as instruções do módulo são executadas no contexto do chamador do módulo. O usuário executando o módulo deve ter permissões apropriadas não apenas no módulo em si, mas também em qualquer objeto que seja referenciado pelo módulo.  
   

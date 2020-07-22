@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f65e1888ed37eef6ad899063eb3d9ee87d2da6f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7c25b8f0395694bdb85cddbb5ec1bf0abf86c9d4
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735629"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483585"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade GRANT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,9 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser concedida em um grupo de disponibilidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   

@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) | Microsoft Docs
+title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012560"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484809"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Nega uma permissão a uma entidade de segurança. Impede a entidade de segurança de herdar a permissão através das suas associações de grupo ou de função. DENY tem precedência sobre todas as permissões, exceto que DENY não se aplica a proprietários do objeto nem a membros da função de servidor fixa sysadmin.
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  ALL  
  Esta opção não nega todas as permissões possíveis. Negar ALL é equivalente a negar as permissões a seguir.  
   
@@ -153,11 +156,12 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
   
  Os usuários autorizados da permissão CONTROL SERVER, como os membros da função de servidor fixa sysadmin, podem negar qualquer permissão em qualquer protegível do servidor. Os usuários autorizados da permissão CONTROL no banco de dados, como os membros da função de banco de dados fixa db_owner, podem negar qualquer permissão em qualquer protegível no banco de dados. Os usuários autorizados da permissão CONTROL em um esquema podem negar qualquer permissão no esquema. Se a cláusula AS for usada, o principal especificado deverá ser proprietário do protegível no qual as permissões estão sendo negadas.  
   
-## <a name="examples"></a>Exemplos  
+## <a name="examples"></a>Exemplos
+
  A tabela a seguir lista os protegíveis e os tópicos que descrevem a sintaxe específica a protegíveis.  
   
-|||  
-|-|-|  
+|Protegíveis|Sintaxe|
+|----------|------|
 |Função de aplicativo|[Permissões DENY da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Assembly|[Permissões DENY de assembly &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |Chave assimétrica|[Permissões DENY de chave assimétrica &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  

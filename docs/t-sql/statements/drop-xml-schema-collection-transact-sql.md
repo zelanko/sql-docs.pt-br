@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf078c2689163196e5424c526ad46642e470bf1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c46567c63dbfda8f622f1c70d32a5dfdc82925ac
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892096"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483109"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,9 @@ Exclui uma coleção de esquema XML inteira e todos os seus componentes.
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *relational_schema*  
 Identifica o nome de esquema relacional. Se não for especificado, o esquema relacional padrão será usado.  
   

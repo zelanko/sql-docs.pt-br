@@ -25,12 +25,12 @@ ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05ab7281448d8e20d23bf31c3da2a9ff08a7cd41
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 06cf89e2cb596ee7ced369fcd1ae7076264f702f
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005105"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465243"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86005105"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sqlsyntax  
 MONTH ( date )  
 ```  
   
@@ -62,20 +62,20 @@ MONTH ( date )
 ## <a name="examples"></a>Exemplos  
  A instrução a seguir retorna `4`. Este é o número do mês.  
   
-```  
+```sql  
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
  A instrução a seguir retorna `1900, 1, 1`. O argumento para *date* é o número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como janeiro 1, 1900.  
   
-```  
+```sql  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna `4`. Este é o número do mês.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')   
@@ -84,7 +84,7 @@ FROM dbo.DimCustomer;
   
  O exemplo a seguir retorna `1900, 1, 1`. O argumento para *date* é o número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como janeiro 1, 1900.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0) FROM dbo.DimCustomer;  

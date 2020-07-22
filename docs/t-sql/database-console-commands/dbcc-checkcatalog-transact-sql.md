@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0d6966d9a0df5fb8a548b7519ad06a43fbe3a694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a19aa7e89494d27d073c1305a75c531cf3ffda0
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749861"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485087"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,9 @@ DBCC CHECKCATALOG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *database_name* | *database_id* | 0  
  É o nome ou ID do banco de dados para o qual verificar consistência do catálogo. Se não for especificado ou se 0 for especificado, o banco de dados atual será usado. Os nomes de banco de dados precisam estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   

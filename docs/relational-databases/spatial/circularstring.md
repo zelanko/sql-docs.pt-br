@@ -1,7 +1,7 @@
 ---
 title: CircularString | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 07/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,16 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c08dd6c0e04c3c323af592ca015b5e1604a05e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c322662347302504d789599aab5887f2ee7ae47e
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751145"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438198"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Um **CircularString** é uma coleção de zero ou mais segmentos de arco circulares contínuos. Um segmento de arco circular é um segmento curvado definido por três pontos em um plano bidimensional; o primeiro ponto não pode ser igual ao terceiro ponto. Se todos os três pontos de um segmento de arco circular forem colineares, o segmento de arco será tratado como um segmento de linha.  
-  
-> [!IMPORTANT]  
-> Para obter uma descrição detalhada e exemplos dos novos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o subtipo **CircularString** , baixe o white paper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Novos recursos espaciais no SQL Server 2012).  
   
 ## <a name="circularstring-instances"></a>Instâncias CircularString  
  O desenho seguinte mostra instâncias **CircularString** válidas:  

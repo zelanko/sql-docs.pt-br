@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -11,14 +11,15 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4cb7824e3efd5a0d6cca969a790834a4e61968cb
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6d1a1a72fbe5ef1b8382901a62adfd95a907b765
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196904"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484257"
 ---
 # <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Exibe o tamanho e o número de linhas de cada partição de uma tabela em um banco de dados do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
@@ -32,7 +33,7 @@ Show the partition stats for a table
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  
-  
+
 ## <a name="arguments"></a>Argumentos  
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  O nome de uma, duas ou três partes da tabela a ser exibido.  Para nomes de tabela de duas partes, o nome precisa ser colocado entre aspas duplas (""). O uso de aspas para um nome de tabela de uma única parte é opcional.  
@@ -61,7 +62,8 @@ DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");  
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
+
 ## <a name="see-also"></a>Confira também
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
- 
+
+- [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+- [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  

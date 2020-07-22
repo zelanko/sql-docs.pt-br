@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56a071487c2cd3f6a6116c3d90d1572a450aa73d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20eaa69a9c0f07926d937128a7fc10c43d4128ef
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765765"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484327"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85765765"
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *value*  
  É um valor numérico ou inteiro que especifica o tempo mais longo de execução de uma consulta. Os valores são arredondados para baixo, para o inteiro mais próximo. Os valores negativos são arredondados para 0. O administrador de consultas não permite a execução de qualquer consulta que tem um custo calculado que excede aquele valor. Se for especificado 0 (o padrão) para essa opção, o administrador de consultas será desativado e todas as consultas terão permissão para serem executadas indefinidamente.  
   

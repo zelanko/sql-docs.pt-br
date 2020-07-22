@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c2ad1a4191a1ea3bbba6bcb34ee33dcdc89c94ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 190a0a74c230ce59cf8e36715ff405ec9decf7a1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897628"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485167"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>Permissões de coleção de esquema GRANT XML (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ GRANT permission  [ ,...n ] ON
     | Database_user_with_no_login  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser concedida em uma coleção de esquemas XML. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   

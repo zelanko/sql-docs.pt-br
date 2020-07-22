@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2a1c3460d3633ddb8b17582eea53a2c8d740b2ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899902"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483881"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85899902"
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *username* **'**  
  É o nome de um usuário do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados atual que é representado. Quando *username* não é especificado, a identidade original do administrador do sistema ou do proprietário do banco de dados que representa o usuário é redefinida.  
   

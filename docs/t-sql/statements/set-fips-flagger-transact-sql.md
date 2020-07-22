@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec7fe290a603d901de17fb88513434a13717e148
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fcbc4df284ef9fdd6467cf5bbe52e91c5c98da18
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765822"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484650"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85765822"
 SET FIPS_FLAGGER ( 'level' |  OFF )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *level* **'**  
  É o nível de conformidade em relação ao padrão FIPS 127-2, segundo o qual todas as operações de banco de dados são verificadas. Se uma operação de banco de dados entrar em conflito com o nível de padrões ISO escolhido, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um aviso.  
   

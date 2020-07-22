@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c86a2c5f9bc0ff1a65922f8dcda404fae645e569
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5deb7adf0be9de47cdd05e04280a1eb8b9f6678
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765860"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484664"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85765860"
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *binary_str*  
  É uma constante **binary**, ou uma constante que pode ser convertida implicitamente em **binary**, a ser associada à sessão ou conexão atual.  
   

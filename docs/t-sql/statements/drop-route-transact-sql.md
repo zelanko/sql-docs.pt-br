@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f46d25f9a6232343e7cbd70050883315fb65a318
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85afe80062fafb0da1a9a2a4aaae21302cbc1891
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895229"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485487"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,9 @@ DROP ROUTE route_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *route_name*  
  O nome da rota a ser descartada. Os nomes de servidor, banco de dados e esquema não podem ser especificados.  
   

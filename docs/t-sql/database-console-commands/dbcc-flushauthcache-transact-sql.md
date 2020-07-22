@@ -1,5 +1,5 @@
 ---
-title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
+title: DBCC FLUSHAUTHCACHE (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 08e28c4ded842a27d69d23de530345cdbf4ffa79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0a4ee56dcb1edbeba870aac79d9d64d569b6e7c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85686201"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484288"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
+
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Esvazia o cache de autenticação do banco de dados que contém informações sobre logons e as regras de firewall, para o banco de dados do usuário atual no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Essa instrução não se aplica ao banco de dados mestre lógico, porque o banco de dados mestre contém o armazenamento físico para as informações sobre logons e regras de firewall. O usuário que executa a instrução e os outros usuários conectados no momento permanecem conectados. (No momento, o DBCC FLUSHAUTHCACHE não é compatível com o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
@@ -36,8 +37,8 @@ Esvazia o cache de autenticação do banco de dados que contém informações so
   
 ```syntaxsql
 DBCC FLUSHAUTHCACHE [ ; ]  
-```  
-  
+```
+
 ## <a name="arguments"></a>Argumentos  
 Nenhum.
   

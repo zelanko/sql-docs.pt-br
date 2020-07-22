@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -12,14 +12,15 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d350d78a4a79bd66cd6bda5794b87d97cf043dc
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 0895a01f3110c90172ab763ebd0991c259da985d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196876"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484597"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Exibe o plano de execução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma consulta em execução em um nó de computação ou em um nó de controle específico do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use isso para solucionar problemas de desempenho de consulta enquanto as consultas estiverem sendo executadas em nós de computação e no nó de controle.
@@ -41,7 +42,7 @@ Sintaxe do Parallel Data Warehouse do Azure:
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  
-  
+
 ## <a name="arguments"></a>Argumentos  
  *distribution_id*  
  Identificador da distribuição que está executando o plano de consulta. Este é um número inteiro e não pode ser NULL. Usado ao direcionar ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
@@ -96,5 +97,6 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ```  
 
 ## <a name="see-also"></a>Confira também
-[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)
+
+- [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
+- [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

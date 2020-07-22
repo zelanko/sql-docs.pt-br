@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ead3a0c0b9feeeffff7491995c63926ec64ad5f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e83d4ecebc9100112f27a813d38c587fe5bc35de
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765944"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483757"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>Permissões de chave simétrica REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | Database_user_with_no_login   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser revogada em uma chave simétrica. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   

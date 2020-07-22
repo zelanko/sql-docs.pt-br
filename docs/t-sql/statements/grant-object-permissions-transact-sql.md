@@ -16,12 +16,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f110124a562ccf6f1cc7ee1d570d29b67c49785
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1e15656ca8506ac03f2556f202284d601b58a981
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004711"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483937"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>Permissões GRANT do objeto (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,9 @@ GRANT <permission> [ ,...n ] ON
     | Database_user_with_no_login  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser concedida em um objeto contido em esquema. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   

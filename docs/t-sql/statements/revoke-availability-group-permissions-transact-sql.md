@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0910901fbe248714b5cbd11d14e5036c52cf8e15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5bdcb114316ea124200e7974f2ffd5675adbe052
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735428"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485333"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser revogada em um grupo de disponibilidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   

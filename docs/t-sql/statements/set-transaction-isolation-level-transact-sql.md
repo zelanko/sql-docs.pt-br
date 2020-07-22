@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da22de4e2a8de0fda4bfeb12f3638f1b7bcfe25f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 23d39a7b7149f6ac75873389c1ac90c6daca8a90
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009231"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483914"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,9 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 >[!NOTE]
 > O SQL Data Warehouse implementa transações ACID. O nível de isolamento do suporte transacional usa como padrão READ UNCOMMITTED.  Você pode alterá-lo para to READ COMMITTED SNAPSHOT ISOLATION selecionando ON na opção de banco de dados READ_COMMITTED_SNAPSHOT para um banco de dados do usuário quando conectado ao banco de dados mestre.  Uma vez habilitada, todas as transações neste banco de dados são executadas em READ COMMITTED SNAPSHOT ISOLATION e a configuração READ UNCOMMITTED no nível da sessão não será respeitada. Confira [Opções ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) para detalhes.  
 
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  READ UNCOMMITTED  
  Especifica que as instruções podem ler linhas que foram modificadas por outras transações, mas que ainda não foram confirmadas.  
   

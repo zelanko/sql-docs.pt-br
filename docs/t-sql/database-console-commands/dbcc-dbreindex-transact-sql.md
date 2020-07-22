@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 4218a14af8e4408538dc69d18e3bcefc44f2c31a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4933d363cc878d8b1f76c791cbc84d600e28dda7
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894871"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485026"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,9 @@ DBCC DBREINDEX
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *table_name*  
  É o nome da tabela que contém o índice ou índices especificados a serem recriados. Os nomes de tabela precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) *.*  
   

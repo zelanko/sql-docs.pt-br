@@ -18,12 +18,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 379d903a312c79f35aaab09ed1e599c978f76056
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ed1c5c45e9ad2ffe46a836708c5686097c61227f
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004707"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484357"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>Permissões de esquema GRANT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,9 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
     [ AS granting_principal ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser concedida em um esquema. Para obter uma lista de permissões, consulte a seção Comentários posteriormente neste tópico.  
   

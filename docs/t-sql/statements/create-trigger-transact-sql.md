@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
+title: CREATE TRIGGER (Transact-SQL)
 description: Referência de Transact-SQL para a instrução CREATE TRIGGER, que é usada para criar um gatilho DML, DDL ou de logon.
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766942"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481665"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cria um gatilho DML, DDL ou de logon. Um gatilho é um tipo especial de procedimento armazenado executado automaticamente quando um evento ocorre no servidor de banco de dados. Os gatilhos DML são executados quando um usuário tenta modificar dados por meio de um evento DML (linguagem de manipulação de dados). Os eventos DML são instruções INSERT, UPDATE ou DELETE em uma tabela ou exibição. Esses gatilhos são disparados quando qualquer evento válido é acionado, sejam as linhas da tabela afetadas ou não. Para obter mais informações, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 OR ALTER  
 **Aplica-se ao**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante). 
@@ -310,20 +312,27 @@ Embora a instrução TRUNCATE TABLE seja de fato uma instrução DELETE, ela nã
 A instrução WRITETEXT, se registrada ou não registrada, não ativa um gatilho.  
   
 As seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não são permitidas em um gatilho DML:  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 Além disso, as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir não são permitidas em um gatilho DML usado em uma tabela ou exibição que seja alvo da ação de gatilho.  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (incluindo CREATE SPATIAL INDEX e CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE quando usado faz o seguinte:<br /><br /> Adiciona, modifica ou descarta colunas.<br /><br /> Alterna partições.<br /><br /> Adiciona ou descarta restrições PRIMARY KEY ou UNIQUE.|||  
-  
+- CREATE INDEX (incluindo CREATE SPATIAL INDEX e CREATE XML INDEX)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- ALTER TABLE quando usado faz o seguinte:
+    - Adiciona, modifica ou descarta colunas.
+    - Alterna partições.
+    - Adiciona ou descarta restrições PRIMARY KEY ou UNIQUE.
+
 > [!NOTE]  
 >  Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a gatilhos definidos pelo usuário em tabelas do sistema, não é recomendável criá-los. 
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0ca841fd5c1e0b6c2fcd25e1476f8dfa8a7b26e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4e866d6cc2c117599f276b51569321cc2ba6107
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766621"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484147"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema DENY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85766621"
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  [ **sys.** ]  
  O qualificador **sys** só é necessário quando você está referenciando exibições do catálogo e exibições de gerenciamento dinâmico.  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d92713b06958dbfd8e2aef995779a25ed76d9d09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8114ca6e50f28c4c603285affd05478c297bf881
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735404"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485137"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | Database_user_with_no_login   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser revogada no principal de banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   

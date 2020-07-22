@@ -21,12 +21,12 @@ ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d4def6fc7ca08e5b7e239364f9149ba66f69d0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 492c51a2a026dbc205c259c3b9f419ae713cce25
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008786"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465205"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86008786"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 LOG10 ( float_expression )  
 ```  
   
@@ -56,7 +56,7 @@ LOG10 ( float_expression )
 ### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>a. Calculando um logaritmo na base 10 para uma variável.  
  O exemplo a seguir calcula o `LOG10` da variável especificada.  
   
-```  
+```sql  
 DECLARE @var FLOAT;  
 SET @var = 145.175643;  
 SELECT 'The LOG10 of the variable is: ' + CONVERT(VARCHAR,LOG10(@var));  
@@ -74,7 +74,7 @@ The LOG10 of the variable is: 2.16189
 ### <a name="b-calculating-the-result-of-raising-a-base-10-logarithm-to-a-specified-power"></a>B. Calculando o resultado da elevação de um logaritmo na base 10 a uma potência especificada.  
  O exemplo a seguir retorna o resultado da elevação de um logaritmo na base 10 a uma potência especificada.  
   
-```  
+```sql  
 SELECT POWER (10, LOG10(5));   
 ```  
   
@@ -92,7 +92,7 @@ SELECT POWER (10, LOG10(5));
 ### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: Calculando um logaritmo na base 10 para um valor.  
  O exemplo a seguir calcula o `LOG10` do valor especificado.  
   
-```  
+```sql  
 SELECT LOG10(145.175642);  
 ```  
   

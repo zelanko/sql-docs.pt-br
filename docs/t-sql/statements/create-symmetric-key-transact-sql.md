@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6e294c0bca1a871cc7b0ccb6c45a92072d7b0fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37e46ba0453f9606a5ddc5310e15d4263de57fcf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766995"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483141"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,9 @@ CREATE SYMMETRIC KEY key_name
     | ASYMMETRIC KEY asym_key_name  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *Key_name*  
  Especifica o nome exclusivo pelo qual a chave simétrica é conhecida no banco de dados. Chaves temporárias são designadas quando o _key_name_ começa com um sinal de número (#). Por exemplo, **#temporaryKey900007**. Você não pode criar uma chave simétrica que tenha um nome que inicie com mais que um #. Não é possível criar uma chave simétrica temporária usando um provedor EKM.  
   

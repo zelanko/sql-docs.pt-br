@@ -21,12 +21,12 @@ ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd9c09ba45558daae53f7a1b4e26395e32edd5c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1566d978da2ca0ea7e40e146b1b1d5a2bbc3661
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735611"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483557"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>Permissões GRANT de credencial no escopo do banco de dados (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -44,7 +44,9 @@ GRANT permission  [ ,...n ]
     [ AS granting_principal ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser concedida em uma credencial no escopo do banco de dados. Listada abaixo.  
   

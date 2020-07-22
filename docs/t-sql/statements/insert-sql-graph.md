@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f772d95923a7fcfe3dce8bafaf4382be71ccce54
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735466"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484492"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -100,7 +100,9 @@ INSERT
 ```  
   
  
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 Este documento descreve os argumentos relativos ao SQL Graph. Para obter uma lista completa e a descrição de argumentos compatíveis com a instrução INSERT, consulte [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
 INTO  

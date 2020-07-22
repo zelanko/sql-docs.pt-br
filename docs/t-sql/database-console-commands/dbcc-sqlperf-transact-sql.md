@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 4132d5ec459f5fb180ebea94665449cefa7e961a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: baa77f853e048fdc1098a93ae7036fd927efbe9c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882014"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485542"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,9 @@ DBCC SQLPERF
      [WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 LOGSPACE  
 Retorna o tamanho atual do log de transações e a porcentagem de espaço usado pelo log para cada banco de dados. Use essas informações para monitorar a quantidade de espaço usado em um log de transações.
 

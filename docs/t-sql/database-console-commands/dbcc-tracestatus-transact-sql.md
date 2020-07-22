@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 31bcacc0d001c4759e81380177c84af3ff278e30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ae272f6d60670ffd1f3841e45b5b15fac9cc42d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896229"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485527"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,9 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *trace#*  
 É o número do sinalizador de rastreamento para o qual o status é exibido. Se *trace#* e -1 não forem especificados, todos os sinalizadores de rastreamento habilitados para a sessão serão exibidos.
   

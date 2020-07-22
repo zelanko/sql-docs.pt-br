@@ -19,12 +19,12 @@ ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e282ac74db4509c49bb6ec7155a75e987708df7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd618fe62a6894211bbad05135e9296e8679679c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766717"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484777"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>Credencial no escopo do banco de dados DENY (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -45,7 +45,9 @@ DENY permission  [ ,...n ]
     [ AS denying_principal ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *permission*  
  Especifica uma permissão que pode ser negada em uma credencial no escopo do banco de dados. Listada abaixo.  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90b8f5c2886da151ae15e9dc1dbcaace9d5093a6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97ed90451d50aab822e2ab96708c0d7303805b53
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896376"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484123"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85896376"
 DROP ENDPOINT endPointName  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *endPointName*  
  É o nome do ponto de extremidade a ser removido.  
   

@@ -32,12 +32,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3941db45a3c667ac2b273323096b6e14bdc0e93f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06a5284d057467ad687a503af0f70be8b01c2154
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766939"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483789"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -95,7 +95,9 @@ CREATE TABLE
 ```  
   
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 Este documento lista apenas os argumentos que pertencem ao SQL Graph. Para obter uma lista completa e a descrição dos argumentos com suporte, confira [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
  *database_name*    

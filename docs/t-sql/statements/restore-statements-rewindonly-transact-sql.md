@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 252285ed8560d6a8dd2361077100f2ce9633f707
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896587"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484030"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Instruções RESTORE – REWINDONLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ FROM <backup_device> [ ,...n ]
 }   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **\<backup_device> ::=** 
   
  Especifica os dispositivos de backup lógicos ou físicos a serem usados na operação de restauração.  

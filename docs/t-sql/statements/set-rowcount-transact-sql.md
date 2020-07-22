@@ -27,12 +27,12 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de38a90be373ac8962fa98f28eb7467dd918b19a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 91739df2125005e123f2d9acd19c71682111f9a8
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002421"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484017"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "86002421"
 SET ROWCOUNT { number | @number_var }   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *number* | @*number_var*  
  É o número inteiro de filas a serem processadas antes de finalizar a consulta específica.  
   
