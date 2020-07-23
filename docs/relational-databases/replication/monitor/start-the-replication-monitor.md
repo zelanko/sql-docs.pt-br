@@ -13,15 +13,15 @@ ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 634b0d0317cdf2db1f43987c449a3ca172beaee4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 2c8ca8ab55a5879fd2c2957bfc1cbb4e4412b11e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159594"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917614"
 ---
 # <a name="start-the-replication-monitor"></a>Iniciar o Replication Monitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   O Replication Monitor pode ser iniciado no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] em qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou no prompt de comando. Depois de iniciar o Replication Monitor, adicione um ou mais Publicadores a serem monitorados. Para obter mais informações, veja [Adicionar e remover Publicadores do Replication Monitor](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
 ### <a name="to-start-replication-monitor-from-sql-server-management-studio"></a>Iniciar o Replication Monitor no SQL Server Management Studio  

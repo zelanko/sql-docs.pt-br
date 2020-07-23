@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c82aee360987868b393de88ee062f39898f9569
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4f8558a766c7fa41adb3f2ec3cb769d0ee0db62
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287121"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916388"
 ---
 # <a name="persisting-custom-objects"></a>Persistência de objetos personalizados
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Você não precisa implementar a persistência personalizada para os objetos personalizados que você criar, desde que suas propriedades usem somente tipos de dados simples como **integer** e **string**. A implementação padrão de persistência salva os metadados para seu objeto junto com os valores de todas as suas propriedades.  

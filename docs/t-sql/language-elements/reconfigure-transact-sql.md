@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 240bc2359a3c0c66fc6f95c2392ae78740865a1d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880414"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915595"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85880414"
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
-## <a name="arguments"></a>Argumentos    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  RECONFIGURE    
  Especifica que se a definição da configuração não requerer uma parada e um reinício do servidor, o valor atualmente em execução deverá ser atualizado. RECONFIGURE também verifica os novos valores de configuração buscando valores que não são válidos (por exemplo, um valor de ordem de classificação que não exista em **syscharsets**) ou não são recomendados. Com as opções de configuração que não requeiram uma parada e um reinício do servidor, o valor atualmente em execução e os valores atualmente configurados para a opção de configuração devem ser o mesmo valor depois que RECONFIGURE for especificado.    
     

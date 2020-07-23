@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac04c9b6a8838ba338407533834a7950dabe055d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95dbbad4faf5cd4470450d5756d2c56a1cf5c8ae
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293052"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916802"
 ---
 # <a name="data-in-data-flows"></a>Dados em fluxos de dados
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de tipos de dados que são usados em fluxos de dados.  

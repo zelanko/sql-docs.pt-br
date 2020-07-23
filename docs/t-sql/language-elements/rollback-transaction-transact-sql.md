@@ -25,12 +25,12 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf6628847410f9ba5f02e7c4240ca86259d6b5f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a7cf13b0056a659fb59f236cf7d49c1ea1f12368
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630506"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915582"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,9 @@ ROLLBACK { TRAN | TRANSACTION }
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *transaction_name*  
  É o nome atribuído à transação em BEGIN TRANSACTION. *transaction_name* precisa estar em conformidade com as regras para identificadores, mas somente os primeiros 32 caracteres do nome da transação são usados. Ao aninhar transações, *transaction_name* precisa ser o nome da instrução BEGIN TRANSACTION mais distante. *transaction_name* sempre diferencia maiúsculas de minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiúsculas de minúsculas.  
   

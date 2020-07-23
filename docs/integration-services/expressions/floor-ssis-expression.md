@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 56f69743e8bbfb8290e492613daeb07885f5ed7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f0161fe842ad8271d04a69b9cb2726db3403314
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289620"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917002"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (Expressão SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Retorna o maior inteiro que é menor que ou igual a uma expressão numérica.  

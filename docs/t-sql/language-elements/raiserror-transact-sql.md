@@ -29,12 +29,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 053097efe59628629e6b2d1edf45c852ad02de56
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630704"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917986"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,9 @@ RAISERROR ( { msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *msg_id*  
  É um número de mensagem de erro definido pelo usuário armazenado na exibição do catálogo sys.messages usando sp_addmessage. Os números de erro para mensagens de erro definidas pelo usuário deve ser maiores que 50000. Quando *msg_id* não é especificado, RAISERROR gera uma mensagem de erro com o número de erro 50000.  
   

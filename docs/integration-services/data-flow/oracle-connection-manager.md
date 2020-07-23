@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69553249"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915632"
 ---
 # <a name="oracle-connection-manager"></a>Gerenciador de Conexões do Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Um Gerenciador de Conexões do Oracle é usado para habilitar um pacote para extrair dados de Oracle Databases e carregar dados em Oracle Databases.
 

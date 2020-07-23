@@ -18,15 +18,15 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fc7868735a05a81afe324755d880cc9e63353c7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9fcf805dc2c4ff9e639b43e0d6ea455d3aa439fe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754577"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915702"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Administrar vários servidores usando Servidores de Gerenciamento Central
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Você pode administrar vários servidores designando servidores de gerenciamento centrais e criando grupos de servidores.  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>O que é um Servidor de Gerenciamento Central e grupos de servidores?  

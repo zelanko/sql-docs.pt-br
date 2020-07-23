@@ -20,12 +20,12 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3bbb0c09f819e686185f65dab28123b95f6e2f6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007630"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915452"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set Operators – UNION (Transact-SQL)
 
@@ -58,7 +58,9 @@ A seguir são apresentadas as regras básicas de combinação dos conjuntos de r
   [ ...n ] }
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 \<query_specification> | (\<query_expression>) É uma especificação ou expressão de consulta que retorna dados a serem combinados com os dados de outra especificação ou expressão de consulta. As definições das colunas que fazem parte de uma operação UNION não precisam ser iguais, mas devem ser compatíveis por meio de conversão implícita. Quando os tipos de dados diferirem, o tipo de dados resultante será determinado com base nas regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md). Quando os tipos são iguais mas diferem em precisão, escala ou extensão, o resultado se baseia nas mesmas regras para combinação de expressões. Para obter mais informações, confira [Precisão, escala e comprimento (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 As colunas do tipo de dados **xml** precisam ser iguais. Todas as colunas devem ter tipo para um esquema XML ou sem-tipo. Se tiverem tipo, elas deverão ter o tipo igual ao da coleção de esquema XML.  

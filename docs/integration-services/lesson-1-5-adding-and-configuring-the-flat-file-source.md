@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283684"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917354"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lição 1-5: Adicionar e configurar a fonte de Arquivo Simples
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Nesta tarefa, você adiciona e configura uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de Arquivo Simples. Esses metadados especificam o formato e a estrutura dos dados a serem extraídos do arquivo simples por um processo de transformação. A fonte de Arquivo Simples extrai dados de um único arquivo simples, usando as definições de formato no gerenciador de conexões de Arquivo Simples.  

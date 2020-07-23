@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee61de08afac103f0280b905100683011460972
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292935"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916725"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Este procedimento descreve como definir uma variável de pacote onde o estado CDC é armazenado.  
@@ -32,24 +32,24 @@ ms.locfileid: "71292935"
   
 |Componente|DESCRIÇÃO|  
 |---------------|-----------------|  
-|**\<nome- do-estado>**|Este é o nome do estado CDC atual.|  
+|**\<state-name>**|Este é o nome do estado CDC atual.|  
 |**CS**|Isso marca o ponto inicial do intervalo de processamento atual (Início atual).|  
 |**\<cs-lsn>**|Este é último LSN (número de sequência de log) processado na execução CDC anterior.|  
 |**CE**|Isso marca o ponto final do intervalo de processamento atual (Término atual). A presença do componente de término atual no estado CDC é uma indicação de que ou um pacote CDC está atualmente em processamento ou um pacote de CDC falhou antes de processar completamente seu intervalo de processamento CDC.|  
 |**\<ce-lsn>**|Este é o último LSN a ser processado na execução CDC atual. Sempre presumimos que o último número de sequência a ser processado é o máximo (0xFFF…).|  
 |**IR**|Isso marca o intervalo de processamento inicial.|  
-|**\<início-do-ir>**|Este é o LSN de uma alteração imediatamente antes de a carga inicial ter sido iniciada.|  
-|**\<término-do-ir>**|Este é o LSN de uma alteração imediatamente depois de a carga inicial ter sido terminada.|  
+|**\<ir-start>**|Este é o LSN de uma alteração imediatamente antes de a carga inicial ter sido iniciada.|  
+|**\<ir-end>**|Este é o LSN de uma alteração imediatamente depois de a carga inicial ter sido terminada.|  
 |**TS**|Isso marca o carimbo de data/hora para a última atualização do estado CDC.|  
-|**\<carimbo de data/hora>**|Essa é uma representação decimal da propriedade System.DateTime.UtcNow de 64 bits.|  
+|**\<timestamp>**|Essa é uma representação decimal da propriedade System.DateTime.UtcNow de 64 bits.|  
 |**ER**|Isso aparece quando a última operação falhou e inclui uma descrição breve da causa do erro. Se esse componente estiver presente, ela será sempre o último.|  
-|**\<texto-de-erro-curto>**|Essa é a descrição curta do erro.|  
+|**\<short-error-text>**|Essa é a descrição curta do erro.|  
   
  Os LSNs e os números de sequência são codificados como uma cadeia de caracteres hexadecimal de até 20 dígitos que representam o valor LSN do binário (10).  
   
  A tabela a seguir descreve os valores de estado CDC possíveis.  
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |(INITIAL)|Esse é o estado inicial antes de qualquer pacote ter sido executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.|  
 |ILSTART (Initial Load Started)|Esse é o estado do início do pacote de carga inicial, depois da chamada da operação de **MarkInitialLoadStart** para a tarefa Controle CDC.|  

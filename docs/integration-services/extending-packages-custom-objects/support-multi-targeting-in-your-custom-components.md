@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4020d295bc29fa3d240c0176611d446fcb427197
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287221"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916382"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Suporte multiplataforma em seus componentes personalizados
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Agora você pode usar o Designer SSIS no SSDT (SQL Server Data Tools) para criar, manter e executar pacotes destinados ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Para obter o SSDT para Visual Studio 2015, consulte [Baixar o SQL Server Data Tools mais recente](../../ssdt/download-sql-server-data-tools-ssdt.md). 
