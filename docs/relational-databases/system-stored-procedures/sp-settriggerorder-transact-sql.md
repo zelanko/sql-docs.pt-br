@@ -18,12 +18,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719189"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977700"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,9 +52,9 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Primeiro**|O disparador é acionado em primeiro lugar.|  
+|**First**|O disparador é acionado em primeiro lugar.|  
 |**Última**|O disparador é acionado em último lugar.|  
-|**Nenhuma**|O disparador é acionado em ordem indefinida.|  
+|**Nenhum**|O disparador é acionado em ordem indefinida.|  
   
 `[ @stmttype = ] 'statement_type'`Especifica a instrução SQL que dispara o gatilho. *statement_type* é **varchar (50)** e pode ser inserir, atualizar, excluir, fazer logon ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado em [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
   
@@ -63,9 +63,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  ** \@ namespace =** { **' banco de dados '**'  |  **servidor** ' | NULO  
  Quando *triggername* é um gatilho DDL, ** \@ namespace** especifica se *triggername* foi criado com escopo de banco de dados ou escopo de servidor. Se *triggername* for um gatilho de logon, o servidor deverá ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado, ou se NULL for especificado, *triggername* será um gatilho DML.  
   
-||  
-|-|  
-|O servidor aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.|  
+* O servidor aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) e 1 (falha)  
