@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ffc3d2786ff20ec500fed130dcf6058c9f3f627d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298564"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918612"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma conexão com um servidor executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou para editar propriedades de conexão.  

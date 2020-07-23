@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35d6c312be1819d8f0e111566a909de0dd8b41c1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296975"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918432"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabalhando com imagens com a tarefa Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Um banco de dados de produtos ou usuários costuma incluir imagens além de texto e dados numéricos. O namespace **System.Drawing** no Microsoft .NET Framework fornece classes para manipular imagens.  

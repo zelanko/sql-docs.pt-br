@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4cd1b3a72a91eb3c2a2252eefcec6cf7416cae8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16aee7cbbcfe102ba7c03fd910f3e34e5d8a85f6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297865"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919518"
 ---
 # <a name="row-count-transformation"></a>Transformação Contagem de Linhas
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A transformação Contagem de Linhas conta as linhas quando passam por um fluxo de dados e armazena a contagem final em uma variável.  

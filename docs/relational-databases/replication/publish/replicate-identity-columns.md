@@ -19,15 +19,15 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a750eb05a8f4cb024e1837d46f028c72c76f4a29
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 1473f9f603f85e0e03fb4d7c23f4367daf63bf7b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160094"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919430"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Quando se atribui uma propriedade IDENTITY a uma coluna, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gera automaticamente números sequenciais para novas linhas inseridas na tabela que contém a coluna de identidade. Para obter mais informações, consulte [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Como as colunas de identidade podem ser incluídas como parte da chave primária, é importante evitar valores duplicados nas colunas de identidade. Para que colunas de identidade sejam usadas em uma topologia de replicação que tenha atualizações em mais de um nó, cada nó da topologia de replicação precisará usar um intervalo diferente de valores de identidade, de modo que não ocorram duplicatas.  
   
  Por exemplo, o intervalo de 1 a 100 poderia ser atribuído ao Publicador; o intervalo de 101 a 200 ao Assinante A e o intervalo de 201 a 300 ao Assinante B. Se uma linha for inserida no Publicador e o valor de identidade for, por exemplo, 65, esse valor será replicado para cada Assinante. Quando a replicação insere dados em cada Assinante, isso não incrementa o valor da coluna de identidade na tabela Assinante. Em vez disso, o valor literal 65 é inserido. Somente as inserções do usuário, não as inserções do agente de replicação, causam o incremento da coluna de identidade.  

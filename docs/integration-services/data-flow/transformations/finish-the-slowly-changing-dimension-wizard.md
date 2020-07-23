@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1f2aafff1e63fbacc92dbbac40c93ef090a4aef9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0d230f07ff082a16c55699f6c49eade131359e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297924"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919321"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Conclua o Assistente para Dimensões de Alteração Lenta
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use a caixa de diálogo **Conclua o Assistente para Dimensões de Alteração Lenta** para verificar as escolhas antes que o assistente crie o suporte para dimensões de alteração lenta.  

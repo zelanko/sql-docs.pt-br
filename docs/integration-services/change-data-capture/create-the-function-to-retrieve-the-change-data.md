@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca74bc7970cb54264b2e8043ad02c8b36d520f93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72251978"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918743"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
@@ -216,7 +216,7 @@ go
 |**__$seqval**|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
 |**__$operation**|**int**|A operação DML (linguagem de manipulação de dados) associada à alteração. Um dos seguintes pode ser feito:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
 |**__$update_mask**|**varbinary(128)**|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração identificando as colunas que foram alteradas. Você poderia examinar este valor se você tivesse que determinar quais colunas foram alteradas.|  
-|**\<colunas da tabela de origem capturada>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
+|**\<captured source table columns>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   
  Para obter mais informações, veja [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431c88eb4f341b55060c23a06b06cf5e599c38e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282617"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918292"
 ---
 # <a name="performance-counters"></a>Contadores de desempenho
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala um conjunto de contadores de desempenho que podem ser usados para monitorar o desempenho do mecanismo de fluxo de dados. Por exemplo, é possível observar o contador "Buffers em spool" para determinar se os buffers de dados estão sendo gravados temporariamente no disco durante a execução de um pacote. Essa troca reduz o desempenho e indica que o computador não tem memória suficiente.  
@@ -34,7 +34,7 @@ ms.locfileid: "71282617"
   
  A tabela a seguir descreve os contadores de desempenho.  
   
-|Contador de desempenho|DESCRIÇÃO|  
+|Contador de desempenho|Descrição|  
 |-------------------------|-----------------|  
 |Bytes de BLOB lidos|O número de bytes dos dados de BLOB (objetos binários grandes) que o mecanismo de fluxo de dados leu em todas as fontes.|  
 |Bytes de BLOB gravados|O número de bytes de dados de BLOB que o mecanismo de fluxo de dados gravou em todos os destinos.|  
