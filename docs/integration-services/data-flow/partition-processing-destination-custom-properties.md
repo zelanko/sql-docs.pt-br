@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28e1a73ae5175009234948d1fa413ba1b52c7216
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e9bd6dff6e35b4fa78d69dc1c6703ca6a098f6c5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292263"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920402"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propriedades personalizadas do destino Processamento de Partições
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   O destino Processamento de Partições tem propriedades personalizadas e propriedades comuns a todos os componentes de fluxo de dados.  

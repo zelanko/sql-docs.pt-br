@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4d56ea995caa6c363432169c660c5cb9f07d082d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec92e90ca9e08ed9931328e31e17f8eb78f885c0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297265"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920185"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>Desenvolvendo tipos específicos de componentes de fluxo de dados
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Esta seção aborda as especificações do desenvolvimento de componentes de origem, componentes de transformação com saídas síncronas, componentes de transformação com saídas assíncronas e componentes de destino.  

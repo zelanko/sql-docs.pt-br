@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29c4fe9779b30066a188b9270e920ffd6339421b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a12c9613923183f0d0cb4cc068f8d3744920640
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298620"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920781"
 ---
 # <a name="data-sources"></a>Fontes de dados
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um objeto de tempo de design que você pode usar em pacotes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: a fonte de dados.  
   
  Um objeto de fonte de dados é uma referência para uma conexão e, no mínimo, inclui uma cadeia de caracteres de conexão e um identificador de fonte de dados. Ele também pode incluir metadados adicionais como uma descrição, um nome, um nome de usuário e uma senha.  
   
-> **OBSERVAÇÃO:** você pode adicionar fontes de dados somente a projetos que são configurados para usar o modelo de implantação de pacote. Se um projeto estiver configurado para usar o modelo de implantação de projeto, você usará gerenciadores de conexões criados no nível do projeto para compartilhar conexões, em vez de usar fontes de dados.  
+> **OBSERVAÇÃO:** Você pode adicionar fontes de dados somente a projetos que são configurados para usar o modelo de implantação de pacote. Se um projeto estiver configurado para usar o modelo de implantação de projeto, você usará gerenciadores de conexões criados no nível do projeto para compartilhar conexões, em vez de usar fontes de dados.  
 >   
 >  Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
   

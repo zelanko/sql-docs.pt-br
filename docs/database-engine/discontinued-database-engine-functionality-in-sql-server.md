@@ -36,15 +36,15 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 512ea4be5a22f04379aa58b724befdf948934292
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2137021617ecf15375be480021ca54b50627464d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659644"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920256"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
