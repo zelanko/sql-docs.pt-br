@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896815"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942828"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Criar uma assinatura atualizável em uma publicação transacional
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
     * `sync tran` – habilita a assinatura para atualização imediata.
     * `failover` – habilita a assinatura para atualização imediata com atualização enfileirada como uma opção de failover.
     > [!NOTE]  
->  `failover` requer que a publicação também esteja habilitada para assinaturas de atualização em fila. 
+    >  `failover` requer que a publicação também esteja habilitada para assinaturas de atualização em fila. 
  
 4. No Assinante, execute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique o seguinte:
 
@@ -150,7 +150,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
     * As credenciais do Windows sob as quais o Distribution Agent no Distribuidor é executado pata `@job_login` e `@job_password`. 
 
     > [!NOTE]  
->  As conexões realizadas com o uso da Autenticação Integrada do Windows sempre são feitas com as credenciais do Windows especificadas por `@job_login` e `@job_password`. O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows. 
+    >  As conexões realizadas com o uso da Autenticação Integrada do Windows sempre são feitas com as credenciais do Windows especificadas por `@job_login` e `@job_password`. O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows. 
 
     * (Opcional) Um valor de `0` para `@subscriber_security_mode` e as informações de logon do SQL Server para `@subscriber_login` e `@subscriber_password`, se você precisar usar a Autenticação do SQL Server ao se conectar ao Assinante. 
     * Agenda para o trabalho do Distribution Agent para essa assinatura.
@@ -180,7 +180,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
     * `queued failover` – habilita o suporte para atualização em fila com a atualização imediata como opção do failover.
 
     > [!NOTE]  
->  `queued failover` requer que a publicação também esteja habilitada para assinaturas de atualização imediata. Para failover de atualização imediata, você deve usar [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) para definir as credenciais sob as quais as alterações no Assinante são replicadas no Publicador.
+    >  `queued failover` requer que a publicação também esteja habilitada para assinaturas de atualização imediata. Para failover de atualização imediata, você deve usar [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) para definir as credenciais sob as quais as alterações no Assinante são replicadas no Publicador.
  
 4. No Assinante, execute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique os seguintes parâmetros:
 

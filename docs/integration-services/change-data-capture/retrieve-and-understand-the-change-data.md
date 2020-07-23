@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83df88c61e99d4d13c4b5bc866aa8f1dff5d5b1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ee6e9fa54a7050f2ef529749aa53019ca507fd8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294604"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923912"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Recuperar e compreender os dados de alteração
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   No fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a primeira tarefa é executar a consulta que recupera os dados de alteração. Você executa esta consulta dentro de um componente de origem em uma tarefa Fluxo de Dados. As transformações downstream e os destinos podem ser usados para aplicar os dados de alteração em seu destino.  

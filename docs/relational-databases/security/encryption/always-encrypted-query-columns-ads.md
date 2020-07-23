@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d202bbd1b285acbe2831fcdb56ec5cc1dd1ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99ed0b0c5424b995f336511ef267d842ba4fe81b
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627323"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942068"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Consultar colunas usando o Always Encrypted com o Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -195,13 +195,15 @@ SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
 ```
 
-    Msg 402, Level 16, State 2, Line 5   
-    The data types char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
-    encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
-    column_encryption_key_database_name = 'Clinic') collation_name = 'Latin1_General_BIN2' 
-    and nchar(11) encrypted with (encryption_type = 'DETERMINISTIC', 
-    encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
-    column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator. 
+```output
+Msg 402, Level 16, State 2, Line 5   
+The data types char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
+encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
+column_encryption_key_database_name = 'Clinic') collation_name = 'Latin1_General_BIN2' 
+and nchar(11) encrypted with (encryption_type = 'DETERMINISTIC', 
+encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
+column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
+```
 
 > [!NOTE]
 > Sem parametrização, a consulta inteira, incluindo as conversões de tipo, será processada dentro do SQL Server/Banco de Dados SQL do Azure. Com a parametrização habilitada, algumas conversões de tipo são executadas pelo Provedor de Dados Microsoft .NET para SQL Server, dentro do Azure Data Studio. Devido às diferenças entre o sistema de tipos do Microsoft .NET e o sistema de tipos do SQL Server (por exemplo, diferente precisão de alguns tipos, como o float), uma consulta executada com a parametrização habilitada poderá produzir resultados diferentes da consulta executada sem a parametrização habilitada. 

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f88355c8c2242d6dee36d52b7fb26e6016201ff4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299117"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923750"
 ---
 # <a name="add-copy-of-existing-package"></a>Adicionar Cópia de Pacote Existente
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use a caixa de diálogo **Adicionar Cópia de Pacote Existente** para adicionar uma cópia de um pacote armazenado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no Repositório de Pacote do SSIS a um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
