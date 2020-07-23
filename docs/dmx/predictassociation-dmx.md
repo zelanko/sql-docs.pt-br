@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668766"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968129"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Prevê associação de membro.  
   
@@ -33,7 +33,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  Algoritmos que contêm tabelas aninhadas previsíveis, incluindo associação e alguns algoritmos de classificação. Os algoritmos de classificação que dão suporte a tabelas aninhadas incluem as [!INCLUDE[msCoName](../includes/msconame-md.md)] árvores de decisão, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes e [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de rede neural.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- \<> de expressão de tabela  
+ \<table expression>  
   
 ## <a name="remarks"></a>Comentários  
  As opções para a função **PredictAssociation** incluem EXCLUDE_NULL, INCLUDE_NULL, inclusivo, exclusivo (padrão), INPUT_ONLY, INCLUDE_STATISTICS e INCLUDE_NODE_ID.  

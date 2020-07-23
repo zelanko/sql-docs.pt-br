@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666795"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967792"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna uma tabela que representa um histograma para a previsão de uma determinada coluna.  
   
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Um histograma gera colunas de estatísticas. A estrutura de coluna do histograma retornado depende do tipo de referência de coluna usada com a função **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colunas escalares  
- Para uma \< referência de coluna escalar>, o histograma que a função **PredictHistogram** retorna consiste nas seguintes colunas:  
+ Para um \<scalar column reference> , o histograma que a função **PredictHistogram** retorna consiste nas seguintes colunas:  
   
 -   Valor sendo previsto.  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      A coluna **$AdjustedProbability** é uma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensão do [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para especificação de mineração de dados.  
   
 ## <a name="cluster-columns"></a>Colunas cluster  
- O histograma que a função **PredictHistogram** retorna para uma \< referência de coluna de cluster> consiste nas seguintes colunas:  
+ O histograma que a função **PredictHistogram** retorna para um \<cluster column reference> consiste nas seguintes colunas:  
   
 -   **$Cluster** (representa o nome do cluster)  
   

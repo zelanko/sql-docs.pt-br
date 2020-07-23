@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2933700c24e34748d2c0d6593d5f34eb8e69bc2
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666957"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970814"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna a probabilidade para um estado especificado.  
   
@@ -34,7 +34,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  Valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade será usado, excluindo-se o bucket de estados ausentes. Para incluir o Bucket de Estados ausentes, defina o \< estado previsto> como **INCLUDE_NULL**. Para retornar a probabilidade para os Estados ausentes, defina o \< estado previsto> como nulo.  
+ Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade será usado, excluindo-se o bucket de estados ausentes. Para incluir o Bucket de Estados ausentes, defina \<predicted state> como **INCLUDE_NULL**. Para retornar a probabilidade para os Estados ausentes, defina \<predicted state> como NULL.  
   
 > [!NOTE]  
 >  Alguns modelos de mineração não fornecem valores de probabilidade e, portanto, não podem usar esta função. Além disso, os valores de probabilidade de qualquer valor de destino em particular são calculados de modo diferente ou podem ter uma interpretação diferente dependendo do tipo de modelo que você está consultando. Para obter mais informações sobre como a probabilidade é calculada para um determinado tipo de modelo, consulte o tópico algoritmo individual em [conteúdo do modelo de mineração &#40;&#41;de mineração de dados de Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

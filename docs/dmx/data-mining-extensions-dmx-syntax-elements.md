@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7cfd0e6846fc377cda6fe9655fa3770748748e2c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669804"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971727"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxe de DMX (Data Mining Extensions)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   No [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode usar vários elementos de sintaxe para definir instruções DMX (Data Mining Extensions) que você pode usar para criar, gerenciar e trabalhar com modelos de data mining. As seções a seguir descrevem esses elementos de sintaxe.  
   

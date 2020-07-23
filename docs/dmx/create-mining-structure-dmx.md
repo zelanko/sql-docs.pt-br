@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669453"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971794"
 ---
 # <a name="create-mining-structure-dmx"></a>CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Cria uma nova estrutura de mineração em um banco de dados e define, opcionalmente, as partições de treinamento e de teste. Depois de criar a estrutura de mineração, você pode usar a instrução [ALTER MINING structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) para adicionar modelos à estrutura de mineração.  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Você pode definir vários valores de sinalizadores de modelagem para uma coluna. No entanto, é possível ter apenas um tipo de conteúdo e um tipo de dados para uma coluna.  
   
 ### <a name="column-relationships"></a>Relações de coluna  
- É possível adicionar uma cláusula a qualquer instrução de definição de coluna para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dá suporte ao uso da seguinte \< cláusula de> de relação de coluna.  
+ É possível adicionar uma cláusula a qualquer instrução de definição de coluna para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dá suporte ao uso da seguinte \<column relationship> cláusula.  
   
  **RELACIONADO A**  
  Indica uma hierarquia de valor. O destino de uma coluna RELATED TO pode ser a coluna de chave em uma tabela aninhada, uma coluna com um valor discreto na linha de caso ou outra coluna com uma cláusula RELATED TO, que indica uma hierarquia mais profunda.  

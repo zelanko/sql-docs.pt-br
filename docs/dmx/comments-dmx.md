@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 834e31fcc9d8e0887929dae356c7b2068aeeff2d
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 37e646df007684ee8e68f9d39119e42014415715
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669344"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969893"
 ---
 # <a name="comments-dmx"></a>Comentários (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Os comentários em DMX (extensões de mineração de dados) são cadeias de caracteres de texto no código do programa que não [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é executado. Os comentários são também conhecidos como comentários. Os comentários são usados para documentar código ou para desabilitar temporariamente partes de um script ou instrução DMX durante o diagnóstico de um código.  
   

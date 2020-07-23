@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669598"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970607"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   A instrução **Select** em DMX (extensões de mineração de dados) é usada para as seguintes tarefas no Data Mining:  
   
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>\<N maiores> e ordenar por  
- Você pode ordenar os resultados de uma consulta usando uma expressão e, em seguida, pode retornar um subconjunto dos resultados usando uma combinação das cláusulas **order by** e **Top** . Isto é útil em um cenário como o de mala direta onde você deseja enviar os resultados para quem tenha mais probabilidade de responder. Você pode ordenar os resultados de uma consulta de previsão de correspondência de destino pela probabilidade de previsão e, em seguida, retornar apenas os \< n maiores resultados de>.  
+## <a name="top-n-and-order-by"></a>SUPERIOR \<n> e ordenar por  
+ Você pode ordenar os resultados de uma consulta usando uma expressão e, em seguida, pode retornar um subconjunto dos resultados usando uma combinação das cláusulas **order by** e **Top** . Isto é útil em um cenário como o de mala direta onde você deseja enviar os resultados para quem tenha mais probabilidade de responder. Você pode ordenar os resultados de uma consulta de previsão de correspondência de destino pela probabilidade de previsão e, em seguida, retornar apenas os \<n> resultados principais.  
   
 ## <a name="select-list"></a>Lista de seleção  
- A * \< lista de seleção>* pode incluir referências de coluna escalares, funções de previsão e expressões. As opções que estão disponíveis dependem do algoritmo e dos contextos seguintes:  
+ O *\<select list>* pode incluir referências de coluna escalares, funções de previsão e expressões. As opções que estão disponíveis dependem do algoritmo e dos contextos seguintes:  
   
 -   Se você está consultando uma estrutura de mineração ou um modelo de mineração  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- Você pode limitar os casos retornados pela consulta usando uma cláusula **Where** . A cláusula **Where** especifica que as referências de coluna na expressão **Where** devem ter a mesma semântica que as referências de coluna na * \< lista de seleção>* da instrução **Select** e só podem retornar uma expressão booliana. A sintaxe da cláusula **Where** é a seguinte  
+ Você pode limitar os casos retornados pela consulta usando uma cláusula **Where** . A cláusula **Where** especifica que as referências de coluna na expressão **Where** devem ter a mesma semântica que as referências de coluna no *\<select list>* da instrução **Select** e só podem retornar uma expressão booleana. A sintaxe da cláusula **Where** é a seguinte  
   
 ```  
 WHERE < condition expression >  

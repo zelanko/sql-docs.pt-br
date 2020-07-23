@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0235661fae03c93f71c33ce0dd6f01570ade7852
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e4b87b8b77b5b8adae8bd549e25ff8a9dd2e223e
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669722"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969817"
 ---
 # <a name="dmx-statements---data-manipulation"></a>Instruções DMX – manipulação de dados
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   A tabela a seguir lista as instruções que integram a DML (Data Manipulation Language) da mineração de dados em DMX (Data Mining Extensions).  
   

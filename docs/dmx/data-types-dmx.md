@@ -8,25 +8,25 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669782"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969877"
 ---
 # <a name="data-types-dmx"></a>Tipos de dados (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Ao usar o DMX (extensões de mineração de dados) para definir um novo modelo de mineração no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você deve fornecer um tipo de dados para cada coluna no modelo. O tipo de dados descreve os dados que o algoritmo de mineração de dados usará ao criar o modelo.  
   
  Os tipos de dados dependem do algoritmo. Cada algoritmo determina quais tipos de dados têm suporte e como são utilizados. Os algoritmos da Microsoft oferecem suporte aos seguintes tipos de dados:  
   
--   Text  
+-   Texto  
   
 -   long  
   
--   Booliano  
+-   Boolean  
   
 -   Double  
   

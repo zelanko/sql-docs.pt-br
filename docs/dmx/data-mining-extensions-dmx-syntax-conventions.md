@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 283ce289d890d9a4d76801a59709463324f45f88
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: dab02107467b75aa418592ce640d88d3789e6cff
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670221"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971732"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Convenções de sintaxe de DMX (Data Mining Extensions)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   A documentação de referência do DMX (extensões de mineração de dados) no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa as seguintes convenções para descrever a linguagem DMX.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "83670221"
 |`[ ]` (colchetes)|Contém itens de sintaxe opcionais. Não digite os colchetes.|  
 |{ } (chaves)|Contém itens de sintaxe requeridos. Não digite as chaves.|  
 |, ...|Indica que o item anterior à vírgula pode ser repetido por qualquer número de vezes. Os itens são separados por vírgulas.|  
-|\<label> ::=|O nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas, como \< rótulo>.|  
+|\<label>::=|O nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas, como \<label> .|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de DMX &#40;extensões DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)  

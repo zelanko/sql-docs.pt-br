@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1233bc4698edf578fbea27252aeaf42969e85ea3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 63fe6414d6f1df9f3855c01e0e7f03f523fe3a36
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669895"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971924"
 ---
 # <a name="-add-dmx"></a>+ (Adicionar) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Realiza uma operação aritmética que adiciona simultaneamente dois números.  
   

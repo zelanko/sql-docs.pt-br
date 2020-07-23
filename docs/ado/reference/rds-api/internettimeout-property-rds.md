@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8862cc58889c4446c23e994a9c8e0f6a54a50d38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 30de657985eafdc5a601d61fedbd666455f3dbc9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751965"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941058"
 ---
 # <a name="internettimeout-property-rds"></a>Propriedade InternetTimeout (RDS)
 Indica o número de milissegundos a aguardar antes que uma solicitação expire.  
@@ -35,11 +35,16 @@ Indica o número de milissegundos a aguardar antes que uma solicitação expire.
  As solicitações em um ambiente de três camadas podem levar vários minutos para serem executadas. Use essa propriedade para especificar o tempo adicional para solicitações de execução longa.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade InternetTimeout (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [Exemplo da propriedade InternetTimeout (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   

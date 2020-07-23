@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cc259b6c9bddff3bcd283a7b69fbaead6ec4e9b4
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: f92ceb47494703f6cc75363a19b9c8a030f9c539
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670052"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969576"
 ---
 # <a name="--negative-dmx"></a>- (Negativo) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Executa uma operação unária que retorna o valor negativo de uma expressão numérica.  
   

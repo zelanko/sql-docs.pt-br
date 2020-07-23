@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670115"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970444"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Selecione do &lt; modelo &gt; . SAMPLE_CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna casos de exemplo que representam os casos utilizados para treinar o modelo de mineração de dados.  
   
@@ -49,7 +49,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>Comentários  
  Casos de exemplo podem ser gerados e podem não existir de fato nos dados de treinamento. O caso retornado é representativo do nó de conteúdo especificado.  
   
- Embora o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo clustering de sequências seja o único [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo que dá suporte ao uso de SELECT do \< modelo>. SAMPLE_CASES, os algoritmos de terceiros também podem oferecer suporte a ele.  
+ Embora o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo clustering de sequência seja o único [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo que oferece suporte ao uso de SELECT de \<model> . SAMPLE_CASES, os algoritmos de terceiros também podem oferecer suporte a ele.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna casos de exemplo utilizados para treinar o modelo de mineração de Correio de destino. Usar a função [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) na cláusula **Where** retorna apenas os casos associados ao nó ' 000000003 '. A cadeia de caracteres de nó pode se encontrar na coluna de NODE_UNIQUE_NAME do conjunto de linhas de esquema.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729509"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922316"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressões de comparação (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   O XQuery fornece os seguintes tipos de operadores de comparação:  
   
@@ -48,11 +48,11 @@ ms.locfileid: "85729509"
 |Operador|Descrição|  
 |--------------|-----------------|  
 |=|Igual a|  
-|!=|Diferente|  
+|!=|Diferente de|  
 |\<|Menor que|  
 |>|Maior que|  
 |\<=|Menor que ou igual a|  
-|>=|Maior que ou igual a|  
+|>=|Maior ou igual a|  
   
  Quando você estiver comparando duas sequências usando operadores de comparação gerais e houver um valor na segunda sequência que compara True a um valor na primeira sequência, o resultado geral é True. Caso contrário, será False. Por exemplo, (1, 2, 3) = (3, 4) é True, pois o valor 3 aparece em ambas as sequências.  
   
@@ -143,11 +143,11 @@ WHERE ContactID=1
 |Operador|Descrição|  
 |--------------|-----------------|  
 |eq|Igual a|  
-|ne|Diferente|  
+|ne|Diferente de|  
 |lt|Menor que|  
 |gt|Maior que|  
 |le|Menor que ou igual a|  
-|ge|Maior que ou igual a|  
+|ge|Maior ou igual a|  
   
  Se os dois valores compararem o mesmo de acordo com o operador escolhido, a expressão retornará True. Caso contrário, ele retornará False. Se qualquer valor for uma sequência vazia, o resultado da expressão será False.  
   

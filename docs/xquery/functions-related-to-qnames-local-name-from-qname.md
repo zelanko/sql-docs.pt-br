@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78511d83ad75df4fe458bb5a5b3d2d59a8636c7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc416f49610aa5641aa06d8e3fbd7f6da89c7977
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720019"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901872"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Funções Relacionadas a QNames – local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Retorna um xs: NCNAME que representa a parte local de QName especificada por *$ARG*. O resultado será uma sequência vazia se *$ARG* for a sequência vazia.  
   

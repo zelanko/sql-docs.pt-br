@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669623"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970614"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECIONAR DISTINCT do &lt; modelo &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna todos os possíveis estados para a coluna selecionada no modelo. Os valores retornados variam dependendo se a coluna especificada contém valores discretos, valores numéricos diferenciados ou valores numéricos contínuos.  
   
@@ -53,7 +53,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- Os resultados da instrução **Select distinto do \< modelo>** variam, dependendo do tipo de coluna. A tabela a seguir descreve os tipos de coluna com suporte e a saída da instrução.  
+ Os resultados da instrução **Select distinto from \<model> ** variam, dependendo do tipo de coluna. A tabela a seguir descreve os tipos de coluna com suporte e a saída da instrução.  
   
 |Tipo de coluna|Saída|  
 |-----------------|------------|  
@@ -71,7 +71,7 @@ FROM [TM Decision Tree]
   
  Resultados do exemplo:  
   
-|Gênero|  
+|Sexo|  
 |------------|  
 ||  
 |F|  

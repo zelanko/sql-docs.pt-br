@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669822"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969917"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna o cluster com maior probabilidade de conter o caso de entrada.  
   
@@ -33,7 +33,7 @@ Cluster()
 ## <a name="return-type"></a>Tipo de retorno  
  A função de **cluster** não requer parâmetros.  
   
- A função **cluster** retorna um valor escalar de um nome de cluster. No entanto, se você usar essa função como um argumento de outra função, deverá considerar como uma \< referência de coluna de cluster>.  
+ A função **cluster** retorna um valor escalar de um nome de cluster. No entanto, se você usar essa função como um argumento de outra função, deverá considerar isso como uma \<cluster column reference> .  
   
 ## <a name="remarks"></a>Comentários  
  O **cluster** também pode ser usado como uma `<` referência `>` de coluna de cluster para uma função **PredictHistogram** .  

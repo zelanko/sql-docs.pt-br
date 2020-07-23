@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669993"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970258"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Estrutura e uso de consultas de previsão DMX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   No [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode usar a consulta de previsão no DMX (extensões de Data Mining) para prever valores de coluna desconhecidos em um novo conjunto de dados, com base nos resultados de um modelo de mineração.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "83669993"
   
 -   **SELECIONAR [ACHATADO]**  
   
--   **Início**  
+-   **INÍCIO**  
   
--   **Do*** \< modelo>* **junção de previsão**      
+-   **De** *\<model>* **junção de previsão**      
   
 -   **ON**  
   
--   **POSIÇÃO**  
+-   **WHERE**  
   
 -   **ORDER BY**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83669993"
   
 -   Funções que retornam uma coluna de dados.  
   
- O elemento **do** * \< modelo>* **junção de previsão** define os dados de origem a serem usados para criar a previsão. Para uma consulta singleton, essa é uma série de valores que são atribuídos a colunas. Para uma junção de previsão vazia, é deixado em branco.  
+ O elemento **da** *\<model>* **junção de previsão** define os dados de origem a serem usados para criar a previsão. Para uma consulta singleton, essa é uma série de valores que são atribuídos a colunas. Para uma junção de previsão vazia, é deixado em branco.  
   
  O elemento **on** mapeia as colunas que são definidas no modelo de mineração para colunas em um conjunto de um DataSet externo. Esse elemento não precisará ser incluído quando forem criadas uma consulta de junção de previsão vazia ou uma junção de previsão natural.  
   

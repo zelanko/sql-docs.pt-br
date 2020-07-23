@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669869"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971819"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Cria um novo modelo de mineração baseado em uma estrutura de mineração existente.  Quando você usa a instrução **ALTER MINING STRUCTURE** para criar um novo modelo de mineração, a estrutura já deve existir. Por outro lado, ao usar a instrução, [crie um modelo de mineração &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md), crie um modelo e gere automaticamente sua estrutura de mineração subjacente ao mesmo tempo.  
   
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  O nome de um algoritmo de mineração de dados, conforme definido pelo provedor.  
   
 > [!NOTE]  
->  Uma lista dos algoritmos com suporte pelo provedor atual pode ser recuperada usando [DMSCHEMA_MINING_SERVICES conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para exibir os algoritmos com suporte na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consulte [Propriedades de mineração de dados](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Uma lista dos algoritmos com suporte pelo provedor atual pode ser recuperada usando [DMSCHEMA_MINING_SERVICES conjunto de linhas](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Para exibir os algoritmos com suporte na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consulte [Propriedades de mineração de dados](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDICT**|Esta coluna pode ser prevista pelo modelo e seus valores podem ser usados como entrada para prever o valor de outras colunas de previsão.|  
+|**PREVER**|Esta coluna pode ser prevista pelo modelo e seus valores podem ser usados como entrada para prever o valor de outras colunas de previsão.|  
 |**PREDICT_ONLY**|Esta coluna pode ser prevista pelo modelo, mas seus valores não podem ser usados em casos de entrada para prever o valor de outras colunas de previsão.|  
   
 ## <a name="filter-criteria-expressions"></a>Expressões de critérios de filtro  

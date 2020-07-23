@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a82bfef35b0d8aec39f7f539f65e6ff1fe8f3ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39b5db61e3709d8d9f1d9859f15d9e6c271b5e05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753575"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917963"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funções em Sequências – distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Remove valores duplicados da sequência especificada por *$ARG*. Se *$ARG* for uma sequência vazia, a função retornará a sequência vazia.  
   

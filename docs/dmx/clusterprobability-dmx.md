@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669353"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969924"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.  
   
@@ -40,9 +40,9 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Para obter mais informações sobre como usar essa sintaxe, consulte [selecionar do modelo de &#60;&#62;.&#41;de conteúdo &#40;DMX ](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas do esquema de conteúdo do modelo de mineração, consulte [DMSCHEMA_MINING_MODEL_CONTENT conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ Para obter mais informações sobre como usar essa sintaxe, consulte [selecionar do modelo de &#60;&#62;.&#41;de conteúdo &#40;DMX ](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas do esquema de conteúdo do modelo de mineração, consulte [DMSCHEMA_MINING_MODEL_CONTENT conjunto de linhas](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
- Se uma \< legenda de nó> não for especificada, a função retornará a probabilidade de que os casos de entrada pertençam ao cluster mais provável. Use a função de **cluster** para retornar o cluster mais provável.  
+ Se um \<node caption> não for especificado, a função retornará a probabilidade de que os casos de entrada pertençam ao cluster mais provável. Use a função de **cluster** para retornar o cluster mais provável.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a probabilidade de que caso especificado exista no cluster rotulado de Cluster 2.  

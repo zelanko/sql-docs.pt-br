@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 21ac78f6ee0ed77bb9549f1749d73d29344a49d1
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668731"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968304"
 ---
 # <a name="or-dmx"></a>OR (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Operador lógico que executa uma disjunção lógica em duas expressões numéricas.  
   
@@ -44,10 +44,10 @@ Expression1 OR Expression2
   
 |Se a Expression1 for|Se a Expression2 for|O valor de retorno será|  
 |-----------------------|-----------------------|---------------------|  
-|VERDADEIRO|VERDADEIRO|VERDADEIRO|  
-|TRUE|FALSO|VERDADEIRO|  
-|FALSO|VERDADEIRO|TRUE|  
-|FALSO|FALSO|FALSO|  
+|TRUE|TRUE|TRUE|  
+|TRUE|FALSE|TRUE|  
+|FALSE|TRUE|TRUE|  
+|FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   

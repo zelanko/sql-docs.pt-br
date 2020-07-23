@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667191"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970694"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna o valor de suporte para um estado especificado.  
   
@@ -31,12 +31,12 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Uma coluna escalar.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Um valor escalar do tipo especificado pela *\<* referência de coluna escalar *>* .  
+ Um valor escalar do tipo especificado por *\<*scalar column reference*>* .  
   
 ## <a name="remarks"></a>Comentários  
- Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade previsível será usado, excluindo-se a partição de estados faltantes. Para incluir o Bucket de Estados ausentes, defina o \< estado previsto> como **INCLUDE_NULL**.  
+ Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade previsível será usado, excluindo-se a partição de estados faltantes. Para incluir o Bucket de Estados ausentes, defina \<predicted state> como **INCLUDE_NULL**.  
   
- Para retornar o suporte para os Estados ausentes, defina o \< estado previsto> como nulo.  
+ Para retornar o suporte para os Estados ausentes, defina \<predicted state> como NULL.  
   
 > [!NOTE]  
 >  Os valores de suporte são calculados de modo diferente ou talvez tenham uma interpretação diferente dependendo do tipo de modelo que você está consultando. Para obter mais informações sobre como o suporte é calculado para qualquer tipo de modelo específico, consulte o tipo de algoritmo individual no [conteúdo do modelo de mineração &#40;Analysis Services&#41;de mineração de dados ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

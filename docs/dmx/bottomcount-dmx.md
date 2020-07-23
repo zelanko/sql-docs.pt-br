@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669854"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969950"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna o número especificado de linhas inferiores em ordem crescente de classificação, conforme especificado por uma expressão.  
   
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Aplica-se A  
- Uma expressão que retorna uma tabela, como uma \< referência de coluna de tabela> ou uma função que retorna uma tabela.  
+ Uma expressão que retorna uma tabela, como uma \<table column reference> , ou uma função que retorna uma tabela.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- \<> de expressão de tabela  
+ \<table expression>  
   
 ## <a name="remarks"></a>Comentários  
- O valor fornecido pela \< expressão de classificação> argumento determina a ordem crescente de classificação para as linhas que são fornecidas na \< expressão de tabela> argumento e o número de linhas inferiores que é especificado no \< argumento Count> é retornado.  
+ O valor fornecido pelo \<rank expression> argumento determina a ordem crescente de classificação para as linhas que são fornecidas no \<table expression> argumento, e o número de linhas inferiores que é especificado no \<count> argumento é retornado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

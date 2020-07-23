@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670011"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970261"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de dados de origem&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Para treinar um modelo de data mining e criar previsões de um modelo de mineração, você precisa acessar os dados que são externos ao banco de dado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Use a \< cláusula> de consulta de dados de origem em DMX (extensões de mineração de dados) para definir esses dados externos. O [&#41;de inserção no &#40;DMX ](../dmx/insert-into-dmx.md), [selecione do modelo de &#60;&#62; junção de previsão &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Selecione em instruções de junção de previsão natural](../dmx/select-from-model-prediction-join-dmx.md) todos usam ** \<>de consulta de dados de origem **.  
+  Para treinar um modelo de data mining e criar previsões de um modelo de mineração, você precisa acessar os dados que são externos ao banco de dado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Você usa a \<source data query> cláusula em DMX (extensões de mineração de dados) para definir esses dados externos. O [&#41;de inserção no &#40;DMX ](../dmx/insert-into-dmx.md), [selecione do modelo de &#60;&#62; junção de previsão &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e selecione todas as instruções [de junção de previsão naturais](../dmx/select-from-model-prediction-join-dmx.md) todos usam **\<source data query>** .  
   
 ## <a name="query-types"></a>Tipos de consultas  
  As três modos mais comuns para especificar dados de origem são:  

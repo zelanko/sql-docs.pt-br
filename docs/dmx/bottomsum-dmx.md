@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669847"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969923"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna, em ordem crescente de classificação, as linhas mais baixas de uma tabela, cujo total cumulativo é, no mínimo, um valor especificado.  
   
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Aplica-se A  
- Uma expressão que retorna uma tabela, como uma \< referência de coluna de tabela> ou uma função que retorna uma tabela.  
+ Uma expressão que retorna uma tabela, como uma \<table column reference> , ou uma função que retorna uma tabela.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- \<> de expressão de tabela  
+ \<table expression>  
   
 ## <a name="remarks"></a>Comentários  
- A função **BottomSum** retorna as linhas inferiores em ordem crescente de classificação. A classificação baseia-se no valor avaliado da \< expressão de classificação> argumento para cada linha, de modo que a soma da \< expressão de classificação> valores é pelo menos o total determinado especificado pelo \< argumento Sum>. **BottomSum** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor SUM especificado.  
+ A função **BottomSum** retorna as linhas inferiores em ordem crescente de classificação. A classificação é baseada no valor avaliado do \<rank expression> argumento para cada linha, de modo que a soma dos \<rank expression> valores seja pelo menos o total determinado especificado pelo \<sum> argumento. **BottomSum** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor SUM especificado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

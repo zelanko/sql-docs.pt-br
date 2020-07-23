@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669918"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970229"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   A função **TopPercent** retorna, em ordem de diminuição da classificação, as linhas mais superiores de uma tabela cujo total cumulativo é pelo menos um percentual especificado.  
   
@@ -28,13 +28,13 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>Aplica-se A  
- Uma expressão que retorna uma tabela, como uma \< referência de coluna de tabela> ou uma função que retorna uma tabela.  
+ Uma expressão que retorna uma tabela, como uma \<table column reference> , ou uma função que retorna uma tabela.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- \<> de expressão de tabela  
+ \<table expression>  
   
 ## <a name="remarks"></a>Comentários  
- A função **TopPercent** retorna as linhas mais superiores em ordem decrescente de classificação com base no valor avaliado da expressão de \< classificação> argumento para cada linha, de modo que a soma da \< expressão de classificação> valores seja pelo menos a porcentagem especificada pelo \< argumento percentual>. **TopPercent** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor percentual especificado.  
+ A função **TopPercent** retorna as linhas mais superiores em ordem decrescente de classificação com base no valor avaliado do \<rank expression> argumento para cada linha, de modo que a soma dos \<rank expression> valores seja pelo menos a porcentagem determinada especificada pelo \<percent> argumento. **TopPercent** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor percentual especificado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

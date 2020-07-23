@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: eedff3b14960fae68ad4e3a9ac54a0034c1a9300
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670087"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969767"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Processa o objeto de mineração de dados especificado. Para obter mais informações sobre como processar modelos de mineração e estruturas de mineração, consulte [requisitos e considerações de processamento &#40;&#41;de mineração de dados ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
@@ -46,9 +46,9 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Comentários  
  Se você não especificar o **modelo de mineração** ou a **estrutura de mineração**, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procurará o tipo de objeto com base no nome e processará o objeto correto. Se o servidor contiver uma estrutura de mineração e um modelo de mineração com nomes idênticos, um erro será retornado.  
   
- Usando o segundo formulário de sintaxe, insira no* \< objeto>*. COLUMN_VALUES, você pode inserir dados diretamente nas colunas de modelo sem treinar o modelo. Esse método fornece dados de coluna para o modelo de forma concisa, ordenada, que é útil quando se trabalha com conjuntos de dados contendo hierarquias ou colunas ordenadas.  
+ Usando o segundo formulário de sintaxe, insira em *\<object>* . COLUMN_VALUES, você pode inserir dados diretamente nas colunas de modelo sem treinar o modelo. Esse método fornece dados de coluna para o modelo de forma concisa, ordenada, que é útil quando se trabalha com conjuntos de dados contendo hierarquias ou colunas ordenadas.  
   
- Se você usar **inserir em** com um modelo de mineração ou uma estrutura de mineração, e deixar de fora as \< colunas de modelo mapeado> e \<> argumentos de consulta de dados de origem, a instrução se comportará como **ProcessDefault**, usando associações que já existem. Se não houver associações, a instrução retornará um erro. Para obter mais informações sobre **ProcessDefault**, consulte [Opções de processamento e configurações &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). O exemplo a seguir mostra a sintaxe:  
+ Se você usar **Insert em** com um modelo de mineração ou uma estrutura de mineração e deixar os \<mapped model columns> \<source data query> argumentos e, a instrução se comportará como **ProcessDefault**, usando associações que já existem. Se não houver associações, a instrução retornará um erro. Para obter mais informações sobre **ProcessDefault**, consulte [Opções de processamento e configurações &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). O exemplo a seguir mostra a sintaxe:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |de|Estado de objetos|Result|  
 |---------------|----------------------|------------|  
-|INSERIR no modelo de modelo de mineração* \<>*|A estrutura de mineração é processada.|O modelo de mineração é processado.|  
+|INSERIR NO MODELO DE MINERAÇÃO*\<model>*|A estrutura de mineração é processada.|O modelo de mineração é processado.|  
 ||A estrutura de mineração é não processada.|O modelo de mineração e a estrutura de mineração são processadas.|  
 ||A estrutura de mineração contém modelos de mineração adicionais.|Falha no processo. É preciso reprocessar a estrutura e os modelos de mineração associados.|  
-|INSERIR na estrutura da estrutura de mineração* \<>*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
-|INSERIR no modelo modelo de mineração* \<>* que contém uma consulta de origem<br /><br /> ou<br /><br /> INSERIR em estrutura de estrutura de mineração* \<>* que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERIR NA ESTRUTURA DE MINERAÇÃO*\<structure>*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
+|INSERIR no modelo *\<model>* de mineração que contém uma consulta de origem<br /><br /> ou<br /><br /> INSERIR na estrutura *\<structure>* de mineração que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Colunas de modelo mapeado  
- Usando o \< elemento> de colunas de modelo mapeado, você pode mapear as colunas da fonte de dados para as colunas em seu modelo de mineração. O \< elemento de> de colunas de modelo mapeado tem a seguinte forma:  
+ Usando o \<mapped model columns> elemento, você pode mapear as colunas da fonte de dados para as colunas em seu modelo de mineração. O \<mapped model columns> elemento tem o seguinte formato:  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  A sintaxe de SKIP requer que você insira SKIP na posição da coluna individual no conjunto de linhas de entrada que não tem nenhuma coluna de estrutura de mineração correspondente. Por exemplo, na tabela aninhada a seguir, OrderNumber deve ser selecionado na cláusula APPEND para que possa ser usado na cláusula RELATE para especificar a junção. No entanto, você não precisa inserir os dados de OrderNumber na tabela aninhada na estrutura de mineração. Portanto o exemplo usa a palavra-chave SKIP em vez de OrderNumber no argumento INSERT INTO.  
   
 ## <a name="source-data-query"></a>Consulta de dados de origem  
- O \< elemento> de consulta de dados de origem pode incluir os seguintes tipos de fonte de dados:  
+ O \<source data query> elemento pode incluir os seguintes tipos de fonte de dados:  
   
 -   **OPENQUERY**  
   

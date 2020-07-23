@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669986"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970283"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna o valor da coluna de estrutura que corresponde ao caso especificado ou o valor de tabela para uma tabela aninhada no caso especificado.  
   
@@ -32,7 +32,7 @@ StructureColumn('structure column name')
  O nome de uma coluna da estrutura de mineração de tabela aninhada ou caso.  
   
 ## <a name="result-type"></a>Tipo de resultado  
- O tipo retornado depende do tipo da coluna referenciada no \< nome da coluna de estrutura> parâmetro. Por exemplo, se a coluna da estrutura de mineração mencionada contiver um valor escalar, a função retornará um valor escalar.  
+ O tipo retornado depende do tipo da coluna que é referenciada no \<structure column name> parâmetro. Por exemplo, se a coluna da estrutura de mineração mencionada contiver um valor escalar, a função retornará um valor escalar.  
   
  Se a coluna da estrutura de mineração mencionada for uma tabela aninhada, a função retornará um valor de tabela. O valor de tabela retornado pode ser usado na cláusula FROM de uma instrução sub-SELECT.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 125fe829c3b76be0d92a3519249df571890efbf2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: b19b897b65ffb3a4c9e940370ffdead1e10b6d31
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670025"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970307"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;consulta de dados &gt; de origem – OPENROWSET
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Substitui uma consulta de dados de origem por uma consulta a um provedor externo. As instruções de inserção, seleção de junção de previsão e seleção de junção de previsão NATURAL dão suporte a **OPENROWSET**.  
   

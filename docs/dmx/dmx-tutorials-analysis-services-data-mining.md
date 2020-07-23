@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668965"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969805"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Tutoriais DMX (Analysis Services - Mineração de Dados)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Os tutoriais a seguir apresentam o uso de instruções DMX  com estruturas e modelos de mineração de dados.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bcd8f24e3d594e7013900d31db2d459c9236d9d9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52559b61d2447aabea35bc8d01454046a9cbbe85
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896494"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914772"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada evento em uma sessão de eventos.  
   
@@ -48,13 +48,12 @@ ms.locfileid: "85896494"
 ## <a name="remarks"></a>Comentários  
  Essa exibição tem as cardinalidades de relação a seguir.  
   
-||||  
-|-|-|-|  
-|De|Para|Relação|  
+| De | Para | Relação |
+| ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|sys. server_event_sessions. event_session_id|Muitos para um|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Exibições de catálogo de eventos estendidos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   

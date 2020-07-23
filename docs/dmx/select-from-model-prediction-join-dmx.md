@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670133"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970442"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECIONAR da &lt; junção de previsão de modelo &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Usa um modelo de mineração para predizer os estados de colunas em uma fonte de dados externa. A instrução de **junção de previsão** corresponde a cada caso da consulta de origem para o modelo.  
   
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- A cláusula ON define o mapeamento entre as colunas da consulta de fonte e as colunas do modelo de mineração. Esse mapeamento é usado para direcionar colunas de uma consulta de fonte para colunas no modelo de mineração, de modo que as colunas possam ser usadas como entradas para criar as previsões. As colunas na \< *lista de mapeamento de junção*> estão relacionadas usando um sinal de igual (=), conforme mostrado no exemplo a seguir:  
+ A cláusula ON define o mapeamento entre as colunas da consulta de fonte e as colunas do modelo de mineração. Esse mapeamento é usado para direcionar colunas de uma consulta de fonte para colunas no modelo de mineração, de modo que as colunas possam ser usadas como entradas para criar as previsões. As colunas no \<*join mapping list*> são relacionadas usando um sinal de igual (=), conforme mostrado no exemplo a seguir:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  A consulta de fonte para a junção de previsão pode ser uma tabela ou uma consulta singleton.  
   
- Você pode especificar funções de previsão que não retornam uma expressão de tabela na \< *lista de expressões Select*> e a \< *expressão de condição*>.  
+ Você pode especificar funções de previsão que não retornam uma expressão de tabela no \<*select expression list*> e no \<*condition expression*> .  
   
  A **junção de previsão natural** mapeia automaticamente os nomes de coluna da consulta de origem que correspondem aos nomes de coluna no modelo. Se você usar a **previsão natural**, poderá omitir a cláusula on.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669833"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969940"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna, em ordem crescente de classificação, as linhas mais baixas de uma tabela, cujo total cumulativo é, no mínimo, uma porcentagem especificada.  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *\<>de expressão de tabela*  
+ *\<Table expression>*  
  O nome de uma coluna de tabela aninhada ou expressão com valor de tabela.  
   
- *\<expressão de classificação>*  
+ *\<rank expression>*  
  Uma coluna na tabela aninhada ou expressão avaliada para uma coluna.  
   
- *\<percentual de>*  
+ *\<percent>*  
  Um duplo que indica a porcentagem de destino total.  
   
 ## <a name="result-type"></a>Tipo de resultado  
  Uma tabela.  
   
 ## <a name="remarks"></a>Comentários  
- A função **BottomPercent** retorna as linhas inferiores em ordem crescente de classificação. A classificação é baseada no valor avaliado da expressão de \< classificação> argumento para cada linha, de modo que a soma da \< expressão de classificação> valores é pelo menos a porcentagem especificada pelo argumento de porcentagem de \<>. **BottomPercent** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor percentual especificado.  
+ A função **BottomPercent** retorna as linhas inferiores em ordem crescente de classificação. A classificação é baseada no valor avaliado do \<rank expression> argumento para cada linha, de modo que a soma dos \<rank expression> valores seja pelo menos a porcentagem determinada especificada pelo \<percent> argumento. **BottomPercent** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor percentual especificado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você criou no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
