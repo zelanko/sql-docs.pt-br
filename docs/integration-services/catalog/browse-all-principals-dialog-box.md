@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 618f5e013e8875f13b06bcabfe8b0c1456af0aba
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299021"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922652"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Caixa de diálogo Procurar Todas as Entidades de Segurança
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use a caixa de diálogo **Procurar Todas as Entidades de Segurança** para selecionar uma entidade de segurança de banco de dados para alterar as permissões da entidade de segurança no projeto selecionado ou em todos os projetos contidos em uma pasta selecionada.  

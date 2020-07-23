@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a65b7559770b6de0d1ebd928815458c02acfd41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3630bbebf5c86b0e839fe51735cba4fb71763b8a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299047"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922693"
 ---
 # <a name="saving-a-package-programmatically"></a>Salvando um pacote programaticamente
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Depois de criar um pacote novo programaticamente, ou modificar um existente, em geral você deseja salvar as alterações.  

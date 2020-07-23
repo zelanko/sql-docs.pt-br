@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 344e3eca9359d3bafa0dd0fd529c939f84575921
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b170928624565d8dc1f80cea93eed4473db3e5e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297612"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921269"
 ---
 # <a name="day-ssis-expression"></a>DAY (Expressão SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Retorna um inteiro que representa a parte do dia em uma data.  

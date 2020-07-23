@@ -15,15 +15,15 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e5abdc4a3ce6c1b58f2ae807889c1d0deb20bc4a
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 23834f3e4a9486713799e9f8542f2cbc66198f5a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159664"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921359"
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Antes de desenvolver um aplicativo que utilize funcionalidades de replicação, siga estas etapas de planejamento gerais:  
   

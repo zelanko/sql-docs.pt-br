@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf1f0f443bbc89e38291b9ecb6927cace18334e8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726133"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921782"
 ---
 # <a name="reading-pages"></a>Lendo páginas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 A E/S de uma instância do SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] inclui leituras lógicas e físicas. Uma leitura lógica ocorre sempre que o [!INCLUDE[ssDE](../includes/ssde-md.md)] solicita uma página do [cache do buffer](../relational-databases/memory-management-architecture-guide.md). Se a página não estiver atualmente no cache do buffer, a leitura física copiará primeiramente a página de disco no cache.
 

@@ -16,16 +16,16 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eedc7754a9bb5f48a07b4865cfb426f7e234d192
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e8c23226d43bd9d10d56b84ae0b4edccc40151d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294979"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923162"
 ---
 # <a name="advanced-editor"></a>Editor Avançado
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use a caixa de diálogo **Editor Avançado** para configurar propriedades para o objeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] selecionado.  

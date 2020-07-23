@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0890fbce533a540300ebd6b7da37a1fc26572a52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768062"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921374"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Este tópico mostra como se conectar a uma fonte de dados do **PostgreSQL** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. 

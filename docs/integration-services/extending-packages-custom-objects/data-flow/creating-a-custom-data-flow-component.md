@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93a2d0db91c8e22146ed3d83bf30d72d9cc3a00e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7acd3f9c218a068f5af09da21ec21b1fcf6e065
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297282"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921252"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Criando um componente de fluxo de dados personalizado
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], a tarefa de fluxo de dados expõe um modelo de objeto que permite que os desenvolvedores criem componentes de fluxo de dados personalizados, como fontes, transformações e destinos, usando o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e o código gerenciado.  

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99a7166ecf231a49e566bbecb7390abe33e61853
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299005"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922654"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use a caixa de diálogo **Configurar** para configurar parâmetros, gerenciadores de conexões e referências a ambientes para projetos e pacotes.  

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0c50372c199d80dc0e6d3d7e3326918011f8a28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dec02c9a17a2eb1db3411c9b359ad55a83ac4fa5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283065"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922359"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>Lição 6-3: Testar o pacote da Lição 6
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Em tempo de execução, seu pacote obtém o valor para a propriedade **Directory** do parâmetro **VarFolderName**.  

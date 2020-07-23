@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 53e5b45af8da84c9afa7bf0a5fcebe0087db0d81
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487995"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922040"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Configure o SSIS ([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) Scale Out concluindo as tarefas a seguir. 

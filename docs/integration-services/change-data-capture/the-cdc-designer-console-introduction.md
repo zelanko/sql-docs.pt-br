@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9c07061634c39d6a5d1b7a2a0b698b27d90c68c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a00271fd569f65b0adb94bba4d035d4fc3f3849f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294534"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921262"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>A introdução do CDC Designer Console
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A seção descreve os procedimentos de instalação para o Change Data Capture Designer para Oracle da Attunity.  

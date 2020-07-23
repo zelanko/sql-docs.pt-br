@@ -18,16 +18,16 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bd61166df6d257c6088b1e62c2c5b262207f958
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295711"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921916"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ajuda F1 do Assistente de Atualização de Pacotes SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use o Assistente de Atualização de Pacote do SSIS para atualizar pacotes criados por versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o formato de pacote da versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

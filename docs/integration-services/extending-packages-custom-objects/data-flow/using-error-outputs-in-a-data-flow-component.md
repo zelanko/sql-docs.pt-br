@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 044f6b384bf557b2c926dd36151488adc6c292a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 965279f9ae819dfccae3a1f1c161a4681ea0cf40
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287373"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922432"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Usando saídas de erro em um componente de fluxo de dados
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Os objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> especiais chamados saídas de erro podem ser adicionados a componentes para permitir que o componente redirecione linhas que não pode processar durante a execução. Os problemas que um componente pode encontrar são geralmente categorizados como erros ou truncamentos, e são específicos a cada componente. Os componentes que oferecem saídas de erro fornecem aos seus usuários a flexibilidade de lidar com condições de erro filtrando linhas de erro para fora do conjunto de resultados, falhando o componente quando ocorre um problema ou ignorando erros e continuando.  

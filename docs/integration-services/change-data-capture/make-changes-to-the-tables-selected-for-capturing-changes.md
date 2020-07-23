@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ee52054e14c641aad64eaa96b146af86e048d95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71122a2b6ffca4e5b1080ed1cef8321cfd4bef04
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298700"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922528"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>Fazer alterações às tabelas selecionadas para capturar alterações
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Nesta caixa de diálogo, você pode selecionar colunas específicas da tabela selecionada da qual capturar alterações. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  

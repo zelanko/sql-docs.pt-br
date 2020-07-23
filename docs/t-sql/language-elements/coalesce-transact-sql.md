@@ -21,12 +21,12 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b72554fcfb879a84eb881647a7f75186168380dd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7b88a8e08fbf031d2b4847206e1bfdf4550bf86c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005047"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922981"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ COALESCE ( expression [ ,...n ] )
 _expressão_  
 É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo.  
   
-## <a name="return-types"></a>Tipos de retorno  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipos de retorno
 Retorna o tipo de dados de _expressão_ com a maior precedência de tipo de dados. Se todas as expressões forem não anuláveis (nonnullable), o resultado será digitado como nonnullable.  
   
 ## <a name="remarks"></a>Comentários  

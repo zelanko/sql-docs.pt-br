@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a157124ed1167ecafa977de573cfdca8d275281f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298932"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922563"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Caixa de diálogo Definir Valor do Parâmetro
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use a caixa de diálogo **Definir Valor do Parâmetro** para definir valores de parâmetros e propriedades do gerenciador de conexões para projetos e pacotes.  

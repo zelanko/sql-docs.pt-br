@@ -24,12 +24,12 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c44e0c3ef987120fda177b2c4f36baca778d6e5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f76874ea201a280386091f4d827b0a2a19332a9a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007387"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923322"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (maior ou igual a) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "86007387"
 expression >= expression  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *expressão*  
  É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Ambas as expressões devem ter tipos de dados implicitamente conversíveis. A conversão depende das regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   

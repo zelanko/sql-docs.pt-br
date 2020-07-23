@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f29f257e6e50a5c835ddcccb323c557bd693bbe5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298574"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921442"
 ---
 # <a name="work-with-cdc-services"></a>Trabalhar com serviços CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Você pode usar o Console de Configuração do Serviço CDC para criar um novo serviço CDC e preparar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC.  

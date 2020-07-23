@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc4c1b81917e07ec23b543f64cb81942104ad31d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298503"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923095"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gerenciador de conexões de vários arquivos simples
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Um gerenciador de conexões de Vários Arquivos Simples permite que um pacote acesse dados em vários arquivos simples. Por exemplo, uma fonte de Arquivo Simples pode usar um gerenciador de conexões de Vários Arquivos Simples quando a tarefa Fluxo de Dados está dentro de um contêiner de loop, como o contêiner Loop For. Em cada loop do contêiner, a fonte de Arquivo Simples carrega dados do nome de arquivo seguinte fornecido pelo gerenciador de conexões de Vários Arquivos Simples.  
@@ -101,7 +101,7 @@ ms.locfileid: "71298503"
  **Formato**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita. Todos os arquivos devem ter o mesmo formato de dados.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa, especificada arrastando as linhas do marcador na página **Colunas** .|  
@@ -113,7 +113,7 @@ ms.locfileid: "71298503"
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
@@ -148,7 +148,7 @@ ms.locfileid: "71298503"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -162,7 +162,7 @@ ms.locfileid: "71298503"
  **Delimitador de coluna**  
  Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|As colunas são delimitadas por um retorno de carro.|  
@@ -203,7 +203,7 @@ ms.locfileid: "71298503"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -234,10 +234,10 @@ ms.locfileid: "71298503"
  **Configurar as propriedades de cada coluna**  
  Selecione uma coluna no painel esquerdo para exibir suas propriedades no painel direito. Consulte a tabela a seguir para obter uma descrição das propriedades dos tipos de dados. Algumas das propriedades listadas são configuráveis apenas para alguns formatos de arquivo simples.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Essa propriedade é somente leitura. Nos arquivos irregulares à direita, todas as colunas têm uma largura fixa, com exceção da última, que é encerrada pelo delimitador de linha.|  
-|**OutputColumnWidth**|Especifica um valor a ser armazenado como contagem de bytes; no caso de arquivos Unicode, isso será exibido como contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples.<br /><br /> Observação: no modelo de objeto, o nome desta propriedade é MaximumWidth.|  
+|**OutputColumnWidth**|Especifica um valor a ser armazenado como contagem de bytes; no caso de arquivos Unicode, isso será exibido como contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples.<br /><br /> Observação: No modelo de objeto, o nome desta propriedade é MaximumWidth.|  
 |**DataType**|Seleciona na lista de tipos de dados disponíveis. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indica se os dados de texto são qualificados usando um caractere de qualificador de texto:<br /><br /> **True**: os dados de texto no arquivo simples são qualificados.<br /><br /> **False**: os dados de texto no arquivo simples não são qualificados.|  
 |**Nome**|Forneça um nome de coluna. O padrão é uma lista numerada das colunas; entretanto, é possível escolher qualquer nome exclusivo e descritivo.|  
@@ -249,7 +249,7 @@ ms.locfileid: "71298503"
  **Novo**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
 |**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  
