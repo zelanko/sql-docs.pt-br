@@ -1,1 +1,0 @@
-Construtor de Relatórios do SQL Server para SQL Server 2012

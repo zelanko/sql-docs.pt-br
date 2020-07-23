@@ -1,1 +1,0 @@
-Este é o conjunto de resultados.

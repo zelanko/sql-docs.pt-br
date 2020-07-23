@@ -1,1 +1,0 @@
-**Aplica-se a:**

@@ -1,1 +1,0 @@
-Cliente Data Quality

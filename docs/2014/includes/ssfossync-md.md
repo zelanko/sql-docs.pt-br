@@ -1,1 +1,0 @@
-conjunto de failover de confirmação\-síncrona

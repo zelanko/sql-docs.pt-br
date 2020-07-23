@@ -1,1 +1,0 @@
-Adicionar banco de dados ao Assistente de Grupo de Disponibilidade

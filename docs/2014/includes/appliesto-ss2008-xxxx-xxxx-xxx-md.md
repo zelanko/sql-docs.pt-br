@@ -1,1 +1,0 @@
-<Token>**Este tópico aplica-se a:**![](media/yes-icon.png)Sim SQL Server (a partir![de](media/no-icon.png)2008) não![banco](media/no-icon.png)de dados ![SQL](media/no-icon.png)do Azure não SQL data warehouse do Azure não Parallel Data Warehouse</Token>

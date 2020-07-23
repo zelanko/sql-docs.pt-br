@@ -1,1 +1,0 @@
-conjunto de failover inteiro
