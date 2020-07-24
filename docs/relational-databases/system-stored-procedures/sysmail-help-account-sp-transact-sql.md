@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890925"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122679"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,19 +49,18 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna um conjunto de resultados que contém as colunas listadas a seguir.  
   
-||||  
-|-|-|-|  
-|Nome da coluna|Tipo de dados|Descrição|  
+| Nome da coluna | Tipo de dados | Descrição |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|O ID da conta.|  
 |**name**|**sysname**|O nome da conta.|  
-|**ndescrição**|**nvarchar(256)**|A descrição da conta.|  
+|**descrição**|**nvarchar(256)**|A descrição da conta.|  
 |**email_address**|**nvarchar(128)**|O endereço de email a partir do qual as mensagens serão enviadas.|  
 |**display_name**|**nvarchar(128)**|O nome para exibição da conta.|  
 |**replyto_address**|**nvarchar(128)**|O endereço onde as respostas às mensagens desta conta são enviadas.|  
 |**ServerType**|**sysname**|O tipo de servidor de email da conta.|  
 |**ServerName**|**sysname**|O nome do servidor de email da conta.|  
 |**port**|**int**|O número da porta usada pelo servidor de email.|  
-|**Nome de Usuário**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
+|**usu**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
 |**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro for 0, Database Mail usará o ** \@ nome de usuário** e a ** \@ senha** para autenticação no servidor SMTP. Se o ** \@ nome de usuário** e a ** \@ senha** forem nulos, Database Mail usará a autenticação anônima. Consulte o administrador do SMTP antes de especificar esse parâmetro.|  
 |**enable_ssl**|**bit**|Especifica se Database Mail criptografa a comunicação usando TLS (segurança de camada de transporte), anteriormente conhecido como protocolo SSL (SSL). Use esta opção se o TLS for necessário no servidor SMTP. **Enable_ssl** é bit, sem padrão. 1 indica Database Mail criptografa a comunicação usando TLS. 0 indica Database Mail envia o email sem criptografia TLS.|  
   
