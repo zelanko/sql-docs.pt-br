@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94cc5b07c97bd5c8d7c7ae6c30c179e2555b95d5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762777"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942634"
 ---
 # <a name="setpermissions-method-adox"></a>Método SetPermissions (ADOX)
 Especifica as permissões para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) ou [usuário](../../../ado/reference/adox-api/user-object-adox.md) em um objeto.  
@@ -61,11 +61,16 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 >  Ao chamar **SetPermissions**, a configuração de ações para **adAccessRevoke** substitui as configurações do parâmetro de *direitos* . Não defina *ações* para **adAccessRevoke** se desejar que os direitos especificados no parâmetro *Rights* tenham efeito.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo dos métodos getPermissions e SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Método getPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   

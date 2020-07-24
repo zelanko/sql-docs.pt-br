@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 566e815350bd59effc4802495bda4846e9a77691
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2a94ea4d86d727bc2258b853285eaa7ebc1e48bc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759212"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942429"
 ---
 # <a name="datecreated-property-adox"></a>Propriedade DateCreated (ADOX)
 Indica a data em que o objeto foi criado.  
@@ -34,11 +34,19 @@ Indica a data em que o objeto foi criado.
  A propriedade **DateCreated** é nula para objetos acrescentados recentemente. Depois de acrescentar uma nova [exibição](../../../ado/reference/adox-api/view-object-adox.md) ou [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), você deve chamar o método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) da coleção [views](../../../ado/reference/adox-api/views-collection-adox.md) ou [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) para obter valores para a propriedade **DateCreated** .  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-||||  
-|-|-|-|  
-|[Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades DateCreated e DateModified (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [Propriedade DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)

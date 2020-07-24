@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748848"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942488"
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
 Cria um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)vazio e desconectado.  
@@ -67,26 +67,26 @@ object.CreateRecordset(ColumnInfos)
   
 |Comprimento|Constante|Número|Substituição|  
 |------------|--------------|------------|------------------|  
-|Fixo|**adTinyInt**|16||  
-|Fixo|**adSmallInt**|2||  
-|Fixo|**adInteger**|3||  
-|Fixo|**adBigInt**|20||  
-|Fixo|**adUnsignedTinyInt**|17||  
-|Fixo|**adUnsignedSmallInt**|18||  
-|Fixo|**adUnsignedInt**|19||  
-|Fixo|**adUnsignedBigInt**|21||  
-|Fixo|**adSingle**|4||  
-|Fixo|**adDouble**|5||  
-|Fixo|**adCurrency**|6||  
-|Fixo|**adDecimal**|14||  
-|Fixo|**adNumeric**|131||  
-|Fixo|**adBoolean**|11||  
-|Fixo|**adError**|10||  
-|Fixo|**adGuid**|72||  
-|Fixo|**adDate**|7||  
-|Fixo|**adDBDate**|133||  
-|Fixo|**adDBTime**|134||  
-|Fixo|**adDBTimestamp**|135|7|  
+|Correção|**adTinyInt**|16||  
+|Correção|**adSmallInt**|2||  
+|Correção|**adInteger**|3||  
+|Correção|**adBigInt**|20||  
+|Correção|**adUnsignedTinyInt**|17||  
+|Correção|**adUnsignedSmallInt**|18||  
+|Correção|**adUnsignedInt**|19||  
+|Correção|**adUnsignedBigInt**|21||  
+|Correção|**adSingle**|4||  
+|Correção|**adDouble**|5||  
+|Correção|**adCurrency**|6||  
+|Correção|**adDecimal**|14||  
+|Correção|**adNumeric**|131||  
+|Correção|**adBoolean**|11||  
+|Correção|**adError**|10||  
+|Correção|**adGuid**|72||  
+|Correção|**adDate**|7||  
+|Correção|**adDBDate**|133||  
+|Correção|**adDBTime**|134||  
+|Correção|**adDBTimestamp**|135|7|  
 |Variável|**adBSTR**|8|130|  
 |Variável|**adChar**|129|200|  
 |Variável|**adVarChar**|200||  
@@ -99,11 +99,16 @@ object.CreateRecordset(ColumnInfos)
 |Variável|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo do método createrecordset (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [Exemplo do método createrecordset (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   

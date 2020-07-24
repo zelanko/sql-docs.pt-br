@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762807"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943018"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Especifica os direitos ou permissões para um grupo ou usuário em um objeto.  
@@ -47,7 +47,12 @@ Especifica os direitos ou permissões para um grupo ou usuário em um objeto.
 |**adRightWritePermissions**|262144 (&H40000)|O usuário ou grupo pode modificar as permissões específicas de um objeto no catálogo.|  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Método GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|[Método SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [Método GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Método SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

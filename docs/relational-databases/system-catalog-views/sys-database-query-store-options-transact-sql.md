@@ -21,19 +21,19 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce2cbf99a62ca8515e596bf4b392315c6b5945b2
-ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+ms.openlocfilehash: 6673b9d0c235f7a38e04d534bf4358585a5b0bd2
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84112312"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942568"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retorna as opções de Repositório de Consultas para este banco de dados.  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "84112312"
 |**current_storage_size_mb**|**bigint**|Tamanho de Repositório de Consultas em disco em megabytes.|  
 |**flush_interval_seconds**|**bigint**|O período para a liberação regular de dados de Repositório de Consultas para o disco em segundos. O valor padrão é **900** (15 min).<br /><br /> Altere usando a `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` instrução.|  
 |**interval_length_minutes**|**bigint**|O intervalo de agregação de estatísticas em minutos. Valores arbitrários não são permitidos. Use um dos seguintes: 1, 5, 10, 15, 30, 60 e 1440 minutos. O valor padrão é **60** minutos.|  
-|**max_storage_size_mb**|**bigint**|Tamanho máximo do disco para o Repositório de Consultas em megabytes (MB). O valor padrão é **100** MB.<br />Para a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edição Premium, o padrão é 1 GB e para a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edição básica, o padrão é 10 MB.<br /><br /> Altere usando a `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` instrução.|  
-|**stale_query_threshold_days**|**bigint**|Número de dias que consultas sem configurações de política são mantidas em Repositório de Consultas. O valor padrão é **30**. Defina como 0 para desabilitar a política de retenção.<br />Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é 7 dias.<br /><br /> Altere usando a `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` instrução.|  
+|**max_storage_size_mb**|**bigint**|Tamanho máximo do disco para o Repositório de Consultas em megabytes (MB). O valor padrão é **100** MB até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e **1 GB** a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />Para a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edição Premium, o padrão é 1 GB e para a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edição básica, o padrão é 10 MB.<br /><br /> Altere usando a `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` instrução.|  
+|**stale_query_threshold_days**|**bigint**|Número de dias em que as informações de uma consulta são mantidas na Repositório de Consultas. O valor padrão é **30**. Defina como 0 para desabilitar a política de retenção.<br />Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é 7 dias.<br /><br /> Altere usando a `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` instrução.|  
 |**max_plans_per_query**|**bigint**|Limita o número máximo de planos armazenados. O valor padrão é **200**. Se o valor máximo for atingido, Repositório de Consultas interromperá a captura de novos planos para essa consulta. A configuração para 0 remove a limitação com relação ao número de planos capturados.<br /><br /> Altere usando a `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` instrução.|  
 |**query_capture_mode**|**smallint**|O modo de captura de consulta atualmente ativo:<br /><br /> **1** = All-todas as consultas são capturadas. Esse é o valor de configuração padrão para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).<br /><br /> 2 = capturar automaticamente consultas relevantes com base na contagem de execução e no consumo de recursos. Esse é o valor de configuração padrão de [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE-parar de capturar novas consultas. O Repositório de Consultas continuará a coletar estatísticas de compilação e runtime para consultas que já foram capturadas. Use essa configuração com cautela, pois você pode perder a captura de consultas importantes.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Descrição textual do modo de captura real do Repositório de Consultas:<br /><br /> TODOS (padrão para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Automático** (padrão para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> Nenhuma|  
@@ -67,7 +67,7 @@ ms.locfileid: "84112312"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Procedimentos Armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

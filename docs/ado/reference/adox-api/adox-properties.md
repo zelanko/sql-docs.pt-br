@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6441c637b371cb059ebaad94380d6bfd4f24c8f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764097"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942811"
 ---
 # <a name="adox-properties"></a>Propriedades ADOX
 
-|||  
+|Propriedade|Descrição|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica o objeto de **conexão** ADO ao qual o catálogo pertence.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Descreve as características da coluna.|  

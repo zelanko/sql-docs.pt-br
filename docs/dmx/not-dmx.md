@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 23aaa06f7da6c29cf1f082c27071d68fa0c6958a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669190"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971624"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Operador lógico que executa uma negação lógica em uma expressão numérica.  
   
@@ -39,8 +39,8 @@ NOT Expression1
   
 |Se a Expression1 for|O valor de retorno será|  
 |-----------------------|---------------------|  
-|VERDADEIRO|FALSO|  
-|FALSO|VERDADEIRO|  
+|TRUE|FALSE|  
+|FALSE|TRUE|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   

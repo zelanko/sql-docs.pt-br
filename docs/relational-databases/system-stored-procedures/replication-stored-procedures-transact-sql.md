@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f02b55e6b798bd66e7e13a8ba8a40329fc0255e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64f75e38aea006fffc0b464bcaeabb4ff6d9fec4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752799"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920082"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>Procedimentos armazenados de replicação (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Os procedimentos armazenados do sistema de replicação são documentados e disponibilizados como um método de execução única de tarefas, como implementação de replicação, e para uso em arquivos de lote e scripts.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "85752799"
 |[&#41;&#40;Transact-SQL de sp_helparticlecolumns](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos de Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Conceitos de programação de replicação](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

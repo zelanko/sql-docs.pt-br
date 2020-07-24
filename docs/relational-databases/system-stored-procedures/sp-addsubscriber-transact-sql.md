@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f83d85ab2a79a4f5f27143de655f7748fe7f0fd4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716366"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915269"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Adiciona um novo Assinante a um Publicador, permitindo que ele receba publicações. Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação, para publicações transacionais e de instantâneo; e para publicações de mesclagem que usam um Distribuidor remoto esse procedimento armazenado é executado no Distribuidor.  
   
@@ -203,7 +203,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar uma assinatura push](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [&#41;&#40;Transact-SQL de sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropsubscriber](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   

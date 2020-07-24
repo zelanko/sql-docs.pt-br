@@ -20,12 +20,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f97f23edb38e7d97a6da19860cf49ca4fdb1182d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820844"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941308"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,26 +52,86 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>Argumentos    
- *database_id* | NULL | 0 | OS    
- ID do banco de dados. *database_id* é **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
+
+:::row:::
+    :::column:::
+        *database_id*
+    :::column-end:::
+    :::column:::
+        NULO
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
+  ID do banco de dados. *database_id* é **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, também deverá especificar null para *object_id*, *index_id*e *partition_number*.    
     
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificada.    
-    
- *object_id* | NULL | 0 | OS    
+
+:::row:::
+    :::column:::
+        *object_id*
+    :::column-end:::
+    :::column:::
+        NULO
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int**.    
     
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id*, também deverá especificar null para *index_id* e *partition_number*.    
-    
- *index_id* | 0 | NULL | -1 | OS    
+
+:::row:::
+    :::column:::
+        *index_id*
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        NULO
+    :::column-end:::
+    :::column:::
+        -1
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  ID do índice. *index_id* é **int**. As entradas válidas são o número de identificação de um índice, 0 se *object_id* for um heap, nulo,-1 ou padrão. O padrão é -1, NULL, -1 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, também deverá especificar null para *partition_number*.    
-    
- *partition_number* | NULL | 0 | OS    
+
+:::row:::
+    :::column:::
+        *partition_number*
+    :::column-end:::
+    :::column:::
+        NULO
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  O número da partição no objeto. *partition_number* é **int**. As entradas válidas são a *partion_number* de um índice ou heap, NULL, 0 ou default. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todas as partições do índice ou heap.    
@@ -236,14 +296,14 @@ GO
 ```    
     
 ## <a name="see-also"></a>Consulte Também    
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
- [Funções e exibições de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [Exibições e funções de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

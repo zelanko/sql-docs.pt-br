@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe7d97909a2d38e548a072245b08110b1d61eb3c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763787"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943158"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Especifica o tipo de objeto de banco de dados para o qual definir permissões ou propriedade.  
@@ -35,8 +35,14 @@ Especifica o tipo de objeto de banco de dados para o qual definir permissões ou
 |**adPermObjView**|5|O objeto é uma exibição.|  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Método GetObjectOwner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|[Método GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|  
-|[Método SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|[Método SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [Método GetObjectOwner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+        [Método GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Método SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)  
+        [Método SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

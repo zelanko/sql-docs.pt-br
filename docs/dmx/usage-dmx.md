@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cdbefcfeb6d638998ec2e0a01b8da5ca40f2aeaf
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670374"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971546"
 ---
 # <a name="usage-dmx"></a>Uso (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Ao usar o DMX (extensões de mineração de dados) para definir um novo modelo de Data Mining no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você deve especificar como o algoritmo de Data Mining que cria o modelo usará cada coluna. Especifique as colunas como um dos tipos seguintes:  
   
--   **Chave**  
+-   **Key**  
   
 -   **Key Sequence**  
   

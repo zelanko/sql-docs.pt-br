@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666689"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970684"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna previsões de valores futuros para os dados das séries temporais. Os dados de séries temporais são contínuos e podem ser armazenados em uma tabela aninhada ou em uma tabela de caso. A função **PredictTimeSeries** sempre retorna uma tabela aninhada.  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- * \< referência de coluna de tabela>*, * \< clic de coluna escalar>*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  Especifica o nome da coluna a ser prevista. A coluna pode conter dados escalares ou tabulares.  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n-end* deve ser um número inteiro maior que *n-Start*.  
   
- *\<>de consulta de origem*  
+ *\<source query>*  
  Define os dados externos usados para fazer previsões.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Estes argumentos só podem ser usados quando os novos dados são adicionados usando uma instrução PREDICTION JOIN. Se você usar uma consulta PREDICTION JOIN e não especificar um argumento, o padrão será EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Uma \< *expressão de tabela*>.  
+ Uma \<*table expression*>.  
   
 ## <a name="remarks"></a>Comentários  
  O algoritmo Time Series da [!INCLUDE[msCoName](../includes/msconame-md.md)] não suporta a previsão histórica ao usar a instrução PREDICTION JOIN para adicionar novos dados.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5f04017124520f6e2acd0669946d5d43d4e83f4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: d400e0e19d381c3cce2ebfeffd9f97abe16354b9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160164"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921804"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrições do modelo de programação da Integração CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Quando você está criando um procedimento armazenado gerenciado ou outro objeto de banco de dados gerenciado, há certas verificações de código executadas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que precisam ser consideradas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]executa verificações no assembly de código gerenciado quando ele é registrado pela primeira vez no banco de dados, usando a instrução **Create assembly** e também em tempo de execução. O código gerenciado também é verificado em runtime porque, em um assembly, talvez haja caminhos de código que jamais possam ser alcançados em runtime.  Isso proporciona flexibilidade para registrar, especialmente, assemblies de terceiros, logo um assembly não seria bloqueado quando houvesse um código 'não seguro' projetado para execução em um ambiente do cliente, mas que jamais seria executado no CLR hospedado. Os requisitos que o código gerenciado deve atender dependem de se o assembly está registrado como **seguro**, **EXTERNAL_ACCESS** **ou não seguro,** **seguro** sendo o mais estrito e está listado abaixo.  
   
  Além das restrições colocadas nos assemblies de código gerenciado, também há permissões de segurança de código que são concedidas. O CLR (Common Language Runtime) oferece suporte a um modelo de segurança chamado segurança de acesso do código (CAS) destinado ao código gerenciado. Nesse modelo, são concedidas permissões a assemblies com base na identidade do código. Os assemblies **seguros**, **EXTERNAL_ACCESS**e não **seguros** têm permissões de CAS diferentes. Para obter mais informações, consulte [segurança de acesso ao código de integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  

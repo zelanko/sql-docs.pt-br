@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 891bad9f62174ec00451e533fe94063a21dc62af
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670187"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971667"
 ---
 # <a name="functions-dmx"></a>Funções (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Ao usar o DMX (Data Mining Extensions) para consultar objetos no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode usar funções para retornar mais informações do que apenas os valores nas colunas no modelo de Data Mining ou no conjunto de dados de entrada. Por exemplo, use consultas DMX para retornar não apenas o valor de previsão de uma coluna, como também a probabilidade de que a previsão esteja correta. Não somente funções DMX podem ser usadas, como também funções do Microsoft Visual Basic for Applications (VBA), Microsoft Excel e procedimentos armazenados.  
   

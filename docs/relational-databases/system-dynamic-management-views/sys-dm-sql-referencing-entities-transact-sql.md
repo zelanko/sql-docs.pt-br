@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717443"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943051"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name. referenciado*_*entity_name*  
- É o nome da entidade referenciada.  
+ `schema_name.referenced_entity_name`É o nome da entidade referenciada.  
   
- *schema_name* é necessário, exceto quando a classe referenciada é PARTITION_FUNCTION.  
+ `schema_name` é necessário, exceto quando a classe referenciada é a PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* é **nvarchar (517)**.  
+ `schema_name.referenced_entity_name`é **nvarchar (517)**.  
   
- *<referenced_class>* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
- É a classe da entidade referenciada. Apenas uma classe pode ser especificada por instrução.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`É a classe da entidade referenciada. Apenas uma classe pode ser especificada por instrução.  
   
- *<referenced_class>* é **nvarchar**(60).  
+ `<referenced_class>`é **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -101,15 +99,15 @@ sys.dm_sql_referencing_entities (
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
-|Tabela|Sim*|Yes|  
-|Exibir|Yes|Yes|  
-|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
+|Tabela|Sim*|Sim|  
+|Visualizar|Sim|Sim|  
+|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
 |procedimento armazenado CLR|Não|Sim|  
-|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Yes|Yes|  
+|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
 |Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|No|Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
+|Gatilho CLR (DML e DDL)|Não|Não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
 |Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
 |Procedimentos armazenados estendidos|Não|Sim|  
 |Fila|Não|Sim|  

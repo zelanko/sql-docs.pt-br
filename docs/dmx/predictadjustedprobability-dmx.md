@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669297"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971549"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna a probabilidade ajustada de um estado especificado.  
   
@@ -34,9 +34,9 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  Valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade previsível será usado, excluindo-se a partição de estados faltantes. Para incluir o Bucket de Estados ausentes, defina o \< estado previsto> como **INCLUDE_NULL**.  
+ Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade previsível será usado, excluindo-se a partição de estados faltantes. Para incluir o Bucket de Estados ausentes, defina \<predicted state> como **INCLUDE_NULL**.  
   
- Para retornar a probabilidade ajustada para os Estados ausentes, defina o \< estado previsto> como nulo.  
+ Para retornar a probabilidade ajustada para os Estados ausentes, defina \<predicted state> como NULL.  
   
  A função **PredictAdjustedProbability** é uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensão para a [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para especificação de mineração de dados.  
   

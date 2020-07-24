@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716355"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918932"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Adiciona uma assinatura a uma publicação e define o status do Assinante. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -96,7 +96,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|nenhum|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas.<br /><br /> Observação: essa opção foi preterida. Use, em vez disso, suporte a replicação.|  
+|nenhuma|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas.<br /><br /> Observação: essa opção foi preterida. Use, em vez disso, suporte a replicação.|  
 |automatic (padrão)|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
 |suporte de replicação só|Fornece geração automática no Assinante de procedimentos armazenados personalizados de artigo e gatilhos que oferecem suporte a assinaturas de atualização, se apropriado. Presume que o Assinante já tem o esquema e os dados iniciais para as tabelas publicadas. Ao configurar uma topologia de replicação transacional ponto a ponto, verifique se os dados em todos os nós na topologia são idênticos. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Sem suporte para assinaturas em publicações não SQL Server.*|  
 |initialize with backup|Esquema e dados iniciais para tabelas publicadas são obtidos de um backup do banco de dados de publicação. Presume que o Assinante tem acesso a um backup do banco de dados de publicação. O local do backup e o tipo de mídia para o backup são especificados por *BackupDeviceName* e *backupdevicetype*. Ao usar essa opção, uma topologia de replicação transacional ponto a ponto não precisa ser desativada durante a configuração.<br /><br /> *Sem suporte para assinaturas em publicações não SQL Server.*|  
@@ -320,7 +320,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar uma assinatura push](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Criar uma assinatura para um assinante não SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [&#41;&#40;Transact-SQL de sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
