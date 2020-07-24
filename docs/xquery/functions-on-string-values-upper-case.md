@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e48fb5448284cc90a87aff88a9cf7a0304c661d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720028"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87107222"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funções em Valores da Cadeia de Caracteres – upper-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +37,8 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 ## <a name="arguments"></a>Argumentos  
   
-|||  
-|-|-|  
 |Termo|Definição|  
+|-|-|
 |*$arg*|O valor de cadeia de caracteres a ser convertido para letras maiúsculas.|  
   
 ## <a name="remarks"></a>Comentários  

@@ -1,5 +1,5 @@
 ---
-title: Monitorar com o SCOM
+title: Usar System Center Operations Manager para monitorar APS
 description: Use o System Center Operations Manager (SCOM) para monitorar o dispositivo de sistema de plataforma de análise (APS).
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400976"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941118"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorar com o sistema de plataforma System Center Operations Manager-Analytics
 Use o System Center Operations Manager (SCOM) para monitorar o dispositivo de sistema de plataforma de análise (APS).

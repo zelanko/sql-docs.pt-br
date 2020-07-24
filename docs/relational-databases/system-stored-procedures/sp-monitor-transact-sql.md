@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21d6e73f79c2cb8c1c0a749f4d8e849d644c8291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891584"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977698"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,37 +65,35 @@ sp_monitor
  Para cada coluna, a estatística é impressa no *número*do formulário (*número*) –*número*% ou *número*(*número*). O primeiro *número* refere-se ao número de segundos (para **CPU_BUSY**, **IO_BUSY**e **ocioso**) ou ao número total (para as outras variáveis) desde que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi reiniciado. O *número* entre parênteses refere-se ao número de segundos ou ao número total desde a última vez em que **sp_monitor** foi executado. A porcentagem é a porcentagem de tempo desde que **sp_monitor** foi executada pela última vez. Por exemplo, se o relatório mostrar **CPU_BUSY** como 4250 (215)-68%, a CPU estará ocupada em 4250 segundos desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciada pela última vez, 215 segundos desde que **sp_monitor** foi executada pela última vez e 68% do tempo total desde que **sp_monitor** foi executado pela última vez.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir relata as informações sobre o quanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esteve ocupado.  
   
-```  
+```console
 USE master  
 EXEC sp_monitor  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-||||  
-|-|-|-|  
-|**last_run**|**current_run**|**seg**|  
-|29 de março de 1998 11:55|4 de abril de 1998 14:22|561|  
-  
-||||  
-|-|-|-|  
-|**cpu_busy**|**io_busy**|**ocioso**|  
-|190 (0)-0%|187 (0)-0%|148 (556) – 99%|  
-  
-||||  
-|-|-|-|  
-|**packets_received**|**packets_sent**|**packet_errors**|  
-|16 (1)|20 (2)|0 (0)|  
-  
-|||||  
-|-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**conexões**|  
-|141 (0)|54920 (127)|0 (0)|4 (0)|  
+
+```console
+last_run       current_run                   seconds
+-----------    --------------------------    ---------
+Mar 29 1998    11:55AM Apr 4 1998 2:22 PM    561
+
+cpu_busy           io_busy     idle
+---------------    ---------   --------------
+190(0)-0%          187(0)-0%   148(556)-99%
+
+packets_received       packets_sent    packet_errors
+----------------       ------------    -------------
+16(1)                  20(2)           0(0)
+
+total_read     total_write   total_errors    connections
+-----------    -----------   -------------   -----------
+141(0)         54920(127)    0(0)            4(0)
+```
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

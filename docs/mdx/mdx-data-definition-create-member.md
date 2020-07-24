@@ -1,6 +1,6 @@
 ---
 title: Instrução CREATE MEMBER (MDX) | Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69494070"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110156"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definição de dados MDX – CREATE MEMBER
 
@@ -105,7 +105,7 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>Propriedades padrão  
- Cada membro calculado tem um conjunto de propriedades padrão. Quando um aplicativo cliente é conectado ao [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as propriedades padrão têm suporte ou estão disponíveis para serem compatíveis, conforme escolhe o administrador.  
+ Cada membro calculado tem um conjunto de propriedades padrão. Quando um aplicativo cliente é conectado ao [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , as propriedades padrão têm suporte ou estão disponíveis para serem compatíveis, conforme escolhe o administrador.  
   
  Propriedades de membro adicionais podem estar disponíveis, dependendo da definição de cubo. As propriedades a seguir representam informações pertinentes ao nível de dimensão no cubo.  
   
@@ -114,9 +114,9 @@ WHERE ProfitRatio
 |SOLVE_ORDER|A ordem na qual o membro calculado será resolvido quando um membro calculado fizer referência a outro membro calculado (ou seja, quando membros calculados se cruzarem).|  
 |FORMAT_STRING|Uma cadeia de caracteres de formato de estilo do Office que o aplicativo cliente pode usar ao exibir valores de células.|  
 |VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Membros calculados visíveis podem ser adicionados a um conjunto com a função [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Um valor diferente de zero indica que o membro calculado é visível. O valor padrão dessa propriedade é *visível*.<br /><br /> Membros calculados que não são visíveis (em que o valor é definido como zero) são em geral usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
-|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> ** \* Aviso \* \* ** Esta propriedade foi preterida. Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obter detalhes.|  
+|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> Aviso esta propriedade foi preterida. ** \* \* \* \* ** Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) para obter detalhes.|  
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o membro.|  
-|DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o membro. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]pelo, a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
+|DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o membro. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , a barra invertida ( \\ ) é o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
 |ASSOCIATED_MEASURE_GROUP|O nome do grupo de medidas ao qual esse membro está associado.|  
   
 ## <a name="see-also"></a>Consulte Também  

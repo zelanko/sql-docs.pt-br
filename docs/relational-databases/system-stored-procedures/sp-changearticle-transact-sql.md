@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717391"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977526"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||Caminho e nome de um script de esquema de artigo usados para criar tabelas de destino. O padrão é NULO.|  
 |**del_cmd**||Instrução DELETE a ser executada; caso contrário, será construída do log.|  
-|**ndescrição**||Nova entrada descritiva para o artigo.|  
+|**descrição**||Nova entrada descritiva para o artigo.|  
 |**dest_object**||Fornecido para compatibilidade com versões anteriores. Use **dest_table**.|  
 |**dest_table**||Nova tabela de destino.|  
 |**destination_owner**||Nome do proprietário do objeto de destino.|  
@@ -129,7 +129,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||Nome da tabela ou exibição usado para produzir um arquivo de saída de sincronização. O padrão é NULO. Sem suporte para Publicadores Oracle.|  
 |**espaços**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**threshold**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
-|**type**||Sem suporte para Publicadores Oracle.|  
+|**tipo**||Sem suporte para Publicadores Oracle.|  
 ||**logbased**|Artigo com base em log.|  
 ||**logbased manualboth**|Artigo com base em log com filtro manual e exibição manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  
 ||**logbased manualfilter**|Artigo com base em log com filtro manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>Opções de esquema válidas  
  A tabela a seguir descreve os valores permitidos de *schema_option* com base no tipo de replicação (mostrado na parte superior) e no tipo de artigo (mostrado na primeira coluna).  
   
-|Tipo de artigo|Tipo de replicação||  
-|------------------|----------------------|------|  
-||Transacional|Instantâneo|  
+| Tipo de artigo | Tipo de replicação-transacional | Tipo de replicação-instantâneo |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|Todas as opções|Todas as opções, mas **0x02**|  
 |**logbased manualfilter**|Todas as opções|Todas as opções, mas **0x02**|  
 |**logbased manualview**|Todas as opções|Todas as opções, mas **0x02**|  
@@ -242,7 +241,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [&#41;&#40;Transact-SQL de sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droparticle](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helparticlecolumns](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053489"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977506"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86053489"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  @xevent_channel  
  O tipo do Evento Estendido. O valor padrão é definido para retornar todos os eventos registrados para os 30 minutos anteriores. Os eventos registrados dependem do tipo de Eventos Estendidos habilitados. Você pode usar esse parâmetro para filtrar o procedimento armazenado para mostrar apenas eventos de um determinado tipo. Você pode especificar o nome do evento completo ou especificar uma subcadeia de caracteres, como: **' admin**, **' analítica '**, **' operacional '** e **' depurar '**. O @event_channel é **VARCHAR (255)**.  
   
@@ -56,9 +57,8 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>Tabela retornada  
  Esse procedimento armazenado retorna uma tabela com as seguintes informações:  
   
-||||  
-|-|-|-|  
-|Nome da coluna|Tipo de Dados|Descrição|  
+| Nome da coluna | Tipo de Dados | Descrição |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|Tipo de Evento Estendido.|  
 |Evento|NVARCHAR (512)|Resumo dos logs de eventos.|  
 |Timestamp|timestamp|Carimbo de data/hora de evento que mostra quando o evento foi gerado.|  

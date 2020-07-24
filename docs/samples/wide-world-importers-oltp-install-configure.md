@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718666"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942365"
 ---
 # <a name="installation-and-configuration"></a>Instalação e configuração
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,9 @@ Aplica-se a: SQL Server
 
 Habilitar a auditoria no SQL Server requer a configuração do servidor. Para habilitar SQL Server auditoria para o exemplo WideWorldImporters, execute a seguinte instrução no banco de dados:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 No banco de dados SQL do Azure, a auditoria é configurada por meio do [portal do Azure](https://portal.azure.com/).
 
@@ -90,5 +92,7 @@ Aplica-se a: banco de dados SQL do Azure
 
 A segurança em nível de linha não é habilitada por padrão no download de bacpac de WideWorldImporters. Para habilitar a segurança em nível de linha no banco de dados, execute o seguinte procedimento armazenado:
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

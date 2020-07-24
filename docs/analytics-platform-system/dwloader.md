@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401172"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942338"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando dwloader para data warehouse paralelos
 **dwloader** é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente. Ao carregar linhas, você pode adicionar todas as linhas ao final da tabela (modo de*acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo Upsert*) ou excluir todas as linhas existentes antes do carregamento e, em seguida, inserir todas as linhas em uma tabela vazia (*modo de recarregamento*).  
@@ -43,7 +43,7 @@ ms.locfileid: "74401172"
   
 5.  Execute **dwloader**.  
   
-    Entre no servidor de carregamento e execute o executável **dwloader. exe** com as opções de linha de comando apropriadas.  
+    Entre no servidor de carregamento e execute o executável **dwloader.exe** com as opções de linha de comando apropriadas.  
   
 6.  Verifique os resultados.  
   
@@ -136,7 +136,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Use um arquivo de parâmetro, *parameter_file_name*, no lugar de parâmetros de linha de comando. *parameter_file_name* pode conter qualquer parâmetro de linha de comando, exceto *user_name* e *senha*. Se um parâmetro for especificado na linha de comando e no arquivo de parâmetro, a linha de comando substituirá o parâmetro file.  
   
-O arquivo de parâmetro contém um parâmetro, sem **-** o prefixo, por linha.  
+O arquivo de parâmetro contém um parâmetro, sem o **-** prefixo, por linha.  
   
 Exemplos:  
   
@@ -195,15 +195,15 @@ Para carregar vários arquivos com um comando:
   
 Exemplos:  
   
--   -i \\\loadserver\loads\daily\\*. gz  
+-   -i \\ \loadserver\loads\daily \\ *. gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\ \loadserver\loads\daily \\ *. txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 Se houver falhas de carregamento, o **dwloader** armazena a linha que falhou ao carregar e a descrição de falha as informações de falha em um arquivo chamado *load_failure_file_name*. Se esse arquivo já existir, o dwloader substituirá o arquivo existente. *load_failure_file_name* é criado quando a primeira falha ocorre. Se todas as linhas forem carregadas com êxito, *load_failure_file_name* não será criado.  
@@ -290,9 +290,9 @@ Caminho e nome do arquivo de configuração que especifica o número de caracter
   
 Esse arquivo deve residir no servidor de carregamento. O caminho pode ser um caminho UNC, relativo ou absoluto. Cada linha em *fixed_width_config_file* contém o nome de uma coluna e o número de caracteres para essa coluna. Há uma linha por coluna, da seguinte maneira, e a ordem no arquivo deve corresponder à ordem na tabela de destino:  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
 Arquivo de configuração de largura fixa de exemplo:  
   
@@ -340,17 +340,17 @@ Exemplos de LF:
   
 Um LF é necessário para UNIX. Uma CR é necessária para o Windows.  
   
-**-D** { **ymd** | ydm | MDY | MYD |  dmy | DYM | *custom_date_format* }  
+**-D** { **ymd** \| ydm \| MDY \| MYD \| dmy \| DYM \| *custom_date_format* }  
 Especifica a ordem de mês (m), dia (d) e ano (y) para todos os campos de data e hora no arquivo de entrada. A ordem padrão é ymd. Para especificar vários formatos de ordem para o mesmo arquivo de origem, use a opção-DT.  
   
-ymd | dmy  
+ymd \| dmy  
 YDM e dmy permitem os mesmos formatos de entrada. Ambos permitem que o ano esteja no início ou no final da data. Por exemplo, para os formatos de data **ydm** e **dmy** , você poderia ter 2013-02-03 ou 02-03-2013 no arquivo de entrada.  
   
 YDM  
 Você só pode carregar a entrada formatada como ydm em colunas do tipo de dados DateTime e smalldatetime. Não é possível carregar valores ydm em uma coluna do tipo de dados datetime2, Date ou DateTimeOffset.  
   
 mda  
-<month> <space> <day>MDY permite <comma>. <year>  
+MDY permite \<month> \<space> \<day> \<comma> \<year> .  
   
 Exemplos de dados de entrada MDY para 1º de janeiro de 1975:  
   
@@ -490,7 +490,7 @@ Disponível com a atualização do CU 7.4, especifica o tamanho máximo da linha
 ## <a name="return-code-values"></a>Valores do código de retorno  
 0 (êxito) ou outro valor inteiro (falha)  
   
-Em uma janela de comando ou arquivo em lotes `errorlevel` , use para exibir o código de retorno. Por exemplo:  
+Em uma janela de comando ou arquivo em lotes, use `errorlevel` para exibir o código de retorno. Por exemplo:  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-Ao usar o PowerShell, `$LastExitCode`use.  
+Ao usar o PowerShell, use `$LastExitCode` .  
   
 ## <a name="permissions"></a>Permissões  
 Requer permissão de carregamento e permissões aplicáveis (inserir, atualizar, excluir) na tabela de destino. Requer a permissão CREATE (para criar uma tabela temporária) no banco de dados de preparo. Se um banco de dados de preparo não for usado, a permissão CREATE será necessária no banco de dados de destino. 
@@ -552,15 +552,15 @@ O acréscimo pode ser executado no modo de várias transacionais (usando o argum
   
 O modo de acréscimo carrega dados em duas fases. A fase 1 carrega os dados do arquivo de origem em uma tabela de preparo simultaneamente (a fragmentação pode ocorrer). A fase dois carrega dados da tabela de preparo para a tabela final. A segunda fase executa uma **inserção em... Selecione WITH (TABLOCK)** operação. A tabela a seguir mostra o comportamento de bloqueio na tabela final e o comportamento de log ao usar o modo de acréscimo:  
   
-|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registrando em log|  
+|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registro em log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Pilha|Sim|Sim|Sim|Mínimo|  
-|Pilha|Sim|Não|Sim|Mínimo|  
-|Pilha|Não|Sim|Não|Mínimo|  
-|Pilha|Não|Não|Não|Mínimo|  
-|L|Sim|Sim|Não|Mínimo|  
+|Pilha|Sim|Sim|Sim|Minimal|  
+|Pilha|Sim|Não|Sim|Minimal|  
+|Pilha|Não|Sim|Não|Minimal|  
+|Pilha|Não|Não|Não|Minimal|  
+|L|Sim|Sim|Não|Minimal|  
 |L|Sim|Não|Sim|Completo|  
-|L|Não|Sim|Não|Mínimo|  
+|L|Não|Sim|Não|Minimal|  
 |L|Não|Não|Sim|Completo|  
   
 A tabela acima mostra **dwloader** usando o modo de acréscimo carregando em um heap ou uma tabela de índice clusterizado (CI), com ou sem o sinalizador de várias transacionais e o carregamento em uma tabela vazia ou em uma tabela não vazia. O comportamento de bloqueio e de log de cada combinação de carga é exibido na tabela. Por exemplo, a fase de carregamento (2ª) com o modo Append em um índice clusterizado sem o modo multifuncional e em uma tabela vazia terá o PDW para criar um bloqueio exclusivo na tabela e o registro em log é mínimo. Isso significa que um cliente não será capaz de carregar (2ª) a fase e a consulta simultaneamente em uma tabela vazia. No entanto, ao carregar com a mesma configuração em uma tabela não vazia, o PDW não emitirá um bloqueio exclusivo na tabela e a simultaneidade será possível. Infelizmente, o log completo ocorre, reduzindo o processo.  
@@ -568,7 +568,7 @@ A tabela acima mostra **dwloader** usando o modo de acréscimo carregando em um 
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-simple-dwloader-example"></a>a. Exemplo de dwloader simples  
-O exemplo a seguir mostra a inicialização do **carregador** apenas com as opções necessárias selecionadas. Outras opções são obtidas do arquivo de configuração global, *loadparamfile. txt*.  
+O exemplo a seguir mostra a inicialização do **carregador** apenas com as opções necessárias selecionadas. Outras opções são obtidas do arquivo de configuração global, *loadparamfile.txt*.  
   
 Exemplo usando a autenticação SQL Server.  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. Carregar dados em uma tabela do AdventureWorks  
-O exemplo a seguir faz parte de um script em lotes que carrega dados no **AdventureWorksPDW2012**.  Para exibir o script completo, abra o arquivo aw_create. bat fornecido com o pacote de instalação do **AdventureWorksPDW2012** . 
+O exemplo a seguir faz parte de um script em lotes que carrega dados no **AdventureWorksPDW2012**.  Para exibir o script completo, abra o arquivo aw_create.bat fornecido com o pacote de instalação do **AdventureWorksPDW2012** . 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-O trecho de script a seguir usa dwloader para carregar dados nas tabelas DimAccount e DimCurrency. Este script está usando um endereço Ethernet. Se ele estava usando InfiniBand, o servidor seria *<appliance_name>* `-SQLCTL01`.  
+O trecho de script a seguir usa dwloader para carregar dados nas tabelas DimAccount e DimCurrency. Este script está usando um endereço Ethernet. Se ele estava usando InfiniBand, o servidor seria *<appliance_name>* `-SQLCTL01` .  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-Veja a seguir um exemplo do arquivo de dados, DimAccount. txt, que contém dados a serem carregados na tabela DimAccount.  
+Veja a seguir um exemplo do arquivo de dados, DimAccount.txt, que contém dados a serem carregados na tabela DimAccount.  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Descrição dos parâmetros de linha de comando:  
   
--   *C:\Arquivos de programas\microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* é o local instalado de dwloader. exe.  
+-   *C:\Arquivos de programas\microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* é o local do dwloader.exe instalado.  
   
 -   *-S* é seguido pelo endereço IP do nó de controle.  
   
@@ -685,17 +685,17 @@ Descrição dos parâmetros de linha de comando:
   
 -   *-e UTF16* indica que o arquivo de origem usa o tipo de codificação de caractere little endian.  
   
--   *-i .\DimAccount.txt* especifica que os dados estão em um arquivo chamado DimAccount. txt, que existe no diretório atual.  
+-   *-i .\DimAccount.txt* especifica que os dados estão em um arquivo chamado DimAccount.txt que existe no diretório atual.  
   
 -   *-T AdventureWorksPDW2012. dbo. DimAccount* especifica o nome de 3 partes da tabela para receber os dados.  
   
 -   *-R DimAccount. Bad* especifica que as linhas que não puderam ser carregadas serão gravadas em um arquivo chamado DimAccount. Bad.  
   
--   *-t "|"* indica que os campos no arquivo de entrada, DimAccount. txt, são separados pelo caractere de barra vertical.  
+-   *-t "|"* indica que os campos no arquivo de entrada, DimAccount.txt, são separados com o caractere de barra vertical.  
   
--   *-r \r\n* especifica que cada linha em DimAccount. txt termina com um retorno de carro e um caractere de alimentação de linha.  
+-   *-r \r\n* especifica que cada linha em DimAccount.txt termina com um retorno de carro e um caractere de alimentação de linha.  
   
--   *-U <login_name>-P <password> * especifica o logon e a senha para o logon que tem permissões para executar a carga.  
+-   *-U <login_name>-P <password> * Especifica o logon e a senha para o logon que tem permissões para executar a carga.  
   
 
 <!-- MISSING LINK
