@@ -10,16 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8f697e2bd68a7cbfe7053a4a2f3054d6ed14b85
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75924984"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943119"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Server ou no Banco de Dados SQL do Azure com o SSIS (SQL Server Integration Services)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Crie um pacote do SSIS (SQL Server Integration Services) para carregar dados no SQL Server ou no [Banco de Dados SQL do Azure](/azure/sql-database/). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
 
@@ -75,28 +75,28 @@ O Visual Studio é aberto e cria um projeto do SSIS (Integration Services). Em s
 * No meio, a superfície de design, com várias guias. Geralmente, você usa pelo menos as guias **Fluxo de Controle** e **Fluxo de Dados**.
 * À direita, os painéis **Gerenciador de Soluções** e **Propriedades**.
   
-    ![][01]
+    ![Captura de tela do Visual Studio mostrando o painel Caixa de Ferramentas, o painel Design, o painel Gerenciador de Soluções e o painel Propriedades.][01]
 
 ## <a name="create-the-basic-data-flow"></a>Criar o fluxo de dados básico
 1. Arraste uma Tarefa Fluxo de Dados da Caixa de ferramentas até o centro da superfície de design (na guia **Fluxo de Controle**).
    
-    ![][02]
+    ![Captura de tela do Visual Studio mostrando uma Tarefa de Fluxo de Dados sendo arrastada para a guia Fluxo de Controle do painel Design.][02]
 2. Clique duas vezes na Tarefa Fluxo de Dados para mudar para a guia Fluxo de Dados.
 3. Na lista Outras Fontes, da Caixa de ferramentas, arraste uma Fonte do ADO.NET até a superfície de design. Mantendo o adaptador de fonte selecionado, altere o nome dele para **fonte do SQL Server** no painel **Propriedades**.
 4. Na lista Outros Destinos, na Caixa de ferramentas, arraste um Destino do ADO.NET até a superfície de design, na fonte do ADO.NET. Mantendo o adaptador de destino selecionado, altere o nome dele para **destino do SQL** no painel **Propriedades**.
    
-    ![][09]
+    ![Captura de tela de um adaptador de destino sendo arrastado para um local diretamente abaixo do adaptador de origem.][09]
 
 ## <a name="configure-the-source-adapter"></a>Configurar o adaptador de fonte
 1. Clique duas vezes no adaptador de fonte para abrir o **Editor de Origem ADO.NET**.
    
-    ![][03]
+    ![Captura de tela do Editor de Origem ADO.NET. A guia Gerenciador de Conexões está visível e os controles estão disponíveis para configurar as propriedades de fluxo de dados.][03]
 2. Na guia **Gerenciador de Conexões** do **Editor de Origem ADO.NET**, clique no botão **Novo** próximo à lista do **Gerenciador de conexões do ADO.NET** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados do SQL Server do qual este tutorial carrega os dados.
    
-    ![][04]
+    ![Captura de tela da caixa de diálogo Configurar Gerenciador de Conexões ADO.NET. Há controles disponíveis para configurar gerenciadores de conexões.][04]
 3. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique no botão **Novo** para abrir a caixa de diálogo **Gerenciador de Conexões** e criar uma conexão de dados.
    
-    ![][05]
+    ![Captura de tela da caixa de diálogo Gerenciador de Conexões. Há controles disponíveis para configurar uma conexão de dados.][05]
 4. Na caixa de diálogo **Gerenciador de Conexões**, faça o seguinte.
    
    1. Para **Provedor**, selecione o Provedor de Dados SqlClient.
@@ -105,16 +105,16 @@ O Visual Studio é aberto e cria um projeto do SSIS (Integration Services). Em s
    4. Na seção **Conectar a um banco de dados**, selecione o banco de dados de exemplo AdventureWorks.
    5. Clique em **Testar Conexão**.
       
-       ![][06]
+       ![Captura de tela de uma caixa de diálogo exibindo um botão OK e um texto que indica que a conexão de teste foi bem-sucedida.][06]
    6. Na caixa de diálogo que relata os resultados do teste de conexão, clique em **OK** para retornar para a caixa de diálogo **Gerenciador de Conexões**.
    7. Na caixa de diálogo **Gerenciador de Conexões**, clique em **OK** para retornar para a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**.
 5. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique em **OK** para retornar para o **Editor de Origem ADO.NET**.
 6. No **Editor de Origem ADO.NET**, na lista **Nome da tabela ou da exibição**, selecione a tabela **Sales.SalesOrderDetail**.
    
-    ![][07]
+    ![Captura de tela do Editor de Origem ADO.NET. Na lista Nome da tabela ou da exibição, a tabela Sales.SalesOrderDetail está selecionada.][07]
 7. Clique em **Visualização** para ver as primeiras 200 linhas de dados da tabela de origem na caixa de diálogo **Visualizar Resultados da Consulta**.
    
-    ![][08]
+    ![Captura de tela da caixa de diálogo Visualizar Resultados da Consulta. Várias linhas de dados de vendas da tabela de origem estão visíveis.][08]
 8. Na caixa de diálogo **Visualizar Resultados da Consulta**, clique em **Fechar** para retornar para o **Editor de Origem ADO.NET**.
 9. No **Editor de Origem ADO.NET**, clique em **OK** terminar a configuração da fonte de dados.
 
@@ -122,14 +122,14 @@ O Visual Studio é aberto e cria um projeto do SSIS (Integration Services). Em s
 1. Selecione o adaptador de fonte na superfície de design.
 2. Selecione a seta azul que se estende do adaptador de fonte e arraste-a até o editor de destino até que ela se encaixe.
    
-    ![][10]
+    ![Captura de tela mostrando os adaptadores de origem e de destino. Uma seta azul aponta para o adaptador de fonte ao adaptador de destino.][10]
    
     Em um pacote do SSIS típico, você pode usar uma variedade de componentes adicionais da Caixa de ferramentas do SSIS entre a fonte e o destino para reestruturar, transformar e limpar seus dados, conforme eles passam pelo fluxo de dados do SSIS. Para deixar este exemplo o mais simples possível, estamos conectando a fonte diretamente com o destino.
 
 ## <a name="configure-the-destination-adapter"></a>Configurar o adaptador de destino
 1. Clique duas vezes no adaptador de destino para abrir o **Editor de Destino ADO.NET**.
    
-    ![][11]
+    ![Captura de tela do Editor de Destino ADO.NET. A guia Gerenciador de Conexões está visível e contém controles para configurar as propriedades de fluxo de dados.][11]
 2. Na guia **Gerenciador de Conexões** do **Editor de Destino ADO.NET**, clique no botão **Novo** próximo à lista do **Gerenciador de conexões** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados no qual este tutorial carrega dados.
 3. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique no botão **Novo** para abrir a caixa de diálogo **Gerenciador de Conexões** e criar uma conexão de dados.
 4. Na caixa de diálogo **Gerenciador de Conexões**, faça o seguinte.
@@ -143,17 +143,17 @@ O Visual Studio é aberto e cria um projeto do SSIS (Integration Services). Em s
 5. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique em **OK** para retornar para o **Editor de Destino ADO.NET**.
 6. No **Editor de Destino ADO.NET**, clique em **Novo**, ao lado da lista **Usar uma tabela ou exibição**, para abrir a caixa de diálogo **Criar Tabela** e criar uma tabela de destino com uma lista de colunas que corresponda à tabela de origem.
    
-    ![][12a]
+    ![Captura de tela da caixa de diálogo Criar Tabela. O código SQL para criar uma tabela de destino está visível.][12a]
 7. Na caixa de diálogo **Criar Tabela**, faça o seguinte.
    
    1. Altere o nome da tabela de destino para **SalesOrderDetail**.
       
-       ![][12b]
+       ![Captura de tela da caixa de diálogo Criar Tabela. O código SQL é visível para criar uma tabela chamada SalesOrderDetail.][12b]
 
    2. Clique em **OK** para criar a tabela e retornar ao **Editor de Destino ADO.NET**.
 8. No **Editor de Destino ADO.NET**, selecione a guia **Mapeamentos** para ver como as colunas da fonte são mapeadas para as colunas do destino.
    
-    ![][13]
+    ![Captura de tela da guia Mapeamentos do Editor de Destino ADO.NET. As linhas conectam colunas com nomes idênticos nas tabelas de origem e de destino.][13]
 9. Clique em **OK** para concluir a configuração do destino.
 
 ## <a name="run-the-package-to-load-the-data"></a>Executar o pacote para carregar os dados
@@ -163,19 +163,19 @@ Os parágrafos a seguir descrevem o que você vê ao criar o pacote com a segund
 
 Conforme o pacote começar a executar, você verá rodas amarelas giratórias indicando a atividade, bem como o número de linhas processadas até aquele momento.
 
-![][14]
+![Captura de tela mostrando os adaptadores de origem e de destino. Há rodas amarelas giratórias sobre cada adaptador, com o texto "89748 linhas" entre elas.][14]
 
 Quando a execução do pacote for concluída, você verá marcas de seleção verdes para indicar êxito, bem como o número total de linhas de dados carregados da fonte para o destino.
 
-![][15]
+![Captura de tela mostrando os adaptadores de origem e de destino. Marcas de seleção verdes estão sobre cada adaptador e o texto "121317 linhas" está entre elas.][15]
 
 Parabéns! Você conseguiu usar o SQL Server Integration Services para carregar dados no SQL Server ou no Banco de Dados SQL do Azure.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Saiba como depurar e solucionar problemas de pacotes diretamente no ambiente de design. Comece aqui: [Solução de problemas de ferramentas para o desenvolvimento de pacotes][Troubleshooting Tools for Package Development].
+- Saiba como depurar e solucionar problemas de pacotes diretamente no ambiente de design. Comece aqui: [Ferramentas de solução de problemas para desenvolvimento de pacotes][Troubleshooting Tools for Package Development].
 
-- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece por aqui: [Implantação de projetos e pacotes][Deployment of Projects and Packages].
+- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece aqui: [Implantação de Projetos e Pacotes][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283265"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922222"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lição 3-2: Adicionar e configurar o registro em log
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ Nesta tarefa, você habilita o log do fluxo de dados no pacote Lesson 3.dtsx. En
   
 5.  Opcionalmente, modifique a **Descrição**.  
   
-6.  Na coluna **Configuração**, selecione **\<Nova Conexão>** para especificar em que local o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] grava informações de log.  
+6.  Na coluna **Configuração**, selecione **\<New Connection>** para especificar em que local o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] grava as informações de log.  
   
     Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos**, para **Tipo de uso**, selecione **Criar Arquivo** e selecione **Procurar**. Por padrão, a caixa de diálogo **Selecione Arquivo** abrirá a pasta do projeto, mas você pode salvar o log em qualquer localização.  
   

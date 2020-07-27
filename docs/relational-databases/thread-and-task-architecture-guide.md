@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158914"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485568"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > A coluna `parent_task_address` será sempre nula para a tarefa pai. 
 
+> [!TIP]
+> Em um [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] muito ocupado é possível ver várias tarefas ativas que estão acima do limite definido por threads reservados. Essas tarefas podem pertencer a uma ramificação que não está mais sendo usada, além disso elas estão em um estado transitório, aguardando a limpeza. 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] Observe que há 17 tarefas ativas para as ramificações que atualmente estão em execução: 16 tarefas filho correspondentes aos threads reservados, além da tarefa pai ou da tarefa de coordenação.
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> Em um [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] muito ocupado é possível ver várias tarefas ativas que estão acima do limite definido por threads reservados. Essas tarefas podem pertencer a uma ramificação que não está mais sendo usada, além disso elas estão em um estado transitório, aguardando a limpeza. 
-
 Observe que cada uma das 16 tarefas filho tem um thread de trabalho diferente atribuído (visto na coluna `worker_address`), porém todos os trabalhos serão atribuídos ao mesmo pool de oito agendadores (0, 5, 6, 7, 8, 9, 10 e 11) e a tarefa pai será atribuída a um agendador fora desse pool (3).
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ Um thread de trabalho somente poderá permanecer ativo no agendador na duração
 > [!TIP] 
 > Para a saída da DMV mostrada acima, todas as tarefas ativas estão no estado SUSPENDED. Mais detalhes sobre as tarefas de espera estão disponíveis ao consultar a DMV de [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
 
-Em resumo, uma solicitação paralela gerará várias tarefas, em que cada tarefa deverá ser atribuída a um thread de trabalho, além disso cada thread de trabalho deverá ser atribuído a um agendador. Portanto, o número de agendadores em uso não poderá exceder o número de tarefas paralelas por ramificação, definido como MaxDOP. 
+Em resumo, uma solicitação paralela gera várias tarefas. Cada tarefa deve ser atribuída a um só thread de trabalho. Cada thread de trabalho deve ser atribuído a um só agendador. Portanto, o número de agendadores em uso não pode ultrapassar o número de tarefas paralelas por branch, que é definido pela configuração de MaxDOP ou pela dica de consulta. O thread de coordenação não contribui para o limite de MaxDOP. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Como alocar threads a uma CPU
 Por padrão, cada instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inicia cada thread e o sistema operacional distribui threads de instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre os microprocessadores ou as CPUs (processadores) em um computador com base na carga. Se a afinidade do processo tiver sido habilitada no nível do sistema operacional, este atribuirá cada thread a uma CPU específica. Em contraste, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] atribui **threads de trabalho** do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aos **agendadores** que distribuem os threads uniformemente entre as CPUs, em modo Round Robin.

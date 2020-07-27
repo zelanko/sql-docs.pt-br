@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto de Estatísticas do pool de recursos | Microsoft Docs
+description: Saiba mais sobre o objeto SQLServer:Resource Pool Stats, que contém contadores de desempenho que relatam as estatísticas de pool de recursos do Resource Governor.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35053d98db9b87b06512064e75adf06b4bcd6c51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4629cc0e109946c6dcd2f146e7e18568eca082f0
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758924"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458744"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, objeto de estatísticas do pool de recursos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85758924"
   
  Cada pool de recursos ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Pool de Recursos que tem o mesmo nome de instância do pool de recursos do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   
-|Nome do contador|DESCRIÇÃO|  
+|Nome do contador|Descrição|  
 |------------------|-----------------|  
 |**Quantidade de memória ativa concedida (KB)**|A quantidade total atual, em kilobytes (KB), de memória concedida. Essas informações também estão disponíveis em [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).| 
 |**Contagem de concessões de memória ativa**|A contagem total atual de concessões de memória. Essas informações também estão disponíveis em [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  

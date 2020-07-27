@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43629b22e6aca90065c139fb35d460384ad1ef1b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296416"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923852"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Criando uma transformação síncrona com o componente Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas espera até receber todas as linhas de entrada para completar seu processamento. Este tópico discute uma transformação síncrona. Para obter informações sobre transformações assíncronas, consulte [Criando uma transformação assíncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "71296416"
 -   Crie uma ou mais saídas adicionais, como uma saída de erro simulada para linhas que contêm valores inesperados. Use os botões **Adicionar Saída** e **Remover Saída** para gerenciar as saídas do componente de transformação síncrona. Todas as linhas de entrada são direcionadas para todas as saídas disponíveis, a menos que você indique que pretende redirecionar cada linha para uma ou outra saída. Você indica que pretende redirecionar linhas especificando um valor inteiro diferente de zero para a propriedade **ExclusionGroup** nas saídas. O valor inteiro específico inserido em **ExclusionGroup** para identificar as saídas não é significativo, mas você deve usar o mesmo inteiro de forma consistente para o grupo especificado de saídas.  
   
     > [!NOTE]  
-    >  Também use um valor da propriedade **ExclusionGroup** diferente de zero com uma única saída quando não desejar gerar todas as linhas. No entanto, nesse caso, você deve chamar explicitamente o método **DirectRowTo\<outputbuffer>** para cada linha que deseja enviar à saída.  
+    >  Também use um valor da propriedade **ExclusionGroup** diferente de zero com uma única saída quando não desejar gerar todas as linhas. Nesse caso, entretanto, você precisa chamar explicitamente o método **DirectRowTo\<outputbuffer>** para cada linha que deseja enviar à saída.  
   
 -   Atribua um nome mais descritivo para a entrada e as saídas. O componente Script utiliza esses nomes para gerar as propriedades de acessador digitadas que você utilizará para referenciar a entrada e as saídas no seu script.  
   
@@ -134,7 +134,7 @@ else
 }  
 ```  
   
- Neste exemplo, o componente Script gera os métodos **DirectRowTo\<OutputBufferX>** para você baseando-se nos nomes das saídas que foram configurados. Você pode usar um código semelhante para direcionar linhas de erro a uma saída de erro simulada.  
+ Neste exemplo, o componente Script gera os métodos **DirectRowTo\<OutputBufferX>** para você com base nos nomes das saídas que foram configurados. Você pode usar um código semelhante para direcionar linhas de erro a uma saída de erro simulada.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos aqui demonstram o código personalizado que é necessário na classe **ScriptMain** para criar um componente de transformação síncrona.  

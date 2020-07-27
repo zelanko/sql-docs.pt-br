@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Gerenciador de Memória | Microsoft Docs
+description: Saiba mais sobre o objeto Memory Manager, que fornece contadores para monitorar o uso geral de memória do servidor no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bab9dfb83a918fe072cc4a97f974f77b0243d06e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1317d52ca3075a5726e528216f569bd91c2a15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775802"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458788"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, objeto Memory Manager
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,9 +30,9 @@ ms.locfileid: "85775802"
 -   Se o desempenho das consultas pode ser melhorado pela adição de memória ou pela disponibilização de mais memória para o cache de dados ou para as estruturas internas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="memory-manager-counters"></a>Contadores do Gerenciador de Memória  
- Essa tabela descreve os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gerenciador de Memória**do**.  
+ Essa tabela descreve os contadores **Gerenciador de Memória** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Contadores do Gerenciador de Memória do SQL Server|DESCRIÇÃO|  
+|Contadores do Gerenciador de Memória do SQL Server|Descrição|  
 |----------------------------------------|-----------------|  
 |**Memória de Conexão (KB)**|Especifica a quantidade total de memória dinâmica que o servidor está usando para manter conexões.|  
 |**Memória Cache de Banco de Dados (KB)**|Especifica a quantidade de memória que o servidor está usando atualmente para o cache de páginas de banco de dados.|  
@@ -39,10 +40,10 @@ ms.locfileid: "85775802"
 |**Memória Livre (KB)**|Especifica a quantidade de memória comprometida que não está atualmente em uso pelo servidor.|  
 |**Memória de Workspace Concedida (KB)**|Especifica a quantidade total de memória concedida atualmente para a execução de processos, como hash, classificação, cópia em massa e operações de criação de índice.|  
 |**Blocos de Bloqueio**|Especifica o número atual de blocos de bloqueio em uso no servidor (atualizado periodicamente). Um bloco de bloqueio representa um recurso individual bloqueado, como uma tabela, página ou linha.|  
-|**Blocos de Bloqueio Alocados**|Especifica o número atual de blocos de bloqueio alocados. Na inicialização do servidor, o número de blocos de bloqueio alocados mais o número de blocos de proprietário de bloqueio alocados dependem da opção de configuração [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Bloqueios**do**. Se forem necessários mais blocos de bloqueio, o valor aumentará.|  
+|**Blocos de Bloqueio Alocados**|Especifica o número atual de blocos de bloqueio alocados. Na inicialização do servidor, o número de blocos de bloqueio alocados mais o número de blocos de proprietário de bloqueio alocados dependem da opção de configuração **Bloqueios** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se forem necessários mais blocos de bloqueio, o valor aumentará.|  
 |**Memória de Bloqueio (KB)**|Especifica a quantidade total de memória dinâmica que o servidor está usando para os bloqueios.|  
 |**Blocos de Proprietário de Bloqueio**|Especifica o número de blocos de proprietário de bloqueio atualmente em uso no servidor (atualizado periodicamente). Um bloco de proprietário de bloqueio representa a propriedade de um bloqueio em um objeto por um thread individual. Portanto, se três threads tiverem, cada um, um bloqueio compartilhado (S) em uma página, haverá três blocos de proprietário de bloqueio.|  
-|**Blocos de Proprietário de Bloqueio Alocados**|Especifica o número atual de blocos de proprietário de bloqueio alocados. Na inicialização do servidor, o número de blocos de proprietário de bloqueio alocados e o número de blocos de bloqueio alocados dependem da opção de configuração [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Bloqueios**do**. Se forem necessários mais blocos de proprietário de bloqueio, o valor aumentará dinamicamente.|  
+|**Blocos de Proprietário de Bloqueio Alocados**|Especifica o número atual de blocos de proprietário de bloqueio alocados. Na inicialização do servidor, o número de blocos de proprietário de bloqueio alocados e o número de blocos de bloqueio alocados dependem da opção de configuração **Bloqueios** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se forem necessários mais blocos de proprietário de bloqueio, o valor aumentará dinamicamente.|  
 |**Memória de Pool de Logs (KB)**|Quantidade total de memória dinâmica que o servidor está usando para o Pool de Logs.| 
 |**Memória de Workspace Máxima (KB)**|Indica a quantidade máxima de memória disponível para a execução de processos, como hash, classificação, cópia em massa e operações de criação de índice.|  
 |**Concessões de Memória Emitidas**|Especifica o número total de processos que adquiriram com êxito uma concessão de memória de workspace.|  

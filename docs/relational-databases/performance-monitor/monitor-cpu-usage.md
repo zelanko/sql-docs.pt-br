@@ -1,5 +1,6 @@
 ---
 title: Monitorar o uso da CPU | Microsoft Docs
+description: Monitore uma instância do SQL Server para determinar se as taxas de uso da CPU estão em um intervalo normal. Use o Monitor do Sistema para ver quanto tempo a CPU passa executando um thread.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787462"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458549"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorar o uso da CPU
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85787462"
   
      Corresponde à porcentagem de tempo que o processador gasta na execução de processos de usuário, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Sistema: Comprimento da fila de processador**  
+-   **Sistema: Extensão da Fila do Processador**  
   
      Corresponde ao número de threads que esperam por tempo de processador. Um gargalo de processador acontece quando os threads de um processo exigem mais ciclos de processador do que os disponíveis. Se muitos processos tentarem utilizar o tempo de processador, pode ser necessário instalar um processador mais rápido. Caso seja um sistema com vários processadores, você pode adicionar um processador.  
   

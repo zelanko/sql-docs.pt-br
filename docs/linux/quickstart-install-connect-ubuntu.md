@@ -3,18 +3,18 @@ title: 'Ubuntu: Instalar o SQL Server em Linux'
 description: Este início rápido mostra como instalar o SQL Server 2017 ou o SQL Server 2019 no Ubuntu e criar e consultar um banco de dados com sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 98485bbe09cb7996aec6dacb93751ab1d69b17fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894141"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438108"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Ubuntu
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "85894141"
 
 Neste início rápido, você instalará o SQL Server 2017 no Ubuntu 18.04. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
 
+> [!TIP]
+> Este tutorial requer a entrada do usuário e uma conexão com a Internet. Se estiver interessado nos procedimentos de instalação autônoma ou offline, confira [Diretrizes de instalação para o SQL Server em Linux](sql-server-linux-setup.md). Para ver uma lista das plataformas com suporte, confira nossas [Notas sobre a versão](sql-server-linux-release-notes.md).
+
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
@@ -32,10 +35,10 @@ Neste início rápido, você instalará o SQL Server 2017 no Ubuntu 18.04. Em se
 
 Neste início rápido, você instalará o SQL Server 2019 no Ubuntu 18.04. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
 
-::: moniker-end
-
 > [!TIP]
-> Este tutorial requer a entrada do usuário e uma conexão com a Internet. Se estiver interessado nos procedimentos de instalação autônoma ou offline, confira [Diretrizes de instalação para o SQL Server em Linux](sql-server-linux-setup.md).
+> Este tutorial requer a entrada do usuário e uma conexão com a Internet. Se estiver interessado nos procedimentos de instalação autônoma ou offline, confira [Diretrizes de instalação para o SQL Server em Linux](sql-server-linux-setup.md). Para ver uma lista das plataformas com suporte, confira nossas [Notas sobre a versão](sql-server-linux-release-notes-2019.md).
+
+::: moniker-end
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

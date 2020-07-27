@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Estatísticas de Agente | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:Broker Statistics, que contém contadores de desempenho que relatam informações sobre o Service Broker para o Mecanismo de Banco de Dados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6dd7b9d542bb72b570a59244639685d3e56d6377
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a32f1013418afa01abee65ab9c8fdb78c794918
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85657035"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458450"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, objeto Broker Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto de desempenho SQLServer:Broker Statistics inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
   
-|Contadores do SQL Server Broker Statistics|DESCRIÇÃO|  
+|Contadores do SQL Server Broker Statistics|Descrição|  
 |-------------------------------------------|-----------------|  
 |**Total de Erros de Ativação**|O número de vezes que um procedimento armazenado de ativação do [!INCLUDE[ssSB](../../includes/sssb-md.md)] fechou com um erro.|  
 |**Reversões de Transações do Agente**|O número de transações revertidas que continham instruções DML relacionadas ao [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND e RECEIVE.|  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Definível pelo usuário | Microsoft Docs
+description: Saiba mais sobre o objeto User Settable, que cria instâncias de contador personalizadas no SQL Server para monitorar aspectos do servidor que não são monitorados pelos contadores existentes.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 427f24bdce5c7af4d0bd9c6b5c0c030112f8a5a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f61f4013c02148485994ebcb5b579c0d0ef78b2b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758906"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458618"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
   
- O objeto **User Settable** contém 10 instâncias do contador de consultas: de **Contador do usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
+ O objeto **Definível pelo Usuário** contém 10 instâncias do contador de consulta: **Contador de usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
   
 > [!NOTE]  
 >  Os procedimentos armazenados de contadores do usuário não são sondados automaticamente pelo Monitor do Sistema. Eles devem ser executados explicitamente por um aplicativo de usuário para obter os valores de contador a serem atualizados. Use um gatilho para atualizar o valor do contador automaticamente. Por exemplo, para criar um contador que monitore o número de linhas em uma tabela, crie um gatilho INSERT e DELETE na tabela que executa a seguinte instrução: `SELECT COUNT(*) FROM table`. Sempre que o gatilho for acionado devido à ocorrência de operação INSERT ou DELETE na tabela, o contador do Monitor do Sistema será atualizado automaticamente.  
   
- Essa tabela descreve o objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]User Settable**do**.  
+ Essa tabela descreve o objeto **User Settable** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Contadores do SQL Server definíveis pelo usuário|DESCRIÇÃO|  
+|Contadores do SQL Server definíveis pelo usuário|Descrição|  
 |---------------------------------------|-----------------|  
 |**Consulta**|O objeto **User Settable** contém o contador da consulta. Os usuários configuram os **Contadores do usuário** dentro do objeto de consulta.|  
   
  Essa tabela descreve as **instâncias** do contador de **Consultas** .  
   
-|Instâncias do contador de consultas|DESCRIÇÃO|  
+|Instâncias do contador de consultas|Descrição|  
 |-----------------------------|-----------------|  
 |**Contador do usuário 1**|Definido usando **sp_user_counter1**.|  
 |**Contador do usuário 2**|Definido usando **sp_user_counter2**.|  

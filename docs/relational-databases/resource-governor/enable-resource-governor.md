@@ -1,5 +1,6 @@
 ---
 title: Habilitar Administrador de Recursos | Microsoft Docs
+description: Saiba como habilitar o Resource Governor usando o SQL Server Management Studio ou o Transact-SQL. É necessário ter a permissão CONTROL SERVER.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: acb23caea9e74af5a1f25f8d6d2acab31fbeb39f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e58987e36ee4119b282a303265d2b6d898c9b0b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720458"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457838"
 ---
 # <a name="enable-resource-governor"></a>Habilitar Administrador de Recursos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

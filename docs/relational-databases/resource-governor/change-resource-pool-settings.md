@@ -1,5 +1,6 @@
 ---
 title: Alterar as configurações do pool de recursos | Microsoft Docs
+description: Saiba como alterar as configurações do pool de recursos usando o SQL Server Management Studio ou o Transact-SQL. É necessário ter a permissão CONTROL SERVER.
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 354b81a774be131c7112b61d8b3709d45e9c0c2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7488211a92ae59ee88dad31719af3c4941f2fa19
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720511"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457558"
 ---
 # <a name="change-resource-pool-settings"></a>Alterar configurações do pool de recursos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

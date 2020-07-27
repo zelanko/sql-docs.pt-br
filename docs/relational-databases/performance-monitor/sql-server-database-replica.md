@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Réplica de banco de dados | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:Database Replica, que contém contadores de desempenho sobre os bancos de dados secundários de um grupo de disponibilidade Always On.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: db892b71ba5e86faf1b45b94cdef12b1850c22a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730844"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458330"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, Réplica de Banco de Dados
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto de desempenho **SQLServer:Database Replica** contém contadores de desempenho que relatam informações sobre os bancos de dados secundários na réplica secundária de um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esse objeto só é válido em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda uma réplica secundária.  
   
-|Nome do contador|DESCRIÇÃO|Exibir em...|  
+|Nome do contador|Descrição|Exibir em...|  
 |------------------|-----------------|--------------|  
 |**Bytes de Arquivo Recebidos/s**|Quantidade de dados FILESTREAM recebida pela réplica secundária para o banco de dados secundário no último segundo.|Réplica secundária|  
 |**Fila de Aplicação de Log Pendente**|Quantidade de blocos de log que estão aguardando para serem aplicados na réplica de banco de dados.|Réplica secundária|

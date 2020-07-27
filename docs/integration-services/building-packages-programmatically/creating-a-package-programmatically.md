@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42d7d3dd3c4e8ee86da1a9fd8de8b725ba1579e7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294933"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919412"
 ---
 # <a name="creating-a-package-programmatically"></a>Criando um pacote programaticamente
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   O objeto <xref:Microsoft.SqlServer.Dts.Runtime.Package> é o contêiner de alto nível para todos os outros objetos em uma solução de projeto do [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Como contêiner de alto nível, o pacote é o primeiro objeto criado, e os objetos subsequentes são adicionados a ele e executados dentro do contexto do pacote. O próprio pacote não move nem transforma dados. O pacote confia nas tarefas que contém para executar o trabalho. As tarefas executam a maioria do trabalho executado por um pacote e definem a funcionalidade de um pacote. Um pacote é criado e executado com apenas três linhas de código, mas várias tarefas e objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> são adicionados para acrescentar funcionalidades ao seu pacote. Esta seção discute como criar um pacote programaticamente. Ela não fornece informações sobre como criar as tarefas ou o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Essas informações são discutidas em seções posteriores.  
@@ -67,13 +67,13 @@ Module Module1
 End Module  
 ```  
   
- Para compilar e executar o exemplo, pressione F5 no Visual Studio. Para compilar o código usando o compilador C#, **csc.exe**, no prompt de comando para compilar, use o comando e as referências de arquivo a seguir, substituindo o *\<nomedoarquivo>* pelo nome do arquivo .cs ou .vb e dando a ele um *\<nomedoarquivodesaída>* de sua escolha.  
+ Para compilar e executar o exemplo, pressione F5 no Visual Studio. Para implementar o código usando o compilador C#, **csc.exe**, no prompt de comando para compilar, use as referências a seguir de comando e arquivo, substituindo o *\<filename>* pelo nome do arquivo .cs ou .vb, e dando a ele um *\<outputfilename>* de sua escolha.  
   
- **csc /target:library /out: \<nomedoarquivodesaída>.dll \<nomedoarquivo>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
  Para compilar o código usando o compilador do Visual Basic .NET, **vbc.exe**, no prompt de comando para compilar, use o comando e as referências de arquivo a seguir.  
   
- **vbc /target:library /out: \<nomedoarquivodesaída>.dll \<nomedoarquivo>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
  Você também pode criar um pacote carregando um pacote existente que foi salvo em disco, no sistema de arquivos, ou no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferença é que o objeto <xref:Microsoft.SqlServer.Dts.Runtime.Application> é criado primeiro e depois o objeto do pacote é preenchido por um dos métodos sobrecarregados do aplicativo: **LoadPackage** para arquivos simples, **LoadFromSQLServer** para pacotes salvos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> para pacotes salvos no sistema de arquivos. O exemplo seguinte carrega um pacote existente do disco e exibe várias propriedades no pacote.  
   

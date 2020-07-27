@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294224"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919803"
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "71294224"
   
 -   Clique com o botão direito do mouse na tarefa **Criação de Perfil de Dados** no Designer de [!INCLUDE[ssIS](../../includes/ssis-md.md)] e clique em **Editar**. Clique em **Abrir o Visualizador de Perfil** na página **Geral** de **Editor da Tarefa Criação de Perfil de Dados**.  
   
--   Na pasta *\<unidade>* :\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn, execute o DataProfileViewer.exe.  
+-   Na pasta *\<drive>* :\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn, execute DataProfileViewer.exe.  
   
  O visualizador usa vários painéis para exibir os perfis solicitados e os resultados computados, com detalhes e capacidade de busca opcionais:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "71294224"
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Comprimento de Coluna  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Perfil de Distribuição de Tamanho de Coluna – painel \<coluna>  
+##### <a name="column-length-distribution-profile---column-pane"></a>Perfil de Distribuição de Comprimento de Coluna – painel \<column>  
  **Comprimento Mínimo**  
  Exibe o comprimento mínimo de valores nesta coluna.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "71294224"
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Tipo de Perfil = Perfil de Razão Nula de Coluna  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Perfil de Razão Nula de Coluna – painel \<coluna>  
+##### <a name="column-null-ratio-profile---column-pane"></a>Perfil Razão Nula de Coluna – painel \<column>  
  **Contagem Nula**  
  Exibe o número de linhas nas quais a coluna perfilada tem um valor nulo.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71294224"
   
 #### <a name="profile-type--column-pattern-profile"></a>Tipo de Perfil = Perfil Padrão de Coluna  
   
-##### <a name="column-pattern-profile---column-pane"></a>Perfil de Padrão de Coluna – painel \<coluna>  
+##### <a name="column-pattern-profile---column-pane"></a>Perfil de Padrão de Coluna – painel \<column>  
  **Contagem de Linhas**  
  Exibe o número de linhas na tabela ou exibição.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "71294224"
   
 #### <a name="profile-type--column-statistics-profile"></a>Tipo de Perfil = Perfil de Estatísticas da Coluna  
   
-##### <a name="column-statistics-profile---column-pane"></a>Perfil de Estatísticas da Coluna – painel \<coluna>  
+##### <a name="column-statistics-profile---column-pane"></a>Perfil Estatísticas de Coluna – painel \<column>  
  **Mínimo**  
  Exibe o valor mínimo localizado na coluna cujo perfil está sendo criado.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71294224"
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Valor da Coluna  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Perfil de Distribuição de Valor da Coluna – painel \<coluna>  
+##### <a name="column-value-distribution-profile---column-pane"></a>Perfil Distribuição de Valor de Coluna – painel \<column>  
  **Número de Valores Distintos**  
  Exibe a contagem de valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "71294224"
   
 #### <a name="profile-type--candidate-key-profile"></a>Tipo de Perfil = Perfil-Chave de Candidato  
   
-##### <a name="candidate-key-profile---table-pane"></a>Perfil-Chave de Candidato – painel \<tabela>  
+##### <a name="candidate-key-profile---table-pane"></a>Perfil Chave Candidata – painel \<table>  
  **Colunas de Chave**  
  Exibe as colunas que foram selecionadas para criação de perfil como chave candidata.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71294224"
  Exibe a intensidade (em porcentagem) da coluna da chave candidata ou da combinação de colunas. Uma intensidade de chave inferior a 100% indica que existem valores em duplicata.  
   
 ##### <a name="key-violations-pane"></a>Painel Violações de Chave  
- **\<column1>, \<column2>, etc.**  
+ **\<column1>, \<column2> etc.**  
  Exibe os valores em duplicata encontrados na coluna cujo perfil está sendo criado.  
   
  **Count**  
@@ -212,17 +212,17 @@ ms.locfileid: "71294224"
 > [!NOTE]  
 >  Uma porcentagem alta de valores errôneos nos dados poderia conduzir a resultados inesperados de um perfil Dependência Funcional. Por exemplo, 90% das linhas têm um valor de “WI” em Estado para um valor de Código Postal de "98052". O perfil informa linhas que contêm o valor de estado correto de "WA" como violações.  
   
- **\<nome de coluna determinante>**  
+ **\<determinant column name>**  
  Exibe o valor da coluna determinante ou combinação de colunas na instância de uma violação de dependência funcional.  
   
- **\<nome de coluna dependente>**  
+ **\<dependent column name>**  
  Exibe o valor da coluna dependente na instância de uma violação de dependência funcional.  
   
  **Contagem de Suporte**  
  Exibe o número de linhas nas quais o valor de coluna determinante determina a coluna dependente.  
   
  **Contagem de Violação**  
- Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas nas quais o valor dependente é o valor exibido na coluna **\<dependent column name>** .)  
+ Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Linhas em que o valor dependente é o valor exibido na coluna **\<dependent column name>** .)  
   
  **Percentual de Suporte**  
  Exibe a porcentagem de linhas nas quais a coluna determinante determina a coluna dependente.  
@@ -240,7 +240,7 @@ ms.locfileid: "71294224"
  Exibe a intensidade (em porcentagem) da sobreposição entre colunas. Uma intensidade de chave inferior a 100% indica que há casos nos quais o valor do subconjunto não está localizado entre os valores do superconjunto.  
   
 ##### <a name="inclusion-violations-pane"></a>Painel Violações de Inclusão  
- **\<column1>, \<column2>, etc.**  
+ **\<column1>, \<column2> etc.**  
  Exibe os valores na coluna de subconjunto ou colunas que não foram localizadas na coluna ou colunas do superconjunto.  
   
  **Count**  

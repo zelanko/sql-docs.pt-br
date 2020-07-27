@@ -1,5 +1,6 @@
 ---
 title: Usar o Repositório de Consultas com OLTP in-memory | Microsoft Docs
+description: Saiba como o Repositório de Consultas do SQL Server permite que você monitore o desempenho do código compilado nativamente para cargas de trabalho executando o OLTP in-memory.
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737119"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456895"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Como usar o Repositório de Consultas com OLTP in-memory
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

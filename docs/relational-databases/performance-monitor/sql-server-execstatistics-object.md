@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto ExecStatistics | Microsoft Docs
+description: Saiba mais sobre o objeto SQLServer:ExecStatistics, que fornece contadores para monitorar diversas execuções.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: aaf66cf2be025262d0d59b7a06421689b93bab91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c6cf9cb90a6b19e3472e7d0fb41475b9deb47f6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775898"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458346"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server, objeto ExecStatistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85775898"
   
  Esta tabela descreve os contadores **Exec Statistics** do SQL Server.  
   
-|Contadores Exec Statistics do SQL Server|DESCRIÇÃO|  
+|Contadores Exec Statistics do SQL Server|Descrição|  
 |-----------------------------------------|-----------------|  
 |**Consulta Distribuída**|Estatísticas referentes à execução de consultas distribuídas.|  
 |**Chamadas DTC**|Estatísticas referentes à execução de chamadas DTC.|  
@@ -35,7 +36,7 @@ ms.locfileid: "85775898"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |**Tempo médio de execução (ms)**|Tempo médio de execução do tipo de execução selecionado.|  
 |**Tempo de execução cumulativo (ms) por segundo**|Tempo de execução agregado, por segundo, do tipo de execução selecionado.|  

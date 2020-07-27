@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Estatísticas de grupo de cargas de trabalho | Microsoft Docs
+description: Saiba mais sobre o objeto SQLServer:Workload Group Stats, que contém contadores de desempenho que relatam as estatísticas do grupo de carga de trabalho do Resource Governor.
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1413ab35860b20a80e1fcae07a0aa5534c1e3965
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6a189c02caaef100b2531b20a986befc5a069ba6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758885"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458108"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objeto de estatísticas de grupo de cargas de trabalho
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85758885"
   
  Cada grupo de cargas de trabalho ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Grupo de Cargas de Trabalho que tem o mesmo nome de instância do grupo de cargas de trabalho do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   
-|Nome do contador|DESCRIÇÃO|  
+|Nome do contador|Descrição|  
 |------------------|-----------------|  
 |**Threads paralelos ativos**|A contagem atual de uso de threads paralelos.|  
 |**Solicitações ativas**|O número de solicitações que estão sendo executadas neste grupo de cargas de trabalho. Deverá ser equivalente à contagem de linhas de sys.dm_exec_requests filtradas pela ID de grupo.|  

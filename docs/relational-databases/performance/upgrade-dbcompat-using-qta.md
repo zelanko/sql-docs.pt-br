@@ -1,5 +1,6 @@
 ---
 title: Atualizar bancos de dados usando o Assistente de Ajuste de Consulta
+description: Saiba como o Assistente de Ajuste de Consulta orienta você ao longo do fluxo de trabalho recomendado para manter a estabilidade do desempenho durante atualizações para versões mais recentes do SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 25083a6254d05abb44a4df3e96d5b070c3d0ba37
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598742"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457561"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Atualizando bancos de dados usando o Assistente de Ajuste de Consulta
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +186,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
     -  **ID da Consulta** 
     -  **Texto da Consulta**: instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser expandida clicando no botão **...** .
     -  **Status**: exibe o estado atual de experimentação para a consulta.
-    -  **Métrica de Linha de Base**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta executada na **Subetapa 3 da Etapa 2**, que representa a consulta regredida após a atualização de compatibilidade do banco de dados.
+    -  **Métrica de linha de base**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta executada na **Subetapa 3 da Etapa 2**, que representa a consulta regredida após a atualização de compatibilidade do banco de dados.
     -  **Métrica Observada**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta após a experimentação, para uma otimização suficientemente boa.
     -  **% de Alteração**: porcentagem de alteração da métrica selecionada entre o estado de experimentação anterior e posterior, que representa o valor da melhoria medida para a consulta com a otimização proposta.
     -  **Opção de Consulta**: link para a dica proposta que melhora a métrica de execução de consulta.

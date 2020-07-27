@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Total do Gerenciador de cursor | Microsoft Docs
+description: Saiba mais sobre o objeto SQLServer:Cursor Manager Total, que fornece contadores para monitorar cursores no SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ce6e923f856693ea32b7651d88d7a5a9f5434f22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2506c12f7a8be65ce490d160c04a7e24771e6c3c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730319"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457705"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server, objeto Cursor Manager Total
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85730319"
   
  Esta tabela descreve os contadores de **Total do Gerenciador de Cursor** do SQL Server.  
   
-|Contadores de Total do Gerenciador de Cursor|DESCRIÇÃO|  
+|Contadores de Total do Gerenciador de Cursor|Descrição|  
 |-----------------------------------|-----------------|  
 |**Contagem de população assíncrona**|Número de cursores sendo populados assincronamente.|  
 |**Taxa de conversão de cursor**|Número de conversões de cursor por segundo.|  

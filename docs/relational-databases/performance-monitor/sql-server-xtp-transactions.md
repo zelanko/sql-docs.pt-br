@@ -1,5 +1,6 @@
 ---
 title: Transações XTP do SQL Server | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho XTP Transactions do SQL Server, que contém contadores relacionados às transações que envolvem OLTP in-memory no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b8da1956665775cf54da529140a10a8477cd86ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 384e2feb7d638a7ff8cad4e22346ba58369cc6aa
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741522"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458060"
 ---
 # <a name="sql-server-xtp-transactions"></a>Transações XTP do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85741522"
   
  Esta tabela descreve os contadores **Transações de XTP do SQL Server** .  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Anulações em cascata/s**|O número de transações que foram revertidas devido a uma reversão de dependência de confirmação (em média), por segundo.|  
 |**Dependências de confirmação realizadas/s**|O número de dependências de confirmação realizadas por transações (em média), por segundo.|  

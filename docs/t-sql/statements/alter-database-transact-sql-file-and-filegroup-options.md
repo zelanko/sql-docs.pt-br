@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdeab9ba00b4c498970ebac378c4abe53f4fbd2c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628606"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552412"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL)
 
@@ -57,9 +57,7 @@ Modifica os arquivos e grupos de arquivos associados ao banco de dados. Adiciona
 
 Para obter mais informações sobre as convenções de sintaxe, consulte [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Clique em um produto
-
-Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique exibe conteúdo diferente aqui nesta página da Web, apropriado para qualquer produto no qual você clicar.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -163,7 +161,7 @@ Para um grupo de arquivos FILESTREAM, NAME pode ser modificado online. FILENAME 
 Você pode definir um arquivo FILESTREAM como OFFLINE. Quando um arquivo FILESTREAM estiver offline, seu grupo de arquivos pai será internamente marcado como offline; portanto, haverá falha em todo acesso aos dados FILESTREAM naquele grupo de arquivos.
 
 > [!NOTE]
-> \<add_or_modify_files> As opções não estão disponíveis em um Banco de Dados Independente.
+> As opções \<add_or_modify_files> não estão disponíveis em um Banco de Dados Independente.
 
 **\<filespec>::=**
 

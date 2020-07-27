@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Banco de Dados | Microsoft Docs
+description: Saiba mais sobre o objeto SQLServer:Databases, que fornece contadores para operações de cópia em massa, taxa de transferência de backup e restauração e atividades de log de transações.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655957"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457978"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

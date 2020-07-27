@@ -1,5 +1,6 @@
 ---
 title: Bancos de dados XTP do SQL Server | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho Bancos de dados XTP do SQL Server, que fornece contadores específicos do banco de dados OLTP in-memory.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f40d6d4afd6195e65ded4e010268251a5bda8b0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dea94fe092f4481386a9fd8a5649d0ea4dd18c2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774245"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457377"
 ---
 # <a name="sql-server-xtp-databases"></a>Bancos de dados XTP do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ O objeto de desempenho **Bancos de dados XTP do SQL Server** fornece contadores 
 
 Esta tabela descreve os contadores **Bancos de dados XTP do SQL Server** .
 
-|Contador|DESCRIÇÃO| 
+|Contador|Descrição| 
 |-------------|-----------------|  
 |**Tamanho Médio de Dados Grandes do Segmento de Transação**|Tamanho médio da carga de dados grandes do segmento de transação. Este é um contador de nível muito baixo, não planejado para uso do cliente.|
 |**Tamanho Médio do Segmento de Transação**|Tamanho médio da carga do segmento de transação. Se esse valor chegar a zero, um número maior de páginas será alocado pelo alocador de back-end. Este é um contador de nível muito baixo, não planejado para uso do cliente.|

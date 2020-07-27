@@ -1,5 +1,6 @@
 ---
 title: Coleta de lixo de SQL Server XTP | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho XTP Garbage Collection do SQL Server, que contém os contadores relacionados ao coletor de lixo do mecanismo OLTP in-memory.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0edeb2fef45d23faec92846b65626bdc3c00d049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8575295948b5560f25dc0e967fa419699587af7b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774226"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457958"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>Coleta de Lixo de XTP do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85774226"
   
  Esta tabela descreve os contadores de **Coleta de Lixo de XTP do SQL Server** .  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Tentativas de verificação de canto sujo/s (emitido pelo GC)**|O número de tentativas de digitalização devido a conflitos de gravação durante as varreduras de canto sujo emitidas pelo coletor de lixo (em média), por segundo. Este é um contador de nível muito baixo, não planejado para uso do cliente.|  
 |**Itens principais do trabalho do GC/s**|O número de itens de trabalho processados pelo thread principal do GC.|  

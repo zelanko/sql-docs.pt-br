@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903918"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919392"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>Derivar valores de coluna com a transformação Coluna Derivada
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Para adicionar e configurar uma transformação Coluna Derivada, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -48,7 +48,7 @@ ms.locfileid: "77903918"
     > [!NOTE]  
     >  Se a expressão não for válida, o texto da expressão será realçado e uma Dica de Ferramenta na coluna descreverá os erros.  
   
-7.  Na lista **Coluna Derivada**, selecione **\<adicionar como uma nova coluna>** para gravar o resultado da avaliação da expressão em uma nova coluna ou selecione uma coluna existente para atualizar com o resultado da avaliação.  
+7.  Na lista **Coluna Derivada**, selecione **\<add as new column>** para escrever o resultado de avaliação da expressão em uma nova coluna ou selecionar uma coluna existente para atualizar com o resultado da avaliação.  
   
      Se você optar por usar uma nova coluna, a caixa de diálogo **Editor de Transformação Coluna Derivada** avaliará a expressão e atribuirá um tipo de dados à coluna, dependendo do tipo de dados, tamanho, precisões, escala e página de código.  
   

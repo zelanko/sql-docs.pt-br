@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e8e6b9a30146aff61464f4aeda46cc49f07abe7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294189"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920692"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -191,7 +191,7 @@ ms.locfileid: "71294189"
   
 ##### <a name="location--sql-server"></a>Local = SQL Server  
  **Conexão**  
- Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões OLE DB na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -200,7 +200,7 @@ ms.locfileid: "71294189"
   
 ##### <a name="location--file-system"></a>Local = Sistema de arquivos  
  **Conexão**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de Arquivos na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de Conexão de Arquivo](../../integration-services/connection-manager/file-connection-manager.md)  
   

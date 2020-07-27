@@ -1,5 +1,6 @@
 ---
 title: Iniciar o Monitor do Sistema (Windows) | Microsoft Docs
+description: Use o Monitor do Sistema para coletar contadores de dados de desempenho, como o uso de processador e de memória, e recursos do SQL Server, como bloqueios e transações.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e03d2d02e970a4e76988664254e0f6f26a78355b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655220"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457591"
 ---
 # <a name="start-system-monitor-windows"></a>Iniciar o Monitor do Sistema (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

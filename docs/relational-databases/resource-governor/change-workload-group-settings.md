@@ -1,5 +1,6 @@
 ---
 title: Alterar as configurações do grupo de carga de trabalho | Microsoft Docs
+description: Saiba como alterar as configurações dos grupos de carga de trabalho padrão e definidos pelo usuário usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1e94646c6cab4a143fb87db9443d219d79262f39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 882d0f15b946e49bf33338707ddeb2ea5354f922
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720556"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457548"
 ---
 # <a name="change-workload-group-settings"></a>Alterar as configurações de grupo de carga de trabalho
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

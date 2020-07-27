@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ebb1f9b6a1d2b9651b26c8649db89c0ca89fc5fa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999771"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554749"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT – Cláusula ORDER BY (Transact-SQL)
 
@@ -92,7 +92,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *order_by_expression*  
  Especifica uma coluna ou expressão na qual o conjunto de resultados da consulta deve ser classificado. Uma coluna de classificação pode ser especificada como um nome ou alias de coluna, ou um inteiro não negativo que representa a posição da coluna na lista de seleção.  
   
@@ -124,7 +126,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  Nos planos de execução de consulta, o valor da contagem de linhas de deslocamento é exibido no atributo **Offset** do operador de consulta TOP.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Especifica o número de linhas que devem ser retornadas depois que a cláusula OFFSET for processada. O valor pode ser uma expressão ou constante inteira que seja maior que ou igual a um.  
   
 **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

@@ -1,5 +1,6 @@
 ---
 title: Criar estatísticas | Microsoft Docs
+description: Saiba como criar estatísticas de otimização de consulta nas colunas de uma tabela ou em uma exibição indexada no SQL Server usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0989fda3e2650843b24719e51cd0944713a9ac2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d7b91e2a3438e09de30a6be3c66bb4c22f9bd1ad
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012243"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458213"
 ---
 # <a name="create-statistics"></a>Criar estatísticas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

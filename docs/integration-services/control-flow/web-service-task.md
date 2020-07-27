@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db56206a629a4bf392ef56641564208ff1a9d3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293796"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913806"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A tarefa Serviço Web executa um método de serviço Web. Você pode usar essa tarefa para os seguintes propósitos:  
@@ -87,7 +87,7 @@ ms.locfileid: "71293796"
   
 ### <a name="options"></a>Opções  
  **HTTPConnection**  
- Selecione um gerenciador de conexões na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
@@ -173,13 +173,13 @@ ms.locfileid: "71293796"
   
 #### <a name="outputtype--file-connection"></a>OutputType = File Connection  
  **Arquivo**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de Arquivos na lista ou clique em \<**New Connection...**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variável**  
- Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**New Variable...**> para criar uma variável.  
   
  **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

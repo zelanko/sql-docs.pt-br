@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80fe147fcdeb205752429521887d1c0b8f76234f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d809d1ffc7a3408d825589b3d69df12dba81f18e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731308"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552542"
 ---
 # <a name="hints-transact-sql---join"></a>Dicas (Transact-SQL) – junção
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,8 +55,10 @@ ms.locfileid: "85731308"
      { LOOP | HASH | MERGE | REMOTE }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
- LOOP | HASH | MERGE  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+ LOOP \| HASH \| MERGE  
  Especifica que a junção na consulta deve usar loop, hash ou mesclagem. O uso de LOOP | HASH | MERGE JOIN força uma junção específica entre duas tabelas. LOOP não pode ser especificado com RIGHT ou FULL como um tipo de junção. Para obter mais informações, confira as [Junções](../../relational-databases/performance/joins.md).
   
  REMOTE  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295735"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913262"
 ---
 # <a name="save-packages"></a>Salvar pacotes
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , você cria pacotes usando o Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e salva os pacotes no sistema de arquivos como arquivos XML (arquivos .dtsx). Você também pode salvar cópias do arquivo XML de pacote no banco de dados msdb no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes. O repositório de pacotes representa as pastas no local do sistema de arquivos que o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gerencia.  
@@ -60,7 +60,7 @@ ms.locfileid: "71295735"
   
 1.  No Gerenciador de Soluções, clique duas vezes no pacote do qual você quer salvar uma cópia.  
   
-2.  No menu **Arquivo**, clique em **Salvar Cópia do \<arquivo de pacote> Como**.  
+2.  No menu **Arquivo**, clique em **Salvar Cópia de \<package file> como**.  
   
 3.  Na caixa de diálogo **Salvar Cópia do Pacote** , selecione um local de pacote na lista **Local dos pacotes** . As seguintes opções estão disponíveis:  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295735"
   
 2.  No Gerenciador de Soluções, clique com o botão direito do mouse no projeto, aponte para **Adicionar** e clique em **Novo Item**.  
   
-3.  Na caixa de diálogo **Adicionar Novo Item – \<nome do projeto**, clique no pacote que deseja usar como modelo.  
+3.  Na caixa de diálogo **Adicionar Novo Item - \<project name>** , clique no pacote que deseja usar como modelo.  
   
      A lista de modelos inclui o modelo padrão do pacote chamado Novo Pacote SSIS. O ícone do pacote identifica os modelos que podem ser usados como modelos de pacote.  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server Agent, objeto JobSteps | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho JobSteps do SQL Server Agent, que contém contadores de desempenho que relatam informações sobre as etapas dos trabalhos do SQL Server Agent.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b3d0c8197f275801140bec48ab05dc6bc19324eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14a13671c5447872e1c4c0030c8717e471d8114f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787389"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457448"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objeto JobSteps
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787389"
   
  A tabela abaixo contém os contadores de **SQLAgent:JobSteps** .  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |**Etapas ativas**|Este contador informa o número de etapas de trabalho atualmente em execução.|  
 |**Etapas em fila**|Este contador informa o número de etapas de trabalho que estão prontas para execução pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mas que ainda não foram iniciadas.|  
@@ -34,7 +35,7 @@ ms.locfileid: "85787389"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância|DESCRIÇÃO|  
+|Instância|Descrição|  
 |--------------|-----------------|  
 |**_Total**|Informações de todas as etapas de trabalho.|  
 |**ActiveScripting**|Informações de etapas de trabalho que usam o subsistema **ActiveScripting** .|  

@@ -1,5 +1,6 @@
 ---
 title: Tutoriais do Mecanismo de Banco de Dados | Microsoft Docs
+description: Use estes tutoriais para saber mais sobre o Mecanismo de Banco de Dados do SQL Server, incluindo por onde começar e como usar o SQL Server Management Studio.
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8098ffe6b2b74f415595a4ff6ed91172085a009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4814fe709fb28141d00fd5302feab845d39d5331
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781613"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458516"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriais do Mecanismo de Banco de Dados
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

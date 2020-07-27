@@ -1,5 +1,6 @@
 ---
 title: Compactação de dados | Microsoft Docs
+description: Aplique a compactação de dados de linha e de página, ou a compactação de arquivamento de columnstore, usando o SQL Server e o Banco de Dados SQL do Azure.
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464f83e573f76bb74158fc8eee6a798089734006
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5da071f378edb771d4b1dc70ac8257febd78a522
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679719"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459003"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +187,7 @@ A tabela a seguir mostra as configurações de replicação que controlam a comp
 |Intenção do usuário|Replicar esquema de partição para uma tabela ou um índice|Replicar configurações de compactação|Comportamento do script|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
 |Para replicar o esquema de partição e habilitar a compactação no Assinante da partição.|True|True|Gera scripts para o esquema da partição e as configurações de compactação.|  
-|Para replicar o esquema da partição, mas não compactar os dados no Assinante.|True|Falso|Gera script para o esquema da partição, mas não para as configurações de compactação da partição.|  
+|Para replicar o esquema da partição, mas não compactar os dados no Assinante.|Verdadeiro|Falso|Gera script para o esquema da partição, mas não para as configurações de compactação da partição.|  
 |Para não replicar o esquema da partição e não compactar os dados no Assinante.|Falso|Falso|Não gera scripts para a partição nem para as configurações de compactação.|  
 |Para compactar a tabela no Assinante, se todas as partições forem compactadas no Publicador, mas não replicar o esquema de partição.|Falso|True|Verifica se todas as partições estão habilitadas para compactação.<br /><br /> Gera scripts para a compactação em nível de tabela.|  
   

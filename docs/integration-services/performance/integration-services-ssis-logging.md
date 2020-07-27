@@ -29,16 +29,16 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287880"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918330"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar o log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
@@ -230,7 +230,7 @@ ms.locfileid: "79287880"
   
 3.  Selecione um provedor de log na lista **Tipo de provedor** e clique em **Adicionar**.  
   
-4.  Na coluna **Configuração**, selecione um gerenciador de conexões ou clique em **\<New connection>** para criar um novo gerenciador de conexões do tipo apropriado para o provedor de logs. Dependendo do provedor selecionado, use um dos seguintes gerenciadores de conexões:  
+4.  Na coluna **Configuração**, selecione um gerenciador de conexões ou clique em **\<New connection>** para criar um gerenciador de conexões do tipo apropriado para o provedor de logs. Dependendo do provedor selecionado, use um dos seguintes gerenciadores de conexões:  
   
     -   Para arquivos de texto, use um gerenciador de conexões de Arquivo. Para saber mais, veja [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -312,7 +312,7 @@ ms.locfileid: "79287880"
  O campo de descrição é editável. Clique e modifique a descrição padrão do log.  
   
  **Configuração**  
- Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
+ Selecione um gerenciador de conexões existente na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
  Tópicos relacionados: [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
   

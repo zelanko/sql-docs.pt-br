@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 48b8dbac5a4ad484103dcceedb243a52cc7e621d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834727"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943088"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Propriedade)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,10 @@ IDENTITY [ (seed , increment) ]
  É o valor usado para a primeira linha carregada na tabela.  
   
  *increment*  
- É o valor de incremento adicionado ao valor de identidade da linha anterior que foi carregada.  
+ É o valor de incremento adicionado ao valor de identidade da linha anterior que foi carregada.
+
+ > [!NOTE]
+ > No Azure Synapse Analytics, os valores da identidade não são incrementais devido à arquitetura distribuída do data warehouse. Confira [Usando IDENTITY para criar chaves alternativas no pool de SQL do Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values) para obter mais informações.
   
  Você deve especificar seed e increment, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
   
@@ -62,8 +65,11 @@ IDENTITY [ (seed , increment) ]
   
  A propriedade de identidade em uma coluna não garante o seguinte:  
   
--   **Exclusividade do valor** – a exclusividade precisa ser imposta usando uma restrição **PRIMARY KEY** ou **UNIQUE** ou um índice **UNIQUE**.  
-  
+-   **Exclusividade do valor** – a exclusividade precisa ser imposta usando uma restrição **PRIMARY KEY** ou **UNIQUE** ou um índice **UNIQUE**. - 
+ 
+> [!NOTE]
+> O Azure Synapse Analytics não dá suporte à restrição de **PRIMARY KEY** ou **UNIQUE** nem ao índice **UNIQUE**. Confira [Usando IDENTITY para criar chaves alternativas no pool de SQL do Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) para obter mais informações.
+
 -   **Valores consecutivos em uma transação** – não é garantido que uma transação que insere várias linhas obtenha valores consecutivos para as linhas porque outras inserções simultâneas podem ocorrer na tabela. Se os valores precisarem ser consecutivos, a transação deverá usar um bloqueio exclusivo na tabela ou usar o nível de isolamento **SERIALIZABLE**.  
   
 -   **Valores consecutivos após o reinício do servidor ou outras falhas** - o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar valores de identidade em cache por questões de desempenho e alguns dos valores atribuídos podem ser perdidos durante uma falha de banco de dados ou uma reinicialização do servidor. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usar um gerador de sequência com a opção **NOCACHE** pode limitar os intervalos de transações que nunca são confirmadas.  

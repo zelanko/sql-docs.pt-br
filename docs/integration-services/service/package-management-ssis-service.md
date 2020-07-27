@@ -27,16 +27,16 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296874"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921992"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   O gerenciamento de pacotes inclui monitoramento, gerenciamento, importação e exportação de pacotes.  
@@ -130,7 +130,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
+    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Browse for more...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
@@ -166,7 +166,7 @@ Interrompa um pacote em execução na pasta **Pacotes em Execução** clicando c
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
+    -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Browse for more...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   

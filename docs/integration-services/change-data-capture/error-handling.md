@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a4aebf354f999b26be59efc2f3c25a205dd3d9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9fc8c8f8b5072afff038c590c82898776534a3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298784"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921603"
 ---
 # <a name="error-handling"></a>Tratamento de erros
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Uma Instância do Oracle CDC mina as alterações de um único banco de dados de origem do Oracle (um cluster do Oracle RAC é considerado um banco de dados único) e grava as alterações confirmadas em tabelas de alteração em um banco de dados do CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -38,13 +38,13 @@ ms.locfileid: "71298784"
   
  A tabela a seguir descreve os vários códigos de status que a Instância Oracle CDC pode relatar em sua tabela de estado.  
   
-|Status|Código de status ativo|Código do estado de erro|DESCRIÇÃO|Substatus|  
+|Status|Código de status ativo|Código do estado de erro|Descrição|Substatus|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|A Instância do Oracle CDC não está sendo executada. O substatus ABORTED indica que a Instância Oracle CDC estava ACTIVE e foi parada inesperadamente.|O substatus ABORTED é estabelecido pela instância principal do Serviço Oracle CDC quando ela detectar que a Instância Oracle CDC não está sendo executada enquanto seu status estiver ACTIVE.|  
 |ERROR|0|1|A Instância do Oracle CDC não está sendo executada. O status de ERROR indica que a instância de CDC estava ACTIVE, mas encontrou um erro que não é recuperável e foi desabilitada.|MISCONFIGURED: um erro de configuração irrecuperável foi detectado.<br /><br /> PASSWORD-REQUIRED: não há nenhuma senha definida para o Designer da Captura de Dados de Alteração para Oracle da Attunity ou a senha configurada não é válida. Isto pode ocorrer devido a uma alteração na senha da chave assimétrica do serviço.|  
-|RUNNING|1|0|A instância CDC está sendo executada e está processando registros de alteração.|IDLE: Todos os registros de alteração foram processados e armazenados nas tabelas de controle de destino ( **_CT**). Não há nenhuma transação ativa com as tabelas de controle.<br /><br /> PROCESSING: há registros de alteração sendo processados que ainda não estão gravados nas tabelas de controle ( **_CT**).|  
+|RUNNING|1|0|A instância CDC está sendo executada e está processando registros de alteração.|IDLE: todos os registros de alteração foram processados e armazenados nas tabelas de controle de destino ( **_CT**). Não há nenhuma transação ativa com as tabelas de controle.<br /><br /> PROCESSING: há registros de alteração sendo processados que ainda não estão gravados nas tabelas de controle ( **_CT**).|  
 |STOPPED|0|0|A instância CDC não está em execução.|O substatus STOP indica que a instância CDC estava ACTIVE e foi parada corretamente.|  
-|SUSPENDED|1|1|A instância de CDC está sendo executada, mas o processamento é suspenso devido a um erro recuperável.|DISCONNECTED: a conexão com o banco de dados Oracle de origem não pode ser estabelecida. O processamento será retomado assim que a conexão for restaurada.<br /><br /> STORAGE: o armazenamento está completo. O processamento será retomado quando o armazenamento estiver disponível. Em alguns casos, este status pode não aparecer porque a tabela de status não pode ser atualizada.<br /><br /> LOGGER: O registrador está conectado ao Oracle, mas não pode ler os logs de transação do Oracle devido a um problema temporário.|  
+|SUSPENDED|1|1|A instância de CDC está sendo executada, mas o processamento é suspenso devido a um erro recuperável.|DISCONNECTED: a conexão ao banco de dados Oracle de origem não pode ser estabelecida. O processamento será retomado assim que a conexão for restaurada.<br /><br /> STORAGE: o armazenamento está completo. O processamento será retomado quando o armazenamento estiver disponível. Em alguns casos, este status pode não aparecer porque a tabela de status não pode ser atualizada.<br /><br /> LOGGER: o registrador está conectado ao Oracle, mas não pode ler os logs de transação do Oracle devido a um problema temporário.|  
 |DATAERROR|x|x|Este código de status só é usado para a tabela **xdbcdc_trace** . Ele não aparece na tabela **xdbcdc_state** . Os registros de rastreamento com este status indicam um problema com um registro de log da Oracle. O registro de log incorreto está armazenado na coluna **dados** como um BLOB.|BADRECORD: o registro de log anexado não pôde ser analisado.<br /><br /> CONVERT-ERROR: os dados em algumas colunas não puderam ser convertidos nos dados das colunas de destino na tabela de captura. Este status somente poderá aparecer se a configuração especificar que os erros de conversão devem gerar registros de rastreamento.|  
   
  Como o estado do Serviço Oracle CDC está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver casos em que o valor de estado no banco de dados pode não refletir o estado real do serviço. O cenário mais comum é quando o serviço perde sua conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não pode retomá-la (por qualquer motivo). Nesse caso, o estado armazenado em **cdc.xdbcdc_state** fica obsoleto. Se o último carimbo de data/hora de atualização (UTC) tiver mais de um minuto, o estado será provavelmente obsoleto. Neste caso, use o Visualizador de Eventos do Windows para localizar informações adicionais sobre o status do serviço.  
@@ -59,7 +59,7 @@ ms.locfileid: "71298784"
   
 -   A tabela MSXDBCDC.dbo.xdbcdc_trace, que é usada para registros gerais e rastreamento pelo processo principal do Serviço Oracle CDC.  
   
--   A tabela \<cdc-database>.cdc.xdbcdc_trace, que é usada para registros gerais e rastreamento pelas Instâncias Oracle CDC. Isto significa que os erros relacionados a uma Instância Oracle CDC específica são registrados em uma tabela de rastreamento daquela instância.  
+-   A tabela \<cdc-database>.cdc.xdbcdc_trace, que é usada para rastreamento e registros em log em geral pelas Instâncias Oracle CDC. Isto significa que os erros relacionados a uma Instância Oracle CDC específica são registrados em uma tabela de rastreamento daquela instância.  
   
  As informações são registradas em log pelo serviço Oracle CDC quando o serviço:  
   

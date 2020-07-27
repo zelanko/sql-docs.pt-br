@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286585"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914222"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Compreendendo o Component Object Model Script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Conforme discutido em [Codificar e depurar o componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), o projeto do componente Script contém três itens de projeto:  
@@ -119,27 +119,27 @@ public override void PreExecute()
   
 -   Propriedades de acessador nomeadas, digitadas para cada coluna de entrada selecionada. Essas propriedades são somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna na página **Colunas de Entrada** do **Editor de Transformação Scripts**.  
   
--   Uma propriedade **\<coluna>_IsNull** para cada coluna de entrada selecionada. Essa propriedade também é somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna.  
+-   Uma propriedade **\<column>_IsNull** para cada coluna de entrada selecionada. Essa propriedade também é somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna.  
   
--   Um método **DirectRowTo\<bufferdesaída>** para cada saída configurada. Você usará esses métodos ao filtrar linhas para uma das várias saídas no mesmo **ExclusionGroup**.  
+-   Um método **DirectRowTo\<outputbuffer>** para cada saída configurada. Você usará esses métodos ao filtrar linhas para uma das várias saídas no mesmo **ExclusionGroup**.  
   
 -   Uma função **NextRow** para obter a próxima linha de entrada e uma função **EndOfRowset** para determinar se o último buffer de dados foi processado. Em geral, você não precisa dessas funções ao usar os métodos de processamento de entrada implementados na classe base **UserComponent**. A próxima seção fornece mais informações sobre a classe base **UserComponent**.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece  
  O item de projeto ComponentWrapper contém uma classe nomeada **UserComponent** que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe **ScriptMain** na qual você escreve seu código personalizado, por sua vez, deriva de **UserComponent**. A classe **UserComponent** contém os seguintes métodos:  
   
--   Uma implementação substituída do método **ProcessInput**. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método **PreExecute** e ele pode ser chamado várias vezes. **ProcessInput** entrega o processamento para o método **\<bufferdeentrada>_ProcessInput**. Depois, o método **ProcessInput** verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível **FinishOutputs** e o método particular **MarkOutputsAsFinished**. O método **MarkOutputsAsFinished**, em seguida, chama **SetEndOfRowset** no último buffer de saída.  
+-   Uma implementação substituída do método **ProcessInput**. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método **PreExecute** e ele pode ser chamado várias vezes. **ProcessInput** entrega o processamento para o método **\<inputbuffer>_ProcessInput**. Depois, o método **ProcessInput** verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível **FinishOutputs** e o método particular **MarkOutputsAsFinished**. O método **MarkOutputsAsFinished**, em seguida, chama **SetEndOfRowset** no último buffer de saída.  
   
--   Uma implementação substituível do método **\<bufferdeentrada>_ProcessInput**. Essa implementação padrão simplesmente executa um loop em cada linha de entrada e chama **\<inputbuffer>_ProcessInputRow**.  
+-   Uma implementação substituível do método **\<inputbuffer>_ProcessInput**. Essa implementação padrão simplesmente executa um loop em cada linha de entrada e chama **\<inputbuffer>_ProcessInputRow**.  
   
 -   Uma implementação substituível do método **\<inputbuffer>_ProcessInputRow**. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.  
   
 #### <a name="what-your-custom-code-should-do"></a>O que seu código personalizado deve fazer  
  Você pode usar os seguintes métodos para processar a entrada na classe **ScriptMain**:  
   
--   Substitua o **\<bufferdeentrada>_ProcessInputRow** para processar os dados em cada linha de entrada conforme ela passa.  
+-   Substitua o **\<inputbuffer>_ProcessInputRow** para processar os dados em cada linha de entrada conforme ela passa.  
   
--   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, verifique se o **EndOfRowset** executa outra ação após o processamento de todas as linhas.) Chame **\<bufferdeentrada>_ProcessInputRow** para executar o processamento de linha.  
+-   Só substitua o **\<inputbuffer>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, verifique se o **EndOfRowset** executa outra ação após o processamento de todas as linhas.) Chame **\<inputbuffer>_ProcessInputRow** para executar o processamento de linha.  
   
 -   Substitua **FinishOutputs** se precisar fazer algo nas saídas antes de seu fechamento.  
   
@@ -153,7 +153,7 @@ public override void PreExecute()
   
 -   Propriedades do acessador nomeado, digitado, somente gravação para cada coluna de saída.  
   
--   Uma propriedade **\<coluna>_IsNull** somente gravação para cada coluna de saída selecionada que você pode usar para definir o valor de coluna como **nulo**.  
+-   Uma propriedade **\<column>_IsNull** somente gravação para cada coluna de saída selecionada que você pode usar para definir o valor de coluna como **nulo**.  
   
 -   Um método **AddRow** para adicionar uma linha nova vazia ao buffer de saída.  
   

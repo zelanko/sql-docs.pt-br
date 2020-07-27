@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a99770eded434ef15966535f082bbd25e07aece7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298523"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923102"
 ---
 # <a name="msmq-connection-manager"></a>Gerenciador de conexões MSMQ
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Um gerenciador de conexões MSMQ permite que um pacote se conecte a uma fila de mensagens que usa Serviço de enfileiramento de mensagens (também conhecido como MSMQ). A tarefa Fila de Mensagens que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui, utiliza um gerenciador de conexões MSMQ.  
@@ -43,8 +43,8 @@ ms.locfileid: "71298523"
   
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
-|Público|\<nome do computador>\\<nome da fila\>|  
-|Privado|\<nome do computador>\Private$\\<nome da fila\>|  
+|Público|\<computer name>\\<nome da fila\>|  
+|Privado|\<computer name>\Private$\\<nome da fila\>|  
   
  Você pode usar um ponto (.) para representar o computador local.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "71298523"
   
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
-|Público|\<nome do computador>\\<nome da fila\>|  
-|Privado|\<nome do computador>\Private$\\<nome da fila\>|  
+|Público|\<computer name>\\<nome da fila\>|  
+|Privado|\<computer name>\Private$\\<nome da fila\>|  
   
  Você pode usar um "." para representar o computador local.  
   

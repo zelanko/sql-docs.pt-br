@@ -1,5 +1,6 @@
 ---
 title: Anexar dicas de consulta a um guia de plano | Microsoft Docs
+description: Pode ser usada qualquer combinação de dicas de consulta válidas em um guia de plano. Saiba mais sobre como anexar dicas a um guia de plano no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1430e98ea0ec30c179b77a630c82a1a379620fab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6a428f0cf913c4076e431314efc12bb52030d4c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773127"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458572"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Anexar dicas de consulta para um guia de plano
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

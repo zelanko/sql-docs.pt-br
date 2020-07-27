@@ -1,5 +1,6 @@
 ---
 title: Exibir propriedades do Administrador de Recursos | Microsoft Docs
+description: Saiba como criar ou configurar entidades do Resource Governor usando a página de Propriedades do Resource Governor no SQL Server Management Studio.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c19adf7c918fa4a2bd2f48227a8109cef26c64f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ff1c4429b14e359ae249f7a9e9baf2f5da46224
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729263"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457808"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

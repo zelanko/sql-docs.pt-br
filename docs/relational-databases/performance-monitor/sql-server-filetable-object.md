@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto FileTable | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:FileTable, que fornece contadores para estatísticas associadas a FileTable e ao acesso não transacionado.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0411ae3768195fd1fb3f5e7f8776a7b71362817
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6abfd3c7bdb7ba03a7ab91a7e242d645590796e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775882"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458815"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatíst
 
 A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 
-|**Contadores de FileTable do SQL Server**|DESCRIÇÃO|  
+|**Contadores de FileTable do SQL Server**|Descrição|  
 |-------------|-----------------|  
 |**Tempo médio para excluir um item FileTable**|Tempo médio (em milissegundos) para excluir um item FileTable.|
 |**Tempo médio de enumeração de FileTable**|Tempo médio (em milissegundos) de uma solicitação de enumeração FileTable.|

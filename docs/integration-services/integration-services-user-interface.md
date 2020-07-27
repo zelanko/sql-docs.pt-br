@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a01b75cc3d3e804d9329b57676eecc28d17c121c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284164"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917439"
 ---
 # <a name="integration-services-user-interface"></a>Interface do usuário do Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Além das superfícies de design nas guias do Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , a interface do usuário fornece acesso às seguintes janelas e caixas de diálogo para adicionar recursos a pacotes e configurar as propriedades de objetos do pacote:  
@@ -51,7 +51,7 @@ ms.locfileid: "71284164"
 |**Assinatura Digital**|Assine um pacote ou remova a assinatura do pacote.|No menu **SSIS** , clique em **Assinatura Digital**.<br /><br /> -ou-<br /><br /> Clique com o botão direito do mouse em qualquer lugar na superfície de design da guia **Fluxo de Controle** e clique em **Assinatura Digital**.|  
 |**Definir pontos de interrupção**|Habilite pontos de interrupção em tarefas e defina propriedades do ponto de interrupção.|Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse em uma tarefa ou um contêiner e clique em **Editar Pontos de Interrupção**. Para definir pontos de interrupção no pacote, clique com o botão direito do mouse em qualquer lugar da superfície de design da guia **Fluxo de Controle** e clique em **Editar Pontos de Interrupção**.|  
   
- A janela **Guia de Introdução** fornece links para exemplos, tutoriais e vídeos. Para adicionar links para conteúdo adicional, modifique o arquivo SamplesSites.xml fornecido com a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. É recomendável não modificar o valor do elemento \<GettingStartedSamples> que especifica a URL do RSS Feed. O arquivo está localizado na pasta *\<unidade>* :\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn. Em um computador de 64 bits, o arquivo está localizado na pasta *\<unidade>* :\Arquivos de Programas(x86)\Microsoft SQL Server\110\DTS\Binn  
+ A janela **Guia de Introdução** fornece links para exemplos, tutoriais e vídeos. Para adicionar links para conteúdo adicional, modifique o arquivo SamplesSites.xml fornecido com a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. É recomendável não modificar o valor do elemento \<GettingStartedSamples> que especifica a URL do RSS feed. O arquivo está localizado na pasta *\<drive>* :\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn. Em um computador de 64 bits, o arquivo está localizado na pasta *\<drive>* :\Arquivos de Programas(x86)\Microsoft SQL Server\110\DTS\Binn  
   
  Se o arquivo SamplesSites.xml se tornar corrompido, substitua o xml no arquivo pelo seguinte xml padrão.  
   

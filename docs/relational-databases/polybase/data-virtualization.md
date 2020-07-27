@@ -1,6 +1,6 @@
 ---
 title: Virtualizar dados externos
-description: Esta página fornece detalhes sobre as etapas para usar o assistente Criar tabela externa para Fontes de dados relacionais
+description: Esta página fornece detalhes sobre as etapas necessárias para usar o assistente Criar Tabela Externa para Fontes de dados ODBC
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588082"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942998"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usar o Assistente de Tabela Externa com fontes de dados relacionais
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Usar o Assistente de Tabela Externa com fontes de dados ODBC
 
 Um dos principais cenários para o SQL Server 2019 é a capacidade de virtualizar os dados. Esse processo permite que os dados se mantenham em sua localização original. É possível *virtualizar* os dados em uma instância do SQL Server para que ela possa ser consultada lá como qualquer outra tabela no SQL Server. Esse processo minimiza a necessidade de processos de ETL. Esse processo é possível com o uso de conectores do PolyBase. Para obter mais informações sobre virtualização de dados, confira [Introdução ao PolyBase](polybase-guide.md).
 
@@ -33,7 +33,7 @@ Conecte-se à instância mestra usando o endereço IP/número da porta do ponto 
 ![Assistente de Virtualização de Dados](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selecionar uma fonte de dados
 
-Se você tiver iniciado o assistente de um dos bancos de dados, a caixa suspensa de destino será preenchida automaticamente. Você também tem a opção de inserir ou alterar o banco de dados de destino nessa página. Os tipos de fonte de dados externa compatíveis com o assistente são SQL Server e Oracle.
+Se você tiver iniciado o assistente de um dos bancos de dados, a caixa suspensa de destino será preenchida automaticamente. Você também tem a opção de inserir ou alterar o banco de dados de destino nessa página. Os tipos de fonte de dados externa compatíveis com o assistente são SQL Server, Oracle, MongoDB e Teradata.
 
 > [!NOTE]
 >O SQL Server é realçado por padrão.
@@ -56,7 +56,7 @@ Nesta etapa, você criará uma chave mestra de banco de dados. É necessário cr
 
 Nesta etapa, insira sua fonte de dados externa e os detalhes de credenciais para criar um objeto da fonte de dados externa. As credenciais são usadas pelo objeto de banco de dados para se conectar à fonte de dados. Digite um nome para a fonte de dados externa. Um exemplo é o Test. Forneça detalhes de conexão do SQL Server da fonte de dados externa. Insira o **Nome do servidor** e o **Nome do banco de dados** em que deseja que sua fonte de dados seja criada.
 
-A próxima etapa é configurar uma credencial. Insira um nome para a credencial. Esse nome é a credencial no escopo do banco de dados, usada para armazenar com segurança as informações de entrada para a fonte de dados externa que você criou. Um exemplo é o TestCred. Insira um nome de usuário e senha para se conectar à fonte de dados.
+A próxima etapa é configurar uma credencial. Insira um nome para a credencial. Esse nome é a credencial no escopo do banco de dados, usada para armazenar com segurança as informações de entrada para a fonte de dados externa que você criou. Um exemplo é `TestCred`. Insira um nome de usuário e senha para se conectar à fonte de dados.
 
 ![Credenciais de fonte de dados externa](media/data-virtualization/data-source-credentials.png)
 

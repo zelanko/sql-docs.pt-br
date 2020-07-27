@@ -1,5 +1,6 @@
 ---
 title: Como configurar o armazenamento – cache de regravação NVDIMM-N
+description: Saiba como configurar um espaço de armazenamento espelhado com um cache de write-back de NVDIMM-N espelhado como uma unidade virtual para armazenar o log de transações do SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2f0434041b7573bc8c32e2618a64a0f900561fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bbd255dc2cd1a9bcb4bc146bcc6c6489b0cb1071
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655743"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457329"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configurar Espaços de Armazenamento com um cache de write-back de NVDIMM-N
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

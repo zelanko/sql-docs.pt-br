@@ -30,16 +30,16 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 176e5f4d638f6093f7239c347cbc0d3e0e5b75bb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298297"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918221"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
@@ -168,7 +168,7 @@ Este procedimento descreve como configurar um contêiner Loop Foreach, incluindo
   
 7.  Opcionalmente, clique em **Mapeamentos de Variáveis** para mapear propriedades de objeto do valor da coleção e execute um dos procedimentos a seguir:  
   
-    1.  Na lista **Variáveis**, selecione uma variável ou clique em **\<Nova Variável>** para criar uma nova variável.  
+    1.  Na lista **Variáveis**, selecione uma variável ou clique em **\<New Variable>** para criar uma variável.  
   
     2.  Se você adicionar uma variável nova, defina as propriedades da variável na caixa de diálogo **Adicionar Variável** e clique em **OK**.  
   
@@ -294,7 +294,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Use o enumerador ADO Foreach para enumerar linhas ou tabelas em um objeto ADO ou ADO.NET armazenado em uma variável. Por exemplo, se o Loop Foreach incluir uma tarefa de Script que grava um conjunto de dados em uma variável, você poderá usar o enumerador ADO Foreach para enumerar linhas no conjunto de dados. Se a variável contiver um conjunto de dados ADO.NET, o enumerador poderá ser configurado para enumerar linhas em várias tabelas ou para enumerar tabelas.  
   
  **Variável de origem de um objeto ADO**  
- Selecione uma variável definida pelo usuário na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione uma variável definida pelo usuário na lista ou clique em \<**New variable...**> para criar uma variável.  
   
 > [!NOTE]  
 >  A variável deve ter o tipo de dados do Objeto, caso contrário ocorrerá um erro.  
@@ -314,7 +314,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Use o Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach para enumerar um esquema para uma fonte de dados específica. Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL, você poderá usar o Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach para enumerar esquemas como as colunas no banco de dados **AdventureWorks** e a tarefa Execute SQL para obter as permissões do esquema.  
   
  **Conexão**  
- Selecione um gerenciador de conexões ADO.NET na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões ADO.NET.  
+ Selecione um gerenciador de conexões ADO.NET na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões ADO.NET.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões ADO.NET deve usar um provedor .NET para OLE DB. Se você estiver se conectando com o SQL Server, o provedor indicado é o Cliente Nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , listado na seção **Provedores de .Net para OleDb** da caixa de diálogo **Gerenciador de conexões** .  
@@ -333,7 +333,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Você usa o Enumerador Foreach de Variável para enumerar os objetos enumeráveis na variável especificada. Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL que executa uma consulta e armazena o resultado em uma variável, você poderá usar o Enumerador Foreach de Variável para enumerar os resultados da consulta.  
   
  **Variável**  
- Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**New variable...**> para criar uma variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -356,11 +356,11 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **DocumentSource**  
  Se **DocumentSourceType** estiver definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências (...) para fornecer o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **DocumentSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
+ Se **DocumentSourceType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões do Arquivo ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **DocumentSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Se **DocumentSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**New variable...**> para criar uma variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -386,11 +386,11 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **OuterXPathString**  
  Se **OuterXPathStringSourceType** for definido como **Entrada direta**, forneça a cadeia de caracteres XPath.  
   
- Se **OuterXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
+ Se **OuterXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **OuterXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Se **OuterXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**New variable...**> para criar uma variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -409,11 +409,11 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **InnerXPathString**  
  Se **InnerXPathStringSourceType** for definido como **Entrada direta**, forneça a cadeia de caracteres XPath.  
   
- Se **InnerXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
+ Se **InnerXPathStringSourceType** for definido como **Conexão do arquivo**, selecione um Gerenciador de conexões do arquivo ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se **InnerXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Se **InnerXPathStringSourceType** for definido como **Variável**, selecione uma variável existente ou clique em \<**New variable...**> para criar uma variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -421,7 +421,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Use o enumerador SMO Foreach para enumerar objetos SMO (SQL Server Management Object). Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL, você poderá usar o enumerador SMO Foreach para enumerar as tabelas no banco de dados **AdventureWorks** e executar consultas que contam o número de linhas em cada tabela.  
   
  **Conexão**  
- Selecione um gerenciador de conexões ADO.NET existente ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
+ Selecione um Gerenciador de conexões ADO.NET existente ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
  Tópicos relacionados: [Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurar Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   

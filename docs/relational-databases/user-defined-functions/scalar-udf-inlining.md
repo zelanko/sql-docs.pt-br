@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727091"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484417"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -29,7 +29,7 @@ ms.locfileid: "85727091"
 Este artigo apresenta o embutimento de UDF escalar, um recurso sob o conjunto de recursos de [Processamento de Consulta Inteligente](../../relational-databases/performance/intelligent-query-processing.md). Esse recurso aprimora o desempenho das consultas que invocam UDFs escalares em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funções escalares definidas pelo usuário T-SQL
-UDFs (funções definidas pelo usuário) implementadas no [!INCLUDE[tsql](../../includes/tsql-md.md)] e que retornam um valor de dados único são chamadas de Funções Definidas pelo Usuário Escalares T-SQL. UDFs do T-SQL são uma maneira elegante de obter reutilização e modularidade de código em consultas [!INCLUDE[tsql](../../includes/tsql-md.md)]. Alguns cálculos (como regras de negócios complexas) são mais fáceis de expressar no formulário de UDF imperativa. UDFs ajudam na criação de uma lógica complexa sem exigir experiência em escrever consultas SQL complexas.
+UDFs (funções definidas pelo usuário) implementadas no [!INCLUDE[tsql](../../includes/tsql-md.md)] e que retornam um valor de dados único são chamadas de Funções Definidas pelo Usuário Escalares T-SQL. UDFs do T-SQL são uma maneira elegante de obter reutilização e modularidade de código em consultas [!INCLUDE[tsql](../../includes/tsql-md.md)]. Alguns cálculos (como regras de negócios complexas) são mais fáceis de expressar no formulário de UDF imperativa. UDFs ajudam na criação de uma lógica complexa sem exigir experiência em escrever consultas SQL complexas. Para saber mais sobre UDFs, confira [Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
 ## <a name="performance-of-scalar-udfs"></a>Desempenho de UDFs escalares
 Normalmente, UDFs escalares acabam tendo um desempenho ruim devido aos seguintes motivos:
@@ -138,13 +138,13 @@ Dependendo da complexidade da lógica na UDF, o plano de consulta resultante tam
 
 - A UDF é escrita usando as seguintes construções:
     - `DECLARE`, `SET`: Declaração de variável e atribuições.
-    - `SELECT`: Consulta SQL com atribuições variáveis únicas/múltiplas<sup>1</sup>.
+    - `SELECT`: Consulta SQL com atribuições variáveis únicas/múltiplas <sup>1</sup>.
     - `IF`/`ELSE`: Ramificação com níveis arbitrários de aninhamento.
     - `RETURN`: Instruções de retorno únicas ou múltiplas.
-    - `UDF`: Chamadas de função aninhadas/recursivas<sup>2</sup>.
+    - `UDF`: Chamadas de função aninhadas/recursivas <sup>2</sup>.
     - Outros: Operações relacionais, como `EXISTS`, `ISNULL`.
-- A UDF não invoca nenhuma função intrínseca que seja dependente de tempo (como `GETDATE()`) ou tenha efeitos colaterais<sup>3</sup> (como `NEWSEQUENTIALID()`).
-- A UDF usa a cláusula `EXECUTE AS CALLER` (o comportamento padrão se a cláusula `EXECUTE AS` não for especificada).
+- A UDF não invoca nenhuma função intrínseca que seja dependente de tempo (como `GETDATE()`) ou tenha efeitos colaterais <sup>3</sup> (como `NEWSEQUENTIALID()`).
+- A UDF usa a cláusula `EXECUTE AS CALLER` (comportamento padrão se a cláusula `EXECUTE AS` não for especificada).
 - A UDF não faz referência a variáveis de tabela nem parâmetros com valor de tabela.
 - A consulta que invoca uma UDF escalar não faz referência a uma chamada UDF escalar em sua cláusula `GROUP BY`.
 - A consulta que invoca um UDF escalar em sua lista de seleção com a cláusula `DISTINCT` não tem a cláusula `ORDER BY`.
@@ -154,25 +154,31 @@ Dependendo da complexidade da lógica na UDF, o plano de consulta resultante tam
 - A UDF não faz referência a tipos definidos pelo usuário.
 - Não há assinaturas adicionadas à UDF.
 - A UDF não é uma função de partição.
-- O UDF não contém referências a CTEs (expressões de tabela comuns)
-- O UDF não contém referências a funções intrínsecas (por exemplo, @@ROWCOUNT) que podem alterar os resultados quando embutidas (restrição adicionada no Microsoft SQL Server 2019 CU2).
-- O UDF não contém funções de agregação que são passadas como parâmetros para um UDF escalar (restrição adicionada no Microsoft SQL Server 2019 CU2).
-- O UDF não faz referência a exibições internas (por exemplo, OBJECT_ID, restrição adicionada no Microsoft SQL Server 2019 CU2).
--   O UDF não faz referência a métodos XML (restrição adicionada no Microsoft SQL Server 2019 CU4).
--   O UDF não contém um SELECT com ORDER BY sem um "TOP 1" (restrição adicionada no Microsoft SQL Server 2019 CU4).
--   O UDF não contém uma consulta SELECT que executa uma atribuição em conjunto com a cláusula ORDER BY (por exemplo, SELECT @x = @x +1 FROM table ORDER BY column_name, restrição adicionada no Microsoft SQL Server 2019 CU4).
-- O UDF não contém várias instruções RETURN (restrição adicionada no SQL Server 2019 CU5).
-- O UDF não é chamado de uma instrução RETURN (restrição adicionada no SQL Server 2019 CU5).
-- O UDF não faz referência à função STRING_AGG (restrição adicionada no SQL Server 2019 CU5). 
+- A UDF não contém referências a CTEs (expressões de tabela comuns).
+- A UDF não contém referências a funções intrínsecas que podem alterar os resultados quando embutidas (como `@@ROWCOUNT`) <sup>4</sup>.
+- A UDF não contém funções de agregação que são passadas como parâmetros para uma UDF escalar <sup>4</sup>.
+- A UDF não faz referência a exibições internas (como `OBJECT_ID`) <sup>4</sup>.
+- A UDF não faz referência a métodos XML <sup>5</sup>.
+- A UDF não contém um SELECT com `ORDER BY` sem uma cláusula `TOP 1` <sup>5</sup>.
+- A UDF não contém uma consulta SELECT que executa uma atribuição em conjunto com a cláusula `ORDER BY` (como `SELECT @x = @x + 1 FROM table1 ORDER BY col1`) <sup>5</sup>.
+- A UDF não contém várias instruções RETURN <sup>6</sup>.
+- A UDF não é chamada de uma instrução RETURN <sup>6</sup>.
+- A UDF não faz referência à função `STRING_AGG` <sup>6</sup>. 
 
-<sup>1</sup> `SELECT` com acúmulo/agregação variável (por exemplo, `SELECT @val += col1 FROM table1`) não há suporte para embutimento.
+<sup>1</sup> `SELECT` com acúmulo/agregação variável não tem suporte para embutimento (como `SELECT @val += col1 FROM table1`).
 
 <sup>2</sup> UDFs recursivos serão embutidos em uma profundidade determinada apenas.
 
 <sup>3</sup> Funções intrínsecas cujos resultados dependem da hora do sistema atual são dependente de hora. Uma função intrínseca que pode atualizar algum estado global interno é um exemplo de uma função com efeitos colaterais. Essas funções retornam resultados diferentes cada vez que são chamadas, com base no estado interno.
 
+<sup>4</sup> Restrição adicionada no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2
+
+<sup>5</sup> Restrição adicionada no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
+
+<sup>6</sup> Restrição adicionada no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
 > [!NOTE]
-> Para obter informações sobre os consertos (fixes) de Embutimento de UDF Escalar do T-SQL mais recentes e alterações nos cenários de qualificação de embutimento, confira o artigo da Base de Dados de Conhecimento: [CORREÇÃO: Problemas de Embutimento de UDF Escalar no SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
+> Para obter informações sobre os consertos (fixes) de Embutimento de UDF Escalar do T-SQL mais recentes e alterações nos cenários de qualificação de embutimento, confira o artigo da Base de Dados de Conhecimento: [CORREÇÃO: Problemas de Embutimento de UDF Escalar no SQL Server 2019](https://support.microsoft.com/help/4538581).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>Verificar se uma UDF pode ser embutida ou não
 Para cada UDF escalar do T-SQL, a exibição de catálogo [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) inclui uma propriedade chamada `is_inlineable`, que indica se uma UDF pode ser embutida ou não. 
@@ -233,7 +239,8 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 
-Uma dica de consulta `USE HINT` tem precedência sobre a configuração no escopo do banco de dados ou a configuração de nível de compatibilidade.
+> [!TIP]
+> Uma dica de consulta `USE HINT` tem precedência sobre a configuração no escopo do banco de dados ou a configuração de nível de compatibilidade.
 
 O embutimento de UDF escalar também pode ser desabilitado para uma UDF específica usando a cláusula INLINE na instrução `CREATE FUNCTION` ou `ALTER FUNCTION`.
 Por exemplo:
@@ -271,13 +278,14 @@ Conforme descrito neste artigo, o embutimento de UDF escalar transforma uma cons
 1. Dicas de junção no nível da consulta talvez não sejam válidas, pois o embutimento pode introduzir novas junções. Dicas de junção local precisarão ser usadas em vez disso.
 1. Exibições que referenciam UDFs embutidos escalares não podem ser indexadas. Se você precisar criar um índice nessas exibições, desabilite embutimento para UDFs referenciadas.
 1. Pode haver algumas diferenças no comportamento de [Máscara de Dados Dinâmicos](../security/dynamic-data-masking.md) com embutimento de UDF. Em certas situações (dependendo da lógica na UDF), embutimento pode ser mais conservador no que diz respeito ao mascaramento de colunas de saída. Em cenários em que as colunas referenciadas em uma UDF não são colunas de saída, elas não são mascaradas. 
-1. Se uma UDF referenciar funções internas, como `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, o valor retornado pela função interna será alterado com o inlining. Essa alteração no comportamento ocorre porque o embutimento altera o escopo das instruções dentro da UDF. Do Microsoft SQL Server 2019 CU2 em diante, o embutimento será bloqueado se o UDF fizer referência a determinadas funções intrínsecas (por exemplo, @@ROWCOUNT).
+1. Se uma UDF referenciar funções internas, como `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, o valor retornado pela função interna será alterado com o inlining. Essa alteração no comportamento ocorre porque o embutimento altera o escopo das instruções dentro da UDF. Começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, embutimento foi bloqueado quando a UDF faz referência a determinadas funções intrínsecas (por exemplo, `@@ROWCOUNT`).
 
 ## <a name="see-also"></a>Consulte Também
+[Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)     
 [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Junções](../../relational-databases/performance/joins.md)     
 [Como demonstrar o processamento de consulta inteligente](https://aka.ms/IQPDemos)     
-[CORREÇÃO: Problemas de Embutimento de UDF Escalar no SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+[CORREÇÃO: Problemas de Embutimento de UDF Escalar no SQL Server 2019](https://support.microsoft.com/help/4538581)     
 

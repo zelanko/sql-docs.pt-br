@@ -1,5 +1,6 @@
 ---
 title: Monitorar os componentes do SQL Server | Microsoft Docs
+description: Saiba como o monitoramento permite identificar tendências de desempenho. O SQL Server fornece um serviço em um ambiente dinâmico, portanto, alterações podem ser necessárias ao longo do tempo.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4635d22ed3349302344bfb6ea7e94c63790c324b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70fe75b97181815246d03de588bdd6d45af3ce9f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790791"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458377"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorar componentes do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ Para obter mais informações sobre ferramentas do Windows Server ou do Windows,
 > [!IMPORTANT]
 > Rastreamento do SQL e [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] estão preteridos. O namespace *Microsoft.SqlServer.Management.Trace* que contém os objetos Trace e Replay do Microsoft SQL Server também foi preterido. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> Em vez disso, use Eventos Estendidos. Para obter mais informações sobre [eventos estendidos](../../relational-databases/extended-events/extended-events.md), confira [Início rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Em vez disso, use Eventos Estendidos. Para obter mais informações sobre [Eventos Estendidos](../../relational-databases/extended-events/extended-events.md), confira [Início rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e no [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para as cargas de trabalho do Analysis Services NÃO está preterido e o suporte a ele continuará.
@@ -99,7 +100,7 @@ Segue, abaixo, uma descrição do processo da captura de dados de eventos e sua 
   
     Limitar os dados de eventos permite que o sistema se concentre nos eventos pertinentes ao cenário de monitoramento. Por exemplo, se desejar monitorar consultas lentas, você pode usar um filtro para monitorar apenas as consultas emitidas pelo aplicativo que levam mais de 30 segundos na execução contra um banco de dados em particular. 
     
-    Para obter mais informações sobre filtragem de rastreamentos de Eventos Estendidos, confira [Início Rápido: Eventos Estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md#demo-of-ssms-integration). 
+    Para obter mais informações sobre filtragem de rastreamentos de Eventos Estendidos, confira [Início rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md#demo-of-ssms-integration). 
     
     Para obter mais informações sobre filtragem de Rastreamento do SQL, confira [Definir um filtro de rastreamento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) e [Filtrar eventos em um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).  
   

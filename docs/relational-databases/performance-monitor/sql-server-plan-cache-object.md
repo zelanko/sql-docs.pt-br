@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Cache de planos | Microsoft Docs
+description: Saiba mais sobre o objeto Plan Cache, que fornece contadores para monitorar como o SQL Server usa a memória para armazenar objetos, como gatilhos e procedimentos armazenados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5bdbff06c1dbda2f31aa8e456878649e8d7f9508
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: faf553c33cf2f515abcad904bfc3c64bf228b546
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775785"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458743"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, objeto Cache de planos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85775785"
   
  Esta tabela descreve os contadores **SQLServer:Plan Cache**.  
   
-|Contadores SQL Server Plan Cache|DESCRIÇÃO|  
+|Contadores SQL Server Plan Cache|Descrição|  
 |------------------------------------|-----------------|  
 |**Taxa de Acertos do Cache**|Taxa entre acertos e pesquisas do cache.|  
 |**Base do Índice de Ocorrência no Cache**|Apenas para uso interno.| 
@@ -36,7 +37,7 @@ ms.locfileid: "85775785"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância do Cache de Plano|DESCRIÇÃO|  
+|Instância do Cache de Plano|Descrição|  
 |-------------------------|-----------------|  
 |**_Total**|Informações para todos os tipos de instâncias do cache.|  
 |**Planos Sql**|Os planos de consulta produzidos de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, inclusive consultas parametrizadas automaticamente ou de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas usando **sp_prepare** ou **sp_cursorprepare**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenará em cache os planos para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc para reutilização posterior se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] idêntica for executada mais tarde. Consultas parametrizadas pelo usuário (mesmo se não preparadas explicitamente) também são monitoradas como Planos SQL Preparados.|  

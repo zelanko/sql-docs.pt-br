@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687199"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913622"
 ---
 # <a name="azure-storage-connection-manager"></a>Gerenciador de conexões do Armazenamento do Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 O gerenciador de conexões do Armazenamento do Azure habilita a conexão de um pacote do SSIS (SQL Server Integration Services) com uma conta do Armazenamento do Azure. O gerenciador de conexões é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
@@ -33,11 +33,15 @@ As propriedades a seguir estão disponíveis.
 
 - **Serviço:** especifica o serviço de armazenamento ao qual se conectar.
 - **Nome da conta:** especifica o nome da conta de armazenamento.
-- **Autenticação:** especifica o método de autenticação a ser usado. As autenticações AccessKey e ServicePrincipal são compatíveis.
+- **Autenticação:** especifica o método de autenticação a ser usado. Há suporte para autenticação com AccessKey, ServicePrincipal e SharedAccessSignature.
     - **AccessKey:** para esse método de autenticação, especifique a **chave de conta**.
     - **ServicePrincipal:** Para esse método de autenticação, especifique a **ID do aplicativo**, a **Chave do aplicativo** e a **ID do locatário** da entidade de serviço.
       Para que a **Conexão de teste** funcione, a entidade de serviço precisa ser atribuída pelo menos à função de **Leitor de Dados do Storage Blob** para a conta de armazenamento.
       Para obter mais informações, confira [Conceder acesso ao blob do Azure e dados de fila com RBAC no portal do Azure](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+    - **SharedAccessSignature:** para esse método de autenticação, especifique pelo menos o **Token** da assinatura de acesso compartilhado.
+      Para testar a conexão, especifique também o escopo de recurso a ser testado. Esse escopo pode ser o **Serviço**, o **Contêiner** ou o **Blob**.
+      Para **Contêiner** e **Blob**, especifique o nome do contêiner e o caminho do blob, respectivamente.
+      Para obter mais informações, confira [Visão geral da assinatura de acesso compartilhado do Armazenamento do Azure](https://docs.microsoft.com/azure/storage/common/storage-sas-overview).
 - **Ambiente:** especifica o ambiente de nuvem que hospeda a conta de armazenamento.
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Identidades gerenciadas para autenticação de recursos do Azure

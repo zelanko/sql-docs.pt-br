@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Estatísticas Resp do Lote | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:Batch Resp Statistics, que fornece contadores para acompanhar os tempos de resposta de lote do SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 447ab09f049a5177a68a1c4a1d3d00239161149a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787372"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458142"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQLServer, Objeto Batch Resp Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ O objeto de desempenho **SQLServer:Batch Resp Statistics** fornece contadores pa
 A tabela a seguir descreve os objetos de desempenho de **Estatística de resposta de lote** do SQL Server.
 
 
-|**Estatísticas de resposta de lote do SQL Server**|DESCRIÇÃO|  
+|**Estatísticas de resposta de lote do SQL Server**|Descrição|  
 |-------------|-----------------|  
 |**Lotes >=000000ms e \<000001ms**|Número de Lotes SQL com tempo de resposta maior ou igual a 0 ms, porém menor que 1 ms|
 |**Lotes >=000001ms e \<000002ms**|Número de Lotes SQL com tempo de resposta maior ou igual a 1 ms, porém menos de 2 ms|
@@ -48,7 +49,7 @@ A tabela a seguir descreve os objetos de desempenho de **Estatística de respost
 
 Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |**Tempo de CPU:Solicitações**|O tempo de CPU gasto na solicitação.|  
 |**Tempo de CPU:Total(ms)**|O tempo total de CPU gasto no lote.|  

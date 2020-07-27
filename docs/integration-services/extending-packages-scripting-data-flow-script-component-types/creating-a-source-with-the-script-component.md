@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e936a0afefa71969cf9e27c2c222d8780532610
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296442"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914124"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Criando uma fonte com o componente Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Você usa um componente de origem no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para carregar dados de uma fonte de dados a serem passados para transformações e destinos downstream. Normalmente, você se conecta à fonte de dados por um gerenciador de conexões existente.  
@@ -64,7 +64,7 @@ ms.locfileid: "71296442"
 -   Talvez você queira criar uma ou mais saídas adicionais, tais como uma saída de erro simulada para linhas que contêm valores inesperados. Use os botões **Adicionar Saída** e **Remover Saída** para gerenciar as saídas do componente de origem. Todas as linhas de entrada são direcionadas a todas as saídas disponíveis, a menos que você também especifique um valor idêntico diferente de zero para a propriedade **ExclusionGroup** das saídas nas quais você pretende direcionar cada linha a apenas uma das saídas que compartilham o mesmo valor **ExclusionGroup**. O valor inteiro específico selecionado para identificar o **ExclusionGroup** não é significativo.  
   
     > [!NOTE]  
-    >  Também use um valor da propriedade **ExclusionGroup** diferente de zero com uma única saída quando não desejar gerar todas as linhas. Porém, nesse caso, você deve chamar explicitamente o método **DirectRowTo\<outputbuffer>** para cada linha que deseja enviar à saída.  
+    >  Também use um valor da propriedade **ExclusionGroup** diferente de zero com uma única saída quando não desejar gerar todas as linhas. Nesse caso, entretanto, você precisa chamar explicitamente o método **DirectRowTo\<outputbuffer>** para cada linha que deseja enviar à saída.  
   
 -   Talvez você queira atribuir um nome amigável às saídas. Posteriormente, você fará referência às saídas pelos nomes no seu script, usando as propriedades de acessador digitadas, criadas para você no código gerado automaticamente.  
   

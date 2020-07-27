@@ -1,5 +1,6 @@
 ---
 title: Joins (SQL Server) | Microsoft Docs
+description: Saiba mais sobre os tipos de operações de junção que o SQL Server emprega. O SQL Server dá suporte ao particionamento de tabela vertical ou ao armazenamento de coluna usando operações de junção.
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009686"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915838"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -229,7 +230,7 @@ Se uma Junção Adaptável alterna para uma operação de Loops Aninhados, ela u
 ### <a name="tracking-adaptive-join-activity"></a>Controlando a atividade da Junção adaptável
 O operador de Junção Adaptável tem os seguintes atributos de operador de plano:
 
-|Atributo de plano|DESCRIÇÃO|
+|Atributo de plano|Descrição|
 |---|---|
 |AdaptiveThresholdRows|Mostra o uso de limite para alternar de uma junção hash para uma junção de loops aninhados.|
 |EstimatedJoinType|Qual é o provável tipo de junção.|
@@ -245,7 +246,7 @@ Algumas condições tornam uma junção lógica qualificada para uma Junção Ad
 - O nível de compatibilidade do banco de dados é 140 ou superior.
 - A consulta é uma instrução `SELECT` (as instruções de modificação de dados não são qualificadas no momento).
 - A junção é qualificada para ser executada por uma Junção de loops aninhados indexada ou um algoritmo físico de Junção hash.
-- A Junção hash usa o [Modo de lote](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) – por meio da presença de um Índice columnstore na consulta geral ou de uma Tabela indexada por columnstore referenciada diretamente pela junção.
+- A Junção hash usa o modo de Lote, habilitado pela presença de um Índice columnstore na consulta geral, uma tabela indexada por Columnstore referenciada diretamente pela junção ou pelo uso do [Modo de Lote no recurso Rowstore](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
 - As soluções alternativas geradas da Junção de loops aninhados e da Junção hash devem ter o mesmo primeiro filho (referência externa).
 
 ### <a name="adaptive-threshold-rows"></a>Linhas de limite adaptável

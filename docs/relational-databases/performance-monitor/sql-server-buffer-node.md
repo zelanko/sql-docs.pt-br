@@ -1,5 +1,6 @@
 ---
 title: SQL Server:Buffer Node | Microsoft Docs
+description: Saiba mais sobre o objeto Buffer Node, que fornece contadores para monitorar a distribuição de páginas do pool de buffers do SQL Server para cada nó NUMA.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1e16fa2868c0d9896f56b87988d5af3047c810fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9d30b4d7f8716dc256d1ea640924af7945d8fd
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656406"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457428"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto **Buffer Node** fornece contadores que complementam aqueles fornecidos pelo objeto **Buffer Manager** . Ele lhe permite monitorar a distribuição de páginas de pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada nó NUMA (non-uniform memory access). Há uma instância do objeto **Buffer Node** para cada nó NUMA em uso. Em arquiteturas diferentes de NUMA, haverá uma única instância do objeto **Buffer Node** .  
   
 ## <a name="buffer-node-performance-objects"></a>Objetos de desempenho do Buffer Node  
- Esta tabela descreve os objetos de desempenho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Buffer Node**do**.  
+ Esta tabela descreve os objetos de desempenho **Buffer Node** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Contadores de Buffer Node do SQL Server|DESCRIÇÃO|  
+|Contadores de Buffer Node do SQL Server|Descrição|  
 |-------------------------------------|-----------------|  
 |**Páginas do banco de dados**|Indica o número de páginas no pool de buffers do nó com conteúdo de banco de dados.|  
 |**Expectativa de vida da página**|Indica o número mínimo de segundos que uma página ficará no pool de buffers do nó sem referências.|  

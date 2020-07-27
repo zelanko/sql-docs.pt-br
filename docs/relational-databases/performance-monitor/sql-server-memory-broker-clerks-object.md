@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Administradores do Agente de Memória | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:Memory Broker Clerks, que fornece contadores para estatísticas relacionadas aos administradores do agente de memória.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5a14877c98b4abb2487712cfed2bd744c20933d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 728a660b3737410e9f235cb8632cbf948f7bcf82
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775812"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458790"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Objeto Administradores do Agente de Memória
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ O objeto de desempenho **SQLServer:Administradores do Agente de Memória** forne
 
 A tabela a seguir descreve os objetos de desempenho **Administradores do Agente de Memória** do SQL Server.
 
-|**Contadores de Administradores do Agente de Memória do SQL Server**|DESCRIÇÃO|  
+|**Contadores de Administradores do Agente de Memória do SQL Server**|Descrição|  
 |-------------|-----------------|  
 |**Benefício interno**|O valor interno de memória para pressão da contagem de entradas, em ms por página por ms, multiplicado por 10 bilhões e truncado para um inteiro.|
 |**Tamanho do administrador do agente de memória**|O tamanho do administrador, em páginas.|

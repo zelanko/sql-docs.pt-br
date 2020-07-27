@@ -1,5 +1,6 @@
 ---
 title: Ajustando o banco de dados usando a carga de trabalho do repositório de consultas | Microsoft Docs
+description: O Orientador de Otimização do Mecanismo de Banco de Dados dá suporte à opção de usar o Repositório de Consultas para selecionar automaticamente uma carga de trabalho adequada para ajuste.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737129"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457567"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ajustando o banco de dados usando a carga de trabalho do repositório de consulta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ No GUI do DTA, selecione o botão de opção **Repositório de Consultas** no pa
 Na linha de comando (dta.exe), escolha a opção **-iq** para selecionar a carga de trabalho do Repositório de Consulta. 
 
 Há duas opções adicionais disponíveis por meio da linha de comando que ajuda a ajustar o comportamento do DTA ao selecionar a carga de trabalho no Repositório de Consultas. Essas opções não estão disponíveis por meio do GUI:
-  1. **Número de eventos de carga de trabalho a ajustar**: essa opção, especificada usando a linha de comando **-n**, permite ao usuário controlar quantos eventos do Repositório de Consultas são ajustados. Por padrão, o DTA usa um valor de 1000 para essa opção. O DTA sempre escolhe os eventos mais caros por duração total. 
+  1. **Número de eventos de carga de trabalho a serem ajustados**: essa opção, especificada usando a linha de comando **-n**, permite ao usuário controlar quantos eventos do Repositório de Consultas são ajustados. Por padrão, o DTA usa um valor de 1000 para essa opção. O DTA sempre escolhe os eventos mais caros por duração total. 
   
   2. **Janelas de tempo dos eventos a serem ajustados**: como o Repositório de Consultas pode conter consultas que foram executadas há muito tempo, essa opção permite que o usuário especifique uma janela de tempo anterior (em horas) de quando uma consulta deve ter sido executado para que ela seja considerada pelo DTA para ajuste. Essa opção é especificada usando o argumento de linha de comando **-I**. 
 

@@ -1,5 +1,6 @@
 ---
 title: Administrador de E/S XTP do SQL Server | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho XTP IO Governor do SQL Server, que contém contadores relacionados ao Administrador de Taxa de E/S do OLTP in-memory.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: fede0215ef21ee7680068629a990ec1a9dd3417f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca71e9d90cf5e057d70a32eae9882d90ddbcf611
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718960"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457931"
 ---
 # <a name="sql-server-xtp-io-governor"></a>Administrador de E/S XTP do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ O objeto de desempenho Administrador de E/S XTP do SQL Server contém contadores
 
 Esta tabela descreve os contadores do **Administrador de E/S XTP do SQL Server** .
 
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Esperas de Créditos Insuficientes/s**|Número de esperas devido a créditos insuficientes nos objetos de taxa (por segundo).|
 |**E/S emitida/s**|Número de E/Ss emitidas por segundo por threads de liberação.|

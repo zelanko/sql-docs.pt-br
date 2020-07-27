@@ -1,5 +1,5 @@
 ---
-title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1d8bad77c52fcabb3190e28767c945718e1d72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630154"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910528"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Define uma variável local com o valor de uma expressão.  
@@ -48,38 +49,43 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
     [ ,...n ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
 @*local_variable*  
  É uma variável declarada para a qual um valor será atribuído.  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 Atribui o valor à direita à variável da esquerda.  
   
 Operador de atribuição composto:  
-  |operador |ação |   
-  |-----|-----|  
-  | = | Atribui a expressão a seguir à variável. |  
-  | += | Adicionar e atribuir |   
-  | -= | Subtrair e atribuir |  
-  | \*= | Multiplicar e atribuir |  
-  | /= | Dividir e atribuir |  
-  | %= | Módulo e atribuir |  
-  | &= | AND bit a bit e atribuir |  
-  | ^= | XOR bit a bit e atribuir |  
-  | \|= | OR bit a bit e atribuir |  
-  
- *expressão*  
- É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Isso inclui uma subconsulta escalar.  
-  
-## <a name="remarks"></a>Comentários  
- SELECT @*local_variable* normalmente é usado para retornar um único valor na variável. No entanto, quando *expression* é o nome de uma coluna, ela pode retornar vários valores. Se a instrução SELECT retornar mais de um valor, à variável será atribuído o último valor retornado.  
-  
- Se a instrução SELECT não retornar nenhuma linha, a variável reterá seu valor atual. Se *expression* for uma subconsulta escalar que não retorna nenhum valor, a variável será definida como NULL.  
-  
- Uma instrução SELECT pode inicializar várias variáveis locais.  
-  
-> [!NOTE]  
->  Uma instrução SELECT que contém uma atribuição de variável não pode ser usada também para executar operações típicas de recuperação de conjunto de resultados.  
+
+| operador | ação |  
+| -------- | ------ |  
+| = | Atribui a expressão a seguir à variável. |  
+| += | Adicionar e atribuir |  
+| -= | Subtrair e atribuir |  
+| \*= | Multiplicar e atribuir |  
+| /= | Dividir e atribuir |  
+| %= | Módulo e atribuir |  
+| &= | AND bit a bit e atribuir |  
+| ^= | XOR bit a bit e atribuir |  
+| \|= | OR bit a bit e atribuir |  
+
+*expressão*  
+É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Isso inclui uma subconsulta escalar.  
+
+## <a name="remarks"></a>Comentários
+
+SELECT @*local_variable* normalmente é usado para retornar um único valor na variável. No entanto, quando *expression* é o nome de uma coluna, ela pode retornar vários valores. Se a instrução SELECT retornar mais de um valor, à variável será atribuído o último valor retornado.  
+
+Se a instrução SELECT não retornar nenhuma linha, a variável reterá seu valor atual. Se *expression* for uma subconsulta escalar que não retorna nenhum valor, a variável será definida como NULL.  
+
+Uma instrução SELECT pode inicializar várias variáveis locais.  
+
+> [!NOTE]
+> Uma instrução SELECT que contém uma atribuição de variável não pode ser usada também para executar operações típicas de recuperação de conjunto de resultados.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -99,7 +105,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +127,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +138,3 @@ NULL
  [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Operadores compostos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  

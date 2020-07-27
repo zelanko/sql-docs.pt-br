@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60ec7105d0942383ad1ebcd963665a8a47eab60c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669914"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913731"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. As informações contidas nestes arquivos podem ajudá-lo a solucionar problemas de execução de pacote.  
   
@@ -44,7 +44,7 @@ No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode cri
   
 -   O arquivo de despejo de depuração .tmp. Esse é um arquivo de texto formatado.  
   
- Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena esses arquivos na pasta *\<unidade>:* \Arquivos de Programas\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena esses arquivos na pasta *\<drive>:* \Arquivos de Programas\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  A tabela a seguir descreve apenas algumas seções no arquivo .tmp. O arquivo .tmp inclui dados adicionais que não estão listados na tabela.  
   

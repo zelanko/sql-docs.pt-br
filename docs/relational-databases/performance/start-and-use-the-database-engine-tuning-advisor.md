@@ -1,5 +1,6 @@
 ---
 title: Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados | Microsoft Docs
+description: Saiba como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no SQL Server para criar cargas de trabalho, ajustar bancos de dados e criar arquivos de entrada XML.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737146"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457606"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297782"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914292"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Classificar dados para as transformações Mesclagem e Junção de Mesclagem
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   No [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], as transformações Mesclagem e Junção de Mesclagem exigem dados classificados para suas entradas. Os dados de entrada devem ser classificados fisicamente e as opções de classificação devem ser definidas nas saídas e nas colunas de saída na origem ou na transformação upstream. Se as opções de classificação indicarem que os dados estão classificados, mas os dados não estiverem efetivamente classificados, os resultados da operação de mesclagem ou junção de mesclagem são imprevisíveis.  
@@ -75,7 +75,7 @@ ms.locfileid: "71297782"
   
 5.  Clique na guia **Propriedades de Entrada e Saída** .  
   
-6.  Clique em **\<Saída do component name>** e defina a propriedade **IsSorted** como **True**.  
+6.  Clique em **\<component name>Saída do**  e defina a propriedade **IsSorted** como **True**.  
   
     > [!NOTE]  
     >  Se você definir manualmente a propriedade **IsSorted** da saída como **True** e os dados não forem classificados, poderão ocorrer ausências de dados ou comparações de dados inválidas na transformação Mesclagem ou Junção de Mesclagem de downstream durante a execução do pacote.  

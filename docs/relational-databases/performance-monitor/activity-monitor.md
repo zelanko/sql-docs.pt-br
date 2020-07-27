@@ -1,5 +1,6 @@
 ---
 title: Monitor de Atividade | Microsoft Docs
+description: Saiba como usar o Monitor de Atividade para exibir informações sobre os processos do SQL Server e como esses processos afetam a instância atual do SQL Server.
 ms.custom: ''
 ms.date: 04/07/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad03ee3c5c9cc0128bb281ff695c1f51cc518d6e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787494"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457764"
 ---
 # <a name="activity-monitor"></a>Monitor de Atividade
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

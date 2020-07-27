@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Estatísticas TO do Agente | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:Broker TO Statistics, que relata informações sobre os objetos de transmissão de solicitação do Service Broker.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 11f6ac4dbc4c4955b05f43ce65f5da231820c3da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3d71f2d4f3f523295c04b099e43415df5b0834b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656508"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458658"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, objeto Broker TO Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  O objeto de desempenho SQLServer:Broker TO Statistics informa quantas vezes os diálogos do [!INCLUDE[ssSB](../../includes/sssb-md.md)] requerem objetos de transmissão, e com que frequência os objetos de transmissão são gravados no **tempdb**.  
+  O objeto de desempenho SQLServer:Broker TO Statistics informa quantas vezes os diálogos do [!INCLUDE[ssSB](../../includes/sssb-md.md)] requerem objetos de transmissão e com que frequência os objetos de transmissão são gravados no **tempdb**.  
   
  Objetos de transmissão registram o estado de transmissões de mensagem para um diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Eles são armazenados na memória. Para liberar a memória, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] grava lotes de objetos de transmissão inativos periodicamente em tabelas de trabalho no **tempdb**.  
   

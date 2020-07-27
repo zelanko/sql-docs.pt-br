@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296249"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914329"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar cópia ou consulta de tabela (Assistente de Importação e Exportação do SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Depois de fornecer informações sobre o destino dos dados e sobre como se conectar a eles, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Especificar cópia ou consulta de tabela**. Nesta página, escolha uma das opções a seguir.
@@ -56,7 +56,7 @@ Depois de clicar em **Avançar**, forneça uma instrução SQL para especificar 
 Você ainda pode usar a opção **Gravar uma consulta** mesmo que você normalmente não grave consultas SQL, desde que você saiba o nome da tabela que você deseja exportar. Na caixa de diálogo **Fornecer uma Consulta de Origem** que você vê após clicar em **Próximo**, insira a consulta como `SELECT * FROM <name of table>`. Se o nome da tabela contiver espaços ou outros caracteres especiais, coloque o nome entre colchetes – `SELECT * FROM [<name of table>]`.
 
 ### <a name="more-info"></a>Obter mais informações
- A opção **Copiar dados de uma ou mais tabelas ou exibições** só está disponível para os provedores que têm uma seção ProviderDescription no arquivo ProviderDescriptors.xml. (Por padrão, esse arquivo está em \<*unidade*>:\Arquivos de programas\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Cada seção ProviderDescription deste arquivo contém informações necessárias para recuperar metadados do provedor correspondente.    
+ A opção **Copiar dados de uma ou mais tabelas ou exibições** só está disponível para os provedores que têm uma seção ProviderDescription no arquivo ProviderDescriptors.xml. (Por padrão, esse arquivo fica em \<*drive*>:\Arquivos de Programas\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Cada seção ProviderDescription deste arquivo contém informações necessárias para recuperar metadados do provedor correspondente.    
     
  Por padrão, o arquivo ProviderDescriptors.xml contém uma seção ProviderDescription só para os provedores da lista a seguir.    
     

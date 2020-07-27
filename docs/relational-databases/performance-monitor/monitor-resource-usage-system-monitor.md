@@ -1,5 +1,6 @@
 ---
 title: Monitorar o uso de recursos (Monitor do Sistema) | Microsoft Docs
+description: Use o Monitor do Sistema para medir o desempenho de objetos SQL Server e de contadores de desempenho, bem como o comportamento de outros objetos, como processadores e memória.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9f451dcfbe7f3463a1b99445efe52a3b31d02a75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: caddd3cf64fec46e6878daa6a46e6661346fd905
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787443"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457988"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

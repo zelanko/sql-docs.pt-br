@@ -1,5 +1,6 @@
 ---
 title: Salvar eventos de Plano de Execução XML separadamente
+description: Saiba como salvar eventos XML do Plano de Execução capturados em rastreamentos em arquivos separados usando o SQL Server Profiler. Abra os arquivos no SQL Server Management Studio.
 titleSuffix: SQL Server Profiler
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 84799148490179aadb571662f0291aa7a09df9db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c7cac6673d190ab8860792a2de1c995804275570
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758963"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458713"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Salvar eventos do Plano de Execução XML separadamente (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

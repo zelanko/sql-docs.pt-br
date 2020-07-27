@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774655"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483854"
 ---
 # <a name="azure-data-studio-extensibility"></a>Extensibilidade do Azure Data Studio
 
@@ -48,9 +48,9 @@ Esta seção aborda os vários pontos de contribuição definidos no manifesto d
 
 O IntelliSense tem suporte no azuredatastudio.
 
-## <a name="contributes-dashboard"></a>Painel Contribui
+### <a name="dashboard-contribution-points"></a>Pontos de contribuição do painel
 
-Guia Contribuir, contêiner, widget insight para o painel.
+Contribua com um widget de guia, contêiner e/ou insight para o painel.
 
 ![Painel](media/extensibility/dashboard-page.png)
 
@@ -276,4 +276,4 @@ No painel, fornecemos as seguintes variáveis de contexto:
 |`serverName`|Uma cadeia de caracteres do nome do servidor da conexão atual. Ex.: `serverName == 'localhost'`.|
 |`databaseName` | Uma cadeia de caracteres do nome do banco de dados da conexão atual. Ex.: `databaseName == 'master'`.|
 |`connection` | O objeto de perfil de conexão completo para a conexão atual (IConnectionProfile)|
-|`dashboardContext` | Uma cadeia de caracteres do contexto da página do painel está atualmente ativada. Ou 'database' ou 'server'. Ex.: `dashboardContext == 'database'`|
+|`dashboardContext` | Uma cadeia de caracteres do contexto da página em que o painel está. Ou 'database' ou 'server'. Ex.: `dashboardContext == 'database'`|

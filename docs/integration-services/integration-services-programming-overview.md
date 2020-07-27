@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296219"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917555"
 ---
 # <a name="integration-services-programming-overview"></a>Visão geral da programação do Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tem uma arquitetura que separa a movimentação e a transformação de dados de gerenciamento e fluxos de controle de pacotes. Há dois mecanismos distintos que definem essa arquitetura e isso pode ser automatizado e estendido na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O mecanismo de tempo de execução implementa a infraestrutura de gerenciamento de fluxos de controle e pacotes que permite aos desenvolvedores controlar o fluxo de execução e definir opções para registro de log, manipuladores de eventos e variáveis. O mecanismo de fluxo de dados é um mecanismo de desempenho alto, especializado, dedicado exclusivamente a extrair, transformar e carregar dados. Sua programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se baseará nesses dois mecanismos.  
@@ -62,9 +62,9 @@ ms.locfileid: "71296219"
 >  As interfaces de programação de aplicativo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são incompatíveis com as linguagens de scripts baseadas em COM, como VBScript.  
   
 ## <a name="locating-assemblies"></a>Localizando assemblies  
- No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] foram atualizados para o .NET 4.0. Há um cache de assembly global separado para o .NET 4, localizado em *\<unidade>* :\Windows\Microsoft.NET\assembly. Você pode localizar todos os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nesse caminho, normalmente na pasta GAC_MSIL.  
+ No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] foram atualizados para o .NET 4.0. Há um cache de assembly global separado para o .NET 4, localizado em *\<drive>* :\Windows\Microsoft.NET\assembly. Você pode localizar todos os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nesse caminho, normalmente na pasta GAC_MSIL.  
   
- Assim como nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os principais arquivos .dll de extensibilidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também estão localizados em *\<unidade>* :\Arquivos de Programas\Microsoft SQL Server\100\SDK\Assemblies.  
+ Assim como nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os principais arquivos .dll de extensibilidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também ficam em *\<drive>* :\Arquivos de Programas\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Assemblies comumente usados  
  A tabela a seguir lista os assemblies usados com frequência durante a programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] através do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

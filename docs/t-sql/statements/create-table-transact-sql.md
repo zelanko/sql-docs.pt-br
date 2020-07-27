@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft Docs
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766953"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481987"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 
 *database_name* É o nome do banco de dados no qual a tabela é criada. *database_name* precisa especificar o nome de um banco de dados existente. Caso não seja especificado, *database_name* usará o banco de dados atual como padrão. O logon para a conexão atual precisa estar associado a uma ID de usuário existente no banco de dados especificado por *database_name*, e essa ID de usuário precisa ter permissões CREATE TABLE.
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES É uma restrição que fornece integridade referencial pa
 
 **(** *ref_column* [ **,** ... *n* ] **)** É uma coluna, ou lista de colunas, da tabela referenciada pela restrição FOREIGN KEY.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } Especifica qual ação ocorrerá nas linhas da tabela criada se essas linhas tiverem uma relação referencial e a linha referenciada for excluída da tabela pai. O padrão é NO ACTION.
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT } Especifica qual ação ocorrerá nas linhas da tabela criada se essas linhas tiverem uma relação referencial e a linha referenciada for excluída da tabela pai. O padrão é NO ACTION.
 
 NO ACTION O [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro e a ação de excluir na linha da tabela pai é revertida.
 
@@ -598,7 +600,7 @@ Se uma instrução `DELETE` for executada em uma linha da tabela **Vendor** e um
 
 Por outro lado, se `NO ACTION` for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gerará um erro e reverterá a ação de exclusão da linha **Vendor**, caso haja, pelo menos, uma linha na tabela **ProductVendor** que a referencie.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } Especifica qual ação ocorrerá nas linhas da tabela alterada quando essas linhas tiverem uma relação referencial e a linha referenciada for atualizada na tabela pai. O padrão é NO ACTION.
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } Especifica qual ação ocorrerá nas linhas da tabela alterada quando essas linhas tiverem uma relação referencial e a linha referenciada for atualizada na tabela pai. O padrão é NO ACTION.
 
 NO ACTION O [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro, e a ação de atualizar na linha da tabela pai é revertida.
 

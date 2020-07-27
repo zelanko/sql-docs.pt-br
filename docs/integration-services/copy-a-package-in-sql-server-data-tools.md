@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52368632a7e2d871f91f4e7c60aad0a7f03dbcf9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293647"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923262"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar um pacote nas Ferramentas de Dados do SQL Server
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Este tópico descreve como criar um novo pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] por meio da cópia de um pacote existente e como atualizar as propriedades **Name** e **GUID** do novo pacote.  
@@ -37,7 +37,7 @@ ms.locfileid: "71293647"
   
 3.  Verifique se o pacote que será copiado está selecionado no Gerenciador de Soluções ou a guia no Designer SSIS que contém o pacote é a guia ativa  
   
-4.  No menu **Arquivo**, clique em **Salvar \<nome do pacote> Como**.  
+4.  No menu **Arquivo** , clique em **Salvar \<package name> como**.  
   
     > [!NOTE]  
     >  O pacote deve ser aberto no Designer do SSIS antes que a opção **Salvar Como** aparecer no menu **Arquivo** .  
@@ -52,7 +52,7 @@ ms.locfileid: "71293647"
   
 9. Como opção, clique no plano de fundo da guia **Fluxo de Controle** e clique em **Propriedades**.  
   
-10. Na janela Propriedades, clique no valor da propriedade de ID e, na lista suspensa, clique em **\<Gerar Nova ID>** .  
+10. Na janela Propriedades, clique no valor da propriedade ID e, na lista suspensa, clique em **\<Generate New ID>** .  
   
 11. No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o novo pacote.  
   

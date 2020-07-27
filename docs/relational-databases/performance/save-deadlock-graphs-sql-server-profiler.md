@@ -1,5 +1,6 @@
 ---
 title: Salvar gráficos de deadlock (SQL Server Profiler) | Microsoft Docs
+description: Saiba como salvar um grafo de deadlock usando o SQL Server Profiler. Gráficos de deadlock são salvos como arquivos XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5dba428d744a2384b9733f06955298ae31c58dca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 874597d5d62f13556072fb129931fa9e4faf1a85
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758845"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458714"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Salvar gráficos de deadlock (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

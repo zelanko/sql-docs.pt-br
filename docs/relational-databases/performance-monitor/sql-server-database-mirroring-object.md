@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Espelhamento de Banco de Dados | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:Database Mirroring, que contém contadores de desempenho que relatam informações sobre o espelhamento de banco de dados do SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760556"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457998"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, objeto Database Mirroring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto de desempenho **SQLServer:Database Mirroring** contém contadores de desempenho que relatam informações sobre o espelhamento de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A tabela a seguir lista os contadores contidos nesse objeto.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |**Bytes Recebidos/s**|Número de bytes recebidos por segundo.|  
 |**Bytes Enviados/s**|Número de bytes enviados por segundo.|  
@@ -46,9 +47,9 @@ ms.locfileid: "85760556"
 |**Recebimentos/s**|Número de mensagens espelhadas recebidas por segundo.|  
 |**Refazer Bytes/s**|Número de bytes de log no qual foi efetuado roll forward no banco de dados espelho por segundo.|  
 |**Refazer KB da Fila**|Número total de quilobytes de log intensificados que permanecem atualmente para serem aplicados para que o banco de dados espelho possa ser avançado. Isto é enviado ao principal a partir do espelho.|  
-|**Enviar/Receber Tempo de Confirmação**|Milissegundos que as mensagens aguardaram pela confirmação do parceiro, no último segundo.<br /><br /> Este contador é útil para solucionar um problema que pode ser causado por um gargalo na rede, como failovers inexplicáveis, grandes filas de envio ou alta latência de transação. Nestes casos, você pode analisar o valor deste contador para determinar se a rede está causando o problema.|  
+|**Enviar/Receber Tempo de Confirmação**|Milissegundos que as mensagens aguardaram pela confirmação do parceiro no último segundo.<br /><br /> Este contador é útil para solucionar um problema que pode ser causado por um gargalo na rede, como failovers inexplicáveis, grandes filas de envio ou alta latência de transação. Nestes casos, você pode analisar o valor deste contador para determinar se a rede está causando o problema.|  
 |**Envios/s**|Número de mensagens espelhadas enviadas por segundo.|  
-|**Atraso na Transação**|Atraso na espera por reconhecimento de confirmação não terminado.|  
+|**Atraso na Transação**|Atraso na espera pelo reconhecimento de confirmação não terminado.|  
   
 > [!NOTE]  
 >  Em cada parceiro, alguns dos contadores mostram um valor zero dependendo de qual função o parceiro desempenha atualmente.  

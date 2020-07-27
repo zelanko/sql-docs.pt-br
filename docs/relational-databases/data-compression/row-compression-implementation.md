@@ -1,5 +1,6 @@
 ---
 title: Implementação da compactação de linha | Microsoft Docs
+description: Saiba como o Mecanismo de Banco de Dados do SQL Server implementa a compactação de linha para ajudar você a planejar o espaço de armazenamento necessário para seus dados.
 ms.custom: ''
 ms.date: 06/30/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af131c9824de651a198fb99afaa526f3dd0bd6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bbe2358e2be461666378cc18c5a735a71574f17a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637297"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456018"
 ---
 # <a name="row-compression-implementation"></a>Implementação da compactação de linha
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85637297"
 ## <a name="how-row-compression-affects-storage"></a>Como a compactação de linha afeta o armazenamento  
  A tabela a seguir descreve como a compactação de linha afeta os tipos existentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]. A tabela não inclui o aumento que pode ser gerado usando a compactação de página.  
   
-|Tipo de dados|O armazenamento é afetado?|DESCRIÇÃO|  
+|Tipo de dados|O armazenamento é afetado?|Descrição|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|Não|1 byte é o armazenamento mínimo necessário.|  
 |**smallint**|Sim|Se o valor couber em 1 byte, apenas 1 byte será usado.|  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 351f5be7bdeddb93618d2a31098f44969b2d79a7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294116"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918158"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
@@ -89,7 +89,7 @@ ms.locfileid: "71294116"
   
 2.  Adicione um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ao pacote. Configure esse gerenciador de conexões para usar o Provedor de Dados NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e conecte-o a uma instância disponível do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Por padrão, o gerenciador de conexões tem o seguinte nome: \<nome do servidor>.AdventureWorks1.  
+     Por padrão, o gerenciador de conexões tem o seguinte nome: \<server name>.AdventureWorks1.  
   
 3.  Adicione um gerenciador de conexões de arquivos ao pacote. Configure esse gerenciador de conexões para criar o arquivo de saída para a tarefa Criação de Perfil de Dados.  
   

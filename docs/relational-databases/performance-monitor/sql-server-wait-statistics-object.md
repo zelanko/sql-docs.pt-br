@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Estatística de espera | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho SQLServer:Wait Statistics, que contém contadores de desempenho que relatam informações sobre o status de espera.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5b9a2ccdd73150eeaa1dda8403c4b73aed03009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a21ac3072869f74c71997be5160b55758fc917
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758917"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457383"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Objeto Wait Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85758917"
   
  A tabela a seguir lista os contadores contidos no objeto Wait Statistics (Estatísticas de Espera).  
   
-|Contadores de Estatísticas de Espera do SQL Server|DESCRIÇÃO|  
+|Contadores de Estatísticas de Espera do SQL Server|Descrição|  
 |-----------------------------------------|-----------------|  
 |**Esperas de bloqueio**|Estatísticas dos processos que esperam por um bloqueio.|  
 |**Esperas de buffer de log**|Estatísticas dos processos que esperam pela disponibilização de buffer de log.|  
@@ -43,7 +44,7 @@ ms.locfileid: "85758917"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |**Tempo de espera médio (ms)**|Tempo médio do tipo de espera selecionado.|  
 |**Tempo de espera cumulativo (ms) por segundo**|Tempo de espera agregado, por segundo, do tipo de espera selecionado.|  

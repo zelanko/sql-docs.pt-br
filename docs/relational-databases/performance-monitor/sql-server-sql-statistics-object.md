@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Estatística de SQL| Microsoft Docs
+description: Saiba mais sobre o objeto QLServer:SQL Statistics, que fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758941"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458113"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +33,9 @@ ms.locfileid: "85758941"
   
  Para obter mais informações sobre parametrização simples e forçada, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Esses são os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Estatísticas do SQL**do**.  
+ Esses são os contadores de **Estatísticas do SQL** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Contadores do SQL Server SQL Statistics|DESCRIÇÃO|  
+|Contadores do SQL Server SQL Statistics|Descrição|  
 |----------------------------------------|-----------------|  
 |**Tentativas de Param. Autom./s**|Número de tentativas de parametrização automática por segundo. O total deve ser a soma das parametrizações automáticas que falharam, seguras e inseguras. A parametrização automática ocorre quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta parametrizar uma solicitação do [!INCLUDE[tsql](../../includes/tsql-md.md)] substituindo alguns literais por parâmetros de modo a permitir a reutilização do plano de execução resultante armazenado em cache em várias solicitações que parecem semelhantes. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões mais novas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse contador não inclui parametrizações forçadas.|  
 |**Solicitações em Lote/s**|Número de lotes de comando [!INCLUDE[tsql](../../includes/tsql-md.md)] recebidos por segundo. Essa estatística é afetada por todas as restrições (tais como E/S, número de usuários, tamanho do cache, complexidade das solicitações etc.). Altas solicitações em lote significam uma boa taxa de transferência.|  

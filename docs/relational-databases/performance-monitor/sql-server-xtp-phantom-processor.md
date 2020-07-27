@@ -1,5 +1,6 @@
 ---
 title: Processador Fantasma de XTP do SQL Server | Microsoft Docs
+description: Saiba mais sobre o objeto de desempenho XTP Phantom Processor do SQL Server, que contém contadores relacionados ao subsistema de processamento fantasma do mecanismo OLTP in-memory.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb3c619edfc1fae76e8b497c46a882fbfc42ffd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ab23b48d001d9145a06b620a20812f856e699de
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743164"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457913"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>Processador Fantasma de XTP do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85743164"
   
  Esta tabela descreve os contadores do **Processador Fantasma de XTP do SQL Server** .  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Tentativas de verificação de canto sujo/s (emitido pelo fantasma)**|O número de tentativas de digitalização devido a conflitos de gravação durante as varreduras de canto sujo emitidas pelo processador fantasma (em média), por segundo. Este é um contador de nível muito baixo, não planejado para uso do cliente.|  
 |**Linhas fantasma expiradas removidas/s**|O número de linhas expiradas removidas por verificações fantasma (em média), por segundo.|  

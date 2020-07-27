@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
+title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f704b064998c584461e4708b52d9c2aa68f20fe7
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786561"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485067"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Inspeciona a integridade de uma restrição especificada ou de todas as restrições em uma tabela especificada no banco de dados atual.
@@ -52,8 +53,10 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
- *table_name* | *table_id* | *constraint_name* | *constraint_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+ *table_name* \| *table_id* \| *constraint_name* \| *constraint_id*  
  É a tabela ou restrição que será verificada. Quando *table_name* ou *table_id* for especificado, todas as restrições habilitadas na tabela serão verificadas. Quando *constraint_name* ou *constraint_id* for especificado, somente essa restrição será verificada. Se nem um identificador de tabela ou um identificador de restrição for especificado, todas as restrições habilitadas em todas as tabelas no banco de dados atual serão verificadas.  
  Um nome de restrição identifica exclusivamente a tabela à qual ela pertence. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   

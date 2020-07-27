@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296044"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917262"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lição 2-2: Adicionar e configurar o contêiner Loop Foreach
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -70,7 +70,7 @@ Após essas modificações no pacote, quando ele for executado, o contêiner Loo
   
 1.  Selecione **Mapeamentos de Variáveis**.  
   
-2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, selecione a célula vazia e selecione **\<Nova Variável...>** .  
+2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, selecione a célula vazia e selecione **\<New Variable...>** .  
   
 3.  Na caixa de diálogo **Adicionar Variável**, em **Nome**, digite **varFileName**.  
   

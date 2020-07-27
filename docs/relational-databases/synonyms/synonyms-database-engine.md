@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787260"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918062"
 ---
 # <a name="synonyms-database-engine"></a>Sinônimos (Mecanismo de Banco de Dados)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Um sinônimo é um objeto de banco de dados que atende aos seguintes propósitos:  
   
 -   Fornece um nome alternativo para outro objeto do banco de dados referido como o objeto base que pode existir em um servidor local ou remoto.  
@@ -35,17 +35,37 @@ Por exemplo, considere a tabela **Employee** do [!INCLUDE[ssSampleDBCoShort](../
 Para resolver os dois problemas, é possível criar um sinônimo, **EmpTable**, no **Server2** para a tabela **Employee** no **Server1**. Agora, o aplicativo cliente precisa usar apenas o nome de uma única parte, **EmpTable**, para fazer referência à tabela **Employee** . Além disso, se o local da tabela **Employee** for alterado, você precisará modificar o sinônimo, **EmpTable**, para apontar para o novo local da tabela **Employee** . Como não existe nenhuma instrução ALTER SYNONYM, você precisa primeiro remover o sinônimo, **EmpTable**, e criá-lo novamente com o mesmo nome, mas apontá-lo para o novo local **Employee**.  
   
 Um sinônimo pertence a um esquema e, como outros objetos de um esquema, seu nome precisa ser exclusivo. É possível criar sinônimos para os seguintes objetos de banco de dados:  
-  
-|||  
-|-|-|  
-|Procedimento armazenado de assembly (CLR)|Função com valor de tabela de assembly (CLR)|  
-|Função escalar de assembly (CLR)|Funções de agregação de assembly (CLR)|  
-|Procedimento de filtro de replicação|Procedimento armazenado estendido|  
-|Função SQL escalar|Função SQL com valor de tabela|  
-|Função SQL com valor de tabela embutida|Procedimento armazenado SQL|  
-|Visualizar|Tabela* (definida pelo usuário)|  
-  
- *Inclui tabelas temporárias locais e globais  
+
+:::row:::
+    :::column:::
+        Procedimento armazenado de assembly (CLR)
+
+        Função escalar de assembly (CLR)
+
+        Procedimento de filtro de replicação
+
+        Função SQL escalar
+
+        Função SQL com valor de tabela embutida
+
+        Visualizar
+    :::column-end:::
+    :::column:::
+        Função com valor de tabela de assembly (CLR)
+
+        Funções de agregação de assembly (CLR)
+
+        Funções de agregação de assembly (CLR)
+
+        Função SQL com valor de tabela
+
+        Procedimento armazenado SQL
+
+        Tabela* (definida pelo usuário)
+    :::column-end:::
+:::row-end:::
+
+*Inclui tabelas temporárias locais e globais  
   
 > [!NOTE]  
 > Não há suporte para nomes de quatro partes para objetos base de função.  
@@ -63,23 +83,48 @@ Se você tiver um esquema padrão do qual você não é o proprietário e deseja
 Apenas os proprietários de sinônimos, membros de **db_owner**, ou membros de **db_ddladmin** podem conceder permissão em um sinônimo.  
   
 Você pode `GRANT`, `DENY` e `REVOKE` todas ou qualquer uma das seguintes permissões em um sinônimo:  
-  
-|||  
-|-|-|  
-|CONTROL|Delete (excluir)|  
-|Execute|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      Execute
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      Delete (excluir)
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>Usando sinônimos  
- É possível usar sinônimos em lugar do objeto base referenciado em várias instruções SQL e contextos de expressão. A tabela a seguir contém uma lista dessas instruções e contextos de expressão:  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|Delete (excluir)|  
-|Execute|Subseleções|  
-  
+ É possível usar sinônimos em lugar do objeto base referenciado em várias instruções SQL e contextos de expressão. As seguintes colunas contêm uma lista dessas instruções e contextos de expressão:  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        Execute
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        Delete (excluir)
+
+        Subseleções
+    :::column-end:::
+:::row-end:::
+ 
  Quando você está trabalhando com sinônimos nos contextos declarados anteriormente, o objeto base é afetado. Por exemplo, se um sinônimo fizer referência a um objeto base que está em uma tabela e você inserir uma linha no sinônimo, na verdade você estará inserindo uma linha na tabela referida.  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 As instruções de permissão a seguir são associadas apenas ao sinônimo e não ao objeto base:  
-  
-|||  
-|-|-|  
-|GRANT|NEGAR|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        NEGAR
+    :::column-end:::
+:::row-end:::
+
 Sinônimos não são associados a esquemas e, portanto, não podem ser referidos pelos seguintes contextos de expressão associados a esquemas:  
-  
-|||  
-|-|-|  
-|Restrições CHECK|Colunas computadas|  
-|Expressões padrão|Expressões de regra|  
-|Exibições associadas a esquema|Funções associadas a esquema|  
+
+:::row:::
+    :::column:::
+        Restrições CHECK
+
+        Expressões padrão
+
+        Exibições associadas a esquema
+    :::column-end:::
+    :::column:::
+        Colunas computadas
+
+        Expressões de regra
+
+        Funções associadas a esquema
+    :::column-end:::
+:::row-end:::
   
 Para obter mais informações sobre funções associadas a esquema, veja [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   

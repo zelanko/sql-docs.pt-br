@@ -1,5 +1,6 @@
 ---
 title: Monitorar o uso de disco | Microsoft Docs
+description: Monitor a atividade de disco para o SQL Server envolve monitorar a E/S de disco e detectar a paginação em excesso, além de isolar a atividade de disco que o SQL Server cria.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d1ee155b97823b419623d0296928db5334c71e7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bf6f22b6a3b76694c89bd480b289ecd0db1dce5
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787474"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458478"
 ---
 # <a name="monitor-disk-usage"></a>Monitorar o uso do disco
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
