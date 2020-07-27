@@ -1,5 +1,6 @@
 ---
 title: Ferramentas para monitoramento e ajuste de desempenho | Microsoft Docs
+description: Saiba mais sobre as ferramentas de monitoramento e ajuste do SQL Server e como escolher a ferramenta ideal dependendo do tipo de monitoramento e dos eventos a serem monitorados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 30cc668487299677bb2874300d660d09d1dedd22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13b974b37202a41f333e7d94104eccbee4c72d5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635452"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457648"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Ferramentas para monitoramento e ajuste de desempenho
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85635452"
   
  A seguir, encontra-se as ferramentas de monitoramento e ajuste do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Ferramenta|DESCRIÇÃO|  
+|Ferramenta|Descrição|  
 |----------|-----------------|  
 |[Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Funções internas exibem estatísticas que retratam a atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde o momento em que o servidor foi iniciado; essas estatísticas são armazenadas em contadores predefinidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, **\@\@CPU_BUSY** contém o tempo de execução do código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela CPU; **\@\@CONNECTIONS** contém o número de conexões ou tentativas de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e **\@\@PACKET_ERRORS** contém o número de pacotes de rede ocorridos em conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|Instruções DBCC (Database Console Command) lhe permitem examinar as estatísticas de desempenho e a consistência lógica e física de um banco de dados.|  
@@ -70,7 +71,7 @@ ms.locfileid: "85635452"
 ## <a name="windows-monitoring-tools"></a>Ferramentas de monitoramento do Windows  
  Os sistemas operacionais Windows e Windows Server 2003 também fornecem as seguintes ferramentas de monitoramento.  
   
-|Ferramenta|DESCRIÇÃO|  
+|Ferramenta|Descrição|  
 |----------|-----------------|  
 |Gerenciador de Tarefas|Mostra uma sinopse dos processos e aplicativos em execução no sistema.|  
 |Agente do monitor da rede|Monitora o tráfego da rede.|  

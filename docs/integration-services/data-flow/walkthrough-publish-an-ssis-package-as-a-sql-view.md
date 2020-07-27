@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216888"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920323"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Este passo a passo fornece as etapas detalhadas para publicar um pacote SSIS como um modo SQL em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -164,9 +164,9 @@ ms.locfileid: "80216888"
   
 1.  Inicialização do SQL Server Management Studio.  
   
-2.  Expanda \<**nome do computador**>, **Bancos de dados**, \<**banco de dados selecionado por você no assistente**> e **Exibições**.  
+2.  Expanda \<**machine name**>, **Bancos de dados**, \<**database you selected in the wizard**> e **Exibições**.  
   
-3.  Clique com o botão direito do mouse na \<**exibição criada pelo assistente**> criada pelo assistente e clique em **Selecionar as 1.000 primeiras linhas**.  
+3.  Clique com o botão direito do mouse na \<**view created by the wizard**> criada pelo assistente e clique em **Selecionar as 1000 primeiras linhas**.  
   
 4.  Confirme que você vê os resultados do pacote do SSIS.  
   

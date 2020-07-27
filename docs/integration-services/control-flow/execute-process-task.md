@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298334"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920675"
 ---
 # <a name="execute-process-task"></a>Tarefa Executar Processo
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A tarefa Executar Processo executa um aplicativo ou arquivo de lote como parte de um fluxo de trabalho do pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Embora você possa usar a tarefa Executar Processo para abrir qualquer aplicativo padrão, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], você geralmente o utiliza para executar aplicativos de negócios ou arquivos de lote que trabalham em uma fonte de dados. Por exemplo, você pode usar a tarefa Executar Processo para expandir um arquivo de texto compactado. Depois, o pacote pode usar o arquivo de texto como uma fonte de dados para o fluxo de dados no pacote. Como outro exemplo, você pode usar a tarefa Executar Processo para executar um aplicativo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizado que gera um relatório de vendas diário. Em seguida, você pode anexar o relatório a uma tarefa Enviar Email e encaminhar o relatório para uma lista de distribuição.  
@@ -116,15 +116,15 @@ ms.locfileid: "71298334"
  Digite o caminho da pasta que contém o executável ou clique no botão Procurar **(…)** e localize a pasta.  
   
  **StandardInputVariable**  
- Selecione a variável para fornecer a entrada ao processo ou clique em \<**Nova variável...** > para criar uma nova variável:  
+ Selecione a variável que fornecerá a entrada para o processo ou clique em \<**New variable...**> para criar uma variável:  
   
  **Tópicos relacionados:** [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Selecione uma variável para capturar a saída do processo ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione a variável para capturar a saída do processo ou clique em \<**New variable...**> para criar uma variável.  
   
  **StandardErrorVariable**  
- Selecione uma variável para capturar a saída de erro do processador ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione a variável para capturar a saída de erro do processador ou clique em \<**New variable...**> para criar uma variável.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Indique se a tarefa deve falhar caso o código de saída do processo seja diferente do valor especificado em **SuccessValue**.  

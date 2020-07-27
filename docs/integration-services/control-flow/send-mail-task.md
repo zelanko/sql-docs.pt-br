@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581cdcddc2138b2d5cd78790be412e0ad0a9fdda
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293925"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920443"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  
@@ -105,7 +105,7 @@ ms.locfileid: "71293925"
   
 ### <a name="options"></a>Opções  
  **SMTPConnection**  
- Selecione um gerenciador de conexões SMTP na lista ou clique em **\<Nova conexão...>** para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões SMTP na lista ou clique em **\<New connection...>** para criar um gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
@@ -153,13 +153,13 @@ ms.locfileid: "71293925"
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexão do arquivo  
  **MessageSource**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de Arquivos na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variável  
  **MessageSource**  
- Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**New variable...**> para criar uma variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto Estatísticas Gerais | Microsoft Docs
+description: Saiba mais sobre o objeto SQLServer:General Statistics, que fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 854345e3985d3254e774071e8e6cc4df36be177b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d146725df4f8c2eaffafb0c46f8062849857ad01
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775861"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458284"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, objeto General Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto **SQLServer:General Statistics** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais e o número de usuários que se conectam e se desconectam, por segundo, dos computadores que executam uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode ser útil ao trabalhar com sistemas do tipo OLTP, em que há muitos clientes conectando-se e desconectando-se de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Estatísticas Gerais**do**.  
+ Esta tabela descreve os contadores de **Estatísticas Gerais** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Contadores de Estatísticas Gerais do SQL Server|DESCRIÇÃO|  
+|Contadores de Estatísticas Gerais do SQL Server|Descrição|  
 |--------------------------------------------|-----------------|  
 |**Tabelas Temporárias Ativas**|Número de tabelas temporárias/variáveis de tabela em uso.|  
 |**Redefinições de conexão/s**|O número total de logons iniciados do pool de conexão.|  
