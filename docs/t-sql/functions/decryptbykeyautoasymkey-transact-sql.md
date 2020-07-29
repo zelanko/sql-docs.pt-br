@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b416b915c011ecd4222dc9a3d708786f58852fe9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48e2f2c50c06c429b07bb67380b3c43509b82ccc
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901646"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111637"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *akey_ID*  
 A ID da chave assimétrica usada para criptografar a chave simétrica. *akey_ID* tem um tipo de dados **int**.  
   

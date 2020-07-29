@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 6f49c01f28115b5033f1f04d027761c063872062
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6ab720bb886946c975bf721a2a38d6d53176201d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254413"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85977911"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copiar resultados da consulta (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Você pode copiar o conjunto de resultados como texto separado por tabulações do painel **Resultados** . Você pode copiar todo o conjunto de resultados ou qualquer número de linhas ou células contíguas ou não contíguas.  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>Para copiar texto do conjunto de resultados do painel Resultados  

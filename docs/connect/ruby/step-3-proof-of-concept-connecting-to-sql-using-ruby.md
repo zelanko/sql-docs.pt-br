@@ -1,7 +1,7 @@
 ---
 title: 'Etapa 3: Prova de conceito da conexão com o SQL usando o Ruby | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10ff3f651695b172396b89dc7de97d62a2824e84
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926717"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263780"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Etapa 3: Prova de conceito da conexão ao SQL usando Ruby
 
@@ -25,7 +25,7 @@ Este exemplo deve ser considerado apenas uma prova de conceito.  O código de ex
   
 A função [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) é usada para se conectar ao Banco de Dados SQL.  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  
@@ -36,11 +36,13 @@ A função [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) é usa
   
 Copie e cole o código a seguir em um arquivo vazio. Nomeie-o como test.rb. Em seguida, execute-o digitando o seguinte comando no seu prompt de comando:  
   
+```ruby
     ruby test.rb  
+```
   
 No exemplo de código, A função [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) é usada para recuperar um conjunto de resultados de uma consulta no Banco de Dados SQL. Essa função aceita uma consulta e retorna um conjunto de resultados. O conjunto de resultados é iterado usando [result.each do |row|](https://github.com/rails-sqlserver/tiny_tds).  
   
-``` ruby 
+```ruby 
     require 'tiny_tds'    
     print 'test'       
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
@@ -60,7 +62,7 @@ Para usar o TinyTDS com o Azure, recomendamos a execução de várias `SET` inst
   
 Para alinhar com o formato [datetime](../../t-sql/data-types/datetime-transact-sql.md) do Microsoft SQL Server, use a função [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) para conversão no formato de datetime correspondente.  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  

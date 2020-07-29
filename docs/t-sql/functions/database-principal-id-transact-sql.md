@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0fa5615d70542373030e0344d6988d9d2d0a028c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa948ecdac28ea578091f9fde0704709394c379a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026264"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110586"
 ---
 # <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,9 @@ Essa função retorna o número de ID de uma entidade de segurança no banco de 
 DATABASE_PRINCIPAL_ID ( 'principal_name' )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *principal_name*  
 É uma expressão do tipo **sysname** que representa a entidade de segurança. Quando *principal_name* é omitido, a `DATABASE_PRINCIPAL_ID` retorna a ID do usuário atual. `DATABASE_PRINCIPAL_ID` requer parênteses.
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f0be0697b0820b2d134e69742a7ffc50048b94e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66cca17f97ed856d30a7098ebc14692db75c19b1
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883046"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86976756"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Configurar o Gerenciamento Extensível de Chave do TDE do SQL Server usando o Azure Key Vault
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -483,6 +483,7 @@ Confira [B. Perguntas frequentes](../../../relational-databases/security/encrypt
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
+    ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;
     ```  
   
 1. Criptografe o banco de dados de teste. Habilite o TDE definindo ENCRYPTION ON.

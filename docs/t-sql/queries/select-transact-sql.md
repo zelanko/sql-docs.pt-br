@@ -25,12 +25,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db5b1cc185c4fc3cb4c932867851703d8c134a14
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b0c6ba071498bb3c5fafac38618723046bd82bdc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999747"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248714"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,16 +102,63 @@ SELECT <select_criteria>
   
 ## <a name="remarks"></a>Comentários  
  Devido à complexidade da instrução SELECT, os elementos e argumentos de sintaxe detalhados são mostrados por cláusula:  
-  
-|||  
-|-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
-|[Cláusula SELECT](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
-|[Cláusula INTO](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT e INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
-|[WHERE](../../t-sql/queries/where-transact-sql.md)|[Cláusula FOR](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[Cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)
+    :::column-end:::
+    :::column:::
+        [HAVING](../../t-sql/queries/select-having-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [Cláusula SELECT](../../t-sql/queries/select-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [EXCEPT e INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [Cláusula INTO](../../t-sql/queries/select-into-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FROM](../../t-sql/queries/from-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [Cláusula FOR](../../t-sql/queries/select-for-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WHERE](../../t-sql/queries/where-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [Cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
  A ordem das cláusulas na instrução SELECT é significativa. Qualquer uma das cláusulas opcionais pode ser omitida, mas quando elas são usadas devem aparecer na ordem apropriada.  
   
  As instruções SELECT serão permitidas em funções definidas pelo usuário apenas se as listas de seleção dessas instruções contiverem expressões que atribuam valores a variáveis que são locais a essas funções.  

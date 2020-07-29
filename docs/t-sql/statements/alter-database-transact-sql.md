@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ec399cc39b3c655ae205588f95e86da4881c73c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 13ef724e531d55a590ded5bc1c3af8da85375e2b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913522"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111245"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -45,10 +45,23 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -272,10 +285,23 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_Banco de dados individual/pool elástico do \*Banco de Dados SQL<br /> \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_Banco de dados individual/pool elástico do \*Banco de Dados SQL<br /> \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -710,10 +736,25 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|**_Instância gerenciada do \*Banco de Dados SQL<br /> \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_Instância gerenciada do \*Banco de Dados SQL<br /> \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
+
+
 
 &nbsp;
 
@@ -831,10 +872,23 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -955,10 +1009,23 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

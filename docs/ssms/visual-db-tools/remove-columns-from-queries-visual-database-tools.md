@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: e548479b98b6495ed61582a5a6fcef8b8878154a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9027c72dff7fd722be87450aa1de10d694a4d3d9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255275"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999483"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Remover colunas de consultas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se você já não deseja mais utilizar uma coluna em uma consulta, remova-a. Se fizer isso, o Designer de Consulta e Exibição removerá referências à coluna na lista de seleção, a especificação de classificação, os critérios de pesquisa, o **painel SQL**e as especificações de agrupamento.  
   
 > [!NOTE]  

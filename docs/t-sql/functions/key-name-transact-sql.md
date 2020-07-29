@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 981014acd2c250406254c53d4e245e9dd3aca280
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d705bec832e5a0f131c242c41a29bc179c4732d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752212"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111930"
 ---
 # <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85752212"
 KEY_NAME ( ciphertext | key_guid )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *ciphertext*  
  É o texto criptografado pela chave simétrica. *cyphertext* é do tipo **varbinary(8000)** .  
   

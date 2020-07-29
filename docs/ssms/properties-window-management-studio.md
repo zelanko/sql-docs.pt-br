@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ff8df58824aee2e718284bbbb2201b2123c216e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257590"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001811"
 ---
 # <a name="properties-window-management-studio"></a>Janela de Propriedades (Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use essa janela para exibir as propriedades dos elementos selecionados. Você também pode usar a janela Propriedades para exibir o arquivo, o projeto e as propriedades da solução. A janela Propriedades está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  
   
 A janela Propriedades exibe tipos diferentes de campos de edição, dependendo das necessidades de uma propriedade em particular. As propriedades mostradas em cinza são somente leitura.  

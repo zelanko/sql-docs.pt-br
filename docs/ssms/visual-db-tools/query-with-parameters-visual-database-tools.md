@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 083f3da69d7b86d12dc1919cea143d10ce5a10fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd07a135a52ab90837cbcbe9ba32f2a0bb4561f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255296"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999519"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Consultar com parâmetros (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Em muitas instâncias, é útil criar uma consulta que pode ser reutilizada muitas vezes nos aplicativos com uma entrada diferente a cada vez. Nesta seção você encontrará informações sobre como criar consultas de parâmetros para usos gerais.  
   
 ## <a name="in-this-section"></a>Nesta seção  

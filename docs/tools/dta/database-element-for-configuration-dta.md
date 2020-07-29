@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4d36151f58ad6b60162ff2984035f10c0ce4e09a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34f7f40ad6681cef603998375eb6de66e054e507
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732136"
 ---
 # <a name="database-element-for-configuration-dta"></a>Elemento de banco de dados para configuração (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Especifica o banco de dados em relação ao qual você deseja que o Orientador de Otimização do Mecanismo de Banco de Dados avalie a configuração hipotética (especificada pelo elemento **Configuration** ).  
   

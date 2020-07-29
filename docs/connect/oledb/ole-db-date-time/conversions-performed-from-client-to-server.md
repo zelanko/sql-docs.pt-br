@@ -12,15 +12,15 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244868"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversões executadas do cliente para o servidor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -70,9 +70,8 @@ ms.locfileid: "67995138"
 |15|A semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] para **datetime** é mantida. Os segundos são arredondados para o 300º de segundo mais próximo.|  
 |16|O comportamento de conversão de um valor (de um tipo determinado) inserido em uma estrutura cliente SSVARIANT é igual ao comportamento do mesmo valor e tipo quando não inserido em uma estrutura cliente SSVARIANT.|  
   
-||||  
-|-|-|-|  
 |Type|Comprimento (em caracteres)|Escala|  
+|-|-|-|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

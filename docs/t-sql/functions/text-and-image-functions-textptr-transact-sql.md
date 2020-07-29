@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 521c012ec8e05cf288aab78021b83c45c2d7bd62
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0150b1b9dace457b76130b7b0b3f863471637970
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895721"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111804"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85895721"
 TEXTPTR ( column )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *column*  
  É a coluna **text**, **ntext** ou **image** que será usada.  
   

@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc526ec022d139288fd057ac1cd7889653cecba5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290772"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859759"
 ---
 # <a name="set-default-options-for-report-builder"></a>Definir opções padrão para o Construtor de Relatórios
   No Construtor de Relatórios, você pode definir um número de padrões úteis para tornar a criação de relatórios mais rápida e fácil.  Por exemplo, se você puder definir ou alterar o servidor de relatório padrão, o Construtor de Relatórios salva seus relatórios no mesmo servidor de relatório automaticamente, a menos que você especifique o contrário.  
   
 -   No Construtor de Relatórios, clique em **Arquivo** > **Opções**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Usar este servidor de relatório ou site do SharePoint por padrão**  
  Pode ser que o administrador tenha configurado essa opção. O valor pode ser uma URL bem formada que inicia com http:// ou https://. Essa configuração determina quais conexões da fonte de dados aparecem por padrão nos assistentes de Tabela/Matriz e de Gráfico. Além disso, seus relatórios serão processados neste servidor e você poderá referenciar recursos deste servidor.  
   

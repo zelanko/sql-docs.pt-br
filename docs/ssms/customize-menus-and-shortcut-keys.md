@@ -1,9 +1,8 @@
 ---
 title: Personalizar menus e teclas de atalho
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,17 +19,17 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: de57e987e933b7dee45b1dd9ff91698dd43488ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243917"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000172"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar menus e teclas de atalho
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+ *\<letra única>* . Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+ *\<single letter>* . Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
   
 Podem ser criados aceleradores de teclado para procedimentos armazenados usando a tecla Ctrl na página **Teclado** da caixa de diálogo **Ferramentas**/**Opções** .  
   

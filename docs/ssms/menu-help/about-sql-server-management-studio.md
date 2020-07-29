@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: acb6ad109fb34641ab5661f48db8906cf4de1430
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2837f9a4135832c99addaff0600d4e3c2aff9c52
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253298"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85983097"
 ---
 # <a name="about-sql-server-management-studio"></a>Sobre o SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use esta caixa de diálogo para exibir ou copiar informações sobre sua instalação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. As edições do Evaluation listam o número de dias que restam até que o produto expire.  
   
 ## <a name="options"></a>Opções  

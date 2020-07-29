@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14bc7634ab3b8b3ad54f8544dc694bb955bd55ce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261715"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001615"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] com atalhos de teclado baseados no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
   

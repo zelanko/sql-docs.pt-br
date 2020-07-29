@@ -2,24 +2,24 @@
 title: Notas de versão do SQL Server 2012 Service Pack | Microsoft Docs
 description: Este artigo contém as notas sobre a versão agregadas dos quatro service packs do SQL Server 2012. Cada service pack acumula os service packs anteriores.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 02/26/2018
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d49f60415135a40ffeb470f09903cd3cd080ab69
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 395acfc882bdd4277a260f53eba4da8acf57d85f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999424"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111692"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 Este tópico contém as notas de versão agregadas dos quatro service packs do SQL Server 2012. Cada service pack acumula os service packs anteriores.
 
 Os services packs estão disponíveis somente online, não em uma mídia de instalação e podem ser baixados da seguinte maneira:

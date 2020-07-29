@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e52727922f03a6ae078477b8af6cf0171acd053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722556"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Arquitetura de extensibilidade nas Extensões de Linguagem do SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Saiba mais sobre a arquitetura de extensibilidade usada para as Extensões de Linguagem do SQL Server, que permite executar código externo no SQL Server. No SQL Server 2019, há suporte para Java. O código é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
 

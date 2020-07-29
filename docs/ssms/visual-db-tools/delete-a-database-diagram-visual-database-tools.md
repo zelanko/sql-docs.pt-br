@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5ebe7109bd97f4e06b708436bbcbe90e690ca1c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e55d6355213241a44b9d5bb27f5e73253192ba40
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244184"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999943"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Excluir um diagrama de banco de dados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Quando você não precisar mais de um diagrama de banco de dados, poderá excluí-lo.  
   
 ### <a name="to-delete-a-database-diagram"></a>Para excluir um diagrama de banco de dados  

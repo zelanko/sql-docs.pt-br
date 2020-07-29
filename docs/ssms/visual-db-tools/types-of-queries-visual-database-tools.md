@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c42830f9e77815e1043a489808c054afe0dc10aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1d35e0c8795f1671a9723074b50c424aafa087b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245308"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004139"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 O Designer de Consulta e Exibição fornece recursos internos para alguns tipos de consulta - Selecionar, Inserir Resultados, Inserir Valores, Atualizar, Excluir e Criar Tabela - e também oferece suporte a expressões de consultas UNION, pesquisa de texto completo e CASE.  
   
 ## <a name="in-this-section"></a>Nesta seção  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d0b4363e41169ccec1da20780cc18ca3c3f57dff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bca9ad46bb101f16c4709e03a2206bfa354be435
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682661"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111083"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *certificate_ID*  
 A ID de um certificado no banco de dados. *certificate_ID* tem um tipo de dados **int**.  
   

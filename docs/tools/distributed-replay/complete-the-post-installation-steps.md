@@ -5,23 +5,23 @@ description: Depois de instalar o Distributed Replay, modifique as contas de ser
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e38755c65e457123c732035a2874f9904644e0d5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: bda2bda26d8933c580597b01fba79d1912cb5b56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681855"
 ---
 # <a name="complete-the-post-installation-steps"></a>Concluir as etapas de pós-instalação
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Depois de instalar o Distributed Replay, modifique as contas de serviços cliente e controlador do Distributed Replay.  
   

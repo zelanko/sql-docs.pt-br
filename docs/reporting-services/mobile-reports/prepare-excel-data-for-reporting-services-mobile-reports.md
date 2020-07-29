@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3a760b0ae100259b8102f303f0747e0da81223e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448379"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942318"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparar dados do Excel para relatórios móveis do Reporting Services
   
@@ -70,11 +70,11 @@ Não existem restrições quanto ao local de armazenamento de arquivos do Excel 
   
 Os campos de data são essenciais para muitos relatórios móveis. Portanto, assegure-se de que as células sejam corretamente formatadas como datas no Excel. Em alguns casos, isso significa que uma conversão é necessária. Veja exemplos de fórmulas para converter células de texto em datas no Excel.  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 Depois de converter as células, é preciso formatá-las como datas selecionando-as ou a coluna inteira > menu **Contexto** > **Formatar Células** > **Data** na lista **Categoria**. Você também pode usar o assistente de texto para colunas do Excel para converter células de texto em datas corretamente formatadas.  
   

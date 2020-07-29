@@ -18,32 +18,137 @@ ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55db5a8dd46a0bd90193b39207eff47ad1b2b2c1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4fd363bcbaa9d0db7eb895abd76277ecfd0338f1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85995074"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245538"
 ---
 # <a name="string-functions-transact-sql"></a>Funções de cadeia de caracteres (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 As funções escalares a seguir executam uma operação em um valor de entrada de cadeia de caracteres e retornam uma cadeia de caracteres ou valor numérico:  
-  
-||||  
-|-|-|-| 
-|[ASCII](../../t-sql/functions/ascii-transact-sql.md)|[CHAR](../../t-sql/functions/char-transact-sql.md)|[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)|
-|[CONCAT](../../t-sql/functions/concat-transact-sql.md)|[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)|[DIFFERENCE](../../t-sql/functions/difference-transact-sql.md) |
-|[FORMAT](../../t-sql/functions/format-transact-sql.md)|[LEFT](../../t-sql/functions/left-transact-sql.md)|[LEN](../../t-sql/functions/len-transact-sql.md) |
-|[LOWER](../../t-sql/functions/lower-transact-sql.md)|[LTRIM](../../t-sql/functions/ltrim-transact-sql.md)|[NCHAR](../../t-sql/functions/nchar-transact-sql.md) |
-|[PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|[QUOTENAME](../../t-sql/functions/quotename-transact-sql.md)|[REPLACE](../../t-sql/functions/replace-transact-sql.md) |
-|[REPLICATE](../../t-sql/functions/replicate-transact-sql.md)|[REVERSE](../../t-sql/functions/reverse-transact-sql.md) |[RIGHT](../../t-sql/functions/right-transact-sql.md) |
-|[RTRIM](../../t-sql/functions/rtrim-transact-sql.md)|[SOUNDEX](../../t-sql/functions/soundex-transact-sql.md) |[SPACE](../../t-sql/functions/space-transact-sql.md) |
-|[STR](../../t-sql/functions/str-transact-sql.md)|[STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md)|[STRING_ESCAPE](../../t-sql/functions/string-escape-transact-sql.md) |
-|[STRING_SPLIT](../../t-sql/functions/string-split-transact-sql.md)|[STUFF](../../t-sql/functions/stuff-transact-sql.md)|[SUBSTRING](../../t-sql/functions/substring-transact-sql.md) |
-|[TRANSLATE](../../t-sql/functions/translate-transact-sql.md)|[TRIM](../../t-sql/functions/trim-transact-sql.md)|[UNICODE](../../t-sql/functions/unicode-transact-sql.md) |
-|[UPPER](../../t-sql/functions/upper-transact-sql.md) | | |
 
+:::row:::
+    :::column:::
+        [ASCII](../../t-sql/functions/ascii-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [CHAR](../../t-sql/functions/char-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [CONCAT](../../t-sql/functions/concat-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [DIFFERENCE](../../t-sql/functions/difference-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FORMAT](../../t-sql/functions/format-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [LEFT](../../t-sql/functions/left-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [LEN](../../t-sql/functions/len-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [LOWER](../../t-sql/functions/lower-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [LTRIM](../../t-sql/functions/ltrim-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [NCHAR](../../t-sql/functions/nchar-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [QUOTENAME](../../t-sql/functions/quotename-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [REPLACE](../../t-sql/functions/replace-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [REPLICATE](../../t-sql/functions/replicate-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [REVERSE](../../t-sql/functions/reverse-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+        [RIGHT](../../t-sql/functions/right-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [RTRIM](../../t-sql/functions/rtrim-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [SOUNDEX](../../t-sql/functions/soundex-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+        [SPACE](../../t-sql/functions/space-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [STR](../../t-sql/functions/str-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [STRING_ESCAPE](../../t-sql/functions/string-escape-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [STRING_SPLIT](../../t-sql/functions/string-split-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [STUFF](../../t-sql/functions/stuff-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [SUBSTRING](../../t-sql/functions/substring-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [TRANSLATE](../../t-sql/functions/translate-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [TRIM](../../t-sql/functions/trim-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UNICODE](../../t-sql/functions/unicode-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [UPPER](../../t-sql/functions/upper-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
   
  Todas as funções de cadeia de caracteres internas, exceto `FORMAT`, são determinísticas. Isso significa que elas retornam o mesmo valor sempre que são chamadas com um conjunto específico de valores de entrada. Para obter mais informações sobre determinismo de funções, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

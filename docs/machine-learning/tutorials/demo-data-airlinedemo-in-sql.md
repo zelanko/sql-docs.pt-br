@@ -2,22 +2,22 @@
 title: Dados de demonstração de voo de companhia aérea para tutoriais
 Description: Crie um banco de dados que contenha um conjunto de dados de companhia aérea em R e Python. Esse conjunto de dados é usado em tutoriais de R e Python para os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728002"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de chegadas de voos de companhias aéreas para tutoriais de Python e R do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Neste exercício, crie um banco de dados do SQL Server para armazenar dados importados de conjuntos internos de demonstração de linhas aéreas em R ou Python. As distribuições do R e Python fornecem dados equivalentes, que podem ser importados para um banco de dados do SQL Server usando o Management Studio.
 

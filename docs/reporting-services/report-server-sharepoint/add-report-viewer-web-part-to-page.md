@@ -1,5 +1,6 @@
 ---
 title: Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint | Microsoft Docs
+description: Exiba um relatório, no SQL Server Reporting Services ou no Servidor de Relatórios do Power BI, adicionando uma web part do Visualizador de Relatórios a uma página do SharePoint.
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,22 +8,22 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a70d7619f878b7091e7a49e05caf93dd814e3a0
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256723"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767389"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Exiba um relatório, no SQL Server Reporting Services ou no Servidor de Relatórios do Power BI, adicionando uma web part do Visualizador de Relatórios a uma página do SharePoint.
 
 ![Web part do Visualizador de Relatórios em uma página do SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * Para que os relatórios sejam carregados com êxito, o C2WTS (Declarações para Serviço de Token do Windows) precisa ser configurado para a delegação restrita de Kerberos. Para obter mais informações sobre como configurar o C2WTS, consulte [C2WTS (Declarações para Serviço de Token do Windows) e Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 

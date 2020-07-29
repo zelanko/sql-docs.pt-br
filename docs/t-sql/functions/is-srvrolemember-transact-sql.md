@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
+title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784510"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248504"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indica se um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é membro da função de servidor especificada.  
@@ -40,19 +41,23 @@ ms.locfileid: "85784510"
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *role* **'**  
  É o nome da função de servidor que está sendo verificada. *role* é **sysname**.  
   
  Os valores válidos de *role* são funções de servidor definidas pelo usuário e as seguintes funções de servidor fixas:  
-  
-|||  
-|-|-|  
-|sysadmin|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> público|  
-|processadmin||  
+
+- sysadmin
+- serveradmin
+- dbcreator
+- setupadmin  
+- bulkadmin
+- securityadmin  
+- diskadmin
+- público  
+- processadmin
   
  **'** *login* **'**  
  É o nome do logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a verificar. *login* é **sysname**, com um padrão de NULL. Se nenhum valor for especificado, o resultado será baseado no contexto de Execução atual. Se o parâmetro contiver a palavra NULL, retornará NULL.  
@@ -60,7 +65,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-|Valor retornado|DESCRIÇÃO|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0|*logon* não é um membro de *role*.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa instrução sempre retorna 0.|  
 |1|*login* é um membro de *role*.|  

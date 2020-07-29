@@ -5,25 +5,25 @@ description: Artigo de referência para comandos notebook de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0a866dcca1debba47abf2e2e241d00151b8641ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7543666f7c8654cc0a28f44a8fe09fdd39f185c0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820965"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242982"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-O artigo a seguir fornece referência para os comandos `notebook` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos
-|     |     |
+| Comando | Descrição |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Exibir um notebook.  Opção para parar no primeiro erro de execução de célula.
 [azdata notebook run](#azdata-notebook-run) | Executar um notebook.  A execução é interrompida no primeiro erro.
@@ -36,11 +36,11 @@ azdata notebook view --path -p
 ### <a name="examples"></a>Exemplos
 Exibir notebook.  Isso mostra todas as células.
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 Exibir notebook.  Isso mostra todas as células, a menos que uma célula com erro na saída seja encontrada.  Nesse caso, a saída para.
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-error
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -56,7 +56,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
@@ -64,16 +64,21 @@ Esse comando cria um diretório temporário e executa o notebook fornecido nele 
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
-                    [--output-html]  
-                    [--arguments -a]  
-                    [--interactive -i]  
-                    [--clear -c]  
-                    [--timeout -t]
+                    
+[--output-html]  
+                    
+[--arguments -a]  
+                    
+[--interactive -i]  
+                    
+[--clear -c]  
+                    
+[--timeout -t]
 ```
 ### <a name="examples"></a>Exemplos
 Executar notebook.
 ```bash
-azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook run --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -100,7 +105,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 

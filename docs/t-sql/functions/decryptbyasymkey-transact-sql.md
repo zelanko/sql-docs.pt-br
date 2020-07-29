@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0bc33fcff2531add1912e44d0bad81443cfd84b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b15b04368ad5b44d1c1adb91cc29367f9e344fc
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682712"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110471"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
     [ , 'Asym_Key_Password' ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *Asym_Key_ID*  
 A ID de uma chave assimétrica no banco de dados. *Asym_Key_ID* tem um tipo de dados **int**.  
   

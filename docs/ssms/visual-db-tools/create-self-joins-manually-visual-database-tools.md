@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 57ceb0963f303a1674642b65ef6c2089fd86ef70
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 162f2e872d1feedd3cecdf54b766ed8e3a43365b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254250"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000006"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Criar autojunções manualmente (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A autojunção de uma tabela pode ser feita, mesmo se a tabela não tiver uma relação reflexiva no banco de dados. Por exemplo, você pode usar uma autojunção para encontrar pares de autores que moram na mesma cidade.  
   
 Como com qualquer junção, uma autojunção requer pelo menos duas tabelas. A diferença é que, em vez de acrescentar uma segunda tabela à consulta, você adicionar uma segunda instância da mesma tabela. Dessa forma, você pode comparar uma coluna na primeira instância da tabela para a mesma coluna na segunda instância, o que permite comparar os valores em uma coluna entre si. O [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) atribui um alias à segunda instância da tabela.  
