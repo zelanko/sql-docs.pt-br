@@ -18,12 +18,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b8e84e35e2af64a83c323474bfc46a81553c7c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8aa10e165dff3f32227f52880afebb8de24f2d12
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003751"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248506"
 ---
 # <a name="ranking-functions-transact-sql"></a>Funções de classificação (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,11 +31,23 @@ ms.locfileid: "86003751"
   As funções de classificação retornam um valor de classificação para cada linha em uma partição. Dependendo da função usada, algumas linhas podem receber o mesmo valor que outras. As funções de classificação são não determinísticas.  
   
  O [!INCLUDE[tsql](../../includes/tsql-md.md)] fornece as seguintes funções de classificação:  
-  
-|||  
-|-|-|  
-|[RANK](../../t-sql/functions/rank-transact-sql.md)|[NTILE](../../t-sql/functions/ntile-transact-sql.md)|  
-|[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
+
+:::row:::
+    :::column:::
+        [RANK](../../t-sql/functions/rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [NTILE](../../t-sql/functions/ntile-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra as quatro funções de classificação usadas na mesma consulta. Para obter exemplos específicos de uma função, veja cada função de classificação.  
