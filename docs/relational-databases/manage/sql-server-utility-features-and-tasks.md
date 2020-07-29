@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755693"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242957"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do Utilitário do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755693"
 ## <a name="related-tasks"></a>Related Tasks  
  Use os tópicos a seguir como introdução rápida ao utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|||  
+|Descrição|Tópico|  
 |-|-|  
-|**Descrição**|**Tópico**|  
 |Descreve considerações para configurar um servidor para executar conjuntos de coleta do utilitário e não utilitário na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considerações sobre a execução de Conjuntos de Coleta do Utilitário e que não são do Utilitário na mesma instância do SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Descreve como criar um ponto de controle do utilitário do SQL Server.|[Criar um ponto de controle do Utilitário do SQL Server &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Descreve como se conectar a um utilitário do SQL Server.|[Conectar a um Utilitário do SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

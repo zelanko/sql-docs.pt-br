@@ -5,16 +5,16 @@ description: Este artigo explica como configurar a camada do HDFS para montar um
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730646"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar o ADLS Gen2 para a camada do HDFS em um cluster de Big Data
 
@@ -48,7 +48,7 @@ Para usar as credenciais do OAuth para montagem, é necessário seguir as etapas
 1. Na barra de navegação à direita, selecione "Registros de aplicativo" e crie um registro
 1. Crie um "Aplicativo Web" e siga o assistente. **Lembre-se do nome do aplicativo que você cria aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado. Observe também a ID do cliente do aplicativo na visão geral ao selecionar o aplicativo.
 1. Depois que o aplicativo Web for criado, vá para "Certificados e segredos" e crie um **Segredo do cliente** e selecione uma duração de chave. **Adicione** o segredo.
-1.     Volte à página Registros de aplicativo e clique em "Pontos de Extremidade" na parte superior. **Anote a URL do "Ponto de extremidade do token OAuth (v2)"**
+1. Volte à página Registros de aplicativo e clique em "Pontos de Extremidade" na parte superior. **Anote a URL do "Ponto de extremidade do token OAuth (v2)"**
 1. Agora você deverá ter os seguintes itens anotados para o OAuth:
 
     - A "ID do Cliente do Aplicativo" do aplicativo Web
@@ -71,13 +71,13 @@ Abra um prompt de comando em um computador cliente que possa acessar o cluster d
 
 **Observe** que você precisa remover qualquer quebra de linha ou espaço entre as vírgulas "," ao fornecer as credenciais. A formatação abaixo é apenas para facilitar a leitura.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>Usar chaves de acesso para montagem
 
@@ -94,10 +94,10 @@ Você também pode fazer a montagem usando chaves de acesso que podem ser obtida
 
 **Observe** que você precisa remover qualquer quebra de linha ou espaço entre as vírgulas "," ao fornecer as credenciais. A formatação abaixo é apenas para facilitar a leitura.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Montar o armazenamento HDFS remoto
 

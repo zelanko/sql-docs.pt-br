@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2b19f1152ad5db39d60592fb23d29234db0d00fa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d736b1071b30cee921fcf766ab1fdeaaea543702
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254670"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008297"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Tópicos de instruções de como criar consultas e exibições (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 O Designer de Consulta e Exibição pode ajudar a criar e a manter a recuperação de dados e as partes de manipulação de dados de seu aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  

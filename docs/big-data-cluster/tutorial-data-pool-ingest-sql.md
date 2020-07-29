@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e7daf0dab9725320cf674db04cc2e306726810f9
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: ed3719a2fa24c7f7306b91cf8d422808d5fcea27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772895"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Ingerir dados em um pool de dados do SQL Server com Transact-SQL
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este tutorial demonstra como usar o Transact-SQL para carregar dados no [pool de dados](concept-data-pool.md) de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], os dados de uma variedade de fontes podem ser ingeridos e distribuídos entre as instâncias do pool de dados.
 

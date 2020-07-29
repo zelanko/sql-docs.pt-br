@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d67d058e089ce00308382d0b52ecc102b062cba2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b464037ffb914b78dc95edbf33676820e849ca1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631595"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111523"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85631595"
 GETANSINULL ( [ 'database' ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  '*database*'  
  O nome do banco de dados para o qual as informações de nulidade devem ser retornadas. *bancodedados é **char** ou **nchar**. Se for **char**, *database* será convertido implicitamente em **nchar**.  
   

@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40338c4083241fedd113bca3a1beb839dbdd3fca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb484c6858e9024fdbbaa4d12c15480d7314bc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784267"
 ---
 # <a name="install-azdata"></a>Instalar `azdata`
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 `azdata` é um utilitário de linha de comando escrito em Python para inicializar e gerenciar o cluster de Big Data por meio de APIs REST. 
 

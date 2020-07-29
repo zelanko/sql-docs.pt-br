@@ -2,22 +2,22 @@
 title: 'Tutorial do R: Desenvolver um modelo no SQL'
 description: Tutorial mostrando como criar uma solução do R de ponta a ponta para análise no banco de dados.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/11/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 129a109cb85d1e9a9a7784cd7d3963598c6725a5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781794"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desenvolvimento de SQL para cientistas de dados do R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Neste tutorial para cientistas de dados, saiba como criar uma solução de ponta a ponta para modelagem preditiva com base no suporte a recursos do R no SQL Server 2016 ou SQL Server 2017. Este tutorial usa um banco de dados [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) no SQL Server. 
 

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7bf66542a0176f991d6b7cfaf4653379af2912e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b34c28fbbf015c9de92fd8b4b0585b871e4aa364
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224628"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996893"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Unir tabelas manualmente (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Quando você adiciona duas (ou mais) tabelas a uma consulta, o [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) tenta uni-las com base em dados comuns ou em informações armazenadas no banco de dados sobre como as tabelas estão relacionadas. Para obter detalhes, consulte [Unir tabelas automaticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). Entretanto, se o Designer de Consulta e Exibição não uniu as tabelas automaticamente, ou se você quiser criar outras condições de junção entre tabelas, será possível unir as tabelas manualmente.  
   
 Você pode criar junções com base em comparações entre duas colunas, não apenas colunas que contêm a mesma informação. Por exemplo, se seu banco de dados contiver duas tabelas, `titles` e `roysched`, você poderá comparar valores na coluna `ytd_sales` da tabela `titles` com as colunas `lorange` e `hirange` na tabela `roysched` . A criação dessa junção lhe permitiria encontrar títulos para pagamentos de royalty referentes a quedas de vendas acumuladas no ano entre os intervalos altos e baixos.  

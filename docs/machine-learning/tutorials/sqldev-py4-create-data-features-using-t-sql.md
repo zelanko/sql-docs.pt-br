@@ -2,22 +2,22 @@
 title: 'Python + T-SQL: Recursos de dados'
 description: Tutorial mostrando como adicionar cálculos a procedimentos armazenados para uso em modelos de machine learning do Python.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb7f7b271c49922698058e396b69b91444c5b65a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 98a1ca3b012c5580e55dd6ea963c3869269f7136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775346"
 ---
 # <a name="create-data-features-using-t-sql"></a>Criar recursos de dados usando o T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Após a exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos*. Esse processo de criação de recursos dos dados brutos pode ser uma etapa crítica na modelagem de análise avançada.
 

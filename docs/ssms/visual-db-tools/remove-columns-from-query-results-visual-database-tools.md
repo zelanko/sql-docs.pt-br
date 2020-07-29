@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d6de3eef6b6903786a0edf3230f5500032d8cd89
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8b69a12cd11006b00cabcffd6b3c2f6112bffc5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255220"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999463"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Remover colunas de resultados da consulta (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se você usar uma coluna em uma consulta Selecionar, mas não desejar exibi-la no conjunto de resultados (ou seja, você não a quer na lista de seleção da consulta), remova-a da saída. Após remover a coluna da saída da consulta, você ainda poderá usá-la em critérios de pesquisa ou como um campo de classificação.  
   
 > [!NOTE]  

@@ -5,16 +5,17 @@ Acumulamos e mantemos a documentação de versões muito antigas do Microsoft SQ
 
 Esses arquivos incluem a documentação de pelo menos as seguintes versões mais antigas:
 
+- SQL Server 2014
 - SQL Server 2012
 - SQL Server 2008 R2
 - SQL Server 2008
 - SQL Server 2005
 
-A [documentação do SQL Server 2014](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) ainda está disponível no nosso endereço de Documentos.
+A [documentação do SQL Server 2014](/previous-versions/sql/2014/index?view=sql-server-2014) ainda está disponível no nosso endereço de Documentos.
 
 A [documentação do SQL Server 2019](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15) está disponível no nosso endereço de Documentos. Em seguida, use a lista suspensa de controle de versão próxima à parte superior da página para selecionar outra versão de interesse.
 
-Para obter mais informações sobre a documentação das versões anteriores do SQL Server, consulte [Versões anteriores da documentação do SQL Server](/sql/toc/previous-versions-sql-server).
+Para obter mais informações sobre a documentação das versões anteriores do SQL Server, consulte [Versões anteriores da documentação do SQL Server](/previous-versions/sql/).
 
 <!-- GM:
 On links to file 'previous-versions-sql-server.md', append 

@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 63f8e2729492d66eb498b0634e015a0a3d4638ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a094a2baf20ccdf29514a82f4ff749c6d9e18be3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780790"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235985"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ As informações de erro do sistema operacional impressas nessas mensagens de er
 1. A resolução do erro 17204 envolve a compreensão do código de erro do sistema operacional associado e o diagnóstico desse erro. Depois que a condição de erro do sistema operacional for resolvida, você poderá tentar reiniciar o banco de dados (por exemplo, usando ALTER DATABASE SET ONLINE) ou a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para colocar o banco de dados afetado online. Em alguns casos, talvez você não consiga resolver o erro do sistema operacional. Portanto, precisará realizar ações corretivas específicas. Discutiremos tais ações nesta seção.
 1. Se a mensagem de erro 17204 contiver apenas um código de erro e não uma descrição de erro, você poderá tentar resolver o código de erro usando o comando de shell do sistema operacional: net helpmsg <error code>. Se você receber um código de status de 8 dígitos como o código de erro, poderá consultar as fontes de informações em [Como converter um HRESULT em um código de erro Win32?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) para decodificar quais são esses códigos de status em erros de sistema operacional.
 1. Se você receber o erro do sistema operacional `Access is Denied` = 5, considere estes métodos:
-   -  Verifique se as permissões estão definidas no arquivo examinando as propriedades dele no Windows Explorer. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa grupos do Windows para provisionar o Controle de Acesso em vários recursos do arquivo. Verifique se o grupo apropriado [com nomes como SQLServerMSSQLUser$ComputerName$MSSQLSERVER ou SQLServerMSSQLUser$ComputerName$InstanceName] tem as permissões necessárias no arquivo de banco de dados mencionado na mensagem de erro. Para obter mais informações, confira [Configurar permissões do sistema de arquivos para acesso ao Mecanismo de Banco de Dados](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md). Verifique se o grupo do Windows realmente inclui a conta de inicialização do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SID do serviço.
+   -  Verifique se as permissões estão definidas no arquivo examinando as propriedades dele no Windows Explorer. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa grupos do Windows para provisionar o Controle de Acesso em vários recursos do arquivo. Verifique se o grupo apropriado [com nomes como SQLServerMSSQLUser$ComputerName$MSSQLSERVER ou SQLServerMSSQLUser$ComputerName$InstanceName] tem as permissões necessárias no arquivo de banco de dados mencionado na mensagem de erro. Para obter mais informações, confira [Configurar permissões do sistema de arquivos para acesso ao Mecanismo de Banco de Dados](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Verifique se o grupo do Windows realmente inclui a conta de inicialização do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SID do serviço.
    -  Examine a conta de usuário na qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está atualmente em execução. Você pode usar o Gerenciador de Tarefas do Windows para obter essas informações. Procure o valor de "Nome de Usuário" para o executável "sqlservr.exe". Além disso, se você alterou recentemente a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], saiba que a maneira com suporte para realizar essa operação é por meio do utilitário SQL Server Configuration Manager. Mais informações sobre isso estão disponíveis em [SQL Server Configuration Manager](../sql-server-configuration-manager.md). 
    -  Dependendo do tipo de operação – abrir bancos de dados durante a inicialização do servidor, anexar um banco de dados, restaurar o banco de dados etc. – a conta usada para representação e acesso ao arquivo de banco de dados pode variar. Examine o tópico [Proteger arquivos de log e dados](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) para entender qual operação define qual permissão e de quais contas. Use uma ferramenta como [Monitor do Processo](https://docs.microsoft.com/sysinternals/downloads/procmon) do SysInternals do Windows para entender se o acesso ao arquivo está acontecendo no contexto de segurança da conta de inicialização do serviço (ou SID do serviço) da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de uma conta representada.
 

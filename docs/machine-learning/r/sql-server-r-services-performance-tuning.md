@@ -2,22 +2,22 @@
 title: Ajuste de desempenho para R
 description: Este artigo descreve a otimização de desempenho para o R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d7b6b91ac3aeaa45c5e6c3e05c12176f5f60b28
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 991f9f0ddbe58e5591a89ff16bf8455d5a5cdca4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756470"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ajuste de desempenho de R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este é o primeiro de quatro artigos que descrevem a otimização de desempenho para R Services com base em dois estudos de caso:
 

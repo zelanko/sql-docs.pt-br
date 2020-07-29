@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003660"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113349"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -47,7 +47,9 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > Os números de versão do mecanismo de banco de dados para o SQL Server e o Banco de Dados SQL do Azure não são comparáveis entre si, mas números de build internos para esses produtos separados. O mecanismo de banco de dados para o Banco de Dados SQL do Azure se baseia na mesma base de código do mecanismo de banco de dados do SQL Server. O mais importante é que o mecanismo de banco de dados do Banco de Dados SQL do Azure sempre tem os bits mais recentes do mecanismo de banco de dados SQL. A versão 12 do Banco de Dados SQL do Azure é mais recente do que a versão 15 do SQL Server.
 
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 
 *propertyname*  
 É uma expressão que contém as informações de propriedade que serão retornadas para o servidor. *propertyname* pode ser um dos valores a seguir.  

@@ -2,22 +2,22 @@
 title: 'Tutorial do R: Criar grafos e gráficos'
 description: Tutorial mostrando como criar grafos e plotagens usando funções de linguagem do R no SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781818"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e plotagens usando o SQL e o R (instruções passo a passo)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Nesta parte do tutorial, você aprende técnicas para gerar plotagens e mapas usando o R com os dados do SQL Server. Você cria um histograma simples e, em seguida, desenvolve um gráfico de mapa mais complexo.
 

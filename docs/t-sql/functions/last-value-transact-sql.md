@@ -19,12 +19,12 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de20295fbe17534d6ae3f00c3cc30b963e340ff3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf16149651ddd288c9f4c8fb62209a9e2be10de
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732272"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110922"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -41,7 +41,9 @@ LAST_VALUE ( [ scalar_expression ] )
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *scalar_expression*  
  É o valor a ser retornado. *scalar_expression* pode ser uma coluna, subconsulta ou outra expressão que resulta em um único valor. Outras funções analíticas não são permitidas.  
   

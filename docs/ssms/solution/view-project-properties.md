@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c63fe4710c35870ab5ff7d52167179146f3874a3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49ba8730a90a14258a8fdaf94fe33bb99a47467b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242804"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000751"
 ---
 # <a name="view-project-properties"></a>Exibir propriedades do projeto
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Você pode exibir as propriedades associadas com seus projetos na janela Propriedades.  
   
 ### <a name="to-view-project-properties"></a>Para exibir as propriedades de projetos  
