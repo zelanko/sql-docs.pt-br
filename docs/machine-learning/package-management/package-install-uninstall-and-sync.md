@@ -2,22 +2,22 @@
 title: Sincronização do pacote R por meio do sistema de arquivos
 description: Atualize as bibliotecas R no SQL Server com as versões mais recentes instaladas no sistema de arquivos.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 71ff0b6232eb69af7e5e138d2681f8126a12d915
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: defbd4fc4fe0872b84f1816ae93bc12d9ad0ded3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757157"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Sincronização de pacotes R para SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 A versão do RevoScaleR incluída no SQL Server 2017 abrange a capacidade de sincronizar coleções de pacotes R entre o sistema de arquivos e a instância e o banco de dados em que os pacotes são usados.
 

@@ -2,22 +2,22 @@
 title: Configurar um cliente de ciência de dados do R
 description: Instale bibliotecas e ferramentas locais do R em uma estação de trabalho de desenvolvimento para conexões remotas ao SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 160365ea9782f50376a34eb87a3bf6893ce404c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896386"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurar um cliente de ciência de dados para desenvolvimento em R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 A integração do R está disponível no SQL Server 2016 ou posterior quando você inclui a opção de linguagem R em uma instalação do [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) ou dos [Serviços de Machine Learning do SQL Server (no banco de dados)](../install/sql-machine-learning-services-windows-install.md). 
 
@@ -48,12 +48,12 @@ Os pacotes do R da Microsoft estão disponíveis em vários produtos e serviços
 
 2. No assistente de instalação, aceite ou altere o caminho de instalação padrão, aceite ou altere a lista de componentes e aceite os termos de licença do Microsoft R Client.
 
-  Quando a instalação for concluída, uma tela de boas-vindas apresentará o produto e a documentação.
+   Quando a instalação for concluída, uma tela de boas-vindas apresentará o produto e a documentação.
 
 3. Crie uma a variável de ambiente do sistema MKL_CBWR para garantir a saída consistente dos cálculos da Intel MKL (Math Kernel Library).
 
-  + No Painel de Controle, clique em **Sistema e Segurança** > **Sistema** > **Configurações Avançadas do Sistema** > **Variáveis de Ambiente**.
-  + Crie uma variável de sistema chamada **MKL_CBWR**, com um valor definido como **AUTO**.
+   + No Painel de Controle, clique em **Sistema e Segurança** > **Sistema** > **Configurações Avançadas do Sistema** > **Variáveis de Ambiente**.
+   + Crie uma variável de sistema chamada **MKL_CBWR**, com um valor definido como **AUTO**.
 
 ## <a name="2---locate-executables"></a>2 – Localizar os executáveis
 
@@ -74,7 +74,7 @@ Ao instalar o R com o SQL Server, você obtém as mesmas ferramentas do R que s�
 
 1. Abra C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 e clique duas vezes em **RGui** para iniciar uma sessão do R com um prompt de comando do R.
 
-  Quando você inicia uma sessão do R de uma pasta do programa da Microsoft, vários pacotes, incluindo o RevoScaleR, são carregados automaticamente. 
+   Quando você inicia uma sessão do R de uma pasta do programa da Microsoft, vários pacotes, incluindo o RevoScaleR, são carregados automaticamente. 
 
 2. Insira `print(Revo.version)` no prompt de comando para retornar as informações de versão do pacote RevoScaleR. Você deve ter a versão 9.2.1 ou 9.3.0 para RevoScaleR.
 
@@ -103,7 +103,7 @@ Se o código exigir pacotes que não sejam instalados por padrão com o SQL Serv
 
 ## <a name="5---test-connections"></a>5 – Testar conectividade
 
- Como uma etapa de verificação, use **RGUI** e RevoScaleR para confirmar a conectividade com o servidor remoto. O SQL Server deve estar habilitado para [conexões remotas](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server) e você deve ter permissões, incluindo um logon de usuário e um banco de dados ao qual se conectar. 
+Como uma etapa de verificação, use **RGUI** e RevoScaleR para confirmar a conectividade com o servidor remoto. O SQL Server deve estar habilitado para [conexões remotas](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server) e você deve ter permissões, incluindo um logon de usuário e um banco de dados ao qual se conectar. 
 
 As etapas a seguir pressupõem o banco de dados de demonstração, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) e a autenticação do Windows.
 
@@ -113,78 +113,78 @@ As etapas a seguir pressupõem o banco de dados de demonstração, [NYCTaxi_Samp
 
 3. Insira o script de demonstração que é executado no servidor remoto. Você deve modificar o script de exemplo a seguir para incluir um nome válido para uma instância remota do SQL Server. Essa sessão começa como uma sessão local, mas a função **rxSummary** é executada na instância remota do SQL Server.
 
-  ```R
-  # Define a connection. Replace server with a valid server name.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Define a connection. Replace server with a valid server name.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
-  # Specify the input data in a SQL query.
-  sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+   # Specify the input data in a SQL query.
+   sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
   
-  # Define a remote compute context based on the remote server.
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Define a remote compute context based on the remote server.
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Execute the function using the remote compute context.
-  rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
-  ```
+   # Execute the function using the remote compute context.
+   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
+   ```
 
-  **Resultados:**
+   **Resultados:**
 
-  Esse script se conecta a um banco de dados no servidor remoto, fornece uma consulta, cria uma instrução `cc` de contexto de computação para a execução remota de código e, em seguida, fornece a função **rxSummary** do RevoScaleR para retornar um resumo estatístico dos resultados da consulta.
+   Esse script se conecta a um banco de dados no servidor remoto, fornece uma consulta, cria uma instrução `cc` de contexto de computação para a execução remota de código e, em seguida, fornece a função **rxSummary** do RevoScaleR para retornar um resumo estatístico dos resultados da consulta.
 
-  ```R
-    Call:
-  rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
-      connectionString = connStr), computeContext = cc)
+   ```R
+     Call:
+   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
+       connectionString = connStr), computeContext = cc)
 
-  Summary Statistics Results for: ~.
-  Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
-  Number of valid observations: 100 
+   Summary Statistics Results for: ~.
+   Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
+   Number of valid observations: 100 
   
-  Name       Mean   StdDev   Min Max ValidObs MissingObs
-  tip_amount 63.245 31.61087 36  180 100      0     
-  ```
+   Name       Mean   StdDev   Min Max ValidObs MissingObs
+   tip_amount 63.245 31.61087 36  180 100      0     
+   ```
 
 4. Definir e obter contexto de computação. Depois que você definir um contexto de computação, ele permanecerá em vigor durante a sessão. Se você não tiver certeza se a computação é local ou remota, execute o comando a seguir para descobrir. Os resultados que especificam uma cadeia de conexão indicam um contexto de computação remota.
 
-  ```R
-  # Return the current compute context.
-  rxGetComputeContext()
+   ```R
+   # Return the current compute context.
+   rxGetComputeContext()
 
-  # Revert to a local compute context.
-  rxSetComputeContext("local")
-  rxGetComputeContext()
+   # Revert to a local compute context.
+   rxSetComputeContext("local")
+   rxGetComputeContext()
 
-  # Switch back to remote.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
-  cc <-RxInSqlServer(connectionString=connStr)
-  rxSetComputeContext(cc)
-  rxGetComputeContext()
-  ```  
+   # Switch back to remote.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   cc <-RxInSqlServer(connectionString=connStr)
+   rxSetComputeContext(cc)
+   rxGetComputeContext()
+   ```  
 
 5. Retorne informações sobre variáveis na fonte de dados, incluindo nome e tipo.
 
-  ```R
-  rxGetVarInfo(data = inDataSource)
-  ```
-  Os resultados incluem 23 variáveis.
+   ```R
+   rxGetVarInfo(data = inDataSource)
+   ```
+   Os resultados incluem 23 variáveis.
 
 
 6. Gere um gráfico de dispersão para explorar se há dependências entre duas variáveis. 
 
-  ```R
-  # Set the connection string. Substitute a valid server name for the placeholder.
-  connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Set the connection string. Substitute a valid server name for the placeholder.
+   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
-  # Specify a query on the nyctaxi_sample table.
-  # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
-  sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Specify a query on the nyctaxi_sample table.
+   # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
+   sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Generate a scatter plot.
-  rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
-  ```
+   # Generate a scatter plot.
+   rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
+   ```
 
-  A captura de tela a seguir mostra a entrada e a saída de gráfico de dispersão.
+   A captura de tela a seguir mostra a entrada e a saída de gráfico de dispersão.
 
    ![Gráfico de dispersão em RGUI](media/rclient-setup-scatterplot.png "Gráfico de dispersão dos dados de demonstração de NYC Taxi")
 
@@ -206,10 +206,10 @@ Ao usar o [RStudio](https://www.rstudio.com/), você pode configurar o ambiente 
 
 1. No RStudio, [atualize seu caminho do R](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) para apontar para o ambiente do R que fornece o RevoScaleR, o Microsoft R Open e outros pacotes da Microsoft. 
 
-  + Para uma instalação do R Client, procure C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
-  + Para um servidor autônomo, procure C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library ou C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+   + Para uma instalação do R Client, procure C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+   + Para um servidor autônomo, procure C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library ou C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
 
-2. Feche e abra o RStudio.
+1. Feche e abra o RStudio.
 
 Quando você reabre o RStudio, o executável R do R Client (ou servidor autônomo) é o mecanismo do R padrão.
 
@@ -230,16 +230,16 @@ Este exemplo usa o Visual Studio 2017 Community Edition, com a carga de trabalho
 
 2. O painel esquerdo contém uma lista de modelos pré-instalados. Clique em **R** e selecione **R Project**. Na caixa **Nome**, digite `dbtest` e clique em **OK**. 
 
-  O Visual Studio cria uma pasta de projeto e um arquivo de script padrão, `Script.R`. 
+   O Visual Studio cria uma pasta de projeto e um arquivo de script padrão, `Script.R`. 
 
 3. Digite `.libPaths()` na primeira linha do arquivo de script e pressione CTRL + ENTER.
 
-  O caminho da biblioteca do R atual deve ser exibido na janela **R Interativo**. 
+   O caminho da biblioteca do R atual deve ser exibido na janela **R Interativo**. 
 
 4. Clique no menu **Ferramentas do R** e selecione **Janelas** para ver uma lista de outras janelas específicas do R que você pode exibir em seu workspace.
  
-  + Exiba a ajuda nos pacotes na biblioteca atual pressionando CTRL + 3.
-  + Veja as variáveis do R no **Gerenciador de Variáveis**, pressionando CTRL + 8.
+   + Exiba a ajuda nos pacotes na biblioteca atual pressionando CTRL + 3.
+   + Veja as variáveis do R no **Gerenciador de Variáveis**, pressionando CTRL + 8.
 
 ## <a name="next-steps"></a>Próximas etapas
 

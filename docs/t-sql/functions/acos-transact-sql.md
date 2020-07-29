@@ -20,12 +20,12 @@ ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf7bdc41d4f6eefdf217447ae9bf0b552b6cfc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3c7c8ebd6256980842ca85f10f200518fe0bac2a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007963"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113203"
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ Uma função que retorna o ângulo, em radianos, cujo cosseno é a expressão fl
 ACOS ( float_expression )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *float_expression*  
 Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do tipo **float** ou de um tipo que pode ser convertido implicitamente em float. Somente um valor que varia de -1,00 a 1,00 é válido. Valores fora deste intervalo retornarão NULL e ASIN relatará um erro de domínio.
   

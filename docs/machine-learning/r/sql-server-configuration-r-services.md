@@ -2,22 +2,22 @@
 title: Configuração para uso com R
 description: Este artigo fornece diretrizes sobre a configuração de hardware e de rede do computador usado para executar o SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730898"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuração do SQL Server para uso com R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo é o segundo de uma série que descreve a otimização de desempenho para R Services com base em dois estudos de caso.  Este artigo fornece diretrizes sobre a configuração de hardware e de rede do computador usado para executar o SQL Server R Services. Ele também contém informações sobre maneiras de configurar as tabelas, o banco de dados ou a instância do SQL Server usada em uma solução. Como o uso de NUMA no SQL Server mistura os conceitos de otimização de hardware e de banco de dados, uma terceira seção aborda o ajuste da CPU e a governança de recursos em detalhes.
 

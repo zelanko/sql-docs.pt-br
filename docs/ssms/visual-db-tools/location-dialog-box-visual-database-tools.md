@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2188d0ede38f7cc5afbbb7f1a918e8428e7924c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a628be0f00cd2d4a90a139ba6217a663d2780c9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224647"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011696"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Caixa de diálogo Local (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use essa caixa de diálogo para localizar e selecionar a pasta que contém os arquivos de interesse. Essa caixa de diálogo retorna o caminho da pasta selecionada à caixa de diálogo de chamada. Você pode acessar essa caixa de diálogo da seguinte forma:  
   
 -   Escolha **Novo** no menu **Arquivo** e selecione **Projeto**. Quando a caixa de diálogo **Novo Projeto** for exibida, escolha **Procurar**. A caixa de diálogo **Local** abre com o título **Local do Projeto**.  

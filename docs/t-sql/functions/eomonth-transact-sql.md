@@ -18,12 +18,12 @@ ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3092c848f11ba62301755d9c112b49d6fb4d2fa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c43b0e8c7afdd72fa1698d084e7693e8401a3d1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732397"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113511"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -38,7 +38,9 @@ Essa função retorna o último dia do mês que contém uma data especificada co
 EOMONTH ( start_date [, month_to_add ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *start_date*  
 Uma expressão de data que especifica a data para a qual retornar o último dia do mês.  
   

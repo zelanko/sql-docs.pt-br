@@ -2,22 +2,22 @@
 title: Criar modelos em R baseados em partição
 description: Saiba como modelar, treinar e usar dados particionados que são criados dinamicamente ao usar as funcionalidades de modelagem baseada em partição do aprendizado de máquina do SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756397"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar modelos baseados em partição no R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 No SQL Server 2019, a modelagem baseada em partição é a capacidade de criar e treinar modelos em dados particionados. Para dados estratificados que são naturalmente segmentados em um esquema de classificação especificado – como regiões geográficas, data e hora, idade ou sexo, você pode executar um script em todo o conjunto de dados, com a capacidade de modelar, treinar e pontuar as partições que permanecem intactas em todas essas operações. 
 

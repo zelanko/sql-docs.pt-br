@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789459"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245185"
 ---
 # <a name="maintenance-plans"></a>Planos de manutenção
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,8 @@ ms.locfileid: "85789459"
 ## <a name="related-tasks"></a>Related Tasks  
  Use os tópicos a seguir como introdução rápida aos planos de manutenção.  
   
-|||  
+|Descrição|Tópico|  
 |-|-|  
-|**Descrição**|**Tópico**|  
 |Configure a opção **Agent XPs** de configuração do servidor para habilitar os procedimentos armazenados estendidos do SQL Server Agent.|[Opção Agent XPs de configuração do servidor](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Descreve como criar um plano de manutenção usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Criar um Plano de Manutenção](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Descreve como criar um plano de manutenção usando a Superfície de Design do Plano de Manutenção.|[Criar um plano de manutenção &#40;Superfície de Design do Plano de Manutenção&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

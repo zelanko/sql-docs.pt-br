@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bcde2847ecbe1fbfdd156df6e631ef4d5c382917
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255498"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003902"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Expressão de Restrição (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Ao anexar uma restrição de verificação a uma tabela ou coluna, é necessário incluir uma expressão SQL. Digite a expressão de restrição de verificação na caixa fornecida.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
 Expression  
 Insira a expressão  
   
@@ -50,9 +49,11 @@ NOT (payment_method = 'credit card') OR
 ## <a name="to-define-a-constraint-expression"></a>Para definir uma expressão de restrição  
 Na guia Verificar Restrições das páginas de propriedades, digite uma expressão na caixa de expressão de Restrição que usa a seguinte sintaxe:  
   
-<pre>{constant | column_name | function | (subquery)}  
+```
+{constant | column_name | function | (subquery)}  
 [{operator | AND | OR | NOT}  
-{constant | column_name | function | (subquery)}...]</pre>  
+{constant | column_name | function | (subquery)}...]
+```
   
 A sintaxe de SQL é criada para os seguintes parâmetros:  
   

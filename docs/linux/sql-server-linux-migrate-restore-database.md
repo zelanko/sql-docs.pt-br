@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 8f8436e463a969921ef3e37ebf89f48bc94b49dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63226ae06abe2771c50fc5debc1a1dc63cb7c590
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895184"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971524"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar um banco de dados do SQL Server do Windows para o Linux usando o recurso de backup e restauração
 
@@ -36,7 +36,7 @@ Você também pode criar um grupo de disponibilidade Always On do SQL Server par
 Os pré-requisitos a seguir são necessários para concluir esse tutorial:
 
 * Computador Windows com o seguinte:
-  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) instalado.
+  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) instalado.
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) instalado.
   * Banco de dados de destino a ser migrado.
 

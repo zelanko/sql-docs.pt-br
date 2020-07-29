@@ -1,7 +1,7 @@
 ---
 title: Políticas de suporte do OLE DB Driver for SQL Server | Microsoft Docs
 description: Políticas de suporte do OLE DB Driver for SQL Server
-ms.date: 03/18/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f48aa8c68b364db98d1cd3111c11c6635ee5335
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526821"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007044"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Políticas de suporte do OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,6 +30,7 @@ O Driver do OLE DB para SQL Server é compatível e testado com conexões com as
 
 | Versão do driver | Banco de Dados SQL do Azure | Data Warehouse SQL do Azure | Instância Gerenciada do Azure SQL | SQL Server 2019 | Microsoft SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|-|-|-|-|-|-|-|-|
+|18.4|S|S|S|S|S|S|S|S|
 |18.3|S|S|S|S|S|S|S|S|
 |18.2|S|S|S|S|S|S|S|S|
 |18.1|S|S|S| |S|S|S|S|
@@ -42,6 +43,7 @@ A tabela a seguir lista os sistemas operacionais compatíveis com o Driver do OL
 
 | Versão do driver | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|-|-|-|-|-|-|
+|18.4|S|S|S|S|S|S|
 |18.3|S|S|S|S|S|S|
 |18.2|S|S|S|S|S|S|
 |18.1| |S|S|S|S|S|
@@ -51,9 +53,6 @@ A tabela a seguir lista os sistemas operacionais compatíveis com o Driver do OL
 <sup>1</sup> Compatível o Windows Server 2012 com [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Compatível com o Windows Server 2012 R2 com a [atualização de abril de 2014](https://go.microsoft.com/fwlink/?linkid=2073785) e [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>3</sup> Compatível com o Windows 8.1 com a [atualização de abril de 2014](https://go.microsoft.com/fwlink/?linkid=2073785) e [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
-
-> [!NOTE]  
-> Não há suporte para o uso da página de código UTF-8 no Windows ("usar Unicode UTF-8 para suporte a idiomas mundiais").
 
 ## <a name="ado-support-policies"></a>Políticas de suporte para ADO  
 

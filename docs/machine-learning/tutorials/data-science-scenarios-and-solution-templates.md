@@ -2,22 +2,22 @@
 title: Modelos de solução de ciência de dados
 description: Este artigo descreve modelos específicos do setor que demonstram as melhores práticas e fornecem os blocos de construção para ajudar você a implementar uma solução de machine learning.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d323178152e07726c818971c8c7e8ee297c20af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728640"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Cenários de ciência de dados e modelos de solução
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo descreve uma série de modelos de solução de machine learning do SQL Server. Esses modelos demonstram as práticas recomendadas e fornecem os blocos de construção para ajudar você a implementar uma solução de machine learning rapidamente. Cada modelo foi projetado para resolver um problema de ciência de dados específico, para um vertical ou um setor específico.
 As tarefas de cada modelo vão desde a preparação de dados, engenharia de recursos até o treinamento e a pontuação do modelo. 

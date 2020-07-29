@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dca6f9c58872060c4c57a850923eab3c81f89778
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f47e9c58921cbbf473295e62cc78f9bbd99f714
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895772"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112457"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,9 @@ Essa função retorna o nome de arquivo lógico para o número de identificaçã
 FILE_NAME ( file_id )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *file_id*  
 Número de identificação de arquivos cujo nome de arquivo será retornado por `FILE_NAME`. *file_id* tem um tipo de dados **int**.  
   
