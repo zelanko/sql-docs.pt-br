@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257150"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001916"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface de usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  
   
 Por padrão, o painel Detalhes do Pesquisador de Objetos está visível no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Se não for possível ver o Pesquisador de Objetos, no menu **Exibir** , clique em **Detalhes do Pesquisador de Objetos** ou pressione **F7**.  

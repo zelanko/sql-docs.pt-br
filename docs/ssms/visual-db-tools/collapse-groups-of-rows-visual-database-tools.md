@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 81c66fe885c7e700366cc12129734710094824d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d810785665e4ecb2e8c59ba3832687724e65c7b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255525"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007404"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Recolher grupos de linhas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Você pode criar um resultado de consulta no qual cada linha de resultado corresponda a um grupo inteiro de linhas dos dados originais. Existem várias coisas a serem levadas em consideração ao recolher linhas:  
   
 -   **Você pode eliminar linhas duplicadas** Algumas consultas podem criar conjuntos de resultados nos quais são exibidas várias linhas idênticas. Por exemplo, você pode criar um conjunto de resultados no qual cada linha contenha o nome da cidade e do estado de uma cidade que contenha um autor, mas se alguma cidade contiver vários autores, haverá várias linhas idênticas. O SQL resultante pode ter esta aparência:  

@@ -2,22 +2,22 @@
 title: Implantar código R em procedimentos armazenados
 description: Insira o código de linguagem R em um procedimento armazenado do SQL Server para disponibilizá-lo a qualquer aplicativo cliente que tenha acesso a um banco de dados SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486799"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242312"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Colocar o código R em operação usando procedimentos armazenados nos Serviços de Machine Learning do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Ao usar os recursos do R e do Python nos Serviços de Machine Learning do SQL Server, a abordagem mais comum para mover soluções para um ambiente de produção é inserir o código em procedimentos armazenados. Este artigo resume os principais pontos para o desenvolvedor do SQL considerar ao colocar o código R em operação usando o SQL Server.
 
@@ -46,7 +46,7 @@ A pontuação é uma tarefa importante que pode ser facilmente automatizada ou i
 
 + [Pontuação em tempo real, otimizada para lotes pequenos
 + Pontuação de linha única, para chamar de um aplicativo
-+ [Pontuação nativa](../sql-native-scoring.md), para previsão de lote rápida do SQL Server sem chamar R
++ [Pontuação nativa](../predictions/native-scoring-predict-transact-sql.md), para previsão de lote rápida do SQL Server sem chamar R
 
 Este tutorial fornece exemplos de pontuação usando um procedimento armazenado nos modos de lote e de linha única:
 

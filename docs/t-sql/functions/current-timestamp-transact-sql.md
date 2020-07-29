@@ -31,12 +31,12 @@ ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67deb9c3b2ee4c924b8d0cf173c7a8c9e9156ee6
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: 1777a033358b350c676fbb79aa81677f0907bbd0
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032578"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112129"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,9 @@ Veja [Tipos de dados e funções de data e hora](../../t-sql/functions/date-and-
 CURRENT_TIMESTAMP  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 Essa função não utiliza argumentos.
   
 ## <a name="return-type"></a>Tipo de retorno  

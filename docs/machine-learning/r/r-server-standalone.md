@@ -2,22 +2,22 @@
 title: O que é Machine Learning Server ou Microsoft R Server autônomo?
 description: Introdução com uma visão geral do Microsoft R Server e do Machine Learning Server autônomos na instalação do SQL Server
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/13/2019
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c745265e1668983a0420bce0d7af35aeecb6daa2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 08f9a001c828eb9f391b51f7d4257641ab99d551
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753422"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>O que é Machine Learning Server ou Microsoft R Server autônomo no SQL Server?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O SQL Server fornece suporte à instalação de um Microsoft R Server ou Machine Learning Server autônomo que é executado independentemente do SQL Server. Dependendo de sua versão do SQL Server, um servidor autônomo tem uma base de R de software livre e, possivelmente, Python, sobreposto com bibliotecas de alto desempenho da Microsoft que adicionam análise estatística e preditiva em escala. As bibliotecas também habilitam tarefas de aprendizado de máquina com script em R ou Python. 
 

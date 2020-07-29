@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: a4edde16397c865d0bc79e280e382857afde8714
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ae545c95c1863346c96d009140eb6709b4fcc4e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198463"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008306"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Criar diagramas de banco de dados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 O Designer de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual se está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  
   
 ![Diagrama de banco de dados mostrando as relações de tabela](../../ssms/visual-db-tools/media/dv3w7c1.gif "Diagrama de banco de dados mostrando as relações de tabela")  

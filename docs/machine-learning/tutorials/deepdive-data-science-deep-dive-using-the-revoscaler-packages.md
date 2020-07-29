@@ -2,22 +2,22 @@
 title: Tutorial de aprofundamento do RevoScaleR
 description: Nesta série de tutoriais, saiba como chamar funções do RevoScaleR usando a integração ao R do Machine Learning do SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 77cbd38bf873761496800cc4ad78d74eee414cf1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728567"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Usar funções RevoScaleR do R com os dados do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Neste tutorial de várias partes, você conhecerá uma variedade de funções do **RevoScaleR** para tarefas associadas à ciência de dados. Ao mesmo tempo, aprenderá a criar um contexto de computação remoto, mover dados entre contextos de computação local e remota e executar o código R em um SQL Server remoto. Também aprenderá a analisar e plotar dados localmente e no servidor remoto e a criar e implantar modelos.
 

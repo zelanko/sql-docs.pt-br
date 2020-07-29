@@ -25,12 +25,12 @@ ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06cf89e2cb596ee7ced369fcd1ae7076264f702f
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+ms.openlocfilehash: aac54d65864111a4b6685fc54b9bdc8fc654594d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465243"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110869"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "86465243"
 MONTH ( date )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *date*  
  É uma expressão que pode ser resolvida em um valor de **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. O argumento *date* pode ser uma expressão, uma expressão de coluna, uma variável definida pelo usuário ou um literal de cadeia de caracteres.  
   

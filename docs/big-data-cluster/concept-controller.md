@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3748e66b01b1b168d617625fe789ce895e79a1a8
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 5a294bf705e4caf4a79c0f67ce925187e24c0f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730703"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>O que o controlador em um cluster de Big Data do SQL Server?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 O controlador hospeda a lógica principal para implantar e gerenciar um cluster de Big Data. Ele cuida de todas as interações com o Kubernetes, instâncias do SQL Server que fazem parte do cluster e outros componentes, como o HDFS e o Spark.
 

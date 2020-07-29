@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 11617b30fef96d189f5d91f46c3fc272d86a153f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a0221259c40a171b02d4d7b6af1d8f65f329a8a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246053"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004117"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Atualizar diagramas de banco de dados de edições anteriores (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Os diagramas de bancos de dados criados em edições anteriores dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são atualizados automaticamente quando a diagramação do banco de dados for configurada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais etapas para configurar a diagramação, confira [Configurar o designer de diagramas de bancos de dados](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Para atualizar diagramas de banco de dados herdados  

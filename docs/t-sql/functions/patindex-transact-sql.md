@@ -22,12 +22,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c9599ddcade6c62a21245ef16cc89034df1524c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003807"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111423"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "86003807"
 PATINDEX ( '%pattern%' , expression )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *pattern*  
  É uma expressão de caractere que contém a sequência a ser localizada. Caracteres curinga podem ser usados; entretanto, o caractere % deve vir antes e seguir *pattern* (exceto quando você pesquisa o primeiro e último caracteres). *pattern* é uma expressão da categoria de tipo de dados de cadeia de caracteres. *pattern* é limitado a 8.000 caracteres.
 

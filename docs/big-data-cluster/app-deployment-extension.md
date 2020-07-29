@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6698e3beee1df32f6b88fcde2c034f60a4e56f21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73707148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728870"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Como usar o Visual Studio Code para implantar aplicativos nos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este artigo descreve como implantar aplicativos em um cluster de Big Data do SQL Server usando o Microsoft Visual Studio Code com a extensão Implantação de Aplicativos.
 

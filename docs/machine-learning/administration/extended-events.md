@@ -2,22 +2,22 @@
 title: Monitorar scripts com eventos estendidos
 description: Saiba como usar eventos estendidos para monitorar e solucionar problemas de operações relacionadas aos scripts externos de trabalhos nos Serviços de Machine Learning do SQL Server, no SQL Server Launchpad, no Python ou no R.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc3c95a4184cede01fb077ee232c02458c97cbf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118899"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110177"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Monitorar scripts do Python e do R com eventos estendidos nos Serviços de Machine Learning do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Saiba como usar eventos estendidos para monitorar e solucionar problemas de operações relacionadas aos scripts externos de trabalhos nos Serviços de Machine Learning do SQL Server, no SQL Server Launchpad, no Python ou no R.
 
@@ -135,7 +135,7 @@ O arquivo de configuração tem o seguinte formato:
 O exemplo a seguir mostra a definição de um rastreamento de eventos para o serviço do Launchpad:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -158,7 +158,7 @@ O exemplo a seguir mostra a definição de um rastreamento de eventos para o ser
 O exemplo a seguir mostra a definição de um rastreamento de eventos para o executável BXLServer.
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

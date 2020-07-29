@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 808fcde7587a68f45bda472ba51e03bddc0884af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1370fcb02e75a5ed9173c8111a79ce17eea8490
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245736"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007861"
 ---
 # <a name="options-environment---general-page"></a>Opções (Ambiente – página Geral)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use a caixa de diálogo **Opções** para configurar ações de inicialização do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], opções gerais de gerenciamento de janelas e outras configurações gerais. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** e clique em **Geral**.
 
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário
 
 **O botão Fechar afeta apenas a janela da ferramenta ativa**
 

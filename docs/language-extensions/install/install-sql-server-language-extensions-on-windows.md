@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d85376a8ebcd946950062ead62387897c47b537
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e32918309d2a51b6bf030d3287b4440d64ee34a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735103"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Instalar Extensões de Linguagem do SQL Server no Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Saiba como instalar o componente de Extensões de Linguagem no SQL Server executando o assistente de instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

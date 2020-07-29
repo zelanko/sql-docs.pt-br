@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 93d7520da2d011de53c0dc6d80eea9f131f9a470
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718504"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma plataforma que oferece opções de linguagens de desenvolvimento, tipos de dados, locais ou nuvens e sistemas operacionais, utilizando a capacidade do SQL Server no Linux, em contêineres do Docker baseados em Linux e no Windows. Este tópico resume o que há de novo para áreas de recurso específico e inclui links para obter detalhes adicionais. Para obter mais informações relacionadas ao SQL Server no Linux, consulte [Documentação do SQL Server no Linux](https://docs.microsoft.com/sql/linux/)
 
 [![Baixe do Centro de Avaliação](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Experimente:** [Baixe o SQL Server 2017 – versão de outubro de 2017](https://go.microsoft.com/fwlink/?LinkID=829477).

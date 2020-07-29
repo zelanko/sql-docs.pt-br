@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 66f60039e21ebefa1ee7eff36b9165f907b4689a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b9136e9f24447f57bc375a8ff9d8ec83ef17bd9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254876"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008192"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Painel SQL (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Você pode usar o painel SQL para criar sua própria instrução SQL, ou pode usar os painéis de Critérios e Diagrama para criar a instrução, caso em que as instruções SQL serão criadas no painel SQL. À medida que você cria a consulta, o painel SQL é atualizado e reformatado automaticamente para ser lido com facilidade.  
   
 Para abrir o painel SQL, primeiro abra o Designer de Consulta e Exibição (com um objeto de banco de dados selecionado no Gerenciador de Servidores, no menu **Banco de Dados** , clique em **Nova Consulta**). Em seguida, no menu **Designer de Consultas** , aponte para o **Painel** e clique em **SQL**.  
