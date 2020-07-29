@@ -1,6 +1,6 @@
 ---
 title: Proteção Estendida para Autenticação com o Reporting Services | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e4d8347b57c7dae62dc8261c6542badfb654bde
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c881376243e1e870c5d3aa6c8477eccfb4a17ac0
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635924"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263773"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
 
@@ -153,13 +153,7 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
 |ComputerNamePhysicalDnsHostname|O nome do host de DNS do computador local. Se o computador local for um nó de um cluster, será usado o nome de host do DNS e não o nome do servidor virtual de cluster.|  
 |ComputerNamePhysicalNetBIOS|O nome NetBIOS do computador local. Se o computador local for um nó de um cluster, será usado o nome do computador local e não do servidor virtual de cluster.|  
   
- À medida que SPNs são adicionados, uma entrada é adicionada ao log de rastreamento, que se assemelha ao seguinte:  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`  
-  
- Para obter mais informações, consulte [Registrar um Nome da Entidade de Serviço &#40;SPN&#41; para um Servidor de Relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) e [Sobre reservas e registro de URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+Para obter mais informações, consulte [Registrar um Nome da Entidade de Serviço &#40;SPN&#41; para um Servidor de Relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) e [Sobre reservas e registro de URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
 

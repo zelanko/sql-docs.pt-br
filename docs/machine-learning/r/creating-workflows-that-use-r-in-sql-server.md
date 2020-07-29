@@ -2,21 +2,21 @@
 title: Criar fluxos de trabalho SSIS e SSRS com R
 description: Cenários de integração que combinam os Serviços de Machine Learning do SQL Server e R Services, SSRS (SQL Server Reporting Services) e SSIS (SQL Server Integration Services).
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680366"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Criar fluxos de trabalho SSIS e SSRS com R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo explica como usar o script incorporado de R e Python usando as funcionalidades de ciência de dados e de linguagem dos Serviços de Machine Learning do SQL Server com dois recursos importantes do SQL Server: SSIS (SQL Server Integration Services) e SSRS (SQL Server Reporting Services). As bibliotecas de R e Python no SQL Server fornecem funções estatísticas e preditivas. O SSIS e o SSRS fornecem transformação e visualizações de ETL coordenadas, respectivamente. Este artigo explica como colocar todos esses recursos juntos neste padrão de fluxo de trabalho:
 

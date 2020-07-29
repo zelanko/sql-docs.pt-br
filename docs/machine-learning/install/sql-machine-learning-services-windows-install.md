@@ -2,23 +2,23 @@
 title: Instalar no Windows
 description: Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. Você pode usar Serviços do Machine Learning (no banco de dados) para executar scripts de Python e R no banco de dados.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 02/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b4de199e96497f32039614a39aabb4b1e8fe5d0
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8cbfbe14eba45d5bb82b0741fb2ccfa809001038
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151893"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885958"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalar Serviços de Machine Learning do SQL Server (R e Python) no Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. Você pode usar Serviços do Machine Learning (no banco de dados) para executar scripts de Python e R no banco de dados.
 

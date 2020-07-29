@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257145"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245539"
 ---
 # <a name="object-explorer"></a>Pesquisador de Objetos
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece recursos para gerenciar objetos em instâncias do [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Benefícios do Pesquisador de Objetos  
@@ -49,5 +49,4 @@ O Pesquisador de Objetos fornece uma interface de usuário hierárquica e gerenc
 |Descreve como conectar o Pesquisador de Objetos a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Descreve como gerenciar objetos representados como nós na hierarquia do Pesquisador de Objetos.|[Gerenciar objetos usando o Pesquisador de Objetos](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |Descreve o painel detalhes do Pesquisador de Objetos, uma exibição tabular de todos os objetos do servidor com uma interface de usuário para gerenciá-los.|[Painel de detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)|  
-|Descreve modos de executar relatórios personalizados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|Descreve modos de executar relatórios personalizados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|

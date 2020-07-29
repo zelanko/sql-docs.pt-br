@@ -23,12 +23,12 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56408c607d9e1ecf5b03fc3bd135d0eae706c9e3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 35b2dd7756d50d2f69fece370330c35e614e33ef
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007618"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112479"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,9 @@ Esta função retorna o número da ID (identificação) de um banco de dados esp
 DB_ID ( [ 'database_name' ] )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 '*database_name*'  
 O nome do banco de dados cujo número de identificação retornará `DB_ID`. Se a chamada para `DB_ID` omite *database_name*, `DB_ID` retorna a ID do banco de dados atual.
   

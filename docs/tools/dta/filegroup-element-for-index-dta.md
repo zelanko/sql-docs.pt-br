@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 0b3c331a11cb01807c6193147ca89f3989d26e0d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2609f47de8658bcde404c864f43faba2ef910a47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785926"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento de grupo de arquivos para índice (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Especifica o grupo de arquivos no qual o índice será criado para uma configuração especificada pelo usuário.  
   

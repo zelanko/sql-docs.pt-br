@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ce5cc43860b895a449e62ff9e618b187957651e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3ac112a73f9cbc94259ca6b582015cdb6b8aca0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251351"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002022"
 ---
 # <a name="add-objects"></a>Adicionar Objetos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Limita as caixas de diálogo de seleção de objeto aos tipos de objetos que você quer consultar.  
   
 ## <a name="options"></a>Opções  

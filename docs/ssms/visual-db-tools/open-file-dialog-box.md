@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251460"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999507"
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
   
 Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e escolha **Arquivo**. Essa caixa de diálogo também é exibida quando você abre arquivos de outros elementos, como a caixa de diálogo **Ferramentas Externas** . No menu **Arquivo** , selecione **Abrir**e escolha **Projeto/Solução** para abrir a caixa de diálogo **Abrir Projeto** semelhante.  

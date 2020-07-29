@@ -2,18 +2,19 @@
 title: Como contribuir para a documentação do SQL Server | Microsoft Docs
 ms.date: 08/13/2018
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286320"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247377"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
 
@@ -23,7 +24,7 @@ Qualquer pessoa pode contribuir para a documentação do SQL Server. Isso inclui
 
 Há dois fluxos de trabalho principais que você pode usar para contribuir:
 
-|||
+|Fluxo de trabalho|Descrição|
 |---|---|
 | [Editar no navegador](#githubui) | Bom para edições simples e breves de qualquer artigo. |
 | [Editar localmente com ferramentas](#tools) | Bom para edições mais complexas, edições que envolvem vários artigos e contribuições frequentes para docs.microsoft.com. |
@@ -93,7 +94,7 @@ Cada artigo do SQL Server contém um arquivo include **applies-to** após o tít
 Considere o seguinte exemplo de Markdown que efetua pull no arquivo include **appliesto-ss-asdb-asdw-pdw-md.md**.
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 Isso adiciona o seguinte texto à parte superior do artigo:

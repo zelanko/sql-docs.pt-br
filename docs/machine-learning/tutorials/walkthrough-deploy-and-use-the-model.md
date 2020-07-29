@@ -2,22 +2,22 @@
 title: 'Tutorial do R: Implantar modelo'
 description: Tutorial mostrando como implantar um modelo do R no SQL Server para análise no banco de dados.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781780"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implantar o modelo do R e usá-lo no SQL Server (passo a passo)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Nesta lição, saiba como implantar modelos do R em um ambiente de produção chamando um modelo treinado de um procedimento armazenado. Você pode invocar o procedimento armazenado no R ou em uma linguagem de programação de aplicativo que dá suporte ao [!INCLUDE[tsql](../../includes/tsql-md.md)] (como C#, Java, Python e assim por diante) e usar o modelo a fim de fazer previsões sobre novas observações.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 564f34822a6c674b20cb0fd54879ee44de16dd6b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a03934759aa32ca9c852eef0588d9cec17b0983
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732666"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110987"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Essa função retorna o comprimento definido de uma coluna em bytes.
 COL_LENGTH ( 'table' , 'column' )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 **'** *table* **'**  
 O nome da tabela cujas informações de comprimento de coluna queremos determinar. *table* é uma expressão do tipo **nvarchar**.
   

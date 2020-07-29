@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6d364316629f63071a6e818dabc479eba2567d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a20c9f8e3df230c2c7799fcbed740385fc324db0
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752265"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113396"
 ---
 # <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85752265"
 Key_ID ( 'Key_Name' )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *Key_Name* **'**  
  Nome de uma chave simétrica no banco de dados.  
   

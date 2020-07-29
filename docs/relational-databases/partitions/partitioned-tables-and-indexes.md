@@ -16,12 +16,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a039d898915c6e1c2290dfadad630d1907acbc9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e99e37091732143f3cf412904f15f567a229e1c1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787512"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243817"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -119,9 +119,8 @@ Desse modo, o otimizador de consulta pode processar a junção mais rapidamente,
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
-|**Tarefas**|**Tópico**|  
+|Tarefas|Tópico|  
+|-|-|   
 |Descreve como criar funções de partição e esquemas de partição, e depois aplicá-los a uma tabela e índice.|[Criar tabelas e índices particionados](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)|  
 |||  
   
