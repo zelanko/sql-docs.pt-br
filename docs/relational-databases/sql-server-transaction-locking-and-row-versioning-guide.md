@@ -19,12 +19,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053742"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87239276"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,14 +71,62 @@ Em um banco de dados, o gerenciamento incorreto de transações normalmente leva
   
  Você pode usar todas as instruções [!INCLUDE[tsql](../includes/tsql-md.md)] em uma transação explícita, com exceção das seguintes instruções:  
   
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP FULLTEXT INDEX|  
-|ALTER FULLTEXT CATALOG|CREATE FULLTEXT CATALOG|RECONFIGURE|  
-|ALTER FULLTEXT INDEX|CREATE FULLTEXT INDEX|RESTORE|  
-|BACKUP|DROP DATABASE|Procedimentos armazenados do sistema de texto completo|  
-|CREATE DATABASE|DROP FULLTEXT CATALOG|sp_dboption para definir opções de banco de dados ou usar um procedimento do sistema que modifique o banco de dados mestre dentro de transações explícitas ou implícitas.|  
-  
+:::row:::
+    :::column:::
+        ALTER DATABASE
+    :::column-end:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT INDEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        RECONFIGURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        RESTORE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BACKUP
+    :::column-end:::
+    :::column:::
+        DROP DATABASE
+    :::column-end:::
+    :::column:::
+        Procedimentos armazenados do sistema de texto completo
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        sp_dboption para definir opções de banco de dados ou usar um procedimento do sistema que modifique o banco de dados mestre dentro de transações explícitas ou implícitas.
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > UPDATE STATISTICS pode ser usada dentro de uma transação explícita. Mas, ela será confirmada independentemente da transação envolvida e não poderá ser revertida.  
   
@@ -90,13 +138,51 @@ Em um banco de dados, o gerenciamento incorreto de transações normalmente leva
   
  Após a configuração do modo de transação implícita em uma conexão, a instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] iniciará automaticamente a transação ao executar pela primeira vez cada uma destas instruções:  
   
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|CREATE|GRANT|SELECT|  
-|Delete (excluir)|INSERT|TRUNCATE TABLE|  
-|DROP|OPEN|UPDATE|  
-  
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Delete (excluir)
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+
 -  **Transações no escopo do Lote**  
    Aplicável apenas a MARS (Conjuntos de Resultados Ativos Múltiplos), a transação [!INCLUDE[tsql](../includes/tsql-md.md)] explícita ou implícita iniciada em uma sessão MARS se torna uma transação de escopo de lote. A transação de escopo de lote que não é confirmada ou revertida quando um lote é concluído, será revertida automaticamente pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

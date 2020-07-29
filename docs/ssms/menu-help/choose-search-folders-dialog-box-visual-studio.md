@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253295"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85982742"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Permite agrupar, salvar e revisar seus próprios conjuntos nomeados de pastas de pesquisa e especificar a ordem na qual eles serão pesquisados. Para exibir essa caixa de diálogo, selecione o botão **Procurar (...)** , ao lado da lista suspensa **Examinar** , na janela Localizar em Arquivos ou Substituir em Arquivos, Localizar e Substituir.  
   
 Adicione pastas à lista **Pastas selecionadas** , digite um nome para esse conjunto de pastas no campo **Conjunto de pastas** e clique em **Aplicar** para salvá-lo. Esse escopo da pesquisa personalizado poderá, assim, ser escolhido por nome nas listas suspensas **Examinar** em **Localizar em Arquivos** e **Substituir em Arquivos**. Para remover um conjunto de pastas personalizado das listas **Examinar** , selecione seu nome no campo **Conjunto de pastas** e clique em **Excluir**.  

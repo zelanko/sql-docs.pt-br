@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d9b62de40a27cf7ebe6422f7ce64124cde0273ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 038ce655c054a52388efbe6853c28c95edb57895
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242473"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237647"
 ---
 # <a name="delete-jobs"></a>excluir trabalhos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
@@ -43,9 +42,8 @@ Membros da função de servidor fixa **sysadmin** podem executar **sp_delete_job
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
-|**Descrição**|**Tópico**|  
+|Descrição|Tópico|  
+|-|-|   
 |Descreve como excluir um ou mais trabalhos do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Excluir um ou mais trabalhos](../../ssms/agent/delete-one-or-more-jobs.md)|  
 |Descreve como configurar o [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para excluir trabalhos automaticamente quando eles obtiverem êxito, falharem ou forem concluídos.|[Automatically Delete a Job](../../ssms/agent/automatically-delete-a-job.md)|  
   

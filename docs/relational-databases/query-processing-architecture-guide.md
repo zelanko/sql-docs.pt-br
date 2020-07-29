@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726148"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247596"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 A alteração de uma das seguintes opções SET para determinada execução afetará a capacidade de reutilizar planos, pois o [!INCLUDE[ssde_md](../includes/ssde_md.md)] executa a [dobragem constante](#ConstantFolding), e essas opções afetam os resultados dessas expressões:
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>Armazenar vários planos em cache para a mesma consulta 
 As consultas e os planos de execução são exclusivamente identificáveis no [!INCLUDE[ssde_md](../includes/ssde_md.md)], de maneira semelhante a uma impressão digital:
@@ -671,16 +719,70 @@ A recompilação em nível de instrução beneficia o desempenho porque, na maio
 O evento estendido do `sql_statement_recompile` (xEvent) relata recompilações no nível da instrução. Esse xEvent ocorre quando uma recompilação no nível de instrução é exigida por qualquer tipo de lote. Isso inclui procedimentos armazenados, disparadores, lotes ad hoc e consultas. Lotes podem ser enviados por meio de diversas interfaces, incluindo sp_executesql, SQL dinâmico e os métodos Prepare ou Execute.
 A coluna `recompile_cause` do xEvent `sql_statement_recompile` contém um código de inteiro que indica o motivo da recompilação. A tabela a seguir contém os possíveis motivos:
 
-|||
-|----|----|  
-|Esquema alterado|Estatísticas alteradas|  
-|Compilação adiada|Alteração da opção SET|  
-|Alteração da tabela temporária|Conjunto de linhas remoto alterado|  
-|Alteração da permissão `FOR BROWSE`|Ambiente de notificação de consulta alterado|  
-|Alteração da exibição particionada|Opções de cursor alteradas|  
-|`OPTION (RECOMPILE)` solicitado|Liberação do plano parametrizado|  
-|Alteração do plano que afeta a versão do banco de dados|Alteração da política de imposição do plano do Repositório de Consultas|  
-|Falha da imposição do plano do Repositório de Consultas|Plano do Repositório de Consultas ausente|
+:::row:::
+    :::column:::
+        Esquema alterado
+    :::column-end:::
+    :::column:::
+        Estatísticas alteradas
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Compilação adiada
+    :::column-end:::
+    :::column:::
+        Alteração da opção SET
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Alteração da tabela temporária
+    :::column-end:::
+    :::column:::
+        Conjunto de linhas remoto alterado
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Alteração da permissão `FOR BROWSE`
+    :::column-end:::
+    :::column:::
+        Ambiente de notificação de consulta alterado
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Alteração da exibição particionada
+    :::column-end:::
+    :::column:::
+        Opções de cursor alteradas
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` solicitado
+    :::column-end:::
+    :::column:::
+        Liberação do plano parametrizado
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Alteração do plano que afeta a versão do banco de dados
+    :::column-end:::
+    :::column:::
+        Alteração da política de imposição do plano do Repositório de Consultas
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Falha da imposição do plano do Repositório de Consultas
+    :::column-end:::
+    :::column:::
+        Plano do Repositório de Consultas ausente
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Em versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em que o xEvents não está disponível, o evento de rastreamento [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) pode ser usado para a mesma finalidade do relatório de recompilações no nível de instrução.

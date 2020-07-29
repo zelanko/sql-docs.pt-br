@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 705e5f381d8df82aff6f662b97d9742586ab498a
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 5e1d5034c24ab7378a48d573a308f5d965525ced
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302017"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248707"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -126,7 +126,7 @@ ALTER AUTHORIZATION ON
 ## <a name="arguments"></a>Argumentos
 \<class_type> É a classe protegível da entidade para a qual o proprietário está sendo alterado. OBJECT é o padrão.    
     
-|||    
+|Classe|Produto|    
 |-|-|    
 |OBJECT|**APLICA-SE A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], SQL Data Warehouse do Azure, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |ASSEMBLY|**APLICA-SE A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    

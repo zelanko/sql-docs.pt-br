@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245760"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001620"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Opções (página Designer – Planos de manutenção)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use a caixa de diálogo **Opções** para determinar o comportamento padrão do designer quando novas formas forem adicionadas à superfície de design. No menu **Ferramentas** , clique em **Opções**, expanda **Designers**e selecione **Planos de Manutenção**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
 **Conecte uma nova forma à forma selecionada por padrão**  
 Quando essa caixa de seleção está selecionada, novas formas conectam-se automaticamente a outras formas ao serem adicionadas à superfície de design. Quando essa caixa de seleção está desmarcada, novas formas não são conectadas ao serem adicionadas. Selecionar essa caixa de seleção habilita as seguintes caixas.  
   

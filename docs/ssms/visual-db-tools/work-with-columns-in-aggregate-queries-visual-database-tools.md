@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 427f367eac38f2c5899f06c022e614bde80f37fb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246240"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002608"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabalhar com colunas em consultas de agregação (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Quando você cria consultas de agregação, o [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) faz determinadas suposições para poder criar uma consulta válida. Por exemplo, se você estiver criando uma consulta de agregação e marcar uma coluna de dados para saída, o Designer de Consulta e Exibição fará com que a coluna automaticamente faça parte da cláusula GROUP BY para que você não tente exibir inadvertidamente o conteúdo de uma linha individual em um resumo.  
   
 ## <a name="using-group-by"></a>Usando Agrupar por  

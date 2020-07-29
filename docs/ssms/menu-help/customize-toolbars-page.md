@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52bd2e24ec2819d18f965fa7cd08eba8b4c351f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242185"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001666"
 ---
 # <a name="customize-toolbars-page"></a>Personalizar (página Barras de Ferramentas)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A guia **Barras de Ferramentas** permite que você crie, renomeie, remova e redefina as barras de ferramentas. Você pode acessar essa guia clicando em **Personalizar** , no menu **Ferramentas** , e clicando em **Barras de Ferramentas**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
 **Barras de Ferramentas**  
 Exibe as barras de ferramentas internas e qualquer outra barra de ferramentas que você criar. Quando uma barra de ferramentas é exibida, um sinal de verificação aparece à sua esquerda nessa caixa de diálogo.  
   

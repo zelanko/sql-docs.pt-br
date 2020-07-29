@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d4c1d934c8b72d490f88b1aa097bc635d631e873
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d214adb3915ab7d4df137c23cc7bcea31bb9b51
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85709851"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112201"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85709851"
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *Cert_ID*  
  É a ID de um certificado no banco de dados. *Cert_ID* é **int**.  
   

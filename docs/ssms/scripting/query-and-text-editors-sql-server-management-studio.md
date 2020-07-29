@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: afd2bc9b3477ad7b3d4448c83cdf20453794a79c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a7d8a708c33b2d44c101afce2e62113e599b5b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261685"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000899"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas e de texto (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Você pode usar um dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar e testar interativamente um script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou para editar um arquivo de texto XML ou sem-formatação. Cada editor tem o suporte de um serviço específico de linguagem que colore palavras-chave e verifica a sintaxe e os erros no uso. O Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] inclui um depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] que você pode usar para ajudar a corrigir problemas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

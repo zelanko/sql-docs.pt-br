@@ -17,16 +17,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ac4584f715da631c13a56fa531334e9da20f6c55
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242838"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243549"
 ---
 # <a name="solution-explorer"></a>Gerenciador de Soluções
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 O painel Gerenciador de Soluções no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece contêineres chamados projetos para gerenciar itens, como scripts de banco de dados, consultas, conexões de dados e arquivos. Um ou mais projetos relacionados um ao outro podem ser combinados em um contêiner chamado solução.  
   
 Uma solução inclui um ou mais projetos, mais arquivos e metadados que ajudam a definir a solução como um todo. Um projeto é um conjunto de arquivos mais metadados relacionados, como informações de conexão. Soluções e projetos contêm itens que representam scripts, consultas, informações de conexão e arquivos necessários para criar sua solução de banco de dados.  
@@ -52,9 +52,8 @@ Os itens contidos em projetos dependem do tipo de projeto e se você está usand
 ## <a name="related-tasks"></a>Related Tasks  
 Use os tópicos a seguir para começar a usar as Soluções do SQL Server:  
   
-|||  
-|-|-|  
-|**Descrição**|**Tópico**|  
+|Descrição|Tópico|  
+|-|-|    
 |Descreve como coletar um ou mais projetos em uma solução.|[Soluções &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Descreve como criar um projeto e adicionar itens como scripts e conexões.|[Projetos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Fornece informações sobre os arquivos usados pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar soluções e arquivos.|[Arquivos que gerenciam soluções e projetos](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

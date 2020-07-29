@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 329b354b5b5e3fe66637962d2808742083c4cfac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da7bd5ba3424699d2cf523a60a1cff855ccdd6e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895756"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111554"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ Essa função retorna o nome do grupo de arquivos para o número de identificaç
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *filegroup_id*  
 
 O número de ID do grupo de arquivos cujo nome de grupo de arquivos será retornado por `FILEGROUP_NAME`. *filegroup_id* tem um tipo de dados **smallint**.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d8bd652a821b6c5dad42238a1eae6ad97c90a1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3550bd04341d9975870aa18483f2901e845795e0
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627517"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   O serviço Web do servidor de relatório usa o sistema de mensagens SOAP (Simple Object Access Protocol) para enviar comandos baseados em texto por meio de uma rede. Esses comandos assumem a forma de texto XML que é enviado por meio da Web usando HTTP. Usando o SOAP como seu protocolo de comunicação, o serviço Web do servidor de relatório permite aplicativos e componentes para trocar dados com o servidor de relatório usando uma infraestrutura largamente aceita e aberta. O padrão de SOAP é definido em www.w3.org/TR/SOAP.  

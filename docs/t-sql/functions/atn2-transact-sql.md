@@ -20,12 +20,12 @@ ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28ba622527afb105cf63625de307f1b5f0ec43b1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 796184257e42db7545744483eba9c47a0f03fa41
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002255"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110999"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ Retorna o ângulo, em radianos, entre o eixo x positivo e o raio a partir da ori
 ATN2 ( float_expression , float_expression )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *float_expression*  
 Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) do tipo de dados **float**.
   

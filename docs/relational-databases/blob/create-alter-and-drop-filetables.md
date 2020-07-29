@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5356b49095c1a2601425f3b58c877117a2b45306
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768019"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246605"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Criar, alterar e remover FileTables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -160,9 +160,8 @@ GO
  **Índices que são criados quando você cria uma nova FileTable**  
  Quando você cria uma nova FileTable, os seguintes índices definidos pelo sistema também são criados:  
   
-|||  
+|Colunas|Tipo de índice|  
 |-|-|  
-|**Colunas**|**Tipo de índice**|  
 |[path_locator] ASC|Chave primária, não clusterizado|  
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|Exclusivo, não clusterizado|  
 |[stream_id] ASC|Exclusivo, não clusterizado|  

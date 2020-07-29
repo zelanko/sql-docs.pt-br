@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1f046767dba460063a71769091f010840848c2e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28e5524c0d2359f3edcbe003be366618df00217b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011536"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112081"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
@@ -35,7 +35,9 @@ Essa função retorna uma cadeia de caracteres resultante de concatenação ou j
 CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 ```
 
-## <a name="arguments"></a>Argumentos   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 separator  
 Uma expressão de qualquer tipo de caractere (`char`, `nchar`, `nvarchar` ou `varchar`).
 

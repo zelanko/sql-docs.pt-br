@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d499666f51605e7df90332174c82681f8a386017
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71e5db112d4949bc38f777a514754ef55e856308
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257225"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001941"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gerenciar objetos usando o Pesquisador de Objetos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Você pode usar o Pesquisador de Objetos para gerenciar objetos como bancos de dados, tabelas e procedimentos armazenados.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Exibindo objetos no Pesquisador de Objetos  

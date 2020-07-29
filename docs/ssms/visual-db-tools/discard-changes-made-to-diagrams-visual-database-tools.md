@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 90361fc9910bc556b69d008bfde92fe499097ac1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45ae54e4f921478869c9e360d3daeb2660730075
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251821"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999693"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Descartar alterações feitas em diagramas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Você pode descartar alterações do diagrama de banco de dados que não desejar salvar no banco de dados.  
   
 ### <a name="to-discard-pending-modifications"></a>Para descartar modificações pendentes  

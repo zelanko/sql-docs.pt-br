@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f492f130da8e30493e1e1a446a951f90b1312464
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246556"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001723"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Executar instruções em vários servidores simultaneamente
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Este tópico descreve como consultar vários servidores ao mesmo tempo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], criando um grupo de servidores locais ou um Servidor de Gerenciamento Central e um ou mais grupos de servidor, e um ou mais servidores registrados dentro dos grupos e, em seguida, consultar o grupo completo. 
 

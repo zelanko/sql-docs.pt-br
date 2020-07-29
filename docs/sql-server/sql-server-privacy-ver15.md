@@ -2,6 +2,7 @@
 title: Suplemento de privacidade do SQL Server 2019| Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -10,16 +11,16 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71150289"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914670"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Suplemento de privacidade do SQL Server 2019
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Este artigo resume os recursos habilitados para Internet que podem coletar e enviar os dados anônimos de diagnóstico e uso de recursos à Microsoft. O SQL Server pode coletar informações padrão do computador e dados de uso e desempenho que podem ser transmitidas à Microsoft e analisadas com a finalidade de aprimorar a qualidade, a segurança e a confiabilidade do produto. Este artigo funciona como um adendo à [Política de privacidade geral da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). A classificação de dados neste artigo aplica-se somente às versões do produto SQL Server local. Ela não se aplica aos itens:
 

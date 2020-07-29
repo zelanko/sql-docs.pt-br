@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6926c31163108da988338920ce77389e9300a0aa
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151597"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918347"
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   O aplicativo **sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas de uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
   
  ![Ícone do Link do tópico](../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") Para obter as convenções de sintaxe, confira [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../tools/command-prompt-utility-reference-database-engine.md).  

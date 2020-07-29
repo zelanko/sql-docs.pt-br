@@ -2,7 +2,7 @@
 title: Funcionalidades descontinuadas do mecanismo de banco de dados
 description: Saiba quais recursos e funcionalidades do mecanismo de banco de dados foram descontinuados no SQL Server 2019 (15.x), SQL Server 2016 (13.x) e versões anteriores.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2137021617ecf15375be480021ca54b50627464d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0aada5da9da6b0eadb1c190690f98c4a3d3cb3b8
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920256"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110243"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ Para obter as opções de configuração atuais, confira [ALTER DATABASE SCOPED 
 
 - O subsistema do ActiveX foi descontinuado. Use a linha de comando ou scripts do PowerShell.
 
-- Parâmetros de inicialização **-h** e **-g**. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Parâmetros de inicialização **-h** e **-g**. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
 
 - A criptografia do protocolo SSL foi descontinuada. Use o protocolo TLS em vez disso. Para obter mais informações, confira [Habilitar conexões para o Mecanismo de Banco de Dados](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## <a name="previous-versions"></a>Versões anteriores
 
-- [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ### <a name="see-also"></a>Confira também
 

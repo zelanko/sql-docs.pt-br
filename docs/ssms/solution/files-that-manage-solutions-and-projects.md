@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac5014ed3567af77b0389e5262925f6e7ae6de12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bec1f5859162d2438d2db137ef0637fc4900b32b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251903"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000839"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Arquivos que gerenciam soluções e projetos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  Este tópico descreve os tipos de arquivos específicos para o [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por padrão, todas as soluções e seus projetos são criados em \Meus Documentos\SQL Server Management Studio Projects.  
 
 

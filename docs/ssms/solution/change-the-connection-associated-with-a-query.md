@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc8164e2c47c1224610183274c460ede9df00ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49801a4ac617de832b5a20e3803daa364a0ad614
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251972"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003288"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Alterar a conexão associada a uma consulta
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Uma consulta pode ser executada em vários servidores ou bancos de dados diferentes alterando a conexão usada pela consulta.  
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>Para alterar a conexão associada a uma consulta  

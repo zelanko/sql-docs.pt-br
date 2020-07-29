@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0c4cc26fddff13e388b74593aa9d8f9331359f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f04595d222f037e875e85b1cb079cef435e1404
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245675"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001545"
 ---
 # <a name="replace-template-parameters"></a>Substituir Parâmetros do Modelo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Modelos contêm parâmetros que podem ser substituídos por valores específicos de implementação cada vez que o modelo é usado. Depois de abrir um modelo em um editor de código, você pode substituir os parâmetros pelos valores relevantes à sua implementação.  
   
 ## <a name="before-you-begin"></a>Antes de começar  

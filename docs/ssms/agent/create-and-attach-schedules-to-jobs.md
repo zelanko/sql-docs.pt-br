@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e515bcf14eff0ce4d4b6c5913803ee8e322365d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aa160cf83c8942ef0b5ed2b5b0f5c06add17d6a4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252137"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246235"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
@@ -90,9 +89,8 @@ Defina a condição de ociosidade de CPU na forma de uma porcentagem abaixo da q
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|Descrição|Tópico|  
 |-|-|  
-|**Descrição**|**Tópico**|  
 |Descreve como criar uma agenda para um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |Descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Agendar um trabalho](../../ssms/agent/schedule-a-job.md)|  
 |Explica como definir a condição de ociosidade de CPU para seu servidor.|[Definir o momento e a duração de ociosidade da CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

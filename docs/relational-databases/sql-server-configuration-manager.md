@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9a66712c7547a5fce852c23cdccd57465d794f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 429c56bed55931e4e30be6b2730638eb93113bd8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918804"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245593"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86918804"
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é uma ferramenta para gerenciar os serviços associados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], configurar os protocolos de rede usados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e para gerenciar a configuração de conectividade de rede de computadores cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é instalado com a instalação do SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager é um snap-in do [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponível no menu Iniciar ou pode ser adicionado a qualquer outra exibição do Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] O Console de Gerenciamento (**mmc.exe**) usa o arquivo **SQLServerManager\<version>.msc** (como **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir o Configuration Manager. Você precisará da versão correspondente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager para gerenciar essa versão específica do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Estes são os caminhos para as últimas cinco versões quando o Windows é instalado na unidade C.  
   
-|||  
+|Versão|Caminho|  
 |-|-|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019|C:\Windows\SysWOW64\SQLServerManager15.msc| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  

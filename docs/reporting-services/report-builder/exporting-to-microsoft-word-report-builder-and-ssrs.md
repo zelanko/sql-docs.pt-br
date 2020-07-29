@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342874"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972124"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -151,7 +151,7 @@ ms.locfileid: "80342874"
 > [!IMPORTANT]  
 >  A extensão de renderização do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) foi preterida. Para obter mais informações, consulte [Recursos preteridos no SQL Server Reporting Services no SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- O renderizador do Word é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 e com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. Para obter mais informações, consulte [Pacote de Compatibilidade do Microsoft Office para Word, Excel e PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
+ O renderizador do Word é compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 e com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. Para obter mais informações, consulte [Pacote de Compatibilidade do Microsoft Office para Word, Excel e PowerPoint](https://www.microsoft.com/download/office.aspx).
   
  A versão anterior da extensão de renderização do Word, compatível com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é renomeada como Word 2003. Apenas a extensão de renderização do Word está disponível por padrão. Você deve atualizar os arquivos de configuração do Reporting Services para disponibilizar a extensão de renderização do Word 2003. O tipo de conteúdo dos arquivos gerados pelo renderizador do Word 2003 é **application/vnd.ms-word** e a extensão de nome de arquivo dos arquivos é .doc.  
   

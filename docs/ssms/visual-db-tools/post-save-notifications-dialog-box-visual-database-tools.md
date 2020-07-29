@@ -13,17 +13,16 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 71b15d02b5f334b7a3c50cf3c16b939eba3c1f96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9999de74cdff0b977fd55d74a2229193ca1d5cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255394"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003191"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Caixa de diálogo Notificações Pós-salvamento (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Essa caixa de diálogo aparece quando ocorrem erros durante tentativa de salvar alterações em tabela. Essa caixa de diálogo lista os objetos salvos com êxito no banco de dados, os objetos que não foram salvos e os erros encontrados.  
   
 ## <a name="options"></a>Opções  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5909e4812ca554ffdd7b7586af652382358170fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8528b0ed43aeafa95f7d196b1c88c5aad3330aaf
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752394"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111976"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85752394"
 FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *msg_number*  
  É a ID da mensagem armazenada em sys.messages. Se *msg_number* for <= 13.000 ou se a mensagem não existir em sys.messages, NULL será retornado.  
   

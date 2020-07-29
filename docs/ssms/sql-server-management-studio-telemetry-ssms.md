@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e9ecc82ab14bf73ab52219301ca5843673b3ba4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245698"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001587"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Auditoria local para coleta de dados de diagnóstico e uso do SSMS
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 O SSMS (SQL Server Management Studio) contém recursos habilitados para Internet que podem coletar e enviar os dados anônimos de diagnóstico e uso de recursos à Microsoft. O SSMS pode coletar informações padrão do computador e informações de uso e desempenho que podem ser transmitidas à Microsoft e analisadas com a finalidade de aprimorar a qualidade, a segurança e a confiabilidade do SSMS. Não coletamos dados como seu nome, endereço ou outras informações de contato. Para obter detalhes, confira a [Declaração de privacidade da Microsoft](https://privacy.microsoft.com/privacystatement) e [Suplemento de Privacidade do SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 

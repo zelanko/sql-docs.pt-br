@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b138877b9afd07f85b90cb5ae2f7197790475c79
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448384"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942308"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparar dados para relatórios móveis do Reporting Services
   
@@ -23,14 +23,15 @@ ms.locfileid: "79448384"
 ## <a name="date-and-time-formats"></a>Formatos de data e hora 
 Ao lidar com intervalos de data e hora para uso em um relatório móvel, particularmente com TimeNavigator, é importante formatar adequadamente a coluna data/hora para que o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] possa identificá-la como tal. Aqui estão exemplos de formatos de data/hora válidos:  
   
-    05/01/2009    
-    2009-05-01    
-    05/01/2009 14:57:32.8    
-    2009-05-01 14:57:32.8    
-    2009-05-01T14:57:32.8375298-04:00    
-    5/01/2008 14:57:32.80 -07:00    
-    1 May 2008 2:57:32.8 PM    
-    Fri, 15 May 2009 20:10:57 GMT    
+`05/01/2009`    
+`2009-05-01`    
+`05/01/2009 14:57:32.8`    
+`2009-05-01 14:57:32.8`    
+`2009-05-01T14:57:32.8375298-04:00`    
+`5/01/2008 14:57:32.80 -07:00`    
+`1 May 2008 2:57:32.8 PM`    
+`Fri, 15 May 2009 20:10:57 GMT`    
+
   
 Conjuntos de dados com base em data e hora podem, na maioria dos casos, ser descritos por um ou mais intervalos de data/hora, como por hora, diariamente, mensalmente, trimestralmente e anualmente. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] pode combinar várias tabelas de granularidades diferentes e exibi-las em um único relatório móvel. No entanto, lembre-se dos intervalos relevantes dos conjuntos de dados originais, já que eles podem ajudar a decidir quais opções de filtro de data/hora apresentar ao usuário no relatório móvel final.  
 
