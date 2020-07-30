@@ -13,31 +13,30 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 564385c15d9877454d30892f9cce54fbca6cf802
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029128"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396385"
 ---
 # <a name="generating-reports-sybasetosql"></a>Geração de relatórios (SybaseToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  
   
 Use o procedimento a seguir para gerar relatórios:  
   
-1.  Especifique o parâmetro **Write-summary-report-to** . O relatório relacionado é armazenado como o nome do arquivo (se especificado) ou na pasta que você especificar. O nome do arquivo é predefinido pelo sistema conforme mencionado na tabela abaixo, ** &lt;em&gt; que n** é o número de arquivo exclusivo que é incrementado com um dígito com cada execução do mesmo comando.  
+1.  Especifique o parâmetro **Write-summary-report-to** . O relatório relacionado é armazenado como o nome do arquivo (se especificado) ou na pasta que você especificar. O nome do arquivo é predefinido pelo sistema conforme mencionado na tabela abaixo, em que ** &lt; n &gt; ** é o número de arquivo exclusivo que é incrementado com um dígito com cada execução do mesmo comando.  
   
     Os comandos vis-to-vis de relatórios são:  
   
-    ||||  
+    |SL. Não.|Comando|Título do relatório|  
     |-|-|-|  
-    |**SL. no.**|**Comando**|**Título do relatório**|  
-    |1|gerar-avaliação-relatório|AssessmentReport&lt;n&gt;. XML|  
-    |2|converter esquema|SchemaConversionReport&lt;n&gt;. XML|  
-    |3|migrar-dados|DataMigrationReport&lt;n&gt;. XML|  
-    |4|instrução Convert-SQL-|ConvertSQLReport&lt;n&gt;. XML|  
-    |5|sincronizar destino|TargetSynchronizationReport&lt;n&gt;. XML|  
-    |6|atualizar-do-banco de dados|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |1|gerar-avaliação-relatório|AssessmentReport &lt; n &gt; . XML|  
+    |2|converter esquema|SchemaConversionReport &lt; n &gt; . XML|  
+    |3|migrar-dados|DataMigrationReport &lt; n &gt; . XML|  
+    |4|instrução Convert-SQL-|ConvertSQLReport &lt; n &gt; . XML|  
+    |5|sincronizar destino|TargetSynchronizationReport &lt; n &gt; . XML|  
+    |6|atualizar-do-banco de dados|SourceDBRefreshReport &lt; n &gt; . XML|  
   
     > [!IMPORTANT]  
     > Um relatório de saída é diferente do relatório de avaliação. O primeiro é um relatório sobre o desempenho de um comando executado, e o último é um relatório XML para consumo programático.  
@@ -46,9 +45,8 @@ Use o procedimento a seguir para gerar relatórios:
   
 2.  Indique a extensão dos detalhes que você deseja no relatório de saída usando as configurações de detalhamento do relatório:  
   
-    ||||  
+    |SL. Não.|Comando e parâmetro|Descrição da saída|  
     |-|-|-|  
-    |**SL. no.**|**Comando e parâmetro**|**Descrição da saída**|  
     |1|verbose = "false"|Gera um relatório resumido da atividade.|  
     |2|verbose = "verdadeiro"|Gera um relatório de status resumido e detalhado para cada atividade.|  
   
@@ -57,9 +55,8 @@ Use o procedimento a seguir para gerar relatórios:
   
 3.  Indique a extensão dos detalhes que você deseja nos relatórios de erro usando as configurações de relatório de erros:  
   
-    ||||  
+    |SL. Não.|Comando e parâmetro|Descrição da saída|  
     |-|-|-|  
-    |**SL. no.**|**Comando e parâmetro**|**Descrição da saída**|  
     |1|relatório-erros = "falso"|Não há detalhes sobre mensagens de erro/aviso/informação.|  
     |2|relatório-erros = "verdadeiro"|Mensagens de erro/aviso/informações detalhadas.|  
   
@@ -87,7 +84,7 @@ Use o procedimento a seguir para gerar relatórios:
 ```  
   
 ### <a name="synchronize-target"></a>sincronizar-destino:  
-O comando **Synchronize-Target** tem o parâmetro **Report-Errors-to** , que especifica o local do relatório de erros para a operação de sincronização. Em seguida, um arquivo por **nome&lt;TargetSynchronizationReport&gt;n. O XML** é criado no local especificado, em ** &lt;que&gt; n** é o número de arquivo exclusivo que é incrementado com um dígito com cada execução do mesmo comando.  
+O comando **Synchronize-Target** tem o parâmetro **Report-Errors-to** , que especifica o local do relatório de erros para a operação de sincronização. Em seguida, um arquivo por nome **TargetSynchronizationReport &lt; n &gt; . O XML** é criado no local especificado, em que ** &lt; n &gt; ** é o número de arquivo exclusivo que é incrementado com um dígito com cada execução do mesmo comando.  
   
 **Observação:** Se o caminho da pasta for fornecido, o parâmetro ' Report-Errors-to ' se tornará um atributo opcional para o comando ' Synchronize-target '.  
   
@@ -115,7 +112,7 @@ O comando **Synchronize-Target** tem o parâmetro **Report-Errors-to** , que esp
 -   script de falha  
   
 ### <a name="refresh-from-database"></a>atualizar-do-banco de dados:  
-O comando **Atualizar-de-banco de dados** tem o parâmetro **Report-Errors-to** , que especifica o local do relatório de erros para a operação de atualização. Em seguida, um arquivo por **nome&lt;SourceDBRefreshReport&gt;n. O XML** é criado no local especificado, em ** &lt;que&gt; n** é o número de arquivo exclusivo que é incrementado com um dígito com cada execução do mesmo comando.  
+O comando **Atualizar-de-banco de dados** tem o parâmetro **Report-Errors-to** , que especifica o local do relatório de erros para a operação de atualização. Em seguida, um arquivo por nome **SourceDBRefreshReport &lt; n &gt; . O XML** é criado no local especificado, em que ** &lt; n &gt; ** é o número de arquivo exclusivo que é incrementado com um dígito com cada execução do mesmo comando.  
   
 **Observação:** Se o caminho da pasta for fornecido, o parâmetro ' Report-Errors-to ' se tornará um atributo opcional para o comando ' Synchronize-target '.  
   

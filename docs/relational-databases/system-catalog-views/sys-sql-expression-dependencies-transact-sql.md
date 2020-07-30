@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833948"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396665"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Contém uma linha para cada dependência por nome em uma entidade definida pelo usuário no banco de dados atual. Isso inclui dependências entre funções escalares definidas pelo usuário e compiladas nativamente, e outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] módulos. Uma dependência entre duas entidades é criada quando uma entidade, chamada de *entidade referenciada*, é exibida pelo nome em uma expressão SQL persistente de outra entidade, chamada de *entidade de referência*. Por exemplo, quando uma tabela for referenciada na definição de uma exibição, a exibição, como a entidade de referência, dependerá da tabela, a entidade referenciada. Se a tabela for descartada, a exibição será inutilizável.  
   
@@ -72,18 +72,18 @@ ms.locfileid: "82833948"
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
-|Tabela|Sim*|Yes|  
-|Visualizar|Yes|Yes|  
-|Índice filtrado|Sim**|No|  
-|Estatísticas filtradas|Sim**|No|  
-|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Yes|Yes|  
+|Tabela|Sim*|Sim|  
+|Visualizar|Sim|Sim|  
+|Índice filtrado|Sim**|Não|  
+|Estatísticas filtradas|Sim**|Não|  
+|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sim|Sim|  
 |procedimento armazenado CLR|Não|Sim|  
-|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Yes|Yes|  
+|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
 |Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|No|Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
+|Gatilho CLR (DML e DDL)|Não|Não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
 |Procedimentos armazenados estendidos|Não|Sim|  
 |Fila|Não|Sim|  
 |Sinônimo|Não|Sim|  

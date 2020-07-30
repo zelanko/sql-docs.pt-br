@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 01aa8586e97677ed8d1071ec4dc2cb65a6aa0436
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086188"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396413"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Trabalhando com o console do SSMA para Oracle (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) versão para DB2 agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console, o SSMA permite a interface do nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -23,16 +23,15 @@ Esta seção explica o procedimento para migrar o banco de dados DB2 usando o ap
   
 Os tópicos abordados nesta seção incluem:  
   
-|||  
+|Tópico|Descrição|  
 |-|-|  
-|**Tópicos**|**Descrição**|  
 |[Introdução com o console do SSMA para DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no console do SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console do SSMA.|  
 |[Criando arquivos de script &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)|Explica como criar um arquivo de script.|  
 |[Criando arquivos de valor de variável &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)|Explica como criar um arquivo de valor de variável.|  
 |[Criando os arquivos de conexão do servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)|Explica como criar um arquivo de conexão do servidor.|  
 |[Executando o console do SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)|Descreve os comandos de arquivo de script para operar o aplicativo de console do SSMA.|  
-|[Trabalhando com os arquivos de script de console de exemplo &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)|Descreve a maneira de personalizar facilmente os scripts que foram fornecidos nos arquivos de exemplo junto com o produto|  
+|[Trabalhando com os arquivos de script de console de exemplo &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)|Descreve a maneira de personalizar facilmente os scripts que foram fornecidos nos arquivos de exemplo junto com o produto.|  
 |[Gerenciando senhas &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)|Descreve a criptografia e a descriptografia de senha e a importação/exportação de informações de senha.|  
 |[Gerando relatórios &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)|Lista os comandos para gerar relatórios.|  
 |[Solução de problemas &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Fornece informações breves sobre como corrigir problemas de migração.|  
