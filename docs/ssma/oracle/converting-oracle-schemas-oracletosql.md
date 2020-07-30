@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293573"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395161"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Converter esquemas Oracle (OracleToSQL)
 Depois de se conectar ao Oracle, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e definir opções de mapeamento de projeto e de dados, você poderá converter objetos de banco de dado Oracle em objetos de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -34,9 +34,8 @@ Antes de converter objetos, examine as opções de conversão do projeto na caix
 ## <a name="conversion-results"></a>Resultados da conversão  
 A tabela a seguir mostra quais objetos Oracle são convertidos e os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos resultantes:  
   
-|||  
-|-|-|  
 |Objetos Oracle|Objetos SQL Server resultantes|  
+|-|-|  
 |Funções|Se a função puder ser convertida diretamente no [!INCLUDE[tsql](../../includes/tsql-md.md)] , o SSMA criará uma função.<br /><br />Em alguns casos, a função deve ser convertida em um procedimento armazenado. Nesse caso, o SSMA cria um procedimento armazenado e uma função que chama o procedimento armazenado.|  
 |Procedimentos|Se o procedimento puder ser convertido diretamente no [!INCLUDE[tsql](../../includes/tsql-md.md)] , o SSMA criará um procedimento armazenado.<br /><br />Em alguns casos, um procedimento armazenado deve ser chamado em uma transação autônoma. Nesse caso, o SSMA cria dois procedimentos armazenados: um que implementa o procedimento e outro usado para chamar o procedimento armazenado de implementação.|  
 |Pacotes|O SSMA cria um conjunto de procedimentos armazenados e funções que são unificados por nomes de objeto semelhantes.|  

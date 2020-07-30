@@ -13,15 +13,15 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fd886217b2fb2caf0fe3f32e88b7bf0215ece1a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcfa1bf254bc60ee1bd2c65ddb813851d0bd369e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145671"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394314"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys. pdw_nodes_dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Retorna o texto do lote SQL que é identificado pelo *sql_handle*especificado. Esta função com valor de tabela substitui a função do sistema **fn_get_sql**.  
    
@@ -39,7 +39,7 @@ Retorna o texto do lote SQL que é identificado pelo *sql_handle*especificado. E
 Os mesmos comentários em [Sys. dm_exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15) se aplicam.  
   
 ## <a name="permissions"></a>Permissões  
- Exigir **sysadmin** a função de servidor `VIEW SERVER STATE` sysadmin ou a permissão no servidor.  
+ Exigir a função de servidor **sysadmin** ou `VIEW SERVER STATE` a permissão no servidor.  
   
 ## <a name="see-also"></a>Confira também  
  [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

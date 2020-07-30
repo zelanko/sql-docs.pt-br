@@ -22,15 +22,15 @@ ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd9255bc39b041f97e60cd3f64f0416cf49ac31
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7bb8a457873a40eb4023ce780946428e6294430
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916245"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394121"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|= (Atribuição de OR bit a bit) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Executa uma operação OR lógica bit a bit entre dois valores inteiros especificados, conforme convertidos em expressões binárias dentro de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e define um valor como o resultado da operação.  
   

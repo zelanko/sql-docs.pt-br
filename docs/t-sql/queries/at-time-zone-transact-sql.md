@@ -16,16 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a315658aa6d4278e12dbccd13bfa4817dec36976
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e27399d2decb00317895017f8a375deb89581d05
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807869"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395067"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Converte um *inputdate* para o valor de *datetimeoffset* correspondente no fuso horário de destino. Quando *inputdate* é fornecido sem as informação de diferença, a função aplica a diferença do fuso horário considerando que *inputdate* está no fuso horário de destino. Se *inputdate* for fornecido como um valor de *datetimeoffset*, a cláusula **AT TIME ZONE** o converterá no fuso horário de destino usando regras de conversão de fuso horário.  
 

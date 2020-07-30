@@ -12,19 +12,19 @@ ms.assetid: e0cd402f-04d0-4a5b-b725-88b31bb7862e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 169df59c354348781eecec0aedcc35c34693263d
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 02f0f1a323b026a12d7dfc4275cb5b3c97863a9c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627624"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395915"
 ---
 # <a name="sysdm_pdw_query_stats_xe_file-transact-sql"></a>sys. dm_pdw_query_stats_xe_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Essa DMV foi preterida e será removida em uma versão futura. Nesta versão, ele retorna 0 linhas.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |event|**nvarchar(60)**|Chave para esta exibição.||  
 |data|**xml**|||  

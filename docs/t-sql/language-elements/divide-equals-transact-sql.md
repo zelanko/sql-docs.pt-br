@@ -21,15 +21,15 @@ ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2198e25408dcf9c62a49d89d224c4c80a43d535a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80b042cd4ee35bc6cc08e0b555335fbc2d2b5eba
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921452"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394171"
 ---
 # <a name="-division-assignment-transact-sql"></a>/= (Atribuição de divisão) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Divide um número por outro e define um valor como o resultado da operação. Por exemplo, se uma variável @x for igual a 34, `@x /= 2` usará o valor original de @x, dividirá esse valor por 2 e definirá @x com esse novo valor (17).  
   

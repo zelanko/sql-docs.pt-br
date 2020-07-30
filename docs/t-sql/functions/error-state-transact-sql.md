@@ -23,15 +23,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19a7029ddb0ea6395530f9bff6733c290bd24d19
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465193"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393953"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Retorna o número de estado do erro que fez o bloco CATCH de um constructo TRY…CATCH ser executado.  
   

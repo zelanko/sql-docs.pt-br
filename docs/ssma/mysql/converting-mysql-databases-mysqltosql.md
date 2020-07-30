@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293663"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394271"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Converter bancos de dados MySQL (MySQLToSQL)
 Depois de ter se conectado ao MySQL, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure e defina opções de mapeamento de projeto e de dados, você pode converter objetos de banco de dados MySQL em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure objetos de banco.  
@@ -31,9 +31,8 @@ Antes de converter objetos, examine as opções de conversão do projeto na caix
 ## <a name="conversion-results"></a>Resultados da conversão  
 A tabela a seguir mostra quais objetos MySQL são convertidos e os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos resultantes:  
   
-|||  
+|Objetos MySQL|Objetos SQL Server resultantes|  
 |-|-|  
-|**Objetos MySQL**|**Objetos SQL Server resultantes**|  
 |Tabelas com objetos dependentes, como índices|O SSMA cria tabelas com objetos dependentes. A tabela é convertida com todos os índices e restrições. Os índices são convertidos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos separados.<br /><br />O **mapeamento de tipo de dados espaciais** só pode ser executado no nível de nó de tabela.<br /><br />Para obter mais informações sobre as configurações de conversão de tabela, consulte [configurações de conversão](conversion-settings-mysqltosql.md)|  
 |Funções|Se a função puder ser convertida diretamente em Transact-SQL, o SSMA criará uma função. Em alguns casos, a função deve ser convertida em um procedimento armazenado. Isso pode ser feito usando a **conversão de função** nas configurações do projeto. Nesse caso, o SSMA cria um procedimento armazenado e uma função que chama o procedimento armazenado.<br /><br />**Opções fornecidas:**<br /><br />Converter de acordo com as configurações do projeto<br /><br />Converter em função<br /><br />Converter em procedimento armazenado<br /><br />Para obter mais informações sobre configurações de conversão de função, consulte [configurações de conversão](conversion-settings-mysqltosql.md)|  
 |Procedimentos|Se o procedimento puder ser convertido diretamente em Transact-SQL, o SSMA criará um procedimento armazenado. Em alguns casos, um procedimento armazenado deve ser chamado em uma transação autônoma. Nesse caso, o SSMA cria dois procedimentos armazenados: um que implementa o procedimento e outro usado para chamar o procedimento armazenado de implementação.|  

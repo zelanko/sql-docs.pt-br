@@ -21,15 +21,15 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90e93d0c56d96cc88b5be0eeed8680bf29c83cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834103"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395133"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contém informações sobre as informações de estatísticas de execução de tempo de execução da consulta.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "82834103"
 |**min_log_bytes_used**|**bigint**|Número mínimo de bytes no log de banco de dados usado pelo plano de consulta, dentro do intervalo de agregação.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|
 |**max_log_bytes_used**|**bigint**|Número máximo de bytes no log de banco de dados usado pelo plano de consulta, dentro do intervalo de agregação.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|
 |**stdev_log_bytes_used**|**float**|Desvio padrão do número de bytes no log de banco de dados usado por um plano de consulta, dentro do intervalo de agregação.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
-|**avg_tempdb_space_used**|**float**|Número médio de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**last_tempdb_space_used**|**bigint**|Último número de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**min_tempdb_space_used**|**bigint**|Número mínimo de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**max_tempdb_space_used**|**bigint**|Número máximo de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**stdev_tempdb_space_used**|**float**|Número de leituras de página desvio padrão do plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
+|**avg_tempdb_space_used**|**float**|Número médio de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|Último número de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|Número mínimo de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|Número máximo de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Número de leituras de página desvio padrão do plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**avg_page_server_io_reads**|**float**|Número médio de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
 |**last_page_server_io_reads**|**bigint**|Último número de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
 |**min_page_server_io_reads**|**bigint**|Número mínimo de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
@@ -116,7 +116,7 @@ Requer a permissão `VIEW DATABASE STATE`.
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Repositório de Consultas procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

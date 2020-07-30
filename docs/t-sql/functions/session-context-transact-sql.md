@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 19e8036b4caac2cc7439cc815ec6625f1368a461
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 00056403e2b2ef00862b7552c76fd98b851cabe5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110309"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394756"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retorna o valor da chave especificada no contexto de sessão atual. O valor é definido com o procedimento [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).  
   

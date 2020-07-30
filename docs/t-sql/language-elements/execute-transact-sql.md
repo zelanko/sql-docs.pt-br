@@ -31,15 +31,15 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e9130ac3a22da474b7ce576969e26bd9205ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d53fe144263d9e3a3b91d6f0e929076a7043b3f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917928"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395278"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Executa uma cadeia de caracteres de comando, uma cadeia de caracteres em um lote [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um dos seguintes módulos: procedimento armazenado do sistema, procedimento armazenado definido pelo usuário, procedimento armazenado CLR, função de valor escalar definida pelo usuário ou procedimento armazenado estendido. A instrução EXECUTE pode ser usada para enviar comandos de passagem aos servidores vinculados. Além disso, o contexto no qual uma cadeia de caracteres ou comando é executado pode ser definido explicitamente. É possível definir metadados para o conjunto de resultados usando as opções do WITH RESULT SETS.
   

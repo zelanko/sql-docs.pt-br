@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c7687b678e755f508f363fa1b327950232038c04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbff8b99dffebdc32e3d4d7e681eccc451899016
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090839"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394947"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Trabalhar com o Console de SSMA para MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) para MySQL agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console, o SSMA permite a interface do nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -23,9 +23,8 @@ Esta seção explica o procedimento para migrar o banco de dados MySQL usando o 
   
 Os tópicos abordados nesta seção incluem:  
   
-|||  
+|Tópico|Descrição|  
 |-|-|  
-|**Tópicos**|**Descrição**|  
 |[Introdução com o console do SSMA para MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no console do SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console do SSMA.|  
 |[Criando arquivos de script &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Explica como criar um arquivo de script.|  

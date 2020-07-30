@@ -21,15 +21,15 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d1cc88f04a85957f21cb215a19c56efa8dc7d9b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 087fc2be7400052c2bbd3e82999c66b052422f99
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112782"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394679"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Controla um grupo de configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que coletivamente especificam algum comportamento padrão ISO.  
   

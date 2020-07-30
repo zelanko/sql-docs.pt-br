@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 589eb9450419b3ef4a4274b0c3a9dfbba3c8e6c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6ca7a3fdd634dab10880d082ad09ac1d71e2616
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896092"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362624"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Configurar o acesso somente leitura a uma réplica secundária de um grupo de disponibilidade Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -181,10 +181,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 -   Para permitir que aplicativos clientes conectem-se a réplicas secundárias legíveis:  
   
-    ||Pré-requisito|Link|  
-    |-|------------------|----------|  
-    |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Verifique se o grupo de disponibilidade tem um ouvinte.|[Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Configurar o roteamento somente leitura para o grupo de disponibilidade.|[Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+|Pré-requisito|Link|  
+|------------------|----------|  
+|Verifique se o grupo de disponibilidade tem um ouvinte.|[Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+|Configurar o roteamento somente leitura para o grupo de disponibilidade.|[Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **Fatores que podem afetar gatilhos e trabalhos depois de um failover**  
   

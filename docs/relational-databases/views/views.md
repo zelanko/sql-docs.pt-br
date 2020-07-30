@@ -13,15 +13,15 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48614fa846903b2104ee27f00dc57cc154adef92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131989"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395705"
 ---
 # <a name="views"></a>Exibições
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Uma exibição é uma tabela virtual cujos conteúdos são definidos por uma consulta. Como uma tabela, uma exibição consiste em um conjunto de colunas nomeadas e linhas de dados. Exceto se indexada, uma exibição não existe como um conjunto armazenado de valores de dados em um banco de dados. As linhas e colunas dos dados vêm de tabelas referidas em consultas que definem a exibição e são produzidas, dinamicamente, quando a exibição é referenciada.  
   
  Uma exibição atua como um filtro nas tabelas subjacentes na exibição. A consulta que define a exibição pode ser de uma ou mais tabelas ou de outras exibições dos bancos de dados atuais ou outros. As consultas distribuídas podem também ser usadas para definir as exibições que usam os dados de diversas fontes heterogêneas. Isso é útil, por exemplo, se você deseja combinar dados estruturados de forma semelhante de diferentes servidores, cada um dos quais armazena dados para uma região diferente de sua organização.  

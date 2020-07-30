@@ -12,23 +12,23 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 11c31d586fadfb8919cef1e7c1c6743be60e0548
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e13043774528228eaa46e70abe5ee00f9e51ac9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819305"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395926"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contém informações adicionais (sobre [Sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) sobre o desempenho e o status de todos os nós do dispositivo. Ele lista uma linha por nó no dispositivo.  
   
-|Nome da coluna|Tipo de Dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|ID numérica exclusiva associada ao nó.<br /><br /> Chave para esta exibição.|Exclusivo em todo o dispositivo, independentemente do tipo.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|process_name|**nvarchar (255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
+|process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |allocated_memory|**bigint**|Memória total alocada neste nó.||  
 |available_memory|**bigint**|Memória total disponível neste nó.||  
 |process_cpu_usage|**bigint**|Uso total da CPU do processo, em tiques.||  

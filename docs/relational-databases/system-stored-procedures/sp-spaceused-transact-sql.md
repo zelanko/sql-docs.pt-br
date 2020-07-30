@@ -18,15 +18,15 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152139"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393941"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Exibe o número de linhas, o espaço em disco reservado e o espaço em disco usado por uma tabela, exibição indexada ou fila [!INCLUDE[ssSB](../../includes/sssb-md.md)] no banco de dados atual ou exibe o espaço em disco reservado e usado pelo banco de dados inteiro.  
   
@@ -60,7 +60,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
   
  O argumento de *modo* pode ter os seguintes valores:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |ALL|Retorna as estatísticas de armazenamento do objeto ou banco de dados, incluindo a parte local e a parte remota.|  
 |LOCAL_ONLY|Retorna as estatísticas de armazenamento apenas da parte local do objeto ou do banco de dados. Se o objeto ou banco de dados não estiver habilitado para Stretch, o retornará as mesmas estatísticas de quando @mode = All.|  
@@ -70,7 +70,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
   
 `[ @oneresultset = ] oneresultset`Indica se um único conjunto de resultados deve ser retornado. O argumento *oneresultset* pode ter os seguintes valores:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |0|Quando * \@ objname* é nulo ou não é especificado, dois conjuntos de resultados são retornados. Dois conjuntos de resultados são o comportamento padrão.|  
 |1|Quando * \@ objname* = NULL ou não for especificado, um único conjunto de resultados será retornado.|  
@@ -97,7 +97,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**reservado**|**varchar (18)**|Total de espaço alocado por objetos no banco de dados.|  
-|**dados**|**varchar (18)**|Total de espaço usado por dados.|  
+|**data**|**varchar (18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar (18)**|Total de espaço usado por índices.|  
 |**Não utilizado**|**varchar (18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|  
   
@@ -109,7 +109,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
 |**database_size**|**varchar (18)**|Tamanho do banco de dados atual em megabytes. **database_size** inclui arquivos de dados e de log.|  
 |**espaço não alocado**|**varchar (18)**|Espaço no banco de dados que não foi reservado para objetos de banco de dados.|  
 |**reservado**|**varchar (18)**|Total de espaço alocado por objetos no banco de dados.|  
-|**dados**|**varchar (18)**|Total de espaço usado por dados.|  
+|**data**|**varchar (18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar (18)**|Total de espaço usado por índices.|  
 |**Não utilizado**|**varchar (18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|  
   
@@ -120,7 +120,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
 |**name**|**nvarchar(128)**|Nome do objeto para o qual foram solicitadas informações de uso do espaço.<br /><br /> O nome de esquema do objeto não é retornado. Se o nome do esquema for necessário, use as exibições de gerenciamento dinâmico [Sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) ou [Sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) para obter informações de tamanho equivalentes.|  
 |**as**|**Char (20)**|Número de linhas existentes na tabela. Se o objeto especificado for uma fila [!INCLUDE[ssSB](../../includes/sssb-md.md)], essa coluna indicará o número de mensagens na fila.|  
 |**reservado**|**varchar (18)**|Quantidade total de espaço reservado para *objname*.|  
-|**dados**|**varchar (18)**|Quantidade total de espaço usada pelos dados em *objname*.|  
+|**data**|**varchar (18)**|Quantidade total de espaço usada pelos dados em *objname*.|  
 |**index_size**|**varchar (18)**|Quantidade total de espaço usada pelos índices em *objname*.|  
 |**Não utilizado**|**varchar (18)**|Quantidade total de espaço reservado para *objname* , mas que ainda não foi usado.|  
  
@@ -137,7 +137,7 @@ Espaço usado pelas tabelas no banco de dados: (este ResultSet não reflete as t
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**reservado**|**varchar (18)**|Total de espaço alocado por objetos no banco de dados.|  
-|**dados**|**varchar (18)**|Total de espaço usado por dados.|  
+|**data**|**varchar (18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar (18)**|Total de espaço usado por índices.|  
 |**Não utilizado**|**varchar (18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|
 
@@ -157,7 +157,7 @@ Se *objname* for omitido, o valor de oneresultset será 1 e *include_total_xtp_s
 |**database_size**|**varchar (18)**|Tamanho do banco de dados atual em megabytes. **database_size** inclui arquivos de dados e de log. Se o banco de dados tiver um grupo de arquivos MEMORY_OPTIMIZED_DATA, isso incluirá o tamanho total em disco de todos os arquivos de ponto de verificação no grupo de arquivos.|
 |**espaço não alocado**|**varchar (18)**|Espaço no banco de dados que não foi reservado para objetos de banco de dados. Se o banco de dados tiver um grupo de arquivos MEMORY_OPTIMIZED_DATA, isso incluirá o tamanho total em disco dos arquivos de ponto de verificação com o estado precriado no grupo de arquivos.|  
 |**reservado**|**varchar (18)**|Total de espaço alocado por objetos no banco de dados.|  
-|**dados**|**varchar (18)**|Total de espaço usado por dados.|  
+|**data**|**varchar (18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar (18)**|Total de espaço usado por índices.|  
 |**Não utilizado**|**varchar (18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|
 |**xtp_precreated**|**varchar (18)**|Tamanho total dos arquivos de ponto de verificação com o estado precriado, em KB. Isso conta em direção ao espaço não alocado no banco de dados como um todo. Retornará NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data com pelo menos um contêiner. *Esta coluna só será incluída se @include_total_xtp_storage = 1*.| 
@@ -249,9 +249,9 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [&#41;DBCC UPDATEUSAGE &#40;Transact-SQL](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. partitions &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

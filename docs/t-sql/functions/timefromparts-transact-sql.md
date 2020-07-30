@@ -18,15 +18,15 @@ ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894bd960552519a2decef2731dc95ea4ca09a5f3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3b22a13e149e63aa459d825b62bef4ab0145c928
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111793"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394190"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna um valor **time** para a hora especificada e com a precisão especificada.  
   
