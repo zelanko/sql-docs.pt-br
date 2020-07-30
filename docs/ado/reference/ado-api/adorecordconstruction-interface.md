@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747172"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242826"
 ---
 # <a name="adorecordconstruction-interface"></a>Interface ADORecordConstruction
 A interface **ADORecordConstruction**é usada para construir um objeto de **registro** ado de um objeto de **linha** OLE DB em um aplicativo C/C++.  
@@ -29,10 +29,10 @@ A interface **ADORecordConstruction**é usada para construir um objeto de **regi
   
 ## <a name="properties"></a>Propriedades  
   
-|||  
+|Propriedade|Descrição|  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Somente gravação.<br />Define o contêiner de um objeto de **linha** de OLE DB neste objeto de **registro** ADO.|  
-|[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um objeto de **linha** de OLE DB de/neste objeto de **registro** ADO.|  
+|[Linha](../../../ado/reference/ado-api/row-property-ado.md)|Leitura/gravação.<br />Obtém/define um objeto de **linha** de OLE DB de/neste objeto de **registro** ADO.|  
   
 ## <a name="methods"></a>Métodos  
  Nenhum.  
@@ -73,6 +73,6 @@ A interface **ADORecordConstruction**é usada para construir um objeto de **regi
 ## <a name="requirements"></a>Requisitos  
  **Versão:** ADO 2,0 e posterior  
   
- **Biblioteca:** MsADO15. dll  
+ **Biblioteca:** msado15.dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4

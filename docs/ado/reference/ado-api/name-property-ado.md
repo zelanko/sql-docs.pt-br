@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 368def89951e7d0eacca9b999b647abd949c3b10
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762417"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243227"
 ---
 # <a name="name-property-ado"></a>Propriedade Name (ADO)
 Indica o nome de um objeto.  
@@ -41,12 +41,18 @@ Indica o nome de um objeto.
  Você pode recuperar a propriedade **Name** de um objeto por uma referência ordinal, após o qual você pode fazer referência ao objeto diretamente por nome. Por exemplo, se `rstMain.Properties(20).Name` o produz `Updatability` , você pode posteriormente fazer referência a essa propriedade como `rstMain.Properties("Updatability")` .  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Objeto Campo](../../../ado/reference/ado-api/field-object.md)|  
-|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades Attributes e Name (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Exemplo de propriedades Attributes e Name (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

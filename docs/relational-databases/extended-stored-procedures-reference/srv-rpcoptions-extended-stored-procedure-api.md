@@ -1,5 +1,6 @@
 ---
 title: srv_rpcoptions (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como srv_rpcoptions na API de procedimento armazenado estendido retorna opções de tempo de execução para o procedimento armazenado remoto atual.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a4bc6bf4a8fe1b600ec7bd7b3ba1877023751db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d4bd331b54b4bb555fcc6cdbe59155a553332eb
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755883"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332461"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ srvproc
 ## <a name="remarks"></a>Comentários  
  A seguinte tabela descreve cada sinalizador de tempo de execução.  
   
-|Sinalizador de tempo de execução|Description|  
+|Sinalizador de tempo de execução|Descrição|  
 |--------------------|-----------------|  
 |SRV_NOMETADATA|O cliente solicitou resultados sem informações de metadados. Esse sinalizador só é usado quando o cliente está se comunicando com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um aplicativo de API de procedimento armazenado estendido não pode omitir informações de metadados.|  
 |SRV_RECOMPILE|O cliente solicitou a recompilação do procedimento armazenado remoto antes de executá-lo. Este sinalizador pode não se aplicar a um aplicativo de API de procedimento armazenado estendido.|  

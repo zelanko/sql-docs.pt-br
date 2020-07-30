@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749294"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242886"
 ---
 # <a name="ado-dynamic-properties"></a>Propriedades dinâmicas do ADO
 As propriedades dinâmicas podem ser adicionadas às coleções de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) dos objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Command](../../../ado/reference/ado-api/command-object-ado.md)ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . A origem dessas propriedades é um provedor de dados, como o provedor de [OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)ou um provedor de serviços, como o [serviço de cursor da Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Consulte a documentação apropriada do provedor de dados ou provedor de serviços para obter mais informações sobre uma propriedade dinâmica específica.  
@@ -26,7 +26,7 @@ As propriedades dinâmicas podem ser adicionadas às coleções de [Propriedades
   
  As propriedades dinâmicas a seguir são especialmente interessantes e também estão documentadas nas fontes que foram mencionadas anteriormente. A funcionalidade especial com ADO está documentada nos tópicos da ajuda do ADO na lista a seguir.  
   
-|||  
+|Propriedade dinâmica|Descrição|  
 |-|-|  
 |[Otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Especifica se um índice deve ser criado neste campo.|  
 |[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Especifica se o provedor de OLE DB deve solicitar informações de inicialização ao usuário.|  

@@ -1,5 +1,5 @@
 ---
-title: Resultados da mensagem do SQL Server | Microsoft Docs
+title: Resultados da mensagem de SQL Server (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,14 @@ ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a846a66fa55e5dd3f8d4f8efeecb2e1b773af840
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e28ec51b3802858c7565be8ac7262574d86bcb5f
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010555"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331891"
 ---
-# <a name="sql-server-message-results"></a>Resultados da mensagem do SQL Server
+# <a name="sql-server-native-client-message-results"></a>Resultados da mensagem de SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   As instruções a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] não geram [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor de OLE DB do cliente nativo ou uma contagem de linha afetada quando executadas:  

@@ -14,11 +14,12 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba04422ef9763202701dfa147ff5da4bfc214018
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3b1a7b24d929eec4503e663557a0151ec89da9e6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011871"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332309"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,8 +75,8 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>Suporte SQLDescribeParam para recursos avançados de data e hora  
  Os valores retornados para tipos de data/hora são os seguintes:  
   
-||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
-|-|-------------------|------------------------|------------------------|  
+| Atributo | *DataTypePtr* | *ParameterSizePtr* | *DecimalDigitsPtr* |  
+| --------- | ------------- | ------------------ | ------------------ |  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  

@@ -1,5 +1,5 @@
 ---
-title: Executar um comando | Microsoft Docs
+title: Executando um comando (provedor de OLE DB de cliente nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba04931d5bfddd3e61df2a272d085dd6337d9a85
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4bb82c242e5bf04d0ceb233814bb2f9eeef9281f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005275"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247635"
 ---
-# <a name="executing-a-command"></a>Executando um comando
+# <a name="executing-a-sql-server-native-client-command"></a>Executando um comando SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Depois de estabelecida a conexão com uma fonte de dados, o consumidor chama o método **IDBCreateSession::CreateSession** para criar uma sessão. A sessão atua como um comando, conjunto de linhas ou fábrica de transação.  

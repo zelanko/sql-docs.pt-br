@@ -1,5 +1,5 @@
 ---
-title: Dando suporte a transações distribuídas | Microsoft Docs
+title: Oferecendo suporte a transações distribuídas (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,14 @@ ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4bd02bccb53448a4039f7f27caf820a931df335
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8f3d67feb719a887b713800f780f5b7d64ee913a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005815"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332285"
 ---
-# <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
+# <a name="supporting-distributed-transactions-in-sql-server-native-client"></a>Dando suporte a transações distribuídas no SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os consumidores do provedor de OLE DB de cliente nativo podem usar o método **ITransactionJoin:: JoinTransaction** para participar de uma transação distribuída coordenada pelo Microsoft coordenador de transações distribuídas (MS DTC).  

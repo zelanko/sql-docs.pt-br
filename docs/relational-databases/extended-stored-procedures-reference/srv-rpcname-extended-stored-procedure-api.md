@@ -1,5 +1,6 @@
 ---
 title: srv_rpcname (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como srv_rpcname na API de procedimento armazenado estendido retorna o componente de nome do procedimento para o procedimento armazenado remoto atual.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 999f949466efe5ed39fe20534f99138d5013f588
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99e901a9ae1a14644d522b23747f1d242f8c95d3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755928"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248275"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d173f74592fad018a32407e11bda5ad661432f46
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e7989ab7372d6e2137dd2530a7ac27bbc0c8db0f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641774"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246039"
 ---
 # <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |
+| --------- | ----- |
 |Nome do Produto|SQL Server|  
 |ID do evento|271|  
 |Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  

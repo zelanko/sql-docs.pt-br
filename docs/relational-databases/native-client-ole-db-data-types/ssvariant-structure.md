@@ -1,5 +1,5 @@
 ---
-title: Estrutura SSVARIANT | Microsoft Docs
+title: Estrutura SSVARIANT (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,13 +15,14 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d87c4a4537683d9dbb9817a0a3c022f23f2b846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ddd98b45cf44f840dfc236f8a0a1b5d809db7288
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998201"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331924"
 ---
-# <a name="ssvariant-structure"></a>Estrutura SSVARIANT
+# <a name="ssvariant-structure-in-sql-server-native-client"></a>Estrutura SSVARIANT no SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A estrutura **SSVARIANT** , que é definida em sqlncli. h, corresponde a um valor DBTYPE_SQLVARIANT no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLEDB de cliente nativo.  
@@ -62,10 +63,10 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |lIntVal|DBTYPE_I4|**Longas**|**VT_SS_I4**|Dá suporte ao tipo de dados **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Dá suporte ao tipo de dados **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Dá suporte ao tipo de dados **real** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Dá suporte ao tipo de dados **float** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|dblFloatVal|DBTYPE_R8|**duplo**|**VT_SS_R8**|Dá suporte ao tipo de dados **float** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |cyMoneyVal|DBTYPE_CY|**LARGE_INTEGER**|**VT_SS_MONEY VT_SS_SMALLMONEY**|Dá suporte aos tipos de dados **money** e **smallmoney**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Dá suporte ao tipo de dados **bit** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|rgbGuidVal|DBTYPE_GUID|**VOLUME**|**VT_SS_GUID**|Dá suporte ao tipo de dados **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Dá suporte ao tipo de dados **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Dá suporte ao tipo de dados **numeric** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Dá suporte ao tipo de dados **Date** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Dá suporte aos tipos de dados **smalldatetime**, **datetime** e **datetime2**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

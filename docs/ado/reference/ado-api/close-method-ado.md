@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748912"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242786"
 ---
 # <a name="close-method-ado"></a>Método Close (ADO)
 Fecha um objeto aberto e quaisquer objetos dependentes.  
@@ -54,12 +54,18 @@ object.Close
  Se você usar o método [clone](../../../ado/reference/ado-api/clone-method-ado.md) para criar cópias de um objeto Open **Recordset** , fechar o original ou um clone não afetará nenhuma das outras cópias.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo dos métodos Open e Close (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Exemplo dos métodos Open e Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   

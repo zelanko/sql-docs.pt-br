@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898361"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395722"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'**<relational_operator>**'** {maior menor que | maior que ou igual a | menor que | menor que ou igual a}  
+ **'**<relational_operator>**'** {maior que \| maior que ou menor que maior ou igual \| a menor que \| menor ou igual}  
  É usado para identificar um valor LSN distinto dentro da tabela **CDC. lsn_time_mapping** com um **tran_end_time** associado que satisfaça a relação em comparação com o valor de *tracking_time* .  
   
  *relational_operator* é **nvarchar (30)**.  

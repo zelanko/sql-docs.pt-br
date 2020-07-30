@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747054"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242806"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction Interface
 A interface **ADOStreamConstruction** é usada para construir um objeto de **fluxo** ADO de um objeto OLE DB **IStream** em um aplicativo C/C++.  
   
 ## <a name="properties"></a>Propriedades  
   
-|||  
+|Propriedade|Descrição|  
 |-|-|  
-|[Propriedade Stream](../../../ado/reference/ado-api/stream-property.md)|Leitura/gravação. Obtém/define um objeto de **fluxo** de OLE DB.|  
+|[Fluxo](../../../ado/reference/ado-api/stream-property.md)|Leitura/gravação. Obtém/define um objeto de **fluxo** de OLE DB.|  
   
 ## <a name="methods"></a>Métodos  
  Nenhum.  
@@ -68,7 +68,7 @@ adoStrConstruct->put_Stream(pUnk);
 ## <a name="requirements"></a>Requisitos  
  **Versão:** ADO 2,0 ou uma versão posterior  
   
- **Biblioteca:** MsADO15. dll  
+ **Biblioteca:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

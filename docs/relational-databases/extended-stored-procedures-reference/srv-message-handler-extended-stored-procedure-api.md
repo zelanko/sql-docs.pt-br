@@ -1,5 +1,6 @@
 ---
 title: srv_message_handler (API de procedimento armazenado estendido)
+description: Saiba mais sobre srv_message_handler e como ele chama o manipulador de mensagens de API de procedimento armazenado estendido instalado.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5841cdb3f57c0c4b6e33737d8c08b3ff0437e800
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2edc96558c00b43dfe9d9b346ad75c32b42af1cd
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756737"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332351"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +83,7 @@ oserrtextlen
  É um valor de estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o erro.  
   
  *oserrnum*  
- É o número de erro do sistema operacional. Este argumento é ignorado.  
+ É o número de erro do sistema operacional. Esse argumento é ignorado.  
   
  *errtext*  
  É a descrição do erro *errornum* do procedimento armazenado estendido.  
@@ -91,7 +92,7 @@ oserrtextlen
  É o tamanho da cadeia de caracteres de erro *errtext* do procedimento armazenado estendido.  
   
  *oserrtext*  
- É a descrição do erro *oserrnum* do sistema operacional. Este argumento é ignorado.  
+ É a descrição do erro *oserrnum* do sistema operacional. Esse argumento é ignorado.  
   
  *oserrtextlen*  
  É o tamanho da cadeia de caracteres de erro *oserrtext* do sistema operacional.  

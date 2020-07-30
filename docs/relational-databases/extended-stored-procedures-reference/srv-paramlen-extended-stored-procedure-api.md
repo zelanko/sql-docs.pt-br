@@ -1,5 +1,6 @@
 ---
 title: srv_paramlen (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como srv_paramlen na API de procedimento armazenado estendido retorna o comprimento dos dados de um parâmetro de chamada de procedimento armazenado remoto.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e76d1f4a68d0c15d1f0a0b33627d18ade97669cf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756723"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248403"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

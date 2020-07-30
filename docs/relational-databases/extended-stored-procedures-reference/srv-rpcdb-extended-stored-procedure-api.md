@@ -1,5 +1,6 @@
 ---
 title: srv_rpcdb (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como srv_rpcdb na API de procedimento armazenado estendido retorna o componente de nome do banco de dados para o procedimento armazenado remoto atual.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38c989a2108a8a877159e9dd5b5c6cffd52ce885
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0dbc2b25db5eedb4e48db2e4053952f5c52517c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755906"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248276"
 ---
 # <a name="srv_rpcdb-extended-stored-procedure-api"></a>srv_rpcdb (API do procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b771c5b8dc54bb312893885aea9c9c151feef3e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0b708b2b79c22240468811732d2ffae0955ea204
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760382"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242776"
 ---
 # <a name="commandtimeout-property-ado"></a>Propriedade CommandTimeout (ADO)
 Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tentativa e gerar um erro.  
@@ -36,11 +36,16 @@ Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tent
  Em um objeto de **conexão** , a propriedade **CommandTimeout** permanece de leitura/gravação depois que a **conexão** é aberta.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

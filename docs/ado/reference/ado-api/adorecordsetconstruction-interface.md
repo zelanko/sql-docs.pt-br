@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747082"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242816"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interface ADORecordsetConstruction
 A interface **ADORecordsetConstruction** é usada para construir um objeto **Recordset** ado de um objeto **conjunto de linhas** OLE DB em um aplicativo C/C++.  
@@ -29,7 +29,7 @@ A interface **ADORecordsetConstruction** é usada para construir um objeto **Rec
   
 ## <a name="properties"></a>Propriedades  
   
-|||  
+|Propriedade|Descrição|  
 |-|-|  
 |[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **capítulo** de/neste objeto ADO **Recordset** .|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **função** de/neste objeto ADO **Recordset** .|  
@@ -74,7 +74,7 @@ A interface **ADORecordsetConstruction** é usada para construir um objeto **Rec
 ## <a name="requirements"></a>Requisitos  
  **Versão:** ADO 2,0 e posterior  
   
- **Biblioteca:** MsADO15. dll  
+ **Biblioteca:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
