@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756540"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242576"
 ---
 # <a name="refresh-method-ado"></a>Método Refresh (ADO)
 Atualiza os objetos em uma coleção para refletir objetos disponíveis de e específicos para o provedor.  
@@ -37,7 +37,7 @@ collection.Refresh
 ## <a name="remarks"></a>Comentários  
  O método **Refresh** realiza diferentes tarefas, dependendo da coleção da qual você a chama.  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>parâmetros  
  O uso do método **Refresh** na coleção [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) de um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) recupera informações de parâmetro do lado do provedor para o procedimento armazenado ou a consulta parametrizada especificada no objeto **Command** . A coleção estará vazia para provedores que não dão suporte a chamadas de procedimento armazenado ou consultas parametrizadas.  
   
  Você deve definir a [propriedade ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) do objeto **de comando** como um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) válido, a propriedade [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) para um comando válido e a propriedade [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) como **adCmdStoredProc** antes de chamar o método **Refresh** .  
@@ -54,17 +54,35 @@ collection.Refresh
  O uso do método **Refresh** em uma coleção **Properties** de alguns objetos popula a coleção com as propriedades dinâmicas que o provedor expõe. Essas propriedades fornecem informações sobre a funcionalidade específica para o provedor, além das propriedades internas que o ADO dá suporte.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-||||  
-|-|-|-|  
-|[Coleção de eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Coleção de colunas](../../../ado/reference/adox-api/columns-collection-adox.md)|[Coleção CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Coleção Dimensions](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Coleção de erros](../../../ado/reference/ado-api/errors-collection-ado.md)|[Coleção Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Coleção de grupos](../../../ado/reference/adox-api/groups-collection-adox.md)|[Coleção de hierarquias](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Coleção de índices](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Coleção de chaves](../../../ado/reference/adox-api/keys-collection-adox.md)|[Coleção de níveis](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Coleção de membros](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Coleção Parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Coleção de posições](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Coleção de procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)|[Coleção de tabelas](../../../ado/reference/adox-api/tables-collection-adox.md)|[Coleção de usuários](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Coleção views](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [Coleção de eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Coleção de colunas](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [Coleção CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [Coleção Dimensions](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [Coleção de erros](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Coleção Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Coleção de grupos](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Coleção de hierarquias](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [Coleção de índices](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Coleção de chaves](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [Coleção de níveis](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Coleção de membros](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Coleção Parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Coleção de posições](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [Coleção de procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [Coleção de tabelas](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Coleção de usuários](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Coleção views](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo do método Refresh (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Exemplo do método Refresh (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   

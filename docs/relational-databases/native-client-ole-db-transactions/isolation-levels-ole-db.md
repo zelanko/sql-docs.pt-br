@@ -1,5 +1,5 @@
 ---
-title: Níveis de isolamento (OLE DB) | Microsoft Docs
+title: Níveis de isolamento (provedor de OLE DB de cliente nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d1e68f237641d3418542f8e565258be6c398887
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d828877a5b1f685eb5e00c5649acd50fd925aabc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005789"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87239978"
 ---
-# <a name="isolation-levels-ole-db"></a>Níveis de isolamento (OLE DB)
+# <a name="isolation-levels-native-client-ole-db-provider"></a>Níveis de isolamento (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem controlar os níveis de isolamento de transação para uma conexão. Para controlar o nível de isolamento de transação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor de OLE DB de cliente nativo usa:  

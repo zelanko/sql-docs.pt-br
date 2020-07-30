@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
+description: Saiba como o sys. dm_db_rda_migration_status contém uma linha para cada lote de dados migrados de cada tabela habilitada para Stretch na instância local do SQL Server.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,11 +19,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 87e69284a4fdcac90420ec8a091fd1bd66933bb0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053478"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238766"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

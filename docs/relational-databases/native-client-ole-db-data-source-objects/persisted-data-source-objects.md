@@ -1,5 +1,5 @@
 ---
-title: Objetos persistidos da fonte de dados | Microsoft Docs
+title: Objetos de fonte de dados persistentes (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0af87b23685fb0249b5abf6dbb212715e166c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998265"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242003"
 ---
-# <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
+# <a name="persisted-data-source-objects-in-sql-server-native-client"></a>Objetos de fonte de dados persistentes no SQL Server Native Client 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a objetos de fonte de dados persistentes com a interface **IPersistFile** .  

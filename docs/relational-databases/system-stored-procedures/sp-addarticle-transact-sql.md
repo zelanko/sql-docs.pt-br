@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731711"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394751"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -75,7 +75,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @source_table = ] 'source_table'`Este parâmetro foi preterido; em vez disso, use *source_object* .  
   
- *Esse parâmetro não tem suporte para Publicadores Oracle.*  
+ *Não há suporte para esse parâmetro em Publicadores Oracle.*  
   
 `[ @destination_table = ] 'destination_table'`É o nome da tabela de destino (assinatura), se for diferente do *source_table*ou do procedimento armazenado. *destination_table* é **sysname**, com um padrão de NULL, o que significa que *source_table* é igual a *destination_table * *.*  
   
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>Opções de esquema padrão  
  Esta tabela descreve o valor padrão definido por replicação se *schema_options* não for especificado pelo usuário, em que esse valor depende do tipo de replicação (mostrado na parte superior) e do tipo de artigo (mostrado na primeira coluna).  
   
-|Tipo de artigo|Tipo de replicação||  
+|Tipo de artigo|Replicação transacional|Replicação de instantâneo|  
 |------------------|----------------------|------|  
-||Transacional|Instantâneo|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>Opções de esquema válidas  
  Esta tabela descreve os valores permitidos de *schema_option* com base no tipo de replicação (mostrado na parte superior) e no tipo de artigo (mostrado na primeira coluna).  
   
-|Tipo de artigo|Tipo de replicação||  
+|Tipo de artigo|Replicação transacional|Replicação de instantâneo|  
 |------------------|----------------------|------|  
-||Transacional|Instantâneo|  
 |**logbased**|Todas as opções|Todas as opções, mas **0x02**|  
 |**logbased manualfilter**|Todas as opções|Todas as opções, mas **0x02**|  
 |**logbased manualview**|Todas as opções|Todas as opções, mas **0x02**|  
@@ -393,13 +391,13 @@ sp_addarticle [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addarticle**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [&#41;&#40;Transact-SQL de sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droparticle](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helparticlecolumns](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys. sysusers (Transact-SQL) | Microsoft Docs
+title: sys.sysusuários (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,29 +21,29 @@ ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0f80f4d77e04906b60549270763d3f2b0881c1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018067"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392948"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Contém uma linha para cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] usuário do Windows, grupo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows, usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou função no banco de dados.  
+  Contém uma linha para cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] usuário do Windows, grupo do Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuário ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] função no banco de dados.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**UID**|**smallint**|ID do usuário ID, exclusivo neste banco de dados.<br /><br /> 1 = proprietário de banco de dados<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
+|**uid**|**smallint**|ID do usuário ID, exclusivo neste banco de dados.<br /><br /> 1 = proprietário de banco de dados<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|Nome do usuário ou nome do grupo, exclusivo neste banco de dados.|  
-|**SIDs**|**varbinary (85)**|Identificador de segurança para esta entrada.|  
+|**sid**|**varbinary (85)**|Identificador de segurança para esta entrada.|  
 |**papéis**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**createdate**|**datetime**|Data em que a conta foi adicionada.|  
+|**CreateDate**|**datetime**|Data em que a conta foi adicionada.|  
 |**updatedate**|**datetime**|A data em que a conta foi alterada pela última vez.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
 |**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

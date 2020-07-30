@@ -11,19 +11,19 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2ae652f584ceaad62379256f822527a316c30f89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fa3c064a2fb54d474afee9cbd4d20c878ff1893
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401730"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394031"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Retorna o estado do cache associado a uma tabela replicada por **object_id**.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|A ID de objeto da tabela. Consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **object_id** é a chave para essa exibição.||  
 |state|**nvarchar(40)**|O estado do cache da tabela replicada para esta tabela.|' Não lido ', ' pronto '|  

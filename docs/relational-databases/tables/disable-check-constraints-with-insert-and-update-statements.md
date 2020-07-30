@@ -16,15 +16,15 @@ ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a25909bfcfb6e8bbc228af03a608c416ab55bd3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 550076bbd091a69e7835d2fd6732d361c6edc740
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68016382"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394419"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>Desabilitar restrições de verificação com instruções INSERT e UPDATE
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Você pode desabilitar uma restrição de verificação para transações INSERT e UPDATE no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Depois de desabilitar as restrições de verificação, as inserções ou atualizações futuras na coluna não serão validadas em relação às condições de restrição. Use esta opção se você souber que novos dados violarão a restrição existente ou se a restrição se aplicar somente aos dados que já estão no banco de dados.  
   

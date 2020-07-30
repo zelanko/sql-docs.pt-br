@@ -1,5 +1,5 @@
 ---
-title: Removendo uma coluna de uma tabela do SQL Server | Microsoft Docs
+title: Remover coluna da tabela de SQL Server (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea68e8b341209a2f2844ba4dc29c944278dd7861
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0aa472e45dd9e5f1f7ae830684fa9d55f11c53c4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004276"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87240157"
 ---
-# <a name="removing-a-column-from-a-sql-server-table"></a>Removendo uma coluna de uma tabela do SQL Server
+# <a name="removing-a-column-from-a-sql-server-table-native-client-ole-db-provider"></a>Removendo uma coluna de uma tabela de SQL Server (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe a função **ITableDefinition::D ropcolumn** . Isso permite que os consumidores removam uma coluna de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

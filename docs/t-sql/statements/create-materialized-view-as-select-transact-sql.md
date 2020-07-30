@@ -37,16 +37,16 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 73fcf068c55b28448d87245b380281b461ef36b0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633604"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394630"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Este artigo explica a instrução criar CREATE MATERIALIZED VIEW AS SELECT T-SQL no SQL Data Warehouse do Azure para o desenvolvimento de soluções. O artigo também fornece exemplos de códigos.
 

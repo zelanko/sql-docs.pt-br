@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3a72234a6d5e5cbb8e0dc9f5d625b93f15f437f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a7a9b9a0a8416cb47adf8d959990ba1e39c60595
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763327"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242590"
 ---
 # <a name="precision-property-ado"></a>Propriedade Precision (ADO)
 Indica o grau de precisão para valores numéricos em um objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) ou para objetos de [campo](../../../ado/reference/ado-api/field-object.md) numérico.  
@@ -37,11 +37,16 @@ Indica o grau de precisão para valores numéricos em um objeto de [parâmetro](
  Para um objeto **Field**, **Precision** normalmente é somente leitura. No entanto, para novos objetos **Field** que foram acrescentados à coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um [registro](../../../ado/reference/ado-api/record-object-ado.md), **Precision** é Read/Write only após a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do **campo** ter sido especificada e o provedor de dados adicionou com êxito o novo **campo** chamando o método [Update](../../../ado/reference/ado-api/update-method.md) da coleção **Fields** .  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto Campo](../../../ado/reference/ado-api/field-object.md)|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades NumericScale e Precision (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [Exemplo das propriedades NumericScale e Precision (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   

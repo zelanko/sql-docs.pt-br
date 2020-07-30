@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 488fe5a46b994ed664c6355e24fe8d567d5ff11d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762903"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242446"
 ---
 # <a name="attributes-property-ado"></a>Propriedade Attributes (ADO)
 Indica uma ou mais características de um objeto.  
@@ -47,12 +47,18 @@ Indica uma ou mais características de um objeto.
 >  **Uso do serviço de dados remoto** Essa propriedade não está disponível em um objeto de **conexão** do lado do cliente.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto Campo](../../../ado/reference/ado-api/field-object.md)|  
-|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades Attributes e Name (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Exemplo de propriedades Attributes e Name (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

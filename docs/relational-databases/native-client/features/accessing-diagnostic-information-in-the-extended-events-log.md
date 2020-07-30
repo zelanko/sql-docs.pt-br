@@ -9,13 +9,14 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96b213bf61b3443e285d6a1cb3be8c08771541c9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6ab3874f5ad5260f4a69b3a35001e04414cbc34
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000447"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242586"
 ---
-# <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico nos logs de eventos estendidos
+# <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>Acessando SQL Server Native Client informações de diagnóstico no log de eventos estendidos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o rastreamento do acesso a dados ([Rastreamento do Acesso a Dados](https://go.microsoft.com/fwlink/?LinkId=125805)) foram atualizados para facilitar a obtenção de informações de diagnóstico sobre falhas de conexão do buffer de anéis de conectividade e informações de desempenho de aplicativo do registro de eventos estendidos.  
@@ -26,7 +27,7 @@ ms.locfileid: "86000447"
 >  Este recurso é destinado somente para finalidades de solucionar problemas e realizar diagnóstico, e pode não ser adequado para auditoria ou propósitos de segurança.  
   
 ## <a name="remarks"></a>Comentários  
- Para operações de conexão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enviará uma ID conexão de cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([Solução de problemas de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) e localizar o campo **ClientConnectionID** e poderá obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote de pré-logon, uma ID de conexão de cliente não será gerada.) A ID de conexão do cliente é um GUID de 16 bytes. Você também poderá localizar a ID de conexão de cliente no destino de saída dos eventos estendidos, se a ação de **client_connection_id** for adicionada a eventos em uma sessão de eventos estendida. Você pode habilitar o rastreamento de acesso a dados e executar novamente o comando de conexão e observar o campo **ClientConnectionID** no rastreamento de acesso a dados para uma operação com falha, se precisar de assistência de diagnóstico adicional.  
+ Para operações de conexão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enviará uma ID conexão de cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([Solução de problemas de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) e localizar o campo **ClientConnectionID** e poderá obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote anterior ao logon, uma ID conexão de cliente não será gerada.) A ID de conexão de cliente é um GUID de 16 bytes. Você também poderá localizar a ID de conexão de cliente no destino de saída dos eventos estendidos, se a ação de **client_connection_id** for adicionada a eventos em uma sessão de eventos estendida. Você pode habilitar o rastreamento de acesso a dados e executar novamente o comando de conexão e observar o campo **ClientConnectionID** no rastreamento de acesso a dados para uma operação com falha, se precisar de assistência de diagnóstico adicional.  
   
  Se você estiver usando o ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e uma conexão ocorrer, poderá obter a ID de conexão de cliente usando o atributo **SQL_COPT_SS_CLIENT_CONNECTION_ID** com [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
   

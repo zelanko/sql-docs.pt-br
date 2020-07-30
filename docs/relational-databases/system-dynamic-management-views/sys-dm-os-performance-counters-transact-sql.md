@@ -20,15 +20,15 @@ ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14ce6a581a89d9f3740b6c018109b20ec3ff39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3d03cac764cb5668cd184b6798c0af618c3de2ec
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833728"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394376"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna uma linha por contador de desempenho mantido pelo servidor. Para obter informações sobre cada contador de desempenho, consulte [usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   

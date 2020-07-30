@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762537"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242686"
 ---
 # <a name="filter-property"></a>Propriedade Filter
 Indica um filtro para dados em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -43,7 +43,7 @@ A cadeia de caracteres de critérios é composta de cláusulas no formato *Field
 
 -   *FieldName* deve ser um nome de campo válido do **conjunto de registros**. Se o nome do campo contiver espaços, você deverá colocar o nome entre colchetes.  
   
--   O operador deve ser um dos seguintes: \< , >, \< =, >=,  <>, = ou **like**.  
+-   O operador deve ser um dos seguintes: \<, > , \<=, > =,  <>, = ou **like**.  
   
 -   Valor é o valor com o qual você vai comparar os valores de campo (por exemplo, ' Smith ', #8/24/95 #, 12,345 ou $50). Use aspas simples com cadeias de caracteres e sinais de sustenido (#) com datas. Para números, você pode usar pontos decimais, sinais de dólar e notação científica. Se o operador for **como**, o valor poderá usar curingas. Somente o asterisco (*) e o sinal de porcentagem (%) curingas são permitidos e devem ser o último caractere na cadeia de caracteres. O valor não pode ser nulo.  
   
@@ -90,7 +90,7 @@ Somente filtros na forma de cadeias de caracteres de critérios afetam o conteú
   
 A tabela a seguir resume os efeitos de **adFilterPendingRecords** em diferentes combinações de filtragem e modificações. A coluna à esquerda mostra as possíveis modificações. As modificações podem ser feitas em qualquer um dos campos não chaveada, no campo de chave em uma tabela com chave única ou em qualquer um dos campos de chave em uma tabela com várias chaves. A linha superior mostra o critério de filtragem. A filtragem pode ser baseada em qualquer um dos campos não chaveada, no campo de chave em uma tabela com chave única ou em qualquer um dos campos de chave em uma tabela com várias chaves. As células de interseção mostram os resultados. Um **+** sinal de adição significa que a aplicação de resultados de **adFilterPendingRecords** em um **conjunto de registros**não vazio. Um **-** sinal de subtração significa um **conjunto de registros**vazio.  
   
-||Não chaves|Chave única|Várias chaves|
+|Combinação|Não chaves|Chave única|Várias chaves|
 |-|--------------|----------------|-------------------|
 |**Não chaves**|+|+|+|
 |**Chave única**|+|-|N/D|

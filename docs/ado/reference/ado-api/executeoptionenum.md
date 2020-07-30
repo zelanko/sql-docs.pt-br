@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e7465ee994a0e09cf62b80d3317948479354780b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757132"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242706"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Especifica como um provedor deve executar um comando.  
@@ -40,15 +40,21 @@ Especifica como um provedor deve executar um comando.
   
 |Constante|  
 |--------------|  
-|AdoEnums.ExecuteOption.ASYNCEXECUTE|  
-|AdoEnums.ExecuteOption.ASYNCFETCH|  
-|AdoEnums.ExecuteOption.ASYNCFETCHNONBLOCKING|  
-|AdoEnums. ExecuteOption. nograves|  
-|AdoEnums. ExecuteOption. não especificado|  
+|AdoEnums.ExecuteOption. ASYNCEXECUTE|  
+|AdoEnums.ExecuteOption. ASYNCFETCH|  
+|AdoEnums.ExecuteOption. ASYNCFETCHNONBLOCKING|  
+|AdoEnums.ExecuteOption. noregistros|  
+|AdoEnums.ExecuteOption. não especificado|  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Método Execute (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Método Open (Conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Método Requery](../../../ado/reference/ado-api/requery-method.md)|
+
+:::row:::
+    :::column:::
+        [Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Método Execute (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+    :::column-end:::
+    :::column:::
+        [Método Open (Conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Método Requery](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::
