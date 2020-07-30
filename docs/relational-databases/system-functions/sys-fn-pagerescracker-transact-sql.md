@@ -1,6 +1,6 @@
 ---
 title: sys. fn_PageResCracker (Transact-SQL) | Microsoft Docs
-description: Documentação da função de sistema sys. fn_PageResCracker.
+description: Saiba mais sobre a função de sistema sys. fn_PageResCracker. Veja exemplos e exiba recursos adicionais disponíveis.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790428"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247575"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]

@@ -1,5 +1,6 @@
 ---
 title: Tipos de dados (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como os tipos de dados de API de procedimento armazenado estendido podem ser expandidos incluindo o arquivo de cabeçalho SRV. h em seu programa.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5ff9f72c7ddec8301940cd14bbfe6086cadbd54
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679055"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244010"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de dados (API de procedimentos armazenados estendidos)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85679055"
   
  Para usar os tipos de dados de API de procedimento armazenado estendido, inclua o arquivo de cabeçalho Srv.h em seu programa.  
   
-|Tipo de dados|Tipo de dados do SQL Server|Description|  
+|Tipo de dados|Tipo de dados do SQL Server|Descrição|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|Tipo de dados **binary**, com tamanho de 0 a 8.000 bytes.|  
 |SRVBIGCHAR|**char**|Tipo de dados de **caractere**, com tamanho de 0 a 8.000 bytes.|  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756306"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243207"
 ---
 # <a name="resync-method"></a>Método Resync
 Atualiza os dados no objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) atual ou na coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) , do banco de dados subjacente.  
@@ -35,7 +35,7 @@ Atualiza os dados no objeto [Recordset](../../../ado/reference/ado-api/recordset
 Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *AffectRecords*  
  Opcional. Um valor [AffectEnum](../../../ado/reference/ado-api/affectenum.md) que determina quantos registros o método de **ressincronização** afetará. O valor padrão é **adAffectAll**. Esse valor não está disponível com o método **Ressync** da coleção **Fields** de um objeto **Record** .  
   
@@ -65,11 +65,16 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  A **ressincronização** não modificará os valores de **status** dos objetos de **campo** , a menos que ocorra um erro quando a **ressincronização** for chamada. Por exemplo, se o campo não existir mais, o provedor retornará um valor de **status** apropriado para o objeto de **campo** , como **adFieldDoesNotExist**. Valores de **status** retornados podem ser logicamente combinados dentro do valor da propriedade **status** .  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo do método Resync (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Exemplo do método Resync (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   

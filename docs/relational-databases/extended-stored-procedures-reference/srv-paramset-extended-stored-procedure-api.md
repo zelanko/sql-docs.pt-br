@@ -1,5 +1,6 @@
 ---
 title: srv_paramset (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como srv_paramset na API de procedimento armazenado estendido define o valor de um parâmetro de retorno de chamada de procedimento armazenado remoto.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645b87be7c1b5955975a370e9e1b49e6608272b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756688"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248328"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ len
  *n*  
  Indica o número do parâmetro a ser definido. O primeiro parâmetro é 1.  
   
- *dados*  
+ *data*  
  É um ponteiro para o valor dos dados a ser enviado de volta ao cliente como o parâmetro de retorno do procedimento armazenado remoto.  
   
  *Len*  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977773"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247116"
 ---
-# <a name="cursors"></a>Cursores
+# <a name="odbc-cursors"></a>Cursores ODBC
 Um aplicativo busca dados com um *cursor*. Um cursor é diferente de um conjunto de resultados: um conjunto de resultados é o conjunto de linhas que corresponde a critérios de pesquisa específicos, enquanto que um cursor é o software que retorna essas linhas ao aplicativo. O cursor de nome *,* como se aplica aos bancos de dados, provavelmente originado do cursor piscando em um terminal de computador. Assim como esse cursor indica a posição atual na tela e onde as palavras digitadas aparecerão em seguida, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados e qual linha será retornada em seguida.  
   
  O modelo de cursor em ODBC é baseado no modelo de cursor no SQL inserido. Uma diferença notável entre esses modelos é a maneira como os cursores são abertos. No SQL inserido, um cursor deve ser declarado explicitamente e aberto antes que possa ser usado. No ODBC, um cursor é aberto implicitamente quando uma instrução que cria um conjunto de resultados é executada. Quando o cursor é aberto, ele é posicionado antes da primeira linha do conjunto de resultados. No SQL incorporado e no ODBC, um cursor deve ser fechado depois que o aplicativo terminar de usá-lo.  

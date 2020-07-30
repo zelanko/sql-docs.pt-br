@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105332"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247130"
 ---
 # <a name="iif-mdx"></a>IIF (MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- A função IIf usa três argumentos: IIF (\<Condition>, \<, em seguida, \<Branch>, senão Branch>).  
+ A função IIf usa três argumentos: IIF ( \<condition> , \<then branch> , \<else branch> ).  
   
  *Logical_Expression*  
  Uma condição que é avaliada como **true** (1) ou **false** (0). Ela deve ser uma expressão MDX lógica válida.  
@@ -63,7 +63,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER e STRICT são mutuamente exclusivos na dica. Eles podem ser usados no mesmo IIF(,,) sobre expressões diferentes.  
   
- Para obter mais informações, consulte [dicas de consulta de função IIf em SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) e [planos de execução e dicas de plano para a função IIf MDX e a instrução Case](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ Para obter mais informações, consulte [dicas de consulta de função IIf em SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) e [planos de execução e dicas de plano para a função IIf MDX e a instrução Case](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Exemplos  
  A consulta a seguir mostra um uso simples de **IIF** dentro de uma medida calculada para retornar um dos dois valores de cadeia de caracteres diferentes quando a medida valor de vendas pela Internet for maior ou menor que $10000:  

@@ -1,5 +1,6 @@
 ---
 title: srv_setutype (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba mais sobre srv_setutype. srv_setutype define o tipo de dados definido pelo usuário para uma coluna em uma linha.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70cacca6e6694d914c4b66b7e6eb813b012cf2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ecdbaef663059146f3ca6bd4a88305e12d4f495
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755811"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248180"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

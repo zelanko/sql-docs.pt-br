@@ -1,5 +1,6 @@
 ---
 title: sys. remote_data_archive_databases (Transact-SQL) | Microsoft Docs
+description: Saiba como o sys. remote_data_archive_databases contém uma linha para cada banco de dados remoto que armazena o dado de um banco de dados local habilitado para Stretch.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,11 +19,12 @@ ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a4d7717a6e89b156cd66ea96a44383d28cbecfb3
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: e192a70c1d8f46b7ad89844a3b38019ab6364cc1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053626"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248145"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database exibições do catálogo-sys. remote_data_archive_databases
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

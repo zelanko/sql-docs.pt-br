@@ -1,5 +1,6 @@
 ---
 title: srv_paramnumber (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como srv_paramnumber na API de procedimento armazenado estendido retorna o número de um parâmetro de chamada de procedimento armazenado remoto.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f10d4a1bdfb2e3e7165596e5f3041c27440223bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d45225866cef925aa0b83ee1516e0d7dc1aa7eee
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756669"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248374"
 ---
 # <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

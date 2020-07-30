@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7437a0304192267b510afbdcc33041991673eff7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fc75b2c016389b850c785462b75aa0b5acdaee07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641695"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246030"
 ---
 # <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |
+| --------- | ----- |
 |Nome do Produto|SQL Server|  
 |ID do evento|264|  
 |Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
