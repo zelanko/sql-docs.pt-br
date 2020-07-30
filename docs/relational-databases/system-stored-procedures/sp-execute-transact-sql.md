@@ -18,15 +18,15 @@ ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae3f46d5856aa061bac0dd06fb954052923a4d7d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12bfa6e7d37aae2a5ffc58828d47ace11d558487
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827773"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392809"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Executa uma instrução preparada [!INCLUDE[tsql](../../includes/tsql-md.md)] usando um identificador especificado e um valor de parâmetro opcional. sp_execute é invocado especificando ID = 12 em um pacote TDS (tabela de dados tabulares).  
   

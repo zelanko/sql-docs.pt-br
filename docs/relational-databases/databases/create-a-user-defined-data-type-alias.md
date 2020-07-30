@@ -17,12 +17,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bea30f3fac2eaacf612839903ab65f668f412ed4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e2bc61b8c69f3e52fc5149a1c3313ee4f0dc8d1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756291"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363146"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "85756291"
      **Storage**  
      Exibe o tamanho de armazenamento máximo para o alias de tipo de dados definido pelo usuário. Os tamanhos máximos de armazenamento variam com base na precisão.  
   
-    |||  
+    |Precisão|Tamanho máximo de armazenamento|  
     |-|-|  
     |1 - 9|5|  
     |10 – 19|9|  
