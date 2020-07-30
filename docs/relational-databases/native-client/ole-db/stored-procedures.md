@@ -16,13 +16,14 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc05fc0c029c15af1e566459e5ac868ac21c0ba8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aac356425788691eaf7bd5ffe00011fa05f3e346
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247105"
 ---
-# <a name="stored-procedures"></a>Procedimentos armazenados
+# <a name="stored-procedures-in-sql-server-native-client"></a>Procedimentos armazenados no SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Um procedimento armazenado ([&#40;Mecanismo de Banco de Dados&#41; de Procedimento Armazenado](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md))é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  

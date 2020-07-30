@@ -16,14 +16,14 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42944947ce8c2998a4329064d9ad496fdfff72b2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: e1574b87bef2e231415b0c95a333c4b7107ca726
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976606"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245878"
 ---
-# <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
+# <a name="sql-server-native-client-data-types-ole-db"></a>Tipos de dados de SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o provedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de cliente nativo, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo mapeia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para OLE DB tipos de dados ao associar parâmetros ou colunas em um conjunto de linhas e quando ele usa a interface **ITableDefinition** para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

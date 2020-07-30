@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763157"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242403"
 ---
 # <a name="cancelupdate-method-ado"></a>Método CancelUpdate (ADO)
 Cancela as alterações feitas na linha atual ou nova de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou na coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) , antes de chamar o método [Update](../../../ado/reference/ado-api/update-method.md) .  
@@ -45,11 +45,16 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  O método **CancelUpdate** cancela todas as inserções ou exclusões pendentes de objetos de [campo](../../../ado/reference/ado-api/field-object.md) e cancela atualizações pendentes de campos existentes e os restaura aos valores originais. A propriedade [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de todos os campos na coleção **Fields** é definida como **adFieldOK**.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo dos métodos Update e CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Exemplo dos métodos Update e CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

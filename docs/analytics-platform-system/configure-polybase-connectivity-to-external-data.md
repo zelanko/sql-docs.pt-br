@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 352f51e0d53c9dc145b1faf1832faf59587fef6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401270"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243087"
 ---
-# <a name="what-is-polybase"></a>O que é o PolyBase?
+# <a name="configure-polybase-connectivity"></a>Configurar a conectividade do polybase
 O polybase permite que o APS (sistema de plataforma de análise) processe consultas Transact-SQL que podem ler e gravar dados em fontes de dados externas. As mesmas consultas que acessam dados externos também podem incluir tabelas de relações em seus APS. Isso permite que você combine dados de fontes externas com dados relacionais de alto valor em seus bancos de dados APS.
 
 ![PolyBase lógico](media/polybase/polybase-logical.png)
@@ -33,7 +33,7 @@ Consulte os [recursos e a limitação](https://docs.microsoft.com/sql/relational
 > O restante dos artigos relacionados ao polybase descrevem como configurar o polybase no APS 2016 (AU6) e posterior.
 
 ## <a name="see-also"></a>Consulte Também
-- [O Hadoop](polybase-configure-hadoop.md)
+- [Hadoop](polybase-configure-hadoop.md)
 - [Armazenamento de Blobs do Azure](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

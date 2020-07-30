@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764557"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242836"
 ---
 # <a name="ado-properties"></a>Propriedades ADO
 
-|||  
+|Propriedade|Descrição|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Indica em qual página o registro atual reside.|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Indica a posição ordinal do registro atual de um objeto **Recordset** .|  
@@ -37,7 +37,7 @@ ms.locfileid: "82764557"
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Indica o conjunto de caracteres no qual o conteúdo de um **fluxo** de texto deve ser traduzido.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Indica o fluxo usado como a entrada para um objeto de **comando** .|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Indica o texto de um comando a ser emitido em relação a um provedor.|  
-|[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tentativa e gerar um erro.|  
+|[CommandTimeOut](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tentativa e gerar um erro.|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indica o tipo de um objeto de **comando** .|  
 |[Propriedade ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indica as informações usadas para estabelecer uma conexão com uma fonte de dados.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indica por quanto tempo aguardar ao estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.|  
@@ -65,7 +65,7 @@ ms.locfileid: "82764557"
 |[Modo](../../../ado/reference/ado-api/mode-property-ado.md)|Indica as permissões disponíveis para modificar dados em um objeto de **conexão**, **registro**ou **fluxo** .|  
 |[Nome](../../../ado/reference/ado-api/name-property-ado.md)|Indica o nome de um objeto.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Indica o código de erro específico do provedor para um objeto de **erro** específico.|  
-|[Automática](../../../ado/reference/ado-api/number-property-ado.md)|Indica o número que identifica exclusivamente um objeto de **erro** .|  
+|[Número](../../../ado/reference/ado-api/number-property-ado.md)|Indica o número que identifica exclusivamente um objeto de **erro** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Indica a escala de valores numéricos em um objeto de **campo** ou **parâmetro** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Indica o valor de um **campo** que existia no registro antes de qualquer alteração ser feita.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Indica quantas páginas de dados o objeto **Recordset** contém.|  
@@ -78,7 +78,7 @@ ms.locfileid: "82764557"
 |[Provedor](../../../ado/reference/ado-api/provider-property-ado.md)|Indica o nome do provedor para um objeto de **conexão** .|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Indica o número de registros em um objeto **Recordset** .|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Indica o tipo de objeto de **registro** .|  
-|[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Obtém ou define um objeto de **linha** de OLE DB de/em um objeto **ADORecordConstruction** .|  
+|[Linha](../../../ado/reference/ado-api/row-property-ado.md)|Obtém ou define um objeto de **linha** de OLE DB de/em um objeto **ADORecordConstruction** .|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Obtém ou define um OLE DB objeto de **função** de/em um objeto **ADORecordsetConstruction** .|  
 |[Conjunto de linhas](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtém ou define um OLE DB objeto de **conjunto de linhas** de/em um objeto **ADORecordsetConstruction** .|  
 |[Origem (erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Indica o nome do objeto ou aplicativo que originalmente gerou um erro.|  
@@ -89,7 +89,7 @@ ms.locfileid: "82764557"
 |[Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)|Indica o status de um objeto de **campo** .|  
 |[Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Indica o status do registro atual em relação a atualizações em lotes ou outras operações em massa.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Indica, em um objeto **Recordset** hierárquico, se a referência aos registros filho subjacentes (ou seja, o *capítulo*) é alterada quando a posição da linha pai é alterada.|  
-|[Propriedade Stream](../../../ado/reference/ado-api/stream-property.md)|Obtém ou define um objeto de **fluxo** de OLE DB de/em um objeto **ADOStreamConstruction** .|  
+|[Propriedade de fluxo](../../../ado/reference/ado-api/stream-property.md)|Obtém ou define um objeto de **fluxo** de OLE DB de/em um objeto **ADOStreamConstruction** .|  
 |[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica o tipo operacional ou o tipo de dados de um **parâmetro**, **campo**ou objeto de **Propriedade** .|  
 |[Tipo (fluxo ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica o tipo de dados contido no **fluxo** (binário ou texto).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica o valor atual no banco de dados para um objeto de **campo** .|  

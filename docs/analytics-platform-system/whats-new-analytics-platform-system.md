@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039832"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243074"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de expansão
 Veja o que há de novo nas atualizações de dispositivo mais recentes para Microsoft Analytics Platform System (APS). O APS é um dispositivo local de expansão que hospeda o MPP SQL Server paralelo data warehouse. 
@@ -65,6 +65,8 @@ O APS CU 7.3 melhora o desempenho da consulta com a eliminação de subexpressã
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Conector do APS informatica para informatica 10.2.0 publicado
 Lançamos uma nova versão dos conectores do informatica para APS que funciona com informatica versão 10.2.0 e 10.2.0 hotfix 1. Os novos conectores podem ser baixados do [site de download](https://www.microsoft.com/download/details.aspx?id=57472).
+> [!NOTE]
+> O conector do APS informatica para informatica 10.2.0 ou 10.2.0 hotfix 1 não funciona em um TLS 1.2 estrito e requer que o TLS 1.0 e 1,1 sejam totalmente funcionais.
 
 #### <a name="supported-versions"></a>Versões compatíveis
 
@@ -138,7 +140,7 @@ O uso de objetos de catálogo para chamadas de metadados em vez de usar o SMO mo
 ### <a name="bug-fixes"></a>Correções de bug
 Atualizamos para SQL Server 2016 SP2 CU2 com APS CU 7.1. A atualização corrige alguns problemas descritos abaixo.
 
-| Title | Descrição |
+| Título | Descrição |
 |:---|:---|
 | **Deadlock potencial de movimentação de tupla** |A atualização corrige uma grande possibilidade de deadlock em um thread em segundo plano de transação distribuída e de movimentação de tupla. Depois de instalar o CU 7.1, os clientes que usaram TF634 para interromper o motor de tupla como SQL Server parâmetro de inicialização ou sinalizador de rastreamento global podem removê-lo com segurança. | 
 | **Determinada consulta de retardo/Lead falha** |Algumas consultas em tabelas CCI com funções de retardo/Lead aninhadas que o erro agora são corrigidas com essa atualização. | 
@@ -161,7 +163,7 @@ O HASH de dicas de consulta e o grupo de pedidos agora têm suporte. Para obter 
 ### <a name="feature-switch"></a>Opção de recurso
 O APS AU7 introduz a opção de recurso no [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled e DmsProcessStopMessageTimeoutInSeconds agora são opções configuráveis que podem ser alteradas por administradores.
 
-### <a name="known-issues"></a>Problemas Conhecidos
+### <a name="known-issues"></a>Problemas conhecidos
 Com o software APS AU7, é fornecida uma atualização de BIOS da Intel que corrige um problema descrito como *ataques de canal lateral de execução especulativa*. Os ataques visam explorar o que é chamado de *vulnerabilidades Spectre e Meltdown*. Embora sejam empacotados junto com o APS, a atualização do BIOS é instalada manualmente e não como parte da instalação do software APS AU7.
 
 A Microsoft aconselha todos os clientes a instalarem o BIOS atualizado. A Microsoft mediu o efeito de KVAS (sombra de endereço virtual) de kernel, KPTI (indireção de tabela de página de kernel) e IBP (mitigação de previsão de ramificação indireta) em várias cargas de trabalho do SQL em vários ambientes. As medidas encontraram uma degradação significativa em algumas cargas de trabalho. Com base nos resultados, a recomendação é que você teste o efeito de desempenho da habilitação da atualização do BIOS antes de implantá-las em um ambiente de produção. Consulte as diretrizes de SQL Server [aqui](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).

@@ -1,5 +1,5 @@
 ---
-title: Propriedades e comportamentos do conjunto de linhas | Microsoft Docs
+title: Propriedades e comportamentos do conjunto de linhas (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013136"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246845"
 ---
-# <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>Propriedades e comportamentos do conjunto de linhas (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Essas são as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Propriedades do conjunto de linhas do provedor de OLE DB de cliente nativo.  
@@ -78,7 +79,7 @@ ms.locfileid: "86013136"
 |DBPROP_REPORTMULTIPLECHANGES|Essa propriedade de conjunto de linhas não é implementada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_RETURNPENDINGINSERTS|Leitura/gravação: somente leitura<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: quando um método que busca linhas é chamado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo não retorna linhas de inserção pendentes.|  
 |DBPROP_ROWRESTRICT|Leitura/gravação: somente leitura<br /><br /> Padrão: VARIANT_TRUE<br /><br /> Descrição: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os conjuntos de linhas do provedor de OLE DB de cliente nativo não dão suporte a direitos de acesso com base na linha. Se a interface **IRowsetChange** for exposta em um conjunto de linhas, o método **SetData** poderá ser chamado pelo consumidor.|  
-|DBPROP_ROWSET_ASYNCH|L/G: Leitura/gravação<br /><br /> Padrão: 0<br /><br /> Descrição: fornece processamento de conjunto de linhas assíncrono. Esta propriedade está no grupo de propriedades Conjunto de linhas e no conjunto de propriedades DBPROPSET_ROWSET. Tipo é VT_14.<br /><br /> O único valor na bitmask com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo é **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|L/G: Leitura/gravação<br /><br /> Padrão: 0<br /><br /> Descrição: fornece para processamento de conjunto de linhas assíncrono. Esta propriedade está no grupo de propriedades Conjunto de linhas e no conjunto de propriedades DBPROPSET_ROWSET. Tipo é VT_14.<br /><br /> O único valor na bitmask com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo é **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|Leitura/gravação: somente leitura<br /><br /> Padrão: DBPROPVAL_RT_FREETHREAD<br /><br /> Descrição: o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte ao acesso a seus objetos a partir de vários threads de execução de um único consumidor.|  
 |DBPROP_SERVERCURSOR|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: em caso de uma definição, um cursor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado para dar suporte ao conjunto de linhas. Para obter mais informações, confira [Conjuntos de linha e cursores do SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: dados de servidor na inserção.<br /><br /> VARIANT_TRUE: no momento em que uma inserção é transmitida ao servidor, o provedor recupera dados do servidor para atualizar o cache de linha local.<br /><br /> VARIANT_FALSE: o provedor não recupera valores de servidor para linhas recentemente inseridas.|  

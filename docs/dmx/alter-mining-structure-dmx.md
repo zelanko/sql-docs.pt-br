@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971819"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362216"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  O sinalizador de modelagem NOT_NULL se aplica à coluna de estrutura de mineração. Para obter mais informações, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
-|||  
-|-|-|  
 |Termo|Definição|  
+|-|-|  
 |**REGRESSOR**|Indica que o algoritmo pode usar a coluna especificada na fórmula de regressão de algoritmos de regressão.|  
 |**MODEL_EXISTENCE_ONLY**|Indica que os valores da coluna de atributo são menos importantes que a presença do atributo.|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>Cláusula de previsão  
  A cláusula de previsão descreve como a coluna de previsão é usada. A tabela seguinte lista as possíveis cláusulas.  
   
-|||  
+|Cláusula|Descrição|  
 |-|-|  
 |**PREVER**|Esta coluna pode ser prevista pelo modelo e seus valores podem ser usados como entrada para prever o valor de outras colunas de previsão.|  
 |**PREDICT_ONLY**|Esta coluna pode ser prevista pelo modelo, mas seus valores não podem ser usados em casos de entrada para prever o valor de outras colunas de previsão.|  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be6d076ca121923a4b6769c7dad5269c3fd642ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301156"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246595"
 ---
 # <a name="sqldescribeparam-function"></a>Função SQLDescribeParam
 **Conformidade**  
@@ -47,7 +47,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## <a name="argument"></a>Argumento  
+## <a name="arguments"></a>Argumentos  
  *StatementHandle*  
  Entrada Identificador de instrução.  
   
@@ -57,9 +57,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  Der Ponteiro para um buffer no qual retornar o tipo de dados SQL do parâmetro. Esse valor é lido no campo de registro de SQL_DESC_CONCISE_TYPE do IPD. Esse será um dos valores na seção tipos de [dados SQL](../../../odbc/reference/appendixes/sql-data-types.md) do Apêndice D: tipos de dados ou um tipo de dados SQL específico do driver.  
   
- No ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME ou SQL_TYPE_TIMESTAMP serão retornados em * \*DataTypePtr* para dados de data, hora ou timestamp, respectivamente; no ODBC 2. *x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP serão retornados. O Gerenciador de driver executa os mapeamentos necessários quando um ODBC 2. o aplicativo *x* está trabalhando com um ODBC 3. *x* driver ou quando um ODBC 3. o aplicativo *x* está funcionando com um ODBC 2. Driver *x* .  
+ No ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME ou SQL_TYPE_TIMESTAMP serão retornados em * \* DataTypePtr* para dados de data, hora ou timestamp, respectivamente; no ODBC 2.* x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP serão retornados. O Gerenciador de driver executa os mapeamentos necessários quando um ODBC 2. o aplicativo *x* está trabalhando com um ODBC 3. *x* driver ou quando um ODBC 3. o aplicativo *x* está funcionando com um ODBC 2. Driver *x* .  
   
- Quando *ColumnNumber* é igual a 0 (para uma coluna de indicador), SQL_BINARY é retornado em * \*DataTypePtr* para indicadores de comprimento variável. (SQL_INTEGER será retornado se os indicadores forem usados por um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. Driver *x* ou por um ODBC 2. *x* aplicativo trabalhando com um ODBC 3. Driver *x* .)  
+ Quando *ColumnNumber* é igual a 0 (para uma coluna de indicador), SQL_BINARY é retornado em * \* DataTypePtr* para indicadores de comprimento variável. (SQL_INTEGER será retornado se os indicadores forem usados por um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. Driver *x* ou por um ODBC 2. *x* aplicativo trabalhando com um ODBC 3. Driver *x* .)  
   
  Para obter mais informações, consulte [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md) no Apêndice D: tipos de dados. Para obter informações sobre tipos de dados do SQL específicos do driver, consulte a documentação do driver.  
   
@@ -81,7 +81,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLDescribeParam** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLDescribeParam** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -90,7 +90,7 @@ SQLRETURN SQLDescribeParam(
 |07009|Índice de descritor inválido|(DM) o valor especificado para o argumento *ParameterNumber* é menor que 1.<br /><br /> O valor especificado para o argumento *ParameterNumber* era maior que o número de parâmetros na instrução SQL associada.<br /><br /> O marcador de parâmetro era parte de uma instrução não DML.<br /><br /> O marcador de parâmetro era parte de uma lista de **seleção** .|  
 |08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado falhou antes da função concluir o processamento.|  
 |21S01|A lista de valores de inserção não corresponde à lista de colunas|O número de parâmetros na instrução **Insert** não correspondeu ao número de colunas na tabela nomeada na instrução.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) a função foi chamada antes de chamar **SQLPrepare** ou **SQLExecDirect** para o *StatementHandle*.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLDescribeParam** foi chamada.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.|  

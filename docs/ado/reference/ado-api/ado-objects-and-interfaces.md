@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe57e31792755aca1dc51b0af50805e853a5bab4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747235"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242846"
 ---
 # <a name="ado-objects-and-interfaces"></a>Objetos e interfaces do ADO
 As relações entre esses objetos são representadas no [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Cada objeto pode estar contido em sua coleção correspondente. Por exemplo, um objeto de [erro](../../../ado/reference/ado-api/error-object.md) pode estar contido em uma coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) . Para obter mais informações, consulte [coleções de ADO](../../../ado/reference/ado-api/ado-collections.md) ou um tópico de coleção específico.  
   
-|||  
+|Objeto ou interface|Descrição|  
 |-|-|  
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Usado para recuperar o comando OLEDB subjacente de um objeto ADOCommand.|  
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Constrói um objeto de **registro** ado de um objeto de **linha** OLE DB em um aplicativo C/C++.|  
@@ -38,7 +38,7 @@ As relações entre esses objetos são representadas no [modelo de objeto ADO](.
 |[Campo](../../../ado/reference/ado-api/field-object.md)|Representa uma coluna de dados com um tipo de dados comum.|  
 |[Parâmetro](../../../ado/reference/ado-api/parameter-object.md)|Representa um parâmetro ou argumento associado a um objeto de **comando** com base em uma consulta parametrizada ou em um procedimento armazenado.<br /><br /> O objeto de **parâmetro** não é seguro para scripts.|  
 |[Propriedade](../../../ado/reference/ado-api/property-object-ado.md)|Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.|  
-|[Gravável](../../../ado/reference/ado-api/record-object-ado.md)|Representa uma linha de um **conjunto de registros**ou um diretório ou arquivo em um sistema de arquivos. O objeto de **registro** é seguro para scripts.|  
+|[Registro](../../../ado/reference/ado-api/record-object-ado.md)|Representa uma linha de um **conjunto de registros**ou um diretório ou arquivo em um sistema de arquivos. O objeto de **registro** é seguro para scripts.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o objeto **Recordset** refere-se apenas a um único registro dentro do conjunto como o registro atual.<br /><br /> O objeto **Recordset** é seguro para scripts.|  
 |[Fluxo](../../../ado/reference/ado-api/stream-object-ado.md)|Representa um fluxo de dados binário.<br /><br /> O objeto de **fluxo** é seguro para scripts.|  
   

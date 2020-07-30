@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762527"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242646"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Especifica o tipo de bloqueio colocado nos registros durante a edição.  
@@ -38,15 +38,21 @@ Especifica o tipo de bloqueio colocado nos registros durante a edição.
   
 |Constante|  
 |--------------|  
-|AdoEnums. LockType. BATCHOPTIMISTIC|  
+|AdoEnums.LockType.BATCHOPTIMISTIC|  
 |AdoEnums. LockType. otimista|  
 |AdoEnums. LockType. PESSIMISTA|  
 |AdoEnums. LockType. READONLY|  
 |AdoEnums. LockType. não especificado|  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Método Clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[Propriedade LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
-|[Método Open (Conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Evento WillExecute (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+
+:::row:::
+    :::column:::
+        [Método Clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
+        [Propriedade LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Método Open (Conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Evento WillExecute (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+    :::column-end:::
+:::row-end:::

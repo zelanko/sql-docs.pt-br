@@ -11,13 +11,14 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa1cc9d33d1835fa65a9724a06f05e80b845ebe9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 736bf5aa1c40e824731eb630b6c64d74d72ad9e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005426"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247821"
 ---
-# <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperar dados de uma coluna FILESTREAM usando ISequentialStream (OLE DB)
+# <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-in-sql-server-native-client-ole-db"></a>Recuperar dados de uma coluna FILESTREAM usando ISequentialStream no SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este exemplo mostra como usar uma interface ISequentialStream em uma interface ICommandText para recuperar um único registro de uma coluna Filestream.  

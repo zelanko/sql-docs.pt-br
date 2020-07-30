@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764117"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243097"
 ---
 # <a name="adox-methods"></a>Métodos do ADOX
 
-|||  
+|Método|Descrição|  
 |-|-|  
 |[Acrescentar (colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Adiciona um novo objeto de **coluna** à coleção de **colunas** .|  
 |[Acrescentar (grupos)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Adiciona um novo objeto de **grupo** à coleção de **grupos** .|  
@@ -34,7 +34,7 @@ ms.locfileid: "82764117"
 |[Acrescentar (exibições)](../../../ado/reference/adox-api/append-method-adox-views.md)|Adiciona um novo objeto de **exibição** à coleção **views** .|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Altera a senha de uma conta de usuário.|  
 |[Criar](../../../ado/reference/adox-api/create-method-adox.md)|Cria um novo catálogo.|  
-|[Excluir](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
+|[Delete (excluir)](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retorna o proprietário de um objeto em um catálogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retorna as permissões para um grupo ou usuário em um objeto.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Especifica o proprietário de um objeto em um catálogo.|  

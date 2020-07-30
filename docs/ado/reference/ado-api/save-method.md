@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755866"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243197"
 ---
 # <a name="save-method"></a>Método Save
 Salva o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um objeto de arquivo ou [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -33,7 +33,7 @@ Salva o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-
 recordset.Save Destination, PersistFormat  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Destino*  
  Opcional. Uma **variante** que representa o nome completo do caminho do arquivo em que o **conjunto de registros** deve ser salvo ou uma referência a um objeto de **fluxo** .  
   
@@ -88,11 +88,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  Um **conjunto de registros** salvo em formato XML é salvo usando o formato UTF-8. Quando esse arquivo é carregado em um fluxo ADO, o objeto Stream não tentará abrir um conjunto de **registros** a partir do fluxo, a menos que a propriedade charset do fluxo seja definida como o valor apropriado para o formato UTF-8.  
   
 ## <a name="applies-to"></a>Aplica-se A  
-  
-|||  
-|-|-|  
-|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo dos métodos Save e Open (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Exemplo dos métodos Save e Open (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

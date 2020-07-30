@@ -1,5 +1,6 @@
 ---
 title: srv_sendmsg (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba mais sobre srv_sendmsg na API de procedimento armazenado estendido e como ele pode enviar uma mensagem para o cliente.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757712cd6e390c4369cea08aa7d0e59d727b7d39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3737b6633710a3831cf8cbcb3801263582369dc7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755846"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248231"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API do procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +82,7 @@ msglen
  *msgnum*  
  É um número de mensagem de 4 bytes.  
   
- *classes*  
+ *class*  
  Especifica a gravidade do erro. Uma gravidade menor ou igual a 10 é considerada uma mensagem informativa.  
   
  *state*  

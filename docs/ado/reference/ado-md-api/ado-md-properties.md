@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b653bd79c6e6e27dee30a4f11385f457717364a2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765227"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242526"
 ---
 # <a name="ado-md-properties"></a>Propriedades do ADO MD
 
-|||  
+|Propriedade|Descrição|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica a qual objeto de **conexão** ADO o células ou o catálogo atual pertence atualmente.|  
 |[Legenda](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica a legenda do texto a ser usada ao exibir um objeto de **nível** ou **membro** .|  
@@ -44,7 +44,7 @@ ms.locfileid: "82765227"
 |[Ordinal (posição)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica exclusivamente uma posição ao longo de um eixo.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica o membro que é o pai do membro atual em uma hierarquia.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indica se o pai deste membro da posição é o mesmo que o pai do membro imediatamente anterior.|  
-|[Fonte](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica a origem dos dados no células.|  
+|[Origem](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica a origem dos dados no células.|  
 |[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica o estado atual do células.|  
 |[Tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica o tipo do membro atual.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica um nome não ambíguo para o objeto atual.|  

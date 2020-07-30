@@ -1,5 +1,5 @@
 ---
-title: Obter dados grandes | Microsoft Docs
+title: Obtendo dados grandes (provedor de OLE DB de cliente nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298a442dbb93ca2c0bb95d79e341d712cd3651ea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005843"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243675"
 ---
-# <a name="getting-large-data"></a>Obtendo dados grandes
+# <a name="getting-large-data-from-a-sql-server-native-client-ole-db-provider"></a>Obtendo dados grandes de um provedor de OLE DB de SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Em geral, os consumidores devem isolar o código que cria um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de armazenamento de provedor de OLE DB de cliente nativo de outro código que manipula dados não referenciados por meio de um ponteiro de interface **ISequentialStream** .  

@@ -1,5 +1,6 @@
 ---
 title: srv_rpcnumber (API de Procedimento Armazenado Estendido) | Microsoft Docs
+description: Saiba como srv_rpcnumber na API de procedimento armazenado estendido retorna o componente de número para a chamada de procedimento armazenado remoto atual.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d828ad55c93f5341370e9daa98ead6ece0997f02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b8a58274af4be774698b8fd8b987e7d05c055e3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755896"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332485"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (API de procedimento armazenado estendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

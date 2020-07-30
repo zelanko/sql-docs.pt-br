@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de linha e cursores do SQL Server | Microsoft Docs
+title: Conjuntos de linhas e SQL Server cursores (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fe60226cef05b8f7925a15be40b0c8cbea9d7c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1829d375ad8a870f1d2d24a40bfd26f6e790e261
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013127"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246822"
 ---
-# <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
+# <a name="rowsets-and-sql-server-cursors-native-client-ole-db-provider"></a>Conjuntos de linhas e SQL Server cursores (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna conjuntos de resultados para clientes usando dois métodos:  
@@ -143,7 +144,7 @@ ms.locfileid: "86013127"
   
  Para um determinado conjunto de propriedades de conjunto de linhas, o modelo de cursor selecionado é determinado da forma a seguir.  
   
- Na coleção especificada de propriedades do conjunto de linhas, obtenha um subconjunto das propriedades listadas nas tabelas anteriores. Divida essas propriedades em dois subgrupos de acordo com o valor do sinalizador obrigatório (T, F) ou opcional (-) de cada propriedade do conjunto de linhas. Para cada modelo de cursor, comece na primeira tabela e se mova da esquerda para direita. Compare os valores das propriedades nos dois subgrupos com os valores das propriedades correspondentes na coluna. O modelo de cursor que não tem nenhuma incompatibilidade com as propriedades exigidas e o menor número de incompatibilidades com as propriedades opcionais é selecionado. Caso haja mais de um modelo de cursor, é escolhido o mais à esquerda.  
+ Na coleção especificada de propriedades do conjunto de linhas, obtenha um subconjunto das propriedades listadas nas tabelas anteriores. Divida essas propriedades em dois subgrupos de acordo com o valor do sinalizador obrigatório (T, F) ou opcional (-) de cada propriedade do conjunto de linhas. Para cada modelo de cursor, inicie na primeira tabela e mova da esquerda para a direita. Compare os valores das propriedades nos dois subgrupos com os valores das propriedades correspondentes nessa coluna. O modelo de cursor que não tem nenhuma incompatibilidade com as propriedades exigidas e o menor número de incompatibilidades com as propriedades opcionais é selecionado. Caso haja mais de um modelo de cursor, é escolhido o mais à esquerda.  
   
 ## <a name="sql-server-cursor-block-size"></a>Tamanho do bloco de cursor do SQL Server  
  Quando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor dá suporte a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de linhas de provedor de OLE DB de cliente nativo, o número de elementos no parâmetro de matriz identificador de linha dos métodos **IRowset:: GetNextRows** ou **IRowsetLocate:: GetRowsAt** define o tamanho do bloco de cursor. As linhas apontadas pelos identificadores na matriz são os membros do bloco de cursor.  
