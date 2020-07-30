@@ -21,15 +21,15 @@ ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fcd2480265f9050d31e160ec6188f4cc3f34d3d3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6b87843c7d73105203689d0fd1205009628e7831
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919872"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396142"
 ---
 # <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (Atribuição de AND bit a bit) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   Executa uma operação AND lógica bit a bit entre dois valores inteiros e define um valor para o resultado da operação.  

@@ -14,12 +14,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001020"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332645"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados e chaves assimétricas do SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,8 @@ ms.locfileid: "86001020"
 ## <a name="tools"></a>Ferramentas  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] fornece ferramentas e utilitários que gerarão certificados e arquivos de chave com nomes seguros. Estas ferramentas oferecem maior flexibilidade no processo de geração de chaves do que a sintaxe do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode usá-las para criar chaves RSA com comprimentos de chaves mais complexas e importá-las para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A tabela a seguir mostra onde encontrar essas ferramentas.  
   
-|||  
-|-|-|  
-|Ferramenta|Finalidade|  
+| Ferramenta | Finalidade |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Cria certificados autoassinados.|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|Cria certificados Preterido em favor de **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Cria nomes seguros para chaves simétricas.|  
