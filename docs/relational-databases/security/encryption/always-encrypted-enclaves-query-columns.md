@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0a522d6deb01169189d6f5faaf7ba2f189d1522
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf127e7aa40e538bb3dee390f3661ae5d74413f3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595501"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411490"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>Consultar colunas usando o Always Encrypted com enclaves seguros
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Este artigo captura considerações gerais para executar consultas em colunas criptografadas usando um enclave seguro no lado do servidor para o [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md). 
 

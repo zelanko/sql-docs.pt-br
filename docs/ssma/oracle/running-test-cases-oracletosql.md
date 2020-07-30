@@ -10,15 +10,15 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266553"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394855"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
-Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  
+Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  
   
 Um requisito necessário para um teste bem-sucedido é que todos os objetos Oracle são convertidos e carregados no banco de dados de destino. Além disso, os dados da tabela devem ser migrados para que o conteúdo das tabelas em ambas as plataformas seja sincronizado.  
   
@@ -41,9 +41,8 @@ Nesta etapa, o SSMA Tester cria objetos auxiliares (tabelas, gatilhos e exibiç�
   
 Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os seguintes objetos auxiliares são criados no Oracle.  
   
-||||  
+|Nome|Tipo|Descrição|  
 |-|-|-|  
-|Nome|Type|Descrição|  
 |USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
 |USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
 |USER_TABLE $ AUDID|tabela|Tabela na qual as linhas novas e alteradas são salvas.|  
@@ -52,18 +51,16 @@ Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os se
 |USER_TABLE $ NEW_ID|exibição|Identificação de linhas inseridas e alteradas.|  
 |USER_TABLE $ OLD|exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
-O objeto a seguir é criado no esquema da tabela verificada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em.  
+O objeto a seguir é criado no esquema da tabela verificada em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-||||  
+|Nome|Tipo|Descrição|  
 |-|-|-|  
-|Nome|Type|Descrição|  
 |USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
   
-E os seguintes objetos são criados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no banco de dados ssmatesterdb.  
+E os seguintes objetos são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados ssmatesterdb.  
   
-||||  
+|Nome|Tipo|Descrição|  
 |-|-|-|  
-|Nome|Type|Descrição|  
 |USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
 |USER_TABLE $ AudID|tabela|Tabela na qual as linhas novas e alteradas são salvas.|  
 |USER_TABLE|exibição|Representação simplificada das modificações da tabela.|  

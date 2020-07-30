@@ -13,16 +13,16 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3f0f37da5def8b9154d655751f00eb7f63d63af
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 008ea4f32b1cb159c67f77e449f1828397b628e8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248684"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394731"
 ---
 # <a name="queries"></a>Consultas
 
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   DML (Linguagem de Manipulação de Dados) é um vocabulário usado para recuperar e trabalhar com os dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e no Banco de Dados SQL. Além disso, a maior parte dela funciona no SQL Data Warehouse e no PDW (examine cada instrução individual para obter detalhes). Use estas instruções para adicionar, modificar, consultar ou remover dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -29,15 +29,15 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 053097efe59628629e6b2d1edf45c852ad02de56
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 691a92eedf5c6ca9681d435d1180c51871504dc4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917986"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394733"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > [!NOTE]
 > A instrução **RAISERROR** não segue **SET XACT_ABORT**. Os novos aplicativos devem usar **THROW** em vez de **RAISERROR**.

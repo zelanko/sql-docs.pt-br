@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831431"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393980"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contém informações sobre cada plano de execução associado a uma consulta.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831431"
 |**is_forced_plan**|**bit**|O plano é marcado como forçado quando o usuário executa o procedimento armazenado **Sys. sp_query_store_force_plan**. O mecanismo de forçação *não garante* que exatamente esse plano será usado para a consulta referenciada pelo **query_id**. A imposição de plano faz com que a consulta seja compilada novamente e, normalmente, produz exatamente o mesmo plano ou semelhante ao plano referenciado por **plan_id**. Se a imposição de plano não for bem sucedido, **force_failure_count** será incrementado e **last_force_failure_reason** será populado com o motivo da falha. <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**is_natively_compiled**|**bit**|O plano inclui procedimentos com otimização de memória compilados nativamente. (0 = FALSE, 1 = TRUE). <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**force_failure_count**|**bigint**|Número de vezes que a força deste plano falhou. Ele pode ser incrementado somente quando a consulta é recompilada (*não em cada execução*). Ele é redefinido para 0 sempre que **is_plan_forced** é alterado de **false** para **true**. <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
-|**last_force_failure_reason**|**int**|Motivo pelo qual a imposição de plano falhou.<br /><br /> 0: nenhuma falha; caso contrário, número do erro que causou a falha na imposição<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<outro valor>: GENERAL_FAILURE <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
+|**last_force_failure_reason**|**int**|Motivo pelo qual a imposição de plano falhou.<br /><br /> 0: nenhuma falha; caso contrário, número do erro que causou a falha na imposição<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Descrição textual de last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: a consulta tenta modificar os dados enquanto a tabela de destino tem um índice que está sendo compilado online<br /><br /> INVALID_STARJOIN: o plano contém uma especificação de StarJoin inválida<br /><br /> TIME_OUT: o otimizador excedeu o número de operações permitidas ao pesquisar o plano especificado pelo plano forçado<br /><br /> NO_DB: um banco de dados especificado no plano não existe<br /><br /> HINT_CONFLICT: a consulta não pode ser compilada porque o plano está em conflito com uma dica de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: não é possível executar a consulta porque o plano está em conflito com o uso de consultas distribuídas ou operações de texto completo.<br /><br /> NO_PLAN: o processador de consultas não pôde produzir o plano de consulta porque não foi possível verificar o plano forçado como válido para a consulta<br /><br /> NO_INDEX: o índice especificado no plano não existe mais<br /><br /> VIEW_COMPILE_FAILED: não foi possível forçar o plano de consulta devido a um problema em uma exibição indexada referenciada no plano<br /><br /> GENERAL_FAILURE: erro de força geral (não coberto por motivos acima) <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará *nenhum*.|  
 |**count_compiles**|**bigint**|Planejar estatísticas de compilação.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planejar estatísticas de compilação.|  
@@ -94,7 +94,7 @@ Por fim, problemas com o próprio plano:
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Procedimentos Armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usar IRow::GetColumns | Microsoft Docs
+title: 'Usando IRow:: GetColumns (provedor de OLE DB de cliente nativo)'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8984b5d883229dfed1219463adcb0b02292d036b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3cdb23620c2898aa32a6cf4d10d383767fcbc915
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246795"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395755"
 ---
 # <a name="using-irowgetcolumns-in-sql-server-native-client"></a>Usando IRow:: GetColumns no SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

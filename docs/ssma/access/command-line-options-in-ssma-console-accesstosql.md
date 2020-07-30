@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265531"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394871"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opções de linha de comando no console do SSMA (AccessToSQL)
 A Microsoft fornece um conjunto robusto de opções de linha de comando para executar e controlar atividades do SSMA. As seções fornecidas fornecem detalhes adicionais.  
@@ -25,7 +25,7 @@ Aqui descritos estão as opções de comando do console.
   
 Para fins desta seção, o termo ' Option ' também é conhecido como ' switch '.  
   
-As opções não diferenciam maiúsculas de minúsculas e podem começar**-** com o caractere**/**' ' ou ' '.  
+As opções não diferenciam maiúsculas de minúsculas e podem começar com o **-** caractere ' ' ou ' **/** '.  
   
 Se as opções forem especificadas, será obrigatório que você especifique os parâmetros de opção correspondentes.  
   
@@ -117,16 +117,12 @@ Essa opção opcional denota a pasta de configurações de ambiente do projeto p
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### <a name="secure-password-option--psecurepassword"></a>Opção de senha segura:-p/SecurePassword  
 Essa opção indica a senha criptografada para conexões do servidor. Ele difere de todas as outras opções, pois não executa nenhum script ou ajuda em qualquer atividade relacionada à migração, mas ajuda a gerenciar a criptografia de senha para as conexões de servidor usadas no projeto de migração.  
   
 Você não pode inserir nenhuma outra opção ou senha como parâmetro de linha de comando. Caso contrário, resultará em um erro. Para obter mais informações, consulte a seção [Gerenciando senhas](managing-passwords-accesstosql.md) .  
   
-As seguintes subopçãos têm suporte para `-p/securepassword`:  
+As seguintes subopçãos têm suporte para `-p/securepassword` :  
   
 -   Para adicionar uma senha ou atualizar uma senha existente, para o armazenamento protegido para uma ID de servidor especificada ou para todas as IDs de servidor definidas no arquivo de conexão do servidor:  
   
