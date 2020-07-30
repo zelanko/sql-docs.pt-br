@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287140"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411367"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planejar o atestado do Serviço Guardião de Host
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Ao usar o [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md), o aplicativo cliente deve estar se comunicando com um enclave confiável no processo [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Para um enclave de VBS (segurança baseada em virtualização), esse requisito inclui verificar se o código dentro do enclave é válido e se o computador que hospeda o [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] é confiável. O atestado remoto alcança essa meta introduzindo um terceiro que pode validar a identidade (e, opcionalmente, a configuração) do computador [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Antes que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] possa usar um enclave para executar uma consulta, ele deve fornecer informações ao serviço de atestado sobre seu ambiente operacional para obter um certificado de integridade. Esse certificado de integridade é enviado para o cliente, que pode verificar de forma independente sua autenticidade com o serviço de atestado. Depois que o cliente confia no certificado de integridade, ele sabe que está se comunicando com um enclave VBS confiável e emitirá a consulta que usará esse enclave.
 

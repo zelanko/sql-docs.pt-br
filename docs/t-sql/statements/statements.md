@@ -13,16 +13,16 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 0fc44d29ca0b94f03fd94e89d5ba442f53fdf5da
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942908"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87391878"
 ---
 # <a name="transact-sql-statements"></a>instruções Transact-SQL
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Uma instrução SQL é uma unidade atômica de trabalho que é totalmente concluída com êxito ou falha por completo. Uma instrução SQL é um conjunto de instruções que consiste em identificadores, parâmetros, variáveis, nomes, tipos de dados e palavras reservadas do SQL compilados com sucesso. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma transação *implícita* para uma instrução SQL se o comando `BeginTransaction` não especificar o início de uma transação. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre confirmará uma transação implícita se a instrução for bem-sucedida e reverterá uma transação implícita se o comando falhar.  
 

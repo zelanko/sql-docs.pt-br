@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595511"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411424"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configurar a criptografia de coluna in-loco usando o Always Encrypted com enclaves seguros 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 O [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md) dá suporte a operações de criptografia em colunas de banco de dados in-loco em um enclave seguro no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A criptografia in-loco elimina a necessidade de mover os dados dessas operações para fora do banco de dados, tornando as operações criptográficas mais rápidas e confiáveis. 
 

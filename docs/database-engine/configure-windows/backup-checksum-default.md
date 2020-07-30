@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b3ce275f3195d3de49f77b0af01e2f2380718e7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725249"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362471"
 ---
 # <a name="backup-checksum-default"></a>padrão de soma de verificação de backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,9 +25,8 @@ ms.locfileid: "85725249"
   
  Os possíveis valores são descritos na tabela seguinte:  
   
-|||  
+|Valor|Significado|  
 |-|-|  
-|**Valor**|**Significado**|  
 |0|Desabilitado. Essa é a configuração padrão.|  
 |1|habilitado|  
   
