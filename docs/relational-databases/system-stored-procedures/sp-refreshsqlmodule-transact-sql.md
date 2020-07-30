@@ -26,15 +26,15 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f99e3497a8b1c2061ed54348943f1d087ed29bb
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977686"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396443"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Atualiza os metadados do procedimento armazenado não associado a esquema, da função definida pelo usuário, da exibição, do gatilho DML, do gatilho DDL de nível de banco de dados ou do gatilho DDL de nível de servidor especificado no banco de dados atual. Metadados persistentes desses objetos, como tipos de dados de parâmetros, podem ficar desatualizados devido a atualizações em seus objetos subjacentes.
   

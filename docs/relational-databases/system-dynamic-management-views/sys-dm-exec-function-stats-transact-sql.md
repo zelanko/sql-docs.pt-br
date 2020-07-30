@@ -18,15 +18,15 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821130"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396775"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retorna estatísticas de desempenho agregadas para funções armazenadas em cache. A exibição retorna uma linha para cada plano de função em cache e o tempo de vida da linha é desde que a função permaneça armazenada em cache. Quando uma função é removida do cache, a linha correspondente é eliminada dessa exibição. Nesse momento, é gerado um evento de Rastreamento do SQL de Estatísticas de Desempenho similar a **sys.dm_exec_query_stats**. Retorna informações sobre funções escalares, incluindo funções na memória e funções escalares CLR. Não retorna informações sobre funções com valor de tabela.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138333"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396556"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configurações do projeto (mapeamento de tipo) (MySQLToSQL)
 As configurações do projeto de mapeamento de tipo permitem que você defina mapeamentos de tipo padrão para o projeto do SSMA.  
@@ -48,9 +48,8 @@ Clique para redefinir a lista de mapeamento de tipo para os padrões do SSMA.
 ## <a name="type-mappings"></a>Mapeamentos de tipo  
 A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem e de destino  
   
-|||  
+|Tipo de dados MySQL|Tipo de dados do SQL Server|  
 |-|-|  
-|**Tipo de dados MySQL**|**Tipo de dados SQL Server**|  
 |BIGINT|BIGINT|  
 |bigint [*.. 255]|BIGINT|  
 |binary|binário [1]|  
@@ -70,7 +69,7 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |Blob [2.. 8000]|varbinary [*]|  
 |Blob [8001.. *]|varbinary(max)|  
 |bool|bit|  
-|booleano|bit|  
+|boolean|bit|  
 |char|nchar [1]|  
 |byte de caracteres|binário [1]|  
 |byte de caractere [0.. 1]|binário [1]|  
@@ -86,18 +85,18 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |DATETIME|datetime2 [0]|  
 |dec|decimal|  
 |Dec [*.. 65]|Decimal [*] [0]|  
-|Dec [*.. 65] [\*.. máximo|Decimal [*] [\*]|  
+|Dec [*.. 65] [ \* .. máximo|Decimal [*] [ \* ]|  
 |decimal|decimal|  
 |Decimal [*.. 65]|Decimal [*] [0]|  
-|Decimal [*.. 65] [\*.. máximo|Decimal [*] [\*]|  
+|Decimal [*.. 65] [ \* .. máximo|Decimal [*] [ \* ]|  
 |double|float [53]|  
 |double precision|float [53]|  
-|precisão dupla [*.. 255] [\*.. máximo|numeric [*] [\*]|  
-|Duplo [*.. 255] [\*.. máximo|numeric [*] [\*]|  
+|precisão dupla [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
+|Duplo [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
 |fixo|numeric|  
-|Corrigido [*.. 65] [\*.. máximo|numeric [*] [\*]|  
+|Corrigido [*.. 65] [ \* .. máximo|numeric [*] [ \* ]|  
 |FLOAT|float [24]|  
-|float [*.. 255] [\*.. máximo|numeric [*] [\*]|  
+|float [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*.. 255]|INT|  
@@ -132,13 +131,13 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |nchar [2.. 255]|nchar [*]|  
 |numeric|numeric|  
 |numeric [*.. 65]|numeric [*] [0]|  
-|numeric [*.. 65] [\*.. máximo|numeric [*] [\*]|  
+|numeric [*.. 65] [ \* .. máximo|numeric [*] [ \* ]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [0.. 1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
-|real [*.. 255] [\*.. máximo|numeric [*] [\*]|  
+|real [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
 |serial|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
@@ -156,18 +155,18 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |bigint não assinado [*.. 255]|BIGINT|  
 |Não assinado Dec|decimal|  
 |Não assinado Dec [*.. 65]|Decimal [*] [0]|  
-|Não assinado Dec [*.. 65] [\*.. máximo|Decimal [*] [\*]|  
+|Não assinado Dec [*.. 65] [ \* .. máximo|Decimal [*] [ \* ]|  
 |Decimal sem sinal|decimal|  
 |Decimal sem sinal [*.. 65]|Decimal [*] [0]|  
-|Decimal sem sinal [*.. 65] [\*.. máximo|Decimal [*] [\*]|  
+|Decimal sem sinal [*.. 65] [ \* .. máximo|Decimal [*] [ \* ]|  
 |duplo não assinado|float [53]|  
 |precisão dupla não assinada|float [53]|  
-|precisão dupla não assinada [*.. 255] [\*.. máximo|numeric [*] [\*]|  
-|duplo não assinado [*.. 255] [\*.. máximo|numeric [*] [\*]|  
+|precisão dupla não assinada [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
+|duplo não assinado [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
 |Não assinado corrigido|numeric|  
-|Não assinado fixo [*.. 65] [\*.. máximo|numeric [*] [\*]|  
+|Não assinado fixo [*.. 65] [ \* .. máximo|numeric [*] [ \* ]|  
 |float não assinado|float [24]|  
-|float não assinado [*.. 255] [\*.. máximo|numeric [*] [\*]|  
+|float não assinado [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
 |float não assinado [*.. 53]|float [53]|  
 |unsigned int|BIGINT|  
 |int não assinado [*.. 255]|BIGINT|  
@@ -177,9 +176,9 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |MEDIUMINT não assinado [*.. 255]|INT|  
 |numérico não assinado|numeric|  
 |numérico não assinado [*.. 65]|numeric [*] [0]|  
-|numérico não assinado [*.. 65] [\*.. máximo|numeric [*] [\*]|  
+|numérico não assinado [*.. 65] [ \* .. máximo|numeric [*] [ \* ]|  
 |real não assinado|float [53]|  
-|real não assinado [*.. 255 [[\*.. máximo|numeric [*] [\*]|  
+|real não assinado [*.. 255 [[ \* .. máximo|numeric [*] [ \* ]|  
 |smallint não assinado|INT|  
 |smallint não assinado [*.. 255]|INT|  
 |tinyint não assinado|TINYINT|  

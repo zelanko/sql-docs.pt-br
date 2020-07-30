@@ -19,15 +19,15 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fa014d44fdbe84770c018387207afb9dd396492
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fff840992f0b24af961acb069268cb41c550da2a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828701"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397095"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Cria um valor exclusivo do tipo **uniqueidentifier**.  
   
