@@ -12,19 +12,19 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a5f3e4f421fbe169d5acb049e5a91ce5ffa3612
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 013a6bcbba5e7647db1bec04204f8e8fec710c16
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627546"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396078"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Mapeia o **database_id**s de bancos de dados para o nome físico usado em nós de computação e fornece a **ID da entidade de segurança** do proprietário do banco de dados no sistema. Ingresse em **Sys. pdw_database_mappings** em **Sys. databases** e **Sys. pdw_nodes_pdw_physical_databases**.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar (36)**|O nome físico do banco de dados nos nós de computação.<br /><br /> **physical_name** e **database_id** formate a chave para essa exibição.||  
 |database_id|**int**|A ID de objeto do banco de dados. Consulte [Sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** e **database_id** formate a chave para essa exibição.||  

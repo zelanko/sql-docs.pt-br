@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 268844335920f88469119df5cc84a145369da1e1
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197237"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332422"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 
@@ -256,7 +256,7 @@ Igual a `datetime`, exceto que você pode especificar o número de segundos frac
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Tipos de dados numéricos exatos que usam dados inteiros. O armazenamento é mostrado na tabela a seguir.  
   
 | Tipo de Dados | Bytes de armazenamento |  

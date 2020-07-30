@@ -19,15 +19,15 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b43fa24ddf0ba8ec5e6c1361925161b222fb72d9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33bf02ad0b9f4718fc9d8e80596176304a8794f6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913152"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396615"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Atribuição de concatenação de cadeia de caracteres) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Concatena duas cadeias de caracteres e define a cadeia de caracteres como o resultado da operação. Por exemplo, se uma variável @x for igual a 'Adventure', @x + = 'Works' usará o valor original de @x, adicionará 'Works' à cadeia de caracteres, e definirá @x com o novo valor 'AdventureWorks'.  
   

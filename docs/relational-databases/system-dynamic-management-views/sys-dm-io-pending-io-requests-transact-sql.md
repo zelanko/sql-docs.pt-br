@@ -20,15 +20,15 @@ ms.assetid: d1fb46dd-5c74-4c04-9ecf-8934b1bedb5b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84bbf050161e6b66d10a1e7ce858459736248847
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d189ba90bb8597f2c23b143528cba1c8b225709
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827894"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396318"
 ---
 # <a name="sysdm_io_pending_io_requests-transact-sql"></a>sys.dm_io_pending_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna uma linha para cada solicitação de E/S pendente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,10 +39,10 @@ ms.locfileid: "82827894"
 |-----------------|---------------|-----------------|  
 |**io_completion_request_address**|**varbinary (8)**|Endereço de memória da solicitação de E/S. Não permite valor nulo.|  
 |**io_type**|**nvarchar(60)**|Tipo de solicitação de E/S pendente. Não permite valor nulo.|  
-|**io_pending_ms_ticks**|**bigint**|Somente para uso interno. Não permite valor nulo.| 
+|**io_pending_ms_ticks**|**bigint**|Apenas para uso interno. Não permite valor nulo.| 
 |**io_pending**|**int**|Indica se a solicitação de E/S está pendente ou foi concluída pelo Windows. Uma solicitação de E/S ainda pode ficar pendente mesmo que o Windows a conclua, caso o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não execute uma opção de contexto que processe a solicitação de E/S e a remova da lista. Não permite valor nulo.|  
 |**io_completion_routine_address**|**varbinary (8)**|Função interna a ser chamada quando a solicitação de E/S é concluída. Permite valor nulo.|  
-|**io_user_data_address**|**varbinary (8)**|Somente para uso interno. Permite valor nulo.|  
+|**io_user_data_address**|**varbinary (8)**|Apenas para uso interno. Permite valor nulo.|  
 |**scheduler_address**|**varbinary (8)**|Agendador no qual esta solicitação de E/S foi emitida. A solicitação de E/S será exibida na lista de E/S pendente do agendador. Para obter mais informações, consulte [Sys. dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). Não permite valor nulo.|  
 |**io_handle**|**varbinary (8)**|Identificador de arquivo do arquivo usado na solicitação de E/S. Permite valor nulo.|  
 |**io_offset**|**bigint**|Deslocamento da solicitação de E/S. Não permite valor nulo.|  
@@ -55,7 +55,7 @@ Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `V
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [E/s relacionadas a exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

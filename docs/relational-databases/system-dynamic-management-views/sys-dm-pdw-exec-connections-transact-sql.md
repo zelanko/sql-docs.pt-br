@@ -12,12 +12,12 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 74cfb2819cd462a2e3cf695cbb0daf92b4dac5a3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197112"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332376"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "86197112"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
-||||  
-|-|-|-|  
+| De | Para | Relação |
+| ---- | -- | ------------ |
 |dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Um para um|  
 |dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|Muitos para um|  
   

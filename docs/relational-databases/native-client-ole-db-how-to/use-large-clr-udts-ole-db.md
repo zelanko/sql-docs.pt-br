@@ -1,5 +1,5 @@
 ---
-title: Usar UDTs grandes do CLR (OLE DB) | Microsoft Docs
+title: Usar UDTs CLR grandes (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,25 +11,26 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33378d8f5ea3252e5166e9a69ea292ce1a76d663
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 60f8978fa0dedfe40a3d48b7796bc4d0fb1359c7
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011862"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396879"
 ---
-# <a name="use-large-clr-udts-ole-db"></a>Usar UDTs grandes do CLR (OLE DB)
+# <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>Usar UDTs CLR grandes no SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este exemplo mostra como buscar linhas com tipos grandes definidos pelo usuário em um conjunto de resultados. Para obter mais informações, veja [Tipos CLR grandes definidos pelo usuário &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo contém dois projetos. Um projeto cria um assembly (DLL) de código-fonte C#. Este assembly contém o tipo CLR. Uma tabela será adicionada ao banco de dados. Uma coluna na tabela será de um tipo definido no assembly, por padrão, este exemplo usará o banco de dados mestre. O segundo projeto é um aplicativo nativo C que lê dados da tabela.  
+ Este exemplo contém dois projetos. Um projeto cria um assembly (DLL) de código-fonte C#. Este assembly contém o tipo CLR. Uma tabela será adicionada ao banco de dados. Uma coluna na tabela será de um tipo definido no assembly. Por padrão, este exemplo usará o banco de dados mestre. O segundo projeto é um aplicativo nativo C que lê dados da tabela.  
   
  Compile a primeira listagem de código (C#) para uma DLL.  Em seguida, copie a DLL para o diretório raiz da unidade C.  
   
  Execute a segunda listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para adicionar o assembly ao banco de dados mestre.  
   
- Compile com ole32.lib oleaut32.lib e execute a terceira listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a terceira listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L "(local)" para L "(local) \\ \name", em que Name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  Execute a quarta listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para excluir o assembly do banco de dados mestre.  
   
