@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27b32c1c4e0f3f4d5359af287ba07d40b033af00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c94765dfe76bc5a1ef188328a6fe27e96671efb1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301807"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363129"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Função SQLRemoveDriverManager
 **Conformidade**  
  Versão introduzida: ODBC 3,0: preterido no Windows XP Service Pack 2, no Windows Server 2003 Service Pack 1 e em sistemas operacionais posteriores.  
   
  **Resumo**  
- **SQLRemoveDriverManager** altera ou remove informações sobre os componentes principais do ODBC da entrada Odbcinst. ini nas informações do sistema.  
+ **SQLRemoveDriverManager** altera ou remove informações sobre os componentes principais do ODBC da entrada Odbcinst.ini nas informações do sistema.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,8 +48,8 @@ BOOL SQLRemoveDriverManager(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar. Se não existir nenhuma entrada nas informações do sistema quando essa função for chamada, a função retornará FALSE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLRemoveDriverManager** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLRemoveDriverManager** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
@@ -77,17 +77,27 @@ BOOL SQLRemoveDriverManager(
  Na verdade, o **SQLRemoveDriverManager** não remove nenhum arquivo. O programa de chamada é responsável por excluir arquivos e manter as contagens de uso do arquivo. No entanto, os arquivos do Gerenciador de driver não devem ser removidos quando a contagem de uso do componente e a contagem de uso do arquivo tiverem atingido zero, pois esses arquivos podem ser usados por outros aplicativos que não incrementaram a contagem de uso do arquivo.  
   
  **SQLRemoveDriverManager** é chamado como parte do processo de desinstalação. Os componentes principais do ODBC (que incluem o Gerenciador de driver, a biblioteca de cursores, o instalador, a biblioteca de idiomas, o administrador, os arquivos de conversão e assim por diante) são desinstalados como um todo. Os seguintes arquivos não são removidos quando **SQLRemoveDriverManager** é chamado como parte do processo de desinstalação:  
-  
-|||  
-|-|-|  
-|ODBC32DLL|ODBCCP32. DLL|  
-|ODBCCR32. DLL|ODBC16GT. DLL|  
-|ODBCCU32. DLL|ODBC32GT. DLL|  
-|ODBCINT. DLL|DS16GT. DLL|  
-|ODBCTRAC. DLL|DS32GT. DLL|  
-|MSVCRT40. DLL|ODBCAD32. EXE|  
-|ODBCCP32. PAINEL||  
-  
+
+:::row:::
+    :::column:::
+        ODBC32DLL  
+        ODBCCR32.DLL  
+        ODBCCU32.DLL  
+        ODBCINT.DLL  
+        ODBCTRAC.DLL  
+        MSVCRT40.DLL  
+        ODBCCP32.CPL  
+    :::column-end:::
+    :::column:::
+        ODBCCP32.DLL  
+        ODBC16GT.DLL  
+        ODBC32GT.DLL  
+        DS16GT.DLL  
+        DS32GT.DLL  
+        ODBCAD32.EXE  
+    :::column-end:::
+:::row-end:::
+
  **SQLRemoveDriverManager** também é chamado como parte de um processo de atualização. Se um aplicativo detectar que deve executar uma atualização e tiver instalado anteriormente o driver, o driver deverá ser removido e reinstalado.  
   
  **SQLRemoveDriverManager** deve primeiro ser chamado para decrementar a contagem de uso do componente. **SQLInstallDriverEx** deve ser chamado para incrementar a contagem de uso do componente. O programa de instalação do aplicativo deve substituir os arquivos do componente principal antigo pelos novos arquivos. As contagens de uso de arquivo permanecerão as mesmas, e outros aplicativos que usam os arquivos de componentes principais de versão mais antiga agora usarão os arquivos de versão mais recentes.  

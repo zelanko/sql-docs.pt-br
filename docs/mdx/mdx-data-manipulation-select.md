@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967367"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362786"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX – SELECT
 
@@ -88,7 +88,7 @@ FROM
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Valores*  
+ *Integer*  
  Um inteiro entre 0 e 127.  
   
  *Cube_Name*  
@@ -159,9 +159,8 @@ FROM
   
  O conjunto de resultados obtido é:  
   
-|||||  
+|Nome do modelo + medidas|Reseller Sales Amount|Valor do desconto|Desconto PCT|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0, 4%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
@@ -211,9 +210,8 @@ FROM
   
  De acordo com os resultados a seguir, os dois conjuntos (Top10SellingProducts, Preferred10Products) são iguais  
   
-|||||  
+|Nome do modelo + medidas|Reseller Sales Amount|Valor do desconto|Desconto PCT|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0, 4%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
@@ -245,9 +243,8 @@ FROM
   
  Gera o seguinte conjunto de resultados:  
   
-|||||  
+|Nome do modelo + medidas|Reseller Sales Amount|Valor do desconto|Desconto PCT|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
@@ -303,9 +300,8 @@ FROM
   
  Gera o seguinte conjunto de resultados:  
   
-|||||  
+|Nome do modelo + medidas|Reseller Sales Amount|Valor do desconto|Desconto PCT|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
@@ -332,9 +328,8 @@ FROM
   
  O conjunto de resultados a seguir agora mostra o comportamento superficial de Autoexists.  
   
-|||||  
+|Nome do modelo + medidas|Reseller Sales Amount|Valor do desconto|Desconto PCT|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
@@ -375,9 +370,8 @@ WHERE
   
  Gera os seguintes resultados:  
   
-|||||||  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Bikes|Clothing|Componentes|  
 |-|-|-|-|-|-|  
-||**Todos os produtos**|**Acessórios**|**Bikes**|**Roupas**|**Componentes**|  
 |**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -399,9 +393,8 @@ WHERE
   
  Gera os seguintes resultados:  
   
-|||||  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
 |-|-|-|-|  
-||**Todos os produtos**|**Acessórios**|**Roupas**|  
 |**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -426,9 +419,8 @@ WHERE
   
  A consulta anterior gera os seguintes resultados:  
   
-|||||  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
 |-|-|-|-|  
-||Todos os Produtos|Acessórios|Roupas|  
 |Todos os Revendedores|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Revendedor de Valor Agregado|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -457,9 +449,8 @@ WHERE
   
  A consulta anterior gera os seguintes resultados:  
   
-|||||  
-|-|-|-|-|  
 |Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|Margem de lucro bruto do revendedor|  
+|-|-|-|-|  
 |$80,450,596.98|$79980114.38|$470482.60|0,58%|  
   
 ## <a name="see-also"></a>Consulte Também  

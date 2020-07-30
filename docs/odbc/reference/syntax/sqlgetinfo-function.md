@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279570"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363376"
 ---
 # <a name="sqlgetinfo-function"></a>Função SQLGetInfo
 
@@ -75,7 +75,7 @@ SQLRETURN SQLGetInfo(
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
 
  Quando **SQLGetInfo** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetInfo** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
@@ -115,7 +115,7 @@ SQLRETURN SQLGetInfo(
   
  Um driver deve retornar um valor para cada tipo de informação definido nas tabelas a seguir. Se um tipo de informação não se aplicar ao driver ou à fonte de dados, o driver retornará um dos valores listados na tabela a seguir.  
 
-|||
+|Tipo de informação|Valor|
 |-|-|
 |Cadeia de caracteres ("Y" ou "N")|"N"|
 |Cadeia de caracteres (não "Y" ou "N")|cadeia de caracteres vazia|
@@ -124,7 +124,7 @@ SQLRETURN SQLGetInfo(
   
  Por exemplo, se uma fonte de dados não oferecer suporte a procedimentos, **SQLGetInfo** retornará os valores listados na tabela a seguir para os valores de *InfoType* relacionados aos procedimentos.  
 
-|||
+|InfoType|Valor|
 |-|-|
 |SQL_PROCEDURES|"N"|
 |SQL_ACCESSIBLE_PROCEDURES|"N"|
@@ -142,29 +142,52 @@ SQLRETURN SQLGetInfo(
 ## <a name="driver-information"></a>Informações do driver  
 
  Os valores a seguir do argumento *InfoType* retornam informações sobre o driver ODBC, como o número de instruções ativas, o nome da fonte de dados e o nível de conformidade dos padrões de interface:  
-  
-|||  
-|-|-|  
-|SQL_ACTIVE_ENVIRONMENTS|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
-|SQL_ASYNC_DBC_FUNCTIONS|SQL_FILE_USAGE|  
-|SQL_ASYNC_MODE|SQL_GETDATA_EXTENSIONS|  
-|SQL_ASYNC_NOTIFICATION|SQL_INFO_SCHEMA_VIEWS|  
-|SQL_BATCH_ROW_COUNT|SQL_KEYSET_CURSOR_ATTRIBUTES1|  
-|SQL_BATCH_SUPPORT|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
-|SQL_DATA_SOURCE_NAME|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|  
-|SQL_DRIVER_AWARE_POOLING_SUPPORTED|SQL_MAX_CONCURRENT_ACTIVITIES|  
-|SQL_DRIVER_HDBC|SQL_MAX_DRIVER_CONNECTIONS|  
-|SQL_DRIVER_HDESC|SQL_ODBC_INTERFACE_CONFORMANCE|  
-|SQL_DRIVER_HENV|SQL_ODBC_STANDARD_CLI_CONFORMANCE|  
-|SQL_DRIVER_HLIB|SQL_ODBC_VER|  
-|SQL_DRIVER_HSTMT|SQL_PARAM_ARRAY_ROW_COUNTS|  
-|SQL_DRIVER_NAME|SQL_PARAM_ARRAY_SELECTS|  
-|SQL_DRIVER_ODBC_VER|SQL_ROW_UPDATES|  
-|SQL_DRIVER_VER|SQL_SEARCH_PATTERN_ESCAPE|  
-|SQL_DYNAMIC_CURSOR_ATTRIBUTES1|SQL_SERVER_NAME|  
-|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|SQL_STATIC_CURSOR_ATTRIBUTES1|  
-|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_STATIC_CURSOR_ATTRIBUTES2|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACTIVE_ENVIRONMENTS  
+        SQL_ASYNC_DBC_FUNCTIONS  
+        SQL_ASYNC_MODE  
+        SQL_ASYNC_NOTIFICATION  
+        SQL_BATCH_ROW_COUNT  
+        SQL_BATCH_SUPPORT  
+        SQL_DATA_SOURCE_NAME  
+        SQL_DRIVER_AWARE_POOLING_SUPPORTED  
+        SQL_DRIVER_HDBC  
+        SQL_DRIVER_HDESC  
+        SQL_DRIVER_HENV  
+        SQL_DRIVER_HLIB  
+        SQL_DRIVER_HSTMT  
+        SQL_DRIVER_NAME  
+        SQL_DRIVER_ODBC_VER  
+        SQL_DRIVER_VER  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES1  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES2  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1  
+    :::column-end:::
+    :::column:::
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2  
+        SQL_FILE_USAGE  
+        SQL_GETDATA_EXTENSIONS  
+        SQL_INFO_SCHEMA_VIEWS  
+        SQL_KEYSET_CURSOR_ATTRIBUTES1  
+        SQL_KEYSET_CURSOR_ATTRIBUTES2  
+        SQL_MAX_ASYNC_CONCURRENT_STATEMENTS  
+        SQL_MAX_CONCURRENT_ACTIVITIES  
+        SQL_MAX_DRIVER_CONNECTIONS  
+        SQL_ODBC_INTERFACE_CONFORMANCE  
+        SQL_ODBC_STANDARD_CLI_CONFORMANCE  
+        SQL_ODBC_VER  
+        SQL_PARAM_ARRAY_ROW_COUNTS  
+        SQL_PARAM_ARRAY_SELECTS  
+        SQL_ROW_UPDATES  
+        SQL_SEARCH_PATTERN_ESCAPE  
+        SQL_SERVER_NAME  
+        SQL_STATIC_CURSOR_ATTRIBUTES1  
+        SQL_STATIC_CURSOR_ATTRIBUTES2  
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > Ao implementar o **SQLGetInfo**, um driver pode melhorar o desempenho, minimizando o número de vezes que as informações são enviadas ou solicitadas do servidor.  
   
@@ -172,141 +195,252 @@ SQLRETURN SQLGetInfo(
 
  Os valores a seguir do argumento *InfoType* retornam informações sobre o produto DBMS, como o nome do DBMS e a versão:  
 
-|||
-|-|-|
-|SQL_DATABASE_NAME|SQL_DBMS_NAME|
-|SQL_DBMS_VER||
-  
+:::row:::
+    :::column:::
+        SQL_DATABASE_NAME  
+        SQL_DBMS_NAME  
+    :::column-end:::
+    :::column:::
+        SQL_DBMS_VER  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="data-source-information"></a>Informações da fonte de dados  
 
  Os valores a seguir do argumento *InfoType* retornam informações sobre a fonte de dados, como características do cursor e recursos de transação:  
-  
-|||  
-|-|-|  
-|SQL_ACCESSIBLE_PROCEDURES|SQL_MULT_RESULT_SETS|  
-|SQL_ACCESSIBLE_TABLES|SQL_MULTIPLE_ACTIVE_TXN|  
-|SQL_BOOKMARK_PERSISTENCE|SQL_NEED_LONG_DATA_LEN|  
-|SQL_CATALOG_TERM|SQL_NULL_COLLATION|  
-|SQL_COLLATION_SEQ|SQL_PROCEDURE_TERM|  
-|SQL_CONCAT_NULL_BEHAVIOR|SQL_SCHEMA_TERM|  
-|SQL_CURSOR_COMMIT_BEHAVIOR|SQL_SCROLL_OPTIONS|  
-|SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_TABLE_TERM|  
-|SQL_CURSOR_SENSITIVITY|SQL_TXN_CAPABLE|  
-|SQL_DATA_SOURCE_READ_ONLY|SQL_TXN_ISOLATION_OPTION|  
-|SQL_DEFAULT_TXN_ISOLATION|SQL_USER_NAME|  
-|SQL_DESCRIBE_PARAMETER||  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACCESSIBLE_PROCEDURES  
+        SQL_ACCESSIBLE_TABLES  
+        SQL_BOOKMARK_PERSISTENCE  
+        SQL_CATALOG_TERM  
+        SQL_COLLATION_SEQ  
+        SQL_CONCAT_NULL_BEHAVIOR  
+        SQL_CURSOR_COMMIT_BEHAVIOR  
+        SQL_CURSOR_ROLLBACK_BEHAVIOR  
+        SQL_CURSOR_SENSITIVITY  
+        SQL_DATA_SOURCE_READ_ONLY  
+        SQL_DEFAULT_TXN_ISOLATION  
+        SQL_DESCRIBE_PARAMETER  
+    :::column-end:::
+    :::column:::
+        SQL_MULT_RESULT_SETS  
+        SQL_MULTIPLE_ACTIVE_TXN  
+        SQL_NEED_LONG_DATA_LEN  
+        SQL_NULL_COLLATION  
+        SQL_PROCEDURE_TERM  
+        SQL_SCHEMA_TERM  
+        SQL_SCROLL_OPTIONS  
+        SQL_TABLE_TERM  
+        SQL_TXN_CAPABLE  
+        SQL_TXN_ISOLATION_OPTION  
+        SQL_USER_NAME  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="supported-sql"></a>SQL com suporte  
 
  Os valores a seguir do argumento *InfoType* retornam informações sobre as instruções SQL com suporte na fonte de dados. A sintaxe SQL de cada recurso descrito por esses tipos de informações é a sintaxe SQL-92. Esses tipos de informações não descrevem exaustivamente toda a gramática do SQL-92. Em vez disso, eles descrevem essas partes da gramática para as quais as fontes de dados normalmente oferecem níveis diferentes de suporte. Especificamente, a maioria das instruções DDL no SQL-92 são cobertas.  
   
  Os aplicativos devem determinar o nível geral de gramática com suporte do tipo de informações SQL_SQL_CONFORMANCE e usar os outros tipos de informações para determinar variações do nível de conformidade de padrões declarados.  
-  
-|||  
-|-|-|  
-|SQL_AGGREGATE_FUNCTIONS|SQL_DROP_TABLE|  
-|SQL_ALTER_DOMAIN|SQL_DROP_TRANSLATION|  
-|SQL_ALTER_SCHEMA|SQL_DROP_VIEW|  
-|SQL_ALTER_TABLE|SQL_EXPRESSIONS_IN_ORDERBY|  
-|SQL_ANSI_SQL_DATETIME_LITERALS|SQL_GROUP_BY|  
-|SQL_CATALOG_LOCATION|SQL_IDENTIFIER_CASE|  
-|SQL_CATALOG_NAME|SQL_IDENTIFIER_QUOTE_CHAR|  
-|SQL_CATALOG_NAME_SEPARATOR|SQL_INDEX_KEYWORDS|  
-|SQL_CATALOG_USAGE|SQL_INSERT_STATEMENT|  
-|SQL_COLUMN_ALIAS|SQL_INTEGRITY|  
-|SQL_CORRELATION_NAME|SQL_KEYWORDS|  
-|SQL_CREATE_ASSERTION|SQL_LIKE_ESCAPE_CLAUSE|  
-|SQL_CREATE_CHARACTER_SET|SQL_NON_NULLABLE_COLUMNS|  
-|SQL_CREATE_COLLATION|SQL_SQL_CONFORMANCE|  
-|SQL_CREATE_DOMAIN|SQL_OJ_CAPABILITIES|  
-|SQL_CREATE_SCHEMA|SQL_ORDER_BY_COLUMNS_IN_SELECT|  
-|SQL_CREATE_TABLE|SQL_OUTER_JOINS|  
-|SQL_CREATE_TRANSLATION|SQL_PROCEDURES|  
-|SQL_DDL_INDEX|SQL_QUOTED_IDENTIFIER_CASE|  
-|SQL_DROP_ASSERTION|SQL_SCHEMA_USAGE|  
-|SQL_DROP_CHARACTER_SET|SQL_SPECIAL_CHARACTERS|  
-|SQL_DROP_COLLATION|SQL_SUBQUERIES|  
-|SQL_DROP_DOMAIN|SQL_UNION|  
-|SQL_DROP_SCHEMA||  
-  
+
+:::row:::
+    :::column:::
+        SQL_AGGREGATE_FUNCTIONS  
+        SQL_ALTER_DOMAIN  
+        SQL_ALTER_SCHEMA  
+        SQL_ALTER_TABLE  
+        SQL_ANSI_SQL_DATETIME_LITERALS  
+        SQL_CATALOG_LOCATION  
+        SQL_CATALOG_NAME  
+        SQL_CATALOG_NAME_SEPARATOR  
+        SQL_CATALOG_USAGE  
+        SQL_COLUMN_ALIAS  
+        SQL_CORRELATION_NAME  
+        SQL_CREATE_ASSERTION  
+        SQL_CREATE_CHARACTER_SET  
+        SQL_CREATE_COLLATION  
+        SQL_CREATE_DOMAIN  
+        SQL_CREATE_SCHEMA  
+        SQL_CREATE_TABLE  
+        SQL_CREATE_TRANSLATION  
+        SQL_DDL_INDEX  
+        SQL_DROP_ASSERTION  
+        SQL_DROP_CHARACTER_SET  
+        SQL_DROP_COLLATION  
+        SQL_DROP_DOMAIN  
+        SQL_DROP_SCHEMA  
+    :::column-end:::
+    :::column:::
+        SQL_DROP_TABLE  
+        SQL_DROP_TRANSLATION  
+        SQL_DROP_VIEW  
+        SQL_EXPRESSIONS_IN_ORDERBY  
+        SQL_GROUP_BY  
+        SQL_IDENTIFIER_CASE  
+        SQL_IDENTIFIER_QUOTE_CHAR  
+        SQL_INDEX_KEYWORDS  
+        SQL_INSERT_STATEMENT  
+        SQL_INTEGRITY  
+        SQL_KEYWORDS  
+        SQL_LIKE_ESCAPE_CLAUSE  
+        SQL_NON_NULLABLE_COLUMNS  
+        SQL_OJ_CAPABILITIES  
+        SQL_ORDER_BY_COLUMNS_IN_SELECT  
+        SQL_OUTER_JOINS  
+        SQL_PROCEDURES  
+        SQL_QUOTED_IDENTIFIER_CASE  
+        SQL_SCHEMA_USAGE  
+        SQL_SPECIAL_CHARACTERS  
+        SQL_SQL_CONFORMANCE  
+        SQL_SUBQUERIES  
+        SQL_UNION  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="sql-limits"></a>Limites do SQL  
 
  Os valores a seguir do argumento *InfoType* retornam informações sobre os limites aplicados a identificadores e cláusulas em instruções SQL, como o comprimento máximo de identificadores e o número máximo de colunas em uma lista de seleção. As limitações podem ser impostas pelo driver ou pela fonte de dados.  
-  
-|||  
-|-|-|  
-|SQL_MAX_BINARY_LITERAL_LEN|SQL_MAX_IDENTIFIER_LEN|  
-|SQL_MAX_CATALOG_NAME_LEN|SQL_MAX_INDEX_SIZE|  
-|SQL_MAX_CHAR_LITERAL_LEN|SQL_MAX_PROCEDURE_NAME_LEN|  
-|SQL_MAX_COLUMN_NAME_LEN|SQL_MAX_ROW_SIZE|  
-|SQL_MAX_COLUMNS_IN_GROUP_BY|SQL_MAX_ROW_SIZE_INCLUDES_LONG|  
-|SQL_MAX_COLUMNS_IN_INDEX|SQL_MAX_SCHEMA_NAME_LEN|  
-|SQL_MAX_COLUMNS_IN_ORDER_BY|SQL_MAX_STATEMENT_LEN|  
-|SQL_MAX_COLUMNS_IN_SELECT|SQL_MAX_TABLE_NAME_LEN|  
-|SQL_MAX_COLUMNS_IN_TABLE|SQL_MAX_TABLES_IN_SELECT|  
-|SQL_MAX_CURSOR_NAME_LEN|SQL_MAX_USER_NAME_LEN|  
-  
+
+:::row:::
+    :::column:::
+        SQL_MAX_BINARY_LITERAL_LEN  
+        SQL_MAX_CATALOG_NAME_LEN  
+        SQL_MAX_CHAR_LITERAL_LEN  
+        SQL_MAX_COLUMN_NAME_LEN  
+        SQL_MAX_COLUMNS_IN_GROUP_BY  
+        SQL_MAX_COLUMNS_IN_INDEX  
+        SQL_MAX_COLUMNS_IN_ORDER_BY  
+        SQL_MAX_COLUMNS_IN_SELECT  
+        SQL_MAX_COLUMNS_IN_TABLE  
+        SQL_MAX_CURSOR_NAME_LEN  
+    :::column-end:::
+    :::column:::
+        SQL_MAX_IDENTIFIER_LEN  
+        SQL_MAX_INDEX_SIZE  
+        SQL_MAX_PROCEDURE_NAME_LEN  
+        SQL_MAX_ROW_SIZE  
+        SQL_MAX_ROW_SIZE_INCLUDES_LONG  
+        SQL_MAX_SCHEMA_NAME_LEN  
+        SQL_MAX_STATEMENT_LEN  
+        SQL_MAX_TABLE_NAME_LEN  
+        SQL_MAX_TABLES_IN_SELECT  
+        SQL_MAX_USER_NAME_LEN  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="scalar-function-information"></a>Informações de função escalar  
 
  Os valores a seguir do argumento *InfoType* retornam informações sobre as funções escalares com suporte da fonte de dados e do driver. Para obter mais informações sobre funções escalares, consulte o [Apêndice E: funções escalares](../appendixes/appendix-e-scalar-functions.md).  
-  
-|||  
-|-|-|  
-|SQL_CONVERT_FUNCTIONS|SQL_TIMEDATE_ADD_INTERVALS|  
-|SQL_NUMERIC_FUNCTIONS|SQL_TIMEDATE_DIFF_INTERVALS|  
-|SQL_STRING_FUNCTIONS|SQL_TIMEDATE_FUNCTIONS|  
-|SQL_SYSTEM_FUNCTIONS||  
-  
+
+:::row:::
+    :::column:::
+        SQL_CONVERT_FUNCTIONS  
+        SQL_NUMERIC_FUNCTIONS  
+        SQL_STRING_FUNCTIONS  
+        SQL_SYSTEM_FUNCTIONS  
+    :::column-end:::
+    :::column:::
+        SQL_TIMEDATE_ADD_INTERVALS  
+        SQL_TIMEDATE_DIFF_INTERVALS  
+        SQL_TIMEDATE_FUNCTIONS  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="conversion-information"></a>Informações de conversão  
 
  Os valores a seguir do argumento *InfoType* retornam uma lista dos tipos de dados SQL para os quais a fonte de dados pode converter o tipo de dados SQL especificado com a função **Convert** escalar:  
-  
-|||  
-|-|-|  
-|SQL_CONVERT_BIGINT|SQL_CONVERT_LONGVARBINARY|  
-|SQL_CONVERT_BINARY|SQL_CONVERT_LONGVARCHAR|  
-|SQL_CONVERT_BIT|SQL_CONVERT_NUMERIC|  
-|SQL_CONVERT_CHAR|SQL_CONVERT_REAL|  
-|SQL_CONVERT_DATE|SQL_CONVERT_SMALLINT|  
-|SQL_CONVERT_DECIMAL|SQL_CONVERT_TIME|  
-|SQL_CONVERT_DOUBLE|SQL_CONVERT_TIMESTAMP|  
-|SQL_CONVERT_FLOAT|SQL_CONVERT_TINYINT|  
-|SQL_CONVERT_INTEGER|SQL_CONVERT_VARBINARY|  
-|SQL_CONVERT_INTERVAL_YEAR_MONTH|SQL_CONVERT_VARCHAR|  
-|SQL_CONVERT_INTERVAL_DAY_TIME||  
-  
+
+:::row:::
+    :::column:::
+        SQL_CONVERT_BIGINT  
+        SQL_CONVERT_BINARY  
+        SQL_CONVERT_BIT  
+        SQL_CONVERT_CHAR  
+        SQL_CONVERT_DATE  
+        SQL_CONVERT_DECIMAL  
+        SQL_CONVERT_DOUBLE  
+        SQL_CONVERT_FLOAT  
+        SQL_CONVERT_INTEGER  
+        SQL_CONVERT_INTERVAL_DAY_TIME  
+        SQL_CONVERT_INTERVAL_YEAR_MONTH  
+    :::column-end:::
+    :::column:::
+        SQL_CONVERT_LONGVARBINARY  
+        SQL_CONVERT_LONGVARCHAR  
+        SQL_CONVERT_NUMERIC  
+        SQL_CONVERT_REAL  
+        SQL_CONVERT_SMALLINT  
+        SQL_CONVERT_TIME  
+        SQL_CONVERT_TIMESTAMP  
+        SQL_CONVERT_TINYINT  
+        SQL_CONVERT_VARBINARY  
+        SQL_CONVERT_VARCHAR  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-types-added-for-odbc-3x"></a>Tipos de informações adicionados para ODBC 3. x  
 
  Os seguintes valores do argumento *InfoType* foram adicionados para ODBC 3. x:  
-  
-|||  
-|-|-|  
-|SQL_ACTIVE_ENVIRONMENTS|SQL_DRIVER_AWARE_POOLING_SUPPORTED|  
-|SQL_AGGREGATE_FUNCTIONS|SQL_DRIVER_HDESC|  
-|SQL_ALTER_DOMAIN|SQL_DROP_ASSERTION|  
-|SQL_ALTER_SCHEMA|SQL_DROP_CHARACTER_SET|  
-|SQL_ANSI_SQL_DATETIME_LITERALS|SQL_DROP_COLLATION|  
-|SQL_ASYNC_DBC_FUNCTIONS|SQL_DROP_DOMAIN|  
-|SQL_ASYNC_MODE|SQL_DROP_SCHEMA|  
-|SQL_ASYNC_NOTIFICATION|SQL_DROP_TABLE|  
-|SQL_BATCH_ROW_COUNT|SQL_DROP_TRANSLATION|  
-|SQL_BATCH_SUPPORT|SQL_DROP_VIEW|  
-|SQL_CATALOG_NAME|SQL_DYNAMIC_CURSOR_ATTRIBUTES1|  
-|SQL_COLLATION_SEQ|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|  
-|SQL_CONVERT_INTERVAL_YEAR_MONTH|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|  
-|SQL_CONVERT_INTERVAL_DAY_TIME|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
-|SQL_CREATE_ASSERTION|SQL_INFO_SCHEMA_VIEWS|  
-|SQL_CREATE_CHARACTER_SET|SQL_INSERT_STATEMENT|  
-|SQL_CREATE_COLLATION|SQL_KEYSET_CURSOR_ATTRIBUTES1|  
-|SQL_CREATE_DOMAIN|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
-|SQL_CREATE_SCHEMA|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|  
-|SQL_CREATE_TABLE|SQL_MAX_IDENTIFIER_LEN|  
-|SQL_CREATE_TRANSLATION|SQL_PARAM_ARRAY_ROW_COUNTS|  
-|SQL_CURSOR_SENSITIVITY|SQL_PARAM_ARRAY_SELECTS|  
-|SQL_DDL_INDEX|SQL_STATIC_CURSOR_ATTRIBUTES1|  
-|SQL_DESCRIBE_PARAMETER|SQL_STATIC_CURSOR_ATTRIBUTES2|  
-|SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACTIVE_ENVIRONMENTS  
+        SQL_AGGREGATE_FUNCTIONS  
+        SQL_ALTER_DOMAIN  
+        SQL_ALTER_SCHEMA  
+        SQL_ANSI_SQL_DATETIME_LITERALS  
+        SQL_ASYNC_DBC_FUNCTIONS  
+        SQL_ASYNC_MODE  
+        SQL_ASYNC_NOTIFICATION  
+        SQL_BATCH_ROW_COUNT  
+        SQL_BATCH_SUPPORT  
+        SQL_CATALOG_NAME  
+        SQL_COLLATION_SEQ  
+        SQL_CONVERT_INTERVAL_DAY_TIME  
+        SQL_CONVERT_INTERVAL_YEAR_MONTH  
+        SQL_CREATE_ASSERTION  
+        SQL_CREATE_CHARACTER_SET  
+        SQL_CREATE_COLLATION  
+        SQL_CREATE_DOMAIN  
+        SQL_CREATE_SCHEMA  
+        SQL_CREATE_TABLE  
+        SQL_CREATE_TRANSLATION  
+        SQL_CURSOR_SENSITIVITY  
+        SQL_DDL_INDEX  
+        SQL_DESCRIBE_PARAMETER  
+        SQL_DM_VER  
+    :::column-end:::
+    :::column:::
+        SQL_DRIVER_AWARE_POOLING_SUPPORTED  
+        SQL_DRIVER_HDESC  
+        SQL_DROP_ASSERTION  
+        SQL_DROP_CHARACTER_SET  
+        SQL_DROP_COLLATION  
+        SQL_DROP_DOMAIN  
+        SQL_DROP_SCHEMA  
+        SQL_DROP_TABLE  
+        SQL_DROP_TRANSLATION  
+        SQL_DROP_VIEW  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES1  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES2  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2  
+        SQL_INFO_SCHEMA_VIEWS  
+        SQL_INSERT_STATEMENT  
+        SQL_KEYSET_CURSOR_ATTRIBUTES1  
+        SQL_KEYSET_CURSOR_ATTRIBUTES2  
+        SQL_MAX_ASYNC_CONCURRENT_STATEMENTS  
+        SQL_MAX_IDENTIFIER_LEN  
+        SQL_PARAM_ARRAY_ROW_COUNTS  
+        SQL_PARAM_ARRAY_SELECTS  
+        SQL_STATIC_CURSOR_ATTRIBUTES1  
+        SQL_STATIC_CURSOR_ATTRIBUTES2  
+        SQL_XOPEN_CLI_YEAR  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-types-renamed-for-odbc-3x"></a>Tipos de informações renomeados para ODBC 3. x  
 
  Os valores a seguir do argumento *InfoType* foram renomeados para ODBC 3. x.  
@@ -328,14 +462,22 @@ SQLRETURN SQLGetInfo(
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Tipos de informações preteridos no ODBC 3. x  
 
  Os valores a seguir do argumento *InfoType* foram preteridos no ODBC 3. x. Os drivers ODBC 3. x devem continuar a dar suporte a esses tipos de informações para compatibilidade com versões anteriores com aplicativos ODBC 2. x. (Para obter mais informações sobre esses tipos, consulte [suporte SQLGetInfo](../appendixes/sqlgetinfo-support.md) no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.)  
-  
-|||  
-|-|-|  
-|SQL_FETCH_DIRECTION|SQL_POS_OPERATIONS|  
-|SQL_LOCK_TYPES|SQL_POSITIONED_STATEMENTS|  
-|SQL_ODBC_API_CONFORMANCE|SQL_SCROLL_CONCURRENCY|  
-|SQL_ODBC_SQL_CONFORMANCE|SQL_STATIC_SENSITIVITY|  
-  
+
+:::row:::
+    :::column:::
+        SQL_FETCH_DIRECTION  
+        SQL_LOCK_TYPES  
+        SQL_ODBC_API_CONFORMANCE  
+        SQL_ODBC_SQL_CONFORMANCE  
+    :::column-end:::
+    :::column:::
+        SQL_POS_OPERATIONS  
+        SQL_POSITIONED_STATEMENTS  
+        SQL_SCROLL_CONCURRENCY  
+        SQL_STATIC_SENSITIVITY  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-type-descriptions"></a>Descrições de tipos de informações  
 
 A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do ODBC na qual ele foi introduzido e sua descrição.  
@@ -347,20 +489,20 @@ A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do 
 |SQL_ACTIVE_ENVIRONMENTS|3.0|Um valor de SQLUSMALLINT que especifica o número máximo de ambientes ativos aos quais o driver pode dar suporte. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.|
 |SQL_AGGREGATE_FUNCTIONS|3.0|Um bitmask SQLUINTEGER que enumera o suporte para funções de agregação:<br/>SQL_AF_ALL<br/>SQL_AF_AVG<br/>SQL_AF_COUNT<br/>SQL_AF_DISTINCT<br/>SQL_AF_MAX<br/>SQL_AF_MIN<br/>SQL_AF_SUM<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará todas essas opções como com suporte.|
 |SQL_ALTER_DOMAIN|3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **ALTER Domain** , conforme definido em SQL-92, com suporte da fonte de dados. Um driver em conformidade com nível completo do SQL-92 sempre retornará todas as bitmasks. Um valor de retorno de "0" significa que não há suporte para a instrução **ALTER Domain** .<br/><br/>O nível de conformidade do SQL-92 ou FIPS no qual esse recurso deve ser suportado é mostrado entre parênteses ao lado de cada bitmask.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br/>SQL_AD_ADD_DOMAIN_CONSTRAINT = há suporte para a adição de uma restrição de domínio (nível completo)<br/>SQL_AD_ADD_DOMAIN_DEFAULT = tem \<alter domain> \<set domain default clause> suporte (nível completo)<br/>SQL_AD_CONSTRAINT_NAME_DEFINITION = tem \<constraint name definition clause> suporte para a nomenclatura de restrição de domínio (nível intermediário)<br/>SQL_AD_DROP_DOMAIN_CONSTRAINT = tem \<drop domain constraint clause> suporte (nível completo)<br/>SQL_AD_DROP_DOMAIN_DEFAULT = tem \<alter domain> \<drop domain default clause> suporte (nível completo)<br/><br/>O bits a seguir especificará \<constraint attributes> se há suporte para o se \<add domain constraint> for suportado (o bit de SQL_AD_ADD_DOMAIN_CONSTRAINT está definido):<br/>SQL_AD_ADD_CONSTRAINT_DEFERRABLE (nível completo)<br/>SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE (nível completo)<br/>SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED (nível completo)<br/>SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE (nível completo)|
-|SQL_ALTER_TABLE|2,0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **ALTER TABLE** com suporte da fonte de dados.<br/><br/>O nível de conformidade do SQL-92 ou FIPS no qual esse recurso deve ser suportado é mostrado entre parênteses ao lado de cada bitmask.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br/>\<add column>Há suporte para a cláusula SQL_AT_ADD_COLUMN_COLLATION =, com instalações para especificar o agrupamento de colunas (nível completo) (ODBC 3,0)<br/>SQL_AT_ADD_COLUMN_DEFAULT = \<add column> há suporte para a cláusula, com instalações para especificar padrões de coluna (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_ADD_COLUMN_SINGLE = tem \<add column> suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_ADD_CONSTRAINT = \<add column> há suporte para a cláusula, com instalações para especificar restrições de coluna (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_ADD_TABLE_CONSTRAINT = \<add table constraint> há suporte para a cláusula (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_NAME_DEFINITION = tem \<constraint name definition> suporte para a nomenclatura de restrições de coluna e tabela (nível intermediário) (ODBC 3,0)<br/>SQL_AT_DROP_COLUMN_CASCADE = \<drop column> Cascade tem suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_DROP_COLUMN_DEFAULT = tem \<alter column> \<drop column default clause> suporte (nível intermediário) (ODBC 3,0)<br/>SQL_AT_DROP_COLUMN_RESTRICT = \<drop column> Restrict tem suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_DROP_TABLE_CONSTRAINT_CASCADE (ODBC 3,0)<br/>SQL_AT_DROP_TABLE_CONSTRAINT_RESTRICT = \<drop column> Restrict tem suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_SET_COLUMN_DEFAULT = tem \<alter column> \<set column default clause> suporte (nível intermediário) (ODBC 3,0)<br/><br/>O bits a seguir especifica o suporte \<constraint attributes> se a especificação de restrições de coluna ou tabela for suportada (o bit de SQL_AT_ADD_CONSTRAINT é definido):<br/>SQL_AT_CONSTRAINT_INITIALLY_DEFERRED (nível completo) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE (nível completo) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_DEFERRABLE (nível completo) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_NON_DEFERRABLE (nível completo) (ODBC 3,0)|
+|SQL_ALTER_TABLE|2.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **ALTER TABLE** com suporte da fonte de dados.<br/><br/>O nível de conformidade do SQL-92 ou FIPS no qual esse recurso deve ser suportado é mostrado entre parênteses ao lado de cada bitmask.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br/>\<add column>Há suporte para a cláusula SQL_AT_ADD_COLUMN_COLLATION =, com instalações para especificar o agrupamento de colunas (nível completo) (ODBC 3,0)<br/>SQL_AT_ADD_COLUMN_DEFAULT = \<add column> há suporte para a cláusula, com instalações para especificar padrões de coluna (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_ADD_COLUMN_SINGLE = tem \<add column> suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_ADD_CONSTRAINT = \<add column> há suporte para a cláusula, com instalações para especificar restrições de coluna (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_ADD_TABLE_CONSTRAINT = \<add table constraint> há suporte para a cláusula (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_NAME_DEFINITION = tem \<constraint name definition> suporte para a nomenclatura de restrições de coluna e tabela (nível intermediário) (ODBC 3,0)<br/>SQL_AT_DROP_COLUMN_CASCADE = \<drop column> Cascade tem suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_DROP_COLUMN_DEFAULT = tem \<alter column> \<drop column default clause> suporte (nível intermediário) (ODBC 3,0)<br/>SQL_AT_DROP_COLUMN_RESTRICT = \<drop column> Restrict tem suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_DROP_TABLE_CONSTRAINT_CASCADE (ODBC 3,0)<br/>SQL_AT_DROP_TABLE_CONSTRAINT_RESTRICT = \<drop column> Restrict tem suporte (nível de transição FIPS) (ODBC 3,0)<br/>SQL_AT_SET_COLUMN_DEFAULT = tem \<alter column> \<set column default clause> suporte (nível intermediário) (ODBC 3,0)<br/><br/>O bits a seguir especifica o suporte \<constraint attributes> se a especificação de restrições de coluna ou tabela for suportada (o bit de SQL_AT_ADD_CONSTRAINT é definido):<br/>SQL_AT_CONSTRAINT_INITIALLY_DEFERRED (nível completo) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE (nível completo) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_DEFERRABLE (nível completo) (ODBC 3,0)<br/>SQL_AT_CONSTRAINT_NON_DEFERRABLE (nível completo) (ODBC 3,0)|
 |SQL_ASYNC_DBC_FUNCTIONS|3.8|Um valor SQLUINTEGER que indica se o driver pode executar funções de forma assíncrona no identificador de conexão.<br/><br/>SQL_ASYNC_DBC_CAPABLE = o driver pode executar funções de conexão de forma assíncrona.<br/>SQL_ASYNC_DBC_NOT_CAPABLE = o driver não pode executar funções de conexão de forma assíncrona.|
 |SQL_ASYNC_MODE|3.0|Um valor SQLUINTEGER que indica o nível de suporte assíncrono no driver:<br/><br/>SQL_AM_CONNECTION = há suporte para a execução assíncrona no nível de conexão. Qualquer um dos identificadores de instrução associados a um determinado identificador de conexão está no modo assíncrono ou todos estão no modo síncrono. Um identificador de instrução em uma conexão não pode estar no modo assíncrono, enquanto outro identificador de instrução na mesma conexão está no modo síncrono e vice-versa.<br/>SQL_AM_STATEMENT = há suporte para a execução assíncrona em nível de instrução. Alguns identificadores de instrução associados a um identificador de conexão podem estar no modo assíncrono, enquanto outros identificadores de instrução na mesma conexão estão no modo síncrono.<br/>Não há suporte para SQL_AM_NONE = modo assíncrono.|
 |SQL_ASYNC_NOTIFICATION|3.8|Um valor SQLUINTEGER que indica se o driver dá suporte à notificação assíncrona:<br/><br/>SQL_ASYNC_NOTIFICATION_CAPABLE = a notificação de execução assíncrona é suportada pelo driver.<br/>SQL_ASYNC_NOTIFICATION_NOT_CAPABLE = a notificação de execução assíncrona não é suportada pelo driver.<br/><br/>Há duas categorias de operações assíncronas ODBC: operações assíncronas de nível de conexão e operações assíncronas em nível de instrução.  Se um driver retornar SQL_ASYNC_NOTIFICATION_CAPABLE, ele deverá dar suporte à notificação para todas as APIs que ele possa executar de forma assíncrona.|
 |SQL_BATCH_ROW_COUNT|3.0|Um bitmask SQLUINTEGER que enumera o comportamento do driver em relação à disponibilidade de contagens de linhas. As seguintes bitmasks são usadas junto com o tipo de informação:<br/><br/>SQL_BRC_ROLLED_UP = contagens de linha para instruções de inserção, exclusão ou atualização consecutivas são acumuladas em uma. Se esse bit não estiver definido, as contagens de linhas estarão disponíveis para cada instrução.<br/>SQL_BRC_PROCEDURES = contagens de linhas, se houver, estarão disponíveis quando um lote for executado em um procedimento armazenado. Se as contagens de linhas estiverem disponíveis, elas poderão ser acumuladas ou individualmente disponíveis, dependendo do SQL_BRC_ROLLED_UP bit.<br/>SQL_BRC_EXPLICIT = contagens de linhas, se houver, estarão disponíveis quando um lote for executado diretamente chamando **SQLExecute** ou **SQLExecDirect**. Se as contagens de linhas estiverem disponíveis, elas poderão ser acumuladas ou individualmente disponíveis, dependendo do SQL_BRC_ROLLED_UP bit.|
 |SQL_BATCH_SUPPORT|3.0|Um bitmask SQLUINTEGER que enumera o suporte do driver para lotes. As seguintes bitmasks são usadas para determinar qual nível tem suporte:<br/><br/>SQL_BS_SELECT_EXPLICIT = o driver dá suporte a lotes explícitos que podem ter instruções de geração de conjunto de resultados.<br/>SQL_BS_ROW_COUNT_EXPLICIT = o driver dá suporte a lotes explícitos que podem ter instruções de geração de contagem de linhas.<br/>SQL_BS_SELECT_PROC = o driver dá suporte a procedimentos explícitos que podem ter instruções de geração de conjunto de resultados.<br/>SQL_BS_ROW_COUNT_PROC = o driver dá suporte a procedimentos explícitos que podem ter instruções de geração de contagem de linhas.|
-|SQL_BOOKMARK_PERSISTENCE|2,0|Um bitmask SQLUINTEGER que enumera as operações por meio das quais os indicadores persistem. As seguintes bitmasks são usadas junto com o sinalizador para determinar por quais indicadores de opções persistem:<br/><br/>SQL_BP_CLOSE = os indicadores são válidos depois que um aplicativo chama **SQLFreeStmt** com a opção SQL_CLOSE ou **SQLCloseCursor** para fechar o cursor associado a uma instrução.<br/>SQL_BP_DELETE = o indicador de uma linha é válido depois que essa linha foi excluída.<br/>SQL_BP_DROP = os indicadores são válidos depois que um aplicativo chama **SQLFreeHandle** com um *identificadortype* de SQL_HANDLE_STMT para descartar uma instrução.<br/>SQL_BP_TRANSACTION = os indicadores são válidos após um aplicativo confirmar ou reverter uma transação.<br/>SQL_BP_UPDATE = o indicador de uma linha é válido depois que qualquer coluna nessa linha tiver sido atualizada, incluindo as colunas de chave.<br/>SQL_BP_OTHER_HSTMT = um indicador associado a uma instrução pode ser usado com outra instrução. A menos que SQL_BP_CLOSE ou SQL_BP_DROP seja especificado, o cursor na primeira instrução deve ser aberto.|
-|SQL_CATALOG_LOCATION|2,0|Um valor de SQLUSMALLINT que indica a posição do catálogo em um nome de tabela qualificado:<br/><br/>SQL_CL_START<br/>SQL_CL_END<br/>Por exemplo, um driver Xbase retorna SQL_CL_START porque o nome do diretório (catálogo) está no início do nome da tabela, como em \EMPDATA\EMP. DBF. Um driver de servidor ORACLE retorna SQL_CL_END porque o catálogo está no final do nome da tabela, como em ADMIN.EMP@EMPDATA .<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará SQL_CL_START. Um valor de 0 será retornado se os catálogos não forem suportados pela fonte de dados. Para determinar se há suporte para os catálogos, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_CATALOG_NAME.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_QUALIFIER_LOCATION.|
+|SQL_BOOKMARK_PERSISTENCE|2.0|Um bitmask SQLUINTEGER que enumera as operações por meio das quais os indicadores persistem. As seguintes bitmasks são usadas junto com o sinalizador para determinar por quais indicadores de opções persistem:<br/><br/>SQL_BP_CLOSE = os indicadores são válidos depois que um aplicativo chama **SQLFreeStmt** com a opção SQL_CLOSE ou **SQLCloseCursor** para fechar o cursor associado a uma instrução.<br/>SQL_BP_DELETE = o indicador de uma linha é válido depois que essa linha foi excluída.<br/>SQL_BP_DROP = os indicadores são válidos depois que um aplicativo chama **SQLFreeHandle** com um *identificadortype* de SQL_HANDLE_STMT para descartar uma instrução.<br/>SQL_BP_TRANSACTION = os indicadores são válidos após um aplicativo confirmar ou reverter uma transação.<br/>SQL_BP_UPDATE = o indicador de uma linha é válido depois que qualquer coluna nessa linha tiver sido atualizada, incluindo as colunas de chave.<br/>SQL_BP_OTHER_HSTMT = um indicador associado a uma instrução pode ser usado com outra instrução. A menos que SQL_BP_CLOSE ou SQL_BP_DROP seja especificado, o cursor na primeira instrução deve ser aberto.|
+|SQL_CATALOG_LOCATION|2.0|Um valor de SQLUSMALLINT que indica a posição do catálogo em um nome de tabela qualificado:<br/><br/>SQL_CL_START<br/>SQL_CL_END<br/>Por exemplo, um driver Xbase retorna SQL_CL_START porque o nome do diretório (catálogo) está no início do nome da tabela, como em \EMPDATA\EMP. DBF. Um driver de servidor ORACLE retorna SQL_CL_END porque o catálogo está no final do nome da tabela, como em ADMIN.EMP@EMPDATA .<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará SQL_CL_START. Um valor de 0 será retornado se os catálogos não forem suportados pela fonte de dados. Para determinar se há suporte para os catálogos, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_CATALOG_NAME.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_QUALIFIER_LOCATION.|
 |SQL_CATALOG_NAME|3.0|Uma cadeia de caracteres: "Y" se o servidor der suporte a nomes de catálogo ou "N" se não tiver.<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará "Y".|
 |SQL_CATALOG_NAME_SEPARATOR|1.0|Uma cadeia de caracteres: o caractere ou os caracteres que a fonte de dados define como o separador entre um nome de catálogo e o elemento de nome qualificado que segue ou precede.<br/><br/>Uma cadeia de caracteres vazia será retornada se os catálogos não forem suportados pela fonte de dados. Para determinar se há suporte para os catálogos, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_CATALOG_NAME. Um driver compatível com nível completo do SQL-92 sempre retornará ".".<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_QUALIFIER_NAME_SEPARATOR.|
 |SQL_CATALOG_TERM|1.0|Uma cadeia de caracteres com o nome do fornecedor de fonte de dados para um catálogo; por exemplo, "banco de dados" ou "diretório". Essa cadeia de caracteres pode estar no caso superior, inferior ou misto.<br/><br/>Uma cadeia de caracteres vazia será retornada se os catálogos não forem suportados pela fonte de dados. Para determinar se há suporte para os catálogos, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_CATALOG_NAME. Um driver compatível com nível completo do SQL-92 sempre retornará "catálogo".<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_QUALIFIER_TERM.|
-|SQL_CATALOG_USAGE|2,0|Um bitmask SQLUINTEGER que enumera as instruções em que os catálogos podem ser usados.<br/><br/>As seguintes bitmasks são usadas para determinar onde os catálogos podem ser usados:<br/>SQL_CU_DML_STATEMENTS = os catálogos têm suporte em todas as instruções de linguagem de manipulação de dados: **selecionar**, **Inserir**, **Atualizar**, **excluir**e, se houver suporte, **Selecione para atualizar** e posicionar as instruções UPDATE e Delete.<br/>SQL_CU_PROCEDURE_INVOCATION = os catálogos têm suporte na instrução de invocação de procedimento ODBC.<br/>SQL_CU_TABLE_DEFINITION = os catálogos têm suporte em todas as instruções de definição de tabela: **CREATE TABLE**, **criar exibição**, **alterar tabela**, **remover tabela**e **descartar exibição**.<br/>SQL_CU_INDEX_DEFINITION = há suporte para catálogos em todas as instruções de definição de índice: **CREATE INDEX** e **drop index**.<br/>SQL_CU_PRIVILEGE_DEFINITION = os catálogos têm suporte em todas as instruções de definição de privilégio: **Grant** e **REVOKE**.<br/><br/>Um valor de 0 será retornado se os catálogos não forem suportados pela fonte de dados. Para determinar se há suporte para os catálogos, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_CATALOG_NAME. Um driver compatível com nível completo do SQL-92 sempre retornará um bitmask com todos esses bits definidos.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_QUALIFIER_USAGE.|
+|SQL_CATALOG_USAGE|2.0|Um bitmask SQLUINTEGER que enumera as instruções em que os catálogos podem ser usados.<br/><br/>As seguintes bitmasks são usadas para determinar onde os catálogos podem ser usados:<br/>SQL_CU_DML_STATEMENTS = os catálogos têm suporte em todas as instruções de linguagem de manipulação de dados: **selecionar**, **Inserir**, **Atualizar**, **excluir**e, se houver suporte, **Selecione para atualizar** e posicionar as instruções UPDATE e Delete.<br/>SQL_CU_PROCEDURE_INVOCATION = os catálogos têm suporte na instrução de invocação de procedimento ODBC.<br/>SQL_CU_TABLE_DEFINITION = os catálogos têm suporte em todas as instruções de definição de tabela: **CREATE TABLE**, **criar exibição**, **alterar tabela**, **remover tabela**e **descartar exibição**.<br/>SQL_CU_INDEX_DEFINITION = há suporte para catálogos em todas as instruções de definição de índice: **CREATE INDEX** e **drop index**.<br/>SQL_CU_PRIVILEGE_DEFINITION = os catálogos têm suporte em todas as instruções de definição de privilégio: **Grant** e **REVOKE**.<br/><br/>Um valor de 0 será retornado se os catálogos não forem suportados pela fonte de dados. Para determinar se há suporte para os catálogos, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_CATALOG_NAME. Um driver compatível com nível completo do SQL-92 sempre retornará um bitmask com todos esses bits definidos.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_QUALIFIER_USAGE.|
 |SQL_COLLATION_SEQ|3.0|O nome da sequência de agrupamento. Essa é uma cadeia de caracteres que indica o nome do agrupamento padrão para o conjunto de caracteres padrão para esse servidor (por exemplo, ' ISO 8859-1 ' ou EBCDIC). Se isso for desconhecido, uma cadeia de caracteres vazia será retornada. Um driver compatível com nível completo do SQL-92 sempre retornará uma cadeia de caracteres não vazia.|
-|SQL_COLUMN_ALIAS|2,0|Uma cadeia de caracteres: "Y" se a fonte de dados oferecer suporte a aliases de coluna; caso contrário, "N".<br/><br/>Um alias de coluna é um nome alternativo que pode ser especificado para uma coluna na lista de seleção usando uma cláusula AS. Um driver compatível com nível de entrada do SQL-92 sempre retornará "Y".|
+|SQL_COLUMN_ALIAS|2.0|Uma cadeia de caracteres: "Y" se a fonte de dados oferecer suporte a aliases de coluna; caso contrário, "N".<br/><br/>Um alias de coluna é um nome alternativo que pode ser especificado para uma coluna na lista de seleção usando uma cláusula AS. Um driver compatível com nível de entrada do SQL-92 sempre retornará "Y".|
 |SQL_CONCAT_NULL_BEHAVIOR|1.0|Um valor SQLUSMALLINT que indica como a fonte de dados lida com a concatenação de colunas de tipo de dados de caractere com valor nulo com colunas de tipo de dados de caractere com valor não nulo:<br/>SQL_CB_NULL = o resultado é um valor nulo.<br/>SQL_CB_NON_NULL = Result é concatenação de coluna ou colunas com valor não nulo.<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará SQL_CB_NULL.|
 |SQL_CONVERT_BIGINT<br/>SQL_CONVERT_BINARY<br/>SQL_CONVERT_BIT<br/>SQL_CONVERT_CHAR<br/>SQL_CONVERT_GUID<br/>SQL_CONVERT_DATE<br/>SQL_CONVERT_DECIMAL<br/>SQL_CONVERT_DOUBLE<br/>SQL_CONVERT_FLOAT<br/>SQL_CONVERT_INTEGER<br/>SQL_CONVERT_INTERVAL_YEAR_MONTH<br/>SQL_CONVERT_INTERVAL_DAY_TIME<br/>SQL_CONVERT_LONGVARBINARY<br/>SQL_CONVERT_LONGVARCHAR<br/>SQL_CONVERT_NUMERIC<br/>SQL_CONVERT_REAL<br/>SQL_CONVERT_SMALLINT<br/>SQL_CONVERT_TIME<br/>SQL_CONVERT_TIMESTAMP<br/>SQL_CONVERT_TINYINT<br/>SQL_CONVERT_VARBINARY<br/>SQL_CONVERT_VARCHAR|1.0|Um bitmask SQLUINTEGER. A bitmask indica as conversões com suporte da fonte de dados com a função **Convert** escalar para os dados do tipo nomeado no *InfoType*. Se o bitmask for igual a zero, a fonte de dados não oferecerá suporte a quaisquer conversões de dados do tipo nomeado, incluindo a conversão para o mesmo tipo de dados.<br/><br/>Por exemplo, para determinar se uma fonte de dados dá suporte à conversão de dados de SQL_INTEGER no tipo de dados SQL_BIGINT, um aplicativo chama **SQLGetInfo** com o *infotype* de SQL_CONVERT_INTEGER. O aplicativo executa uma operação **and** com o bitmask retornado e SQL_CVT_BIGINT. Se o valor resultante for diferente de zero, haverá suporte para a conversão.<br/><br/>As seguintes bitmasks são usadas para determinar quais conversões têm suporte:<br/>SQL_CVT_BIGINT (ODBC 1,0)<br/>SQL_CVT_BINARY (ODBC 1,0)<br/>SQL_CVT_BIT (ODBC 1,0)<br/>SQL_CVT_GUID (ODBC 3,5)<br/>SQL_CVT_CHAR (ODBC 1,0)<br/>SQL_CVT_DATE (ODBC 1,0)<br/>SQL_CVT_DECIMAL (ODBC 1,0)<br/>SQL_CVT_DOUBLE (ODBC 1,0)<br/>SQL_CVT_FLOAT (ODBC 1,0)<br/>SQL_CVT_INTEGER (ODBC 1,0)<br/>SQL_CVT_INTERVAL_YEAR_MONTH (ODBC 3,0)<br/>SQL_CVT_INTERVAL_DAY_TIME (ODBC 3,0)<br/>SQL_CVT_LONGVARBINARY (ODBC 1,0)<br/>SQL_CVT_LONGVARCHAR (ODBC 1,0)<br/>SQL_CVT_NUMERIC (ODBC 1,0)<br/>SQL_CVT_REAL (ODBC 1,0)<br/>SQL_CVT_SMALLINT (ODBC 1,0)<br/>SQL_CVT_TIME (ODBC 1,0)<br/>SQL_CVT_TIMESTAMP (ODBC 1,0)<br/>SQL_CVT_TINYINT (ODBC 1,0)<br/>SQL_CVT_VARBINARY (ODBC 1,0)<br/>SQL_CVT_VARCHAR (ODBC 1,0)|
 |SQL_CONVERT_FUNCTIONS|1.0|Um bitmask SQLUINTEGER que enumera as funções de conversão escalar com suporte do driver e a fonte de dados associada.<br/><br/>O seguinte bitmask é usado para determinar quais funções de conversão têm suporte:<br/>SQL_FN_CVT_CASTSQL_FN_CVT_CONVERT|
@@ -372,7 +514,7 @@ A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do 
 |SQL_CREATE_SCHEMA|3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **Create Schema** , conforme definido em SQL-92, com suporte da fonte de dados.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br/>SQL_CS_CREATE_SCHEMA<br/>SQL_CS_AUTHORIZATION<br/>SQL_CS_DEFAULT_CHARACTER_SET<br/><br/>Um driver compatível com nível intermediário SQL-92 sempre retornará as opções SQL_CS_CREATE_SCHEMA e SQL_CS_AUTHORIZATION como com suporte. Eles também devem ter suporte no nível de entrada SQL-92, mas não necessariamente como instruções SQL. Um driver compatível com nível completo do SQL-92 sempre retornará todas essas opções como com suporte.|
 |SQL_CREATE_TABLE|3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **CREATE TABLE** , conforme definido em SQL-92, com suporte da fonte de dados.<br/><br/>O nível de conformidade do SQL-92 ou FIPS no qual esse recurso deve ser suportado é mostrado entre parênteses ao lado de cada bitmask.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br/>SQL_CT_CREATE_TABLE = há suporte para a instrução CREATE TABLE. (Nível de entrada)<br/>SQL_CT_TABLE_CONSTRAINT = há suporte para a especificação de restrições de tabela (nível de transição FIPS)<br/>SQL_CT_CONSTRAINT_NAME_DEFINITION = a \<constraint name definition> cláusula tem suporte para a nomenclatura de restrições de coluna e tabela (nível intermediário)<br/><br/>Os bits a seguir especificam a capacidade de criar tabelas temporárias:<br/>SQL_CT_COMMIT_PRESERVE = as linhas excluídas são preservadas na confirmação. (Nível completo)<br/>SQL_CT_COMMIT_DELETE = as linhas excluídas são excluídas na confirmação. (Nível completo)<br/>SQL_CT_GLOBAL_TEMPORARY = tabelas temporárias globais podem ser criadas. (Nível completo)<br/>SQL_CT_LOCAL_TEMPORARY = tabelas temporárias locais podem ser criadas. (Nível completo)<br/><br/>Os bits a seguir especificam a capacidade de criar restrições de coluna:<br/>SQL_CT_COLUMN_CONSTRAINT = há suporte para a especificação de restrições de coluna (nível de transição FIPS)<br/>SQL_CT_COLUMN_DEFAULT = há suporte para a especificação de padrões de coluna (nível de transição FIPS)<br/>SQL_CT_COLUMN_COLLATION = há suporte para a especificação de agrupamento de coluna (nível completo)<br/><br/>Os seguintes bits especificarão os atributos de restrição com suporte se a especificação de restrições de coluna ou tabela for suportada:<br/>SQL_CT_CONSTRAINT_INITIALLY_DEFERRED (nível completo)<br/>SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE (nível completo)<br/>SQL_CT_CONSTRAINT_DEFERRABLE (nível completo)<br/>SQL_CT_CONSTRAINT_NON_DEFERRABLE (nível completo)|
 |SQL_CREATE_TRANSLATION|3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **Create translation** , conforme definido em SQL-92, com suporte da fonte de dados.<br/><br/>O seguinte bitmask é usado para determinar quais cláusulas têm suporte:<br/>SQL_CTR_CREATE_TRANSLATION<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará essas opções como com suporte. Um valor de retorno de "0" significa que não há suporte para a instrução **Create translation** .|
-|SQL_CREATE_VIEW||3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **Create View** , conforme definido em SQL-92, com suporte da fonte de dados.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br/>SQL_CV_CREATE_VIEW<br/>SQL_CV_CHECK_OPTION<br/>SQL_CV_CASCADED<br/>SQL_CV_LOCAL<br/><br/>Um valor de retorno de "0" significa que não há suporte para a instrução **Create View** .<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará as opções SQL_CV_CREATE_VIEW e SQL_CV_CHECK_OPTION como com suporte.<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará todas essas opções como com suporte.|
+|SQL_CREATE_VIEW|3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **Create View** , conforme definido em SQL-92, com suporte da fonte de dados.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br/>SQL_CV_CREATE_VIEW<br/>SQL_CV_CHECK_OPTION<br/>SQL_CV_CASCADED<br/>SQL_CV_LOCAL<br/><br/>Um valor de retorno de "0" significa que não há suporte para a instrução **Create View** .<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará as opções SQL_CV_CREATE_VIEW e SQL_CV_CHECK_OPTION como com suporte.<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará todas essas opções como com suporte.|
 |SQL_CURSOR_COMMIT_BEHAVIOR|1.0|Um valor SQLUSMALLINT que indica como uma operação de **confirmação** afeta os cursores e as instruções preparadas na fonte de dados (o comportamento da fonte de dados quando você confirma uma transação).<br/><br/>O valor desse atributo refletirá o estado atual da próxima configuração: SQL_COPT_SS_PRESERVE_CURSORS.<br/>SQL_CB_DELETE = fechar cursores e excluir instruções preparadas. Para usar o cursor novamente, o aplicativo deve repreparar e executar novamente a instrução.<br/>SQL_CB_CLOSE = fechar cursores. Para instruções preparadas, o aplicativo pode chamar **SQLExecute** na instrução sem chamar **SQLPrepare** novamente. O padrão para o driver ODBC do SQL é SQL_CB_CLOSE. Isso significa que o driver ODBC do SQL fechará seus Cursors quando você confirmar uma transação.<br/>SQL_CB_PRESERVE = preservar cursores na mesma posição que antes da operação de **confirmação** . O aplicativo pode continuar a buscar dados ou pode fechar o cursor e executar novamente a instrução sem repará-la.|
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|1.0|Um valor SQLUSMALLINT que indica como uma operação de **reversão** afeta os cursores e as instruções preparadas na fonte de dados:<br/>SQL_CB_DELETE = fechar cursores e excluir instruções preparadas. Para usar o cursor novamente, o aplicativo deve repreparar e executar novamente a instrução.<br/>SQL_CB_CLOSE = fechar cursores. Para instruções preparadas, o aplicativo pode chamar **SQLExecute** na instrução sem chamar **SQLPrepare** novamente.<br/>SQL_CB_PRESERVE = preservar cursores na mesma posição que antes da operação de **reversão** . O aplicativo pode continuar a buscar dados ou pode fechar o cursor e executar novamente a instrução sem repará-la.|
 |SQL_CURSOR_SENSITIVITY|3.0|Um valor SQLUINTEGER que indica o suporte para sensibilidade do cursor:<br/>SQL_INSENSITIVE = todos os cursores no identificador de instrução mostram o conjunto de resultados sem refletir as alterações feitas a ele por qualquer outro cursor dentro da mesma transação.<br/>SQL_UNSPECIFIED = não é especificado se os cursores no identificador de instrução tornam visíveis as alterações feitas em um conjunto de resultados por outro cursor dentro da mesma transação. Os cursores no identificador de instrução podem tornar visíveis nenhuma, algumas ou todas essas alterações.<br/>SQL_SENSITIVE = cursores são sensíveis a alterações feitas por outros cursores dentro da mesma transação.<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará a opção SQL_UNSPECIFIED como com suporte.<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará a opção SQL_INSENSITIVE como com suporte.|
@@ -389,10 +531,10 @@ A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do 
 |SQL_DRIVER_AWARE_POOLING_SUPPORTED|3.8|Um valor SQLUINTEGER que indica se o driver dá suporte ao pool com reconhecimento de driver. (Para obter mais informações, consulte [pooling de conexão com suporte a driver](../develop-app/driver-aware-connection-pooling.md).<br/><br/>SQL_DRIVER_AWARE_POOLING_CAPABLE indica que o driver pode dar suporte ao mecanismo de Pooling com reconhecimento de driver.<br/>SQL_DRIVER_AWARE_POOLING_NOT_CAPABLE indica que o driver não pode dar suporte ao mecanismo de Pooling com reconhecimento de driver.<br/><br/>Um driver não precisa implementar SQL_DRIVER_AWARE_POOLING_SUPPORTED e o Gerenciador de driver não vai respeitar o valor de retorno do driver.|
 |SQL_DRIVER_HDBCSQL_DRIVER_HENV|1.0|Um valor SQLULEN, o identificador de ambiente do driver ou o identificador de conexão, determinado pelo argumento *InfoType*.<br/><br/>Esses tipos de informações são implementados apenas pelo Gerenciador de driver.|
 |SQL_DRIVER_HDESC|3.0|Um valor SQLULEN, o identificador do descritor do driver determinado pelo identificador do descritor do Gerenciador de driver, que deve ser passado na entrada em \* *InfoValuePtr* do aplicativo. Nesse caso, *InfoValuePtr* é um argumento de entrada e de saída. O identificador do descritor de entrada passado em \* *InfoValuePtr* deve ter sido explicitamente ou implicitamente alocado no *ConnectionHandle*.<br/><br/>O aplicativo deve fazer uma cópia do identificador do descritor do Gerenciador de driver antes de chamar **SQLGetInfo** com esse tipo de informação, para garantir que o identificador não seja substituído na saída.<br/><br/>Esse tipo de informação é implementado apenas pelo Gerenciador de driver.|
-|SQL_DRIVER_HLIB|2,0|Um valor SQLULEN, o *hinst* da biblioteca de carregamento retornado ao Gerenciador de driver quando ele carregou a DLL do driver em um sistema operacional Microsoft Windows ou seu equivalente em outro sistema operacional. O identificador é válido somente para o identificador de conexão especificado na chamada para **SQLGetInfo**.<br/><br/>Esse tipo de informação é implementado apenas pelo Gerenciador de driver.|
+|SQL_DRIVER_HLIB|2.0|Um valor SQLULEN, o *hinst* da biblioteca de carregamento retornado ao Gerenciador de driver quando ele carregou a DLL do driver em um sistema operacional Microsoft Windows ou seu equivalente em outro sistema operacional. O identificador é válido somente para o identificador de conexão especificado na chamada para **SQLGetInfo**.<br/><br/>Esse tipo de informação é implementado apenas pelo Gerenciador de driver.|
 |SQL_DRIVER_HSTMT|1.0|Um valor SQLULEN, o identificador de instrução do driver determinado pelo identificador de instrução do Gerenciador de driver, que deve ser passado na entrada em \* *InfoValuePtr* do aplicativo. Nesse caso, *InfoValuePtr* é um argumento de entrada e de saída. O identificador de instrução de entrada passado em \* *InfoValuePtr* deve ter sido alocado no argumento *ConnectionHandle*.<br/><br/>O aplicativo deve fazer uma cópia do identificador de instrução do Gerenciador de driver antes de chamar **SQLGetInfo** com esse tipo de informação, para garantir que o identificador não seja substituído na saída.<br/><br/>Esse tipo de informação é implementado apenas pelo Gerenciador de driver.|
 |SQL_DRIVER_NAME|1.0|Uma cadeia de caracteres com o nome do arquivo do driver usado para acessar a fonte de dados.|
-|SQL_DRIVER_ODBC_VER|2,0|Uma cadeia de caracteres com a versão do ODBC à qual o driver dá suporte. A versão está no formato # #. # #, em que os dois primeiros dígitos são a versão principal e os próximos dois dígitos são a versão secundária. SQL_SPEC_MAJOR e SQL_SPEC_MINOR definem os números de versão principal e secundária. Para a versão do ODBC descrita neste manual, eles são 3 e 0, e o driver deve retornar "3, 0".<br/><br/>O Gerenciador de driver ODBC não modificará o valor de retorno de SQLGetInfo (SQL_DRIVER_ODBC_VER) para manter a compatibilidade com versões anteriores para aplicativos existentes. O driver especifica qual valor será retornado. No entanto, um driver que dá suporte à extensibilidade de tipo de dados C deve retornar 3,8 (ou superior) quando um aplicativo chama **SQLSetEnvAttr** para definir SQL_ATTR_ODBC_VERSION como 3,8. Para obter mais informações, consulte [Tipos de dados C em ODBC](../develop-app/c-data-types-in-odbc.md).|
+|SQL_DRIVER_ODBC_VER|2.0|Uma cadeia de caracteres com a versão do ODBC à qual o driver dá suporte. A versão está no formato # #. # #, em que os dois primeiros dígitos são a versão principal e os próximos dois dígitos são a versão secundária. SQL_SPEC_MAJOR e SQL_SPEC_MINOR definem os números de versão principal e secundária. Para a versão do ODBC descrita neste manual, eles são 3 e 0, e o driver deve retornar "3, 0".<br/><br/>O Gerenciador de driver ODBC não modificará o valor de retorno de SQLGetInfo (SQL_DRIVER_ODBC_VER) para manter a compatibilidade com versões anteriores para aplicativos existentes. O driver especifica qual valor será retornado. No entanto, um driver que dá suporte à extensibilidade de tipo de dados C deve retornar 3,8 (ou superior) quando um aplicativo chama **SQLSetEnvAttr** para definir SQL_ATTR_ODBC_VERSION como 3,8. Para obter mais informações, consulte [Tipos de dados C em ODBC](../develop-app/c-data-types-in-odbc.md).|
 |SQL_DRIVER_VER|1.0|Uma cadeia de caracteres com a versão do driver e, opcionalmente, uma descrição do driver. No mínimo, a versão está no formato # #. # #. # # # #, em que os dois primeiros dígitos são a versão principal, os dois próximos dígitos são a versão secundária e os últimos quatro dígitos são a versão de lançamento.|
 |SQL_DROP_ASSERTION|3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **drop ASSERTION** , conforme definido em SQL-92, com suporte da fonte de dados.<br/><br/>O seguinte bitmask é usado para determinar quais cláusulas têm suporte:<br/>SQL_DA_DROP_ASSERTION<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará essa opção como com suporte.|
 |SQL_DROP_CHARACTER_SET|3.0|Um bitmask SQLUINTEGER que enumera as cláusulas na instrução **drop character set** , conforme definido em SQL-92, com suporte da fonte de dados.<br/><br/>O seguinte bitmask é usado para determinar quais cláusulas têm suporte:<br/>SQL_DCS_DROP_CHARACTER_SET<br/><br/>Um driver compatível com nível completo do SQL-92 sempre retornará essa opção como com suporte.|
@@ -405,11 +547,11 @@ A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do 
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES1|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor dinâmico que são suportados pelo driver. Essa bitmask contém o primeiro subconjunto de atributos; para o segundo subconjunto, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES2.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA1_NEXT = um argumento *FetchOrientation* de SQL_FETCH_NEXT tem suporte em uma chamada para **SQLFetchScroll** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_ABSOLUTE = os argumentos *FetchOrientation* de SQL_FETCH_FIRST, SQL_FETCH_LAST e SQL_FETCH_ABSOLUTE têm suporte em uma chamada para **SQLFetchScroll** quando o cursor é um cursor dinâmico. (O conjunto de linhas que será buscado é independente da posição atual do cursor.)<br/>SQL_CA1_RELATIVE = os argumentos *FetchOrientation* de SQL_FETCH_PRIOR e SQL_FETCH_RELATIVE têm suporte em uma chamada para **SQLFetchScroll** quando o cursor é um cursor dinâmico. (O conjunto de linhas que será buscado depende da posição atual do cursor. Observe que isso é separado do SQL_FETCH_NEXT porque, em um cursor somente de avanço, há suporte apenas para SQL_FETCH_NEXT.)<br/>SQL_CA1_BOOKMARK = um argumento *FetchOrientation* de SQL_FETCH_BOOKMARK tem suporte em uma chamada para **SQLFetchScroll** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_LOCK_EXCLUSIVE = um argumento *LockType* de SQL_LOCK_EXCLUSIVE tem suporte em uma chamada para **SQLSetPos** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_LOCK_NO_CHANGE = um argumento *LockType* de SQL_LOCK_NO_CHANGE tem suporte em uma chamada para **SQLSetPos** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_LOCK_UNLOCK = um argumento *LockType* de SQL_LOCK_UNLOCK tem suporte em uma chamada para **SQLSetPos** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_POS_POSITION = um argumento de *operação* de SQL_POSITION tem suporte em uma chamada para **SQLSetPos** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_POS_UPDATE = um argumento de *operação* de SQL_UPDATE tem suporte em uma chamada para **SQLSetPos** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_POS_DELETE = um argumento de *operação* de SQL_DELETE tem suporte em uma chamada para **SQLSetPos** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_POS_REFRESH = um argumento de *operação* de SQL_REFRESH tem suporte em uma chamada para **SQLSetPos** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_POSITIONED_UPDATE = uma atualização na qual o atual da instrução SQL tem suporte quando o cursor é um cursor dinâmico. (Um driver compatível com nível de entrada do SQL-92 sempre retornará essa opção como com suporte.)<br/>SQL_CA1_POSITIONED_DELETE = uma exclusão na qual o atual da instrução SQL tem suporte quando o cursor é um cursor dinâmico. (Um driver compatível com nível de entrada do SQL-92 sempre retornará essa opção como com suporte.)<br/>SQL_CA1_SELECT_FOR_UPDATE = uma instrução SELECT FOR UPDATE SQL tem suporte quando o cursor é um cursor dinâmico. (Um driver compatível com nível de entrada do SQL-92 sempre retornará essa opção como com suporte.)<br/>SQL_CA1_BULK_ADD = um argumento de *operação* de SQL_ADD tem suporte em uma chamada para **SQLBulkOperations** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_BULK_UPDATE_BY_BOOKMARK = um argumento de *operação* de SQL_UPDATE_BY_BOOKMARK tem suporte em uma chamada para **SQLBulkOperations** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_BULK_DELETE_BY_BOOKMARK = um argumento de *operação* de SQL_DELETE_BY_BOOKMARK tem suporte em uma chamada para **SQLBulkOperations** quando o cursor é um cursor dinâmico.<br/>SQL_CA1_BULK_FETCH_BY_BOOKMARK = um argumento de *operação* de SQL_FETCH_BY_BOOKMARK tem suporte em uma chamada para **SQLBulkOperations** quando o cursor é um cursor dinâmico.<br/><br/>Um driver compatível com nível intermediário do SQL-92 geralmente retornará as opções SQL_CA1_NEXT, SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE como com suporte, pois ele dá suporte a cursores roláveis por meio da instrução SQL FETCH inserida. Como isso não determina diretamente o suporte do SQL subjacente, no entanto, os cursores roláveis podem não ter suporte, mesmo para um driver compatível com nível intermediário do SQL-92.|
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES2|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor dinâmico que são suportados pelo driver. Essa bitmask contém o segundo subconjunto de atributos; para o primeiro subconjunto, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES1.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA2_READ_ONLY_CONCURRENCY = um cursor dinâmico somente leitura, no qual não há atualizações permitidas, tem suporte. (O atributo de instrução SQL_ATTR_CONCURRENCY pode ser SQL_CONCUR_READ_ONLY para um cursor dinâmico).<br/>SQL_CA2_LOCK_CONCURRENCY = um cursor dinâmico que usa o nível mais baixo de bloqueio suficiente para certificar-se de que a linha pode ser atualizada tem suporte. (O atributo de instrução SQL_ATTR_CONCURRENCY pode ser SQL_CONCUR_LOCK para um cursor dinâmico.) Esses bloqueios devem ser consistentes com o nível de isolamento da transação definido pelo atributo de conexão SQL_ATTR_TXN_ISOLATION.<br/>SQL_CA2_OPT_ROWVER_CONCURRENCY = um cursor dinâmico que usa o controle de simultaneidade otimista comparando versões de linha tem suporte. (O atributo de instrução SQL_ATTR_CONCURRENCY pode ser SQL_CONCUR_ROWVER para um cursor dinâmico.)<br/>SQL_CA2_OPT_VALUES_CONCURRENCY = um cursor dinâmico que usa o controle de simultaneidade otimista comparando valores é suportado. (O atributo de instrução SQL_ATTR_CONCURRENCY pode ser SQL_CONCUR_VALUES para um cursor dinâmico.)<br/>SQL_CA2_SENSITIVITY_ADDITIONS = as linhas adicionadas são visíveis para um cursor dinâmico; o cursor pode rolar para essas linhas. (Onde essas linhas são adicionadas ao cursor depende do driver.)<br/>SQL_CA2_SENSITIVITY_DELETIONS = as linhas excluídas não estão mais disponíveis para um cursor dinâmico e não deixam um "buraco" no conjunto de resultados; Depois que o cursor dinâmico rola de uma linha excluída, ele não pode retornar a essa linha.<br/>SQL_CA2_SENSITIVITY_UPDATES = atualizações para linhas são visíveis para um cursor dinâmico; Se o cursor dinâmico rolar de e retornar para uma linha atualizada, os dados retornados pelo cursor serão os dados atualizados, não os dados originais.<br/>SQL_CA2_MAX_ROWS_SELECT = o atributo de instrução SQL_ATTR_MAX_ROWS afeta as instruções **Select** quando o cursor é um cursor dinâmico.<br/>SQL_CA2_MAX_ROWS_INSERT = o atributo de instrução SQL_ATTR_MAX_ROWS afeta as instruções **Insert** quando o cursor é um cursor dinâmico.<br/>SQL_CA2_MAX_ROWS_DELETE = o atributo de instrução SQL_ATTR_MAX_ROWS afeta as instruções **delete** quando o cursor é um cursor dinâmico.<br/>SQL_CA2_MAX_ROWS_UPDATE = o atributo de instrução SQL_ATTR_MAX_ROWS afeta as instruções **Update** quando o cursor é um cursor dinâmico.<br/>SQL_CA2_MAX_ROWS_CATALOG = o atributo de instrução SQL_ATTR_MAX_ROWS afeta os conjuntos de resultados do **Catálogo** quando o cursor é um cursor dinâmico.<br/>SQL_CA2_MAX_ROWS_AFFECTS_ALL = o atributo de instrução SQL_ATTR_MAX_ROWS afeta as instruções **Select**, **Insert**, **delete**e **Update** e os conjuntos de resultados do **Catálogo** , quando o cursor é um cursor dinâmico.<br/>SQL_CA2_CRC_EXACT = a contagem de linhas exata está disponível no campo diagnóstico SQL_DIAG_CURSOR_ROW_COUNT quando o cursor é um cursor dinâmico.<br/>SQL_CA2_CRC_APPROXIMATE = uma contagem aproximada de linhas está disponível no campo diagnóstico SQL_DIAG_CURSOR_ROW_COUNT quando o cursor é um cursor dinâmico.<br/>SQL_CA2_SIMULATE_NON_UNIQUE = o driver não garante que as instruções de atualização ou exclusão posicionadas, afetarão apenas uma linha quando o cursor for um cursor dinâmico; é responsabilidade do aplicativo garantir isso. (Se uma instrução afetar mais de uma linha, **SQLExecute** ou **SQLExecDirect** retornará SQLSTATE 01001 [conflito de operação do cursor].) Para definir esse comportamento, o aplicativo chama **SQLSetStmtAttr** com o atributo SQL_ATTR_SIMULATE_CURSOR definido como SQL_SC_NON_UNIQUE.<br/>SQL_CA2_SIMULATE_TRY_UNIQUE = o driver tenta garantir que as instruções de atualização ou exclusão posicionadas, afetarão apenas uma linha quando o cursor for um cursor dinâmico. O driver sempre executa essas instruções, mesmo que elas possam afetar mais de uma linha, como quando não há nenhuma chave exclusiva. (Se uma instrução afetar mais de uma linha, **SQLExecute** ou **SQLExecDirect** retornará SQLSTATE 01001 [conflito de operação do cursor].) Para definir esse comportamento, o aplicativo chama **SQLSetStmtAttr** com o atributo SQL_ATTR_SIMULATE_CURSOR definido como SQL_SC_TRY_UNIQUE.<br/>SQL_CA2_SIMULATE_UNIQUE = o driver garante que as instruções de atualização ou exclusão posicionadas, afetarão apenas uma linha quando o cursor for um cursor dinâmico. Se o driver não puder garantir isso para uma determinada instrução, **SQLExecDirect** ou **SQLPrepare** retornará SQLSTATE 01001 (conflito de operação do cursor). Para definir esse comportamento, o aplicativo chama **SQLSetStmtAttr** com o atributo SQL_ATTR_SIMULATE_CURSOR definido como SQL_SC_UNIQUE.|
 |SQL_EXPRESSIONS_IN_ORDERBY|1.0|Uma cadeia de caracteres: "Y" se a fonte de dados der suporte a expressões na lista **ordenar por** ; "N" se não tiver.|
-|SQL_FILE_USAGE|2,0|Um valor SQLUSMALLINT que indica como um driver de camada única trata diretamente os arquivos em uma fonte de dados:<br/>SQL_FILE_NOT_SUPPORTED = o driver não é um driver de camada única. Por exemplo, um driver ORACLE é um driver de duas camadas.<br/>SQL_FILE_TABLE = um driver de camada única trata os arquivos em uma fonte de dados como tabelas. Por exemplo, um driver Xbase trata cada arquivo Xbase como uma tabela.<br/>SQL_FILE_CATALOG = um driver de camada única trata os arquivos em uma fonte de dados como um catálogo. Por exemplo, um driver do Microsoft Access trata cada arquivo do Microsoft Access como um banco de dados completo.<br/><br/>Um aplicativo pode usar isso para determinar como os usuários selecionarão os dados. Por exemplo, os usuários Xbase costumam considerar os dados armazenados em arquivos, enquanto os usuários do ORACLE e do Microsoft Access geralmente consideram os dados armazenados em tabelas.<br/><br/>Quando um usuário seleciona uma fonte de dados Xbase, o aplicativo pode exibir a caixa de diálogo comum **Abrir arquivo** do Windows; Quando o usuário seleciona uma fonte de dados do Microsoft Access ou ORACLE, o aplicativo pode exibir uma caixa de diálogo de **seleção de tabela** personalizada.|
+|SQL_FILE_USAGE|2.0|Um valor SQLUSMALLINT que indica como um driver de camada única trata diretamente os arquivos em uma fonte de dados:<br/>SQL_FILE_NOT_SUPPORTED = o driver não é um driver de camada única. Por exemplo, um driver ORACLE é um driver de duas camadas.<br/>SQL_FILE_TABLE = um driver de camada única trata os arquivos em uma fonte de dados como tabelas. Por exemplo, um driver Xbase trata cada arquivo Xbase como uma tabela.<br/>SQL_FILE_CATALOG = um driver de camada única trata os arquivos em uma fonte de dados como um catálogo. Por exemplo, um driver do Microsoft Access trata cada arquivo do Microsoft Access como um banco de dados completo.<br/><br/>Um aplicativo pode usar isso para determinar como os usuários selecionarão os dados. Por exemplo, os usuários Xbase costumam considerar os dados armazenados em arquivos, enquanto os usuários do ORACLE e do Microsoft Access geralmente consideram os dados armazenados em tabelas.<br/><br/>Quando um usuário seleciona uma fonte de dados Xbase, o aplicativo pode exibir a caixa de diálogo comum **Abrir arquivo** do Windows; Quando o usuário seleciona uma fonte de dados do Microsoft Access ou ORACLE, o aplicativo pode exibir uma caixa de diálogo de **seleção de tabela** personalizada.|
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor de somente avanço que são suportados pelo driver. Essa bitmask contém o primeiro subconjunto de atributos; para o segundo subconjunto, consulte SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA1_NEXT<br/>SQL_CA1_LOCK_EXCLUSIVE<br/>SQL_CA1_LOCK_NO_CHANGE<br/>SQL_CA1_LOCK_UNLOCK<br/>SQL_CA1_POS_POSITION<br/>SQL_CA1_POS_UPDATE<br/>SQL_CA1_POS_DELETE<br/>SQL_CA1_POS_REFRESH<br/>SQL_CA1_POSITIONED_UPDATE<br/>SQL_CA1_POSITIONED_DELETE<br/>SQL_CA1_SELECT_FOR_UPDATE<br/>SQL_CA1_BULK_ADD<br/>SQL_CA1_BULK_UPDATE_BY_BOOKMARK<br/>SQL_CA1_BULK_DELETE_BY_BOOKMARK<br/>SQL_CA1_BULK_FETCH_BY_BOOKMARK<br/><br/>Para obter descrições desses bitmasks, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (e substitua "cursor de somente encaminhamento" para "cursor dinâmico" nas descrições).|
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor de somente avanço que são suportados pelo driver. Essa bitmask contém o segundo subconjunto de atributos; para o primeiro subconjunto, consulte SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA2_READ_ONLY_CONCURRENCY<br/>SQL_CA2_LOCK_CONCURRENCY<br/>SQL_CA2_OPT_ROWVER_CONCURRENCY<br/>SQL_CA2_OPT_VALUES_CONCURRENCY<br/>SQL_CA2_SENSITIVITY_ADDITIONS<br/>SQL_CA2_SENSITIVITY_DELETIONS<br/>SQL_CA2_SENSITIVITY_UPDATES<br/>SQL_CA2_MAX_ROWS_SELECT<br/>SQL_CA2_MAX_ROWS_INSERT<br/>SQL_CA2_MAX_ROWS_DELETE<br/>SQL_CA2_MAX_ROWS_UPDATE<br/>SQL_CA2_MAX_ROWS_CATALOG<br/>SQL_CA2_MAX_ROWS_AFFECTS_ALL<br/>SQL_CA2_CRC_EXACT<br/>SQL_CA2_CRC_APPROXIMATE<br/>SQL_CA2_SIMULATE_NON_UNIQUE<br/>SQL_CA2_SIMULATE_TRY_UNIQUE<br/>SQL_CA2_SIMULATE_UNIQUE<br/><br/>Para obter descrições desses bitmasks, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES2 (e substitua "cursor de somente encaminhamento" para "cursor dinâmico" nas descrições).|
-|SQL_GETDATA_EXTENSIONS|2,0|Um bitmask SQLUINTEGER enumerando extensões para **SQLGetData**.<br/><br/>As seguintes bitmasks são usadas junto com o sinalizador para determinar as extensões comuns às quais o driver dá suporte para **SQLGetData**:<br/>SQL_GD_ANY_COLUMN = **SQLGetData** pode ser chamado para qualquer coluna desassociada, incluindo aqueles antes da última coluna associada. Observe que as colunas devem ser chamadas em ordem crescente de número de coluna, a menos que SQL_GD_ANY_ORDER também seja retornado.<br/>SQL_GD_ANY_ORDER = **SQLGetData** pode ser chamado para colunas desassociadas em qualquer ordem. Observe que **SQLGetData** pode ser chamado somente para colunas após a última coluna associada, a menos que SQL_GD_ANY_COLUMN também seja retornado.<br/>SQL_GD_BLOCK = **SQLGetData** pode ser chamado para uma coluna não associada em qualquer linha em um bloco (onde o tamanho do conjunto de linhas é maior que 1) de dados após o posicionamento para essa linha com **SQLSetPos**.<br/>SQL_GD_BOUND = **SQLGetData** pode ser chamado para colunas associadas além de colunas desassociadas. Um driver não pode retornar esse valor, a menos que ele também retorne SQL_GD_ANY_COLUMN.<br/>SQL_GD_OUTPUT_PARAMS = **SQLGetData** pode ser chamado para retornar valores de parâmetro de saída. Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](../develop-app/retrieving-output-parameters-using-sqlgetdata.md).<br/><br/>**SQLGetData** é necessário para retornar dados somente de colunas não associadas que ocorrem após a última coluna associada, são chamados na ordem de aumento do número da coluna e não estão em uma linha em um bloco de linhas.<br/><br/>Se um driver oferecer suporte a indicadores (comprimento fixo ou comprimento variável), ele deverá dar suporte à chamada de **SQLGetData** na coluna 0. Esse suporte é necessário, independentemente do que o driver retorna para uma chamada para **SQLGetInfo** com o SQL_GETDATA_EXTENSIONS *InfoType*.|
-|SQL_GROUP_BY|2,0|Um valor SQLUSMALLINT que especifica a relação entre as colunas na cláusula **Group by** e as colunas não agregadas na lista de seleção:<br/>SQL_GB_COLLATE = uma cláusula **COLLATE** pode ser especificada no final de cada coluna de agrupamento. (ODBC 3,0)<br/>Não há suporte para SQL_GB_NOT_SUPPORTED = cláusulas **Group by** . (ODBC 2,0)<br/>SQL_GB_GROUP_BY_EQUALS_SELECT = a cláusula **Group by** deve conter todas as colunas não agregadas na lista de seleção. Ele não pode conter nenhuma outra coluna. Por exemplo, **selecione Depto, Max (salário) do grupo de funcionários por departamento**. (ODBC 2,0)<br/>SQL_GB_GROUP_BY_CONTAINS_SELECT = a cláusula **Group by** deve conter todas as colunas não agregadas na lista de seleção. Ele pode conter colunas que não estão na lista de seleção. Por exemplo, **selecione Depto, Max (salário) do grupo de funcionários por departamento, idade**. (ODBC 2,0)<br/>SQL_GB_NO_RELATION = as colunas na cláusula **Group by** e a lista SELECT não estão relacionadas. O significado das colunas não agrupadas e não agregadas na lista de seleção é dependente da fonte de dados. Por exemplo, **selecione Depto, salário do grupo de funcionários por departamento, idade**. (ODBC 2,0)<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará a opção SQL_GB_GROUP_BY_EQUALS_SELECT como com suporte. Um driver compatível com nível completo do SQL-92 sempre retornará a opção SQL_GB_COLLATE como com suporte. Se nenhuma das opções tiver suporte, a cláusula **Group by** não terá suporte da fonte de dados.|
+|SQL_GETDATA_EXTENSIONS|2.0|Um bitmask SQLUINTEGER enumerando extensões para **SQLGetData**.<br/><br/>As seguintes bitmasks são usadas junto com o sinalizador para determinar as extensões comuns às quais o driver dá suporte para **SQLGetData**:<br/>SQL_GD_ANY_COLUMN = **SQLGetData** pode ser chamado para qualquer coluna desassociada, incluindo aqueles antes da última coluna associada. Observe que as colunas devem ser chamadas em ordem crescente de número de coluna, a menos que SQL_GD_ANY_ORDER também seja retornado.<br/>SQL_GD_ANY_ORDER = **SQLGetData** pode ser chamado para colunas desassociadas em qualquer ordem. Observe que **SQLGetData** pode ser chamado somente para colunas após a última coluna associada, a menos que SQL_GD_ANY_COLUMN também seja retornado.<br/>SQL_GD_BLOCK = **SQLGetData** pode ser chamado para uma coluna não associada em qualquer linha em um bloco (onde o tamanho do conjunto de linhas é maior que 1) de dados após o posicionamento para essa linha com **SQLSetPos**.<br/>SQL_GD_BOUND = **SQLGetData** pode ser chamado para colunas associadas além de colunas desassociadas. Um driver não pode retornar esse valor, a menos que ele também retorne SQL_GD_ANY_COLUMN.<br/>SQL_GD_OUTPUT_PARAMS = **SQLGetData** pode ser chamado para retornar valores de parâmetro de saída. Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](../develop-app/retrieving-output-parameters-using-sqlgetdata.md).<br/><br/>**SQLGetData** é necessário para retornar dados somente de colunas não associadas que ocorrem após a última coluna associada, são chamados na ordem de aumento do número da coluna e não estão em uma linha em um bloco de linhas.<br/><br/>Se um driver oferecer suporte a indicadores (comprimento fixo ou comprimento variável), ele deverá dar suporte à chamada de **SQLGetData** na coluna 0. Esse suporte é necessário, independentemente do que o driver retorna para uma chamada para **SQLGetInfo** com o SQL_GETDATA_EXTENSIONS *InfoType*.|
+|SQL_GROUP_BY|2.0|Um valor SQLUSMALLINT que especifica a relação entre as colunas na cláusula **Group by** e as colunas não agregadas na lista de seleção:<br/>SQL_GB_COLLATE = uma cláusula **COLLATE** pode ser especificada no final de cada coluna de agrupamento. (ODBC 3,0)<br/>Não há suporte para SQL_GB_NOT_SUPPORTED = cláusulas **Group by** . (ODBC 2,0)<br/>SQL_GB_GROUP_BY_EQUALS_SELECT = a cláusula **Group by** deve conter todas as colunas não agregadas na lista de seleção. Ele não pode conter nenhuma outra coluna. Por exemplo, **selecione Depto, Max (salário) do grupo de funcionários por departamento**. (ODBC 2,0)<br/>SQL_GB_GROUP_BY_CONTAINS_SELECT = a cláusula **Group by** deve conter todas as colunas não agregadas na lista de seleção. Ele pode conter colunas que não estão na lista de seleção. Por exemplo, **selecione Depto, Max (salário) do grupo de funcionários por departamento, idade**. (ODBC 2,0)<br/>SQL_GB_NO_RELATION = as colunas na cláusula **Group by** e a lista SELECT não estão relacionadas. O significado das colunas não agrupadas e não agregadas na lista de seleção é dependente da fonte de dados. Por exemplo, **selecione Depto, salário do grupo de funcionários por departamento, idade**. (ODBC 2,0)<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará a opção SQL_GB_GROUP_BY_EQUALS_SELECT como com suporte. Um driver compatível com nível completo do SQL-92 sempre retornará a opção SQL_GB_COLLATE como com suporte. Se nenhuma das opções tiver suporte, a cláusula **Group by** não terá suporte da fonte de dados.|
 |SQL_IDENTIFIER_CASE|1.0|Um valor de SQLUSMALLINT da seguinte maneira:<br/>SQL_IC_UPPER = identificadores no SQL não diferenciam maiúsculas de minúsculas e são armazenados em letras maiúsculas no catálogo do sistema.<br/>Os identificadores SQL_IC_LOWER = no SQL não diferenciam maiúsculas de minúsculas e são armazenados em letras minúsculas no catálogo do sistema.<br/>SQL_IC_SENSITIVE = identificadores no SQL diferenciam maiúsculas de minúsculas e são armazenados em caso misto no catálogo do sistema.<br/>SQL_IC_MIXED = identificadores no SQL não diferenciam maiúsculas de minúsculas e são armazenados em maiúsculas e minúsculas no catálogo do sistema.<br/><br/>Como os identificadores em SQL-92 nunca diferenciam maiúsculas de minúsculas, um driver que está de acordo com o SQL-92 (qualquer nível) nunca retornará a opção SQL_IC_SENSITIVE como com suporte.|
 |SQL_IDENTIFIER_QUOTE_CHAR|1.0|A cadeia de caracteres que é usada como o delimitador inicial e final de um identificador entre aspas (delimitados) nas instruções SQL. (Os identificadores passados como argumentos para funções ODBC não precisam ser colocados entre aspas.) Se a fonte de dados não oferecer suporte a identificadores entre aspas, um espaço em branco será retornado.<br/><br/>Essa cadeia de caracteres também pode ser usada para a cotação de argumentos de função de catálogo quando o atributo de conexão SQL_ATTR_METADATA_ID é definido como SQL_TRUE.<br/><br/>Como o caractere de aspas de identificador em SQL-92 é a aspa dupla ("), um driver que está de acordo com o SQL-92 sempre retornará o caractere de aspas duplas.|
 |SQL_INDEX_KEYWORDS|3.0|Um bitmask SQLUINTEGER que enumera palavras-chave na instrução CREATE INDEX que são suportadas pelo driver:<br/>SQL_IK_NONE = não há suporte para nenhuma das palavras-chave.<br/>SQL_IK_ASC = há suporte para a palavra-chave ASC.<br/>SQL_IK_DESC = há suporte para a palavra-chave DESC.<br/>SQL_IK_ALL = há suporte para todas as palavras-chave.<br/><br/>Para ver se a instrução CREATE INDEX tem suporte, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_DLL_INDEX.|
@@ -418,54 +560,54 @@ A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do 
 |SQL_INTEGRITY|1.0|Uma cadeia de caracteres: "Y" se a fonte de dados der suporte à instalação de aperfeiçoamento de integridade; "N" se não tiver.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_ODBC_SQL_OPT_IEF.|
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor do conjunto de chaves que são suportados pelo driver. Essa bitmask contém o primeiro subconjunto de atributos; para o segundo subconjunto, consulte SQL_KEYSET_CURSOR_ATTRIBUTES2.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA1_NEXT<br/>SQL_CA1_ABSOLUTE<br/>SQL_CA1_RELATIVE<br/>SQL_CA1_BOOKMARK<br/>SQL_CA1_LOCK_EXCLUSIVE<br/>SQL_CA1_LOCK_NO_CHANGE<br/>SQL_CA1_LOCK_UNLOCK<br/>SQL_CA1_POS_POSITION<br/>SQL_CA1_POS_UPDATE<br/>SQL_CA1_POS_DELETE<br/>SQL_CA1_POS_REFRESH<br/>SQL_CA1_POSITIONED_UPDATE<br/>SQL_CA1_POSITIONED_DELETE<br/>SQL_CA1_SELECT_FOR_UPDATE<br/>SQL_CA1_BULK_ADD<br/>SQL_CA1_BULK_UPDATE_BY_BOOKMARK<br/>SQL_CA1_BULK_DELETE_BY_BOOKMARK<br/>SQL_CA1_BULK_FETCH_BY_BOOKMARK<br/><br/>Para obter descrições desses bitmasks, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (e substitua "cursor controlado por conjunto de chaves" para "cursor dinâmico" nas descrições).<br/><br/>Um driver compatível com nível intermediário do SQL-92 geralmente retorna as opções SQL_CA1_NEXT, SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE, como com suporte, porque o driver dá suporte a cursores roláveis por meio da instrução SQL FETCH inserida. Como isso não determina diretamente o suporte do SQL subjacente, no entanto, os cursores roláveis podem não ter suporte, mesmo para um driver compatível com nível intermediário do SQL-92.|
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor do conjunto de chaves que são suportados pelo driver. Essa bitmask contém o segundo subconjunto de atributos; para o primeiro subconjunto, consulte SQL_KEYSET_CURSOR_ATTRIBUTES1.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA2_READ_ONLY_CONCURRENCY<br/>SQL_CA2_LOCK_CONCURRENCY<br/>SQL_CA2_OPT_ROWVER_CONCURRENCY<br/>SQL_CA2_OPT_VALUES_CONCURRENCY<br/>SQL_CA2_SENSITIVITY_ADDITIONS<br/>SQL_CA2_SENSITIVITY_DELETIONS<br/>SQL_CA2_SENSITIVITY_UPDATES<br/>SQL_CA2_MAX_ROWS_SELECT<br/>SQL_CA2_MAX_ROWS_INSERT<br/>SQL_CA2_MAX_ROWS_DELETE<br/>SQL_CA2_MAX_ROWS_UPDATE<br/>SQL_CA2_MAX_ROWS_CATALOG<br/>SQL_CA2_MAX_ROWS_AFFECTS_ALL<br/>SQL_CA2_CRC_EXACT<br/>SQL_CA2_CRC_APPROXIMATE<br/>SQL_CA2_SIMULATE_NON_UNIQUE<br/>SQL_CA2_SIMULATE_TRY_UNIQUE<br/>SQL_CA2_SIMULATE_UNIQUE<br/><br/>Para obter descrições desses bitmasks, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (e substitua "cursor controlado por conjunto de chaves" para "cursor dinâmico" nas descrições).|
-|SQL_KEYWORDS|2,0|Uma cadeia de caracteres que contém uma lista separada por vírgulas de todas as palavras-chave específicas da fonte de dados. Esta lista não contém palavras-chave específicas para ODBC ou palavras-chave usadas pela fonte de dados e pelo ODBC. Esta lista representa todas as palavras-chave reservadas; aplicativos interoperáveis não devem usar essas palavras em nomes de objetos.<br/><br/>Para obter uma lista de palavras-chave ODBC, consulte [palavras-chave reservadas](../appendixes/reserved-keywords.md) no [Apêndice C: gramática SQL](../appendixes/appendix-c-sql-grammar.md). O valor **#define** SQL_ODBC_KEYWORDS contém uma lista separada por vírgulas de palavras-chave ODBC.|
-|SQL_LIKE_ESCAPE_CLAUSE|2,0|Uma cadeia de caracteres: "Y" se a fonte de dados der suporte a um caractere de escape para o caractere de porcentagem (%) e o caractere de sublinhado (_) em um predicado **like** e o driver dá suporte à sintaxe ODBC para definir um caractere de escape de predicado **like** ; "N" caso contrário.|
+|SQL_KEYWORDS|2.0|Uma cadeia de caracteres que contém uma lista separada por vírgulas de todas as palavras-chave específicas da fonte de dados. Esta lista não contém palavras-chave específicas para ODBC ou palavras-chave usadas pela fonte de dados e pelo ODBC. Esta lista representa todas as palavras-chave reservadas; aplicativos interoperáveis não devem usar essas palavras em nomes de objetos.<br/><br/>Para obter uma lista de palavras-chave ODBC, consulte [palavras-chave reservadas](../appendixes/reserved-keywords.md) no [Apêndice C: gramática SQL](../appendixes/appendix-c-sql-grammar.md). O valor **#define** SQL_ODBC_KEYWORDS contém uma lista separada por vírgulas de palavras-chave ODBC.|
+|SQL_LIKE_ESCAPE_CLAUSE|2.0|Uma cadeia de caracteres: "Y" se a fonte de dados der suporte a um caractere de escape para o caractere de porcentagem (%) e o caractere de sublinhado (_) em um predicado **like** e o driver dá suporte à sintaxe ODBC para definir um caractere de escape de predicado **like** ; "N" caso contrário.|
 |SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|3.0|Um valor SQLUINTEGER que especifica o número máximo de instruções simultâneas ativas no modo assíncrono para o qual o driver pode dar suporte em uma determinada conexão. Se não houver um limite específico ou se o limite for desconhecido, esse valor será zero.|
-|SQL_MAX_BINARY_LITERAL_LEN|2,0|Um valor SQLUINTEGER que especifica o comprimento máximo (número de caracteres hexadecimais, excluindo o prefixo literal e o sufixo retornado por **SQLGetTypeInfo**) de um literal binário em uma instrução SQL. Por exemplo, o literal binário 0xFFAA tem um comprimento de 4. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
+|SQL_MAX_BINARY_LITERAL_LEN|2.0|Um valor SQLUINTEGER que especifica o comprimento máximo (número de caracteres hexadecimais, excluindo o prefixo literal e o sufixo retornado por **SQLGetTypeInfo**) de um literal binário em uma instrução SQL. Por exemplo, o literal binário 0xFFAA tem um comprimento de 4. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
 |SQL_MAX_CATALOG_NAME_LEN|1.0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de catálogo na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível completo FIPS retornará pelo menos 128.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_MAX_QUALIFIER_NAME_LEN.|
-|SQL_MAX_CHAR_LITERAL_LEN|2,0|Um valor SQLUINTEGER que especifica o comprimento máximo (número de caracteres, excluindo o prefixo literal e o sufixo retornado por **SQLGetTypeInfo**) de um literal de caractere em uma instrução SQL. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
+|SQL_MAX_CHAR_LITERAL_LEN|2.0|Um valor SQLUINTEGER que especifica o comprimento máximo (número de caracteres, excluindo o prefixo literal e o sufixo retornado por **SQLGetTypeInfo**) de um literal de caractere em uma instrução SQL. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
 |SQL_MAX_COLUMN_NAME_LEN|1.0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de coluna na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 18. Um driver compatível com nível intermediário FIPS retornará pelo menos 128.|
-|SQL_MAX_COLUMNS_IN_GROUP_BY|2,0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em uma cláusula **Group by** . Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 6. Um driver compatível com nível intermediário FIPS retornará pelo menos 15.|
-|SQL_MAX_COLUMNS_IN_INDEX|2,0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em um índice. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.|
-|SQL_MAX_COLUMNS_IN_ORDER_BY|2,0|Um valor SQLUSMALLINT que especifica o número máximo de colunas permitido em uma cláusula **order by** . Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 6. Um driver compatível com nível intermediário FIPS retornará pelo menos 15.|
-|SQL_MAX_COLUMNS_IN_SELECT|2,0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em uma lista de seleção. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 100. Um driver compatível com nível intermediário FIPS retornará pelo menos 250.|
-|SQL_MAX_COLUMNS_IN_TABLE|2,0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em uma tabela. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 100. Um driver compatível com nível intermediário FIPS retornará pelo menos 250.|
+|SQL_MAX_COLUMNS_IN_GROUP_BY|2.0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em uma cláusula **Group by** . Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 6. Um driver compatível com nível intermediário FIPS retornará pelo menos 15.|
+|SQL_MAX_COLUMNS_IN_INDEX|2.0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em um índice. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.|
+|SQL_MAX_COLUMNS_IN_ORDER_BY|2.0|Um valor SQLUSMALLINT que especifica o número máximo de colunas permitido em uma cláusula **order by** . Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 6. Um driver compatível com nível intermediário FIPS retornará pelo menos 15.|
+|SQL_MAX_COLUMNS_IN_SELECT|2.0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em uma lista de seleção. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 100. Um driver compatível com nível intermediário FIPS retornará pelo menos 250.|
+|SQL_MAX_COLUMNS_IN_TABLE|2.0|Um valor de SQLUSMALLINT que especifica o número máximo de colunas permitido em uma tabela. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 100. Um driver compatível com nível intermediário FIPS retornará pelo menos 250.|
 |SQL_MAX_CONCURRENT_ACTIVITIES|1.0|Um valor SQLUSMALLINT que especifica o número máximo de instruções ativas às quais o driver pode dar suporte para uma conexão. Uma instrução é definida como ativa se tiver resultados pendentes, com o termo "resultados", que significa linhas de uma operação **Select** ou linhas afetadas por uma operação de **inserção**, **atualização**ou **exclusão** (como uma contagem de linhas) ou se estiver em um estado NEED_DATA. Esse valor pode refletir uma limitação imposta pelo driver ou pela fonte de dados. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_ACTIVE_STATEMENTS.|
 |SQL_MAX_CURSOR_NAME_LEN|1.0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de cursor na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 18. Um driver compatível com nível intermediário FIPS retornará pelo menos 128.|
 |SQL_MAX_DRIVER_CONNECTIONS|1.0|Um valor de SQLUSMALLINT que especifica o número máximo de conexões ativas às quais o driver pode dar suporte para um ambiente. Esse valor pode refletir uma limitação imposta pelo driver ou pela fonte de dados. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_ACTIVE_CONNECTIONS.|
 |SQL_MAX_IDENTIFIER_LEN|3.0|Um SQLUSMALLINT que indica o tamanho máximo em caracteres que a fonte de dados dá suporte para nomes definidos pelo usuário.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 18. Um driver compatível com nível intermediário FIPS retornará pelo menos 128.|
-|SQL_MAX_INDEX_SIZE|2,0|Um valor SQLUINTEGER que especifica o número máximo de bytes permitidos nos campos combinados de um índice. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.|
+|SQL_MAX_INDEX_SIZE|2.0|Um valor SQLUINTEGER que especifica o número máximo de bytes permitidos nos campos combinados de um índice. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.|
 |SQL_MAX_PROCEDURE_NAME_LEN|1.0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de procedimento na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
-|SQL_MAX_ROW_SIZE|2,0|Um valor SQLUINTEGER que especifica o comprimento máximo de uma única linha em uma tabela. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 2.000. Um driver compatível com nível intermediário FIPS retornará pelo menos 8.000.|
+|SQL_MAX_ROW_SIZE|2.0|Um valor SQLUINTEGER que especifica o comprimento máximo de uma única linha em uma tabela. Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 2.000. Um driver compatível com nível intermediário FIPS retornará pelo menos 8.000.|
 |SQL_MAX_ROW_SIZE_INCLUDES_LONG|3.0|Uma cadeia de caracteres: "Y" se o tamanho máximo de linha retornado para o SQL_MAX_ROW_SIZE tipo de informação incluir o comprimento de todas as colunas de SQL_LONGVARCHAR e SQL_LONGVARBINARY na linha; "N" caso contrário.|
 |SQL_MAX_SCHEMA_NAME_LEN|1.0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de esquema na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 18. Um driver compatível com nível intermediário FIPS retornará pelo menos 128.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_MAX_OWNER_NAME_LEN.|
-|SQL_MAX_STATEMENT_LEN|2,0|Um valor SQLUINTEGER que especifica o comprimento máximo (número de caracteres, incluindo o espaço em branco) de uma instrução SQL. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
+|SQL_MAX_STATEMENT_LEN|2.0|Um valor SQLUINTEGER que especifica o comprimento máximo (número de caracteres, incluindo o espaço em branco) de uma instrução SQL. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
 |SQL_MAX_TABLE_NAME_LEN|1.0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de tabela na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 18. Um driver compatível com nível intermediário FIPS retornará pelo menos 128.|
-|SQL_MAX_TABLES_IN_SELECT|2,0|Um valor SQLUSMALLINT que especifica o número máximo de tabelas permitidas na cláusula **from** de uma instrução **Select** . Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 15. Um driver compatível com nível intermediário FIPS retornará pelo menos 50.|
-|SQL_MAX_USER_NAME_LEN|2,0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de usuário na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
+|SQL_MAX_TABLES_IN_SELECT|2.0|Um valor SQLUSMALLINT que especifica o número máximo de tabelas permitidas na cláusula **from** de uma instrução **Select** . Se não houver um limite especificado ou o limite for desconhecido, esse valor será definido como zero.<br/><br/>Um driver compatível com nível de entrada FIPS retornará pelo menos 15. Um driver compatível com nível intermediário FIPS retornará pelo menos 50.|
+|SQL_MAX_USER_NAME_LEN|2.0|Um valor de SQLUSMALLINT que especifica o comprimento máximo de um nome de usuário na fonte de dados. Se não houver nenhum comprimento máximo ou o comprimento for desconhecido, esse valor será definido como zero.|
 |SQL_MULT_RESULT_SETS|1.0|Uma cadeia de caracteres: "Y" se a fonte de dados der suporte a vários conjuntos de resultados, "N" se não tiver.<br/><br/>Para obter mais informações sobre vários conjuntos de resultados, consulte [vários resultados](../develop-app/multiple-results.md).|
 |SQL_MULTIPLE_ACTIVE_TXN|1.0|Uma cadeia de caracteres: "Y" se o driver oferecer suporte a mais de uma transação ativa ao mesmo tempo, "N" se apenas uma transação puder estar ativa a qualquer momento.<br/><br/>As informações retornadas para esse tipo de informação não se aplicam no caso de transações distribuídas.|
-|SQL_NEED_LONG_DATA_LEN|2,0|Uma cadeia de caracteres: "Y" se a fonte de dados precisar do comprimento de um valor de dados longo (o tipo de dados for SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específico da fonte de dados) antes desse valor ser enviado para a fonte de dados, "N" se não tiver. Para obter mais informações, consulte [função SQLBindParameter](sqlbindparameter-function.md) e [função SQLSetPos](sqlsetpos-function.md).|
+|SQL_NEED_LONG_DATA_LEN|2.0|Uma cadeia de caracteres: "Y" se a fonte de dados precisar do comprimento de um valor de dados longo (o tipo de dados for SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específico da fonte de dados) antes desse valor ser enviado para a fonte de dados, "N" se não tiver. Para obter mais informações, consulte [função SQLBindParameter](sqlbindparameter-function.md) e [função SQLSetPos](sqlsetpos-function.md).|
 |SQL_NON_NULLABLE_COLUMNS|1.0|Um valor SQLUSMALLINT que especifica se a fonte de dados dá suporte a NOT NULL em colunas:<br/>SQL_NNC_NULL = todas as colunas devem ser anuláveis.<br/>SQL_NNC_NON_NULL = colunas não podem ser anuláveis. (A fonte de dados dá suporte à restrição de coluna **NOT NULL** em instruções **CREATE TABLE** .)<br/><br/>Um driver compatível com nível de entrada do SQL-92 retornará SQL_NNC_NON_NULL.|
-|SQL_NULL_COLLATION|2,0|Um valor de SQLUSMALLINT que especifica onde os nulos são classificados em um conjunto de resultados:<br/>SQL_NC_END = NULLs são classificados no final do conjunto de resultados, independentemente das palavras-chave ASC ou DESC.<br/>SQL_NC_HIGH = NULLs são classificados na extremidade superior do conjunto de resultados, dependendo das palavras-chave ASC ou DESC.<br/>SQL_NC_LOW = NULLs são classificados na extremidade inferior do conjunto de resultados, dependendo das palavras-chave ASC ou DESC.<br/>SQL_NC_START = NULLs são classificados no início do conjunto de resultados, independentemente das palavras-chave ASC ou DESC.|
+|SQL_NULL_COLLATION|2.0|Um valor de SQLUSMALLINT que especifica onde os nulos são classificados em um conjunto de resultados:<br/>SQL_NC_END = NULLs são classificados no final do conjunto de resultados, independentemente das palavras-chave ASC ou DESC.<br/>SQL_NC_HIGH = NULLs são classificados na extremidade superior do conjunto de resultados, dependendo das palavras-chave ASC ou DESC.<br/>SQL_NC_LOW = NULLs são classificados na extremidade inferior do conjunto de resultados, dependendo das palavras-chave ASC ou DESC.<br/>SQL_NC_START = NULLs são classificados no início do conjunto de resultados, independentemente das palavras-chave ASC ou DESC.|
 |SQL_NUMERIC_FUNCTIONS|1.0|Observação: o tipo de informação foi introduzido no ODBC 1,0; cada bitmask é rotulado com a versão na qual foi introduzido.<br/><br/>Um bitmask SQLUINTEGER que enumera as funções numéricas escalares com suporte do driver e a fonte de dados associada.<br/><br/>As seguintes bitmasks são usadas para determinar quais funções numéricas têm suporte:<br/>SQL_FN_NUM_ABS (ODBC 1,0)<br/>SQL_FN_NUM_ACOS (ODBC 1,0)<br/>SQL_FN_NUM_ASIN (ODBC 1,0)<br/>SQL_FN_NUM_ATAN (ODBC 1,0)<br/>SQL_FN_NUM_ATAN2 (ODBC 1,0)<br/>SQL_FN_NUM_CEILING (ODBC 1,0)<br/>SQL_FN_NUM_COS (ODBC 1,0)<br/>SQL_FN_NUM_COT (ODBC 1,0)<br/>SQL_FN_NUM_DEGREES (ODBC 2,0)<br/>SQL_FN_NUM_EXP (ODBC 1,0)<br/>SQL_FN_NUM_FLOOR (ODBC 1,0)<br/>SQL_FN_NUM_LOG (ODBC 1,0)<br/>SQL_FN_NUM_LOG10 (ODBC 2,0)<br/>SQL_FN_NUM_MOD (ODBC 1,0)<br/>SQL_FN_NUM_PI (ODBC 1,0)<br/>SQL_FN_NUM_POWER (ODBC 2,0)<br/>SQL_FN_NUM_RADIANS (ODBC 2,0)<br/>SQL_FN_NUM_RAND (ODBC 1,0)<br/>SQL_FN_NUM_ROUND (ODBC 2,0)<br/>SQL_FN_NUM_SIGN (ODBC 1,0)<br/>SQL_FN_NUM_SIN (ODBC 1,0)<br/>SQL_FN_NUM_SQRT (ODBC 1,0)<br/>SQL_FN_NUM_TAN (ODBC 1,0)<br/>SQL_FN_NUM_TRUNCATE (ODBC 2,0)|
 |SQL_ODBC_INTERFACE_CONFORMANCE|3.0|Um valor SQLUINTEGER que indica o nível da interface ODBC 3 *. x* com a qual o driver está em conformidade.<br/><br/>SQL_OIC_CORE: o nível mínimo ao qual todos os drivers ODBC devem estar em conformidade. Esse nível inclui elementos básicos de interface, como funções de conexão, funções para preparar e executar uma instrução SQL, funções de metadados de conjunto de resultados básicas, funções de catálogo básico e assim por diante.<br/>SQL_OIC_LEVEL1: um nível que inclui a funcionalidade do nível de conformidade dos padrões principais, além de cursores roláveis, indicadores, atualizações e exclusões posicionadas e assim por diante.<br/>SQL_OIC_LEVEL2: um nível que inclui A funcionalidade de nível de conformidade de padrões de nível 1, além de recursos avançados, como cursores confidenciais; atualizar, excluir e atualizar por indicadores; suporte a procedimentos armazenados; funções de catálogo para chaves primárias e estrangeiras; suporte a vários catálogos; e assim por diante.<br/><br/>Para obter mais informações, consulte [níveis de conformidade da interface](../develop-app/interface-conformance-levels.md).|
 |SQL_ODBC_VER|1.0|Uma cadeia de caracteres com a versão do ODBC para a qual o Gerenciador de driver está em conformidade. A versão está no formato # #. # #. 0000, em que os dois primeiros dígitos são a versão principal e os próximos dois dígitos são a versão secundária. Isso é implementado somente no Gerenciador de driver.|
 |SQL_OJ_CAPABILITIES|2, 1|Um bitmask SQLUINTEGER que enumera os tipos de junções externas com suporte no driver e na fonte de dados. As seguintes bitmasks são usadas para determinar quais tipos têm suporte:<br/>SQL_OJ_LEFT = há suporte para junções externas à esquerda.<br/>SQL_OJ_RIGHT = há suporte para junções externas à direita.<br/>SQL_OJ_FULL = há suporte para junções externas completas.<br/>SQL_OJ_NESTED = há suporte para junções externas aninhadas.<br/>SQL_OJ_NOT_ORDERED = os nomes de coluna na cláusula ON da junção externa não precisam estar na mesma ordem que os respectivos nomes de tabela na cláusula de **junção externa** .<br/>SQL_OJ_INNER = a tabela interna (a tabela direita em uma junção externa esquerda ou a tabela esquerda em uma junção externa direita) também pode ser usada em uma junção interna. Isso não se aplica a junções externas completas, que não têm uma tabela interna.<br/>SQL_OJ_ALL_COMPARISON_OPS = o operador de comparação na cláusula ON pode ser qualquer um dos operadores de comparação ODBC. Se esse bit não estiver definido, somente o operador de comparação Equals (=) poderá ser usado em junções externas.<br/><br/>Se nenhuma dessas opções for retornada como com suporte, não haverá suporte para nenhuma cláusula de junção externa.<br/><br/>Para obter informações sobre o suporte de operadores de junção relacionais em uma instrução SELECT, conforme definido pelo SQL-92, consulte SQL_SQL92_RELATIONAL_JOIN_OPERATORS.|
-|SQL_ORDER_BY_COLUMNS_IN_SELECT|2,0|Uma cadeia de caracteres: "Y" se as colunas na cláusula **order by** devem estar na lista de seleção; caso contrário, "N".|
+|SQL_ORDER_BY_COLUMNS_IN_SELECT|2.0|Uma cadeia de caracteres: "Y" se as colunas na cláusula **order by** devem estar na lista de seleção; caso contrário, "N".|
 |SQL_PARAM_ARRAY_ROW_COUNTS|3.0|Um SQLUINTEGER enumerando as propriedades do driver em relação à disponibilidade de contagens de linhas em uma execução parametrizada. Tem os seguintes valores:<br/>SQL_PARC_BATCH = contagens de linhas individuais estão disponíveis para cada conjunto de parâmetros. Isso é conceitualmente equivalente ao driver que gera um lote de instruções SQL, um para cada parâmetro definido na matriz. As informações de erro estendidas podem ser recuperadas usando o campo descritor de SQL_PARAM_STATUS_PTR.<br/>SQL_PARC_NO_BATCH = há apenas uma contagem de linhas disponível, que é a contagem de linhas cumulativa resultante da execução da instrução para toda a matriz de parâmetros. Isso é conceitualmente equivalente a tratar a instrução junto com a matriz de parâmetros completa como uma unidade atômica. Os erros são tratados da mesma forma como se uma instrução fosse executada.|
 |SQL_PARAM_ARRAY_SELECTS|3.0|Um SQLUINTEGER enumerando as propriedades do driver em relação à disponibilidade dos conjuntos de resultados em uma execução parametrizada. Tem os seguintes valores:<br/>SQL_PAS_BATCH = há um conjunto de resultados disponível por conjunto de parâmetros. Isso é conceitualmente equivalente ao driver que gera um lote de instruções SQL, um para cada parâmetro definido na matriz.<br/>SQL_PAS_NO_BATCH = há apenas um conjunto de resultados disponível, que representa o conjunto de resultados cumulativos resultante da execução da instrução para a matriz completa de parâmetros. Isso é conceitualmente equivalente a tratar a instrução junto com a matriz de parâmetros completa como uma unidade atômica.<br/>SQL_PAS_NO_SELECT = um driver não permite que uma instrução de geração de conjunto de resultados seja executada com uma matriz de parâmetros.|
-|SQL_POS_OPERATIONS|2,0|Um bitmask SQLINTEGER que enumera as operações de suporte no **SQLSetPos**.<br/><br/>As seguintes bitmasks são usadas junto com o sinalizador para determinar quais opções têm suporte.<br/>SQL_POS_POSITION (ODBC 2,0)<br/>SQL_POS_REFRESH (ODBC 2,0)<br/>SQL_POS_UPDATE (ODBC 2,0)<br/>SQL_POS_DELETE (ODBC 2,0)<br/>SQL_POS_ADD (ODBC 2,0)|
+|SQL_POS_OPERATIONS|2.0|Um bitmask SQLINTEGER que enumera as operações de suporte no **SQLSetPos**.<br/><br/>As seguintes bitmasks são usadas junto com o sinalizador para determinar quais opções têm suporte.<br/>SQL_POS_POSITION (ODBC 2,0)<br/>SQL_POS_REFRESH (ODBC 2,0)<br/>SQL_POS_UPDATE (ODBC 2,0)<br/>SQL_POS_DELETE (ODBC 2,0)<br/>SQL_POS_ADD (ODBC 2,0)|
 |SQL_PROCEDURE_TERM|1.0|Uma cadeia de caracteres com o nome do fornecedor da fonte de dados para um procedimento; por exemplo, "procedimento de banco de dados", "procedimento armazenado", "procedimento", "pacote" ou "consulta armazenada".|
 |SQL_PROCEDURES|1.0|Uma cadeia de caracteres: "Y" se a fonte de dados der suporte a procedimentos e o driver der suporte à sintaxe de invocação de procedimento ODBC; "N" caso contrário.|
-|SQL_QUOTED_IDENTIFIER_CASE|2,0|Um valor de SQLUSMALLINT da seguinte maneira:<br/>SQL_IC_UPPER = identificadores entre aspas no SQL não diferenciam maiúsculas de minúsculas e são armazenados em letras maiúsculas no catálogo do sistema.<br/>SQL_IC_LOWER = identificadores entre aspas no SQL não diferenciam maiúsculas de minúsculas e são armazenados em letras minúsculas no catálogo do sistema.<br/>SQL_IC_SENSITIVE = identificadores entre aspas no SQL diferenciam maiúsculas de minúsculas e são armazenados em maiúsculas e minúsculas no catálogo do sistema. (Em um banco de dados compatível com SQL-92, os identificadores entre aspas sempre diferenciam maiúsculas de minúsculas.)<br/>SQL_IC_MIXED = identificadores entre aspas no SQL não diferenciam maiúsculas de minúsculas e são armazenados em maiúsculas e minúsculas no catálogo do sistema.<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará SQL_IC_SENSITIVE.|
+|SQL_QUOTED_IDENTIFIER_CASE|2.0|Um valor de SQLUSMALLINT da seguinte maneira:<br/>SQL_IC_UPPER = identificadores entre aspas no SQL não diferenciam maiúsculas de minúsculas e são armazenados em letras maiúsculas no catálogo do sistema.<br/>SQL_IC_LOWER = identificadores entre aspas no SQL não diferenciam maiúsculas de minúsculas e são armazenados em letras minúsculas no catálogo do sistema.<br/>SQL_IC_SENSITIVE = identificadores entre aspas no SQL diferenciam maiúsculas de minúsculas e são armazenados em maiúsculas e minúsculas no catálogo do sistema. (Em um banco de dados compatível com SQL-92, os identificadores entre aspas sempre diferenciam maiúsculas de minúsculas.)<br/>SQL_IC_MIXED = identificadores entre aspas no SQL não diferenciam maiúsculas de minúsculas e são armazenados em maiúsculas e minúsculas no catálogo do sistema.<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará SQL_IC_SENSITIVE.|
 |SQL_ROW_UPDATES|1.0|Uma cadeia de caracteres: "Y" se um cursor misto ou controlado por conjunto de chaves mantém versões de linha ou valores para todas as linhas buscadas e, portanto, pode detectar todas as atualizações que foram feitas em uma linha por qualquer usuário desde que a linha foi buscada pela última vez. (Isso se aplica somente a atualizações, não a exclusões ou inserções.) O driver pode retornar o sinalizador SQL_ROW_UPDATED para a matriz de status de linha quando **SQLFetchScroll** é chamado. Caso contrário, "N".|
 |SQL_SCHEMA_TERM|1.0|Uma cadeia de caracteres com o nome do fornecedor de fonte de dados para um esquema; por exemplo, "proprietário", "ID de autorização" ou "esquema".<br/><br/>A cadeia de caracteres pode ser retornada no caso superior, inferior ou misto.<br/><br/>Um driver compatível com nível de entrada do SQL-92 sempre retornará "Schema".<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_OWNER_TERM.|
-|SQL_SCHEMA_USAGE|2,0|Um bitmask SQLUINTEGER que enumera as instruções nas quais os esquemas podem ser usados:<br/>SQL_SU_DML_STATEMENTS = há suporte para esquemas em todas as instruções de linguagem de manipulação de dados: **selecionar**, **Inserir**, **Atualizar**, **excluir**e, se houver suporte, **Selecione para atualizar** e posicionar as instruções UPDATE e Delete.<br/>SQL_SU_PROCEDURE_INVOCATION = há suporte para esquemas na instrução de invocação de procedimento ODBC.<br/>SQL_SU_TABLE_DEFINITION = há suporte para esquemas em todas as instruções de definição de tabela: **CREATE TABLE**, **criar exibição**, **alterar tabela**, **remover tabela**e **descartar exibição**.<br/>SQL_SU_INDEX_DEFINITION = há suporte para esquemas em todas as instruções de definição de índice: **CREATE INDEX** e **drop index**.<br/>SQL_SU_PRIVILEGE_DEFINITION = há suporte para esquemas em todas as instruções de definição de privilégio: **Grant** e **REVOKE**.<br/><br/>Um driver compatível com nível de entrada do SQL-92 sempre retornará as opções SQL_SU_DML_STATEMENTS, SQL_SU_TABLE_DEFINITION e SQL_SU_PRIVILEGE_DEFINITION, como com suporte.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_OWNER_USAGE.|
+|SQL_SCHEMA_USAGE|2.0|Um bitmask SQLUINTEGER que enumera as instruções nas quais os esquemas podem ser usados:<br/>SQL_SU_DML_STATEMENTS = há suporte para esquemas em todas as instruções de linguagem de manipulação de dados: **selecionar**, **Inserir**, **Atualizar**, **excluir**e, se houver suporte, **Selecione para atualizar** e posicionar as instruções UPDATE e Delete.<br/>SQL_SU_PROCEDURE_INVOCATION = há suporte para esquemas na instrução de invocação de procedimento ODBC.<br/>SQL_SU_TABLE_DEFINITION = há suporte para esquemas em todas as instruções de definição de tabela: **CREATE TABLE**, **criar exibição**, **alterar tabela**, **remover tabela**e **descartar exibição**.<br/>SQL_SU_INDEX_DEFINITION = há suporte para esquemas em todas as instruções de definição de índice: **CREATE INDEX** e **drop index**.<br/>SQL_SU_PRIVILEGE_DEFINITION = há suporte para esquemas em todas as instruções de definição de privilégio: **Grant** e **REVOKE**.<br/><br/>Um driver compatível com nível de entrada do SQL-92 sempre retornará as opções SQL_SU_DML_STATEMENTS, SQL_SU_TABLE_DEFINITION e SQL_SU_PRIVILEGE_DEFINITION, como com suporte.<br/><br/>Este *InfoType* foi renomeado para ODBC 3,0 do ODBC 2,0 *InfoType* SQL_OWNER_USAGE.|
 |SQL_SCROLL_OPTIONS|1.0|Observação: o tipo de informação foi introduzido no ODBC 1,0; cada bitmask é rotulado com a versão na qual foi introduzido.<br/><br/>Um bitmask SQLUINTEGER que enumera as opções de rolagem com suporte para cursores roláveis.<br/><br/>As seguintes bitmasks são usadas para determinar quais opções têm suporte:<br/>SQL_SO_FORWARD_ONLY = o cursor só rola para frente. (ODBC 1,0)<br/>SQL_SO_STATIC = os dados no conjunto de resultados são estáticos. (ODBC 2,0)<br/>SQL_SO_KEYSET_DRIVEN = o driver salva e usa as chaves para cada linha no conjunto de resultados. (ODBC 1,0)<br/>SQL_SO_DYNAMIC = o driver mantém as chaves para cada linha no conjunto de linhas (o tamanho do conjunto de chaves é o mesmo que o tamanho do Rowset). (ODBC 1,0)<br/>SQL_SO_MIXED = o driver mantém as chaves para cada linha no conjunto de chaves, e o tamanho do conjuntos de chaves é maior do que o tamanho do Rowset. O cursor é orientado por conjunto de chaves dentro do conjunto de chaves e dinâmico fora do conjunto de chaves. (ODBC 1,0)<br/><br/>Para obter informações sobre cursores roláveis, consulte [cursores roláveis](../develop-app/scrollable-cursors.md).|
 |SQL_SEARCH_PATTERN_ESCAPE|1.0|Uma cadeia de caracteres que especifica o que o driver dá suporte como um caractere de escape que permite o uso dos metacaracteres de correspondência de padrões de sublinhado (_) e sinal de porcentagem (%) como caracteres válidos em padrões de pesquisa. Esse caractere de escape se aplica somente aos argumentos da função de catálogo que dão suporte a cadeias de caracteres de pesquisa. Se essa cadeia de caracteres estiver vazia, o driver não oferecerá suporte a um caractere de escape de padrão de pesquisa.<br/><br/>Como esse tipo de informação não indica o suporte geral do caractere de escape no predicado **like** , o SQL-92 não inclui os requisitos para essa cadeia de caracteres.<br/><br/>Este *InfoType* é limitado a funções de catálogo. Para obter uma descrição do uso do caractere de escape em cadeias de caracteres de padrão de pesquisa, consulte [argumentos de valor de padrão](../develop-app/pattern-value-arguments.md).|
 |SQL_SERVER_NAME|1.0|Uma cadeia de caracteres com o nome do servidor específico da fonte de dados; útil quando um nome de fonte de dados é usado durante **SQLConnect**, **SQLDriverConnect**e **SQLBrowseConnect**.|
-|SQL_SPECIAL_CHARACTERS|2,0|Uma cadeia de caracteres que contém todos os caracteres especiais (ou seja, todos os caracteres, exceto a até z, A a Z, 0 a 9 e sublinhado) que podem ser usados em um nome de identificador, como um nome de tabela, nome de coluna ou nome de índice, na fonte de dados. Por exemplo, "# $ ^". Se um identificador contiver um ou mais desses caracteres, o identificador deverá ser um identificador delimitado.|
+|SQL_SPECIAL_CHARACTERS|2.0|Uma cadeia de caracteres que contém todos os caracteres especiais (ou seja, todos os caracteres, exceto a até z, A a Z, 0 a 9 e sublinhado) que podem ser usados em um nome de identificador, como um nome de tabela, nome de coluna ou nome de índice, na fonte de dados. Por exemplo, "# $ ^". Se um identificador contiver um ou mais desses caracteres, o identificador deverá ser um identificador delimitado.|
 |SQL_SQL_CONFORMANCE|3.0|Um valor SQLUINTEGER que indica o nível de SQL-92 ao qual o driver dá suporte:<br/>SQL_SC_SQL92_ENTRY = em conformidade com SQL-92 de nível de entrada.<br/>SQL_SC_FIPS127_2_TRANSITIONAL = compatível com nível de transição FIPS 127-2.<br/>SQL_SC_SQL92_FULL = em conformidade com SQL-92 de nível completo.<br/>SQL_SC_ SQL92_INTERMEDIATE = em conformidade com SQL-92 de nível intermediário.|
 |SQL_SQL92_DATETIME_FUNCTIONS|3.0|Um bitmask SQLUINTEGER que enumera as funções escalares DateTime com suporte pelo driver e a fonte de dados associada, conforme definido em SQL-92.<br/><br/>As seguintes bitmasks são usadas para determinar quais funções DateTime têm suporte:<br/>SQL_SDF_CURRENT_DATE<br/>SQL_SDF_CURRENT_TIME<br/>SQL_SDF_CURRENT_TIMESTAMP|
 |SQL_SQL92_FOREIGN_KEY_DELETE_RULE|3.0|Um bitmask SQLUINTEGER que enumera as regras com suporte para uma chave estrangeira em uma instrução **delete** , conforme definido em SQL-92.<br/><br/>As seguintes bitmasks são usadas para determinar quais cláusulas são compatíveis com a fonte de dados:<br/>SQL_SFKD_CASCADE<br/>SQL_SFKD_NO_ACTION<br/>SQL_SFKD_SET_DEFAULT<br/>SQL_SFKD_SET_NULL<br/><br/>Um driver compatível com nível de transição FIPS sempre retornará todas essas opções como com suporte.|
@@ -482,15 +624,15 @@ A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do 
 |SQL_STATIC_CURSOR_ATTRIBUTES1|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor estático que são suportados pelo driver. Essa bitmask contém o primeiro subconjunto de atributos; para o segundo subconjunto, consulte SQL_STATIC_CURSOR_ATTRIBUTES2.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA1_NEXT<br/>SQL_CA1_ABSOLUTE<br/>SQL_CA1_RELATIVE<br/>SQL_CA1_BOOKMARK<br/>SQL_CA1_LOCK_NO_CHANGE<br/>SQL_CA1_LOCK_EXCLUSIVE<br/>SQL_CA1_LOCK_UNLOCK<br/>SQL_CA1_POS_POSITION<br/>SQL_CA1_POS_UPDATE<br/>SQL_CA1_POS_DELETE<br/>SQL_CA1_POS_REFRESH<br/>SQL_CA1_POSITIONED_UPDATE<br/>SQL_CA1_POSITIONED_DELETE<br/>SQL_CA1_SELECT_FOR_UPDATE<br/>SQL_CA1_BULK_ADD<br/>SQL_CA1_BULK_UPDATE_BY_BOOKMARK<br/>SQL_CA1_BULK_DELETE_BY_BOOKMARK<br/>SQL_CA1_BULK_FETCH_BY_BOOKMARK<br/><br/>Para obter descrições desses bitmasks, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (e substitua "cursor estático" por "cursor dinâmico" nas descrições).<br/><br/>Um driver compatível com nível intermediário do SQL-92 geralmente retorna as opções SQL_CA1_NEXT, SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE, como com suporte, porque o driver dá suporte a cursores roláveis por meio da instrução SQL FETCH inserida. Como isso não determina diretamente o suporte do SQL subjacente, no entanto, os cursores roláveis podem não ter suporte, mesmo para um driver compatível com nível intermediário do SQL-92.|
 |SQL_STATIC_CURSOR_ATTRIBUTES2|3.0|Um bitmask SQLUINTEGER que descreve os atributos de um cursor estático que são suportados pelo driver. Essa bitmask contém o segundo subconjunto de atributos; para o primeiro subconjunto, consulte SQL_STATIC_CURSOR_ATTRIBUTES1.<br/><br/>As seguintes bitmasks são usadas para determinar quais atributos têm suporte:<br/>SQL_CA2_READ_ONLY_CONCURRENCY<br/>SQL_CA2_LOCK_CONCURRENCY<br/>SQL_CA2_OPT_ROWVER_CONCURRENCY<br/>SQL_CA2_OPT_VALUES_CONCURRENCY<br/>SQL_CA2_SENSITIVITY_ADDITIONS<br/>SQL_CA2_SENSITIVITY_DELETIONS<br/>SQL_CA2_SENSITIVITY_UPDATES<br/>SQL_CA2_MAX_ROWS_SELECT<br/>SQL_CA2_MAX_ROWS_INSERT<br/>SQL_CA2_MAX_ROWS_DELETE<br/>SQL_CA2_MAX_ROWS_UPDATE<br/>SQL_CA2_MAX_ROWS_CATALOG<br/>SQL_CA2_MAX_ROWS_AFFECTS_ALL<br/>SQL_CA2_CRC_EXACT<br/>SQL_CA2_CRC_APPROXIMATE<br/>SQL_CA2_SIMULATE_NON_UNIQUE<br/>SQL_CA2_SIMULATE_TRY_UNIQUE<br/>SQL_CA2_SIMULATE_UNIQUE<br/><br/>Para obter descrições desses bitmasks, consulte SQL_DYNAMIC_CURSOR_ATTRIBUTES2 (e substitua "cursor estático" por "cursor dinâmico" nas descrições).|
 |SQL_STRING_FUNCTIONS|1.0|Observação: o tipo de informação foi introduzido no ODBC 1,0; cada bitmask é rotulado com a versão na qual foi introduzido.<br/><br/>Um bitmask SQLUINTEGER que enumera as funções de cadeia de caracteres escalares com suporte do driver e a fonte de dados associada.<br/><br/>As seguintes bitmasks são usadas para determinar quais funções de cadeia de caracteres têm suporte:<br/>SQL_FN_STR_ASCII (ODBC 1,0)<br/>SQL_FN_STR_BIT_LENGTH (ODBC 3,0)<br/>SQL_FN_STR_CHAR (ODBC 1,0)<br/>SQL_FN_STR_CHAR_LENGTH (ODBC 3,0)<br/>SQL_FN_STR_CHARACTER_LENGTH (ODBC 3,0)<br/>SQL_FN_STR_CONCAT (ODBC 1,0)<br/>SQL_FN_STR_DIFFERENCE (ODBC 2,0)<br/>SQL_FN_STR_INSERT (ODBC 1,0)<br/>SQL_FN_STR_LCASE (ODBC 1,0)<br/>SQL_FN_STR_LEFT (ODBC 1,0)<br/>SQL_FN_STR_LENGTH (ODBC 1,0)<br/>SQL_FN_STR_LOCATE (ODBC 1,0)<br/>SQL_FN_STR_LTRIM (ODBC 1,0)<br/>SQL_FN_STR_OCTET_LENGTH (ODBC 3,0)<br/>SQL_FN_STR_POSITION (ODBC 3,0)<br/>SQL_FN_STR_REPEAT (ODBC 1,0)<br/>SQL_FN_STR_REPLACE (ODBC 1,0)<br/>SQL_FN_STR_RIGHT (ODBC 1,0)<br/>SQL_FN_STR_RTRIM (ODBC 1,0)<br/>SQL_FN_STR_SOUNDEX (ODBC 2,0)<br/>SQL_FN_STR_SPACE (ODBC 2,0)<br/>SQL_FN_STR_SUBSTRING (ODBC 1,0)<br/>SQL_FN_STR_UCASE (ODBC 1,0)<br/><br/>Se um aplicativo puder chamar a função **Localizar** escalar com os argumentos *string_exp1*, *string_exp2*e *Iniciar* , o driver retornará o SQL_FN_STR_LOCATE bitmask. Se um aplicativo puder chamar a função localizar escalar apenas com os argumentos *string_exp1* e *string_exp2* , o driver retornará o SQL_FN_STR_LOCATE_2 bitmask. Os drivers que dão suporte total à função **Localizar** escalar retornam ambos os bitmasks.<br/><br/>(Para obter mais informações, consulte [funções de cadeia de caracteres](../appendixes/string-functions.md) no apêndice e, "funções escalares".)|
-|SQL_SUBQUERIES|2,0|Um bitmask SQLUINTEGER que enumera os predicados que dão suporte a subconsultas:<br/>SQL_SQ_CORRELATED_SUBQUERIES<br/>SQL_SQ_COMPARISON<br/>SQL_SQ_EXISTS<br/>SQL_SQ_INSQL_SQ_QUANTIFIED<br/><br/>O bitmask SQL_SQ_CORRELATED_SUBQUERIES indica que todos os predicados que dão suporte a subconsultas dão suporte a Subconsultas correlacionadas.<br/><br/>Um driver compatível com nível de entrada do SQL-92 sempre retornará um bitmask no qual todos esses bits estão definidos.|
+|SQL_SUBQUERIES|2.0|Um bitmask SQLUINTEGER que enumera os predicados que dão suporte a subconsultas:<br/>SQL_SQ_CORRELATED_SUBQUERIES<br/>SQL_SQ_COMPARISON<br/>SQL_SQ_EXISTS<br/>SQL_SQ_INSQL_SQ_QUANTIFIED<br/><br/>O bitmask SQL_SQ_CORRELATED_SUBQUERIES indica que todos os predicados que dão suporte a subconsultas dão suporte a Subconsultas correlacionadas.<br/><br/>Um driver compatível com nível de entrada do SQL-92 sempre retornará um bitmask no qual todos esses bits estão definidos.|
 |SQL_SYSTEM_FUNCTIONS|1.0|Um bitmask SQLUINTEGER que enumera as funções do sistema escalar com suporte do driver e a fonte de dados associada.<br/><br/>As seguintes bitmasks são usadas para determinar quais funções do sistema têm suporte:<br/>SQL_FN_SYS_DBNAME<br/>SQL_FN_SYS_IFNULL<br/>SQL_FN_SYS_USERNAME|
 |SQL_TABLE_TERM|1.0|Uma cadeia de caracteres com o nome do fornecedor da fonte de dados para uma tabela; por exemplo, "tabela" ou "arquivo".<br/><br/>Essa cadeia de caracteres pode estar no caso superior, inferior ou misto.<br/><br/>Um driver compatível com nível de entrada do SQL-92 sempre retornará "tabela".|
-|SQL_TIMEDATE_ADD_INTERVALS|2,0|Um bitmask SQLUINTEGER que enumera os intervalos de carimbo de data/hora com suporte do driver e a fonte de dados associada para a função escalar TIMESTAMPADD.<br/><br/>As seguintes bitmasks são usadas para determinar quais intervalos têm suporte:<br/>SQL_FN_TSI_FRAC_SECOND<br/>SQL_FN_TSI_SECOND<br/>SQL_FN_TSI_MINUTE<br/>SQL_FN_TSI_HOUR<br/>SQL_FN_TSI_DAY<br/>SQL_FN_TSI_WEEK<br/>SQL_FN_TSI_MONTH<br/>SQL_FN_TSI_QUARTER<br/>SQL_FN_TSI_YEAR<br/><br/>Um driver compatível com nível de transição FIPS sempre retornará um bitmask no qual todos esses bits estão definidos.|
-|SQL_TIMEDATE_DIFF_INTERVALS|2,0|Um bitmask SQLUINTEGER que enumera os intervalos de carimbo de data/hora com suporte do driver e a fonte de dados associada para a função escalar TIMESTAMPDIFF.<br/><br/>As seguintes bitmasks são usadas para determinar quais intervalos têm suporte:<br/>SQL_FN_TSI_FRAC_SECOND<br/>SQL_FN_TSI_SECOND<br/>SQL_FN_TSI_MINUTE<br/>SQL_FN_TSI_HOUR<br/>SQL_FN_TSI_DAY<br/>SQL_FN_TSI_WEEK<br/>SQL_FN_TSI_MONTH<br/>SQL_FN_TSI_QUARTER<br/>SQL_FN_TSI_YEAR<br/><br/>Um driver compatível com nível de transição FIPS sempre retornará um bitmask no qual todos esses bits estão definidos.|
+|SQL_TIMEDATE_ADD_INTERVALS|2.0|Um bitmask SQLUINTEGER que enumera os intervalos de carimbo de data/hora com suporte do driver e a fonte de dados associada para a função escalar TIMESTAMPADD.<br/><br/>As seguintes bitmasks são usadas para determinar quais intervalos têm suporte:<br/>SQL_FN_TSI_FRAC_SECOND<br/>SQL_FN_TSI_SECOND<br/>SQL_FN_TSI_MINUTE<br/>SQL_FN_TSI_HOUR<br/>SQL_FN_TSI_DAY<br/>SQL_FN_TSI_WEEK<br/>SQL_FN_TSI_MONTH<br/>SQL_FN_TSI_QUARTER<br/>SQL_FN_TSI_YEAR<br/><br/>Um driver compatível com nível de transição FIPS sempre retornará um bitmask no qual todos esses bits estão definidos.|
+|SQL_TIMEDATE_DIFF_INTERVALS|2.0|Um bitmask SQLUINTEGER que enumera os intervalos de carimbo de data/hora com suporte do driver e a fonte de dados associada para a função escalar TIMESTAMPDIFF.<br/><br/>As seguintes bitmasks são usadas para determinar quais intervalos têm suporte:<br/>SQL_FN_TSI_FRAC_SECOND<br/>SQL_FN_TSI_SECOND<br/>SQL_FN_TSI_MINUTE<br/>SQL_FN_TSI_HOUR<br/>SQL_FN_TSI_DAY<br/>SQL_FN_TSI_WEEK<br/>SQL_FN_TSI_MONTH<br/>SQL_FN_TSI_QUARTER<br/>SQL_FN_TSI_YEAR<br/><br/>Um driver compatível com nível de transição FIPS sempre retornará um bitmask no qual todos esses bits estão definidos.|
 |SQL_TIMEDATE_FUNCTIONS|1.0|Observação: o tipo de informação foi introduzido no ODBC 1,0; cada bitmask é rotulado com a versão na qual foi introduzido.<br/><br/>Um bitmask SQLUINTEGER que enumera as funções de data e hora escalares com suporte no driver e na fonte de dados associada.<br/><br/>As seguintes bitmasks são usadas para determinar quais funções de data e hora têm suporte:<br/>SQL_FN_TD_CURRENT_DATE (ODBC 3,0)<br/>SQL_FN_TD_CURRENT_TIME (ODBC 3,0)<br/>SQL_FN_TD_CURRENT_TIMESTAMP (ODBC 3,0)<br/>SQL_FN_TD_CURDATE (ODBC 1,0)<br/>SQL_FN_TD_CURTIME (ODBC 1,0)<br/>SQL_FN_TD_DAYNAME (ODBC 2,0)<br/>SQL_FN_TD_DAYOFMONTH (ODBC 1,0)<br/>SQL_FN_TD_DAYOFWEEK (ODBC 1,0)<br/>SQL_FN_TD_DAYOFYEAR (ODBC 1,0)<br/>SQL_FN_TD_EXTRACT (ODBC 3,0)<br/>SQL_FN_TD_HOUR (ODBC 1,0)<br/>SQL_FN_TD_MINUTE (ODBC 1,0)<br/>SQL_FN_TD_MONTH (ODBC 1,0)<br/>SQL_FN_TD_MONTHNAME (ODBC 2,0)<br/>SQL_FN_TD_NOW (ODBC 1,0)<br/>SQL_FN_TD_QUARTER (ODBC 1,0)<br/>SQL_FN_TD_SECOND (ODBC 1,0)<br/>SQL_FN_TD_TIMESTAMPADD (ODBC 2,0)<br/>SQL_FN_TD_TIMESTAMPDIFF (ODBC 2,0)<br/>SQL_FN_TD_WEEK (ODBC 1,0)<br/>SQL_FN_TD_YEAR (ODBC 1,0)|
 |SQL_TXN_CAPABLE|1.0|Observação: o tipo de informação foi introduzido no ODBC 1,0; cada valor de retorno é rotulado com a versão na qual ele foi introduzido.<br/><br/>Um valor de SQLUSMALLINT que descreve o suporte de transação no driver ou na fonte de dados:<br/>SQL_TC_NONE = transações sem suporte. (ODBC 1,0)<br/>SQL_TC_DML = as transações podem conter apenas instruções DML (linguagem de manipulação de dados) (**Select**, **Insert**, **Update**e **delete**). As instruções DDL (linguagem de definição de dados) encontradas em uma transação causam um erro. (ODBC 1,0)<br/>SQL_TC_DDL_COMMIT = as transações podem conter apenas instruções DML. As instruções DDL (**CREATE TABLE**, **drop index**e assim por diante) encontradas em uma transação fazem com que a transação seja confirmada. (ODBC 2,0)<br/>SQL_TC_DDL_IGNORE = as transações podem conter apenas instruções DML. As instruções DDL encontradas em uma transação são ignoradas. (ODBC 2,0)<br/>SQL_TC_ALL = as transações podem conter instruções DDL e instruções DML em qualquer ordem. (ODBC 1,0)<br/><br/>(Como o suporte a transações é obrigatório no SQL-92, um driver compatível com SQL-92 [qualquer nível] nunca retornará SQL_TC_NONE.)|
 |SQL_TXN_ISOLATION_OPTION|1.0|Um bitmask SQLUINTEGER que enumera os níveis de isolamento da transação disponíveis do driver ou da fonte de dados.<br/><br/>As seguintes bitmasks são usadas junto com o sinalizador para determinar quais opções têm suporte:<br/>SQL_TXN_READ_UNCOMMITTED<br/>SQL_TXN_READ_COMMITTED<br/>SQL_TXN_REPEATABLE_READ<br/>SQL_TXN_SERIALIZABLE<br/><br/>Para obter descrições desses níveis de isolamento, consulte a descrição de SQL_DEFAULT_TXN_ISOLATION.<br/><br/>Para definir o nível de isolamento da transação, um aplicativo chama **SQLSetConnectAttr** para definir o atributo SQL_ATTR_TXN_ISOLATION. Para obter mais informações, consulte [função SQLSetConnectAttr](sqlsetconnectattr-function.md).<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará SQL_TXN_SERIALIZABLE como com suporte. Um driver compatível com nível de transição FIPS sempre retornará todas essas opções como com suporte.|
-|SQL_UNION|2,0|Um bitmask SQLUINTEGER que enumera o suporte para a cláusula **Union** :<br/>SQL_U_UNION = a fonte de dados dá suporte à cláusula **Union** .<br/>SQL_U_UNION_ALL = a fonte de dados dá suporte à palavra-chave **All** na cláusula **Union** . (**SQLGetInfo** retorna SQL_U_UNION e SQL_U_UNION_ALL nesse caso.)<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará essas duas opções como com suporte.|
+|SQL_UNION|2.0|Um bitmask SQLUINTEGER que enumera o suporte para a cláusula **Union** :<br/>SQL_U_UNION = a fonte de dados dá suporte à cláusula **Union** .<br/>SQL_U_UNION_ALL = a fonte de dados dá suporte à palavra-chave **All** na cláusula **Union** . (**SQLGetInfo** retorna SQL_U_UNION e SQL_U_UNION_ALL nesse caso.)<br/><br/>Um driver de nível de entrada do SQL-92 sempre retornará essas duas opções como com suporte.|
 |SQL_USER_NAME|1.0|Uma cadeia de caracteres com o nome usado em um determinado banco de dados, que pode ser diferente do nome de logon.|
 |SQL_XOPEN_CLI_YEAR|3.0|Uma cadeia de caracteres que indica o ano de publicação da especificação de grupo aberto com a qual a versão do Gerenciador de driver ODBC está totalmente em conformidade.|
   

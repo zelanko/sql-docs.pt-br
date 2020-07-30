@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 741a967b3fde6c5e3b5e3de87ac54a1142c93bfe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 513e376199c6f53953d49b70eae17f8da916f6bf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896980"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362956"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos do aplicativo Web (Master Data Service)
 
@@ -50,16 +50,45 @@ ms.locfileid: "85896980"
 > [!IMPORTANT]  
 >A**Compactação de Conteúdo Dinâmico** é habilitada por padrão. Isso reduz consideravelmente o tamanho da resposta xml e salva a E/S de rede, embora o uso da CPU aumente.  Para obter mais informações, veja **Melhoria do desempenho do [CTP] 2.0** em [Novidades no MDS &#40;Master Data Services&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
-||  
-|-|  
-|Serviços de informações da Internet<br /><br /> Ferramentas de gerenciamento da Web<br /><br /> Console de Gerenciamento IIS<br /><br /> Serviços da World Wide Web<br /><br /> Desenvolvimento de aplicativo<br /><br /> .NET Extensibility 3.5<br /><br /> Extensibilidade do .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensões ISAPI<br /><br /> Filtros ISAPI<br /><br /> Recursos comuns de HTTP<br /><br /> Documento padrão<br /><br /> Navegação de diretório<br /><br /> Erros de HTTP<br /><br /> Conteúdo estático<br /><br /> [Observação: não instale a Publicação WebDAV]<br /><br /> Integridade e diagnóstico<br /><br /> Log de HTTP<br /><br /> Monitor de solicitação<br /><br /> Desempenho<br /><br /> Compactação de conteúdo estático<br /><br /> Segurança<br /><br /> Filtragem de solicitação<br /><br /> Autenticação do Windows|  
+- Serviços de informações da Internet
+- Ferramentas de gerenciamento da Web
+- Console de Gerenciamento IIS
+- Serviços da World Wide Web
+- Desenvolvimento do aplicativo
+- .NET Extensibility 3.5
+- Extensibilidade do .NET 4.5
+- ASP.NET 3.5
+- ASP.NET 4.5
+- Extensões ISAPI
+- Filtros ISAPI
+- Recursos comuns de HTTP
+- Documento padrão
+- Navegação de diretório
+- Erros de HTTP
+- Conteúdo estático [Observação: não instale a publicação WebDAV.]
+- Integridade e diagnóstico
+- Log de HTTP
+- Monitor de solicitação
+- Desempenho
+- Compactação de conteúdo estático
+- Segurança
+- Filtragem de solicitação
+- Autenticação do Windows
   
 ### <a name="features"></a>Recursos 
  No Windows Server 2012 ou no Windows Server 2012 R2, você pode usar o **Gerenciador do Servidor** para instalar os recursos necessários a seguir.  
   
-||  
-|-|  
-|.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)<br /><br /> Serviços avançados do .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> Serviços WCF<br /><br /> Ativação de HTTP [Observação: isso é necessário.]<br /><br /> Compartilhamento de porta TCP<br /><br /> Serviço de Ativação de Processos do Windows<br /><br /> Modelo de processo<br /><br /> Ambiente .NET<br /><br /> APIs de configuração<br/><br/>Compactação de Conteúdo Dinâmico|  
+- .NET Framework 3.5 (inclui o .NET 2.0 e 3.0)
+- Serviços avançados do .NET Framework 4.5
+- ASP.NET 4.5
+- Serviços WCF
+- Ativação de HTTP [Observação: isso é necessário.]
+- Compartilhamento de porta TCP
+- Serviço de Ativação de Processos do Windows
+- Modelo de processo
+- Ambiente .NET
+- APIs de configuração
+- Compactação de Conteúdo Dinâmico
   
  Veja a seguir um exemplo de script do PowerShell para adicionar os recursos e funções do servidor de pré-requisito. Os recursos e as funções de servidor de pré-requisito variam conforme o ambiente.  
   
@@ -83,5 +112,3 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
       
  [Criar um aplicativo Web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [Página Configuração da Web &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
-  
-  

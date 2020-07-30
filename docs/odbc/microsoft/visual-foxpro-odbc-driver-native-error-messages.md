@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f97356a810f5aa0d911e09df016c62b03ee726b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56d65221ba90b217521fa6a7563d70b7fc44f940
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304778"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363326"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensagens de erro nativas do Driver ODBC do Visual FoxPro
 As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visual FoxPro.  
   
 ## <a name="001"></a>001  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |1|O recurso não está disponível.|  
 |2|Falha na operação de entrada/saída.|  
@@ -36,7 +36,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="100"></a>100  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |100|Muitos arquivos abertos.|  
 |101|Não é possível abrir o arquivo.|  
@@ -92,7 +92,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="200"></a>200  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |200|Erro de sintaxe.|  
 |201|Muitos nomes usados.|  
@@ -132,7 +132,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="300"></a>300  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |301|Incompatibilidade de tipo de operador/operando.|  
 |302|Incompatibilidade de tipo de dados.|  
@@ -143,7 +143,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="400"></a>400  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |406|A impressora não está pronta.|  
 |407|Argumento inválido usado com a função SET.|  
@@ -160,10 +160,10 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
 |471|Formato de coluna incorreto.|  
 |473|Propriedade de nível de ambiente inválida.|  
 |474|Chamada inválida emitida ao executar uma sequência sqlexec ().|  
-|479|\\ *value*Valor\\de nome de coluna de atualização inválido.|  
+|479|Valor de nome de coluna de atualização inválido \\ *value* \\ .|  
 |489|Os campos gerais não podem ser usados na condição WHERE de uma instrução UPDATE. Altere a propriedade Wheretype da exibição.|  
 |491|Nenhuma tabela de atualização foi especificada. Use a propriedade Tables do cursor.|  
-|492|Nenhuma coluna de chave foi especificada para o \\ *valor*\\da tabela de atualização. Use a propriedade keyfiellist do cursor.|  
+|492|Nenhuma coluna de chave foi especificada para o valor da tabela de atualização \\ *value* \\ . Use a propriedade keyfiellist do cursor.|  
 |493|O parâmetro SQL está ausente.|  
 |494|A definição da exibição foi alterada.|  
 |495|Aviso: a chave definida pela propriedade keyField para o *valor* da tabela não é exclusiva.|  
@@ -172,7 +172,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="500"></a>500  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |502|Não é possível gravar no registro porque ele está em uso.|  
 |503|O arquivo não pode ser bloqueado.|  
@@ -182,7 +182,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
 |523|A execução foi cancelada pelo usuário.|  
 |525|Não há suporte para a função em tabelas remotas.|  
 |526|Erro de conectividade: *valor.*|  
-|527|Não é possível carregar a biblioteca ODBC, ODBC32. DLL.|  
+|527|Não é possível carregar a biblioteca ODBC, ODBC32.DLL.|  
 |528|Ponto de entrada ODBC ausente, *valor*.|  
 |530|Busca cancelada; a tabela remota está fechada.|  
 |532|Não há suporte para conversão de tipo.|  
@@ -233,7 +233,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="600"></a>600  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |601|O nome do alias já está em uso.|  
 |602|A operação é inválida para um campo de memorando, geral ou imagem.|  
@@ -251,7 +251,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="700"></a>700  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |700|O registro está sendo usado por outro usuário.|  
 |701|O arquivo deve ser aberto exclusivamente.|  
@@ -277,7 +277,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="800"></a>800  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |802|SQL: não é possível localizar a tabela.|  
 |872|Muitas colunas.|  
@@ -290,7 +290,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
   
 ## <a name="900"></a>900  
   
-|||  
+|Código do erro|Mensagem de erro|  
 |-|-|  
 |901|O valor do argumento da função, o tipo ou a contagem é inválido.|  
 |902|Falha no avaliador de expressão.|  
@@ -322,7 +322,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
 |945|O objeto atual foi liberado.|  
 |947|A expressão é muito complexa.|  
 |951|Não é possível limpar o objeto em uso.|  
-|955|Venceu. INI/registro corrompido.|  
+|955|WIN.INI/Registry está corrompido.|  
 |957|Erro ao acessar o spooler de impressora.|  
 |959|Coordenadas inválidas.|  
 |960|Redefinição ilegal do *valor*da variável.|  

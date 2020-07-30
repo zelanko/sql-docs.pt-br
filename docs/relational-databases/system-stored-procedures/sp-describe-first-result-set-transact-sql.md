@@ -18,15 +18,15 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831174"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394368"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna os metadados do primeiro conjunto de resultados possível do [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Retorna um conjunto de resultados vazio quando o lote não retorna resultados. Gera um erro se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não puder determinar os metadados para a primeira consulta que será executada executando uma análise estática. A exibição de gerenciamento dinâmico [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retorna as mesmas informações.  
   
@@ -158,7 +158,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>Exemplos típicos  
   
-#### <a name="a-simple-example"></a>a. Exemplo simples  
+#### <a name="a-simple-example"></a>A. Exemplo simples  
  O exemplo a seguir descreve o conjunto de resultados retornado de uma única consulta.  
   
 ```  
@@ -190,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|Nome|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULO|NULO|NULO|NULO|  
   
@@ -203,10 +203,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|Nome|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
-|1|2|a|dbo|t|a|1|  
+|1|2|um|dbo|t|um|1|  
   
  Exemplo que usa 2 indicando que foi analisado como se você estivesse preparando um cursor.  
   
@@ -216,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|Nome|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULO|NULO|NULO|0|  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Resultado: \< nome de coluna desconhecido> **varchar (20) nulo**  
+ Resultado: \<Unknown Column Name> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nome de coluna forçado a ser idêntico via alias  
  Igual ao anterior, mas as colunas têm o mesmo nome via alias de coluna.  

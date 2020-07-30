@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970684"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363516"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Estes argumentos só podem ser usados quando os novos dados são adicionados usando uma instrução PREDICTION JOIN. Se você usar uma consulta PREDICTION JOIN e não especificar um argumento, o padrão será EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Uma \<*table expression*>.  
+ Um \<*table expression*>.  
   
 ## <a name="remarks"></a>Comentários  
  O algoritmo Time Series da [!INCLUDE[msCoName](../includes/msconame-md.md)] não suporta a previsão histórica ao usar a instrução PREDICTION JOIN para adicionar novos dados.  
@@ -147,7 +147,7 @@ ON
   
  Previsões originais:  
   
-||||  
+|Região de modelo|ReportingDate|Quantidade|  
 |-|-|-|  
 |M200 Pacífico|7/25/2008 12:00:00 AM|46|  
 |M200 Pacífico|8/25/2008 12:00:00 AM|44|  
@@ -155,7 +155,7 @@ ON
   
  Previsões atualizadas:  
   
-||||  
+|Região de modelo|ReportingDate|Quantidade|  
 |-|-|-|  
 |M200 Pacífico|7/25/2008 12:00:00 AM|91|  
 |M200 Pacífico|8/25/2008 12:00:00 AM|89|  

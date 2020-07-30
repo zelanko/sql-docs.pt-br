@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898107"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362976"
 ---
 # <a name="managing-a-domain"></a>Gerenciando um domínio
 
@@ -44,7 +44,7 @@ ms.locfileid: "85898107"
 ## <a name="in-this-section"></a>Nesta seção  
  O uso de um domínio permite a você o seguinte:  
   
-|||  
+|Descrição da operação|Tópico|  
 |-|-|  
 |Criar uma representação semântica de um campo de dados com um tipo de dados específico, especificar como o domínio é populado e formatar a saída do domínio|[Criar um domínio](../data-quality-services/create-a-domain.md)|  
 |Vincular um domínio a outro, permitindo o compartilhamento das mesmas configurações e valores|[Criar um domínio vinculado](../data-quality-services/create-a-linked-domain.md)|  

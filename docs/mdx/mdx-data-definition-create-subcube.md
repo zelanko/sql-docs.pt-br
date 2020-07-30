@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887433"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362796"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definição de dados MDX – CREATE SUBCUBE
 
@@ -89,9 +89,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Gera o os seguintes resultados:  
   
-|||||  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
 |-|-|-|-|  
-||Todos os Produtos|Acessórios|Clothing|  
 |Todos os Revendedores|$2031079.39|$506,172.45|$1,524,906.93|  
 |Revendedor de Valor Agregado|$767388.52|$175,002.81|$592,385.71|  
 |Warehouse|$1263690.86|$331,169.64|$932,521.23|  
@@ -118,9 +117,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Gera o os seguintes resultados diferentes:  
   
-|||||  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
 |-|-|-|-|  
-||Todos os Produtos|Acessórios|Clothing|  
 |Todos os Revendedores|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Revendedor de Valor Agregado|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

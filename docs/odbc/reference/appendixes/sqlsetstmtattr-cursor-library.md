@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bdd9b3b559d5cc78a0d44f5280aae347bc8996a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 366af9f48f709ec7414c1efc43000f1b565ff6d6
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300486"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363438"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (Biblioteca de cursores)
 > [!IMPORTANT]  
@@ -26,15 +26,24 @@ ms.locfileid: "81300486"
  Este tópico discute o uso da função **SQLSetStmtAttr** na biblioteca de cursores. Para obter informações gerais sobre **SQLSetStmtAttr**, consulte [SQLSetStmtAttr function](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
  A biblioteca de cursores dá suporte aos seguintes atributos de instrução com **SQLSetStmtAttr**:  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROWSET_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROWSET_ARRAY_SIZE  
+        SQL_ATTR_SIMULATE_CURSOR  
+        SQL_ATTR_USE_BOOKMARKS  
+    :::column-end:::
+:::row-end:::
+
  A biblioteca de cursores dá suporte apenas aos valores SQL_CURSOR_FORWARD_ONLY e SQL_CURSOR_STATIC do atributo de instrução SQL_ATTR_CURSOR_TYPE.  
   
  Para cursores somente de avanço, a biblioteca de cursores dá suporte ao valor SQL_CONCUR_READ_ONLY do atributo SQL_ATTR_CONCURRENCY Statement. Para cursores estáticos, a biblioteca de cursores dá suporte aos valores de SQL_CONCUR_READ_ONLY e SQL_CONCUR_VALUES do atributo de instrução SQL_ATTR_CONCURRENCY.  

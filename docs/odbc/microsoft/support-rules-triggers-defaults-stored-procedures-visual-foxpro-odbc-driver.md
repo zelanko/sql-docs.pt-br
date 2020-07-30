@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2fcf8e7c80b2712313cba81199489dc7cb06dce0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a02aeea8f33e3a4d87fc771a7b0fa7b1a0067b6d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301133"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363356"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Suporte para regras, gatilhos, valores padrão e procedimentos armazenados (Driver ODBC do Visual FoxPro)
 Você não pode criar regras, gatilhos, valores padrão ou procedimentos armazenados do Visual FoxPro usando o driver ODBC do Visual FoxPro. No entanto, seu aplicativo pode interagir com regras existentes, gatilhos, valores padrão ou procedimentos armazenados à medida que insere, atualiza ou exclui dados do Visual FoxPro armazenados em um banco de dados.  
@@ -43,244 +43,568 @@ Você não pode criar regras, gatilhos, valores padrão ou procedimentos armazen
  Se seu aplicativo interage com dados cujas regras, gatilhos, valores padrão ou procedimentos armazenados chamam quaisquer outros comandos ou funções do Visual FoxPro, o driver gera um erro. Consulte [comandos e funções do Visual FoxPro sem suporte](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) para obter uma lista de comandos e funções sem suporte do driver.  
   
 > [!TIP]  
->  Se você quiser inserir código condicional em suas regras, gatilhos ou procedimentos armazenados que determinam os comandos a serem executados quando chamados pelo driver, você poderá usar a função **Version ()** . A função **Version ()** retorna "Visual FoxPro ODBC Driver * \<Version>*" quando chamado pelo driver.  
+>  Se você quiser inserir código condicional em suas regras, gatilhos ou procedimentos armazenados que determinam os comandos a serem executados quando chamados pelo driver, você poderá usar a função **Version ()** . A função **Version ()** retorna "driver ODBC do Visual FoxPro *\<version>* " quando chamado pelo driver.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Comandos e funções do Visual FoxPro com suporte em regras, gatilhos, valores padrão e procedimentos armazenados  
-  
-||||  
-|-|-|-|  
-|Operador $|Operador %|& comando|  
-|&& comando|* Comando|= Comando|  
-  
-## <a name="a"></a>Um  
-  
-||||  
-|-|-|-|  
-|Função ABS ()|Função ACOPY ()|Comando adicionar tabela|  
-|Função ADATABASES ()|Função ADBOBJECTS ()|Função AERROR ()|  
-|Função ADEL ()|Função AELEMENT ()|Função ALEN ()|  
-|Função AFIELDS ()|Função AINS ()|ALTER TABLE – comando SQL|  
-|Função ALIAS ()|Função mytrim ()|ACRESCENTAR do comando de matriz|  
-|Operador AND|Comando APPEND|Comando acrescentar memorando|  
-|ACRESCENTAR do comando|ACRESCENTAR comando geral|Função ASCAN ()|  
-|Comando de procedimentos de acréscimo|Função ASC ()|Função ASUBSCRIPT ()|  
-|Função Asen ()|Função ASORT ()|Função ATAN ()|  
-|Função AT ()|Função AT_C ()|Função ATCLINE ()|  
-|Função ATC ()|Função ATCC ()|Função AUSED ()|  
-|Função ATLINE ()|Função ATN2 ()||  
-|Comando médio|Função ACOS ()||  
-  
+
+:::row:::
+    :::column:::
+        Operador $  
+        Operador %  
+    :::column-end:::
+    :::column:::
+        & comando  
+        && comando  
+    :::column-end:::
+    :::column:::
+        \* Comando  
+        = Comando  
+    :::column-end:::
+:::row-end:::
+
+## <a name="a"></a>A  
+
+:::row:::
+    :::column:::
+        Função ABS ()  
+        Função ACOPY ()  
+        Função ACOS ()  
+        Função ADATABASES ()  
+        Função ADBOBJECTS ()  
+        Comando adicionar tabela  
+        Função ADEL ()  
+        Função AELEMENT ()  
+        Função AERROR ()  
+        Função AFIELDS ()  
+        Função AINS ()  
+        Função ALEN ()  
+        Função ALIAS ()  
+    :::column-end:::
+    :::column:::
+        Função mytrim ()  
+        ALTER TABLE – comando SQL  
+        Operador AND  
+        Comando APPEND  
+        ACRESCENTAR do comando  
+        ACRESCENTAR do comando de matriz  
+        ACRESCENTAR comando geral  
+        Comando acrescentar memorando  
+        Comando de procedimentos de acréscimo  
+        Função ASC ()  
+        Função ASCAN ()  
+        Função Asen ()  
+        Função ASORT ()  
+    :::column-end:::
+    :::column:::
+        Função ASUBSCRIPT ()  
+        Função AT ()  
+        Função AT_C ()  
+        Função ATAN ()  
+        Função ATC ()  
+        Função ATCC ()  
+        Função ATCLINE ()  
+        Função ATLINE ()  
+        Função ATN2 ()  
+        Função AUSED ()  
+        Comando médio  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="b"></a>B  
-  
-||||  
-|-|-|-|  
-|BEGIN TRANSACTION comando|Função BETWEEN ()|Função BITNOT ()|  
-|Função BITCLEAR ()|Função BITLSHIFT ()|Função conjunto ()|  
-|Função BITOR ()|Função BITRSHIFT ()|Comando em branco|  
-|Função DEBITTEST ()|Função BITXOR ()||  
-|Função BOF ()|Função BITAND ()||  
-  
+
+:::row:::
+    :::column:::
+        BEGIN TRANSACTION comando  
+        Função BETWEEN ()  
+        Função BITAND ()  
+        Função BITCLEAR ()  
+        Função BITLSHIFT ()  
+    :::column-end:::
+    :::column:::
+        Função BITNOT ()  
+        Função BITOR ()  
+        Função BITRSHIFT ()  
+        Função conjunto ()  
+        Função DEBITTEST ()  
+    :::column-end:::
+    :::column:::
+        Função BITXOR ()  
+        Comando em branco  
+        Função BOF ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="c"></a>C  
-  
-||||  
-|-|-|-|  
-|Comando CALCULATE|Função CANDIDATE ()|Função CHR ()|  
-|Função CDX ()|Função teto ()|FECHAR comandos|  
-|Função CHRTRAN ()|Função CHRTRANC ()|Comando copiar índices|  
-|Função CMONTH ()|CONTINUAR comando|Comando de copiar estrutura ESTENDIda|  
-|Comando copiar procedimentos|Comando copiar estrutura|COPIAR para o comando|  
-|Comando copiar marca|Comando copiar para matriz|Função CPCONVERT ()|  
-|Função COS ()|Comando COUNT|Função CTOD ()|  
-|Função CPCURRENT ()|Função CPDBF ()|Função CURSORSETPROP ()|  
-|Função CTOT ()|Função CURSORGETPROP ()||  
-|Função curva ()|Função CDOW ()||  
-  
+
+:::row:::
+    :::column:::
+        Comando CALCULATE  
+        Função CANDIDATE ()  
+        Função CDOW ()  
+        Função CDX ()  
+        Função teto ()  
+        Função CHR ()  
+        Função CHRTRAN ()  
+        Função CHRTRANC ()  
+        FECHAR comandos  
+        Função CMONTH ()  
+    :::column-end:::
+    :::column:::
+        CONTINUAR comando  
+        Comando copiar índices  
+        Comando copiar procedimentos  
+        Comando copiar estrutura  
+        Comando de copiar estrutura ESTENDIda  
+        Comando copiar marca  
+        COPIAR para o comando  
+        Comando copiar para matriz  
+        Função COS ()  
+        Comando COUNT  
+    :::column-end:::
+    :::column:::
+        Função CPCONVERT ()  
+        Função CPCURRENT ()  
+        Função CPDBF ()  
+        Função CTOD ()  
+        Função CTOT ()  
+        Função CURSORGETPROP ()  
+        Função CURSORSETPROP ()  
+        Função curva ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="d"></a>D  
-  
-||||  
-|-|-|-|  
-|Função DATE ()|Função DATETIME ()|Função DAY ()|  
-|Função DBC ()|Função DBF ()|Função DBGETPROP ()|  
-|Função DBUSED ()|DELETE – comando SQL|Excluir comando|  
-|Comando DELETE TAG|Função DELETED ()|Função DESCENDING ()|  
-|Função DIFFERENCE ()|Comando de dimensão|Função espaço em disco ()|  
-|Função DMY ()|FAZER MAIÚSCULAS E MINÚSCULAS... Comando endcase|Comando DO|  
-|DO WHILE... Comando ENDDO|Função DOW ()|Função DTOC ()|  
-|Função DTOR ()|Função DTOS ()|Função DTOT ()|  
-  
+
+:::row:::
+    :::column:::
+        Função DATE ()  
+        Função DATETIME ()  
+        Função DAY ()  
+        Função DBC ()  
+        Função DBF ()  
+        Função DBGETPROP ()  
+        Função DBUSED ()  
+        DELETE – comando SQL  
+    :::column-end:::
+    :::column:::
+        Excluir comando  
+        Comando DELETE TAG  
+        Função DELETED ()  
+        Função DESCENDING ()  
+        Função DIFFERENCE ()  
+        Comando de dimensão  
+        Função espaço em disco ()  
+        Função DMY ()  
+    :::column-end:::
+    :::column:::
+        Comando DO  
+        FAZER MAIÚSCULAS E MINÚSCULAS... Comando endcase  
+        DO WHILE... Comando ENDDO  
+        Função DOW ()  
+        Função DTOC ()  
+        Função DTOR ()  
+        Função DTOS ()  
+        Função DTOT ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="e"></a>E  
-  
-||||  
-|-|-|-|  
-|Função EMPTY ()|Função EVALUATE ()|Comando EXIT|  
-|Função ERROR ()|Função EXP ()||  
-|Comando encerrar transação|Função EOF ()||  
-  
+
+:::row:::
+    :::column:::
+        Função EMPTY ()  
+        Comando encerrar transação  
+        Função EOF ()  
+    :::column-end:::
+    :::column:::
+        Função ERROR ()  
+        Função EVALUATE ()  
+        Comando EXIT  
+    :::column-end:::
+    :::column:::
+        Função EXP ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="f"></a>F  
-  
-||||  
-|-|-|-|  
-|Função FCOUNT ()|Função FDATE ()|Função FIELD ()|  
-|Função FILE ()|Função FILTER ()|Função FLDLIST ()|  
-|Função FLOCK ()|Função FLOOR ()|Comando FLUSH|  
-|PARA... Comando ENDFOR|Função FOR ()|Função FOUND ()|  
-|Comando de tabela gratuita|Função FSIZE ()|Função FTIME ()|  
-|Função FULLPATH ()|Comando de função|Função VF ()|  
-  
+
+:::row:::
+    :::column:::
+        Função FCOUNT ()  
+        Função FDATE ()  
+        Função FIELD ()  
+        Função FILE ()  
+        Função FILTER ()  
+        Função FLDLIST ()  
+    :::column-end:::
+    :::column:::
+        Função FLOCK ()  
+        Função FLOOR ()  
+        Comando FLUSH  
+        Função FOR ()  
+        PARA... Comando ENDFOR  
+        Função FOUND ()  
+    :::column-end:::
+    :::column:::
+        Comando de tabela gratuita  
+        Função FSIZE ()  
+        Função FTIME ()  
+        Função FULLPATH ()  
+        Comando de função  
+        Função VF ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="g"></a>G  
-  
-||||  
-|-|-|-|  
-|COLETAR comando|Função GETNEXTMODIFIED ()|Comando GO/GOTO|  
-|Função GETFLDSTATE ()|Função GOMONTH ()||  
-|Função GETCP ()|Função GETENV ()||  
-  
+
+:::row:::
+    :::column:::
+        COLETAR comando  
+        Função GETCP ()  
+        Função GETENV ()  
+    :::column-end:::
+    :::column:::
+        Função GETFLDSTATE ()  
+        Função GETNEXTMODIFIED ()  
+        Comando GO/GOTO  
+    :::column-end:::
+    :::column:::
+        Função GOMONTH ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="h"></a>H  
-  
-|||  
-|-|-|  
-|Função HEADER ()|Função HOUR ()|  
-  
+
+:::row:::
+    :::column:::
+        Função HEADER ()
+    :::column-end:::
+    :::column:::
+        Função HOUR ()
+    :::column-end:::
+:::row-end:::
+
 ## <a name="i"></a>I  
-  
-||||  
-|-|-|-|  
-|Função IDXCOLLATE ()|SE... Comando ENDIF|Função IIF ()|  
-|Função INDBC ()|Comando INDEX|Função inList ()|  
-|INSERIR-comando SQL|Função INT ()|Função isalpha ()|  
-|Função ISBLANK ()|Função IsDigit ()|Função isexclusive ()|  
-|Função ISLEADBYTE ()|Função islow ()|Função ISNULL ()|  
-|Função ISREADONLY ()|Função IsUpper ()||  
-  
+
+:::row:::
+    :::column:::
+        Função IDXCOLLATE ()  
+        SE... Comando ENDIF  
+        Função IIF ()  
+        Função INDBC ()  
+        Comando INDEX  
+        Função inList ()  
+    :::column-end:::
+    :::column:::
+        INSERIR-comando SQL  
+        Função INT ()  
+        Função isalpha ()  
+        Função ISBLANK ()  
+        Função IsDigit ()  
+        Função isexclusive ()  
+    :::column-end:::
+    :::column:::
+        Função ISLEADBYTE ()  
+        Função islow ()  
+        Função ISNULL ()  
+        Função ISREADONLY ()  
+        Função IsUpper ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="k"></a>K  
-  
-||||  
-|-|-|-|  
-|Função KEY ()|Função keycompare ()||  
-  
+
+:::row:::
+    :::column:::
+        Função KEY ()
+    :::column-end:::
+    :::column:::
+        Função keycompare ()
+    :::column-end:::
+:::row-end:::
+
 ## <a name="l"></a>L  
-  
-||||  
-|-|-|-|  
-|Função LEFT ()|Função LEFTC ()|Função LIKEC ()|  
-|Função LENC ()|Função LIKE ()|Função LOCK ()|  
-|Comando LOCAL|Comando Localizar|Função LOOKUP ()|  
-|Função LOG ()|Função LOG10 ()|Função LTRIM ()|  
-|Função LOWER ()|Comando LPARAMETERS||  
-|Função LUPDATE ()|Função LEN ()||  
-  
+
+:::row:::
+    :::column:::
+        Função LEFT ()  
+        Função LEFTC ()  
+        Função LEN ()  
+        Função LENC ()  
+        Função LIKE ()  
+        Função LIKEC ()  
+    :::column-end:::
+    :::column:::
+        Comando LOCAL  
+        Comando Localizar  
+        Função LOCK ()  
+        Função LOG ()  
+        Função LOG10 ()  
+        Função LOOKUP ()  
+    :::column-end:::
+    :::column:::
+        Função LOWER ()  
+        Comando LPARAMETERS  
+        Função LTRIM ()  
+        Função LUPDATE ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="m"></a>M  
-  
-||||  
-|-|-|-|  
-|Variável de memória do sistema _MLINE|Função MAX ()|Função MDX ()|  
-|Função MDY ()|Função MEMLINES ()|Função MESSAGE ()|  
-|Função MIN ()|Função MINUTE ()|Função MLINE ()|  
-|Função MOD ()|Função MONTH ()|Função MTON ()|  
-  
+
+:::row:::
+    :::column:::
+        Função MAX ()  
+        Função MDX ()  
+        Função MDY ()  
+        Função MEMLINES ()  
+    :::column-end:::
+    :::column:::
+        Função MESSAGE ()  
+        Função MIN ()  
+        Função MINUTE ()  
+        Variável de memória do sistema _MLINE  
+    :::column-end:::
+    :::column:::
+        Função MLINE ()  
+        Função MOD ()  
+        Função MONTH ()  
+        Função MTON ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="n"></a>N  
-  
-||||  
-|-|-|-|  
-|Função NDX ()|Função NORMALIZE ()|Operador NOT|  
-|Comando de observação|Função NTOM ()|Função NVL ()|  
-  
-## <a name="o"></a>O   
-  
-||||  
-|-|-|-|  
-|Função OCCURs ()|Função OLDVAL ()|NO comando de erro|  
-|Comando ON KEY|Função ON ()|Comando Abrir banco de dados|  
-|Operador OR|Função ORDER ()|Função OS ()|  
-  
+
+:::row:::
+    :::column:::
+        Função NDX ()  
+        Função NORMALIZE ()  
+    :::column-end:::
+    :::column:::
+        Operador NOT  
+        Comando de observação  
+    :::column-end:::
+    :::column:::
+        Função NTOM ()  
+        Função NVL ()  
+    :::column-end:::
+:::row-end:::
+
+## <a name="o"></a>O  
+
+:::row:::
+    :::column:::
+        Função OCCURs ()  
+        Função OLDVAL ()  
+        Função ON ()  
+    :::column-end:::
+    :::column:::
+        NO comando de erro  
+        Comando ON KEY  
+        Comando Abrir banco de dados  
+    :::column-end:::
+    :::column:::
+        Operador OR  
+        Função ORDER ()  
+        Função OS ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="p"></a>P  
-  
-||||  
-|-|-|-|  
-|Comando de pacote|Função Parameters ()|Função PAYMENT ()|  
-|Comando Parameters|Função PRIMARY ()|Comando particular|  
-|Função PI ()|Função PROGRAM ()|Função Pri ()|  
-|Comando de procedimento|Função VP ()||  
-|Comando público|PADL () &#124; PADR () &#124; funções PADC ()||  
-  
+
+:::row:::
+    :::column:::
+        Comando de pacote  
+        PADL () &#124; PADR () &#124; funções PADC ()  
+        Comando Parameters  
+        Função Parameters ()  
+        Função PAYMENT ()  
+    :::column-end:::
+    :::column:::
+        Função PI ()  
+        Função PRIMARY ()  
+        Comando particular  
+        Comando de procedimento  
+        Função PROGRAM ()  
+    :::column-end:::
+    :::column:::
+        Função Pri ()  
+        Comando público  
+        Função VP ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="r"></a>R  
-  
-||||  
-|-|-|-|  
-|Função RAND ()|Função RAT ()|Função RATC ()|  
-|Função RATLINE ()|Comando recall|Função RECCOUNT ()|  
-|Função RECNO ()|Função RECSIZE ()|Comando REGIONAL|  
-|Função RELATION ()|Comando remover tabela|Comando REPLACE|  
-|SUBSTITUIR do comando de matriz|Função REPLICAte ()|Repetir comando|  
-|Comando de retorno|Função RIGHT ()|Função RIGHTC ()|  
-|Função RLOCK ()|Comando ROLLBACK|Função ROUND ()|  
-|Função RTOD ()|Função RTRIM ()||  
-  
+
+:::row:::
+    :::column:::
+        Função RAND ()  
+        Função RAT ()  
+        Função RATC ()  
+        Função RATLINE ()  
+        Comando recall  
+        Função RECCOUNT ()  
+        Função RECNO ()  
+        Função RECSIZE ()  
+    :::column-end:::
+    :::column:::
+        Comando REGIONAL  
+        Função RELATION ()  
+        Comando remover tabela  
+        Comando REPLACE  
+        SUBSTITUIR do comando de matriz  
+        Função REPLICAte ()  
+        Repetir comando  
+        Comando de retorno  
+    :::column-end:::
+    :::column:::
+        Função RIGHT ()  
+        Função RIGHTC ()  
+        Função RLOCK ()  
+        Comando ROLLBACK  
+        Função ROUND ()  
+        Função RTOD ()  
+        Função RTRIM ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="s"></a>S  
-  
-||||  
-|-|-|-|  
-|VERIFICAR... Comando endscan|Comando de dispersão|Função SEC ()|  
-|Função SECONDs ()|Comando de busca|Função SEEK ()|  
-|Selecionar comando|Função SELECT ()|SELECT-comando SQL|  
-|Comando SET BLOCKSIZE|Definir comando de transporte|Definir comando do século|  
-|Comando SET COLLATE|Comando SET DATABASE|Definir comando de data|  
-|Definir comando padrão|Comando SET DELETED|Comando SET EXACT|  
-|Comando SET EXCLUSIVE|Comando SET FDOW|Comando definir campos|  
-|Definir comando de filtro|Definir comando fixo|Definir comando FULLPATH|  
-|Comando SET FWEEK|Comando definir horas|Comando SET INDEX|  
-|Definir comando de bloqueio|Comando SET My LOCKs|Definir comando NEAR|  
-|Comando SET NOCPTRANS|Definir comando NOTIFY|Comando SET NULL|  
-|Comando SET OPTIMIZE|Comando SET ORDER|Comando SET PATH|  
-|Comando SET PROCEDURE|Comando SET RELATION|Comando SET RELATION OFF|  
-|Comando SET REPROCESS|Comando SET SKIP|Comando SET UDFPARMS|  
-|Comando SET UNIQUE|Definir comando de VOLUME|Função SET ()|  
-|Função SETFLDSTATE ()|Função SIGN ()|Função SIN ()|  
-|Comando SKIP|Comando SORT|Função SPACE ()|  
-|Função SQRT ()|Comando STORE|Função STR ()|  
-|Função STRCONV ()|Função STRTRAN ()|Função de coisas ()|  
-|Função STUFFC ()|Função SUBST ()|Função SUBSTRC ()|  
-|Comando SUM|Função SYS (2011)||  
-  
+
+:::row:::
+    :::column:::
+        VERIFICAR... Comando endscan  
+        Comando de dispersão  
+        Função SEC ()  
+        Função SECONDs ()  
+        Comando de busca  
+        Função SEEK ()  
+        Selecionar comando  
+        Função SELECT ()  
+        SELECT-comando SQL  
+        Função SET ()  
+        Comando SET BLOCKSIZE  
+        Definir comando de transporte  
+        Definir comando do século  
+        Comando SET COLLATE  
+        Comando SET DATABASE  
+        Definir comando de data  
+        Definir comando padrão  
+        Comando SET DELETED  
+        Comando SET EXACT  
+        Comando SET EXCLUSIVE  
+        Comando SET FDOW  
+    :::column-end:::
+    :::column:::
+        Comando definir campos  
+        Definir comando de filtro  
+        Definir comando fixo  
+        Definir comando FULLPATH  
+        Comando SET FWEEK  
+        Comando definir horas  
+        Comando SET INDEX  
+        Definir comando de bloqueio  
+        Comando SET My LOCKs  
+        Definir comando NEAR  
+        Comando SET NOCPTRANS  
+        Definir comando NOTIFY  
+        Comando SET NULL  
+        Comando SET OPTIMIZE  
+        Comando SET ORDER  
+        Comando SET PATH  
+        Comando SET PROCEDURE  
+        Comando SET RELATION  
+        Comando SET RELATION OFF  
+        Comando SET REPROCESS  
+        Comando SET SKIP  
+    :::column-end:::
+    :::column:::
+        Comando SET UDFPARMS  
+        Comando SET UNIQUE  
+        Definir comando de VOLUME  
+        Função SETFLDSTATE ()  
+        Função SIGN ()  
+        Função SIN ()  
+        Comando SKIP  
+        Comando SORT  
+        Função SPACE ()  
+        Função SQRT ()  
+        Comando STORE  
+        Função STR ()  
+        Função STRCONV ()  
+        Função STRTRAN ()  
+        Função de coisas ()  
+        Função STUFFC ()  
+        Função SUBST ()  
+        Função SUBSTRC ()  
+        Comando SUM  
+        Função SYS (2011)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="t"></a>T  
-  
-||||  
-|-|-|-|  
-|Variável de memória do sistema _TALLY|Variável de memória do sistema _TRIGGERLEVEL|Função TAGCOUNT ()|  
-|Função TABLEUPDATE ()|Função TAG ()|Função TARGET ()|  
-|Função TAGNO ()|Função TAN ()|Função TRIM ()|  
-|Função TIME ()|Comando TOTAL|Função TXNLEVEL ()|  
-|Função TTOC ()|Função TTOD ()||  
-|Função TYPE ()|Função TABLEREVERT ()||  
-  
+
+:::row:::
+    :::column:::
+        Função TABLEREVERT ()  
+        Função TABLEUPDATE ()  
+        Função TAG ()  
+        Função TAGCOUNT ()  
+        Função TAGNO ()  
+        Variável de memória do sistema _TALLY  
+    :::column-end:::
+    :::column:::
+        Função TAN ()  
+        Função TARGET ()  
+        Função TIME ()  
+        Comando TOTAL  
+        Variável de memória do sistema _TRIGGERLEVEL  
+        Função TRIM ()  
+    :::column-end:::
+    :::column:::
+        Função TTOC ()  
+        Função TTOD ()  
+        Função TXNLEVEL ()  
+        Função TYPE ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="u"></a>U  
-  
-||||  
-|-|-|-|  
-|Função UNIQUE ()|Comando UNLOCK|USAR comando|  
-|Atualizar comando|Função UPPER ()||  
-|Função USED ()|UPDATE – comando SQL||  
-  
+
+:::row:::
+    :::column:::
+        Função UNIQUE ()  
+        Comando UNLOCK  
+        Atualizar comando  
+    :::column-end:::
+    :::column:::
+        UPDATE – comando SQL  
+        Função UPPER ()  
+        USAR comando  
+    :::column-end:::
+    :::column:::
+        Função USED ()  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="v"></a>V  
-  
-||||  
-|-|-|-|  
-|Função VAL ()|Função VERSION ()||  
-  
+
+:::row:::
+    :::column:::
+        Função VAL ()
+    :::column-end:::
+    :::column:::
+        Função VERSION ()
+    :::column-end:::
+:::row-end:::
+
 ## <a name="w"></a>W  
-  
-||||  
-|-|-|-|  
-|Função WEEK ()|||  
-  
+
+Função WEEK ()
+
 ## <a name="y"></a>S  
-  
-||||  
-|-|-|-|  
-|Função YEAR ()|||  
-  
+
+Função YEAR ()
+
 ## <a name="z"></a>Z  
-  
-||||  
-|-|-|-|  
-|Comando ZAP|||
+
+Comando ZAP

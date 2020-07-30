@@ -100,7 +100,7 @@ sys.dm_sql_referencing_entities (
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
 |Tabela|Sim*|Sim|  
-|Visualizar|Sim|Sim|  
+|Exibir|Sim|Sim|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
 |procedimento armazenado CLR|Não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  

@@ -183,7 +183,7 @@ GO
   
  **Fragmentação lógica**  
   
- É a porcentagem de páginas com problema nas páginas de folha de um índice. Uma página com problema é aquela para a qual a próxima página física alocada ao índice não é a página apontada pelo ponteiro da próxima págin*a* na página de folha atual.  
+ É a porcentagem de páginas com problema nas páginas de folha de um índice. Uma página fora de ordem é aquela cuja próxima página física alocada ao índice não é a página apontada pelo ponteiro de próxima págin*a* na página de folha atual.  
   
  **Fragmentação da extensão**  
   

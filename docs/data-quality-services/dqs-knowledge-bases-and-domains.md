@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a4eff5b70e83b92e1c99e1d7c4b1c351dec35b7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895386"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362479"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de Dados de Conhecimento DQS e domínios
 
@@ -146,7 +146,7 @@ ms.locfileid: "85895386"
 ## <a name="in-this-section"></a>Nesta seção  
  Você pode realizar as operações a seguir em uma base de dados de conhecimento e seus domínios:  
   
-|||  
+|Descrição da operação|Tópico|  
 |-|-|  
 |Crie, abra, adicione conhecimento para e execute descoberta em uma base de dados de conhecimento|[Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
 |Realize operações de importação e exportação em domínios e bases de dados de conhecimento|[Importando e exportando conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  

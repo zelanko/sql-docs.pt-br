@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036587"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362646"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  A expressão acima produz os seguintes resultados:  
   
-||Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  A consulta acima retorna os resultados a seguir; as linhas da seção intermediária foram removidas para proporcionar legibilidade.  
   
-||Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
+|Bicicletas de passeio|Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|($5668.01)|  
 |Touring-2000 azul, 46|$321027.03|$333021.50|($11994.47)|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  Observe que a consulta solicita um percentual de 100%; o que significa que todas as linhas devem ser retornadas. No entanto, como há valores negativos no *Numeric_Expression* , apenas uma linha é retornada.  
   
-||Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
+|Bicicletas de passeio|Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|($5668.01)|  
   

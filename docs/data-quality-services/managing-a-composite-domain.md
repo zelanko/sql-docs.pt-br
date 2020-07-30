@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898086"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363045"
 ---
 # <a name="managing-a-composite-domain"></a>Gerenciando um domínio composto
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898086"
 ## <a name="in-this-section"></a>Nesta seção  
  Com um domínio composto, você pode fazer o seguinte:  
   
-|||  
+|Descrição da operação|Tópico|  
 |-|-|  
 |Crie uma representação semântica para um campo de dados que consiste em vários termos relacionados que não são analisados|[Criar um domínio composto](../data-quality-services/create-a-composite-domain.md)|  
 |Quando você estiver mapeando dados complexos para um domínio composto, poderá analisar os dados com base no conhecimento, além de analisar um delimitador. O DQS tentará primeiro usar seu conhecimento sobre domínios únicos para determinar como as partes da cadeia de caracteres complexa pertencerão aos domínios únicos.|[Criar um domínio composto](../data-quality-services/create-a-composite-domain.md)|  

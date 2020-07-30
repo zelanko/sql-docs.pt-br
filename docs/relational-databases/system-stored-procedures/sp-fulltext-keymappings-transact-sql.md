@@ -41,7 +41,7 @@ ms.locfileid: "86977725"
 sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *table_id*  
  É a ID do objeto da tabela indexada de texto completo. Se você especificar um *table_id*inválido, um erro será retornado. Para obter informações sobre como obter a ID de objeto de uma tabela, consulte [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
   
@@ -91,7 +91,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  Os exemplo desta seção usam a tabela `Production.ProductReview` do banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Você pode criar esse índice executando o exemplo fornecido para a `ProductReview` tabela em [criar índice de texto completo &#40;&#41;TRANSACT-SQL ](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>a. Obtendo todos os valores de Chave e DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtendo todos os valores de Chave e DocId  
  O exemplo a seguir usa uma instrução [declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) para criar uma variável local `@table_id` e atribuir a ID da `ProductReview` tabela como seu valor. O exemplo executa **sp_fulltext_keymappings** especificando `@table_id` para o parâmetro *table_id* .  
   
 > [!NOTE]  

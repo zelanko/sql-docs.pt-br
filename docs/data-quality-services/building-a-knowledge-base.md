@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 895dcfdd5acaa580b8ee719a3edac67d7308f605
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897548"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362664"
 ---
 # <a name="building-a-knowledge-base"></a>Criando uma base de dados de conhecimento
 
@@ -25,7 +25,7 @@ ms.locfileid: "85897548"
 ## <a name="in-this-section"></a>Nesta seção  
  É possível executar as seguintes operações em uma base de dados de conhecimento:  
   
-|||  
+|Descrição da operação|Tópico|  
 |-|-|  
 |Criar uma nova base de dados de conhecimento do zero, a partir de uma base de dados de conhecimento existente ou a partir de um arquivo de dados .dqs.|[Criar uma base de dados de conhecimento](../data-quality-services/create-a-knowledge-base.md)|  
 |Abrir uma base de dados de conhecimento existente para executar a descoberta da base de dados de conhecimento, o gerenciamento de domínio, ou adicionar uma política de correspondência.|[Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md)|  

@@ -21,24 +21,24 @@ ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d874e26e9cbaa5a97d65675f384f2dce7ba30d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 797cdece07651499a9b770ba59972792805828a5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829283"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395217"
 ---
 # <a name="sysdm_os_server_diagnostics_log_configurations"></a>sys.dm_os_server_diagnostics_log_configurations
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna uma linha com a configuração atual do log de diagnóstico do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas configurações de propriedade determinam se o log de diagnóstico está ativado ou desativado e o local, o número e o tamanho dos arquivos de log.  
   
-|Nome da coluna|Tipo de Dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |is_enabled|**bit**|Indica se o log está ativado ou desativado.<br /><br /> 1 = O log de diagnóstico está ativado<br /><br /> 0 = O log de diagnóstico está desativado|  
 |max_size|**int**|Tamanho máximo em megabytes que cada log de diagnóstico pode atingir. O padrão é 100 MB.|  
 |max_files|**int**|Número máximo de arquivos de log de diagnóstico que podem ser armazenados no computador antes de serem reciclados para novos logs de diagnóstico.|  
-|path|**nvarchar(260)**|Caminho que indica o local dos logs de diagnóstico. O local padrão é \<\MSSQL\Log> dentro da pasta de instalação da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|caminho|**nvarchar(260)**|Caminho que indica o local dos logs de diagnóstico. A localização padrão é \<\MSSQL\Log> dentro da pasta de instalação da instância do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Permissões  
  Exige permissões de VIEW SERVER STATE na instância do cluster de failover do SQL Server.  
@@ -55,7 +55,7 @@ FROM sys.dm_os_server_diagnostics_log_configurations;
   
 |IS_ENABLED|PATH|MAX_SIZE|MAX_FILES|  
 |-----------------|----------|---------------|----------------|  
-|1|\<C:\Arquivos de Programas\microsoft SQL Server\MSSQL13\MSSQL\Log>|10|10|  
+|1|\<C:\Program Files\Microsoft SQL Server\MSSQL13\MSSQL\Log>|10|10|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e ler o log de diagnóstico da instância do cluster de failover](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  

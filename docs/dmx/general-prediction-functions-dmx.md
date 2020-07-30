@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cde2fe9da61ca9d877f0c905609d8baf832ea509
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6db4adccfa0786e2acb1ce45725758d6b302b51f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971664"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363016"
 ---
 # <a name="general-prediction-functions-dmx"></a>Funções de previsão gerais (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,15 +22,23 @@ ms.locfileid: "86971664"
   
 ## <a name="common-functions"></a>Funções comuns  
  Você pode usar funções para ampliar os resultados retornados por um modelo de mineração. Você pode usar as seguintes funções para qualquer instrução **Select** que retorne uma expressão de tabela:  
-  
-|||  
-|-|-|  
-|[&#41;&#40;DMX BottomCount](../dmx/bottomcount-dmx.md)|[&#41;&#40;DMX RangeMin](../dmx/rangemin-dmx.md)|  
-|[&#41;&#40;DMX BottomPercent](../dmx/bottompercent-dmx.md)|[&#41;&#40;DMX TopCount](../dmx/topcount-dmx.md)|  
-|[Prever &#40;DMX&#41;](../dmx/predict-dmx.md)|[&#41;&#40;DMX TopPercent](../dmx/toppercent-dmx.md)|  
-|[&#41;&#40;DMX RangeMax](../dmx/rangemax-dmx.md)|[TopSum &#40;&#41;DMX](../dmx/topsum-dmx.md)|  
-|[&#41;&#40;DMX RangeMid](../dmx/rangemid-dmx.md)||  
-  
+
+:::row:::
+    :::column:::
+        [&#41;&#40;DMX BottomCount](../dmx/bottomcount-dmx.md)  
+        [&#41;&#40;DMX BottomPercent](../dmx/bottompercent-dmx.md)  
+        [Prever &#40;DMX&#41;](../dmx/predict-dmx.md)  
+        [&#41;&#40;DMX RangeMax](../dmx/rangemax-dmx.md)  
+        [&#41;&#40;DMX RangeMid](../dmx/rangemid-dmx.md)  
+    :::column-end:::
+    :::column:::
+        [&#41;&#40;DMX RangeMin](../dmx/rangemin-dmx.md)  
+        [&#41;&#40;DMX TopCount](../dmx/topcount-dmx.md)  
+        [&#41;&#40;DMX TopPercent](../dmx/toppercent-dmx.md)  
+        [TopSum &#40;&#41;DMX](../dmx/topsum-dmx.md)  
+    :::column-end:::
+:::row-end:::
+
  Além disso, as funções a seguir são suportadas em quase todos os tipos de modelo:  
   
 -   [Existe &#40;DMX&#41;](../dmx/exists-dmx.md)  
@@ -61,7 +69,7 @@ ms.locfileid: "86971664"
 |Tipo de consulta|Funções suportadas|Comentários|  
 |----------------|-------------------------|-------------|  
 |[SELECIONAR DISTINCT DE\<model>](../dmx/select-distinct-from-model-dmx.md)|[&#41;&#40;DMX RangeMin](../dmx/rangemin-dmx.md)<br /><br /> [&#41;&#40;DMX RangeMid](../dmx/rangemid-dmx.md)<br /><br /> [&#41;&#40;DMX RangeMax](../dmx/rangemax-dmx.md)|Essas funções podem ser usadas para fornecer valores máximos, valores mínimos e médias para qualquer coluna que contenha tipos de dados numéricos, independentemente de a coluna ser contínua ou ter sido diferenciada.|  
-|[Selecione \<model> . DISPUTA](../dmx/select-from-model-content-dmx.md)<br /><br /> ou<br /><br /> [Selecione \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se você tiver salvo o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX que estão disponíveis para consultar uma hierarquia de atributo.|  
+|[Selecione \<model> . DISPUTA](../dmx/select-from-model-content-dmx.md)<br /><br /> ou<br /><br /> [Selecione \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se você salvou o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX (Multidimensional Expressions) que estão disponíveis para consultar uma hierarquia de atributo.|  
 |[Selecione \<model> . BOLSAS](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [&#41;&#40;DMX IsTrainingCase](../dmx/istrainingcase-dmx.md)<br /><br /> [&#41;&#40;DMX IsTestCase](../dmx/istestcase-dmx.md)|A função Lag tem suporte apenas para modelos de série temporal.<br /><br /> A função IsTestCase tem suporte em modelos baseados em uma estrutura que foi criada usando a opção de controle para criar um conjunto de dados de teste. Se o modelo não for baseado em uma estrutura com um conjunto de teste de validação, todos os casos serão considerados como casos de treinamento.|  
 |[Selecione \<model> . SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Nesse contexto, a função IsInNode retorna um caso que pertence a um conjunto de casos de exemplo ideais.|  
 |Selecione \<model> . PMML|Não aplicável. Em vez disso, use funções de consulta XML.|As representações PMML são suportadas apenas pelos tipos de modelo a seguir:<br /><br /> Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)]<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  

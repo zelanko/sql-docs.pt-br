@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306177"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363420"
 ---
 # <a name="level-1-interface-conformance"></a>Conformidade de interface nível 1
 O nível de conformidade da interface de nível 1 inclui a funcionalidade de nível de conformidade da interface principal, além de recursos adicionais, como transações, que geralmente estão disponíveis em um DBMS relacional do OLTP. Um driver compatível com a interface de nível 1 permite que o aplicativo faça o seguinte, além dos recursos do nível de conformidade da interface principal:  
   
-|||  
+|Número do recurso|Descrição|  
 |-|-|  
 |101|Especifique o esquema de tabelas e exibições de banco de dados (usando a nomeação de duas partes). (Para obter mais informações, consulte o recurso de nomenclatura de três partes 201 na [conformidade da interface de nível 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
 |102|Invocar a execução assíncrona real de funções ODBC, onde as funções ODBC aplicáveis são todas síncronas ou todas assíncronas em uma determinada conexão.|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306987"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363316"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Função de conversão de tipo de dados explícitos
 A conversão explícita de tipo de dados é especificada em termos de definições de tipo de dados SQL.  
@@ -31,29 +31,52 @@ A conversão explícita de tipo de dados é especificada em termos de definiçõ
  **Convert (** _value_exp_, _data_type_**)**  
   
  A função retorna o valor especificado por *value_exp* convertido para o *data_type*especificado, em que *data_type* é uma das seguintes palavras-chave:  
-  
-|||  
-|-|-|  
-|SQL_BIGINT|SQL_INTERVAL_HOUR_TO_MINUTE|  
-|SQL_BINARY|SQL_INTERVAL_HOUR_TO_SECOND|  
-|SQL_BIT|SQL_INTERVAL_MINUTE_TO_SECOND|  
-|SQL_CHAR|SQL_LONGVARBINARY|  
-|SQL_DECIMAL|SQL_LONGVARCHAR|  
-|SQL_DOUBLE|SQL_NUMERIC|  
-|SQL_FLOAT|SQL_REAL|  
-|SQL_GUID|SQL_SMALLINT|  
-|SQL_INTEGER|SQL_DATE|  
-|SQL_INTERVAL_MONTH|SQL_TIME|  
-|SQL_INTERVAL_YEAR|SQL_TIMESTAMP|  
-|SQL_INTERVAL_YEAR_TO_MONTH|SQL_TINYINT|  
-|SQL_INTERVAL_DAY|SQL_VARBINARY|  
-|SQL_INTERVAL_HOUR|SQL_VARCHAR|  
-|SQL_INTERVAL_MINUTE|SQL_WCHAR|  
-|SQL_INTERVAL_SECOND|SQL_WLONGVARCHAR|  
-|SQL_INTERVAL_DAY_TO_HOUR|SQL_WVARCHAR|  
-|SQL_INTERVAL_DAY_TO_MINUTE||  
-|SQL_INTERVAL_DAY_TO_SECOND||  
-  
+
+:::row:::
+    :::column:::
+        SQL_BIGINT  
+        SQL_BINARY  
+        SQL_BIT  
+        SQL_CHAR  
+        SQL_DATE  
+        SQL_DECIMAL  
+        SQL_DOUBLE  
+        SQL_FLOAT  
+        SQL_GUID  
+        SQL_INTEGER  
+        SQL_INTERVAL_DAY  
+        SQL_INTERVAL_DAY_TO_HOUR  
+    :::column-end:::
+    :::column:::
+        SQL_INTERVAL_DAY_TO_MINUTE  
+        SQL_INTERVAL_DAY_TO_SECOND  
+        SQL_INTERVAL_HOUR  
+        SQL_INTERVAL_HOUR_TO_MINUTE  
+        SQL_INTERVAL_HOUR_TO_SECOND  
+        SQL_INTERVAL_MINUTE  
+        SQL_INTERVAL_MINUTE_TO_SECOND  
+        SQL_INTERVAL_MONTH  
+        SQL_INTERVAL_SECOND  
+        SQL_INTERVAL_YEAR  
+        SQL_INTERVAL_YEAR_TO_MONTH  
+        SQL_LONGVARBINARY  
+    :::column-end:::
+    :::column:::
+        SQL_LONGVARCHAR  
+        SQL_NUMERIC  
+        SQL_REAL  
+        SQL_SMALLINT  
+        SQL_TIME  
+        SQL_TIMESTAMP  
+        SQL_TINYINT  
+        SQL_VARBINARY  
+        SQL_VARCHAR  
+        SQL_WCHAR  
+        SQL_WLONGVARCHAR  
+        SQL_WVARCHAR  
+    :::column-end:::
+:::row-end:::
+
  A sintaxe ODBC para a função de conversão de tipo de dados explícita não oferece suporte à especificação do formato de conversão. Se a especificação de formatos explícitos for suportada pela fonte de dados subjacente, um driver deverá especificar um valor padrão ou implementar a especificação de formato.  
   
  O argumento *value_exp* pode ser um nome de coluna, o resultado de outra função escalar ou um literal numérico ou de cadeia de caracteres. Por exemplo:  
