@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868375"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435171"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o Assistente de Migração de Dados
 
@@ -34,10 +34,10 @@ As instruções passo a passo a seguir ajudam a usar o Assistente de Migração 
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 ou superior.
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 ou superior.
   - [Power bi área de trabalho](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Módulos de Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Módulos do Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Baixar e extrair:
-  - O [modelo de Power bi de relatórios de DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-  - O [script loadwarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - O [modelo de Power bi de relatórios de DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - O [script loadwarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Carregando os módulos do PowerShell
 
@@ -46,7 +46,7 @@ Salvar os módulos do PowerShell no diretório de módulos do PowerShell permite
 Para carregar os módulos, execute as seguintes etapas:
 
 1. Navegue até C:\Program Files\WindowsPowerShell\Modules e, em seguida, crie uma pasta chamada **DataMigrationAssistant**.
-2. Abra o [PowerShell-modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)e salve-os na pasta que você criou.
+2. Abra o [PowerShell-modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip)e salve-os na pasta que você criou.
 
       ![Módulos do PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -80,7 +80,6 @@ Esse inventário pode estar em uma das duas formas:
 >
 > Para instâncias padrão, defina o nome da instância como MSSQLServer.
 
-
 Ao usar um arquivo CSV para importar os dados, certifique-se de que há apenas duas colunas de **nome da instância** de dados e nome do **banco**de dado, e que as colunas não têm linhas de cabeçalho.
 
  ![conteúdo do arquivo CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -97,7 +96,7 @@ Crie um banco de dados chamado **EstateInventory** e uma tabela chamada **Databa
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server conteúdo da tabela](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![SQL Server conteúdo da tabela](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Se esse banco de dados não estiver no computador ferramentas, verifique se o computador das ferramentas tem conectividade de rede com essa SQL Server instância.
 
@@ -105,10 +104,21 @@ O benefício de usar uma tabela de SQL Server em um arquivo CSV é que você pod
 
 Tenha em mente que, dependendo do número de objetos e da sua complexidade, uma avaliação pode levar um tempo muito longo (horas +), portanto, é prudente separar a avaliação em partes gerenciáveis.
 
+### <a name="if-using-an-instance-inventory"></a>Se estiver usando um inventário de instância
+
+Crie um banco de dados chamado **EstateInventory** e uma tabela chamada **InstanceInventory**. A tabela que contém esses dados de inventário pode ter qualquer número de colunas, desde que existam quatro colunas a seguir:
+
+- ServerName
+- InstanceName
+- Porta
+- AssessmentFlag
+
+![SQL Server conteúdo da tabela](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## <a name="running-a-scaled-assessment"></a>Executando uma avaliação dimensionada
 
 Depois de carregar os módulos do PowerShell no diretório Modules e criar um inventário, você precisará executar uma avaliação dimensionada abrindo o PowerShell e executando a função dmaDataCollector.
- 
+
   ![Listagens de funções dmaDataCollector](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 Os parâmetros associados à função dmaDataCollector são descritos na tabela a seguir.
@@ -119,19 +129,20 @@ Os parâmetros associados à função dmaDataCollector são descritos na tabela 
 |**csvPath** | O caminho para o arquivo de inventário CSV.  Usado somente quando **getServerListFrom** é definido como **CSV**. |
 |**serverName** | O SQL Server nome da instância do inventário ao usar o **SqlServer** no parâmetro **getServerListFrom** . |
 |**NomeDoBancoDeDados** | O banco de dados que hospeda a tabela de inventário. |
+|**useInstancesOnly** | Sinalizador de bits para especificar se deve ser usada uma lista de instâncias para avaliação ou não.  Se definido como 0, a tabela DatabaseInventory será usada para criar a lista de destino de avaliação. |
 |**AssessmentName** | O nome da avaliação DMA. |
-|**TargetPlatform** | O tipo de destino da avaliação que você deseja executar.  Os valores possíveis são **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**e **ManagedSqlServer**. |
+|**TargetPlatform** | O tipo de destino da avaliação que você deseja executar.  Os valores possíveis são **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**e **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | O método de autenticação para se conectar aos destinos de SQL Server que você deseja avaliar. Os valores possíveis são **SQLAuth** e **WindowsAuth**. |
 |**OutputLocation** | O diretório no qual armazenar o arquivo de saída de avaliação JSON. Dependendo do número de bancos de dados que estão sendo avaliados e do número de objetos dentro dos bancos de dados, as avaliações podem levar um tempo excepcionalmente longo. O arquivo será gravado depois que todas as avaliações forem concluídas. |
 
 Se houver um erro inesperado, a janela de comando que é iniciada por esse processo será encerrada.  Examine o log de erros para determinar por que ele falhou.
- 
+
   ![Local do log de erros](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## <a name="consuming-the-assessment-json-file"></a>Consumindo o arquivo JSON de avaliação
 
 Após a conclusão da avaliação, agora você estará pronto para importar os dados para SQL Server para análise. Para consumir o arquivo JSON de avaliação, abra o PowerShell e execute a função dmaProcessor.
- 
+
   ![listagem de funções dmaProcessor](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 Os parâmetros associados à função dmaProcessor são descritos na tabela a seguir.
@@ -157,8 +168,8 @@ Depois que o dmaProcessor concluir o processamento dos arquivos de avaliação, 
     O script obterá os dados da tabela ReportData no banco de dados DMAReporting e o carregará no warehouse.  Se houver erros durante esse processo de carregamento, eles provavelmente são resultado de entradas ausentes nas tabelas de dimensões.
 
 2. Carregue o data warehouse.
- 
-      ![Conteúdo do loadwarehouse carregado](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![Conteúdo do loadwarehouse carregado](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>Definir seus proprietários de banco de dados
 
@@ -166,7 +177,7 @@ Embora não seja obrigatório, para obter o maior valor dos relatórios, é reco
 
 Você também pode usar o script loadwarehouse para fornecer as instruções TSQL básicas para definir os proprietários do banco de dados.
 
-  ![Proprietários de configuração do loadwarehouse](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![Proprietários de configuração do loadwarehouse](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## <a name="dma-reports"></a>Relatórios de DMA
 
@@ -250,7 +261,7 @@ Este visual mostra uma divisão dos bancos de dados pelos seguintes buckets de p
 - NÃO ESTÁ PRONTO
 
 ### <a name="issues-word-cloud"></a>Problemas na nuvem do Word
- 
+
   ![Problemas de DMA WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 Este visual mostra os problemas que estão ocorrendo no momento no contexto de seleção (tudo, instância, banco de dados [múltiplos de]). Quanto maior a palavra aparecer na tela, maior será o número de problemas nessa categoria. Focalizar o ponteiro do mouse sobre uma palavra mostra o número de problemas que ocorrem nessa categoria.
@@ -280,7 +291,7 @@ Esta tarefa filtra o relatório do plano de correção para o nível de hierarqu
   ![Relatório de plano de correção de DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 Você também pode usar o relatório de plano de correção por conta própria para criar um plano de correção personalizado usando os filtros na folha **filtros de visualizações** .
- 
+
   ![Opções de filtro de relatório do plano de correção DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>Aviso de script
