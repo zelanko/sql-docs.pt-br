@@ -1,5 +1,5 @@
 ---
-title: Arquivo Schema. ini (driver de arquivo de texto) | Microsoft Docs
+title: Arquivo de Schema.ini (driver de arquivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365351724f27205e7d460c757f1268d042cefc76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed041e43a211f58a34b4e2476d9e0b62ff5d162b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305507"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442879"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini File (Driver de Arquivo de texto)
-Quando o driver de texto é usado, o formato do arquivo de texto é determinado usando um arquivo de informações de esquema. O arquivo de informações de esquema sempre é denominado Schema. ini e sempre é mantido no mesmo diretório que a fonte de dados de texto. O arquivo de informações de esquema fornece o IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema. ini sempre é necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema. ini quando sua tabela de texto contiver dados DateTime, de moeda ou decimais, ou sempre que desejar mais controle sobre a manipulação dos dados na tabela.  
+Quando o driver de texto é usado, o formato do arquivo de texto é determinado usando um arquivo de informações de esquema. O arquivo de informações de esquema sempre é denominado Schema.ini e sempre é mantido no mesmo diretório que a fonte de dados de texto. O arquivo de informações de esquema fornece o IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo de Schema.ini sempre é necessário para acessar dados de comprimento fixo. Você deve usar um arquivo de Schema.ini quando sua tabela de texto contiver dados DateTime, de moeda ou decimais, ou sempre que desejar mais controle sobre a manipulação dos dados na tabela.  
   
 > [!NOTE]  
->  O texto ISAM obterá os valores iniciais do registro, não de Schema. ini. O mesmo formato de arquivo padrão se aplica a todas as novas tabelas de dados de texto. Todos os arquivos que foram criados pela instrução CREATE TABLE herdam os mesmos valores de formato padrão, que são definidos selecionando-se os valores de formato de arquivo na \<caixa de diálogo **definir formato de texto** com o padrão> escolhido na lista **tabelas** . Se os valores no registro forem diferentes dos valores em Schema. ini, os valores no registro serão substituídos pelos valores de Schema. ini.  
+>  O texto ISAM obterá os valores iniciais do registro, não de Schema.ini. O mesmo formato de arquivo padrão se aplica a todas as novas tabelas de dados de texto. Todos os arquivos que foram criados pela instrução CREATE TABLE herdam os mesmos valores de formato padrão, que são definidos selecionando-se os valores de formato de arquivo na caixa de diálogo **definir formato de texto** , com \<default> escolhido na lista **tabelas** . Se os valores no registro forem diferentes dos valores em Schema.ini, os valores no registro serão substituídos pelos valores de Schema.ini.  
   
-## <a name="understanding-schemaini-files"></a>Noções básicas sobre arquivos Schema. ini  
- Os arquivos Schema. ini fornecem informações de esquema sobre os registros em um arquivo de texto. Cada entrada Schema. ini especifica uma das cinco características da tabela:  
+## <a name="understanding-schemaini-files"></a>Noções básicas sobre arquivos Schema.ini  
+ Schema.ini arquivos fornecem informações de esquema sobre os registros em um arquivo de texto. Cada entrada de Schema.ini especifica uma das cinco características da tabela:  
   
 -   O nome do arquivo de texto  
   
@@ -42,16 +42,16 @@ Quando o driver de texto é usado, o formato do arquivo de texto é determinado 
  As seções a seguir discutem essas características.  
   
 ## <a name="specifying-the-file-name"></a>Especificando o nome do arquivo  
- A primeira entrada em Schema. ini é sempre o nome do arquivo de origem de texto entre colchetes. O exemplo a seguir ilustra a entrada para o arquivo Sample. txt:  
+ A primeira entrada em Schema.ini é sempre o nome do arquivo de origem de texto entre colchetes. O exemplo a seguir ilustra a entrada para o arquivo Sample.txt:  
   
 ```  
 [Sample.txt]  
 ```  
   
 ## <a name="specifying-the-file-format"></a>Especificando o formato de arquivo  
- A opção **Format** em Schema. ini especifica o formato do arquivo de texto. O texto IISAM pode ler o formato automaticamente da maioria dos arquivos delimitados por caractere. Você pode usar qualquer caractere único como um delimitador no arquivo, exceto o sinal de aspas duplas ("). A configuração de **formato** em Schema. ini substitui a configuração no registro do Windows, file by file. A tabela a seguir lista os valores válidos para a opção **Format** .  
+ A opção **Format** em Schema.ini especifica o formato do arquivo de texto. O texto IISAM pode ler o formato automaticamente da maioria dos arquivos delimitados por caractere. Você pode usar qualquer caractere único como um delimitador no arquivo, exceto o sinal de aspas duplas ("). A configuração de **formato** no Schema.ini substitui a configuração no registro do Windows, arquivo por arquivo. A tabela a seguir lista os valores válidos para a opção **Format** .  
   
-|Especificador de formato|Formato de tabela|Instrução de formato Schema. ini|  
+|Especificador de formato|Formato de tabela|Instrução Schema.ini Format|  
 |----------------------|------------------|---------------------------------|  
 |**Delimitado por tabulação**|Os campos no arquivo são delimitados por guias.|Formato = TabDelimited|  
 |**Delimitado por CSV**|Os campos no arquivo são delimitados por vírgulas (valores separados por vírgula).|Formato = CSVDelimited|  
@@ -68,9 +68,9 @@ Quando o driver de texto é usado, o formato do arquivo de texto é determinado 
  Você deve especificar cada coluna por número e designar o nome da coluna, o tipo de dados e a largura para arquivos de comprimento fixo.  
   
 > [!NOTE]  
->  A configuração **ColNameHeader** em Schema. ini substitui a configuração **FirstRowHasNames** no registro do Windows, file by file.  
+>  A configuração **ColNameHeader** no Schema.ini substitui a configuração **FirstRowHasNames** no registro do Windows, file by file.  
   
- Os tipos de dados dos campos também podem ser determinados. Use a opção **MaxScanRows** para indicar quantas linhas devem ser verificadas ao determinar os tipos de coluna. Se você definir **MaxScanRows** como 0, o arquivo inteiro será verificado. A configuração **MaxScanRows** em Schema. ini substitui a configuração no registro do Windows, file by file.  
+ Os tipos de dados dos campos também podem ser determinados. Use a opção **MaxScanRows** para indicar quantas linhas devem ser verificadas ao determinar os tipos de coluna. Se você definir **MaxScanRows** como 0, o arquivo inteiro será verificado. A configuração **MaxScanRows** no Schema.ini substitui a configuração no registro do Windows, file by file.  
   
  A entrada a seguir indica que o Microsoft Jet deve usar os dados na primeira linha da tabela para determinar os nomes de campo e deve examinar o arquivo inteiro para determinar os tipos de dados usados:  
   
@@ -79,7 +79,7 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- A próxima entrada designa campos em uma tabela usando a opção número de coluna (**Col**_n_), que é opcional para arquivos delimitados por caractere e é necessária para arquivos de comprimento fixo. O exemplo mostra as entradas de Schema. ini para dois campos, um campo de texto CustomerNumber de 10 caracteres e um campo de texto CustomerName de 30 caracteres:  
+ A próxima entrada designa campos em uma tabela usando a opção número de coluna (**Col**_n_), que é opcional para arquivos delimitados por caractere e é necessária para arquivos de comprimento fixo. O exemplo mostra as entradas de Schema.ini para dois campos, um campo de texto CustomerNumber de 10 caracteres e um campo de texto CustomerName de 30 caracteres:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
@@ -90,7 +90,7 @@ Col2=CustomerName Text Width 30
   
 ```  
   
-n=ColumnNametype [#]  
+n=ColumnName type [Width] [#]  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -99,21 +99,21 @@ n=ColumnNametype [#]
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*ColumnName*|O nome de texto da coluna. Se o nome da coluna contiver espaços inseridos, você deverá colocá-los entre aspas duplas.|  
-|*type*|Os tipos de dados são os seguintes:<br /><br /> **Tipos de dados do Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Texto<br /><br /> Memo<br /><br /> **Tipos de dados ODBC** Char (o mesmo que Text)<br /><br /> Float (igual a Double)<br /><br /> Inteiro (igual a curto)<br /><br /> LongChar (o mesmo que Memo)<br /><br /> *Formato de data* /data|  
-|**Largura**|O valor `Width`da cadeia de caracteres literal. Indica que o número a seguir designa a largura da coluna (opcional para arquivos delimitados por caractere; necessário para arquivos de comprimento fixo).|  
+|*tipo*|Os tipos de dados são os seguintes:<br /><br /> **Tipos de dados do Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Texto<br /><br /> Memo<br /><br /> **Tipos de dados ODBC** Char (o mesmo que Text)<br /><br /> Float (igual a Double)<br /><br /> Inteiro (igual a curto)<br /><br /> LongChar (o mesmo que Memo)<br /><br /> *Formato de data* /data|  
+|**Largura**|O valor da cadeia de caracteres literal `Width` . Indica que o número a seguir designa a largura da coluna (opcional para arquivos delimitados por caractere; necessário para arquivos de comprimento fixo).|  
 |*#*|O valor inteiro que designa a largura da coluna (obrigatório se a **largura** for especificada).|  
   
 ## <a name="selecting-a-character-set"></a>Selecionando um conjunto de caracteres  
- Você pode selecionar entre dois conjuntos de caracteres: ANSI e OEM. A configuração **CharacterSet** em Schema. ini substitui a configuração no registro do Windows, file by file. O exemplo a seguir mostra a entrada Schema. ini que define o conjunto de caracteres como ANSI:  
+ Você pode selecionar entre dois conjuntos de caracteres: ANSI e OEM. A configuração **CharacterSet** no Schema.ini substitui a configuração no registro do Windows, file by file. O exemplo a seguir mostra a entrada Schema.ini que define o conjunto de caracteres como ANSI:  
   
 ```  
 CharacterSet=ANSI  
 ```  
   
 ## <a name="specifying-data-type-formats-and-conversions"></a>Especificando formatos e conversões de tipo de dados  
- O arquivo Schema. ini contém várias opções que você pode usar para especificar como os dados são convertidos ou exibidos. A tabela a seguir lista cada uma dessas opções.  
+ O arquivo de Schema.ini contém várias opções que você pode usar para especificar como os dados são convertidos ou exibidos. A tabela a seguir lista cada uma dessas opções.  
   
-|Opção|Descrição|  
+|Opção|Description|  
 |------------|-----------------|  
 |**DateTimeFormat**|Pode ser definido como uma cadeia de caracteres de formato que indica datas e horas. Você deve especificar essa entrada se todos os campos de data/hora na importação/exportação forem manipulados com o mesmo formato. Todos os formatos do Microsoft Jet, exceto A.M. e P.M. têm suporte. Se não houver nenhuma cadeia de caracteres de formato, as opções de imagem e hora da data abreviada do painel de controle do Windows serão usadas.|  
 |**DecimalSymbol**|Pode ser definido como qualquer caractere único que é usado para separar o inteiro da parte fracionária de um número.|  

@@ -20,15 +20,15 @@ ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d83894ed9ca328db945201c0078c1f560ee2e618
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b5bfd506f1baa20a4edd36701e37c78847881089
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830729"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442868"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Relata as transações ativas no mecanismo de banco de dados OLTP na memória.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82830729"
 |commit_dependency_total_attempt_count|**int**|Somente para uso interno|  
 |scan_area|**int**|Somente para uso interno|  
 |scan_area_desc|**nvarchar**|Somente para uso interno|  
-|scan_location|**int**|Somente para uso interno.|  
+|scan_location|**int**|Apenas para uso interno.|  
 |dependent_1_address|**varbinary (8)**|Somente para uso interno|  
 |dependent_2_address|**varbinary (8)**|Somente para uso interno|  
 |dependent_3_address|**varbinary (8)**|Somente para uso interno|  

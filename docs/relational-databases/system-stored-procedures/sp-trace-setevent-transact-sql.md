@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892591"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472662"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -257,11 +257,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|**Duration**|Tempo decorrido (em milhões de segundos) utilizado pelo evento. Esta coluna de dados não é populada pelo evento Hash Warning.|  
 |14|**StartTime**|Horário de início do evento, quando disponível.|  
 |15|**EndTime**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como **SQL:BatchStarting** ou **SP:Starting**. Ele também não é preenchido pelo evento de **aviso de hash** .|  
-|16|**Pareça**|Número de leituras lógicas do disco executadas pelo servidor em nome do evento. Esta coluna não é preenchida pelo evento **Lock: solto** .|  
-|17|**Registra**|Número de gravações no disco físico executadas pelo servidor em nome do evento.|  
+|16|**Reads**|Número de leituras lógicas do disco executadas pelo servidor em nome do evento. Esta coluna não é preenchida pelo evento **Lock: solto** .|  
+|17|**Writes**|Número de gravações no disco físico executadas pelo servidor em nome do evento.|  
 |18|**CPU**|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |19|**Permissões**|Representa o bitmap de permissões; usada pela Security Auditing.|  
-|20|**Severidade**|Nível de severidade de uma exceção.|  
+|20|**Gravidade**|Nível de severidade de uma exceção.|  
 |21|**EventSubClass**|Tipo de subclasse de evento. Essa coluna de dados não é populada para todas as classes de evento.|  
 |22|**ObjectID**|ID de objeto atribuída pelo sistema.|  
 |23|**Êxito**|Êxito da tentativa de uso de permissões; usada para auditoria.<br /><br /> **1** = êxito**0** = falha|  
@@ -295,14 +295,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |51|**EventSequence**|Número de sequência para esse evento.|  
 |52|**BigintData1**|valor **bigint** , que depende da classe de evento capturada no rastreamento.|  
 |53|**BigintData2**|valor **bigint** , que depende da classe de evento capturada no rastreamento.|  
-|54|**VOLUME**|Valor GUID, que é dependente da classe de evento capturada no rastreamento.|  
+|54|**GUID**|Valor GUID, que é dependente da classe de evento capturada no rastreamento.|  
 |55|**IntegerData2**|Valor inteiro, que é dependente da classe de evento capturada no rastreamento.|  
 |56|**ObjectID2**|ID do objeto ou entidade relacionada, se disponível.|  
 |57|**Tipo**|Valor inteiro, que é dependente da classe de evento capturada no rastreamento.|  
 |58|**OwnerID**|Tipo o objeto que possui o bloqueio. Apenas para eventos de bloqueio.|  
 |59|**ParentName**|Nome do esquema que contém o objeto.|  
 |60|**IsSystem**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> **1** = sistema<br /><br /> **0** = usuário.|  
-|61|**Deslocamento**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|  
+|61|**Desvio**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|  
 |62|**SourceDatabaseID**|ID do banco de dados no qual a origem do objeto existe.|  
 |63|**SqlHandle**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado para **Sys. dm_exec_sql_text ()** para recuperar o texto SQL associado.|  
 |64|**SessionLoginName**|O nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **Login1** e executar uma instrução como **Login2**, **SessionLoginName** irá exibir **Login1**, enquanto que **LoginName** exibirá **Login2**. Esta coluna de dados exibe logons tanto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quanto do Windows.|  
@@ -316,7 +316,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Esta tabela ilustra a interação entre ** \@ on** e ** \@ columnid**.  
   
-|@on|@columnid|Result|  
+|\@no|\@columnid|Resultado|  
 |---------|---------------|------------|  
 |ON (**1**)|NULO|Evento é definido como ON.<br /><br /> Todas as colunas são limpas.|  
 ||NOT NULL|A coluna é definida como ON para o evento especificado.|  

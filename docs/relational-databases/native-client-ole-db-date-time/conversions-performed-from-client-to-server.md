@@ -13,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fe44586362595f4d1c86a88ccfce0f0f0ec3de6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: da80b44c2b24d58906d4b8fab6c0989caceec544
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245853"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472262"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>SQL Server Native Client conversões executadas do cliente para o servidor
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,9 +69,8 @@ ms.locfileid: "87245853"
 |15|A semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para **datetime** é mantida. Os segundos são arredondados para o 300º de segundo mais próximo.|  
 |16|O comportamento de conversão de um valor (de um tipo determinado) inserido em uma estrutura cliente SSVARIANT é igual ao comportamento do mesmo valor e tipo quando não inserido em uma estrutura cliente SSVARIANT.|  
   
-||||  
+|Tipo|Comprimento (em caracteres)|Escala|  
 |-|-|-|  
-|Type|Comprimento (em caracteres)|Escala|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

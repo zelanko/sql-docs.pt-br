@@ -1,6 +1,6 @@
 ---
 title: Melhores práticas para o Assistente de Migração de Dados
-description: Conheça as práticas recomendadas para migrar bancos de dados SQL Server com Assistente de Migração de Dados
+description: Conheça as práticas recomendadas para migrar SQL Server bancos de dados com Assistente de Migração de Dados, incluindo informações sobre instalação, avaliação e migração.
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886043"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472362"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para executar o Assistente de Migração de Dados
+# <a name="best-practices-for-running-data-migration-assistant"></a>Melhores práticas para a execução do Assistente de Migração de Dados
 Este artigo fornece algumas informações de práticas recomendadas para instalação, avaliação e migração.
 
 ## <a name="installation"></a>Instalação

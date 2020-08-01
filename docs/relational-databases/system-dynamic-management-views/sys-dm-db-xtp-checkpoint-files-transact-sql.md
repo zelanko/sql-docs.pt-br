@@ -21,15 +21,15 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677525"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442585"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Exibe informações sobre os arquivos de ponto de verificação, incluindo o tamanho do arquivo, o local físico e a ID da transação.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85677525"
   
  Para obter mais informações, consulte [criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]e posterior  
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior   
  A tabela a seguir descreve as colunas do `sys.dm_db_xtp_checkpoint_files` , começando com **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
 |Nome da coluna|Tipo|Description|  
@@ -74,7 +74,7 @@ ms.locfileid: "85677525"
 |-----------------|----------|-----------------|  
 |container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [Sys. database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|O GUID do contêiner do qual fazem parte os dados ou o arquivo delta.|  
-|checkpoint_file_id|**VOLUME**|ID dos dados ou arquivo delta.|  
+|checkpoint_file_id|**GUID**|ID dos dados ou arquivo delta.|  
 |relative_file_path|**nvarchar(256)**|Caminho para os dados ou arquivo delta, relativo ao local do contêiner.|  
 |file_type|**tinyint**|0 para arquivo de dados.<br /><br /> 1 para arquivo delta.<br /><br /> NULL se a coluna de estado estiver definida como 7.|  
 |file_type_desc|**nvarchar(60)**|O tipo de arquivo: DATA_FILE, DELTA_FILE ou NULL se a coluna de estado for definida como 7.|  

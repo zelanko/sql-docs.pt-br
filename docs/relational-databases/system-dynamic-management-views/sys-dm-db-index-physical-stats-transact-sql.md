@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112763"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472193"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL | 0 | OS  
+ *database_id* \| \|Padrão nulo 0 \|  
  É a ID do banco de dados. *database_id* é **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, também deverá especificar null para *object_id*, *index_id*e *partition_number*.  
   
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificada. Quando você usar DB_ID sem especificar um nome de banco de dados, o nível de compatibilidade do banco de dados atual deverá ser 90 ou mais.  
   
- *object_id* | NULL | 0 | OS  
+ *object_id* \| \|Padrão nulo 0 \|  
  É a ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int**.  
   
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto. Desde o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , as entradas válidas também incluem o nome da fila do Service Broker ou o nome da tabela interna da fila. Quando os parâmetros padrão são aplicados (ou seja, todos os objetos, todos os índices, etc.), as informações de fragmentação de todas as filas são incluídas no conjunto de resultados.  
   
  Especifique NULL para retornar informações de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id*, também deverá especificar null para *index_id* e *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | OS  
+ *index_id* \| 0 \| nulo \| -1 \| padrão  
  É a ID do índice. *index_id* é **int**. As entradas válidas são o número de identificação de um índice, 0 se *object_id* for um heap, nulo,-1 ou padrão. O padrão é -1. NULL,-1 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, também deverá especificar null para *partition_number*.  
   
- *partition_number* | NULL | 0 | OS  
+ *partition_number* \| \|Padrão nulo 0 \|  
  É o número da partição no objeto. *partition_number* é **int**. As entradas válidas são a *partion_number* de um índice ou heap, NULL, 0 ou default. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todas as partições do objeto proprietário.  
   
  o *partition_number* é baseado em 1. Um índice ou heap não particionado tem *partition_number* definido como 1.  
   
- *modo* | NULL | OS  
+ *modo* \| \|padrão nulo  
  É o nome do modo. o *modo* especifica o nível de verificação que é usado para obter estatísticas. o *modo* é **sysname**. Entradas válidas são DEFAULT, NULL, LIMITED, SAMPLED ou DETAILED. O padrão (NULL) é LIMITED.  
   
 ## <a name="table-returned"></a>Tabela retornada  

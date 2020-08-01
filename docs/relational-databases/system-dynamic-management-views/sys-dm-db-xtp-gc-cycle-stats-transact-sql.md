@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830805"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442572"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Envia o estado atual das transações confirmadas que excluíram uma ou mais linhas. O thread inativo de coleta de lixo é ativado a cada minuto ou quando o número de transações DML confirmadas excede um limite interno desde o último ciclo de coleta de lixo. Como parte do ciclo de coleta de lixo, ele move as transações que foram confirmadas em uma ou mais filas associadas às gerações. As transações que geraram versões obsoletas são agrupadas em uma unidade de 16 transações em 16 gerações, da seguinte maneira:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830805"
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Um identificador de exclusividade para o ciclo de coleta de lixo.|  
 |ticks_at_cycle_start|**bigint**|Tiques no momento em que o ciclo foi iniciado.|  
