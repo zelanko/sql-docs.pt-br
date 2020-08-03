@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9da1c78f9f312574a0a914f0956357412a35d4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1847c47622dc36bbdb92db675a90765ff6f197f6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216025"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332145"
 ---
 # <a name="polybase-features-and-limitations"></a>Recursos e limitações do PolyBase
 
@@ -26,28 +26,26 @@ Este artigo é um resumo dos recursos do PolyBase disponíveis para produtos e s
 ## <a name="feature-summary-for-product-releases"></a>Resumo de recursos para versões do produto
 
 Esta tabela lista os principais recursos para o PolyBase e os produtos nos quais estão disponíveis.  
-  
-||||||
-|-|-|-|-|-|   
-|**Recurso**|**SQL Server 2016**|**Banco de Dados SQL do Azure**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+
+|**Recurso** |**SQL Server 2016** |**Banco de Dados SQL do Azure** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|---------|---------|---------|---------|---------|
 |Consultar dados do Hadoop com [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|Não|Sim|
 |Importar dados do Hadoop|Sim|Não|Não|Sim|
 |Exportar dados para o Hadoop  |Sim|Não|Não| Sim|
 |Consultar, importar e exportar para o Azure HDInsight |Não|Não|Não|Não
 |Enviar cálculos de consulta por push ao Hadoop|Sim|Não|Não|Sim|  
-|Importar dados do Armazenamento de Blobs do Azure|Sim|Não|Sim|Sim| 
+|Importar dados do Armazenamento de Blobs do Azure|Sim|Não|Sim|Sim|
 |Exportar dados para o Armazenamento de Blobs do Azure|Sim|Não|Sim|Sim|  
-|Importar dados do Azure Data Lake Store|Não|Não|Sim|Não|    
+|Importar dados do Azure Data Lake Store|Não|Não|Sim|Não|
 |Exportar dados do Azure Data Lake Store|Não|Não|Sim|Não|
-|Executar consultas do PolyBase nas ferramentas do Microsoft BI|Sim|Não|Sim|Sim|   
+|Executar consultas do PolyBase nas ferramentas do Microsoft BI|Sim|Não|Sim|Sim|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Computação de aplicação com suporte para operadores do T-SQL
 
-No SQL Server e no APS, nem todos os operadores do T-SQL podem ser aplicados ao cluster do Hadoop. A tabela a seguir lista todos os operadores com suporte e um subconjunto de operadores sem suporte. 
+No SQL Server e no APS, nem todos os operadores do T-SQL podem ser aplicados ao cluster do Hadoop. A tabela a seguir lista todos os operadores com suporte e um subconjunto de operadores sem suporte.
 
-||||
-|-|-|-| 
-|**Tipo de operador**|**Pode ser enviado por push para Hadoop**|**Pode ser enviado por push para o Armazenamento de Blobs**|
+|**Tipo de operador** |**Pode ser enviado por push para Hadoop** |**Pode ser enviado por push para o Armazenamento de Blobs** |
+|---------|---------|---------|
 |Projeções de coluna|Sim|Não|
 |Predicados|Sim|Não|
 |Agregações|Parcial|Não|
@@ -63,9 +61,9 @@ O PolyBase apresenta as seguintes limitações:
 
 - Para usar o PolyBase, você deve permissões no nível de sysadmin ou SERVER CONTROL no banco de dados.
 
-- O tamanho máximo de linha possível, incluindo o comprimento total das colunas de comprimento variável, não pode exceder 32 KB no SQL Server ou 1 MB no SQL Data Warehouse do Azure.
+- O tamanho máximo de linha possível, incluindo o comprimento total das colunas de comprimento variável, não pode exceder 32 KB no SQL Server ou 1 MB no Azure Synapse Analytics.
 
-- Quando os dados são exportados em um formato de arquivo ORC do SQL Server ou do SQL Data Warehouse, as colunas com muito texto podem ser limitadas. Podem ser limitados a apenas 50 colunas devido a mensagens de erro de falta de memória do Java. Para solucionar esse problema, exporte apenas um subconjunto das colunas.
+- Quando os dados são exportados em um formato de arquivo ORC do SQL Server ou do Azure Synapse Analytics, as colunas com muito texto podem ser limitadas. Podem ser limitados a apenas 50 colunas devido a mensagens de erro de falta de memória do Java. Para solucionar esse problema, exporte apenas um subconjunto das colunas.
 
 - O PolyBase não poderá se conectar a uma instância do Hortonworks se o Knox estiver habilitado.
 

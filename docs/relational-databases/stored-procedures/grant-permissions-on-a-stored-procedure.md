@@ -1,5 +1,6 @@
 ---
 title: Conceder permissões em um procedimento armazenado | Microsoft Docs
+description: Saiba como conceder permissões a um procedimento armazenado no SQL Server 2019 (15.x) usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b76db9ab1e2380e6f7925ed0717f01ee2d053658
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 343ad174485697864a4f253f0c4d6352b8b12abb
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332588"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>Conceder permissões em um procedimento armazenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

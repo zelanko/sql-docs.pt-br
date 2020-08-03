@@ -1,6 +1,6 @@
 ---
 title: 'Início Rápido: Conectar-se ao PostgreSQL e consultá-lo'
-description: Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se ao PostgreSQL e executar uma consulta
+description: Faça um início rápido no qual você usa o Azure Data Studio para conectar-se ao PostgreSQL e usa instruções SQL para criar e consultar um banco de dados.
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
@@ -9,16 +9,16 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717155"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411302"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Início Rápido: Usar o Azure Data Studio para conectar-se ao PostgreSQL e consultá-lo
 
-Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se ao Postgres e usar instruções SQL para criar o banco de dados *tutorialdb* e consultá-lo.
+Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se ao PostgreSQL e usar instruções SQL para criar o banco de dados *tutorialdb* e consultá-lo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

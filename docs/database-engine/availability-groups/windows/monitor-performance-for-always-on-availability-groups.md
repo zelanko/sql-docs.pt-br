@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897345"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362662"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,8 @@ ms.locfileid: "85897345"
   
  ![Sincronização de dados do grupo de disponibilidade](media/always-onag-datasynchronization.gif "Sincronização de dados do grupo de disponibilidade")  
   
-|||||  
+|Sequência|Descrição da etapa|Comentários|Métricas úteis|  
 |-|-|-|-|  
-|**Sequência**|**Descrição da etapa**|**Comentários**|**Métricas úteis**|  
 |1|Geração de log|Os dados de log são liberados para o disco. Esse log deve ser replicado para as réplicas secundárias. Os registros de log entram na fila de envio.|[SQL Server:Database > bytes de log liberados\s](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capturar|Os logs de cada banco de dados são capturados e enviados para a fila de parceiro correspondente (um por par de réplica de banco de dados). Esse processo de captura é executado continuamente enquanto a réplica de disponibilidade está conectada e a movimentação de dados não é suspensa por qualquer razão e o par de réplica de banco de dados está aparecendo como Sincronizando ou Sincronizado. Se o processo de captura não puder verificar e enfileirar as mensagens com a rapidez necessária, a fila de envio de log se acumulará.|[SQL Server:Availability Replica > Bytes enviados à replica\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md), que é uma agregação de soma de todas as mensagens de banco de dados enfileiradas para essa réplica de disponibilidade.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) na réplica primária.|  
 |3|Enviar|As mensagens na fila de cada réplica de banco de dados são removidas da fila e enviadas pela rede para a respectiva réplica secundária.|[SQL Server: Réplica de Disponibilidade > Bytes enviados para transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -41,9 +40,8 @@ ms.locfileid: "85897345"
   
  Depois que os logs foram capturados na réplica primária, eles ficam sujeitos a dois níveis de controles de fluxo, conforme mostrado na tabela a seguir.  
   
-|||||  
+|Nível|Número de portões|Número de mensagens|Métricas úteis|  
 |-|-|-|-|  
-|**Level**|**Número de portões**|**Número de mensagens**|**Métricas úteis**|  
 |Transporte|1 por réplica de disponibilidade|8192|Eventos estendidos **database_transport_flow_control_action**|  
 |Banco de dados|1 por banco de dados de disponibilidade|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Eventos estendidos **hadron_database_flow_control_action**|  
   

@@ -106,8 +106,8 @@ Após instalar o SQL Server em Linux, examine as práticas recomendadas para con
 
 Além de **sqlcmd**, você pode usar as seguintes ferramentas multiplataforma para gerenciar o SQL Server:
 
-|||
-|---|---|
+| Ferramenta | Descrição |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | Um utilitário de gerenciamento de banco de dados GUI multiplataforma. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Um editor de código GUI multiplataforma que executa instruções Transact-SQL com a extensão mssql. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Uma ferramenta de automação e configuração multiplataforma baseada em cmdlets. |
@@ -129,12 +129,10 @@ Para outras ferramentas que executam o Windows, mas se conectam ao SQL Server no
 
 Para outros cenários de instalação, veja os seguintes recursos:
 
-|||
-|---|---|
-| [Atualizar](../linux/sql-server-linux-setup.md#upgrade) | Saiba como atualizar uma instalação existente do SQL Server no Linux |
-| [Desinstalação](../linux/sql-server-linux-setup.md#uninstall) | Desinstalar o SQL Server no Linux |
-| [Instalação autônoma](../linux/sql-server-linux-setup.md#unattended) | Saiba como gerar o script da instalação sem prompts |
-| [Instalação offline](../linux/sql-server-linux-setup.md#offline) | Saiba como baixar manualmente os pacotes para instalação offline |
+* [Atualização](../linux/sql-server-linux-setup.md#upgrade): Saiba como atualizar uma instalação existente do SQL Server no Linux
+* [Desinstalação](../linux/sql-server-linux-setup.md#uninstall): Desinstalar o SQL Server no Linux
+* [Instalação autônoma](../linux/sql-server-linux-setup.md#unattended): Saiba como gerar o script da instalação sem prompts
+* [Instalação offline](../linux/sql-server-linux-setup.md#offline): Saiba como baixar manualmente os pacotes para instalação offline
 
 > [!TIP]
 > Para obter respostas a perguntas frequentes, confira as [Perguntas frequentes sobre o SQL Server em Linux](../linux/sql-server-linux-faq.md).

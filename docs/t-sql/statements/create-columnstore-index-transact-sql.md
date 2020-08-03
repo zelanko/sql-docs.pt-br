@@ -29,15 +29,15 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633263"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396246"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Converta uma tabela rowstore em um índice columnstore clusterizado ou crie um índice columnstore não clusterizado. Use um índice columnstore para executar análise operacional em tempo real com eficiência em uma carga de trabalho OLTP ou para melhorar o desempenho da consulta e a compactação de dados em cargas de trabalho de data warehouse.  
   
@@ -250,7 +250,7 @@ ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutos]  
    Especifica um limite inferior para o tempo em que uma linha deve permanecer no rowgroup delta antes que ela seja qualificada para migrar para o rowgroup compactado. Por exemplo, um cliente pode dizer que se uma linha for alterada para 120 minutos, ele será elegível para a compactação em formato de armazenamento colunar. Para um índice columnstore em tabelas baseadas em disco, não acompanhamos o tempo em que uma linha é inserida ou atualizada, usamos o tempo de fechamento do rowgroup delta como um proxy para a linha. A duração padrão é 0 minutos. Uma linha é migrada para o armazenamento colunar depois que 1 milhão de linhas são acumuladas no rowgroup delta e ele é marcado como fechado.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
@@ -516,7 +516,7 @@ GO
     -   Faça isso somente se desejar especificar um novo nome para o índice quando ele for convertido em um índice columnstore clusterizado. Se você não remover o índice clusterizado, o novo índice columnstore clusterizado terá o mesmo nome.  
   
         > [!NOTE]  
-        > Pode ser mais fácil lembrar o nome do índice se você usar seu próprio nome. Todos os índices clusterizados da rowstore usam o nome padrão que é 'ClusteredIndex_\<GUID>'.  
+        > Pode ser mais fácil lembrar o nome do índice se você usar seu próprio nome. Todos os índices clusterizados da rowstore usam o nome padrão que é "ClusteredIndex_\<GUID>".  
   
     ```sql  
     --Process for dropping a clustered index.  

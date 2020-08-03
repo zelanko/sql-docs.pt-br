@@ -1,5 +1,6 @@
 ---
 title: Exibir as dependências de um procedimento armazenado| Microsoft Docs
+description: Saiba como exibir dependências de procedimento armazenado no SQL Server 2019 (15.x) usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aea9d3e1e073bfb4e34b1cc4250f2af64921d65f
-ms.sourcegitcommit: 3ea90a17a04827d573a281a4d62e72dba974504f
+ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332572"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332195"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Exibir as dependências de um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]

@@ -28,15 +28,15 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981907"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392545"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A tabela a seguir lista e descreve as convenções usadas nos diagramas de sintaxe na Referência [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -52,7 +52,7 @@ A tabela a seguir lista e descreve as convenções usadas nos diagramas de sinta
 |[ **,** ..._n_]|Indica que o item precedente pode ser repetido _n_ vezes. As ocorrências são separadas por vírgulas.|  
 |[..._n_]|Indica que o item precedente pode ser repetido _n_ vezes. As ocorrências são separadas por espaços em branco.|  
 |;|Terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o ponto e vírgula não seja necessário para a maioria das instruções nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele será necessário em uma versão futura.|  
-|\<label> ::=|O nome de um bloco de sintaxe. Use essa convenção para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<label>.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo, \<grouping set>, e uma lista é uma coleção de conjuntos, por exemplo, \<composite element list>.|  
+|\<label> ::=|O nome de um bloco de sintaxe. Use essa convenção para agrupar e rotular seções de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre divisas: \<label>.<br /><br /> Um conjunto é uma coleção de expressões, por exemplo, \<grouping set>; e uma lista é uma coleção de conjuntos, por exemplo, \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Nomes de partes múltiplas  
 A menos que especificado de outra forma, todas as referências [!INCLUDE[tsql](../../includes/tsql-md.md)] ao nome de um objeto de banco de dados podem ser um nome de quatro partes, do seguinte modo:  

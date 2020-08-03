@@ -1,6 +1,6 @@
 ---
 title: Criar e personalizar atalhos de teclado
-description: Saiba como criar e personalizar atalhos de teclado no Azure Data Studio
+description: Saiba como exibir, editar e criar atalhos de teclado no Azure Data Studio, usando uma funcionalidade baseada naquela do Visual Studio Code.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 008c44e8e0ca61d4b2e84ba9e25863d4ffa78fa7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774569"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411067"
 ---
 # <a name="keyboard-shortcuts-in-azure-data-studio"></a>Atalhos de teclado no Azure Data Studio
 

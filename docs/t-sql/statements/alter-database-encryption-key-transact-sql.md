@@ -18,12 +18,12 @@ ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d4683e635e6eb30d8ac628e55d109d0d81794764
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 7d33e0b284720befaa4e159fc2db00493f405a33
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301947"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394711"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -69,7 +69,7 @@ ALTER DATABASE ENCRYPTION KEY
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
- REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
+ REGENERATE WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY }  
  Especifica o algoritmo de criptografia que é usado para a chave de criptografia.  
   
  ENCRYPTION BY SERVER CERTIFICATE *Encryptor_Name*  

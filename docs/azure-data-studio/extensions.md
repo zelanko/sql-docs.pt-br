@@ -1,6 +1,6 @@
 ---
 title: Adicionar extensões
-description: Adicione extensões do Marketplace de Extensões ao Azure Data Studio
+description: Saiba como adicionar funcionalidade ao Azure Data Studio selecionando e instalando extensões entre as fornecidas pela Microsoft e por terceiros.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: d049b80197fdd50e3f7da5a449c35e092366fa51
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: eb6578f69ab9c0ded637ef9762ea50cfd18a25bb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483648"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411112"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>Estender a funcionalidade do Azure Data Studio
 

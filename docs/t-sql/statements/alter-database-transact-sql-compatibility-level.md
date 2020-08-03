@@ -1,7 +1,7 @@
 ---
 title: Nível de compatibilidade de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c690545847979fcd50f2de23aca201eed067d5a
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: b17da534ff8b1f5864589882ca924ebd0379bc71
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302035"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332005"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 
@@ -52,7 +52,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 *database_name* É o nome do banco de dados a ser modificado.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } É a versão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o banco de dados deve ser compatível. Os seguintes valores de nível de compatibilidade podem ser configurados (nem todas as versões dão suporte a todos os níveis de compatibilidade listados acima):
+COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } É a versão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual o banco de dados deve ser compatível. Os seguintes valores de nível de compatibilidade podem ser configurados (nem todas as versões dão suporte a todos os níveis de compatibilidade listados acima):
 
 <a name="supported-dbcompats"></a>
 
@@ -136,7 +136,7 @@ Para obter mais detalhes, incluindo o fluxo de trabalho recomendado para atualiz
 > A funcionalidade **descontinuada** introduzida em uma determinada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**não é** protegida pelo nível de compatibilidade. Refere-se à funcionalidade removida do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > Por exemplo, a dica `FASTFIRSTROW` foi descontinuada no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e substituída pela dica `OPTION (FAST n )`. A definição do nível de compatibilidade do banco de dados como 110 não restaurará a dica descontinuada.  
 >  
-> Para saber mais sobre a funcionalidade descontinuada, confira [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) e [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
+> Para obter mais informações sobre a funcionalidade descontinuada, confira [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) e [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2014](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server).
 
 > [!IMPORTANT]
 > As **alterações da falha** introduzidas em uma determinada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**podem não** estar protegidas pelo nível de compatibilidade. Refere-se às alterações de comportamento entre versões do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Geralmente, o comportamento do [!INCLUDE[tsql](../../includes/tsql-md.md)] é protegido pelo nível de compatibilidade. No entanto, os objetos do sistema alterados ou removidos **não** são protegidos pelo nível de compatibilidade.
@@ -148,7 +148,7 @@ Para obter mais detalhes, incluindo o fluxo de trabalho recomendado para atualiz
 > - Alterações de nomes de coluna em objetos do sistema. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a coluna *single_pages_kb* no sys.dm_os_sys_info foi renomeada para *pages_kb*. Seja qual for o nível de compatibilidade, a consulta `SELECT single_pages_kb FROM sys.dm_os_sys_info` gerará o erro 207 (Nome de coluna inválido).
 > - Objetos do sistema removidos. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o `sp_dboption` foi removido. Seja qual for o nível de compatibilidade, a instrução `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` gerará o erro 2812 (Não foi possível encontrar o procedimento armazenado 'sp_dboption').
 >
-> Para saber mais sobre alterações recentes, confira [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) e [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).
+> Para saber mais sobre alterações da falha, confira [Alterações da falha em recursos do Mecanismo de Banco de Dados no SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Alterações da falha em recursos do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) e [Alterações da falha em recursos do Mecanismo de Banco de Dados no SQL Server 2014](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server).
 
 ## <a name="differences-between-compatibility-levels"></a>Diferenças entre Níveis de Compatibilidade
 Para todas as instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o nível de compatibilidade padrão está associado à versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], conforme visto [nesta tabela](#supported-dbcompats). Para novos trabalhos de desenvolvimento, sempre planeje a certificação de aplicativos no Nível de Compatibilidade do Banco de Dados mais recente.

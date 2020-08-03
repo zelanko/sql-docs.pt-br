@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13ef724e531d55a590ded5bc1c3af8da85375e2b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b0236522bbdbf174338f9a711e5d636c4c297d66
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111245"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331952"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -411,7 +411,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['Basic' | 'Standard' | 'Premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) Altera a camada de serviço do banco de dados.
+MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale']) Altera a camada de serviço do banco de dados.
 
 O exemplo a seguir altera a edição para `Premium`:
 
@@ -423,7 +423,7 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > A alteração da edição falhará se a propriedade MAXSIZE do banco de dados estiver definida como um valor fora do intervalo válido compatível com essa edição.
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em conformidade com o conjunto válido de valores da propriedade EDITION do banco de dados. A alteração do tamanho máximo do banco de dados pode fazer com que a EDIÇÃO do banco de dados seja alterada.
+MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em conformidade com o conjunto válido de valores da propriedade EDITION do banco de dados. A alteração do tamanho máximo do banco de dados pode fazer com que a EDIÇÃO do banco de dados seja alterada.
 
 > [!NOTE]
 > O argumento **MAXSIZE** não é aplicável a bancos de dados individuais na camada de serviço em hiperescala. Os bancos de dados da camada de serviço em hiperescala crescem conforme necessário até 100 TB. O serviço de Banco de Dados SQL adiciona armazenamento automaticamente – não é necessário definir um tamanho máximo.

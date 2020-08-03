@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2474ed82498dae30b96178f0fcf962f3b1f0767
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 84872a5acaacf6c969e4dea367f0e64a2588d26a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897876"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394989"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente de Leitor de Fila de Replicação
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -75,10 +75,10 @@ qrdrsvc [-?]
  **-DistributorPassword** _distributor_password_  
  É a senha do Distribuidor.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Especifica o modo de segurança do Distribuidor. Um valor de **0** indica Modo (padrão) de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor de **1** indica Modo de Autenticação do Windows.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  É o nível da criptografia com protocolo TLS, anteriormente conhecido como protocolo SSL, usada pelo Queue Reader Agent ao fazer conexões.  
   
 |Valor EncryptionLevel|Descrição|  
@@ -92,7 +92,7 @@ qrdrsvc [-?]
   
  Confira mais informações em [Exibir e modificar as configurações de replicação de segurança](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**\| **3**]  
  Especifica a quantidade de histórico registrada durante uma operação de leitura de fila. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
 |Valor HistoryVerboseLevel|Descrição|  
@@ -108,7 +108,7 @@ qrdrsvc [-?]
  **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2**]  
  Especifica se a saída deve ser detalhada. Se o nível detalhado for **0**, só mensagens de erro serão impressas. Se o nível detalhado for **1**, todas as mensagens de relatório de progresso serão impressas. Se o nível detalhado for **2** (padrão), todas as mensagens de erro e de relatório de progresso serão impressas, o que é útil na depuração.  
   
  **-PollingInterval** _polling_interval_  
@@ -123,7 +123,7 @@ qrdrsvc [-?]
  **-QueryTimeOut** _query_time_out_seconds_  
  É o número de segundos antes que a consulta expire. O padrão é 1800 segundos.  
   
- **-ResolverState** [ **1**| **2**| **3**]  
+ **-ResolverState** [ **1**\| **2**\| **3**]  
  Especifica como conflitos de atualização na fila são resolvidos. Um valor **1** indica que o Publicador ganha o conflito, a transação na fila conflitante será revertida no Publicador e no Assinante de atualização de origem e o processo de transações subsequentes em fila continuará. Um valor **2** indica que o Assinante ganha o conflito e a transação na fila substituirá os valores no Publicador. Um valor **3** indica que qualquer conflito resultará na reinicialização do Assinante; o Publicador ganha o conflito, o processamento de transações subsequentes na fila será interrompido e a assinatura será reiniciada. A configuração padrão é **1** para publicações transacionais e **3** para publicações de instantâneo.  
   
 ## <a name="remarks"></a>Comentários  

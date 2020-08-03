@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727070"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363417"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
 
@@ -107,10 +107,14 @@ Além das opções SET e dos requisitos de função determinística, os seguinte
 
 - A exibição deve ser criada usando a opção `WITH SCHEMABINDING`.
 - A exibição deve referenciar apenas as tabelas base que estão no mesmo banco de dados que a exibição. A exibição não pode fazer referência a outras exibições.
+
+- Se `GROUP BY` estiver presente, a definição VIEW deverá conter `COUNT_BIG(*)` e não deverá conter `HAVING`. Essas restrições `GROUP BY` são aplicáveis apenas à definição de exibição indexada. Uma consulta pode usar uma exibição indexada em seu plano de execução mesmo que não satisfaça a essas restrições `GROUP BY`.
+- Se a definição de exibição contiver uma cláusula `GROUP BY`, a chave do índice clusterizado exclusivo poderá referenciar somente as colunas especificadas na cláusula `GROUP BY`.
+
 - A instrução SELECT na definição da exibição não deve conter os seguintes elementos do Transact-SQL:
 
-   ||||
-   |-|-|-|
+   | Elementos de Transact-SQL | (continua) | (continua) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|Funções ROWSET (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` E `OPENXML`)|Junções `OUTER` (`LEFT`, `RIGHT` ou `FULL`)|
    |Tabela derivada (definida pela especificação de uma instrução `SELECT` na cláusula `FROM`)|Autojunções|Especificação de colunas usando `SELECT *` ou `SELECT <table_name>.*`|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` ou `AVG`|CTE (expressão de tabela comum)|
@@ -121,15 +125,11 @@ Além das opções SET e dos requisitos de função determinística, os seguinte
    |Variáveis de tabela|`OUTER APPLY` ou `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Conjuntos de colunas esparsas|Funções com valor de tabela (TVF) embutidas ou de várias instruções (MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> A exibição indexada pode conter colunas **float**; porém, essas colunas não podem ser incluídas na chave de índice clusterizado.
 
-- Se `GROUP BY` estiver presente, a definição VIEW deverá conter `COUNT_BIG(*)` e não deverá conter `HAVING`. Essas restrições `GROUP BY` são aplicáveis apenas à definição de exibição indexada. Uma consulta pode usar uma exibição indexada em seu plano de execução mesmo que não satisfaça a essas restrições `GROUP BY`.
-- Se a definição de exibição contiver uma cláusula `GROUP BY`, a chave do índice clusterizado exclusivo poderá referenciar somente as colunas especificadas na cláusula `GROUP BY`.
+   <sup>1</sup> A exibição indexada pode conter colunas **float**; porém, essas colunas não podem ser incluídas na chave de índice clusterizado.
 
-> [!IMPORTANT]
-> As exibições indexadas não são compatíveis sobre consultas temporais (consultas que usam a cláusula `FOR SYSTEM_TIME`).
+   > [!IMPORTANT]
+   > As exibições indexadas não são compatíveis sobre consultas temporais (consultas que usam a cláusula `FOR SYSTEM_TIME`).
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> Recomendações
 

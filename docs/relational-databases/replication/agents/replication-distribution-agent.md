@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87109403"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395017"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -133,10 +133,10 @@ distrib [-?]
  **-DistributorPassword** _distributor_password_  
  É a senha do Distribuidor.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Especifica o modo de segurança do Distribuidor. Um valor 0 indica Modo de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor 1 indica Modo de Autenticação do Windows (padrão).  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  É o nível da criptografia TLS (Transport Layer Security), antes conhecida como SSL (Secure Sockets Layer), usada pelo Agente de Distribuição ao fazer conexões.  
   
 |Valor EncryptionLevel|Descrição|  
@@ -171,7 +171,7 @@ distrib [-?]
  **-FtpUserName**  _ftp_user_name_  
  É o nome de usuário usado para se conectar ao serviço FTP. Quando não especificado, **anonymous** é usado.  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [ **0** \| **1** \| **2** \| **3** ]  
  Especifica a quantidade de histórico registrada durante uma operação de distribuição. Você pode minimizar o efeito de desempenho do registro de histórico selecionando **1**.  
   
 |Valor HistoryVerboseLevel|Descrição|  
@@ -261,7 +261,7 @@ distrib [-?]
 |**1**|Fonte de dados ODBC|  
 |**3**|Fonte de dados OLE DB|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
  É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante, mantendo muitas das características transacionais presentes ao usar um thread único. Para um Publicador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , há suporte para um intervalo de valores de 1 a 64. Esse parâmetro só tem suporte quando o Publicador e o Distribuidor estão sendo executados no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou versões posteriores. Esse parâmetro não tem suporte ou deve ser 0 para Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou assinaturas ponto a ponto.  
   
 > [!NOTE]  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897888"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394981"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  É a senha do Distribuidor.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Especifica o modo de segurança do Distribuidor. Um valor de **0** indica Modo (padrão) de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor de **1** indica Modo de Autenticação do Windows.  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -165,7 +165,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  É o local dos arquivos de instantâneo de dados filtrados quando a publicação usa filtros de linha com parâmetros.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  É o nível da criptografia TLS (Transport Layer Security), antes conhecida como SSL (Secure Sockets Layer), usada pelo Merge Agent ao fazer conexões.  
   
 |Valor EncryptionLevel|Descrição|  
@@ -179,7 +179,7 @@ replmerg [-?]
 
  Confira mais informações em [Exibir e modificar as configurações de replicação de segurança](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir o upload, use o **\@subscriber_upload_options** de **sp_addmergearticle**.  
   
@@ -195,13 +195,13 @@ replmerg [-?]
   
  Se você estiver usando o **ExchangeType** para separar a fase de upload e download da replicação de mesclagem em sessões separadas, deverá executar o agente de mesclagem com o **ExchangeType** definido como 1 primeiro e, em seguida, executar o agente de mesclagem novamente com o valor 2. Se houver falha ao executar o agente de mesclagem com ambos os parâmetros, isso fará os metadados serem excluídos e exigirá que você reinicialize a assinatura (sem carregamento).  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  Especifica que tipo de método de cálculo de número de linhas deve ser usado para validação de número de linhas. Um valor de **1** (padrão) indica o método rápido. Um valor de **0** indica o método de número de linhas completo.  
   
- **-FileTransferType** [**0**|**1**]  
+ **-FileTransferType** [**0**\|**1**]  
  Especifica o tipo de transferência de arquivo. Um valor **0** indica UNC (convenção de nomenclatura universal) e um valor **1** indica FTP (File Transfer Protocol).  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**\|**1**\|**2** ( **Publisher**\| **Subscriber**\| **Both**)]  
  Especifica o nível de convergência que o Merge Agent deve usar e pode ser um dos seguintes:  
   
 |Valor ForceConvergenceLevel|Descrição|  
@@ -222,7 +222,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  É o nome de usuário usado para se conectar ao serviço FTP. Quando não especificado, anônimo é usado.  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  Especifica a quantidade de histórico registrada durante uma operação de mesclagem. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
 |Valor HistoryVerboseLevel|Descrição|  
@@ -235,7 +235,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  É o nome de rede do computador local. O padrão é o nome do computador local.  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  Especifica se resolução de conflito interativa é usada quando um conflito ocorre durante a sincronização. O padrão é **0**, indicando que resolução de conflito interativa não é usada.  
   
  **-InternetLogin** _internet_login_  
@@ -253,7 +253,7 @@ replmerg [-?]
  **-InternetProxyServer**  *internet_proxy_server*  
  Especifica o servidor proxy a ser usado ao acessar o recurso HTTP especificado em *internet_url*.  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  Especifica o modo de segurança IIS usado ao conectar ao servidor Web durante sincronização da Web. Um valor de **0** indica Autenticação Básica e um valor de **1** indica Autenticação Integrada do Windows (padrão).  
   
  **-InternetTimeout** _internet_timeout_  
@@ -282,16 +282,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  Especifica o número máximo de linhas alteradas que deve ser carregado do Assinante para o Publicador. O número de linhas carregado deve ser maior do que o máximo especificado porque as gerações concluídas são processadas e os threads de destino paralelos podem executar, cada um processando no mínimo 100 alterações na primeira passagem. Por padrão, todas as alterações que estão prontas serem carregadas são enviadas.  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  Especifica se os metadados são removidos de [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)e [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) com base no período de retenção da publicação. O padrão é **1**, indicando que deve ocorrer limpeza total. Um valor de **0** indica que não deve ocorrer limpeza total automaticamente.  
   
  **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
  Especifica se a saída deve ser detalhada. Se o nível detalhado for **0**, só mensagens de erro serão impressas. Se o nível detalhado for **1**, todas as mensagens de relatório de progresso serão impressas. Se o nível detalhado for **2** (padrão), todas as mensagens de erro e de relatório de progresso serão impressas, o que é útil na depuração.  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  Especifica se o Merge Agent deve processar em paralelo as alterações carregadas para o Publicador e as baixadas no Assinante, que são úteis em ambientes de grandes volumes com alta largura de banda de rede. Se **ParallelUploadDownload** for **1**, o processamento paralelo será habilitado.  
   
  **-PacketSize**  
@@ -312,7 +312,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  É a senha do Publicador. Se **PublisherSecurityMode** for **0** (para Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), esse parâmetro deve ser especificado.  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  Especifica o modo de segurança do Publicador. Um valor de **0** indica Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (padrão), e um valor de **1** indica Modo de Autenticação do Windows.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -327,7 +327,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  É o caminho para o banco de dados Jet (arquivo .mdb) se **SubscriberType** for **2** (permite uma conexão com o banco de dados Jet sem o DSN (Nome da Fonte de Dados) ODBC).  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ **-SubscriberDBAddOption** [**0**\| **1**\| **2**\| **3**]  
  Especifica se existe um banco de dados do Assinante.  
   
 |Valor SubscriberDBAddOption|Descrição|  
@@ -346,22 +346,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  É a senha de Assinante. Se **SubscriberSecurityMode** for **0** (para Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), esse parâmetro deverá ser especificado.  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ **-SubscriberSecurityMode** [ **0**\| **1**]  
  Especifica o modo de segurança do Assinante. Um valor de **0** indica Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (padrão), e um valor de **1** indica Modo de Autenticação do Windows.  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ **-SubscriberConflictClean** [ **0**\| **1**]  
  Se as tabelas de conflitos são limpas no Assinante durante o processo de sincronização, onde um valor de **1** indica que as tabelas de conflitos são limpas no Assinante. Esse parâmetro só é usado para assinaturas de publicações com log de conflitos descentralizado.  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**\| **1**\| **3**\| **4**\| **5**\| **6**\| **7**\| **8**]  
  Especifica o tipo de conexão de Assinante usado pelo Merge Agent. Somente o valor padrão de **0** tem suporte para esse parâmetro.  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ **-SubscriptionType**[ **0**\| **1**\| **2**]  
  Especifica o tipo de assinatura para distribuição. Um valor **0** indica uma assinatura push (padrão), um valor **1** indica uma assinatura pull e um valor **2** indica uma assinatura anônima.  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** [ **0\|1**]  
  Especifica se o Merge Agent está sincronizando entre um Assinante e um Publicador alternativo. Um valor de **1** indica que é um Publicador alternativo. O padrão é **0**.  
  
- **-T** [**101|102**]  
+ **-T** [**101\|102**]  
  Sinalizadores de rastreamento que habilitam funcionalidades adicionais para o Agente de Mesclagem. Um valor de **101** habilita informações adicionais de registro em log detalhadas para ajudar a determinar quanto tempo leva cada etapa do processo de sincronização da replicação de mesclagem. Um valor de **102** grava as mesmas estatísticas que o sinalizador de rastreamento **101**, mas na tabela <Distribution server>..msmerge_history. Habilite o registro em log do agente de mesclagem ao usar o sinalizador de rastreamento 101 com os parâmetros `-output` e `-outputverboselevel`.  Por exemplo, adicione os parâmetros a seguir ao agente de mesclagem e reinicie o agente: `-T 101, -output, -outputverboselevel`. 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  Aprimora o desempenho do instantâneo inicial fazendo com que o Merge Agent use o comando BULK INSERT ao aplicar arquivos de instantâneo no Assinante. Esse parâmetro é preterido porque não é compatível com o tipo de dados de XML. Se você não estiver replicando dados XML, esse parâmetro poderá ser usado. Esse parâmetro não pode ser usado com instantâneos de modo de caractere. Se você usar esse parâmetro, a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Assinante deverá ter permissões de leitura no diretório onde os arquivos de dados .bcp de instantâneo estão localizados. Quando esse parâmetro não é usado, o driver ODBC carregado pelo agente lê a partir dos arquivos, portanto o contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é usado.  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  Especifica se a validação deve ser feita no final da mensagem de mesclagem e, se for, o tipo de validação. O valor **3** é o valor recomendado.  
   
 |Valor de validação|Descrição|  

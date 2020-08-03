@@ -21,12 +21,12 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979372"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332031"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuração de visibilidade de metadados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,21 +43,43 @@ GO
   
 ## <a name="scope-and-impact-of-metadata-visibility-configuration"></a>Escopo e impacto da configuração de visibilidade de metadados  
  A configuração de visibilidade de metadados apenas se aplica aos seguintes protegíveis.  
-  
-|||  
-|-|-|  
-|Exibições do catálogo|Procedimentos armazenados do [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help**|  
-|Metadados com exposição de funções internas|Exibições do esquema de informações|  
-|Exibições de compatibilidade|Propriedades estendidas|  
+
+:::row:::
+    :::column:::
+        Exibições do catálogo
+
+        Metadados com exposição de funções internas
+
+        Exibições de compatibilidade
+    :::column-end:::
+    :::column:::
+         Procedimentos armazenados do [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help**
+
+        Exibições do esquema de informações
+
+        Propriedades estendidas
+    :::column-end:::
+:::row-end:::
   
  A configuração de visibilidade de metadados não se aplica aos seguintes protegíveis.  
-  
-|||  
-|-|-|  
-|Tabelas do sistema de envio de logs|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelas do sistema do Agent|  
-|Tabelas do sistema de plano de manutenção do banco de dados|Tabelas do sistema de backup|  
-|Tabelas do sistema de replicação|Replicação e procedimento armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help**|  
-  
+
+:::row:::
+    :::column:::
+        Tabelas do sistema de envio de logs
+
+        Tabelas do sistema de plano de manutenção do banco de dados
+
+        Tabelas do sistema de replicação
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelas do sistema do Agent
+
+        Tabelas do sistema de backup
+
+        Replicação e procedimento armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help**
+    :::column-end:::
+:::row-end:::
+
  Acessibilidade de metadados limitada significa o seguinte:  
   
 -   Aplicativos que assumem que o acesso de metadados **público** será interrompido.  
@@ -118,26 +140,28 @@ GO
     -   Não foi negada permissão ao usuário em VIEW DEFINITION no objeto e possui permissões em CONTROL, ALTER ou em TAKE OWNERSHIP no objeto. Todos os outros usuários verão NULL.  
   
 -   As colunas de definição encontradas nas exibições do catálogo a seguir:  
-  
-    |||  
-    |-|-|  
-    |**sys.all_sql_modules**|**sys.sql_modules**|  
-    |**sys.server_sql_modules**|**sys.check_constraints**|  
-    |**sys.default_constraints**|**sys.computed_columns**|  
-    |**sys.numbered_procedures**||  
-  
+
+    - **sys.all_sql_modules**  
+    - **sys.server_sql_modules**  
+    - **sys.default_constraints**
+    - **sys.numbered_procedures**
+    - **sys.sql_modules**
+    - **sys.check_constraints**
+    - **sys.computed_columns**
+
 -   A coluna **ctext** na exibição de compatibilidade **syscomments** .  
   
 -   A saída do procedimento **sp_helptext** .  
   
--   As seguintes colunas nas exibições do esquema de informações:  
-  
-    |||  
-    |-|-|  
-    |INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE|INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT|INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION|INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION|  
-  
+-   As seguintes colunas nas exibições do esquema de informações:
+
+    - INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE
+    - INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION
+    - INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION
+
 -   Função OBJECT_DEFINITION()  
   
 -   O valor armazenado na coluna password_hash em **sys.sql_logins**.  Um usuário que não tenha a permissão CONTROL SERVER verá um valor NULL nessa coluna.  
@@ -177,19 +201,45 @@ GO
   
  Os metadados retornados pelas funções DB_ID() e DB_NAME() são visíveis para todos os usuários.  
   
- A tabela a seguir lista aos exibições do catálogo que são visíveis na função **pública** .  
-  
-|||  
-|-|-|  
-|**sys.partition_functions**|**sys.partition_range_values**|  
-|**sys.partition_schemes**|**sys.data_spaces**|  
-|**sys.filegroups**|**sys.destination_data_spaces**|  
-|**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
-|**sys.sql_dependencies**|**sys.type_assembly_usages**|  
-|**sys.parameter_type_usages**|**sys.column_type_usages**|  
-  
+ Esta é uma lista das exibições do catálogo visíveis na função **pública**.  
+
+:::row:::
+    :::column:::
+        **sys.partition_functions**
+
+        **sys.partition_schemes**
+
+        **sys.filegroups**
+
+        **sys.database_files**
+
+        **sys.partitions**
+
+        **sys.schemas**
+
+        **sys.sql_dependencies**
+
+        **sys.parameter_type_usages**
+    :::column-end:::
+    :::column:::
+        **sys.partition_range_values**
+
+        **sys.data_spaces**
+
+        **sys.destination_data_spaces**
+
+        **sys.allocation_units**
+
+        **sys.messages**
+
+        **sys.configurations**
+
+        **sys.type_assembly_usages**
+
+        **sys.column_type_usages**
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte Também  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

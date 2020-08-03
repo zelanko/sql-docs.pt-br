@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4618c69eb24901580118a6fc6b4119689f1e9663
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651748"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362656"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > O formato de SPN novo não requer um número de porta. Isso significa que um servidor de várias portas ou um protocolo que não usa números de porta pode usar a autenticação Kerberos.  
    
-|||  
+|Formato de SPN|Descrição|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado. \<port> é um número da porta TCP.|  
+|MSSQLSvc/\<FQDN>:\<port>|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado. \<port> é um número da porta TCP.|  
 |MSSQLSvc/\<FQDN>|O SPN padrão gerado pelo provedor para uma instância padrão quando um protocolo diferente de TCP é usado. \<FQDN> é um nome de domínio totalmente qualificado.|  
 |MSSQLSvc/\<FQDN>:\<instancename>|O SPN padrão gerado pelo provedor para uma instância nomeada quando um protocolo diferente de TCP é usado. \<instancename> é o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 

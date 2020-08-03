@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e8b0ce1e5924a2186529fb7f7b301b85d0d547c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4354def42884887539693073bf3108d7227170de
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726490"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363559"
 ---
 # <a name="database-mail-log-and-audits"></a>Registro em log e auditoria do Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,9 +34,8 @@ ms.locfileid: "85726490"
   
 ## <a name="database-mail-auditing-tasks"></a>Tarefas de auditoria do Database Mail  
   
-|||  
+|Examinando e gerenciando logs do Database Mail|Link para o tópico|  
 |-|-|  
-|**Examinando e gerenciando logs do Database Mail**|**Link para tópico**|  
 |Verifique o status de entrega de uma mensagem individual|[Verificar o status de mensagens de email enviadas com o Database Mail](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |Limpe mensagens, anexos e entradas de log do Database Mail|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|  
 |Arquive mensagens e logs do Database Email|[Criar um trabalho do SQL Server Agent para arquivar mensagens e logs de eventos do Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  

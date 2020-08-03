@@ -1,5 +1,5 @@
 ---
-title: Inicializar uma assinatura com um instantâneo | Microsoft Docs
+title: Inicializar assinatura com instantâneo
 ms.custom: ''
 ms.date: 03/23/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44ccd31700ab6bb3bf3500e93febc0209d9fa9ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb69f5c2033a515676587ddbef0cb3d14e3bc3d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716785"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396123"
 ---
-# <a name="initialize-a-subscription-with-a-snapshot"></a>Inicializar uma assinatura com um instantâneo
+# <a name="initialize-a-subscription-with-a-snapshot-for-a-new-publication"></a>Inicializar uma assinatura com um instantâneo para uma nova publicação
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 

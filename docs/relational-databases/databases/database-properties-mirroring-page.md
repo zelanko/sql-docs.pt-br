@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630986"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361246"
 ---
 # <a name="database-properties-mirroring-page"></a>Propriedades do banco de dados (página Espelhamento)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630986"
   
  Se o assistente for concluído com êxito, a ação tomada dependerá de o espelhamento já ter começado, conforme explicado a seguir:  
   
-|||  
+|estado de espelhamento|Ação executada|  
 |-|-|  
 |Se o espelhamento não tiver começado.|A página de propriedades armazena essas informações de conexão em cache e, além disso, armazena um valor em cache que indica se o banco de dados espelho tem a propriedade de parceiro definida.<br /><br /> Ao término do assistente, você é solicitado a iniciar o espelhamento de banco de dados usando os endereços de rede do servidor e o modo de operação padrão. Se precisar alterar os endereços ou o modo de operação, clique em **Não Iniciar o Espelhamento**.|  
 |Se o espelhamento já tiver começado.|Se o servidor testemunha tiver sido alterado no assistente, será definido adequadamente.|  

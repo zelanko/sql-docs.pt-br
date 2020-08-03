@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcb3bc8292b2cef9b917447c1388162a8f61ae9e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f6e25763f585f063eeb25fd512b65a3e51c070e5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245245"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394661"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -106,7 +106,7 @@ NAME = newUserName
 > [!NOTE]
 > Essa opção está disponível apenas para usuários contidos.
 
- DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores.
+ DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores.
 
  Especifica um idioma padrão a ser atribuído ao usuário. Se essa opção não for definida como NONE, o idioma padrão será definido como o idioma padrão do banco de dados. Se o idioma padrão do banco de dados for alterado mais tarde, o idioma padrão do usuário permanecerá inalterado. *DEFAULT_LANGUAGE* pode ser a lcid (ID local), o nome do idioma ou o alias do idioma.
 

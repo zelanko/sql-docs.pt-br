@@ -19,15 +19,15 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dada9214720bbe30711dbc0d722ea2904e0bb491
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0841c29b0897ed739b33e8d7e2d09227b8b495f8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832917"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395788"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Calcula um percentil baseado em uma distribuição contínua do valor da coluna em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O resultado é interpolado e talvez não seja igual a qualquer um dos valores específicos da coluna.  
   
@@ -41,7 +41,9 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *numeric_literal*  
  O percentil a ser computado. O valor deve variar entre 0,0 e 1,0.  
   
@@ -49,7 +51,7 @@ PERCENTILE_CONT ( numeric_literal )
  Especifica uma lista de valores numéricos sobre os quais classificar e computar o percentil. Apenas uma *order_by_expression* é permitida. A expressão precisa avaliar a um tipo numérico exato ou aproximado, nenhum outro tipo de dados sendo permitido. Os tipos numéricos exatos são: **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** e **money**. Os tipos numéricos aproximados são **float** e **real**. A ordem de classificação padrão é crescente.  
   
  OVER **(** \<partition_by_clause> **)**  
- Divide o conjunto de resultados produzido pela cláusula FROM nas partições às quais a função de percentil é aplicada. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). A \<cláusula ORDER BY> e a \<cláusula rows ou range> da sintaxe OVER não podem ser especificadas em uma função PERCENTILE_CONT.  
+ Divide o conjunto de resultados produzido pela cláusula FROM nas partições às quais a função de percentil é aplicada. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY clause> e \<rows or range clause> da sintaxe OVER não podem ser especificados em uma função PERCENTILE_CONT.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float(53)**  

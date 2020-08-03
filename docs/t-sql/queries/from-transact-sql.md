@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636199"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397069"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 No Transact-SQL, a cláusula FROM está disponível nas seguintes instruções:
 
@@ -177,7 +177,7 @@ FROM { <table_source> [ ,...n ] }
  Especifica uma tabela, exibição, variável de tabela ou origem de tabela derivada, com ou sem um alias, a ser usada na instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Até 256 origens da tabela podem ser usadas em uma instrução, embora o limite varie de acordo com a memória disponível e a complexidade de outras expressões na consulta. Consultas individuais podem não aceitar até 256 origens de tabela.  
   
 > [!NOTE]  
->  O desempenho da consulta pode ser prejudicado com um grande número de tabelas referenciadas em uma consulta. O tempo de compilação e otimização também é afetado por outros fatores. Esses fatores incluem a presença de índices e exibições indexadas em cada \<table_source> e o tamanho de \<select_list> na instrução SELECT.  
+>  O desempenho da consulta pode ser prejudicado com um grande número de tabelas referenciadas em uma consulta. O tempo de compilação e otimização também é afetado por outros fatores. Eles incluem a presença de índices e exibições indexadas em cada \<table_source> e o tamanho do \<select_list> na instrução SELECT.  
   
  A ordem de origens de tabela após a palavra-chave FROM não afeta o conjunto de resultados que é retornado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna erros quando aparecem nomes duplicados na cláusula FROM.  
   
@@ -383,14 +383,14 @@ ON (p.ProductID = v.ProductID);
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Retorna uma tabela com um único registro para cada linha que contém os valores que foram reais (atuais) no momento passado especificado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *\<date_time>* . O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *\<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *\<date_time>* .   
+ Retorna uma tabela com um único registro para cada linha que contém os valores que foram reais (atuais) no momento passado especificado. Internamente, uma união é executada entre a tabela temporal e a tabela de histórico dela e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *\<date_time>* . O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *\<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
- Retorna uma tabela com os valores para todas as versões de registro que estavam ativas no intervalo de tempo especificado, sem levar em conta se eles começaram a estar ativos antes do valor de parâmetro *\<start_date_time>* para o argumento FROM ou deixaram de estar ativos após o valor de parâmetro *\<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que se tornaram ativas exatamente no limite inferior definido pelo ponto de extremidade FROM são incluídas e as linhas que se tornaram ativas exatamente no limite superior definido pelo ponto de extremidade TO não são incluídas.  
+ Retorna uma tabela com os valores para todas as versões de registro que estavam ativas dentro do intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *\<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *\<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que se tornaram ativas exatamente no limite inferior definido pelo ponto de extremidade FROM são incluídas e as linhas que se tornaram ativas exatamente no limite superior definido pelo ponto de extremidade TO não são incluídas.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
@@ -398,7 +398,7 @@ ON (p.ProductID = v.ProductID);
   
  A mesma descrição acima para **FROM \<start_date_time> TO \<end_date_time>** é válida, exceto que ela inclui linhas que se tornaram ativas no limite superior definido pelo ponto de extremidade \<end_date_time>.  
   
- CONTAINED IN (\<start_date_time>, \<end_date_time>)  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 

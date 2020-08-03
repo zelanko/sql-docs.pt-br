@@ -2,19 +2,19 @@
 title: Configurar o grupo de disponibilidade de várias sub-redes e a FCI (Linux)
 description: Saiba como configurar grupos de disponibilidade Always On de várias sub-redes e FCIs (instâncias de cluster de failover) para o SQL Server em Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5abe1d99f753e0f41ca74a0864079293800dc1df
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196959"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362959"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar instâncias de cluster de failover e grupos de disponibilidade Always On com várias sub-redes
 
@@ -57,28 +57,42 @@ No mundo do Windows, o WSFC (Cluster de Failover do Windows Server) dá suporte 
 2. Edite o arquivo que foi gerado. Procure a seção `<resources>`. Você verá os vários recursos que foram criados para o AG ou o FCI. Localize aquele associado ao endereço IP. Adicione uma seção `<instance attributes>` com as informações para o segundo endereço IP acima ou abaixo do existente, mas antes de `<operations>`. Ela é semelhante à seguinte sintaxe:
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    em que *NameForAttribute* é o nome exclusivo desse atributo, *Score* é o número atribuído ao atributo, que deve ser maior do que as sub-redes primárias, *RuleName* é o nome da regra, *ExpressionName* é o nome da expressão, *NodeNameInSubnet2* é o nome do nó na outra sub-rede, *NameForSecondIP* é o nome associado ao segundo endereço IP, *IPAddress* é o endereço IP para a segunda sub-rede, *NameForSecondIPNetmask* é o nome associado à máscara de rede e *Netmask* é a máscara de rede para a segunda sub-rede.
+    em que *NameForAttribute* é o nome exclusivo desse atributo, *NameForIP* é o nome associado ao endereço IP, *IPAddress* é o endereço IP da segunda sub-rede.
     
     Um exemplo é mostrado a seguir.
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    Por padrão, há apenas um <instance/> no arquivo XML CIB exportado. Digamos que haja duas sub-redes, você precisa ter duas entradas <instance/>.
+    Veja um exemplo de entradas para duas sub-redes
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   O 'boolean-op="or"' é usado quando a sub-rede tem mais de um servidor.
+
 
 3. Importe o CIB modificado e reconfigure o Pacemaker.
 
@@ -99,6 +113,11 @@ No mundo do Windows, o WSFC (Cluster de Failover do Windows Server) dá suporte 
 ### <a name="check-and-verify-failover"></a>Checar e verificar o failover
 
 1. Depois que o CIB for aplicado com êxito com a configuração atualizada, execute ping no nome DNS associado ao recurso de endereço IP no Pacemaker. Ele deve refletir o endereço IP associado à sub-rede que atualmente hospeda o grupo de disponibilidade ou o FCI.
+
 2. Faça failover do grupo de disponibilidade ou do FCI para a outra sub-rede.
+
 3. Depois que o grupo de disponibilidade ou o FCI estiver totalmente online, execute ping no nome DNS associado ao endereço IP. Ele deve refletir o endereço IP na segunda sub-rede.
+
 4. Se desejar, faça failback do grupo de disponibilidade ou FCI para a sub-rede original.
+
+Esta é uma postagem CSS mostrando como configurar o CIB de três sub-redes. Leia para obter detalhes: [Configurar o grupo de disponibilidade AlwaysOn de várias sub-redes modificando o CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).

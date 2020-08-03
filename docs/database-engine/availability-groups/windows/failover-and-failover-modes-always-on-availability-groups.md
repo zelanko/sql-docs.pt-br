@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98681c7ba908a43f2f4cc3e792f7f62b8a8ba2b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897500"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395051"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -79,8 +79,8 @@ ms.locfileid: "85897500"
 ##  <a name="overview-of-failover"></a><a name="Overview"></a> Visão geral de failover  
  A tabela a seguir resume os formulários de failover com suporte sob diferentes modos de disponibilidade e failover. Para cada emparelhamento, o modo de disponibilidade efetiva e o modo de failover são determinados pela interseção dos modos de réplica primária mais os modos de uma ou mais réplicas secundárias.  
   
-||Modo de confirmação assíncrona|Modo de confirmação síncrona com modo de failover manual|Modo de confirmação síncrona com modo de failover automático|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Forma de failover|Modo de confirmação assíncrona|Modo de confirmação síncrona com modo de failover manual|Modo de confirmação síncrona com modo de failover automático|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |failover automático|Não|Não|Sim|  
 |Failover manual planejado|Não|Sim|Sim|  
 |failover forçado|Sim|Sim|Sim **&#42;**|  
