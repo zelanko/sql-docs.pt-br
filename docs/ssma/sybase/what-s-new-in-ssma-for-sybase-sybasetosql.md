@@ -4,21 +4,26 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 10ac2af79db21b9320c3ef180a64de8c2a13b29f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007856"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477318"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>O que há de novo no SSMA para SAP ASE (SybaseToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para SAP ASE (anteriormente o SSMA para Sybase) alterações em cada versão.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+A versão v 8.12 do SSMA para SAP ASE contém pequenas melhorias de desempenho e correções de bugs.
 
 ## <a name="ssma-v811"></a>8.11 do SSMA v
 
@@ -335,6 +340,6 @@ A versão de novembro de 2006 do SSMA para Sybase contém as seguintes alteraç�
 
 A versão de julho de 2006 do SSMA for Sybase foi a versão inicial.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Introdução com o SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
