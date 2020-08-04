@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 190a0a74c230ce59cf8e36715ff405ec9decf7a1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 550b947a910da66e87c5efdddc5ec13fdc9d761c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485167"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544329"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>Permissões de coleção de esquema GRANT XML (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -128,7 +128,7 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir concede a permissão `EXECUTE` na coleção de esquemas XML `Invoices4` ao usuário `Wanida`. A coleção de esquemas XML `Invoices4` está localizada dentro do esquema `Sales` do banco de dados `AdventureWorks2012`.  
   
- ```
+ ```sql
  USE AdventureWorks2012;  
  GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
  GO

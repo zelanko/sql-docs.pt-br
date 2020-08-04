@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f97998b439fca6e0290966e2ee8fc2bdd785150
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919647"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472432"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
 
@@ -61,9 +61,8 @@ Para se conectar ao Microsoft Dynamics AX Online ou ao Microsoft Dynamics CRM On
 ## <a name="odata-connection-manager-properties"></a>Propriedades do gerenciador de conexões do OData  
  A lista a seguir descreve as propriedades do gerenciador de conexões OData.  
   
-|||  
-|-|-|  
 |Propriedade|DESCRIÇÃO|  
+|-|-|  
 |Url|URL do documento de serviço.|  
 |UserName|O nome de usuário a ser usado para autenticação, se necessário.|  
 |Senha|A senha a ser usada para autenticação, se necessário.|  

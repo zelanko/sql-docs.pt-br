@@ -23,16 +23,16 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: markingmyname
 ms.author: maghan
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 484884cd4ba85021adf5eaf081a8db239508c4d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4bb178639b262320a0292a25b3535a9f969972f0
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85683760"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523218"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>tipos de dados e funções de data e hora (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 As seções neste tópico abrangem todos os tipos e funções de data [!INCLUDE[tsql](../../includes/tsql-md.md)] e data e hora.
 

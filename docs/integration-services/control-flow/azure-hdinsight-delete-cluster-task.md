@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52147ff689b88876512afd6cb428e78c6c00d621
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87bbb8455169ae0c50475781b3b9e25e9967fd93
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913845"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472532"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Tarefa Excluir Cluster do Azure HDInsight
 
@@ -36,9 +36,8 @@ Para adicionar uma **Tarefa Excluir Cluster do Azure HDInsight**, arraste e solt
   
 A tabela a seguir fornece uma descrição dos campos nessa caixa de diálogo.  
   
-|||  
+|Campo|Descrição|  
 |-|-|  
-|**Campo**|**Descrição**|  
 |AzureResourceManagerConnection|Selecione um gerenciador de conexões do Azure Resource Manager existente ou crie um novo que será usado para excluir o cluster HDInsight.|
 |SubscriptionId|Especifique a ID da assinatura na qual o cluster HDInsight está.|
 |ResourceGroup|Especifique o grupo de recursos do Azure no qual o cluster HDInsight está.|

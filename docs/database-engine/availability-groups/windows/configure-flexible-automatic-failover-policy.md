@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 39922c57380772a30a18e27861398397fd77793f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a273b97e5c8ce50cb82991491bbea0b5366d5665
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925264"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522370"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurar uma política de failover automático flexível para um grupo de disponibilidade Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Este tópico descreve como configurar a política de failover flexível para um grupo de disponibilidade Always On usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no SQL Server. Uma política de failover flexível fornece um controle granular das condições que causam um [failover automático](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) de um grupo de disponibilidade. Ao alterar as condições de falha que disparam um failover automático e a frequência de verificações de integridade, você pode aumentar ou diminuir a probabilidade de um failover automático para oferecer suporte ao seu SLA para alta disponibilidade.  
 

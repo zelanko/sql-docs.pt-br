@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e41b5ffc1ff1cbd524298a17e32f5f677954f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919194"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472485"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitário de Execução de Pacotes (dtexecui)
 
@@ -68,9 +68,8 @@ ms.locfileid: "86919194"
  **Origem do pacote**  
  Especifique o local do pacote a ser executado usando as seguintes opções:  
   
-|||  
-|-|-|  
 |Valor|DESCRIÇÃO|  
+|-|-|  
 |**SQL Server**|Selecione esta opção quando o pacote estiver no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** _nome de usuário_ e **/PASSWORD** _senha_ ao prompt de comando.|  
 |**Sistema de Arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
 |**Armazenamento de Pacotes SSIS**|Selecione esta opção quando o pacote estiver no Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  

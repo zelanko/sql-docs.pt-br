@@ -18,16 +18,16 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 897163a7273e68c93a829b58faaf5654a8c257da
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: be3ecc4924abd059bf6cd04234dbd2fb66c92a72
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112963"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522978"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Retorna um valor formatado com o formato e a cultura opcional especificados. Use a função FORMAT para formatação com reconhecimento de localidade de valores de data/hora e número como cadeias de caracteres. Para conversões de tipos de dados gerais, use CAST ou CONVERT.  
   

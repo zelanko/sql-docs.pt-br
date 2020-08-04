@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922727"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435435"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -253,8 +253,6 @@ Quando você especificar um intervalo como o destino, ocorrerá um erro se o int
 Antes de salvar com sucesso cadeias de caracteres com mais de 255 caracteres em uma coluna do Excel, o driver deve reconhecer o tipo de dados da coluna de destino como **memorando** e não como **cadeia de caracteres**.
 
 -   Se uma tabela de destino existente já contiver linhas de dados, então as primeiras linhas que serão amostradas pelo driver devem conter pelo menos uma instância com um valor maior que 255 caracteres na coluna de memorando.
-
--   Se uma nova tabela de destino for criada durante o desenvolvimento do pacote ou em tempo de execução ou pelo Assistente de Importação e de Exportação, então a instrução `CREATE TABLE` deverá usar LONGTEXT (ou um de seus sinônimos) como o tipo de dados da coluna de memorando de destino. No assistente, verifique a instrução `CREATE TABLE` e a revise, se necessário, clicando em **Editar SQL** ao lado da opção **Criar tabela de destino** na página **Mapeamentos de coluna**.
 
 ## <a name="related-content"></a>Conteúdo relacionado
 

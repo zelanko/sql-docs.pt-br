@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c3da0afe1824b47af01946bbe5707c71578700d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6b6afc86afc567e2d6f93b45dae8fb9fd4861525
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110187"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522400"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Referência de objeto do sistema de grupo de disponibilidade Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
     
 Este tópico serve como uma página de referência para todos os vários objetos do sistema que podem ser usados ao trabalhar com grupos de disponibilidade Always On. 
 

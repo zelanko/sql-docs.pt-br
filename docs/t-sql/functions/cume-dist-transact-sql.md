@@ -19,15 +19,15 @@ ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26527260cfcb3f557239f6ca83b60e3f269be9ac
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 101372817c6948a3ebf614774710fdde051212ed
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112510"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522520"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa função calcula a distribuição cumulativa com um valor em um grupo de valores. Em outras palavras, `CUME_DIST` computa a posição relativa de um valor especificado em um grupo de valores. Supondo a ordenação ascendente, o `CUME_DIST` de um valor na linha _r_ é definido como o número de linhas com valores menores ou iguais ao valor de _r_, dividido pelo número de linhas avaliadas no conjunto de resultados da consulta ou partição. `CUME_DIST` é semelhante à função `PERCENT_RANK`.
   
