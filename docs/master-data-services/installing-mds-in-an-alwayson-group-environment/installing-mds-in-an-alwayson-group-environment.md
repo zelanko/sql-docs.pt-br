@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901726"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522000"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
@@ -324,7 +324,7 @@ Normalmente, você deve habilitar confirmação síncrona apenas quando os dois 
 
    Figura 18
 
-9. Na página **Selecionar Sincronização de Dados**, clique em **Completa** e especifique um compartilhamento de rede que todos os nós podem acessar. Clique em **Próximo** para continuar. Consulte a Figura 19.
+9. Na página **Selecionar Sincronização de Dados**, clique em **Completa** e especifique um compartilhamento de rede que todos os nós podem acessar. Clique em **Avançar** para continuar. Consulte a Figura 19.
 
    Esse compartilhamento de rede será usado para armazenar o backup do banco de dados para criar réplicas secundárias. Se isso não estiver disponível para sua organização, escolha outra preferência de sincronização de dados. Consulte [SQL Server o grupo de disponibilidade Always On 2016](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) sobre como usar outras opções para criar réplicas secundárias. A Figura 17 também lista outras opções.
 
@@ -332,7 +332,7 @@ Normalmente, você deve habilitar confirmação síncrona apenas quando os dois 
 
    Figura 19 
 
-10. Na página **Validação**, certifique-se de que todas as validações sejam aprovadas com êxito e corrija os erros. Clique em **Próximo** para continuar.
+10. Na página **Validação**, certifique-se de que todas as validações sejam aprovadas com êxito e corrija os erros. Clique em **Avançar** para continuar.
 
 11. Na página **Resumo**, examine todas as configurações e clique em **Concluir**. Isso criará o grupo de disponibilidade e o configurará.
 
@@ -390,7 +390,7 @@ Essa solução apresentada neste artigo requer somente o banco de dados de back-
 
 Neste white paper, vimos como configurar e configurar o banco de dados de back-end Master Data Services como parte de um AG. Essa configuração fornece alta disponibilidade e recuperação de desastres no banco de dados de back-end do Master Data Services. Para implementar essa configuração, você precisa instalar e configurar o cluster de failover do Windows Server, o AG e o Master Data Services.
 
-## <a name="feedback"></a>Comentários
+## <a name="feedback-comments"></a>Comentários de comentários
 
 Este white paper foi útil? Envie seus comentários clicando **Comentários** na parte superior do artigo. 
 

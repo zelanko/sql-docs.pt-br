@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831160"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522540"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Retorna um conjunto de resultados que contém metadados sobre parâmetros não declarados em um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Considera cada parâmetro usado no lote ** \@ TSQL** , mas não declarado em ** \@ params**. Um conjunto de resultados que contém uma linha para cada um desses parâmetros é retornado com as informações de tipo deduzidas para esse parâmetro. O procedimento retornará um conjunto de resultados vazio se o lote de entrada ** \@ TSQL** não tiver parâmetros, exceto aqueles declarados em ** \@ params**.  
   
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      O tipo de dados para \@ P1, \@ P2 e \@ P3 será o tipo de dados C1, o tipo de dados de retorno de dbo. tbl e o tipo de dados de parâmetro para dbo. tbl, respectivamente.  
   
-     Como um caso especial, se \@ p for um argumento para um \< operador, >, \< = ou >=, as regras de dedução simples não se aplicarão. O algoritmo de dedução de tipo usará as regras de dedução gerais explicadas na próxima seção. Por exemplo, se c1 for uma coluna do tipo de dados char(30), considere as duas consultas a seguir:  
+     Como um caso especial, se \@ p for um argumento para um \<, > \<=, or > operador, =, as regras de dedução simples não se aplicarão. O algoritmo de dedução de tipo usará as regras de dedução gerais explicadas na próxima seção. Por exemplo, se c1 for uma coluna do tipo de dados char(30), considere as duas consultas a seguir:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
