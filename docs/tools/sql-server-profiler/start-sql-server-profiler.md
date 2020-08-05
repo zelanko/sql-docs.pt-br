@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 7bfe84350449d1de600699c7bb73348bf5a1b069
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6ce61356dcbaaf1d05be9aa56804af3d85adbd7b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734166"
 ---
 # <a name="run-sql-server-profiler"></a>Executar o SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Você pode executar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de várias maneiras diferentes, para dar suporte à coleta da saída do rastreamento em uma variedade de cenários. Você pode iniciar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] por meio do menu **Iniciar** do Windows 10, do menu **Ferramentas** no [!INCLUDE[ssDE](../../includes/ssde-md.md)] Orientador de Otimização e de vários locais no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

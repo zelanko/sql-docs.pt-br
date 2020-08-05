@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff9734eea7e81d9c5e2ad8acbecf1fc9a60f09de
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151589"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918336"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   O utilitário**sqlmaint** executa um conjunto especificado de operações de manutenção em um ou mais bancos de dados. Use o **sqlmaint** para executar verificações DBCC, fazer backup de um banco de dados e do respectivo log de transações, atualizar estatísticas e recompilar índices. Todas as atividades de manutenção de banco de dados geram um relatório que pode ser enviado a um arquivo de texto designado, arquivo HTML ou conta de email. O**sqlmaint** executa planos de manutenção de bancos de dados criados com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para executar planos de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no prompt de comando, use o [Utilitário dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
@@ -131,7 +131,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  O nome do arquivo UNC completo é necessário para *html_file* , quando **sqlmaint** acessa um servidor remoto.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Especifica que qualquer relatório HTML no diretório de relatórios deverá ser excluído se o intervalo de tempo após a criação do arquivo de relatório exceder \<*time_period*>. **-DelHtmlRpt** procura arquivos cujos nomes correspondem ao padrão gerado pelo parâmetro *html_file*. Se *html_file* for c:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fará com que **sqlmaint** exclua todos os arquivos cujos nomes correspondam ao padrão C:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm e que sejam anteriores ao \<*time_period*> especificado.  
+ Especifica que qualquer relatório HTML no diretório de relatórios deverá ser excluído se o intervalo de tempo depois da criação do arquivo de relatório exceder o \<*time_period*>. **-DelHtmlRpt** procura arquivos cujos nomes correspondem ao padrão gerado pelo parâmetro *html_file*. Se *html_file* for C:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fará com que **sqlmaint** exclua todos os arquivos cujos nomes correspondam ao padrão C:\Arquivos de Programas\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm e que sejam anteriores ao \<*time_period*> especificado.  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Especifica que o espaço não usado seja removido do banco de dados especificado em **-D**. Essa opção só é útil para bancos de dados definidos para crescer automaticamente. *Threshold_percent* especifica o tamanho em megabytes que o banco de dados deve atingir, antes que **sqlmaint** tente remover o espaço de dados não utilizado. Se o banco de dados for menor que *threshold_percent*, nenhuma ação será tomada. *Free_percent* especifica quanto espaço não utilizado deve permanecer no banco de dados, especificado como um percentual do tamanho final do banco de dados. Por exemplo, se um banco de dados com 200 MB contiver 100 MB de dados, especificar 10 para *free_percent* resultará em um tamanho final de banco de dados de 110 MB. Observe que um banco de dados não será expandido se for menor do que *free_percent* somado à quantidade de dados no banco de dados. Por exemplo, se um banco de dados de 108 MB tiver 100 MB de dados, especificar 10 para *free_percent* não expandirá o banco de dados para 110 MB; ele permanecerá com 108 MB.  
@@ -201,7 +201,7 @@ dbname_log_yyyymmddhhmm.BAK
  Especifica que a mídia de backup é disco.  
   
  **-DelBkUps**< *time_period* >  
- Para backups em disco, especifica que qualquer arquivo de backup no diretório de backups deverá ser excluído se o intervalo de tempo após a criação do backup exceder o \<*time_period*>.  
+ Para backups em disco, especifica que qualquer arquivo de backup no diretório de backups deverá ser excluído se o intervalo de tempo depois da criação do backup exceder o \<*time_period*>.  
   
  **-CrBkSubDir**  
  Para backups em disco, especifica que um subdiretório deverá ser criado no diretório [*backup_path*] ou no diretório de backup padrão se o **-UseDefDir** também for especificado. O nome do subdiretório é gerado com base no nome do banco de dados especificado em **-D**. **-CrBkSubDir** oferece um modo fácil de colocar todos os backups de bancos de dados diferentes em subdiretórios separados, sem a necessidade de alterar o parâmetro *backup_path* .  

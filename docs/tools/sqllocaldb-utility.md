@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b171f587e54948b2a8d70c804d47362e97b61bb9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c0fdaa59f094a44b90affc3fa256275fffdfc69a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151609"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920592"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitário SqlLocalDB
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Use o utilitário **SqlLocalDB** para criar uma instância de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. O utilitário **SqlLocalDB** (SqlLocalDB.exe) é uma ferramenta de linha de comando simples para permitir que usuários e desenvolvedores criem e gerenciem uma instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Para obter informações sobre como usar o **LocalDB**, consulte [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -46,7 +46,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>Argumentos  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
- Cria uma nova instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. O **SqlLocalDB** usa a versão de binários [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] especificada pelo argumento *\<instance-version>* . O número da versão é especificado em formato numérico com pelo menos um decimal. Os números de versões secundárias (pacotes de serviço) são opcionais. Por exemplo, os dois números de versão seguintes são aceitáveis: 11.0 ou 11.0.1186. A versão especificada deve ser estalada no computador. Se não especificado, o número da versão será padronizado como a versão do utilitário **SqlLocalDB** . A adição de **-s** inicia a nova instância do **LocalDB**.  
+ Cria uma nova instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. O **SqlLocalDB** usa a versão de binários do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] especificada pelo argumento *\<instance-version>* . O número da versão é especificado em formato numérico com pelo menos um decimal. Os números de versões secundárias (pacotes de serviço) são opcionais. Por exemplo, os dois números de versão seguintes são aceitáveis: 11.0 ou 11.0.1186. A versão especificada deve ser estalada no computador. Se não especificado, o número da versão será padronizado como a versão do utilitário **SqlLocalDB** . A adição de **-s** inicia a nova instância do **LocalDB**.  
   
  [ **share** | **h** ]  
  Compartilha a instância privada especificada do **LocalDB** que usa o nome compartilhado especificado. Se a SID ou o nome de conta do usuário for omitido, o valor padrão será o usuário atual.  
@@ -66,7 +66,7 @@ SqlLocalDB.exe
  [ **info** | **i** ] [ *\<instance-name>* ]  
  Lista todas as instâncias do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** de propriedade do usuário atual.  
   
- *\<instance-name>* retorna o nome, a versão, o estado (Executando ou Parado), a hora da última inicialização da instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** e o nome do pipe local do **LocalDB**.  
+ *\<instance-name>* retorna o nome, a versão, o estado (Em execução ou Parado), a hora da última inicialização da instância especificada do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** e o nome do pipe local do **LocalDB**.  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** habilita rastreamento para as chamadas à API do **SqlLocalDB** para o usuário atual. **trace off** desabilita o rastreamento.  
