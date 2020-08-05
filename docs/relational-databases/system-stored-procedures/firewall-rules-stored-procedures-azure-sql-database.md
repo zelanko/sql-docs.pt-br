@@ -17,15 +17,15 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d06646127c59dca8e72f061b049cabb42f8073ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bace837ef11fc106632b84fe01ed5c8bc1448ffa
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246685"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544340"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Procedimentos armazenados de regras de firewall (banco de dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   Esta seção contém os seguintes procedimentos armazenados que definem ou excluem as regras de firewall. [!INCLUDE[tsql_md](../../includes/tsql-md.md)]as regras de firewall podem ser usadas com o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Para obter mais informações, consulte [configurar regras de firewall do banco de dados SQL do Azure-visão geral](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
 

@@ -1,6 +1,6 @@
 ---
 title: Reproduzir um rastreamento para atualizações de SQL Server
-description: Reproduzir um rastreamento com Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
+description: Saiba como reproduzir um rastreamento capturado com Assistente para Experimentos de Banco de Dados para atualizações de SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289144"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565495"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproduzir um rastreamento no Assistente para Experimentos de Banco de Dados
 
@@ -118,7 +118,7 @@ A **passagem%** significa que apenas uma porcentagem de consultas foi aprovada. 
 
 **P: como posso examinar os eventos de rastreamento que foram coletados durante a reprodução?**
 
-Abra um arquivo de rastreamento de destino e exiba-o no SQL Profiler. Ou\\, se você quiser fazer modificações na captura de reprodução, todos os scripts de SQL Server estarão disponíveis em C: Arquivos de programas (x86)\\Microsoft Corporation\\assistente para experimentos de banco de dados\\scripts\\StartReplayCapture. Sql.
+Abra um arquivo de rastreamento de destino e exiba-o no SQL Profiler. Ou, se você quiser fazer modificações na captura de reprodução, todos os scripts de SQL Server estarão disponíveis em C: \\ arquivos de programas (x86) \\ Microsoft Corporation \\ Assistente para experimentos de banco de dados \\ scripts \\ StartReplayCapture. Sql.
 
 **P: quais eventos de rastreamento o DEA coleta durante a reprodução?**
 
@@ -133,11 +133,11 @@ O DEA captura eventos de rastreamento que contêm informações relacionadas ao 
 - Confirme se o usuário tem os direitos de usuário necessários.
 - Confirme se a conta de serviço do cliente Distributed Replay tem acesso ao computador que está executando o SQL Server.
 
-Você pode obter mais detalhes nos logs em% temp%\\DEA. Se o problema persistir, entre em contato com a equipe do produto.
+Você pode obter mais detalhes nos logs em% temp% \\ DEA. Se o problema persistir, entre em contato com a equipe do produto.
 
 **P: por que não consigo me conectar ao controlador de Distributed Replay?**
 
-- Verifique se o serviço do controlador de Distributed Replay está em execução no computador do controlador. Para verificar, use as ferramentas de gerenciamento de Distributed Replay (execute `dreplay.exe status -f 1`o comando).
+- Verifique se o serviço do controlador de Distributed Replay está em execução no computador do controlador. Para verificar, use as ferramentas de gerenciamento de Distributed Replay (execute o comando `dreplay.exe status -f 1` ).
 - Se a reprodução for iniciada remotamente:
   - Confirme se o computador que está executando o DEA pode executar ping no controlador com êxito. Confirme se as configurações de firewall permitem conexões de acordo com as instruções na página **Configurar ambiente de reprodução** . Para obter mais informações, consulte o artigo [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
   - Verifique se o início remoto DCOM e a ativação remota são permitidos para o usuário do controlador de Distributed Replay.
@@ -163,6 +163,6 @@ Esse problema é conhecido na versão RTM do SQL Server 2017. Para obter mais in
   
 O problema foi resolvido na atualização cumulativa 1 mais recente para o SQL Server 2017. Baixe a versão mais recente da [atualização cumulativa 1 para SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - Para criar um relatório de análise que ajuda você a obter informações sobre as alterações propostas, consulte [criar relatórios](database-experimentation-assistant-create-report.md).

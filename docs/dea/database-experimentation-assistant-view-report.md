@@ -1,6 +1,6 @@
 ---
 title: Exibir relatórios de análise para atualizações SQL Server
-description: Exibir relatórios de análise no Assistente para Experimentos de Banco de Dados
+description: Saiba como exibir e entender os relatórios de análise para obter informações de desempenho no Assistente para Experimentos de Banco de Dados (DEA).
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977555"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565485"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Exibir relatórios de análise no Assistente para Experimentos de Banco de Dados
 

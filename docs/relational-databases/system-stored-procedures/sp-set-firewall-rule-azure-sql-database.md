@@ -19,15 +19,15 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9bc37626879b743eb3a5d0864490dc3543a8d8a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70152060"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544399"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   Cria ou atualiza as configurações de firewall em nível de servidor para seu servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Esse procedimento armazenado só está disponível no banco de dados mestre para o logon da entidade de segurança no nível do servidor ou atribuído Azure Active Directory entidade de segurança.  
   
@@ -42,13 +42,13 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- A tabela a seguir demonstra os argumentos e as opções [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]com suporte no.  
+ A tabela a seguir demonstra os argumentos e as opções com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
 |Nome|Datatype|Descrição|  
 |----------|--------------|-----------------|  
-|[@name =] nomes|**NVARCHAR (128)**|O nome usado para descrever e distinguir a configuração de firewall de nível de servidor.|  
-|[@start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|O endereço IP mais baixo no intervalo da configuração do firewall em nível de servidor. Os endereços IP iguais a ou maiores que esse podem tentar se conectar ao servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`.|  
-|[@end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|O endereço IP mais alto no intervalo da configuração do firewall em nível de servidor. Os endereços IP iguais a ou menores que esse podem tentar se conectar ao servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: as tentativas de conexão do Azure são permitidas quando esse *start_ip_address* campo e o `0.0.0.0`campo de start_ip_address é igual a.|  
+|[ @name =] ' nome '|**NVARCHAR (128)**|O nome usado para descrever e distinguir a configuração de firewall de nível de servidor.|  
+|[ @start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|O endereço IP mais baixo no intervalo da configuração do firewall em nível de servidor. Os endereços IP iguais a ou maiores que esse podem tentar se conectar ao servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`.|  
+|[ @end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|O endereço IP mais alto no intervalo da configuração do firewall em nível de servidor. Os endereços IP iguais a ou menores que esse podem tentar se conectar ao servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: as tentativas de conexão do Azure são permitidas quando esse campo e o campo de *start_ip_address* é igual a `0.0.0.0` .|  
   
 ## <a name="remarks"></a>Comentários  
  Os nomes das configurações de firewall de nível de servidor devem ser exclusivos. Se o nome da configuração fornecida para o procedimento armazenado já existir na tabela de configurações de firewall, os endereços IP inicial e final serão atualizados. Caso contrário, uma nova configuração de firewall de nível de servidor será criada.  
@@ -69,7 +69,7 @@ exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- O código a seguir cria uma configuração de firewall de nível de servidor chamada `Example setting 1` somente para o endereço IP `0.0.0.2`. Em seguida, `sp_set_firewall_rule` o procedimento armazenado é chamado novamente para atualizar o endereço IP final `0.0.0.4`para, nessa configuração de firewall. Isso cria um intervalo que permite endereços `0.0.0.2`IP, `0.0.0.3`e `0.0.0.4` para acessar o servidor.  
+ O código a seguir cria uma configuração de firewall de nível de servidor chamada `Example setting 1` somente para o endereço IP `0.0.0.2`. Em seguida, o `sp_set_firewall_rule` procedimento armazenado é chamado novamente para atualizar o endereço IP final para `0.0.0.4` , nessa configuração de firewall. Isso cria um intervalo que permite endereços IP `0.0.0.2` , `0.0.0.3` e `0.0.0.4` para acessar o servidor.  
   
 ```  
 -- Create server-level firewall setting for only IP 0.0.0.2  

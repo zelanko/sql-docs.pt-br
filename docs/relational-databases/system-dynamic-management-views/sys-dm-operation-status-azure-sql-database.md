@@ -1,5 +1,5 @@
 ---
-title: sys. dm_operation_status (banco de dados SQL do Azure) | Microsoft Docs
+title: sys. dm_operation_status | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440703"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544379"
 ---
-# <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Banco de Dados SQL do Azure)
+# <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Retorna informações sobre as operações executadas em bancos de dados em um servidor do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85440703"
 |resource_type|**int**|Indica o tipo de recurso no qual a operação é executada. Não nulo. Na versão atual, essa exibição controla as operações executadas no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] somente, e o valor inteiro correspondente é 0.|  
 |resource_type_desc|**nvarchar(2048)**|Descrição do tipo de recurso no qual a operação é executada. Na versão atual, essa exibição controla as operações executadas somente no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nome do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no qual a operação é realizada. Não nulo.|  
-|minor_resource_id|**sql_variant**|Apenas para uso interno. Não nulo.|  
+|minor_resource_id|**sql_variant**|Somente para uso interno. Não nulo.|  
 |operação|**nvarchar(60)**|Operação executada em um [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tal como CREATE ou ALTER.|  
 |state|**tinyint**|O estado da operação.<br /><br /> 0 = Pendente<br />1 = em andamento<br />2 = Concluído<br />3 = Falha<br />4 = Cancelado|  
 |state_desc|**nvarchar(120)**|PENDING = a operação está esperando a disponibilidade do recurso ou da cota.<br /><br /> IN_PROGRESS = a operação foi iniciada e está em andamento.<br /><br /> COMPLETED = a operação foi concluída com êxito.<br /><br /> FAILED = falha na operação. Consulte a coluna **error_desc** para obter detalhes.<br /><br /> CANCELLED = operação interrompida na solicitação do usuário.|  

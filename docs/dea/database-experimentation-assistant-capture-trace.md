@@ -1,6 +1,6 @@
 ---
 title: Capturar um rastreamento para atualizações de SQL Server
-description: Capturar um rastreamento no Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
+description: Use Assistente para Experimentos de Banco de Dados (DEA) para criar um arquivo de rastreamento com um log de eventos de servidor capturados.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289824"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565588"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente para Experimentos de Banco de Dados
 
@@ -134,7 +134,7 @@ Se você vir um erro ao executar uma captura de rastreamento, confirme se:
 - O nome do computador que executa o SQL Server é válido. Para confirmar, tente se conectar ao computador que executa o SQL Server usando o SQL Server Management Studio (SSMS).
 - A configuração do firewall não bloqueia conexões com o computador que executa o SQL Server.
 - O usuário tem as permissões listadas nas [perguntas frequentes de reprodução](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
-- O nome do rastreamento não segue a Convenção de substituição padrão\_(captura 1). Em vez disso, tente rastrear nomes\_como captura 1a ou Capture1.
+- O nome do rastreamento não segue a Convenção de substituição padrão (captura \_ 1). Em vez disso, tente rastrear nomes como captura \_ 1a ou Capture1.
 
 A seguir estão alguns erros possíveis que você pode ver e soluções para solucioná-los:
 

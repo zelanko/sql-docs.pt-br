@@ -1,6 +1,6 @@
 ---
 title: Criar relatórios de análise
-description: Criar relatórios de análise no Assistente para Experimentos de Banco de Dados
+description: Gerar um relatório de análise no Assistente para Experimentos de Banco de Dados (DEA). Os relatórios de análise fornecem informações sobre as implicações de desempenho das alterações propostas.
 ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09f8ab0b3f4950e06c96b67c74f9cdcbc09269d5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289834"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565563"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Criar relatórios de análise no Assistente para Experimentos de Banco de Dados (SQL Server)
 
@@ -67,7 +67,7 @@ O usuário que fez logon no DEA deve ter direitos de sysadmin no Analysis Server
 |Possíveis erros|Solução|  
 |---|---|  
 |Não é possível conectar-se ao banco de dados. Verifique se você tem direitos de sysadmin para analisar e exibir os relatórios.|Talvez você não tenha direitos de acesso ou sysadmin para o servidor ou banco de dados. Confirme seus direitos de logon e tente novamente.|  
-|Não é possível gerar o **nome do relatório** no **nome do servidor**do servidor. Para obter detalhes, verifique o relatório **nome do relatório** .|Talvez você não tenha os direitos sysadmin necessários para gerar um novo relatório. Para ver os erros detalhados, selecione o relatório com erros e verifique os logs em% temp%\\DEA.|  
+|Não é possível gerar o **nome do relatório** no **nome do servidor**do servidor. Para obter detalhes, verifique o relatório **nome do relatório** .|Talvez você não tenha os direitos sysadmin necessários para gerar um novo relatório. Para ver os erros detalhados, selecione o relatório com erros e verifique os logs em% temp% \\ DEA.|  
 |O usuário atual não tem as permissões necessárias para executar a operação. Verifique se você tem direitos de sysadmin para executar o rastreamento e analisar os relatórios.|Você não tem os direitos sysadmin necessários para gerar um novo relatório.|  
 
 **P: não consigo me conectar ao computador que executa o SQL Server**
@@ -76,25 +76,25 @@ O usuário que fez logon no DEA deve ter direitos de sysadmin no Analysis Server
 - Confirme se a configuração do firewall não bloqueia conexões com o computador que executa o SQL Server.
 - Confirme se o usuário tem os direitos de usuário necessários.
 
-Você pode ver mais detalhes nos logs em% temp%\\DEA. Se o problema persistir, entre em contato com a equipe do produto.
+Você pode ver mais detalhes nos logs em% temp% \\ DEA. Se o problema persistir, entre em contato com a equipe do produto.
 
 **P: vejo um erro ao gerar um relatório de análise**
 
 O acesso à Internet é necessário na primeira vez que você gera um relatório de análise após a instalação do DEA. O acesso à Internet é necessário para baixar pacotes que são necessários para análise estatística.
 
-Se ocorrer um erro enquanto o relatório é criado, a página progresso mostra a etapa específica em que a geração da análise falhou. Você pode ver mais detalhes nos logs em% temp%\\DEA. Verifique se você tem uma conexão válida com o servidor com os direitos de usuário necessários e tente novamente. Se o problema persistir, entre em contato com a equipe do produto.
+Se ocorrer um erro enquanto o relatório é criado, a página progresso mostra a etapa específica em que a geração da análise falhou. Você pode ver mais detalhes nos logs em% temp% \\ DEA. Verifique se você tem uma conexão válida com o servidor com os direitos de usuário necessários e tente novamente. Se o problema persistir, entre em contato com a equipe do produto.
 
 |Possíveis erros|Solução|  
 |---|---|  
-|RInterop encontrou um erro na inicialização. Verifique os logs do RInterop e tente novamente.|O DEA requer acesso à Internet para baixar pacotes R dependentes. Verifique os logs do RInterop nos logs\\% Temp% RINTEROP e DEA em%\\Temp% DEA. Se o RInterop foi inicializado incorretamente ou se ele foi inicializado sem os pacotes de R corretos, você poderá ver a exceção "falha ao gerar o novo relatório de análise" após a etapa InitializeRInterop nos logs do DEA.<br><br>Os logs do RInterop também podem mostrar um erro semelhante a "não há um pacote jsonlite disponível". Se seu computador não tiver acesso à Internet, você poderá baixar manualmente o pacote jsonlite R necessário:<br><br><li>Vá para a pasta% UserProfile\\% DEARPackages no sistema de arquivos da máquina. Essa pasta consiste nos pacotes usados pelo R para DEA.</li><br><li>Se a pasta jsonlite estiver ausente na lista de pacotes instalados, você precisará de um computador com acesso à Internet para baixar a versão de\_lançamento do jsonlite 1.4 [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html). zip de.</li><br><li>Copie o arquivo. zip para o computador em que você está executando o DEA.  Extraia a pasta jsonlite e copie-a para%\\USERPROFILE% DEARPackages. Essa etapa instala automaticamente o pacote jsonlite em R. A pasta deve ser nomeada **jsonlite** e o conteúdo deve estar diretamente dentro da pasta, não um nível abaixo.</li><br><li>Feche DEA, reabra e tente novamente a análise.</li><br>Você também pode usar o RGUI. Vá para **pacotes** > **instalar do zip**. Vá para o pacote que você baixou anteriormente e instale o.<br><br>Se o RInterop foi inicializado e configurado corretamente, você deverá ver "Instalando o pacote R dependente jsonlite" nos logs do RInterop.|  
+|RInterop encontrou um erro na inicialização. Verifique os logs do RInterop e tente novamente.|O DEA requer acesso à Internet para baixar pacotes R dependentes. Verifique os logs do RInterop nos logs% temp% \\ RInterop e DEA em% temp% \\ DEA. Se o RInterop foi inicializado incorretamente ou se ele foi inicializado sem os pacotes de R corretos, você poderá ver a exceção "falha ao gerar o novo relatório de análise" após a etapa InitializeRInterop nos logs do DEA.<br><br>Os logs do RInterop também podem mostrar um erro semelhante a "não há um pacote jsonlite disponível". Se seu computador não tiver acesso à Internet, você poderá baixar manualmente o pacote jsonlite R necessário:<br><br><li>Vá para a pasta% UserProfile% \\ DEARPackages no sistema de arquivos da máquina. Essa pasta consiste nos pacotes usados pelo R para DEA.</li><br><li>Se a pasta jsonlite estiver ausente na lista de pacotes instalados, você precisará de um computador com acesso à Internet para baixar a versão de lançamento do jsonlite \_1.4.zip do [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html) .</li><br><li>Copie o arquivo. zip para o computador em que você está executando o DEA.  Extraia a pasta jsonlite e copie-a para% UserProfile% \\ DEARPackages. Essa etapa instala automaticamente o pacote jsonlite em R. A pasta deve ser nomeada **jsonlite** e o conteúdo deve estar diretamente dentro da pasta, não um nível abaixo.</li><br><li>Feche DEA, reabra e tente novamente a análise.</li><br>Você também pode usar o RGUI. Vá para **pacotes**  >  **instalar do zip**. Vá para o pacote que você baixou anteriormente e instale o.<br><br>Se o RInterop foi inicializado e configurado corretamente, você deverá ver "Instalando o pacote R dependente jsonlite" nos logs do RInterop.|  
 |Não é possível conectar-se à instância de SQL Server, verifique se o nome do servidor está correto e verifique o acesso necessário ao usuário que está conectado.|Talvez você não tenha direitos de acesso ou de usuário no servidor, ou o nome do servidor pode estar incorreto.|
-|O processo de RInterop atingiu o tempo limite. Verifique os logs de DEA e RInterop, interrompa o processo de RInterop no Gerenciador de tarefas e tente novamente.<br><br>ou o<br><br>RInterop está em estado com falha. Pare o processo RInterop no Gerenciador de tarefas e tente novamente.|Verifique os logs em% temp\\% RInterop para confirmar o erro. Remova o processo RInterop do Gerenciador de tarefas antes de tentar novamente. Entre em contato com a equipe do produto se o problema persistir.|
+|O processo de RInterop atingiu o tempo limite. Verifique os logs de DEA e RInterop, interrompa o processo de RInterop no Gerenciador de tarefas e tente novamente.<br><br>ou<br><br>RInterop está em estado com falha. Pare o processo RInterop no Gerenciador de tarefas e tente novamente.|Verifique os logs em% temp% \\ RInterop para confirmar o erro. Remova o processo RInterop do Gerenciador de tarefas antes de tentar novamente. Entre em contato com a equipe do produto se o problema persistir.|
 
 **P: o relatório é gerado, mas os dados parecem estar ausentes**
 
 Verifique o banco de dados no computador de análise que está executando SQL Server para confirmar a existência dos mesmos. Verifique se o banco de dados de análise existe e verifique suas tabelas. Por exemplo, verifique estas tabelas: TblBatchesA, TblBatchesB e TblSummaryStats.
 
-Se os dados não existirem, os dados poderão não ter sido copiados corretamente ou o banco de dado poderá estar corrompido. Se apenas alguns dados estiverem ausentes, os arquivos de rastreamento criados na captura ou reprodução poderão não ter capturado a carga de trabalho com precisão. Se os dados estiverem lá, verifique os arquivos de log em% temp\\% DEA para ver se algum erro foi registrado. Em seguida, tente gerar novamente o relatório de análise.
+Se os dados não existirem, os dados poderão não ter sido copiados corretamente ou o banco de dado poderá estar corrompido. Se apenas alguns dados estiverem ausentes, os arquivos de rastreamento criados na captura ou reprodução poderão não ter capturado a carga de trabalho com precisão. Se os dados estiverem lá, verifique os arquivos de log em% temp% \\ DEA para ver se algum erro foi registrado. Em seguida, tente gerar novamente o relatório de análise.
 
 Mais perguntas ou comentários? Envie comentários por meio da ferramenta DEA escolhendo o ícone de Smiley no canto inferior esquerdo.
 

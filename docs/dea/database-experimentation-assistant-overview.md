@@ -1,6 +1,6 @@
 ---
 title: Visão geral do Assistente para Experimentos de Banco de Dados
-description: Visão geral do Assistente para Experimentos de Banco de Dados
+description: Saiba mais detalhes sobre o Assistente para Experimentos de Banco de Dados (DEA), por exemplo, como avaliar uma versão de destino do SQL Server para uma carga de trabalho específica.
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,12 +11,12 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759152"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565546"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Visão geral do Assistente para Experimentos de Banco de Dados
 
@@ -32,7 +32,7 @@ Os dados de comparação podem levar a uma maior confiança e ajudar a garantir 
 
 ## <a name="get-dea"></a>Obter DEA
 
-Para instalar o DEA, [Baixe](https://www.microsoft.com/download/details.aspx?id=54090) a versão mais recente da ferramenta. Em seguida, execute o arquivo **DatabaseExperimentationAssistant. exe** .
+Para instalar o DEA, [Baixe](https://www.microsoft.com/download/details.aspx?id=54090) a versão mais recente da ferramenta. Em seguida, execute o arquivo **DatabaseExperimentationAssistant.exe** .
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>Arquitetura da solução para comparar cargas de trabalho
 
@@ -105,7 +105,7 @@ Os dados de telemetria podem ser coletados em quatro tipos de eventos:
 A coleta e o envio de dados de telemetria são opcionais. Para especificar quais eventos são coletados e se os eventos coletados são enviados à Microsoft, use as seguintes etapas:
 
 1. Vá para o local em que o DEA está instalado (por exemplo, C: \\ arquivos de programas (x86) \\ Microsoft Corporation \\ Assistente para experimentos de banco de dados).
-2. Abra e modifique os arquivos. config **DEA. exe. config** (para o aplicativo) e **DEACmd. exe. config** (para a CLI) para tratar do seu cenário, conforme apropriado:
+2. Abra e modifique os arquivos. config **DEA.exe.config** (para o aplicativo) e **DEACmd.exe.config** (para a CLI) para tratar do seu cenário, conforme apropriado:
     - Para interromper a coleta de um tipo de evento, defina o valor de *Event* (por exemplo, **TraceEvent**) como **false**. Para começar a coletar o evento novamente, defina o valor como **true**.
     - Para interromper o salvamento de cópias locais de eventos, defina o valor de **TraceLoggerEnabled** como **false**. Para começar a salvar cópias locais novamente, defina o valor como **true**.
     - Para interromper o envio de eventos à Microsoft, defina o valor de **AppInsightsLoggerEnabled** como **false**. Para começar a enviar eventos para a Microsoft novamente, defina o valor como **true**.
