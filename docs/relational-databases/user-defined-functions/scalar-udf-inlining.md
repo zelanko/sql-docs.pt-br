@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484417"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435579"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -131,7 +131,7 @@ Como mencionado anteriormente, o plano de consulta não tem mais um operador de 
 -  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também inferiu o `GROUP BY O_CUSTKEY on ORDERS` implícito e usou IndexSpool + StreamAggregate para implementá-lo.
 -  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agora está usando o paralelismo em todos os operadores.
 
-Dependendo da complexidade da lógica na UDF, o plano de consulta resultante também poderá ficar maior e mais complexo. Como podemos ver, as operações dentro da UDF agora não são mais uma caixa preta e, portanto, o otimizador de consulta é capaz de calcular o custo e otimizar essas operações. Além disso, uma vez que a UDF não está mais no plano, invocação da UDF iterativa é substituída por um plano que evita completamente a sobrecarga de chamada de função.
+Dependendo da complexidade da lógica na UDF, o plano de consulta resultante também poderá ficar maior e mais complexo. Como podemos ver, as operações dentro da UDF agora não são mais uma caixa opaca e, portanto, o otimizador de consulta é capaz de calcular o custo e otimizar essas operações. Além disso, uma vez que a UDF não está mais no plano, invocação da UDF iterativa é substituída por um plano que evita completamente a sobrecarga de chamada de função.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisitos de UDFs escalares que podem ser embutidas
 <a name="requirements"></a> Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições forem verdadeiras:

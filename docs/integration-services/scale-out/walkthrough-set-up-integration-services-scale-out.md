@@ -1,6 +1,6 @@
 ---
 title: 'Passo a passo: Configurar SSIS Scale Out | Microsoft Docs'
-description: Este artigo orienta você pela instalação e configuração do SSIS Scale Out
+description: Conheça mais detalhes sobre a instalação e configuração do SSIS (SQL Server Integration Services) Scale Out Master.
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 53e5b45af8da84c9afa7bf0a5fcebe0087db0d81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922040"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522340"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
 

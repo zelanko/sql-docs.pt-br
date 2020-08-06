@@ -1,6 +1,6 @@
 ---
 title: Mestre do Scale Out | Microsoft Docs
-description: Este artigo descreve o componente Scale Out Master do SSIS Scale Out
+description: Saiba mais sobre o componente Scale Out Master do SSIS (SQL Server Integration Services) Scale Out Master Service.
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e7d9bc5b6d84a0108fd68a77a06bcbda5bf47d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6d130bc0d6754a182f7768e4d2e7d8588dc337fc
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918992"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522310"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Mestre de Expansão de Integration Services (SSIS)
 

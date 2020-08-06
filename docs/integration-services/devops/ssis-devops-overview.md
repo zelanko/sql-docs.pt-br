@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196068"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472472"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services)
 
@@ -117,7 +117,7 @@ Tipo de autenticação para acessar o servidor de destino especificado. Essa pro
 
 Porém, o suporte ao tipo de autenticação específico depende do tipo de servidor de destino e do tipo de agente. A matriz de suporte detalhado é listada na tabela abaixo.
 
-| |Agente hospedado pela Microsoft|Agente auto-hospedado|
+|Tipo de servidor de destino|Agente hospedado pela Microsoft|Agente auto-hospedado|
 |---------|---------|---------|
 |SQL Server local ou VM |N/D|Autenticação do Windows|
 |SQL do Azure|Autenticação do SQL Server <br> Active Directory – Senha|Autenticação do SQL Server <br> Active Directory – Senha <br> Active Directory – Integrado|
@@ -143,7 +143,7 @@ Especifique se deseja substituir os projetos existentes ou os arquivos SSISDeplo
 
 #### <a name="continue-deployment-when-error-occurs"></a>Continuar a implantação quando ocorrer um erro
 
-Especifique se a implantação continuará para projetos ou arquivos restantes quando ocorrer um erro. Se a opção for 'Não', a tarefa Implantação do SSIS será interrompida imediatamente quando ocorrer um erro.
+Especifique se deseja continuar a implantação para projetos ou arquivos restantes quando ocorrer um erro. Se a opção for 'Não', a tarefa Implantação do SSIS será interrompida imediatamente quando ocorrer um erro.
 
 ### <a name="limitations-and-known-issues"></a>Limitações e problemas conhecidos
 
@@ -197,7 +197,7 @@ Tipo de autenticação para acessar o servidor de destino especificado. De modo 
 
 Porém, o suporte ao tipo de autenticação específico depende do tipo de servidor de destino e do tipo de agente. A matriz de suporte detalhado é listada na tabela abaixo.
 
-| |Agente hospedado pela Microsoft|Agente auto-hospedado|
+|Tipo de servidor de destino|Agente hospedado pela Microsoft|Agente auto-hospedado|
 |---------|---------|---------|
 |SQL Server local ou VM |N/D|Autenticação do Windows|
 |SQL do Azure|Autenticação do SQL Server <br> Active Directory – Senha|Autenticação do SQL Server <br> Active Directory – Senha <br> Active Directory – Integrado|

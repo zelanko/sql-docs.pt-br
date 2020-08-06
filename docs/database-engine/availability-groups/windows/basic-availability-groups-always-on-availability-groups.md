@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cee7b5274347e26b595f81d78b51946c7d5ce39b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 851d6a801a83f8e66bbab3da2f1836a0bbdccf21
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896171"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435224"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>Grupos de Disponibilidade AlwaysOn básicos para um banco de dados individual
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +45,9 @@ ms.locfileid: "85896171"
 - Grupos de disponibilidade básica só têm suporte para servidores do Standard Edition. 
 
 - Grupos de disponibilidade básicos não podem fazer parte de um grupo de disponibilidade distribuído. 
+
+- Você pode ter vários grupos de disponibilidade Básicos conectados a uma única instância do SQL Server.
+
   
 ## <a name="configuration"></a>Configuração  
  Um grupo de disponibilidade básico AlwaysOn pode ser criado em quaisquer dois servidores SQL Server 2016 Standard Edition. Quando você cria um grupo de disponibilidade básica, deve especificar ambas as réplicas durante a criação.  

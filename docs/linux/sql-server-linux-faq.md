@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895342"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477348"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Perguntas frequentes sobre o SQL Server em Linux
 
@@ -163,5 +163,9 @@ As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em
 1. **Posso alterar a propriedade de arquivos e diretórios do SQL Server da conta e do grupo do mssql instalado?**
 
    Não há suporte para alterar a propriedade do diretório e dos arquivos do SQL Server da instalação padrão. A conta e o grupo do mssql são usados especificamente para o SQL Server e não têm acesso de logon interativo.
-
+   
+ 1. **Há suporte para links simbólicos nos diretórios de log e dados do SQL Server?** 
+    
+    Não, os links simbólicos não têm suporte em diretórios de log e dados do SQL Server. Para alterar os diretórios de log e dados padrão, confira [Alterar o local do diretório de log e dados padrão](sql-server-linux-configure-mssql-conf.md#datadir).
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

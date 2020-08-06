@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922520"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472536"
 ---
 # <a name="manage-a-cdc-instance"></a>Gerenciar uma instância CDC
 
@@ -71,7 +71,7 @@ ms.locfileid: "86922520"
   
 -   **Status**: um ícone que indica o status atual para a instância CDC. A seguir veja a descrição dos status.  
   
-    |||  
+    |ícone|Status e descrições|  
     |-|-|  
     |![Erro](../../integration-services/change-data-capture/media/error.gif "Erro")|**Erro**. A Instância Oracle CDC não está sendo executada devido a um erro não reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Misconfigured**: um erro de configuração ocorrido que exige intervenção manual.<br /><br /> **Password Required**: nenhuma senha foi definida para a Instância Oracle CDC ou a senha não é válida.<br /><br /> **Unexpected**. Todos os outros erros não recuperáveis.|  
     |![OK](../../integration-services/change-data-capture/media/okay.gif "Okey")|**Running**: a instância CDC está sendo executada e está processando registros de alteração. Os seguintes substatus estão disponíveis:<br /><br /> **Idle**: Todos os registros de alteração foram processados e armazenados nas tabelas de alteração de destino. Não há mais nenhuma transação ativa.<br /><br /> **Processing**: há registros de alteração sendo processados que ainda não estão gravados nas tabelas de alteração.|  

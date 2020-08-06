@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ce860d112f171e4cc341c2b2e2b03149720e6b9
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919192"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472483"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implantação de pacote herdado (SSIS)
 
@@ -47,7 +47,7 @@ ms.locfileid: "86919192"
   
  Há quatro etapas no processo de implantação de pacotes:  
   
-1.  A primeira etapa é opcional e envolve a criação de configurações de pacotes que atualizam as propriedades dos elementos dos pacotes em tempo de execução. As configurações são incluídas automaticamente quando se implantam os pacotes.  
+1.  A primeira etapa é opcional e envolve a criação de configurações de pacote que atualizam as propriedades dos elementos de pacote em tempo de execução. As configurações são incluídas automaticamente quando se implantam os pacotes.  
   
 2.  A segunda etapa é desenvolver o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para criar um utilitário de implantação de pacote. O utilitário de implantação para o projeto contém os pacotes que você quer implantar  
   

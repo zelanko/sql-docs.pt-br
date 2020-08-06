@@ -14,12 +14,12 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e1cffa7f2d8c388b391a3bcb8cbe51ebd6ff1c2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ad927941169f7f93f43a534535f80449682c9d60
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001034"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472499"
 ---
 # <a name="sql-injection"></a>Injeção de SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -171,7 +171,7 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
 ### <a name="wrapping-parameters-with-quotename-and-replace"></a>Envolvendo parâmetros com QUOTENAME () e REPLACE()  
  Em cada procedimento armazenado selecionado, verifique se todas as variáveis usadas no Transact-SQ dinâmico estão sendo tratadas corretamente. Dados oriundos de parâmetros de entrada de procedimento armazenado ou que são lidos de uma tabela devem ser envolvidos em QUOTENAME() ou REPLACE(). Lembre-se de que o valor de @variable que é passado para QUOTENAME() pertence a sysname e tem um comprimento máximo de 128 caracteres.  
   
-|@variable|Invólucro recomendado|  
+|\@variable|Invólucro recomendado|  
 |---------------|-------------------------|  
 |Nome de um protegível|`QUOTENAME(@variable)`|  
 |Cadeia de caracteres de ≤ 128 caracteres|`QUOTENAME(@variable, '''')`|  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751901"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442818"
 ---
 # <a name="server-memory-configuration-options"></a>Opções de configuração de memória do servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ Para definir uma quantidade fixa de memória:
   
 2.  Clique no nó **Memória** .  
   
-3.  Em **Opções de Memória do Servidor**, insira a mesma quantidade desejada para **Memória mínima do servidor** e **Memória máxima do servidor**.  
+3.  Em **Opções de Memória do Servidor**, insira a quantidade desejada para **Memória mínima do servidor** e **Memória máxima do servidor**.  
   
      Use as configurações padrão para permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] altere seus requisitos de memória de forma dinâmica com base nos recursos disponíveis do sistema. É recomendável definir uma opção **max server memory**, conforme [detalhado acima](#max_server_memory). 
+
+A seguinte captura de tela demonstra as três etapas: 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Configurar memória no SSMS":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>LPIM (Bloquear Páginas na Memória) 
 Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco. O bloqueio de páginas na memória pode manter a resposta do servidor quando ocorre paginação de memória no disco. A opção **Bloquear Páginas na Memória** será definida para ON nas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition e superior quando a conta com privilégios para executar o sqlservr.exe tiver recebido o direito de usuário *LPIM* (Bloquear Páginas na Memória) do Windows.  

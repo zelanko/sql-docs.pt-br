@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ad3743b35570ddb0f4644b909ca06339444143e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410932"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435439"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,7 +27,7 @@ Introduzido no SQL Server 2016, o Always Encrypted protege a confidencialidade d
 
 Sem os aprimoramentos discutidos neste artigo, o Always Encrypted protege os dados criptografando-os no lado do cliente e nunca permitindo que os dados ou as chaves de criptografia correspondentes aparecessem em texto não criptografado dentro do Mecanismo do SQL Server. Como resultado, a funcionalidade em colunas criptografadas dentro do banco de dados fica muito restrita. As únicas operações que o SQL Server pode executar em dados criptografados são comparações de igualdade (disponíveis somente com criptografia determinística). Todas as outras operações, incluindo operações criptográficas (criptografia de dados inicial ou rotação de chave) e/ou cálculos avançados (por exemplo, correspondência de padrões) não eram compatíveis com o interior do banco de dados. Os usuários precisam mover os dados para fora do banco de dados para executar essas operações no lado do cliente.
 
-O Always Encrypted *com enclaves seguros* soluciona essas limitações, permitindo realizar cálculos em dados de texto não criptografado em um enclave seguro no lado do servidor. Um enclave seguro é uma região protegida de memória dentro do processo do SQL Server e atua como um ambiente de execução confiável para o processamento de dados confidenciais dentro do mecanismo do SQL Server. Um enclave seguro é exibido como uma caixa preta para o restante do SQL Server e outros processos no computador de hospedagem. Não há nenhuma maneira de exibir os dados ou o código dentro do enclave de fora, mesmo com um depurador.  
+O Always Encrypted *com enclaves seguros* soluciona essas limitações, permitindo realizar cálculos em dados de texto não criptografado em um enclave seguro no lado do servidor. Um enclave seguro é uma região protegida de memória dentro do processo do SQL Server e atua como um ambiente de execução confiável para o processamento de dados confidenciais dentro do mecanismo do SQL Server. Um enclave seguro é exibido como uma caixa opaca para o restante do SQL Server e outros processos no computador de hospedagem. Não há nenhuma maneira de exibir os dados ou o código dentro do enclave de fora, mesmo com um depurador.  
 
 
 O Always Encrypted usa enclaves seguros, conforme ilustrado no diagrama a seguir:

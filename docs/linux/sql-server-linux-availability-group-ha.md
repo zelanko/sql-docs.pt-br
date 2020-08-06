@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892255"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472395"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para configurações do grupo de disponibilidade
 
@@ -59,7 +59,7 @@ Essa configuração consiste em três réplicas síncronas. Por padrão, ela for
 
 Um grupo de disponibilidade com três réplicas síncronas pode fornecer escala de leitura, alta disponibilidade e proteção de dados. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |escala de leitura|Alta disponibilidade e </br> proteção de dados | Proteção de dados|
+|Comportamento de disponibilidade |escala de leitura|Alta disponibilidade e </br> proteção de dados | Proteção de dados|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Interrupção principal |Failover automático. A nova primária é R/W. |Failover automático. A nova primária é R/W. |Failover automático. A nova primária não estará disponível para transações de usuário enquanto a primária anterior não se recuperar e ingressar no grupo de disponibilidade como secundária. |
@@ -77,7 +77,7 @@ Essa configuração habilita a proteção de dados. Assim como as outras configu
 
 Um grupo de disponibilidade com duas réplicas síncronas fornece escala de leitura e proteção de dados. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |escala de leitura |Proteção de dados|
+|Comportamento de disponibilidade |escala de leitura |Proteção de dados|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R/W.| Failover automático. A nova primária não estará disponível para transações de usuário enquanto a primária anterior não se recuperar e ingressar no grupo de disponibilidade como secundária.|
@@ -103,7 +103,7 @@ No diagrama do grupo de disponibilidade, uma réplica primária envia dados de c
 
 O valor padrão de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |Alta disponibilidade e </br> proteção de dados | Proteção de dados|
+|Comportamento de disponibilidade |Alta disponibilidade e </br> proteção de dados | Proteção de dados|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupção principal | Failover automático. A nova primária é R/W. | Failover automático. A nova primária não está disponível para transações de usuário. |

@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196883"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522948"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurar a replicação com Grupos de Disponibilidade AlwaysOn
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   A configuração dos grupos de disponibilidade AlwaysOn e da replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve sete etapas. Cada etapa está descrita com mais detalhes nas seções a seguir.  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Configurar as publicações de banco de dados e assinaturas  
  **Configurar o distribuidor**  
   
- O banco de dados de distribuição não pode ser colocado em um grupo de disponibilidade com o SQL Server 2012 e o SQL Server 2014. O SQL 2016 e superiores oferece suporte à colocação do banco de dados de distribuição em um grupo de disponibilidade. Para obter mais informações, confira [Configurar o banco de dados de distribuição em um grupo de disponibilidade](../../../relational-databases/replication/configure-distribution-availability-group.md).
+ O banco de dados de distribuição não pode ser colocado em um grupo de disponibilidade com o SQL Server 2012 e o SQL Server 2014. A colocação do banco de dados de distribuição em um grupo de disponibilidade tem suporte no SQL 2016 e posterior, exceto no caso de bancos de dados de distribuição usados em topologias de replicação ponto a ponto, de mesclagem ou bidirecionais. Para obter mais informações, confira [Configurar o banco de dados de distribuição em um grupo de disponibilidade](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Configurar a distribuição no distribuidor. Se procedimentos armazenados estiverem sendo usados para a configuração, execute **sp_adddistributor**. Use o parâmetro *\@password* para identificar a senha que será usada quando um publicador remoto se conectar ao distribuidor. A senha também será necessária em cada publicador remoto quando o distribuidor remoto for instalado.  
   
