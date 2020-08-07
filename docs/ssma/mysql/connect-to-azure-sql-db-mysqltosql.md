@@ -1,5 +1,5 @@
 ---
-title: Conectar-se ao BD SQL do Azure (MySQLToSQL) | Microsoft Docs
+title: Conectar-se ao banco de dados SQL do Azure (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103240"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823789"
 ---
-# <a name="connect-to-azure-sql-db-mysqltosql"></a>Conectar-se ao BD SQL do Azure (MySQLToSQL)
+# <a name="connect-to-azure-sql-database-mysqltosql"></a>Conectar-se ao banco de dados SQL do Azure (MySQLToSQL)
 Use a caixa de diálogo Conectar-se a SQL Azure para se conectar ao banco de dados do SQL Azure que você deseja migrar.  
   
 Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar-se a SQL Azure**. Se você tiver se conectado anteriormente, o comando será **reconectado a SQL Azure.**  

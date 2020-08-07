@@ -1,5 +1,5 @@
 ---
-title: Migrar dados de ASE do Sybase para o SQL Server-BD SQL do Azure | Microsoft Docs
+title: Migrar dados de ASE do Sybase para o SQL Server-banco de dado SQL do Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9a2663d22bf3820985712ade72f5eaf480266d6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028838"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865334"
 ---
-# <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migrando dados de ASE do Sybase para o SQL Server – BD SQL do Azure (SybaseToSQL)
-Depois de ter carregado com êxito os objetos de banco de dados do Sybase Adaptive Server Enterprise ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ase) no ou no BD SQL do Azure, você pode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrar dados do ase para o ou do BD SQL do Azure.  
+# <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Migrando dados de ASE do Sybase para o SQL Server – banco de SybaseToSQL SQL
+Depois de ter carregado com êxito os objetos de banco de dados do Sybase Adaptive Server Enterprise (ASE) no ou no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL do Azure, você pode migrar os dados do ase para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do banco de dado SQL do Azure.  
   
 > [!IMPORTANT]  
 > Se o mecanismo que está sendo usado for o mecanismo de migração de dados do servidor, antes de migrar os dados, você deverá instalar o pacote de extensões do SSMA para Sybase ASE e os provedores de ASE do Sybase no computador que está executando o SSMA. O serviço de SQL Server Agent também deve estar em execução. Para obter mais informações sobre como instalar o pacote de extensões, consulte [instalando os componentes do SSMA no SQL Server (SybaseToSQL)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>Definindo opções de migração  
-Antes de migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados para o ou o BD SQL do Azure, examine as opções de migração do projeto na caixa de diálogo **configurações do projeto** .  
+Antes de migrar dados para o ou para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database, examine as opções de migração de projeto na caixa de diálogo **configurações do projeto** .  
   
 -   Usando essa caixa de diálogo, você pode definir opções como tamanho do lote de migração, bloqueio de tabela, verificação de restrição, tratamento de valor nulo e tratamento de valor de identidade. Para obter mais informações sobre as configurações de migração do projeto, consulte [configurações do projeto (migração) (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
@@ -54,10 +54,10 @@ Antes de migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados 
 -   Para iniciar a migração no lado do servidor, selecione a opção **mecanismo de migração de dados do servidor** na caixa de diálogo Configurações do **projeto** .  
   
 > [!NOTE]  
-> Quando o BD SQL do Azure é usado como o banco de dados de destino, somente a **migração de dado do lado do cliente** é permitida e a migração de dados do lado do servidor não tem suporte.  
+> Quando o banco de dados SQL do Azure é usado como o banco de dado de destino, somente a **migração de clientes no lado do cliente** é permitida e a migração de dados do lado do servidor não é  
   
-## <a name="migrating-data-to-sql-server-or-azure-sql-db"></a>Migrando dados para o SQL Server ou o BD SQL do Azure  
-A migração de dados é uma operação de carregamento em massa que move linhas de dados das tabelas do ASE para SQL Server tabelas em transações. O número de linhas carregadas no SQL Server ou no BD SQL do Azure em cada transação é definido nas configurações do projeto.  
+## <a name="migrating-data-to-sql-server-or-azure-sql-database"></a>Migrando dados para o SQL Server ou para o Azure SQL Database  
+A migração de dados é uma operação de carregamento em massa que move linhas de dados das tabelas do ASE para SQL Server tabelas em transações. O número de linhas carregadas no SQL Server ou no banco de dados SQL do Azure em cada transação é definido nas configurações do projeto.  
   
 Para exibir as mensagens de migração, verifique se o painel de saída está visível. Caso contrário, selecione **saída** no menu **Exibir** .  
   
@@ -67,7 +67,7 @@ Para exibir as mensagens de migração, verifique se o painel de saída está vi
   
     -   Os provedores do ASE são instalados no computador que está executando o SSMA.  
   
-    -   Você sincronizou os objetos convertidos com o banco de dados de destino (SQL Server ou BD SQL do Azure).  
+    -   Você sincronizou os objetos convertidos com o banco de dados de destino (SQL Server ou banco de dados SQL do Azure).  
   
 2.  No Gerenciador de metadados do Sybase, selecione os objetos que contêm os dados que você deseja migrar:  
   
@@ -100,7 +100,7 @@ Para exibir as mensagens de migração, verifique se o painel de saída está vi
   
     Se o banco de dados de destino for SQL Server, insira as credenciais de conexão na caixa de diálogo **conectar a SQL Server** e clique em **conectar**. Para obter mais informações sobre como se conectar ao SQL Server, consulte [conectando-se ao SQL Server (SybaseToSQL)](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
-    Se o banco de dados de destino for Azure SQL DB, insira as credenciais de conexão na caixa de diálogo **conectar ao BD SQL do Azure** e clique em **conectar**. Para obter mais informações sobre como se conectar ao BD SQL do Azure, consulte [conectando-se ao banco de dados SQL do azure &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+    Se o banco de dados de destino for um banco de dados SQL do Azure, insira as credenciais de conexão na caixa de diálogo **conectar ao banco de dados SQL do Azure** e clique em **conectar**. Para obter mais informações sobre como se conectar ao banco de dados SQL do Azure, consulte [conectando ao banco de dados SQL do azure &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
     As mensagens serão exibidas no painel de **saída** . Quando a migração for concluída, o **relatório de migração de dados** será exibido. Se algum dado não for migrado, clique na linha que contém os erros e, em seguida, clique em **detalhes**. Ao concluir o relatório, clique em **fechar**. Para obter mais informações sobre o relatório de migração de dados, consulte [relatório de migração de dados (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
@@ -108,5 +108,5 @@ Para exibir as mensagens de migração, verifique se o painel de saída está vi
 > Quando o SQL Express Edition é usado como o banco de dados de destino, somente a migração de dado do lado do cliente é permitida e não há suporte para a migração de dados do lado do servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Migrando bancos de dados do Sybase ASE para o SQL Server-BD SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrando bancos de dados do Sybase ASE para o SQL Server-banco de SybaseToSQL SQL do Azure &#40;o&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

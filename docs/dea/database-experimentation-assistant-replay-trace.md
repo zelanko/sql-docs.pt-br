@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565495"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823361"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproduzir um rastreamento no Assistente para Experimentos de Banco de Dados
 
@@ -48,7 +48,7 @@ Primeiro, você precisa executar uma reprodução de rastreamento no destino 1, 
     - **Local do rastreamento de reprodução**: especifique o caminho para armazenar arquivos de rastreamento/XEvents associados à reprodução de rastreamento.
 
         > [!NOTE]
-        > Para um banco de dados SQL do Azure ou uma instância gerenciada do banco de dados SQL do Azure, você precisa fornecer o URI de SAS da conta de armazenamento de BLOBs do Azure.
+        > Para um banco de dados SQL do Azure ou um Instância Gerenciada SQL do Azure, você precisa fornecer o URI de SAS da conta de armazenamento de BLOBs do Azure.
 
 3. Verifique se você restaurou os bancos de dados selecionando a caixa de seleção **Sim, eu restaurei manualmente os bancos de dados** .
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06bddd3929efa4477039300f38fbdcf301680085
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411594"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865384"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalando os componentes do SSMA em SQL Server (SybaseToSQL)
 
@@ -112,4 +112,4 @@ As instruções a seguir fornecem as etapas básicas de instalação para a inst
 ## <a name="see-also"></a>Confira também
 
 - [Instalando o SSMA para cliente Sybase](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
-- [Migrando bancos de dados do Sybase ASE para o SQL Server-BD SQL do Azure](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Migrando bancos de dados de ASE do Sybase para o SQL Server-Azure SQL Database](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

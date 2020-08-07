@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d74cb91c6e0cb9bc9a1c8dce53f8e93d355df5d2
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885793"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823598"
 ---
-# <a name="overview-of-data-migration-assistant"></a>Visão geral do Assistente de Migração de Dados
+# <a name="overview-of-data-migration-assistant"></a>Visão Geral do Assistente de Migração de Dados
 
 O Assistente de Migração de Dados (DMA) ajuda você a atualizar para uma plataforma de dados moderna detectando problemas de compatibilidade que podem afetar a funcionalidade do banco de dado em sua nova versão do SQL Server ou do banco de dados SQL do Azure. O Assistente de Migração de Dados recomenda melhorias de desempenho e confiabilidade para seu ambiente de destino e permite mover seu esquema, dados e objetos não contidos do seu servidor de origem para o servidor de destino.
 
@@ -30,7 +30,7 @@ O Assistente de Migração de Dados (DMA) ajuda você a atualizar para uma plata
   
 ## <a name="get-data-migration-assistant"></a>Obter o Assistente de Migração de Dados
 
-Para instalar o DMA, baixe a versão mais recente da ferramenta no [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)e, em seguida, execute o arquivo **DataMigrationAssistant. msi** .
+Para instalar o DMA, baixe a versão mais recente da ferramenta no [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)e, em seguida, execute o arquivo **DataMigrationAssistant.msi** .
 
 ## <a name="capabilities"></a>Funcionalidades
 
@@ -61,7 +61,7 @@ Para instalar o DMA, baixe a versão mais recente da ferramenta no [centro de do
 
 - Após uma migração bem-sucedida, os aplicativos podem se conectar aos bancos de dados de SQL Server de destino diretamente.
 
-- Avaliar pacotes do SQL Server Integration Services (SSIS) locais migrando para o banco de dados SQL do Azure ou a instância gerenciada do banco de dados SQL do Azure. A avaliação ajuda a descobrir problemas que podem afetar a migração. Eles são descritos como problemas de compatibilidade e são organizados nas seguintes categorias:
+- Avaliar pacotes do SSIS (SQL Server Integration Services locais) migrando para o banco de dados SQL do Azure ou o SQL Instância Gerenciada do Azure. A avaliação ajuda a descobrir problemas que podem afetar a migração. Eles são descritos como problemas de compatibilidade e são organizados nas seguintes categorias:
 
   - Bloqueadores de migração: descobre os problemas de compatibilidade que bloqueiam a migração de pacote (s) de origem para o Azure. O DMA fornece recomendações para ajudá-lo a resolver esses problemas.
 
@@ -71,7 +71,7 @@ Para instalar o DMA, baixe a versão mais recente da ferramenta no [centro de do
 
 Para executar uma avaliação, você precisa ser membro da função SQL Server **sysadmin** .
 
-## <a name="supported-source-and-target-versions"></a>Versões de origem e de destino com suporte
+## <a name="supported-source-and-target-versions"></a>Versões de origem e de destino compatíveis
 
 O DMA substitui todas as versões anteriores do supervisor de atualização do SQL Server e deve ser usado para atualizações para a maioria das versões de SQL Server. As versões de origem e destino com suporte são:
 
@@ -83,7 +83,7 @@ O DMA substitui todas as versões anteriores do supervisor de atualização do S
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
--  SQL Server 2017 no Windows
+- SQL Server 2017 no Windows
 
 **Destinos**
 
@@ -93,7 +93,7 @@ O DMA substitui todas as versões anteriores do supervisor de atualização do S
 - SQL Server 2017 no Windows e no Linux
 - SQL Server 2019
 - Banco de dados individual do Banco de Dados SQL do Azure
-- Instância gerenciada do Banco de Dados SQL do Azure
+- Instância Gerenciada do Azure SQL
 - SQL Server em execução em uma máquina virtual do Azure
 
 ## <a name="see-also"></a>Confira também

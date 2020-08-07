@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054267"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864933"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
 
@@ -99,7 +99,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 1. À esquerda, selecione o **+** ícone e, em seguida, selecione o **tipo de projeto** de avaliação
 2. Especifique o nome do projeto e, em seguida, selecione o servidor de origem e os tipos de servidor de destino.
 
-    Se você estiver atualizando sua instância de SQL Server local para uma versão posterior do SQL Server ou para SQL Server hospedada em uma VM do Azure, defina o tipo de servidor de origem e de destino como **SQL Server**. Defina o tipo de servidor de destino como **instância gerenciada do banco de dados SQL do Azure** para uma avaliação de prontidão de destino do banco de dados SQL do Azure (PaaS).
+    Se você estiver atualizando sua instância de SQL Server local para uma versão posterior do SQL Server ou para SQL Server hospedada em uma VM do Azure, defina o tipo de servidor de origem e de destino como **SQL Server**. Defina o tipo de servidor de destino como **Azure SQL instância gerenciada** para uma avaliação de prontidão de destino do banco de dados SQL do Azure (PaaS).
 
 3. Selecione **Criar**.
 
@@ -134,7 +134,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. Entre no portal do Azure.
+6. Entre no Portal do Azure.
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
@@ -159,7 +159,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
    ![Migrações para Azure – analisar resultados de preparação](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
     **Instâncias de banco de dados avaliadas**: o número de instâncias de SQL Server avaliadas até agora.
-    **Bancos de dados avaliados**: o número total de bancos de dados avaliados em uma ou mais instâncias de SQL Server avaliação **de bancos de dados estão prontas para o BD SQL**: número de banco de dados prontos para migrar para o Azure SQL Database (PaaS).
+    **Bancos de dados avaliados**: o número total de bancos de dados avaliados em uma ou mais instâncias de SQL Server avaliadas como **bancos de dados prontos para o SQL Database**: número de bancos de dados prontos para migrar para o Azure SQL Database (PaaS).
     **Bancos de dados prontos para a VM do SQL do Azure**: o número de bancos de dados consiste em um ou mais bloqueadores de migração para o Azure SQL Database (PaaS), mas pronto para migrar para as VMs SQL Server do Azure.
 
 3. Selecione **instâncias de banco de dados avaliadas** para obter SQL Server exibição de nível de instância.

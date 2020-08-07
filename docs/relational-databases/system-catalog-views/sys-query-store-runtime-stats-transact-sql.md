@@ -21,12 +21,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395133"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823721"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -98,11 +98,11 @@ ms.locfileid: "87395133"
 |**min_tempdb_space_used**|**bigint**|Número mínimo de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**max_tempdb_space_used**|**bigint**|Número máximo de leituras de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**stdev_tempdb_space_used**|**float**|Número de leituras de página desvio padrão do plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**avg_page_server_io_reads**|**float**|Número médio de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
-|**last_page_server_io_reads**|**bigint**|Último número de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
-|**min_page_server_io_reads**|**bigint**|Número mínimo de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
-|**max_page_server_io_reads**|**bigint**|Número máximo de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
-|**stdev_page_server_io_reads**|**float**|Número de e/s de servidor de páginas lê desvio padrão para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de BD SQL do Azure, MI (não hiperescala) sempre retornará zero (0).|
+|**avg_page_server_io_reads**|**float**|Número médio de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de dados SQL do Azure, o SQL Instância Gerenciada do Azure (não hiperescala) sempre retornará zero (0).|
+|**last_page_server_io_reads**|**bigint**|Último número de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de dados SQL do Azure, o SQL Instância Gerenciada do Azure (não hiperescala) sempre retornará zero (0).|
+|**min_page_server_io_reads**|**bigint**|Número mínimo de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de dados SQL do Azure, o SQL Instância Gerenciada do Azure (não hiperescala) sempre retornará zero (0).|
+|**max_page_server_io_reads**|**bigint**|Número máximo de leituras de e/s de servidor de página para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de dados SQL do Azure, o SQL Instância Gerenciada do Azure (não hiperescala) sempre retornará zero (0).|
+|**stdev_page_server_io_reads**|**float**|Número de e/s de servidor de páginas lê desvio padrão para o plano de consulta dentro do intervalo de agregação. (expresso como um número de páginas de 8 KB de leitura).<br><br/>**Aplica-se a:** Hiperescala do banco de dados SQL do Azure</br>**Observação:** O Azure SQL Data Warehouse, o banco de dados SQL do Azure, o SQL Instância Gerenciada do Azure (não hiperescala) sempre retornará zero (0).|
   
 ## <a name="permissions"></a>Permissões  
 Requer a permissão `VIEW DATABASE STATE`.  

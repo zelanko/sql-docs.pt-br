@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734697"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865314"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,10 +116,10 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**max_spills**|**bigint**|O número máximo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|Número total de leituras de servidor de página remota executadas por execuções deste plano desde sua compilação.<br /><br /> **Aplica-se a:** Hiperescala do BD SQL do Azure |  
-|**last_page_server_reads**|**bigint**|Número de leituras de servidor de página remota executadas na última vez em que o plano foi executado.<br /><br /> **Aplica-se a:** Hiperescala do BD SQL do Azure |  
-|**min_page_server_reads**|**bigint**|O número mínimo de servidores de página remotos lê que esse plano já realizou durante uma única execução.<br /><br /> **Aplica-se a:** Hiperescala do BD SQL do Azure |  
-|**max_page_server_reads**|**bigint**|O número máximo de servidores de páginas remotos lê que esse plano já realizou durante uma única execução.<br /><br /> **Aplica-se a:** Hiperescala do BD SQL do Azure |  
+|**total_page_server_reads**|**bigint**|Número total de leituras de servidor de página remota executadas por execuções deste plano desde sua compilação.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
+|**last_page_server_reads**|**bigint**|Número de leituras de servidor de página remota executadas na última vez em que o plano foi executado.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
+|**min_page_server_reads**|**bigint**|O número mínimo de servidores de página remotos lê que esse plano já realizou durante uma única execução.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
+|**max_page_server_reads**|**bigint**|O número máximo de servidores de páginas remotos lê que esse plano já realizou durante uma única execução.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
 > [!NOTE]
 > <sup>1</sup> para procedimentos armazenados compilados nativamente quando a coleta de estatísticas está habilitada, o tempo de trabalho é coletado em milissegundos. Se a consulta for executada em menos de um milissegundo, o valor será 0.  
   
@@ -173,7 +173,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Confira também  
 [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

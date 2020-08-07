@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790403"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877959"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -177,7 +177,7 @@ Os dois parâmetros são **input_data_1_partition_by_columns** e **input_data_1_
 Você pode executar o script em paralelo especificando `@parallel=1` . Se a consulta de entrada puder ser paralelizada, você deverá definir `@parallel=1` como parte dos argumentos para `sp_execute_external_script` . Por padrão, o otimizador de consulta opera em `@parallel=1` tabelas com mais de 256 linhas, mas se você quiser tratar isso explicitamente, esse script incluirá o parâmetro como uma demonstração.
 
 > [!Tip]
-> Para treinar cargas de trabalho, use `@parallel` com qualquer script de treinamento arbitrário, mesmo aqueles que usam algoritmos não Microsoft Rx. Normalmente, somente os algoritmos do RevoScaleR (com o prefixo rx) oferecem paralelismo em cenários de treinamento no SQL Server. Mas com os novos parâmetros no SQL Server vNext, você pode paralelizar um script que chama funções não especificamente projetadas com esse recurso.
+> Para treinar cargas de trabalho, use `@parallel` com qualquer script de treinamento arbitrário, mesmo aqueles que usam algoritmos não Microsoft Rx. Normalmente, somente os algoritmos do RevoScaleR (com o prefixo rx) oferecem paralelismo em cenários de treinamento no SQL Server. Mas com os novos parâmetros no SQL Server 2019 e posterior, você pode paralelizar um script que chama funções não especificamente projetadas com esse recurso.
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Execução de streaming para scripts do Python e do R  
@@ -322,7 +322,7 @@ Para gerar um modelo semelhante usando Python, altere o identificador de idioma 
 
 Para pontuação, você também pode usar a função nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), que é normalmente mais rápida porque evita que o runtime do Python ou do R seja chamado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 + [Aprendizado de máquina do SQL](../../machine-learning/index.yml)
 + [Extensões de linguagem SQL Server](../../language-extensions/language-extensions-overview.md). 

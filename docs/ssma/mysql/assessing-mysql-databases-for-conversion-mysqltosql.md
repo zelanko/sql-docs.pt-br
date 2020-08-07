@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139213"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823801"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Avaliar os bancos de dados MySQL para conversão (MySQLToSQL)
-Antes de carregar objetos e migrar dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o ou SQL Azure, você deve determinar qual será a complexidade da migração e quanto tempo a migração levará. O SSMA pode criar um relatório de avaliação que mostra a porcentagem de objetos que serão convertidos com êxito. O SSMA também permite que você exiba os problemas específicos que causam falhas de conversão.  
+Antes de carregar objetos e migrar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você deve determinar qual será a complexidade da migração e quanto tempo a migração levará. O SSMA pode criar um relatório de avaliação que mostra a porcentagem de objetos que serão convertidos com êxito. O SSMA também permite que você exiba os problemas específicos que causam falhas de conversão.  
   
 ## <a name="creating-assessment-reports"></a>Criando relatórios de avaliação  
-Quando ele cria esse relatório de avaliação, o SSMA converte os objetos de banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados MySQL selecionados em ou SQL Azure sintaxe e, em seguida, mostra os resultados.  
+Quando ele cria esse relatório de avaliação, o SSMA converte os objetos de banco de dados MySQL selecionados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure sintaxe e, em seguida, mostra os resultados.  
   
 **Para criar um relatório de avaliação**  
   
@@ -36,7 +36,7 @@ Quando ele cria esse relatório de avaliação, o SSMA converte os objetos de ba
   
     O SSMA mostrará o progresso na barra de status na parte inferior da janela. Se o painel de saída estiver visível, você também verá mensagens no painel de saída.  
   
-    Quando a avaliação for concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de migração para MySQL, janela relatório de avaliação será exibido.  
+    Quando a avaliação for concluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração para MySQL, janela relatório de avaliação será exibido.  
   
 ## <a name="using-assessment-reports"></a>Usando relatórios de avaliação  
 A janela relatório de avaliação contém três painéis:  
@@ -76,11 +76,11 @@ O painel estatísticas de conversão mostra as estatísticas de conversão. Se a
   
 -   No MySQL, você pode modificar o objeto MySQL para remover ou revisar o código problemático. Para carregar o código atualizado no SSMA, você precisará atualizar os metadados. Para obter mais informações, consulte [conectando-se ao MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
   
--   Você pode excluir o objeto da migração. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure Gerenciador de metadados e Gerenciador de metadados MySQL, desmarque a caixa de seleção ao lado do item antes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carregar os objetos no ou SQL Azure e migrar dados do MySQL.  
+-   Você pode excluir o objeto da migração. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure Gerenciador de metadados e Gerenciador de metadados MySQL, desmarque a caixa de seleção ao lado do item antes de carregar os objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure e migrar dados do MySQL.  
   
 ## <a name="next-step"></a>Próxima etapa  
 [Convertendo bancos de dados MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
-[Migrando bancos de dados MySQL para SQL Server-BD SQL do Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrando bancos de dados MySQL para SQL Server-banco de MySQLToSql SQL do Azure &#40;&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

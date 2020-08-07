@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885823"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864903"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o SKU do banco de dados SQL/Instância Gerenciada do Azure correto para seu banco de dados local
 
 A migração de bancos de dados para a nuvem pode ser complicada, especialmente ao tentar selecionar o melhor destino de banco de dados do Azure e SKU para seu banco de dados. Nossa meta com o Assistente de Migração de banco de dados (DMA) é ajudar a resolver essas perguntas e facilitar sua experiência de migração de banco de dados fornecendo essas recomendações de SKU em uma saída amigável.
 
-Este artigo se concentra no recurso de recomendações de SKU do banco de dados SQL do Azure do DMA. O banco de dados SQL do Azure tem várias opções de implantação, incluindo:
+Este artigo se concentra no recurso de recomendações de SKU do banco de dados SQL do Azure do DMA. O banco de dados SQL do Azure e o Azure SQL Instância Gerenciada têm várias opções de implantação, incluindo:
 
 - Banco de dados individual
 - Pools elásticos
 - Instância gerenciada
 
-O recurso de recomendações de SKU permite que você identifique o banco de dados individual do banco de dados SQL do Azure ou o SKU de instância gerenciada mínimo recomendado com base nos contadores de desempenho coletados dos computadores que hospedam seus bancos de dados. O recurso fornece recomendações relacionadas ao tipo de preço, nível de computação e tamanho máximo de dados, bem como ao custo estimado por mês. Ele também oferece a capacidade de provisionar em massa bancos de dados individuais e instâncias gerenciadas no Azure para todos os bancos de dados recomendados.
+O recurso de recomendações de SKU permite que você identifique o mínimo recomendado do banco de dados SQL do Azure ou o Azure SQL Instância Gerenciada SKU com base em contadores de desempenho coletados do (s) computador (es) que hospedam seus bancos de dados. O recurso fornece recomendações relacionadas ao tipo de preço, nível de computação e tamanho máximo de dados, bem como ao custo estimado por mês. Ele também oferece a capacidade de provisionar em massa bancos de dados individuais e instâncias gerenciadas para todos os bancos de dados recomendados.
 
 > [!NOTE]
 > Essa funcionalidade está disponível no momento apenas por meio da CLI (interface de linha de comando).
 
-Veja a seguir as instruções para ajudá-lo a determinar as recomendações de SKU do banco de dados SQL do Azure e provisionar os bancos de dados individuais correspondentes ou instâncias gerenciadas no Azure usando DMA.
+Veja a seguir as instruções para ajudá-lo a determinar as recomendações de SKU e provisionar os bancos de dados individuais ou instâncias gerenciadas correspondentes no Azure usando DMA.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Baixe e instale a versão mais recente do [DMA](https://aka.ms/get-dma). Se você já tiver uma versão anterior da ferramenta, abra-a e será solicitado a atualizar o DMA.
 - Verifique se o computador tem o [PowerShell versão 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre como descobrir qual versão do PowerShell está instalada em seu computador, consulte o artigo [baixar e instalar o Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Verifique se o seu computador tem o módulo do Azure PowerShell instalado. Para obter mais informações, consulte o artigo [instalar o Azure PowerShell Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
-- Verifique se o arquivo do PowerShell **SkuRecommendationDataCollectionScript. ps1**, que é necessário para coletar os contadores de desempenho, está instalado na pasta DMA.
+- Verifique se o arquivo do PowerShell **SkuRecommendationDataCollectionScript.ps1**, que é necessário para coletar os contadores de desempenho, está instalado na pasta DMA.
 - Verifique se o computador no qual você executará esse processo tem permissões de administrador para o computador que está hospedando seus bancos de dados.
 
 ## <a name="collect-performance-counters"></a>Coletar contadores de desempenho
@@ -52,7 +52,7 @@ A primeira etapa do processo é coletar contadores de desempenho para seus banco
 
 Você não precisa executar essa tarefa individualmente para cada banco de dados. Os contadores de desempenho coletados de um computador podem ser usados para recomendar a SKU para todos os bancos de dados hospedados no computador.
 
-1. Na pasta DMA, localize o arquivo do PowerShell SkuRecommendationDataCollectionScript. ps1. Esse arquivo é necessário para coletar os contadores de desempenho.
+1. Na pasta DMA, localize o arquivo do PowerShell SkuRecommendationDataCollectionScript.ps1. Esse arquivo é necessário para coletar os contadores de desempenho.
 
     ![Arquivo do PowerShell mostrado na pasta DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
@@ -80,9 +80,9 @@ Use o arquivo de saída dos contadores de desempenho que você criou como entrad
 
 Para a opção de banco de dados individual, o DMA fornecerá recomendações para o tipo de preço de banco de dados único do banco de dado SQL do Azure, o nível de computação e o tamanho máximo para cada um deles no computador. Se você tiver vários bancos de dados em seu computador, também poderá especificar os bancos de dados para os quais deseja obter recomendações. O DMA também fornecerá o custo mensal estimado para cada banco de dados.
 
-Para a instância gerenciada, as recomendações dão suporte a um cenário de comparação de precisão e deslocamento. Como resultado, o DMA fornecerá recomendações para o tipo de preço da instância gerenciada do banco de dados SQL do Azure, o nível de computação e o tamanho máximo do dado para o conjunto de bancos de dados em seu computador. Novamente, se você tiver vários bancos de dados em seu computador, também poderá especificar os bancos de dados para os quais deseja obter recomendações. O DMA também fornecerá o custo mensal estimado para a instância gerenciada.
+Para a instância gerenciada, as recomendações dão suporte a um cenário de comparação de precisão e deslocamento. Como resultado, o DMA fornecerá recomendações para o tipo de preço do Azure SQL Instância Gerenciada, o nível de computação e o tamanho máximo dos dados para o conjunto de bancos de dado em seu computador. Novamente, se você tiver vários bancos de dados em seu computador, também poderá especificar os bancos de dados para os quais deseja obter recomendações. O DMA também fornecerá o custo mensal estimado para a instância gerenciada.
 
-Para usar a CLI do DMA para obter recomendações de SKU, no prompt de comando, execute dmacmd. exe com os seguintes argumentos:
+Para usar a CLI do DMA para obter recomendações de SKU, no prompt de comando, execute dmacmd.exe com os seguintes argumentos:
 
 - **/Action = SkuRecommendation**: Insira este argumento para executar avaliações de SKU.
 - **/SkuRecommendationInputDataFilePath**: o caminho para o arquivo de contador coletado na seção anterior.
@@ -102,7 +102,7 @@ Além disso, selecione um dos seguintes argumentos:
     - **/AzureAuthenticationTenantId**: o locatário de autenticação.
     - **/AzureAuthenticationClientId**: a ID do cliente do aplicativo AAD usado para autenticação.
     - Uma das seguintes opções de autenticação:
-      - Interactive (Interativo)
+      - Interativo
         - **AzureAuthenticationInteractiveAuthentication**: Defina como true para uma janela pop-up de autenticação.
       - Baseado em certificado
         - **AzureAuthenticationCertificateStoreLocation**: defina para o local do repositório de certificados (por exemplo, "CurrentUser").
@@ -176,15 +176,15 @@ Para recomendações de instância gerenciada, o arquivo de saída TSV terá a s
 Segue uma descrição de cada coluna no arquivo de saída.
 
 - **DatabaseName** -o nome do seu banco de dados.
-- **Metrictype** -camada de instância gerenciada/banco de dados SQL do banco de dados único do Azure recomendado.
-- **Metricvalue** -SKU do banco de dados SQL do Azure/instância gerenciada recomendada.
+- **Metrictype** – nível de desempenho recomendado.
+- **Metricvalue** -SKU recomendado.
 - **PricePerMonth** – o preço estimado por mês para o SKU correspondente.
 - **RegionName** – o nome da região do SKU correspondente. 
 - **IsTierRecommended** – fazemos uma recomendação de SKU mínima para cada camada. Em seguida, aplicamos a heurística para determinar a camada correta para seu banco de dados. Isso reflete qual camada é recomendada para o banco de dados. 
 - **ExclusionReasons** -esse valor estará em branco se uma camada for recomendada. Para cada camada que não é recomendada, fornecemos os motivos pelos quais ela não foi selecionada.
 - **AppliedRules** – uma breve notação das regras que foram aplicadas.
 
-A camada final recomendada (ou seja, **metrictype**) e o valor (ou seja, **metricvalue**) – encontrados em que a coluna **IsTierRecommended** é true – reflete a SKU mínima necessária para que suas consultas sejam executadas no Azure com uma taxa de sucesso semelhante aos seus bancos de dados locais. Para a instância gerenciada, o DMA atualmente dá suporte a recomendações para as 8vcore mais usadas para SKUs 40vcore. Por exemplo, se o SKU mínimo recomendado for S4 para a camada Standard, a escolha S3 ou abaixo fará com que as consultas expirem o tempo limite ou falham na execução.
+A camada final recomendada (ou seja, **metrictype**) e o valor (ou seja, **metricvalue**) – encontrados em que a coluna **IsTierRecommended** é true – reflete a SKU mínima necessária para que suas consultas sejam executadas no Azure com uma taxa de sucesso semelhante aos seus bancos de dados locais. Para o Azure SQL Instância Gerenciada, o DMA atualmente dá suporte a recomendações para as 8vcore mais usadas para SKUs 40vcore. Por exemplo, se o SKU mínimo recomendado for S4 para a camada Standard, a escolha S3 ou abaixo fará com que as consultas expirem o tempo limite ou falham na execução.
 
 O arquivo HTML contém essas informações em um formato gráfico. Ele fornece um meio amigável de exibir a recomendação final e provisionar a próxima parte do processo. Mais informações sobre a saída HTML estão na seção a seguir.
 
@@ -198,7 +198,7 @@ Para inserir informações de provisionamento e fazer alterações nas recomenda
 
 **Para obter recomendações de banco de dados individual**
 
-![Tela de recomendações de SKU do BD SQL do Azure](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Tela de recomendações de SKU do banco de dados SQL do Azure](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. Abra o arquivo HTML e insira as seguintes informações:
     - **ID da assinatura** -a ID da assinatura do Azure para a qual você deseja provisionar os bancos de dados.
@@ -214,7 +214,7 @@ Para inserir informações de provisionamento e fazer alterações nas recomenda
 
     Esse processo deve criar todos os bancos de dados selecionados na página HTML.
 
-**Para recomendações de instância gerenciada**
+**Para as recomendações do Azure SQL Instância Gerenciada**
 
 ![Tela de recomendações de SKU do SQL do Azure](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

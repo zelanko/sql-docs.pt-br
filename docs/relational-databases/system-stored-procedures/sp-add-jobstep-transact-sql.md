@@ -15,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97954598f44b5fa66a6558aae4964cc1651f6f70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879946"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865062"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -31,7 +31,7 @@ Adiciona uma etapa (operação) a um trabalho do SQL Agent.
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> No [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os tipos de trabalho SQL Server Agent têm suporte. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
+> No [Azure SQL instância gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os tipos de trabalho SQL Server Agent são suportados. Consulte [diferenças de T-SQL do Azure SQL instância gerenciada do SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obter detalhes.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -76,7 +76,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 |Valor|Descrição|
 |-----------|-----------------|
-|'**ActiveScripting**'|Script ativo<br /><br /> ** \* \* \* Importante \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
+|'**ActiveScripting**'|Script ativo<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|Comando do sistema operacional ou programa executável|
 |'**Distribuição**'|Trabalho do Replication Distribution Agent|
 |'**Instantâneo**'|Trabalho do Replication Snapshot Agent|

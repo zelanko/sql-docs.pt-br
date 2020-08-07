@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754151"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865274"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Banco de Dados SQL do Microsoft Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,9 +52,9 @@ Um objeto de trabalho é uma construção do Windows que implementa a CPU, a mem
 |process_physical_affinity|**nvarchar (3072)**|Máscaras de bits que descrevem quais processadores lógicos o processo de SQL Server pode usar em cada grupo de processador. O valor nessa coluna é formado por um ou mais pares de valor, cada um entre chaves. Em cada par, o primeiro valor é o número do grupo de processador e o segundo valor é a máscara de bit de afinidade para esse grupo de processador. Por exemplo, o valor `{{0,a}{1,2}}` significa que a máscara de afinidade para o grupo de processadores `0` é `a` ( `1010` em binário, indicando que os processadores 2 e 4 são usados) e a máscara de afinidade para o grupo de processadores `1` é `2` ( `10` em binário, indicando que o processador 2 é usado).|
   
 ## <a name="permissions"></a>Permissões  
-Em Instância Gerenciada do Banco de Dados SQL, requer `VIEW SERVER STATE` permissão. No Banco de Dados SQL, requer a permissão `VIEW DATABASE STATE` no banco de dados.  
+No SQL Instância Gerenciada, requer `VIEW SERVER STATE` permissão. No Banco de Dados SQL, requer a permissão `VIEW DATABASE STATE` no banco de dados.  
  
 ## <a name="see-also"></a>Consulte Também  
 
-Para obter informações sobre instâncias gerenciadas, consulte [instância gerenciada do banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Para obter informações sobre instâncias gerenciadas, consulte [SQL instância gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

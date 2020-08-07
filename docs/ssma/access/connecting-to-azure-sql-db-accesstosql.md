@@ -1,5 +1,5 @@
 ---
-title: Conectando-se ao BD SQL do Azure (AccessToSQL) | Microsoft Docs
+title: Conectando-se ao banco de dados SQL do Azure (AccessToSQL) | Microsoft Docs
 description: Saiba como se conectar a uma instância de destino do banco de dados SQL do Azure para migrar bancos de dados do Access. O SSMA obtém metadados sobre bancos de dados no banco de dados SQL do Azure.
 ms.prod: sql
 ms.custom: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293123"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822513"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Conectando-se ao BD SQL do Azure (AccessToSQL)
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>Conectando-se ao banco de dados SQL do Azure (AccessToSQL)
 Para migrar bancos de dados do Access para SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conecta, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados do banco de dados no SQL Azure Gerenciador de metadados. O SSMA armazena informações sobre a instância do SQL Azure à qual você está conectado, mas não armazena senhas.  
   
 Sua conexão com SQL Azure permanece ativa até que você feche o projeto. Quando você reabrir o projeto, deverá se reconectar ao SQL Azure se quiser uma conexão ativa com o servidor. Você pode trabalhar offline até carregar os objetos de banco de dados em SQL Azure e migrar.  
@@ -89,7 +89,7 @@ Se SQL Azure esquemas forem alterados depois de se conectar, você poderá atual
   
 **Para atualizar SQL Azure metadados**  
   
--   No SQL Azure Gerenciador de metadados, clique com o botão direito do mouse em **bancos**de dados e selecione **Atualizar do Database**.  
+-   No SQL Azure Gerenciador de metadados, clique com o botão direito do mouse em **bancos**de dados e selecione **Atualizar do banco de dados**.  
   
 ## <a name="reconnecting-to-sql-azure"></a>Reconectando ao SQL Azure  
 Sua conexão com SQL Azure permanece ativa até que você feche o projeto. Quando você reabrir o projeto, deverá se reconectar ao SQL Azure se quiser uma conexão ativa com o servidor. Você pode trabalhar offline até carregar os objetos de banco de dados em SQL Azure e migrar.  

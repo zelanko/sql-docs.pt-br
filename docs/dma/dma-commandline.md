@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925350"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864913"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar Assistente de Migração de Dados da linha de comando
 
-Com a versão 2,1 e superior, quando você instala o Assistente de Migração de Dados, ele também instalará o dmacmd. exe em *% ProgramFiles% \\ Assistente de migração de dados da Microsoft \\ *. Use dmacmd. exe para avaliar seus bancos de dados em um modo autônomo e gerar o resultado para o arquivo JSON ou CSV. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados enormes. 
+Com a versão 2,1 e superior, quando você instala o Assistente de Migração de Dados, ele também instalará dmacmd.exe em *% ProgramFiles% \\ Assistente de migração de dados da Microsoft \\ *. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e gerar o resultado para o arquivo JSON ou CSV. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados enormes. 
 
 > [!NOTE]
-> O Dmacmd. exe dá suporte apenas a avaliações de execução. No momento, não há suporte para migrações.
+> Dmacmd.exe dá suporte apenas a avaliações em execução. No momento, não há suporte para migrações.
 
 ## <a name="assessments-using-the-command-line-interface-cli"></a>Avaliações usando a CLI (interface de linha de comando)
 
@@ -42,7 +42,7 @@ DmaCmd.exe /AssessmentName="string"
 
 |Argumento  |Descrição  | Necessário (s/N)
 |---------|---------|---------------|
-| `/help or /?`     | Como usar o texto de ajuda do dmacmd. exe        | N
+| `/help or /?`     | Como usar dmacmd.exe texto de ajuda        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
 |`/AssessmentDatabases`     | Lista delimitada por espaço de cadeias de conexão. O nome do banco de dados (catálogo inicial) diferencia maiúsculas de minúsculas. | S
 |`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para avaliação: SqlOnPrem, RdsSqlServer (padrão) <br>Valores com suporte para avaliação de prontidão de destino: SqlOnPrem, RdsSqlServer (padrão), Cassandra (versão prévia)   | N
@@ -61,7 +61,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/ImportFeatureDiscoveryReportJson`    | Caminho para o relatório JSON do recurso de descoberta criado anteriormente. Em vez de conexões de origem, esse arquivo será usado.   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | Permite carregar e publicar resultados de avaliação para migrações para Azure   | N
 |`/AzureCloudEnvironment`    |Seleciona o ambiente de nuvem do Azure ao qual se conectar, o padrão é a nuvem pública do Azure. Valores com suporte: Azure (padrão), AzureChina, AzureGermany, AzureUSGovernment.   | N 
-|`/SubscriptionId`    |ID da assinatura do Azure.   | S <br> (Obrigatório se o argumento EnableAssessmentUploadToAzureMigrate for especificado)
+|`/SubscriptionId`    |Id de assinatura do Azure.   | S <br> (Obrigatório se o argumento EnableAssessmentUploadToAzureMigrate for especificado)
 |`/AzureMigrateProjectName`    |O nome do projeto de migrações para Azure para carregar os resultados da avaliação.   | S <br> (Obrigatório se o argumento EnableAssessmentUploadToAzureMigrate for especificado)
 |`/ResourceGroupName`    |Nome do grupo de recursos de migrações para Azure.   | S <br> (Obrigatório se o argumento EnableAssessmentUploadToAzureMigrate for especificado)
 |`/AssessmentResultInputFolder`    |O caminho da pasta de entrada que contém. Arquivos de avaliação DMA para carregar para migrações para Azure.   | S <br> (Obrigatório se a ação for AzureMigrateUpload)
@@ -70,7 +70,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Exemplos de avaliações usando a CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -269,7 +269,7 @@ DmaCmd.exe
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -277,9 +277,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Recomendações de SKU da instância gerenciada/banco de dados SQL do Azure usando a CLI
+## <a name="azure-sql-database--azure-sql-managed-instance-sku-recommendations-using-the-cli"></a>Banco de dados SQL do Azure/Azure SQL Instância Gerenciada recomendações de SKU usando a CLI
 
-Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure e opções de implantação de instância gerenciada.
+Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure e as opções de implantação do Azure SQL Instância Gerenciada.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -312,11 +312,11 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Exemplos de avaliações de SKU usando a CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Banco de BD SQL do Azure/recomendação de SKU de MI com atualização de preço (obter preços mais recentes)-autenticação interativa** 
+**Banco de dados SQL do Azure/recomendação do Azure SQL Instância Gerenciada SKU com atualização de preço (obter preços mais recentes)-autenticação interativa** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -333,7 +333,7 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Banco de BD SQL do Azure/recomendação de SKU de MI com atualização de preço (obter preços mais recentes)-autenticação de certificado**
+**Banco de dados SQL do Azure/Azure SQL Instância Gerenciada recomendação de SKU com atualização de preço (obter preços mais recentes)-autenticação de certificado**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -351,7 +351,7 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Recomendação do BD SQL do Azure/MI com atualização de preço (obter preços mais recentes) – autenticação de token e especificar bancos de dados para recomendar**
+**Banco de dados SQL do Azure/recomendação do Azure SQL Instância Gerenciada com atualização de preço (obter preços mais recentes) – autenticação de token e especificar bancos de dados a serem recomendados**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -369,7 +369,7 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Banco de BD SQL do Azure/recomendação de SKU de MI sem atualização de preço (usar preços estáticos)** 
+**Banco de dados SQL do Azure/Azure SQL Instância Gerenciada recomendação de SKU sem atualização de preço (usar preços estáticos)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

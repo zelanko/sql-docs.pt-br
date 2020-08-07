@@ -1,5 +1,5 @@
 ---
-title: Migrar bancos de dados do Access para o SQL Server-BD SQL do Azure | Microsoft Docs
+title: Migrar bancos de dados do Access para o SQL Server-Azure SQL Database | Microsoft Docs
 description: Use esse processo recomendado para migrar bancos de dados do Access para o SQL Server ou o Azure SQL Database usando o Assistente de Migração do SQL Server (SSMA).
 ms.prod: sql
 ms.custom: ''
@@ -17,14 +17,14 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d3cbe1565642d43aabf3e36604fac5bfc2979c65
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293733"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823541"
 ---
-# <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Migrando bancos de dados do Access para o SQL Server – BD SQL do Azure (AccessToSQL)
+# <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>Migrando bancos de dados do Access para o SQL Server-banco de AccessToSQL (Azure SQL Database)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) é uma ferramenta que fornece um ambiente abrangente que ajuda você a migrar rapidamente bancos de dados do Access para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SQL Azure. Usando o SSMA, você pode examinar o acesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure objetos de banco de dados, avaliar o banco de dados do Access para migração, converter objetos de banco de dados do Access, carregá-los em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure e, em seguida, migrar dados.  
   
 ## <a name="recommended-migration-process"></a>Processo de migração recomendado  
@@ -59,6 +59,6 @@ Para migrar com êxito objetos e dados do acesso ao [!INCLUDE[ssNoVersion](../..
   
 Você também pode usar o assistente de migração para orientá-lo nesse processo. Para obter mais informações, consulte [Migration Wizard](migration-wizard-accesstosql.md).  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Confira também  
 [Introdução com Assistente de Migração do SQL Server para acesso](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Preparando bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)

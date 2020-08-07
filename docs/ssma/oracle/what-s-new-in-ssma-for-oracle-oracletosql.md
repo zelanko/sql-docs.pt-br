@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477448"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862397"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>O que há de novo no SSMA para Oracle (OracleToSQL)
 
@@ -159,16 +159,16 @@ A versão v 8.1 do SSMA para Oracle foi aprimorada com correções direcionadas 
 
 A versão v 8.0 do SSMA para Oracle foi aprimorada com correções direcionadas projetadas para melhorar a qualidade e a conversão de métricas. Esta versão também oferece os seguintes novos recursos:
 
-* Suporte para **instância gerenciada do banco de dados SQL do Azure** como um destino. Agora você pode criar novos projetos destinados a Instância Gerenciada do Banco de Dados SQL do Azure:
+* Suporte para o **Azure SQL instância gerenciada** como um destino. Agora você pode criar novos projetos destinados ao Azure SQL Instância Gerenciada:
 
-  ![Projeto MI do BD SQL](../media/ssma-newproject-sqldbmi.png)
+  ![Projeto do SQL MI](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > O pacote de extensão do SSMA para Oracle também foi atualizado para permitir instalações remotas em Instância Gerenciada do Banco de Dados SQL do Azure:
+  > O pacote de extensão do SSMA para Oracle também foi atualizado para permitir instalações remotas no Azure SQL Instância Gerenciada:
   >
   > ![Pacote de extensão do SSMA para Oracle](../media/ssma-oracle-ext-pack.png)
 
-  Alguns recursos, incluindo o testador e a migração de dados do lado do servidor, não têm suporte ao direcionar Instância Gerenciada do Banco de Dados SQL do Azure. Leia mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Alguns recursos, incluindo o testador e a migração de dados do lado do servidor, não têm suporte ao direcionar o Azure SQL Instância Gerenciada. Leia mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * **Supervisor de correção**após a conversão. Saiba mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -336,8 +336,8 @@ A versão de manutenção de janeiro de 2014 do SSMA para Oracle contém as segu
 
 A versão de julho de 2014 do SSMA para Oracle contém as seguintes alterações:
 
-* Suporte adicionado para o banco de BD SQL do Azure.
-* A funcionalidade do pacote de extensão foi movida para o esquema para dar suporte ao BD SQL do Azure.
+* Adicionado suporte para o banco de dados SQL do Azure.
+* Funcionalidade do pacote de extensão movida para o esquema para dar suporte ao banco de dados SQL do Azure.
 * Suporte adicionado para exibições materializadas da Oracle.
 * Adicionado suporte para tabelas com otimização de memória SQL Server 2014.
 * Aprimoramentos de desempenho incluídos testados para bancos de dados com mais de 10 mil objetos.

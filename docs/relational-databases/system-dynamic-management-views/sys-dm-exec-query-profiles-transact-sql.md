@@ -20,12 +20,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442550"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865364"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -89,7 +89,7 @@ A partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do SP1, a *infraestru
 > A consulta em investigação precisa ser iniciada **depois** que a infraestrutura de criação de perfil de consulta tiver sido habilitada, habilitá-la após a consulta iniciada não produzirá resultados no `sys.dm_exec_query_profiles` . Para saber mais sobre como habilitar as infraestruturas de criação de perfil de consulta, confira [infraestrutura de criação de perfil de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Permissões  
-No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e na [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] instância gerenciada, o requer `VIEW DATABASE STATE` permissão e associação da `db_owner` função de banco de dados.   
+No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e SQL instância gerenciada do Azure, requer `VIEW DATABASE STATE` permissão e associação da `db_owner` função de banco de dados.   
 Nas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
    
 ## <a name="examples"></a>Exemplos  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c776d68cb997f5f360e7b79180a8dfaea86fd6e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a46432317ebf320af3e3860c1c1973fc04119b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771499"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864963"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'`É o logon da conta sob a qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão de NULL. Em Instância Gerenciada do Banco de Dados SQL do Azure, use uma conta de SQL Server. *Isso não pode ser alterado para um não-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Editor.*  
+`[ @job_login = ] 'job_login'`É o logon da conta sob a qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão de NULL. No Azure SQL Instância Gerenciada, use uma conta de SQL Server. *Isso não pode ser alterado para um não-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Editor.*  
   
 `[ @job_password = ] 'job_password'`É a senha para a conta na qual o agente é executado. *job_password* é **sysname**, com um padrão de NULL.  
   
@@ -78,7 +78,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_changelogreader_agent**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar as configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [&#41;&#40;Transact-SQL de sp_helplogreader_agent](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   

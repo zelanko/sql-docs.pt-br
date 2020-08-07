@@ -1,6 +1,6 @@
 ---
 title: Hospedar um banco de dados em uma instância gerenciada
-description: Este artigo descreve como configurar um banco de dados do MDS (Master Data Service) em uma instância gerenciada.
+description: Saiba como criar e configurar um banco de dados Master Data Services (MDS) e hospedá-lo em um Instância Gerenciada SQL do Azure.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812908"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878943"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar um banco de dados MDS em uma instância gerenciada
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812908"
   
 ## <a name="preparation"></a>Preparação
 
-Para preparar, você precisa criar e configurar uma instância gerenciada do banco de dados SQL do Azure e configurar o computador do aplicativo Web.
+Para preparar, você precisa criar e configurar um Instância Gerenciada de SQL do Azure e configurar o computador do aplicativo Web.
 
 ### <a name="create-and-configure-the-database"></a>Criar e configurar o banco de dados
 
-1. Crie uma instância gerenciada do banco de dados SQL do Azure com uma rede virtual. Consulte [início rápido: criar uma instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) para obter detalhes.
+1. Crie uma instância gerenciada com uma rede virtual. Consulte [início rápido: criar um instância gerenciada SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) para obter detalhes.
 
 1. Configure uma conexão ponto a site. Consulte [Configurar uma conexão ponto a site com uma VNet usando a autenticação de certificado nativa do Azure: portal do Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obter instruções.
 
-1. Configurar a autenticação de Azure Active Directory com a instância gerenciada do banco de dados SQL. Consulte [configurar e gerenciar a autenticação de Azure Active Directory com o SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) para obter detalhes.
+1. Configure Azure Active Directory autenticação com o SQL Instância Gerenciada. Consulte [configurar e gerenciar a autenticação de Azure Active Directory com o SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) para obter detalhes.
 
 ### <a name="configure-web-application-machine"></a>Configurar computador do aplicativo Web
 
-1. Instale um certificado de conexão ponto a site e uma VPN para garantir que o computador possa acessar a instância gerenciada do banco de dados SQL. Consulte [Configurar uma conexão ponto a site com uma VNet usando a autenticação de certificado nativa do Azure: portal do Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obter instruções.
+1. Instale um certificado de conexão ponto a site e uma VPN para garantir que o computador possa acessar a instância gerenciada. Consulte [Configurar uma conexão ponto a site com uma VNet usando a autenticação de certificado nativa do Azure: portal do Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obter instruções.
 
 1. Instale as seguintes funções e recursos:
    - Funções:
@@ -47,7 +47,7 @@ Para preparar, você precisa criar e configurar uma instância gerenciada do ban
      - Ferramentas de gerenciamento da Web
      - Console de Gerenciamento IIS
      - Serviços da World Wide Web
-     - Desenvolvimento de aplicativo
+     - Desenvolvimento do aplicativo
      - .NET Extensibility 3.5
      - Extensibilidade do .NET 4.5
      - ASP.NET 3.5
@@ -228,7 +228,7 @@ Para corrigir esse problema, você precisa atualizar a versão do banco de dados
 
 1. Selecione **concluir** depois que todas as tarefas forem concluídas.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Banco de dados do Master Data Services](../master-data-services/master-data-services-database.md)
 - [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)

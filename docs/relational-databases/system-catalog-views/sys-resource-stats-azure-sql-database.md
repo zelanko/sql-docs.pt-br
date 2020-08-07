@@ -19,12 +19,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717579"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822798"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "85717579"
 |dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. |
 |xtp_storage_percent|**decimal (5, 2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|
 |avg_login_rate_percent|**decimal (5, 2)**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
-|avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do BD SQL.|
-|avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do BD SQL.|
+|avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do banco de dados SQL.|
+|avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do banco de dados SQL.|
 |cpu_limit|**decimal (5, 2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
 |allocated_storage_in_megabytes|**float**|A quantidade de espaço de arquivo formatado em MB disponibilizada para armazenar dados de banco de dados. O espaço de arquivo formatado também é conhecido como espaço de dados alocado.  Para obter mais informações, consulte: [Gerenciamento de espaço de arquivo no banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   

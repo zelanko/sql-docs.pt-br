@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ff5d88c5269fc1b6e03029004d92a5360b82b65b
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293653"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822492"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Conectar-se ao MySQL (MySQLToSQL)
 Para migrar bancos de dados MySQL para SQL Server ou SQL Azure, você deve se conectar ao banco de dados MySQL que deseja migrar. Quando você se conecta, o SSMA obtém metadados sobre todos os esquemas do MySQL e, em seguida, exibe-os no painel do Gerenciador de metadados do MySQL. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena senhas.  
@@ -115,5 +115,5 @@ Os metadados sobre o banco de dados MySQL não são atualizados automaticamente.
 A próxima etapa no processo de migração está [se conectando ao SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
-[Migrando bancos de dados MySQL para SQL Server-BD SQL do Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrando bancos de dados MySQL para SQL Server-banco de MySQLToSql SQL do Azure &#40;&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

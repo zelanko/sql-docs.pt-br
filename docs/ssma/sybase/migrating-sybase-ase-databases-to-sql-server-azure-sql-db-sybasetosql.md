@@ -1,5 +1,5 @@
 ---
-title: Migrar bancos de dados do Sybase ASE para SQL Server-BD SQL do Azure | Microsoft Docs
+title: Migrar bancos de dados de ASE do Sybase para o SQL Server-Azure SQL Database | Microsoft Docs
 description: Use esse processo recomendado para migrar bancos de dados corporativos do SAP Adaptive Server para o SQL Server ou o Azure SQL Database usando o Assistente de Migração do SQL Server (SSMA).
 ms.custom: ''
 ms.date: 11/30/2017
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a9bcca5d23fe147394a350ff8c640680ec674675
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 15c3b7d8594f9b0700c7cb1f429a89947c16655b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292813"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865294"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>Migrando bancos de dados do SAP ASE para o SQL Server-SybaseToSQL (Azure SQL Database)
 O Assistente de Migração do SQL Server (SSMA) para SAP Adaptive Server Enterprise (ASE) é um ambiente abrangente que ajuda você a migrar rapidamente bancos de dados do SAP ASE para o ou para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database. Usando o SSMA para SAP ASE, você pode examinar os objetos e os dados do banco de dados, avaliar os bancos de dado para migração, migrar objetos de banco de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Azure SQL Database e, em seguida, migrar dados para o ou para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure.  
@@ -45,7 +45,7 @@ Para migrar com êxito objetos e dados de bancos de dado SAP ASE para o ou para 
   
 9. Se necessário, atualize seus aplicativos de banco de dados.  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Confira também  
 [Instalando o SSMA para SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [Introdução com o SSMA para SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

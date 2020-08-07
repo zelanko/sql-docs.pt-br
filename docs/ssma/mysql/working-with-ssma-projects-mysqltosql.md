@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904898"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862428"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Trabalhar com projetos do SSMA (MySQLToSQL)
 Para migrar bancos de dados MySQL para SQL Server ou SQL Azure, você deve primeiro criar um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -83,7 +83,7 @@ Para migrar dados do MySQL para SQL Server ou SQL Azure, você deve criar um pro
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   BD SQL do Azure  
+    -   Banco de dados SQL do Azure  
   
 E clique em **OK**  
   
@@ -133,7 +133,7 @@ A próxima etapa do processo de migração é [conectar-se ao MySQL &#40;MySQLTo
   
 ## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[Migrando bancos de dados MySQL para SQL Server-BD SQL do Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrando bancos de dados MySQL para SQL Server-banco de MySQLToSql SQL do Azure &#40;&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Conectando-se ao SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Conectando-se ao BD SQL do Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[Conectando-se ao banco de dados SQL do Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Vincular aplicativos de acesso a SQL Server-banco de BD SQL do Azure | Microsoft Docs
+title: Vincular aplicativos de acesso a SQL Server-banco de dados SQL do Azure | Microsoft Docs
 description: Saiba como vincular suas tabelas do Access às tabelas migradas para que você possa usar seus aplicativos do Access existentes com o SQL Server ou o banco de dados SQL do Azure.
 ms.prod: sql
 ms.custom: ''
@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293763"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823841"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculando aplicativos de acesso ao SQL Server – BD SQL do Azure (AccessToSQL)
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Vinculando aplicativos de acesso ao SQL Server-banco de dados SQL do Azure (AccessToSQL)
 Se você quiser usar seus aplicativos do Access existentes com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poderá vincular suas tabelas originais do Access às tabelas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. A vinculação modifica o banco de dados do Access de forma que suas consultas, formulários, relatórios e páginas de acesso a data usem os dados do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure em vez de usarem o banco de dado do Access.  
   
 > [!NOTE]  
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **Resolução:** Você pode definir uma consulta de acesso que retorna somente as linhas com tipos de dados com suporte.  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Confira também  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

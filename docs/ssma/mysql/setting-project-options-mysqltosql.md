@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944684"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863517"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Definir opções do projeto (MySQLToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para os tipos de dados de destino.  Antes de converter objetos para SQL Server ou SQL Azure ou migrar dados para SQL Server ou SQL Azure, verifique se as opções de configuração são apropriadas para o projeto.  
@@ -60,7 +60,7 @@ Para obter mais informações sobre as configurações e como as configurações
   
 -   [Configurações do projeto &#40;sincronização&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Configurações do projeto &#40;BD SQL do Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Configurações do projeto &#40;banco de dados SQL do Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>Definir opções do projeto  
 No SSMA, você pode definir as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto que você criar.  

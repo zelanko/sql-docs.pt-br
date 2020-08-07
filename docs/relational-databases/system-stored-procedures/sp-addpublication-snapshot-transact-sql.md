@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8b5f827126afca81baeafe5f5c35e3d94666fcc
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716535"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865254"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -117,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para ajudar a melhorar a segurança, recomendamos que você forneça nomes de login e senhas em tempo de execução.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta sob a qual o agente é executado. Em Instância Gerenciada do Banco de Dados SQL do Azure, use uma conta de SQL Server. *job_login* é **nvarchar (257)**, com um padrão de NULL. Essa conta é sempre usada para conexões de agente com o distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
+`[ @job_login = ] 'job_login'`É o logon da conta sob a qual o agente é executado. No Azure SQL Instância Gerenciada, use uma conta de SQL Server. *job_login* é **nvarchar (257)**, com um padrão de NULL. Essa conta é sempre usada para conexões de agente com o distribuidor. Você deve fornecer esse parâmetro ao criar um novo trabalho do Agente de Instantâneo.  
   
 > [!NOTE]
 >  Para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, esse deve ser o mesmo logon especificado em [Sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

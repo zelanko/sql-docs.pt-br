@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477358"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863462"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novidades no SSMA para MySQL (MySQLToSql)
 
@@ -114,9 +114,9 @@ A versão v 8.1 do SSMA para MySQL foi aprimorada com correções direcionadas q
 
 A versão v 8.0 do SSMA para MySQL foi aprimorada com correções direcionadas projetadas para melhorar a qualidade e a conversão de métricas. Esta versão também oferece os seguintes novos recursos:
 
-* Suporte para **instância gerenciada do banco de dados SQL do Azure** como um destino. Agora você pode criar novos projetos destinados a Instância Gerenciada do Banco de Dados SQL do Azure:
+* Suporte para o **Azure SQL instância gerenciada** como um destino. Agora você pode criar novos projetos destinados ao Azure SQL Instância Gerenciada:
 
-  ![Projeto MI do BD SQL](../media/ssma-newproject-sqldbmi.png)
+  ![Projeto do SQL MI](../media/ssma-newproject-sqldbmi.png)
 
 * **Supervisor de correção**após a conversão. Saiba mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -238,8 +238,8 @@ A versão de manutenção de janeiro de 2016 do SSMA para MySQL contém as segui
 
 A versão de julho de 2014 do SSMA para MySQL contém as seguintes alterações:
   
-* Conversão de código do BD SQL do Azure aprimorada.
-* A funcionalidade do pacote de extensão foi movida para o esquema para dar suporte ao BD SQL do Azure.
+* Conversão de código do banco de dados SQL do Azure aprimorada.
+* Funcionalidade do pacote de extensão movida para o esquema para dar suporte ao banco de dados SQL do Azure.
 * Aprimoramentos de desempenho testados para bancos de dados com mais de 10 mil objetos.
 * Aprimoramentos da interface do usuário para lidar com um grande número de objetos.
 * Realce de esquemas LOB bem conhecidos (para que eles possam ser ignorados na conversão).

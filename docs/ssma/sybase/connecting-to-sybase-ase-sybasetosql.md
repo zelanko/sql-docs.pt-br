@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0558e86380c6cec822103a22b746b5af05437cae
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ff1a2144dd9a8f18e71a5e9fa54343bd414f070a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306085"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864803"
 ---
 # <a name="connecting-to-sap-ase-sybasetosql"></a>Conectando-se ao SAP ASE (SybaseToSQL)
 
@@ -115,4 +115,4 @@ Os metadados sobre os bancos de dados ASE não são atualizados automaticamente.
   
 ## <a name="see-also"></a>Consulte Também
 
-[Migrando bancos de dados do Sybase ASE para o SQL Server-BD SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrando bancos de dados do Sybase ASE para o SQL Server-banco de SybaseToSQL SQL do Azure &#40;o&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

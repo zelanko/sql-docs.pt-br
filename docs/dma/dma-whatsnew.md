@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924620"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864893"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
 
@@ -43,7 +43,7 @@ Além disso, esta versão do Assistente de Migração de Dados fornece aprimoram
 
 ## <a name="data-migration-assistant-v45"></a>Assistente de Migração de Dados v 4.5
 
-A versão v 4.5 do Assistente de Migração de Dados fornece suporte para a avaliação da migração de pacotes SQL Server Integration Services (SSIS) hospedados no sistema de arquivos para o banco de dados SQL do Azure ou a instância gerenciada do banco de dados SQL do Azure.
+A versão v 4.5 do Assistente de Migração de Dados fornece suporte para a avaliação da migração de pacotes SQL Server Integration Services (SSIS) hospedados no sistema de arquivos para o banco de dados SQL do Azure ou o SQL Instância Gerenciada.
 
 ## <a name="data-migration-assistant-v44"></a>Assistente de Migração de Dados v 4.4
 
@@ -53,9 +53,9 @@ A versão v 4.4 do Assistente de Migração de Dados fornece suporte para upload
 
 A versão v 4.3 do Assistente de Migração de Dados fornece suporte para:
 
-- Recomendações de SKU para instâncias gerenciadas do banco de dados SQL do Azure baseadas na avaliação de carga de trabalho
+- Recomendações de SKU para o Azure SQL Instância Gerenciada com base na avaliação de carga de trabalho.
 - RDS SQL Server como uma fonte para avaliações.
-- Avaliações de trabalho do agente para instância gerenciada do banco de dados SQL do Azure como um destino.
+- Avaliações de trabalho do agente para o Azure SQL Instância Gerenciada como um destino.
 - A capacidade de ignorar determinadas regras de avaliação; a lista de códigos de erro especificados na propriedade ' ignoreErrorCodes ' configurada no DMA não aparecerá nos resultados da avaliação de DMA.
 - Avaliação de consultas T-SQL em etapas de atividade de trabalho e fornecimento de recomendações apropriadas
 - Avaliações de eventos estendidos (visualização pública).
@@ -67,15 +67,15 @@ Além disso, esta versão do DMA fornece um desempenho aprimorado para lidar com
 
 ## <a name="data-migration-assistant-v42"></a>Assistente de Migração de Dados v 4.2
 
-A versão v 4.2 do Assistente de Migração de Dados fornece suporte de linha de comando para avaliação de prontidão de destino para uma ou mais instâncias de servidor ao migrar do SQL Server local para uma instância gerenciada do banco de dados SQL do Azure. Agora, os clientes podem usar a linha de comando Assistente de Migração de Dados para coletar metadados sobre seu esquema de banco de dados, detectar os bloqueadores e saber mais sobre recursos com suporte parcial ou sem suporte que afetam a migração para uma instância gerenciada do banco de dados SQL do Azure. Os resultados podem ser renderizados usando o modelo de Power BI fornecido.
+A versão v 4.2 do Assistente de Migração de Dados fornece suporte de linha de comando para avaliação de prontidão de destino para uma ou mais instâncias de servidor ao migrar do SQL Server local para um Instância Gerenciada SQL. Agora, os clientes podem usar a linha de comando Assistente de Migração de Dados para coletar metadados sobre seu esquema de banco de dados, detectar os bloqueadores e saber mais sobre recursos com suporte parcial ou sem suporte que afetam a migração para um Instância Gerenciada SQL. Os resultados podem ser renderizados usando o modelo de Power BI fornecido.
 
 ## <a name="data-migration-assistant-v41"></a>Assistente de Migração de Dados v 4.1
 
-A versão v 4.1 do Assistente de Migração de Dados introduz o suporte para uma avaliação abrangente de bancos de dados de SQL Server locais migrando para a instância gerenciada do Azure SQL Database.
+A versão v 4.1 do Assistente de Migração de Dados introduz o suporte para uma avaliação abrangente de bancos de dados locais SQL Server migrando para o SQL Instância Gerenciada.
 
-O fluxo de trabalho de avaliação ajuda a detectar os seguintes problemas, o que pode afetar sua migração para a instância gerenciada do banco de dados SQL do Azure:
+O fluxo de trabalho de avaliação ajuda a detectar os seguintes problemas, o que pode afetar a migração para o SQL Instância Gerenciada:
 
-- **Recursos sem suporte ou com suporte parcial**. Assistente de Migração de Dados avalia seu banco de dados de SQL Server de origem para recursos em uso que têm suporte parcial ou sem suporte no Instância Gerenciada do Banco de Dados SQL do Azure de destino. Em seguida, a ferramenta fornece um conjunto abrangente de recomendações, abordagens alternativas disponíveis no Azure e etapas de mitigação para que os clientes possam levar essas informações em conta ao planejar seus projetos de migração.
+- **Recursos sem suporte ou com suporte parcial**. Assistente de Migração de Dados avalia seu banco de dados de SQL Server de origem para recursos em uso que têm suporte parcial ou sem suporte no Instância Gerenciada de destino do SQL. Em seguida, a ferramenta fornece um conjunto abrangente de recomendações, abordagens alternativas disponíveis no Azure e etapas de mitigação para que os clientes possam levar essas informações em conta ao planejar seus projetos de migração.
 
 - **Problemas de compatibilidade**. Assistente de Migração de Dados também identifica problemas de compatibilidade relacionados às seguintes áreas:
 
@@ -83,7 +83,7 @@ O fluxo de trabalho de avaliação ajuda a detectar os seguintes problemas, o qu
   - Alterações comportamentais: os objetos de esquema relatados podem continuar a funcionar, mas podem apresentar um comportamento diferente, por exemplo, degradação de desempenho.
   - Problemas informativos: esses objetos não afetarão a migração, mas podem ter sido preteridos do recurso SQL Server versões.
 
-Após a conclusão da avaliação, use o [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/services/database-migration/) (DMS) para executar a migração de seus bancos de dados do SQL Server para instância gerenciada do banco de dados SQL do Azure.  O DMS dá suporte a migrações de banco de dados [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (única) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (tempo de inatividade mínimo) para instância gerenciada do banco de dados SQL do Azure.
+Após a conclusão da avaliação, use o [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/services/database-migration/) (DMS) para executar a migração de seus bancos de dados do SQL Server para o SQL instância gerenciada.  O DMS dá suporte a migrações de banco de dados [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (única) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (tempo de inatividade mínimo) para o SQL instância gerenciada.
 
 ## <a name="data-migration-assistant-v40"></a>Assistente de Migração de Dados v 4.0
 
@@ -124,7 +124,7 @@ A versão v 3.4 do Assistente de Migração de Dados inclui as seguintes adiçõ
 - Suporte para SQL Server 2017 como uma fonte de migrações para o banco de dados SQL do Azure.
 - Aprimoramentos em estabilidade, desempenho e exatidão da regra de avaliação.
 
-## <a name="ddata-migration-assistant-v33"></a>Repositório Assistente de Migração v 3.3
+## <a name="data-migration-assistant-v33"></a>Assistente de Migração de Dados v 3.3
 
 A versão v 3.3 do Assistente de Migração de Dados permite a migração de uma instância de SQL Server local para a nova versão do SQL Server 2017, no Windows e no Linux. Embora o fluxo de trabalho de migração geral para Windows e Linux seja o mesmo, a mudança para o SQL Server 2017 para Linux requer algumas considerações adicionais.
 
@@ -192,4 +192,4 @@ A versão v 1.0 do Assistente de Migração de Dados é a versão inicial e forn
 
 ## <a name="see-also"></a>Confira também
 
-[Visão geral do Assistente de Migração de Dados](../dma/dma-overview.md)
+[Visão Geral do Assistente de Migração de Dados](../dma/dma-overview.md)

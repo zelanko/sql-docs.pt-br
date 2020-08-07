@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942365"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824061"
 ---
 # <a name="installation-and-configuration"></a>Instalação e configuração
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ Para restaurar um backup em uma instância do SQL Server, você pode usar Manage
 5. Se necessário, altere o local de destino dos arquivos de dados e de log no painel **arquivos** . Observe que é uma prática recomendada posicionar arquivos de dados e de log em unidades diferentes.
 6. Clique em **OK**. Isso iniciará a restauração do banco de dados. Após a conclusão, você terá o banco de dados WideWorldImporters instalado em sua instância de SQL Server.
 
-### <a name="azure-sql-database"></a>Banco de Dados SQL do Azure
+### <a name="azure-sql-database"></a>Banco de dados SQL do Azure
 
 Para importar um bacpac para um novo banco de dados SQL, você pode usar Management Studio.
 
@@ -68,7 +68,7 @@ Para importar um bacpac para um novo banco de dados SQL, você pode usar Managem
 
 ### <a name="full-text-indexing"></a>Indexação de texto completo
 
-O banco de dados de exemplo pode fazer uso de indexação de texto completo. No entanto, esse recurso não é instalado por padrão com SQL Server-você precisa selecioná-lo durante a instalação do SQL Server (ele é habilitado por padrão no banco de BD SQL do Azure). Portanto, uma etapa pós-instalação é necessária.
+O banco de dados de exemplo pode fazer uso de indexação de texto completo. No entanto, esse recurso não é instalado por padrão com SQL Server-você precisa selecioná-lo durante a instalação do SQL Server (ele é habilitado por padrão no banco de dados SQL do Azure). Portanto, uma etapa pós-instalação é necessária.
 
 1. No SQL Server Management Studio, conecte-se ao banco de dados WideWorldImporters e abra uma nova janela de consulta.
 2. Execute o seguinte comando T-SQL para habilitar o uso da indexação de texto completo no banco de dados:`EXECUTE Application.Configuration_ApplyFullTextIndexing`

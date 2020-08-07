@@ -1,6 +1,6 @@
 ---
 title: Criar uma avaliação de migração do SSIS com o Assistente de Migração de Dados
-description: Saiba como usar Assistente de Migração de Dados para avaliar um SSIS (serviço de integração do SQL Server) local antes de migrar para o banco de dados SQL do Azure ou para a instância gerenciada do banco de dados SQL do Azure
+description: Saiba como usar Assistente de Migração de Dados para avaliar um SSIS (serviço de integração do SQL Server) local antes de migrar para o banco de dados SQL do Azure ou o SQL do Azure Instância Gerenciada
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74687154"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822191"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Executar uma avaliação de migração do serviço de integração SQL Server com Assistente de Migração de Dados
 
@@ -34,7 +34,7 @@ O DMA precisa ser executado com acesso de **administrador** para avaliar pacotes
 
 ## <a name="performance-assessments"></a>Avaliações de desempenho
 
-As instruções passo a passo a seguir ajudam a executar sua primeira avaliação para migrar pacotes do SSIS (serviço de integração SQL Server) para o banco de dados SQL do Azure ou a instância gerenciada do banco de dados SQL do Azure, usando Assistente de Migração de Dados.
+As instruções passo a passo a seguir ajudam você a executar sua primeira avaliação para migrar pacotes do SSIS (serviço de integração SQL Server) para o banco de dados SQL do Azure ou o SQL Instância Gerenciada do Azure, usando Assistente de Migração de Dados.
 
 ## <a name="create-an-assessment"></a>Criar uma avaliação
 
@@ -42,7 +42,7 @@ As instruções passo a passo a seguir ajudam a executar sua primeira avaliaçã
 
 1. Defina o tipo de servidor de origem e de destino.
 
-    Selecione a origem como **SQL Server**e defina o tipo de servidor de destino como **banco de dados SQL do Azure** ou **instância gerenciada do banco de dados SQL do Azure**.
+    Selecione a origem como **SQL Server**e defina o tipo de servidor de destino como **banco de dados SQL do Azure** ou **SQL do Azure instância gerenciada**.
 
 1. Clique em **Criar**.
 
@@ -74,5 +74,5 @@ A categoria de problemas de compatibilidade fornece recursos com suporte parcial
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Migrar cargas de trabalho do SSIS locais para o SSIS em visão geral do ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrar pacotes do SQL Server Integration Services para uma instância gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrar pacotes SQL Server Integration Services para um SQL do Azure Instância Gerenciada](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Reimplantar pacotes SQL Server Integration Services no banco de dados SQL do Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

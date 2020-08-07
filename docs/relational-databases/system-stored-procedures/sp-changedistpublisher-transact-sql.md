@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717409"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864993"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @value = ] 'value'`É o valor para a propriedade fornecida. o *valor* é **nvarchar (255)**, com um padrão de NULL.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`É necessário para a instância gerenciada do banco de dados SQL, deve corresponder à chave de acesso do volume de armazenamento do banco de dados SQL do Azure. 
+`[ @storage_connection_string = ] 'storage_connection_string'`É necessário para o SQL Instância Gerenciada, deve corresponder à chave de acesso do volume de armazenamento do banco de dados SQL do Azure. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -64,7 +64,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ||**0**|Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Publicador. *Isso não pode ser alterado para um não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Editor.*|  
 |**working_directory**||Diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação.|  
 |NULL (padrão)||Todas as opções de *Propriedade* disponíveis são impressas.| 
-|**storage_connection_string**| Chave de acesso | A chave de acesso para o diretório de trabalho quando o banco de dados é Instância Gerenciada do Banco de Dados SQL do Azure. 
+|**storage_connection_string**| Chave de acesso | A chave de acesso para o diretório de trabalho quando o banco de dados é Azure SQL Instância Gerenciada. 
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -76,10 +76,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar as propriedades do distribuidor e do Publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [&#41;&#40;Transact-SQL de sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdistpublisher](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

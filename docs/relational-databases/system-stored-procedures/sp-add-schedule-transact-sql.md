@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878293"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865304"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +68,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Mensal|  
 |**32**|Mensal, relativo a *freq_interval*|  
 |**64**|Executar quando o serviço SQL Agent for iniciado|  
-|**128**|Executar quando o computador estiver ocioso (sem suporte no [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Executar quando o computador estiver ocioso (sem suporte no [Azure SQL instância gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval`Os dias em que um trabalho é executado. *freq_interval* é **int**, com um padrão de **1**, e depende do valor de *freq_type*.  
   

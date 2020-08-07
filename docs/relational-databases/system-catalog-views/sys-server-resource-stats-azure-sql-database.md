@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772978"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864487"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (banco de dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Retorna o uso da CPU, e/s e dados de armazenamento para um Instância Gerenciada SQL do Azure. Os dados são coletados e agregados em intervalos de cinco minutos. Há uma linha para cada relatório de 15 segundos. Os dados retornados incluem uso de CPU, tamanho de armazenamento, utilização de e/s e SKU de instância gerenciada. Os dados históricos são retidos por aproximadamente 14 dias.
+Retorna o uso da CPU, e/s e dados de armazenamento para o Azure SQL Instância Gerenciada. Os dados são coletados e agregados em intervalos de cinco minutos. Há uma linha para cada relatório de 15 segundos. Os dados retornados incluem uso de CPU, tamanho de armazenamento, utilização de e/s e SKU. Os dados históricos são retidos por aproximadamente 14 dias.
 
-A exibição **Sys. server_resource_stats** tem definições diferentes, dependendo da versão da instância gerenciada do Azure SQL à qual o banco de dados está associado. Considere essas diferenças e quaisquer modificações que seu aplicativo exige ao fazer a atualização para uma nova versão do servidor.
+A exibição **Sys. server_resource_stats** tem definições diferentes, dependendo da versão do instância gerenciada do Azure SQL à qual o banco de dados está associado. Considere essas diferenças e quaisquer modificações que seu aplicativo exige ao fazer a atualização para uma nova versão do servidor.
  
   
  A tabela a seguir descreve as colunas disponíveis em um servidor v12:  
@@ -44,10 +44,10 @@ A exibição **Sys. server_resource_stats** tem definições diferentes, depende
 |resource_name|nvarchar(128)|Nome do recurso.|
 |sku|nvarchar(128)|Instância Gerenciada camada de serviço da instância. O valores possíveis são os seguintes: <br><ul><li>Uso Geral</li></ul><ul><li>Comercialmente Crítico</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de geração de hardware: como Gen 4 ou Gen 5|
-|virtual_core_count|INT|Representa o número de núcleos virtuais por instância (8, 16 ou 24 em visualização pública)|
+|virtual_core_count|int|Representa o número de núcleos virtuais por instância (8, 16 ou 24 em visualização pública)|
 |avg_cpu_percent|decimal (5, 2)|Média de utilização de computação em porcentagem do limite do Instância Gerenciada camada de serviço utilizada pela instância. Ele é calculado como a soma do tempo de CPU de todos os pools de recursos para todos os bancos de dados na instância e dividido por tempo de CPU disponível para essa camada no intervalo especificado.|
 |reserved_storage_mb|BIGINT|Armazenamento reservado por instância (quantidade de espaço de armazenamento que o cliente comprou para a instância gerenciada)|
-|storage_space_used_mb|decimal (18, 2)|Armazenamento usado por todos os arquivos de bancos de dados de instância gerenciada (incluindo bancos de dados do usuário e do sistema)|
+|storage_space_used_mb|decimal (18, 2)|Armazenamento usado por todos os arquivos de banco de dados em uma instância gerenciada (incluindo bancos de dados do usuário e do sistema)|
 |io_request|BIGINT|Número total de operações físicas de e/s dentro do intervalo|
 |io_bytes_read|BIGINT|Número de bytes físicos lidos dentro do intervalo|
 |io_bytes_written|BIGINT|Número de bytes físicos gravados no intervalo|

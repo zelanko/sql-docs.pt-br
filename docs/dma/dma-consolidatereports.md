@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435171"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823238"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o Assistente de Migração de Dados
 
@@ -197,7 +197,7 @@ Você também pode usar o script loadwarehouse para fornecer as instruções TSQ
 
 Para trabalhar com relatórios DMA, use marcadores e segmentações para filtrar por:
 
-- Tipos de avaliação (banco de BD SQL do Azure, SQL do Azure MI, SQL local) 
+- Tipos de avaliação (banco de dados SQL do Azure, Azure SQL Instância Gerenciada, SQL Server) 
 - Nome da Instância
 - Nome do Banco de Dados
 - Nome da equipe
@@ -212,8 +212,8 @@ A seleção do indicador filtros habilita a seguinte folha:
 
 Você pode usar indicadores para alternar o contexto de relatório entre:
 
-- Avaliações de nuvem do BD SQL do Azure
-- Avaliações de nuvem do Azure SQL MI
+- Avaliações de nuvem do banco de dados SQL do Azure
+- Avaliações de nuvem do Azure SQL Instância Gerenciada
 - Avaliações locais
 
 ![Indicadores de exibições de relatório de DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)

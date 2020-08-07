@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083532"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864833"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Avaliando objetos de banco de dados SAP ASE para conversão (SybaseToSQL)
-Antes de carregar objetos e migrar dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o ou SQL do Azure, você deve determinar como a complexidade da migração e quanto tempo deve levar. O SSMA pode criar um relatório de avaliação que mostra a porcentagem de objetos e procedimentos que serão convertidos com [!INCLUDE[tsql](../../includes/tsql-md.md)]êxito em. O SSMA também permite que você exiba os problemas específicos que podem causar falhas de conversão.  
+Antes de carregar objetos e migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL do Azure, você deve determinar como a complexidade da migração e quanto tempo deve levar. O SSMA pode criar um relatório de avaliação que mostra a porcentagem de objetos e procedimentos que serão convertidos com êxito em [!INCLUDE[tsql](../../includes/tsql-md.md)] . O SSMA também permite que você exiba os problemas específicos que podem causar falhas de conversão.  
   
 ## <a name="create-assessment-reports"></a>Criar relatórios de avaliação  
-Ao criar esse relatório de avaliação, o SSMA converte os objetos de banco de dados do ASE (SAP Adaptive [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Enterprise) selecionados no ou na sintaxe SQL do Azure e, em seguida, mostra os resultados.  
+Ao criar esse relatório de avaliação, o SSMA converte os objetos de banco de dados do ASE (SAP Adaptive Server Enterprise) selecionados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou na sintaxe SQL do Azure e, em seguida, mostra os resultados.  
   
 **Para criar um relatório de avaliação**  
   
@@ -71,11 +71,11 @@ Os **painéis de estatísticas de conversão** mostram as estatísticas de conve
   
     -   No ASE, você pode alterar o objeto ASE para remover ou revisar o código problemático. Para carregar o código atualizado no SSMA, você precisará atualizar os metadados. Para obter mais informações, consulte [conectando-se ao Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
-    -   Você pode excluir o objeto da migração. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou no Gerenciador de metadados do SQL do Azure e no Gerenciador de metadados Sybase, desmarque a caixa de seleção ao lado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do item antes de carregar os objetos no ou SQL do Azure e migrar dados do ase.
+    -   Você pode excluir o objeto da migração. No ou no Gerenciador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadados do SQL do Azure e no Gerenciador de metadados Sybase, desmarque a caixa de seleção ao lado do item antes de carregar os objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL do Azure e migrar dados do ase.
   
 ## <a name="next-steps"></a>Próximas etapas  
 [Convertendo objetos de banco de dados SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
-[Migrar bancos de dados do SAP ASE para o SQL Server-BD SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrar bancos de dados do SAP ASE para o SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
