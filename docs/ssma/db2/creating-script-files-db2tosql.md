@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: F
+ms.author: alexiva
+ms.openlocfilehash: ac87b3459a5a2ae5c8477ce0674facaf361f03b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989840"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933827"
 ---
 # <a name="creating-script-files-db2tosql"></a>Criando arquivos de script (DB2ToSQL)
 A primeira etapa antes de iniciar o aplicativo do console do SSMA é criar o arquivo de script e, se necessário, criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
@@ -319,9 +319,9 @@ As opções configuráveis pelo usuário incluem:
   
     Aqui, surgem dois casos:  
   
-    1.  Se a opção Override for **false**, a ordem de pesquisa será Protected Storage-&gt;script File-&gt;Server Connection File-&gt; prompt User.  
+    1.  Se a opção Override for **false**, a ordem de pesquisa será Protected Storage- &gt; script File- &gt; Server Connection File- &gt; prompt User.  
   
-    2.  Se a opção substituir for **verdadeira**, a ordem de pesquisa será arquivo de script&gt;-arquivo de conexão&gt;do servidor-avisar usuário.  
+    2.  Se a opção substituir for **verdadeira**, a ordem de pesquisa será arquivo de script- &gt; arquivo de conexão do servidor- &gt; avisar usuário.  
   
     **Exemplo:**  
   
@@ -343,7 +343,7 @@ Os parâmetros de conexão do servidor podem ser definidos no arquivo de script 
 ## <a name="script-commands"></a>Comandos de script  
 O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console do SSMA processa a migração na ordem dos comandos que aparecem no arquivo de script.  
   
-Por exemplo, uma migração de dados típica de uma tabela específica de um banco de dados DB2 segue a hierarquia de&gt; : esquema-tabela.  
+Por exemplo, uma migração de dados típica de uma tabela específica de um banco de dados DB2 segue a hierarquia de: esquema- &gt; tabela.  
   
 Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo do console do SSMA sai e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em uma [criação de arquivos de valor de variável &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
@@ -374,15 +374,15 @@ Quando todos os comandos no arquivo de script são executados com êxito, o apli
 ```  
 Modelos que consistem em três arquivos de script (para executar vários cenários), arquivo de valor de variável e um arquivo de conexão de servidor são fornecidos na pasta de scripts de console de exemplo do diretório do produto:  
   
--   AssessmentReportGenerationSample. xml  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. xml  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample. xml  
+-   SqlStatementConversionSample.xml  
   
--   VariableValueFileSample. xml  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. xml  
+-   ServersConnectionFileSample.xml  
   
 Você pode executar os modelos (arquivos) depois de alterar os parâmetros exibidos aqui para fins de relevância.  
   

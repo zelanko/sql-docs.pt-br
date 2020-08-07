@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068950"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934147"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventário de acesso (AccessToSQL)
-As seções a seguir descrevem as tabelas criadas pelo SSMA quando você exporta esquemas de acesso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o.  
+As seções a seguir descrevem as tabelas criadas pelo SSMA quando você exporta esquemas de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="databases"></a>Bancos de dados  
 Os metadados do banco de dados são exportados para a tabela de **SSMA_Access_InventoryDatabases** . Esta tabela contém as seguintes colunas:  
@@ -96,8 +96,8 @@ Os metadados de coluna são exportados para a tabela de **SSMA_Access_InventoryC
 |**IsNullable**|**bit**|Especifica se a coluna pode conter valores nulos. Se o valor for 1, a coluna poderá conter valores nulos. Se o valor for 0, a coluna não poderá conter valores nulos. Observe que a regra de validação também pode ser usada para evitar valores nulos.|  
 |**DataType**|**nvarchar(4000)**|O tipo de dados de acesso da coluna, como **texto** ou **longo**.|  
 |**IsAutoIncrement**|**bit**|Especifica se a coluna incrementa automaticamente valores inteiros. Se o valor for 1, os inteiros serão incrementados automaticamente.|  
-|**Ordinal**|**smallint**|A ordem da coluna na tabela, começando em zero.|  
-|**ValorPadrão**|**nvarchar(4000)**|O valor padrão da coluna.|  
+|**Numera**|**smallint**|A ordem da coluna na tabela, começando em zero.|  
+|**DefaultValue**|**nvarchar(4000)**|O valor padrão da coluna.|  
 |**ValidationRule**|**nvarchar(4000)**|A regra usada para validar os dados adicionados ou atualizados na coluna.|  
   
 ## <a name="indexes"></a>Índices  

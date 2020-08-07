@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865324"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931221"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mapear esquemas ASE do Sybase para esquemas do SQL Server (SybaseToSQL)
-No Sybase Adaptive Server Enterprise (ASE), cada banco de dados tem um ou mais esquemas. Por padrão, o SSMA migra todos os objetos dentro de um banco de dados e esquema para o mesmo banco de dados e esquema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. No entanto, você pode personalizar o mapeamento entre os esquemas e bancos de dados do ASE e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure.  
+No Sybase Adaptive Server Enterprise (ASE), cada banco de dados tem um ou mais esquemas. Por padrão, o SSMA migra todos os objetos dentro de um banco de dados e esquema para o mesmo banco de dados e esquema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. No entanto, você pode personalizar o mapeamento entre o ASE e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados SQL do Azure.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>Esquemas ASE e SQL Server ou SQL Azure  
 ASE e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure especificar bancos de dados e seus esquemas usando a notação de duas partes como *Database. Schema*. Por exemplo, em um banco de dados de **demonstração** do ase, pode haver um esquema **dbo** . Esse par de banco de dados e esquema é especificado como **demo. dbo**. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure tiver o mesmo banco de dados e esquema, o par também será especificado como **demo. dbo**.  
@@ -51,7 +51,7 @@ Você pode mapear o banco de dados de origem para qualquer banco de dados de des
   
 -   Mapeando para SQL Azure  
   
-Você pode mapear o banco de dados de origem para o destino conectado SQL Azure banco de dados ou para qualquer esquema no banco de dados de SQL Azure de destino conectado. Se você mapear o esquema de origem para qualquer esquema não existente no banco de dados de destino conectado, será exibida uma mensagem **"o esquema não existe nos metadados de destino. Ele seria criado durante a sincronização. Deseja continuar? "** Clique em Sim.  
+Você pode mapear o banco de dados de origem para o banco de dados SQL do Azure de destino conectado ou para qualquer esquema no banco de dados SQL do Azure de destino conectado. Se você mapear o esquema de origem para qualquer esquema não existente no banco de dados de destino conectado, será exibida uma mensagem **"o esquema não existe nos metadados de destino. Ele seria criado durante a sincronização. Deseja continuar? "** Clique em Sim.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Revertendo para o banco de dados e esquema padrão  
 Se você personalizar o mapeamento entre um esquema ASE e um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema ou SQL Azure, você poderá reverter o mapeamento para os valores padrão.  

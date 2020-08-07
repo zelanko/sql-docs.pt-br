@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b9e091db3e04eb0b82458e60f860dfb829076863
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262966"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934717"
 ---
 # <a name="managing-backups-oracletosql"></a>Gerenciar backups (OracleToSQL)
 O gerenciamento de backup Oracle permite que você faça backup e restaure os dados da tabela antes ou depois de executar um teste. Você também pode gerenciar o conteúdo de backup com a caixa de diálogo gerenciar conteúdo de backup.  

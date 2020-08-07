@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c9569675fa94b04602b10d0c781fb213fcb307c8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3701cac59619634b314e138e11eae5af79b8a462
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394818"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938529"
 ---
 # <a name="generating-reports-accesstosql"></a>Gerando relatórios (AccessToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  

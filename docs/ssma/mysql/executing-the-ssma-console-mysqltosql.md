@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909686"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935591"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o console do SSMA (MySQLToSQL)
 A Microsoft fornece um conjunto robusto de comandos de arquivo de script para executar e controlar atividades do SSMA.  
@@ -200,7 +200,7 @@ reconectar-fonte-banco de dados
   
 Connect-Target-Database  
   
-1.  Conecta-se ao SQL Server de destino ou SQL Azure banco de dados e carrega metadados de alto nível do banco de dados de destino, mas não os metadados inteiramente.  
+1.  Conecta-se ao SQL Server de destino ou ao banco de dados SQL do Azure e carrega metadados de alto nível do banco de dados de destino, mas não os metadados inteiramente.  
   
 2.  Se a conexão com o destino não puder ser estabelecida, um erro será gerado e o aplicativo de console parará outra execução.  
   
@@ -244,7 +244,7 @@ gerar-avaliação-relatório
   
 **Script**  
   
-1.  `assessment-report-folder:`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+1.  `assessment-report-folder:`Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
   
 2.  `object-name:`Especifica os objetos considerados para geração de relatórios de avaliação (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
@@ -256,7 +256,7 @@ gerar-avaliação-relatório
   
 5.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;AssessmentReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **AssessmentReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -318,9 +318,9 @@ converter esquema
   
 **Script**  
   
-1.  `conversion-report-folder:`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+1.  `conversion-report-folder:`Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
   
-2.  `object-name:`Especifica os objetos considerados para converter o esquema (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
+2.  `object-name:`Especifica os objetos considerados para converter o esquema (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
 3.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
@@ -330,7 +330,7 @@ converter esquema
   
 5.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;SchemaConversionReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **SchemaConversionReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação do relatório de resumo tem duas subcategorias adicionais:  
   
@@ -382,13 +382,13 @@ migrar-dados
   
 **Script**  
   
-1.  `object-name:`Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
+1.  `object-name:`Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
 2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
 3.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;DataMigrationReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **DataMigrationReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -476,7 +476,7 @@ sincronizar destino
   
 **Script**  
   
-1.  `object-name:`Especifica os objetos considerados para sincronização com o banco de dados de destino (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
+1.  `object-name:`Especifica os objetos considerados para sincronização com o banco de dados de destino (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
 2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
@@ -488,7 +488,7 @@ sincronizar destino
   
     -   script de falha  
   
-4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport. xml** será criado.  
+4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -539,7 +539,7 @@ atualizar-do-banco de dados
   
 **Script**  
   
-1.  `object-name:`Especifica os objetos de origem considerados para atualização do banco de dados de origem (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
+1.  `object-name:`Especifica os objetos de origem considerados para atualização do banco de dados de origem (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
 2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
@@ -551,7 +551,7 @@ atualizar-do-banco de dados
   
     -   script de falha  
   
-4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport. xml** será criado.  
+4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
   
 Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
@@ -604,7 +604,7 @@ Usado para salvar os scripts dos objetos em um arquivo mencionado quando metabas
   
 Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
-1.  `object-name:`Especifica os objetos cujos scripts devem ser salvos. (Pode ter nomes de objeto individuais ou um nome de objeto de grupo)  
+1.  `object-name:`Especifica os objetos cujos scripts devem ser salvos. (Ele pode ter nomes de objetos individuais ou um nome de objeto de grupo)  
   
 2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
@@ -656,19 +656,19 @@ instrução Convert-SQL-
   
     Se esse atributo não for especificado, a instrução T-SQL convertida será exibida no console do. (atributo opcional)  
   
-3.  `conversion-report-folder`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+3.  `conversion-report-folder`Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
   
 4.  `conversion-report-overwrite`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-5.  `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta em que o T-SQL convertido será armazenado. Quando um caminho de pasta é especificado junto com `sql-files` o atributo, cada arquivo de origem terá um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com `sql` o atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
+5.  `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta em que o T-SQL convertido será armazenado. Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem terá um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
   
 6.  `sql`Especifica as instruções SQL do MySQL a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
   
 7.  `sql-files`Especifica o caminho dos arquivos SQL que deve ser convertido em código T-SQL.  
   
-8.  `write-summary-report-to`Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport. xml** será criado. (atributo opcional)  
+8.  `write-summary-report-to`Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport.XML** será criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais, aula sobre visualização..,:  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264507"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934985"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opções de linha de comando no Console do SSMA (OracleToSQL)
 A Microsoft fornece uma série robusta de opções de linha de comando para executar e controlar as atividades do SSMA. As seções que mais profundos detalham o mesmo.  
@@ -30,7 +30,7 @@ Aqui descritos estão as opções de comando do console.
   
 Para fins desta seção, o termo ' Option ' também é conhecido como ' switch '.  
   
--   As opções não diferenciam maiúsculas de minúsculas e podem**-** começar com o caractere**/**' ' ou, ' '.  
+-   As opções não diferenciam maiúsculas de minúsculas e podem começar com o **-** caractere ' ' ou, ' **/** '.  
   
 -   Se as opções forem especificadas, será obrigatório especificar os parâmetros de opção correspondentes.  
   
@@ -127,7 +127,7 @@ Essa opção indica a senha criptografada para conexões do servidor. Ele difere
   
 Você não pode inserir nenhuma outra opção ou senha como parâmetro de linha de comando. Caso contrário, resultará em um erro. Para obter mais informações, consulte a seção [Gerenciando senhas](managing-passwords-oracletosql.md) .  
   
-As seguintes subopções têm suporte para `-p/securepassword`:  
+As seguintes subopções têm suporte para `-p/securepassword` :  
   
 -   Para adicionar a senha ao armazenamento protegido para uma ID de servidor especificada ou para todas as IDs de servidor definidas no arquivo de conexão do servidor. A opção-overwrite, abaixo, atualiza a senha se ela já existir:  
   

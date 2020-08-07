@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Generating reports
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1741b8e638142adc7fb33398e329197bdc97220d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f61387e6ca77ed93b7b23f335fc5b1f46c343ff2
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395371"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935528"
 ---
 # <a name="generating-reports-mysqltosql"></a>Geração de relatórios (MySQLToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  

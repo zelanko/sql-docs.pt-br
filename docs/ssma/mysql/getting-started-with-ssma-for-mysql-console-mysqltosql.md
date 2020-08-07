@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a5ade295e64415f50e4887fa971f20d8fe5b7f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075425"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935515"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introdução ao Console de SSMA para MySQL (MySQLToSQL)
 Esta seção descreve o procedimento para iniciar e começar a usar o aplicativo de console do MySQL. Também listados aqui, estão as convenções usadas em uma janela de saída típica do console do SSMA.  
@@ -29,7 +29,7 @@ Use as etapas a seguir para iniciar o aplicativo de console do SSMA:
   
 2.  Clique no **Assistente de migração do SQL Server para o atalho do prompt de comando do MySQL** .  
   
-    Ele exibe o menu uso do console do `(/? Help)`SSMA e, para ajudá-lo a começar a usar o aplicativo de console.  
+    Ele exibe o menu uso do console do SSMA e `(/? Help)` , para ajudá-lo a começar a usar o aplicativo de console.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedimento para usar o console do SSMA  
 Depois que o console do for iniciado com êxito no seu sistema Windows, você poderá usar as seguintes etapas para trabalhar nele:  
@@ -55,7 +55,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 Interpretação de cores da saída do console na tabela a seguir:  
   
-|Color|Descrição|  
+|Color|DESCRIÇÃO|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  

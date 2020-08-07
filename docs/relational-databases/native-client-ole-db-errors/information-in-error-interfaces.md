@@ -18,12 +18,12 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c0ef8694db1d2f5feb4a994fa2fb557a9a7b187
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7a0d18e8adff256ab9bc29e4c763989e008adeec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247941"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941388"
 ---
 # <a name="information-in-ole-db-defined-error-interfaces"></a>Informações em interfaces de erro definidas pelo OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "87247941"
 |---------------------|-----------------|  
 |**GetDescription**|Cadeia de caracteres de mensagem de erro descritiva.|  
 |**GetGUID**|GUID da interface que definiu o erro.|  
-|**GetHelpContext**|Não há suporte. Sempre retorna zero.|  
+|**GetHelpContext**|Sem suporte. Sempre retorna zero.|  
 |**GetHelpFile**|Sem suporte. Sempre retorna NULL.|  
 |**GetSource**|Cadeia de caracteres "Microsoft SQL Server Native Client".|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "87247941"
 |Função de membro|Descrição|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Preenche uma estrutura ERRORINFO com informações básica sobre um erro. Uma estrutura ERRORINFO contém membros que identificam o valor de retorno HRESULT para o erro e o provedor e interface aos quais o erro se aplica.|  
-|**GetCustomErrorObject**|Retorna uma referência em interfaces **ISQLErrorInfo** e [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).|  
+|**GetCustomErrorObject**|Retorna uma referência em interfaces **ISQLErrorInfo** e [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).|  
 |**GetErrorInfo**|Retorna uma referência em uma interface **IErrorInfo**.|  
 |**GetErrorParameters**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo não retorna parâmetros para o consumidor por meio de **geterroparameters**.|  
 |**GetRecordCount**|Contagem de registros de erro disponível.|  

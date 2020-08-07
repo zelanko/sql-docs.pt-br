@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 872eb991483bb1615f3260d64ed5e5438fd1c2ce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909706"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933537"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Novos recursos de GUI no SSMA para DB2 (DB2ToSQL)
 Este capítulo descreve os novos recursos da interface do usuário do SSMA.  
@@ -54,14 +54,14 @@ Você pode definir/remover um indicador das seguintes maneiras:
   
 -   Clique na área cinza à esquerda da janela SQL  
   
--   Use CTRL + SHIFT +&lt;0.. 9&gt; para definir o indicador numerado  
+-   Use CTRL + SHIFT + &lt; 0.. 9 &gt; para definir o indicador numerado  
   
 ### <a name="bookmark-navigation"></a>Navegação por indicadores  
 Você pode percorrer os indicadores das seguintes maneiras:  
   
 -   Usar botões próximo indicador, indicador anterior na parte superior da janela SQL  
   
--   Use CTRL +&lt;0.. 9&gt; para localizar o indicador numerado  
+-   Use CTRL + &lt; 0.. 9 &gt; para localizar o indicador numerado  
   
 -   Usar botões ir para ou exibir origem na caixa de diálogo Gerenciar indicadores  
   

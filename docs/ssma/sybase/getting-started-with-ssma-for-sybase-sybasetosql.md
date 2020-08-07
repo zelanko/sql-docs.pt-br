@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 57a7a4d3f8bee507c11700f383d5bb02adb4172c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cd6e32470673a87a410530298972b251d2807e4b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293933"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931806"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introdução com o SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistente de Migração (SSMA) para SAP ASE permite que você converta rapidamente esquemas de banco de dados do SAP Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas de banco de dados SQL do Azure, carregue os esquemas resultantes no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL do Azure, e migre-os do SAP ase para o ou para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database.  
@@ -74,7 +74,7 @@ A maioria das configurações de metadados é somente leitura. No entanto, você
   
 As alterações feitas em um Gerenciador de metadados são refletidas nos metadados do projeto, não nos bancos de dados de origem ou de destino.  
   
-### <a name="toolbars"></a>Barras de Ferramentas  
+### <a name="toolbars"></a>Barras de ferramentas  
 O SSMA tem duas barras de ferramentas: uma barra de ferramentas de projeto e uma barra de ferramentas de migração.  
   
 #### <a name="the-project-toolbar"></a>A barra de ferramentas do projeto  
@@ -109,6 +109,6 @@ O menu **Exibir** fornece comandos para alternar a visibilidade do painel de sa�
   
 -   O painel de Lista de Erros mostra mensagens de erro, aviso e informativas em uma lista que você pode classificar.  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Consulte também  
 [Migrar bancos de dados do SAP ASE para o SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Referência da interface do usuário &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

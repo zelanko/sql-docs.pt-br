@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565525"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951101"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 
@@ -132,6 +132,6 @@ Ao analisar rastreamentos usando o comando DEA, você pode usar as seguintes op�
 | --Abu | URL de BLOB para uma instância com chave SAS |
 | --BBU | URL do blob para a instância B com chave SAS |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - Para obter mais informações sobre como usar o DEA, consulte [visão geral do assistente para experimentos de banco de dados](database-experimentation-assistant-overview.md).

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029114"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931549"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introdução com o console do SSMA para Sybase (SybaseToSQL)
 Esta seção descreve o procedimento para iniciar e começar a usar o aplicativo de console do SSMA para Sybase. Também estão listados aqui as convenções usadas em uma janela de saída típica do console do SSMA.  
@@ -30,7 +30,7 @@ Use as etapas a seguir para iniciar o aplicativo de console do SSMA:
   
 2.  Clique no **Assistente de migração do SQL Server para o atalho do prompt de comando Sybase** .  
   
-    Ele exibe o menu uso do console do `(/? Help)`SSMA e, para ajudá-lo a começar a usar o aplicativo de console.  
+    Ele exibe o menu uso do console do SSMA e `(/? Help)` , para ajudá-lo a começar a usar o aplicativo de console.  
   
 ## <a name="using-the-ssma-console"></a>Usando o console do SSMA  
 Depois que o console do for iniciado com êxito no seu sistema Windows, você poderá usar as seguintes etapas para trabalhar nele:  
@@ -56,7 +56,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 A interpretação de cores da saída do console aparece na tabela a seguir:  
   
-|Color|Descrição|  
+|Color|DESCRIÇÃO|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  
@@ -65,5 +65,5 @@ A interpretação de cores da saída do console aparece na tabela a seguir:
 |Verde|Solicitar entrada do usuário|  
 |Cores|Início, término e resultado de uma operação|  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
 [Instalando o SSMA para SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

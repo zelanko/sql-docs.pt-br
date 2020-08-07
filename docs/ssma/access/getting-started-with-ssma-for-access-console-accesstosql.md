@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68222224"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938506"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introdução com o console do SSMA para Access (AccessToSQL)
 Esta seção descreve o procedimento para iniciar e começar a usar o aplicativo de console do Access. Também listados aqui, estão as convenções usadas em uma janela de saída típica do console do SSMA.  
@@ -26,7 +26,7 @@ Use as etapas a seguir para iniciar o aplicativo de console do SSMA:
   
 2.  Clique no atalho **Assistente de migração do SQL Server para acessar o prompt de comando** .  
   
-    Ele exibe o menu uso do console do `(/? Help)`SSMA e, para ajudá-lo a começar a usar o aplicativo de console.  
+    Ele exibe o menu uso do console do SSMA e `(/? Help)` , para ajudá-lo a começar a usar o aplicativo de console.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedimento para usar o console do SSMA  
 Depois que o console do for iniciado com êxito no seu sistema Windows, você poderá usar as seguintes etapas para trabalhar nele:  
@@ -52,7 +52,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 Interpretação de cores da saída do console na tabela a seguir:  
   
-|Color|Descrição|  
+|Color|DESCRIÇÃO|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  

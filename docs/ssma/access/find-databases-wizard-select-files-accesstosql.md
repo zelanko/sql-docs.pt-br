@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006550"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938711"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistente para localizar bancos de dados (selecionar arquivos) (AccessToSQL)
 A página Selecionar arquivos do assistente para localizar bancos de dados lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo a ser adicionado ao SSMA, selecione a linha que contém o nome do arquivo. Quando terminar de selecionar arquivos, clique em **Avançar** para exibir a página verificar seleção.  
@@ -44,10 +44,10 @@ Exibe o caminho do arquivo de banco de dados do Access.
 **Tamanho**  
 O tamanho do banco de dados, em bytes.  
   
-**Criação**  
+**Criado**  
 A data e a hora em que o banco de dados foi criado.  
   
-**Modificado**  
+**Alteração**  
 A data e a hora da última atualização do banco de dados.  
   
 ## <a name="see-also"></a>Consulte Também  

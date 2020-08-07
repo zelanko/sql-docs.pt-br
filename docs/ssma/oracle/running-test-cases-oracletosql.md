@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394855"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933047"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
 Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  
@@ -41,7 +41,7 @@ Nesta etapa, o SSMA Tester cria objetos auxiliares (tabelas, gatilhos e exibiç�
   
 Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os seguintes objetos auxiliares são criados no Oracle.  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |-|-|-|  
 |USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
 |USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
@@ -53,13 +53,13 @@ Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os se
   
 O objeto a seguir é criado no esquema da tabela verificada em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |-|-|-|  
 |USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
   
 E os seguintes objetos são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados ssmatesterdb.  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|Descrição|  
 |-|-|-|  
 |USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
 |USER_TABLE $ AudID|tabela|Tabela na qual as linhas novas e alteradas são salvas.|  

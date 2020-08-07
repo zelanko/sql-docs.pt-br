@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b9a2663d22bf3820985712ade72f5eaf480266d6
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5bac0e5437a4700c6bfb4b349e1a5ca9cf421901
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865334"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934661"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Migrando dados de ASE do Sybase para o SQL Server – banco de SybaseToSQL SQL
 Depois de ter carregado com êxito os objetos de banco de dados do Sybase Adaptive Server Enterprise (ASE) no ou no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL do Azure, você pode migrar os dados do ase para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do banco de dado SQL do Azure.  

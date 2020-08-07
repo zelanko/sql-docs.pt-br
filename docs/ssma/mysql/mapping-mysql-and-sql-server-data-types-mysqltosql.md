@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823459"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935346"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapear os tipos de dados do SQL Server e MySQL (MySQLToSQL)
-Tipos de banco de dados MySQL diferem de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados ou SQL Azure. Ao converter objetos do banco de dados MySQL em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do ou SQL Azure, você deve especificar como mapear tipos de dado de MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão ou pode personalizar os mapeamentos, conforme mostrado nos procedimentos a seguir.  
+Tipos de banco de dados MySQL diferem dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados SQL ou do Azure Ao converter objetos do banco de dados MySQL em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do ou SQL Azure, você deve especificar como mapear tipos de dado de MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão ou pode personalizar os mapeamentos, conforme mostrado nos procedimentos a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
 O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações de projeto &#40;mapeamento de tipo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -68,9 +68,9 @@ Quando você exibe a guia **mapeamento de tipo** no SSMA, o plano de fundo é co
   
     Isso permite que você personalize o mapeamento de dados para valores menores e maiores do mesmo tipo de dados. Em **tipo de destino**, selecione o tipo de dados SQL Server ou SQL Azure de destino.  
   
-    1.  Alguns tipos exigem um comprimento de tipo de dados de destino. Se necessário, insira o novo comprimento dos dados na caixa **substituir por** e clique em **OK**.  
+    -  Alguns tipos exigem um comprimento de tipo de dados de destino. Se necessário, insira o novo comprimento dos dados na caixa **substituir por** e clique em **OK**.  
   
-    2.  Alguns tipos exigem uma **escala** e **precisão** de tipo de dados de destino. Se necessário, insira a nova precisão e escala na caixa **substituir por** e clique em **OK** .  
+    -  Alguns tipos exigem uma **escala**e **precisão** de tipo de dados de destino. Se necessário, insira a nova precisão e escala na caixa **substituir por** e clique em **OK**.  
   
 -   **Para remover um mapeamento de tipo de dados, faça o seguinte:**  
   

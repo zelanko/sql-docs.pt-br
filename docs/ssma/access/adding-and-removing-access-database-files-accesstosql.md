@@ -27,14 +27,14 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293683"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934127"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Adicionando e removendo arquivos de banco de dados do Access (AccessToSQL)
 Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, você deve adicionar um ou mais bancos de dado do Access ao projeto do SSMA. Esses bancos de dados devem ter o Access 97 ou versões posteriores. Se você tiver bancos de dados de uma versão anterior do Access, deverá converter os bancos de dados em uma versão mais recente. Você faz isso abrindo e salvando os bancos de dados no Access 97 ou em uma versão posterior antes de adicioná-los ao SSMA.  
