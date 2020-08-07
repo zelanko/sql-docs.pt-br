@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd0f9f37b3381705a2e739276a7a044837fb20ad
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110166"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87946969"
 ---
 # <a name="clr-integration-security"></a>Segurança da integração CLR
 
@@ -53,7 +53,6 @@ ms.locfileid: "87110166"
  [Representação e segurança de integração CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Aborda como o código gerenciado acessa recursos externos que usam representação.  
   
- [Permitindo chamadores parcialmente confiáveis](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Aborda problemas que surgem quando um método gerenciado invoca um método em uma classe contida em outro assembly.  
   
  [Domínios do aplicativo e segurança da integração CLR](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  

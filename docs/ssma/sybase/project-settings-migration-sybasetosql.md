@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5e8a8f9c88537d0dc807efe7baf387ea917468d3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028707"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930863"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Configurações do projeto (migração) (SybaseToSQL)
-A página migração da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA migra dados do Sybase Adaptive Server Enterprise (ase) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o.  
+A página migração da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA migra dados do Sybase Adaptive Server Enterprise (ase) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 O painel migração está disponível nas caixas de diálogo **configurações do projeto** e configurações do **projeto padrão** .  
   

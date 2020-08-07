@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f59e442a70b8c9b621f453ab9837412238ec6102
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927784"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937255"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Seleção de objeto avançada (DB2ToSQL)
 A caixa de diálogo **seção de objeto avançado** permite filtrar objetos de banco de dados usando cadeias de caracteres e subcadeias no nome do objeto e, em seguida, selecionar ou desmarcar esses objetos. O SSMA executa operações de conversão e migração em objetos selecionados.  
@@ -25,7 +25,7 @@ Ao abrir pela primeira vez a caixa de diálogo, clique em **Mostrar itens de sub
   
 Antes de usar essa caixa de diálogo, talvez você queira forçar o SSMA a carregar todos os metadados convertendo esquemas ou salvando o projeto.  
   
-## <a name="options"></a>Opções  
+## <a name="options"></a>Opções
 **Verificar todos os itens**  
 Adiciona uma marca de seleção ao lado de todos os itens. Esses itens serão selecionados imediatamente no Gerenciador de metadados.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864913"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950971"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar Assistente de Migração de Dados da linha de comando
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Avaliação de banco de dados único para plataforma de destino SQL Azure banco de dados, salvar resultados em arquivos. JSON e. csv**
+**Avaliação de banco de dados único para plataforma de destino banco de dados SQL do Azure, salvar resultados em arquivo. JSON e. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Avaliação de banco de dados único para plataforma de destino SQL Azure banco de dados, salvar resultados em arquivos. JSON e. csv**
+**Avaliação de banco de dados único para plataforma de destino banco de dados SQL do Azure, salvar resultados em arquivo. JSON e. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 |`/SkuRecommendationSubscriptionId` | A ID da assinatura. | S <br> (Para obter os preços mais recentes)
 |`/SkuRecommendationDatabasesToRecommend` | Lista de bancos de dados separados por espaços para recomendar (por exemplo, "Database1" "Database2" "Database3"). Os nomes diferenciam maiúsculas de minúsculas e devem estar entre aspas duplas. Se omitido, serão fornecidas recomendações para todos os bancos de dados. | N
 |`/AzureAuthenticationTenantId` | O locatário de autenticação. | S <br> (Para obter os preços mais recentes)
-|`/AzureAuthenticationClientId` | A ID do cliente do aplicativo AAD usado para autenticação. | S <br> (Para obter os preços mais recentes)
+|`/AzureAuthenticationClientId` | A ID do cliente do aplicativo do Azure AD usado para autenticação. | S <br> (Para obter os preços mais recentes)
 |`/AzureAuthenticationInteractiveAuthentication` | Defina como true para exibir a janela. | S <br> (Para obter os preços mais recentes) <br>(Escolha uma das 3 opções de autenticação-opção 1)
 |`/AzureAuthenticationCertificateStoreLocation` | Defina como o local do repositório de certificados (por exemplo, "CurrentUser"). | S <br>(Para obter os preços mais recentes) <br> (Escolha uma das 3 opções de autenticação-opção 2)
 |`/AzureAuthenticationCertificateThumbprint` | Defina como a impressão digital do certificado. | S <br> (Para obter os preços mais recentes) <br>(Escolha uma das 3 opções de autenticação-opção 2)
@@ -379,6 +379,6 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 - Download de [Assistente de migração de dados](https://aka.ms/get-dma) .
 - O artigo [identifica o SKU do banco de dados SQL do Azure correto para seu banco de dados local](https://aka.ms/dma-sku-recommend-sqldb).

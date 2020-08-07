@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 724f0fc6a38388d9366f3c46090ddaf22cd64a34
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40ad7c3d165b0869f3cba9e6f703cd9e33ef199f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887813"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948081"
 ---
 # <a name="creating-an-assembly"></a>Criando um assembly
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -135,7 +135,4 @@ WITH PERMISSION_SET = UNSAFE;
  [Alterando um assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Descartando um assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [Segurança de acesso ao código de integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [propriedade TRUSTWORTHY do banco de dados](../../../relational-databases/security/trustworthy-database-property.md)   
- [Permitindo chamadores parcialmente confiáveis](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
-  
-  
+ [propriedade TRUSTWORTHY do banco de dados](../../../relational-databases/security/trustworthy-database-property.md)

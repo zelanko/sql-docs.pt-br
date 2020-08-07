@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028664"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930724"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configurações do projeto (mapeamento de tipo) (SybaseToSQL)
-A página mapeamento de tipos da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte os tipos de dados do ase Adaptive [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Enterprise para os tipos de dados.  
+A página mapeamento de tipos da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte os tipos de dados do ase Adaptive Server Enterprise para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos de dados.  
   
 A página mapeamento de tipo está disponível nas caixas de diálogo **configurações do projeto** e **configurações do projeto padrão** .  
   
@@ -30,7 +30,7 @@ A página mapeamento de tipo está disponível nas caixas de diálogo **configur
 O tipo de dados do ASE mapeado.  
   
 **Tipo de destino**  
-O tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados de destino para o tipo de dados do ase especificado.  
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados de destino para o tipo de dados do ase especificado.  
   
 Consulte a tabela na seção a seguir para o mapeamento de tipo do SSMA para Sybase padrão.  
   
@@ -47,99 +47,99 @@ Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeam
 Clique para redefinir a lista de mapeamento de tipo para os padrões do SSMA.  
   
 ## <a name="default-type-mapping"></a>Mapeamento de tipo padrão  
-A tabela a seguir contém o mapeamento de tipo padrão entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ase e os tipos de dados.  
+A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
   
 |Tipo de dados do ASE|Tipo de dados do SQL Server|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binário [\*.. 8000]**|**binário [\*]**|  
-|**binário [8001..\*]**|**varbinary(max)**|  
+|**binário [ \* .. 8000]**|**binário [ \* ]**|  
+|**binário [8001.. \* ]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**variável de caractere\*[.. 8000]**|**varchar [\*]**|  
-|**variação de caractere [8001.\*.]**|**varchar(max)**|  
-|**Char [\*.. 8000]**|**Char [\*]**|  
-|**Char [8001..\*;]**|**varchar(max)**|  
+|**variável de caractere [ \* .. 8000]**|**varchar [ \* ]**|  
+|**variação de caractere [8001.. \* ]**|**varchar(max)**|  
+|**Char [ \* .. 8000]**|**Char [ \* ]**|  
+|**Char [8001.. \* ;]**|**varchar(max)**|  
 |**espaço**|**char**|  
 |**character varying**|**varchar**|  
-|**variável de caractere\*[.. 8000]**|**varchar [\*]**|  
-|**variável de caractere [8001.\*.]**|**varchar(max)**|  
-|**caractere [\*.. 8000]**|**Char [\*]**|  
-|**caractere [8001..\*]**|**varchar(max)**|  
+|**variável de caractere [ \* .. 8000]**|**varchar [ \* ]**|  
+|**variável de caractere [8001.. \* ]**|**varchar(max)**|  
+|**caractere [ \* .. 8000]**|**Char [ \* ]**|  
+|**caractere [8001.. \* ]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**dez**|**decimal**|  
-|**Dec [\*.. \*]**|**Decimal [\*]**|  
-|**Dec [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
+|**Dec [ \* .. \* ]**|**Decimal [ \* ]**|  
+|**Dec [ \* .. \* ] [\*..\*]**|**Decimal [ \* ] [ \* ]**|  
 |**decimal**|**decimal**|  
-|**Decimal [\*.. \*]**|**Decimal [\*]**|  
-|**Decimal [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
+|**Decimal [ \* .. \* ]**|**Decimal [ \* ]**|  
+|**Decimal [ \* .. \* ] [\*..\*]**|**Decimal [ \* ] [ \* ]**|  
 |**precisão dupla**|**float [53]**|  
 |**float**|**float [53]**|  
-|**float [\*.. 15**|**float [24]**|  
-|**float [16..\*]**|**float [53]**|  
+|**float [ \* .. 15**|**float [24]**|  
+|**float [16.. \* ]**|**float [53]**|  
 |**imagem**|**imagem**|  
 |**int**|**int**|  
 |**inteiro**|**int**|  
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**caractere nacional**|**nchar**|  
-|**caractere nacional [\*.. 4000]**|**nchar [\*]**|  
+|**caractere nacional [ \* .. 4000]**|**nchar [ \* ]**|  
 |**variação de caractere nacional**|**nvarchar**|  
-|**variação de caractere nacional\*[.. 4000]**|**nvarchar [\*]**|  
-|**variação de caractere nacional [4001.\*.]**|**nvarchar(max)**|  
-|**caractere nacional [4001..\*]**|**nvarchar(max)**|  
+|**variação de caractere nacional [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**variação de caractere nacional [4001.. \* ]**|**nvarchar(max)**|  
+|**caractere nacional [4001.. \* ]**|**nvarchar(max)**|  
 |**caractere nacional**|**nchar**|  
-|**caractere nacional [\*.. 4000]**|**nchar [\*]**|  
-|**caractere nacional [4001..\*]**|**nvarchar(max)**|  
+|**caractere nacional [ \* .. 4000]**|**nchar [ \* ]**|  
+|**caractere nacional [4001.. \* ]**|**nvarchar(max)**|  
 |**variação de caractere nacional**|**nvarchar**|  
-|**variação de caractere nacional\*[.. 4000]**|**nvarchar [\*]**|  
-|**variação de caractere nacional [4001.\*.]**|**nvarchar(max)**|  
+|**variação de caractere nacional [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**variação de caractere nacional [4001.. \* ]**|**nvarchar(max)**|  
 |**varchar nacional**|**nvarchar**|  
-|**varchar [\*.. 4000]**|**nvarchar [\*]**|  
-|**varchar [4001..\*] nacional**|**nvarchar(max)**|  
+|**varchar [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**varchar [4001.. \* ] nacional**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**variável nchar**|**nvarchar**|  
-|**nchar variando\*[.. 4000]**|**nvarchar [\*]**|  
-|**nchar variável [4001..\*]**|**nvarchar(max)**|  
-|**nchar [\*.. 4000]**|**nchar [\*]**|  
-|**nchar [4001..\*]**|**nvarchar(max)**|  
+|**nchar variando [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**nchar variável [4001.. \* ]**|**nvarchar(max)**|  
+|**nchar [ \* .. 4000]**|**nchar [ \* ]**|  
+|**nchar [4001.. \* ]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**numérico [\*.. \*]**|**numeric [\*]**|  
-|**numérico [\*.. \*][\*.. \*]**|**numeric [\*] [\*]**|  
+|**numérico [ \* .. \* ]**|**numeric [ \* ]**|  
+|**numérico [ \* .. \* ] [\*..\*]**|**numeric [ \* ] [ \* ]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
-|**nvarchar [4001..\*]**|**nvarchar(max)**|  
+|**nvarchar [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**nvarchar [4001.. \* ]**|**nvarchar(max)**|  
 |**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
-|**sysname [\*.. \*]**|**nvarchar [255]**|  
+|**sysname [ \* .. \* ]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**hora [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**variável UNICHAR**|**nvarchar**|  
-|**UNICHAR variando\*[.. 4000]**|**nvarchar [\*]**|  
-|**variável UNICHAR [4001..\*]**|**nvarchar(max)**|  
-|**UNICHAR [\*.. 4000]**|**nchar [\*]**|  
-|**UNICHAR [4001..\*]**|**nvarchar(max)**|  
+|**UNICHAR variando [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**variável UNICHAR [4001.. \* ]**|**nvarchar(max)**|  
+|**UNICHAR [ \* .. 4000]**|**nchar [ \* ]**|  
+|**UNICHAR [4001.. \* ]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar [\*.. 4000]**|**nvarchar [\*]**|  
-|**univarchar [4001..\*]**|**nvarchar(max)**|  
+|**univarchar [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**univarchar [4001.. \* ]**|**nvarchar(max)**|  
 |**bigint não assinado**|**numeric [20] [0]**|  
 |**unsigned int**|**bigint**|  
 |**smallint não assinado**|**int**|  
 |**tinyint não assinado**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*.. 8000]**|**varbinary [\*]**|  
-|**varbinary [8001..\*]**|**varbinary(max)**|  
+|**varbinary [ \* .. 8000]**|**varbinary [ \* ]**|  
+|**varbinary [8001.. \* ]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*.. 8000]**|**varchar [\*]**|  
-|**varchar [8001..\*]**|**varchar(max)**|  
+|**varchar [ \* .. 8000]**|**varchar [ \* ]**|  
+|**varchar [8001.. \* ]**|**varchar(max)**|  
   

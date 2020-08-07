@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929452"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937769"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Configurações do projeto (conversão) (AccessToSQL)
-As configurações do projeto de conversão permitem que você configure como os objetos são convertidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de objetos de banco de dados do Access ou SQL Azure objetos de banco de dados.  
+As configurações do projeto de conversão permitem que você configure como os objetos são convertidos de objetos de banco de dados do Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos do banco de dados SQL do Azure.  
   
 O painel de conversão está disponível nas caixas de diálogo **configurações do projeto** e **configurações do projeto padrão** .  
   
@@ -30,7 +30,7 @@ O painel de conversão está disponível nas caixas de diálogo **configuraçõe
   
 ## <a name="options"></a>Opções  
 **Adicionar chave primária**  
-Cria uma nova chave primária na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure se uma tabela de acesso não tiver nenhuma chave primária ou índice exclusivo.  
+Cria uma nova chave primária na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela ou SQL Azure se uma tabela de acesso não tiver nenhuma chave primária ou índice exclusivo.  
   
 -   **Modo padrão**: false  
   
@@ -83,7 +83,7 @@ Especifica o tipo de mensagem (aviso, erro ou nada) que o SSMA mostra no painel 
   
 -   **Modo completo**: erro  
   
-**Avisar quando uma consulta complexa usar um curinga (\&#42;)**  
+**Avisar quando uma consulta complexa usar um curinga ( \& #42;)**  
 Exibe um aviso no painel de saída e Lista de Erros quando um nome de coluna em uma instrução SELECT é um curinga (*).  
   
 -   **Modo padrão**: verdadeiro  

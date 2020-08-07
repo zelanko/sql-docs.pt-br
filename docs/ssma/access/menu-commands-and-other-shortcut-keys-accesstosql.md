@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f7e5aa6a3b6d663c21ff57abda09ee9308a0a2af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907136"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937781"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandos de menu e outras teclas de atalho (AccessToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do aplicativo SSMA para Access.  
@@ -82,7 +82,7 @@ Para acessar o menu ferramentas, o atalho de teclado usado é ALT + T. A tabela 
 |Criar relatório.|ALT + T + C|  
 |Converta o esquema.|ALT + T + N ou CTRL + R|  
 |Atualizar do banco de dados do Access.|ALT + T + R|  
-|Sincronizar com o SQL Server ou SQL Azure banco de dados.|ALT + T + S|  
+|Sincronize com o SQL Server ou o banco de dados SQL do Azure.|ALT + T + S|  
 |Salvar como script.|ALT + T + A|  
 |Migre dados.|ALT + T + M|  
 |Pare a operação atual.|ALT + T + O|  

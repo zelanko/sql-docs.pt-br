@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020994"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930407"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selecionar e configurar os objetos afetados (SybaseToSQL)
 Nesta página, você pode selecionar tabelas e chaves estrangeiras, alterações que devem ser comparadas quando o SSMA verifica os resultados da execução dos objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -110,7 +110,7 @@ Controla a sensibilidade do caso de comparação.
 -   Se você escolher **false**, a comparação considerará o caso de letra.  
   
 ## <a name="comparing-sql"></a>Comparando SQL  
-Você pode exibir as instruções SELECT geradas pelo SSMA Tester na página **comparar SQL** . O testador irá comparar os conjuntos de resultados dessas instruções linha por linha. Cada linha seguinte de um conjunto de resultados do Sybase deve ser igual à próxima linha do conjunto de resultados produzido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em.  
+Você pode exibir as instruções SELECT geradas pelo SSMA Tester na página **comparar SQL** . O testador irá comparar os conjuntos de resultados dessas instruções linha por linha. Cada linha seguinte de um conjunto de resultados do Sybase deve ser igual à próxima linha do conjunto de resultados produzido em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Você pode editar essas instruções SELECT para fornecer verificação personalizada. Para salvar as alterações no Sybase e em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções, use os botões **aplicar** sob o SQL de origem e de destino, de forma correspondente.  
   

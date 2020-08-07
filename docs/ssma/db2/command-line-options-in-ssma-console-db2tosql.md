@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 32167639a12d86a7bf3cf84b3895537af551d8d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938268"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937036"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opções de linha de comando no console do SSMA (DB2ToSQL)
 A Microsoft fornece uma série robusta de opções de linha de comando para executar e controlar as atividades do SSMA. As seções que mais profundos detalham o mesmo.  
@@ -24,7 +24,7 @@ Aqui descritos estão as opções de comando do console.
   
 Para fins desta seção, o termo ' Option ' também é conhecido como ' switch '.  
   
-As opções não diferenciam maiúsculas de minúsculas e podem**-** começar com o caractere**/**' ' ou, ' '.  
+As opções não diferenciam maiúsculas de minúsculas e podem começar com o **-** caractere ' ' ou, ' **/** '.  
   
 Se as opções forem especificadas, será obrigatório especificar os parâmetros de opção correspondentes.  
   
@@ -121,7 +121,7 @@ Essa opção indica a senha criptografada para conexões do servidor. Ele difere
   
 Você não pode inserir nenhuma outra opção ou senha como parâmetro de linha de comando. Caso contrário, resultará em um erro. Para obter mais informações, consulte a seção [Gerenciando senhas](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) .  
   
-As seguintes subopções têm suporte para `-p/securepassword`:  
+As seguintes subopções têm suporte para `-p/securepassword` :  
   
 -   Para adicionar a senha ao armazenamento protegido para uma ID de servidor especificada ou para todas as IDs de servidor definidas no arquivo de conexão do servidor. A opção-overwrite, abaixo, atualiza a senha se ela já existir:  
   

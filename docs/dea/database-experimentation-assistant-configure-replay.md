@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: e2715667fc474335ffec54259ebb821fe2e5904a
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 7519b35bb89704acad32f3dfe46c2f916b4dc441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565514"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951351"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurar Distributed Replay para Assistente para Experimentos de Banco de Dados
 
@@ -126,6 +126,6 @@ As etapas a seguir devem ser executadas para cada repetição:
 2. Forneça permissões para que o usuário da conta de serviço do cliente acesse os bancos de dados na instância do SQL Server. As permissões são necessárias para que as consultas sejam executadas na instância de SQL Server.
 3. Inicie a reprodução.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - Para saber como reproduzir um rastreamento capturado em um ambiente de teste atualizado, consulte [reproduzir um rastreamento no Assistente para experimentos de banco de dados](database-experimentation-assistant-replay-trace.md).

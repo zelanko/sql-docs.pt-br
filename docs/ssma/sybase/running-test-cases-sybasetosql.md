@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021024"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930458"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Executar casos de teste (SybaseToSQL)
-Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Sybase [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  
+Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Sybase e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  
   
 Um requisito necessário para um teste bem-sucedido é que todos os objetos Sybase são convertidos e carregados no banco de dados de destino. Além disso, os dados da tabela devem ser migrados para que o conteúdo das tabelas em ambas as plataformas seja sincronizado.  
   
@@ -38,11 +38,11 @@ Quando o teste for concluído, o relatório de caso de teste será criado. Cliqu
 O SSMA Tester verifica se todos os pré-requisitos foram atendidos para a execução de teste antes do início do teste. Se algumas condições não forem satisfeitas, uma mensagem de erro será exibida.  
   
 ### <a name="initialization"></a>Inicialização  
-Nesta etapa, o SSMA Tester cria objetos auxiliares (tabelas, gatilhos e exibições) no Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. Eles permitem que as alterações de rastreamento feitas nas tabelas afetadas escolhidas para verificação se o modo de comparações de tabela são **apenas alterações**.  
+Nesta etapa, o SSMA Tester cria objetos auxiliares (tabelas, gatilhos e exibições) no Sybase e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eles permitem que as alterações de rastreamento feitas nas tabelas afetadas escolhidas para verificação se o modo de comparações de tabela são **apenas alterações**.  
   
 Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os seguintes objetos auxiliares são criados no Sybase.  
   
-Os seguintes objetos são criados em Sybase no banco de dados SSMATESTER2005db ou SSMATESTER2008db e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados ssmatesterdb_syb.  
+Os seguintes objetos são criados em Sybase no banco de dados SSMATESTER2005db ou SSMATESTER2008db e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados ssmatesterdb_syb.  
   
 |Nome|Type|Descrição|  
 |--------|--------|---------------|  
@@ -54,7 +54,7 @@ Os seguintes objetos são criados em Sybase no banco de dados SSMATESTER2005db o
 |USER_TABLE $ new_id|Visualizar|Identificação de linhas inseridas e alteradas.|  
 |USER_TABLE $ Old|Visualizar|Representação simplificada de linhas excluídas e substituídas.|  
   
-O objeto a seguir é criado no banco de dados da tabela verificada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no Sybase e no.  
+O objeto a seguir é criado no banco de dados da tabela verificada no Sybase e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Nome|Type|Descrição|  
 |--------|--------|---------------|  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68024750"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938657"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistente para localizar bancos de dados (selecionar locais) (AccessToSQL)
 Na página Selecionar locais do assistente para localizar bancos de dados, insira os parâmetros de pesquisa para localizar bancos de dados do Access.  
@@ -36,7 +36,7 @@ Lista os locais que o SSMA examinará. Quando você clica no botão **Adicionar*
 **Adicionar**  
 Adiciona o local na caixa de texto caminho à lista de locais.  
   
-**Substitua**  
+**Substituir**  
 Se um item na lista de locais for selecionado, o item na caixa de texto caminho substituirá o item selecionado.  
   
 **Remover**  
@@ -55,7 +55,7 @@ Para localizar bancos de dados que foram atualizados pela última vez em um inte
 Para localizar bancos de dados que correspondem a um critério de tamanho, selecione um caractere de comparação na primeira caixa, insira um número para o tamanho e, em seguida, selecione bytes, quilobytes ou megabytes da terceira caixa.  
   
 **Proprietário**  
-Insira o nome de usuário completo do Windows do proprietário. Isso pode ser formatado como *domain*\\*usuário*do domínio.  
+Insira o nome de usuário completo do Windows do proprietário. Isso pode ser formatado como *domain* \\ *usuário*do domínio.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Adicionando e removendo arquivos de banco de dados do Access](adding-and-removing-access-database-files-accesstosql.md)  

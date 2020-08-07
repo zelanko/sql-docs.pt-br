@@ -8,16 +8,16 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 09f8ab0b3f4950e06c96b67c74f9cdcbc09269d5
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 7a50504923a825a437ea4456a1bb9394cd0635db
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565563"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951321"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Criar relatórios de análise no Assistente para Experimentos de Banco de Dados (SQL Server)
 
@@ -88,7 +88,7 @@ Se ocorrer um erro enquanto o relatório é criado, a página progresso mostra a
 |---|---|  
 |RInterop encontrou um erro na inicialização. Verifique os logs do RInterop e tente novamente.|O DEA requer acesso à Internet para baixar pacotes R dependentes. Verifique os logs do RInterop nos logs% temp% \\ RInterop e DEA em% temp% \\ DEA. Se o RInterop foi inicializado incorretamente ou se ele foi inicializado sem os pacotes de R corretos, você poderá ver a exceção "falha ao gerar o novo relatório de análise" após a etapa InitializeRInterop nos logs do DEA.<br><br>Os logs do RInterop também podem mostrar um erro semelhante a "não há um pacote jsonlite disponível". Se seu computador não tiver acesso à Internet, você poderá baixar manualmente o pacote jsonlite R necessário:<br><br><li>Vá para a pasta% UserProfile% \\ DEARPackages no sistema de arquivos da máquina. Essa pasta consiste nos pacotes usados pelo R para DEA.</li><br><li>Se a pasta jsonlite estiver ausente na lista de pacotes instalados, você precisará de um computador com acesso à Internet para baixar a versão de lançamento do jsonlite \_1.4.zip do [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html) .</li><br><li>Copie o arquivo. zip para o computador em que você está executando o DEA.  Extraia a pasta jsonlite e copie-a para% UserProfile% \\ DEARPackages. Essa etapa instala automaticamente o pacote jsonlite em R. A pasta deve ser nomeada **jsonlite** e o conteúdo deve estar diretamente dentro da pasta, não um nível abaixo.</li><br><li>Feche DEA, reabra e tente novamente a análise.</li><br>Você também pode usar o RGUI. Vá para **pacotes**  >  **instalar do zip**. Vá para o pacote que você baixou anteriormente e instale o.<br><br>Se o RInterop foi inicializado e configurado corretamente, você deverá ver "Instalando o pacote R dependente jsonlite" nos logs do RInterop.|  
 |Não é possível conectar-se à instância de SQL Server, verifique se o nome do servidor está correto e verifique o acesso necessário ao usuário que está conectado.|Talvez você não tenha direitos de acesso ou de usuário no servidor, ou o nome do servidor pode estar incorreto.|
-|O processo de RInterop atingiu o tempo limite. Verifique os logs de DEA e RInterop, interrompa o processo de RInterop no Gerenciador de tarefas e tente novamente.<br><br>ou<br><br>RInterop está em estado com falha. Pare o processo RInterop no Gerenciador de tarefas e tente novamente.|Verifique os logs em% temp% \\ RInterop para confirmar o erro. Remova o processo RInterop do Gerenciador de tarefas antes de tentar novamente. Entre em contato com a equipe do produto se o problema persistir.|
+|O processo de RInterop atingiu o tempo limite. Verifique os logs de DEA e RInterop, interrompa o processo de RInterop no Gerenciador de tarefas e tente novamente.<br><br>ou o<br><br>RInterop está em estado com falha. Pare o processo RInterop no Gerenciador de tarefas e tente novamente.|Verifique os logs em% temp% \\ RInterop para confirmar o erro. Remova o processo RInterop do Gerenciador de tarefas antes de tentar novamente. Entre em contato com a equipe do produto se o problema persistir.|
 
 **P: o relatório é gerado, mas os dados parecem estar ausentes**
 
@@ -98,6 +98,6 @@ Se os dados não existirem, os dados poderão não ter sido copiados corretament
 
 Mais perguntas ou comentários? Envie comentários por meio da ferramenta DEA escolhendo o ícone de Smiley no canto inferior esquerdo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - Para saber como exibir o relatório de análise, consulte [exibir relatórios](database-experimentation-assistant-view-report.md).

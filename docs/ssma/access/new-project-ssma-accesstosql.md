@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - New Project dialog box
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: db042e18beb0b33f50639b63f76dde21863c19a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 61c14895f2e464713661f74890b2eb1d5ccc79f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112291"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937776"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Novo projeto (SSMA) (AccessToSQL)
 Use a caixa de diálogo **novo projeto** para criar um novo projeto do SSMA. Para acessar a caixa de diálogo **novo projeto** , no menu **arquivo** , clique em **novo projeto**.  
@@ -26,7 +26,7 @@ Use a caixa de diálogo **novo projeto** para criar um novo projeto do SSMA. Par
   
 Insira o nome do projeto. O SSMA acrescentará a extensão de arquivo.  
   
-**Local**  
+**Localidade**  
   
 Insira ou navegue até o local da pasta ou da rede para salvar o projeto.  
   
@@ -47,6 +47,6 @@ Selecione uma das versões de banco de dados de destino na lista abaixo
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> Um novo projeto do tipo ' SQL Azure ' requer, SQL Server Native Client (SNAC) versão 10,5 ou superior para vincular as tabelas de acesso ao banco de dados SQL Azure.   
+> Um novo projeto do tipo ' SQL Azure ' requer, SQL Server Native Client (SNAC) versão 10,5 ou superior para vincular as tabelas de acesso ao banco de dados SQL do Azure.   
 > Você pode obter a versão mais recente do SNAC do [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   

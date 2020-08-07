@@ -17,15 +17,15 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: b27d773bc8fd928e7db2e29c7a01492fb97df78f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823942"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938763"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introdução ao Assistente de Migração do SQL Server para acesso (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) para acesso permite que você converta rapidamente objetos de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Access ou objetos do banco de dados SQL do Azure, carregue os objetos resultantes no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL do Azure e migre-os de acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou ao Azure SQL Database. Se necessário, você também pode vincular tabelas de acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tabelas do banco de dados SQL do Azure para que possa continuar a usar seus aplicativos de front-end do Access com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o banco de dados SQL do Azure.  
@@ -132,6 +132,6 @@ O menu **Exibir** fornece comandos para alternar a visibilidade do painel de sa�
   
 -   O painel de Lista de Erros mostra mensagens de erro, aviso e informativas em uma lista que você pode classificar.  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

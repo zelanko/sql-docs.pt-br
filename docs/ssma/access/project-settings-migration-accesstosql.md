@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929391"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937675"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
-As configurações do projeto de migração permitem que você configure como os dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são migrados para o ou SQL Azure.  
+As configurações do projeto de migração permitem que você configure como os dados são migrados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 O painel migração está disponível nas caixas de diálogo **configurações do projeto** e **configurações padrão do projeto** .  
   
@@ -39,7 +39,7 @@ Especifica se o SSMA deve verificar as restrições ao adicionar dados às tabel
 -   **Modo completo**: falso  
   
 **Acionadores**  
-Especifica se o SSMA deve acionar gatilhos de inserção ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionar dados a tabelas.  
+Especifica se o SSMA deve acionar gatilhos de inserção ao adicionar dados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas.  
   
 -   **Modo padrão**: false  
   
@@ -48,7 +48,7 @@ Especifica se o SSMA deve acionar gatilhos de inserção ao [!INCLUDE[ssNoVersio
 -   **Modo completo**: falso  
   
 **Manter identidade**  
-Especifica se o SSMA preserva os valores de identidade de acesso ao adicionar dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ao. Se esse valor for false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o atribuirá valores de identidade.  
+Especifica se o SSMA preserva os valores de identidade de acesso ao adicionar dados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se esse valor for false, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribuirá valores de identidade.  
   
 -   **Modo padrão**: verdadeiro  
   
@@ -57,7 +57,7 @@ Especifica se o SSMA preserva os valores de identidade de acesso ao adicionar da
 -   **Modo completo**: falso  
   
 **Manter nulos**  
-Especifica se o SSMA preserva valores nulos nos dados de origem quando adiciona dados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independentemente dos valores padrão especificados em. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+Especifica se o SSMA preserva valores nulos nos dados de origem quando adiciona dados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , independentemente dos valores padrão especificados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Modo padrão**: verdadeiro  
   

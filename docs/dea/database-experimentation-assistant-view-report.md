@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 017b7a1e06fca4a1f682050b99f8c8412b44aaf4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565485"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951121"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Exibir relatórios de análise no Assistente para Experimentos de Banco de Dados
 
@@ -83,6 +83,6 @@ Você pode selecionar links de modelo de consulta para obter informações mais 
    > [!NOTE]
    > Se você estiver analisando o evento estendido (. XEL) os arquivos, as informações do plano de consulta não são coletadas para limitar a pressão de memória no computador do usuário.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - Para saber como gerar um relatório de análise em um prompt de comando, consulte [executar no prompt de comando](database-experimentation-assistant-run-command-prompt.md).

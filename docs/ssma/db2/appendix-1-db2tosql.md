@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 70d916526f5b7d7d36c9237624ef311befca39c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a6683a435262012f67d7690766f32a802a138226
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938355"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937148"
 ---
 # <a name="appendix---1-db2tosql"></a>Apêndice-1 (DB2ToSQL)
 Exibição rápida das opções de linha de comando do console do SSMA:  
   
-|SL. Não.|Opção|Obrigatório?|Argumento de opção|Valores permitidos|  
+|SL. Não.|Alternar|Necessário?|Argumento de opção|Valores permitidos|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Sim|scriptfile|Nome de arquivo XML válido.<br /><br />Arquivo de definição de script do console.|  
 |2|-v/variável|Não|variablevaluefile|Nome de arquivo XML válido.<br /><br />Se forem usadas variáveis no arquivo de script, esse arquivo deverá ser especificado.|  
