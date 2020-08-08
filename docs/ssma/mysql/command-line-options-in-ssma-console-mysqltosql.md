@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c941cca65bd5ccd3a234da7da0aa3b710ecb4ae3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103256"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935995"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opções de linha de comando no Console do SSMA (MySQLToSQL)
 A Microsoft fornece uma série robusta de opções de linha de comando para executar e controlar as atividades do SSMA. As seções que mais profundos detalham o mesmo.  
@@ -34,7 +34,7 @@ Aqui descritos estão as opções de comando do console.
   
 Para fins desta seção, o termo ' Option ' também é conhecido como ' switch '.  
   
-As opções não diferenciam maiúsculas de minúsculas e podem**-** começar com o caractere**/**' ' ou, ' '.  
+As opções não diferenciam maiúsculas de minúsculas e podem começar com o **-** caractere ' ' ou, ' **/** '.  
   
 Se as opções forem especificadas, será obrigatório especificar os parâmetros de opção correspondentes.  
   
@@ -131,7 +131,7 @@ Essa opção indica a senha criptografada para conexões do servidor. Ele difere
   
 Você não pode inserir nenhuma outra opção ou senha como parâmetro de linha de comando. Caso contrário, resultará em um erro. Para obter mais informações, consulte a seção [Gerenciando senhas](managing-passwords-mysqltosql.md) .  
   
-As seguintes subopções têm suporte para `-p/securepassword`:  
+As seguintes subopções têm suporte para `-p/securepassword` :  
   
 -   Para adicionar a senha ao armazenamento protegido para uma ID de servidor especificada ou para todas as IDs de servidor definidas no arquivo de conexão do servidor. A opção-overwrite, abaixo, atualiza a senha se ela já existir:  
   

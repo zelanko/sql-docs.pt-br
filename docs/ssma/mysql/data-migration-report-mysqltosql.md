@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0bb755336e3d26dd54ea1820ed4fdcfab75e757
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9c88bb9f59d38a1d9cf85785954f5fc6b4ae276
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935775"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Relatório de migração de dados (MySQLToSQL)
-A caixa de diálogo **relatório de migração de dados** é exibida após [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a migração de dados para o.  
+A caixa de diálogo **relatório de migração de dados** é exibida após a migração de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
 **Status**  

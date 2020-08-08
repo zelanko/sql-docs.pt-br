@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103227"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935975"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectar-se ao MySQL (MySQLToSQL)
 Use a caixa de diálogo **conectar-se ao MySQL** para se conectar ao banco de dados MySQL que você deseja migrar.  
@@ -50,7 +50,7 @@ Digite a senha para o nome de usuário.
   
 Se você quiser se conectar com segurança ao MySQL, faça o uso da SSL (Secure Socket Layer) marcando a caixa de seleção **SSL** .  
   
-**Configurar**  
+**Configure**  
   
 Ele fornece uma opção para configurar a conexão com o MySQL por meio do protocolo SSL.  
   

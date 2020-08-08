@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363516"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943013"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -193,7 +193,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Retorna novas previsões para as três frações de tempo restantes com base no modelo recém-expandido.  
   
- A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término. Para obter um exemplo de como fazer isso, consulte [lição 5: estendendo o modelo de série temporal](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ A seguinte tabela lista os resultados da consulta do Exemplo 2. Observe que os dois primeiros valores retornados para M200 Europa são exatamente os mesmos dos novos valores fornecidos. Esse comportamento ocorre por design. Se você desejar iniciar as previsões após o final dos novos dados, deverá especificar um período de início e de término.  
   
  Além disso, observe que você não forneceu novos dados para a região do Pacífico. Portanto, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retorna novas previsões para todas as cinco frações de tempo.  
   

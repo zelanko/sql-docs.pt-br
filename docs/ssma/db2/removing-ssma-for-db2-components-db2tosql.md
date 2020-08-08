@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6e5d1cd88027dfa3fb4216c93ab4e660ddcc0dc9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060090"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936630"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Removendo o SSMA para DB2ToSQL (componentes do DB2)
-Quando terminar de migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o, talvez você queira desinstalar os componentes do SSMA. Você pode desinstalar os componentes do cliente a qualquer momento. No entanto, você não deve desinstalar o pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de extensão de, a menos que os bancos de dados migrados não usem mais funções no esquema de **ssma_DB2** do **sysdb** .  
+Quando terminar de migrar bancos de dados do DB2 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , talvez você queira desinstalar os componentes do SSMA. Você pode desinstalar os componentes do cliente a qualquer momento. No entanto, você não deve desinstalar o pacote de extensão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que os bancos de dados migrados não usem mais funções no esquema de **ssma_DB2** do **sysdb** .  
   
 ## <a name="uninstalling-the-ssma-for-db2-client"></a>Desinstalando o cliente SSMA para DB2  
 Você pode desinstalar o SSMA usando **Adicionar ou remover programas**.  
@@ -26,7 +26,7 @@ Você pode desinstalar o SSMA usando **Adicionar ou remover programas**.
   
 1.  No Painel de Controle, abra **Adicionar ou Remover Programas**.  
   
-2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] Selecione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de migração para DB2**e clique em **remover**.  
+2.  Selecione ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração para DB2**e clique em **remover**.  
   
 3.  Para confirmar que deseja desinstalar o SSMA, clique em **Sim**.  
   

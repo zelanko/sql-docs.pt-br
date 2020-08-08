@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823629"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935320"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapear bancos de dados MySQL para esquemas SQL Server (MySQLToSQL)
-Por padrão, o SSMA para MySQL migra todos os objetos em um esquema do MySQL para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados do ou SQL Azure chamado para o esquema. No entanto, você pode personalizar o mapeamento entre esquemas do MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados do SQL Azure.  
+Por padrão, o SSMA para MySQL migra todos os objetos em um esquema MySQL para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados SQL do ou do Azure chamado para o esquema. No entanto, você pode personalizar o mapeamento entre os esquemas do MySQL e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados SQL do Azure.  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Esquemas MySQL e SQL Server ou SQL Azure  
 O conceito de MySQL de um esquema é mapeado para o conceito de SQL Server de um banco de dados e um de seus esquemas. O SSMA se refere à combinação SQL Server de banco de dados e esquema como um esquema.  

@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c6f8e53a13d5950138f71ed9b4858419eb70f07f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cd6dcfc6613b1290fb0798a29a5302b7ede34b43
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823281"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936025"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Converter bancos de dados MySQL (MySQLToSQL)
-Depois de ter se conectado ao MySQL, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure e defina opções de mapeamento de projeto e de dados, você pode converter objetos de banco de dados MySQL em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure objetos de banco.  
+Depois de se conectar ao MySQL, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure e definir opções de mapeamento de projeto e de dados, você poderá converter objetos de banco de dados MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de banco de dados SQL do Azure.  
   
 ## <a name="the-conversion-process"></a>O processo de conversão  
 A conversão de objetos de banco de dados usa as definições de objeto do MySQL, converte-as em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos semelhantes ou SQL Azure e, em seguida, carrega essas informações nos metadados do SSMA. Ele não carrega as informações na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Em seguida, você pode exibir os objetos e suas propriedades usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure Gerenciador de metadados.  

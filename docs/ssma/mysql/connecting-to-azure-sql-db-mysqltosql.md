@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822545"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935926"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>Conectando-se ao banco de dados SQL do Azure (MySQLToSQL)
 Para migrar bancos de dados MySQL para SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conecta, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados do banco de dados no SQL Azure Gerenciador de metadados. O SSMA armazena informações da instância do SQL Azure ao qual você está conectado, mas não armazena senhas.  
@@ -63,7 +63,7 @@ Ao definir as propriedades de conexão, você também especifica o banco de dado
 > O SSMA para MySQL não dá suporte à conexão com o banco de dados **mestre** no SQL Azure.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Sincronizando metadados de SQL Azure  
-Metadados sobre bancos de dados SQL Azure não são atualizados automaticamente. Os metadados no SQL Azure Gerenciador de metadados é um instantâneo dos metadados quando você se conecta pela primeira vez ao SQL Azure, ou a última vez que você atualizou os metadados manualmente. Você pode atualizar os metadados manualmente para todos os bancos de dados ou para qualquer banco de dados ou objeto de banco de dados individual.  
+Os metadados sobre os bancos de dados no Azure SQL Database não são atualizados automaticamente. Os metadados no SQL Azure Gerenciador de metadados é um instantâneo dos metadados quando você se conecta pela primeira vez ao SQL Azure, ou a última vez que você atualizou os metadados manualmente. Você pode atualizar os metadados manualmente para todos os bancos de dados ou para qualquer banco de dados ou objeto de banco de dados individual.  
   
 **Para sincronizar metadados**  
   
@@ -78,7 +78,7 @@ Metadados sobre bancos de dados SQL Azure não são atualizados automaticamente.
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa na migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento entre os esquemas do MySQL e os esquemas e bancos de dados do SQL Azure, consulte [mapeando bancos de dados MySQL para esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   Para personalizar o mapeamento entre os esquemas do MySQL e o banco de dados SQL do Azure, consulte [mapeando bancos de dados MySQL para esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 -   Para personalizar as opções de configuração para os projetos, consulte [definir opções de projeto &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   

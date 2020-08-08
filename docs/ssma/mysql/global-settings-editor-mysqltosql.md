@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a8fd4998a491d17c493588acfa7df9092f66f6e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1af73ccecb341bf852f7b7188e4c49e83b1b0254
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075408"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935395"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>Configurações globais (Editor) (MySQLToSQL)
 Use a página Editor da caixa de diálogo **configurações globais** para especificar as configurações das janelas do editor de códigos.  

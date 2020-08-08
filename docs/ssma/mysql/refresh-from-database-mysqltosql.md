@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a3ca412381cf31edce8cf735fab630a6db92e5df
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066700"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935160"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Atualizar do banco de dados (MySQLToSQL)
 A caixa **de diálogo atualizar do banco de dados** permite selecionar quais objetos atualizar do banco de dados MySQL. As linhas na caixa de diálogo são codificadas por cores com base no estado dos metadados:  

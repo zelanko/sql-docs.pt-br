@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: de3a1619a1ff5f7e6b44b40e07d73892d2742949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 251f340a8999ecec1247d30314af64c3acdca6d3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139328"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936147"
 ---
 # <a name="appendix---1-mysqltosql"></a>Apêndice – 1 (MySQLToSQL)
 Exibição rápida das opções de linha de comando do console do SSMA:  
   
-|SL. Não.|Opção|Obrigatório?|Argumento de opção|Valores permitidos|  
+|SL. Não.|Alternar|Necessário?|Argumento de opção|Valores permitidos|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Sim|scriptfile|Nome de arquivo XML válido.<br /><br />Arquivo de definição de script do console.|  
 |2|-v/variável|Não|variablevaluefile|Nome de arquivo XML válido.<br /><br />Se forem usadas variáveis no arquivo de script, esse arquivo deverá ser especificado.|  

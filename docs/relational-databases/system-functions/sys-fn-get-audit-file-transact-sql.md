@@ -21,12 +21,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 9d61fbe341ee7b3a1890b3f6a6e4aa042c1449d3
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823254"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988785"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -93,19 +93,19 @@ fn_get_audit_file ( file_pattern,
 | audit_schema_version | **int** | Sempre 1 |  
 | class_type | **varchar(2)** | O tipo de entidade auditável no qual a auditoria ocorre. Não permite valor nulo. |  
 | client_ip | **nvarchar(128)** | **Aplica-se a**: banco de dados SQL do Azure + SQL Server (a partir de 2017)<br /><br />  IP de origem do aplicativo cliente |  
-| connection_id | GUID | **Aplica-se a**: banco de dados SQL do Azure e instância gerenciada do SQL<br /><br /> ID da conexão no servidor |
+| connection_id | GUID | **Aplica-se a**: banco de dados SQL do Azure e SQL instância gerenciada<br /><br /> ID da conexão no servidor |
 | data_sensitivity_information | nvarchar(4000) | **Aplica-se a**: somente banco de dados SQL do Azure<br /><br /> Tipos de informações e rótulos de sensibilidade retornados pela consulta auditada, com base nas colunas classificadas no banco de dados. Saiba mais sobre a [descoberta e a classificação de dados do banco SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | O contexto do banco de dados no qual a ação aconteceu. Permite valor nulo. Retorna NULL para auditorias que ocorrem no nível do servidor. |  
 | database_principal_id | **int** |ID do contexto do usuário de banco de dados no qual a ação é executada. Não permite valor nulo. Retornará 0 se isso não se aplicar. Por exemplo, uma operação de servidor.|
 | database_principal_name | **sysname** | Usuário atual. Permite valor nulo. Retorna NULL se não disponível. |  
-| duration_milliseconds | **bigint** | **Aplica-se a**: banco de dados SQL do Azure e instância gerenciada do SQL<br /><br /> Duração da execução da consulta em milissegundos |
+| duration_milliseconds | **bigint** | **Aplica-se a**: banco de dados SQL do Azure e SQL instância gerenciada<br /><br /> Duração da execução da consulta em milissegundos |
 | event_time | **datetime2** | Data e hora em que a ação auditável é acionada. Não permite valor nulo. |  
 | file_name | **varchar(260)** | O caminho e nome do arquivo de log de auditoria que deu origem ao registro. Não permite valor nulo. |
 | is_column_permission | **bit** | Sinalizador que indica se esta é uma permissão no nível de coluna. Não permite valor nulo. Retorna 0 quando permission_bitmask = 0.<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | A ID da entidade na qual a auditoria ocorreu. Isso inclui o seguinte:<br /> Objetos do servidor<br /> Bancos de dados<br /> Objetos de banco de dados<br /> Objetos de esquema<br /> Não permite valor nulo. Retornará 0 se a entidade for o próprio Servidor ou se a auditoria não for realizada no nível de um objeto. Por exemplo, Autenticação. |  
 | object_name | **sysname** | O nome da entidade na qual a auditoria ocorreu. Isso inclui o seguinte:<br /> Objetos do servidor<br /> Bancos de dados<br /> Objetos de banco de dados<br /> Objetos de esquema<br /> Permite valor nulo. Retornará NULL se a entidade for o próprio Servidor ou se a auditoria não for realizada no nível de um objeto. Por exemplo, Autenticação. |
 | permission_bitmask | **varbinary(16)** | Em algumas ações, são as permissões que foram concedidas, negadas ou revogadas. |
-| response_rows | **bigint** | **Aplica-se a**: banco de dados SQL do Azure e instância gerenciada do SQL<br /><br /> Número de linhas retornadas no conjunto de resultados. |  
+| response_rows | **bigint** | **Aplica-se a**: banco de dados SQL do Azure e SQL instância gerenciada<br /><br /> Número de linhas retornadas no conjunto de resultados. |  
 | schema_name | **sysname** | O contexto do esquema no qual a ação aconteceu. Permite valor nulo. Retorna NULL para auditorias que ocorrem fora de um esquema. |  
 | sequence_group_id | **varbinary** | **Aplica-se a**: somente SQL Server (começando com 2016)<br /><br />  Identificador exclusivo |  
 | sequence_number | **int** | Rastreia a sequência de registros dentro de um único registro de auditoria que é muito grande para se ajustar no buffer de gravação das auditorias. Não permite valor nulo. |  
@@ -123,8 +123,8 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | Logon de destino da ação. Permite valor nulo. Retorna NULL se não aplicável. |  
 | target_server_principal_sid | **varbinary** | SID do logon de destino. Permite valor nulo. Retorna NULL se não aplicável. |  
 | transaction_id | **bigint** | **Aplica-se a**: somente SQL Server (começando com 2016)<br /><br /> Identificador exclusivo para identificar vários eventos de auditoria em uma transação |  
-| user_defined_event_id | **smallint** | **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, banco de dados SQL do Azure e instância GERENCIAda do SQL<br /><br /> ID do evento definido pelo usuário passada como um argumento para **sp_audit_write**. **NULL** para eventos do sistema (padrão) e diferente de zero para o evento definido pelo usuário. Para obter mais informações, consulte [sp_audit_write &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
-| user_defined_information | **nvarchar(4000)** | **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, banco de dados SQL do Azure e instância GERENCIAda do SQL<br /><br /> Usado para registrar informações adicionais que o usuário deseja registrar no log de auditoria usando o procedimento armazenado **sp_audit_write** . |  
+| user_defined_event_id | **smallint** | **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, banco de dados SQL do Azure e SQL instância gerenciada<br /><br /> ID do evento definido pelo usuário passada como um argumento para **sp_audit_write**. **NULL** para eventos do sistema (padrão) e diferente de zero para o evento definido pelo usuário. Para obter mais informações, consulte [sp_audit_write &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar(4000)** | **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, banco de dados SQL do Azure e SQL instância gerenciada<br /><br /> Usado para registrar informações adicionais que o usuário deseja registrar no log de auditoria usando o procedimento armazenado **sp_audit_write** . |  
 
   
 ## <a name="remarks"></a>Comentários  

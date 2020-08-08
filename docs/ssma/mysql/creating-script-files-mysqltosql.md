@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 54b8dd8d58158997793f6c32da51a10136d02fce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103058"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935745"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Creating Script Files (MySQLToSQL)
 A primeira etapa antes de iniciar o aplicativo do console do SSMA é criar o arquivo de script e, se necessário, criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
@@ -324,9 +324,9 @@ As opções configuráveis pelo usuário incluem:
   
     Aqui, surgem dois casos:  
   
-    1.  Se a opção Override for **false**, a ordem de pesquisa será Protected Storage-&gt;script File-&gt;Server Connection File-&gt; prompt User.  
+    1.  Se a opção Override for **false**, a ordem de pesquisa será Protected Storage- &gt; script File- &gt; Server Connection File- &gt; prompt User.  
   
-    2.  Se a opção substituir for **verdadeira**, a ordem de pesquisa será arquivo de script&gt;-arquivo de conexão&gt;do servidor-avisar usuário.  
+    2.  Se a opção substituir for **verdadeira**, a ordem de pesquisa será arquivo de script- &gt; arquivo de conexão do servidor- &gt; avisar usuário.  
   
     **Exemplo:**  
   
@@ -348,7 +348,7 @@ Os parâmetros de conexão do servidor podem ser definidos no arquivo de script 
 ## <a name="script-commands"></a>Comandos de script  
 O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console do SSMA processa a migração na ordem dos comandos que aparecem no arquivo de script.  
   
-Por exemplo, uma migração de dados típica de uma tabela específica em um banco de dado MySQL Segue a hierarquia de&gt; : Database-Table.  
+Por exemplo, uma migração de dados típica de uma tabela específica em um banco de dado MySQL Segue a hierarquia de: Database- &gt; Table.  
   
 Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo do console do SSMA sai e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em um [valor de variável files](creating-variable-value-files-mysqltosql.md) ou em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
@@ -379,15 +379,15 @@ Quando todos os comandos no arquivo de script são executados com êxito, o apli
 ```  
 Modelos que consistem em três arquivos de script (para executar vários cenários), arquivo de valor de variável e um arquivo de conexão de servidor são fornecidos na pasta de scripts de console de exemplo do diretório do produto:  
   
--   AssessmentReportGenerationSample. xml  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. xml  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample. xml  
+-   SqlStatementConversionSample.xml  
   
--   VariableValueFileSample. xml  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. xml  
+-   ServersConnectionFileSample.xml  
   
 Você pode executar os modelos (arquivos) depois de alterar os parâmetros exibidos aqui para fins de relevância.  
   

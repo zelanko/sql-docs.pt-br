@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394534"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936510"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referência da interface do usuário (DB2ToSQL)
 Esta seção inclui tópicos de ajuda para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração (SSMA) para DB2.  
