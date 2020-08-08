@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Sybase Console,Creating Server Connection Files
 - Sybase Console,Server Connection File Validation
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d50dead28fa182c946ec1abf0ac9cc4bb3f052d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029364"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931879"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Criar os arquivos de Conexão de servidor (SybaseToSQL)
-As informações do servidor podem ser especificadas na seção servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão `-c <serverconnectionfile>`do servidor é,. Se a mesma ID do servidor estiver presente no arquivo de script e no arquivo de conexão do servidor, a definição do servidor no arquivo de script será considerada.  
+As informações do servidor podem ser especificadas na seção servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão do servidor é, `-c <serverconnectionfile>` . Se a mesma ID do servidor estiver presente no arquivo de script e no arquivo de conexão do servidor, a definição do servidor no arquivo de script será considerada.  
   
 **Exemplo:**  
   

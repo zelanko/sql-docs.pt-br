@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e7880d0bd7bc6de821e4a7ac8bef68ec1e7e7fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c28d9bed90a492ee4c6feb50236386516e2bb93c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989526"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933697"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>Configurações globais (Janela de Saída) (DB2ToSQL)
 Use a caixa de diálogo **configurações globais** para especificar as configurações do SSMA.  

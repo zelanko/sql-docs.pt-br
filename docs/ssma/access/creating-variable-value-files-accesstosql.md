@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006598"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933965"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Criando arquivos de valor de variável (AccessToSQL)
 Um arquivo de valor de variável é um arquivo XML que inclui os valores de parâmetro de comandos (como o nome do servidor de origem ou de destino) que são alterados com frequência nas migrações do servidor. Quando ocorre um grande número de migrações de banco de dados, vários arquivos variáveis para armazenar o valor de cada servidor de origem são criados e referenciados em um arquivo de script mestre com a opção **-v** na linha de comando. Esse comportamento ajuda a manter valores estáticos em alguns arquivos de script com os valores de variáveis em vários arquivos de variáveis.  
   
 > [!NOTE]  
 > -  Os nomes de variáveis são prefixados e sufixos com um símbolo de $ (dólar). Se uma variável não for atribuída a um valor no arquivo de valor da variável, ocorrerá um erro durante a análise do arquivo de script, resultando na parada do processo de execução do console.  
-> -  O caractere de escape **$** para **$$** é. Se o valor de uma variável ou valor estático de um parâmetro contiver **$** um símbolo (dólar), **$$** deverá ser especificado para tratá-lo como um caractere em vez de uma variável.  
-> -  Para fins de manutenção, as variáveis podem ser declaradas dentro `'variable-group'` de elementos para separação lógica de variáveis definidas pelo usuário.  O uso deste elemento não é obrigatório.  
+> -  O caractere de escape para **$** é **$$** . Se o valor de uma variável ou valor estático de um parâmetro contiver um **$** símbolo (dólar), **$$** deverá ser especificado para tratá-lo como um caractere em vez de uma variável.  
+> -  Para fins de manutenção, as variáveis podem ser declaradas dentro de `'variable-group'` elementos para separação lógica de variáveis definidas pelo usuário.  O uso deste elemento não é obrigatório.  
   
 **Exemplos:**  
   
@@ -93,6 +93,6 @@ O usuário pode facilmente validar seu arquivo de valor de variável em relaçã
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa na operação do console é [criar os arquivos de conexão do servidor &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
 [Criando os arquivos de conexão do servidor (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

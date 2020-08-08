@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 42042451cb0b2197dd54270d4eca1bb990eb233d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910699"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934047"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Seleção de objeto avançada (AccessToSQL)
 A caixa de diálogo **seção de objeto avançado** permite filtrar objetos de banco de dados usando cadeias de caracteres e subcadeias no nome do objeto e, em seguida, selecionar ou desmarcar esses objetos. O SSMA executa operações de conversão e migração em objetos selecionados.  

@@ -9,19 +9,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Appendix
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 9d2d58b06c1a222a2ff6042bb5ca46338f752f7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ccd075529e5ecb3277ab698632cca9c948802690
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083545"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932287"
 ---
 # <a name="appendix---1-sybasetosql"></a>Apêndice – 1 (SybaseToSQL)
 Exibição rápida das opções de linha de comando do console do SSMA:  
   
-|SL. Não.|Opção|Obrigatório?|Argumento de opção|Valores permitidos|  
+|SL. Não.|Alternar|Necessário?|Argumento de opção|Valores permitidos|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Sim|scriptfile|Nome de arquivo XML válido.<br /><br />Arquivo de definição de script do console.|  
 |2|-v/variável|Não|variablevaluefile|Nome de arquivo XML válido.<br /><br />Se forem usadas variáveis no arquivo de script, esse arquivo deverá ser especificado.|  

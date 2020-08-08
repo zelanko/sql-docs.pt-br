@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 188634d6e4efcfb72aaa6fd890bc180a499bf5b9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060187"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933677"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Configurações do projeto (carregando objetos do sistema) (DB2ToSQL)
-A página carregando objetos do sistema da caixa de diálogo **configurações do projeto** permite especificar quais objetos do sistema DB2 o SSMA converte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e carrega.  
+A página carregando objetos do sistema da caixa de diálogo **configurações do projeto** permite especificar quais objetos do sistema DB2 o SSMA converte e carrega [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 O painel carregando objetos do sistema está disponível nas caixas de diálogo **configurações do projeto** e **configurações padrão do projeto** :  
   

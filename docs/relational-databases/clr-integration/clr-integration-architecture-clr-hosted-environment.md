@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246391"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934367"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração CLR – Ambiente hospedado de CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87246391"
  Código fortemente tipado é um código que acessa as estruturas de memória somente de modos bem definidos. Por exemplo, dada uma referência de objeto válida, o código fortemente tipado pode acessar memória em offsets fixos, correspondentes a membros de campo reais. Entretanto, se o código acessar a memória em offsets arbitrários dentro ou fora do intervalo de memória que pertence ao objeto, então ele não será fortemente tipado. Quando os assemblies são carregados no CLR, antes de a MSIL ser compilada usando compilação JIT (just-in-time), o runtime executa uma fase de verificação que examina o código antes de determinar sua segurança de tipos. O código aprovado com êxito nesta verificação é chamado de código fortemente tipado verificável.  
   
 ###### <a name="application-domains"></a>Domínios de aplicativo  
- O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios de aplicativo e segurança de integração CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios de aplicativo e segurança de integração CLR](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
   
 ###### <a name="code-access-security-cas"></a>CAS (segurança de acesso ao código)  
  O sistema de segurança CLR sistema fornece um modo de controlar quais os tipos de código gerenciado de operações que podem ser executados, atribuindo permissões ao código. As permissões de acesso ao código são atribuídas com base na identidade do código (por exemplo, a assinatura do assembly ou a origem do código).  

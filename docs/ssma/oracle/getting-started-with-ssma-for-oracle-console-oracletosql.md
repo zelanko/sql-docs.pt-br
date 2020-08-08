@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264499"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934884"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introdução ao console do SSMA para Oracle (OracleToSQL)
 Esta seção descreve o procedimento para iniciar e começar a usar o aplicativo de console do Oracle. Também listados aqui, estão as convenções usadas em uma janela de saída típica do console do SSMA.  
@@ -28,9 +28,9 @@ Use as etapas a seguir para iniciar o aplicativo de console do SSMA:
   
 1.  Vá para **Iniciar** e aponte para **todos os programas**.  
   
-2.  Clique no ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de migração para o atalho do prompt de comando do Oracle** .  
+2.  Clique no ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração para o atalho do prompt de comando do Oracle** .  
   
-    Ele exibe o menu uso do console do `(/? Help)`SSMA e, para ajudá-lo a começar a usar o aplicativo de console.  
+    Ele exibe o menu uso do console do SSMA e `(/? Help)` , para ajudá-lo a começar a usar o aplicativo de console.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedimento para usar o console do SSMA  
 Depois que o console do for iniciado com êxito no seu sistema Windows, você poderá usar as seguintes etapas para trabalhar nele:  
@@ -56,7 +56,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 Interpretação de cores da saída do console na tabela a seguir:  
   
-|Color|Descrição|  
+|Color|DESCRIÇÃO|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  

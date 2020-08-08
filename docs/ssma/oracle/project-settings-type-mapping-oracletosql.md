@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266578"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933177"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Configurações do projeto (mapeamento de tipo) (OracleToSQL)
-A página mapeamento de tipo da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos de dados Oracle em tipos de dados.  
+A página mapeamento de tipo da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte os tipos de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
   
 A página mapeamento de tipo está disponível nas caixas de diálogo **configurações do projeto** e **configurações do projeto padrão** .  
   
@@ -35,7 +35,7 @@ A tabela a seguir mostra as opções da guia **mapeamento de tipos** :
 O tipo de dados Oracle mapeado.  
   
 **Tipo de destino**  
-O tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados de destino para o tipo de dados Oracle especificado.  
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados de destino para o tipo de dados Oracle especificado.  
   
 Consulte as tabelas na próxima seção para obter os mapeamentos padrão do SSMA for Oracle Type.  
   
@@ -57,12 +57,12 @@ No SSMA para Oracle, você pode definir mapeamentos de tipo personalizados para 
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Tipo de argumento padrão e mapeamento de tipo de valor de retorno  
 A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos e valores de retorno.  
   
-|Tipo de dados Oracle|Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados padrão|  
+|Tipo de dados Oracle|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo de dados padrão|  
 |--------------------|-------------------------------------------------------------------------|  
 |bArquivo|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|INT|  
+|binary_integer|int|  
 |blob|varbinary(max)|  
 |booleano|bit|  
 |char|varchar(max)|  
@@ -75,12 +75,12 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |decimal|float [53]|  
 |double precision|float [53]|  
 |FLOAT|float [53]|  
-|INT|INT|  
-|inteiro|INT|  
+|int|int|  
+|integer|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
-|Long RAW [\*.. 8000]<sup>*</sup>|varbinary [*]|  
-|Long RAW [8001..\*]<sup>*</sup>|varbinary(max)|  
+|Long RAW [ \* .. 8000]<sup>*</sup>|varbinary [*]|  
+|Long RAW [8001.. \* ]<sup>*</sup>|varbinary(max)|  
 |caractere nacional|nvarchar(max)|  
 |variação de caractere nacional|nvarchar(max)|  
 |caractere nacional|nvarchar(max)|  
@@ -91,13 +91,13 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |número|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|INT|  
+|pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |sinal de|SMALLINT|  
 |SMALLINT|SMALLINT|  
-|cadeia de caracteres|varchar(max)|  
+|string|varchar(max)|  
 |timestamp|datetime2|  
 |carimbo de data/hora com fuso horário local|datetimeoffset|  
 |carimbo de data/hora com fuso horário|datetimeoffset|  
@@ -113,32 +113,32 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 ### <a name="default-column-type-mapping"></a>Mapeamento de tipo de coluna padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para colunas.  
   
-|Tipo de dados Oracle|Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados padrão|  
+|Tipo de dados Oracle|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo de dados padrão|  
 |--------------------|-------------------------------------------------------------------------|  
 |bArquivo|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|variação de caractere [*.. \*]|varchar [*]|  
-|Char [*.. \*]|Char [*]|  
+|variação de caractere [*.. \* ]|varchar [*]|  
+|Char [*.. \* ]|Char [*]|  
 |character|char|  
-|variável de caractere [*.. \*]|varchar [*]|  
-|caractere [*.. \*]|Char [*]|  
+|variável de caractere [*.. \* ]|varchar [*]|  
+|caractere [*.. \* ]|Char [*]|  
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|Dec [38] [0]|  
-|Dec [*.. \*]|Dec [*] [0]|  
-|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Dec [*.. \* ]|Dec [*] [0]|  
+|Dec [*.. \* ] [\*..\*]|Dec [*] [ \* ]|  
 |decimal|Decimal [38] [0]|  
-|Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
+|Decimal [*.. \* ]|Decimal [*] [0]|  
+|Decimal [*.. \* ] [\*..\*]|Decimal [*] [ \* ]|  
 |double precision|float [53]|  
 |FLOAT|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54. *]|float [53]|  
-|INT|INT|  
-|inteiro|INT|  
+|int|int|  
+|integer|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [*.. 8000]|varbinary [*]|  
@@ -147,46 +147,46 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |longo [*.. 8000]|varchar [*]|  
 |longo [8001.. *]|varchar(max)|  
 |caractere nacional|NCHAR|  
-|variação de caractere nacional [*.. \*]|nvarchar [*]|  
-|caractere nacional [*.. \*]|nchar [*]|  
+|variação de caractere nacional [*.. \* ]|nvarchar [*]|  
+|caractere nacional [*.. \* ]|nchar [*]|  
 |caractere nacional|NCHAR|  
-|variação de caractere nacional [*.. \*]|nvarchar [*]|  
-|caractere nacional [*.. \*]|nchar [*]|  
+|variação de caractere nacional [*.. \* ]|nvarchar [*]|  
+|caractere nacional [*.. \* ]|nchar [*]|  
 |NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |NCLOB|nvarchar(max)|  
 |número|float [53]|  
-|número [*.. \*]|numeric [*]|  
-|número [*.. \*][\*.. \*]|numeric [*] [\*]|  
+|número [*.. \* ]|numeric [*]|  
+|número [*.. \* ] [\*..\*]|numeric [*] [ \* ]|  
 |numeric|numeric|  
-|numeric [*.. \*]|numeric [*]|  
-|numeric [*.. \*][\*.. \*]|numeric [*] [\*]|  
-|nvarchar2[*.. \*]|nvarchar [*]|  
-|RAW [*.. \*]|varbinary [*]|  
+|numeric [*.. \* ]|numeric [*]|  
+|numeric [*.. \* ] [\*..\*]|numeric [*] [ \* ]|  
+|NVARCHAR2 [*.. \* ]|nvarchar [*]|  
+|RAW [*.. \* ]|varbinary [*]|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |carimbo de data/hora com fuso horário local|datetimeoffset|  
-|carimbo de data/hora com o fuso horário local [*.. \*]|DateTimeOffset [*]|  
+|carimbo de data/hora com fuso horário local [*.. \* ]|DateTimeOffset [*]|  
 |carimbo de data/hora com fuso horário|datetimeoffset|  
-|carimbo de data/hora com fuso horário [*.. \*]|DateTimeOffset [*]|  
-|carimbo de data/hora [*.. \*]|datetime2 [*]|  
+|carimbo de data/hora com fuso horário [*.. \* ]|DateTimeOffset [*]|  
+|carimbo de data/hora [*.. \* ]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
-|varchar [*.. \*]|varchar [*]|  
-|VARCHAR2 [*.. \*]|varchar [*]|  
+|UROWID [*.. \* ]|UNIQUEIDENTIFIER|  
+|varchar [*.. \* ]|varchar [*]|  
+|VARCHAR2 [*.. \* ]|varchar [*]|  
 |XmlType|Xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mapeamento de tipo de variável local padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.  
   
-|Tipo de dados Oracle|Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados padrão|  
+|Tipo de dados Oracle|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo de dados padrão|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|INT|  
+|binary_interger|int|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
@@ -202,18 +202,18 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|Dec [38] [0]|  
-|Dec [*.. \*]|Dec [*] [0]|  
-|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Dec [*.. \* ]|Dec [*] [0]|  
+|Dec [*.. \* ] [\*..\*]|Dec [*] [ \* ]|  
 |decimal|Decimal [38] [0]|  
-|Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
+|Decimal [*.. \* ]|Decimal [*] [0]|  
+|Decimal [*.. \* ] [\*..\*]|Decimal [*] [ \* ]|  
 |double precision|float [53]|  
 |Float|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54. *]|float [53]|  
-|Int|INT|  
-|Integer|INT|  
-|inteiro [*.. \*]|numeric [*] [0]|  
+|Int|int|  
+|Integer|int|  
+|inteiro [*.. \* ]|numeric [*] [0]|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [*.. 8000]|varbinary [*]|  
@@ -235,14 +235,14 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |nchar variável [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |Número|float [53]|  
-|número [*.. \*]|numeric [*]|  
-|número [*.. \*][\*.. \*]|numeric [*] [\*]|  
+|número [*.. \* ]|numeric [*]|  
+|número [*.. \* ] [\*..\*]|numeric [*] [ \* ]|  
 |Numérico|numeric [38] [0]|  
-|numeric [*.. \*]|numeric [*]|  
-|numeric [*.. \*][\*.. \*]|numeric [*] [\*]|  
+|numeric [*.. \* ]|numeric [*]|  
+|numeric [*.. \* ] [\*..\*]|numeric [*] [ \* ]|  
 |nvarchar2[*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
-|pls_integer|INT|  
+|pls_integer|int|  
 |RAW [*.. 8000]|varbinary [*]|  
 |RAW [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
@@ -254,11 +254,11 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |timestamp|datetime2|  
 |carimbo de data/hora com fuso horário local|datetimeoffset|  
 |carimbo de data/hora com fuso horário|datetimeoffset|  
-|carimbo de data/hora com o fuso horário local [*.. \*]|DateTimeOffset [*]|  
-|carimbo de data/hora com fuso horário [*.. \*]|DateTimeOffset [*]|  
-|carimbo de data/hora [*.. \*]|datetime2 [*]|  
+|carimbo de data/hora com fuso horário local [*.. \* ]|DateTimeOffset [*]|  
+|carimbo de data/hora com fuso horário [*.. \* ]|DateTimeOffset [*]|  
+|carimbo de data/hora [*.. \* ]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
+|UROWID [*.. \* ]|UNIQUEIDENTIFIER|  
 |varchar [*.. 8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|varchar [*]|  

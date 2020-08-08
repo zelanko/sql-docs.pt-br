@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864893"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988502"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
 
@@ -154,8 +154,8 @@ A versão v 3.2 do Assistente de Migração de Dados inclui as seguintes adiçõ
 
 A versão v 3.1 do Assistente de Migração de Dados inclui as seguintes adições:
 
-- Recomendações de avaliação aprimoradas para bancos de dados SQL do Azure em termos de agrupamentos de banco de dados, uso de procedimentos armazenados do sistema sem suporte e objetos CLR.
-- Diretrizes de avaliação para os níveis de compatibilidade 130, 120, 110 e 100 ao migrar para bancos de dados SQL do Azure.
+- Recomendações de avaliação aprimoradas para o banco de dados SQL do Azure em termos de agrupamentos de banco de dados, uso de procedimentos armazenados do sistema sem suporte e objetos CLR.
+- Diretrizes de avaliação para os níveis de compatibilidade 130, 120, 110 e 100 ao migrar para o banco de dados SQL do Azure.
 
 ## <a name="data-migration-assistant-v30"></a>Assistente de Migração de Dados v 3.0
 
@@ -181,7 +181,7 @@ A versão v 2.0 do Assistente de Migração de Dados inclui recomendações de r
 A versão v 1.0 do Assistente de Migração de Dados é a versão inicial e fornece para:
 
 - Descoberta de problemas que podem afetar uma atualização para uma versão local do SQL Server. Quaisquer descobertas são descritas como problemas de compatibilidade e elas são categorizadas nas seguintes áreas:
-  - Alterações da falha
+  - Alterações de quebra
   - Alterações de comportamento
   - Recursos preteridos
 - Descoberta de novos recursos na plataforma de SQL Server de destino para as quais o banco de dados pode se beneficiar após uma atualização. Quaisquer descobertas são descritas como recomendações de recurso e elas são categorizadas nas seguintes áreas:
@@ -190,6 +190,6 @@ A versão v 1.0 do Assistente de Migração de Dados é a versão inicial e forn
   - Armazenamento
 - Experiência de usuário moderna para realizar avaliações.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Visão Geral do Assistente de Migração de Dados](../dma/dma-overview.md)

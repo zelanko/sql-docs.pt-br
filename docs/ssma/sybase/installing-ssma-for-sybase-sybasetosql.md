@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 302225b3339f779bbcf138ce0c6ee2e3ee24adf8
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fa1205a2511eb2c49c5be616caefad0ee0102105
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292894"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931600"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Instalando o SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) para SAP Adaptive Server Enterprise (ASE) consiste em um aplicativo cliente que você usa para executar uma migração do SAP ASE para o ou para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados SQL do Azure. Ele também contém um pacote de extensão que dá suporte à migração de dados e ao uso de funções de sistema ASE em seus bancos de dados migrados.  
@@ -35,5 +35,5 @@ Se você abrir um projeto de uma versão anterior do SSMA para SAP ASE, o SSMA p
 |[Instalando os componentes do SSMA em SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Fornece informações e instruções para instalar o pacote de extensão em instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Removendo os componentes do SSMA para SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|Fornece instruções para desinstalar o programa cliente e o pacote de extensão.|  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Consulte também  
 [Migrar bancos de dados do SAP ASE para o SQL Server-Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

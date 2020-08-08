@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Test Case Wizard
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266130"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934949"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Criar casos de teste (OracleToSQL)
 Use o assistente de caso de teste para criar um teste. Este assistente permite que você crie casos de teste escolhendo objetos testados e verificados e especificando os parâmetros de teste.  

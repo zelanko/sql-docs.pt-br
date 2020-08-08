@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293923"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933267"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandos de menu e outras teclas de atalho (OracleToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do aplicativo SSMA para Oracle.  
@@ -81,7 +81,7 @@ Para acessar o menu ferramentas, o atalho de teclado usado é ALT + T. A tabela 
 |Criar relatório.|ALT + T + C|  
 |Converta o esquema.|ALT + T + N ou CTRL + R|  
 |Atualizar do banco de dados Oracle.|ALT + T + R|  
-|Sincronizar com o SQL Server ou SQL Azure banco de dados.|ALT + T + S|  
+|Sincronize com o SQL Server ou o banco de dados SQL do Azure.|ALT + T + S|  
 |Salvar como script.|ALT + T + A|  
 |Migre dados.|ALT + T + M|  
 |Pare a operação atual.|ALT + T + O|  

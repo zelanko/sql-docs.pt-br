@@ -16,17 +16,17 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006560"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934010"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportando um inventário de acesso (AccessToSQL)
-Se você tiver vários bancos de dados do Access e não tiver certeza sobre quais deles serão migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poderá exportar um inventário de todos os bancos de dados do Access em um projeto do. Em seguida, você pode examinar e consultar os metadados de inventário para determinar quais bancos de dados e objetos nesses bancos de dados migram. Esse inventário permite que você encontre rapidamente respostas para perguntas, como as seguintes:  
+Se você tiver vários bancos de dados do Access e não tiver certeza sobre quais deles serão migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poderá exportar um inventário de todos os bancos de dados do Access em um projeto do. Em seguida, você pode examinar e consultar os metadados de inventário para determinar quais bancos de dados e objetos nesses bancos de dados migram. Esse inventário permite que você encontre rapidamente respostas para perguntas, como as seguintes:  
   
 -   Quais são os maiores bancos de dados?  
   
@@ -44,12 +44,12 @@ Exemplos de consulta que são usados para responder a essas perguntas são forne
 O SSMA exporta metadados sobre bancos de dados do Access, tabelas, colunas, índices, chaves estrangeiras, consultas, relatórios, formulários, macros e módulos. Os metadados sobre cada uma dessas categorias de itens são exportados para uma tabela separada. Para esquemas dessas tabelas, consulte esquemas de [inventário de acesso](access-inventory-schemas-accesstosql.md).  
   
 ## <a name="exporting-inventory-data"></a>Exportando dados de inventário  
-Para exportar um inventário de acesso, você deve primeiro abrir ou criar um projeto do SSMA e, em seguida, adicionar o banco de dados do Access que deseja analisar. Depois de adicionar bancos de dados a um projeto do SSMA, você exporta metadados sobre esses bancos de dados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema e um banco de dados especificados. Se necessário, o SSMA cria tabelas para armazenar os metadados. Em seguida, o SSMA adiciona os metadados sobre os bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Access ao banco de dados.  
+Para exportar um inventário de acesso, você deve primeiro abrir ou criar um projeto do SSMA e, em seguida, adicionar o banco de dados do Access que deseja analisar. Depois de adicionar bancos de dados a um projeto do SSMA, você exporta metadados sobre esses bancos de dados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema e um banco de dados especificados. Se necessário, o SSMA cria tabelas para armazenar os metadados. Em seguida, o SSMA adiciona os metadados sobre os bancos de dados do Access ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
   
 > [!NOTE]  
-> Um banco de dados do Access pode ser dividido em vários arquivos: um banco de dados back-end que contém tabelas e bancos de dados front-end que contêm consultas, formulários, relatórios, macros, módulos e atalhos. Se você quiser migrar um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de divisão para o, adicione o banco de dados front-end ao SSMA.  
+> Um banco de dados do Access pode ser dividido em vários arquivos: um banco de dados back-end que contém tabelas e bancos de dados front-end que contêm consultas, formulários, relatórios, macros, módulos e atalhos. Se você quiser migrar um banco de dados de divisão para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, adicione o banco de dados front-end ao SSMA.  
   
-As instruções a seguir descrevem como criar um projeto do, adicionar bancos de dados ao projeto, conectar- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se a e, em seguida, exportar o inventário.  
+As instruções a seguir descrevem como criar um projeto do, adicionar bancos de dados ao projeto, conectar-se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, exportar o inventário.  
   
 **Para criar um projeto**  
   
@@ -90,7 +90,7 @@ Para obter mais informações sobre como criar projetos, consulte [criando e ger
   
     Você pode usar os botões **selecionar tudo** e **desmarcar todos** na parte superior da lista para selecionar ou limpar todos os bancos de dados. Você também pode manter a tecla CTRL pressionada para selecionar várias linhas ou manter a tecla SHIFT pressionada para selecionar um intervalo de linhas.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página verificar, clique em **concluir**.  
   
@@ -100,7 +100,7 @@ Para obter mais informações sobre como adicionar bancos de dados a projetos, c
   
 1.  No menu **arquivo** , selecione **conectar-se a SQL Server**.  
   
-2.  Na caixa de diálogo conexão, digite ou selecione o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Na caixa de diálogo conexão, digite ou selecione o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   Se você estiver se conectando à instância padrão no computador local, poderá inserir **localhost** ou um ponto (**.**).  
   
@@ -110,11 +110,11 @@ Para obter mais informações sobre como adicionar bancos de dados a projetos, c
   
 3.  Na caixa **banco de dados** , digite o nome do banco de dados de destino para metadados exportados.  
   
-4.  Se sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurada para aceitar conexões em uma porta não padrão, insira o número da porta que é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado para conexões na caixa **porta do servidor** . Para a instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o número da porta padrão é 1433. Para instâncias nomeadas, o SSMA tenta obter o número da porta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do serviço navegador.  
+4.  Se sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurada para aceitar conexões em uma porta não padrão, insira o número da porta que é usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexões na caixa **porta do servidor** . Para a instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o número da porta padrão é 1433. Para instâncias nomeadas, o SSMA tenta obter o número da porta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço navegador.  
   
 5.  No menu suspenso **autenticação** , selecione o tipo de autenticação a ser usado para a conexão. Para usar a conta atual do Windows, selecione **autenticação do Windows**. Para usar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon, selecione **SQL Server autenticação**e, em seguida, forneça um nome de usuário e uma senha.  
   
-Para obter mais informações sobre como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se conectar ao, consulte [conectando-se a SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+Para obter mais informações sobre como se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [conectando-se a SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
 **Para exportar informações de inventário**  
   
@@ -131,11 +131,11 @@ Para obter mais informações sobre como [!INCLUDE[ssNoVersion](../../includes/s
 Cada vez que você exporta metadados, o SSMA anexa os dados ao inventário. Os dados existentes no inventário não são atualizados ou excluídos.  
   
 ## <a name="querying-the-exported-metadata"></a>Consultando os metadados exportados  
-Depois de exportar metadados sobre bancos de dados do Access, você pode consultar os metadados. As instruções a seguir descrevem como usar a janela do editor [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de consultas no para executar consultas.  
+Depois de exportar metadados sobre bancos de dados do Access, você pode consultar os metadados. As instruções a seguir descrevem como usar a janela do editor de consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para executar consultas.  
   
 **Para consultar metadados**  
   
-1.  No menu **Iniciar** , aponte para **todos os programas**, aponte para **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** ou para **o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft 2008** ou **para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Microsoft 2012**e clique em **SQL Server Management Studio**.  
+1.  No menu **Iniciar** , aponte para **todos os programas**, aponte para **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** ou para **o Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** ou para **o Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**e clique em **SQL Server Management Studio**.  
   
 2.  Na caixa de diálogo **conectar ao servidor** , verifique as configurações e clique em **conectar**.  
   
@@ -146,7 +146,7 @@ Depois de exportar metadados sobre bancos de dados do Access, você pode consult
 5.  Pressione a tecla F5 para executar a consulta.  
   
 ## <a name="query-examples"></a>Exemplos de consulta  
-Antes de executar qualquer uma das consultas a seguir, você deve executar uma consulta de *database_name* de uso para garantir que as consultas sejam executadas no banco de dados que contém os metadados exportados. Por exemplo, se você exportou metadados para um banco de dados chamado MyAccessMetadata, você adicionaria o seguinte no [!INCLUDE[tsql](../../includes/tsql-md.md)] início do código:  
+Antes de executar qualquer uma das consultas a seguir, você deve executar uma consulta de *database_name* de uso para garantir que as consultas sejam executadas no banco de dados que contém os metadados exportados. Por exemplo, se você exportou metadados para um banco de dados chamado MyAccessMetadata, você adicionaria o seguinte no início do [!INCLUDE[tsql](../../includes/tsql-md.md)] código:  
   
 ```  
 USE MyAccessMetadata;  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 511095f8b6910f95a7f3e4105fce102bb2a9522e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910209"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933127"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Novos recursos de GUI no SSMA para Oracle (OracleToSQL)
 Este capítulo descreve os novos recursos da interface do usuário do SSMA.  
@@ -55,14 +55,14 @@ Você pode definir/remover um indicador das seguintes maneiras:
   
 -   Clique na área cinza à esquerda da janela SQL  
   
--   Use CTRL + SHIFT +&lt;0.. 9&gt; para definir o indicador numerado  
+-   Use CTRL + SHIFT + &lt; 0.. 9 &gt; para definir o indicador numerado  
   
 ### <a name="bookmark-navigation"></a>Navegação por indicadores  
 Você pode percorrer os indicadores das seguintes maneiras:  
   
 -   Usar botões próximo indicador, indicador anterior na parte superior da janela SQL  
   
--   Use CTRL +&lt;0.. 9&gt; para localizar o indicador numerado  
+-   Use CTRL + &lt; 0.. 9 &gt; para localizar o indicador numerado  
   
 -   Usar botões ir para ou exibir origem na caixa de diálogo Gerenciar indicadores  
   

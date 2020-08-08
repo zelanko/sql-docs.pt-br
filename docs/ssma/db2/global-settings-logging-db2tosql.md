@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 020eebfe3d6ae509516eaedd8a891b0ee481bc83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989563"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933777"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Configurações globais (log) (DB2ToSQL)
 Use a caixa de diálogo **configurações globais** para especificar as configurações de log para o SSMA. Normalmente, você alteraria essas configurações apenas ao trabalhar com o suporte ao produto.  
@@ -29,14 +29,14 @@ As seguintes opções estão disponíveis no **nível de mensagens**:
 |----------|---------------|  
 |**[todas as categorias]**|Usado para definir o nível de log para todas as opções a seguir.|  
 |**Coletor**|Coleta metadados sobre o esquema de origem e salva-os no projeto.|  
-|**Conversor**|Converte estruturas de objetos de banco de dados de origem, como tabelas e procedimentos armazenados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , em estruturas correspondentes.|  
-|**Data Migrator**|Migra dados do banco de dado de origem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o.|  
+|**Conversor**|Converte estruturas de objetos de banco de dados de origem, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estruturas correspondentes.|  
+|**Data Migrator**|Migra dados do banco de dado de origem para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
 |**Interface gráfica do usuário**|Mensagens que aparecem quando você usa a ferramenta SSMA.|  
 |**Vinculador**|Resolve os identificadores do SQL e fornece informações para outros componentes.|  
-|**Outros**|Todas as mensagens que não estão em nenhuma outra categoria.|  
+|**Outras**|Todas as mensagens que não estão em nenhuma outra categoria.|  
 |**Analisador**|Analisa o esquema de origem.|  
-|**Sincronizador**|Carrega objetos de banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados de origem no.|  
+|**Sincronizador**|Carrega objetos de banco de dados de origem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Árvoreconverter**|Converte objetos nos metadados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadados.|  
 |**Testador**|Mensagens que aparecem quando você usa o SSMA Tester.|  
   
@@ -46,9 +46,9 @@ Para cada opção sob o **nível de mensagens**, configure um dos seguintes nív
 |-|-|  
 |**Erro fatal**|Grave somente mensagens de erro fatal no log.|  
 |**Erro**|Grave mensagens de erro e erro fatal no log.|  
-|**Alerta**|Gravar mensagens de erro fatal, de erro e de aviso no log.|  
+|**Aviso**|Gravar mensagens de erro fatal, de erro e de aviso no log.|  
 |**Informações**|Grave mensagens informativas, de aviso, de erro e de erro fatal no log.|  
-|**Depuração**|Grave todas as mensagens, incluindo as mensagens de depuração, no log.|  
+|**Depurar**|Grave todas as mensagens, incluindo as mensagens de depuração, no log.|  
   
 **Caminho do arquivo de log**  
 O caminho do arquivo e o nome dos arquivos de log do SSMA. Para especificar um nome diferente, clique no caminho atual e, em seguida, clique no botão procurar (**...**).  

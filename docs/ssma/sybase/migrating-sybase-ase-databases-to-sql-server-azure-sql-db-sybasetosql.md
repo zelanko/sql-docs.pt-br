@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 15c3b7d8594f9b0700c7cb1f429a89947c16655b
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e0a938d615b15dc7b280a6c6b9337a546e0059bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865294"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934654"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>Migrando bancos de dados do SAP ASE para o SQL Server-SybaseToSQL (Azure SQL Database)
 O Assistente de Migração do SQL Server (SSMA) para SAP Adaptive Server Enterprise (ASE) é um ambiente abrangente que ajuda você a migrar rapidamente bancos de dados do SAP ASE para o ou para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database. Usando o SSMA para SAP ASE, você pode examinar os objetos e os dados do banco de dados, avaliar os bancos de dado para migração, migrar objetos de banco de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Azure SQL Database e, em seguida, migrar dados para o ou para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure.  
@@ -45,7 +45,7 @@ Para migrar com êxito objetos e dados de bancos de dado SAP ASE para o ou para 
   
 9. Se necessário, atualize seus aplicativos de banco de dados.  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
 [Instalando o SSMA para SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [Introdução com o SSMA para SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

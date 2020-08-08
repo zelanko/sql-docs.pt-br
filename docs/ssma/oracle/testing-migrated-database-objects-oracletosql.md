@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 9e7c63986cde88c7a1ccbf67f8dd3751bb6d41b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266477"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932827"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Testar objetos de banco de dados migrados (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração para Oracle Tester (SSMA Tester) testa automaticamente a conversão de objetos de banco de dados e a migração feita pelo SSMA. Depois que todas as etapas de migração do SSMA forem concluídas, use o SSMA Tester para verificar se os objetos convertidos funcionam da mesma maneira e se todos os dados foram transferidos corretamente.  
@@ -32,7 +32,7 @@ Você pode testar os seguintes tipos de objeto com o SSMA Tester:
   
 -   Instruções autônomas.  
   
-O SSMA Tester executa objetos selecionados para teste no Oracle e em suas contrapartes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. Depois disso, ele compara os resultados de acordo com os seguintes critérios:  
+O SSMA Tester executa objetos selecionados para teste no Oracle e em suas contrapartes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois disso, ele compara os resultados de acordo com os seguintes critérios:  
   
 -   As alterações nos dados da tabela são idênticas?  
   
@@ -43,7 +43,7 @@ O SSMA Tester executa objetos selecionados para teste no Oracle e em suas contra
 -   Os conjuntos de resultados são idênticos?  
   
 > [!NOTE]  
-> Segura! Nunca use o SSMA Tester em sistemas de produção. Durante a execução do testador, o esquema de origem e os dados são modificados. Enquanto isso, a restauração completa do estado original pode ser impossível para alguns tipos de código testado.  
+> Atenção! Nunca use o SSMA Tester em sistemas de produção. Durante a execução do testador, o esquema de origem e os dados são modificados. Enquanto isso, a restauração completa do estado original pode ser impossível para alguns tipos de código testado.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
 Se você quiser usar o SSMA Tester, instale o pacote de extensão do SSMA Oracle com a opção **instalar banco de dados do testador** ativada.  
@@ -52,9 +52,9 @@ Para habilitar a comparação dos dados da tabela resultante, defina a opção *
   
 Além disso, verifique o seguinte:  
   
--   As ferramentas de cliente Oracle são instaladas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador em que o é executado.  
+-   As ferramentas de cliente Oracle são instaladas no computador em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado.  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração CLR (Common Language Runtime) foi habilitada no mecanismo de banco de dados.  
+-   A integração CLR (Common Language Runtime) foi habilitada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados.  
   
 Observe que a versão atual do SSMA Tester não oferece suporte à execução paralela por diferentes usuários no mesmo servidor de origem ou de destino.  
   

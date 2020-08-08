@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b81892edd4605960a50c63aa61ed65d1522d42ec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259832"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933996"
 ---
 # <a name="creating-script-files-accesstosql"></a>Criando arquivos de script (AccessToSQL)
 A primeira etapa antes de iniciar o aplicativo do console do SSMA é criar o arquivo de script e, se necessário, criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
@@ -320,9 +320,9 @@ As opções configuráveis pelo usuário incluem:
   
     Aqui, surgem dois casos:  
   
-    1.  Se a opção Override for **false**, a ordem de pesquisa será Protected Storage-&gt;script File-&gt;Server Connection File-&gt; prompt User.  
+    1.  Se a opção Override for **false**, a ordem de pesquisa será Protected Storage- &gt; script File- &gt; Server Connection File- &gt; prompt User.  
   
-    2.  Se a opção substituir for **verdadeira**, a ordem de pesquisa será arquivo de script&gt;-arquivo de conexão&gt;do servidor-avisar usuário.  
+    2.  Se a opção substituir for **verdadeira**, a ordem de pesquisa será arquivo de script- &gt; arquivo de conexão do servidor- &gt; avisar usuário.  
   
     **Exemplo:**  
   
@@ -344,7 +344,7 @@ Os parâmetros de conexão do servidor podem ser definidos no arquivo de script 
 ## <a name="script-commands"></a>Comandos de script  
 O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console do SSMA processa a migração na ordem dos comandos que aparecem no arquivo de script.  
   
-Por exemplo, uma migração de dados típica de uma tabela específica em um banco de dado do Access segue a hierarquia&gt; de: Database-Table.  
+Por exemplo, uma migração de dados típica de uma tabela específica em um banco de dado do Access segue a hierarquia de: Database- &gt; Table.  
   
 Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo do console do SSMA sai e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em um [valor de variável files](creating-variable-value-files-accesstosql.md) ou em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
@@ -375,13 +375,13 @@ Quando todos os comandos no arquivo de script são executados com êxito, o apli
 ```  
 Modelos que consistem em três arquivos de script (para executar vários cenários), arquivo de valor de variável e um arquivo de conexão de servidor são fornecidos na pasta de scripts de console de exemplo do diretório do produto:  
   
--   AssessmentReportGenerationSample. xml  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. xml  
+-   ConversionAndDataMigrationSample.xml  
   
--   VariableValueFileSample. xml  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. xml  
+-   ServersConnectionFileSample.xml  
   
 Você pode executar os modelos (arquivos) depois de alterar os parâmetros exibidos aqui para fins de relevância.  
   
@@ -393,6 +393,6 @@ O usuário pode facilmente validar seu arquivo de script em relação ao arquivo
 ## <a name="next-step"></a>Próxima etapa
 A próxima etapa na operação do console é [criar arquivos de valor de variável &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
 [Criando arquivos de valor de variável &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7b3f7e776268eed28beed4e4349c1ae8909789d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989686"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933807"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Executando o console do SSMA (DB2ToSQL)
 A Microsoft fornece um conjunto robusto de comandos de arquivo de script para executar e controlar atividades do SSMA. As seções que mais profundos detalham o mesmo. O aplicativo de console usa determinados comandos de arquivo de script padrão, conforme enumerado nesta seção.  
@@ -242,7 +242,7 @@ gerar-avaliação-relatório
   
 -   `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;AssessmentReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **AssessmentReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -314,7 +314,7 @@ converter esquema
   
 -   `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;SchemaConversionReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **SchemaConversionReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -376,7 +376,7 @@ migrar-Data: migra os dados de origem para o destino.
   
 -   `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;DataMigrationReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **DataMigrationReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -500,7 +500,7 @@ sincronizar destino
   
     -   script de falha  
   
--   `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport. xml** será criado.  
+-   `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -565,7 +565,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
     -   script de falha  
   
--   `report-errors-to:`Especifica o local do relatório de erros para a operação de atualização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport. xml** será criado.  
+-   `report-errors-to:`Especifica o local do relatório de erros para a operação de atualização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -674,13 +674,13 @@ instrução Convert-SQL-
   
     **Valor padrão:** false. (atributo opcional)  
   
--   `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta em que o T-SQL convertido será armazenado. Quando um caminho de pasta é especificado junto com `sql-files` o atributo, cada arquivo de origem terá um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com `sql` o atributo, o T-SQL convertido é gravado em um arquivo chamado **Result. out** na pasta especificada.  
+-   `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta em que o T-SQL convertido será armazenado. Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem terá um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado **Result. out** na pasta especificada.  
   
 -   `sql`Especifica as instruções SQL do DB2 a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
   
 -   `sql-files`Especifica o caminho dos arquivos SQL que deve ser convertido em código T-SQL.  
   
--   `write-summary-report-to`Especifica o caminho onde o relatório será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport. xml** será criado. (atributo opcional)  
+-   `write-summary-report-to`Especifica o caminho onde o relatório será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport.XML** será criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais, aula sobre visualização..,:  
   

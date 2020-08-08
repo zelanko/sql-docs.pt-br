@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b55228d51099c8c48c181a85d2615039f764b8a4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029401"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932167"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Relatório de migração de dados (SybaseToSQL)
-A caixa de diálogo **relatório de migração de dados** é exibida após [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a migração de dados para o.  
+A caixa de diálogo **relatório de migração de dados** é exibida após a migração de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
 **Status**  

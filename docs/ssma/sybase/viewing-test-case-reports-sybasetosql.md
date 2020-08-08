@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 99bad46468ff0138c07f531c9e32cdecc4fda5be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934520"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Exibir relatórios de caso de teste (SybaseToSQL)
 O relatório de caso de teste mostra os resultados da verificação de teste e as informações gerais de teste. No caso de uma falha de teste, as informações sobre quaisquer dados incompatíveis em objetos verificados também são exibidas.  

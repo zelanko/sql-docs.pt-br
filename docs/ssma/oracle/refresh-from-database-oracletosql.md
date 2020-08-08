@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266541"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933007"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Atualização do banco de dados (OracleToSQL)
 A caixa de diálogo **Atualizar do banco de dados** permite selecionar quais objetos atualizar do banco de dados Oracle. As linhas na caixa de diálogo são codificadas por cores com base no estado dos metadados:  

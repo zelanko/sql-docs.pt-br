@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066664"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933987"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configurações do projeto (mapeamento de tipo) (AccessToSQL)
 As configurações do projeto de mapeamento de tipo permitem que você defina mapeamentos de tipo padrão para o projeto do SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [mapeando tipos de dados de origem e de destino](mapping-source-and-target-data-types-accesstosql.md).  
@@ -37,28 +37,28 @@ O mapeamento de tipo está disponível nas caixas de diálogo **configurações 
 O tipo de dados do Access a ser mapeado.  
   
 **Tipo de destino**  
-O tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados de destino ou SQL Azure para o tipo de dados de acesso especificado.  
+O tipo de dados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure para o tipo de dados de acesso especificado.  
   
 A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem e de destino.  
   
 |Acessar tipo de dados|Tipo de dados do SQL Server|  
 |--------------------|------------------------|  
-|**binário [\*.. \*]**|**varbinary [\*]**|  
+|**binário [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**booleano**|**bit**|  
 |**byte**|**tinyint**|  
 |**moeda**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**volume**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**inteiro**|**smallint**|  
-|**Longas**|**int**|  
+|**longo**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**memorando**|**nvarchar(max)**|  
 |**memorando** -para o Access 97|**varchar(max)**|  
 |**single**|**real**|  
-|**texto [\*.. \*]**|**nvarchar [\*]**|  
-|**texto [\*.. ] \*** -para o Access 97|**varchar [\*]**|  
+|**texto [ \* .. \* ]**|**nvarchar [ \* ]**|  
+|**text [ \* .. \* ]** -para o Access 97|**varchar [ \* ]**|  
   
 **Adicionar**  
 Clique para adicionar um tipo de dados à lista de mapeamento.  

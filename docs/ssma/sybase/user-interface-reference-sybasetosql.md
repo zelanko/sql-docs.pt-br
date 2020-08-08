@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 997566ef168b53397ad7c76014012d671fb25c91
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: afe4c2fe8ad2ff254a44cc2aba477f4ef411fdd7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864723"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934575"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referência da interface do usuário (SybaseToSQL)
 Esta seção inclui tópicos de ajuda para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração (SSMA) para Sybase.  

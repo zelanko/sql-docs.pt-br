@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8a5406bd58e62e34bfaaa6046bd2feb9f58f73a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006577"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934024"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Editar mapeamento de tipo (AccessToSQL)
 A caixa de diálogo **Editar mapeamento de tipo** permite especificar como os tipos são mapeados entre os objetos de banco de dados de origem e de destino.  
@@ -40,10 +40,10 @@ Especifique o comprimento mínimo para esse mapeamento. Por exemplo, para o tipo
 Especifique o comprimento máximo para esse mapeamento. Por exemplo, para o tipo de dados **texto** , você pode inserir 20 para especificar que esse mapeamento é para um intervalo que termina no **texto (20)**.  
   
 **Tipo de destino**  
-Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para o qual o tipo de dados de origem está mapeado. Quando o SSMA cria a tabela ou o procedimento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]armazenado no, o tipo de dados de origem será alterado para esse tipo de dados.  
+Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para o qual o tipo de dados de origem está mapeado. Quando o SSMA cria a tabela ou o procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o tipo de dados de origem será alterado para esse tipo de dados.  
   
 Se o tipo de dados for de comprimento variável, o campo a seguir aparecerá em **tipo de destino**:  
   
-**Replace with**  
+**Substituir por**  
 Especifique o comprimento de destino para esse mapeamento. Por exemplo, para o tipo de dados **nvarchar** , você pode inserir 20 para especificar que o tipo de dados de origem especificado deve ser mapeado para **nvarchar (20)**.  
   

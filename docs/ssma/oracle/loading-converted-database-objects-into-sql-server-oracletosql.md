@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 37d75a6454388c19caaa483d83cc5f6a230dab30
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293843"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934756"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Carregar objetos de banco de dados convertidos no SQL Server (OracleToSQL)
 Depois de converter os esquemas do Oracle para SQL Server, você pode carregar os objetos de banco de dados resultantes em SQL Server. Você pode fazer com que o SSMA crie os objetos, ou pode criar o script dos objetos e executar os scripts por conta própria. Além disso, o SSMA permite que você atualize metadados de destino com o conteúdo real do banco de dados SQL Server.  

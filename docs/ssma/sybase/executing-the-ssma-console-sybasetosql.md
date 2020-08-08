@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029147"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931672"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o console do SSMA (SybaseToSQL)
 A Microsoft fornece um conjunto robusto de comandos de arquivo de script para executar e controlar atividades do SSMA. As seções que mais profundos detalham o mesmo.  
@@ -201,7 +201,7 @@ Falha ao conectar-se ao servidor de banco de dados de origem durante a execuçã
   
 -   `write-summary-report-to:`Especifica o caminho no qual o relatório será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;AssessmentReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **AssessmentReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -267,7 +267,7 @@ Se a conexão de banco de dados de origem ou de destino não for executada antes
   
 -   `write-summary-report-to:`Especifica o caminho no qual o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;SchemaConversionReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **SchemaConversionReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -320,7 +320,7 @@ Esse comando migra os dados de origem para o destino.
   
 -   `write-summary-report-to:`Especifica o caminho no qual o relatório será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;DataMigrationReport n. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **DataMigrationReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
@@ -411,7 +411,7 @@ Se a conexão do banco de dados de destino não for executada antes da execuçã
   
     -   script de falha  
   
--   `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport. xml** será criado.  
+-   `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -472,7 +472,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
     -   script de falha  
   
--   `report-errors-to:`Especifica o local do relatório de erros para a operação de atualização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport. xml** será criado.  
+-   `report-errors-to:`Especifica o local do relatório de erros para a operação de atualização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -576,13 +576,13 @@ Esse comando converte a instrução SQL.
   
     **Valor padrão:** false. (atributo opcional)  
   
--   `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta para o qual o T-SQL convertido deve ser armazenado. Quando um caminho de pasta é especificado junto com `sql-files` o atributo, cada arquivo de origem tem um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com `sql` o atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
+-   `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta para o qual o T-SQL convertido deve ser armazenado. Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem tem um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
   
 -   `sql`Especifica as instruções do Sybase SQL a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
   
 -   `sql-files`Especifica o caminho dos arquivos SQL que precisa ser convertido em código T-SQL.  
   
--   `write-summary-report-to`Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport. xml** será criado. (atributo opcional)  
+-   `write-summary-report-to`Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport.XML** será criado. (atributo opcional)  
   
     A criação do relatório de resumo tem duas subcategorias adicionais, ou seja:  
   

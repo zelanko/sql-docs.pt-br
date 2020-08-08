@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 985d6e58d00dee705a684b7ef2f6516a5459f0df
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293863"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934892"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introdução ao SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) para Oracle permite converter rapidamente esquemas de banco de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, carregar os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e migrar dados do Oracle para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -76,7 +76,7 @@ A maioria das configurações de metadados é somente leitura. No entanto, você
   
 As alterações feitas em um Gerenciador de metadados são refletidas nos metadados do projeto, não nos bancos de dados de origem ou de destino.  
   
-### <a name="toolbars"></a>Barras de Ferramentas  
+### <a name="toolbars"></a>Barras de ferramentas  
 O SSMA tem duas barras de ferramentas: uma barra de ferramentas de projeto e uma barra de ferramentas de migração.  
   
 #### <a name="the-project-toolbar"></a>A barra de ferramentas do projeto  

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 11b47065fe180956d58361ec80eda1dac25fa4b1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083501"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932317"
 ---
 # <a name="assessment-report-sybasetosql"></a>Relatório de avaliação (SybaseToSQL)
-A janela relatório de avaliação mostra os resultados da conversão de objetos de banco [!INCLUDE[tsql](../../includes/tsql-md.md)] de dados em sintaxe e também pode ajudá-lo a estimar a complexidade e o custo de seus projetos de migração.  
+A janela relatório de avaliação mostra os resultados da conversão de objetos de banco de dados em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe e também pode ajudá-lo a estimar a complexidade e o custo de seus projetos de migração.  
   
 Para acessar o relatório de avaliação, selecione objetos a serem convertidos no Gerenciador de metadados de origem, clique com o botão direito do mouse em **bancos de dados**e selecione **criar relatório**.  
   
@@ -32,12 +32,12 @@ Mostra as estatísticas de conversão por tipo de objeto. Esse painel só é vis
 Mostra as estatísticas de conversão para o objeto selecionado. Esse painel só é visível quando um objeto individual com código é selecionado no painel esquerdo. Talvez seja necessário expandir as **estatísticas** para exibir esse painel.  
   
 **Navegação de origem**  
-Mostra o código do ASE para o objeto selecionado e realça o código que não foi convertido [!INCLUDE[tsql](../../includes/tsql-md.md)]em. Esse painel só é visível quando um objeto individual com código é selecionado no painel esquerdo.  
+Mostra o código do ASE para o objeto selecionado e realça o código que não foi convertido em [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esse painel só é visível quando um objeto individual com código é selecionado no painel esquerdo.  
   
 Clique nos números de linha para definir ou limpar os indicadores. Use os botões na parte superior do painel para navegar pelo código.  
   
 **Navegação de destino**  
-Mostra o código resultante [!INCLUDE[tsql](../../includes/tsql-md.md)] da conversão para o objeto selecionado e mensagens de erro para o código que não foi convertido. Esse painel só é visível quando um objeto individual com código é selecionado no painel esquerdo.  
+Mostra o código resultante da conversão [!INCLUDE[tsql](../../includes/tsql-md.md)] para o objeto selecionado e mensagens de erro para o código que não foi convertido. Esse painel só é visível quando um objeto individual com código é selecionado no painel esquerdo.  
   
 Clique nos números de linha para definir ou limpar os indicadores. Use os botões na parte superior do painel para navegar pelo código.  
   

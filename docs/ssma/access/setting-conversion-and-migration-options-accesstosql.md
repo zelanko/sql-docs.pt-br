@@ -14,17 +14,17 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051502"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933957"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Configurando opções de conversão e migração (AccessToSQL)
-Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para os tipos de dados de destino. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure ou migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, verifique se as opções de configuração são apropriadas para o projeto.  
+Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para os tipos de dados de destino. Antes de converter objetos ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure ou migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, verifique se as opções de configuração são apropriadas para o projeto.  
   
 ## <a name="configuration-options-and-modes"></a>Opções de configuração e modos  
 O SSMA tem quatro conjuntos de parâmetros de configuração e quatro modos para definir essas configurações: padrão, otimista, completo e personalizado. O modo padrão é recomendado para a maioria dos usuários. Use o modo otimista para conversões simples. Use o modo completo se desejar ver todas as mensagens. No modo personalizado, você define as opções.  
@@ -82,7 +82,7 @@ A próxima etapa na migração depende de suas necessidades de projeto:
   
 -   Para personalizar o mapeamento de bancos de dados de origem e de destino, consulte [mapeando bancos de dados de origem e de destino](mapping-source-and-target-databases-accesstosql.md)  
   
--   Caso contrário, você pode converter as definições de objeto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados do Access em ou SQL Azure definições de objeto. Para obter mais informações, consulte [convertendo objetos de banco de dados do Access](converting-access-database-objects-accesstosql.md)  
+-   Caso contrário, você pode converter as definições de objeto de banco de dados do Access em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure definições de objeto. Para obter mais informações, consulte [convertendo objetos de banco de dados do Access](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

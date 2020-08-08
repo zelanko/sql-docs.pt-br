@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 38097cda1a014c173f96657f5758a95b9d266f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086796"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932527"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Exibir relatórios de caso de teste (OracleToSQL)
 O relatório de caso de teste mostra os resultados da verificação de teste e as informações gerais de teste. No caso de uma falha de teste, as informações sobre quaisquer dados incompatíveis em objetos verificados também são exibidas.  

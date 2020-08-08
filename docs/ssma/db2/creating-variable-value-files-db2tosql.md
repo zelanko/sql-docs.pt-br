@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f5a1b2fe01fd9800ee9d56e3a01f9861bfb3a046
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989774"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933851"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Criando arquivos de valor de variável (DB2ToSQL)
 O arquivo de valor da variável é um arquivo XML que inclui os valores de parâmetro de comandos, como, o nome do servidor de origem ou de destino que costuma ser alterado de uma migração de servidor para outra. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variáveis para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com a opção **-v** na linha de comando. Isso ajuda a manter valores estáticos em alguns arquivos de script com os valores de variáveis em vários arquivos de variáveis.  
   
 > [!NOTE]  
 > 1.  Os nomes de variáveis são prefixados e sufixos com um símbolo de $ (dólar). Se as variáveis não forem atribuídas a um valor no arquivo de valor de variável, você encontrará um erro durante a análise do arquivo de script, resultando na parada do processo de execução do console.  
-> 2.  O caractere de escape **$** para **$$** é. Se o valor de uma variável ou valor estático de um parâmetro contiver **$** um símbolo (dólar) **$$** , deverá ser especificado para tratá-lo como um caractere em vez de uma variável.  
+> 2.  O caractere de escape para **$** é **$$** . Se o valor de uma variável ou valor estático de um parâmetro contiver um **$** símbolo (dólar), **$$** deverá ser especificado para tratá-lo como um caractere em vez de uma variável.  
 > 3.  Para fins de manutenção, as variáveis podem ser declaradas dentro `'variable-group'` de elementos para separação lógica de variáveis definidas pelo usuário.  O uso deste elemento não é obrigatório.  
   
 **Exemplos:**  

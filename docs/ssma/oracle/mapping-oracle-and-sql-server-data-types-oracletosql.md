@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 656132dafce39e6007601b75956fd73714638716
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293828"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934766"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapeamento de tipos de dados do Oracle e do SQL Server (OracleToSQL)
 Tipos de banco de dados Oracle são diferentes dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados. Ao converter objetos de banco de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, você deve especificar como mapear tipos de dado do Oracle para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode aceitar os mapeamentos de tipo de dados padrão ou pode personalizar os mapeamentos, conforme mostrado nas seções a seguir.  

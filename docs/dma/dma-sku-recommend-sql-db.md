@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 3a061ede945ed8eda5264c2ef210bca5ac1d70e9
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864903"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988493"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o SKU do banco de dados SQL/Instância Gerenciada do Azure correto para seu banco de dados local
 
@@ -29,7 +29,7 @@ Este artigo se concentra no recurso de recomendações de SKU do banco de dados 
 
 - Banco de dados individual
 - Pools elásticos
-- Instância gerenciada
+- Banco de Dados SQL
 
 O recurso de recomendações de SKU permite que você identifique o mínimo recomendado do banco de dados SQL do Azure ou o Azure SQL Instância Gerenciada SKU com base em contadores de desempenho coletados do (s) computador (es) que hospedam seus bancos de dados. O recurso fornece recomendações relacionadas ao tipo de preço, nível de computação e tamanho máximo de dados, bem como ao custo estimado por mês. Ele também oferece a capacidade de provisionar em massa bancos de dados individuais e instâncias gerenciadas para todos os bancos de dados recomendados.
 

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863517"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935124"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Definir opções do projeto (MySQLToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para os tipos de dados de destino.  Antes de converter objetos para SQL Server ou SQL Azure ou migrar dados para SQL Server ou SQL Azure, verifique se as opções de configuração são apropriadas para o projeto.  

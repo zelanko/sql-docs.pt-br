@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1d2f1c02b9a9400236381cdd30fb3deb570500c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028758"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934645"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configurações do projeto (conversão) (SybaseToSQL)
-A página conversão da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte a sintaxe do Sybase Adaptive Server Enterprise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ASE) em ou SQL Azure sintaxe.  
+A página conversão da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte a sintaxe do Sybase Adaptive Server Enterprise (ase) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure sintaxe.  
   
 O painel de conversão está disponível nas caixas de diálogo **configurações do projeto** e **configurações padrão do projeto** :  
   
@@ -29,7 +29,7 @@ O painel de conversão está disponível nas caixas de diálogo **configuraçõe
 **@@ERROR**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure e ASE usam códigos de erro diferentes.  
   
-Use essa configuração para especificar o tipo de mensagem (aviso ou erro) que o SSMA mostra no painel de saída ou de lista de erros quando encontra uma referência **a@ERROR @** no código do ase.  
+Use essa configuração para especificar o tipo de mensagem (aviso ou erro) que o SSMA mostra no painel de saída ou de lista de erros quando encontra uma referência **a @ERROR @** no código do ase.  
   
 -   Se você selecionar **converter e marcar com aviso**, o SSMA converterá as instruções e as marcará com comentários de aviso.  
   
@@ -87,7 +87,7 @@ Essa configuração especifica como converter cadeias de caracteres vazias. As o
   
 -   **Substituir constantes de cadeia de caracteres vazias por espaço**  
   
--   Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comportamento/SQL Azure, selecione **manter a sintaxe atual**.  
+-   Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento/SQL Azure, selecione **manter a sintaxe atual**.  
   
 Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a seguinte configuração:  
   
@@ -96,13 +96,13 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo completo:** Substituir todas as expressões de cadeia de caracteres por espaço  
   
 **CONVERTER e transmitir conversão de cadeia de caracteres binária**  
-A conversão de valores binários em números pode retornar valores diferentes em plataformas diferentes. Por exemplo, em processadores x86, CONVERTa (Integer, 0x00000100) retorna 65536 no ASE e 256 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. O ASE também retorna valores diferentes, dependendo da ordem de byte.  
+A conversão de valores binários em números pode retornar valores diferentes em plataformas diferentes. Por exemplo, em processadores x86, CONVERTa (Integer, 0x00000100) retorna 65536 no ASE e 256 no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O ASE também retorna valores diferentes, dependendo da ordem de byte.  
   
 Use essa configuração para controlar como o SSMA converte as expressões CONVERT e CASE que contêm valores binários:  
   
 -   Selecione **conversão simples** para converter as expressões sem avisos ou correções. Use essa configuração se você souber que o servidor ASE tem uma ordem de bytes que não requer nenhuma alteração do valor binário.  
   
--   Selecione **converter e corrigir** para que o SSMA converta e corrija as expressões para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]uso em. A ordem de bytes em constantes literais será revertida. Todos os outros valores binários (como variáveis e colunas binárias) serão marcados com erros. Use esse valor se você souber que o servidor ASE tem uma ordem de bytes que requer alterações em valores binários.  
+-   Selecione **converter e corrigir** para que o SSMA converta e corrija as expressões para uso em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A ordem de bytes em constantes literais será revertida. Todos os outros valores binários (como variáveis e colunas binárias) serão marcados com erros. Use esse valor se você souber que o servidor ASE tem uma ordem de bytes que requer alterações em valores binários.  
   
 -   Selecione **converter e marcar com aviso** para que o SSMA converta e corrija as expressões e marque todas as expressões convertidas com comentários de aviso.  
   
@@ -128,9 +128,9 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo completo:** Marcar com erro  
   
 **Conversão de verificação de igualdade**  
-Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure, se a configuração de ANSI_NULLS estiver ativada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure retornará desconhecido quando qualquer comparação de igualdade contiver um valor nulo. Se ANSI_NULLS for off, as comparações de igualdade que contêm valores nulos retornarão true quando a coluna comparada e a expressão ou duas expressões forem nulas. Por padrão (ANSINULL OFF), as comparações de igualdade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de ase do Sybase se comportam como/SQL Azure com ANSI_NULLS desativado.  
+Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure, se a configuração de ANSI_NULLS estiver ativada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure retornará desconhecido quando qualquer comparação de igualdade contiver um valor nulo. Se ANSI_NULLS for off, as comparações de igualdade que contêm valores nulos retornarão true quando a coluna comparada e a expressão ou duas expressões forem nulas. Por padrão (ANSINULL OFF), as comparações de igualdade de ASE do Sybase se comportam como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure com ANSI_NULLS desativado.  
   
--   Se você selecionar **conversão simples**, o SSMA converterá o código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE em/SQL Azure sintaxe sem verificações adicionais para valores nulos. Use essa configuração se ANSI_NULLS estiver desativada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure ou se desejar revisar comparações de igualdade de acordo com cada caso.  
+-   Se você selecionar **conversão simples**, o SSMA converterá o código do ase em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure sintaxe sem verificações adicionais para valores nulos. Use essa configuração se ANSI_NULLS estiver desativada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure ou se desejar revisar comparações de igualdade de acordo com cada caso.  
   
 -   Se você selecionar **considerar valores nulos**, o SSMA adicionará verificações de valores nulos usando as cláusulas is NULL e is NOT NULL.  
   
@@ -141,7 +141,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo completo:** Considerar valores nulos  
   
 **Formatar cadeias de caracteres**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure não dá mais suporte ao argumento *FORMAT_STRING* nas instruções Print e RAISERROR. A variável *FORMAT_STRING* com suporte para colocar parâmetros substituíveis diretamente na cadeia de caracteres e, em seguida, substituir os parâmetros em tempo de execução. Em vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disso, o requer a cadeia de caracteres completa usando um literal de cadeia de caracteres ou uma cadeia de caracteres criada usando uma variável. Para obter mais informações, consulte o tópico " [!INCLUDE[tsql](../../includes/tsql-md.md)]imprimir ()" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos manuais online do.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure não dá mais suporte ao argumento *FORMAT_STRING* nas instruções Print e RAISERROR. A variável *FORMAT_STRING* com suporte para colocar parâmetros substituíveis diretamente na cadeia de caracteres e, em seguida, substituir os parâmetros em tempo de execução. Em vez disso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o requer a cadeia de caracteres completa usando um literal de cadeia de caracteres ou uma cadeia de caracteres criada usando uma variável. Para obter mais informações, consulte o tópico "imprimir ( [!INCLUDE[tsql](../../includes/tsql-md.md)] )" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
 Quando o SSMA encontra um argumento *FORMAT_STRING* , ele pode criar um literal de cadeia de caracteres usando as variáveis ou criar uma nova variável e criar uma cadeia de caracteres usando essa variável.  
   
@@ -178,11 +178,11 @@ Quando o SSMA encontra um argumento *FORMAT_STRING* , ele pode criar um literal 
         CAST (@arg2 AS varchar(max)))  
     PRINT @print_format_1  
     ```  
-    Quando ele usa **criar novo** modo de cadeia de caracteres, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA pressupõe que a opção CONCAT_NULL_YIELDS_NULL está desativada. Portanto, o SSMA não verifica argumentos nulos.  
+    Quando ele usa **criar novo** modo de cadeia de caracteres, o SSMA pressupõe que a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opção CONCAT_NULL_YIELDS_NULL está desativada. Portanto, o SSMA não verifica argumentos nulos.  
   
 -   Para que o SSMA crie uma nova variável para cada instrução PRINT e RAISERROR e, em seguida, use essa variável para o valor da cadeia de caracteres, selecione **criar nova variável**.  
   
-    Nesse modo, se uma instrução PRINT ou RAISERROR não usar espaços reservados e variáveis locais, o SSMA substituirá todos os caracteres de porcentagem duplas (%%) com caracteres de porcentagem única para obedecer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sintaxe/SQL Azure.  
+    Nesse modo, se uma instrução PRINT ou RAISERROR não usar espaços reservados e variáveis locais, o SSMA substituirá todos os caracteres de porcentagem duplas (%%) com caracteres de porcentagem única para obedecer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe/SQL Azure.  
   
     Se uma instrução PRINT ou RAISERROR usar espaços reservados e uma ou mais variáveis locais, como no exemplo a seguir:  
   
@@ -250,7 +250,7 @@ Essa configuração especifica se as definições de objetos temporários que ap
 **Modo completo:** Não  
   
 **Conversão de tabela de proxy**  
-Especifica se as tabelas proxy do ASE são [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]convertidas em/SQL Azure tabelas ou não são convertidas e o código é marcado com comentários de erro.  
+Especifica se as tabelas proxy do ASE são convertidas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure tabelas ou não são convertidas e o código é marcado com comentários de erro.  
   
 -   Selecione **converter** para converter tabelas de proxy em tabelas regulares.  
   
@@ -261,9 +261,9 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo padrão/otimista/completo:** Marcar com erro  
   
 **Número da mensagem base RAISERROR**  
-As mensagens de usuário do ASE são armazenadas em cada banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]as mensagens do usuário são armazenadas centralmente e disponibilizadas por meio da exibição do catálogo **Sys. messages** . Além disso, as mensagens de usuário do ASE começam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] às 20000, mas as mensagens de erro começam em 50001.  
+As mensagens de usuário do ASE são armazenadas em cada banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]as mensagens do usuário são armazenadas centralmente e disponibilizadas por meio da exibição do catálogo **Sys. messages** . Além disso, as mensagens de usuário do ASE começam às 20000, mas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as mensagens de erro começam em 50001.  
   
-Essa configuração especifica o número a ser adicionado ao número de mensagem de usuário do ASE para convertê-lo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de usuário. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seu tiver mensagens de usuário na exibição de catálogo **Sys. messages** , talvez seja necessário alterar esse número para um valor mais alto. Isso é para que os números de mensagem convertidos não entrem em conflito com os números de mensagem existentes.  
+Essa configuração especifica o número a ser adicionado ao número de mensagem de usuário do ASE para convertê-lo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de usuário. Se o seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver mensagens de usuário na exibição de catálogo **Sys. messages** , talvez seja necessário alterar esse número para um valor mais alto. Isso é para que os números de mensagem convertidos não entrem em conflito com os números de mensagem existentes.  
   
 Observe o seguinte:  
   
@@ -273,7 +273,7 @@ Observe o seguinte:
   
 -   Se o número da mensagem referenciado for uma variável ou expressão, o SSMA criará uma variável local intermediária.  
   
--   No modo otimista, o SSMA pressupõe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a opção CONCAT_NULL_YIELDS_NULL está desativada e não faz nenhuma verificação de argumentos nulos.  
+-   No modo otimista, o SSMA pressupõe que a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opção CONCAT_NULL_YIELDS_NULL está desativada e não faz nenhuma verificação de argumentos nulos.  
   
 -   No modo completo, o SSMA verifica argumentos nulos.  
   
@@ -315,7 +315,7 @@ No ASE, CHARINDEX retornará NULL somente se todas as expressões de entrada for
   
 -   Para usar o comportamento do ASE, selecione **substituir função**. Todas as chamadas para a função CHARINDEX são substituídas por uma chamada para CHARINDEX_VARCHAR ou CHARINDEX_NVARCHAR função definida pelo usuário com base no tipo de parâmetros passados (criados no banco de dados de usuário sob o 2SS ' s do nome do esquema ') para emular o comportamento do ASE do Sybase.  
   
--   Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comportamento/SQL Azure, selecione **manter a sintaxe atual**.  
+-   Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento/SQL Azure, selecione **manter a sintaxe atual**.  
   
 Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a seguinte configuração:  
   
@@ -324,11 +324,11 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo completo:** Função Replace  
   
 **função DATALENGTH**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure e ASE diferem no valor retornado pela função DATALENGTH quando o valor é um único espaço. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure retorna 0 e ase retorna 1.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure e ASE diferem no valor retornado pela função DATALENGTH quando o valor é um único espaço. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure retorna 0 e ase retorna 1.  
   
 -   Para usar o comportamento do ASE, selecione **substituir função**. Todas as chamadas para a função DATALENGTH são substituídas por uma expressão CASE para emular o comportamento de ASE do Sybase.  
   
--   Para usar o comportamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão/SQL Azure, selecione **manter a sintaxe atual**.  
+-   Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento padrão/SQL Azure, selecione **manter a sintaxe atual**.  
   
 Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a seguinte configuração:  
   
@@ -337,7 +337,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo completo:** Função Replace  
   
 **função INDEX_COL**  
-O ASE dá suporte a um argumento opcional *user_id* para a função INDEX_COL; no entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure não oferece suporte a esse argumento. Se você usar o argumento *user_id* , essa função não poderá ser convertida em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure sintaxe.  
+O ASE dá suporte a um argumento opcional *user_id* para a função INDEX_COL; no entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure não oferece suporte a esse argumento. Se você usar o argumento *user_id* , essa função não poderá ser convertida em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure sintaxe.  
   
 -   Para usar o comportamento do ASE, selecione **converter função**. Se o código contiver o argumento *user_id* , o SSMA exibirá um erro.  
   
@@ -388,7 +388,7 @@ Especifica se a função PATINDEX deve ser convertida para corresponder ao compo
   
 -   Para usar o comportamento do ASE, selecione **usar**.  
   
--   Para usar o comportamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]padrão/SQL Azure, selecione **não usar**.  
+-   Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento padrão/SQL Azure, selecione **não usar**.  
   
 Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a seguinte configuração:  
   
@@ -397,11 +397,11 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo completo:** Utilizá  
   
 **função REPLICATE**  
-A função REPLICAte repete uma cadeia de caracteres do número de vezes especificado. No ASE, se você especificar para repetir a cadeia de caracteres zero vezes, o resultado será nulo. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure, o resultado é uma cadeia de caracteres vazia.  
+A função REPLICAte repete uma cadeia de caracteres do número de vezes especificado. No ASE, se você especificar para repetir a cadeia de caracteres zero vezes, o resultado será nulo. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure, o resultado é uma cadeia de caracteres vazia.  
   
 -   Para usar o comportamento do ASE, selecione **substituir função**. Todas as chamadas para a função REPLICAte são substituídas por uma chamada para REPLICATE_VARCHAR ou REPLICATE_NVARCHAR função definida pelo usuário com base no tipo de parâmetros passados (criados no banco de dados do usuário sob o 2SS ' s do nome do esquema) para emular o comportamento de ASE do Sybase.  
   
--   Para usar o comportamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]padrão/SQL Azure, selecione **substituir função**.  
+-   Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento padrão/SQL Azure, selecione **substituir função**.  
   
 Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a seguinte configuração:  
   
@@ -419,7 +419,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 Modo **padrão/otimista/modo completo:** Função Replace  
   
 **função SUBSTRING**  
-No ASE, a função `SUBSTRING(expression, start, length)` retornará NULL se um valor inicial maior que o número de caracteres na expressão for especificado ou se length for igual a zero. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure, a expressão equivalente retorna uma cadeia de caracteres vazia.  
+No ASE, a função `SUBSTRING(expression, start, length)` retornará NULL se um valor inicial maior que o número de caracteres na expressão for especificado ou se length for igual a zero. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure, a expressão equivalente retorna uma cadeia de caracteres vazia.  
   
 -   Para usar o comportamento do ASE, selecione **substituir função**. Todas as chamadas para a função substring são substituídas por uma chamada para SUBSTRING_VARCHAR ou SUBSTRING_NVARCHAR ou SUBSTRING_VARBINARY função definida pelo usuário com base no tipo de parâmetros transmitidos (criados no banco de dados do usuário sob o 2SS ' s do nome do esquema) para emular o comportamento de ASE do Sybase.  
   
@@ -433,7 +433,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
   
 ## <a name="tables"></a>TABLES  
 **Adicionar chave primária**  
-Cria uma nova chave primária na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure se uma tabela de acesso não tiver nenhuma chave primária ou índice exclusivo.  
+Cria uma nova chave primária na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela ou SQL Azure se uma tabela de acesso não tiver nenhuma chave primária ou índice exclusivo.  
   
 -   **Modo padrão**: false  
   

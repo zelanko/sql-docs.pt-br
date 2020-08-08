@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 3380531a26e062d6b06c2f08cb5bc36a8df55004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 913ca29a043d6422d818221f5d13dea3029a21e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262979"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934735"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Aviso legal (SSMA para Oracle)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  

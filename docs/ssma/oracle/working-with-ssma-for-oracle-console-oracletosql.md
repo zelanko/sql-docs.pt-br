@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f1f760d2cc97c7f54be18281c7b55a6527eb8ec2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d99fb680e6b2ca9b8ce044d8f8c322c6bce06cec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392059"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932987"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Trabalhar com o console do SSMA para Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) versão para Oracle agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console, o SSMA permite a interface do nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
