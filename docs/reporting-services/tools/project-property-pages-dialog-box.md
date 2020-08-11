@@ -1,5 +1,6 @@
 ---
 title: Caixa de diálogo Páginas de Propriedades do Projeto | Microsoft Docs
+description: Conheça as opções da caixa de diálogo Páginas de Propriedades do Projeto que permitem configurar propriedades de implantação para um projeto do Servidor de Relatório.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a3be836ba4df9bcb4ef6f8b6ca24caa5c7a67bf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578234"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86909995"
 ---
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
 
@@ -28,8 +29,8 @@ ms.locfileid: "65578234"
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>Opções  
- **Configuração**  
- Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Debug**, **DebugLocal**e **Release**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)** .  
+ **Configuration**  
+ Selecione a configuração a ser editada. Inicialmente, estão disponíveis as seguintes configurações: **Debug**, **DebugLocal** e **Release**. A configuração ativa aparece primeiro; por exemplo, **Active(Debug)** .  
   
  Para ver as propriedades de mais de uma configuração ao mesmo tempo, selecione **Todas as Configurações** ou **Várias Configurações**.  
   
