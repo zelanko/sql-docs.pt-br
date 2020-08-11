@@ -1,5 +1,6 @@
 ---
 title: Propriedades do Servidor (página Geral) | Microsoft Docs
+description: Conheça as opções da página Propriedades do Servidor de Relatório.
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 718121027064cc44e540ea710097da9added0c0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576166"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916605"
 ---
 # <a name="report-server-properties-general-page"></a>Propriedades do Servidor de Relatório (página Geral)
   Use essa página para exibir ou modificar o título usado no Gerenciador de Relatórios, habilitar ou desabilitar Meus Relatórios, selecionar uma definição de função para a segurança de Meus Relatórios e habilitar e desabilitar o controle de impressão do cliente.  

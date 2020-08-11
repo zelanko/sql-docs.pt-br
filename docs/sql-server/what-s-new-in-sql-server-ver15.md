@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665359"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923395"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] baseia-se em versões anteriores para ampliar o SQL Server como uma plataforma que fornece opções de linguagens de desenvolvimento, tipos de dados, ambientes locais ou na nuvem e sistemas operacionais.
 
@@ -39,7 +39,7 @@ As seções a seguir fornecem uma visão geral desses recursos.
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>Virtualização de dados e [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-Hoje em dia, as empresas costumam gerenciar grandes acervos de dados que consistem em uma ampla gama de conjuntos de dados cada vez maiores e são hospedados em fontes de dados em silos e presentes em toda a empresa. Obter informações quase em tempo real de todos os seus dados com o SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], que fornecem um ambiente completo para trabalhar com grandes conjuntos de dados, incluindo funcionalidades de aprendizado de máquina e IA.
+Hoje em dia, as empresas costumam gerenciar grandes acervos de dados que consistem em uma ampla gama de conjuntos de dados cada vez maiores e são hospedados em fontes de dados em silos e presentes em toda a empresa. Obter informações quase em tempo real de todos os seus dados com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], que fornecem um ambiente completo para trabalhar com grandes conjuntos de dados, incluindo funcionalidades de aprendizado de máquina e IA.
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -160,7 +160,7 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece uma arquitetura
 |Always Encrypted com enclaves seguros|Expande sobre Always Encrypted com criptografia in-loco e computações avançadas, habilitando cálculos em dados de texto sem formatação dentro de um enclave seguro no lado do servidor. A criptografia in-loco melhora o desempenho e a confiabilidade das operações de criptografia (criptografia de colunas, chaves de criptografia de colunas giratórias e assim por diante), pois evita a movimentação de dados para fora do banco de dados.<br><br> O suporte para computações avançadas (correspondência de padrões e operações de comparação) desbloqueia o Always Encrypted a um conjunto muito mais amplo de cenários e aplicativos que demandam proteção de dados confidenciais, além de exigir uma funcionalidade mais rica em consultas Transact-SQL. Veja [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Gerenciamento de certificados no SQL Server Configuration Manager|Tarefas de gerenciamento de certificados, como exibir e implantar certificados, agora são possíveis usando o SQL Server Configuration Manager. Confira [Gerenciamento de certificado (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
 |Descoberta e Classificação de Dados|A Descoberta e Classificação de Dados fornece recursos para classificar e rotular colunas em tabelas de usuário. A classificação dos dados confidenciais (de negócios, financeiros, de serviços de saúde, PII, etc.) pode desempenhar um papel fundamental na dimensão da proteção de informações organizacionais. Esse recurso pode funcionar como a infraestrutura para:<ul><li>ajudar a atender a padrões de privacidade de dados e requisitos de conformidade regulamentar</li><li>Vários cenários de segurança, como monitoramento (auditoria) e alerta sobre acesso anômalo a dados confidenciais</li><li>facilitar a identificação de onde os dados confidenciais residem na empresa, para que os administradores possam adotar as etapas corretas para proteger o banco de dados</li></ul>|
-|Auditoria do SQL Server|A auditoria [Auditoria](../relational-databases/security/auditing/sql-server-audit-database-engine.md) também foi aprimorada para incluir um novo campo `data_sensitivity_information` no registro do log de auditoria, que contém as classificações (rótulos) de confidencialidade dos dados reais que foram retornados pela consulta. Confira detalhes e exemplos em [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
+|Auditoria do SQL Server|A [Auditoria](../relational-databases/security/auditing/sql-server-audit-database-engine.md) também foi aprimorada para incluir um novo campo `data_sensitivity_information` no registro do log de auditoria, que contém as classificações (rótulos) de confidencialidade dos dados reais retornados pela consulta. Confira detalhes e exemplos em [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>Alta disponibilidade
@@ -222,7 +222,7 @@ A maneira mais fácil de começar a trabalhar com o [!INCLUDE[ssNoVersion](../in
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---| 
-|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)* . Confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto está alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)* . Confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto está alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
 |Novas opções de configuração de paralelismo | Define o *grau máximo de configuração de* servidor de paralelismo durante a instalação. Confira a [página Configuração do mecanismo de banco de dados – MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) e o parâmetro `SQLMAXDOP` em [Instalar SQL Server no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor padrão está alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 |Aviso de instalação na chave do produto (Product Key) da licença do servidor/CAL|Se uma chave do produto (Product Key) de licença de servidor corporativo/CAL for inserida e o computador tiver mais que 20 núcleos físicos ou 40 núcleos lógicos quando o Hyper-Threading estiver habilitado, será exibido um aviso durante a instalação. Os usuários ainda podem reconhecer a limitação e continuar a instalação ou podem inserir uma Chave de Licença que dê suporte ao número máximo de processadores do sistema operacional.|
 | &nbsp; | &nbsp; |

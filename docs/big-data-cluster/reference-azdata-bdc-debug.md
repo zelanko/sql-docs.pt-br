@@ -5,38 +5,43 @@ description: Artigo de referência para comandos bdc debug de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cccdc543a572df19849afec16d0a2a71413ed19e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bda7fc541c0c89827df28e368d0cf8cc9db8bed5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820890"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943034"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-O artigo a seguir fornece referência para os comandos `bdc debug` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos
-|     |     |
+| Comando | Descrição |
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copiar logs.
-[azdata bdc debug dump](#azdata-bdc-debug-dump) | Gatilho de despejo de log.
+[azdata bdc debug dump](#azdata-bdc-debug-dump) | Dispara o despejo de memória.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 Copiar os logs de depuração do cluster de Big Data – a configuração do Kubernetes é necessária em seu sistema.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
-                           [--target-folder -d]  
-                           [--pod -p]  
-                           [--timeout -t]  
-                           [--skip-compress -sc]  
-                           [--exclude-dumps -ed]
+                           
+[--target-folder -d]  
+                           
+[--pod -p]  
+                           
+[--timeout -t]  
+                           
+[--skip-compress -sc]  
+                           
+[--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--namespace -n`
@@ -62,24 +67,25 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-Disparar o despejo de log e copiá-lo do contêiner – a configuração de Kubernetes é necessária no seu sistema.
+Dispara o despejo de memória e copia-o do contêiner; é necessário realizar a configuração do Kubernetes no sistema.
 ```bash
 azdata bdc debug dump --namespace -n 
-                      --container -c  
-                      [--target-folder -d]
+                      [--container -c]  
+                      
+[--target-folder -d]
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--namespace -n`
 Nome do cluster de Big Data, usado para namespaces de Kubernetes.
-#### `--container -c`
-Copiar os logs para os contêineres com nome semelhante, opcional. Por padrão, copia logs para todos os contêineres. Não pode ser especificado várias vezes. Se especificado várias vezes, o último será usado
 ### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--container -c`
+O contêiner de destino a ser disparado para despejar os processos `controller` em execução
 #### `--target-folder -d`
-Caminho da pasta de destino para a qual copiar os logs. Opcional; por padrão, cria o resultado na pasta local.  Não pode ser especificado várias vezes. Se especificado várias vezes, o último será usado `./output/dump`
+Pasta de destino de cópia do despejo. `./output/dump`
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -88,7 +94,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 

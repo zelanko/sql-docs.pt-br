@@ -1,5 +1,6 @@
 ---
 title: Conectar-se a um servidor de relatório no Management Studio | Microsoft Docs
+description: Saiba como se conectar a qualquer servidor na família do SQL Server e navegar graficamente no conteúdo usando o Pesquisador de Objetos no SQL Server Management Studio.
 ms.date: 05/07/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574105"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918412"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar-se a um servidor de relatório no Management Studio
 
@@ -49,7 +50,7 @@ ms.locfileid: "65574105"
 
 2. Selecione **Conectar** para exibir a lista de tipos de servidor e depois selecione **Reporting Services**.
 
-3. Na caixa de diálogo **Conectar-se ao Servidor** , digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: *\<servername>[\\<instancename\>]* .
+3. Na caixa de diálogo **Conectar-se ao Servidor** , digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: *\<servername>[\\<nomedainstância\>]* .
 
 4. Selecione o **Tipo de autenticação**. Se você estiver usando a Autenticação do Windows, conecte-se usando suas credenciais. Se selecionar a autenticação Básica ou a autenticação Formulários, digite a conta e a senha.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "65574105"
 
 4. Para **Nome do servidor**, digite um valor. Especifique o valor dependendo do modo do servidor:
 
-    - Para um servidor de relatório de modo nativo, digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: *\<servername>[\\<instancename\>]* .
+    - Para um servidor de relatório de modo nativo, digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: *\<servername>[\\<nomedainstância\>]* .
 
     - Para um servidor de relatório executado no modo integrado SharePoint, o servidor ao qual se conectar é o site do SharePoint ao qual o servidor está conectado. Conecte-se ao site do SharePoint para que você possa exibir os níveis de permissão. O controle de permissões acessa o conteúdo do servidor de relatório e as operações. Você pode especificar qualquer site na coleção de sites. O seguinte exemplo ilustra a sintaxe: `https://mysharepointsite`.
 

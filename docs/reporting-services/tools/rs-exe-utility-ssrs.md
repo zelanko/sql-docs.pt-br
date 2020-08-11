@@ -1,5 +1,6 @@
 ---
 title: Utilitário RS.exe | Microsoft Docs
+description: Saiba mais sobre os comandos e a sintaxe do utilitário rs.exe que processa os scripts usados para automatizar tarefas de administração e implantação do servidor de relatório.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081690"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914973"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  
@@ -90,7 +91,7 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Variáveis globais são criadas com os nomes dados e definidos para os valores fornecidos. Por exemplo, **-v a=** "**1**" **-v b=** "**2**" resulta em uma variável chamada **a** com valor de "**1**" e variável **b** com valor de "**2**".  
+ Variáveis globais são criadas com os nomes dados e definidos para os valores fornecidos. Por exemplo, **-v a=**"**1**" **-v b=**"**2**" resulta em uma variável chamada **a** com valor de "**1**" e variável **b** com valor de "**2**".  
   
  Variáveis globais estão disponíveis para qualquer função no script. Uma barra invertida e aspas ( **\\"** ) são interpretadas como aspas duplas. As aspas só serão necessárias se a cadeia de caracteres contiver um espaço. Os nomes de variáveis devem ser válidos para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; eles devem começar com um caractere alfabético ou sublinhado e conter caracteres alfabéticos, dígitos ou sublinhados. Palavras reservadas não podem ser usadas como nomes de variável. Para obter mais informações sobre como usar variáveis globais, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

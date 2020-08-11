@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286170"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941209"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Instalar o primeiro servidor de relatório no modo do SharePoint
 
@@ -92,13 +92,17 @@ ms.locfileid: "79286170"
     > [!NOTE]
     > Verifique se você especificou o nome correto do servidor do SharePoint.
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. Você deve ver uma resposta indicando que um trabalho de temporizador foi agendado. Você precisará aguardar até a execução do trabalho.
 
 5. Use o comando a seguir para verificar a função atribuída do servidor.
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. **Role** deve listar **Custom**.
  
@@ -209,7 +213,9 @@ ms.locfileid: "79286170"
     > [!IMPORTANT]
     > Se uma mensagem de erro semelhante à seguinte for exibida:  
     >   
-    >     Install-SPRSService: o termo “Install-SPRSService” **não é reconhecido** como o nome de um cmdlet, função, arquivo de script ou programa operável. Verifique a ortografia do nome ou se um caminho foi incluído, verifique se ele está correto e tente novamente.  
+    ```powershell
+    >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > Você está no Windows PowerShell, em vez de no Shell de Gerenciamento do SharePoint ou o modo do SharePoint do Reporting Services não está instalado. Para obter mais informações sobre o Reporting Services e o PowerShell, consulte [Cmdlets do PowerShell para o modo do SharePoint do Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -224,7 +230,7 @@ ms.locfileid: "79286170"
     > [!NOTE]  
     >  Se o serviço Reporting Services permanecer com o status **Iniciando** e não for alterado para **Iniciado**, verifique se o serviço "Administração do SharePoint 2013" foi iniciado no Gerenciador do Servidor do Windows.  
   
-##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Etapa 3: Criar um aplicativo do serviço Reporting Services  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Etapa 3: criar um aplicativo de serviço do Reporting Services  
  Esta seção fornece as etapas para criar um aplicativo de serviço e uma descrição das propriedades, se você estiver analisando um aplicativo de serviço existente.  
   
 1.  Na Administração Central do SharePoint, no grupo **Gerenciamento de Aplicativo** , selecione **Gerenciar Aplicativos de Serviço**.  
@@ -240,7 +246,7 @@ ms.locfileid: "79286170"
   
 5.  Na seção **Pool de Aplicativos** , crie um novo pool de aplicativos para o aplicativo (recomendável). Se você usar o mesmo nome para o pool de aplicativos e o aplicativo de serviço, isso poderá facilitar a administração contínua. Isso também poderá ser afetado por quantos aplicativos de serviço você criará e se você precisar usar vários em um único pool de aplicativos. Consulte a documentação do SharePoint sobre recomendações e práticas recomendadas para o gerenciamento do pool de aplicativos.  
   
-     Selecione ou crie uma conta de segurança para o pool de aplicativos. Não se esqueça de especificar uma conta de usuário do domínio. Uma conta de usuário de domínio habilita o uso do recurso de conta gerenciado do SharePoint que o deixa atualizar senhas e informações de conta em um único local. Contas de domínio também serão obrigatórias se você pretender escalar horizontalmente a implantação para incluir instâncias de serviço adicionais a serem executadas sob a mesma identidade.  
+     Selecione ou crie uma conta de segurança para o pool de aplicativos. Não se esqueça de especificar uma conta de usuário do domínio. Uma conta de usuário de domínio habilita o uso do recurso de conta gerenciado do SharePoint que o deixa atualizar senhas e informações de conta em um único local. Contas de domínio também serão obrigatórias se você pretender diminuir a implantação para incluir instâncias de serviço adicionais a serem executadas sob a mesma identidade.  
   
 6.  No **Servidor de Banco de Dados**, você pode usar o servidor atual ou escolher outro SQL Server.  
   
@@ -260,7 +266,7 @@ ms.locfileid: "79286170"
   
 -   Tópico [Para criar um aplicativo do serviço Reporting Services usando o PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Etapa 4: Ativar o recurso de conjunto de sites do Power View.
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Etapa 4: ativar o recurso de coleção de sites do Power View.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], um recurso do Suplemento SQL Server 2016 Reporting Services para produtos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, é um recurso de conjunto de sites. O recurso é ativado automaticamente para conjuntos de sites raiz e conjuntos de sites criados após a instalação do suplemento Reporting Services. Se você planejar usar o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verifique se o recurso está ativado.  
   
@@ -270,7 +276,7 @@ ms.locfileid: "79286170"
   
 1.  As etapas a seguir pressupõem que o site do SharePoint esteja configurado para **versão da experiência**2013, pra o SharePoint 2013.  
   
-     Abra o navegador para o site do SharePoint desejado. Por exemplo, https://\<nomedoservidor>/sites/bi  
+     Abra o navegador para o site do SharePoint desejado. Por exemplo, https://\<servername>/sites/bi  
   
 2.  Selecione **Configurações**![Configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint").  
   
@@ -295,7 +301,7 @@ ms.locfileid: "79286170"
   
 -   Habilita o recurso do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para um conjunto de sites.  
   
- parâmetros  
+ Parâmetros  
   
 -   Atualizar o parâmetro **-Account** para o proxy de serviço. A conta deve ser uma conta de serviço gerenciada no farm do SharePoint. Para obter mais informações, consulte o tópico do SharePoint [Plano para as contas administrativas e de serviço no SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
   

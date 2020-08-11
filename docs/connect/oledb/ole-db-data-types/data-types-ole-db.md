@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados (OLE DB) | Microsoft Docs
+title: Tipos de dados (Driver do OLE DB) | Microsoft Docs
 description: Tipos de dados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 05e9714159a3253a92c2eb0aeef3ea48e632345c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 28ff4bfc3262803ba8bafcb405e477a1692cb93f
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015823"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977743"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 keywords:
 - novo sql server
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886233"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967457"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
  Com o SQL Server 2016, você pode compilar aplicativos críticos inteligentes usando uma plataforma de banco de dados híbrido escalonável que contém tudo integrado, desde desempenho na memória e a segurança avançada até análise no banco de dados. A versão do SQL Server 2016 adiciona novos recursos de segurança, recursos de consulta, integração do Hadoop com a nuvem, análise R e muito mais, juntamente com vários aprimoramentos e melhorias. 
 
 Esta página fornece informações de resumo e links para informações mais detalhadas de novidades do SQL Server 2016 para cada componente do SQL Server. 
@@ -33,7 +33,7 @@ Esta página fornece informações de resumo e links para informações mais det
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Experimente o SQL Server hoje mesmo!** 
-- Baixe **gratuitamente** o [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
+- Baixe a [**edição mais recente **gratuita** do SQL Server.** ](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md). 
 - Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview).
 

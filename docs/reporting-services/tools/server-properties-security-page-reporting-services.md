@@ -1,5 +1,6 @@
 ---
 title: Propriedades do servidor (página Segurança) – Reporting Services | Microsoft Docs
+description: Saiba como usar a página do Reporting Services no SQL Server Management Studio para desligar recursos que possam comprometer um servidor de relatório.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -10,12 +11,12 @@ ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
-ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 617b64d6f57bb1d64098ebf8390309a714aa81c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571321"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912353"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Propriedades do Servidor (página Segurança) - Reporting Services
 

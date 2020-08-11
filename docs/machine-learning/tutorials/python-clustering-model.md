@@ -5,29 +5,31 @@ description: Nesta série de tutoriais de quatro partes, você executará o clus
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e1482824da2d83e56538ce094e74c91cee224867
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606533"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967687"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Tutorial do Python: categorizar clientes usando o cluster K-means com o aprendizado de máquina do SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Nesta série de tutoriais de quatro partes, você usará o Python para desenvolver e implantar um modelo de cluster K-Means nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou nos [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md) para categorizar dados de clientes.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Nesta série de tutoriais de quatro partes, você usará o Python para desenvolver e implantar um modelo de clustering de K-Means nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) para os dados do cliente do cluster.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Nesta série de tutoriais de quatro partes, você usará o Python para desenvolver e implantar um modelo de cluster K-means nos [Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) para os dados do cliente do cluster.
 ::: moniker-end
 
 Na primeira parte desta série, você configurará os pré-requisitos do tutorial e, em seguida, restaurará um conjunto de dados de exemplo para um banco de dados. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de clustering em Python com o aprendizado de máquina do SQL.
@@ -55,6 +57,11 @@ Na [parte quatro](python-clustering-model-deploy.md), você aprenderá a criar u
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) com a opção de linguagem Python – siga as instruções de instalação no [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Serviços de Machine Learning da Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira a [Visão geral dos Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar o banco de dados de exemplo na Instância Gerenciada de SQL do Azure.
+::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md). Você usará um notebook no Azure Data Studio para Python e para SQL. Para obter mais informações sobre notebooks, confira [Como usar notebooks no Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
@@ -72,13 +79,14 @@ Na [parte quatro](python-clustering-model-deploy.md), você aprenderá a criar u
 
 ## <a name="restore-the-sample-database"></a>Restaurar o banco de dados de exemplo
 
-O conjunto de dados de exemplo usado neste tutorial foi salvo em um arquivo **.bak** de backup de banco de dados para você baixar e usar. Esse conjunto de dados é derivado do conjunto de dados [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp), fornecido pela [TPC (Transaction Processing Performance Council)](http://www.tpc.org/default.asp).
+O conjunto de dados de exemplo usado neste tutorial foi salvo em um arquivo **.bak** de backup de banco de dados para você baixar e usar. Esse conjunto de dados é derivado do conjunto de dados [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp), fornecido pela [TPC (Transaction Processing Performance Council)](http://www.tpc.org/).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > Se você estiver usando Serviços de Machine Learning em Clusters de Big Data, confira como [Restaurar um banco de dados na instância mestra de cluster de Big Data do SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. Baixe o arquivo [tpcxbb_1gb. bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
 
 1. Siga as instruções em [Restaurar um banco de dados de um arquivo de backup](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) no Azure Data Studio, usando estes detalhes:
@@ -92,6 +100,22 @@ O conjunto de dados de exemplo usado neste tutorial foi salvo em um arquivo **.b
     USE tpcxbb_1gb;
     SELECT * FROM [dbo].[customer];
     ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. Baixe o arquivo [tpcxbb_1gb. bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
+
+1. Siga as instruções descritas em [Restaurar um banco de dados em uma Instância Gerenciada](/azure/sql-database/sql-database-managed-instance-get-started-restore) no SQL Server Management Studio usando estes detalhes:
+
+   * Importe do arquivo **tpcxbb_1gb.bak** que você baixou
+   * Nomeie o banco de dados de destino como "tpcxbb_1gb"
+
+1. Consultando a tabela **dbo.customer**, é possível verificar se o conjunto de dados existe depois de você ter restaurado o banco de dados:
+
+    ```sql
+    USE tpcxbb_1gb;
+    SELECT * FROM [dbo].[customer];
+    ```
+::: moniker-end
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 

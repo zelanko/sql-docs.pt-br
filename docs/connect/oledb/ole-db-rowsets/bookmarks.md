@@ -1,5 +1,5 @@
 ---
-title: Indicadores | Microsoft Docs
+title: Indicadores de linha (Driver do OLE DB) | Microsoft Docs
 description: Indicadores no OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, bookmarks
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a10d8c7afb3dab1b193c82b3e6686cdad2c0651e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4065ae08fe37b42e47ae464a09d2a9e2a9810bb7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015401"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942248"
 ---
 # <a name="bookmarks"></a>Indicadores
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

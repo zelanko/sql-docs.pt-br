@@ -1,5 +1,6 @@
 ---
 title: Definir propriedades de implantação (Reporting Services) | Microsoft Docs
+description: Saiba como definir as propriedades de implantação usadas pelo SSDT (SQL Server Data Tools) ou pelo Visual Studio para criar, visualizar e implantar relatórios.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -13,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175333"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914884"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "66175333"
     > [!NOTE]  
     > Para um servidor de relatórios executado no modo nativo, você deverá ter permissões de **Publicação** na pasta de destino para publicar relatórios nessa pasta. As permissões de publicação são fornecidas por meio de uma atribuição de função que mapeia sua conta de usuário para uma função que inclui operações de publicação. Para obter mais informações, consulte [Criar e gerenciar atribuições](../../reporting-services/security/create-and-manage-role-assignments.md). Para um servidor de relatórios executado no modo integrado do SharePoint, você deve ter permissão de **Membro** ou **Proprietário** no site do SharePoint. Para obter mais informações, consulte [Referência à permissão de listas e sites do SharePoint para itens do Servidor de Relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http: *//server/reportserver* ou https: *//server/reportserver)* . Este é o diretório virtual do servidor de relatório, e não o portal da Web.  
+10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http:*//server/reportserver* ou https:*//server/reportserver)*. Este é o diretório virtual do servidor de relatório, e não o portal da Web.  
   
      Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, <https://*servername*>, <https://*servername*/*site*>ou <https://*servername*/*site*/*subsite*>).  
   
@@ -72,7 +73,7 @@ ms.locfileid: "66175333"
   
 2. Na caixa de diálogo **Páginas de Propriedades** do projeto, clique no **Gerenciador de Configuração**.  
   
-3. Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Ativa(***\<configuration>***)** .  
+3. Na caixa de diálogo **Gerenciador de Configuração** , selecione a configuração a ser editado. A configuração ativa no momento é exibida como **Active(***\<configuration>***)** .  
   
 4. Em **Contextos do Projeto**, para cada projeto na solução, selecione ou desmarque **Build** ou **Deploy**.  
   

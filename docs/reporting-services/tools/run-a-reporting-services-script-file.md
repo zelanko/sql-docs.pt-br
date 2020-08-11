@@ -1,5 +1,6 @@
 ---
 title: Executar um arquivo de script do Reporting Services | Microsoft Docs
+description: Veja exemplos de como executar um arquivo de script do Reporting Services no prompt de comando usando o ambiente de script do Reporting Services (rs.exe).
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ad3c0bb7ea7700f457cfaa9e7cb08684624dc73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79d96354c497977b780078ccbe94b25738b0f522
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571533"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914789"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Executar um arquivo de script do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os arquivos de script são executados no prompt de comando usando o ambiente de script do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RS.exe). O RS.exe possui diversos argumentos de prompt de comando disponíveis para uso. Para obter mais informações sobre as opções de prompt de comando, consulte [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). Para obter mais exemplos de script, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  

@@ -1,7 +1,7 @@
 ---
 title: 'PowerShell: Gerenciar autenticação'
+description: Saiba como usar a Autenticação do SQL Server em vez da Autenticação do Windows (o padrão) ao se conectar a uma instância do Mecanismo de Banco de Dados.
 titleSuffix: SQL Server on Linux
-description: Saiba como usar o PowerShell para gerenciar a autenticação do Windows e do SQL no SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13ec62ac5adfd818de429f087f9b5d8dc83bb8a2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75557955"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919093"
 ---
 # <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell: Gerenciar a autenticação no SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Por padrão, os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell usam a Autenticação do Windows ao conectar a uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. É possível usar a Autenticação do SQL Server definindo uma unidade virtual do PowerShell ou especificando os parâmetros **-Username** e **-Password** para **Invoke-Sqlcmd**.  
   

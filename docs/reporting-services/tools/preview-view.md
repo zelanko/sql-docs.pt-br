@@ -1,5 +1,6 @@
 ---
 title: Exibição de visualização | Microsoft Docs
+description: Saiba mais sobre o modo de exibição de Visualização do Designer de Relatórios do Reporting Services, em que você verá uma exibição do relatório renderizado.
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdfb752b3d78f037e1ce5a9202c2ef564b12bc2d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582169"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915572"
 ---
 # <a name="preview-view"></a>Modo Visualizar
 No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use a exibição **Visualização** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.

@@ -1,5 +1,6 @@
 ---
 title: Exemplos de URL para itens em um servidor de relatório – modo do SharePoint | Microsoft Docs
+description: Veja exemplos de como usar URLs que especificam localizações em uma hierarquia da Web do site do SharePoint em um servidor de relatório.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 860cecad6e375098b4f437608b54db515beb1949
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574014"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921462"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemplos de URL para itens em um servidor de relatório – modo do SharePoint
   Para publicar relatórios e itens relacionados em uma biblioteca do SharePoint, você pode publicar o conteúdo por meio das ferramentas de criação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como o Designer de Relatórios ou carregar o conteúdo por meio das ações do site do SharePoint.  
@@ -29,7 +30,7 @@ ms.locfileid: "65574014"
   
  Podem ser usados os seguintes elementos da hierarquia da Web para acessar e proteger o conteúdo do servidor de relatório. Outros objetos, como listas e páginas, não são usados para acessar o conteúdo do servidor de relatório e, portanto, não estão descritos na tabela seguinte.  
   
-|Objeto|DESCRIÇÃO|  
+|Objeto|Descrição|  
 |------------|-----------------|  
 |Aplicativo Web do SharePoint|Um aplicativo da Web do SharePoint pode ser instalado como um servidor autônomo ou em um farm que tenha uma coleção de servidores virtuais. Um aplicativo Web tem uma URL (por exemplo, `http:*//servername*`) e pode conter vários sites.|  
 |Site|Um site é um site pai de um aplicativo da Web ou um subsite.|  

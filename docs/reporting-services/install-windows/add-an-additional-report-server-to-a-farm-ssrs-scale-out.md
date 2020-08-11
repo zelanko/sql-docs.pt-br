@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225687"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942978"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
 
@@ -70,9 +70,11 @@ ms.locfileid: "63225687"
   
  Por padrão, os servidores de relatório são configurados com \<IsWebServiceEnable> definido como TRUE. Quando todos os servidores forem configurados para TRUE, o interativo e em segundo plano terão a carga equilibrada em todos os nós no farm.  
   
- Se você configurar todos os servidores de relatório com \<IsWebServiceEnable> definido como False, verá uma mensagem de erro semelhante à seguinte quando tentar usar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
+ Se você configurar todos os servidores de relatório com \<IsWebServiceEnable> definido como False, verá uma mensagem de erro semelhante à seguinte ao tentar usar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  Para obter mais informações, veja [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 

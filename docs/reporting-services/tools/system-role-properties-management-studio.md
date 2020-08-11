@@ -1,5 +1,6 @@
 ---
 title: Propriedades de função do sistema (Management Studio) | Microsoft Docs
+description: Conheça as opções da página Funções do Sistema, em que você poderá ver as definições de função do sistema que estão atualmente definidas para o servidor de relatório.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6099c12a66ebcca61ac18ed1ca3f612512bf2fad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576028"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914896"
 ---
 # <a name="system-role-properties-management-studio"></a>Propriedades de Função do Sistema (Management Studio)
   Use a página Funções do Sistema para exibir as definições de funções do sistema atualmente definidas no servidor de relatório. Uma definição de função do sistema contém uma coleção de tarefas nomeada executada com relação a todo o site e não com relação a um item individual. Definições de função são atribuídas a um usuário ou a grupos para criar uma atribuição de função resultante. As tarefas na definição de função especificam o que o usuário ou grupo pode fazer.  

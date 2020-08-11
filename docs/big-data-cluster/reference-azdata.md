@@ -5,43 +5,47 @@ description: Artigo de referência para comandos de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94adabb2ace2f5619abd700b2652aa7d88f3e1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7a3862dca974efc0ef035a0b52edfff39d2f5bcf
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822347"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942968"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Este artigo de referência descreve comandos `azdata`.
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos
-|     |     |
+| Comando | Descrição |
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | Selecionar, gerenciar e operar clusters de Big Data do SQL Server. |
 |[azdata app](reference-azdata-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
+|[azdata bdc](reference-azdata-bdc.md) | Selecionar, gerenciar e operar clusters de Big Data do SQL Server. |
+|[azdata sql](reference-azdata-sql.md) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL. |
 [azdata login](#azdata-login) | Faça logon no ponto de extremidade do controlador do cluster e defina seu namespace como seu contexto ativo. Para usar uma senha no logon, defina a variável de ambiente AZDATA_PASSWORD.
 [azdata logout](#azdata-logout) | Fazer logoff do cluster.
 |[azdata context](reference-azdata-context.md) | Comandos de gerenciamento de contexto. |
-|[azdata control](reference-azdata-control.md) | Criar, excluir e gerenciar planos de controle. |
-|[azdata sql](reference-azdata-sql.md) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL. |
+|[azdata extension](reference-azdata-extension.md) | Gerencia e atualiza as extensões da CLI. |
 |[azdata notebook](reference-azdata-notebook.md) | Comandos para exibir, executar e gerenciar notebooks de um terminal. |
 ## <a name="azdata-login"></a>azdata login
 Quando o cluster for implantado, ele listará o ponto de extremidade do controlador durante a implantação, que você deverá usar para fazer logon.  Se você não conhecer o ponto de extremidade do controlador, você poderá fazer logon colocando a configuração de kube do seu cluster na localização padrão <user home>/.kube/config ou usando a variável de ambiente KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.  Quando você fizer logon, o namespace desse cluster será definido como seu contexto ativo.
 ```bash
 azdata login [--auth] 
              [--endpoint -e]  
-             [--accept-eula -a]  
-             [--namespace -n]  
-             [--username -u]  
-             [--principal -p]
+             
+[--accept-eula -a]  
+             
+[--namespace -n]  
+             
+[--username -u]  
+             
+[--principal -p]
 ```
 ### <a name="examples"></a>Exemplos
 Faça logon usando autenticação Básica.
@@ -89,7 +93,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-logout"></a>azdata logout
@@ -110,7 +114,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 

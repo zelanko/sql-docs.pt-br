@@ -1,5 +1,6 @@
 ---
 title: Nova Função de Sistema (Management Studio) | Microsoft Docs
+description: Saiba mais sobre a página Nova Função do Sistema do Management Studio, em que você cria uma definição de função no nível do sistema que especifica um conjunto de tarefas que se aplicam a um servidor de relatório como um todo.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4bb010a6f3b9c21661cfa840e6975cec51f90c84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 22c3442e16503fd58f8fcb099018b88ab6bfbf92
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582189"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915534"
 ---
 # <a name="new-system-role-management-studio"></a>Nova Função do Sistema (Management Studio)
   Use essa página para criar uma definição de função de nível de sistema. Uma definição de função de sistema especifica um conjunto de tarefas de nível de sistema que se aplica a um servidor de relatório como um todo.  

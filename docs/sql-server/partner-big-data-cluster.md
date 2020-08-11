@@ -5,19 +5,19 @@ ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 11/19/2019
 ms.prod: sql
-ms.technology: ''
+ms.technology: big-data-cluster
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 1dff86c3fde7ce204d54bc46ef2dfa730aacf305
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67881767174d3af101ba0541573730af999c5cf3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169606"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914310"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>Parceiros de Clusters de Big Data do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Para compatibilidade com a implementação de soluções com Clusters de Big Data do SQL Server, você pode trabalhar com parceiros. Este artigo identifica alguns parceiros da Microsoft com soluções para Clusters de Big Data.
 
 ## <a name="our-partners"></a>Nossos parceiros
@@ -27,7 +27,7 @@ Para compatibilidade com a implementação de soluções com Clusters de Big Dat
 |![dellemc][1] |A Dell EMC vende armazenamento de dados, segurança de informações, virtualização, análise, computação em nuvem e outros produtos e serviços que permitem que as organizações armazenem, gerenciem, protejam e analisem dados.|[Marketplace][dellemc_marketplace]<br>[Site][dellemc_website]<br>[Folha de dados][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[Vídeo][dellemc_youtube]<br>[Blog][dellemc_blog] |
 |![HPE][2] |Desempenho empresarial para o Microsoft SQL Server<br>Nossas soluções de armazenamento fornecem o Microsoft SQL Server sem preocupações. A integração aprimora o gerenciamento de dados de cópia, aprimora a proteção de dados, acelera o DevOps e fornece uma passagem para a nuvem.|[Site][hpe_website]<br>[Folha de dados][hpe_datasheet]<br>[Baixar a avaliação][hpe_download]<br>[Twitter][hpe_twitter]<br>[Vídeo][hpe_youtube]<br>[Blog][hpe_download]|
 |![NetApp][3] |O NetApp StorageGRID é um armazenamento de objeto definido por software. Ele pode ser implantado como combinações de dispositivos apenas de software feitos sob medida e em ambientes virtualizados.<br/><br/>Em um namespace, o StorageGRID pode ser dimensionado em vários data centers localizados em todo o mundo. O StorageGRID oferece armazenamento maciço de objetos S3 com o gerenciamento de dados dinâmicos, permitindo que os clientes executem fluxos de trabalho de última geração localmente, aproveitando os recursos de nuvem pública. O exclusivo mecanismo de política de gerenciamento de dados do StorageGRID garante níveis otimizados de desempenho e durabilidade, bem como o cumprimento dos requisitos de localidade de dados. |[Site][netapp_website]<br>[Folha de dados][netapp_datasheet]<br>[Twitter][netapp_twitter]<br>[Vídeo][netapp_youtube]<br>[Docs][netapp_docs]|
-|![PureStorage][5] |O Pure Storage capacita a inovação para criar um mundo melhor usando dados ao fornecer uma plataforma simples Evergreen™ que permite às organizações transformar dados em inteligência e vantagem.  Pronto para o BDC (Cluster de Big Data), o Pure Storage tem uma malha de armazenamento altamente escalonável para plataformas de orquestração de contêineres compatíveis com Kubernetes. O FlashBlade da Pure é uma plataforma de armazenamento simples de gerenciar, de alto desempenho, que pode ser utilizada por camadas de HDFS do Cluster de Big Data do SQL Server 2019, permitindo a escala para petabytes de armazenamento utilizável e largura de banda de E/S na ordem de dezenas de gigabytes. O FlashArray, bem como o FlashBlade, é perfeito para obter sucesso com o Cluster de Big Data. |[Site][purestorage_website]<br>[Folha de dados][purestorage_datasheet]<br>[Twitter][purestorage_twitter]<br>[Docs][purestorage_docs]|
+|![PureStorage][5] |O Pure Storage capacita a inovação para criar um mundo melhor usando dados ao fornecer uma plataforma simples Evergreen&trade; que permite às organizações transformar dados em inteligência e vantagem.  Pronto para o BDC (Cluster de Big Data), o Pure Storage tem uma malha de armazenamento altamente escalonável para plataformas de orquestração de contêineres compatíveis com Kubernetes. O FlashBlade da Pure é uma plataforma de armazenamento simples de gerenciar, de alto desempenho, que pode ser utilizada por camadas de HDFS do Cluster de Big Data do SQL Server 2019, permitindo a escala para petabytes de armazenamento utilizável e largura de banda de E/S na ordem de dezenas de gigabytes. O FlashArray, bem como o FlashBlade, é perfeito para obter sucesso com o Cluster de Big Data. |[Site][purestorage_website]<br>[Folha de dados][purestorage_datasheet]<br>[Twitter][purestorage_twitter]<br>[Docs][purestorage_docs]|
 |![StreamSets][4] |O StreamSets fornece uma solução sem código para operar pipelines de dados para Clusters de Big Data: <br/><ul><li> Crie e opere fluxos de dados contínuos com ferramentas visuais e intuitivas, acabando com a necessidade de saber como codificar para sistemas de Big Data</li><li>Desenvolva aplicativos de análise complexos em Apache Spark usando uma interface do usuário intuitiva do tipo "arrastar e soltar" </li><li>Ingira e processe dados em escala de uma ampla variedade de fontes de dados com integração nativa em SQL Server e HDFS</li><li>Acelere a migração de bancos de dados relacionais, clusters Hadoop e repositórios NoSQL em Clusters de Big Data</li></ul>   | [Site][streamsets_website]<br>[Blog][streamsets_blog]<br>[Vídeo][streamsets_youtube]<br>[Documentação][streamsets_docs]|
 |![azuredatalake][6] |Análise Azure Data Lake<br><br>Um serviço de trabalho de análise sob demanda para alimentar a ação inteligente<br><br>Desenvolva e execute facilmente programas de transformação e processamento de dados paralelos em massa em U-SQL, R, Python e .NET em petabytes de dados. Sem infraestrutura para gerenciar, você pode processar dados sob demanda, dimensionar instantaneamente e pagar apenas por trabalho.|[Site][azuredatalake_website]<br>[Folha de dados](/azure/data-lake-analytics/data-lake-analytics-overview/)<br>[Twitter][azuredatalake_twitter]<br>[Blog][azuredatalake_blog]|
 

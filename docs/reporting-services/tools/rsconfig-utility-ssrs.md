@@ -1,5 +1,6 @@
 ---
 title: Utilitário rsconfig | Microsoft Docs
+description: Saiba mais sobre o utilitário rsconfig.exe que criptografa e armazena os valores de conta e conexão de banco de dados do servidor de relatório no arquivo RSReportServer.config.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082182"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913627"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
   O utilitário **rsconfig.exe** criptografa e armazena conexão e valores de conta no arquivo RSReportServer.config. Valores criptografados incluem informações de conexão de banco de dados do servidor de relatório e valores de conta usados para processamento de relatório autônomo.  

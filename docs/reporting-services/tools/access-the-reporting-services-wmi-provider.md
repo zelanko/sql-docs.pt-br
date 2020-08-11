@@ -1,5 +1,6 @@
 ---
 title: Acessar o provedor WMI do Reporting Services | Microsoft Docs
+description: Saiba como acessar o provedor WMI do Reporting Services que expõe duas classes WMI para administração de instâncias de servidor de relatório do modo nativo por meio de scripts.
 ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 887dc0895351eecf351e08efdfe6c40a8285a6ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576756"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918402"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Acessar o provedor WMI do Reporting Services
   O provedor WMI do Reporting Services expõe duas classes WMI para administração de instâncias de servidor de relatório do modo nativo através de scripts:  
@@ -28,7 +29,7 @@ ms.locfileid: "65576756"
 > [!IMPORTANT]  
 >  A partir da versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o provedor WMI tem suporte apenas para servidores de relatórios no modo nativo. Servidores de relatórios no modo do SharePoint podem ser gerenciados com páginas Administração Central do SharePoint e scripts do PowerShell.  
   
-|Classe|Namespace|DESCRIÇÃO|  
+|Classe|Namespace|Descrição|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|Fornece as informações básicas exigidas para um cliente se conectar a um servidor de relatório instalado.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|Representa os parâmetros de instalação e de tempo de execução de uma instância do servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.<br /><br /> **\*\* Importante \*\*** Esta classe é acessível apenas com privilégios administrativos.|  

@@ -1,5 +1,6 @@
 ---
 title: Implantação e suporte de versão no SSDT (SQL Server Data Tools) | Microsoft Docs
+description: Saiba mais sobre as versões compatíveis para criar e publicar relatórios no SQL Server Data Tools e como definir as propriedades de configuração e implantação do projeto.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571506"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917954"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oferece suporte aos seguintes cenários:  

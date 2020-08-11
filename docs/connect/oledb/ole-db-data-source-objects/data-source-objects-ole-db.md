@@ -1,5 +1,5 @@
 ---
-title: Objetos da fonte de dados (OLE DB) | Microsoft Docs
+title: Objetos de fonte de dados (Driver do OLE DB) | Microsoft Docs
 description: Objetos de fonte de dados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5bdfdd91daf1e41b7eae33cd504e127c249de1b8
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015918"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86976088"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de fonte de dados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

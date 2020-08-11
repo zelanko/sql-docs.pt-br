@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ff4038fd5a09b0776533c2ffa94cb6c1afeb567b
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: d87d817f2bc7c23e2df3dd18d55ce21d12304cb4
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531130"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943208"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingerir dados em um pool de dados do SQL Server com trabalhos do Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este tutorial demonstra como usar trabalhos do Spark para carregar dados no [pool de dados](concept-data-pool.md) de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
@@ -111,7 +111,12 @@ A próxima etapa é criar um trabalho de streaming do Spark que carregue dados d
 2. Crie um notebook e selecione Spark | Scala como o kernel.
 
 3. Executar o trabalho de ingestão do Spark
+
    1. Configurar os parâmetros do conector Spark-SQL
+
+    > [!NOTE]
+    > Se o cluster de Big Data for implantado com a integração do Active Directory, substitua o valor de **nome do host** abaixo para incluir o FQDN acrescentado ao nome do serviço. Por ex.: *hostname=master-p-svc.\<domainName>* .
+
       ```
       import org.apache.spark.sql.types._
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
@@ -129,7 +134,7 @@ A próxima etapa é criar um trabalho de streaming do Spark que carregue dados d
       StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
-      val hostname = "master-0.master-svc"
+      val hostname = "master-p-svc"
       val port = 1433
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```

@@ -1,6 +1,7 @@
 ---
 title: SQL Server Profiler
 titleSuffix: SQL Server Profiler
+description: Explore os recursos do SQL Server Profiler. Obtenha ajuda para solucionar problemas usando essa ferramenta para criar rastreamentos e analisar e reproduzir resultados do rastreamento.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 127c8dc055118612bff2382b2cf01a899be5f8fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719230"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914802"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+ [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma interface para criar e gerenciar rastreamentos, além de analisar e reproduzir resultados de rastreamento. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas ao diagnosticar um problema.
 

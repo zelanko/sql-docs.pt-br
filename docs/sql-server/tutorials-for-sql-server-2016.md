@@ -1,23 +1,22 @@
 ---
 title: Tutoriais do SQL Server | Microsoft Docs
-ms.custom: ''
+description: Use estes tutoriais do SQL Server para aprender novas tecnologias e recursos. Os tutoriais para versões anteriores do SQL Server geralmente funcionam com as versões mais recentes.
 ms.date: 11/01/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: performance
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000621"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913934"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriais do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial aborda um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
      
 -   Se um tutorial usar um dos bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], baixe e use a versão mais recente do CodePlex. Para obter mais informações, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).    
@@ -27,7 +26,7 @@ ms.locfileid: "83000621"
  
 ## <a name="current-tutorials"></a>Tutoriais atuais  
   
-|Tecnologia|DESCRIÇÃO|  
+|Tecnologia|Descrição|  
 |--------------|---------------|  
 |[Tutoriais do Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Saiba como desenvolver e implantar modelos de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Saiba também como usar ferramentas como o PowerPivot para analisar os dados nos modelos.|  
 |[Tutoriais do Mecanismo de Banco de Dados](../relational-databases/database-engine-tutorials.md)|Saiba como conectar-se a uma instância do mecanismo de banco de dados e, em seguida compilar e executar instruções Transact-SQL.|  
