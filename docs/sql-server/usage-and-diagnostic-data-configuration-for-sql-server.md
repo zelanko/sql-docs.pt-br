@@ -1,6 +1,6 @@
 ---
 title: Configurar a coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário) | Microsoft Docs
-description: ''
+description: Saiba mais sobre as informações coletadas pelo SQL Server dos usuários para aprimorar os produtos. Confira como configurar o SQL Server para não enviar essas informações.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/27/2019
@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028931"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901918"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurar a coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="summary"></a>Resumo
 
@@ -84,7 +84,7 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
     
     Nome da RegEntry = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
     
     {InstanceID} refere-se ao tipo de instância e à instância, como nos exemplos a seguir:
 
@@ -98,7 +98,7 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
     
     Nome da RegEntry = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
 
 > [!NOTE]
 > {Versão Principal} refere-se à versão do SQL Server, por exemplo, 140 para o SQL Server 2017
@@ -115,7 +115,7 @@ Semelhante ao comportamento em uma versão anterior do SQL Server, os clientes d
 
     Nome da RegEntry = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
  
     {InstanceID} refere-se ao tipo de instância e à instância, como nos exemplos a seguir: 
 
@@ -130,7 +130,7 @@ Semelhante ao comportamento em uma versão anterior do SQL Server, os clientes d
 
     Nome da RegEntry = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
+    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
 
 > [!NOTE]
 > {Versão Principal} refere-se à versão do SQL Server. Por exemplo, "140" refere-se ao SQL Server 2017.
