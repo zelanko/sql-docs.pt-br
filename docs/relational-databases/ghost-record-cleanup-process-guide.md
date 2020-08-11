@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859088"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248155"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Guia do processo de limpeza de fantasma
 
@@ -46,7 +46,7 @@ A consulta abaixo pode identificar quantos registros fantasma existem em um úni
 
 ## <a name="disable-the-ghost-cleanup"></a>Desabilitar a limpeza de fantasma
 
-Em sistemas de alta carga com muitas exclusões, o processo de limpeza de fantasma pode gerar um problema de desempenho impedindo a manutenção de páginas no pool de buffers e a geração de E/S. Como tal, é possível desabilitar esse processo com o uso do sinalizador de rastreamento 661. Mais informações sobre isso podem ser encontradas em [Opções de ajuste para o SQL Server ao executar cargas de trabalho de alto desempenho](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). No entanto, há implicações no desempenho decorrentes da desabilitação do processo.
+Em sistemas de alta carga com muitas exclusões, o processo de limpeza de fantasma pode gerar um problema de desempenho impedindo a manutenção de páginas no pool de buffers e a geração de E/S. Assim sendo, é possível desabilitar esse processo com o uso do [sinalizador de rastreamento 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). No entanto, há implicações no desempenho decorrentes da desabilitação do processo.
 
 Desabilitar o processo de limpeza de fantasma pode fazer seu banco de dados crescer desnecessariamente e ocasionar problemas de desempenho. Como o processo de limpeza de fantasma remove registros marcados como fantasmas, desabilitar o processo deixará esses registros na página, impedindo que o SQL Server reutilize esse espaço. Isso força o SQL Server a adicionar dados a novas páginas, gerando arquivos de banco de dados sobrecarregados e pode ocasionar também [divisões da página](indexes/specify-fill-factor-for-an-index.md). As divisões da página geram problemas de desempenho ao criar planos de execução e ao realizar operações de exame. 
 

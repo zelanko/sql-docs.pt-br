@@ -1,5 +1,6 @@
 ---
 title: Gerenciador de Alertas de Dados para usuários do SharePoint | Microsoft Docs
+description: Saiba como o Reporting Services fornece o Gerenciador de Alertas de Dados para operadores de informações do SharePoint para gerenciar os alertas de dados.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb1dda8e708d08fae32e920406ea2b60fa39496
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571484"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243277"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gerenciador de Alertas de Dados para Usuários do SharePoint
 
@@ -44,7 +45,7 @@ Quando um site do SharePoint é habilitado para alertas de dados, duas páginas 
 ##  <a name="view-data-alert-information"></a><a name="ViewingAlerts"></a> Exibir informações de alertas de dados  
  Você pode exibir uma lista dos alertas de dados que criou no Designer de Alertas de Dados. Para abrir o Gerenciador de Alertas de Dados, você clica com o botão direito do mouse em um relatório publicado em uma biblioteca do SharePoint. A imagem a seguir mostra a opção **Gerenciar Alertas de Dados** no menu de atalho de relatório.  
   
- ![Abrir o Gerenciador de Alertas no menu de contexto de relatório](../reporting-services/media/rs-openalertmanager.gif "Abrir o Gerenciador de Alertas no menu de contexto de relatório")  
+ ![Abrir o Gerenciador de Alertas do menu de contexto de relatório](../reporting-services/media/rs-openalertmanager.gif "Abrir o Gerenciador de Alertas no menu de contexto de relatório")  
   
  O Gerenciador de Alertas de Dados inclui uma tabela que lista o nome do alerta, o nome do relatório, seu nome como o criador da definição de alerta, o número de mensagens de alerta enviadas, a última vez que o alerta foi executado, a última vez que a definição do alerta foi modificada e o status da última mensagem de alerta. Se a mensagem de alerta não puder ser gerada ou enviada, a coluna de status conterá informações sobre o erro e ajudará a solucionar problemas do alerta. Para obter mais informações, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   

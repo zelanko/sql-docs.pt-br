@@ -1,5 +1,6 @@
 ---
 title: Informações rápidas (IntelliSense)
+description: Saiba como usar a opção Informações Rápidas do IntelliSense para exibir a declaração completa de qualquer identificador no código. No SQL Server Management Studio, essa opção está disponível no Editor do Mecanismo de Banco de Dados e no Editor de Consultas XML.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fc27af899dd445f82d081de7c23158217cc7f6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ade62b8c3a72bbc21f249c4b725047ef96624e4
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253770"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122521"
 ---
 # <a name="quick-info-intellisense"></a>Informações rápidas (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A opção [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **Informações Rápidas** exibe a declaração completa de qualquer identificador em seu código. Quando você move o ponteiro do mouse sobre um identificador, sua declaração é exibida em uma janela pop-up amarela. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], as **Informações Rápidas** estão disponíveis nos Editores do Mecanismo de Banco de Dados e de Consulta XML.  
   
 ## <a name="transact-sql-quick-info"></a>Informações Rápidas do Transact-SQL  

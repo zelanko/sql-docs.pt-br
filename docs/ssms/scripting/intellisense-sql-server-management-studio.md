@@ -1,5 +1,6 @@
 ---
 title: IntelliSense (SQL Server Management Studio)
+description: O Microsoft IntelliSense pode ajudar no processo de escrita de código de várias maneiras. Confira uma visão geral de como usar o IntelliSense, com links para artigos que fornecem os detalhes.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2117410304632c9ab0e6637eab6c156c18973f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66bb25859efcd49f43a61e173156214ff9ca46e6
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253869"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123107"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Os editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oferecem suporte a opções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reduzem a digitação, fornecem acesso rápido a informações de sintaxe ou facilitam a exibição dos delimitadores de expressões complexas.  
   
 ## <a name="benefits-of-intellisense"></a>Benefícios do IntelliSense  

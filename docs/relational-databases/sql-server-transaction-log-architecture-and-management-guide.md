@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000521"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122628"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ Para obter mais informações sobre os argumentos `FILEGROWTH` e `SIZE` de `ALTE
   
  O log de transações é um arquivo embrulhado. Por exemplo, considere um banco de dados com um arquivo de log físico dividido em quatro VLFs. Quando o banco de dados é criado, o arquivo de log lógico começa no início do arquivo de log físico. Novos registros de log são adicionados no final do log lógico e expandem para o final do log físico. O truncamento de logs libera quaisquer logs virtuais cujos registros apareçam todos na frente do número mínimo de sequência de recuperação do log (MinLSN). O *MinLSN* é o número de sequência de log do registro de log mais antigo que deve estar presente para o êxito de uma reversão de todo o banco de dados. O log de transações no banco de dados de exemplo pareceria semelhante ao apresentado na ilustração a seguir.  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![Descreve como um arquivo de log físico é dividido em logs virtuais](../relational-databases/media/tranlog3.png)  
   
  Quando o final do log lógico alcança o final do arquivo de log físico, os novos registros de log são adicionados no início do arquivo de log físico.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![Descreve como um log de transações lógicas é encapsulado no respectivo arquivo de log físico](../relational-databases/media/tranlog4.png)   
   
  Esse ciclo repete-se indefinidamente, desde que o final do log lógico nunca alcance o início do log lógico. Se os registros de log antigos forem truncados com frequência suficiente para sempre deixar espaço suficiente para todos os registros de log novos criados através do próximo ponto de verificação, o log nunca estará completo. Contudo, se o final do log lógico não alcançar o início do log lógico, ocorrerá uma das duas coisas:  
   
@@ -117,11 +117,11 @@ Para obter mais informações sobre os argumentos `FILEGROWTH` e `SIZE` de `ALTE
   
  As ilustrações seguintes mostram um log de transações antes e depois do truncamento. A primeira ilustração mostra um log de transações que nunca foi truncado. Atualmente, quatro arquivos de log virtuais estão em uso pelo log lógico. O log virtual inicia à frente do primeiro arquivo de log virtual e termina em log 4 virtual. O registro de MinLSN está em log 3 virtual. O log 1 virtual e o log 2 virtual contêm apenas registros de log inativos. Estes registros podem ser truncados. O log 5 virtual ainda está sem-uso e não é parte do log lógico atual.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![Descreve como um log de transações é exibido antes de ser truncado](../relational-databases/media/tranlog2.png)  
   
  A segunda ilustração mostra como o log aparece depois de ser truncado. Log 1 virtual e log 2 virtual foram liberados para reutilização. O log lógico agora inicia no começo do log 3 virtual. O log 5 virtual ainda está sem-uso e não é parte do log lógico atual.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![Descreve como um log de transações é exibido depois de ser truncado](../relational-databases/media/tranlog3.png)  
   
  O truncamento de log ocorre automaticamente após os seguintes eventos, exceto quando atrasado por alguma razão:  
   
@@ -228,7 +228,7 @@ A seção do arquivo de log desde o MinLSN até o último registro de log gravad
 
 A ilustração seguinte mostra uma versão simplificada de um log de término de uma transação com duas transações ativas. Os registros de ponto de verificação foram compactados em um único registro.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![Descreve um log de final de transação com duas transações ativas e um registro de ponto de verificação compactado](../relational-databases/media/active-log.png) 
 
 LSN 148 é o último registro no log de transação. No momento em que o ponto de verificação gravado em LSN 147 foi processado, Tran 1 havia sido confirmada e Tran 2 era a única transação ativa. Isso torna o primeiro registro de log para Tran 2 o registro de log mais antigo para uma transação ativa no momento do último ponto de verificação. Isso torna LSN 142 o registro Iniciar transação para Tran 2, o MinLSN.
 

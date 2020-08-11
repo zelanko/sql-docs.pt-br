@@ -1,5 +1,6 @@
 ---
 title: Criar uma assinatura controlada por dados (Tutorial do SSRS) | Microsoft Docs
+description: Saiba mais sobre as assinaturas controladas por dados por meio de um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivo.
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f4843c02d12c08cac8efa8b453999f4484ab084
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194824"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246328"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
 Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensina os conceitos de assinaturas controladas por dados, apresentando um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivos. 
@@ -39,7 +40,7 @@ Este tutorial divide-se em três lições:
 
 O diagrama a seguir ilustra o fluxo de trabalho básico do tutorial:
 
-| Etapa    | DESCRIÇÃO |
+| Etapa    | Descrição |
 | --------|------------ |
 | (1)     | A configuração de assinatura anota o relatório de origem, o agendamento e o mapeamento de campo para o Banco de dados do assinante. |
 | (2)     | A tabela OrderInfo contém quatro números de pedido a serem usados para filtragem, um por arquivo. A tabela também contém os formatos de arquivo para os relatórios gerados. |
@@ -71,7 +72,7 @@ Para usar este tutorial, seu computador deve ter os seguintes itens instalados:
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   
-**Tempo estimado para concluir o tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
+**Tempo estimado para a conclusão do tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Assinaturas controladas por dados](../reporting-services/subscriptions/data-driven-subscriptions.md)  

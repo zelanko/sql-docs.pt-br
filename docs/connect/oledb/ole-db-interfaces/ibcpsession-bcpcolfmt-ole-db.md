@@ -1,8 +1,8 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
+title: IBCPSession::BCPColFmt (driver do OLE DB) | Microsoft Docs
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4d55b6e950ccf7e1e9bfac54bf357d070ab09f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994580"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244648"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -60,10 +60,14 @@ HRESULT BCPColFmt(
   
 -   O comprimento máximo dos dados por campo de arquivo do usuário.  
   
--   A sequência de bytes de encerramento opcional de cada campo.  
+-   A sequência de bytes de encerramento opcional de cada campo <a href="#terminator_note"><sup>**1**</sup></a>.  
   
--   O comprimento da sequência de bytes de encerramento opcional.  
+-   O comprimento da sequência de bytes de encerramento opcional <a href="#terminator_note"><sup>**1**</sup></a>.  
   
+
+> [!IMPORTANT]
+> <b id="terminator_note">[1]:</b> O uso da sequência de encerramento em cenários em que a página de código do arquivo de dados está definida como UTF-8 não é compatível. Nesses cenários, **pbUserDataTerm** deve ser definido como `nullptr` e **cbUserDataTerm** deve ser definido como `0`.
+
  Cada chamada para **BCPColFmt** especifica o formato de um campo de arquivo do usuário. Por exemplo, para alterar as configurações padrão de três campos em um arquivo de dados do usuário com cinco campos, primeiro chame `BCPColumns(5)`e, em seguida, **BCPColFmt** cinco vezes, com três dessas chamadas definindo o formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como BCP_TYPE_DEFAULT, além de *cbIndicator*, *cbUserData*e *cbUserDataTerm* como 0, BCP_VARIABLE_LENGTH e 0, respectivamente. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
   
 > [!NOTE]  
@@ -105,11 +109,11 @@ HRESULT BCPColFmt(
   
  Se for usada mais de uma maneira de especificar um comprimento de coluna de arquivo de usuário (como um terminador e um indicador de comprimento ou um terminador e um comprimento de coluna máximo), a cópia em massa escolherá aquela que resultar na menor quantidade de dados sendo copiados.  
   
- A API de cópia em massa executa a conversão de caracteres Unicode em MBCS conforme necessário. É necessário tomar cuidado para garantir que tanto a cadeia de caracteres de bytes do terminador quanto o comprimento da cadeia de caracteres de bytes estejam definidos corretamente.  
-  
+ A API de cópia em massa executa a conversão de caracteres Unicode em MBCS conforme necessário. É necessário tomar cuidado para garantir que tanto a cadeia de caracteres de bytes do terminador quanto o comprimento da cadeia de caracteres de bytes estejam definidos corretamente. Confira a seção [Comentários](#remarks) acima para ver as limitações da codificação UTF-8.
+
  *cbUserDataTerm*[in]  
- O comprimento, em bytes, da sequência de terminador a ser usada para a coluna. Se nenhum terminador estiver presente ou for desejado nos dados, defina esse valor como 0.  
-  
+ O comprimento, em bytes, da sequência de terminador a ser usada para a coluna. Se nenhum terminador estiver presente ou for desejado nos dados, defina esse valor como 0. Confira a seção [Comentários](#remarks) acima para ver as limitações da codificação UTF-8.
+
  *idxServerCol*[in]  
  A posição ordinal da coluna na tabela do banco de dados. O número da primeira coluna é 1. A posição ordinal de uma coluna é informada por **IColumnsInfo::GetColumnInfo** ou métodos semelhantes. Caso esse valor seja 0, a cópia em massa ignora o campo no arquivo de dados.  
   

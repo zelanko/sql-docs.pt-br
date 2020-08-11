@@ -1,5 +1,6 @@
 ---
-title: 'Lição 1: Criar um novo site | Microsoft Docs'
+title: 'Lição 1: Criar um site | Microsoft Docs'
+description: Saiba como criar um projeto de site usando o modelo de site ASP.NET para Visual C#.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac670743ba36e3e1d880f152317956115ccf8c78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d44bb92cccea8067abcfd249d592b44661544eb4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651561"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247155"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Lição 1: Criar um novo site
+# <a name="lesson-1-create-a-new-website"></a>Lição 1: Criar um novo site da web
 Nesta lição, você aprenderá a criar um novo projeto do site usando o modelo de site ASP.NET para o Visual C#.  
   
 ## <a name="to-create-a-new-website"></a>Para criar um novo site  
@@ -31,4 +32,4 @@ Nesta lição, você aprenderá a criar um novo projeto do site usando o modelo 
 O projeto do site será aberto e iniciará o **Assistente de Relatório**. Escolha**Cancelar** no Assistente de Relatório e Fonte de Dados, já que vamos criar um conjunto de dados personalizado na próxima etapa.  
   
 ## <a name="next-task"></a>Próxima tarefa  
-Você criou um novo projeto de site com êxito. Em seguida, você criará uma conexão de dados e uma tabela de dados para o relatório pai. Consulte [Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).
+Você criou um novo projeto de site com êxito. Em seguida, você criará uma conexão de dados e uma tabela de dados para o relatório pai. Veja a [Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).

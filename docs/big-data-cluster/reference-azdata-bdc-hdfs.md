@@ -5,25 +5,25 @@ description: Artigo de referência para comandos bdc hdfs de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 74af88306288adaa584e26c943bd8c6c743fa315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d9f128f354156f6e9f9413f491bba3a30d1a0c9d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821409"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243021"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-O artigo a seguir fornece referência para os comandos `bdc hdfs` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos
-|     |     |
+| Comando | Descrição |
 | --- | --- |
 [azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Comandos de status do serviço do hdfs.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | O shell do HDFS é um shell de comando interativo simples para o sistema de arquivos HDFS.
@@ -57,18 +57,19 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
 Listar o status do arquivo ou diretório fornecido.
 ```bash
 azdata bdc hdfs ls --path -p 
- ```
+                   
+```
 ### <a name="examples"></a>Exemplos
 Status da lista
 ```bash
-azdata bdc hdfs ls --path '/tmp'
+azdata bdc hdfs ls --path tmp/
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -81,18 +82,19 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
 Determinar se existe um arquivo ou diretório.  Retornará True se existir; caso contrário, False.
 ```bash
 azdata bdc hdfs exists --path -p 
-     ```
-### Examples
-Check for file or directory existance.
+                       
+```
+### <a name="examples"></a>Exemplos
+Verifique se um arquivo ou um diretório existe.
 ```bash
-azdata bdc hdfs exists --path '/tmp'
+azdata bdc hdfs exists --path tmp/
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -105,18 +107,19 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
 Criar um diretório no caminho especificado.
 ```bash
 azdata bdc hdfs mkdir --path -p 
-    ```
-### Examples
-Make directory.
+                      
+```
+### <a name="examples"></a>Exemplos
+Criar diretório.
 ```bash
-azdata bdc hdfs mkdir --path '/tmp'
+azdata bdc hdfs mkdir --path tmp/
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -129,7 +132,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
@@ -141,7 +144,7 @@ azdata bdc hdfs mv --source-path -s
 ### <a name="examples"></a>Exemplos
 Mover arquivo ou diretório.
 ```bash
-azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
+azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--source-path -s`
@@ -156,7 +159,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
@@ -168,7 +171,7 @@ azdata bdc hdfs create --path -p
 ### <a name="examples"></a>Exemplos
 Criar arquivo.
 ```bash
-azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
+azdata bdc hdfs create --path "tmp/test.txt" --data "This is a test."
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -183,7 +186,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
@@ -191,12 +194,13 @@ Ler o conteúdo de um arquivo.  O deslocamento e o comprimento em bytes são par
 ```bash
 azdata bdc hdfs cat --path -p 
                     --offset  
-                    --length -l
+                    
+--length -l
 ```
 ### <a name="examples"></a>Exemplos
 Ler arquivo.
 ```bash
-azdata bdc hdfs cat --path '/tmp/test.txt'
+azdata bdc hdfs cat --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -213,18 +217,19 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
 Remover um arquivo ou diretório.
 ```bash
 azdata bdc hdfs rm --path -p 
- ```
+                   
+```
 ### <a name="examples"></a>Exemplos
 Remover um arquivo ou diretório.
 ```bash
-azdata bdc hdfs rm --path '/tmp'
+azdata bdc hdfs rm --path tmp/
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -237,18 +242,19 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
 Remover recursivamente um arquivo ou diretório.
 ```bash
 azdata bdc hdfs rmr --path -p 
-  ```
+                    
+```
 ### <a name="examples"></a>Exemplos
 Remover diretório recursivamente.
 ```bash
-azdata bdc hdfs rmr --path '/tmp'
+azdata bdc hdfs rmr --path tmp/
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -261,7 +267,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
@@ -273,7 +279,7 @@ azdata bdc hdfs chmod --path -p
 ### <a name="examples"></a>Exemplos
 Alterar a permissão do arquivo ou diretório.
 ```bash
-azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
+azdata bdc hdfs chmod --permission 775 --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -288,7 +294,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
@@ -296,12 +302,13 @@ Alterar o proprietário ou o grupo do arquivo especificado.
 ```bash
 azdata bdc hdfs chown --path -p 
                       --owner  
-                      --group -g
+                      
+--group -g
 ```
 ### <a name="examples"></a>Exemplos
 Alterar o proprietário e o grupo.
 ```bash
-azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
+azdata bdc hdfs chown --owner hdfs --group superusergroup --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
@@ -318,7 +325,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-hdfs-cp"></a>azdata bdc hdfs cp
@@ -330,7 +337,7 @@ azdata bdc hdfs cp --from-path -f
 ### <a name="examples"></a>Exemplos
 Copie um arquivo ou um diretório entre o computador local e o HDFS.
 ```bash
-azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
+azdata bdc hdfs cp --from_path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--from-path -f`
@@ -345,7 +352,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 

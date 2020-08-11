@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com KPIs no Reporting Services | Microsoft Docs
+description: Saiba como você pode medir com facilidade o status e o desempenho usando KPIs no SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329364"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247435"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Trabalhando com KPIs no Reporting Services
 
@@ -52,7 +53,7 @@ A tela **Novo KPI** será exibida.
   
 Você pode atribuir valores estáticos ou usar dados de um conjunto de dados compartilhado. Quando você cria um novo KPI, ele é preenchido com um conjunto aleatório de dados manual.  
   
-| Campo | DESCRIÇÃO |
+| Campo | Descrição |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Formato de valor | Usado para alterar o formato do valor que está em exibição. |
 | Valor | O valor a ser exibido para o KPI. |

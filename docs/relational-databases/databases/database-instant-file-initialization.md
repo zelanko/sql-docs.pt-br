@@ -2,7 +2,7 @@
 title: Inicialização imediata de arquivo do banco de dados
 description: Saiba mais sobre a inicialização instantânea de arquivo e como habilitá-la no banco de dados SQL Server.
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756256"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246566"
 ---
 # <a name="database-instant-file-initialization"></a>Inicialização imediata de arquivo do banco de dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ Por padrão, arquivos de dados e de log são inicializados para substituir todos
 - Restaurar um banco de dados ou grupo de arquivos.  
 
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a IFI (Inicialização Instantânea de Arquivo) permite uma execução mais rápida das operações de arquivo mencionadas anteriormente, já que ela recupera o espaço em disco usado sem preencher esse espaço com zeros. Em vez disso, o conteúdo do disco é substituído à medida que novos dados são gravados nos arquivos. Arquivos de log não podem ser inicializados de imediato.
+
 
 ## <a name="enable-instant-file-initialization"></a>Habilitar a inicialização instantânea de arquivo
 
@@ -99,5 +100,29 @@ Se houver preocupação com a possível divulgação do conteúdo excluído, voc
     > [!NOTE]
     > Desabilitar aumentará os tempos de alocação para arquivos de dados e afetará apenas os arquivos que forem criados ou aumentados em tamanho após o direito do usuário ser revogado.
   
+### <a name="se_manage_volume_name-user-right"></a>Direito do usuário SE_MANAGE_VOLUME_NAME
+
+O privilégio do usuário *SE_MANAGE_VOLUME_NAME* pode ser atribuído nas **Ferramentas Administrativas do Windows**, miniaplicativo de **Política de Segurança Local**. Em **Políticas Locais**, selecione **Atribuição de Direito do Usuário** e modifique a propriedade **Executar tarefas de manutenção de volume**.
+
+## <a name="performance-considerations"></a>Considerações sobre o desempenho
+
+O processo de inicialização do arquivo de banco de dados grava zeros nas novas regiões do arquivo em inicialização. A duração desse processo depende do tamanho da parte do arquivo que é inicializada e do tempo de resposta e da capacidade do sistema de armazenamento. Se a inicialização demorar muito tempo, as mensagens a seguir poderão ser registradas no log de erros do SQL Server e no Log do Aplicativo.
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+O longo aumento automático de um banco de dados e/ou de um arquivo de log de transações poderá causar problemas de desempenho de consulta. Isso ocorre porque uma operação que requer o aumento automático de um arquivo será mantida com recursos do tipo bloqueio ou trava durante a operação de aumento do arquivo. Podem ocorrer longas esperas nas travas para as páginas de alocação. A operação que exige o longo aumento automático mostrará um tipo de espera igual a PREEMPTIVE_OS_WRITEFILEGATHER.
+
+
+
+
+
 ## <a name="see-also"></a>Consulte Também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

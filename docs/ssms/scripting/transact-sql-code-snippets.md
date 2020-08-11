@@ -1,5 +1,6 @@
 ---
 title: Snippets de código Transact-SQL
+description: Você pode usar trechos de código Transact-SQL para ajudar a escrever seu código. Veja aqui uma lista de tarefas de snippet com links para artigos que as descrevem.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,16 +11,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed4261773b7a7b6e539a60000d1b0748aca2602
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b2986e68cf58afaab0d0254f29ca6b0124af126
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243362"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246206"
 ---
 # <a name="transact-sql-code-snippets"></a>Snippets de código Transact-SQL
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Um snippet [!INCLUDE[tsql](../../includes/tsql-md.md)].code é um modelo que contém a estrutura básica de um bloco ou uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode usar os snippets como ponto de partida ao adicionar instruções ao Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode inserir os snippets predefinidos fornecidos com o SQL Server ou criar o seu próprio.  
 

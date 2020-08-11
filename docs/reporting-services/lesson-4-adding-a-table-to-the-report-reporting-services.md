@@ -1,6 +1,6 @@
 ---
 title: 'Lição 4: Adicionar uma tabela ao relatório | Microsoft Docs'
-description: Após definir o conjunto de dados, você poderá começar a criar o relatório paginado. Crie um layout de relatório arrastando e soltando objetos de relatório do painel Caixa de Ferramentas para a Área de design.
+description: Você cria um layout de relatório arrastando e soltando objetos de relatório (como uma tabela) do painel da Caixa de Ferramentas para a Área de design.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0194591ffec572c7d079c70233de45977a38d130
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244297"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246305"
 ---
 # <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>Lição 4: Adicionar uma tabela ao relatório (Reporting Services)
 

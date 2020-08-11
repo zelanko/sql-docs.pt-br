@@ -1,5 +1,6 @@
 ---
 title: Parâmetros | Microsoft Docs
+description: Saiba como usar parâmetros para trocar dados entre procedimentos armazenados e funções e o aplicativo ou a ferramenta que chamou o procedimento armazenado ou a função.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,14 +14,14 @@ ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73f4eb1d138746687601b2a9e58849093a2b2aa3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6641172a4f38a445ce57cfd5b9b43f9b8758144f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000923"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246522"
 ---
-# <a name="parameters"></a>parâmetros
+# <a name="parameters"></a>Parâmetros
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 São usados parâmetros para troca de dados entre procedimentos armazenados e funções e entre o aplicativo ou a ferramenta que chamam o procedimento armazenado ou a função: 
 

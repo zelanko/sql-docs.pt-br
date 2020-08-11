@@ -1,5 +1,6 @@
 ---
 title: Habilitar, desabilitar e excluir pontos de interrupção
+description: Saiba como usar a janela Pontos de Interrupção para ver, excluir, desabilitar e habilitar pontos de interrupção.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +13,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72acf04118e0b3b7f3f205a06d6e93e96bf13ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253920"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122911"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, desabilitar e excluir pontos de interrupção
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usar a janela **Pontos de Interrupção** . Use a janela para exibir informações de ponto de interrupção e executar ações como excluir, desabilitar ou habilitar pontos de interrupção.
 
@@ -95,7 +96,7 @@ Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usa
   
  Você pode excluir todos os pontos de interrupção de uma das seguintes maneiras:  
   
--   No menu **Depurar** , clique em **Excluir Todos os Pontos de Interrupção**.  
+-   No menu **Depurar**, clique em **Excluir Todos os Pontos de Interrupção**.  
   
 -   Na barra de ferramentas da janela **Pontos de Interrupção** , clique no botão **Excluir Todos os Pontos de Interrupção** .  
   

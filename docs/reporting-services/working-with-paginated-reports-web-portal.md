@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com relatórios paginados (portal da Web) | Microsoft Docs
+description: Saiba como ver e gerenciar as propriedades de um relatório paginado no portal da Web. Aprenda também a usar o Construtor de Relatórios para criar ou editar relatórios paginados.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222656"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243566"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
 
@@ -56,7 +57,7 @@ Na tela de propriedades, você pode alterar o **nome** a e **descrição** do re
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
   
 Você pode modificar os parâmetros existentes de um relatório paginado. Para adicionar um novo parâmetro, você deve editar o relatório no Construtor de Relatórios ou no SQL Server Data Tools.  
   
@@ -77,7 +78,7 @@ Especifique uma extensão de processamento de dados usada para processar dados d
   
 Especifique a cadeia de conexão que o servidor de relatório utiliza para conectar-se à fonte de dados. O tipo de conexão determina a sintaxe que você deve usar. Por exemplo, uma cadeia de caracteres de conexão da extensão do processamento de dados XML é uma URL para um documento XML. Na maioria dos casos, uma cadeia de caracteres de conexão típica especifica o servidor de banco de dados e um arquivo de dados. O exemplo a seguir ilustra uma cadeia de conexão usada para se conectar a um banco de dados do SQL Server chamado MyData:  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 Uma cadeia de conexão pode ser configurada como uma expressão para que você possa especificar a fonte de dados em tempo de execução. Expressões de fonte de dados são definidas no relatório, no Designer de Relatórios. Expressões de fonte de dados não podem ser definidas, exibidas ou modificadas no portal da Web. Porém, você pode substituir uma expressão de fonte de dados clicando em **Substituir Padrão** para digitar uma cadeia de conexão estática. Se você quiser retornar à expressão, clique em **Reverter em Padrão**. O servidor de relatórios armazena a cadeia de caracteres de conexão original no caso de você precisar restaurá-la. Para usar expressões de fonte de dados, você deve usar as informações de conexão de fonte de dados publicadas originalmente no relatório. As fontes de dados compartilhadas não dão suporte ao uso de expressões na cadeia de conexão.  
   

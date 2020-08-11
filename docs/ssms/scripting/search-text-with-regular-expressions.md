@@ -1,5 +1,6 @@
 ---
 title: Pesquisar texto com expressões regulares
+description: Saiba como usar uma expressão regular no campo "Localizar" de uma caixa de diálogo Localizar e Substituir para especificar um padrão para correspondência.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44c9350ef8134382a413018bcfde1d36351f808d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253684"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122764"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Localizar e Substituir**.  
   
@@ -39,7 +40,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|DESCRIÇÃO|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere|.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
@@ -61,7 +62,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
-|Expression|Sintaxe|DESCRIÇÃO|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
@@ -85,7 +86,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  A tabela a seguir relaciona a sintaxe para correspondência por propriedades de caracteres Unicode padrão. A abreviação de duas letras é igual à relacionada no banco de dados de propriedades de caractere Unicode. Elas podem ser especificadas como parte de um conjunto de caracteres. Por exemplo, a expressão [:Nd:Nl:No] faz a correspondência de qualquer tipo de dígito.  
   
-|Expression|Sintaxe|DESCRIÇÃO|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Letra maiúscula|:Lu|Faz a correspondência de qualquer letra maiúscula. Por exemplo, Luhe faz a correspondência de "The" mas não "the".|  
 |Letra minúscula|:Ll|Faz a correspondência de qualquer letra minúscula. Por exemplo, Llhe faz a correspondência de "the" mas não "The".|  
@@ -108,7 +109,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
 |Marca sem-espaçamento|:Mn|Faz a correspondência de marcas sem-espaçamento.|  
 |Marca de combinação|:Mc|Faz a correspondência de marcas de combinação.|  
 |Marca de circunscrição|:Me|Faz a correspondência de marcas de circunscrição.|  
-|Símbolo matemático|:Sm|Corresponde a +, =, ~, &#124;, \< e >.|  
+|Símbolo matemático|:Sm|Faz a correspondência de +, =, ~, &#124;, \<, and >.|  
 |Símbolo de moeda|:Sc|Faz a correspondência de $ e outros símbolos de moeda.|  
 |Símbolo de modificador|:Sk|Faz a correspondência de símbolos de modificador como acento circunflexo, acento grave e acento circunflexo invertido.|  
 |Outro símbolo|:So|Faz a correspondência de outros símbolos, como o sinal de protegido por direitos autorais, o sinal de parágrafo e o sinal de grau.|  
@@ -120,7 +121,7 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
   
  Além das propriedades de caracteres Unicode padrão, as propriedades adicionais a seguir podem ser especificadas como parte de um conjunto de caracteres.  
   
-|Expression|Sintaxe|DESCRIÇÃO|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
 |Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  

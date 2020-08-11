@@ -1,5 +1,6 @@
 ---
 title: 'Lição 5: Formatando um relatório (Reporting Services) | Microsoft Docs'
+description: Saiba como formatar os campos de data e moeda e os cabeçalhos de coluna depois de adicionar uma região de dados e alguns campos ao relatório de Ordens de Vendas.
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d3fd220aef7a593a2244cf2d7509c5264fcca
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65105934"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245105"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: Formatando um relatório (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lição 5: formatar um relatório (Reporting Services)
 
 Agora que já adicionou uma região de dados e alguns campos ao relatório de ordens de venda, você pode formatar os campos de data e moeda, além dos cabeçalhos da coluna.
 
@@ -65,7 +66,7 @@ Você pode adicionar outra formatação ao relatório, realce a linha de cabeça
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Nesta lição, você formatou com êxito os cabeçalhos de coluna e as expressões de campo. Agora você adicionará os agrupamentos e totais ao relatório. Continue na [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+Nesta lição, você formatou com êxito os cabeçalhos de coluna e as expressões de campo. Agora você adicionará os agrupamentos e totais ao relatório. Continue com a [Lição 6: como adicionar agrupamentos e totais &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 ## <a name="see-also"></a>Confira também
 

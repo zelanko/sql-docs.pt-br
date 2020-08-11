@@ -1,5 +1,6 @@
 ---
 title: Substituir em Arquivos
+description: Saiba como usar o recurso Substituir nos Arquivos da janela Localizar e Substituir para pesquisar o texto de um conjunto de arquivos em busca de uma cadeia de caracteres ou uma expressão e alterar parte do texto encontrado ou o texto inteiro.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b14b359a71de345a245e874cca0c191296c823f7
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261675"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122517"
 ---
 # <a name="replace-in-files"></a>Substituir em Arquivos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  A guia **Substituir nos Arquivos** da janela Localizar e Substituir permite pesquisar o código de um conjunto especificado de arquivos para uma cadeia de caracteres ou expressão, bem como alterar algumas ou todas as correspondências encontradas. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+   A guia **Substituir nos Arquivos** da janela Localizar e Substituir permite pesquisar o código de um conjunto especificado de arquivos para uma cadeia de caracteres ou expressão, bem como alterar algumas ou todas as correspondências encontradas. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
   
  Também há botões da barra de ferramentas e teclas de atalho disponíveis para abrir a caixa de diálogo **Localizar e Substituir** .  
   
@@ -88,7 +89,7 @@ ms.locfileid: "78261675"
  Especifica que serão pesquisadas as subpastas da pasta especificada em **Examinar** . Isso requer um conjunto de diretórios personalizados.  
   
  **Procurar (...)**  
- Clique nesse botão para exibir a caixa de diálogo **Escolher Pastas de Pesquisa** , na qual é possível reunir, editar, salvar e selecionar conjuntos nomeados de diretórios para digitar na caixa **Examinar** .  
+ Clique nesse botão para exibir a caixa de diálogo **Escolher Pastas de Pesquisa**, na qual é possível reunir, editar, salvar e selecionar conjuntos nomeados de diretórios para digitar na caixa **Examinar**.  
   
 ## <a name="find-options"></a>Opções de Busca  
  Você pode expandir ou recolher a seção **Opções de Busca** . As opções seguintes podem ser marcadas ou desmarcadas.  

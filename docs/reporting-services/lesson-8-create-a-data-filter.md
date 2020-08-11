@@ -1,5 +1,6 @@
 ---
 title: 'Lição 8: Criar um filtro de dados | Microsoft Docs'
+description: Saiba como criar um filtro de dados para a tabela de dados definida para o relatório filho. Crie um filtro baseado em tabela ou um filtro de consulta para o relatório de detalhamento.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512388"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243237"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lição 8: Criar um filtro de dados
 Após adicionar uma ação de detalhamento no relatório pai, a próxima etapa é criar um filtro de dados para a tabela de dados definida para o relatório filho.  
@@ -165,7 +166,7 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
   
     1.  Cria uma instância do conjunto de dados, **DataSet2**, criado na Etapa 2 da [Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Crie uma conexão com o banco de dados SQL Server para executar a consulta definida na **Lição 4: Definir uma conexão de dados e uma DataTable para o relatório filho**.  
+    2.  Crie uma conexão com o banco de dados SqlServer para executar a consulta definida na **Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho**.  
   
     3.  A consulta incluirá um parâmetro, **productid**, para garantir que os dados retornados serão filtrados com base na **ProductID** selecionada no relatório pai.  
   
@@ -287,7 +288,7 @@ Você pode criar um filtro baseado em tabela **ou** um filtro de consulta para o
 6.  Salve o arquivo.  
   
 ## <a name="next-task"></a>Próxima tarefa  
-Você criou, com êxito, um filtro de dados para a tabela de dados definida para o relatório filho. Em seguida, você compilará e executará o aplicativo de site. Consulte [Lição 9: Criar e executar o aplicativo](../reporting-services/lesson-9-build-and-run-the-application.md).  
+Você criou, com êxito, um filtro de dados para a tabela de dados definida para o relatório filho. Em seguida, você compilará e executará o aplicativo de site. Confira a [Lição 9: Criar e executar o aplicativo](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   

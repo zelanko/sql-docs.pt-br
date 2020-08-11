@@ -1,5 +1,5 @@
 ---
-title: Descartar um índice do SQL Server | Microsoft Docs
+title: Remover um índice do SQL Server (Driver do OLE DB) | Microsoft Docs
 description: Descartar um índice do SQL Server usando o Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 708deecefe451115ca0fca97075f88311dec2f5a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd31e30247493e887709ad5dbf38bacb3e3444ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015248"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244117"
 ---
 # <a name="dropping-a-sql-server-index"></a>Descartando um índice do SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

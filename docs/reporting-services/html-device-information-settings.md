@@ -1,5 +1,6 @@
 ---
 title: Configurações de informações do dispositivo HTML | Microsoft Docs
+description: Saiba mais sobre as diversas configurações de informações do dispositivo que estão disponíveis para a renderização em formato HTML.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6d86394f22eabb73c055329b2ad583f589b45ea8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503097"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247185"
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
 A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
@@ -44,7 +45,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
 |**ReplacementRoot(\*)**|A cadeia de caracteres que precede todos os links de detalhamento, alternância e indicadores no relatório quando forem renderizados fora do controle ReportViewer. Por exemplo, este é usado para redirecionar um clique do usuário a uma página personalizada.|  
 |**ResourceStreamRoot(\*)**|A cadeia de caracteres a ser pré-demarcada na URL para todos os recursos de imagem, como imagens para alternância ou classificação.|  
 |**Seção**|O número da página do relatório para renderizar. Um valor **0** indica que todas as seções do relatório serão renderizadas. O valor padrão é **1**.|  
-|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **https://\<nomedoservidor>/resources/companyimages**).|  
+|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **https://\<servername>/resources/companyimages**).|  
 |**StyleStream**|Indica se os estilos e scripts são criados como um fluxo separado em vez de no documento. O valor padrão é **false**.|  
 |**Barra de ferramentas**|Indica se deve mostrar ou ocultar a barra de ferramentas. O padrão desse parâmetro é **true**. Se o valor desse parâmetro for **false**, todas as demais opções (menos o mapa do documento) serão ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele.<br /><br /> A barra de ferramentas do Visualizador de Relatório é renderizada quando você usa o acesso de URL para renderizar um relatório. A barra de ferramentas não é renderizada por meio da API SOAP. Entretanto, a configuração de informações de dispositivo **Toolbar** afeta o modo como o relatório é exibido ao usar o método de SOAP **Render** . Se o valor desse parâmetro for **true** ao usar o SOAP para renderizar para HTML, somente a primeira seção do relatório será renderizada. Se o valor for **false**, o relatório HTML inteiro será renderizado como uma única página HTML.|  
 |**UserAgent**|A cadeia de caracteres **user-agent** do navegador que faz a solicitação, a qual é encontrada na solicitação HTTP.|  

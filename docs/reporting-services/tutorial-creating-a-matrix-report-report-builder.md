@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Criando um relatório de matriz (Construtor de Relatórios) | Microsoft Docs'
+description: Saiba como criar um relatório paginado do Reporting Services com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhadas.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294704"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247445"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criar um relatório de matriz (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhados. 
 
 Você também cria um grupo de colunas adjacentes, formata colunas e gira o texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
@@ -49,7 +50,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 5.  Clique em **Próximo**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Saiba mais sobre como criar uma fonte de dados inserida no [Tutorial: Ciar um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Próximo**.  
   
@@ -133,7 +134,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
   
 13. Clique em **Concluir**.  
   
-    A matriz é adicionada à superfície de design. O painel Grupos de Linhas mostra dois grupos de linhas: Territory e SalesDate. O painel Grupos de Colunas mostra dois grupos de colunas: Subcategory e Product. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
+    A matriz é adicionada à superfície de design. O painel Grupos de Linhas mostra dois grupos de linhas: Território e SalesDate. O painel Grupos de Colunas mostra dois grupos de colunas: Subcategoria e Produto. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   

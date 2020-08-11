@@ -1,5 +1,6 @@
 ---
 title: Alertas de dados do Reporting Services | Microsoft Docs
+description: Saiba como os alertas de dados do SQL Server Reporting Services ajudam a informar você sobre dados de relatório interessantes ou importantes para você.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487786"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246675"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
 
@@ -81,7 +82,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Salvar definições de alertas de dados e metadados de alerta  
  Quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo integrado do SharePoint, o banco de dados de alertas do SQL Server é criado automaticamente.  
   
- As definições de alertas de dados e os metadados de alerta são salvos no banco de dados de alertas. Por padrão, esse banco de dados é chamado ReportingServices\<GUID>_Alerting.  
+ As definições de alertas de dados e os metadados de alerta são salvos no banco de dados de alertas. Por padrão, esse banco de dados é denominado ReportingServices\<GUID>_Alerting.  
   
  Quando você salva a definição de alerta de dados, o alerta cria um trabalho do SQL Server Agent para a definição do alerta. O trabalho inclui um agendamento de trabalho. O agendamento se baseia no padrão de recorrência que você define na definição de alerta. A execução do trabalho inicia o processamento da definição de alerta de dados.  
   

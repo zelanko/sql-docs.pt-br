@@ -1,5 +1,6 @@
 ---
 title: Completar Palavra (IntelliSense)
+description: O recurso Completar Palavra do Microsoft IntelliSense pode completar o que você está digitando quando há um contexto suficiente para identificá-lo exclusivamente ou fornecer uma lista de possibilidades para sua escolha. Conheça as quatro maneiras de invocar esse recurso.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fb33d179463383e41f73ddba30525ce908e2cb5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253991"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122877"
 ---
 # <a name="complete-word-intellisense"></a>Completar Palavra (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A opção [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense Complete Word digita o restante de uma variável, comando ou nome de função quando você já digitou caracteres suficientes para identificar o termo de forma exclusiva.  
   
  Há quatro maneiras para invocar o recurso Complete Word:  

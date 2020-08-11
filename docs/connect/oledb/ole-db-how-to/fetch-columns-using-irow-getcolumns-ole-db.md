@@ -1,5 +1,5 @@
 ---
-title: Buscar colunas usando IRow::GetColumns (OLE DB) | Microsoft Docs
+title: Buscar colunas usando IRow::GetColumns (driver do OLE DB) | Microsoft Docs
 description: Buscar colunas usando IRow::GetColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015586"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244773"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Buscar colunas usando IRow::GetColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A interface **IRow** permite o acesso direto a colunas de uma única linha no conjunto de resultados. Portanto, **IRow** é um modo eficiente de recuperar colunas de um conjunto de resultados com uma linha.  
   
- Um exemplo de código que mostra como buscar uma única linha usando **IRow** está disponível. Nesse exemplo, uma coluna de cada vez é recuperada da linha. O exemplo mostra:  
+ Está disponível um exemplo de código que mostra como buscar uma linha usando **IRow**. Nesse exemplo, uma coluna de cada vez é recuperada da linha. O exemplo mostra:  
   
 -   Como buscar um grupo de colunas (em sequência).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68015586"
   
  A primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) cria uma tabela usada pelo exemplo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L "(local)" para L"(local)\\\name", em que name representa a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  A terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) exclui a tabela usada pelo exemplo.  
   

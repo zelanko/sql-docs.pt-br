@@ -1,5 +1,5 @@
 ---
-title: Recursos preteridos do Mecanismo de Banco de Dados | Microsoft Docs
+title: Recursos preteridos do mecanismo de banco de dados no SQL Server 2017 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: Saiba mais sobre os recursos do mecanismo de banco de dados preteridos que ainda estão disponíveis no SQL Server 2017 (14.x), mas que não devem ser usados em novos aplicativos.
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759135"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244070"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 
@@ -38,7 +38,7 @@ Quando um recurso está marcado como preterido, isso significa que:\
 
 É possível monitorar o uso de recursos preteridos usando o contador de desempenho do Objeto Recursos Preteridos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e os eventos de rastreamento. Para obter mais informações, confira o artigo [Usar objetos do SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-O valor desses contadores também está disponível com a execução da seguinte instrução:  
+Os valores desses contadores também estão disponíveis com a execução da seguinte instrução:  
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
@@ -127,7 +127,7 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | Sintaxe de**timestamp** para o tipo de dados **rowversion** | Sintaxe do tipo de dados**rowversion** | timestamp |
 | Capacidade para inserir valores nulos em colunas **timestamp** . | Em vez disso, use um DEFAULT. | INSERT NULL em colunas TIMESTAMP |
 | Opção de tabela 'text in row'|Use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opção de tabela 'text in row' |
-| Tipos de dados:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **imagem**|Use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** .|Tipos de dados: **text** **ntext** ou **image** |
+| Tipos de dados:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **imagem**|Use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** .|Tipos de dados: **text**, **ntext** ou **image** |
 
 ### <a name="database-management"></a>Gerenciamento de banco de dados
 

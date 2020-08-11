@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 781b58bfa0d2afa3ee981fd591909719e8d1051a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4a512b91bbac1a84004643de2738468f21ee984
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921923"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248649"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "86921923"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é uma plataforma para criar integração de dados em nível empresarial e soluções de transformações de dados. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para solucionar problemas empresariais complexos copiando ou baixando arquivos, carregando data warehouses, limpando e minerando dados e gerenciando objetos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e dados.
+O SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é uma plataforma para criar integração de dados em nível empresarial e soluções de transformações de dados. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para solucionar problemas empresariais complexos copiando ou baixando arquivos, carregando data warehouses, limpando e minerando dados e gerenciando objetos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e dados.
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pode extrair e transformar dados uma ampla variedade de fontes, como arquivos de dados XML, arquivos simples e fontes de dados relacionais e transferir dados para um ou mais destinos.
 

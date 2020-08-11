@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: da67f050eba24ecf040124533c9d98c3f3f6bfec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f79511daab45aa03af93a05092a7e858547f6953
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74056727"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244978"
 ---
-# <a name="filestream-support"></a>Suporte a FILESTREAM
+# <a name="filestream-support-in-ole-db-driver-for-sql-server"></a>Suporte ao FILESTREAM no Driver do OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

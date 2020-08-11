@@ -1,6 +1,7 @@
 ---
 title: 'Solucionar problemas de relatórios: Relatórios de mapas (Construtor de Relatórios) | Microsoft Docs'
-ms.date: 01/17/2018
+description: Explore ideias de solução de problemas para situações que possam ocorrer quando você personaliza, adiciona uma camada ou publica um relatório com um mapa no Construtor de Relatórios.
+ms.date: 07/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3dc21f30222704622f86732c11bd5f1db7b46d1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080845"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112025"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (Construtor de Relatórios e SSRS)
   Os problemas com mapas em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] podem ocorrer quando você adiciona um mapa ou camada do mapa ao relatório, quando você personaliza um mapa existente ou camada do mapa em seu relatório, quando visualiza um mapa em um relatório ou quando publica um relatório com um mapa. Use este tópico para ajudar a solucionar esses problemas.  
@@ -206,6 +207,6 @@ ms.locfileid: "77080845"
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solução de problemas do Construtor de Relatórios](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [Solução de problemas do Construtor de Relatórios](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

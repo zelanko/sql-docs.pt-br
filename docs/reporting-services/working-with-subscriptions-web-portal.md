@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com assinaturas (portal da Web) | Microsoft Docs
+description: Saiba como usar a página Assinaturas para listar todas as assinaturas do relatório atual no Reporting Services.
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 046faa5ff137f62ac2554192012ff0917bfb17e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243544"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Trabalhando com assinaturas (portal da web)
 

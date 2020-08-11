@@ -1,5 +1,5 @@
 ---
-title: Cursores | Microsoft Docs
+title: Cursores (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4bec8b13cd060801e99e4c6cb842c2b0f38c25e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733908"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236033"
 ---
-# <a name="cursors"></a>Cursores
+# <a name="sql-server-cursors"></a>Cursores do SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   As operações em um ato de banco de dados relacional em um conjunto completo de linhas. Por exemplo, o conjunto de linhas retornado por uma instrução `SELECT` consiste de todas as linhas que satisfazem as condições na cláusula `WHERE` da instrução. Este conjunto completo de linhas retornado pela instrução é conhecido como conjunto de resultados. Aplicativos, especialmente aplicativos online interativos, não podem sempre trabalhar efetivamente com todo o conjunto de resultados como uma unidade. Esses aplicativos precisam de um mecanismo para trabalhar com uma linha ou um bloco pequeno de linhas de cada vez. Os cursores são uma extensão dos conjuntos de resultados que proveem esse mecanismo.  
   

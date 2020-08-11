@@ -1,5 +1,5 @@
 ---
-title: Suporte a tipos de dados para melhorias de data e hora do OLE DB | Microsoft Docs
+title: Compatibilidade do tipo de dados para aprimoramentos de data e hora (driver do OLE DB) | Microsoft Docs
 description: Suporte a tipos de dados para melhorias de data e hora do OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4306574aca251ad1f530cfeb3c26ce91e0a48b1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995113"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244863"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte a tipos de dados para melhorias de data e hora do OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -75,7 +75,7 @@ ms.locfileid: "67995113"
   
  Foram modificadas as implementações dos seguintes structs do OLE DB existentes para dar suporte aos novos tipos de data e hora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Porém, as definições não foram alteradas.  
   
--   DBTYPE_DATE (É um tipo de automação DATE. Ele é representado internamente como um **double**. A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é a fração de um dia. Este tipo tem uma exatidão de 1 segundo, portanto tem uma escala efetiva de 0.)  
+-   DBTYPE_DATE (É um tipo de automação DATE. É representado internamente como um **double**. A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é a fração de um dia. Este tipo tem uma exatidão de 1 segundo, portanto tem uma escala efetiva de 0.)  
   
 -   DBTYPE_DBDATE  
   

@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 864abdb32dceaaa18e221295eebebc4f8382d4bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af1f6698cc08064d5ff9a8e8c6da32574b01d732
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901560"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248637"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Início Rápido: Executar imagens de contêiner do SQL Server com o Docker
 
@@ -177,6 +177,8 @@ SELECT @@SERVERNAME,
 
 Configurar `-h` e `--name` com o mesmo valor é uma boa maneira de identificar facilmente o contêiner de destino.
 
+5. Como etapa final, altere sua senha SA porque `SA_PASSWORD` está visível na saída `ps -eax` e armazenada na variável de ambiente de mesmo nome. Confira as etapas abaixo.
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -295,8 +297,14 @@ SELECT @@SERVERNAME,
 
 Configurar `-h` e `--name` com o mesmo valor é uma boa maneira de identificar facilmente o contêiner de destino.
 
+
+5. Como etapa final, altere sua senha SA porque `SA_PASSWORD` está visível na saída `ps -eax` e armazenada na variável de ambiente de mesmo nome. Confira as etapas abaixo.
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a name="change-the-sa-password"></a><a id="sapassword"></a> Alterar a senha SA
 

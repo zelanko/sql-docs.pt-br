@@ -1,6 +1,6 @@
 ---
 title: Recursos compatíveis com diferentes edições – SQL Server Reporting Services | Microsoft Docs
-description: Esse tópico explica os recursos do SQL Server Reporting Services (SSRS) que têm suporte nas diferentes edições do SQL Server. A edição Evaluation do SQL Server está disponível por um período de avaliação de 180 dias.
+description: Saiba mais sobre os recursos do SSRS (SQL Server Reporting Services) compatíveis com as diferentes edições do SQL Server.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76516597"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246655"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Recursos do SQL Server Reporting Services compatíveis com as edições
 

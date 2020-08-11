@@ -1,5 +1,6 @@
 ---
 title: Permissões necessárias
+description: Saiba mais sobre as permissões necessárias para várias tarefas do SQL Server Data Tools, como a criação de um banco de dados, a execução de testes de unidade e a comparação de esquemas.
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
@@ -8,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
-ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256991"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243717"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Permissões necessárias para SQL Server Data Tools
 
@@ -38,9 +38,8 @@ Antes de você realizar uma ação em um banco de dados no Visual Studio, faça 
 ## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Permissões para criar ou implantar um banco de dados  
 Você deve ter as permissões a seguir para criar ou implantar um banco de dados.  
   
-|||  
-|-|-|  
 |Ações|Permissões necessárias|  
+|-|-|  
 |Importar objetos de banco de dados e configurações|Você deve ser capaz de se conectar ao banco de dados de origem.<br /><br />Se o banco de dados de origem estiver baseado no SQL Server 2005, você também deverá ter a permissão **VIEW DEFINITION** em cada objeto.<br /><br />Se o banco de dados de origem estiver baseado no SQL Server 2008 ou posterior, você também deverá ter a permissão **VIEW DEFINITION** em cada objeto. Seu logon deve ter a permissão **VIEW SERVER STATE** (para chaves de criptografia de banco de dados).|  
 |Importar objetos de servidor e configurações|Você deve ser capaz de se conectar ao banco de dados mestre no servidor especificado.<br /><br />Se o servidor estiver executando o SQL Server 2005, você deverá ter a permissão **VIEW ANY DEFINITION** no servidor.<br /><br />Se o banco de dados de origem estiver baseado no SQL Server 2008 ou posterior, você também deverá ter a permissão **VIEW ANY DEFINITION** no servidor. Seu logon deve ter a permissão **VIEW SERVER STATE** (para chaves de criptografia de banco de dados).|  
 |Criar ou atualizar um projeto de banco de dados|Você não precisa de permissões de banco de dados para criar ou modificar um projeto de banco de dados.|  
@@ -57,14 +56,13 @@ A *refatoração de banco de dados* ocorre somente dentro de um projeto de banco
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Permissões para realizar testes de unidade em um banco de dados do SQL Server  
 Você deve ter as permissões a seguir para realizar testes de unidade em um banco de dados.  
   
-|||  
-|-|-|  
 |Ações|Permissões necessárias|  
+|-|-|   
 |Executar uma ação de teste|Você deve usar a conexão de banco de dados do contexto de execução. Para obter mais informações, consulte [Visão geral das cadeias de conexão e permissões](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Executar uma ação de pré-teste ou pós-teste|Você deve usar a conexão de banco de dados do contexto privilegiado. Essa conexão de banco de dados tem mais permissões do que a conexão do contexto de execução.|  
 |Executar os scripts TestInitialize e TestCleanup|Você deve usar a conexão de banco de dados do contexto privilegiado.|  
-|Implantar alterações de banco de dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
-|Gerar dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Implantar alterações de banco de dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Gerar dados antes de executar os testes|Você deve usar a conexão de banco de dados do contexto privilegiado. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
 ## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Permissões para gerar dados  
 Você deve ter as permissões **INSERT** e **SELECT** nos objetos no banco de dados de destino para gerar os dados de teste usando o Gerador de Dados. Se você limpar os dados antes de gerar dados, também deverá ter as permissões **DELETE** nos objetos no banco de dados de destino. Para redefinir a coluna **IDENTITY** em uma tabela, você deverá possuir a tabela ou ser membro da função db_owner ou db_ddladmin.  
@@ -72,9 +70,8 @@ Você deve ter as permissões **INSERT** e **SELECT** nos objetos no banco de da
 ## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Permissões para comparar esquemas e dados  
 Você deve ter as permissões a seguir para comparar esquemas ou dados.  
   
-|||  
-|-|-|  
 |Ações|Permissões necessárias|  
+|-|-|   
 |Comparar os esquemas de dois bancos de dados|Você deve ter as permissões para importar objetos e configurações dos bancos de dados, conforme descrito em [Permissões para criar ou implantar um banco de dados](#DatabaseCreationAndDeploymentPermissions).|  
 |Compare os esquemas de um banco de dados e um projeto de banco de dados|Você deve ter as permissões para importar objetos e configurações do banco de dados, conforme descrito em [Permissões para criar ou implantar um banco de dados](#DatabaseCreationAndDeploymentPermissions). Você também deve o projeto de banco de dados aberto no Visual Studio.|  
 |Escrever atualizações em um banco de dados de destino|Você deve ter as permissões para implantar atualizações no banco de dados de destino, conforme descrito em [Permissões para criar ou implantar um banco de dados](#DatabaseCreationAndDeploymentPermissions).|  

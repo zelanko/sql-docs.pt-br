@@ -1,5 +1,6 @@
 ---
 title: Configurações de informações de dispositivo CSV | Microsoft Docs
+description: Saiba mais sobre as configurações de informações do dispositivo CSV que estão disponíveis para a renderização em formato texto.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9df267e6ab605f3c328ed2a07c78770bc5dade92
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571605"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248560"
 ---
 # <a name="csv-device-information-settings"></a>Configurações das informações do dispositivo CSV
   As configurações de informações de dispositivo para a extensão de renderização de CSV permitem que os delimitadores e os qualificadores sejam alterados e o tratamento de quebra de linha seja especificado. A extensão do arquivo também pode ser enviada, como também a codificação e inclusão de linhas de cabeçalho na saída. Como é provável que os delimitadores sejam caracteres especiais, você deverá codificá-los em uma seção CDATA, se as configurações forem gravadas como XML.  
@@ -27,7 +28,7 @@ ms.locfileid: "65571605"
 |-------------|-----------|  
 |**Codificação**|O nome da IANA (Internet Assigned Numbers Authority) de uma codificação de caracteres com suporte do .NET Framework. O valor padrão é **UTF-8**. Exemplos de outros valores incluem ASCII, UTF-7 e UTF-16.|  
 |**ExcelMode**|Especifica se a saída de destino é para o Excel. O valor padrão é **true**.|  
-|**FieldDelimiter**|A cadeia de caracteres delimitadora para colocar no resultado. O valor padrão é uma vírgula (,). Você deve codificar o valor dessas informações de dispositivo ao transmiti-lo em uma URL. Por exemplo, um caractere de tabulação como um delimitador deve ser "%09".<br /><br /> Você pode alterar o delimitador de campo padrão para qualquer caractere que desejar, inclusive o TAB, alterando as configurações de informações de dispositivo no arquivo de configuração. Por exemplo, para usar TAB, atualize a configuração do FieldDelimiter para \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> No exemplo [TAB] é um caractere de tabulação real, o que significa que aparece espaço em branco no arquivo de configuração. O atributo "xml:space" instrui os analisadores para preservarem o espaço em branco.|  
+|**FieldDelimiter**|A cadeia de caracteres delimitadora para colocar no resultado. O valor padrão é uma vírgula (,). Você deve codificar o valor dessas informações de dispositivo ao transmiti-lo em uma URL. Por exemplo, um caractere de tabulação como um delimitador deve ser "%09".<br /><br /> Você pode alterar o delimitador de campo padrão para qualquer caractere que desejar, inclusive o TAB, alterando as configurações de informações de dispositivo no arquivo de configuração. Por exemplo, para usar o TAB, atualize a configuração FieldDelimiter para \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> No exemplo [TAB] é um caractere de tabulação real, o que significa que aparece espaço em branco no arquivo de configuração. O atributo "xml:space" instrui os analisadores para preservarem o espaço em branco.|  
 |**FileExtension**|A extensão do arquivo a ser colocada no resultado. O valor padrão é **.CSV**. Se tanto **FileExtension** quanto **extensão** forem especificados, **FileExtension** terá precedência.|  
 |**NoHeader**|Indica se a linha do cabeçalho será excluída da saída. O valor padrão é **false**.|  
 |**Qualificador**|A cadeia de caracteres do qualificador para colocar ao redor de resultados que contêm o delimitador de campo ou delimitador de registro. Se os resultados contiverem o qualificador, ele será repetido. A configuração **Qualificador** deve ser diferente das configurações **FieldDelimiter** e **RecordDelimiter** . O valor padrão é uma aspa (").|  

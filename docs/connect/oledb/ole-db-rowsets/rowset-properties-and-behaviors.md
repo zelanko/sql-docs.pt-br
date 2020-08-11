@@ -1,5 +1,5 @@
 ---
-title: Propriedades e comportamentos do conjunto de linhas | Microsoft Docs
+title: Propriedades e comportamentos do conjunto de linhas (Driver do OLE DB)
 description: Propriedades e comportamentos do conjunto de linhas no Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015355"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244165"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "68015355"
 |DBPROP_BLOCKINGSTORAGEOBJECTS|L/G: Somente leitura<br /><br /> Padrão: VARIANT_TRUE<br /><br /> Descrição: os objetos de armazenamento do Driver do OLE DB para SQL Server bloqueiam o uso de outros métodos de conjunto de linhas.|  
 |DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: o Driver do OLE DB para SQL Server dá suporte a indicadores para identificação de linha do conjunto de linhas quando DBPROP_BOOKMARKS ou DBPROP_LITERALBOOKMARKS é VARIANT_TRUE.<br /><br /> A definição de qualquer uma das propriedades como VARIANT_TRUE não habilita o posicionamento do conjunto de linhas por indicador. Defina DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll como VARIANT_TRUE para criar um conjunto de linhas que dê suporte ao posicionamento do conjunto de linhas por indicador.<br /><br /> O Driver do OLE DB para SQL Server usa um cursor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para dar suporte a um conjunto de linhas que contenha indicadores. Para obter mais informações, confira [Conjuntos de linha e cursores do SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Observação: A definição dessas propriedades em conflito com outras propriedades de definição de cursor do OLE DB Driver for SQL Server causa um erro. Por exemplo, a definição de DBPROP_BOOKMARKS como VARIANT_TRUE quando DBPROP_OTHERINSERT também é VARIANT_TRUE gera um erro quando o consumidor tenta abrir um conjunto de linhas.|  
 |DBPROP_BOOKMARKSKIPPED|L/G: Somente leitura<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: o Driver do OLE DB para SQL Server retorna DB_E_BADBOOKMARK se o consumidor indica um indicador inválido ao posicionar ou pesquisar um conjunto de linhas com indicadores.|  
-|DBPROP_BOOKMARKTYPE|L/G: Somente leitura<br /><br /> Padrão: DBPROPVAL_BMK_NUMERIC<br /><br /> Descrição: o Driver do OLE DB para SQL Server implementa somente indicadores numéricos. Um indicador do Driver do OLE DB para SQL Server é um número inteiro sem sinal de 32 bits, do tipo DBTYPE_UI4.|  
+|DBPROP_BOOKMARKTYPE|L/G: Somente leitura<br /><br /> Padrão: DBPROPVAL_BMK_NUMERIC<br /><br /> Descrição: o Driver do OLE DB para SQL Server implementa somente indicadores numéricos. Um indicador do Driver do OLE DB para SQL Server é um inteiro sem sinal de 32 bits, do tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Esta propriedade de conjunto de linhas não é implementada pelo Driver do OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: o Driver do OLE DB para SQL Server dá suporte à busca e rolagem regressiva em conjuntos de linhas não sequenciais. O OLE DB Driver for SQL Server cria um conjunto de linhas com suporte de cursor quando DBPROP_CANFETCHBACKWARDS ou DBPROP_CANSCROLLBACKWARDS é VARIANT_TRUE. Para obter mais informações, confira [Conjuntos de linha e cursores do SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_CANHOLDROWS|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: por padrão, o Driver do OLE DB para SQL Server retorna DB_E_ROWSNOTRELEASED se o consumidor tenta obter mais linhas para um conjunto de linhas enquanto existem alterações pendentes nessas linhas atualmente no conjunto. Este comportamento pode ser modificado.<br /><br /> A definição de DBPROP_CANHOLDROWS e DBPROP_IRowsetChange como VARIANT_TRUE implica um conjunto de linhas com indicadores. Se as duas propriedades forem VARIANT_TRUE, a interface **IRowsetLocate** estará disponível no conjunto de linhas e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS serão VARIANT_TRUE.<br /><br /> Os conjuntos de linhas do Driver do OLE DB para SQL Server que contêm indicadores são compatíveis com os cursores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  

@@ -1,5 +1,6 @@
 ---
 title: Informações do depurador Transact-SQL
+description: Saiba como exibir a saída do depurador Transact-SQL, que inclui informações como pilhas de chamadas, threads, pontos de interrupção, código, variáveis e comandos.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -18,16 +19,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 853c11d1cf08a24168d21f0d20cedc74c2ea4004
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253036"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243732"
 ---
 # <a name="transact-sql-debugger---information"></a>Depurador do Transact-SQL – Informações
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual. 
 

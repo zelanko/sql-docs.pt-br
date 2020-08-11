@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Criando um relatório de formato livre (Construtor de Relatórios) | Microsoft Docs'
+description: Saiba como criar um relatório paginado que atue como um boletim informativo e no qual cada página exiba texto estático, elementos visuais de resumo e dados de vendas de exemplo detalhados.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499558"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247455"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Criando um Relatório de Formato Livre (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado que atua como um boletim informativo. Cada página exibe um texto estático, visuais de resumo e dados de vendas de exemplo detalhados.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -48,13 +49,13 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Nova** > **Fonte de Dados**.  
   
-2.  Na caixa **Nome** , digite: **ListDataSource**  
+2.  Na caixa **Nome**, digite: **ListDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, na caixa **Cadeia de conexão**, digite: **Fonte de Dados = \<servername>**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: **Fonte de dados = \<servername>**  
   
-    **\<servername>** , por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
+    **\<servername>** , por exemplo, Report001, especifica um computador no qual há instalada uma instância do Mecanismo de Banco de Dados do SQL Server. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
   
 5.  Clique em **Credenciais**e insira as credenciais necessárias para conexão à instância do Mecanismo de Banco de Dados do SQL Server.  
   
@@ -64,7 +65,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 1.  No painel Dados do Relatório, clique em **Novo** > **Conjunto de Dados**.  
   
-2.  Na caixa **Nome** , digite: **ListDataset**.  
+2.  Na caixa **Nome**, digite: **ListDataset**.  
   
 3.  Clique em **Usar um conjunto de dados inserido em meu relatório**e verifique se a fonte de dados é **ListDataSource**.  
   
@@ -199,7 +200,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
 2.  Na guia **Inserir** > **Caixa de Texto**. Clique no canto superior esquerdo da lista, dentro do retângulo que você adicionou anteriormente, e arraste para criar a caixa de texto com 9,76 centímetros de largura e 12,70 centímetros de altura.  
   
-3.  Com o cursor na caixa de texto, digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
+3.  Com o cursor na caixa de texto e digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
   
     ![Adicionar texto do título do boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "Adicionar texto do título do boletim informativo")  
   
@@ -405,7 +406,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo.  
    
-10. Selecione o título do gráfico e digite: **Quantidades Vendidas do Produto**.  
+10. Selecione o título e o tipo do gráfico: **Quantidades Vendidas do Produto**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Conte** **Segoe UI Semibold**.
@@ -444,7 +445,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 9. Arraste o gráfico para dentro do retângulo, abaixo do gráfico de pizza.  
    
-10. Selecione o título do gráfico e digite: **Vendas de Produtos**.  
+10. Selecione o título e o tipo do gráfico: **Vendas do Produto**.  
   
 12. Na guia **Início** > **Fonte**, crie o título:
     * **Conte** **Segoe UI Semibold**.

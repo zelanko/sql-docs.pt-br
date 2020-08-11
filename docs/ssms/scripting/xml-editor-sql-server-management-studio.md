@@ -1,5 +1,6 @@
 ---
 title: Editor XML (SQL Server Management Studio)
+description: Saiba como usar as ferramentas visuais do Editor de XML do SQL Server Management Studio para trabalhar com XSDs (esquemas XML), conjuntos de dados do ADO.NET e documentos XML.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b62b35ee3819edcbfcc0fc41f8fa22747d966b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252928"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236847"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Fornece um conjunto de ferramentas visuais para trabalhar com Esquemas XML, conjuntos de dados ADO.NET e documentos XML. O XML Designer oferece suporte para a linguagem de definição de esquema XML (XSD) definida pelo World Wide Web Consortium (WC3). O designer não oferece suporte para DTDs (definições de tipo de documento) ou outras linguagens de esquema XML, como XDR (XML-Data Reduced).  
   
  Para exibir o designer, adicione um conjunto de dados, esquema XML ou arquivo XML a seu projeto ou abra qualquer um dos tipos de arquivo listados na tabela abaixo.  
@@ -35,7 +36,7 @@ ms.locfileid: "75252928"
   
  O designer fornece as três exibições (ou modos) a seguir, para se trabalhar em arquivos XML, esquemas XML e conjuntos de dados:  
   
-|Visualizar|DESCRIÇÃO|Tipos de arquivos com suporte|  
+|Visualizar|Descrição|Tipos de arquivos com suporte|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para criar visualmente e modificar esquemas XML e conjuntos de dados ADO.NET.|.xsd|  
 |**Dados**|Para modificar visualmente arquivos de dados XML em uma grade de dados estruturada.|.xml|  
@@ -82,7 +83,7 @@ ms.locfileid: "75252928"
 ## <a name="data-view"></a>Exibição de dados  
  Exibição de dados fornece uma grade de dados que pode ser usada para modificar arquivos .xml. Somente o conteúdo (mas não as marcas e estrutura) em um arquivo XML pode ser editado em exibição de dados.  
   
- Há duas áreas separadas na Exibição de Dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
+ Há duas áreas separadas na exibição de dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
   
 > [!NOTE]  
 >  Arquivos XML recentemente criados não contêm nenhum dado e, assim, não podem ser exibidos na exibição de Dados. Há também algumas instâncias de documentos XML nas quais a exibição de dados não pode ser invocada. Embora o XML seja considerado bem formado, se não for estruturado dados tentando mudar para exibição de dados irão gerar a seguinte mensagem: "Embora esse documento seja bem formado, ele contém estrutura que a exibição de dados não pode exibir".  

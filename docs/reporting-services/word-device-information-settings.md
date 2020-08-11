@@ -1,5 +1,6 @@
 ---
 title: Configurações de informações de dispositivo do Word | Microsoft Docs
+description: Saiba mais sobre as configurações de informações de dispositivo que estão disponíveis para a renderização no formato do Microsoft Word.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e12669575e06ab2ea3898e7592c2c1d08e90f283
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571135"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247425"
 ---
 # <a name="word-device-information-settings"></a>Configurações de informações de dispositivo do Word
   A tabela a seguir lista as configurações de informações de dispositivo para renderização no formato [!INCLUDE[ofprword](../includes/ofprword-md.md)] .  

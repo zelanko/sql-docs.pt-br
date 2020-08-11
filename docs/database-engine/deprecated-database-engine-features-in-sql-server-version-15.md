@@ -1,5 +1,5 @@
 ---
-title: Recursos preteridos do Mecanismo de Banco de Dados | Microsoft Docs
+title: Recursos preteridos do mecanismo de banco de dados no SQL Server 2019 | Microsoft Docs
 titleSuffix: SQL Server 2019
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: 552afb292f89eea602099fa095b86f587710229b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38597e5675bf285833cf8533690df83019224077
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920259"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244057"
 ---
 # <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>Recursos preteridos do mecanismo de banco de dados no [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 

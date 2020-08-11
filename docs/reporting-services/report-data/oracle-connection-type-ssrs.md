@@ -1,5 +1,6 @@
 ---
-title: Tipo de conexão Oracle (Construtor de Relatórios e Servidor de Relatórios do Power BI) | Microsoft Docs
+title: Tipo de conexão Oracle (SSRS e Servidor de Relatórios do Power BI)
+description: Use as informações contidas neste artigo sobre o tipo de conexão Oracle para saber como criar uma fonte de dados.
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 188e054487099e8db96ded6066b71ad09a49c762
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342739"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246475"
 ---
-# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Tipo de conexão Oracle (Construtor de Relatórios e Servidor de Relatórios do Power BI | Microsoft Docs)
+# <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Tipo de conexão Oracle (SSRS e Servidor de Relatórios do Power BI)
 
 Para usar dados de um banco de dados Oracle no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo Oracle. Esse tipo de fonte de dados interno usa o Provedor de Dados Oracle diretamente e exige um componente do software cliente Oracle. Este artigo explica como baixar e instalar drivers para o Reporting Services, o Servidor de Relatórios do Power BI, o Construtor de Relatórios e o Power BI Desktop.
 

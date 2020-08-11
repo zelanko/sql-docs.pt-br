@@ -1,5 +1,6 @@
 ---
 title: Janela Comando
+description: Saiba como usar a janela Comando do depurador Transact-SQL para executar comandos de depuração e editar comandos no código que você está depurando.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,18 +14,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 226acc4696b5edacde3b6950c10c8b5370e29b42
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e9a1e432de7b9bb0871ffc094f7d37cd1709aff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243425"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248051"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Depurador do Transact-SQL – Janela Comando
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use a **Janela Comando** para executar comandos como de depuração e edição na janela do Editor de Consultas do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que está atualmente em depuração. É necessário estar no modo de depuração para usar a **Janela Comando**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a muitos dos comandos que também têm suporte na janela de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obter mais informações, veja [Janela Comando do Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
+Use a **Janela Comando** para executar comandos (como de depuração e edição) sobre o código na janela do Editor de Consultas [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que está atualmente em depuração. É necessário estar no modo de depuração para usar a **Janela Comando**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a muitos dos comandos que também têm suporte na janela de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obter mais informações, veja [Janela Comando do Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -36,7 +37,7 @@ Use a **Janela Comando** para executar comandos como de depuração e edição n
 
 **Para imprimir o valor de uma variável**
 
-- No **CommandWindow**, digite **Debug.Print \<VariableName>** e pressione ENTER.
+- Na **Janela Comando**, digite **Debug.Print \<VariableName>** e pressione ENTER.
 
 **Para listar as informações sobre a thread atual**
 
@@ -44,7 +45,7 @@ Use a **Janela Comando** para executar comandos como de depuração e edição n
 
 **Para adicionar uma variável à janela QuickWatch.**
 
-- Na **CommandWindow**, digite **Debug.QuickWatch \<VariableName>** e pressione ENTER.
+- Na **Janela Comando**, digite **Debug.QuickWatch \<VariableName>** e pressione ENTER.
 
 ## <a name="see-also"></a>Consulte Também
 

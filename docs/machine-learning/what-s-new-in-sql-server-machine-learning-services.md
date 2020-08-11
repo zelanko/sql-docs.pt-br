@@ -3,23 +3,23 @@ title: Novidades dos Serviços de Machine Learning do SQL Server
 titleSuffix: ''
 description: Comunicados de novos recursos para cada versão do Serviços de Machine Learning do SQL Server e Serviço de R do SQL Server 2016.
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: overview
 author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdb358c2414d40aa39ead1323eff90aefbb3081e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7e4092bd98749006b6f68b8c55fee3baca678255
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486991"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245235"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novidades dos Serviços de Machine Learning do SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 As funcionalidades de aprendizado de máquina são adicionadas ao SQL Server em cada versão à medida que continuamos expandindo, estendendo e aprofundando a integração entre a plataforma de dados, a análise avançada e a ciência de dados. 
 
@@ -31,13 +31,15 @@ Esta versão adiciona os recursos mais solicitados para operações de aprendiza
 > [!NOTE]
 > Para obter a documentação das novidades do Java no SQL Server 2019, confira [Novidades das Extensões de Linguagem do SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
-Veja abaixo os novos recursos dos Serviços de Machine Learning do SQL Server:
+Confira abaixo os novos recursos dos Serviços de Machine Learning do SQL Server, disponíveis no **Windows** e no **Linux**:
 
-- Agora há suporte para a [conexão de loopback com o SQL Server de um script Python ou R](connect/loopback-connection.md) no Windows e no Linux. 
-- No Windows e no Linux, suporte para [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) no R e no Python.
-- Suporte na plataforma Linux para aprendizado de máquina do R e do Python. Introdução à [Instalar os Serviços de Machine Learning do SQL Server no Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- A compatibilidade com a plataforma Linux foi adicionada nos Serviços de Machine Learning para Python e para R. Introdução a [Instalar os Serviços de Machine Learning do SQL Server no Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- [Conexão em loopback para SQL Server de um script Python ou R](connect/loopback-connection.md). 
+- [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) para Python e R.
 - O [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduz dois novos parâmetros que permitem gerar com facilidade vários modelos com base em dados particionados. Saiba mais neste tutorial: [Criar modelos baseados em partição no R](tutorials/r-tutorial-create-models-per-partition.md).
-- Agora há suporte ao cluster de failover no Windows e no Linux, supondo que o serviço SQL Server Launchpad tenha sido iniciado em todos os nós. Para obter mais informações, confira [Instalação do cluster de failover do SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md).
+- A compatibilidade do cluster de failover está disponível para o serviço Launchpad, supondo que o serviço SQL Server Launchpad tenha sido iniciado em todos os nós. Para obter mais informações, confira [Instalação do cluster de failover do SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md).
+- Alterações no mecanismo de isolamento para os Serviços de Machine Learning. Para obter mais informações, confira [SQL Server 2019 no Windows: alterações de isolamento nos Serviços de Machine Learning](install/sql-server-machine-learning-services-2019.md).
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ Como o Python é integrado ao mecanismo de banco de dados, você pode manter a a
 
 Há suporte para a integração entre o T-SQL e o Python por meio do procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Você pode chamar qualquer código Python usando esse procedimento armazenado. O código é executado em uma arquitetura segura e dupla que permite a implantação de nível empresarial de scripts e modelos do Python, que podem ser chamados em um aplicativo usando um procedimento armazenado simples. Ganhos de desempenho adicionais são obtidos por meio do streaming de dados dos processos do SQL para os processos do Python e da paralelização de anel MPI.
 
-Use a função T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) para executar a [pontuação nativa](sql-native-scoring.md) em um modelo pré-treinado que foi salvo anteriormente no formato binário exigido.
+Use a função T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) para executar a [pontuação nativa](predictions/native-scoring-predict-transact-sql.md) em um modelo pré-treinado que foi salvo anteriormente no formato binário exigido.
 
 ### <a name="python-libraries"></a>Bibliotecas do Python
 
@@ -100,8 +102,8 @@ Para obter os comunicados sobre todos os recursos, confira [Novidades do SQL Ser
 
 | Versão |Atualização de recursos |
 |---------|----------------|
-| Adições de CU | A [**pontuação em tempo real**](real-time-scoring.md) depende de bibliotecas nativas C++ para ler um modelo armazenado em um formato binário otimizado e, em seguida, gerar previsões sem precisar chamar o runtime do R. Isso torna as operações de pontuação muito mais rápidas. Com a pontuação em tempo real, você pode executar um procedimento armazenado ou realizar a pontuação em tempo real por meio do código R. A pontuação em tempo real também estará disponível para o SQL Server 2016 se a instância for atualizada para a última versão do [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
-| Versão inicial | [**Integração do R para análise no banco de dados**](r/sql-server-r-services.md). <br/><br/> Pacotes R para chamar funções do R no T-SQL e vice-versa. As funções do RevoScaleR fornecem a análise do R em escala, dividindo os dados em partes de componentes, coordenando e gerenciando o processamento distribuído e agregando os resultados. No SQL Server 2016 R Services (no Banco de Dados), o mecanismo do RevoScaleR é integrado a uma instância do mecanismo de banco de dados, reunindo os dados e a análise no mesmo contexto de processamento. <br/><br/>Integração entre o T-SQL e o R por meio de [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Você pode chamar qualquer código R usando esse procedimento armazenado. Essa infraestrutura segura permite a implantação de nível empresarial de modelos e scripts do Rn que podem ser chamados em um aplicativo usando um procedimento armazenado simples. Ganhos de desempenho adicionais são obtidos por meio do streaming de dados dos processos do SQL para os processos do R e da paralelização de anel MPI. <br/><br/>Use a função T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) para executar a [pontuação nativa](sql-native-scoring.md) em um modelo pré-treinado que foi salvo anteriormente no formato binário exigido.|
+| Adições de CU | A [**pontuação em tempo real**](predictions/real-time-scoring.md) depende de bibliotecas nativas C++ para ler um modelo armazenado em um formato binário otimizado e, em seguida, gerar previsões sem precisar chamar o runtime do R. Isso torna as operações de pontuação muito mais rápidas. Com a pontuação em tempo real, você pode executar um procedimento armazenado ou realizar a pontuação em tempo real por meio do código R. A pontuação em tempo real também estará disponível para o SQL Server 2016 se a instância for atualizada para a última versão do [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
+| Versão inicial | [**Integração do R para análise no banco de dados**](r/sql-server-r-services.md). <br/><br/> Pacotes R para chamar funções do R no T-SQL e vice-versa. As funções do RevoScaleR fornecem a análise do R em escala, dividindo os dados em partes de componentes, coordenando e gerenciando o processamento distribuído e agregando os resultados. No SQL Server 2016 R Services (no Banco de Dados), o mecanismo do RevoScaleR é integrado a uma instância do mecanismo de banco de dados, reunindo os dados e a análise no mesmo contexto de processamento. <br/><br/>Integração entre o T-SQL e o R por meio de [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Você pode chamar qualquer código R usando esse procedimento armazenado. Essa infraestrutura segura permite a implantação de nível empresarial de modelos e scripts do Rn que podem ser chamados em um aplicativo usando um procedimento armazenado simples. Ganhos de desempenho adicionais são obtidos por meio do streaming de dados dos processos do SQL para os processos do R e da paralelização de anel MPI. <br/><br/>Use a função T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) para executar a [pontuação nativa](predictions/native-scoring-predict-transact-sql.md) em um modelo pré-treinado que foi salvo anteriormente no formato binário exigido.|
 
 ::: moniker-end
 
@@ -110,7 +112,7 @@ Para obter os comunicados sobre todos os recursos, confira [Novidades do SQL Ser
 
 O SQL Server 2019 adiciona o suporte para Linux para R e Python quando você instala os pacotes de aprendizado de máquina com uma instância do mecanismo de banco de dados. Para obter mais informações, confira [Instalar os Serviços de Machine Learning do SQL Server no Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-No Linux, o SQL Server 2017 não tem a integração do R nem do Python, mas você pode usar a [pontuação nativa](sql-native-scoring.md) no Linux, pois essa funcionalidade está disponível por meio do T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), que é executado no Linux. A pontuação nativa permite a pontuação de alto desempenho por meio de um modelo pré-treinado, sem chamar ou, até mesmo, exigir um runtime do R.
+No Linux, o SQL Server 2017 não tem a integração do R nem do Python, mas você pode usar a [pontuação nativa](predictions/native-scoring-predict-transact-sql.md) no Linux, pois essa funcionalidade está disponível por meio do T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), que é executado no Linux. A pontuação nativa permite a pontuação de alto desempenho por meio de um modelo pré-treinado, sem chamar ou, até mesmo, exigir um runtime do R.
 ::: moniker-end
 
 ## <a name="next-steps"></a>Próximas etapas

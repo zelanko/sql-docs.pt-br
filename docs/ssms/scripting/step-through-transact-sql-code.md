@@ -1,5 +1,6 @@
 ---
 title: Percorrer código Transact-SQL
+description: Saiba como usar o depurador Transact-SQL para controlar quais instruções Transact-SQL são executadas em uma janela do Editor de Consultas do Mecanismo de Banco de Dados.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243437"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246173"
 ---
 # <a name="step-through-transact-sql-code"></a>Percorrer código Transact-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que você controle quais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] são executadas em uma janela Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode pausar o depurador em instruções individuais e exibir o estado dos elementos de código nesse ponto.  
 

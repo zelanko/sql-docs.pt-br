@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012148"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243683"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 
@@ -55,7 +55,7 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 > [!NOTE]
 > A tabela a seguir inclui uma coluna para as versões de 32 bits, que não estão mais disponíveis.
 
-| |32 bits <sup>1</sup> |64 bits|
+|Política de memória|32 bits <sup>1</sup> |64 bits|
 |-------|-------|-------| 
 |Memória convencional |Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Até o limite de espaço de endereço virtual do processo: <br>- 2 GB<br>- 3 GB com parâmetro de inicialização de /3gb <sup>2</sup> <br>- 4 GB no WOW64 <sup>3</sup> |Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Até o limite de espaço de endereço virtual do processo: <br>- 7 TB com arquitetura IA64 (IA64 não tem suporte no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e posterior)<br>- Máximo do sistema operacional com a arquitetura x64 <sup>4</sup>
 |Mecanismo AWE (Permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ir além do limite de espaço de endereço virtual do processo na plataforma de 32 bits.) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edições Standard, Enterprise e Developer: o pool de buffers é capaz de acessar até 64 GB de memória.|Não aplicável <sup>5</sup> |

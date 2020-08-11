@@ -1,5 +1,6 @@
 ---
 title: Adicionar um instantâneo ao histórico de relatórios – Reporting Services | Microsoft Docs
+description: Saiba detalhes sobre como adicionar manualmente um instantâneo ao histórico de relatórios no SSRS (SQL Server Reporting Services).
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68251937"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245729"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Adicionar um instantâneo ao histórico de relatório
 

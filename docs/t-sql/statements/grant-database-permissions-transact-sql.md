@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c421a03bfbafbe8d734ad6d3174e3ea20834606
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5aca8d2f5135400c80c5943455237c066a7ba424
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482868"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236636"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>Permissões de banco de dados GRANT (Transact-SQL)
 
@@ -63,9 +63,9 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* Especifica uma permissão que pode ser concedida em um banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.
 
-ALL Esta opção não concede todas as permissões possíveis. A concessão ALL é equivalente a conceder as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+ALL Esta opção não concede todas as permissões possíveis. A concessão ALL é equivalente a conceder as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
-PRIVILEGES Incluídos para conformidade com ISO. Não altera o comportamento de ALL.
+PRIVILEGES Incluídos para conformidade com ANSI-92. Não altera o comportamento de ALL.
 
 WITH GRANT OPTION Indica que a entidade de segurança também terá a capacidade de conceder a permissão especificada a outros principais.
 

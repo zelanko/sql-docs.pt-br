@@ -1,5 +1,6 @@
 ---
 title: Funcionalidade descontinuada no SSRS (SQL Server Reporting Services) 2016
+description: Saiba detalhes sobre os recursos do SQL Server Reporting Services que não estão mais disponíveis no SQL Server 2016.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
-ms.openlocfilehash: a34b37a2e970c0f7a1a873947d9f8432c0b9733c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dec5b4ab6d942b448e051c4db54c2e180e4b0ad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74317850"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246317"
 ---
 # <a name="discontinued-functionality-in-sql-server-2016-reporting-services-ssrs"></a>Funcionalidade descontinuada no SSRS (SQL Server Reporting Services) 2016
 
@@ -22,7 +23,7 @@ ms.locfileid: "74317850"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Este artigo descreve os recursos do SQL Server Reporting Services que não estão mais disponíveis no SQL Server 2016. Ele não inclui anúncios sobre suporte descontinuado para versões específicas do sistema operacional ou do IIS (Serviços de Informações da Internet) da Microsoft. Para obter mais informações sobre os pré-requisitos, consulte [Requisitos de hardware e de software para instalar o SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+Este artigo descreve os recursos do SQL Server Reporting Services que não estão mais disponíveis no SQL Server 2016. Não inclui anúncios sobre suporte descontinuado para versões específicas do sistema operacional ou do IIS (Serviços de Informações da Internet) da Microsoft. Para obter mais informações sobre os pré-requisitos, consulte [Requisitos de hardware e de software para instalar o SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 Um *recurso descontinuado* é aquele que não tem mais suporte. Ele pode também ser fisicamente removido do produto. Os recursos a seguir foram descontinuados.
 

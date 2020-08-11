@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668872"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247068"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  Os procedimentos armazenados compilados nativamente são compilados no momento da criação, enquanto os procedimentos armazenados interpretados são compilados no momento da primeira execução. (Uma parte da compilação, particularmente de análise e algebrização, ocorre na criação. No entanto, para procedimentos armazenados interpretados, a otimização dos planos de consulta ocorre na primeira execução.) A lógica de recompilação é semelhante. Os procedimentos armazenados compilados nativamente são recompilados na primeira execução do procedimento se o servidor for reiniciado. Os procedimentos armazenados interpretados serão recompilados se o plano não estiver mais no cache do plano. A tabela a seguir resume os casos de compilação e recompilação para procedimentos armazenados interpretados e compilados nativamente:  
   
-||Originalmente compilado|Acesso do|  
+|Tempo de Compilação|Originalmente compilado|Acesso do|  
 |-|-----------------------|-----------------|  
 |Compilação inicial|No momento da criação.|Na primeira execução.|  
 |Recompilação automática|Na primeira execução do procedimento após o reinício do banco de dados ou do servidor.|Na reinicialização do servidor. Ou, remoção do cache do plano, geralmente com base nas alterações de estatísticas ou esquema, ou demanda de memória.|  

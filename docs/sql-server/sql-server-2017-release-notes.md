@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001109"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245598"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de Versão do SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 Este tópico descreve as limitações e os problemas com o SQL Server 2017. Para obter informações relacionadas. consulte:
 - [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notas de versão do SQL Server no Linux](../linux/sql-server-linux-release-notes.md)
@@ -74,7 +74,7 @@ Não há nenhuma nota de versão do SQL Server no Windows relacionada a essa ver
 - **Problema e impacto ao cliente:** O parâmetro *runincluster* do procedimento armazenado **[catalog].[create_execution]** foi renomeado como *runinscaleout*, a fim de obter consistência e legibilidade.
 - **Solução alternativa:** Se você tiver scripts existentes para executar pacotes no Scale Out, precisará alterar o nome do parâmetro de *runincluster* para *runinscaleout* para que os scripts funcionem no RC1.
 
-- **Problema e impacto ao cliente:** O SSMS (SQL Server Management Studio) 17.1 e versões anteriores não pode disparar a execução de pacote no Scale Out no RC1. A mensagem de erro é: " *@runincluster* não é um parâmetro para o procedimento **create_execution**." Esse problema é corrigido na próxima versão do SSMS, a versão 17.2. A versão 17.2 e posteriores do SSMS oferecem suporte ao novo nome de parâmetro e execução de execução em Scale Out. 
+- **Problema e impacto ao cliente:** O SSMS (SQL Server Management Studio) 17.1 e versões anteriores não pode disparar a execução de pacote no Scale Out no RC1. A mensagem de erro é: " *\@runincluster* não é parâmetro para o procedimento **create_execution**". Esse problema é corrigido na próxima versão do SSMS, a versão 17.2. A versão 17.2 e posteriores do SSMS oferecem suporte ao novo nome de parâmetro e execução de execução em Scale Out. 
 - **Solução alternativa:** até a versão 17.2 do SSMS estar disponível:
   1. Use sua versão existente do SSMS para gerar o script de execução do pacote.
   2. Altere o nome do parâmetro *runincluster* para *runinscaleout* no script.
@@ -150,7 +150,7 @@ Não há nenhuma nota de versão do SQL Server no Windows relacionada a essa ver
 
 ## <a name="more-information"></a>Mais informações
 - [Notas de versão do SQL Server Reporting Services](../reporting-services/release-notes-reporting-services.md).
-- [Problemas Conhecidos de Serviços de Machine Learning](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [Problemas Conhecidos de Serviços de Machine Learning](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [Centro de atualização do SQL Server – links e informações para todas as versões com suporte](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

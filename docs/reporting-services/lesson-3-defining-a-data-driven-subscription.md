@@ -1,5 +1,6 @@
 ---
 title: 'Lição 3: Definindo uma assinatura controlada por dados | Microsoft Docs'
+description: Use as páginas da assinatura controlada por dados do portal da Web do Reporting Services para se conectar a uma fonte de dados de assinatura e criar uma consulta que recupere dados de assinatura.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332a1cbcda7bee87c16167179ef488fe02334474
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826861"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247175"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lição 3: Definindo uma assinatura controlada por dados
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
   
 > [!NOTE]  
 > Antes de começar, verifique se o serviço **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** está em execução. Se não estiver, não será possível salvar a assinatura.  Um método de verificação é abrir o [Gerenciador de Configuração do SQL Server](../relational-databases/sql-server-configuration-manager.md).
-Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, consulte [Lição 2: modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+Esta lição pressupõe que você concluiu a Lição 1 e Lição 2, e que a fonte de dados de relatório usa credenciais armazenadas.  Para obter mais informações, veja [Lição 2: Modificar as propriedades de fonte de dados de relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Iniciar o Assistente de Assinatura Controlada por Dados  
   
@@ -86,7 +87,7 @@ Parâmetro  |Origem do valor  | Valor/campo
 **Formato de renderização** | Obter valor do conjunto de dados | Formatar
 **Modo de gravação**| Inserir valor| Incremento automático    
 **Extensão do arquivo** |Inserir valor |True
-**Nome de usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira-o neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
+**Nome de usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
 **Senha** | Inserir valor | Digite sua senha
 **Usar conta de compartilhamento de arquivo** | Inserir valor | Falso
 

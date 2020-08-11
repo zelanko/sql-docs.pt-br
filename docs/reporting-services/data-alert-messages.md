@@ -1,5 +1,6 @@
 ---
 title: Mensagens de alerta de dados | Microsoft Docs
+description: 'Saiba como os alertas de dados do SQL Server Reporting Services entregam dois tipos de mensagens de alerta de dados por email: mensagens com resultados de alertas de dados e mensagens com descrições de erro.'
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6af7f155edba97ea558c7bc6427bb5ef143eea47
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571553"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245157"
 ---
 # <a name="data-alert-messages"></a>Mensagens de alertas de dados
 

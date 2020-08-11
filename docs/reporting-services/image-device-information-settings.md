@@ -1,5 +1,6 @@
 ---
 title: Configurações de informações de dispositivo de imagem | Microsoft Docs
+description: Saiba mais sobre as diversas configurações de informações de dispositivo que você pode usar para renderizar em um formato de imagem no Reporting Services.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57126e2ab47493b2f320308344acf9d15b572318
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503077"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247165"
 ---
 # <a name="image-device-information-settings"></a>Configurações das informações do dispositivo do Image
   A tabela a seguir lista as configurações de informações de dispositivo para renderização no formato do IMAGE.  
@@ -32,7 +33,7 @@ ms.locfileid: "65503077"
 |**MarginLeft**|O valor da margem esquerda, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, **1in**). Esse valor substitui as configurações originais do relatório.|  
 |**MarginRight**|O valor da margem direita, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, **1in**). Esse valor substitui as configurações originais do relatório.|  
 |**MarginTop**|O valor da margem superior, em polegadas, a ser definido para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, **1in**). Esse valor substitui as configurações originais do relatório.|  
-|**OutputFormat**|Um dos formatos de saída de [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) com suporte: **BMP**, **EMF**, **GIF**, **JPEG**, **PNG**ou **TIFF**.|  
+|**OutputFormat**|Um dos formatos de saída compatíveis do [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]): **BMP**, **EMF**, **GIF**, **JPEG**, **PNG** ou **TIFF**.|  
 |**PageHeight**|A altura da página, em polegadas, a ser definida para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, **11in**). Esse valor substitui as configurações originais do relatório.|  
 |**PageWidth**|A largura da página, em polegadas, a ser definida para o relatório. Inclua um valor inteiro ou um decimal seguido de "in" (por exemplo, **8,5in**). Esse valor substitui as configurações originais do relatório.|  
 |**PrintDpiX**|A resolução horizontal da imagem de saída. O valor padrão é **300**. Aplica-se ao formato de saída de metarquivo avançado (**EMF**).|  

@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Formatar texto (Construtor de Relatórios) | Microsoft Docs'
+description: Saiba como formatar texto de várias maneiras em um relatório paginado do Reporting Services. Por exemplo, é possível testar diferentes formatos.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63042929"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248115"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
 
@@ -50,7 +51,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
 
     Se o painel **Dados do Relatório** não estiver visível, na guia **Exibir** , marque **Dados do Relatório**.
   
-2.  Na caixa **Nome** , digite: **TextDataSource**  
+2.  Na caixa **Nome**, digite: **TextDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
@@ -67,7 +68,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
-3.  Na caixa **Nome** , digite: **TextDataset.**  
+3.  Na caixa **Nome**, digite: **TextDataset.**  
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   
@@ -179,7 +180,7 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
 1.  Na guia **Inserir** > **Tabela** > **Assistente de Tabela**.  
   
-2.  Na página **Escolher um conjunto de dados** do Assistente de Nova Tabela ou Matriz, clique em **Escolher um conjunto de dados existente neste relatório ou em um conjunto de dados compartilhado** > **TextDataset (neste Relatório)**  > **Avançar**.  
+2.  Na página **Escolher um conjunto de dados** do Assistente de Nova Tabela ou Matriz, clique em **Escolher um conjunto de dados existente neste relatório ou em um conjunto de dados compartilhado** > **TextDataset (neste Relatório)** > **Avançar**.  
   
 3.  Na página **Organizar campos** , arraste os campos **Territory**, **LinkText**e **Product** até **Grupos de Linhas**, arraste o campo **Sales** até **Valores**e clique em **Avançar**.  
 
@@ -355,7 +356,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Há várias maneiras de formatar um texto no Construtor de Relatórios. O [Tutorial: Criação de um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
+Há várias maneiras de formatar um texto no Construtor de Relatórios. [Tutorial: Criar um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
 
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 [Formatação de Itens de Relatório](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

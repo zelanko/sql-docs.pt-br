@@ -1,5 +1,6 @@
 ---
 title: Configurar o IntelliSense (SQL Server Management Studio)
+description: A maioria das opções do IntelliSense está ativada por padrão. Saiba como desligar a uma opção do IntelliSense e invocá-la por meio de um comando de menu ou uma combinação de pressionamento de teclas.
 ms.custom: seo-lt-2019
 ms.date: 06/02/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3310c432e872ca7819c6d9f60b777d1b077f9f98
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaf166e819f062f8b66ab8b171f345cb68515383
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253947"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122848"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurar o IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A maioria da opções [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense é ativada por padrão. Você pode desativar a uma opção IntelliSense e no lugar dela invocar por meio de um comando de menu ou combinação de teclas.  
   
 > [!IMPORTANT]  

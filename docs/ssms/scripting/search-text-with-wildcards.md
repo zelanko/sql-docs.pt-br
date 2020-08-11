@@ -1,5 +1,6 @@
 ---
 title: Pesquisar texto com curingas
+description: Saiba como usar curingas no campo "Localizar" de uma caixa de diálogo Localizar e Substituir para especificar um padrão para correspondência.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8e2766939038879d92de0f8f73b5c2eab38f45d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253619"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122787"
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  As expressões a seguir podem substituir caracteres ou dígitos no campo **O que localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Localizar e Substituir**do**.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  As expressões a seguir podem substituir caracteres ou dígitos no campo **O que localizar** da caixa de diálogo **Localizar e Substituir** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-search-using-wildcards"></a>Para pesquisar usando curingas  
   
@@ -35,7 +36,7 @@ ms.locfileid: "75253619"
   
  A tabela a seguir descreve os curingas disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|DESCRIÇÃO|  
+|Expression|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere único|?|Corresponde a qualquer caractere único.|  
 |Qualquer dígito único|#|Corresponde a qualquer dígito único. Por exemplo, 7# corresponde a números que incluem 7 seguidos por outro número, como 71, mas não 17.|  

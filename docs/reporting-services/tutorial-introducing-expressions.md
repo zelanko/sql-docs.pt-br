@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Apresentação de expressões | Microsoft Docs'
+description: Saiba como usar expressões com funções e operadores comuns para criar relatórios paginados avançados e flexíveis do Reporting Services.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295894"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248535"
 ---
-# <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
+# <a name="tutorial-introducing-expressions"></a>Tutorial: Introdução às expressões
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você usa expressões com funções e operadores comuns para criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avançados e flexíveis. 
 
 Você escreverá expressões que concatenam valores de nome, pesquisará valores em um conjunto de dados separado, exibirá diferentes cores com base em valores de campo e assim por diante.  
@@ -89,7 +90,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
     ```  
 
   
-10. Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ). O conjunto de resultados exibe 23 linhas de dados e nas seguintes colunas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
+10. Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ). O conjunto de resultados exibe 23 linhas de dados com as seguintes colunas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Exibir nome, inicial e sobrenome  
-Nesta seção, use a função **Left** e o operador **Concatenate** ( **&** ) em uma expressão avaliada com um nome que inclui uma inicial e um sobrenome. Você pode criar a expressão passo a passo ou ignorá-la no procedimento e copiar/colar a expressão do tutorial na caixa de diálogo **Expressão** .   
+Nesta seção, use a função **Left** e o operador **Concatenate** (**&**) em uma expressão avaliada com um nome que inclui uma inicial e um sobrenome. Você pode criar a expressão passo a passo ou ignorá-la no procedimento e copiar/colar a expressão do tutorial na caixa de diálogo **Expressão** .   
   
 1.  Clique com o botão direito do mouse na coluna **StateProvince** , aponte para **Inserir Coluna**e clique em **Esquerda**.  
   
@@ -357,7 +358,7 @@ Nesta seção, você cria o conjunto de dados CountryRegion e usa a função **L
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Para pesquisar valores no conjunto de dados CountryRegion  
   
-1.  Clique no cabeçalho da coluna **Country Region ID** e exclua o texto: **ID**, de modo que ele se torna **Country Region**.  
+1.  Clique no cabeçalho da coluna **Identificação de país ou região** e exclua o texto: **ID**, para ler **Região do País**.  
   
 2.  Clique com o botão direito do mouse na célula de dados da coluna **Country Region** e clique em **Expressão**.  
   

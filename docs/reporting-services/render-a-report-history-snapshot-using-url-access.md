@@ -1,5 +1,6 @@
 ---
 title: Renderizar um instantâneo do histórico de relatórios usando o acesso à URL | Microsoft Docs
+description: Saiba como renderizar um relatório com base em um instantâneo de histórico de relatório fornecendo o parâmetro rs:Snapshot e definindo seu valor como uma ID de instantâneo válida.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2caf9def46440aa87f8b4e143cc9e3163e408ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 01a173da6f22b2f2ed1cc5c273b4e1f0f1c0ec1a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580803"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247473"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Renderizar instantâneo de histórico de relatório com o acesso à URL
   Você pode renderizar um relatório com base em um instantâneo de histórico de relatório fornecendo o parâmetro *rs:Snapshot* e definindo seu valor como uma ID de instantâneo válida. O valor do parâmetro está no formato AAAA-MM-DDTHH:MM:SS, com base no padrão ISO (Organização Internacional de Padronização) 8601.  

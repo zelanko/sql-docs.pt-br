@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Relatório de mapa (Construtor de Relatórios) | Microsoft Docs'
+description: Saiba mais sobre os recursos de mapa que você pode usar para exibir dados em um plano de fundo geográfico em um relatório paginado do Reporting Services.
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041428"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248125"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de Mapa (Construtor de Relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Os mapas se baseiam em dados espaciais que geralmente consistem em pontos, linhas e polígonos. Por exemplo, um polígono pode representar a estrutura de tópicos de um município, uma linha pode representar uma estrada e um ponto pode representar o local de uma cidade. Cada tipo de dados espaciais é exibido em uma camada do mapa separada como um conjunto de elementos de mapa.  
@@ -171,10 +172,10 @@ Nesta seção, você usa o assistente de camadas do mapa para adicionar uma cama
     O conjunto de resultados contém sete colunas que representam um conjunto de lojas no estado de Nova York que vendem bens de consumo. Aqui está uma lista, com explicações para aquelas que podem não ser óbvias: 
     *   **StoreKey**: um identificador de repositório.  
     *   **StoreName**.
-    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1.125 pés quadrados.
+    *   **SellingArea**: a área disponível para exibição do produto, que varia de 455 pés quadrados a 1125 pés quadrados.
     *   **City**.
     *   **County**.
-    *   **Sales**: Total de vendas. 
+    *   **Vendas**: total de vendas. 
     *   **SpatialLocation**: local em longitude e latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 

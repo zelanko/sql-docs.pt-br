@@ -1,5 +1,6 @@
 ---
 title: 'Lição 7: Adicionar uma ação de detalhamento ao relatório pai | Microsoft Docs'
+description: Saiba como adicionar um controle de detalhamento no relatório pai depois de adicionar um controle ReportViewer ao aplicativo de site.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6a6e588cb79ffbc97450a4ad0a627957dc73b75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651262"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243247"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lição 7: Adicionar ação de detalhamento ao relatório pai
 Depois que você adicionar um controle ReportViewer para o aplicativo de site, a próxima etapa será adicionar uma ação de detalhamento no relatório pai.  
@@ -40,7 +41,7 @@ Depois que você adicionar um controle ReportViewer para o aplicativo de site, a
 8.  Selecione **OK** para concluir.  
   
 ## <a name="next-task"></a>Próxima tarefa  
-Você adicionou uma ação de detalhamento no relatório pai. Em seguida, você criará um filtro de dados para a tabela de dados definida para o relatório filho. Consulte [Lição 8: Criar um filtro de dados](../reporting-services/lesson-8-create-a-data-filter.md).  
+Você adicionou uma ação de detalhamento no relatório pai. Em seguida, você criará um filtro de dados para a tabela de dados definida para o relatório filho. Confira a [Lição 8: Criar um filtro de dados](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

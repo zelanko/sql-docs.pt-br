@@ -1,5 +1,6 @@
 ---
 title: Especificar uma ação de ponto de interrupção
+description: Aprenda agora a especificar uma ação What Hit, uma tarefa personalizada para o depurador Transact-SQL executar quando um ponto de interrupção é atingido e algumas outras condições são satisfeitas.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253648"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122717"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.
 
@@ -41,7 +42,7 @@ Uma mensagem de impressão é especificada na opção **Imprimir uma Mensagem** 
   
     1.  $ADDRESS retorna o nome do procedimento armazenado ou a função definida pelo usuário onde o ponto de interrupção foi definido. Se o ponto de interrupção for definido na janela do editor, $ADDRESS retornará o nome do arquivo de script que está sendo editado. $ADDRESS e $FUNCTION retornam as mesmas informações no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER retorna o nome da unidade do código [!INCLUDE[tsql](../../includes/tsql-md.md)] que chamou um procedimento armazenado ou uma função. Se o ponto de interrupção estiver na janela do editor, $CALLER retornará \<Nenhum chamador disponível>. Se o ponto de interrupção estiver em um procedimento armazenado ou se a função definida pelo usuário foi chamada do código na janela do editor, $CALLER retornará o nome do arquivo que está sendo editado. Se o ponto de interrupção estiver em um procedimento armazenado ou a função definida pelo usuário tiver sido chamada de outro procedimento armazenado ou função, $CALLER retornará o nome do procedimento ou da função de chamada.  
+    2.  $CALLER retorna o nome da unidade do código [!INCLUDE[tsql](../../includes/tsql-md.md)] que chamou um procedimento armazenado ou uma função. Se o ponto de interrupção estiver na janela do editor, $CALLER retornará \<No caller available>. Se o ponto de interrupção estiver em um procedimento armazenado ou se a função definida pelo usuário foi chamada do código na janela do editor, $CALLER retornará o nome do arquivo que está sendo editado. Se o ponto de interrupção estiver em um procedimento armazenado ou a função definida pelo usuário tiver sido chamada de outro procedimento armazenado ou função, $CALLER retornará o nome do procedimento ou da função de chamada.  
   
     3.  $CALLSTACK retornará a pilha de chamada de funções na cadeia que chamou o procedimento armazenado ou a função definida pelo usuário atual. Se o ponto de interrupção estiver na janela do editor, $CALLSTACK retornará o nome do arquivo de script que está sendo editado.  
   

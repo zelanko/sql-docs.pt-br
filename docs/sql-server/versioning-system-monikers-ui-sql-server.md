@@ -1,20 +1,18 @@
 ---
 title: Documentação do sistema de controle de versão do SQL
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150603"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247361"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de controle de versão para documentação do SQL
 
@@ -36,7 +34,7 @@ Essa abordagem antiga significava que se uma falha fosse descoberta na documenta
 
 ## <a name="multiple-versions-in-the-same-files"></a>Várias versões nos mesmos arquivos
 
-Por esse motivo e por outros, os arquivos de documentação do SQL Server 2016 também são para o 2017, o 2019 e provavelmente para o \<vNext\>. Essa consolidação se tornou prática porque agora atribuímos _monikers de controle de versão_ aos nossos arquivos de documentação do SQL Server. Os monikers de controle de versão são atribuídos ou inseridos explicitamente a qualquer grau de granularidade que faça sentido para cada arquivo de documentação fornecido.
+Por esse e outros motivos, os arquivos de documentação do SQL Server 2016 também são usados para o 2017, o 2019 e provavelmente o \<vNext\>. Essa consolidação se tornou prática porque agora atribuímos _monikers de controle de versão_ aos nossos arquivos de documentação do SQL Server. Os monikers de controle de versão são atribuídos ou inseridos explicitamente a qualquer grau de granularidade que faça sentido para cada arquivo de documentação fornecido.
 
 ## <a name="versioning-control-in-the-ui"></a>Controle de versão na interface do usuário
 
@@ -136,7 +134,7 @@ Há um nome de produto de moniker especial de **Todo o SQL** e sua única versã
 
 Alguns artigos têm informações relacionadas a várias versões do SQL Server. Cada moniker regular oculta seções com controle de versão que, de outra forma, podem exibir informações que são imprecisas, confusas ou contraditórias para a versão do moniker. O moniker **Todo o SQL** especial exibe todas as seções de versão e talvez não seja óbvio que informações imprecisas estão sendo exibidas.
 
-## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Mensagem: A página solicitada não está disponível para o \<moniker\>
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Mensagem: A página solicitada não está disponível para \<moniker\>
 
 O cenário a seguir leva à exibição de uma mensagem informativa próxima à parte superior da página da Web :::no-loc text="Docs"::::
 
@@ -163,10 +161,11 @@ O sistema de controle de versão está totalmente implementado para a versão 20
     - [Versões anteriores do SQL Server, 2012 – 2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; O sistema de controle de versão está meio implementado para o SQL Server 2014. Você pode escolher SQL Server 2014 no controle de versão e isso funciona. No entanto, internamente, os arquivos do 2014 são dedicados apenas ao 2014, da mesma forma que os arquivos do 2008 são dedicados apenas ao 2008.
-    - [Documentação do SQL Server 2014](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [Documentação offline do SQL Server 2014](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 e posteriores:_ &nbsp; O sistema de controle de versão está totalmente implementado para o SQL Server 2016 e versões posteriores.
     - [Bem-vindo à documentação do SQL Server 2016 e versões posteriores](/sql/sql-server/?view=sql-server-2016)
+    - [Documentação offline do SQL Server 2016](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Confira também
 

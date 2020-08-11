@@ -1,5 +1,6 @@
 ---
 title: Novidades do Reporting Services | Microsoft Docs
+description: Saiba mais sobre as novidades nas diferentes versões do SQL Server Reporting Services, incluindo as alterações nas principais áreas de recursos.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079613"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248545"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
@@ -34,19 +35,19 @@ O [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/detail
 
 ### <a name="azure-sql-managed-instance-support"></a>Suporte às instâncias gerenciadas do Azure SQL
 
-Agora você pode hospedar um catálogo de banco de dados usado para o SSRS (SQL Server Reporting Services) em uma MI (Instância Gerenciada) do SQL do Azure hospedada em uma VM ou no seu data center. A compatibilidade é limitada ao uso das credenciais de banco de dados para a conexão com a MI do SQL.
+Agora você pode hospedar um catálogo de banco de dados usado para o SSRS (SQL Server Reporting Services) em uma MI (Instância Gerenciada) do SQL do Azure hospedada em uma VM ou no seu data center. O suporte é limitado ao uso de credenciais de banco de dados para a conexão com a MI do SQL.
 
 ### <a name="power-bi-premium-dataset-support"></a>Compatibilidade com o conjunto de dados do Power BI Premium
 
-Você pode se conectar a conjuntos do Power BI usando o Construtor de Relatórios da Microsoft ou o SSDT (SQL Server Data Tools). Em seguida, você pode publicar esses relatórios no SSRS 2019 usando a conectividade do SQL Server Analysis Services. Os usuários precisam usar um nome de usuário e senha do Windows armazenados para habilitar o cenário.
+Você pode se conectar aos conjuntos de dados do Power BI usando o Construtor de Relatórios da Microsoft ou o SSDT (SQL Server Data Tools). Em seguida, você pode publicar esses relatórios no SSRS 2019 usando a conectividade do SQL Server Analysis Services. Para ativar o cenário, os usuários precisam usar um nome de usuário e senha armazenados do Windows.
 
 ### <a name="alttext-alternative-text-support-for-report-elements"></a>Compatibilidade do AltText (texto alternativo) para elementos do relatório
 
-Ao criar relatórios, você pode usar dicas de ferramenta para especificar o texto de cada elemento no relatório. A tecnologia de leitor de tela identifica essas dicas de ferramenta corretamente.
+Ao criar relatórios, você pode usar dicas de ferramentas para especificar o texto de cada elemento no relatório. A tecnologia de leitor de tela identifica essas dicas de ferramenta corretamente.
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Suporte de Proxy de Aplicativo do Azure Active Directory
 
-Com o Proxy de Aplicativo do Azure Active Directory, você não precisa mais gerenciar seu proxy de aplicativo Web para permitir o acesso seguro por meio de aplicativos Web ou móveis.
+Com o Proxy de Aplicativo do Azure Active Directory, você não precisa mais gerenciar seu próprio proxy de aplicativo Web para permitir acesso seguro via aplicativos móveis ou da Web.
 
 ### <a name="custom-headers"></a>Cabeçalhos personalizados
 
@@ -58,7 +59,7 @@ O SQL Server 2019 agora é compatível com o Transparent Data Encryption para o 
 
 ### <a name="microsoft-report-builder-update"></a>Atualização do Construtor de Relatórios da Microsoft
 
-A versão lançada recentemente do Construtor de Relatórios é totalmente compatível com as versões 2016, 2017 e 2019 do Reporting Services. Ele também é compatível com todas as versões lançadas e compatíveis do Servidor de Relatórios do Power BI.
+A versão lançada recentemente do Construtor de Relatórios é totalmente compatível com as versões 2016, 2017 e 2019 do Reporting Services. Também é compatível com todas as versões lançadas e compatíveis do Servidor de Relatórios do Power BI.
 
 ::: moniker-end
 
@@ -181,9 +182,9 @@ Para obter mais informações sobre o suporte ao navegador, veja [Suporte ao nav
 
 **Relatórios paginados modernos:** desenvolva relatórios paginados modernos perfeitos com estilos novos e modernos para gráficos, medidores, mapas e outras visualizações de dados.
 
-**Gráficos de mapa de árvore e explosão solar:** aprimore seus relatórios com gráficos de mapa de árvore ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e explosão solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), excelentes maneiras de exibir dados hierárquicos. Para saber mais, confira [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Gráficos Explosão Solar e Mapa de Árvore:** aprimore seus relatórios com gráficos de mapa de árvore ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e explosão solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), excelentes maneiras de exibir dados hierárquicos. Para saber mais, confira [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Inserção de relatório:** agora você pode incorporar relatórios móveis e paginados a outras páginas da Web e aplicativos usando um iframe juntamente com os parâmetros da URL.  
+**Inserção de relatório:** agora você pode inserir relatórios móveis e paginados a outras páginas da Web e aplicativos usando um iframe juntamente com os parâmetros da URL.  
 
 **Fixar itens de relatórios a um Painel do Power BI:** Ao exibir um relatório no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], você pode selecionar itens de relatório e fixá-los a um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Os itens que você pode fixar são gráficos, painéis de medidores, mapas e imagens. Você pode:
 
@@ -197,7 +198,7 @@ Para obter mais informações sobre o suporte ao navegador, veja [Suporte ao nav
 
 Para obter mais informações, consulte [Integração do Servidor de Relatórios do Power BI &#40;Gerenciador de Configurações&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [Fixar itens do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**Renderização e exportação do PowerPoint:** o formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**Renderização e Exportação do PowerPoint:** O formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +210,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Para saber mais, confira [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF substitui o ActiveX na impressão remota:** a barra de ferramentas do visualizador de relatórios agora imprime usando PDF em vez dos controles ActiveX. O novo visualizador de relatórios é compatível com navegadores mais modernos, incluindo o Microsoft Edge. Não é mais necessário baixar os controles do ActiveX! Dependendo do navegador que você usa e dos aplicativos e serviços de visualização de PDF que tenha instalados, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abrirá uma caixa de diálogo de impressão para imprimir seu relatório ou solicitará que você faça o download de um arquivo .PDF. Como administrador, você ainda pode desabilitar a impressão do lado do cliente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**O PDF substitui o ActiveX para impressões remotas:** a barra de ferramentas do Visualizador de Relatórios agora imprime usando PDF em vez dos controles ActiveX. O novo visualizador de relatórios é compatível com navegadores mais modernos, incluindo o Microsoft Edge. Não é mais necessário baixar os controles do ActiveX! Dependendo do navegador que você usa e dos aplicativos e serviços de visualização de PDF que tenha instalados, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abrirá uma caixa de diálogo de impressão para imprimir seu relatório ou solicitará que você faça o download de um arquivo .PDF. Como administrador, você ainda pode desabilitar a impressão do lado do cliente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 Para obter mais informações, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -226,18 +227,18 @@ Para obter mais informações, consulte [Habilitar e desabilitar a impressão do
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-A nova versão do SSDT inclui os modelos de projeto para o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistente de Projeto do Servidor de Relatório e Projeto do Servidor de Relatório. Para saber mais sobre como baixar o SSDT, veja [Ferramentas de Dados do SQL Server para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+A nova versão do SSDT inclui os modelos de projeto para [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistente de Projeto do Servidor de Relatório e Projeto do Servidor de Relatório. Para saber mais sobre como baixar o SSDT, veja [Ferramentas de Dados do SQL Server para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Aprimoramentos do Construtor de Relatórios
 
-**Nova interface do usuário do Construtor de Relatórios:** a principal interface do usuário do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] agora tem uma aparência moderna com elementos de interface do usuário simplificados.  
+**Nova Interface do Usuário do Construtor de Relatórios:** A principal interface de usuário do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] agora tem uma aparência moderna com elementos de interface do usuário simplificados.  
 
 |||  
 |-|-|  
 |Novo|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Painel de parâmetros personalizado:** agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel. Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Painel de Parâmetros Personalizados:** Agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel. Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 ![Lista de parâmetros no painel de dados do relatório e no painel de parâmetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parâmetros no painel de dados do relatório e no painel de parâmetros")  
 

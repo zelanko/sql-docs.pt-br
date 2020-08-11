@@ -1,5 +1,6 @@
 ---
 title: Pesquisar documentos usando listas de resultados
+description: Saiba como pesquisar e substituir um texto em todos os arquivos contidos em um projeto, uma solução ou uma pasta do sistema de arquivos. As correspondências são exibidas na janela Localizar Resultados 1, e você pode clicar duas vezes em uma correspondência para ver a linha que a contém.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b06660f3bc175e9869d669e7996f31d1a704f9b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa62cc76deab4f40f7db63ebd119fc9cd227c72e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253667"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122799"
 ---
 # <a name="search-documents-using-results-lists"></a>Pesquisar documentos usando listas de resultados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Usando a caixa de diálogo **Localizar e Substituir** , você pode pesquisar e substituir texto em todos os arquivos de um projeto ou solução, ou em uma pasta do sistema de arquivos, mesmo quando eles não estiverem abertos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Correspondências de pesquisas executadas com a caixa de diálogo **Localizar e Substituir** são exibidas nas janelas Localizar Resultados 1 e Localizar Resultados 2, que permitem a exibição do texto exato da linha que contém a correspondência.  
   
 ### <a name="to-search-in-multiple-files"></a>Para executar pesquisas em vários arquivos  

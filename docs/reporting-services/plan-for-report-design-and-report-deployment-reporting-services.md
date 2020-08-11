@@ -1,5 +1,6 @@
 ---
 title: Planejar o design e a implantação de relatório | Reporting Services | Microsoft Docs
+description: Saiba como planejar um ambiente de criação de relatórios e de servidor de relatório que funcionem juntos usando o Reporting Services.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581243"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247535"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios paginados. Saiba como planejar ambientes de criação de relatório e de servidor de relatório que funcionam juntos.
@@ -46,7 +47,7 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Suporte para servidor de relatório e esquema RDL  
  Um arquivo de definição de relatório pode ser implantado em um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] das seguintes maneiras:  
   
--   **Designer de Relatórios:** implante um relatório do Designer de Relatórios no [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Designer de Relatórios:** implante um relatório do Designer de Relatórios em [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
 -   **Construtor de Relatórios:** salve um relatório no servidor de relatório do Construtor de Relatórios.  
   

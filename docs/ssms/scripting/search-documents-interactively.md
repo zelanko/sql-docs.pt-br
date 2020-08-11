@@ -1,5 +1,6 @@
 ---
 title: Pesquisar documentos interativamente
+description: Saiba como usar a caixa de diálogo Localizar e Substituir para pesquisar uma ou mais janelas ou arquivos abertos, pausando a pesquisa cada correspondência para examinar o que foi encontrado no contexto. Você também pode executar uma operação de localização em massa e examinar as correspondências de pesquisa no formato de relatório.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253659"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122801"
 ---
 # <a name="search-documents-interactively"></a>Pesquisar documentos interativamente
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Usando a caixa de diálogo **Localizar e Substituir** , você pode pesquisar um ou mais arquivos ou janelas abertas, e navegar pelos resultados da pesquisa um a um. Essa técnica permite a revisão de cada correspondência individual da pesquisa no contexto do texto da correspondência. Você também tem a opção de executar operações de localização em massa e revisar correspondências da pesquisa no formato de relatório usando a caixa de diálogo **Localizar e Substituir** .  
   
 ### <a name="to-search-all-open-documents"></a>Para pesquisar todos os documentos abertos  

@@ -1,5 +1,6 @@
 ---
 title: 'Lição 1: Criando um banco de dados do assinante de exemplo | Microsoft Docs'
+description: Saiba como criar um banco de dados pequeno de "assinante" para armazenar dados de assinatura que serão usados por uma assinatura controlada por dados.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513158"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243257"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lição 1: Criando um banco de dados do assinante de exemplo
 
@@ -55,14 +56,14 @@ Esta lição pressupõe que você esteja usando o [!INCLUDE[ssManStudioFull_md](
     GO  
     ```  
   
-7.  Clique em **! Execute** na barra de ferramentas.  
+7.  Clique em **! Execute**  na barra de ferramentas.  
   
 8.  Use uma instrução SELECT para verificar se há três linhas de dados. Por exemplo: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Próximas etapas  
 + Você criou com êxito os dados de assinatura que controlarão a distribuição de relatórios e modificarão a saída de relatório para cada assinante. 
 + Em seguida, você modificará as propriedades de fonte de dados do relatório para usar credenciais armazenadas. 
-+ Você também modificará o design do relatório para incluir um parâmetro que a assinatura usará com os dados do assinante. [Lição 2: Modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
++ Você também modificará o design do relatório para incluir um parâmetro que a assinatura usará com os dados do assinante. [Lição 2: Como modificar as propriedades de fonte de dados de relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
 ## <a name="next-steps"></a>Próximas etapas
 

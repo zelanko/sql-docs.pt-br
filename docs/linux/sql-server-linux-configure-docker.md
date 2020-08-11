@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 14b0ff1c40ae8e809f7ad5b39e482bd3f76774ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89f68b19a47605e5f2ad9d02abffc6810d8df578
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899641"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245615"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -638,6 +638,14 @@ Adicione a variável `MSSQL_DATA_DIR` para alterar o diretório de dados em seu 
 
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
+## <a name="enable-sql-server-agent"></a><a id="enablesqlagent"></a> Habilitar o SQL Server Agent
+
+Habilite o SQL Server Agent e ele será iniciado automaticamente com SQL Server
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_AGENT_ENABLED=true" --name sql1 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ## <a name="troubleshooting"></a><a id="troubleshooting"></a> Solução de problemas

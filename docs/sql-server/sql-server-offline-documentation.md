@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151546"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237836"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Instalar a documentação do SQL Server para visualização offline em SSMS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Este artigo descreve como baixar e exibir o conteúdo do SQL Server no [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) offline. O conteúdo offline permite acessar a documentação sem estar conectado à Internet (embora seja necessário inicialmente uma conexão com a Internet para baixá-lo).
 
@@ -34,7 +35,7 @@ As etapas a seguir explicam como carregar conteúdo offline para o SQL Server 20
 
 1. No SSMS, selecione **Adicionar e Remover o Conteúdo da Ajuda** no menu Ajuda.
 
-   ![Adicionar e remover conteúdo do Help Viewer](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![Adicionar e Remover Conteúdo da Ajuda](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    O Help Viewer é aberto na guia Gerenciar Conteúdo.
 
@@ -58,11 +59,14 @@ As etapas a seguir explicam como carregar conteúdo offline para o SQL Server 20
 
 ## <a name="sql-server-2014-offline-content"></a>Conteúdo offline do SQL Server 2014
 
+> [!IMPORTANT]
+> O conteúdo Transact-SQL do SQL 2014 só está disponível offline.
+
 As etapas a seguir explicam como carregar conteúdo offline para o SQL Server 2014.
 
 1. Baixe o conteúdo da [Documentação do produto do Microsoft SQL Server 2014 para ambientes restritos por firewall e proxy](https://www.microsoft.com/download/details.aspx?id=42557) no centro de downloads e salve-o em uma pasta.
 
-2. Descompacte a pasta zip para visualizar o arquivo.msha.
+2. Descompacte o arquivo para ver o arquivo *.msha*.
 
    ![Arquivo de instalação da documentação de Ajuda do SQL Server 2014](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -97,16 +101,13 @@ As etapas a seguir explicam como carregar conteúdo offline para o SQL Server 20
 
    ![Manuais do SQL Server 2014 atualizados automaticamente](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
-> [!Tip]
-> O conteúdo Transact-SQL do SQL 2014 só está disponível offline.
-
 ## <a name="sql-server-2012-offline-content"></a>Conteúdo offline do SQL Server 2012
 
 As etapas a seguir explicam como carregar conteúdo offline para o SQL Server 2012
 
 1. Baixe o conteúdo da [Documentação do produto do Microsoft SQL Server 2012 para ambientes restritos por firewall e proxy](https://www.microsoft.com/download/details.aspx?id=35750) no centro de downloads e salve-o em uma pasta.
 
-2. Descompacte a pasta zip para visualizar o arquivo.msha.
+2. Descompacte o arquivo para ver o arquivo *.msha*.
 
    ![Arquivo de instalação do conteúdo da Ajuda do SQL Server 2012](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -153,7 +154,7 @@ Para visualizar a ajuda instalada no SSMS, selecione **Inicializar no Help Viewe
 
 O Help Viewer é aberto na guia Gerenciar Conteúdo, com o sumário da Ajuda instalada no painel esquerdo. Selecione os artigos no sumário para exibi-los no painel à direita.
 
-> [!TIP]
+> [!Important]
 > Se o painel de conteúdo não estiver visível, selecione Conteúdos na margem esquerda. Selecione o ícone de pino para manter o painel de conteúdo aberto.  
 
    ![Help Viewer com conteúdo](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ Confira o Ciclo de Vida do Produto da Microsoft para obter informações de comp
 
 Para saber mais sobre conteúdo arquivado e o Help Viewer, confira os links abaixo.
 
-- [SQL Server, documentação](../sql-server/index.yml?view=sql-server-2016)
-- [Documentação do SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [Documentação de versões anteriores do SQL Server](https://docs.microsoft.com/previous-versions/sql/)
+- [Documentação online do SQL Server](../sql-server/index.yml?view=sql-server-2016)
+- [Documentação online do SQL Server 2014](/sql/2014-toc/)
+- [Versões anteriores da documentação online do SQL Server](previous-versions-sql-server.md)
 - [Sistema de controle de versão para documentação do SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

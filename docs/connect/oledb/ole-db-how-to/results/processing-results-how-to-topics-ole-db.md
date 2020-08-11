@@ -1,5 +1,5 @@
 ---
-title: Tópicos de instrução sobre processamento de resultados (OLE DB) | Microsoft Docs
+title: Tópicos de instrução sobre o processamento de resultados (driver do OLE DB)
 description: Tópicos de instruções sobre o processamento de resultados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, processing results
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3cda281e8ce5bc276ff8baab6887754ba56e43a3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 897d3ce2357d3fd6e6f11bba643bd4d4d0219912
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015563"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244696"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

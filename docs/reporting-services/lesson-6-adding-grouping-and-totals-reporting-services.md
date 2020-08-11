@@ -1,5 +1,6 @@
 ---
 title: 'Lição 6: Adicionar agrupamentos e totais (Reporting Services) | Microsoft Docs'
+description: Saiba como adicionar agrupamentos e totais ao relatório do Reporting Services para organizar e resumir seus dados.
 ms.date: 04/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d149bb85834ae9c775e414e405889631a81f288
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65089674"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243258"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lição 6: Adicionar agrupamentos e totais (Reporting Services)
 
