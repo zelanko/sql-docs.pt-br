@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245191"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947123"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "87245191"
  Este exemplo demonstra o recurso OLTP in-memory. Ele mostra as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente e pode ser usado para demonstrar os benefícios de desempenho do OLTP in-memory.  
   
 > [!NOTE]  
->  Para exibir este tópico para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consulte [Extensões do AdventureWorks para demonstrar o OLTP in-memory](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
+>  Para exibir este tópico para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consulte [Extensões do AdventureWorks para demonstrar o OLTP in-memory](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview).  
   
  O exemplo a seguir migra cinco tabelas do banco de dados do AdventureWorks para a otimização de memória e inclui uma carga de trabalho de demonstração para o processamento de pedidos de vendas. Você pode usar essa carga de trabalho de demonstração para consultar o benefício de desempenho em usar o OLTP in-memory no servidor.  
   
@@ -183,12 +183,11 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  Os índices de HASH podem ser usados para otimizar mais a carga de trabalho. Eles são particularmente otimizados para pesquisas de ponto e inserções de linhas. No entanto, lembre-se de que eles não dão suporte a exames de intervalo, exames ordenados ou pesquisas nas colunas de chave de índice. Consequentemente, tome cuidado ao usar esses índices. Além disso, é necessário especificar o bucket_count na hora da criação. Normalmente, ele deve ser definido entre uma e duas vezes o número de valores de chave de índice, mas valores superestimados não costumam ser um problema.  
   
-Para obter mais informações, confira os Manuais Online para obter mais detalhes sobre [diretrizes de índice](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) e diretrizes para [escolher o bucket_count certo](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+Para obter mais informações, confira os Manuais Online para obter mais detalhes sobre [diretrizes de índice](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) e diretrizes para [escolher o bucket_count certo](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
 
 
 Os Manuais Online a seguir fornecem mais informações sobre os seguintes tópicos:
-- [Diretrizes de índice](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
-- [Como escolher a bucket_count correta](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+- [Diretrizes de índice](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  Os índices nas tabelas migradas foram ajustados para a carga de trabalho de processamento de pedidos de vendas de demonstração. A carga de trabalho se baseia em inserções e pesquisas de ponto nas tabelas Sales.SalesOrderHeader_inmem e Sales.SalesOrderDetail_inmem, e ela também se baseia em pesquisas de ponto nas colunas de chave primária nas tabelas Production.Product_inmem e Sales.SpecialOffer_inmem.  
   
@@ -276,7 +275,7 @@ Os Manuais Online a seguir fornecem mais informações sobre os seguintes tópic
   
     -   Atualize as informações de envio de um pedido de vendas específico. Isso também atualizará as informações de envio para todos os itens de linha do pedido de vendas.  
   
-    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -631,7 +630,7 @@ ORDER BY state, file_type
   
 | state_desc | file_type_desc | count | on-disk size MB |
 | ---------- | -------------- | ----- | --------------- |
-|PRECREATED|DATA|16|2\.048|  
+|PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
@@ -675,7 +674,7 @@ ORDER BY state, file_type
   
 | state_desc | file_type_desc | count | on-disk size MB |
 | ---------- | -------------- | ----- | --------------- |
-|PRECREATED|DATA|16|2\.048|  
+|PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
@@ -719,7 +718,7 @@ ORDER BY state, file_type
   
 | state_desc | file_type_desc | count | on-disk size MB |
 | ---------- | -------------- | ----- | --------------- |
-|PRECREATED|DATA|16|2\.048|  
+|PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
 |ACTIVE|DELTA|38|1331|  
@@ -751,7 +750,7 @@ ORDER BY state, file_type
   
 | state_desc | file_type_desc | count | on-disk size MB |
 | ---------- | -------------- | ----- | --------------- |
-|PRECREATED|DATA|16|2\.048|  
+|PRECREATED|DATA|16|2.048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  

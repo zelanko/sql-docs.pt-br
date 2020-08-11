@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247596"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934365"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a dobra constante c
 - Expressões aritméticas, como 1+1, 5/3*2, que contêm apenas constantes.
 - Expressões lógicas, como 1=1 and 1>2 AND 3>4, que contêm apenas constantes.
 - Funções internas consideradas dobráveis pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], inclusive `CAST` e `CONVERT`. Geralmente, uma função intrínseca será dobrável se for uma função de suas entradas apenas e não outras informações contextuais, como opções SET, configurações de idioma, opções de banco de dados e chaves de codificação. Funções não determinísticas não são dobráveis. Funções internas determinísticas são dobráveis, com algumas exceções.
-- Métodos determinísticos de tipos CLR definidos pelo usuário e funções CLR determinísticas com valor escalar definidas pelo usuário (começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para saber mais, veja [Dobra constante para funções e métodos de CLR definidos pelo usuário](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Métodos determinísticos de tipos CLR definidos pelo usuário e funções CLR determinísticas com valor escalar definidas pelo usuário (começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para saber mais, veja [Dobra constante para funções e métodos de CLR definidos pelo usuário](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
 
 > [!NOTE] 
 > Há uma exceção para tipos de objeto grandes. Se o tipo de saída do processo de dobra for um tipo de objeto grande (text,ntext, image, nvarchar(max), varchar(max), varbinary(max) ou XML), então [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dobrará a expressão.

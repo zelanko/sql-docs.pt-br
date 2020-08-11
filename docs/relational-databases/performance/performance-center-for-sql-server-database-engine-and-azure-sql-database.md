@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6d578ee456d2ddd9531af307e2106f4a12dbbece
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 81d876df75fd096b897f13322bb76f90fffa5cad
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411342"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947288"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Central de desempenho do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "87411342"
  [Guia de arquitetura de página e extensões](../../relational-databases/pages-and-extents-architecture-guide.md)  
  [Validação pós-migração e guia de otimização](../../relational-databases/post-migration-validation-and-optimization-guide.md)  
  [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)  
- [Guia de controle de versão de linha e bloqueio de transações do SQL Server](https://msdn.microsoft.com/library/jj856598)  
+ [Guia de controle de versão de linha e bloqueio de transações do SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)  
  [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
  [Guia de arquitetura de thread e tarefa](../../relational-databases/thread-and-task-architecture-guide.md) 
   

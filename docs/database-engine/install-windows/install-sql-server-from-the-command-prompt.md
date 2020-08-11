@@ -85,12 +85,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 78d413af670dd62d3eb761babf1e0df846117c14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 190f757b7c9849866788646fe3288086d73f8811
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892344"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934370"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar o SQL Server do prompt de comando
 
@@ -883,7 +883,7 @@ O SSMS (*[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) agor
 |/FEATURES=SQLEngine,PolyBase|Instala o mecanismo PolyBase.|  
   
 ##  <a name="role-parameters"></a><a name="RoleParameters"></a> Parâmetros de função  
- A função de instalação ou o parâmetro /Role é usado para instalar uma seleção pré-configurada de recursos. As funções do SSAS instalam uma instância do SSAS em um farm existente do SharePoint ou em um novo farm não configurado. São fornecidas duas funções de instalação para dar suporte a cada cenário. Você pode escolher somente uma função de instalação para instalar de cada vez. Se você escolher uma função de instalação, serão instalados os recursos e os componentes que pertencem à função. Você não pode variar os recursos e os componentes que são designados para aquela função. Para saber mais sobre como usar o parâmetro da função de recurso, consulte [Instalar o Power Pivot no Prompt de Comando](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
+ A função de instalação ou o parâmetro /Role é usado para instalar uma seleção pré-configurada de recursos. As funções do SSAS instalam uma instância do SSAS em um farm existente do SharePoint ou em um novo farm não configurado. São fornecidas duas funções de instalação para dar suporte a cada cenário. Você pode escolher somente uma função de instalação para instalar de cada vez. Se você escolher uma função de instalação, serão instalados os recursos e os componentes que pertencem à função. Você não pode variar os recursos e os componentes que são designados para aquela função. Para saber mais sobre como usar o parâmetro da função de recurso, consulte [Instalar o Power Pivot no Prompt de Comando](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode). 
   
  A função AllFeatures_WithDefaults é o comportamento padrão de edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e reduz o número de caixas de diálogo apresentadas ao usuário. Ela pode ser especificada na linha de comando ao instalar uma edição do SQL Server que não seja o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   

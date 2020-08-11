@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1cba83176d921846f1eac55ef84a70eebd5af42a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733837"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943353"
 ---
 # <a name="data-collection"></a>Coleta de dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85733837"
   
  O coletor de dados permite ajustar o escopo da coleta de dados para se adéquem a seus ambientes de teste e de produção. O coletor de dados também usa o data warehouse, um banco de dados relacional que permite gerenciar os dados coletados configurando diferentes períodos de retenção dos dados.  
   
- O coletor de dados oferece suporte ao ajuste dinâmico para coleta de dados e é extensível via API. Para obter mais informações, consulte [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ O coletor de dados oferece suporte ao ajuste dinâmico para coleta de dados e é extensível via API. Para obter mais informações, consulte [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql).  
   
  A ilustração a seguir mostra como o coletor de dados se adapta à estratégia geral de coleta e gerenciamento de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

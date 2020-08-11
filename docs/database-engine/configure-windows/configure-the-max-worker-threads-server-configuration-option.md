@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04a0a9401b765b86e83a6641bf8742d6b326cc13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696977"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807063"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurar a opção max worker threads de configuração de servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,7 @@ O valor padrão de **max worker threads** é 0. Isso habilita o [!INCLUDE[ssNoVe
     |8|288|576|576|   
     |16|352|704|704|   
     |32|480|960|960|   
-    |64|736|1\.472|2432|   
+    |64|736|1\.472|1.472|   
     |128|1248|2496|4480|   
     |256|2272|4544|8\.576|   
     
