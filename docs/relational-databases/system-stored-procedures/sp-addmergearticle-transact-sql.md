@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786276"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051115"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** especifica que a assinatura será verificada para ver se ela é de uma fonte confiável.  
   
-`[ @destination_object = ] 'destination_object'`É o nome do objeto no banco de dados de assinatura. *destination_object* é **sysname**, com um valor padrão de o que está em ** \@ source_object**. Este parâmetro é especificado somente se o artigo for um artigo apenas de esquema, como procedimentos armazenados, exibições e UDFs. Se o artigo especificado for um artigo de tabela, o valor em *@source_object* substituirá o valor em *destination_object*.  
+`[ @destination_object = ] 'destination_object'`É o nome do objeto no banco de dados de assinatura. *destination_object* é **sysname**, com um valor padrão de o que está em ** \@ source_object**. Este parâmetro é especificado somente se o artigo for um artigo apenas de esquema, como procedimentos armazenados, exibições e UDFs. Se o artigo especificado for um artigo de tabela, o valor em * \@ source_object* substituirá o valor em *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Habilita ou desabilita o uso do resolvedor interativo em um artigo. *allow_interactive_resolver* é **nvarchar (5)**, com um padrão de false. **verdadeiro** habilita o uso do resolvedor interativo no artigo; **false** desabilita.  
   
@@ -355,15 +355,15 @@ sp_addmergearticle [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na função de servidor fixa **sysadmin** ou na função de banco de dados fixa **db_owner** .  
+ Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md)   
- [Publicar objetos de banco de dados e](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [&#41;&#40;Transact-SQL de sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropmergearticle](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergearticle](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
