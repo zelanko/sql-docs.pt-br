@@ -1,6 +1,7 @@
 ---
 title: Extrair um script de um rastreamento
 titleSuffix: SQL Server Profiler
+description: Saiba como extrair eventos do Transact-SQL de um arquivo ou tabela de rastreamento no SQL Server Profiler e salvá-los como um arquivo de script Transact-SQL.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4abc9c52bd7fb969ed655d7e056597e14e25038f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2495eb7c020e6fb64fb894d4d6bb7614707f84bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774862"
 ---
 # <a name="extract-a-script-from-a-trace-sql-server-profiler"></a>Extrair um script de um rastreamento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tópico descreve como extrair eventos [!INCLUDE[tsql](../../includes/tsql-md.md)] de um arquivo ou tabela de rastreamento e salvá-los em um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

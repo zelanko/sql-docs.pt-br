@@ -1,6 +1,7 @@
 ---
 title: Filtrar eventos com base na hora de término do evento
 titleSuffix: SQL Server Profiler
+description: Filtre eventos pela hora de término durante um rastreamento. Saiba como configurar um filtro pela hora de término do evento no SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8372ce58317eead122675f3585be01f5da7eb829
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e82f5820f418e65e8638ee27898a130ae6e564d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774811"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtrar eventos com base na hora de término do evento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como filtrar eventos de rastreamento de acordo com a hora de término do evento, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-filter-events-based-on-the-event-end-time"></a>Para filtrar eventos com base na hora de término do evento  

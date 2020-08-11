@@ -1,6 +1,6 @@
 ---
 title: Exibir e ler o log de diagnóstico da instância do cluster de failover
-description: Saiba como exibir e ler o log de diagnóstico produzido pela instância do cluster de failover do SQL Server.
+description: Saiba como exibir e ler o log de diagnóstico em execução produzido por uma instância do cluster de failover do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e2f84b38751b57e1fe9ebba525e636da45a59954
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242878"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896670"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Exibir e ler o log de diagnóstico da instância do cluster de failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Todos os erros críticos e eventos de aviso para a DLL de Recursos do SQL Server são gravados no log de eventos do Windows. Um log em execução das informações de diagnóstico específicas do SQL Server é capturado pelo procedimento armazenado do sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e gravado nos arquivos de log de diagnóstico do cluster de failover do SQL Server (também conhecidos como logs *SQLDIAG*).  
   
 -   **Antes de começar:**  [Recomendações](#Recommendations), [Segurança](#Security)  
@@ -30,7 +30,7 @@ ms.locfileid: "75242878"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
- Por padrão, os arquivos SQLDIAG são armazenados em uma pasta LOG local do diretório de instância do SQL Server, por exemplo, ‘C\Program Files\Microsoft SQL Server\MSSQL13\<InstanceName>\MSSQL\LOG' do nó proprietário da FCI (instância do cluster de failover) Sempre Visível. O tamanho de cada arquivo de log de SQLDIAG é fixo em 100 MB. Dez arquivos de log desse tipo são armazenados no computador antes de serem reciclados para novos logs.  
+ Por padrão, os arquivos SQLDIAG são armazenados em uma pasta LOG local do diretório de instância do SQL Server, por exemplo, ‘C\Program Files\Microsoft SQL Server\MSSQL13\<InstanceName>\MSSQL\LOG' do nó proprietário da FCI (instância do cluster de failover) sempre ativada. O tamanho de cada arquivo de log de SQLDIAG é fixo em 100 MB. Dez arquivos de log desse tipo são armazenados no computador antes de serem reciclados para novos logs.  
   
  Os logs usam o formato de arquivo de eventos estendidos. A função do sistema **sys.fn_xe_file_target_read_file** pode ser usada para leitura dos arquivos criados por Eventos Estendidos. É retornado um evento, em formato XML, por linha. Consulte a exibição do sistema para analisar os dados XML como um conjunto de resultados. Para obter mais informações, veja [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   

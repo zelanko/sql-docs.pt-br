@@ -1,27 +1,32 @@
 ---
 title: Extensão da linguagem R
-description: Saiba mais sobre a execução de código R e bibliotecas R internas nos SQL Server R Services ou nos Serviços de Machine Learning do SQL Server.
+description: Saiba mais sobre a extensão do R para executar scripts de R externos com os Serviços de Machine Learning do SQL Server e o SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e51e4121a7e941512a84e3acf577af0ff687f4d7
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487555"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406269"
 ---
-# <a name="r-language-extension-in-sql-server"></a>Extensão da linguagem R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="r-language-extension-in-sql-server-machine-learning-services"></a>Extensão da linguagem R nos Serviços de Machine Learning do SQL Server
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-A extensão R faz parte do complemento Serviços de Machine Learning do SQL Server para o mecanismo de banco de dados relacional. Ela adiciona um ambiente de execução de R, uma distribuição de R base com bibliotecas e ferramentas padrão e as bibliotecas do Microsoft R: [RevoScaleR](../r/ref-r-revoscaler.md) para análise em escala, [MicrosoftML](../r/ref-r-microsoftml.md) para algoritmos de aprendizado de máquina e outras bibliotecas para acessar dados ou código R no SQL Server.
+Este artigo descreve a extensão do R para executar scripts de Python externos com os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) e o [SQL Server 2016 R Services](../r/sql-server-r-services.md). A extensão adiciona:
 
-A integração do R está disponível no [SQL Server R Services](../r/sql-server-r-services.md) e nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md).
+- Um ambiente de execução de R
+- Uma distribuição básica de R com bibliotecas e ferramentas padrão
+- Bibliotecas de R da Microsoft:
+  - [RevoScaleR](../r/ref-r-revoscaler.md) para análise em escala
+  - [MicrosoftML](../r/ref-r-microsoftml.md) para algoritmos de machine learning
+  - Outras bibliotecas para acessar dados ou código R no SQL Server
 
 ## <a name="r-components"></a>Componentes R
 

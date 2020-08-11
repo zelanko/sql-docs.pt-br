@@ -1,5 +1,6 @@
 ---
 title: Coletar fatias pequenas em um gráfico de pizza (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como coletar muitas fatias pequenas em um gráfico de pizza em uma só fatia em relatórios paginados do Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487975"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462060"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Coletar fatias pequenas em um gráfico de pizza (Construtor de Relatórios e SSRS)
 Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como reunir várias fatias pequenas de um gráfico de pizza em uma única fatia nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
@@ -79,7 +80,7 @@ Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como re
 >  Não é possível formatar o gráfico de pizza secundário. Por esse motivo, é altamente recomendável usar a primeira abordagem ao coletar fatias da pizza.  
   
 ## <a name="see-also"></a>Consulte Também  
-* [Tutorial: Adicionar um gráfico de pizza ao relatório (construtor de relatórios)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+* [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

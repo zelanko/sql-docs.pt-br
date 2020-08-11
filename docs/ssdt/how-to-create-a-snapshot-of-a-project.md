@@ -1,5 +1,6 @@
 ---
 title: Criar um instantâneo de um projeto
+description: Familiarize-se com arquivos de aplicativo da camada de dados ou instantâneos e veja como usá-los. Descubra como criar ou importar instantâneos e como compará-los.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c381b920a527ab2320f6e83d6dbc057b675a4754
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241527"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518836"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Como: Criar um instantâneo de um projeto
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Como fazer: Criar um instantâneo de um projeto
 
 Um arquivo de **Aplicativo da camada de dados** fornece uma representação somente leitura do esquema de banco de dados no momento em que ele é criado. Ele está sendo tratado basicamente como um esquema de banco de dados do qual você pode importar os objetos de esquema de volta para um projeto. Você também pode compará-lo com o esquema de um banco de dados ou um projeto e atualizar o banco de dados ou o projeto para refletir o esquema definido no instantâneo.  
   
@@ -65,5 +65,5 @@ No caso de um erro do usuário em um projeto de banco de dados de origem, você 
     Você pode localizar facilmente o delta de instantâneos diferentes usando a Comparação de Esquemas. Neste caso, você pode descobrir como seu projeto evolui durante o processo de desenvolvimento.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

@@ -2,22 +2,22 @@
 title: Habilitar ou desabilitar o gerenciamento de pacotes de R
 description: Habilite o gerenciamento remoto de pacotes de R nos SQL Server 2016 R Services ou Serviços de Machine Learning do SQL Server (no banco de dados)
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757139"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento de pacotes para SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo descreve como habilitar o gerenciamento remoto de pacotes de R de uma estação de trabalho cliente ou de um Machine Learning Server diferente. Após a habilitação do recurso de gerenciamento de pacotes no SQL Server, você pode usar comandos RevoScaleR em um cliente para instalar pacotes no SQL Server.
 
@@ -41,7 +41,7 @@ Para habilitar ou desabilitar o gerenciamento de pacotes no SQL Server, use o ut
 
     Este comando cria os objetos de nível de instância no computador SQL Server que são necessários para o gerenciamento de pacotes. Ele também reinicia a Barra inicial da instância.
 
-    Se você não especificar uma instância, a instância padrão será usada. Se você não especificar um usuário, o contexto de segurança atual será usado. Por exemplo, o seguinte comando habilita o gerenciamento de pacotes na instância no caminho do RegisterRExt.exe, usando as credenciais do usuário que abriu o prompt de comando:
+    Se você não especificar uma instância, a instância padrão será usada. Se você não especificar um usuário, o contexto de segurança atual será usado. Por exemplo, o seguinte comando habilita o gerenciamento de pacotes na instância padrão, usando as credenciais do usuário que abriu o prompt de comando:
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ Para habilitar ou desabilitar o gerenciamento de pacotes no SQL Server, use o ut
    
     Este comando cria alguns artefatos de banco de dados, incluindo as seguintes funções de banco de dados que são usadas para controlar permissões de usuário: `rpkgs-users`, `rpkgs-private`e `rpkgs-shared`.
 
-    Por exemplo, o comando a seguir habilita o gerenciamento de pacotes no banco de dados, na instância em que o RegisterRExt é executado. Se você não especificar um usuário, o contexto de segurança atual será usado.
+    Por exemplo, o comando a seguir habilita o gerenciamento de pacotes no banco de dados, na instância padrão. Se você não especificar um usuário, o contexto de segurança atual será usado.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

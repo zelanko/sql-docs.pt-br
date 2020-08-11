@@ -1,5 +1,6 @@
 ---
 title: Definir parâmetros em um relatório publicado – modo integrado do SharePoint | Microsoft Docs
+description: Saiba como definir parâmetros e executar um relatório com parâmetros, na definição de relatório ou depois que o relatório é publicado, no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a04058cc679d7697f2526c85b8b6526e8ea4a8ce
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576662"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681215"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Definir parâmetros em um relatório publicado – modo integrado do SharePoint
   Um relatório parametrizado aceita valores de entrada usados para filtrar dados quando você executa o relatório. Os parâmetros são definidos quando o relatório é criado. Dependendo de como um parâmetro de relatório é configurado na definição do relatório, ele pode aceitar um único valor, vários valores ou valores dinâmicos, que se alteram em resposta a uma seleção anterior (por exemplo, quando você seleciona uma categoria de produto, a próxima seleção pode ser um produto específico dessa categoria). Um parâmetro pode ter um valor padrão, que pode ser usado para executar automaticamente uma versão filtrada do relatório ou pode ser substituído por um valor diferente.  
   
- Essas propriedades podem ser estabelecidas na definição do relatório ou depois que o relatório for publicado. Embora você possa modificar algumas propriedades de parâmetro em uma publicação para alterar o valor e exibir propriedades, você não pode alterar o nome do parâmetro nem o tipo de dados. O nome do parâmetro e o tipo de dados só podem ser alterados pelo autor do relatório na definição do relatório.  
+ Essas propriedades podem ser estabelecidas na definição do relatório ou depois que o relatório for publicado. Embora você possa modificar algumas propriedades de parâmetro em um relatório publicado para alterar o valor e exibir propriedades, você não pode alterar o nome do parâmetro nem o tipo de dados. O nome do parâmetro e o tipo de dados só podem ser alterados pelo autor do relatório na definição do relatório.  
   
  Para executar um relatório com parâmetros, você geralmente deve saber quais valores digitar, embora um relatório possa incluir listas suspensas de valores válidos a serem escolhidos.  
   

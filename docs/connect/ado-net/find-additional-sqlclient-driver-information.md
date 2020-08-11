@@ -1,7 +1,7 @@
 ---
 title: Localizando informações adicionais sobre o driver do SqlClient
 description: Página que contém informações úteis sobre o driver.
-ms.date: 09/30/2019
+ms.date: 06/15/2019
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 185c8648af5a55f53a25839a40008a203239957f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929013"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85106893"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Localizando informações adicionais sobre o driver do SqlClient
 
@@ -30,7 +30,7 @@ Para obter mais informações sobre o desenvolvimento do Provedor de Dados do Mi
   
 |Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
-|[Repositório do GitHub do .Net CoreFX](https://github.com/dotnet/corefx)|Esse repositório contém a implementação da biblioteca para o .NET Core.|
+|[Repositório do GitHub do .NET Runtime](https://github.com/dotnet/runtime)|Esse repositório contém a implementação da biblioteca para o .NET Core.|
 |[Repositório do GitHub do Provedor de Dados do Microsoft SqlClient para SQL Server](https://github.com/dotnet/SqlClient)|Esse repositório contém o código-fonte para o driver do SqlClient.|  
 |[Navegador de API .NET](https://docs.microsoft.com/dotnet/api/)|Esse site contém informações de API do .NET para o driver.|  
   

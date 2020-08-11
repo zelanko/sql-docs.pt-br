@@ -1,5 +1,6 @@
 ---
-title: Rastrear a operação do driver | Microsoft Docs
+title: Rastreamento de operação do driver
+description: Saiba como usar o rastreamento para registrar detalhes em log e resolver problemas ao usar o driver JDBC para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219355"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393124"
 ---
 # <a name="tracing-driver-operation"></a>Rastreamento de operação do driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "81219355"
 |INFO|Fornece mensagens informativas.|  
 |CONFIG|Fornece mensagens de configuração. Observe que o driver JDBC atualmente não fornece nenhuma mensagem de configuração.|  
 |FINE|Fornece informações básicas de rastreamento inclusive todas as exceções lançadas pelos métodos públicos.|  
-|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e o método retornam valores, exceto os tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.|  
+|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e os valores retornados do método, exceto pelos tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.|  
 |FINEST|Fornece informações de rastreamento altamente detalhadas. Este é o nível mais baixo de log.|  
 |OFF|Desliga o log.|  
 |ALL|Habilita log de todas as mensagens.|  
@@ -59,7 +60,7 @@ ms.locfileid: "81219355"
 |WARNING|Indica um problema potencial.|  
 |INFO|Fornece mensagens informativas.|  
 |FINE|Fornece informações de rastreamento que incluem criação e destruição básicas de objeto. Além disso, todas as exceções lançadas pelos métodos públicos.|  
-|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e o método retornam valores, exceto os tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> As seguintes categorias de log existiam na versão 1.2 do JDBC Driver e tinham o nível de registros em log FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde a versão 2.0, estes são atualizados para o nível FINER.|  
+|FINER|Fornece informações de rastreamento detalhadas inclusive todas as entradas de método público e pontos de saída com tipos de dados de parâmetro associados e todas as propriedades públicas para classes públicas. Além disso, os parâmetros de entrada, os parâmetros de saída e os valores retornados do método, exceto pelos tipos de valores retornados CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> As seguintes categorias de log existiam na versão 1.2 do JDBC Driver e tinham o nível de registros em log FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA e [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde a versão 2.0, estes são atualizados para o nível FINER.|  
 |FINEST|Fornece informações de rastreamento altamente detalhadas. Este é o nível mais baixo de log.<br /><br /> As seguintes categorias de log existiam na versão 1.2 do JDBC Driver e tinham o nível de registros em log FINEST: TDS.DATA e TDS.TOKEN. Desde a versão 2.0, eles mantêm o nível de log FINEST.|  
 |OFF|Desliga o log.|  
 |ALL|Habilita log de todas as mensagens.|  

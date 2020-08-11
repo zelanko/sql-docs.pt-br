@@ -1,5 +1,6 @@
 ---
 title: Medidores (Construtor de Relatórios) | Microsoft Docs
+description: Exiba os indicadores chave de desempenho para ilustrar valores ou para comparar dados usando um medidor radial ou linear no Construtor de Relatórios.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -156,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082116"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011854"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
   Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , uma região de dados de medidor exibe um único valor para o conjunto de dados. Um medidor individual é sempre posicionado dentro de um painel de medidores, onde é possível adicionar medidores filho ou adjacentes. Dentro de um painel de medidor único, você pode criar vários medidores que compartilham funções comuns, como filtragem, agrupamento ou classificação.  
@@ -178,7 +179,7 @@ ms.locfileid: "77082116"
   
  ![Diagrama de elementos de medidor](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")  
   
- Para obter mais informações sobre como usar medidores como KPIs, consulte [Tutorial: Adicionando um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Saiba mais sobre como usar medidores como KPIs no [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar medidores separadamente de um relatório como partes do relatório. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -204,7 +205,7 @@ ms.locfileid: "77082116"
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opções de medidor linear: Horizontal, Vertical, Vários Ponteiros de Barra, Duas Escalas, Intervalo de Três Cores, Logarítmico, Termômetro, Termômetro Fahrenheit/Celsius e Gráfico de Marcador.  
+ Opções de medidor linear: Horizontal, Vertical, Vários Ponteiros de Barra, Duas Escalas, Intervalo de Três Cores, Logarítmico, Termômetro, Termômetro Fahrenheit/Celsius e Gráfico com Marcadores.  
   
 ##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> Adicionando dados a um medidor  
  Depois que você adicionar um medidor à superfície de design, arraste um campo de subconjunto para o painel de dados do medidor. Por padrão, o medidor agrega todos os valores de campo em um valor que é mostrado no medidor. Esse valor é anexado ao ponteiro com o uso da propriedade Value. Dependendo do tipo de dados do campo, o medidor usará a agregação SUM ou COUNT. Quando você usar dados numéricos, apropriados para adição, o medidor usará a função SUM. Caso contrário, usará a agregação COUNT. O valor do ponteiro poderá usar uma agregação diferente ou nenhuma agregação.  

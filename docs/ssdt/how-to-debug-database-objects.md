@@ -1,21 +1,21 @@
 ---
 title: Depurar objetos de banco de dados
+description: Descubra como depurar procedimentos armazenados, funções e gatilhos. Veja como ativar a depuração, definir pontos de interrupção e executar um teste de unidade do SQL Server no modo de depuração.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241458"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518756"
 ---
 # <a name="how-to--debug-database-objects"></a>Como fazer:  Depurar objetos de banco de dados
 
@@ -23,7 +23,7 @@ Um teste de unidade do SQL Server consiste no seguinte:
   
 -   Código de teste de unidade escrito em Visual C\# ou Visual Basic. Este código, que é gerado pelo Designer de Teste de Unidade do SQL Server, é responsável por enviar o script Transact\-SQL que forma o corpo do teste.  
   
--   Uma ou mais condições de teste, que são gravadas na linguagem Visual C\# ou Visual Basic. Para depurar condições de teste, siga o procedimento para depurar um teste de unidade conforme descrito em [Como depurar enquanto um teste é executado (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) ou [Como depurar enquanto um teste é executado (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
+-   Uma ou mais condições de teste, que são gravadas na linguagem Visual C\# ou Visual Basic. Para depurar condições de teste, siga o procedimento para depurar um teste de unidade conforme descrito em [Como depurar enquanto um teste está sendo executado (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) ou [Como depurar enquanto um teste está sendo executado (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Um ou mais scripts Transact\-SQL executados nos objetos do banco de dados que você está testando. Você não pode depurar esses scripts Transact\-SQL.  
   

@@ -1,5 +1,6 @@
 ---
 title: Alterar legendas de mapa, escala de cores e regras associadas no Construtor de Relatórios-SSRS | Microsoft Docs
+description: Saiba como alterar legendas de mapa para ajudar os usuários a interpretar a visualização de dados em mapas no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -31,12 +32,12 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: deb79a6a1216f584bdbda3a54b276326e5152f01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054234"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um mapa pode conter legendas de mapa, uma escala de cores e uma escala de distância. Essas partes de um mapa ajudam os usuários a interpretar a visualização de dados no mapa.  
@@ -55,11 +56,11 @@ ms.locfileid: "65581736"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para alterar a posição de uma legenda em relação ao visor  
   
-1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página _\<item de relatório>_ **Propriedades**.  
+1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página _\<report item>_ **Propriedades**.  
   
 2.  Em **Posição**, clique no local que especifica onde exibir a legenda em relação ao visor.  
   
-3.  Para exibir a legenda fora do visor, selecione **Mostrar \<item de relatório> fora do visor**.  
+3.  Para exibir a legenda fora do visor, selecione **Mostrar \<report item> fora do visor**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -101,7 +102,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<map element type>_ **Regra de Cores**.  
   
 3.  Clique em **Legenda**.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<map element type>_ **Regra de Cores**.  
   
 3.  Clique em **Aplicar estilo do modelo**.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<map element type>_ **Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando a paleta de cores**.  
   
@@ -147,7 +148,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<map element type>_ **Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando intervalos de cores**.  
   
@@ -169,7 +170,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<map element type>_ **Regra de Cores**.  
   
 3.  Clique em **Visualizar dados usando cores personalizadas**.  
   
@@ -187,9 +188,9 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<map element type>_ **Regra de Cores**.  
   
-3.  Selecione a opção **Visualizar dados usando** \<tipo de regra>. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
+3.  Selecione a opção **Visualizar dados usando** \<rule type>. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
   
 4.  Clique em **Distribuição**.  
   
@@ -219,9 +220,9 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados que você deseja e clique em _\<map element type>_ **Regra**.  
   
-3.  Verifique se **Visualizar dados usando** \<*tipo de regra*> está selecionado.  
+3.  Verifique se a opção **Visualizar dados usando** \<*rule type*> está selecionada.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -240,9 +241,9 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra de Cores**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<map element type>_ **Regra de Cores**.  
   
-3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções **Visualizar dados usando** \<tipo de regra>.  
+3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você precisa selecionar uma das opções **Visualizar dados usando** \<rule type>.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -261,7 +262,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados que você deseja e clique em _\<map element type>_ **Regra**.  
   
 3.  Clique em **Legenda**.  
   
@@ -274,7 +275,7 @@ ms.locfileid: "65581736"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _\<mapear tipo de elemento>_ **Regra**.  
+2.  Clique com o botão direito do mouse na camada que tem os dados que você deseja e clique em _\<map element type>_ **Regra**.  
   
 3.  Clique em **Legenda**.  
   
@@ -286,7 +287,7 @@ ms.locfileid: "65581736"
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

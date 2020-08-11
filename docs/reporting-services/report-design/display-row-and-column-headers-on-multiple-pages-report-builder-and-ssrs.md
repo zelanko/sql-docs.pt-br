@@ -1,6 +1,6 @@
 ---
 title: Mostrar cabeçalhos de linha e coluna em várias páginas (Construtor de Relatórios) | Microsoft Docs
-description: Você pode controlar se os cabeçalhos de linha e de coluna serão repetidos em cada página de um relatório paginado do Reporting Services em uma região de dados tablix (uma tabela, matriz ou lista) que abrange várias páginas.
+description: Saiba como controlar a repetição de cabeçalhos de linha e coluna em cada página de um relatório paginado para uma região de dados tablix que abrange várias páginas no Construtor de Relatórios.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254588"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778638"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)
 

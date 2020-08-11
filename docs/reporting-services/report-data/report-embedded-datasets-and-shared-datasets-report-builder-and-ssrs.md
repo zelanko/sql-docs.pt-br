@@ -1,5 +1,6 @@
 ---
 title: Conjuntos de dados inseridos e compartilhados de relatórios (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre conjuntos de dados compartilhados e conjuntos de dados inseridos de relatório para que você possa criar expressões que são avaliadas para os dados reais quando o relatório é executado.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1347086db055ab0bb13f337d8125b3f9795157dc
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812247"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
   Um conjunto de dados especifica os dados que você pode usar a partir de uma conexão de dados. Um conjunto de dados é baseado em uma conexão de dados que foi salva no relatório como uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada em um servidor de relatório. O conjunto de dados inclui uma consulta que especifica um conjunto de campos. Ao arrastar esses campos para a superfície de design, você cria expressões que avaliam os dados reais quando o relatório é executado.  
@@ -122,7 +123,7 @@ ms.locfileid: "77081797"
   
  A diferença entre as fontes de dados inseridas e compartilhadas está em como elas são criadas, armazenadas e gerenciadas. A tabela seguinte resume as diferenças entre fontes de dados inseridas e compartilhadas:  
   
-|DESCRIÇÃO|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
+|Descrição|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
 |-----------------|------------------------------|----------------------------|  
 |A conexão de dados é inserida na definição do relatório.|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")||  
 |O ponteiro para a conexão de dados no servidor de relatório é inserido na definição do relatório.||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  

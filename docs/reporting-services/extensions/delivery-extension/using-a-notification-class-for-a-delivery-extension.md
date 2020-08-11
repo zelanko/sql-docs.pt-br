@@ -1,5 +1,6 @@
 ---
 title: Usando uma classe de notificação para uma extensão de entrega | Microsoft Docs
+description: Descubra como as extensões de entrega podem usar a classe Notification. Essa classe armazena informações de assinatura usadas durante a entrega de relatórios.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad2792a390597223a98b8606af4cb361d17b9e8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20f65f0aeb5e7ab9a74da2b1f3baae574c45f3f2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529472"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Usando uma classe de notificação classe para uma extensão de entrega
   A classe <xref:Microsoft.ReportingServices.Interfaces.Notification> classe está localizada no namespace <xref:Microsoft.ReportingServices.Interfaces> e representa informações de assinatura que extensões de entrega usam para entregar relatórios. A classe <xref:Microsoft.ReportingServices.Interfaces.Notification> oferece algumas propriedades que podem ser usadas para renderizar os relatórios para entrega, determinar o status da notificação e definir dados de usuário.  

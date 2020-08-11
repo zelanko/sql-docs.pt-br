@@ -1,5 +1,6 @@
 ---
 title: Os filtros mais usados (Construtor de Relatórios) | Microsoft Docs
+description: Considere esses exemplos de filtros junto com as equações de filtro que você especifica para criar o filtro no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d091d4b8d49bd1f7a6d0cac04a874bccfba6c2fc
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082313"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779118"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtros comumente usados (Construtor de Relatórios e SSRS)
   Para criar um filtro, é necessário especificar uma ou mais equações de filtro. As equações de filtro incluem uma expressão, um tipo de dados, um operador e um valor. Este tópico traz exemplos de filtros que são utilizados com frequência.  
@@ -29,7 +30,7 @@ ms.locfileid: "77082313"
 ## <a name="filter-examples"></a>Exemplos de filtro  
  A tabela a seguir mostra exemplo de equações de filtro que usam diferentes tipos de dados e operadores. O escopo da comparação é determinado pelo item de relatório para o qual é definido um filtro. Por exemplo, no caso de um filtro definido em um conjunto de dados, **TOP % 10** representa os principais 10% de valores do conjunto de dados; no caso de um filtro definido em um grupo, **TOP % 10** são os principais 10% de valores do grupo.  
   
-|Expressão simples|Tipo de Dados|Operador|Valor|DESCRIÇÃO|  
+|Expressão simples|Tipo de Dados|Operador|Valor|Descrição|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Inteiro**|**>**|`7`|Inclui valores de dados maiores que 7.|  
 |`[SUM(Quantity)]`|**Inteiro**|**TOP N**|`10`|Inclui os 10 principais valores de dados.|  

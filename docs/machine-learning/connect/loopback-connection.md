@@ -1,8 +1,8 @@
 ---
 title: Conexão de loopback do SQL
-description: Saiba como usar uma conexão de loopback para se conectar novamente ao SQL Server por ODBC a fim de ler ou gravar dados de um script Python ou R executado de sp_execute_external_script. Você poderá usar isso quando não for possível usar os argumentos InputDataSet e OutputDataSet de sp_execute_external_script.
+description: Saiba como usar uma conexão de loopback para se conectar novamente ao SQL Server por ODBC a fim de ler ou gravar dados de um script de Python ou de R executado de sp_execute_external_script.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/21/2019
 ms.topic: conceptual
 author: Aniruddh25
@@ -10,15 +10,15 @@ ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118639"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482547"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Conexão de loopback para o SQL Server de um script Python ou R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Saiba como usar uma conexão de loopback para se conectar novamente ao SQL Server por [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) a fim de ler ou gravar dados de um script Python ou R executado de `sp_execute_external_script`. Você poderá usar isso quando não for possível usar os argumentos **InputDataSet** e **OutputDataSet** de `sp_execute_external_script`.
 
@@ -56,7 +56,7 @@ Você pode usar a API **rx_get_sql_loopback_connection_string ()** em [revoscale
 
 Ela aceita os seguintes argumentos:
 
-| Argumento | DESCRIÇÃO |
+| Argumento | Descrição |
 |-|-|
 | name_of_database | Nome do banco de dados para o qual a conexão deve ser feita |
 | odbc_driver | O nome do driver ODBC |
@@ -104,7 +104,7 @@ Você pode usar a API **rxGetSqlLoopbackConnectionString()** em [RevoScaleR](../
 
 Ela aceita os seguintes argumentos:
 
-| Argumento | DESCRIÇÃO |
+| Argumento | Descrição |
 |-|-|
 | nameOfDatabase | Nome do banco de dados para o qual a conexão deve ser feita |
 | odbcDriver | O nome do driver ODBC |

@@ -1,5 +1,6 @@
 ---
 title: Interface do usuário do Designer de Consultas Relacional (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como usar o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: faa47b9ac36cc4606b327b1eec0ff73220d58934
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593386"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455568"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta relacional (Construtor de Relatórios)
   O Construtor de Relatórios e o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fornecem um designer de consulta gráfica e um designer de consulta com base em texto para ajudá-lo a criar uma consulta que especifique os dados a serem recuperados dos bancos de dados relacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -93,7 +94,7 @@ ms.locfileid: "73593386"
   
  A tabela a seguir lista as agregações e fornece descrições resumidas delas.  
   
-|Agregado|DESCRIÇÃO|  
+|Agregado|Descrição|  
 |---------------|-----------------|  
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
 |Contagem|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
@@ -182,7 +183,7 @@ ms.locfileid: "73593386"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consulta relacional fornece os seguintes botões para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|DESCRIÇÃO|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  

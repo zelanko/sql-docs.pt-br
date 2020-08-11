@@ -1,5 +1,6 @@
 ---
 title: Tabelas (Construtor de Relatórios e SSRS) | Microsoft Docs
+description: Exiba dados de detalhes ou dados agrupados usando um campo ou vários campos ou escrevendo sua expressão em um relatório paginado no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cac6edf23b15cbb6dc100c84a7035b425798d9d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067107"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelas (Construtor de Relatórios e SSRS)
  No [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], você pode usar uma tabela para exibir dados detalhados ou dados agrupados, ou uma combinação de ambos em um relatório paginado.   
@@ -42,7 +43,7 @@ ms.locfileid: "65574730"
   
  ![Modelo de tabela na superfície de design, selecionado](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Modelo de tabela na superfície de design, selecionado")  
   
- O identificador de linha da Linha de dados mostra o símbolo de detalhes (![Identificador de linha com três linhas paralelas da linha de detalhes](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")). Para exibir dados nessas linhas, arraste campos do painel de dados do relatório para as células da tabela na linha detalhada ou do cabeçalho. Ambas as linhas são preenchidas simultaneamente. Para adicionar mais colunas, arraste o campo para a tabela até que você veja um ponto de inserção. Depois de adicionar campos de conjunto de dados à tabela, você pode alterar o formato padrão das datas e da moeda para controlar o modo de exibição no relatório. O seguinte diagrama mostra uma região de dados de tabela com estes campos: Data, Ordem, Produto, Quantidade e Total da Linha.  
+ O identificador de linha da Linha de dados mostra o símbolo de detalhes (![Identificador de linha com três linhas paralelas da linha de detalhes](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")). Para exibir dados nessas linhas, arraste campos do painel de dados do relatório para as células da tabela na linha detalhada ou do cabeçalho. Ambas as linhas são preenchidas simultaneamente. Para adicionar mais colunas, arraste o campo para a tabela até que você veja um ponto de inserção. Depois de adicionar campos de conjunto de dados à tabela, você pode alterar o formato padrão das datas e da moeda para controlar o modo de exibição no relatório. O seguinte diagrama mostra uma região de dados de tabela com estes campos: Data, Ordem, Produto, Quantidade e Total da linha.  
   
  ![Design, Tabela com cabeçalhos de colunas em Negrito](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Design, Tabela com cabeçalhos de colunas em Negrito")  
   

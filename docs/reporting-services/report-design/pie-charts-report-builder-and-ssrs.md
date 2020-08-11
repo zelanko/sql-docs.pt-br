@@ -1,5 +1,6 @@
 ---
 title: Gráficos de pizza (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como exibir dados como uma proporção do todo com o uso de gráficos de pizza e gráficos de rosca no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99988a882adff55308c9c7e3fe776cd49b7ce275
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 84f2bdbfd565809167be7c3ffe0169a5d4e3b79f
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082442"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255603"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos de pizza (Construtor de Relatórios e SSRS)
   Gráficos de pizza e gráficos de rosca exibem dados como uma proporção do todo. Os gráficos de pizza são os mais usados para fazer comparações entre grupos. Gráficos de pizza e de rosca, além dos gráficos pirâmide e funil, compõem um grupo de gráficos conhecidos como gráficos de forma. Os gráficos de forma não têm nenhum eixo. Quando um campo numérico é solto em um gráfico de forma, o gráfico calcula a porcentagem de cada valor com relação ao total. Para obter mais informações sobre gráficos de forma, consulte [Gráficos de forma &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  

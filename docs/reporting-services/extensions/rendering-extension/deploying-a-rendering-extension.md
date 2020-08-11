@@ -1,5 +1,6 @@
 ---
 title: Implantando uma extensão de renderização | Microsoft Docs
+description: Descubra como implantar uma extensão de renderização de relatório. Veja quais entradas de arquivo de configuração adicionar para que o servidor de relatório e o Designer de Relatórios localizem a extensão.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193693"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529462"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implantando uma extensão de renderização
   Depois de escrever e compilar a extensão de renderização de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para uma biblioteca do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você precisa torná-la detectável pelo servidor de relatório e pelo Designer de Relatórios. Para fazer isso, copie a extensão para o diretório apropriado e adicione entradas para os arquivos de configuração [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] apropriados.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento de extensão de renderização de arquivo de configuração  
- Quando uma extensão de renderização foi compilada em um .DLL, você adiciona uma entrada no arquivo rsreportserver.config. Por padrão, o local é em %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. O elemento pai é \<Render>. Sob o elemento Render, existe um elemento Extension para cada extensão de renderização. O elemento **Extension** contém dois atributos, Name e Type.  
+ Quando uma extensão de renderização foi compilada em um .DLL, você adiciona uma entrada no arquivo rsreportserver.config. Por padrão, a localização é em %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. O elemento pai é \<Render>. Sob o elemento Render, existe um elemento Extension para cada extensão de renderização. O elemento **Extension** contém dois atributos, Name e Type.  
   
  A tabela a seguir descreve os atributos para o elemento **Extension** para as extensões de renderização:  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |**Nome**|Um nome exclusivo para a extensão. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas do elemento **Extension** de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
 |**Tipo**|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  

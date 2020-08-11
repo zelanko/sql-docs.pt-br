@@ -1,5 +1,6 @@
 ---
 title: Função StDev (Construtor de Relatórios) | Microsoft Docs
+description: A função StDev no Construtor de Relatórios retorna o desvio padrão de todos os valores numéricos não nulos especificados por uma expressão.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbf17d4c642d3ccdb14f6a6f1f42212d6e9152a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aabefbf7eab7393702ccc99d9a62fdd9032540ab
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081147"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462270"
 ---
 # <a name="report-builder-functions---stdev-function"></a>Funções do Construtor de Relatórios – Função StDev
   Retorna o desvio padrão de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

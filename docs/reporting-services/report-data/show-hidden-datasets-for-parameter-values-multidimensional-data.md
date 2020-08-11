@@ -1,5 +1,6 @@
 ---
 title: Mostrar conjuntos de dados ocultos para valores de parâmetros – dados multidimensionais | Microsoft Docs
+description: Saiba como mostrar conjuntos de dados ocultos para valores de parâmetros, para que você possa exibir todos os conjuntos de dados em um relatório.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b7298d9d761342afbfee33c62f4eda3aa7f3b59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499915"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455248"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Mostrar conjuntos de dados ocultos para valores de parâmetros – dados multidimensionais
   Seu relatório pode incluir conjuntos de dados gerados automaticamente (também conhecidos como conjuntos de dados ocultos) que não aparecem por padrão no painel de dados do relatório. Esses conjuntos de dados são criados das seguintes formas:  

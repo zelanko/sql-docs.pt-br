@@ -1,21 +1,21 @@
 ---
 title: Condições de teste personalizadas para testes de unidade do SQL Server
+description: Descubra como instalar condições de teste personalizadas para testes de unidade do SQL Server. Veja os riscos envolvidos na instalação das condições de teste que você não criou.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 829132cdd70afb725720ba629ae556ea07f09a56
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245527"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518736"
 ---
 # <a name="custom-test-conditions-for-sql-server-unit-tests"></a>Condições de teste personalizadas para testes de unidade do SQL Server
 
@@ -39,9 +39,9 @@ Para instalar uma condição de teste personalizada, copie o assembly assinado (
   
 Para saber mais sobre condições de teste personalizadas para os testes de unidade do SQL Server, confira:  
   
--   [Como criar condições de teste para o designer de teste de unidade do SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
+-   [Como: Criar condições de teste para o Designer de teste de unidade do SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Como atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [Como: atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
 -   [Passo a passo: usar uma condição de teste personalizada para verificar os resultados de um procedimento armazenado](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   

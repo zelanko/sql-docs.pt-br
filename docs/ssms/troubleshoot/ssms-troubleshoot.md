@@ -1,31 +1,31 @@
 ---
-title: Solucionar problemas de falha ou travamento com o SSMS
+title: Solução de problemas em um sistema com falha ou sem resposta com o SSMS
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: dnethi
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: f994a44d6fe0f458ae8f8d8be0351421322e7967
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98ed3868008808ff18a9847a009108ee41205d12
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243877"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091247"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Obter dados de diagnóstico após uma falha do SQL Server Management Studio (SSMS)
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>Obter o despejo de memória completo após uma falha ou travamento
+## <a name="get-full-memory-dump-after-an-unresponsive-system-or-crash"></a>Obter o despejo de memória completo após o sistema falhar ou ficar sem resposta
 
-Obtenha o despejo de memória completo no SSMS (SQL Server Management Studio) ao ocorrer falha ou travamento.
+Obtenha o despejo de memória completo do SSMS (SQL Server Management Studio) quando ele falhar ou parar de responder.
 
-Siga as etapas abaixo para capturar informações de diagnóstico para solucionar problemas de falha ou travamento do SSMS.
+Siga as etapas abaixo para capturar informações de diagnóstico para solucionar problemas de falha ou falta de resposta do SSMS.
 
 1. Baixe o [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
 

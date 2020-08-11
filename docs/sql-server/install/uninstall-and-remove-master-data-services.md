@@ -1,5 +1,6 @@
 ---
 title: Desinstalar e remover o Master Data Services | Microsoft Docs
+description: Esse processo de desinstalação remove as pastas e arquivos do Master Data Services e desinstala o Gerenciador de Configuração do Master Data Services do computador local.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,23 +8,23 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126043"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883718"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Desinstalar e remover o Master Data Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Para desinstalar o recurso [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga as etapas em [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) e especifique [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] como um recurso a ser removido na página **Selecionar Recursos**. O processo de desinstalação remove as pastas e arquivos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e desinstala o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] do computador local.  
+   Para desinstalar o recurso [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga as etapas em [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) e especifique [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] como um recurso a ser removido na página **Selecionar Recursos**. O processo de desinstalação remove as pastas e arquivos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e desinstala o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] do computador local.  
   
  Para impedir a perda de dados e evitar que outros computadores no sistema sejam afetados, alguns itens não são removidos nem alterados pelo processo de desinstalação. Revise a tabela a seguir para determinar se os itens deverão permanecer ou ser removidos.  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |Pastas e arquivos|O processo de desinstalação remove a maioria das pastas e arquivos do caminho de instalação.<br /><br /> O processo de desinstalação não remove as pastas Master Data Services e MDSTempDir do local de instalação. Depois que o processo de desinstalação estiver concluído, você poderá excluir essas pastas manualmente do sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] assemblies|O processo de desinstalação remove os assemblies do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] do GAC (Cache Global de Assemblies).|  

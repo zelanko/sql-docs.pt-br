@@ -1,5 +1,6 @@
 ---
 title: Renomeação e refatoração para fazer alterações em seus objetos de banco de dados
+description: Saiba mais sobre os menus Renomear e Refatorar no Editor Transact-SQL. Veja como renomear tipos, alternar esquemas de objetos, expandir curingas e nomes totalmente qualificados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,18 +13,17 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ca1ef866a86f71eaa1b5f7dfa94821c94da5588
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244236"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895834"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Como: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Como fazer: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados
 
 O menu contextual Refatorar no Editor de Transact\-SQL permite renomear ou mover um objeto para um esquema diferente e permite uma visualização de todas as áreas afetadas antes de confirmar a alteração. Você também pode usar o menu Refatorar para qualificar completamente todas as referências a objetos de banco de dados ou expandir os caracteres curinga nas instruções `SELECT` em seu projeto de banco de dados.  
   

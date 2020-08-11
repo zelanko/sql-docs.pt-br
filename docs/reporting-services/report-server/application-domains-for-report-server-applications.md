@@ -1,5 +1,6 @@
 ---
 title: Domínios do aplicativo para aplicativos do Servidor de Relatório | Microsoft Docs
+description: Saiba mais sobre eventos que fazem um domínio de aplicativo reciclar aplicativos do Reporting Services para solucionar problemas.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9492a6617b459fad1afca9200ae9437f02a41d29
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535458"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domínios do aplicativo para aplicativos do Servidor de Relatório
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o servidor de relatório é implementado como um único serviço que contém um serviço Web Servidor de Relatórios, Gerenciador de Relatórios e um aplicativo executado em segundo plano. Cada aplicativo é executado em seu próprio domínio de aplicativo dentro do único processo de servidor de relatório. Para a maior parte, os domínios de aplicativo são criados, configurados e gerenciados internamente. Entretanto, saber como as operações de reciclagem ocorrem para os domínios de aplicativo para servidores de relatório poderá ser útil se você estiver investigando o desempenho ou problemas de memória ou solucionando problemas de interrupção de serviço.  

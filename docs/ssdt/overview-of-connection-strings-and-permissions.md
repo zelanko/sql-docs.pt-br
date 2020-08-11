@@ -1,21 +1,21 @@
 ---
 title: Cadeias de conexão e permissões
+description: Saiba mais sobre as cadeias de conexão, as contas e as permissões de que você precisa para executar testes de unidade do SQL Server. Confira como configurar as cadeias de conexão.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243757"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901105"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Visão geral das cadeias de conexão e permissões
 
@@ -27,7 +27,7 @@ Na caixa de diálogo **Configuração de Teste do SQL Server**, você pode espec
 > [!NOTE]  
 > O contexto de execução e o contexto privilegiado serão diferentes somente se você usar a autenticação do SQL Server. Se você usar a autenticação do Windows, as mesmas credenciais serão usadas para ambas as cadeias de conexão.  
   
--   Contexto de execução (obrigatório) - uma conta de usuário para executar o script de teste. Essa cadeia de conexão deve ter as mesmas credenciais que você espera que os usuários tenham. Isso é importante porque garante que as permissões apropriadas sejam aplicadas ao banco de dados. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+-   Contexto de execução (obrigatório) - uma conta de usuário para executar o script de teste. Essa cadeia de conexão deve ter as mesmas credenciais que você espera que os usuários tenham. Isso é importante porque garante que as permissões apropriadas sejam aplicadas ao banco de dados. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
     No arquivo app.config do projeto de teste, esse é o elemento `ExecutionContext`.  
   

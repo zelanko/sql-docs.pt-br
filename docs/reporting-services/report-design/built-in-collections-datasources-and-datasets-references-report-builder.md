@@ -1,5 +1,6 @@
 ---
 title: Referências das coleções DataSources e DataSets (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre as coleções de fontes de dados e conjuntos de dados. Descubra como disponibilizá-los depois que o relatório for publicado em um servidor de relatório no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8310d67c8305101b1729446d4d9e25bc463ea0fd
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081463"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681265"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Coleções internas – referências de DataSources e DataSets (Construtor de Relatórios)
   A coleção **DataSources** representa todas as fontes de dados usadas em um relatório. De maneira semelhante, a coleção **DataSets** representa todos os conjuntos de dados para todas as fontes de dados em um relatório. Use o painel **Dados do Relatório** para obter uma exibição hierárquica dos conjuntos de dados do relatório organizados sob a fonte de dados a qual eles fazem referência. Se você incluir referências nessas coleções, não poderá ver os valores ao visualizar o relatório. Essas coleções estão disponíveis apenas após o relatório ter sido publicado em um servidor de relatório.  

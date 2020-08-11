@@ -1,5 +1,6 @@
 ---
 title: Criar objetos de banco de dados usando o Designer de Tabela
+description: Saiba como criar um banco de dados no Pesquisador de Objetos do SQL Server. Veja como criar tabelas, restrições e referências de chave estrangeira no Designer de Tabela.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241498"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518776"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Como: Criar objetos de banco de dados usando o Designer de Tabela
+# <a name="how-to-create-database-objects-using-table-designer"></a>Como fazer: Criar objetos de banco de dados usando o Designer de Tabela
 
 Além de ser semelhante visualmente ao SSMS, no novo nó **SQL Server** do **Pesquisador de Objetos do SQL Server** você pode criar novos objetos usando menus contextuais que funcionam como suas contrapartes do SSMS.  
   

@@ -1,5 +1,6 @@
 ---
 title: Conjuntos de dados de relatório | Microsoft Docs
+description: Saiba mais sobre os conjuntos de dados de relatório, por exemplo, que um conjunto de dados contém as informações necessárias para recuperar um conjunto específico de dados de uma fonte de dados.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0677b5c5cdf5ff01009a81da01668ff977d2fcff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081942"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458340"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de dados de relatório (SSRS)
   Para adicionar dados a um relatório, você cria conjuntos de dados. Cada conjunto de dados representa o conjunto de resultados gerado pela execução de um comando de consulta em uma fonte dados. As colunas do conjunto de resultados são a coleção de campos. As linhas do conjunto de resultados são os dados. O conjunto de resultados não contêm os dados reais. Um conjunto de dados contém as informações necessárias para recuperar um conjunto específico de dados de uma fonte de dados.  
@@ -36,7 +37,7 @@ ms.locfileid: "77081942"
   
  Você também pode adicionar conjuntos de dados a um relatório adicionando partes de relatório que incluem os conjuntos de dados dos quais elas dependem. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para saber como criar um relatório que exibe dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para criar um relatório que inclui seus próprios dados, consulte [Tutorial: Criar um gráfico de relatório rápido offline &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Para saber como criar um relatório que exibe dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para criar um relatório que inclui os próprios dados, confira [Tutorial: Criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

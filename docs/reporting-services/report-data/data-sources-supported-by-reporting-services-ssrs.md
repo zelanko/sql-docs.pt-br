@@ -1,6 +1,7 @@
 ---
 title: Fontes de dados compatíveis com o Reporting Services | Microsoft Docs
-ms.date: 04/16/2020
+description: Saiba mais sobre as diferentes fontes de dados que têm suporte do Reporting Services, incluindo Microsoft SQL Server, Oracle e ODBC.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b84ba1a790a86d503ced41f6cd1a95e7bec4dc1
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528140"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458948"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  
@@ -89,11 +90,11 @@ ms.locfileid: "81528140"
   
 -   Versão do provedor de dados subjacente (opcional): alguns tipos de fonte de dados são compatíveis com mais de um provedor de dados. Essas versões poderiam ser diferentes do mesmo provedor ou implementações diferentes de terceiros em relação a um tipo de provedor de dados. O nome do provedor costuma ser exibido na cadeia de conexão após a configuração de uma fonte de dados. Esta coluna responde à pergunta: "Depois de selecionar o tipo de fonte de dados, qual provedor de dados devo selecionar na caixa de diálogo **Propriedades da Conexão**?"  
   
--   *\<Plataforma>* da fonte de dados: A plataforma da fonte de dados compatível com a extensão de processamento ou o provedor de dados em relação à fonte de dados de destino. Esta coluna responde à pergunta: "A extensão de processamento ou o provedor de dados podem recuperar dados de uma fonte nesse tipo de plataforma?"  
+-   Fonte de dados *\<platform>* : A plataforma da fonte de dados compatível com a extensão de processamento ou o provedor de dados em relação à fonte de dados de destino. Esta coluna responde à pergunta: "A extensão de processamento ou o provedor de dados podem recuperar dados de uma fonte nesse tipo de plataforma?"  
   
 -   Versão da fonte de dados: a versão da fonte de dados de destino compatível com o DPE ou o provedor de dados. Esta coluna responde à pergunta: "Esse provedor de dados ou extensão de processamento de dados pode recuperar dados dessa versão da fonte de dados?"  
   
--   *\<Plataforma>* do RS: As plataformas do servidor de relatório e do cliente de criação do relatório em que é possível instalar uma DPE personalizada ou provedor de dados. As extensões de processamento de dados internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão incluídas em todas as instalações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Uma extensão de processamento de dados personalizada ou um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve ser compilado nativamente em relação a uma plataforma específica. Esta coluna responde à pergunta: "Esse provedor de dados ou extensão de processamento de dados pode ser instalado nesse tipo de plataforma?"  
+-   RS *\<platform>* : As plataformas do servidor de relatório e do cliente de criação do relatório em que é possível instalar uma DPE personalizada ou provedor de dados. As extensões de processamento de dados internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão incluídas em todas as instalações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Uma extensão de processamento de dados personalizada ou um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve ser compilado nativamente em relação a uma plataforma específica. Esta coluna responde à pergunta: "Esse provedor de dados ou extensão de processamento de dados pode ser instalado nesse tipo de plataforma?"  
   
 ###  <a name="types-of-data-sources"></a><a name="DataSourcesTable"></a> Tipos de fontes de dados  
   
@@ -106,7 +107,7 @@ ms.locfileid: "81528140"
 |SQL Data Warehouse|[Banco de Dados SQL do Microsoft Azure](#Azure)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|N/D|N/D|SQL Data Warehouse|S|S| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] dispositivo|[Microsoft Parallel Data Warehouse](#PWD)|Extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] preterida|N/D|N/D|N/D|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |Banco de dados multidimensional ou de tabela [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Usa ADOMD.NET|S|S|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e posterior|S|S|  
-|Conjunto de dados do Power BI Premium |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Usa ADOMD.NET|S|S|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e versões posteriores e Servidor de Relatórios do Power BI|S|S|
+|Conjunto de dados do Power BI Premium (começando com o Reporting Services 2019 e o Servidor de Relatórios do Power BI de janeiro de 2020) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Usa ADOMD.NET|S|S|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e posteriores|S|S|
 |Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Usa ADOMD.NET|S|S|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e versões posteriores|S|S| 
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados multidimensional|OLEDB|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient<br /><br /> Versão 10.0|S|S|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|S|S|
 |Listas do SharePoint|[Lista do Microsoft SharePoint](#SharePointList)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Obtém dados do Lists.asmx ou de interfaces API do modelo de objeto do SharePoint.<br /><br /> Consulte a [Observação](#SharePointList).|N|S|Produtos do SharePoint 2013 e posterior|S|S|   
@@ -170,7 +171,7 @@ Essa fonte de dados foi preterida. Use o tipo de fonte de dados SQL Server para 
   
  Esse provedor de dados usa o modelo de objeto ADOMD.NET par criar consultas que usam XMLA (XML for Analysis) versão 1.1. Os resultados são retornados como um conjunto de linhas bidimensional. Para obter mais informações, consulte [Tipo de conexão do Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo de conexão do Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interface do usuário do Designer de Consultas MDX do Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) e [Interface do usuário do Designer de Consultas DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- Para fontes de dados do Azure Analysis Services, a autenticação multifator deve estar desabilitada para as credenciais usadas na conexão à fonte de dados. 
+ Para fontes de dados do conjunto de dados do Azure Analysis Services e do Power BI Premium, a autenticação multifator deve estar desabilitada para as credenciais usadas na conexão à fonte de dados. Se precisar da autenticação multifator habilitada para seu ambiente, examine o <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">Acesso condicional do Azure Active Directory</a> como uma opção para desabilitar a autenticação multifator para as credenciais usadas na fonte de dados.
   
  Ao se conectar a uma fonte de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a extensão de processamento de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é compatível com os parâmetros de vários valores e mapeia as propriedades da célula e do membro para propriedades estendidas compatíveis com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   

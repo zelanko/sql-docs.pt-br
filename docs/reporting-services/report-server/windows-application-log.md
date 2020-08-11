@@ -1,5 +1,6 @@
 ---
 title: Log do aplicativo do Windows | Microsoft Docs
+description: Saiba como exibir mensagens de eventos no log do aplicativo que são geradas por aplicativos do servidor de relatório executados no sistema local.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5466c8a3e839a6db9438fde3ca7ce295405f3f23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547828"
 ---
 # <a name="windows-application-log"></a>Log de aplicativo do Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grava mensagens de evento no log do aplicativo do Windows. Você pode usar as informações das mensagens gravadas no log de aplicativo para obter mais detalhes sobre os eventos gerados pelos aplicativos do servidor de relatório em execução no sistema local.  
@@ -37,7 +38,7 @@ ms.locfileid: "65580931"
   
  A tabela a seguir descreve os tipos de evento que o servidor de relatório grava no log de eventos do aplicativo.  
   
-|Tipo de evento|DESCRIÇÃO|  
+|Tipo de evento|Descrição|  
 |----------------|-----------------|  
 |Informações|Um evento que descreve uma operação bem-sucedida (por exemplo, quando o serviço Servidor de Relatório é iniciado).|  
 |Aviso|Um evento que indica um possível problema (por exemplo, pouco espaço em disco).|  

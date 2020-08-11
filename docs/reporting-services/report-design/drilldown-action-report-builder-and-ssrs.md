@@ -1,5 +1,6 @@
 ---
 title: Ação de drill down (Construtor de Relatórios) | Microsoft Docs
+description: Permita que usuários com a Ação de drill down ocultem e exibam itens interativamente no Construtor de Relatórios fornecendo ícones e mais e menos em uma caixa de texto.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +39,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c917e591bf7de47c7d6084d06cf2064904f8b4a
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080473"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462230"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Ação de análise detalhada (Construtor de Relatórios e SSRS)
 Ao fornecer ícones de sinal de adição ou de subtração em uma caixa de texto, você permite que os usuários ocultem ou exibam itens interativamente. Isso se chama *busca detalhada* . Para uma tabela ou matriz, você pode mostrar ou ocultar linhas e colunas estáticas ou linhas e colunas que estão associadas a grupos.  

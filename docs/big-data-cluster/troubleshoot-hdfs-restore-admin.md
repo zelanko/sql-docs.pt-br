@@ -1,5 +1,5 @@
 ---
-title: Restaurar os direitos de administrador do HDFS
+title: Restaurar permissões do HDFS
 titleSuffix: SQL Server Big Data Cluster
 description: Restaure os direitos de administrador do HDFS.
 author: MikeRayMSFT
@@ -9,14 +9,14 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fb8c7c53c6edf4a02649f256ac6aa6d7080fdf5
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: c6d09921074ca2f2e386535baff5060620a7a3c8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108690"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669379"
 ---
-# <a name="restore-hdfs-admin-rights"></a>Restaurar os direitos de administrador do HDFS
+# <a name="restore-hdfs-permissions"></a>Restaurar permissões do HDFS
 
 As modificações de ACLs (listas de controle de acesso) do HDFS podem ter afetado as pastas `/system` e `/tmp` no HDFS. A causa mais provável da modificação da ACL é um usuário manipulando manualmente as ACLs da pasta. Não há suporte para a modificação direta de permissões nas pastas /system e /tmp/logs.
 

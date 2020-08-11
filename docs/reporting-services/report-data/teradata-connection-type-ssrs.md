@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexão Teradata | Microsoft Docs
+description: Use as informações fornecidas neste artigo sobre o tipo de conexão Teradata para aprender a criar uma fonte de dados.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fffacee190197125cf283be6ad9263dfae1f1d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a97d0320affe87e039f4369d699f1998caa8d153
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081704"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458309"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Tipo de conexão Teradata (SSRS)
   Para incluir dados de um cubo do Teradata no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo Teradata. Esse tipo de fonte de dados interna é baseado na extensão de processamento de dados do Provedor Gerenciados do .NET para Teradata.  

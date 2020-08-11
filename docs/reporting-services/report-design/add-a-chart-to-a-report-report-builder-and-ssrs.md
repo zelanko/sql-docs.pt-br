@@ -1,5 +1,6 @@
 ---
 title: Adicionar um gráfico a um relatório (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como adicionar um gráfico a um relatório paginado quando desejar resumir dados em um formato visual no Construtor de Relatórios.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 986871918463e09fe0aec138c75487694faee258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ba53f3fa33bdb8b0f09c13b1afa9aba9398ff87
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080804"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779138"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Adicionar um gráfico a um relatório (Construtor de Relatórios e SSRS)
   Para resumir dados em um formato visual em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , use uma região de dados do gráfico. É importante escolher um tipo de gráfico apropriado para o tipo de dados que você está apresentando. Isso influencia a interpretação dos dados quando colocados em formato de gráfico. Para obter mais informações, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -68,9 +69,9 @@ ms.locfileid: "77080804"
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Adicionando um gráfico de barras ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adicionando um gráfico de barras a um relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Adicionando um gráfico de pizza ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Adicionando um gráfico de pizza ao relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adicionar um gráfico de barras a um relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Adicionar um gráfico de pizza a um relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

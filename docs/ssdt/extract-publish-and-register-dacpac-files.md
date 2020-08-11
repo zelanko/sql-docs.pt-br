@@ -1,5 +1,6 @@
 ---
 title: Extrair, publicar e registrar arquivos .dacpac
+description: Saiba mais sobre as ações que você pode executar com DACs (aplicativos da camada de dados). Os exemplos incluem extração, publicação e registro de arquivos de instantâneo (.dacpac).
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 67cb0321ebc1bdfa345b7bb6670ca31a4418d6e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db4981480d5c14a658c49e29068f7eebfa53bb6b
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241647"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518956"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extrair, publicar e registrar arquivos .dacpac
 

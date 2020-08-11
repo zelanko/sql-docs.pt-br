@@ -1,6 +1,6 @@
 ---
 title: Forçar um cluster WSFC para iniciar sem um quorum
-description: Descreve como forçar um cluster de failover do Windows Server a iniciar sem um quorum.
+description: Force um nó de cluster de clustering de failover do Windows Server a iniciar sem um quorum, o que pode ser necessário para recuperar dados e restabelecer a alta disponibilidade.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f7838537d93ce6ef60afc0ac971bbc47d358f79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258137"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899007"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forçar um cluster WSFC para iniciar sem um quorum
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como forçar um nó de cluster WSFC (Windows Server Failover Clustering) a iniciar sem um quorum.  Talvez isso seja necessário na recuperação de desastre e em cenários com várias sub-redes para recuperar dados e restabelecer totalmente a alta disponibilidade para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e instâncias de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   **Antes de iniciar:**  [Recomendações](#Recommendations), [Segurança](#Security)  

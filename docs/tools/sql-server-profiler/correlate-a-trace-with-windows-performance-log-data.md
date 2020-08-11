@@ -1,6 +1,7 @@
 ---
 title: Correlacionar um rastreamento com os dados de log de desempenho do Windows
 titleSuffix: SQL Server Profiler
+description: Saiba como correlacionar os logs de desempenho do Windows a um rastreamento para que você possa exibir dados de contadores e objetos do Monitor do Sistema no SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,26 +12,26 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: b9fca7d522d21706681ddfa714d45e8d18b3d4c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10fc6d48bc8187e49cac7d2dcfffb806419b1799
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774893"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Correlacionar um rastreamento com os dados de log de desempenho do Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode abrir um log de desempenho do Microsoft Windows, escolher os contadores que deseja correlacionar com um rastreamento e exibir os contadores de desempenho selecionados junto com o rastreamento na interface gráfica do usuário do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Quando você seleciona um evento na janela de rastreamento, uma barra vermelha vertical no painel da janela de dados do Monitor do Sistema do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indica os dados do log de desempenho que se correlacionam com o evento de rastreamento selecionado.  
   
- Para correlacionar um rastreamento com contadores de desempenho, abra um arquivo ou tabela de rastreamento que contenha as colunas de dados **StartTime** e **EndTime**, então clique em **Importar Dados de Desempenho** no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Arquivo**do**. Em seguida, você pode abrir um log de desempenho e selecionar os objetos e contadores do Monitor do Sistema que deseja correlacionar com o rastreamento.  
+ Para correlacionar um rastreamento com contadores de desempenho, abra um arquivo ou tabela de rastreamento que contenha as colunas de dados **StartTime** e **EndTime**, então clique em **Importar Dados de Desempenho** no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Arquivo** do . Em seguida, você pode abrir um log de desempenho e selecionar os objetos e contadores do Monitor do Sistema que deseja correlacionar com o rastreamento.  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>Para correlacionar um rastreamento com dados do log de desempenho  
   
 1.  No [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], abra uma tabela ou arquivo de rastreamento salvo. Não é possível correlacionar um rastreamento em execução que ainda está coletando dados de evento. Para correlação precisa com os dados do Monitor do Sistema, o rastreamento deve conter as colunas de dados **StartTime** e **EndTime** .  
   
-2.  No menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Arquivo**do**, clique em **Importar Dados de Desempenho**.  
+2.  No menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], clique em **Importar Dados de Desempenho**.  
   
 3.  Na caixa de diálogo **Abrir** , selecione um arquivo que contenha um log de desempenho. Os dados do log de desempenho devem ter sido capturados durante o mesmo período de tempo que os dados do rastreamento.  
   

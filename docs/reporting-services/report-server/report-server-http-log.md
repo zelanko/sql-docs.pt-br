@@ -1,5 +1,6 @@
 ---
 title: Log HTTP do Servidor de Relatório | Microsoft Docs
+description: Saiba como habilitar o log HTTP do Servidor de Relatório depois de instalar o Reporting Services. Esse recurso registra cada resposta e solicitação HTTP que um servidor de relatório manipula.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547998"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
@@ -54,7 +55,7 @@ ms.locfileid: "67140459"
 ## <a name="log-file-fields"></a>Campos do arquivo de log  
  A tabela a seguir descreve os campos disponíveis no log. A lista de campos pode ser configurada; é possível especificar quais campos devem ser incluídos com a configuração **HTTPTraceSwitches** . A coluna **Padrão** especifica se o campo será incluído automaticamente no arquivo de log caso **HTTPTraceSwitches**não seja especificado.  
   
-|Campo|DESCRIÇÃO|Padrão|  
+|Campo|Descrição|Padrão|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Esse valor é opcional. O valor padrão é ReportServerServiceHTTP_. Você pode especificar um valor diferente se desejar usar uma convenção de nomeação de arquivo diferente (por exemplo, para incluir o nome do servidor se estiver salvando arquivos de log em um local central).|Sim|  
 |HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|Não|  

@@ -1,6 +1,7 @@
 ---
 title: Modelos
 titleSuffix: SQl Server Profiler
+description: Saiba mais sobre os modelos predefinidos que o SQL Server Profiler fornece e como usá-los. Confira como criar modelos definidos pelo usuário e alterar o modelo padrão.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d278cd7b25dd4a9879f2c3a498bf2288e582beb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748641"
 ---
 # <a name="sql-server-profiler-templates"></a>Modelos do SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar modelos que definem as classes de evento e colunas de dados a serem incluídas em rastreamentos. Depois de definir e salvar o modelo, você pode executar um rastreamento que registre os dados de cada classe de evento selecionada. É possível usar um modelo em muitos rastreamentos; o modelo propriamente dito não é executado.  
 
@@ -51,7 +52,7 @@ Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 
 ## <a name="default-template"></a>Modelo padrão  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] designa automaticamente o modelo **Standard** como padrão aplicado a novos rastreamentos. Porém, você pode alterar o modelo padrão para qualquer outro modelo predefinido ou definido pelo usuário. Para alterar o modelo padrão, marque a caixa de seleção **Usar como modelo padrão para o tipo de servidor selecionado** ao criar ou editar um modelo, usando a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** .  
   
- Para navegar até a caixa de diálogo **Propriedades do Modelo de Rastreamento**, no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Arquivo**do**, escolha **Modelos** e clique em **Novo Modelo** ou em **Editar Modelo**.  
+ Para navegar até a caixa de diálogo **Propriedades do Modelo de Rastreamento**, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], escolha **Modelos** e clique em **Novo Modelo** ou em **Editar Modelo**.  
   
 > [!NOTE]  
 >  O modelo padrão é específico a cada tipo de servidor. Alterar o padrão para um tipo de servidor não influi no modelo padrão de qualquer outro tipo de servidor. Para obter mais informações sobre como definir um modelo padrão para um servidor específico, veja [Definir padrões de definição de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  

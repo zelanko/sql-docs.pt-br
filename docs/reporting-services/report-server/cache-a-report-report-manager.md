@@ -1,5 +1,6 @@
 ---
 title: Armazenar um relatório em cache (Gerenciador de Relatórios) | Microsoft Docs
+description: Saiba como agendar a validade de um relatório armazenado em cache no Gerenciador de Relatórios. O cache de um relatório acelera a exibição enquanto ele permanece em cache.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b82d064b379f7c8a43f854204b9fce7337262e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67a423a34d0b641e15daf5828748d572e504e329
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574847"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547896"
 ---
 # <a name="cache-a-report-report-manager"></a>Armazenar um relatório em cache (Gerenciador de Relatórios)
   Um modo de melhorar o desempenho é configurar propriedades de cache para um relatório. Quando um relatório é armazenado em cache, uma cópia do relatório renderizado é salva por um curto período de tempo. O primeiro usuário que solicita o relatório deve aguardar a conclusão do processamento antes de exibir o relatório. Usuários subsequentes que solicitam o relatório dentro do período de cache podem exibi-lo imediatamente porque o processamento já ocorreu.  

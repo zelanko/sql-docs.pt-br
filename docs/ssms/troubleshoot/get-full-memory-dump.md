@@ -1,6 +1,6 @@
 ---
 title: Obter despejo de memória completo para solucionar problemas do SSMS
-Description: Solução de problemas de um travamento ou uma falha do SSMS ao coletar um despejo de memória completo
+Description: Solucionar problemas do SSMS com falha ou sem resposta coletando um despejo de memória completo
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247166"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091222"
 ---
 # <a name="get-full-memory-dump"></a>Obtenha Despejo de Memória Completo
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Neste artigo, você aprenderá a capturar informações de diagnóstico para solucionar problemas de uma falha ou travamento ocorrido com o SSMS (SQL Server Management Studio).
+Neste artigo, você aprenderá a capturar informações de diagnóstico para solucionar problemas em um sistema com falha ou sem resposta ao usar o SSMS (SQL Server Management Studio).
 
 Siga as etapas abaixo para capturar informações de diagnóstico para solucionar problemas.
 

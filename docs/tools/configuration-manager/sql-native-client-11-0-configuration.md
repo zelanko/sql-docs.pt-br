@@ -1,5 +1,6 @@
 ---
 title: Configuração do SQL Native Client 11.0
+description: Saiba mais sobre as configurações definidas nas caixas de diálogo de Configuração do SQL Server Native Client no Microsoft SQL Server Configuration Manager.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08b2107b77acecebeb990e6a071963af964f61ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885971"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuração do SQL Native Client 11.0
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Esta seção contém os tópicos da Ajuda F1 das caixas de diálogo **Configuração do SQL Server Native Client** no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é a biblioteca de rede que os computadores cliente usam para se conectarem ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] começando com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  As definições feitas na Configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client são usadas no computador que está executando o programa cliente. Quando definidas no computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elas afetam somente os programas clientes executados no servidor.  

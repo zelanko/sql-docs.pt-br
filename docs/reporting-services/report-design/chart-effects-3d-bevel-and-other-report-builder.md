@@ -1,5 +1,6 @@
 ---
 title: 3D, bisel e outros efeitos em um gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Descubra como efeitos 3D podem ser usados para fornecer profundidade e adicionar impacto visual a gráficos no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a1c6dd7adfd9450ae56b9cc7718d454f5d68426
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9875133b3d3a07d26313f5e4c375e2233d10677
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082415"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255326"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Efeitos de gráfico – 3D, bisel e outros (Construtor de Relatórios)
   É possível usar efeitos 3D (tridimensionais) para fornecer profundidade e adicionar impacto visual aos gráficos em seus relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo, para enfatizar uma fatia específica de um gráfico de pizza destacada, você pode girar e alterar a perspectiva do gráfico de modo que as pessoas observem essa fatia primeiro. Quando efeitos 3D são aplicados ao gráfico, todas as cores de gradiente e estilos de hachurado são desabilitados.  

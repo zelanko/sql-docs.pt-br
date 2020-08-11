@@ -1,6 +1,6 @@
 ---
 title: Dicas e truques ao usar o SSMS
-description: Saiba como incluir e remover comentários de seu código, recuar o texto, filtrar os objetos no pesquisador de objetos, acessar o log de erros do SQL Server e localizar o nome da instância do SQL Server usando o SQL Server Management Studio.
+description: Saiba como comentar código e remover a marca de comentário dele, recuar texto, filtrar objetos, acessar logs de erros e localizar nomes de instância do SQL Server com o SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245505"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462340"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Dicas e truques para usar o SSMS (SQL Server Management Studio)
 

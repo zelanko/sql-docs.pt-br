@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153219"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091800"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de bugs corrigidos
 
@@ -51,8 +51,8 @@ Esta página contém uma lista de bugs corrigidos em cada versão, começando co
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>Correções de bugs no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Correção para travamento intermitente quando vários MARS (Conjuntos de Resultados Ativos Múltiplos) estão habilitados
-- Correção de travamento da resiliência de conexão quando a notificação assíncrona está habilitada
+- Correção para o problema intermitente quando o MARS (conjunto de resultados ativos múltiplos) está habilitado em que o driver para de responder
+- Correção do problema de resiliência da conexão quando a notificação assíncrona é habilitada em que o driver para de responder
 - Correção de falha ao recuperar registros de diagnóstico para tentativas de conexão multithread
 - Correção de "Criptografia não compatível" após a reconexão e depois de chamar SQLGetInfo() com SQL_USER_NAME e SQL_DATA_SOURCE_READ_ONLY
 - Correção de erro de inicialização COM durante a Autenticação Interativa do Azure Active Directory
@@ -94,7 +94,7 @@ Esta página contém uma lista de bugs corrigidos em cada versão, começando co
 
 - Correção de bug em que a inserção em massa pode falhar com o erro "acesso negado" quando a autenticação Kerberos é usada
 - Solução alternativa removida para um bug unixODBC presente na versão inferior a 2.3.1 (o driver dobrou o tamanho de determinados buffers passados para unixODBC)
-- Correção da Resiliência da Conexão (reconexão) suspensa ao usar ColumnEncryption=enabled
+- Correção da Resiliência da Conexão (reconexão), que parava de responder ao usar ColumnEncryption=enabled
 - Correção do bug de criação de DSN no qual ao usar a opção "Autenticação Interativa do Active Directory", a janela de Autenticação do Azure poderia ficar sem resposta (Windows)
 - Correção de uma falha rara durante o desligamento do ODBC quando uma execução assíncrona está habilitada (ocorrida ao limpar o identificador de conexão)
 - Correção de um problema em que o Driver SQL causou alto consumo de CPU durante a execução de procedimentos armazenados longos

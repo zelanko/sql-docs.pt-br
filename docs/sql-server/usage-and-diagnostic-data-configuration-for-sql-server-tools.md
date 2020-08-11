@@ -1,5 +1,6 @@
 ---
 title: Configurar a coleta de dados de diagnóstico e uso nas ferramentas do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário) | Microsoft Docs
+description: Saiba mais sobre as informações que o Programa de Aperfeiçoamento da Experiência do Usuário coleta dos usuários para aprimorar os produtos. Veja como aceitar ou rejeitar a participação no programa no SSDT (SQL Server Data Tools).
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091809"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000419"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurar a coleta de dados de diagnóstico e uso nas ferramentas do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Saiba como o Programa de Aperfeiçoamento da Experiência do Usuário ajuda a Microsoft a identificar maneiras de aperfeiçoar o nosso software.  Você pode configurar ferramentas para aceitá-las ou recusá-las a qualquer momento.  
   
@@ -71,7 +72,7 @@ Valor = (DWORD)
 
   
 > [!CAUTION]  
->  A edição incorreta do Registro poderá danificar seriamente o sistema. Antes de alterar o Registro, faça um backup dos dados importantes do computador. Você poderá também usar a opção de inicialização Última Configuração Válida se encontrar problemas depois de aplicar as alterações manualmente.  
+>  A edição incorreta do Registro pode causar danos graves ao sistema. Antes de alterar o Registro, faça backup de todos os dados importantes do computador. Você poderá também usar a opção de inicialização Última Configuração Válida se encontrar problemas depois de aplicar as alterações manualmente.  
   
  Para saber mais sobre os dados coletados, processados ou transmitidos pelo Programa de Aperfeiçoamento da Experiência do Usuário, confira a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkID=868444).  
  
@@ -113,7 +114,7 @@ Valor = (DWORD)
 -   1 significa usar  
   
 > [!CAUTION]  
->  A edição incorreta do Registro poderá danificar seriamente o sistema. Antes de alterar o Registro, faça um backup dos dados importantes do computador. Você poderá também usar a opção de inicialização Última Configuração Válida se encontrar problemas depois de aplicar as alterações manualmente.  
+>  A edição incorreta do Registro pode causar danos graves ao sistema. Antes de alterar o Registro, faça backup de todos os dados importantes do computador. Você poderá também usar a opção de inicialização Última Configuração Válida se encontrar problemas depois de aplicar as alterações manualmente.  
   
  Para saber mais sobre os dados coletados, processados ou transmitidos pelo Programa de Aperfeiçoamento da Experiência do Usuário, confira a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkID=868444).  
   

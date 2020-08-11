@@ -1,6 +1,6 @@
 ---
 title: Configurar a Autenticação do Windows no servidor de relatório | Microsoft Docs
-ms.date: 08/26/2016
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499940"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263830"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
   Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM. Se sua implantação incluir aplicativos cliente e navegadores que usam esses provedores de segurança, use os valores padrão sem nenhuma configuração adicional. Se desejar usar um provedor de segurança diferente para a segurança integrada do Windows (por exemplo, se desejar usar Kerberos diretamente) ou se tiver modificado os valores padrão e desejar restaurar as configurações originais, use as informações deste tópico para especificar configurações de autenticação no servidor de relatório.  
@@ -96,7 +96,7 @@ ms.locfileid: "66499940"
           </AuthenticationTypes>  
     ```  
   
-4.  Cole-a nas entradas existentes de \<**Authentication**>.  
+4.  Cole-a nas entradas existentes para \<**Authentication**>.  
   
      Observe que você não pode usar **Personalizado** com os tipos **RSWindows** .  
   
@@ -160,15 +160,9 @@ ms.locfileid: "66499940"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Reinicie o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e procure entradas semelhantes às seguintes no arquivo de log de rastreamento:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   Os valores em \<Explicit> conterão os SPNs configurados no Active Directory para a conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
- Se você não desejar continuar usando a Proteção Estendida, defina os valores de configuração para os padrões e reinicie a conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Reinicie o serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+
+ Se você não quiser continuar usando a Proteção Estendida, defina os valores de configuração para os padrões e reinicie a conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

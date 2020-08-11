@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 63600f98fcf86fb9549c6da91224988ce7483eee
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72041135"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465313"
 ---
 # <a name="data-classification"></a>Classificação de dados
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -244,7 +244,7 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="supported-version"></a><a name="bkmk-version"></a>Versão compatível
-O Microsoft ODBC Driver 17.2 permite recuperação de informações de classificação de dados por meio de `SQLGetDescField` se `FieldIdentifier` está definido como `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
+O Microsoft ODBC Driver 17.2 permite a recuperação de informações de Classificação de Dados por meio de `SQLGetDescField` se `FieldIdentifier` está definido como `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
 
 Na versão 17.4.1.1 do Microsoft ODBC Driver e em versões posteriores, é possível recuperar a versão da Classificação de Dados compatível com um servidor por meio de `SQLGetDescField` usando o identificador de campo `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). Na 17.4.1.1, a versão de classificação de dados compatível é definida como "2".
 
@@ -259,7 +259,7 @@ Para definir a versão, essa chamada deve ser feita imediatamente antes da chama
 ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
 ```
 
-O valor da versão da Classificação de Dados compatível no momento pode ser recuperada por meio de uma chamada a SQLGetConnectAttr: 
+O valor da versão da Classificação de Dados compatível no momento pode ser recuperado por meio de uma chamada a SQLGetConnectAttr: 
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```

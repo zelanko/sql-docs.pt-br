@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 63c271c4e1d59c9446495607b42b0b5ad13ea246
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671030"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>Tutoriais do R para aprendizado de máquina do SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Este artigo descreve os tutoriais e guias de início rápido do R para os [Serviços de Machine Learning no SQL Server](../sql-server-machine-learning-services.md) e nos [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
@@ -31,17 +30,28 @@ Este artigo descreve os tutoriais e guias de início rápido de R para os [Servi
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Este artigo descreve os tutoriais e guias de início rápido do R para o [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Este artigo descreve os tutoriais e guias de início rápido de Python para os [Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
 ## <a name="r-tutorials"></a>Tutoriais do R
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 | Tutorial | Descrição |
 |------|-------------|
 | [Prever aluguel de esquis com árvore de decisão](r-predictive-model-introduction.md) | Use o R e um modelo de árvore de decisão para prever o número de futuros aluguéis de esqui. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
 | [Categorizar clientes usando cluster K-means](r-clustering-model-introduction.md) | Use o R para desenvolver e implantar um modelo de cluster K-means para categorizar os clientes. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
-| [Análise do R no banco de dados para cientistas de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Para desenvolvedores de R não familiarizados com o SQL Server, este tutorial explica como executar tarefas comuns de ciência de dados no SQL Server. Carregue e visualize dados, treine e salve um modelo para SQL Server e use o modelo para análise preditiva. |
-| [Análise do R no banco de dados para desenvolvedores do SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Crie e implante uma solução do R completa, usando apenas as ferramentas do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Concentra-se em mover uma solução para produção. Você aprenderá a encapsular o código R em um procedimento armazenado, salvar um modelo do R em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fazer chamadas parametrizadas para o modelo do R para previsão. |
+| [Análise do R no banco de dados para cientistas de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Para desenvolvedores de R não familiarizados com machine learning do SQL, este tutorial explica como executar tarefas comuns de ciência de dados no SQL. Carregue e visualize dados, treine e salve um modelo em um banco de dados e use o modelo para análise preditiva. |
+| [Análise do R no banco de dados para desenvolvedores do SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Crie e implante uma solução do R completa, usando apenas ferramentas do SQL. Concentra-se em mover uma solução para produção. Você aprenderá a encapsular o código do R em um procedimento armazenado, salvar um modelo do R em um banco de dados e fazer chamadas parametrizadas ao modelo do R para previsão. |
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+| Tutorial | Descrição |
+|------|-------------|
+| [Prever aluguel de esquis com árvore de decisão](r-predictive-model-introduction.md) | Use o R e um modelo de árvore de decisão para prever o número de futuros aluguéis de esqui. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
+| [Categorizar clientes usando cluster K-means](r-clustering-model-introduction.md) | Use o R para desenvolver e implantar um modelo de cluster K-means para categorizar os clientes. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
+::: moniker-end
 
 ## <a name="r-quickstarts"></a>Inícios rápidos do R
 
@@ -55,4 +65,4 @@ Se você não estiver familiarizado com o aprendizado de máquina do SQL, també
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais detalhes técnicos sobre o R no SQL Server, confira [Extensão da linguagem R no SQL Server](../concepts/extension-r.md).
++ [Extensão do Python no SQL Server](../concepts/extension-r.md)

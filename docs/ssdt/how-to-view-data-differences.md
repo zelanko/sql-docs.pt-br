@@ -1,5 +1,6 @@
 ---
 title: Exibir diferenças de dados
+description: Saiba como comparar dois bancos de dados e veja quais as diferenças entre os objetos de banco de dados deles. Confira como exibir registros em objetos e como filtrar a exibição.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 750909ea5344d5972ffdc8a2db418d8c482231f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226747"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895760"
 ---
-# <a name="how-to-view-data-differences"></a>Como: exibir diferenças de dados
+# <a name="how-to-view-data-differences"></a>Como fazer: Exibir diferenças de dados
 
 Depois que você comparar os dados em dois bancos de dados, verá cada *objeto de banco de dados* que você comparou e seu status. Você também pode exibir os resultados para os registros dentro de cada objeto, agrupados por status.  
   
@@ -36,5 +36,5 @@ Depois que você exibir as diferenças, poderá atualizar o *destino* para corre
     -   Para exibir resultados para registros dentro de um objeto específico, clique no objeto no painel de resultados principal e clique em uma guia no painel Exibir Registros. Cada guia exibe todos os registros dentro desse objeto que têm um status específico: diferente, somente na origem, somente no destino e idêntico. Os dados são exibidos por registro e coluna.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

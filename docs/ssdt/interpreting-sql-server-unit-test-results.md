@@ -1,21 +1,21 @@
 ---
 title: Interpretando resultados do teste de unidade do SQL Server
+description: Saiba como usar a janela Resultados do Teste ou os arquivos .trx para ver resultados de teste de unidade do SQL Server. Confira como obter informações detalhadas sobre os resultados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1708c6aa8a082cfc06aadf832e0dbf30f2c23e23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246430"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893836"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Interpretando resultados do teste de unidade do SQL Server
 
@@ -26,7 +26,7 @@ Para ver informações detalhadas de um resultado de teste, clique duas vezes na
 Para saber mais sobre como alterar a exibição da janela **Resultados de Teste**, confira [Como adicionar ou remover colunas em janelas de teste (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx) ou [Como adicionar ou remover colunas em janelas de teste (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx).  
   
 ## <a name="storing-test-results"></a>Armazenando resultados de teste  
-Os resultados dos testes de unidade são armazenados automaticamente no disco rígido, em arquivos com a extensão .trx. Um arquivo .trx é um arquivo XML que contém os detalhes de uma execução de teste. Você pode carregar arquivos .trx de execuções de teste anteriores para analisar os resultados dessas execuções ou executar novamente os testes anteriores. Para saber mais, confira [Como executar novamente um teste (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+Os resultados dos testes de unidade são armazenados automaticamente no disco rígido, em arquivos com a extensão .trx. Um arquivo .trx é um arquivo XML que contém os detalhes de uma execução de teste. Você pode carregar arquivos .trx de execuções de teste anteriores para analisar os resultados dessas execuções ou executar novamente os testes anteriores. Para obter mais informações, confira [Como executar um teste novamente (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
   
 > [!NOTE]  
 > Você não pode executar testes de unidade remotamente.  

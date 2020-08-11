@@ -1,5 +1,6 @@
 ---
 title: Criando uma biblioteca de extensões de entrega | Microsoft Docs
+description: Saiba como atribuir uma extensão de entrega criada no Reporting Services para um namespace exclusivo e criá-la em um arquivo do assembly ou biblioteca.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06b204e9cc3c13492b0ab6815c7d36abdc628d4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77bff5683f459317458f270eea663641ca5e2c33
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193877"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529132"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Criando uma biblioteca de extensões de entrega
   Cada extensão de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que você cria deve ser atribuída a um namespace exclusivo e criada em uma biblioteca ou em um arquivo de assembly. O nome exato do namespace não é importante, mas deve ser exclusivo e não deve ser compartilhado com qualquer outra extensão. Você deve criar seus próprios namespaces exclusivos para as extensões de entrega da sua empresa.  

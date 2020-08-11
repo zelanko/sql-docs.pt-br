@@ -1,5 +1,6 @@
 ---
 title: Atualizar as credenciais em fontes de dados de relatório por meio de um site do SharePoint | Microsoft Docs
+description: Saiba como atualizar as fontes de dados incorporadas nos relatórios e nas fontes de dados compartilhadas salvas em uma biblioteca de documentos do SharePoint.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a9908e340dadeb1108e68ca10f466276c14df23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575441"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458952"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Atualizar credenciais em fontes de dados de relatório de um site do SharePoint
   Este tópico descreve como atualizar as fontes de dados incorporadas nos relatórios e nas fontes de dados compartilhadas salvas em uma biblioteca de documentos do SharePoint.  
@@ -46,7 +47,7 @@ ms.locfileid: "65575441"
   
 7.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<conta\> e selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65575441"
   
 5.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados.**  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<conta\> e selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   

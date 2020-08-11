@@ -1,5 +1,6 @@
 ---
 title: Configurar o acesso ao Construtor de Relatórios | Microsoft Docs
+description: Configure o Construtor de Relatórios, uma ferramenta de relatórios instalada com o servidor de relatório do SQL Server Reporting Services. Ele usa modo de integração nativo ou do SharePoint.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
-ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 168e8897743e113ae1a40df5ad8d35c66289fde0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68255168"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548078"
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
 O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc que é instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], configurado para o modo nativo ou o modo de integração do SharePoint.  
@@ -25,7 +26,7 @@ O acesso ao Construtor de Relatórios depende dos seguintes fatores:
 
 - As configurações de autenticação que determinam se as credenciais de usuário podem ser transmitidas através do servidor de relatório ou se o acesso anônimo está configurado nos arquivos de aplicativo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 O Construtor de Relatórios não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Recursos com suporte nas edições do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
@@ -101,7 +102,7 @@ Depois que você criar as atribuições de função, os usuários terão permiss
 
     4. Em Descrição, insira uma descrição para a função de modo que os usuários do portal da Web saibam de que se trata a função.  
 
-    5. Adicione as seguintes tarefas: **Relatórios de consumo**, **Exibir relatórios**, **Exibir modelos**, **Exibir recursos**, **Exibir pastas**e **Gerenciar assinaturas individuais**.  
+    5. Adicione as seguintes tarefas: **Relatórios de consumo**, **Exibir relatórios**, **Exibir modelos**, **Exibir recursos**, **Exibir pastas** e **Gerenciar assinaturas individuais**.  
 
     6. Clique em **OK** para salvar a função.  
 
@@ -115,7 +116,7 @@ Depois que você criar as atribuições de função, os usuários terão permiss
 3. Clique em **Segurança**.  
 
 4. Se uma atribuição de função já existir para o usuário ou grupo para o qual deseja configurar o acesso do Construtor de Relatórios, clique em **Editar**.  
-Caso contrário, clique em **Atribuição de Nova Função**. Em Grupo ou usuário, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
+Caso contrário, clique em **Atribuição de Nova Função**. Em Grupo ou usuário, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
 
 5. Selecione **Usuário do Sistema**e clique em **OK**.  
 
@@ -127,7 +128,7 @@ Caso contrário, clique em **Atribuição de Nova Função**. Em Grupo ou usuár
 
 9. Se uma atribuição de função já existir para o usuário ou grupo para o qual deseja configurar o acesso do Construtor de Relatórios, clique em **Editar**.  
 
-    Caso contrário, clique em **Atribuição de Nova Função**. Em Grupo ou usuário, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
+    Caso contrário, clique em **Atribuição de Nova Função**. Em Grupo ou usuário, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
 
 10. Selecione **Construtor de Relatórios**e clique em **Aplicar**.  
 

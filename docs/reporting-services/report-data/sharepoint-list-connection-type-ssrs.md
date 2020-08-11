@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexão de lista do SharePoint | Microsoft Docs
+description: Use as informações fornecidas neste artigo sobre o tipo de conexão SharePoint List para aprender a criar uma fonte de dados.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081394"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455629"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
 

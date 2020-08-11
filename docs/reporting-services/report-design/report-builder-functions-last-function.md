@@ -1,5 +1,6 @@
 ---
 title: Função Last (Construtor de Relatórios) | Microsoft Docs
+description: A função Last retornará o valor final em um conjunto de dados depois que toda a classificação e filtragem tiverem sido aplicadas no escopo especificado no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1856df527f071c5366be84c8260d16ea92bf087
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68f4341c6f747ae58f11ce0c210a7ef4fac78997
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081247"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012614"
 ---
 # <a name="report-builder-functions---last-function"></a>Funções do Construtor de Relatórios – Função Last
   Retorna o último valor no escopo fornecido da expressão especificada.  

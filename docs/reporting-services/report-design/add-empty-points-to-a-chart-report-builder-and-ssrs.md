@@ -1,5 +1,6 @@
 ---
 title: Adicionar pontos vazios a um gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Especifique pontos vazios em um gráfico. Esses pontos são calculados no Construtor de Relatórios tirando a média dos pontos de dados anteriores e seguintes que contêm um valor.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65b97d3f50eec05574a9f7463678ca7da09e2492
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afdcb8a6d464484fb6f294cb4d7943659e32e7f1
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081654"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255659"
 ---
 # <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Adicionar pontos vazios a um gráfico (Construtor de Relatórios e SSRS)
 Valores nulos são mostrados no gráfico como espaços vazios ou lacunas entre os pontos de dados em uma série. Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , pontos vazios são pontos de dados que podem ser inseridos em um espaço vazio criado por valores nulos.  

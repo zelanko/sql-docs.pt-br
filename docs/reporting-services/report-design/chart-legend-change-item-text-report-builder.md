@@ -1,5 +1,6 @@
 ---
 title: Alterar o texto de um item de legenda (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como alterar o texto de um item de legenda para mostrar mais informações sobre pontos de dados individuais no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7f13d4663cf0d4e27148e77eebc59068e8c36924
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078705"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681235"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Legenda de gráfico – alterar item de texto (Construtor de Relatórios)
   Quando um campo é colocado na área Valores do gráfico, um item de legenda é gerado automaticamente contendo o nome desse campo. Cada item de legenda está conectado a uma série individual no gráfico, exceto para gráficos de forma, nos quais a legenda está conectada a pontos de dados individuais em vez de séries individuais.  
@@ -35,7 +36,7 @@ ms.locfileid: "77078705"
   
  A tabela a seguir fornece exemplos de palavras-chave específicas de gráfico para usar para a propriedade **Texto da Legenda Personalizada** . Para obter mais informações sobre palavras-chave, consulte [Formatação de pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-|Palavra-chave|DESCRIÇÃO|Exemplo do que é exibido como texto na legenda|  
+|Palavra-chave|Descrição|Exemplo do que é exibido como texto na legenda|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|Exibe a porcentagem do valor total para uma casa decimal.|85.0%|  
 |`#VALY`|Exibe o valor numérico real do campo de dados.|17000|  

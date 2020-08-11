@@ -1,5 +1,6 @@
 ---
 title: Desenvolvimento seguro (Reporting Services) | Microsoft Docs
+description: Saiba mais sobre o sistema de segurança de acesso do código que o Reporting Services usa, que executa o código em contextos de segurança restritos e definidos pelo administrador.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ead476f8aa6d2565c1865a24c2570a68c2b958d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69d60e4a68deee28c639cc5e100456ef1c9c3552
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193806"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529396"
 ---
 # <a name="secure-development-reporting-services"></a>Desenvolvimento seguro (Reporting Services)
   O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece um sistema de segurança robusto que pode executar o código em contextos de segurança altamente restritos definidos pelo administrador. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa o sistema de segurança do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], conhecido como segurança de acesso a código (ou segurança baseada em evidência). Na segurança de acesso do código, um usuário pode ser confiável para acessar um recurso, mas se o código executado pelo usuário não for confiável, o acesso ao recurso será negado.  

@@ -1,5 +1,6 @@
 ---
 title: Variar a exibição de polígono, linha e ponto por regras e dados analíticos | Microsoft Docs
+description: Controle a exibição de polígonos, linhas e pontos definindo opções e regras ou substituindo opções de elementos de mapa inseridos no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b251d3483d999ee2e4923502608bb9254e44776a
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578442"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012214"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   As opções de exibição para polígonos, linhas e pontos em uma camada do mapa são controladas pela definição de opções para a camada, estabelecendo regras para os elementos do mapa na camada ou substituindo opções para elementos de mapas inseridos específicos em uma camada.  
@@ -106,7 +107,7 @@ ms.locfileid: "65578442"
   
 -   **Ideal.** Crie intervalos que ajustem automaticamente a distribuição para criar subintervalos equilibrados. O número de subintervalos é determinado pelo algoritmo.  
   
--   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados do exemplo, você pode especificar 3 intervalos: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique seu próprio número de intervalos para controlar a distribuição de valores. Para os dados do exemplo, você pode especificar três intervalos: 1-2, 3-8, 9.  
   
  Os valores de distribuição são usados pelas regras para variar os valores de exibição do elemento do mapa.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "65578442"
   
  As tabelas a seguir mostram exemplos de formatos diferentes que você pode usar.  
   
-|Palavra-chave e formato|DESCRIÇÃO|Exemplo do que é exibido como texto na legenda|  
+|Palavra-chave e formato|Descrição|Exemplo do que é exibido como texto na legenda|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Exibe a moeda do valor total sem casas decimais|$ 400|  
 |`#FROMVALUE {C2}`|Exibe a moeda do valor total com até duas casas decimais.|$ 400,55|  

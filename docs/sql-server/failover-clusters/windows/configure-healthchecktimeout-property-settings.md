@@ -1,6 +1,6 @@
 ---
 title: Configurar o HealthCheckTimeout para o grupo de disponibilidade
-description: Configure o HealthCheckTimeout para um grupo de disponibilidade Always On, que é usado para especificar o tempo que a DLL de recurso do SQL Server deve aguardar antes de relatar uma falta de resposta.
+description: Configure o HealthCheckTimeout para um grupo de disponibilidade Always On, que especifica o tempo que a DLL de recurso do SQL Server aguarda antes de relatar uma falta de resposta.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925103"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882953"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Definir configurações da propriedade HealthCheckTimeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   A configuração HealthCheckTimeout é usada para especificar o tempo, em milissegundos, que a DLL de recurso do SQL Server deve aguardar por informações retornadas pelo procedimento armazenado [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) antes de relatar a FCI (Instância de Cluster de Failover) AlwaysOn como sem resposta. As alterações feitas nas configurações de tempo limite entram em vigor imediatamente e não requerem uma reinicialização do recurso do SQL Server.  
   
 -   **Antes de começar:**  [Limitações e Restrições](#Limits), [Segurança](#Security)  

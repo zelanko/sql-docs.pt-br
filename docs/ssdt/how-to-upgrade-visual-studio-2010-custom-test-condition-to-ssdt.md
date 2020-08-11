@@ -1,23 +1,23 @@
 ---
 title: Atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior
+description: Saiba mais sobre como atualizar uma condição de teste personalizada do Visual Studio 2010 para uso no SQL Server Data Tools. Veja quais alterações fazer e como instalar a condição.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2b211250acb2e2594601236a379023a8479243c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893366"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Como: Atualizar uma condição de teste personalizado do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Como fazer: Atualizar uma condição de teste personalizada do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools
 
 Para usar uma condição de unidade de teste que você criou em uma versão anterior para o SQL Server Data Tools, você deverá atualizá-la:  
   

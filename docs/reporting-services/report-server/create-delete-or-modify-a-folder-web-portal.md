@@ -1,5 +1,6 @@
 ---
 title: Criar, excluir ou modificar uma pasta – Reporting Services | Microsoft Docs
+description: Saiba como criar, modificar e excluir pastas para que você possa organizar e gerenciar os itens publicados em um servidor de relatório do Reporting Services.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67492852"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548018"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Criar, excluir ou modificar uma pasta – Reporting Services
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
@@ -96,7 +97,7 @@ ms.locfileid: "67492852"
   
 2. Clique com o botão direito do mouse na pasta e selecione **Excluir** no menu suspenso.  
   
-3. Selecione a guia **Propriedades**. O **propriedades** página é exibida por padrão.  
+3. Clique na guia **Propriedades**. A página **Propriedades** é exibida por padrão.  
   
 4. Você pode alterar o nome da pasta na caixa de texto *Nome**.  
   

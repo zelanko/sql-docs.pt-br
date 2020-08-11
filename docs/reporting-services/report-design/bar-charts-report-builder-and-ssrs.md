@@ -1,5 +1,6 @@
 ---
 title: Gráficos de barras (Construtor de Relatórios) | Microsoft Docs
+description: Exiba os dados horizontalmente com um gráfico de barras para representar dados com uma data de início e de término finita no Construtor de Relatórios.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31749e321ac89d02a046a1bd6d67139bc476c110
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd0fa20a515850d8ab097ef8e868946d16a0439b
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081479"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255519"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Construtor de Relatórios e SSRS)
   Um gráfico de barras exibe as séries como conjuntos de barras horizontais. O gráfico de barras plano está bem relacionado ao gráfico de colunas, que exibe uma série como conjuntos de barras verticais e o gráfico de barras de intervalo, que exibe uma série como conjuntos de barras horizontais com pontos de início e término variáveis.  
@@ -65,7 +66,7 @@ ms.locfileid: "77081479"
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Adicionar estilos de bisel, alto-relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Adicionando um gráfico de barras a um relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adicionando um gráfico de barras a um relatório](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Tutorial: Adicionar um gráfico de barras a um relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adicionar um gráfico de barras a um relatório](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

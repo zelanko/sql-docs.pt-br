@@ -1,5 +1,6 @@
 ---
 title: Realçar os dados do gráfico adicionando faixas (Construtor de Relatórios) | Microsoft Docs
+description: Use as faixas em medidores horizontais ou verticais para aprimorar a legibilidade, realçar datas ou realçar um intervalo de chaves específico no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd7c4ee0998f7f0386272130e56bab47303b31c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b06345fef2d2bc813cfd146c8b31a53b54451859
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082091"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011694"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Realçar dados do gráfico adicionando faixas (Construtor de Relatórios e SSRS)
   As faixas são intervalos horizontais ou verticais que sombreiam o plano de fundo do gráfico em intervalos regulares ou personalizados. É possível usar faixas para:  

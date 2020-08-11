@@ -1,5 +1,6 @@
 ---
 title: Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios) | Microsoft Docs
+description: Descubra os termos usados para descrever relatórios em diferentes estados no Construtor de Relatórios. Esses estados incluem a definição inicial e o relatório publicado.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11236a29e22877e1d785d7ac2325898cc11bac7e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 53e8c7fcd6765742af0056fb44659386cf652561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039715"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos termos para descrever um relatório paginado em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  

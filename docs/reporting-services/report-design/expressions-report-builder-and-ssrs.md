@@ -1,5 +1,6 @@
 ---
 title: Expressões (Construtor de Relatórios) | Microsoft Docs
+description: Controle o conteúdo, o design e a interatividade do seu relatório com expressões que permitem que você recupere, exiba, filtre e formate dados no Construtor de Relatórios.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99314c9108ef0af50a3c43d83a5fcb69b9ccf14f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d092377531a2391917ccdaae046d456bd3b1f629
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487605"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012234"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
   As expressões são amplamente usadas em todos os relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. 
@@ -44,7 +45,7 @@ ms.locfileid: "81487605"
   
 -   **Simples** Uma expressão simples contém uma referência a um único item em uma coleção interna, como, por exemplo, um campo do conjunto de dados, um parâmetro ou um campo interno. Na superfície de design, uma expressão simples aparece entre colchetes. Por exemplo, `[FieldName]` corresponde à expressão subjacente `=Fields!FieldName.Value`. Expressões simples são criadas automaticamente à medida que você cria o layout de relatório e arrasta itens do painel de dados do relatório para a superfície de design. Para obter mais informações sobre os símbolos que representam coleções internas diferentes, consulte [Compreendendo símbolos de prefixo de expressões simples](#DisplayText).  
   
--   **Complexa** Uma expressão complexa contém referências a várias referências internas, operadores e chamadas de função. Uma expressão complexa é exibida como <\<Expr>> quando o valor de expressão inclui mais que uma referência simples. Para exibir a expressão, passe o mouse sobre ela e use a dica de ferramenta. Para editar a expressão, abra-a na caixa de diálogo **Expressão** .  
+-   **Complexa** Uma expressão complexa contém referências a várias referências internas, operadores e chamadas de função. Uma expressão complexa é exibida como <\<Expr>> quando o valor de expressão inclui mais do que uma referência simples. Para exibir a expressão, passe o mouse sobre ela e use a dica de ferramenta. Para editar a expressão, abra-a na caixa de diálogo **Expressão** .  
   
  A figura a seguir mostra expressões simples e complexas típicas para caixas de texto e texto do espaço reservado.  
   
@@ -75,7 +76,7 @@ As expressões simples usam símbolos para indicar se a referência destina-se a
   
  A seguinte tabela lista os tipos de referências que podem ser incluídos em uma expressão:  
   
-|Referências|DESCRIÇÃO|Exemplo|  
+|Referências|Descrição|Exemplo|  
 |----------------|-----------------|-------------|  
 |[Constantes](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|Descreve as constantes acessadas interativamente para propriedades que exigem valores de constantes, tais como cores de fontes.|`="Blue"`|  
 |[Operadores](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Descreve os operadores a serem usados para combinar referências em uma expressão. Por exemplo, o operador **&** é usado para concatenar cadeias de caracteres.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
@@ -110,6 +111,6 @@ As expressões simples usam símbolos para indicar se a referência destina-se a
 -   [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [Tutorial: Apresentação de expressões](../tutorial-introducing-expressions.md)
+-   [Tutorial: Apresentando expressões](../tutorial-introducing-expressions.md)
 -   [Exemplos de relatório (Construtor de Relatórios e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

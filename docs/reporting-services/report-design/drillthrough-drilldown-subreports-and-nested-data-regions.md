@@ -1,5 +1,6 @@
 ---
 title: Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas | Microsoft Docs
+description: Organize os dados para mostrar a relação do geral com o detalhado e exibi-los em um sub-relatório ou um relatório de detalhamento separado.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55dd847b01d6870712c226fa9aec0d49de2c4efb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578773"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689383"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas
   É possível organizar dados de várias formas para mostrar a relação entre o geral e o detalhado.  É possível colocar todos os dados no relatório, mas defini-lo como oculto até que um usuário clique para revelar detalhes; trata-se de uma ação de *busca detalhada* . É possível exibir os dados em uma região de dados, como uma tabela ou um gráfico, *aninhado* em outra região de dados, como uma tabela ou matriz. É possível exibir os dados em um *sub-relatório* totalmente contido em um relatório principal. Se preferir, você pode colocar os dados detalhados em relatórios de *detalhamento* , relatórios à parte que são exibidos quando um usuário clica em um link.  

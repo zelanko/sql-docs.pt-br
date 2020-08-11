@@ -1,5 +1,6 @@
 ---
 title: Pontos de dados vazios e nulos nos gráficos (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre o processamento de gráfico para valores vazios e o uso de espaços reservados e como os pontos de dados vazios e nulos são exibidos no Construtor de Relatórios.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d675921a3fe5dd1a49c8e9f4f9c52721db63726e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0945637105fccb7558521f59f65ae28f9b29808d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048269"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Pontos de dados vazios e nulos em gráficos (Construtor de Relatórios e SSRS)
 

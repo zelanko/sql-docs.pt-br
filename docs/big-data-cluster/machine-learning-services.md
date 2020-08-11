@@ -7,17 +7,17 @@ ms.author: davidph
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
-ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643336"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196908"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Executar scripts do Python e do R com Serviços de Machine Learning em Clusters de Big Data do SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Você pode executar scripts do Python e do R na instância mestra de [Clusters de Big Data do SQL Server](big-data-cluster-overview.md) com [Serviços de Machine Learning](../machine-learning/index.yml).
 
@@ -119,7 +119,7 @@ Cada balanceador de carga é um ponto de extremidade de réplica mestre.
 
 A imagem a seguir demonstra esse processo.
 
-[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+[![Demonstração](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrar o recurso de habilitação no Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
 
 Agora você está pronto para executar scripts do Python e do R na instância mestra de Clusters de Big Data. Confira os guias de início rápido nas [Próximas etapas](#next-steps) para executar seu primeiro script.
 
@@ -141,7 +141,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ## <a name="next-steps"></a>Próximas etapas
 
-+ [Início Rápido: Criar e executar scripts Python simples com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-python-create-script.md)
-+ [Início Rápido: Criar e pontuar um modelo de previsão no Python com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-python-train-score-model.md)
-+ [Início Rápido: Criar e executar scripts R simples com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Início Rápido: Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](../machine-learning/tutorials/quickstart-r-train-score-model.md)
++ [Executar scripts simples do Python](../machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json)
++ [Treinar e pontuar um modelo preditivo no Python](../machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json)
++ [Executar scripts simples do R](../machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json)
++ [Treinar e pontuar um modelo preditivo no R](../machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json)

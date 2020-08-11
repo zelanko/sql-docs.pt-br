@@ -1,5 +1,6 @@
 ---
 title: Log de rastreamento do serviço Servidor de Relatório
+description: Saiba mais sobre logs de rastreamento do serviço de relatório no Reporting Services, que contêm informações detalhadas para operações de serviço do Servidor de Relatório.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 294639b3fed68acf0bb8b07ea0430a890e97910e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68254864"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541498"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
 

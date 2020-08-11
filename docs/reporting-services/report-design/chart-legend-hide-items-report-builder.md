@@ -1,5 +1,6 @@
 ---
 title: Ocultar itens de legenda no gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como escolher os itens exibidos na legenda para exibir os dados essenciais no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 784258433329832bbff3f8737086ef906eecfd64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f745b3eb2c862f4105bcdd872a8915845341942
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081333"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681415"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>Legenda de gráfico – Ocultar itens (Construtor de Relatórios)
 Por padrão, qualquer série adicionada a um gráfico sem forma em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] será adicionada como um item na legenda. Para gráficos de pizza, de rosca, de funil e de pirâmide, qualquer série adicionada ao gráfico adicionará pontos de dados individuais na legenda.  

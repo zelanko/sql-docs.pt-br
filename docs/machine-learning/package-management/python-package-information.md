@@ -4,34 +4,36 @@ description: Saiba como obter informações sobre os pacotes do Python instalado
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 06/03/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb08940a9a6c9c15d8c633f5b3c439514bc43646
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: cecd267627b32b989913ace5e374c74543e69ba4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83605948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671094"
 ---
 # <a name="get-python-package-information"></a>Obter informações sobre o pacote do Python
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Este artigo descreve como obter informações sobre os pacotes do Python instalados, incluindo versões e locais de instalação, nos Serviços de Machine Learning do SQL Server. Os exemplos de scripts do Python mostram como listar informações de pacote, como o caminho e a versão de instalação.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Este artigo descreve como obter informações sobre os pacotes do Python instalados, incluindo versões e locais de instalação, nos [Serviços de Machine Learning no SQL Server](../sql-server-machine-learning-services.md) e em [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md). Os exemplos de scripts do Python mostram como listar informações de pacote, como o caminho e a versão de instalação.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Este artigo descreve como obter informações sobre os pacotes do Python instalados, incluindo versões e locais de instalação, nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md). Os exemplos de scripts do Python mostram como listar informações de pacote, como o caminho e a versão de instalação.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Este artigo descreve como obter informações sobre os pacotes do Python instalados, incluindo versões e locais de instalação, nos [Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Os exemplos de scripts do Python mostram como listar informações de pacote, como o caminho e a versão de instalação.
+::: moniker-end
 
 ## <a name="default-python-library-location"></a>Localização da biblioteca padrão do Python
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Quando você instala o aprendizado de máquina com o SQL Server, uma única biblioteca de pacotes é criada no nível de instância para cada linguagem instalada. A biblioteca de instâncias é uma pasta protegida registrada no SQL Server.
-::: moniker-end
-
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-Quando você instala o aprendizado de máquina com o SQL Server, uma única biblioteca de pacotes é criada no nível de instância para cada linguagem instalada.
-::: moniker-end
 
 Todo script ou código executado no banco de dados no SQL Server deve carregar funções da biblioteca de instâncias. O SQL Server não pode acessar pacotes instalados em outras bibliotecas. Isso se aplica a clientes remotos também: qualquer código do Python em execução no contexto de computação do servidor só pode usar pacotes instalados na biblioteca de instâncias.
 Para proteger os ativos do servidor, a biblioteca de instâncias padrão pode ser modificada apenas por um administrador do computador.
@@ -59,7 +61,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-Execute a instrução a seguir para verificar a biblioteca padrão para a instância atual. Este exemplo retorna a lista de pastas incluídas na variável `sys.path` do Python. A lista inclui o diretório atual e o caminho da biblioteca padrão.
+Execute a instrução SQL a seguir para verificar a biblioteca padrão para a instância atual. Este exemplo retorna a lista de pastas incluídas na variável `sys.path` do Python. A lista inclui o diretório atual e o caminho da biblioteca padrão.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -68,6 +70,11 @@ EXECUTE sp_execute_external_script
 ```
 
 Para obter mais informações sobre a variável `sys.path` e como ela é usada para definir o caminho de pesquisa do interpretador para módulos, confira [O caminho de pesquisa do módulo](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!NOTE]
+> Não tente instalar pacotes do Python diretamente na biblioteca de pacotes do SQL usando **pip** ou métodos semelhantes. Em vez disso, use **sqlmlutils** para instalar pacotes em uma instância SQL. Para obter mais informações, confira [Instalar pacotes do Python com o sqlmlutils](install-additional-python-packages-on-sql-server.md).
+::: moniker-end
 
 ## <a name="default-microsoft-python-packages"></a>Pacotes do Python padrão da Microsoft
 
@@ -123,7 +130,7 @@ EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pkg_name = "pandas"
+pkg_name = "scikit-learn"
 try:
     version = pkg_resources.get_distribution(pkg_name).version
     print("Package " + pkg_name + " is version " + version)
@@ -135,22 +142,13 @@ except:
 Resultado:
 
 ```text
-STDOUT message(s) from external script: Package pandas is version 0.23.4
+STDOUT message(s) from external script: Package scikit-learn is version 0.20.2
 ```
 
-O exemplo a seguir imprime a versão do pacote `pandas`.
+<a name="bkmk_SQLPythonVersion"></a>
+## <a name="view-the-version-of-python"></a>Exibir a versão do Python
 
-```sql
-EXECUTE sp_execute_external_script
-  @language = N'Python',
-  @script = N'
-import pkg_resources
-pkg_name = "pandas"
-print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
-'
-```
-
-O exemplo a seguir retorna a versão do Python.
+O código de exemplo a seguir retorna a versão do Python instalada na instância do SQL Server.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -163,9 +161,9 @@ print(sys.version)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 + [Instalar pacotes com ferramentas do Python](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [Instalar novos pacotes de Python com sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

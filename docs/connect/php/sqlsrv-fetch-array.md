@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft Docs
+title: sqlsrv_fetch_array
+description: Referência da API para a função sqlsrv_fetch_array no Driver para PHP para o SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0055ed89d217a664d201d93d2c13c8e078d2a38
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927810"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391801"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,13 +42,13 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [OPCIONAL]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|A próxima linha de dados é retornada como uma matriz numérica.|  
 |SQLSRV_FETCH_ASSOC|A próxima linha de dados é retornada como uma matriz associativa. As chaves da matriz são os nomes das colunas no conjunto de resultados.|  
 |SQLSRV_FETCH_BOTH|A próxima linha de dados é retornada tanto como uma matriz numérica quanto como uma matriz associativa. Esse é o valor padrão.|  
   
-*row* [OPCIONAL]: adicionado na versão 1.1. Um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que usa um cursor rolável. (Quando *row* for especificado, *fetchtype* deverá ser especificado explicitamente, mesmo se você especificar o valor padrão.)  
+*row* [OPCIONAL]: Adicionado na versão 1.1. Um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que usa um cursor rolável. (Quando *row* for especificado, *fetchtype* deverá ser especificado explicitamente, mesmo se você especificar o valor padrão.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Se o conjunto de resultados retornado pela parte `SELECT SCOPE_IDENTITY()` dessa instrução for recuperado como uma matriz associativa, a chave do valor retornado será uma cadeia de caracteres vazia ("") porque a coluna retornada não tem nome. Para evitar isso, você pode recuperar o resultado como uma matriz numérica ou pode especificar um nome para a coluna retornada na instrução Transact-SQL. Veja a seguir uma maneira de especificar um nome de coluna no Transact-SQL:  
+Se o conjunto de resultados retornado pela parte `SELECT SCOPE_IDENTITY()` dessa instrução for recuperado como uma matriz associativa, a chave do valor retornado será uma cadeia de caracteres vazia ("") porque a coluna retornada não tem nome. Para evitar isso, você pode recuperar o resultado como uma matriz numérica ou pode especificar um nome para a coluna retornada na instrução Transact-SQL. A seguinte instrução é uma forma de especificar um nome de coluna no Transact-SQL:  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -176,7 +177,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-A função **sqlsrv_fetch_array** sempre retorna dados de acordo com os [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre como especificar o tipo de dados do PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+A função **sqlsrv_fetch_array** sempre retorna dados de acordo com os [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre como especificar o tipo de dados do PHP, confira [Como: especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Se um campo sem nome for recuperado, a chave associativa do elemento da matriz será uma cadeia de caracteres vazia (""). Para obter mais informações, consulte [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   

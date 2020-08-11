@@ -1,5 +1,6 @@
 ---
 title: Assistente de mapa e assistente de camada do mapa (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como automatizar a criação de um mapa, a adição de uma camada do mapa ou a alteração de opções da camada do mapa com os Assistentes de Mapa ou o Assistente de Camada do Mapa no Construtor de Relatórios.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048328"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
  Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , o Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
@@ -44,7 +45,7 @@ ms.locfileid: "77078573"
   
  Clique no título da página do assistente para obter o respectivo conteúdo de ajuda. As páginas exibidas variarão de acordo com as suas escolhas de tipo de mapa, a fonte de dados espaciais e a fonte de dados analíticos.  
   
-1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  [Escolha uma fonte de dados espaciais](#SpatialDataSource). Os dados espaciais podem vir da galeria de mapas, de um Arquivo de Forma ESRI ou de dados espaciais em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   [O que são dados espaciais?](#SpatialData)  
   
@@ -119,7 +120,7 @@ ms.locfileid: "77078573"
  Para estender a galeria de mapas, você pode adicionar ou remover relatórios do diretório dessa galeria e adicionar pastas para organizar os mapas. Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
- Um Arquivo de Forma ESRI é um conjunto de arquivos com dados no formato de dados espaciais de Arquivo de Forma ESRI (Environmental Systems Research Institute, Inc.). Em geral, esse conjunto de arquivos inclui o arquivo *\<filename>* .shp, que contém os dados espaciais e um arquivo de suporte, *\<filename>* .dbf.  
+ Um Arquivo de Forma ESRI é um conjunto de arquivos com dados no formato de dados espaciais de Arquivo de Forma ESRI (Environmental Systems Research Institute, Inc.). Em geral, esse conjunto de arquivos inclui o arquivo *\<filename>* .shp que contém os dados espaciais e um arquivo de suporte, *\<filename>* .dbf.  
   
  Quando você especifica um arquivo de forma como fonte de dados espaciais e ele está em seu computador local, os dados espaciais são inseridos automaticamente no relatório. Para usar dados espaciais de um arquivo ESRI dinamicamente, faça o seguinte:  
   

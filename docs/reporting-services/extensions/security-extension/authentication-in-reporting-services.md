@@ -1,5 +1,6 @@
 ---
 title: Autenticação no Reporting Services | Microsoft Docs
+description: Saiba como estender esquemas de autenticação no Reporting Services usando a Autenticação de Formulários ou a interface IAuthenticationExtension2.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 64d22ded480b62a8d963127e32cf35b5e53df9ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488580"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529072"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticação no Reporting Services
   A autenticação é o processo de estabelecimento do direito de um usuário a uma identidade. Existem muitas técnicas que você pode usar para autenticar um usuário. O modo mais comum é usar senhas. Quando você implementa a Autenticação de Formulários, por exemplo, deseja uma implementação que solicite credenciais dos usuários (normalmente por meio de alguma interface que solicita um nome de login e uma senha) e depois valide os usuários em um repositório de dados, como uma tabela de banco de dados ou um arquivo de configuração. Se as credenciais não puderem ser validadas, o processo de autenticação falhará e o usuário assumirá uma identidade anônima.  

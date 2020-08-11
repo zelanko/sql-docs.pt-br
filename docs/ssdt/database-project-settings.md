@@ -1,5 +1,6 @@
 ---
 title: Configurações de projeto de banco de dados
+description: Saiba mais sobre as configurações de projeto de banco de dados. Veja como usar essas configurações para controlar aspectos do seu banco de dados, depuração e configurações de build.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -36,16 +37,15 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241679"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518846"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 

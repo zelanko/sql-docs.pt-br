@@ -1,21 +1,21 @@
 ---
 title: Solucionando problemas de teste de unidade do banco de dados SQL Server
+description: Veja dicas de solução de problemas que você pode ter com testes de unidade do SQL Server, como falhas de tempo limite e implantação de banco de dados para destinos inesperados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9f8c0c87922a54df0bcd3d2ee4fa730ecfaff7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256315"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883409"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Solucionando problemas de teste de unidade do banco de dados SQL Server
 
@@ -49,6 +49,6 @@ Se seus testes de unidade de banco de dados estão falhando devido a tempo limit
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[Como configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Como: Criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Como: configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

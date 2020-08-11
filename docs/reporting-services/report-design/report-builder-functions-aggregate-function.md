@@ -1,5 +1,6 @@
 ---
 title: Função de agregação (Construtor de Relatórios) | Microsoft Docs
+description: A função de agregação retorna uma agregação personalizada de uma expressão especificada pois a expressão é definida pelo provedor de dados.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c2590431193fa48bf4467fb30c5abc6cbf5a037
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aef4411334ee9ca345a5b2f2c8b325c6fd2dae70
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079130"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462410"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funções do Construtor de Relatórios – Função de Agregação
   Retorna uma agregação personalizada da expressão especificada, conforme definido pelo provedor de dados.  

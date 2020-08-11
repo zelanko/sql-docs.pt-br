@@ -1,5 +1,6 @@
 ---
 title: Ativar eventos do Reporting Services para o log de rastreamento do SharePoint (ULS) | Microsoft Docs
+description: Saiba como ativar a gravação de eventos do Reporting Services no log de rastreamento ULS do SharePoint para servidores no Reporting Services no modo do SharePoint.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547858"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -38,7 +39,7 @@ ms.locfileid: "68893239"
 ##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> Recomendações gerais de log ULS  
  A tabela a seguir lista categorias e níveis de eventos recomendados para monitorar um ambiente do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Quando um evento é registrado em log, cada entrada inclui a hora do registro, o nome do processo e a ID do thread.  
   
-|Categoria|Nível|DESCRIÇÃO|  
+|Categoria|Nível|Descrição|  
 |--------------|-----------|-----------------|  
 |Banco de dados|Detalhado|Registra eventos que envolvem acesso ao banco de dados.|  
 |Geral|Detalhado|Registra eventos que envolvem acesso aos seguintes itens:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Páginas da Web<br /><br /> Manipulador de HTTP do Visualizador de Relatórios<br /><br /> Acesso a relatório (arquivos .rdl)<br /><br /> Fontes de dados (arquivos .rsds)<br /><br /> URLs no site do SharePoint (arquivos .smdl)|  
@@ -87,7 +88,7 @@ Get-SPDiagnosticConfig
   
 2.  **Categoria:** Eventos relacionados ao servidor terão os caracteres "Servidor de Relatório" no início do nome. Por exemplo "Runtime de Alerta do Servidor de Relatório". Esses eventos também são registrados em log para os arquivos de log do servidor de relatório.  
   
-3.  **Categoria:** eventos relacionados ou comunicados de um componente front-end da Web não contêm "Servidor de Relatório". Por exemplo "Proxy de Aplicativo de Serviço" Runtime de Alerta do Servidor de Relatório". As entradas de WFE contêm um CorrelationID, mas as entradas de servidor não.  
+3.  **Categoria:** Eventos relacionados ou comunicados de um componente front-end da Web não contêm "Servidor de Relatório". Por exemplo "Proxy de Aplicativo de Serviço" Runtime de Alerta do Servidor de Relatório". As entradas de WFE contêm um CorrelationID, mas as entradas de servidor não.  
   
 ##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> Lista de eventos do SQL Server Reporting Services  
  Esta tabela é uma lista dos eventos na categoria SQL Server Reporting Services:  
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |Provedor do servidor de relatório||  
 |Renderização do servidor de relatório||  
 |Visualização de relatório do servidor de relatório||  
-|Utilitário de recursos do servidor de relatório|Entradas de exemplo:<br /><br /> Serviços de MediumReporting iniciando o SKU: avaliação<br /><br /> Cópia de MediumEvaluation: restam 180 dias|  
+|Utilitário de recursos do servidor de relatório|Entradas de exemplo:<br /><br /> Serviços de MediumReporting iniciando o SKU: Avaliação<br /><br /> Cópia de MediumEvaluation: 180 dias restantes|  
 |Trabalhos em execução do servidor de relatório||  
 |Solicitações em execução do servidor de relatório||  
 |Agenda do servidor de relatório||  

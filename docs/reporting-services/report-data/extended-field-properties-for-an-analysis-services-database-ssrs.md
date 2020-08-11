@@ -1,5 +1,6 @@
 ---
 title: Propriedades de campo estendidas para um banco de dados do Analysis Services | Microsoft Docs
+description: Saiba mais sobre as propriedades de campo estendidas para um banco de dados do Analysis Services e como incluir valores de propriedades de campo estendidas em seu relatório.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: beae593bc4673a1fd31d27c5f807553a2b960872
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077683"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458351"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
   A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo **Value** e **IsMissing** que estão disponíveis na fonte de dados e que têm suporte na extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode inclui os valores de propriedade do campo estendido em seu relatório escrevendo expressões que os especifiquem por nome usando a coleção interna de **Fields** .  

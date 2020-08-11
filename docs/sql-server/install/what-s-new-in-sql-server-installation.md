@@ -1,5 +1,6 @@
 ---
 title: Novidades na instalação do SQL Server | Microsoft Docs
+description: Este artigo resume algumas alterações no processo de instalação do SQL Server, incluindo o suporte a SysPrep e a maneira de atualizar do SQL Server 2005.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dcadc3152a98ad1477d702bef8989d9a5e33543f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68045653"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899613"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novidades na instalação do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  A instalação tem suporte apenas em processadores x64. Para obter mais informações, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   

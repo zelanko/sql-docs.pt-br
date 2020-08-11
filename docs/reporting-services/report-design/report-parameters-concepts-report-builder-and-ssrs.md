@@ -1,5 +1,6 @@
 ---
 title: Conceitos de parâmetros de relatório (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como adicionar parâmetros para vincular relatórios paginados, controlar a aparência de um relatório, filtrar dados de relatório ou restringir o escopo no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5e7cafdce773969f9e6914a47534f88eb238a4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e6419e43991ff2dfe28ea0e3f6b2033693b9c3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081071"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681595"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Conceitos de parâmetros de relatório (Construtor de Relatórios e SSRS)
   Você pode adicionar parâmetros a um relatório para vincular relatórios relacionados, controlar a aparência do relatório, filtrar dados de relatórios ou restringir o escopo de um relatório a usuários ou locais específicos.  

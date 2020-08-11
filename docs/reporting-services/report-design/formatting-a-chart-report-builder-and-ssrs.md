@@ -1,5 +1,6 @@
 ---
 title: Como formatar um gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Aprimore a aparência do gráfico e realce os pontos de dados usando as opções de formatação encontradas nas propriedades de cada elemento de gráfico no Construtor de Relatórios.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -49,12 +50,12 @@ f1_keywords:
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ffb31bd95cda34c064d4f49081c66228e25bbd5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 170691bbc29a69ef486776057a2da774bef90910
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079952"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255469"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formatando um gráfico (Construtor de Relatórios e SSRS)
   Quando você tiver definido os dados do gráfico e estiver satisfeito com a sua aparência, poderá adicionar a formatação para melhorá-lo em geral e realçar os principais pontos de dados. As opções de formatação mais comuns podem ser modificadas na caixa de diálogo Propriedades que são encontradas quando você clica com o botão direito do mouse em um elemento do gráfico para exibir o menu de atalho correspondente. Cada elemento do gráfico possui sua própria caixa de diálogo. Para obter mais informações sobre elementos de gráfico, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

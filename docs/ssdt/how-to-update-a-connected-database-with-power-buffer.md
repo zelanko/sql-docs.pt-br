@@ -1,5 +1,6 @@
 ---
 title: Atualizar um banco de dados conectado com o Power Buffer
+description: Saiba como usar o Power Buffer para atualizar um banco de dados. Confira como verificar as alterações antes de aplicá-las e como salvar alterações em um script para implantação posterior.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3954ae84a201209e49b65dc421ab41b93126fb65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244256"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893874"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Como atualizar um banco de dados conectado com o Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Como fazer: Atualizar um banco de dados conectado com o Power Buffer
 
 A tecnologia Power Buffer do SQL Server Data Tools facilita a aplicação de alterações em seu banco de dados conectado, armazenando todas as suas edições na sessão atual. Qualquer erro causado ao editar na janela Power Buffer (no Editor Transact\-SQL ou no Designer de Tabela) é exibido imediatamente no painel **Lista de Erros**, permitindo que você siga os erros identificados para a devida solução de problemas. Você pode verificar suas alterações pendentes até estar pronto para aplicá-las no seu banco de dados. Durante o processo de atualização, o SSDT automaticamente cria um script ALTER com base nas suas edições e o alerta para qualquer problema potencial. Você pode aplicar todas as alterações acumuladas em todas as janelas abertas do Power Buffer no mesmo banco de dados, ou salvar o script ALTER para ser implantado posteriormente.  
   
@@ -63,5 +63,5 @@ Os procedimentos a seguir utilizam entidades criadas em procedimentos anteriores
 5.  Clique com o botão direito em **Table_1** e selecione **Excluir**. Clique em **Atualizar Banco de Dados** na caixa de diálogo **Visualizar Alterações de Banco de Dados**.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como corrigir erros](../ssdt/how-to-fix-errors.md)  
+[Como: Consertar erros](../ssdt/how-to-fix-errors.md)  
   

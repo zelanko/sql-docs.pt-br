@@ -1,5 +1,6 @@
 ---
 title: Contadores de desempenho para os objetos de desempenho do serviço Web do MSRS 2011 | Microsoft Docs
+description: Saiba mais sobre os contadores de desempenho para os objetos de desempenho do Serviço Web do MSRS 2011 e o Serviço Windows do MSRS 2011.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 21975c380bc948c9f8a514da40a42fd1f422c125
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893450"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545528"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contadores de desempenho para os objetos de desempenho do serviço Web do MSRS 2011
   Este tópico descreve contadores de desempenho para os objetos de desempenho do **Serviço Web MSRS 2011** e do **Serviço do Windows MSRS 2011** . Esses objetos fazem parte de uma implantação do Modo Nativo do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -46,7 +47,7 @@ ms.locfileid: "68893450"
   
  A tabela a seguir lista os contadores que são incluídos com o objeto de desempenho do **Serviço Web MSRS 2011** .  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Sessões ativas**|Número de sessões ativas. Este contador fornece uma contagem cumulativa de todas as sessões de navegador geradas a partir de execuções de relatórios, independentemente de estarem ativas ou não.<br /><br /> O contador é reduzido à medida que os registros de sessão são removidos. Por padrão, as sessões são removidas após dez minutos de inatividade.|  
 |**Acertos de cache/s**|Número de solicitações por segundo para relatórios armazenados em cache. As solicitações são para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte **Total de acertos de cache** mais adiante neste tópico.)|  
@@ -76,7 +77,7 @@ ms.locfileid: "68893450"
   
  A tabela a seguir lista os contadores incluídos no objeto de desempenho do **Serviço do Windows MSRS 2011** .  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Sessões ativas**|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |**Liberações do cache/s**|Número de liberações de cache por segundo.|  

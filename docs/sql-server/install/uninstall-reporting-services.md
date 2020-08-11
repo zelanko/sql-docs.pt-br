@@ -1,5 +1,6 @@
 ---
 title: Desinstalar o Reporting Services | Microsoft Docs
+description: Este artigo descreve como desinstalar o Reporting Services, que não remove o conteúdo que você criou ou a configuração que você modificou.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 16466f509383ec407dafcd5a9cf61b324a7c4b52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 40bc0ef1014268a2d6b7d50d29589b1db3aaf093
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71951573"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883700"
 ---
 # <a name="uninstall-reporting-services"></a>Desinstalar o Reporting Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A desinstalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não remove o conteúdo que você criou ou a configuração que você modificou. Porém, se algum conteúdo precisar ser utilizado depois que a desinstalação for concluída, é recomendável fazer cópias do conteúdo antes de começar o processo de desinstalação.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "71951573"
   
 -   **Banco de dados temporário do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
   
--   **Banco de dados de alertas do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
+-   **Banco de dados de alerta do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Desinstale o suplemento para produtos do SharePoint.  
  Ao desinstalar o suplemento de um computador, você pode optar por desinstalar somente os arquivos ou também para remover o recursos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do farm. Para obter informações sobre como instalar o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para os produtos do SharePoint, veja [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  

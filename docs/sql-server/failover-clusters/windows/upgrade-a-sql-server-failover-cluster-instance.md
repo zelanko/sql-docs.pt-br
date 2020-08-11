@@ -1,6 +1,6 @@
 ---
 title: Atualizar uma instância de cluster de failover
-description: Etapas para atualizar uma instância de cluster de failover do SQL Server usando a mídia de instalação.
+description: Saiba como atualizar uma instância de cluster de failover do SQL Server usando a mídia de instalação. Saiba mais sobre como realizar atualizações sem interrupção e a atualização de um cluster de várias sub-redes.
 ms.custom: seo-lt-2019
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24607a6372ba733165aa12fd159baea10f80ebd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43447d1fbba7ceb9a1c3faa79443f6304e8e6015
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822020"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858576"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Atualizar uma instância de cluster de failover do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte ao upgrade de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uma nova versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], para um novo service pack ou atualização cumulativa do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou ao instalar um novo service pack ou atualização cumulativa do serviço Windows separadamente em todos os nós de cluster de failover, com tempo de inatividade limitado a um único failover manual (ou dois failovers manuais, em caso de failback para a primária original).  
   
  Não há suporte para upgrade do sistema operacional Windows de um cluster de failover em sistemas operacionais anteriores ao [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Para fazer upgrade de um nó de cluster em execução no [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] ou posterior, consulte [Executar uma atualização ou atualização sem interrupção](#perform-a-rolling-upgrade-or-update).  
@@ -43,16 +43,16 @@ ms.locfileid: "74822020"
   
 -   Durante a atualização do cluster de failover, o tempo de inatividade está limitado ao tempo necessário à atualização de scripts para execução. Se você seguir o processo de atualização sem interrupção do cluster de failover abaixo e atender a todos os pré-requisitos em todos os nós antes de começar o processo de atualização, o tempo de inatividade é mínimo. O upgrade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando as tabelas com otimização de memória estiverem em uso levará um pouco mais de tempo. Para saber mais, confira [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Antes de começar, examine as seguintes informações importantes:  
   
--   [Upgrades de versão e edição com suporte](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verifique se você pode atualizar para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] de sua versão do sistema operacional Windows e da versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por exemplo, não é possível atualizar diretamente de um instância de clustering de failover do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] atualizar um cluster de failover em execução no [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Atualizações compatíveis de versão e edição](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verifique se você pode atualizar para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] de sua versão do sistema operacional Windows e da versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por exemplo, não é possível atualizar diretamente de um instância de clustering de failover do SQL Server 2005 para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] atualizar um cluster de failover em execução no [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
--   [Escolha um método de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selecione o método de atualização apropriado e as etapas com base em sua análise de atualizações de versão e edição com suporte e também com base em outros componentes instalados em seu ambiente para atualizar os componentes no ordem correta.  
+-   [Escolher um método de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): selecione o método e as etapas de atualização apropriados com base em sua análise de atualizações de versão e de edição com suporte e também com base em outros componentes instalados em seu ambiente a fim de atualizar os componentes na ordem correta.  
   
--   [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): examine as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização, e desenvolva e teste o plano de atualização.  
+-   [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Analise as notas de versão e os problemas conhecidos da atualização, a lista de verificação pré-atualização, e desenvolva e teste o plano de atualização.  
   
--   [Requisitos de hardware e software para a instalação do SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
+-   [Requisitos de hardware e software para a instalação do SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Analise os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Realizar uma atualização ou atualização sem interrupção  
  Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], use a instalação de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para atualizar cada nó de cluster de failover por vez, começando com os nós passivos. Conforme você atualiza cada nó, ele é omitido dos possíveis proprietários do cluster de failover. Se houver um failover inesperado, os nós atualizados não participarão do failover até que a propriedade do grupo de recursos de cluster seja movida para um nó atualizado pela instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

@@ -1,5 +1,6 @@
 ---
 title: Usar comparação de esquema para comparar definições de banco de dados diferentes
+description: Saiba como comparar definições de banco de dados com a Comparação de Esquemas. Confira como excluir diferenças específicas e atualizar o destino ou então criar um script de atualização.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2347297adfbc9d4df88c7df32fffefa4990010d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895826"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Como fazer: Usar comparação de esquema para comparar definições de banco de dados diferentes
 
@@ -41,7 +41,7 @@ O procedimento a seguir compara o esquema de um projeto de banco de dados com um
   
 ### <a name="to-compare-database-definitions"></a>Para comparar definições de banco de dados  
   
-1.  No menu **SQL**, selecione **Comparação de Esquemas** e clique em **Nova Comparação de Esquemas**.  
+1.  No menu **Ferramentas**, selecione **SQL Server** e clique em **Nova Comparação de Esquemas**.  
   
     Como alternativa, clique com o botão direito do mouse no projeto **TradeDev**, no **Gerenciador de Soluções**, e selecione **Comparação de Esquemas**.  
   

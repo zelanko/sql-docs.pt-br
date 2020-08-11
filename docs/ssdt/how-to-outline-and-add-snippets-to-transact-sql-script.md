@@ -1,23 +1,23 @@
 ---
 title: Estruturar tópicos e adicionar snippets a scripts Transact-SQL
+description: Saiba mais sobre os snippets de código fornecidos pelo SSDT. Confira como inserir snippets em aplicativos e descubra como ocultar e expandir códigos no Editor Transact-SQL.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 655dc1271fa928558974bf6ebc36b8d551207ea2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241355"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880433"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como estruturar tópicos e adicionar snippets a scripts Transact-SQL
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como fazer: Estruturar tópicos e adicionar snippets a scripts Transact-SQL
 
 O SQL Server Data Tools inclui uma biblioteca de códigos que consiste em snippets de código prontos para serem inseridos no seu aplicativo. Cada snippet executa uma tarefa de script completa como criar uma função, tabela, gatilho, índice, exibição, tipo de dados definido pelo usuário, etc. Você pode inserir um snippet em seu código-fonte com alguns cliques do mouse. Estes snippets aumentam sua produtividade reduzindo a quantidade de tempo você gasta digitando.  
   

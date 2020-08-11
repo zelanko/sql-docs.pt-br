@@ -1,5 +1,6 @@
 ---
 title: Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Mostre os mesmos dados em uma matriz e em um gráfico no Construtor de Relatórios. Defina as propriedades nessas regiões de dados para incluir as especificações.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b444cd40a8141ca3b9398181944aef3a6e61915c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056549"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios)
   Quando quiser mostrar os mesmos dados em uma matriz e em um gráfico, defina propriedades em ambas as regiões de dados para especificar o mesmo conjunto de dados, além das mesmas expressões para filtros, grupos, classificações e dados.  

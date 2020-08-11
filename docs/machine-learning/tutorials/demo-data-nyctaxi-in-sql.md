@@ -2,22 +2,22 @@
 title: Dados de demonstração de Táxi de Nova York para tutoriais
 description: Crie um banco de dados que contenha os dados de exemplo de taxi de Nova York. Esse conjunto de dados é usado em tutoriais de R e Python para os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814049"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de táxi de Nova York para tutoriais de Python e R do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo explica como configurar um banco de dados de exemplo que consiste em dados públicos da [Comissão táxi e limusines da Cidade de Nova York](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Esses dados são usados em vários tutoriais de R e Python para análise no banco de dados no SQL Server. Para fazer com que o código de exemplo seja executado mais rapidamente, criamos uma amostragem representativa de 1% dos dados. No seu sistema, o arquivo de backup do banco de dados terá um pouco mais de 90 MB, fornecendo 1,7 milhões de linhas na tabela de dados primária.
 
@@ -33,6 +33,11 @@ Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem 
 O banco de dados de exemplo é um arquivo BAK do SQL Server 2016 hospedado pela Microsoft. Você pode restaurá-lo no SQL Server 2016 e posterior. O download do arquivo é iniciado imediatamente quando você clica no link. 
 
 O tamanho do arquivo é aproximadamente 90 MB.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>Para restaurar o banco de dados de exemplo em [Clusters de Big Data do SQL Server](../../big-data-cluster/big-data-cluster-overview.md), baixe [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) e siga as instruções em [Restaurar um banco de dados para a instância mestra de cluster de Big Data do SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
 
 1. Clique em [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) para baixar o arquivo de backup do banco de dados.
 

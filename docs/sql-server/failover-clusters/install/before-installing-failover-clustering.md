@@ -1,10 +1,11 @@
 ---
 title: Antes de instalar o clustering de failover | Microsoft Docs
+description: Este artigo descreve as considerações de planejamento em preparação para a instalação de um cluster de failover do SQL Server, incluindo hardware, sistema operacional e configuração.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517936"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900517"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Antes de instalar um cluster de failover do SQL Server, você deve selecionar o hardware e o sistema operacional nos quais o SQL Server será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
   
  Se um cluster do Windows tiver uma unidade de disco local e a mesma letra de unidade também for usada em um ou mais nós de cluster como uma unidade compartilhada, você não poderá instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nessa unidade. Essa restrição se aplica às instâncias de cluster de failover do SQL Server e instâncias autônomas em um servidor que faz parte de uma Instância do Cluster de Failover do Windows.
@@ -47,9 +48,9 @@ ms.locfileid: "72517936"
   
     -   O .NET Framework 3.5 SP1 não é mais instalado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mas pode ser necessário durante a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em sistemas operacionais antigos do Windows. Para obter mais informações, veja [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de versão](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update:** para evitar que o computador seja reinicializado devido à instalação do .NET Framework 4 durante a instalação, a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] exige a instalação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update no computador.  Se você estiver instalando o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] no Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, essa atualização será incluída. Se você estiver instalando em um sistema operacional Windows mais antigo, baixe-o em [Microsoft Update para .NET Framework 4.0 no Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Pacote de atualização:** Para evitar que o computador seja reinicializado devido à instalação do .NET Framework 4 durante a instalação, a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requer que uma atualização do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] seja instalada no computador.  Se você estiver instalando o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] no Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, essa atualização será incluída. Se você estiver instalando em um sistema operacional Windows mais antigo, baixe-o em [Microsoft Update para .NET Framework 4.0 no Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
-    -   .NET Framework 4: a instalação instala o .NET Framework 4 em um sistema operacional clusterizado. Para reduzir o tempo de instalação, convém instalar o .NET Framework 4 antes de executar a Instalação.  
+    -   .NET Framework 4: O .NET Framework 4 é instalado em um sistema operacional clusterizado. Para reduzir o tempo de instalação, convém instalar o .NET Framework 4 antes de executar a Instalação.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Arquivos de suporte à Instalação. Você pode instalar esses arquivos executando o SqlSupport.msi localizado na mídia de instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
@@ -216,7 +217,7 @@ ms.locfileid: "72517936"
   
 1.  A dependência de recurso de endereço IP é definida como OR em uma configuração de várias sub-redes. Para obter mais informações, veja [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  Não há suporte para dependências de endereço IP AND-OR mistas. Por exemplo, não há suporte para \<IP1> AND \<IP2> OR \<IP3>.  
+2.  Não há suporte para dependências de endereço IP AND-OR mistas. Por exemplo, \<IP1> AND \<IP2> OR \<IP3> não é compatível.  
   
 3.  Não há suporte para mais de um endereço IP por sub-rede.  
   

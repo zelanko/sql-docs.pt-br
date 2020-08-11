@@ -1,5 +1,6 @@
 ---
 title: Implementando uma classe Connection para uma extensão de processamento de dados | Microsoft Docs
+description: Implemente um objeto Connection para uma extensão de processamento de dados no Reporting Services. Veja quais interfaces implementar e o que exigir de clientes.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32d38fd943628b25ab8fd9ce47b779b75c05e211
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42f53d1b31f2e5b8805c5173bd45fcbd27f2d4a4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193939"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529558"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementando uma classe Connection para uma extensão de processamento de dados
   O objeto **Connection** representa uma conexão de banco de dados ou recurso semelhante e é o ponto de partida para usuários de uma extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Ele representa as conexões com servidores de banco de dados, embora qualquer entidade com comportamento semelhante possa ser exposta como uma **Connection**.  

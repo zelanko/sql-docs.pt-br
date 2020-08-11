@@ -1,5 +1,6 @@
 ---
 title: Como formatar linhas, cores e imagens (Construtor de Relatórios) | Microsoft Docs
+description: Explore maneiras de usar linhas, cores, regiões de dados e imagens no Construtor de Relatórios. Vincule visualmente os itens para aprimorar a legibilidade no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8567c1f331c17cd0875c2d4f1b94423b3c3ce347
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc3cacd9321b65dc652fa7323553b445949501fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079863"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048261"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite formatar linhas, cores, regiões de dados, imagens e outros itens de relatório.  

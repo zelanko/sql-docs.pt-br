@@ -1,5 +1,6 @@
 ---
 title: Ferramentas de design de consulta | Microsoft Docs
+description: Saiba mais sobre as ferramentas de design de consultas, bem como o tipo de fonte de dados ao qual cada uma delas dá suporte.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4d92cb7c7b669b4a3087790397a1965d460dd9a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3f7772dbfc2442929627ce30f5653404cbe4f8bc
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082013"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458012"
 ---
 # <a name="query-design-tools-ssrs"></a>Ferramentas de Design da Consulta (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece várias ferramentas de design de consulta que podem ser usadas para criar consultas de conjunto de dados no Designer de Relatórios. Alguns designers de consulta fornecem modos alternativos para que você possa escolher se deseja trabalhar no modo visual ou diretamente na linguagem da consulta. Este tópico apresenta cada ferramenta e descreve o tipo de fonte de dados que cada uma suporta. As seguintes ferramentas são descritas neste tópico:  
@@ -63,7 +64,7 @@ ms.locfileid: "77082013"
 ##  <a name="text-based-query-designer"></a><a name="Textbased"></a> Designer de Consulta baseado em texto  
  O designer de consulta com base em texto é a ferramenta de criação de consulta padrão para a maioria das fontes de dados relacionais compatíveis, inclusive [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML e ODBC. Em comparação com o designer de consultas gráficas, essa ferramenta de design de consulta não valida a sintaxe de consulta durante o design da consulta. A imagem a seguir fornece uma ilustração do designer de consulta com base no texto.  
   
- ![Designer de consultas genérico para a consulta de dados relacionais](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Designer de consultas genérico para a consulta de dados relacionais")  
+ ![Designer de consultas genérico para consulta de dados relacionais](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Designer de consultas genérico para consulta de dados relacionais")  
   
  O designer de consulta com base no texto é recomendado para criar consultas complexas, com o uso de procedimentos armazenados, consultando dados XML, e para escrever consultas dinâmicas. Dependendo da fonte de dados, talvez você possa alternar o botão **Editar como Texto** na barra de ferramentas para alternar entre o designer de consultas gráficas e o designer de consulta com base no texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c).  
   

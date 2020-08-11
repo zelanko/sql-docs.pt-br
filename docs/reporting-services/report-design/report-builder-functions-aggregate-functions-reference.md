@@ -1,5 +1,6 @@
 ---
 title: Referência de funções de agregação (Construtor de Relatórios) | Microsoft Docs
+description: Use funções de agregação internas em expressões no Construtor de Relatórios para incluir valores agregados em seu relatório.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081323"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255729"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
   Para incluir valores agregados no relatório, é possível usar funções de agregação internas em expressões. A função de agregação padrão para campos numéricos é SUM. É possível editar a expressão e usar uma função de agregação interna diferente ou especificar outro escopo. O escopo identifica qual conjunto de dados deve ser usado no cálculo.  
@@ -69,7 +70,7 @@ ms.locfileid: "77081323"
 ##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Restrições em campos internos, coleções e funções de agregação  
  A tabela a seguir resume as restrições em locais no relatório em que é possível adicionar expressões que contêm referências a coleções internas globais.  
   
-|Local no relatório|Campos|parâmetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variáveis|RenderFormat|  
+|Local no relatório|Campos|parâmetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variáveis|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Cabeçalho de página<br /><br /> Rodapé de página|Sim|Sim|No máximo um<br /><br /> Observação 1|Sim|Sim|Sim|Sim|  
 |Corpo|Sim<br /><br /> Observação 2|Sim|Apenas itens no escopo atual ou em um escopo contentor<br /><br /> Observação 3|Não|Sim|Sim|Sim|  
@@ -81,7 +82,7 @@ ms.locfileid: "77081323"
 |Expressão de filtro|Sim|Sim|Não|Não|Sim|Sim<br /><br /> Observação 6|Não|  
 |Código|Não|Sim<br /><br /> Observação 7|Não|Não|Não|Não|Não|  
 |Report.Language|Não|Sim|Não|Não|Não|Não|Não|  
-|variáveis|Sim|Sim|Não|Não|Sim|Escopo atual ou contentor|Não|  
+|Variáveis|Sim|Sim|Não|Não|Sim|Escopo atual ou contentor|Não|  
 |Agregações|Sim|Sim|Apenas cabeçalho da página/rodapé da página|Apenas em agregações de item de relatório|Sim|Não|Não|  
 |Funções de Lookup|Sim|Sim|Sim|Não|Sim|Não|Não|  
   
@@ -173,7 +174,7 @@ ms.locfileid: "77081323"
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Testando para escopo  
  A função interna a seguir testa o contexto atual de um item de relatório para verificar se ele é membro de um escopo específico.  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indica se a instância atual de um item está dentro do escopo especificado.|  
   
@@ -182,7 +183,7 @@ ms.locfileid: "77081323"
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Recuperando nível recursivo  
  A função interna a seguir recupera o nível atual quando uma hierarquia recursiva é processada. Use o resultado dessa função com a propriedade **Padding** em uma caixa de texto para controlar o nível de recuo de uma hierarquia visual para um grupo recursivo. Para obter mais informações, consulte [Criar grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Retorna o nível atual de profundidade em uma hierarquia recursiva.|  
   

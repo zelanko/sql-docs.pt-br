@@ -1,5 +1,6 @@
 ---
 title: Publicar e republicar partes do relatório (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como publicar uma parte de relatório com metadados editados com configurações padrão em uma localização padrão no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ea76e42cb7230bc4195cc8c2dc1615308fa4058
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c8beab2bdd11e0b8f3b550d46601b5e00069525
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082352"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255219"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publicar e republicar partes de relatório (Construtor de Relatórios e SSRS)
   Partes de relatório são itens de relatório paginados que foram publicados separadamente em um servidor de relatório e que podem ser reutilizados em outros relatórios paginados. Você pode publicar uma parte de relatório com configurações padrão em um local padrão ou pode editar os metadados de parte do relatório, como nome e descrição e salvá-lo em outro lugar no servidor de relatório. Também será possível salvá-lo em um site do SharePoint integrado com um servidor de relatório se você tiver as permissões corretas.  
@@ -32,7 +33,7 @@ ms.locfileid: "77082352"
   
      Caso contrário, clique em **Examine e modifique as partes de relatório antes da publicação**.  
   
-3.  Edite o nome da parte de relatório e a descrição: clique duas vezes no nome para editá-lo e clique no campo **Descrição** para adicionar uma descrição.  
+3.  Edite o nome e a descrição da parte do relatório: clique duas vezes no nome para editá-lo e clique no campo **Descrição** para adicionar uma descrição.  
   
     > [!NOTE]  
     >  É conveniente dar à parte de relatório nome e descrição claros, para facilitar a identificação durante a pesquisa. O comprimento máximo para o nome de uma parte de relatório é 260 caracteres para o caminho inteiro, inclusive os nomes das pastas no servidor, seguido pelo nome real da parte de relatório.  

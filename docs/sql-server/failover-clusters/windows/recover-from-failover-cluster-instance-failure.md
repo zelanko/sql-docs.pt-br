@@ -1,6 +1,6 @@
 ---
 title: Recuperar-se de uma falha na instância do cluster de failover
-description: Descreve como se recuperar de um failover de uma instância de cluster de failover do SQL Server.
+description: Saiba como se recuperar do failover de uma instância do cluster de failover usando o snap-in Gerenciador de Cluster de Failover após ocorrer um failover no SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44f178d5433a1d3de1670b762b6e1d7e60bad033
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901203"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Recuperar-se de uma falha na instância do cluster de failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como se recuperar de falhas de cluster usando o snap-in Gerenciador de Cluster de Failover após a ocorrência de um failover no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. O snap-in Gerenciador de Cluster de Failover é o aplicativo de gerenciamento de cluster do serviço WSFC (Windows Server Failover Clustering).  
   
 -   [Recuperar de uma falha irreparável](#Scenario1)  

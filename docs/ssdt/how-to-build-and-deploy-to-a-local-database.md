@@ -1,23 +1,23 @@
 ---
 title: Criar e implantar em um banco de dados local
+description: Saiba mais sobre a instância de servidor local que o SQL Server 2012 fornece. Veja como usar essa instância para compilar, testar e depurar projetos de desenvolvimento.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241614"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518916"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>Como: Compilar e implantar em um banco de dados local
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>Como fazer: Criar e implantar em um banco de dados local
 
 O Microsoft SQL Server 2012 fornece uma instância de servidor local sob demanda, chamada Runtime de Banco de Dados Local do SQL Server Express, que é ativada quando um projeto de Banco de Dados do SQL Server é depurado. Esta instância de servidor local pode ser usada como uma área restrita para compilar, testar e depurar seu projeto. Isso é independente de qualquer uma de suas instâncias do SQL Server instaladas e não é acessível fora do SQL Server Data Tools (SSDT). Esse tipo de organização é ideal para os desenvolvedores que não têm acesso ou têm acesso limitado a bancos de dados de produção, mas gostariam de testar seus projetos localmente antes que uma equipe autorizada implante-os na produção. Além disso, quando você está desenvolvendo uma solução de banco de dados para o SQL Azure, pode utilizar a conveniência fornecida por este servidor local para desenvolver e testar localmente seu projeto de banco de dados, antes de implantá-lo na nuvem.  
   

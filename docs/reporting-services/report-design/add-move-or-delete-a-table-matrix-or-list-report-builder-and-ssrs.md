@@ -1,5 +1,6 @@
 ---
 title: Adicionar, mover ou excluir uma tabela, matriz ou lista (Construtor de Relatórios) | Microsoft Docs
+description: Organize suas regiões de dados de tabela ou matriz usando o Assistente de Nova Tabela ou o Assistente de Nova Matriz no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 995bfa16d25392e35b9147c021b6bbcaff423a6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 698ee0d950b701ff864b31a6d786f72beed632f5
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081615"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011734"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Adicionar, mover ou excluir uma tabela, matriz ou lista (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , uma região de dados exibe dados de um conjunto de dados de relatório em um relatório. As regiões de dados incluem tabela, matriz, gráfico e medidor. Para aninhar uma região de dados dentro de outra, adicione cada uma separadamente e arraste a região de dados filho para a região de dados pai.  

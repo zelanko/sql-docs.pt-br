@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748498"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: criar um modelo preditivo no R com o aprendizado de máquina do SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Na parte três desta série de tutoriais de quatro partes, você treinará um modelo preditivo em R e, na próxima parte desta série, você implantará esse modelo em um banco de dados do SQL Server com o Serviços de Machine Learning ou em Clusters de Big Data.
@@ -29,7 +28,10 @@ Na parte três desta série de tutoriais de quatro partes, você treinará um mo
 Na parte três desta série de tutoriais de quatro partes, você treinará um modelo preditivo em R e, na próxima parte desta série, você implantará esse modelo em um banco de dados do SQL Server com os Serviços de Machine Learning.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Na parte três desta série de tutoriais de quatro partes, você treinará um modelo preditivo em R e, na próxima parte desta série, você implantará esse modelo em um banco de dados do SQL Server com o SQL Server R Services.
+Na parte três desta série de tutoriais de quatro partes, você treinará um modelo preditivo em R e, na próxima parte desta série, você implantará esse modelo em um banco de dados com o SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Na parte três desta série de tutoriais de quatro partes, você treinará um modelo preditivo em R e, na próxima parte desta série, você implantará esse modelo em um banco de dados da Instância Gerenciada de SQL do Azure com os Serviços de Machine Learning.
 ::: moniker-end
 
 Neste artigo, você aprenderá a:
@@ -41,7 +43,7 @@ Neste artigo, você aprenderá a:
 
 Na [parte um](r-predictive-model-introduction.md), você aprendeu a restaurar o banco de dados de exemplo.
 
-Na [parte dois](r-predictive-model-prepare-data.md), você aprendeu a carregar os dados de um banco de dados em uma estrutura do Python e a prepará-los no R.
+Na [parte dois](r-predictive-model-prepare-data.md), você aprendeu a carregar os dados de um banco de dados em uma estrutura de dados do Python e a prepará-los no R.
 
 Na [parte quatro](r-predictive-model-deploy.md), você aprenderá a armazenar o modelo em um banco de dados e, em seguida, criará procedimentos armazenados com base nos scripts do Python desenvolvidos nas partes dois e três. Os procedimentos armazenados serão executados no servidor para fazer previsões com base em novos dados.
 
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

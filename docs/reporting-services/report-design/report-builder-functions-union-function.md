@@ -1,5 +1,6 @@
 ---
 title: Função Union (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre essa função que retorna a união de todos os valores numéricos não nulos especificados por uma expressão.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e760971e012e5144176484d921570bdee8097497
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2c53ba51ebce8d0e3cbb78d7a7e8905cb5537bb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081121"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689500"
 ---
 # <a name="report-builder-functions---union-function"></a>Funções do Construtor de Relatórios – Função Union
   Retorna a união de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

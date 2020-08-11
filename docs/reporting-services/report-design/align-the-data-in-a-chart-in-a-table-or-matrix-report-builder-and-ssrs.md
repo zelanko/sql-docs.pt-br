@@ -1,5 +1,6 @@
 ---
 title: Alinhar os dados de um gráfico em uma tabela ou matriz (Construtor de Relatórios) | Microsoft Docs
+description: Descubra usos de minigráficos e barras de dados no Construtor de Relatórios. Esses gráficos pequenos e simples transmitem muitas informações com a quantidade mínima de detalhes.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6cb82188a6ded92fadf96385f193f504c29bf56
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30b2c4ad2bb1c4c4a6254d5563ab547b11c3f52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994573"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Alinhar os dados de um gráfico em uma tabela ou matriz (Construtor de Relatórios e SSRS)
   Minigráficos e barras de dados são gráficos simples que transmitem muitas informações com poucos detalhes externos. Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , quando você marca essa opção, os valores nos minigráficos e nas barras de dados são alinhados nas diferentes células da tabela ou matriz, mesmo que valores estejam faltando nos dados nos quais eles se baseiam.  

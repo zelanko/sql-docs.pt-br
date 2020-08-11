@@ -1,5 +1,6 @@
 ---
 title: Implantando uma extensão de entrega | Microsoft Docs
+description: Saiba como implantar uma extensão de entrega a um servidor de relatório. Veja quais entradas adicionar a quais arquivos de configuração para que o servidor de relatório localize a extensão.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f358ebb3cc58a9f10c117d24bce8c04d849fd2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193767"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529112"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implantando uma extensão de entrega
   As extensões de entrega fornecem suas informações de configuração na forma de um arquivo de configuração XML. O arquivo XML é compatível com o esquema XML definido para extensões de entrega. As extensões de entrega oferecem infraestrutura para a definição e para a modificação do arquivo de configuração.  
@@ -31,7 +32,7 @@ ms.locfileid: "63193767"
   
  A tabela a seguir descreve os atributos do elemento **Extension** em extensões de entrega.  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |**Nome**|Um nome exclusivo para a extensão (por exemplo "Email do Servidor de Relatório" para a extensão de entrega de email ou "FileShare do Servidor de Relatório" para a extensão de entrega do compartilhamento de arquivo). O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
 |**Tipo**|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  
@@ -44,7 +45,7 @@ ms.locfileid: "63193767"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Para implantar um assembly de extensão de entrega para um servidor de relatório  
   
-1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de entrega. A localização padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin.  
+1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de entrega. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin.  
   
     > [!IMPORTANT]  
     >  Se você estiver tentando substituir um assembly de extensão de entrega existente, primeiro deverá parar o serviço Servidor de Relatório antes de copiar o assembly atualizado. Reinicie o seu serviço depois de terminar de copiar o assembly.  
@@ -69,7 +70,7 @@ ms.locfileid: "63193767"
   
      O valor de **Name** é o nome exclusivo da extensão de entrega. O valor de **Type** é uma lista separada por vírgula que inclui uma entrada para o namespace totalmente qualificado da classe que implementa a interface <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>, seguida pelo nome do assembly (não incluindo a extensão de arquivo .dll). Por padrão, as extensões de entrega ficam visíveis. Para ocultar uma extensão de interfaces do usuário, como o portal da Web, adicione um atributo **Visible** ao elemento **Extension** e defina-o como **false**.  
   
-5.  Por fim, adicione um grupo de códigos ao assembly personalizado que concede a permissão **FullTrust** para a extensão de entrega. Faça isso adicionando o grupo de códigos ao arquivo rssrvpolicy.config localizado por padrão em %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. O grupo de códigos pode ter esta aparência:  
+5.  Por fim, adicione um grupo de códigos ao assembly personalizado que concede a permissão **FullTrust** para a extensão de entrega. Isso é feito por meio da adição do grupo de códigos ao arquivo rssrvpolicy.config localizado, por padrão, em %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. O grupo de códigos pode ter esta aparência:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

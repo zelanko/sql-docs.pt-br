@@ -1,5 +1,6 @@
 ---
 title: Gráficos de dispersão (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como usar gráficos de dispersão, com valores representados por posições de ponto em um gráfico, para comparar dados agregados entre categorias no Construtor de Relatórios.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d2eb99c0cf155a9ffbc57a5500cc76b057f6731
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b38cf5b7ed632726fb7a67f6018f35887730f01
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081038"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255349"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>Gráficos de dispersão (Construtor de Relatórios e SSRS)
   Um gráfico de dispersão exibe uma série como um conjunto de pontos. Os valores são representados pela posição dos pontos no gráfico. As categorias são representadas por diferentes marcadores no gráfico. Normalmente, os gráficos de dispersão são usados para comparar dados agregados por categorias. Para obter mais informações sobre como adicionar dados a um gráfico de dispersão, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

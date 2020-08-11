@@ -1,5 +1,6 @@
 ---
 title: Como implantar uma extensão de processamento de dados para um Servidor de Relatório | Microsoft Docs
+description: Saiba como implantar uma extensão de processamento de dados em um servidor de relatório aprendendo quais entradas adicionar a quais arquivos de configuração.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194126"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529578"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Implantando uma extensão de processamento de dados para um Servidor de Relatório
   Servidores de relatórios usam extensões de processamento de dados por recuperar e processar dados em relatórios renderizados. Você deve implantar o seu assembly de extensão de processamento de dados para um servidor de relatório como um assembly privado. Também será preciso criar uma entrada no arquivo de configuração do servidor de relatório, RSReportServer.config.  
@@ -25,7 +26,7 @@ ms.locfileid: "63194126"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Para implantar um assembly de extensão de processamento de dados  
   
-1.  Copie o assembly do local de preparo para o diretório bin do servidor de relatório no qual você deseja usar a extensão de processamento de dados. O local padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
+1.  Copie o assembly do local de preparo para o diretório bin do servidor de relatório no qual você deseja usar a extensão de processamento de dados. A localização padrão do diretório bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Esta etapa impedirá uma atualização para uma instância mais nova do SQL Server. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -50,7 +51,7 @@ ms.locfileid: "63194126"
   
      O valor de **Name** é o nome exclusivo da extensão de processamento de dados. O valor de **Type** é uma lista separada por vírgula que inclui uma entrada para o namespace totalmente qualificado da classe que implementa as interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguida do nome do assembly (sem incluir a extensão de arquivo .dll). Por padrão, as extensões de processamento de dados estão visíveis. Para ocultar uma extensão de interfaces do usuário, como o Gerenciador de Relatórios, adicione um atributo **Visible** ao elemento **Extension** e defina-o como **false**.  
   
-5.  Adicione um grupo de códigos ao assembly personalizado que concede a permissão **FullTrust** para a extensão. Faça isso adicionando o grupo de códigos ao arquivo rssrvpolicy.config localizado, por padrão, em %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer. O grupo de códigos pode ter esta aparência:  
+5.  Adicione um grupo de códigos ao assembly personalizado que concede a permissão **FullTrust** para a extensão. Isso é feito por meio da adição do grupo de códigos ao arquivo rssrvpolicy.config localizado, por padrão, em %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer. O grupo de códigos pode ter esta aparência:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

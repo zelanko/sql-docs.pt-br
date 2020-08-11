@@ -1,5 +1,6 @@
 ---
 title: Associar um parâmetro de consulta a um parâmetro de relatório (Construtor de Relatórios) | Microsoft Docs
+description: Aprenda usos para os parâmetros de relatório do Reporting Services, as propriedades que você pode definir e como associar um parâmetro de consulta de conjunto de dados a um parâmetro de relatório.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e9752c14ef2ba03cdb95ad8fe4430c4d4fa23db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76af4ebaaabf8b99f6bf654715aeb5e19791b3db
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808464"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Associar um parâmetro de consulta a um parâmetro de relatório (Construtor de Relatórios e SSRS)
   Quando você define uma consulta de conjunto de dados que contém uma variável de consulta, o comando de consulta é analisado. Para cada variável de consulta, são criados um parâmetro de conjunto de dados e um parâmetro de relatório correspondentes. O parâmetro de conjunto de dados aponta para o parâmetro de relatório. Dessa forma, o usuário pode inserir um valor que é passado diretamente para a consulta. Toda vez que você edita o comando de consulta, ocorre o mesmo processo.  
@@ -29,7 +30,7 @@ ms.locfileid: "77081432"
   
 1.  No painel de dados do relatório, clique com o botão direito do mouse no conjunto de dados, clique em **Propriedades do Conjunto de Dados**e, depois, em **Parâmetros**.  
   
-    > **OBSERVAÇÃO:** se o painel Dados do Relatório não estiver visível, clique em **Dados do Relatório** no menu **Exibir** .  
+    > **OBSERVAÇÃO:** Se o painel Dados do Relatório não estiver visível, clique em **Dados do Relatório** no menu **Exibir** .  
   
 2.  Na coluna **Nome do Parâmetro**, localize o nome do parâmetro de consulta. Os nomes de parâmetro são preenchidos automaticamente com base na consulta. Sempre que você altera a consulta, ela é verificada em busca de novos parâmetros de consulta. Os parâmetros de consulta criados manualmente não são alterados quando a consulta é alterada.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "77081432"
   
     -   Em **Valor do Parâmetro**, digite ou selecione uma expressão avaliada como o valor passado para o parâmetro de consulta. Normalmente é o nome do parâmetro de relatório.  
   
-        > **OBSERVAÇÃO:** os valores de um parâmetro de consulta não se limitam a parâmetros de relatório. Para o valor do parâmetro, você pode usar qualquer expressão avaliada como um valor.  
+        > **OBSERVAÇÃO:** Os valores de um parâmetro de consulta não se limitam a parâmetros de relatório. Para o valor do parâmetro, você pode usar qualquer expressão avaliada como um valor.  
   
 3.  Repita a etapa 2 para especificar mais parâmetros de consulta.  
   

@@ -1,5 +1,6 @@
 ---
 title: Propriedades do SQL Server (guia Serviço)
+description: Saiba mais sobre as opções na guia Serviço na caixa de diálogo Propriedades do MSSQLSERVER, como o caminho binário, o nome do host e o modo de início.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b87f54bcfc50249cef1810a728eaa796e7ee3b38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fb389b6fd903393539bdffffc3bf0bad3cd27d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306792"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898963"
 ---
 # <a name="sql-server-properties-service-tab"></a>Propriedades do SQL Server (guia Serviço)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use a guia **Serviço**na caixa de diálogo **Propriedades de MSSQLSERVER** para exibir ou especificar as opções a seguir.  
   
 ## <a name="options"></a>Opções  
@@ -47,7 +48,7 @@ ms.locfileid: "75306792"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: este serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
 -   Automático: este serviço tenta ser iniciado na inicialização do computador.  
   

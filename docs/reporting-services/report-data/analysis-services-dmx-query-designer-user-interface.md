@@ -1,5 +1,6 @@
 ---
 title: Interface do usuário do Designer de Consultas DMX do Analysis Services | Microsoft Docs
+description: Saiba mais sobre os designers de consultas gráficas do Reporting Services para a criação de consultas DMX.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42313894264979caf49ccbbe54d25b91261a8a10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b5ec7c356cef924749ae4ea9a1f6519cd983099
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812131"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta DMX do Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece designers de consultas gráficas que permitem criar consultas DMX (extensões DMX) e MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este tópico descreve o designer de consulta DMX. Para obter mais informações, consulte [Interface do usuário do Designer de Consulta MDX do Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
@@ -30,7 +31,7 @@ ms.locfileid: "65573573"
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas DMX gráficas  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas DMX por meio da interface gráfica. A tabela a seguir descreve os botões e as respectivas funções.  
   
-|Botão|DESCRIÇÃO|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Desabilitado para este tipo de fonte de dados.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

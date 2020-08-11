@@ -1,6 +1,6 @@
 ---
 title: Manipulando valores nulos
-description: Demonstra como trabalhar com valores de GUID e uniqueidentifier no SQL Server e .NET.
+description: Demonstra como trabalhar com valores nulos no SQL Server e no .NET e como eles diferem de valores vazios.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 40c3d2e938e8b595fa63566a096fb4145c73c439
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921195"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393164"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
 

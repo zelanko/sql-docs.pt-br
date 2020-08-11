@@ -1,5 +1,6 @@
 ---
 title: Propriedades do SQL Server Integration Services (guia Fazer Logon)
+description: Saiba mais sobre a guia Fazer Logon da caixa de diálogo Propriedades do SQL Server Integration Services. Confira como especificar uma conta e iniciar ou parar o serviço.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59fd7444eecfd0beb6310ecfec3380eaf1b8b3f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d601e389f75661becbc5756fd5fdd6525b0a623
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306855"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896200"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Propriedades do SQL Server Integration Services (guia Fazer Logon)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use a guia **Fazer Logon** da caixa de diálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Propriedades** do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para especificar a conta usada pelo serviço e também para iniciar e parar o serviço.  
   
 ## <a name="options"></a>Opções  

@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexão Power Pivot | Microsoft Docs
+description: Use as informações fornecidas neste artigo sobre o tipo de conexão Power Pivot para aprender a criar uma fonte de dados.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba0c6616c2a99007a379a71e0169b2bac85e5be5
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79112359"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458001"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexão Power Pivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicada em uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] do SharePoint.  
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  A fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser publicada em um Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um site do SharePoint.  
   
  Para dar suporte a conexões do Construtor de Relatórios a uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , o SQL Server 2008 R2 ADOMD.NET deve estar instalado no computador de sua estação de trabalho. Essa biblioteca de cliente é instalada com o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, mas se você estiver usando um computador que não tenha esse aplicativo, deverá baixar e instalar o ADOMD.NET no [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
@@ -42,7 +43,7 @@ ms.locfileid: "79112359"
 ## <a name="filters"></a>Filtros  
  No painel Filtros, especifique dimensões e membros a serem filtrados ou incluídos nos resultados da consulta.  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  No painel Filtros, selecione a opção **Parâmetros** de um filtro para criar automaticamente um parâmetro de relatório com os valores disponíveis correspondentes às seleções do filtro.  
   
 ## <a name="remarks"></a>Comentários  

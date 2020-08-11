@@ -1,30 +1,30 @@
 ---
 title: Arquitetura de extensibilidade
-description: Este artigo descreve a arquitetura da estrutura de extensibilidade para executar um script externo, como R ou Python, no SQL Server.
+description: Este artigo descreve a arquitetura da estrutura de extensibilidade para executar um script externo de R ou Python nos Serviços de Machine Learning do SQL Server. O script é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118819"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406289"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitetura de extensibilidade no Serviços de Machine Learning do SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-O SQL Server tem uma estrutura de extensibilidade para executar um script externo, como R ou Python, no servidor. O script é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
+Este artigo descreve a arquitetura da estrutura de extensibilidade para executar um script externo de R ou Python nos Serviços de Machine Learning do SQL Server. O script é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
 
 ## <a name="background"></a>Segundo plano
 
-A estrutura de extensibilidade foi introduzida no SQL Server 2016 para dar suporte ao runtime do R. O SQL Server 2017 e posteriores são compatíveis com o Python.
+A estrutura de extensibilidade foi introduzida no SQL Server 2016 para dar suporte ao runtime do R com o [R Services](../r/sql-server-r-services.md). O SQL Server 2017 e posteriores têm suporte para Python com o [Serviços de Machine Learning](../sql-server-machine-learning-services.md).
 
 A finalidade da estrutura de extensibilidade é oferecer uma interface entre o SQL Server e as linguagens de ciência de dados, como R e Python. A meta é reduzir o conflito ao mover soluções de ciência de dados para produção e proteger os dados expostos durante o processo de desenvolvimento. Executando uma linguagem de script confiável dentro de uma estrutura segura gerenciada pelo SQL Server, os administradores de banco de dados podem manter a segurança enquanto permitem que os cientistas de dados acessem dados empresariais.
 

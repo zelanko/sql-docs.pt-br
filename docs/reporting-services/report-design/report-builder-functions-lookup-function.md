@@ -1,5 +1,6 @@
 ---
 title: Função Lookup (Construtor de Relatórios) | Microsoft Docs
+description: Use a função Lookup para retornar o primeiro valor correspondente para o nome especificado de um conjunto de dados que contém pares de nome ou valor.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2a3016bc45537aed393124b6d20f8d4a1656759
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081227"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255719"
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funções do Construtor de Relatórios – Função Lookup
   Retorna o primeiro valor correspondente para o nome especificado de um conjunto de dados que contém pares de nome/valor.  

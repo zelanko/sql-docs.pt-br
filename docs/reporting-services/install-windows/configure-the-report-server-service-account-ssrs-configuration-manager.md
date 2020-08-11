@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/09/2020
+ms.openlocfilehash: f1c17f3a3f3accdbc9fcefa4872100d6a4ee2889
+ms.sourcegitcommit: 60900cdd520ec723102b54ccd27b102bf6c91d25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866019"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84638280"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
 
@@ -52,7 +52,7 @@ ms.locfileid: "74866019"
   
 2. Na página Conta de Serviço, selecione a opção que descreve o tipo de conta que você deseja usar.  
   
-3. Se você tiver selecionado uma conta de usuário do Windows, especifique a nova conta e a senha. A conta não pode ter mais de 20 caracteres.  
+3. Se você tiver selecionado uma conta de usuário do Windows, especifique a nova conta e a senha. A conta não pode ter mais de 20 caracteres e não pode conter os caracteres especiais " / \ [ ] : ; | = , + * ? < > ' de acordo com as regra de nomenclatura da conta de usuário do Windows.  
   
      Se o servidor de relatório for implantado em uma rede compatível com a autenticação Kerberos, você precisará registrar o SPN (nome da entidade de serviço) do servidor de relatório com a conta de usuário de domínio que você tiver especificado. Para obter mais informações, consulte [Registrar um SPN &#40;Nome da Entidade de Serviço&#41; para um servidor de relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "74866019"
   
 5. Quando for solicitado que você faça backup da chave simétrica, digite um nome e um local de arquivo para o backup da chave simétrica, digite uma senha para bloquear e desbloquear o arquivo e clique em **OK**.  
   
-6. Se o servidor de relatório usar a conta de serviço para conectar-se ao banco de dados do servidor de relatório, as informações de conexão serão atualizadas para usar a nova conta ou senha. A atualização das informações da conexão exige que você se conecte ao banco de dados. Se a caixa de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Conexão de Banco de Dados**do** for exibida, insira as credenciais que têm permissão para se conectar ao banco de dados e, em seguida, clique em **OK**.  
+6. Se o servidor de relatório usar a conta de serviço para conectar-se ao banco de dados do servidor de relatório, as informações de conexão serão atualizadas para usar a nova conta ou senha. A atualização das informações da conexão exige que você se conecte ao banco de dados. Se a caixa de diálogo **Conexão de Banco de Dados** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for exibida, insira as credenciais que têm permissão para se conectar ao banco de dados e, em seguida, clique em **OK**.  
   
 7. Quando for avisado para restaurar a chave simétrica, digite a senha que você especificou na etapa 5 e clique em **OK**.  
   
@@ -72,7 +72,8 @@ ms.locfileid: "74866019"
   
 |Conta|Explicação|  
 |-------------|-----------------|  
-|Contas de usuário de domínio|Se você tiver uma conta de usuário de domínio do Windows que possua as permissões mínimas necessárias para operações do servidor de relatório, deverá usá-la.<br /><br /> É recomendável uma conta de usuário de domínio porque ela isola o serviço Servidor de Relatório dos outros aplicativos. A execução de vários aplicativos em uma conta compartilhada, como Serviço de Rede, aumenta o risco de um usuário mal-intencionado assumir o controle do servidor de relatório, pois a violação de segurança de um aplicativo pode se estender facilmente a todos os aplicativos executados na mesma conta.<br /><br /> Se você usar uma conta de usuário de domínio, será necessário alterar a senha periodicamente, caso a organização imponha uma política de expiração de senha. Talvez também seja necessário registrar o serviço com a conta de usuário. Para obter mais informações, consulte [Registrar um SPN &#40;Nome da Entidade de Serviço&#41; para um servidor de relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evite usar uma conta de usuário local do Windows. Normalmente, as contas locais não têm permissão suficiente para acessar recursos em outros computadores. Para obter mais informações sobre como o uso de uma conta local limita as funcionalidades do servidor de relatório, veja [Considerações sobre o uso de contas locais](#localaccounts) neste tópico.|  
+|Contas de usuário de domínio|Se você tiver uma conta de usuário de domínio do Windows que possua as permissões mínimas necessárias para operações do servidor de relatório, deverá usá-la.<br /><br /> É recomendável uma conta de usuário de domínio porque ela isola o serviço Servidor de Relatório dos outros aplicativos. A execução de vários aplicativos em uma conta compartilhada, como Serviço de Rede, aumenta o risco de um usuário mal-intencionado assumir o controle do servidor de relatório, pois a violação de segurança de um aplicativo pode se estender facilmente a todos os aplicativos executados na mesma conta.<br /><br /> Se você usar uma conta de usuário de domínio, será necessário alterar a senha periodicamente, caso a organização imponha uma política de expiração de senha. Talvez também seja necessário registrar o serviço com a conta de usuário. Para obter mais informações, consulte [Registrar um SPN &#40;Nome da Entidade de Serviço&#41; para um servidor de relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evite usar uma conta de usuário local do Windows. Normalmente, as contas locais não têm permissão suficiente para acessar recursos em outros computadores. Para obter mais informações sobre como o uso de uma conta local limita as funcionalidades do servidor de relatório, veja [Considerações sobre o uso de contas locais](#localaccounts) neste tópico.| 
+| **gMSA (Conta de Serviço Gerenciado de Grupo)** | Contas de Serviço Gerenciado autônomas foram introduzidas no Windows Server 2008 R2 e no Windows 7. São contas de domínio gerenciado que fornecem gerenciamento automático de senhas e gerenciamento simplificado de SPN, incluindo delegação de gerenciamento para outros administradores. A **Conta de Serviço Gerenciado de Grupo** fornece a mesma funcionalidade dentro do domínio, mas também estende essa funcionalidade em vários servidores. |
 |**Conta de Serviço Virtual**|**Conta de Serviço Virtual** representa o serviço Windows. É uma conta interna com menos privilégios que tem permissões de logon na rede. Essa conta é recomendada caso você não tenha uma conta de usuário de domínio disponível ou se quiser evitar interrupções de serviço que possam ocorrer em consequência de políticas de expiração de senha.|  
 |**Serviço de Rede**|**Serviço de rede** é uma conta interna com menos privilégios que tem a permissões de logon na rede. <br /><br /> Se você selecionar **Serviço de Rede**, tente minimizar o número de serviços que são executados na mesma conta. Uma violação de segurança em qualquer aplicativo compromete a segurança de todos os outros aplicativos executados na mesma conta.|  
 |**Serviço Local**|**Serviço Local** é uma conta interna semelhante a uma conta de usuário autenticada local do Windows. Os serviços executados como a conta **Serviço Local** acessam os recursos de rede como uma sessão nula sem credenciais. Essa conta não é apropriada para cenários de implantação de intranet em que o servidor de relatório deve se conectar a um banco de dados do servidor de relatório remoto ou a um controlador de domínio de rede para autenticar um usuário antes de abrir um relatório ou processar uma assinatura.|  

@@ -1,21 +1,21 @@
 ---
-title: Verificar o código do banco de dados usando v
+title: Verificando o código do banco de dados usando os testes de unidade do SQL Server
+description: Saiba mais sobre os testes de unidade do SQL Server. Confira quais edições do Visual Studio dão suporte para os testes e veja recursos sobre como usar os testes para verificar o código do banco de dados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 256d40ab25244f1efa03fb4cebf1cd798879efe2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243493"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899730"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Verificando o código do banco de dados usando os testes de unidade do SQL Server
 
@@ -44,15 +44,15 @@ Na tabela a seguir, é possível localizar descrições de tarefas comuns que of
   
 |Tarefas comuns|Conteúdo de suporte|  
 |----------------|----------------------|  
-|**Adquira prática de trabalho:** você pode seguir um passo a passo introdutório para familiarizar-se com as etapas de criação e execução de um teste de unidade simples do SQL Server. Este passo a passo inclui um exemplo de um teste de unidade negativo do SQL Server.|[Passo a passo: criar e executar um teste de unidade do SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
-|**Defina testes de unidade do SQL Server:** você deve criar testes de unidade do SQL Server em seu próprio projeto. Defina as configurações desse projeto e defina uma ou mais condições de teste para cada teste.|[Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[Usar condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
+|**Obtenha treinamento prático:** você pode seguir um passo a passo introdutório para familiarizar-se com as etapas de criação e execução de um teste de unidade simples do SQL Server. Este passo a passo inclui um exemplo de um teste de unidade negativo do SQL Server.|[Passo a passo: Criar e executar um teste de unidade do SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
+|**Definir testes de unidade do SQL Server:** você deve criar testes de unidade do SQL Server nos respectivos projetos. Defina as configurações desse projeto e defina uma ou mais condições de teste para cada teste.|[Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[Usar condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
 |**Execute testes de unidade do SQL Server:** após definir um ou mais testes de unidade, você os executa, depura os problemas e examina os resultados do teste.|[Executar testes de unidade do SQL Server](../ssdt/running-sql-server-unit-tests.md)|  
-|**Gerencie grupos de teste (Visual Studio 2010):** você poderá organizar testes em grupos caso eles normalmente sejam executados ao mesmo tempo. Ainda há suporte para as listas de teste, mas para os novos grupos de teste, você deve considerar as categorias de teste. Por exemplo, você pode criar uma categoria de teste para os testes dos gatilhos ou de todos os objetos em um *esquema específico*.|[Definir categorias de teste para agrupar os testes](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[Definir listas de teste para agrupar os testes](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
+|**Gerenciar grupos de testes (Visual Studio 2010):** você poderá organizar testes em grupos caso eles normalmente sejam executados ao mesmo tempo. Ainda há suporte para as listas de teste, mas para os novos grupos de teste, você deve considerar as categorias de teste. Por exemplo, você pode criar uma categoria de teste para os testes dos gatilhos ou de todos os objetos em um *esquema específico*.|[Definir categorias de teste para agrupar os testes](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[Definir listas de teste para agrupar os testes](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
 |**Faça check-in dos projetos de teste e dos testes para controle de versão:** Após executar os testes e verificar se estão funcionando corretamente, faça check-in do projeto de teste e de todos os arquivos associados para fazer o controle de versão, de modo que todos os membros da equipe possam executar os testes. Ao fazer check-in do seu projeto de teste em um controle de versão junto com seu projeto de banco de dados do SQL Server, você poderá facilmente restaurar as versões compatíveis dos testes de banco de dados e do seu banco de dados.|[Adicionar arquivos ao controle de versão](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[Usar as janelas Check-In e Alterações Pendentes](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
-|**Defina condições de teste personalizadas:** você pode criar condições de teste personalizadas se precisar testar o comportamento não abordado pelo conjunto padrão das condições de teste. Você deve distribuir essas condições para todos os membros da sua equipe que precisem executar os testes que usam as novas condições.|[Cenário: definir condições de teste personalizadas para testes de unidade do SQL Server](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
+|**Defina condições de teste personalizadas:** você pode criar condições de teste personalizadas se precisar testar o comportamento não abordado pelo conjunto padrão das condições de teste. Você deve distribuir essas condições para todos os membros da sua equipe que precisem executar os testes que usam as novas condições.|[Cenário: Definir condições de teste personalizadas para testes de unidade do SQL Server](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
 |**Atualize os testes de unidade existentes:** se você tiver testes de unidade de banco de dados criados em uma versão anterior do Visual Studio, deverá atualizá-los antes que eles sejam criados e executados com êxito nessa versão.<br /><br />**OBSERVAÇÃO:** se você abrir uma solução que contém um projeto de banco de dados e um projeto de teste de unidade de banco de dados de uma versão anterior do Visual Studio, será solicitado a atualizar o projeto de banco de dados. Você não será solicitado a atualizar os projetos de testes de unidade de banco de dados, que deve ser atualizado manualmente.|[Atualizar um projeto de teste mais antigo contendo testes de unidade de banco de dados](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
 |**Extensibilidade:** você pode estender o SQL Server Data Tools criando extensões de recursos.|[Condições de teste personalizadas para testes de unidade do SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)|  
-|**Solucione problemas:** você pode obter mais informações sobre como solucionar problemas comuns em testes de unidade do SQL Server.|[Solucionar problemas de teste de unidade do banco de dados SQL Server](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
+|**Solucionar problemas:** você pode obter mais informações sobre como solucionar problemas comuns no teste de unidade do SQL Server.|[Solucionar problemas de teste de unidade do banco de dados SQL Server](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
   
 ## <a name="related-scenarios"></a>Cenários relacionados  
 [Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md)  

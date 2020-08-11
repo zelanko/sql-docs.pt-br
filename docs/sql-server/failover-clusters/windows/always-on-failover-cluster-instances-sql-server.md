@@ -1,6 +1,6 @@
 ---
 title: Instâncias do cluster de failover do AlwaysOn
-description: Uma descrição da instância de cluster de failover Always On para SQL Server.
+description: Saiba como as instâncias de cluster de failover sempre ativadas fornecem alta disponibilidade local por meio de redundância no nível de instância do servidor no SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 727bc6c3725315a012cff268b180ecc28a5a3631
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230188"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882968"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instâncias do cluster de failover do AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Como parte da oferta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On, as Instâncias de Cluster de Failover do Always On aproveitam a funcionalidade WSFC (Windows Server Failover Clustering) para fornecer alta disponibilidade local por meio de redundância no nível da instância de servidor, uma FCI (*instância de cluster de failover*). Uma FCI é uma instância única do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que é instalada em nós de WSFC (Windows Server Failover Clustering) e, possivelmente, em várias sub-redes. Na rede, uma FCI aparece ser uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sendo executada em um único computador, mas proporciona failover de um nó do WSFC para outro se o nó atual se tornar indisponível.  
   

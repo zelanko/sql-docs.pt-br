@@ -1,5 +1,6 @@
 ---
 title: Usando a classe Report para uma extensão de entrega | Microsoft Docs
+description: Saiba como as extensões de entrega podem usar a classe Report, que armazena a URL de relatório no servidor de relatório, o nome do relatório e outras propriedades.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05196a42af159e06a2b740c5671b2892d8362453
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 544a3c58f7a273a19a2df459e8d834d69afd2f8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193614"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529452"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>Usando a classe Report para uma extensão de entrega
   A classe de <xref:Microsoft.ReportingServices.Interfaces.Report> representa um relatório no banco de dados do servidor de relatório. Qualquer assinatura é associada a um relatório específico. O relatório está contido na notificação. A sua extensão de entrega pode usar o objeto de <xref:Microsoft.ReportingServices.Interfaces.Report> que faz parte da notificação para renderizar o relatório. O objeto de <xref:Microsoft.ReportingServices.Interfaces.Report> também contém propriedades específicas do relatório, como a URL para o relatório no servidor de relatório e o nome do relatório. Todas essas propriedades podem ser usadas como parte de seu provedor de entrega.  

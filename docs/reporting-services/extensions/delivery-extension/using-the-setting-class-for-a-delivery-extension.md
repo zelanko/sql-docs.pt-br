@@ -1,5 +1,6 @@
 ---
 title: Usando a classe Setting para uma extensão de entrega | Microsoft Docs
+description: Saiba como as extensões de entrega podem usar a classe Setting, que armazena informações de que a extensão de entrega precisa para fornecer notificações e relatórios.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 118f116de516e912b78b7467450b44116b432271
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d90728a83821575bd71c3fe93fb1a090beaf8bdb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193585"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529092"
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>Usando a classe Setting para uma extensão de entrega
   A classe <xref:Microsoft.ReportingServices.Interfaces.Setting> está localizada no namespace <xref:Microsoft.ReportingServices.Interfaces> e representa as informações sobre configurações de extensão para uma extensão de entrega. A classe <xref:Microsoft.ReportingServices.Interfaces.Setting> fornece infraestrutura para o armazenamento de informações sobre as configurações obrigatórias para que uma extensão de entrega funcione corretamente. Por exemplo, na entrega de E-Mail do Report Server, é necessário que um usuário forneça configurações específicas de entrega de e-mails, como o endereço do destinatário, o endereço do remetente, a linha de assunto do e-mail e mais. Indubitavelmente, os seus provedores de entrega personalizados exigirão que o usuário forneça configurações específicas para que a extensão de entrega entregue notificações e relatórios.  

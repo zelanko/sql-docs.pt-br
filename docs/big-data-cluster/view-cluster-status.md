@@ -5,20 +5,20 @@ description: Este artigo explica como exibir o status de um cluster de Big Data 
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772824"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Como exibir o status de um cluster de Big Data 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este artigo descreve como acessar os pontos de extremidade de serviço e exibir o status de componentes de um cluster de Big Data do SQL Server. É possível usar o Azure Data Studio e **azdata** e este artigo descreve as duas técnicas.
 
@@ -53,7 +53,9 @@ A tabela de pontos de extremidade de serviço também expõe vários painéis pa
 - Monitoramento de Trabalhos do Spark
 - Gerenciamento de Recursos do Spark
 
-Você pode clicar diretamente nesses links. Você será solicitado a autenticar ao acessar esses painéis. Para os painéis de métricas e logs, forneça as credenciais de administrador do controlador que você definiu no momento da implantação usando as variáveis de ambiente **AZDATA_USERNAME** e **AZDATA_PASSWORD**. Os painéis do Spark usarão as credenciais do gateway (Knox): a identidade do AD em um cluster integrado ao AD ou o usuário **raiz** e **AZDATA_PASSWORD**, se estiver usando a autenticação Básica no cluster. 
+Você pode clicar diretamente nesses links. Você será solicitado a autenticar ao acessar esses painéis. Para os painéis de métricas e logs, forneça as credenciais de administrador do controlador que você definiu no momento da implantação usando as variáveis de ambiente **AZDATA_USERNAME** e **AZDATA_PASSWORD**. Os painéis do Spark usarão as credenciais do gateway (Knox): a identidade do AD em um cluster integrado ao AD ou, se estiver usando a autenticação Básica no cluster, **AZDATA_USERNAME** e **AZDATA_PASSWORD**.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook de Status do Cluster
 

@@ -9,18 +9,18 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286040"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279454"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar o cluster de Big Data do SQL Server com alta disponibilidade
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Como Clusters de Big Data do SQL Server estão no Kubernetes como aplicativos em contêineres e usam recursos como conjuntos com estado e armazenamento persistente, essa infraestrutura tem monitoramento de integridade, detecção de falha e mecanismos de failover internos que os componentes do cluster utilizam para manter a integridade do serviço. Para maior confiabilidade, você também pode configurar a instância mestra do SQL Server ou o nó de nome do HDFS e serviços compartilhados do Spark para implantar com réplicas adicionais em uma configuração de alta disponibilidade. O monitoramento, a detecção de falhas e o failover automático são gerenciados por um serviço de gerenciamento de cluster de Big Data, ou seja, o serviço de controle. Esse serviço é fornecido sem a intervenção do usuário – tudo da configuração do grupo de disponibilidade, configurando pontos de extremidade de espelhamento de banco de dados, para adicionar bancos de dados ao grupo de disponibilidade ou a coordenação de failover e atualização. 
+Como Clusters de Big Data do SQL Server estão no Kubernetes como aplicativos em contêineres e usam recursos como conjuntos com estado e armazenamento persistente, essa infraestrutura tem monitoramento de integridade, detecção de falha e mecanismos de failover internos que os componentes do cluster utilizam para manter a integridade do serviço. Para maior confiabilidade, você também pode configurar a instância mestra do SQL Server ou o nó de nome do HDFS e serviços compartilhados do Spark para implantar com réplicas adicionais em uma configuração de alta disponibilidade. O monitoramento, a detecção de falhas e o failover automático são gerenciados por um serviço de gerenciamento de cluster de Big Data, ou seja, o serviço de controle. Esse serviço é fornecido sem a intervenção do usuário – tudo, desde a configuração do grupo de disponibilidade e da configuração dos pontos de extremidade de espelhamento de banco de dados, à adição do bancos de dados ao grupo de disponibilidade ou à coordenação de failover e atualização. 
 
 A imagem a seguir representa como um grupo de disponibilidade é implantado em um Cluster de Big Data do SQL Server:
 

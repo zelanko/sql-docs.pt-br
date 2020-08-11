@@ -1,5 +1,6 @@
 ---
 title: Propriedades do servidor de relatório (guia Fazer Logon)
+description: Saiba mais sobre a guia Fazer Logon da caixa de diálogo Propriedades do servidor de relatório no SQL Server. Confira como usá-la para especificar uma conta e iniciar ou parar o serviço.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a79108efea864af196de1d8b756195c1a9e4036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306340"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897610"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propriedades do servidor de relatório (guia Fazer Logon)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use a guia **Fazer Logon** da caixa de diálogo **Propriedades de Servidor de Relatório** para especificar a conta usada pelo serviço Servidor de Relatório e para iniciar e parar o serviço.  
   
 ## <a name="options"></a>Opções  

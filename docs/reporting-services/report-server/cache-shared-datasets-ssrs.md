@@ -1,5 +1,6 @@
 ---
 title: Conjunto de dados compartilhados em cache | Microsoft Docs
+description: Saiba como armazenar conjuntos de dados compartilhados em cache no Gerenciador de Relatórios do SQL Server, que aprimora o tempo de resposta e fornece dados consistentes para relatórios que usam o conjunto de dados.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b256074f441dd2160298fe7840af4f6fca13eaf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082550"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545595"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Conjuntos de dados compartilhado em cache (SSRS)
   Os resultados de consultas de um conjunto de dados compartilhado podem ser copiados para um cache para fornecer dados consistentes para vários relatórios e melhorar o tempo de resposta da consulta do conjunto de dados. Como relatórios, você pode configurar um conjunto de dados compartilhado para ser armazenado em cache no primeiro uso ou especificando uma agenda.  

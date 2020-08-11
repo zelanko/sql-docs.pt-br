@@ -1,5 +1,6 @@
 ---
 title: Exemplos de expressão de grupo (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como agrupar dados por um só campo ou criar expressões mais complexas que identificam os dados nos quais deve ser feito o agrupamento no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ead7e4c893c667021770df4977244bb509c0d79c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082102"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012414"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões de grupo (Construtor de Relatórios e SSRS)
   Em uma região de dados, você pode agrupar dados por um único campo ou criar expressões mais complexas que identifiquem os dados nos quais deve ser feito o agrupamento. Expressões complexas incluem referências a vários campos ou parâmetros, instruções condicionais ou código personalizado. Quando você define um grupo para uma região de dados, você adiciona essas expressões às propriedades **Group** . Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -31,7 +32,7 @@ ms.locfileid: "77082102"
 ## <a name="examples-of-group-expressions"></a>Exemplos de expressões de grupo  
  A tabela a seguir fornece exemplos de expressões de grupo que podem ser usadas para definir um grupo.  
   
-|DESCRIÇÃO|Expression|  
+|Descrição|Expression|  
 |-----------------|----------------|  
 |Agrupar pelo campo `Region` .|`=Fields!Region.Value`|  
 |Agrupar por sobrenome e nome.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

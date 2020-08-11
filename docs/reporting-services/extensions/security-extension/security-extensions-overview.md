@@ -1,5 +1,6 @@
 ---
 title: Visão geral das extensões de segurança | Microsoft Docs
+description: Saiba mais sobre as extensões de segurança no Reporting Services. Veja as situações em que a autenticação personalizada e a autorização são apropriadas.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5947d26c93dc9e79fc19c37e672f3342eb1d33d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72eaf9b5c47d19da6b7f1893e473031cd6ebc615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082275"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529192"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>Visão geral das extensões de segurança – SSRS (Reporting Services)
   Uma extensão de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] habilita a autenticação e a autorização de usuários ou grupos; ou seja, ela permite que diferentes usuários façam logon em um servidor de relatório e, com base em suas identidades, executem diferentes tarefas ou operações. Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma extensão de autenticação baseada no Windows, que usa protocolos de contas do Windows para verificar as identidades de usuários que afirmam ter contas no sistema. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa um sistema de segurança baseado em função para autorizar usuários. O modelo de segurança baseada em função do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é semelhante aos modelos de segurança baseada em função de outras tecnologias.  

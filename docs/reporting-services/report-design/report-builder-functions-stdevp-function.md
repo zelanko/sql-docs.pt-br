@@ -1,5 +1,6 @@
 ---
 title: Função StDevP (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre essa função que retorna o desvio padrão da população de todos os valores numéricos não nulos especificados por uma expressão.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c46bdc29f93715246401a824cac889f8052101bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2323683d4e5164d9c73cccca4ee896e7352c8fef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081145"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688729"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>Funções do Construtor de Relatórios – Função StDevP
   Retorna o desvio padrão da população de todos os valores numéricos não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  

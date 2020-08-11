@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70f02555b6993a8edd3b226352480dc5be8951c7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258161"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894891"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , somente um nó pode ter o grupo de recursos de cluster do WSFC (Windows Server Failover Cluster) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
   
  Uma FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende do serviço do WSFC subjacente para detecção de failover. Assim, dois mecanismos determinam o comportamento de failover para FCI: a primeira é a funcionalidade nativa do WSFC e a última é a funcionalidade adicionada pela instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -105,7 +105,7 @@ ms.locfileid: "75258161"
  *Valor padrão  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a> Respondendo a falhas  
- Após a detecção de uma ou mais condições de falha, como o serviço do WSFC responderá às falhas dependerá do estado do quorum do WSFC e das configurações de reinicialização e failover do grupo de recursos de FCI. Se a FCI tiver perdido seu quorum do WSFC, toda a FCI é colocada offline e a FCI perdeu sua alta disponibilidade. Se a FCI ainda tiver seu quorum do WSFC, o serviço do WSFC poderá responder primeiro tentando reiniciar o nó com falha e depois executando failover se as tentativas de reinicialização não forem bem-sucedidas. As configurações de reinicialização e failover são definidas no snap-in Gerenciador de Cluster de Failover. Para obter mais informações sobre essas configurações, consulte [\<Recursos> Propriedades: guia Políticas](https://technet.microsoft.com/library/cc725685.aspx).  
+ Após a detecção de uma ou mais condições de falha, como o serviço do WSFC responderá às falhas dependerá do estado do quorum do WSFC e das configurações de reinicialização e failover do grupo de recursos de FCI. Se a FCI tiver perdido seu quorum do WSFC, toda a FCI é colocada offline e a FCI perdeu sua alta disponibilidade. Se a FCI ainda tiver seu quorum do WSFC, o serviço do WSFC poderá responder primeiro tentando reiniciar o nó com falha e depois executando failover se as tentativas de reinicialização não forem bem-sucedidas. As configurações de reinicialização e failover são definidas no snap-in Gerenciador de Cluster de Failover. Para saber mais sobre essas configurações, confira [Propriedades do \<Resource>: guia de políticas](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Para obter mais informações sobre como manter a integridade do quórum, veja [Configuração de modos de quorum e votação do WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

@@ -2,24 +2,24 @@
 title: Consumir aplicativos
 titleSuffix: SQL Server Big Data Clusters
 description: Consuma um aplicativo implantado em Clusters de Big Data do SQL Server usando um serviço Web RESTful.
-author: jeroenterheerdt
-ms.author: jterh
-ms.reviewer: mikeray
-ms.date: 01/07/2020
+author: cloudmelon
+ms.author: melqin
+ms.reviewer: bilia
+ms.date: 06/22/2020
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45161a879adadb0de78c4b2b0d3c62a5c2e18f55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719061"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Consumir um aplicativo implantado em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] usando um serviço Web RESTful
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este artigo descreve como consumir um aplicativo implantado em um cluster de Big Data do SQL Server usando um serviço Web RESTful.
 
@@ -29,11 +29,14 @@ Este artigo descreve como consumir um aplicativo implantado em um cluster de Big
 - [Utilitário de linha de comando azdata](deploy-install-azdata.md)
 - Um aplicativo implantado usando [azdata](big-data-cluster-create-apps.md) ou a [Extensão de implantação de aplicativo](app-deployment-extension.md)
 
+> [!NOTE]
+> Quando o arquivo de especificação YAML do aplicativo especifica uma agenda, o aplicativo será disparado por meio de um trabalho cron. Se o cluster de Big Data for implantado no OpenShift, o início do trabalho cron exigirá recursos adicionais. Confira os detalhes sobre [considerações de segurança no OpenShift](concept-application-deployment.md#app-deploy-security) para obter instruções específicas.
+
 ## <a name="capabilities"></a>Funcionalidades
 
 Depois de implantar um aplicativo em seu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], você pode acessar e consumir esse aplicativo usando um serviço Web RESTful. Isso permite a integração desse aplicativo usando outros aplicativos ou serviços (por exemplo, um aplicativo móvel ou site). A tabela a seguir descreve os comandos de implantação do aplicativo que você pode usar com **azdata** para obter informações sobre o serviço Web RESTful para seu aplicativo.
 
-|Comando |DESCRIÇÃO |
+|Comando |Descrição |
 |:---|:---|
 |`azdata app describe` | Descrever o aplicativo. |
 
@@ -98,6 +101,12 @@ Para acessar o serviço Web RESTful para o aplicativo que você implantou, prime
 |GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
 |CU1 e posteriores| `https://[IP]:[PORT]/api/v1/swagger.json`|
 
+ Considerando a saída do exemplo anterior: versão CU4 e o endereço IP do controlador (10.1.1.3 no exemplo) e o número da porta (30080), a URL seria assim: 
+ 
+ ```bash
+    https://10.1.1.3 :30080/api/v1/swagger.json
+```
+ 
 > Para obter informações sobre a versão, confira [Histórico de versões](release-notes-big-data-cluster.md#release-history).
 
 Abra a URL adequada em seu navegador usando o endereço IP e a porta que você recuperou executando o comando [`describe`](#retrieve-the-endpoint) acima. Entre com as mesmas credenciais usadas para o `azdata login`.
@@ -106,18 +115,37 @@ Cole o conteúdo de `swagger.json` no [Editor de Swagger](https://editor.swagger
 
 ![API Swagger](media/big-data-cluster-consume-apps/api_swagger.png)
 
-Observe o método GET `app`, bem como o método POST `token`. Como a autenticação para aplicativos usa tokens JWT, você precisará obter um token usando sua ferramenta favorita para fazer uma chamada POST para o método `token`. Veja um exemplo de como fazer exatamente isso no [Postman](https://www.getpostman.com/):
+Observe que o `app` é o método GET e para obter o `token` usaria o método POST. Como a autenticação para aplicativos usa tokens JWT, você precisará obter um token usando sua ferramenta favorita para fazer uma chamada POST para o método `token`. Com o mesmo exemplo, a URL para obter o token JWT se pareceria com o seguinte:
+
+ ```bash
+    https://10.1.1.3 :30080/api/v1/token
+```
+
+
+Veja um exemplo de como fazer exatamente isso no [Postman](https://www.getpostman.com/):
 
 ![Token do Postman](media/big-data-cluster-consume-apps/postman_token.png)
 
-O resultado dessa solicitação lhe dará um `access_token` JWT, que será necessário para chamar a URL para executar o aplicativo.
+
+A saída dessa solicitação lhe dará um `access_token` JWT, que será necessário para chamar a URL para executar o aplicativo.
 
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Executar o aplicativo usando o serviço Web RESTful
 
-> [!NOTE]
-> Se desejar, você pode abrir a URL para o `swagger` que foi retornado quando você executou `azdata app describe --name [appname] --version [version]` em seu navegador, que deve ser semelhante a `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. Você precisará fazer logon com as mesmas credenciais usadas para o `azdata login`. O conteúdo do `swagger.json` que você pode colar no [Editor de Swagger](https://editor.swagger.io). Você verá que o serviço Web expõe o método `run`. Observe também a URL base exibida na parte superior.
+Há maneiras várias maneiras de consumir um aplicativo no BDC: você pode optar por usar [o comando azdata app run](big-data-cluster-create-apps.md). Esta seção demonstrará como usar ferramentas para desenvolvedores comuns, como o Postman, para executar o aplicativo. 
 
-Você pode usar sua ferramenta favorita para chamar o método `run` (`https://[IP]:30778/api/app/[appname]/[version]/run`), passando os parâmetros no corpo da solicitação POST como json. Neste exemplo, usaremos [Postman](https://www.getpostman.com/). Antes de fazer a chamada, você precisará definir o `Authorization` como `Bearer Token` e colar o token recuperado anteriormente. Isso definirá um cabeçalho em sua solicitação. Veja a captura de tela abaixo.
+Você pode abrir a URL para o `swagger` que foi retornado quando você executou `azdata app describe --name [appname] --version [version]` em seu navegador, que deve ser semelhante a `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. 
+
+> [!NOTE]
+> Você precisará fazer logon com as mesmas credenciais usadas para o `azdata login`. Com o mesmo exemplo, o comando ficaria assim:
+
+ ```bash
+    azdata app describe --name add-app --version v1
+```
+
+O conteúdo do `swagger.json` que você pode colar no [Editor de Swagger](https://editor.swagger.io). Você verá que o serviço Web expõe o método `run` e nos bastidores ele passou pelo proxy de aplicativo, que é uma API Web que autentica usuários e roteia as solicitações para os aplicativos. Observe que a URL base é exibida na parte superior. Você pode usar a ferramenta de sua escolha para chamar o método `run` (`https://[IP]:30778/api/app/[appname]/[version]/run`), passando os parâmetros no corpo da solicitação POST como JSON. 
+
+
+Neste exemplo, usaremos [Postman](https://www.getpostman.com/). Antes de fazer a chamada, você precisará definir o `Authorization` como `Bearer Token` e colar o token recuperado anteriormente. Isso definirá um cabeçalho em sua solicitação. Veja a captura de tela abaixo.
 
 ![Cabeçalhos de execução de Postman](media/big-data-cluster-consume-apps/postman_run_1.png)
 
@@ -130,6 +158,7 @@ Ao enviar a solicitação, você receberá a mesma saída que recebeu quando exe
 ![Resultado da execução do Postman](media/big-data-cluster-consume-apps/postman_result.png)
 
 Você chamou o aplicativo com êxito usando o serviço Web. Você pode seguir etapas semelhantes para integrar esse serviço Web ao seu aplicativo.
+
 
 ## <a name="next-steps"></a>Próximas etapas
 

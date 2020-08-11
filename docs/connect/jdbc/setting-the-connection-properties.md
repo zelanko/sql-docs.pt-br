@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0fcc9c86bc71846fd43cd1c606b55116c2171ca4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: bcb252b120638449af30c7d9bd408c687a250c06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793296"
 ---
 # <a name="setting-the-connection-properties"></a>Configuração das propriedades de conexão
 
@@ -60,8 +60,8 @@ A tabela a seguir lista todas as propriedades da cadeia de conexão disponíveis
 | domainName,<br/>domínio<br/><br/>String<br/>nulo | O domínio do Windows no qual a autenticação será realizada usando NTLM. |
 | disableStatementPooling<br/><br/>booleano<br/>["true" &#124; "false"]<br/><br/>true | Sinalizador que indica se o pool de instruções deve ser usado. |
 | enablePrepareOnFirst...<br/>PreparedStatementCall<br/><br/>booleano<br/>["true" &#124; "false"]<br/><br/>false | _enablePrepareOnFirstPreparedStatementCall_<br/><br/> Defina como "true" para habilitar a criação de identificador de instrução preparada chamando <code>sp_prepexec</code> na primeira execução da instrução preparada. <br/><br/>Defina como "false" para alterar a primeira execução de uma instrução preparada para chamar <code>sp_executesql</code> e não preparar uma instrução; depois que a segunda execução acontecer, ela chamará <code>sp_prepexec</code> para configurar um identificador de instrução preparada. |
-| enclaveAttestationUrl<br/><br/>String<br/><br/>nulo | Do Microsoft JDBC Driver 8.2 para SQL Server em diante, essa propriedade opcional indica a URL do ponto de extremidade de serviço de atestado a ser usada para Always Encrypted com enclaves seguros.<br/><br/>Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
-| enclaveAttestationProtocol<br/><br/>String<br/><br/>nulo | Do Microsoft JDBC Driver 8.2 para SQL Server em diante, essa propriedade opcional indica o protocolo de atestado a ser usado para Always Encrypted com enclaves seguros. No momento, o único valor compatível para esse campo é **HGS**.<br/><br/>Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
+| enclaveAttestationUrl<br/><br/>String<br/><br/>nulo | Do Microsoft JDBC Driver 8.2 para SQL Server em diante, essa propriedade opcional indica a URL do ponto de extremidade de serviço de atestado a ser usada para Always Encrypted com enclaves seguros.<br/><br/>Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
+| enclaveAttestationProtocol<br/><br/>String<br/><br/>nulo | Do Microsoft JDBC Driver 8.2 para SQL Server em diante, essa propriedade opcional indica o protocolo de atestado a ser usado para Always Encrypted com enclaves seguros. No momento, o único valor compatível para esse campo é **HGS**.<br/><br/>Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | encrypt<br/><br/>booleano<br/>["true" &#124; "false"]<br/><br/>false | Defina essa opção como "true" para especificar que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a criptografia TLS em todos os dados enviados entre o cliente e o servidor, caso o servidor tenha um certificado instalado. O valor padrão é "falso".<br/><br/> No Microsoft JDBC Driver 6.0 para SQL Server em diante, há uma nova configuração de conexão 'autenticação' que usa a criptografia TLS por padrão. <br/><br/>Para obter mais informações, veja a propriedade 'autenticação'. |
 | failoverPartner<br/><br/>String<br/><br/>nulo | O nome do servidor de failover usado em uma configuração de espelhamento de banco de dados. Essa propriedade é usada em uma falha de conexão inicial ao servidor principal; depois que você estabelecer a conexão inicial, essa propriedade será ignorada. Ele deve ser usado com a propriedade databaseName.<br/><br/> **Observação:** O driver não dá suporte à especificação do número da porta de instância do servidor para a instância do parceiro de failover como parte da propriedade failoverPartner na cadeia de conexão. No entanto, há suporte à especificação das propriedades serverName, instanceName e portNumber da instância do servidor principal e da propriedade failoverPartner da instância do parceiro de failover na mesma cadeia de conexão.<br/><br/> Se você especificar um Nome de Rede Virtual na propriedade de conexão **Server**, não poderá usar o espelhamento de bancos de dados. Para saber mais, confira [Suporte a JDBC Driver para alta disponibilidade e recuperação de desastre](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) |
 | fips<br/><br/>booleano<br/>["true" &#124; "false"]<br/><br/>"false" | Para a JVM habilitada por FIPS, essa propriedade deveria ser **true**. |

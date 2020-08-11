@@ -1,21 +1,21 @@
 ---
 title: Scripts nos testes de unidade do SQL Server
+description: Familiarize-se com os scripts de teste de unidade do SQL Server. Saiba mais sobre os scripts pré-teste, teste e pós-teste e os scripts comuns TestInitialize e TestCleanup.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1cc9bde70e716ba19f17f8d146719ccb191580b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256975"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883446"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts nos testes de unidade do SQL Server
 
@@ -49,7 +49,7 @@ Para saber mais sobre os diferentes contextos de segurança nos quais cada um de
 ![Dois testes de unidade de banco de dados](../ssdt/media/twodatabaseunittests.png "Dois testes de unidade de banco de dados")  
   
 > [!NOTE]  
-> Se a implantação do projeto de banco de dados do SQL Server tiver sido configurada, isso ocorrerá no início da execução de teste, na cadeia de conexão de contexto privilegiado. Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+> Se a implantação do projeto de banco de dados do SQL Server tiver sido configurada, isso ocorrerá no início da execução de teste, na cadeia de conexão de contexto privilegiado. Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
 ## <a name="initialization-and-cleanup-scripts"></a>Scripts de inicialização e de limpeza  
 No Designer de Teste de Unidade do SQL Server, os scripts TestInitialize e TestCleanup são denominados scripts comuns. O exemplo anterior pressupõe que os dois testes de unidade fazem parte da mesma classe de teste. Como resultado, eles compartilham os mesmos scripts TestInitialize e TestCleanup. Essa condição é válida para todos os testes de unidade de uma única classe de teste. Entretanto, se a execução do teste contiver testes de unidade de classes de teste diferentes, os scripts comuns da classe de teste associada serão executados antes e depois da execução do teste de unidade.  

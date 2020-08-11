@@ -1,5 +1,6 @@
 ---
 title: Definir a orientação da caixa de texto (Construtor de Relatórios) | Microsoft Docs
+description: Descubra como girar uma caixa de texto em direções diferentes em seus relatórios paginados no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,18 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 058da26bfe4fc5bf8ae5d777a35d0356b463ca11
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081003"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681375"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Definir a orientação da caixa de texto (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você pode girar uma caixa de texto em direções diferentes:   
 * Horizontalmente   
-* Verticalmente (rotação de 90 graus, com texto lido de cima para baixo)  
+* Verticalmente (rotação de 90 graus, com texto lido de cima para baixo, exceto caracteres de texto do Leste da Ásia)
+
 * Rotação de 270 graus (texto lido de baixo para cima).   
   
 Como a caixa de texto é girada, e não o texto, a rotação se aplica a todo o texto na caixa de texto. Não é possível especificar direções diferentes para partes do texto. Dimensione manualmente a largura da coluna e a altura da linha para acomodar o texto girado.  

@@ -1,5 +1,6 @@
 ---
 title: Preparando a implementação de uma extensão de entrega | Microsoft Docs
+description: Descubra como implementar uma extensão de entrega no Reporting Services. Saiba mais sobre interfaces e classes disponíveis e a funcionalidade obrigatória e opcional.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 949ab416b0d30f7bb20ec2b797a04121d49b9811
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa186787f22c6ba3dbabe6f3e219165cbf96a9b7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193720"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529492"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>Preparando para implementar uma entrega de extensão
   Antes de implementar a sua extensão de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você deve definir as interfaces a serem implementadas. Primeiro você precisa decidir como a sua extensão de entrega será usada, que configurações a sua extensão de entrega exigirá e a funcionalidade específica de que você precisará implementar para entregar notificações de relatório.  
@@ -35,7 +36,7 @@ ms.locfileid: "63193720"
   
  A tabela a seguir descreve as interfaces e as classes disponíveis para extensões de entrega.  
   
-|Interface ou classe|DESCRIÇÃO|  
+|Interface ou classe|Descrição|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> Interface|Representa uma extensão no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Interface|Representa uma extensão de entrega no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  

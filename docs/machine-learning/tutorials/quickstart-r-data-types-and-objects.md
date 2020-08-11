@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: Neste início rápido, você aprenderá a usar estruturas de dados, tipos de dados e objetos ao usar R no aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: b4e2fe7a7f8f5009f289a3db78b58f629e819ff2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772346"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>Início Rápido: Estruturas de dados, tipos de dados e objetos usando o R com o aprendizado de máquina do SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou nos [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md). Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
@@ -29,6 +29,9 @@ Neste início rápido, você aprenderá a usar estruturas de dados e tipos de da
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R no [SQL Server R Services](../r/sql-server-r-services.md). Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R nos [Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Você aprenderá como mover dados entre o R e a Instância Gerenciada de SQL, bem como os problemas comuns que podem ocorrer.
 ::: moniker-end
 
 Os problemas comuns que se deve conhecer de antemão incluem:
@@ -50,6 +53,9 @@ Para executar este início rápido, você precisará dos pré-requisitos a segui
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Para saber como instalar o R Services, confira o [Guia de instalação do Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Serviços de Machine Learning da Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira a [Visão geral dos Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Uma ferramenta para executar consultas SQL que contenham scripts do R. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).
@@ -205,7 +211,7 @@ Agora, R retorna um único valor como resultado.
 Por quê? Nesse caso, como os dois argumentos podem ser tratados como vetores de mesmo tamanho, R retorna o produto interno como uma matriz.  Esse é o comportamento esperado de acordo com as regras de álgebra linear; no entanto, isso pode causar problemas se seu aplicativo downstream espera que o esquema de saída nunca mude.
 
 > [!TIP]
-> 
+>
 > Encontrou erros? Verifique se você está executando o procedimento armazenado no contexto do banco de dados que contém a tabela, não no **mestre** nem em outro banco de dados.
 >
 > Além disso, sugerimos que você evite usar tabelas temporárias para esses exemplos. Alguns clientes do R encerrarão uma conexão entre os lotes, excluindo tabelas temporárias.
@@ -292,7 +298,7 @@ Depois de fazer a consulta funcionar, examine os resultados da função `str` pa
 
 **Resultados**
 
-```sql
+```text
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
 STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
 STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1

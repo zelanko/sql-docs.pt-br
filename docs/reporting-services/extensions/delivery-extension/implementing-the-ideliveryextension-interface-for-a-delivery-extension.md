@@ -1,5 +1,6 @@
 ---
 title: Implementando a interface IDeliveryExtension para uma extensão de entrega | Microsoft Docs
+description: Saiba como implementar a interface IDeliveryExtension em uma extensão de entrega para que os clientes possam validar os dados do usuário e recuperar as configurações de entrega.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 229d08da8be91a462b243fbb5580395fd03867ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba66d4f375e30edf37594230ddb44c1bd18d99b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529525"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementando a interface IDeliveryExtension para uma extensão de entrega
   A sua classe de extensão de entrega é usada para entregar notificações de relatório a usuários com base no conteúdo das notificações. A classe de extensão de entrega também oferece infraestrutura para validar configurações de usuário passadas à extensão de entrega. Além disso, a sua classe de extensão de entrega deve conter propriedades específicas que os clientes poderão usar para obter informações sobre o nome da extensão, as configurações suportadas pela extensão e os formatos disponíveis para a extensão de entrega.  

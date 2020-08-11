@@ -1,5 +1,6 @@
 ---
 title: Configurar e administrar um servidor de relatório (modo nativo) | Microsoft Docs
+description: Saiba mais sobre abordagens que você pode usar para configurar o Reporting Services e encontre artigos sobre como configurar componentes, recursos ou funcionalidades de servidor.
 ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2e38e508d2c6a7447781dd2918b980bcc1ff6003
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68a37cc93271fc913cc89d2b0e522a81adec443f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082534"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547458"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurar e administrar um servidor de relatório (modo nativo do SSRS)
   Este artigo resume as abordagens que podem ser usadas para configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Também inclui uma lista de tópicos que explicam como configurar componentes, recursos ou recursos específicos de servidor. Para configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode:  

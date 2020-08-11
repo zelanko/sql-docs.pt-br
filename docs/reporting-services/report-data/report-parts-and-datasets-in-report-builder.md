@@ -1,5 +1,6 @@
 ---
 title: Partes de relatório e conjuntos de dados no Construtor de Relatórios | Microsoft Docs
+description: Saiba mais sobre partes de relatório que você pode adicionar na Galeria de Partes de Relatório do Construtor de Relatórios. Além disso, saiba mais sobre os conjuntos de dados dos quais os relatórios dependem.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80d075cc85f3784459fa7302e601e95a1f11970b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808366"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Partes de relatório e conjuntos de dados no Construtor de Relatórios
   No Construtor de Relatórios, a maneira mais fácil de incluir dados em um relatório é adicionando partes de relatório da Galeria de Partes de Relatório. As partes de relatório contêm os conjuntos de dados dos quais dependem, conhecidos como *conjuntos de dados dependentes*. Os conjuntos de dados dependentes se baseiam em fontes de dados compartilhadas e podem ser conjuntos de dados inseridos ou compartilhados. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

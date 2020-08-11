@@ -1,5 +1,6 @@
 ---
 title: Contadores de desempenho – serviço ReportServer, objetos de desempenho | Microsoft Docs
+description: Conheça os contadores de desempenho para os objetos de desempenho ReportServer:Service e ReportServerSharePoint:Service, parte de uma implantação do SQL Server 2012.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893446"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545518"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Contadores de desempenho – serviço ReportServer, objetos de desempenho
   Este tópico descreve contadores de desempenho para os objetos de desempenho **ReportServer:Service** e **ReportServerSharePoint:Service** que fazem parte de uma implantação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -49,7 +50,7 @@ ms.locfileid: "68893446"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Active connections**|O número de conexões atualmente ativas no servidor.|  
 |**Bytes Received Total**|O número de bytes recebidos pelo servidor. Esse contador calcula o total de bytes brutos recebidos pelo Gerenciador de Relatórios e pelo servidor de relatório.|  
@@ -82,7 +83,7 @@ ms.locfileid: "68893446"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Memory Pressure State**||  
 |**Memory Shrink Amount**||  

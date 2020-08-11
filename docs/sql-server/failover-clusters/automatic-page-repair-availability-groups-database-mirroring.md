@@ -1,6 +1,6 @@
 ---
 title: Reparo automático de página para grupos de disponibilidade e espelhamento de banco de dados
-description: 'Repara automaticamente determinados tipos de corrupção de página quando um banco de dados participa de um grupo de disponibilidade Always On ou de um relacionamento de espelhamento de banco de dados. Este tópico fornece informações sobre os tipos de erros e suas possíveis resoluções. '
+description: Saiba como reparar automaticamente determinados tipos de corrupção de página quando um banco de dados participa de um grupo de disponibilidade Always On ou de um espelhamento de banco de dados.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729126"
 ---
-# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparo automático de página (Grupos de Disponibilidade: espelhamento de banco de dados)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O reparo automático de página tem suporte do espelhamento de banco de dados e de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois que certos tipos de erros corrompem uma página, tornando-a ilegível, um parceiro de espelhamento de banco de dados (entidade de segurança ou espelho) ou uma réplica de disponibilidade (primária ou secundária) tenta recuperar a página automaticamente. O parceiro/réplica que não puder ler a página solicitará uma cópia atualizada da página do seu parceiro ou de outra réplica. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia legível. Isso costuma resolver o erro.  
   
  Em geral, o espelhamento de banco de dados e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tratam erros de E/S de formas equivalentes. As poucas diferenças são destacadas explicitamente aqui.  
@@ -47,7 +47,7 @@ ms.locfileid: "74822647"
 ##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a> Tipos de erro que causam uma tentativa de reparo automático de página  
  O reparo automático de página do espelhamento de banco de dados tenta reparar apenas páginas em um arquivo de dados no qual houve falha na operação de um dos erros listados na tabela a seguir.  
   
-|Número do erro|DESCRIÇÃO|Instâncias que causam uma tentativa de reparo automático de página|  
+|Número do erro|Descrição|Instâncias que causam uma tentativa de reparo automático de página|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|Ação realizada apenas se o sistema operacional tiver executado uma CRC (verificação de redundância cíclica) que falhou nos dados.|ERROR_CRC. O valor do sistema operacional desse erro é 23.|  
 |824|Erros lógicos.|Erros de dados lógicos, como gravação interrompida ou soma de verificação de página inválida.|  

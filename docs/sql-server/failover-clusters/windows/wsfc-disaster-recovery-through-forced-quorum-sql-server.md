@@ -1,6 +1,6 @@
 ---
 title: Recuperação de desastre por meio de quorum forçado
-description: A recuperação de uma falha de quorum requer intervenção manual. Este artigo descreve como abordar a maneira de forçar o quorum em caso de desastre de uma FCI (instância de cluster de failover) do SQL Server.
+description: A recuperação de uma falha de quorum requer intervenção manual. Saiba como forçar o quorum em caso de desastre de uma instância de cluster de failover do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20beee1d78975cdb4da4338ca85eff14a32b8153
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821985"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896692"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperação de desastres WSFC por meio de quorum forçado (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   A falha de quorum normalmente é causada por um desastre sistêmico ou uma falha de comunicações persistente que envolve vários nós no cluster WSFC.  A intervenção manual é necessária para a recuperação de uma falha de quorum.  
   
 -   **Antes de iniciar:**  [Pré-requisitos](#Prerequisites), [Segurança](#Security)  

@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5b94759131082e2ce60e8a09dde728cadb4a94cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50f3bc0bdfaf804acc563bd6450541f0e364e825
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255138"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010660"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Salvar diagramas de banco de dados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Salvando um diagrama de banco de dados, você pode salvar todas as alterações realizadas, incluindo qualquer alteração feita nas tabelas, colunas e outros objetos de banco de dados.  
   
 ### <a name="to-save-the-database-diagram"></a>Para salvar o diagrama de banco de dados  
   
-1.  No menu **Arquivo** , escolha **Salvar \<** _tablename_ **>** .  
+1.  No menu **Arquivo**, escolha **Salvar \<**_tablename_**>** .  
   
 2.  Se esse for um diagrama novo que nunca foi salvo, será exibida a caixa de diálogo **Salvar como** . Digite um nome para o diagrama.  
   

@@ -1,19 +1,19 @@
 ---
 title: Criando uma identidade visual para o portal da Web | Microsoft Docs
-ms.date: 04/10/2019
+ms.date: 07/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-description: Neste artigo, você aprenderá a alterar a aparência do portal da Web criando uma identidade visual para o seu negócio por meio de um pacote de marcas. O pacote de marcas foi projetado para que você não precise de um conhecimento avançado de CSS (folha de estilos em cascata) para criá-lo.
+description: Saiba como criar uma marca para o seu portal da Web, mudando a aparência dele para sua empresa por meio de um pacote de marca. O pacote de marca foi projetado para que você não precise de conhecimento aprofundado de CSS.
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72251915"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888121"
 ---
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
 
@@ -38,50 +38,62 @@ Os arquivos devem ter os nomes listados acima. O arquivo zip pode receber o nome
 O arquivo metadata.xml permite que você defina o nome do pacote de marca, e possui uma entrada de referência para os arquivos colors.json e logo.png.  
   
 Para alterar o nome de seu pacote de marca, altere o atributo **name** do elemento **SystemResourcePackage** .  
-  
+
+```xml
     name="Multicolored example brand"  
+```
   
 Opcionalmente, você pode incluir uma imagem do logotipo em seu pacote de marca. Este item estaria listado dentro do elemento Contents.  
   
 Exemplo sem um arquivo de logotipo.  
-  
-    <Contents>  
-      <Item key="colors" path="colors.json" />  
-    </Contents>  
-  
+
+```xml
+<Contents>  
+    <Item key="colors" path="colors.json" />  
+</Contents>  
+```
+
 Exemplo com um arquivo de logotipo.  
   
-    <Contents>  
-      <Item key="colors" path="colors.json" />  
-      <Item key="logo" path="logo.png" />  
-    </Contents>  
-  
+```xml
+<Contents>  
+    <Item key="colors" path="colors.json" />  
+    <Item key="logo" path="logo.png" />  
+</Contents>  
+```
+
 ### <a name="colorsjson"></a>Colors.json
   
 Quando o pacote de marca é carregado, o servidor extrai os pares de nome/valor apropriados do arquivo colors.json e os mescla com a folha de estilo LESS mestre, brand.less. Esse arquivo LESS é processado, e o arquivo CSS resultante é fornecido ao cliente. Todas as cores na folha de estilos seguem a representação hexadecimal de seis caracteres de uma cor.  
   
 A folha de estilos LESS contém blocos que fazem referência a algumas variáveis LESS predefinidas, como as seguintes.  
-  
-    /* primary buttons */   
-    .btn-primary {   
-        color:@primaryButtonColor;   
-        background-color:@primaryButtonBg;   
-    }  
+
+```css
+/* primary buttons */   
+.btn-primary {   
+    color:@primaryButtonColor;   
+    background-color:@primaryButtonBg;   
+}  
+```
   
 Embora isso se pareça com a sintaxe CSS, os valores de cor, prefixados com o @symbol, são exclusivos ao LESS. Eles são variáveis cujos valores são definidos pelo arquivo json.  
   
 Por exemplo, se o arquivo colors.json tiver os valores a seguir.  
-  
-    "primary":"#009900",   
-    "primaryContrast":"#ffffff"   
-  
+
+```json
+"primary":"#009900",   
+"primaryContrast":"#ffffff"   
+```
+
 A saída processada procuraria a variável LESS **\@primaryButtonBg** e veria que ela é mapeada para a propriedade json chamada **primary**, que neste exemplo é #009900. Portanto, geraria o CSS apropriado.  
-  
+
+```css
     .btn-primary {   
         color:#ffffff;   
         background-color:#009900;   
     }  
-  
+```
+
 Todos os botões primários seriam processados na cor verde-escuro com texto em branco.  
   
 O arquivo colors.json, para o Reporting Services, tem duas categorias principais nas quais os itens são agrupados.  
@@ -100,7 +112,8 @@ A seção da interface é dividida nos seguintes agrupamentos.
 |Terciário neutro|Planos de fundo de configurações do site.|  
 |Mensagens de aviso/perigo/êxito|Cores para essas mensagens.|  
 |KPI|Controla as cores para bom (1), neutro (0), neutro (-1) e nenhum.|  
-  
+|||
+
 Na primeira vez que você se conecta a um servidor com o Publicador de Relatório Móveis, que tem um pacote de marca implantado, o tema será adicionado aos temas disponíveis para uso no menu superior direito do aplicativo.  
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
@@ -134,112 +147,116 @@ Para adicionar, baixar ou remover um pacote de marca, você pode fazer o seguint
 Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote redefinirá imediatamente o portal da Web com a marca padrão.  
   
 ## <a name="metadataxml-example"></a>Exemplo de metadata.xml
-  
-    <?xml version="1.0" encoding="utf-8"?>  
-    <SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
-        type="UniversalBrand"  
-        version="2.0.2"  
-        name="Multicolored example brand"  
-        >  
-        <Contents>  
-            <Item key="colors" path="colors.json" />  
-            <Item key="logo" path="logo.png" />  
-        </Contents>  
-    </SystemResourcePackage>  
-   
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+    type="UniversalBrand"  
+    version="2.0.2"  
+    name="Multicolored example brand"  
+    >  
+    <Contents>  
+        <Item key="colors" path="colors.json" />  
+        <Item key="logo" path="logo.png" />  
+    </Contents>  
+</SystemResourcePackage>  
+```
+
 ## <a name="colorsjson-example"></a>Exemplo de colors.json
-  
-    {  
-        "name":"Multicolored example brand",  
-        "version":"1.0",  
-        "interface":{  
-            "primary":"#b31e1e",  
-            "primaryAlt":"#ca0806",  
-            "primaryAlt2":"#621013",  
-            "primaryAlt3":"#e40000",  
-            "primaryAlt4":"#e14e50",  
-            "primaryContrast":"#fff",  
-  
-            "secondary":"#042200",  
-            "secondaryAlt":"#0f4400",  
-            "secondaryAlt2":"#155500",  
-            "secondaryAlt3":"#217700",  
-            "secondaryContrast":"#49e63c",  
-  
-            "neutralPrimary":"#d8edff",  
-            "neutralPrimaryAlt":"#c9e6ff",  
-            "neutralPrimaryAlt2":"#aedaff",  
-            "neutralPrimaryAlt3":"#88c8ff",  
-            "neutralPrimaryContrast":"#0a2b4c",  
-  
-            "neutralSecondary":"#e9d8eb",  
-            "neutralSecondaryAlt":"#d9badc",  
-            "neutralSecondaryAlt2":"#b06cb5",  
-            "neutralSecondaryAlt3":"#a75bac",  
-            "neutralSecondaryContrast":"#250a26",  
-  
-            "neutralTertiary":"#f79220",  
-            "neutralTertiaryAlt":"#f8a54b",  
-            "neutralTertiaryAlt2":"#facc9b",  
-            "neutralTertiaryAlt3":"#fce3c7",  
-            "neutralTertiaryContrast":"#391d00",  
-  
-            "danger":"#ff0000",  
-            "success":"#00ff00",  
-            "warning":"#ff8800",  
-            "info":"#00ff",  
-            "dangerContrast":"#fff",  
-            "successContrast":"#fff",  
-            "warningContrast":"#fff",  
-            "infoContrast":"#fff",  
-  
-            "kpiGood":"#4fb443",  
-            "kpiBad":"#de061a",  
-            "kpiNeutral":"#d9b42c",  
-            "kpiNone":"#333",  
-            "kpiGoodContrast":"#fff",  
-            "kpiBadContrast":"#fff",  
-            "kpiNeutralContrast":"#fff",  
-            "kpiNoneContrast":"#fff"  
-           },  
-           "theme":{  
-            "dataPoints":[  
-                "#0072c6",  
-                "#f68c1f",  
-                "#269657",  
-                "#dd5900",  
-                "#5b3573",  
-                "#22bdef",  
-                "#b4009e",  
-                "#008274",  
-                "#fdc336",  
-                "#ea3c00",  
-                "#00188f",  
-                "#9f9f9f"  
-            ],  
-  
-            "good":"#85ba00",  
-            "bad":"#e90000",  
-            "neutral":"#edb327",  
-            "none":"#333",  
-  
-            "background":"#fff",  
-            "foreground":"#222",  
-            "mapBase":"#00aeef",  
-            "panelBackground":"#f6f6f6",  
-            "panelForeground":"#222",  
-            "panelAccent":"#00aeef",  
-            "tableAccent":"#00aeef",  
-  
-            "altBackground":"#f6f6f6",  
-            "altForeground":"#000",  
-            "altMapBase":"#f68c1f",  
-            "altPanelBackground":"#235378",  
-            "altPanelForeground":"#fff",  
-            "altPanelAccent":"#fdc336",  
-            "altTableAccent":"#fdc336"  
-        }  
+
+```json
+{  
+    "name":"Multicolored example brand",  
+    "version":"1.0",  
+    "interface":{  
+        "primary":"#b31e1e",  
+        "primaryAlt":"#ca0806",  
+        "primaryAlt2":"#621013",  
+        "primaryAlt3":"#e40000",  
+        "primaryAlt4":"#e14e50",  
+        "primaryContrast":"#fff",  
+
+        "secondary":"#042200",  
+        "secondaryAlt":"#0f4400",  
+        "secondaryAlt2":"#155500",  
+        "secondaryAlt3":"#217700",  
+        "secondaryContrast":"#49e63c",  
+
+        "neutralPrimary":"#d8edff",  
+        "neutralPrimaryAlt":"#c9e6ff",  
+        "neutralPrimaryAlt2":"#aedaff",  
+        "neutralPrimaryAlt3":"#88c8ff",  
+        "neutralPrimaryContrast":"#0a2b4c",  
+
+        "neutralSecondary":"#e9d8eb",  
+        "neutralSecondaryAlt":"#d9badc",  
+        "neutralSecondaryAlt2":"#b06cb5",  
+        "neutralSecondaryAlt3":"#a75bac",  
+        "neutralSecondaryContrast":"#250a26",  
+
+        "neutralTertiary":"#f79220",  
+        "neutralTertiaryAlt":"#f8a54b",  
+        "neutralTertiaryAlt2":"#facc9b",  
+        "neutralTertiaryAlt3":"#fce3c7",  
+        "neutralTertiaryContrast":"#391d00",  
+
+        "danger":"#ff0000",  
+        "success":"#00ff00",  
+        "warning":"#ff8800",  
+        "info":"#00ff",  
+        "dangerContrast":"#fff",  
+        "successContrast":"#fff",  
+        "warningContrast":"#fff",  
+        "infoContrast":"#fff",  
+
+        "kpiGood":"#4fb443",  
+        "kpiBad":"#de061a",  
+        "kpiNeutral":"#d9b42c",  
+        "kpiNone":"#333",  
+        "kpiGoodContrast":"#fff",  
+        "kpiBadContrast":"#fff",  
+        "kpiNeutralContrast":"#fff",  
+        "kpiNoneContrast":"#fff"  
+        },  
+        "theme":{  
+        "dataPoints":[  
+            "#0072c6",  
+            "#f68c1f",  
+            "#269657",  
+            "#dd5900",  
+            "#5b3573",  
+            "#22bdef",  
+            "#b4009e",  
+            "#008274",  
+            "#fdc336",  
+            "#ea3c00",  
+            "#00188f",  
+            "#9f9f9f"  
+        ],  
+
+        "good":"#85ba00",  
+        "bad":"#e90000",  
+        "neutral":"#edb327",  
+        "none":"#333",  
+
+        "background":"#fff",  
+        "foreground":"#222",  
+        "mapBase":"#00aeef",  
+        "panelBackground":"#f6f6f6",  
+        "panelForeground":"#222",  
+        "panelAccent":"#00aeef",  
+        "tableAccent":"#00aeef",  
+
+        "altBackground":"#f6f6f6",  
+        "altForeground":"#000",  
+        "altMapBase":"#f68c1f",  
+        "altPanelBackground":"#235378",  
+        "altPanelForeground":"#fff",  
+        "altPanelAccent":"#fdc336",  
+        "altTableAccent":"#fdc336"  
     }  
+}  
+```
 
 ## <a name="next-steps"></a>Próximas etapas
 

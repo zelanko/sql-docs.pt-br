@@ -1,5 +1,6 @@
 ---
 title: Visão geral das extensões de renderização | Microsoft Docs
+description: Veja quais extensões de renderização de dados estão incluídas com o Reporting Services. Saiba como adicionar extensões de renderização personalizadas para gerar relatórios em outros formatos.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193887"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529422"
 ---
 # <a name="rendering-extensions-overview"></a>Visão geral das extensões de renderização
   Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui sete extensões de renderização: HTML, Excel, Word, CSV ou Texto, XML, Imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  

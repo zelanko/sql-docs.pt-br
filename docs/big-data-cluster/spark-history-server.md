@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728026"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Depurar e diagnosticar aplicativos Spark no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Servidor de Histórico do Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este artigo fornece orientações sobre como usar o Servidor de Histórico do Spark estendido para depurar e diagnosticar aplicativos Spark em um Cluster de Big Data do SQL Server. Essas funcionalidades de depuração e diagnóstico são internas do Servidor de Histórico do Spark e são da plataforma Microsoft. A extensão inclui guias de dados, de grafo e de diagnóstico. Na guia de dados, os usuários podem ver os dados de entrada e de saída do trabalho do Spark. Na guia de gráfico, os usuários podem ver o fluxo de dados e reproduzir o grafo do trabalho. Na guia de diagnóstico, o usuário pode consultar informações sobre Distorção de dados, Distorção de tempo e Análise de uso do executor.
 
@@ -28,7 +28,7 @@ Este artigo fornece orientações sobre como usar o Servidor de Histórico do Sp
 A experiência do usuário com o servidor de histórico do Spark de software livre é aprimorada com informações, que incluem dados específicos do trabalho e a visualização interativa de grafos de trabalho e fluxos de dados do cluster de Big Data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Abrir a interface do usuário da Web do Servidor de Histórico do Spark usando uma URL
-Abra o Servidor de Histórico do Spark navegando até a URL a seguir, substitua `<Ipaddress>` e `<Port>` por informações específicas do cluster de Big Data. Observe que, em uma instalação do Cluster de Big Data com autenticação Básica (nome de usuário/senha), você precisará fornecer a **raiz** do usuário quando for solicitado que faça logon em pontos de extremidade de gateway (Knox). É possível encontrar mais informações em: [Implantar cluster de Big Data do SQL Server](quickstart-big-data-cluster-deploy.md)
+Abra o Servidor de Histórico do Spark navegando até a URL a seguir, substitua `<Ipaddress>` e `<Port>` por informações específicas do cluster de Big Data. Em clusters implantados antes do SQL Server 2019 CU 5 em uma instalação de cluster de Big Data com autenticação Básica (nome de usuário/senha), você precisará fornecer a **raiz** do usuário quando for solicitado que faça logon em pontos de extremidade do gateway (Knox). Confira [Implantar cluster de Big Data do SQL Server](quickstart-big-data-cluster-deploy.md). [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ O Grafo de Uso do Executor visualiza a alocação do executor real do trabalho d
 + Clique no ícone colorido para selecionar ou desmarcar o conteúdo correspondente em todos os rascunhos.
 
     ![Selecionar gráfico](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Logs do Spark/Yarn
+Além do Servidor de Histórico do Spark, você pode encontrar os logs para o Spark e Yarn aqui, respectivamente:
+* Logs de eventos do Spark: hdfs:///system/spark-events
+* Logs do Yarn: hdfs:///tmp/logs/root/logs-tfile
 
+Observação: Ambos os logs têm um período de retenção padrão de sete dias. Se você quiser alterar o período de retenção, confira a página [Configurar Apache Spark e Apache Hadoop](configure-spark-hdfs.md). A localização **não pode** ser alterada.
 
 ## <a name="known-issues"></a>Problemas conhecidos
 O Servidor de Histórico do Spark tem os seguintes problemas conhecidos:

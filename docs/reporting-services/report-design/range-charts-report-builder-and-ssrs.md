@@ -1,5 +1,6 @@
 ---
 title: Gráficos de intervalos (Construtor de Relatórios) | Microsoft Docs
+description: Exiba um conjunto de pontos de dados em que cada um deles é definido por vários valores para a mesma categoria usando gráficos de intervalo no Construtor de Relatórios.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3df3a377b466a84f325fbc5bee13f94bf9d08da7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaeebef414b5bcb57ef59fa1400a288097704bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057575"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Gráficos de intervalos (Construtor de Relatórios e SSRS)
   Um tipo de gráfico de intervalos exibe um conjunto de pontos de dados que são definidos por diversos valores para a mesma categoria. Os valores são representados pela altura do marcador, de acordo com a medição feita pelo eixo y. Os rótulos de categoria são exibidos no eixo de categoria. O gráfico de intervalos comum preenche a área entre os valores superior e inferior de cada ponto de dados.  

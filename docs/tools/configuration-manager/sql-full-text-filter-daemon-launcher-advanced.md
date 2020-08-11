@@ -1,5 +1,6 @@
 ---
 title: Iniciador do Daemon de Filtro de Texto Completo do SQL (Avançado)
+description: Saiba mais sobre o Iniciador do Daemon de Filtro de Texto Completo do SQL, usado pela pesquisa de texto completo do SQL Server. Saiba mais sobre a guia Avançado da caixa de diálogo de Propriedades do Iniciador.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6829ffc48eb9c8baedb89225186ca345f0e0dd06
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cdb657cd0fe9b05b55002da07119a86f9ef1e839
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307922"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896571"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-advanced"></a>Iniciador do Daemon de Filtro de Texto Completo do SQL (Avançado)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o serviço do Iniciador do Daemon de Filtro de Texto Completo do SQL é usado pelo texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este serviço deverá estar em execução se você usar a pesquisa de texto completo. Para obter informações sobre os processos do host do daemon de filtro, consulte "Arquitetura da pesquisa de texto completo" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Por padrão, nenhuma propriedade aparece na guia **Avançado** . Se as propriedades personalizadas estiverem definidas, elas também aparecerão nessa guia com seus valores.  

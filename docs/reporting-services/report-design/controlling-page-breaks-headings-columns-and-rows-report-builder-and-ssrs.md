@@ -1,5 +1,6 @@
 ---
 title: Como controlar quebras de página, títulos, colunas e linhas (Construtor de Relatórios) | Microsoft Docs
+description: Otimize a exibição e a impressão de suas tabelas, listas ou imagens com opções de comprimento, colunas, títulos e linhas de página no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3bcce26870ffea199d83f542a5d31bed1452cd1
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082299"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012634"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controlando quebras de páginas, títulos, colunas e linhas (Construtor de Relatórios e SSRS)
   Uma quebra de página divide um relatório em páginas separadas para exibição e impressão. As quebras de página determinam como o conteúdo é colocado em uma página de relatório para visualização ideal quando você visualiza um relatório ou exporta-o para outro formato de arquivo.  
   
- A adição de quebras de páginas também melhora o desempenho de relatórios grandes durante seu processamento. Uma página renderizada é exibida enquanto as páginas restantes são processadas em segundo plano. Isso permite que você inicie a exibição das páginas iniciais do relatório enquanto aguarda a disponibilização das restantes.  
+ A adição de quebras de página também aprimora o desempenho de relatórios grandes durante o processamento deles. Uma página renderizada é exibida enquanto as páginas restantes são processadas em segundo plano. Isso permite que você inicie a exibição das páginas iniciais do relatório enquanto aguarda a disponibilização das restantes.  
   
  É possível adicioná-las a itens de relatório como uma tabela, matriz, lista, gráfico, medidor ou imagem. Também é possível adicionar quebras de página a grupos em uma tabela, matriz ou lista. As quebras de página podem somente ser adicionadas antes, após e entre os grupos. As quebras de página entre grupos não são adicionadas ao relatório por padrão.  
   

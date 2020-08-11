@@ -1,5 +1,6 @@
 ---
 title: Adicionar locais personalizados a um mapa (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como adicionar locais personalizados a um mapa que você adicionou a um relatório paginado no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 137b15dc1390ed6b5aef352041d8c9c481db89e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf6610f1abb446d27825e8d2e95677100a69184d
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081642"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255669"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Adicionar locais personalizados a um mapa (Construtor de Relatórios e SSRS)
   Depois que adicionar um mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você poderá adicionar seus próprios locais de ponto.  

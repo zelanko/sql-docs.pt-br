@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools
+description: Veja recursos em tarefas de desenvolvimento de banco de dados que você pode realizar com o SQL Server Data Tools, como a criação de tabelas e a criação de extensões de recurso.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fa96a9175124e3aa1bc5f0e7008422fafe85aab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256340"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883444"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 
@@ -29,7 +29,7 @@ O Pesquisador de Objetos do SQL Server no Visual Studio oferece uma exibição d
   
 Os tópicos e seções a seguir discutem como o SSDT pode ajudar no desenvolvimento de bancos de dados. Tópicos de instruções são incluídos para ajudá-lo no processo de conclusão das tarefas do seu projeto de banco de dados. Essas tarefas, escritas na forma de tutorial e concluídas em ordem, usam a Northwind Traders, uma empresa fictícia que importa e exporta comidas especializadas do mundo todo.  
   
-|Tópicos/Seção|DESCRIÇÃO|  
+|Tópicos/Seção|Descrição|  
 |-------------------|---------------|  
 |[Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md)|Os tópicos nesta seção descrevem os recursos do SQL Server Data Tools para autoria, criação, depuração e publicação de um projeto de banco de dados.|  
 |[Desenvolvimento de banco de dados orientado a projetos usando ferramentas de linha de comando](../ssdt/project-oriented-database-development-using-command-line-tools.md)|Os tópicos nesta seção descrevem ferramentas de linha de comando que permitem alguns cenários de desenvolvimento de banco de dados orientados por projeto.|  

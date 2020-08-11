@@ -1,5 +1,6 @@
 ---
 title: Comparar servidores de relatório nativos e do SharePoint Reporting Services | Microsoft Docs
+description: Conheça a parte central de uma instalação do SQL Server Reporting Services, composta por um mecanismo de processamento e extensões para adicionar funcionalidade.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038019"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764776"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Comparar servidores de relatório nativos e do SharePoint Reporting Services
 
@@ -27,7 +28,7 @@ Saiba mais sobre a parte central de uma instalação do [!INCLUDE[ssNoVersion](.
 
 Um servidor de relatório do Reporting Services é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#feature-comparison-of-sharepoint-and-native-mode) para obter uma comparação entre os recursos.  
   
- **Instalação:** para obter informações sobre a instalação do Reporting Services, consulte [Instalar o Reporting Services](../install-windows/install-reporting-services.md).
+ **Instalação:** para obter informações sobre a instalação do Reporting Services, confira [Instalar o Reporting Services](../install-windows/install-reporting-services.md).
 
 ## <a name="overview-of-report-server-modes"></a>Visão geral dos modos do servidor de relatório
 
@@ -97,7 +98,7 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
   
  ![Arquitetura funcional do SharePoint para SSRS](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Arquitetura funcional do SharePoint para SSRS")  
   
-||DESCRIÇÃO|  
+||Descrição|  
 |-|-----------------|  
 |**(1)**|Servidores Web ou WFE (front-ends da Web). O suplemento Reporting Services deve ser instalado em cada servidor Web do qual você deseja utilizar os recursos de aplicativo Web, como exibição de relatórios ou páginas de gerenciamento do Reporting Services para tarefas como gerenciar fontes de dados ou assinaturas.|  
 |**(2)**|O suplemento instala a URL e pontos de extremidade SOAP para clientes se comunicarem com os servidores de Aplicativos, pelo proxy de serviço do Reporting Services.|  

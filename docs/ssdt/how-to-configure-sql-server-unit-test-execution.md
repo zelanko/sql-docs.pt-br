@@ -1,23 +1,23 @@
 ---
 title: Configurar a execução do teste de unidade do SQL Server
+description: Saiba como configurar testes de unidade do SQL Server. Veja como especificar cadeias de conexão e como implantar um esquema de banco de dados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241573"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519026"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Como: Configurar a execução do teste de unidade do SQL Server
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Como fazer: Configurar a execução do teste de unidade do SQL Server
 
 Configurando o projeto de teste, você pode especificar várias configurações que determinam como os testes de unidade do SQL Server serão executados. Essas configurações são armazenados no arquivo app.config do projeto de teste. Se você editar esse arquivo diretamente, os novos valores aparecerão na caixa de diálogo Configuração de Teste.  
   

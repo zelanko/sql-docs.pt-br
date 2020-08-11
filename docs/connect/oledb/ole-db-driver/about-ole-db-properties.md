@@ -1,10 +1,9 @@
 ---
-title: Sobre propriedades OLE DB | Microsoft Docs
+title: Sobre as propriedades de conexão do OLE DB | Microsoft Docs
 description: Sobre as propriedades do OLE DB
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/20/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,17 +14,40 @@ helpviewer_keywords:
 - property values [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 53d34483d8af029dd147b82da7611ddec616d641
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa2fbb56d9d8926c45970ecddfabd226c87d26e2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995061"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004452"
 ---
 # <a name="about-ole-db-properties"></a>Sobre propriedades OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+<!--
+NOTE , GeneMi , 2020/May/20:
+    This SQL 2016+ article is a nearly exact duplicate of another SQL 2016+ article.
+    This article resides under docs/connect/oledb/ole-db-driver/.
+
+    The other article resides under docs/relational-databases/native-client-ole-db-provider/.
+    And, the other article has a SQL 2014 counterpart having its same GitHub directory path and filename, to support SQL 2014 OPS Versioning with SQL 2016+.
+
+    This path-file name is:
+'\sql-docs-pr\docs\connect\oledb\ole-db-driver\about-ole-db-properties.md'.
+
+    The other path-file is named:
+'\sql-docs-pr\docs\relational-databases\native-client-ole-db-provider\about-ole-db-properties.md'.
+
+    Therefore, maybe this docs/connect/oledb/... file should be deleted?
+
+1611957:  This NOTE relates to SEO content bug 1611957 about metadata 'title:' value duplication:
+    https://mseng.visualstudio.com/TechnicalContent/_workitems/edit/1611957
+
+PR 15068:  This HTML comment is being added by PR...
+    https://github.com/MicrosoftDocs/sql-docs-pr/pull/15068
+-->
 
   Os consumidores definem valores de propriedade para solicitar um comportamento de objeto específico. Por exemplo, os consumidores usam propriedades para especificar as interfaces a serem expostas por um conjunto de linhas. Eles obtêm os valores de propriedade para determinar os recursos de um objeto, como um conjunto de linhas, uma sessão ou um objeto de fonte de dados.  
   

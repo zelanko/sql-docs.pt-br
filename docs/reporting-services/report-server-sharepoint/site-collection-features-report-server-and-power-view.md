@@ -1,5 +1,6 @@
 ---
 title: Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint | Microsoft Docs
+description: Em geral, o Suplemento do SQL Server Reporting Services para recursos do SharePoint é ativado automaticamente. Use estas instruções se precisar ativá-las manualmente.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580510"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764775"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
 
@@ -26,7 +27,7 @@ ms.locfileid: "65580510"
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
- Se você instalar o suplemento Reporting Services para Produtos do SharePoint 2010 após a instalação do produto do SharePoint, os recursos de integração do Servidor de Relatório e do Power View só serão ativados para conjuntos de sites raiz. Para outros conjuntos de sites, você precisa ativar os recursos manualmente. Por exemplo, se você tiver um conjunto de sites **https://[nome do meu servidor]/sites/[nome da coleção de sites]** , precisará ativar os recursos do conjunto de sites do Reporting Services manualmente.  
+ Se você instalar o suplemento Reporting Services para Produtos do SharePoint 2010 após a instalação do produto do SharePoint, os recursos de integração do Servidor de Relatório e do Power View só serão ativados para conjuntos de sites raiz. Para outros conjuntos de sites, você precisa ativar os recursos manualmente. Por exemplo, se você tiver um conjunto de sites **https://[nome do meu servidor]/sites/[nome da coleção de sites]**, precisará ativar os recursos do conjunto de sites do Reporting Services manualmente.  
   
  Quando não houver nenhum conjunto de sites raiz, o suplemento Reporting Services registrará uma mensagem semelhante à mostrada a seguir.  
   

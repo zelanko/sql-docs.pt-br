@@ -1,23 +1,23 @@
 ---
 title: Objetos do SQL Server 2012 no seu projeto
+description: Familiarize-se com as sequências do SQL Server 2012. Confira como adicionar esses objetos a projetos de banco de dados e usá-los em consultas.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 69c68812e169d2831ffde71d2b21f9af8f418600
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486787"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895845"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Como usar objetos do Microsoft SQL Server 2012 no seu projeto
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Como fazer: Usar objetos do Microsoft SQL Server 2012 no seu projeto
 
 Neste exemplo, você adicionará um objeto de sequência a um projeto de banco de dados destinado ao Microsoft SQL Server 2012.  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 0d11a6f839fba1905055aefafa65353008530f8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219245"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004526"
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -74,13 +74,83 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Dá suporte ao tipo de dados **time**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) Especifica a escala para o valor *tTime2Val*.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Dá suporte ao tipo de dados **datetime2**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) Especifica a escala para o valor *tsDataTimeVal*.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Dá suporte ao tipo de dados **datetimeoffset**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) Especifica a escala para o valor *tsoDateTimeOffsetVal*.|  
-|NCharVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Dá suporte aos tipos de dados **nchar** e **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**SHORT**) especifica o comprimento real da cadeia de caracteres para a qual *pwchNCharVal* aponta. Não inclui o zero final.<br /><br /> *sMaxLength* (**SHORT**) especifica o comprimento máximo da cadeia de caracteres para a qual *pwchNCharVal* aponta.<br /><br /> *pwchNCharVal* (**WCHAR** \*) Ponteiro para a cadeia de caracteres.<br /><br /> Membros não usados: *rgbReserved*, *dwReserved* e *pwchReserved*.|  
-|CharVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Dá suporte aos tipos de dados **char** e **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**SHORT**) especifica o comprimento real da cadeia de caracteres para a qual *pchCharVal* aponta. Não inclui o zero final.<br /><br /> *sMaxLength* (**SHORT**) especifica o comprimento máximo da cadeia de caracteres para a qual *pchCharVal* aponta.<br /><br /> *pchCharVal* (**CHAR** \*) Ponteiro para a cadeia de caracteres.<br /><br /> Membros não usados:<br /><br /> *rgbReserved*, *dwReserved* e *pwchReserved*.|  
+|NCharVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Dá suporte aos tipos de dados **nchar** e **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**SHORT**) especifica o comprimento real da cadeia de caracteres para a qual *pwchNCharVal* aponta. Não inclui o zero final.<br /><br /> *sMaxLength* (**SHORT**) especifica o comprimento máximo da cadeia de caracteres para a qual *pwchNCharVal* aponta.<br /><br /> *pwchNCharVal* (**WCHAR** \*) Ponteiro para a cadeia de caracteres.<br /><br /> *rgbReserved* (**BYTE [5]** ) especifica as informações de ordenação.<br /><br /> Membros não usados: *dwReserved* e *pwchReserved*.|  
+|CharVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Dá suporte aos tipos de dados **char** e **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**SHORT**) especifica o comprimento real da cadeia de caracteres para a qual *pchCharVal* aponta. Não inclui o zero final.<br /><br /> *sMaxLength* (**SHORT**) especifica o comprimento máximo da cadeia de caracteres para a qual *pchCharVal* aponta.<br /><br /> *pchCharVal* (**CHAR** \*) Ponteiro para a cadeia de caracteres.<br /><br /> *rgbReserved* (**BYTE [5]** ) especifica as informações de ordenação.<br /><br /> Membros não usados:<br /><br /> *dwReserved* e *pwchReserved*.|  
 |BinaryVal|Não existe um indicador de tipo OLE DB correspondente.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Dá suporte aos tipos de dados **binary** e **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Inclui os seguintes membros:<br /><br /> *sActualLength* (**SHORT**) especifica o comprimento real dos dados para os quais *prgbBinaryVal* aponta.<br /><br /> *sMaxLength* (**SHORT**) especifica o comprimento máximo dos dados para os quais *prgbBinaryVal* aponta.<br /><br /> *prgbBinaryVal* (**BYTE** \*) Ponteiro para os dados binários.<br /><br /> Membro não usado: *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
+## <a name="known-issues"></a>Problemas conhecidos
+### <a name="possible-narrow-string-data-corruption"></a>Possibilidade de dados corrompidos na cadeia de caracteres estreita
+Antes da versão 18.4 do driver do OLE DB, a inserção em uma coluna `sql_variant` poderia resultar em dados corrompidos no servidor se todas as seguintes condições fossem verdadeiras:
+- A página de código do computador cliente não correspondia à página de código de ordenação do banco de dados.
+- O buffer do cliente para inserção de caracteres não ASCII contidos de cadeia de caracteres estreita era codificado na página de código do cliente.
+- Uma das destas condições era verdadeira:
+  - O campo `pwszDataSourceType` na estrutura `DBPARAMBINDINFO` descrevendo o parâmetro correspondente à coluna `sql_variant` era definido como `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"` ou `L"sql_variant"`. Para obter detalhes, confira: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
+
+    *or*
+  - A consulta SQL parametrizada usada para inserção era preparada.
+
+Mais especificamente, o driver do OLE DB não convertia os dados para a página de código de ordenação do banco de dados antes de inseri-los. No entanto, o driver indicava incorretamente para o servidor que os dados haviam sido codificados na página de código de ordenação do banco de dados. Esse comportamento levava a uma incompatibilidade entre os dados e sua página de código correspondente armazenada na coluna `sql_variant`.
+
+De maneira semelhante, após a recuperação do mesmo valor, o driver do OLE DB não convertia cadeias de caracteres na página de código do cliente. No entanto, como os dados inseridos já estavam na página de código do cliente (consulte o parágrafo acima), o aplicativo cliente podia interpretar os dados corretamente. Mesmo assim, aplicativos que usassem outros drivers recuperariam esses valores em um formato corrompido. A corrupção ocorria porque outros drivers interpretavam a cadeia de caracteres na página de código de ordenação do banco de dados e tentavam convertê-los na página de código do cliente.
+
+Começando com a versão 18.4, o driver do OLE DB converte as cadeias de caracteres estreitas para a página de código de ordenação do banco de dados antes da inserção. Da mesma forma, o driver converte os dados de volta para a página de código do cliente após a recuperação. Como resultado, aplicativos cliente que dependem do bug mencionado acima podem enfrentar problemas ao recuperar dados inseridos usando uma versão anterior do driver do OLE DB. O [procedimento de recuperação](#recovery-procedure) a seguir destina-se a fornecer diretrizes para resolver esses problemas.
+
+### <a name="recovery-procedure"></a>Procedimento de recuperação
+> [!IMPORTANT]  
+> Antes de executar as etapas de recuperação abaixo, faça backup dos dados existentes.
+
+Se o seu aplicativo apresentar problemas ao recuperar dados de uma coluna `sql_variant` depois de alternar para a versão 18.4 do driver do OLE DB, os dados corrompidos precisarão ser modificados para ter a mesma ordenação que a do banco de dados no qual estão armazenados. O script a seguir pode ser usado para recuperar um só valor de uma coluna `sql_variant`. O script é um modelo e você precisa ajustá-lo ao seu cenário.
+
+> [!IMPORTANT]  
+> Como a página de código original dos dados não é armazenada, você precisa informar ao servidor como os dados foram codificados inicialmente. Para fazer isso, execute o script no contexto de um banco de dados que tenha a mesma página de código que a do cliente que inseriu os dados primeiro. Por exemplo, se os dados corrompidos tiverem sido inseridos de um cliente configurado com a página de código `932`, o script a seguir precisará ser executado dentro do contexto de um banco de dados com uma ordenação em japonês (por exemplo, `Japanese_XJIS_100_CS_AI`).
+
+```sql
+/*
+    Description:
+        Template that can be used to recover the corrupted value inserted into the sql_variant column.
+
+    Scenario:
+        The database is named [YourDatabase] and it contains a table named [YourTable], which contains the corrupted value.
+        Schema is named [dbo].
+        The corrupted value is stored in a column of type sql_variant named [YourColumn].
+        The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
+            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
+*/
+
+-- Base type in sql_variant can hold a maximum of 8000 bytes
+-- For details see: 
+--  https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
+DECLARE @bin VARBINARY(8000)
+
+-- In the following lines we convert the sql_variant base type to binary.
+-- <FilterExpression>
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+SET @bin = (SELECT CAST([YourColumn] AS VARBINARY(8000)) FROM [YourDatabase].[dbo].[YourTable] WHERE <FilterExpression>)
+
+-- In the following lines we store the binary value in char(59) (a fixed-size character data type).
+-- IMPORTANT NOTE: 
+--      This example assumes the corrupted sql_variant's base type is char(59).
+--      You MUST adjust the type (that is, char/varchar) and size to match your scenario exactly.
+DECLARE @char CHAR(59)
+SET @char = CAST((@bin) AS CHAR(59))
+DECLARE @sqlvariant sql_variant
+
+-- The following lines recover the corrupted value by translating the value to the collation of the database.
+-- <DBCollation>
+--      Must be replaced with the collation (for example, Latin1_General_100_CI_AS_SC_UTF8) of the database holding the data.
+SET @sqlvariant = @char collate <DBCollation>
+
+-- Finally, we update the corrupted value with the recovered value.
+-- "<FilterExpression>"
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <FilterExpression>
+```
+
 ## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   

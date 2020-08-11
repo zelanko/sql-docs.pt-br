@@ -1,5 +1,6 @@
 ---
 title: Preparando a implementação de uma extensão de processamento de dados | Microsoft Docs
+description: Descubra como implementar uma extensão de processamento de dados no Reporting Services. Saiba mais sobre interfaces disponíveis e a funcionalidade obrigatória e opcional.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf7bbaddbe4379c7d56ce7209b6b93eb1b4f6254
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193898"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529153"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparando para implementar uma extensão de processamento de dados
   Antes de implementar a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você deve definir as interfaces a serem implementadas. Talvez você deseje fornecer implementações específicas à extensão de todo o conjunto de interfaces ou simplesmente pode desejar concentrar a implementação em um subconjunto, como as interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>, nas quais os clientes poderão interagir principalmente com um conjunto de resultados como um objeto **DataReader** e usarão a extensão de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] como uma ponte entre o conjunto de resultados e a fonte de dados.  
@@ -62,7 +63,7 @@ ms.locfileid: "63193898"
 ## <a name="available-extension-interfaces"></a>Interfaces de extensão disponíveis  
  A tabela a seguir descreve as interfaces disponíveis e se implementação é obrigatória ou opcional.  
   
-|Interface|DESCRIÇÃO|Implementação|  
+|Interface|Descrição|Implementação|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Representa uma sessão exclusiva com uma fonte de dados. No caso de um sistema de banco de dados cliente/servidor, a sessão pode ser equivalente a uma conexão de rede com o servidor.|Obrigatório|  
 |IDbConnectionExtension|Representa propriedades de conexão adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] relativas a segurança e a autenticação.|Opcional|  

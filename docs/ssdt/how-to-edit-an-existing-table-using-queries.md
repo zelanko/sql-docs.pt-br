@@ -1,23 +1,23 @@
 ---
 title: Editar uma tabela existente usando consultas
+description: Saiba como usar uma consulta Transact-SQL para editar a definição ou os dados de uma tabela. Veja exemplos de edição de uma definição de tabela e inserção de linhas em uma tabela.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241411"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518806"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Como: Editar uma tabela existente usando consultas
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Como fazer: Editar uma tabela existente usando consultas
 
 Você pode editar a definição de uma tabela ou de seus dados gravando uma consulta Transact\-SQL. Para exibir ou inserir dados em uma tabela visualmente, use o Editor de Dados como descrito em [Desenvolvimento de banco de dados conectado](../ssdt/connected-database-development.md).  
   

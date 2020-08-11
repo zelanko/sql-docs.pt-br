@@ -1,5 +1,6 @@
 ---
 title: Função CountRows (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre a função CountRows, que retorna o número de linhas em um escopo especificado, incluindo linhas com valores nulos.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 735d2f05c8a7aec166f445ebc91879ab26c1d142
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 81b82f0d0d01dec7e3302eb32e3422f527f02064
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034930"
 ---
 # <a name="report-builder-functions---countrows-function"></a>Funções do Construtor de Relatórios – Função CountRows
   Retorna o número de linhas no escopo especificado, inclusive as linhas com valores nulos.  

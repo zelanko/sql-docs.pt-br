@@ -1,5 +1,6 @@
 ---
 title: Contadores de desempenho para os objetos de desempenho do MSRS 2011 no modo do SharePoint | Microsoft Docs
+description: Conheça os contadores de desempenho para os objetos de desempenho do Modo do SharePoint do Serviço Web do MSRS 2011 e do Modo do SharePoint do Serviço Windows do MSRS 2011.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50981b1da0addf5bd55e4640653d3471e3aa459d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892219"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545533"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contadores de desempenho para os objetos de desempenho do MSRS 2011 no modo do SharePoint
   Esse tópico descreve os contadores de desempenho para os objetos de desempenho do **modo do SharePoint do Serviço Web MSRS 2011** e do **modo do SharePoint do Serviço do Windows MSRS 2011** que fazem parte da implantação de um modo do SharePoint do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -46,7 +47,7 @@ ms.locfileid: "68892219"
   
  A tabela a seguir lista os contadores incluídos com o objeto de desempenho do **modo do SharePoint do serviço Web MSRS 2011** .  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Sessões ativas**|Número de sessões ativas. Este contador fornece uma contagem cumulativa de todas as sessões de navegador geradas a partir de execuções de relatórios, independentemente de estarem ativas ou não.<br /><br /> O contador é reduzido à medida que os registros de sessão são removidos. Por padrão, as sessões são removidas após dez minutos de inatividade.|  
 |**Acertos de cache/s**|Número de solicitações por segundo para relatórios armazenados em cache. Essas são solicitações para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte **Total de acertos de cache** mais adiante neste tópico.)|  
@@ -76,7 +77,7 @@ ms.locfileid: "68892219"
   
  A tabela a seguir lista os contadores incluídos no objeto de desempenho do **modo do SharePoint do Serviço Windows MSRS 2011** .  
   
-|Contador|DESCRIÇÃO|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Sessões ativas**|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |**Alerta: comprimento da fila de evento**||  

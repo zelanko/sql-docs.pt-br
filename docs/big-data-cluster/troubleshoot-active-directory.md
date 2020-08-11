@@ -5,20 +5,20 @@ description: Solucionar problemas de implantação de um cluster de Big Data do 
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772881"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Solucionar problemas de integração do Active Directory com o cluster de Big Data do SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este artigo explica como solucionar problemas de implantação de um Cluster de Big Data do SQL Server no modo Active Directory.
 
@@ -123,9 +123,9 @@ Para identificar por que a implantação é encerrada sem criar pods de computa�
 
 ## <a name="cause"></a>Causa
 
-No exemplo acima, a implantação não cria um logon para o usuário de domínio porque o grupo de domínio está no escopo como domínio local. Use grupos no escopo de domínio universal ou de domínio global. [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo Active Directory](deploy-active-directory.md) explica os requisitos de escopo do grupo do AD.
+No exemplo acima, a implantação não cria um logon para o usuário de domínio porque o grupo de domínio está no escopo como domínio local. Use grupos com escopo global ou universal. [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo Active Directory](deploy-active-directory.md) explica os requisitos de escopo do grupo do AD.
 
-## <a name="resolution"></a>Resolução
+## <a name="verify"></a>Verificar
 
 Verifique o escopo do grupo de domínio (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

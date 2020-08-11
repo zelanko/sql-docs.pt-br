@@ -1,31 +1,32 @@
 ---
 title: Conjunto de dados de demonstração do Iris para tutoriais
-Description: Crie um banco de dados que contenha o conjunto de dados do Iris e modelos de previsão. Esse conjunto de dados é usado em tutoriais de R e Python para os Serviços de Machine Learning do SQL Server.
+titleSuffix: SQL machine learning
+Description: Crie um banco de dados que contenha o conjunto de dados do Iris e modelos de previsão. Esse conjunto de dados é usado em tutoriais de R e Python com machine learning do SQL.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.technology: machine-learning-services
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1d3aee4034124f61d88ccdf5e35f86b13b60158
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737839"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dados de demonstração do Iris para tutoriais de Python e R no SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Dados de demonstração do Iris para tutoriais de Python e R com machine learning do SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Neste exercício, crie um banco de dados de SQL Server para armazenar dados do [conjunto de dados de flores do Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e modelos baseados nos mesmos dados. Os dados do Iris são incluídos nas distribuições do R e do Python instaladas pelo SQL Server e são usados nos tutoriais de aprendizado de máquina do SQL Server. 
+Neste exercício, crie um banco de dados para armazenar dados do [conjunto de dados de flores do Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e modelos baseados nos mesmos dados. Os dados do Iris são incluídos nas distribuições do R e do Python e são usados nos tutoriais de machine learning do SQL Server.
 
-Para concluir este exercício, você deve ter o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou outra ferramenta que possa executar consultas T-SQL.
+Para concluir este exercício, você deve ter o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) ou outra ferramenta que possa executar consultas T-SQL.
 
 Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem o seguinte:
 
-+  [Início Rápido: Criar, treinar e usar um modelo Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-model.md)
++ [Início Rápido: Criar e pontuar um modelo preditivo no Python](quickstart-python-train-score-model.md)
 
 ## <a name="create-the-database"></a>Criar o banco de dados
 
@@ -39,9 +40,6 @@ Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem 
     USE irissql
     GO
     ```
-
-    > [!TIP] 
-    > Se você for novato no SQL Server ou estiver trabalhando em um servidor próprio, um erro comum é fazer logon e começar a trabalhar sem perceber que você está no banco de dados **mestre**. Para ter certeza de que você está usando o banco de dados correto, sempre especifique o contexto usando a instrução `USE <database name>` (por exemplo, `use irissql`).
 
 3. Adicione algumas tabelas vazias: uma para armazenar os dados e outra para armazenar os modelos treinados. A tabela **iris_models** é usada para armazenar modelos serializados gerados em outros exercícios.
 
@@ -58,15 +56,12 @@ Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem 
     );
     ```
 
-    > [!TIP] 
-    > Se você for novato no T-SQL, vale a pena memorizar a instrução `DROP...IF`. Quando você tenta criar uma tabela e uma já existe, o SQL Server retorna um erro: "Já existe um objeto denominado 'iris_data' no banco de dados." Uma maneira de evitar esses erros é excluir todas as tabelas existentes ou outros objetos como parte do seu código.
-
-4. Execute o código a seguir para criar a tabela usada para armazenar o modelo treinado. Para salvar modelos de Python (ou R) no SQL Server, eles devem ser serializados e armazenados em uma coluna do tipo **varbinary(max)** . 
+4. Execute o código a seguir para criar a tabela usada para armazenar o modelo treinado. Para salvar modelos de Python (ou R) no SQL Server, eles devem ser serializados e armazenados em uma coluna do tipo **varbinary(max)** .
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
     GO
-    
+
     CREATE TABLE iris_models (
       model_name VARCHAR(50) NOT NULL DEFAULT('default model') PRIMARY KEY,
       model VARBINARY(MAX) NOT NULL
@@ -78,7 +73,7 @@ Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem 
 
 ## <a name="populate-the-table"></a>Popular a tabela
 
-É possível obter dados internos do Iris do R ou do Python. Você pode usar o Python ou o R para carregar os dados em um quadro de dados e, em seguida, inseri-los em uma tabela no banco de dados. Mover dados de treinamento de uma sessão externa para uma tabela do SQL Server é um processo de várias etapas:
+É possível obter dados internos do Iris do R ou do Python. Você pode usar o Python ou o R para carregar os dados em um quadro de dados e, em seguida, inseri-los em uma tabela no banco de dados. Mover dados de treinamento de uma sessão externa para uma tabela é um processo de várias etapas:
 
 + Crie um procedimento armazenado que obtenha os dados desejados.
 + Execute o procedimento armazenado para realmente obter os dados.
@@ -136,10 +131,6 @@ Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem 
 
     Se você for novato no T-SQL, lembre-se de que a instrução INSERT só adiciona novos dados; ela não verificará os dados existentes ou excluirá e recompilará a tabela. Para evitar a obtenção de várias cópias dos mesmos dados em uma tabela, você pode executar esta instrução primeiro: `TRUNCATE TABLE iris_data`. A instrução T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) exclui os dados existentes, mas mantém a estrutura da tabela intacta.
 
-    > [!TIP]
-    > Para modificar o procedimento armazenado posteriormente, você não precisa removê-lo nem recriá-lo. Use a instrução [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql). 
-
-
 ## <a name="query-the-data"></a>Consultar os dados
 
 Como uma etapa de validação, execute uma consulta para confirmar se os dados foram carregados.
@@ -157,4 +148,4 @@ Como uma etapa de validação, execute uma consulta para confirmar se os dados f
 
 No início rápido a seguir, você criará um modelo de machine learning e o salvará em uma tabela. Em seguida, usará o modelo para gerar resultados previstos.
 
-+ [Início Rápido: Criar, treinar e usar um modelo Python com procedimentos armazenados no SQL Server](quickstart-python-train-score-model.md)
++ [Início rápido: criar e pontuar um modelo preditivo no Python](quickstart-python-train-score-model.md)

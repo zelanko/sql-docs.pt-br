@@ -1,5 +1,6 @@
 ---
 title: Gerenciar fontes de dados de relatório | Microsoft Docs
+description: Saiba mais sobre como gerenciar fontes de dados de relatório, incluindo como se conectar às fontes de dados externas referenciadas em um relatório.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190816"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458253"
 ---
 # <a name="manage-report-data-sources"></a>Gerenciar fontes de dados de relatório
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], relatórios, modelos de relatório e assinatura controladas por dados recuperam dados de fontes de dados externas. Para se conectar a uma fonte de dados externo, um servidor de relatório usa as informações de conexão de fonte de dados definidas em ou às quais é feita referência no relatório, modelo ou assinatura. As propriedades de conexão da fonte de dados são sempre definidas na criação do relatório ou modelo, mas podem ser gerenciadas de forma independente depois que o relatório ou modelo é publicado em um servidor de relatório.  
@@ -40,7 +41,7 @@ ms.locfileid: "74190816"
 ## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propriedades gerenciadas: tipo de fonte de dados, cadeias de conexão e credenciais  
  As propriedades da fonte de dados que você pode gerenciar em um servidor de relatório são:  
   
-|Propriedade|DESCRIÇÃO|Como gerenciá-la|  
+|Propriedade|Descrição|Como gerenciá-la|  
 |--------------|-----------------|----------------------|  
 |Tipo de fonte de dados|Determina qual extensão de processamento de dados do servidor de relatório será usada nos dados externos. Alguns exemplos de processadores de dados incluem SQL Server, Analysis Services e Oracle.|O tipo de fonte de dados é uma propriedade gerenciada, pois é configurável. Entretanto, você deverá configurar apenas um tipo de fonte de dados se estiver criando uma nova fonte de dados compartilhada.<br /><br /> Não altere o tipo da fonte de dados nas páginas de propriedades de um relatório publicado ou modelo, pois isso certamente invalidará a conexão. É improvável que as estruturas de dados requeridas por um relatório ou modelo sejam idênticas em uma plataforma de dados diferente.|  
 |Cadeia de conexão|Estabelece a conexão inicial a uma fonte de dados externa. Um relatório pode usar cadeias de conexões estáticas ou dinâmicas.<br /><br /> Uma *cadeia de conexão estática* é um conjunto de valores que o relatório usa para conectar-se à mesma fonte de dados sempre que é executado.<br /><br /> Uma *cadeia de conexão dinâmica* é uma expressão que você cria em um relatório, permitindo que o usuário selecione qual fonte de dados deve ser usada no tempo de execução. Você deve criar uma expressão e uma lista de seleção de fonte de dados no relatório ao criá-lo no Designer de Relatórios.|A alteração de uma cadeia de conexão é útil quando você move uma fonte de dados para outro computador, ou se você tiver criado relatórios usando dados de teste mas deseja implantar os relatórios com um banco de dados de produção.<br /><br /> Você pode gerenciar uma cadeia de conexão estática substituindo a cadeia original por uma diferente.<br /><br /> Para gerenciar uma cadeia de conexão dinâmica no portal da Web ou em um site do SharePoint, você está limitado a substituí-la por uma estática. Não é possível editar a própria expressão, nem alterar a lista de seleção de fonte de dados. Para alterar a expressão ou a lista de valores válidos, você deve editar a definição do relatório e republicá-lo no servidor de relatório. Para saber mais, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  

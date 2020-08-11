@@ -1,5 +1,6 @@
 ---
 title: Mover ou excluir um item (Gerenciador de Relatórios) | Microsoft Docs
+description: Um servidor de relatório do Gerenciador de Relatórios armazena relatórios e itens relatados em pastas. Você pode mover ou excluir itens. O servidor de relatório mantém referências a itens movidos.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b3b615a45df3d9e45338514423700a706980eee0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581083"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535494"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover ou excluir um item (Gerenciador de Relatórios)
   Relatórios e itens de relatório que você publica em um servidor de relatório são armazenados em pastas. Você pode mover itens para uma pasta diferente e as referências a esses itens são mantidas automaticamente pelo servidor de relatório. Antes de excluir um item, verifique se outros itens dependem dele.  

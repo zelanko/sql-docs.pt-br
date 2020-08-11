@@ -1,6 +1,7 @@
 ---
 title: Exibir e analisar rastreamentos
 titleSuffix: SQL Server Profiler
+description: Descubra como usar o SQL Server Profiler para exibir dados de rastreamento, localizar eventos específicos, exibir nomes de objetos e solucionar problemas.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c806d55867c63c273bd528ecafc4419d31fde7e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722633"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Exibir e analisar rastreamentos com o SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir dados de evento capturados em um rastreamento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe dados com base em propriedades de rastreamento definidas. Um modo de analisar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiá-los para outro programa, como o Orientador de Otimização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização poderá usar um arquivo de rastreamento contendo um lote SQL e eventos de RPC (chamada de procedimento remoto) se a coluna de dados **Text** estiver incluída no rastreamento. Para certificar-se de que os eventos e colunas corretos são capturados para uso com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use o modelo Ajuste predefinido, que é fornecido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -66,7 +67,7 @@ AND     CPU < (Duration * 1000)
   
     -   Abra o arquivo ou tabela de rastreamento e expanda o nó da classe de evento desejada; por exemplo, **Deadlock Chain**. Para obter mais informações, consulte [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) ou do [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
   
-    -   Pesquise os dados do rastreamento até localizar os eventos que está buscando (use o comando **Localizar** do menu **Editar** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para ajudá-lo a localizar valores no rastreamento). Observe os valores nas colunas de dados **ClientProcessID** e **Start Time** dos eventos rastreados.  
+    -   Pesquise os dados do rastreamento até localizar os eventos que está buscando (use o comando **Localizar** do menu **Editar** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] como auxílio para localizar valores no rastreamento). Observe os valores nas colunas de dados **ClientProcessID** e **Start Time** dos eventos rastreados.  
   
 3.  Exiba os eventos em contexto.  
   

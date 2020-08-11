@@ -1,6 +1,6 @@
 ---
 title: Administração e manutenção da instância de cluster de failover
-description: Saiba mais sobre a administração e manutenção de instâncias de cluster de failover do SQL Server.
+description: Saiba mais sobre a manutenção e a administração de instâncias de cluster de failover do SQL Server com o programa de instalação do SQL Server ou o snap-in Gerenciador de Cluster de Failover.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c5a6abf9599591bf1619b951926626fc337cf170
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230072"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887795"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administração e manutenção da instância de cluster de failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Tarefas de manutenção como adicionar ou remover nós de uma FCI (instância de cluster de failover) AlwaysOn são realizadas usando o programa de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Outras tarefas de administração como alterar o recurso de endereço IP e recuperar de certos cenários de FCI são realizadas com o uso do snap-in Gerenciador de Cluster de Failover, que é o snap-in de gerenciamento do serviço WSFC (Windows Server Failover Clustering).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Mantendo uma instância de cluster de failover  

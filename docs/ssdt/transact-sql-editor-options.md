@@ -1,5 +1,6 @@
 ---
 title: Opções do Editor do Transact-SQL
+description: Familiarize-se com as opções do Editor Transact-SQL. Saiba mais sobre as propriedades de execução de consulta e as propriedades de resultados da consulta e veja como ajustar os valores.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -23,16 +24,15 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0edf0ee20ce44abadb7783baa6e99cba88ddff7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256316"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883420"
 ---
 # <a name="transact-sql-editor-options"></a>Opções do Editor do Transact-SQL
 
@@ -44,7 +44,7 @@ Este tópico contém informações sobre algumas das opções do Editor Transact
   
 ## <a name="query-execution"></a><a name="QueryExecution"></a>Execução da consulta  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |------------|---------------|  
 |**SET ROWCOUNT**|O valor padrão de 0 indica que o SQL Server esperará os resultados até que todos os resultados sejam recebidos. Forneça um valor maior que 0 se você quiser que o SQL Server interrompa a consulta depois de obter o número especificado de linhas. Para desligar essa opção (de forma que todas as linhas sejam retornadas), especifique SET ROWCOUNT 0.|  
 |**SET TEXTSIZE**|O valor padrão de 2.147.483.647 bytes indica que o SQL Server fornecerá um campo de dados completo até o limite dos campos de dados text, ntext, nvarchar(max) e varchar(max). Não afeta o tipo de dados XML. Forneça um número menor para limitar os resultados no caso de valores grandes. Colunas maiores que o número fornecido serão truncadas.|  
@@ -72,14 +72,14 @@ Este tópico contém informações sobre algumas das opções do Editor Transact
   
 ## <a name="query-results"></a><a name="QueryResults"></a>Resultados da consulta  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |------------|---------------|  
 |**Incluir a consulta no conjunto de resultados**|Retorna o texto da consulta como parte do conjunto de resultados.|  
 |**Inclua cabeçalhos de coluna ao copiar ou salvar resultados**|Inclui os cabeçalhos de coluna (títulos) quando os resultados são copiados para a área de transferência ou quando são salvos em um arquivo. Desmarque essa caixa de seleção se você não deseja que os dados de resultados copiados ou salvos contenham apenas os dados e não os cabeçalhos da coluna.|  
 |**Descartar resultados após a execução**|Libera memória descartando os resultados da consulta após a tela tê-los recebido.|  
 |**Exibir resultados em uma guia separada**|Exibe o conjunto de resultados em uma janela de documentos nova, em vez de na parte inferior da janela de documentos de consulta.|  
 |**Alternar para a guia Resultados após a execução da consulta**|Define automaticamente o foco da tela para o conjunto de resultados.|  
-|**Máximo de Caracteres Recuperados**|Dados não XML:<br /><br />Digite um número de 1 a 65535 para especificar o número máximo de caracteres que serão exibidos em cada célula. **Observação:** especificar um número grande de caracteres pode fazer com que os dados no conjunto de resultados apareçam truncados. O número máximo de caracteres exibido em cada célula depende do tamanho da fonte. Quando conjuntos de resultados grandes são retornados, um valor alto nesta caixa pode fazer com que o SQL Server Management Studio seja executado com pouca memória e prejudicar o desempenho do sistema.<br /><br />Dados XML:<br /><br />Selecione 1 MB, 2 MB ou 5 MB. Selecione Ilimitado para recuperar todos os caracteres.|  
+|**Máximo de Caracteres Recuperados**|Dados não XML:<br /><br />Digite um número de 1 a 65535 para especificar o número máximo de caracteres que serão exibidos em cada célula. **Observação:** Especificar um número grande de caracteres pode fazer com que os dados no conjunto de resultados apareçam truncados. O número máximo de caracteres exibido em cada célula depende do tamanho da fonte. Quando conjuntos de resultados grandes são retornados, um valor alto nesta caixa pode fazer com que o SQL Server Management Studio seja executado com pouca memória e prejudicar o desempenho do sistema.<br /><br />Dados XML:<br /><br />Selecione 1 MB, 2 MB ou 5 MB. Selecione Ilimitado para recuperar todos os caracteres.|  
 |**Formato de saída**|Por padrão, a saída é exibida em colunas criadas preenchendo os resultados com espaços. Outras opções são o uso de vírgulas, tabulações ou espaços para separar as colunas. Marque a caixa de seleção **Delimitador personalizado** para especificar um caractere delimitador diferente na caixa **Delimitador personalizado** .|  
 |**Delimitador personalizado**|Especifique o caractere de sua escolha para separar colunas. Essa opção estará disponível somente se a caixa de seleção **Delimitador personalizado** estiver marcada na caixa **Formato de saída** .|  
 |**Incluir cabeçalhos de coluna no conjunto de resultados**|Desmarque esta caixa de seleção se não quiser cada coluna rotulada com um título de coluna:|  

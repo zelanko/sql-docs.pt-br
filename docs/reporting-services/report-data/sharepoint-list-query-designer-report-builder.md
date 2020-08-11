@@ -1,5 +1,6 @@
 ---
 title: Designer de Consultas de Lista do SharePoint (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como usar o designer de consultas de Lista do SharePoint para explorar os metadados de lista do SharePoint, criar uma consulta interativamente e exibir os resultados da consulta.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57f02d8de68f0f98a7993a90abb49525b056f45e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500048"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455298"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Designer de Consulta de Lista do SharePoint (Construtor de Relatórios)
   O Designer de Relatórios e o Designer de Relatórios fornecem um designer de consultas gráficas e um designer de consulta baseado em texto para ajudá-lo a criar uma consulta que especifica os dados a serem recuperados do site do SharePoint para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados de lista do SharePoint, criar uma consulta interativamente e exibir os resultados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas, modificar uma consulta ou digitar os comandos da consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -85,7 +86,7 @@ ms.locfileid: "66500048"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consulta relacional fornece os seguintes botões para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|DESCRIÇÃO|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
 |**Importaçãoação**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  

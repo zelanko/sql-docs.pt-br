@@ -1,5 +1,6 @@
 ---
 title: Propriedades do alias (guia Alias)
+description: Use a guia Alias da caixa de diálogo Propriedades para configurar um alias para que você possa usar um nome alternativo ao se conectar a uma instância do SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +12,18 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 53bb19934209ee501c76317e102e5b1fcae28c4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 098da595a57c82e4d0ff68713880f38fe6acb6d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306602"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902195"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Propriedades de &lt;alias&gt; (guia Alias)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-O alias é um nome alternativo que pode ser usado para fazer uma conexão. Ele encapsula os elementos necessários de uma cadeia de conexão, expondo-os com um nome escolhido pelo usuário. Use a página **Alias** na caixa de diálogo de **\<** Nome do alias **> Propriedades** para exibir ou especificar os elementos da cadeia de conexão de um Alias.
+O alias é um nome alternativo que pode ser usado para fazer uma conexão. Ele encapsula os elementos necessários de uma cadeia de conexão, expondo-os com um nome escolhido pelo usuário. Use a página **Alias** na caixa de diálogo de **\<**Alias name**> Propriedades** para exibir ou especificar os elementos da cadeia de conexão de um Alias.
 
 ## <a name="options"></a>Opções
 

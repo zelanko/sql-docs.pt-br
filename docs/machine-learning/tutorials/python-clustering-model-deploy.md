@@ -1,32 +1,35 @@
 ---
 title: 'Tutorial do Python: implantar um modelo de cluster'
+titleSuffix: SQL machine learning
 description: Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering no Python com o aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730517"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutorial do Python: Implantar um modelo para categorizar os clientes com o aprendizado de máquina do SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python, em um banco de dados SQL usando os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
+Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python, em um banco de dados usando os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python em um Banco de Dados SQL usando os Serviços de Machine Learning do SQL Server.
+Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python em um banco de dados usando os Serviços de Machine Learning do SQL Server.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python, em um banco de dados usando os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 
 Para executar o clustering regularmente, à medida que novos clientes se registram, você precisa ser capaz de chamar o script Python de qualquer aplicativo. Para fazer isso, você pode implantar o script do Python em um banco de dados colocando-o dentro de um procedimento armazenado do SQL. Como seu modelo é executado no banco de dados, ele pode ser facilmente treinado em relação aos dados armazenados no banco de dados.
@@ -42,7 +45,7 @@ Neste artigo, você aprenderá a:
 
 Na [parte um](python-clustering-model.md), você instalou os pré-requisitos e restaurou o banco de dados de exemplo.
 
-Na [parte dois](python-clustering-model-prepare-data.md), você aprendeu a preparar os dados de um Banco de Dados SQL para executar o clustering.
+Na [parte dois](python-clustering-model-prepare-data.md), você aprendeu a preparar os dados de um banco de dados para executar clustering.
 
 Na [parte três](python-clustering-model-build.md), você aprendeu a criar e treinar um modelo de clustering K-means em Python.
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Executar clustering no Banco de Dados SQL
+## <a name="perform-clustering"></a>Executar clustering
 
 Agora que você criou o procedimento armazenado, execute o script a seguir para realizar o clustering usando o procedimento.
 

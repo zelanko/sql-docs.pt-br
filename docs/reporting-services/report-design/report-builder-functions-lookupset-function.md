@@ -1,5 +1,6 @@
 ---
 title: Função LookupSet (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre a função LookupSet, que retorna o conjunto de valores correspondentes para um nome especificado de um conjunto de dados que contém pares de nome ou valor.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081222"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255579"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funções do Construtor de Relatórios – Função LookupSet
   Retorna o conjunto de valores correspondentes para o nome especificado de um conjunto de dados que contém pares de nome/valor.  

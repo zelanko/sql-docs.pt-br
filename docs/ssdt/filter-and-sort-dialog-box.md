@@ -1,5 +1,6 @@
 ---
 title: Caixa de diálogo Filtrar e Classificar
+description: Saiba como modificar os dados que o SQL Server Data Tools exibe em uma tabela ou uma exibição. Veja como ajustar o número de linhas, a ordem de classificação e outros fatores.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b9e275ac7dac2cdb21736f6e9cf9390eaca31ca3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a1057122cb4abb0e8898961635e0ca45f52f4365
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241636"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518936"
 ---
 # <a name="filter-and-sort-dialog-box"></a>Caixa de diálogo Filtrar e Classificar
 

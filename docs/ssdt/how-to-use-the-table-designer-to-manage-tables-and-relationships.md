@@ -1,5 +1,6 @@
 ---
 title: Use o Designer de Tabela para gerenciar tabelas e relacionamentos
+description: Familiarize-se com o Designer de Tabela. Confira como usar essa ferramenta para criar e editar a estrutura da tabela de banco de dados e para exibir relações entre objetos de banco de dados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +11,17 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4262242a0ac9822bed793e1bd78a4ce51294d485
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226833"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895804"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Como: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Como fazer: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos
 
 O Designer de Tabela fornece uma experiência visual juntamente com o Editor Transact\-SQL para criar e editar a estrutura de tabelas, incluindo objetos de programação específicos de tabela, para bancos de dados do SQL Server.  Ele é iniciado quando você cria uma nova tabela para um banco de dados conectado ou um projeto, ou quando você clica duas vezes para editar uma tabela no Pesquisador de Objetos do SQL Server ou no Gerenciador de Soluções.  
   
@@ -57,5 +57,5 @@ O designer é composto por Grade de Colunas, Painel de Script e Painel Contexto.
     Observe que a experiência de criar e editar entidades de banco de dados para um projeto offline é idêntica a executar as tarefas com um banco de dados conectado.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como criar objetos de banco de dados usando o Designer de Tabela](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Como: Criar objetos de banco de dados usando o Designer de Tabela](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

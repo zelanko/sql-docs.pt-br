@@ -1,22 +1,22 @@
 ---
 title: Criar um logon para SQLRUserGroup
-description: Para conexões de loopback usando a autenticação implícita, crie um logon no SQL Server para SQLRUserGroup, para que uma conta de trabalho possa fazer logon no servidor, para conversão de identidade de volta para o usuário de chamada.
+description: Crie um logon no SQL Server para SQLRUserGroup, usando a autenticação implícita para fazer logon no servidor para conversão da identidade de volta para o usuário autor da chamada.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117119"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484621"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Criar um logon para SQLRUserGroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Crie um [logon no SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando uma [conexão de loopback](../../machine-learning/concepts/security.md#implied-authentication) em seu script especificar uma *conexão confiável* e a identidade usada para executar um objeto que contém seu código for uma conta de usuário do Windows.
 

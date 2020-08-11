@@ -2,22 +2,22 @@
 title: Converter tipos de dados R e SQL
 description: Examine as conversões implícita e explícita de tipo de dados entre o R e o SQL Server em soluções de ciência de dados e de aprendizado de máquina.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 08/08/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/15/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
+ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486715"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411634"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapeamentos de tipo de dados entre o R e o SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Para soluções do R executadas no recurso de integração do R nos Serviços de Machine Learning do SQL Server, examine a lista de tipos de dados não compatíveis e as conversões de tipo de dados que podem ser executadas implicitamente quando os dados são passados entre as bibliotecas do R e o SQL Server.
 
@@ -41,17 +41,17 @@ A tabela a seguir mostra as alterações em tipos de dados e valores quando dado
 
 |Tipo SQL|Classe R|Tipo RESULT SET|Comentários|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|A execução de um script de R com `sp_execute_external_script` permite usar o tipo de dados bigint como dados de entrada. No entanto, como são convertidos no tipo numérico do R, eles sofrem uma perda de precisão com valores muito altos ou que têm valores de ponto decimal. O R só é compatível com números inteiros de 53 bits. Mais do que isso, ele começa a apresentar perda de precisão.|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|O quadro de dados de entrada (input_data_1) é criado sem a configuração explícita do parâmetro *stringsAsFactors* e, portanto, o tipo de coluna depende de *default.stringsAsFactors()* em R|
 |**datetime**|`POSIXct`|**datetime**|Representado como GMT|
 |**date**|`POSIXct`|**datetime**|Representado como GMT|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|A execução de um script de R com `sp_execute_external_script` permite usar o tipo de dados decimal como dados de entrada. No entanto, como são convertidos no tipo numérico do R, eles sofrem uma perda de precisão com valores muito altos ou que têm valores de ponto decimal. `sp_execute_external_script` com um script de R não é compatível com a gama completa desse tipo de dados e altera os últimos dígitos decimais, especialmente os fracionários.|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|A execução de um script de R com `sp_execute_external_script` permite usar o tipo de dados money como dados de entrada. No entanto, como são convertidos no tipo numérico do R, eles sofrem uma perda de precisão com valores muito altos ou que têm valores de ponto decimal. Às vezes, os valores de centavos podem ser imprecisos, o que gera um aviso: *Aviso: não foi possível representar os valores de centavos*.  |
+|**numeric(p,s)**|`numeric`|**float**|A execução de um script de R com `sp_execute_external_script` permite usar o tipo de dados numeric como dados de entrada. No entanto, como são convertidos no tipo numérico do R, eles sofrem uma perda de precisão com valores muito altos ou que têm valores de ponto decimal. `sp_execute_external_script` com um script de R não é compatível com a gama completa desse tipo de dados e altera os últimos dígitos decimais, especialmente os fracionários.|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Representado como GMT|
 |**smallint**|`integer`|**int**||
@@ -60,8 +60,7 @@ A tabela a seguir mostra as alterações em tipos de dados e valores quando dado
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Só é permitido como parâmetro de entrada e saída|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|O quadro de dados de entrada (input_data_1) é criado sem a configuração explícita do parâmetro *stringsAsFactors* e, portanto, o tipo de coluna depende de *default.stringsAsFactors()* em R|
 
 ## <a name="data-types-not-supported-by-r"></a>Tipos de dados sem suporte em R
 

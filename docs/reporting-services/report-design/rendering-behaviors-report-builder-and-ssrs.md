@@ -1,5 +1,6 @@
 ---
 title: Comportamentos de renderização (Construtor de Relatórios e SSRS) | Microsoft Docs
+description: Saiba mais sobre as regras aplicadas ao corpo do relatório e o conteúdo dele ao renderizar um relatório no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0214df6c7299f0a3240b904bbd00e965988d95dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048252"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamentos de renderização (Construtor de Relatórios e SSRS)
   Dependendo do renderizador selecionado, algumas regras são aplicadas ao corpo do relatório e ao seu conteúdo quando um relatório é renderizado. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  

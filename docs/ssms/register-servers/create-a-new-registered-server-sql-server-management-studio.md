@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 836775e914023e4f68c7a4a1225c843c639825d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246567"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001752"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Criar um novo servidor registrado (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Este tópico descreve como salvar as informações de conexão para os servidores que você acessa com frequência, registrando o servidor no componente Servidores Registrados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Um servidor pode ser registrado antes de conectar ou ao conectar o Pesquisador de Objetos. Há uma opção de menu especial para registrar as instâncias de servidor no computador local.  
   

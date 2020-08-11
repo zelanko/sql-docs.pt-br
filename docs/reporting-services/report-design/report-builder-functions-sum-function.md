@@ -1,5 +1,6 @@
 ---
 title: Função SUM (Construtor de Relatórios) | Microsoft Docs
+description: A função Sum no Construtor de Relatórios retorna a soma de todos os valores numéricos não nulos especificados pela expressão.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b59a3ba46aaf01ce67b7691f84a560ccd64410fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 22db409b3c5e485db27cb828f1769ecdb001b5c8
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081127"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681425"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funções do Construtor de Relatórios – Função Sum
   Retorna a soma de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  

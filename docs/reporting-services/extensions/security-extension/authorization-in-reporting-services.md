@@ -1,5 +1,6 @@
 ---
 title: Autorização no Reporting Services | Microsoft Docs
+description: Saiba mais sobre o processo de autorização no Reporting Services. Saiba como desenvolver extensões de segurança usando a interface IAuthorizationExtension2.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5895064b0e6191c3ecbdcbd5405b1fd1bd50237
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193341"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529052"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorização no Reporting Services
   Autorização é o processo de determinar se uma identidade deve receber o tipo de acesso solicitado a um determinado recurso no banco de dados de servidor de relatório. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma arquitetura de autorização baseada em função que concede um acesso de usuário a um determinado recurso com base na atribuição de função do usuário para o aplicativo. As extensões de segurança para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contêm uma implementação de um componente de autorização usado para conceder acesso a usuários assim que eles se autenticam no servidor de relatório. A autorização é invocada quando um usuário tenta executar uma operação no sistema ou um item de servidor de relatório por meio da API SOAP e via acesso à URL. Isso é possível por meio da interface de extensão de segurança **IAuthorizationExtension2**. Como foi dito anteriormente, todas as extensões herdam de **IExtension** , a interface base para qualquer extensão que você implanta. **IExtension** e **IAuthorizationExtension2** são membros do namespace **Microsoft.ReportingServices.Interfaces**.  

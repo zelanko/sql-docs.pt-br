@@ -1,5 +1,6 @@
 ---
 title: Adicionar e verificar uma conexão de dados (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como usar o Construtor de Relatórios para adicionar e verificar uma conexão de dados para verificar se as credenciais especificadas são suficientes.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812141"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Adicionar e verificar uma conexão de dados (Construtor de Relatórios e SSRS)
 
@@ -52,7 +53,7 @@ A fonte de dados será exibida no painel de dados do relatório.
 
 2. Clique em **Testar Conexão**.
 
-3. Se a conexão for bem-sucedida, a seguinte mensagem aparecerá: Conexão criada com êxito". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. Se a conexão for bem-sucedida, a seguinte mensagem aparecerá: "Conexão criada com êxito". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 4. Se a conexão não for bem-sucedida, a seguinte mensagem aparecerá: "Não é possível conectar à fonte de dados".  
 

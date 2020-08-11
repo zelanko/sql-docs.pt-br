@@ -1,5 +1,6 @@
 ---
 title: Pré-carregar o cache (SSRS)| Microsoft Docs
+description: Saiba como pré-carregar o cache para um conjunto de dados compartilhado criando um plano de atualização do cache para o conjunto de dados compartilhado em um serviço de relatório do Reporting Services.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5401d324be7bb59d5be21afa72acebc0a7ab6487
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66174997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548038"
 ---
 # <a name="preload-the-cache"></a>Pré-carregar o cache  
   Você pode pré-carregar o cache para um conjunto de dados compartilhado criando um plano de atualização do cache para o conjunto de dados compartilhado.  
@@ -48,7 +49,7 @@ ms.locfileid: "66174997"
 5. Para ativar o cache de um conjunto de dados, selecione o botão de opção **Armazenar cópias deste conjunto de dados em cache e usá-las quando disponíveis**. A seção **Expiração do cache** aparece abaixo dele. Selecione um destes botões de opção:
 
     - **O cache expira após x minutos** (insira o número desejado de minutos para x).
-    - **O cache expira segundo uma agenda**.  O Reporting Services fornece agendas compartilhadas e outras específicas ao relatório, para ajudar você a controlar o processamento, a consistência do conteúdo e o desempenho da distribuição dos relatórios. Para obter mais informações, consulte [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Há várias opções para criar uma agenda, neste caso, para expiração do cache: selecione uma das duas opções de agenda abaixo:  
+    - **O cache expira segundo uma agenda**.  O Reporting Services fornece agendas compartilhadas e outras específicas ao relatório, para ajudar você a controlar o processamento, a consistência do conteúdo e o desempenho da distribuição dos relatórios. Para obter mais informações, consulte [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Há várias opções de criar uma agenda, neste caso, para expiração do cache: selecione uma das duas opções de agenda abaixo:  
       - botão de opção **Agenda compartilhada** e selecione uma agenda na caixa de texto suspensa **Selecione uma agenda compartilhada**. Para obter mais informações, consulte [Schedules](../../reporting-services/subscriptions/schedules.md "Agendas").  
       - botão de opção **Agenda específica do relatório** e selecione o link **Editar agenda**, para exibir a página *Detalhes da agenda*.  
 

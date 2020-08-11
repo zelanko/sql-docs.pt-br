@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexão XML | Microsoft Docs
+description: Saiba mais sobre o tipo de conexão XML para se conectar e recuperar dados de documentos XML, serviços Web ou XML inserido na consulta.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081683"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458493"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexão XML (SSRS)
   Para incluir dados em uma fonte de dados XML em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo XML. Esse tipo interno de fonte de dados é baseado na extensão de dados XML. Use esse tipo de fonte de dados para se conectar e recuperar dados de documentos XML, serviços Web ou XML inseridos na consulta.  
@@ -31,7 +32,7 @@ ms.locfileid: "77081683"
 |-----------------------|-------------------------------|  
 |Serviço Web|`https://adventure-works.com/results.aspx`|  
 |Documento XML|`https://localhost/XML/Customers.xml`|  
-|Documento XML inserido|*Vazio*|  
+|Documento XML inserido|*Empty (vazio)*|  
   
  Para obter mais exemplos de cadeias de conexão, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
@@ -48,7 +49,7 @@ ms.locfileid: "77081683"
   
  Não há suporte para credenciais armazenadas nem solicitadas. Lembre-se de que, se você desabilitar a segurança integrada do Windows, não poderá usá-la para recuperar dados. Se você especificar as credenciais armazenadas ou solicitadas, ocorrerá um erro em tempo de execução.  
   
- Para obter mais informações, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar informações de credenciais e conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Confira mais informações em [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar Informações de Credenciais e de Conexão para Fontes de Dados de Relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="queries"></a><a name="Query"></a> Consultas  
  Uma consulta especifica os dados a serem recuperados de um conjunto de dados de relatório. As colunas no conjunto de resultados para uma consulta populam a coleção de campos para um conjunto de dados. Um relatório só processa o primeiro conjunto de resultados recuperados por uma consulta.  
@@ -59,7 +60,7 @@ ms.locfileid: "77081683"
   
  Os valores possíveis para uma consulta de conjunto de dados de uma fonte de dados do tipo XML são mostrados abaixo.  
   
--   *Vazio*  
+-   *Empty (vazio)*  
   
      Use uma consulta em branco para criar um conjunto de resultados padrão. A consulta padrão é criada lendo a fonte de dados e desviando a hierarquia do nó XML para a primeira coleção de folhas. O conjunto de resultados inclui todos os nós com valores de texto e todos os atributos de nó ao longo desse caminho. As colunas no conjunto de resultados são mapeadas para os campos no conjunto de dados.  
   
@@ -93,7 +94,7 @@ ms.locfileid: "77081683"
   
     -   **A fonte de dados XML é um documento XML**  
   
-         Elementos XML obrigatórios: nenhum  
+         Elementos XML obrigatórios: Nenhum  
   
          Elementos XML opcionais:  
   
@@ -115,12 +116,12 @@ ms.locfileid: "77081683"
   
  Confira mais informações em [Sintaxe de Consulta XML para Dados de Relatório XML e#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Para obter exemplos, consulte [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)[Reporting Services: usando fontes de dados XML e de serviço Web].  
+ Para obter exemplos, confira [Reporting Services: usando fontes de dados XML e de serviço Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar os dados do serviço Web XML  
  A extensão de processamento de dados XML não detecta o esquema para você. Portanto, você deve ter alguma maneira de descobrir quais métodos SOAP recuperarão os dados desejados. Você também deve entender o namespace ou esquema de endereçamento que o serviço Web usa para seus dados.  
   
- Para um serviço Web, você pode fornecer um elemento \<**Query**> que especifica um método a ser chamado ou uma ação de SOAP. Você pode deixar a consulta em branco e usar a consulta padrão se os dados XML tiverem uma estrutura hierárquica que gera os dados que você deseja usar em seu relatório. Os atributos e valores de nó do elemento XML recuperados quando a consulta é executada são mapeados para os campos do conjunto de dados usados no seu relatório.  
+ Para um serviço Web, você pode fornecer um elemento \<**Query**>, que especifica um método a ser chamado ou uma ação de SOAP. Você pode deixar a consulta em branco e usar a consulta padrão se os dados XML tiverem uma estrutura hierárquica que gera os dados que você deseja usar em seu relatório. Os atributos e valores de nó do elemento XML recuperados quando a consulta é executada são mapeados para os campos do conjunto de dados usados no seu relatório.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Requisitos para recuperar os dados de documento XML  
  Usando o protocolo http, o servidor deve retornar dados XML ou os dados XML devem ser inseridos no elemento XML **Query** . Se você se referir a um documento XML diretamente usando o protocolo http, a extensão deverá ser .xml.  

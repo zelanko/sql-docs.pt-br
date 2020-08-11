@@ -1,5 +1,6 @@
 ---
 title: Servidor de relatório do Reporting Services (modo nativo) | Microsoft Docs
+description: Saiba mais sobre o Servidor de Relatório configurado para o modo nativo, incluindo o gerenciamento de conteúdo, o gerenciamento de um recurso e a referência a um recurso de imagem de um relatório.
 ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086835"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535408"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Um servidor de relatório configurado para o modo nativo como um servidor de aplicativo que fornece todos os recursos de processamento e gerenciamento exclusivamente através de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

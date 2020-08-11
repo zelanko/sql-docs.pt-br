@@ -1,5 +1,6 @@
 ---
 title: Adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório | Microsoft Docs
+description: Personalize a lista de opções que um usuário pode fazer para um parâmetro no Construtor de Relatórios especificando uma lista de valores disponíveis a serem exibidos para o usuário.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9d826682f2bcb742ab4ba7ae9e2b6fba33600c0
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582042"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681325"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório
   Depois de criar um parâmetro de relatório, você poderá especificar uma lista de valores disponíveis a ser exibida para o usuário. Uma lista de valores disponíveis limita as escolhas do usuário aos valores válidos para o parâmetro.  

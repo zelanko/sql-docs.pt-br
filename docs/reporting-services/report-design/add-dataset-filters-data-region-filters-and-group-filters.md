@@ -1,5 +1,6 @@
 ---
 title: Adicionar filtros de conjunto de dados, de região de dados e de grupo | Microsoft Docs
+description: Descubra como os filtros podem ajudar você a controlar quais dados são exibidos e processados em seus relatórios no Construtor de Relatórios.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e512a330ba8d16a0dbbce878f8bfb6c60176a098
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582061"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255689"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo
   Em um relatório, um filtro faz parte de um conjunto de dados, uma região de dados ou um grupo de regiões de dados criado por você para limitar os dados usados no relatório. Os filtros são uma forma de ajudar você a controlar os dados do relatório, caso você não possa alterar a consulta do conjunto de dados; por exemplo, se estiver usando um conjunto de dados compartilhado.  

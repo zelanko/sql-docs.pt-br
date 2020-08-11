@@ -1,6 +1,6 @@
 ---
 title: Definições de função – funções predefinidas | Microsoft Docs
-ms.date: 05/24/2019
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67500194"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716733"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definições de função – funções predefinidas
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
@@ -59,11 +59,11 @@ ms.locfileid: "67500194"
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Criar relatórios vinculados|Criar relatórios vinculados com base em um relatório não vinculado.|  
-|Gerenciar todas as assinaturas|Exibir, modificar e excluir qualquer assinatura para relatórios e relatórios vinculados, independentemente de quem for proprietário da assinatura. Essa tarefa também oferece suporte a criação de assinaturas controladas por dados.|  
+|Gerenciar todas as assinaturas|Exibir, modificar e excluir qualquer assinatura para relatórios e relatórios vinculados, independentemente de quem for proprietário da assinatura. Essa tarefa dá suporte à criação de assinaturas controladas por dados. Ela também dá suporte à edição e execução da [atualização agendada para arquivos do Power BI (.pbix) no Servidor de Relatórios do Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Gerenciar as fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
 |Gerenciar modelos|Criar, exibir e excluir modelos e exibir e modificar propriedades de modelo.|  
-|Administrar assinaturas individuais|Criar, exibir, modificar e excluir assinaturas de propriedade do usuário para relatórios e relatórios vinculados.|  
+|Administrar assinaturas individuais|Criar, exibir, modificar e excluir assinaturas de propriedade do usuário para relatórios e relatórios vinculados. Essa tarefa também dá suporte à edição e execução da [atualização agendada para arquivos do Power BI (.pbix) no Servidor de Relatórios do Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Gerenciar histórico de relatório|Criar, exibir e excluir histórico de relatório, exibir propriedades do histórico de relatório, e exibir e modificar configurações que determinam limites para o número de instantâneos e o funcionamento do cache.|  
 |Gerenciar relatórios|Adicionar e excluir relatórios, modificar parâmetros de relatório, exibir e modificar propriedades de relatório, exibir e modificar fontes de dados que fornecem o conteúdo para o relatório, exibir e modificar definições de relatório e definir diretrizes de segurança no nível do relatório.|  
 |Gerenciar recursos|Criar, modificar e excluir recursos, e exibir e modificar propriedades de recurso.|  
@@ -92,7 +92,7 @@ ms.locfileid: "67500194"
 ### <a name="publisher-tasks"></a>Tarefas do publicador  
  A tabela a seguir relaciona as tarefas incluídas na função **Publicador**:  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados e publicá-los em uma pasta do servidor de relatório.|  
 |Gerenciar as fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
@@ -114,7 +114,7 @@ ms.locfileid: "67500194"
 ### <a name="browser-tasks"></a>Tarefas do navegador  
  A tabela a seguir relaciona as tarefas incluídas na função **Navegador**:  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
 |Exibir recursos|Exibir recursos e propriedades de recurso.|  
@@ -133,7 +133,7 @@ ms.locfileid: "67500194"
 ### <a name="report-builder-tasks"></a>Tarefas do Construtor de Relatórios  
  A tabela a seguir relaciona as tarefas incluídas na função **Construtor de Relatórios**:  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
@@ -155,7 +155,7 @@ ms.locfileid: "67500194"
 ### <a name="my-reports-tasks"></a>Tarefas de Meus Relatórios  
  A tabela a seguir relaciona as tarefas incluídas na função **Meus Relatórios**:  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados que são baseados em relatórios armazenados na pasta Meus Relatórios do usuário.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
@@ -183,7 +183,7 @@ ms.locfileid: "67500194"
 ### <a name="system-administrator-tasks"></a>Tarefas de administrador do sistema  
  A tabela a seguir lista as tarefas que são incluídas na função **Administrador do Sistema**:  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Iniciar a execução da definição de relatório sem publicá-la em um servidor de relatório.|  
 |Gerenciar trabalhos|Exibir e cancelar trabalhos que estão em execução. Para obter mais informações, consulte [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md).|  
@@ -201,7 +201,7 @@ A tabela a seguir lista as tarefas incluídas na definição da função **Usuá
   
 ### <a name="system-user-tasks"></a>Tarefas do usuário do sistema  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Execute um relatório sem publicá-lo em um servidor de relatório.|  
 |Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a configuração Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título do portal da Web é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  

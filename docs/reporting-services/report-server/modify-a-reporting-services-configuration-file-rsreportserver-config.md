@@ -1,5 +1,6 @@
 ---
 title: Modificar um arquivo de configuração do Reporting Services (RSreportserver.config) | Microsoft Docs
+description: Saiba como modificar arquivos de configuração no Reporting Services para adicionar ou definir configurações avançadas. Algumas configurações são para uso interno. Continue com cuidado.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 315f1129f6c83f36de02efebf4eb4ec58cb4c48f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581125"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547942"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativo em um conjunto de arquivos de configuração. A instalação cria os arquivos de configuração para cada instância instalada do servidor de relatório. Em cada arquivo, os valores são definidos durante a instalação ou quando você usa ferramentas e aplicativos para configurar um servidor para operação. Em alguns casos, é necessário modificar um arquivo diretamente para adicionar ou definir configurações avançadas. As configurações são especificadas como elementos ou atributos XML. Se você entender de XML e arquivos de configuração, use um editor de texto ou de código para modificar configurações definidas pelo usuário.  

@@ -1,30 +1,34 @@
 ---
 title: 'Início Rápido: Treinar um modelo no Python'
-description: Neste guia de início rápido, você criará e treinará um modelo de previsão usando o Python. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando os Serviços de Machine Learning do SQL Server.
+titleSuffix: SQL machine learning
+description: Neste guia de início rápido, você criará e treinará um modelo de previsão usando o Python. Você salvará o modelo em uma tabela no banco de dados e usará o modelo para prever valores com base em novos dados com o machine learning do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7fe03849217dfe6e8ad7acedc39d891c5168f9c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772374"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão no Python com os Serviços de Machine Learning do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Início Rápido: criar e pontuar um modelo de previsão no Python com o machine learning do SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Neste guia de início rápido, você criará e treinará um modelo de previsão usando o Python. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou os [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Neste guia de início rápido, você criará e treinará um modelo de previsão usando o Python. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Neste guia de início rápido, você criará e treinará um modelo de previsão usando o Python. Você salvará o modelo em uma tabela no banco de dados e usará o modelo para prever valores com base em novos dados usando os [Serviços de Machine Learning de Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Você criará e executará dois procedimentos armazenados em execução no SQL. A primeira usa o conjunto de dados de flor de Iris clássica e gera um modelo de Bayes simples para prever uma espécie de Iris com base nas características da flor. O segundo procedimento é para pontuação – ele chama o modelo gerado no primeiro procedimento para gerar um conjunto de previsões com base em novos dados. Ao colocar o código Python em um procedimento armazenado do SQL, as operações são contidas em SQL, são reutilizáveis e podem ser chamadas por outros procedimentos armazenados e aplicativos cliente.
@@ -38,15 +42,19 @@ Ao concluir este início rápido, você aprenderá:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
+Para executar este início rápido, você precisará dos pré-requisitos a seguir.
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou o [Guia de instalação do Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Você também pode [habilitar Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Serviços de Machine Learning da Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira a [Visão geral dos Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
-- Uma ferramenta para executar consultas SQL que contenham scripts do R. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).
-
+- Uma ferramenta para executar consultas SQL que contenham scripts Python. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 - Os dados de exemplo usados neste exercício são os dados de exemplo de Iris. Siga as instruções em [Dados de demonstração de Iris](demo-data-iris-in-sql.md) para criar o banco de dados de exemplo **irissql**.
 
@@ -54,7 +62,7 @@ Ao concluir este início rápido, você aprenderá:
 
 Nesta etapa, você criará um procedimento armazenado que gera um modelo para prever resultados.
 
-1. Abra o Azure Data Studio, conecte-se à instância do SQL Server e abra uma nova janela de consulta.
+1. Abra o Azure Data Studio, conecte-se à instância SQL e abra uma nova janela de consulta.
 
 1. Conectar-se ao banco de dados irissql.
 
@@ -66,11 +74,11 @@ Nesta etapa, você criará um procedimento armazenado que gera um modelo para pr
 1. Copie no código a seguir para criar um novo procedimento armazenado.
 
    Quando executado, esse procedimento chama [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para iniciar uma sessão do Python. 
-   
-   As entradas necessárias para seu código Python são passadas como parâmetros de entrada neste procedimento armazenado. A saída será um modelo treinado, com base na biblioteca **Scikit-learn** do Python para o algoritmo de aprendizado de máquina. 
+
+   As entradas necessárias para seu código Python são passadas como parâmetros de entrada neste procedimento armazenado. A saída será um modelo treinado, com base na biblioteca **Scikit-learn** do Python para o algoritmo de aprendizado de máquina.
 
    Esse código usa [**pickle**](https://docs.python.org/2/library/pickle.html) para serializar o modelo. O modelo será treinado usando dados das colunas 0 a 4 da tabela **iris_data**. 
-   
+
    Os parâmetros que você vê na segunda parte do procedimento articulam entradas de dados e saídas de modelo. Tanto quanto possível, você quer que o código Python em execução em um procedimento armazenado tenha entradas e saídas claramente definidas e que mapeiem para entradas de procedimento armazenado e saídas passadas em tempo de execução.
 
     ```sql
@@ -100,7 +108,7 @@ Nesta etapa, você criará um procedimento armazenado que gera um modelo para pr
 
 Nesta etapa, você executa o procedimento para executar o código inserido, criando um modelo treinado e serializado como uma saída. 
 
-Os modelos que são armazenados para reutilização no SQL Server são serializados como um fluxo de bytes e armazenados em uma coluna varbinary(max) em uma tabela de banco de dados. Depois que o modelo é criado, treinado, serializado e salvo em um banco de dados, ele pode ser chamado por outros procedimentos ou pela função [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) em cargas de trabalho de pontuação.
+Os modelos que são armazenados para reutilização no seu banco de dados são serializados como um fluxo de bytes e armazenados em uma coluna VARBINARY(MAX) em uma tabela de banco de dados. Depois que o modelo é criado, treinado, serializado e salvo em um banco de dados, ele pode ser chamado por outros procedimentos ou pela função [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) em cargas de trabalho de pontuação.
 
 1. Execute o código a seguir para executar o procedimento. A instrução específica para executar um procedimento armazenado é `EXECUTE` na quarta linha.
 
@@ -183,13 +191,11 @@ Agora que você criou, treinau e salvou um modelo, passe para a próxima etapa: 
 
 ## <a name="conclusion"></a>Conclusão
 
-Neste exercício, você aprendeu a criar procedimentos armazenados dedicados a tarefas diferentes, em que cada procedimento armazenado usou o procedimento armazenado do sistema `sp_execute_external_script` para iniciar um processo do Python. As entradas para o processo do Python são passadas para `sp_execute_external` como parâmetros. O próprio script do Python e as variáveis de dados em um banco de dados do SQL Server são passados como entradas.
+Neste exercício, você aprendeu a criar procedimentos armazenados dedicados a tarefas diferentes, em que cada procedimento armazenado usou o procedimento armazenado do sistema `sp_execute_external_script` para iniciar um processo do Python. As entradas para o processo do Python são passadas para `sp_execute_external` como parâmetros. O script do Python propriamente dito e as variáveis de dados em um banco de dados são passados como entradas.
 
 Em geral, você deve planejar usar o Azure Data Studio apenas com código Python aprimorado ou com código Python simples que retorne saída baseada em linhas. Como uma ferramenta, o Azure Data Studio dá suporte a linguagens de consulta como T-SQL e retorna conjuntos de linhas bidimensionais. Caso o código gere uma saída visual como uma dispersão ou um histograma, você precisará de uma ferramenta separada ou de um aplicativo para usuário final que possa renderizar a imagem fora do procedimento armazenado.
 
 Para alguns desenvolvedores de Python acostumados a escrever scripts abrangentes que lidem com uma variedade de operações, organizar tarefas em procedimentos separados pode parecer desnecessário. Mas o treinamento e a pontuação têm casos de uso diferentes. Separando-os, você pode colocar cada tarefa em um agendamento e em permissões de escopo diferentes para cada operação.
-
-Da mesma forma, você também pode aproveitar os recursos do SQL Server (tais como processamento paralelo e governança de recursos) ou escrever seu script para usar algoritmos em [microsoftml](../python/ref-py-microsoftml.md), que dá suporte a streaming e a execução paralela. Ao separar o treinamento e a pontuação, você pode direcionar otimizações para cargas de trabalho específicas.
 
 Um último benefício é que os processos podem ser modificados usando parâmetros. Neste exercício, o código Python que criou o modelo (chamado "Naive Bayes" neste exemplo) foi passado como uma entrada para um segundo procedimento armazenado que chama o modelo em um processo de pontuação. Este exercício usa apenas um modelo, mas você pode imaginar como a parametrização do modelo em uma tarefa de pontuação tornaria esse script mais útil.
 

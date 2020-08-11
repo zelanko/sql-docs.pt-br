@@ -1,5 +1,6 @@
 ---
 title: Gerenciar um servidor de relatório no modo nativo do Reporting Services | Microsoft Docs
+description: Veja estes artigos ao configurar um servidor de relatório de modo nativo ou ao configurar um serviço de relatório para ser executado no modo integrado do SharePoint.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499591"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547951"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
   Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  

@@ -1,5 +1,6 @@
 ---
 title: Converter fontes de dados (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como converter suas fontes de dados no Construtor de Relatórios e no Designer de Relatórios usando as opções no painel de dados do relatório.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05aee467c3e69c115bedfa498a546a4e1664ba71
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 799e3f877f2a92fb0b476037f08013e624f2d518
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081754"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458178"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>Converter fontes de dados (Construtor de Relatórios e SSRS)
   Cada fonte de dados no painel de dados do relatório é inserida e específica do relatório ou é compartilhada. No Construtor de Relatórios, uma fonte de dados compartilhada aponta para uma fonte de dados compartilhada publicada em um servidor de relatório ou no site do SharePoint. No Designer de Relatórios, uma fonte de dados compartilhada aponta para uma fonte de dados compartilhada na pasta **Fontes de Dados Compartilhadas** do Gerenciador de Soluções.  

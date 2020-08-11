@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexão SAP NetWeaver BI | Microsoft Docs
+description: Use as informações fornecidas neste artigo sobre o tipo de conexão SAP NetWeaver BI para aprender a criar uma fonte de dados.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c9edca5b50403f47b82cd2e69d51eb568c66f8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 028ee19646716666314b0242e0ebe0e3c6551e95
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081780"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457746"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexão SAP NetWeaver BI (SSRS)
   Para incluir dados de uma fonte de dados externa do SAP NetWeaver® Business Intelligence em seu relatório, você deve ter um conjunto de dados baseado em uma fonte de dados de relatório do tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Esse tipo de fonte de dados interna tem como base a extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  

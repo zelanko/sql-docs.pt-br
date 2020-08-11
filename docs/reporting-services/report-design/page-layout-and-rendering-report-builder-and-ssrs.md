@@ -1,5 +1,6 @@
 ---
 title: Layout e renderização da página (Construtor de Relatórios) | Microsoft Docs
+description: Crie ou aprimore seus relatórios paginados com extensões de renderização para layout da página, quebras de página e tamanho de papel no Construtor de Relatórios.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d28282a1fd787585f401e3b532f104cba5e2c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082453"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012694"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout de página e renderização (Construtor de Relatórios e SSRS)
 Leia sobre as extensões de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para relatórios paginados se tiver certeza de que seu relatório tem a aparência desejada, incluindo o layout da página, quebras de página e tamanho do papel. 

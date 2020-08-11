@@ -1,5 +1,6 @@
 ---
 title: Função Min (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre a função Min, que retorna o valor mínimo de todos os valores numéricos não nulos especificados por uma expressão no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f1cff64290206526103c848de693c2a95735d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ea5098d06e66813fb91d27ca9d56c31732080a2
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081197"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255569"
 ---
 # <a name="report-builder-functions---min-function"></a>Funções do Construtor de Relatórios – Função Min
   Retorna o valor mínimo de todos os valores numéricos não nulos especificados pela expressão, no contexto do escopo fornecido.  

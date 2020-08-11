@@ -1,5 +1,6 @@
 ---
-title: Usando a autenticação NTLM para se conectar ao SQL Server | Microsoft Docs
+title: Usando a autenticação NTLM para se conectar ao SQL Server
+description: Saiba como estabelecer uma conexão de Banco de Dados SQL usando a autenticação NTLM com o driver JDBC.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026099"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393144"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Usando a autenticação NTLM para se conectar ao SQL Server
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Um SPN (nome da entidade de serviço) é o nome pelo qual um cliente identifica exclusivamente uma instância de um serviço.
 
-Você pode especificar o SPN usando a propriedade de conexão **serverSpn** ou deixar que o driver o crie para você (o padrão). Esta propriedade está no formato de: "MSSQLSvc/fqdn:port\@REALM" em que fqdn é o nome de domínio totalmente qualificado, porta é o número da porta e REALM é o realm do SQL Server em letras maiúsculas. A parte do realm dessa propriedade é opcional, pois o realm padrão é o mesmo que o do servidor.
+Você pode especificar o SPN usando a propriedade de conexão **serverSpn** ou deixar que o driver o crie para você (o padrão). Essa propriedade está no formato: "MSSQLSvc/fqdn:port\@REALM", em que fqdn é o nome de domínio totalmente qualificado, port é o número da porta e REALM é o realm do SQL Server em letras maiúsculas. A parte do realm dessa propriedade é opcional, pois o realm padrão é o mesmo que o do servidor.
 
 Por exemplo, o SPN pode ser: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 

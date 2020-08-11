@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 21b3f8f93d3375789de9da92ab4bb2b1e136964c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772335"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Início Rápido: criar e pontuar um modelo de previsão no R com o aprendizado de máquina do SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Neste início rápido, você criará e treinará um modelo preditivo usando o T. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou em [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
@@ -29,6 +29,9 @@ Neste guia de início rápido, você criará e treinará um modelo de previsão 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Neste início rápido, você criará e treinará um modelo de previsão usando o T. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando o [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Neste guia de início rápido, você criará e treinará um modelo de previsão usando o T. Você salvará o modelo em uma tabela em sua instância do SQL Server e usará o modelo para prever valores com base em novos dados usando os [Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Você criará e executará dois procedimentos armazenados em execução no SQL. O primeiro usa o conjunto de dados **mtcars** incluído com o R e gera um GLM (modelo linear generalizado) simples que prevê a probabilidade de um veículo ter sido equipado com uma transmissão manual. O segundo procedimento é para pontuação – ele chama o modelo gerado no primeiro procedimento para gerar um conjunto de previsões com base em novos dados. Ao colocar o código R em um procedimento armazenado do SQL, as operações são contidas em SQL, são reutilizáveis e podem ser chamadas por outros procedimentos armazenados e aplicativos cliente.
@@ -55,6 +58,9 @@ Para executar este início rápido, você precisará dos pré-requisitos a segui
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Para saber como instalar o R Services, confira o [Guia de instalação do Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Serviços de Machine Learning da Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira a [Visão geral dos Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Uma ferramenta para executar consultas SQL que contenham scripts do R. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).

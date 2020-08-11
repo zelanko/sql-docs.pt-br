@@ -1,5 +1,6 @@
 ---
 title: Servidor de relatório do Reporting Services (modo do SharePoint) | Microsoft Docs
+description: Um servidor de relatório do Reporting Services com o Modo do SharePoint pode ser executado no SharePoint para usar recursos de colaboração e gerenciamento para tipos de conteúdo do Reporting Services.
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262349"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764835"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de relatório do Reporting Services (modo do SharePoint)
 
@@ -64,9 +65,9 @@ ms.locfileid: "68262349"
 
  A versão do SQL Server 2008 R2 introduziu um novo *modo local* para exibição de relatórios de um servidor do SharePoint 2010 com o Suplemento Reporting Services do Microsoft SQL Server 2008 R2 ou posterior para os produtos SharePoint 2010 instalados.  
   
--   *Modo local*: o modo local permite que os relatórios sejam renderizados localmente na biblioteca de documentos do SharePoint, sem integração com um servidor de relatório do Reporting Services. O suplemento Reporting Services para produtos do SharePoint é obrigatório, ao contrário de um servidor de relatório do Reporting Services. O suplemento pode ser instalado de várias maneiras diferentes, incluindo a ferramenta de preparação de produtos do SharePoint 2010. Para obter mais informações sobre o modo local, consulte [Relatórios em modo local vs. modo conectado no Visualizador de Relatórios](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) e [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Modo local:* o modo local permite que os relatórios sejam renderizados localmente na biblioteca de documentos do SharePoint, sem integração com um servidor de relatório do Reporting Services. O suplemento Reporting Services para produtos do SharePoint é obrigatório, ao contrário de um servidor de relatório do Reporting Services. O suplemento pode ser instalado de várias maneiras diferentes, incluindo a ferramenta de preparação de produtos do SharePoint 2010. Para obter mais informações sobre o modo local, consulte [Relatórios em modo local vs. modo conectado no Visualizador de Relatórios](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) e [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Modo conectado*: há suporte para o modo Conectado com a integração de um servidor de relatório do Reporting Services no farm do SharePoint usando a Administração Central do SharePoint. A integração com um servidor de relatório permite relatórios completos de ponta a ponta, fornecendo os recursos de colaboração do SharePoint 2010 e os recursos baseados no servidor de um servidor de relatório, inclusive: Assinaturas, Instantâneos e processamento baseado no servidor.  
+-   *Modo conectado*: o modo conectado é compatível por meio da integração de um servidor de relatório do Reporting Services no farm do SharePoint usando a Administração Central do SharePoint. A integração com um servidor de relatório permite relatórios completos de ponta a ponta, fornecendo os recursos de colaboração do SharePoint 2010 e os recursos baseados no servidor de um servidor de relatório, inclusive: Assinaturas, Instantâneos e processamento baseado no servidor.  
   
 ## <a name="unsupported-sharepoint-features"></a>Recursos do SharePoint sem suporte
 

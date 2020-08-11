@@ -1,5 +1,6 @@
 ---
 title: Locais de arquivo
+description: Uma instância do SQL Server tem os próprios arquivos de programas e de dados. Ela pode compartilhar arquivos comuns com outras instâncias do SQL Server. Este artigo inclui locais de arquivos.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: da7f187cc388e08f4d1f0307ba6fae78c58e6489
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d0532f2705a926cc9395e62759aef3eb1dc9f69
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253476"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858666"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Locais de arquivos para instâncias padrão e nomeadas do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em uma ou mais instâncias separadas. Uma instância, seja padrão ou nomeada, tem seu próprio conjunto de arquivos de programas e de dados, bem como um conjunto de arquivos comuns compartilhados entre todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador.  
   
@@ -32,10 +33,10 @@ ms.locfileid: "75253476"
 > 
 >  Os bancos de dados de sistema (mestre, modelo, MSDB e tempdb) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para saber mais, veja [Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
 >   
->  Não exclua nenhum dos seguintes diretórios ou seus conteúdos: Binn, Data, Ftdata, HTML ou 1046. Você pode excluir outros diretórios, se necessário; entretanto, talvez você não possa recuperar alguma funcionalidade ou dados perdidos sem desinstalar e depois reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não exclua, nem modifique quaisquer dos arquivos .htm no diretório de HTML. Eles são necessários para que as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionem corretamente.  
+>  Não exclua nenhum dos seguintes diretórios ou seus conteúdos: Binn, Data, Ftdata, HTML ou 1033. Você pode excluir outros diretórios, se necessário; entretanto, talvez você não possa recuperar alguma funcionalidade ou dados perdidos sem desinstalar e depois reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não exclua, nem modifique quaisquer dos arquivos .htm no diretório de HTML. Eles são necessários para que as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionem corretamente.  
   
 ## <a name="shared-files-for-all-instances-of-ssnoversion"></a>Arquivos compartilhados para todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Os arquivos comuns usados por todas as instâncias em um único computador são instalados na pasta [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*unidade*> é a letra da unidade na qual os componentes são instalados. Em geral, o padrão é a unidade C. _nnn_ identifica a versão. A tabela a seguir identifica as versões dos caminhos. \{nn} é o valor da versão usado na ID da instância e no caminho do Registro. 
+ Os arquivos comuns usados por todas as instâncias em um único computador são instalados na pasta [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*drive*> é a letra da unidade na qual os componentes são instalados. Em geral, o padrão é a unidade C. _nnn_ identifica a versão. A tabela a seguir identifica as versões dos caminhos. \{nn} é o valor da versão usado na ID da instância e no caminho do Registro. 
 
 |Versão|\*nnn*|{nn}|
 |-----|-----|--------|
@@ -73,7 +74,7 @@ ms.locfileid: "75253476"
   
  Você pode especificar qualquer valor para o ID da instância, mas evite caracteres especiais e palavras-chave reservadas.  
   
- Você pode especificar um ID de instância não padrão durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Em vez de \\{Arquivos de Programas}\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um \<caminho personalizado>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado se o usuário optar por alterar o diretório de instalação padrão. Observe que as IDs de instância que começam com sublinhado (_) ou contêm o sinal numérico (#) ou o cifrão ($) não têm suporte.  
+ Você pode especificar um ID de instância não padrão durante a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Em vez de \\{Program Files}\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um \<custom path>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado se o usuário optar por alterar o diretório de instalação padrão. Observe que as IDs de instância que começam com sublinhado (_) ou contêm o sinal numérico (#) ou o cifrão ($) não têm suporte.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os componentes cliente não reconhecem instâncias e, portanto, não recebem uma ID de instância. Por padrão, os componentes que não reconhecem instância são instalados em um único diretório: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. A alteração do caminho de instalação de um componente compartilhado também o altera para os outros componentes compartilhados. Instalações subsequentes instalam componentes sem reconhecimento de instância no mesmo diretório que a instalação original.  
@@ -109,9 +110,9 @@ ms.locfileid: "75253476"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de dados|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<InstanceID>\ |Configurável|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<InstanceID>\Reporting Services\ReportServer\Bin\ |Configurável|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gerenciador de relatórios|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<InstanceID>\Reporting Services\ReportManager\ |Caminho fixo|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Diretório de instalação>\nnn\DTS\\ <sup>1</sup> |Configurável |  
-|Componentes de cliente (exceto bcp.exe e sqlcmd.exe)|\<Diretório de instalação>\nnn\Tools\\ <sup>1</sup> |Configurável |  
-|Componentes de cliente (bcp.exe e sqlcmd.exe)|\<Diretório de Instalação>\Client SDK\ODBC\nnn\Tools\Binn|Caminho fixo|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\nnn\DTS\\ <sup>1</sup> |Configurável |  
+|Componentes de cliente (exceto bcp.exe e sqlcmd.exe)|\<Install Directory>\nnn\Tools\\ <sup>1</sup> |Configurável |  
+|Componentes de cliente (bcp.exe e sqlcmd.exe)|\<Install Directory>\Client SDK\ODBC\nnn\Tools\Binn|Caminho fixo|  
 |Replicação e objetos COM do lado do servidor|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Caminho fixo|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DLLs de componentes para o mecanismo de Tempo de Execução de Transformação de Dados, o mecanismo Pipeline de Transformação de Dados e o utilitário de prompt de comando **dtexec**|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Caminho fixo|  
 |DLLs que dão suporte de conexão gerenciado para o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Caminho fixo|  

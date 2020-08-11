@@ -1,7 +1,7 @@
 ---
 title: Referência de parâmetro de acesso à URL | Microsoft Docs
 description: Use os parâmetros deste artigo como parte de uma URL para configurar a aparência de seus relatórios do Reporting Services.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147379"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859018"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso à URL
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147379"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**: Pesquise um relatório por um conjunto específico de texto.
+-   **FindString**: Pesquisa um relatório para um conjunto de texto específico e realça o texto.
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* não funciona, a menos que você inclua *rc:Toolbar*=**false** para a cadeia de caracteres de acesso à URL.
   
      Por exemplo, no modo nativo:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      Por exemplo, no modo do SharePoint:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**: Especifica a última seção a ser pesquisada. O valor padrão desse parâmetro é a última página do relatório.  

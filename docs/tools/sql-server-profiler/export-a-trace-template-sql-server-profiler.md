@@ -1,6 +1,7 @@
 ---
 title: Exportar um modelo de rastreamento
 titleSuffix: SQL Server Profiler
+description: Saiba como usar SQL Server Profiler para exportar um modelo de rastreamento como um arquivo de modelo para que você possa usar o modelo com outra instância do SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8348b393da3dde8b8f941a882cf227b9bd99953b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774828"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportar um modelo de rastreamento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tópico descreve como exportar um modelo de rastreamento existente para ser salvo como arquivo de modelo (.tdf), usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Quando um modelo de rastreamento é exportado e salvo como arquivo, ele pode ser usado com outra instância do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

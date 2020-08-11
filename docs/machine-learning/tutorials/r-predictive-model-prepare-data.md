@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784074"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: preparar os dados para treinar um modelo preditivo no R com o aprendizado de máquina do SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Na parte dois deste tutorial de quatro partes, você preparará os dados de um banco de dados usando o R. Ainda nesta série, você usará esses dados para treinar e implantar um modelo preditivo em R com os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
@@ -31,12 +30,15 @@ Na parte dois deste tutorial de quatro partes, você preparará os dados de um b
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Na parte dois deste tutorial de quatro partes, você preparará os dados de um banco de dados usando o R. Ainda nesta série, você usará esses dados para treinar e implantar um modelo preditivo em R com o SQL Server R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Na parte dois deste tutorial de quatro partes, você preparará os dados de um banco de dados usando o R. Ainda nesta série, você usará esses dados para treinar e implantar um modelo preditivo em R com os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
+::: moniker-end
 
 Neste artigo, você aprenderá a:
 
 > [!div class="checklist"]
 > * Restaurar um banco de dados de exemplo em um banco de dados
-> * Carregar os dados do banco de dados SQL em uma estrutura de dados do R
+> * Carregar os dados do banco de dados em uma estrutura de dados do R
 > * Preparar os dados no R identificando algumas colunas como categóricas
 
 Na [parte um](r-predictive-model-introduction.md), você aprendeu a restaurar o banco de dados de exemplo.
@@ -51,22 +53,19 @@ A parte dois deste tutorial presume que você concluiu a [**parte um**](r-predic
 
 ## <a name="load-the-data-into-a-data-frame"></a>Carregar os dados em um quadro de dados
 
-Para usar os dados no R, é necessário carregá-los do banco de dados SQL para a estrutura de dados (`rentaldata`).
+Para usar os dados no R, é necessário carregá-los do banco de dados para a estrutura de dados (`rentaldata`).
 
 Crie um novo arquivo RScript no RStudio e execute o script a seguir. Substitua **ServerName** por suas informações de conexão.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ Se você não continuar com este tutorial, exclua o banco de dados TutorialDB.
 
 Na parte dois desta série de tutoriais, você aprendeu a:
 
-* Carregar os dados de exemplo do SQL Server em uma estrutura de dados do R
+* Carregar os dados de exemplo em uma estrutura de dados do R
 * Preparar os dados no R identificando algumas colunas como categóricas
 
 Para criar um modelo de machine learning que usa dados do banco de dados TutorialDB, siga a parte três desta série de tutoriais:

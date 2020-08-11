@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: Aprenda a modificar as contas dos serviços controlador e cliente do Distributed Replay e, em seguida, reaplicar as listas de controle de acesso.
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681163"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificar as contas de serviços de controlador e de cliente
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Neste tópico, você aprenderá a modificar o controlador Distributed Replay e as contas de serviço cliente e depois reaplicar as ACLs (listas de controle de acesso).  
   
@@ -28,7 +28,7 @@ Neste tópico, você aprenderá a modificar o controlador Distributed Replay e a
   
 1.  No computador em que os serviços Distributed Replay estão instalados, no prompt de comando, digite **dcomcnfg**.  
   
-2.  Clique duas vezes em **Serviços**, role para baixo e clique com o botão direito do mouse em **<nome do serviço> do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<** e clique em **Iniciar** ou em **Parar**.  
+2.  Clique duas vezes em **Serviços**, role para baixo e clique com o botão direito do mouse em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>** e clique em **Iniciar** ou em **Parar**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Para modificar o serviço controlador Distributed Replay  
   

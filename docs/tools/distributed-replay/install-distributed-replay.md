@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: 'Este artigo descreve as maneiras de instalar o Distributed Replay: usando o Assistente de Instalação, a janela do Prompt de Comando ou um arquivo de configuração.'
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681332"
 ---
 # <a name="install-distributed-replay"></a>Instalar o Distributed Replay
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Você pode instalar o Distributed Replay de uma destas três maneiras:  
   
@@ -67,7 +67,7 @@ Você pode instalar o Distributed Replay de uma destas três maneiras:
   
      \- OU -  
   
-     \<Diretório de Recursos Compartilhados>\Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
+     \<Share Feature Directory>\Tools\\(diretório de recursos compartilhados alternativos fornecidos pelo usuário)  
   
 -   Em um sistema de 64 bits:  
   
@@ -75,7 +75,7 @@ Você pode instalar o Distributed Replay de uma destas três maneiras:
   
      \- OU -  
   
-     \<Diretório de Recursos Compartilhados (x86)>\Tools\\(diretório de recursos compartilhados [x86] alternativo fornecido pelo usuário)  
+     \<Share Feature Directory (x86)>\Tools\\(diretório de recursos compartilhados alternativos (x86) fornecidos pelo usuário)  
   
 #### <a name="to-install-distributed-replay-features"></a>Para instalar recursos do Distributed Replay  
   

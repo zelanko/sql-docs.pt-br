@@ -1,5 +1,6 @@
 ---
 title: Gráficos de forma (Construtor de Relatórios) | Microsoft Docs
+description: Veja como os gráficos de forma exibem dados de valor como porcentagens do todo no Construtor de Relatórios. Com frequência, são usados gráficos de forma para mostrar comparações proporcionais entre valores em um conjunto.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e1d8d10837708b7cde4f83056a23a0e143662ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cf834c986827fa83617f8eafc30e8798314e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006072"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de forma (Construtor de Relatórios e SSRS)
   Um gráfico de forma exibe os dados de valor como porcentagens do todo. São usados gráficos de forma normalmente para mostrar comparações proporcionais entre valores diferentes em um conjunto. Categorias são representadas por segmentos individuais da forma. O tamanho do segmento é determinado pelo valor. Os gráficos de forma tem uso semelhante aos gráficos de pizza, exceto que eles classificam as categorias do maior para o menor.  

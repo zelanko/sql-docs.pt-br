@@ -1,5 +1,6 @@
 ---
 title: Função Count (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre a função Count, que retorna uma contagem de valores não nulos especificados por uma expressão, que é avaliada no contexto de um escopo especificado.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044090"
 ---
 # <a name="report-builder-functions---count-function"></a>Funções do Construtor de Relatórios – Função Count
   Retorna uma contagem de valores não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  
@@ -60,7 +61,7 @@ Count(expression, scope, recursive)
   
  Exemplo  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  O seguinte exemplo de código mostra uma expressão que calcula o número de valores não nulos de `Size` para o escopo padrão e para um escopo de grupo pai. A expressão é adicionada a uma célula em uma linha que pertence ao `GroupbySubcategory`do grupo filho. O grupo pai é `GroupbyCategory`. A expressão exibe os resultados de `GroupbySubcategory` (o escopo padrão) e de `GroupbyCategory` (o escopo do grupo pai).  
   
 > [!NOTE]  

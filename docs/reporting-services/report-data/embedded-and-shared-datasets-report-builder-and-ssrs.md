@@ -1,5 +1,6 @@
 ---
 title: Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre conjuntos de dados inseridos e compartilhados. Os conjuntos de dados contêm um comando de consulta, parâmetros e opções de dados que incluem diferenciação de maiúsculas e minúsculas e ordenação.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1d665699dc2051745b08a56796588dab51e3bcf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be5419348e7fa14ada37b119a9df9078dfe8bba8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077626"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458361"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados (Construtor de Relatórios e SSRS)
   Em um relatório, um conjunto de dados representa dados de relatório retornados em virtude da execução de um consulta em uma fonte de dados externa. O conjunto de dados depende da conexão de dados que contém informações sobre a fonte de dados externa. Os dados em si não são incluídos na definição de relatório. O conjunto de dados contém um comando de consulta, uma coleção de campos, parâmetros, filtros e opções de dados que incluem diferenciação de maiúsculas e minúsculas e ordenação. Existem dois tipos de conjuntos de dados:  

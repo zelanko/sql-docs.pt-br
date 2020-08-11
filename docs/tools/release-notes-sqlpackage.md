@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262132"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353093"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas sobre a versão do SqlPackage.exe
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>sqlpackage 18.5.1
+
+|Plataforma|Baixar|Data de liberação|Versão|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2134206)|24 de junho de 2020|18.5.1|15.0.4826.1|
+|.NET Core para macOS |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2134312)|24 de junho de 2020| 18.5.1|15.0.4826.1|
+|.NET Core para Linux |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2134311)|24 de junho de 2020| 18.5.1|15.0.4826.1|
+|.NET Core para Windows |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2134310)|24 de junho de 2020| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>Correções
+| Recurso | Detalhes |
+| :------ | :------ |
+| Implantação | Correção de uma regressão que foi introduzida na versão 18.5, fazendo com que houvesse um erro "Sintaxe incorreta próxima de 'type '" ao implantar um dacpac ou importar um bacpac com um usuário com logon externo no ambiente local | 
+
 ## <a name="185-sqlpackage"></a>sqlpackage 18.5
 
 |Plataforma|Baixar|Data de liberação|Versão|Build
@@ -51,7 +66,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Implantação | Adicionar suporte do SQL Data Warehouse do Azure para índice columnstore clusterizado ordenado |
 | Implantação | Adicionar suporte para Fonte de Dados Externa (para Oracle, Teradata, MongoDB/CosmosDB, ODBC, Cluster de Big Data) e Tabela Externa para o Cluster de Big Data do SQL Server 2019 |
 | Implantação | Adicionar Instância do Banco de Dados SQL no Edge como edição com suporte |
-| Implantação | Suporte a nomes de servidor da Instância Gerenciada no formato '\<server>.\<dnszone>.database.windows.net' |
+| Implantação | Suporte a nomes de servidor da Instância Gerenciada no formato "\<server>.\<dnszone>.database.windows.net" |
 | Implantação | Adicionar suporte para comando de cópia no SQL Data Warehouse do Azure |
 | Implantação | Adicionar a opção de implantação 'IgnoreTablePartitionOptions' durante a publicação para evitar a recriação de tabela quando houver alteração na função de partição na tabela para o SQL Data Warehouse do Azure |
 | .NET Core | Adicionar suporte para Microsoft.Data.SqlClient na versão do .NET Core do sqlpackage |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correções
 | Fix | Detalhes |
 | :-- | :------ |
-| Implantação | Corrigir o dacpac de publicação de um banco de dados que contém um usuário externo que lançava um erro de "Referência de objeto não definida para uma instância de um objeto". |
 | Implantação | Corrigir a análise do caminho JSON como expressão |
 | Implantação | Corrigir a geração de instruções GRANT para as permissões AlterAnyDatabaseScopedConfiguration e AlterAnySensitivityClassification |
 | Implantação | A permissão Corrigir Script Externo não era reconhecida |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | Corrigir o bug de ScriptDom em que ele não reconhecia as restrições embutidas definidas após um índice embutido |
 | ScriptDom | Corrigir o parêntese de fechamento ausente em SYSTEM_TIME de ScriptDom quando em uma instrução de lote |
 | Always Encrypted | Corrigir a tabela #tmpErrors, em que o descarte falhava se o sqlpackage se reconectasse e a tabela temporária já tivesse sido desativada, pois a tabela temporária desaparece quando a conexão é eliminada |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+| Recurso | Detalhes |
+| :------ | :------ |
+| Implantação |  Uma regressão foi introduzida na versão 18.5, fazendo com que houvesse um erro "Sintaxe incorreta próxima de 'type '" ao implantar um dacpac ou importar um bacpac com um usuário com logon externo no ambiente local. A solução alternativa é usar o sqlpackage 18.4 e o problema será corrigido na próxima versão do sqlpackage. | 
+| .NET Core | A importação de bacpacs com Classificação de Confidencialidade falha com "Erro fatal de conexão interna" devido a esse [problema conhecido](https://github.com/dotnet/SqlClient/issues/559) no Microsoft.Data.SqlClient. Isso será corrigido na próxima versão do sqlpackage. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1

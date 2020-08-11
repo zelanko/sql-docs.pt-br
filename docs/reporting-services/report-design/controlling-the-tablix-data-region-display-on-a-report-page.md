@@ -1,5 +1,6 @@
 ---
 title: Controlando a exibição da região de dados Tablix em uma página de relatório | Microsoft Docs
+description: Saiba mais sobre as propriedades que permitem que você altere o modo como um relatório paginado aparece quando você exibe uma região de dados de tabela, matriz e lista no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95ee59f09fd839460c6635600ceb9c00905e6357
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581523"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255299"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controlando a exibição da região de dados Tablix em uma página do relatório
 Leia sobre as propriedades que você poderá definir em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para uma região de dados de tabela, matriz ou lista a fim de alterar sua aparência quando você vir o relatório.  

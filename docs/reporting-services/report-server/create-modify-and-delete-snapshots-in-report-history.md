@@ -1,5 +1,6 @@
 ---
 title: Criar, modificar e excluir instantâneos no histórico de relatórios | Microsoft Docs
+description: Saiba como manter o histórico de relatórios no Reporting Services adicionando e excluindo instantâneos ou modificando propriedades que afetam o armazenamento do histórico de relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72486193f4171be9fdce9400328bd1c2a199f2c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c686ff203b9a080424fb46e50c42a6edefd7655
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580473"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548028"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Criar, modificar e excluir instantâneos no histórico de relatório
   O histórico de relatórios é uma coleção de instantâneos de relatório. Você pode manter o histórico de relatórios adicionando e excluindo instantâneos ou modificando propriedades que afetam o armazenamento do histórico de relatórios. O histórico de relatórios pode ser criado manualmente ou em uma agenda.  

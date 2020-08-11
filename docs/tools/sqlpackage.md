@@ -1,5 +1,6 @@
 ---
 title: SqlPackage.exe
+description: Saiba como automatizar tarefas de desenvolvimento de banco de dados com SqlPackage.exe. Veja exemplos e parâmetros, propriedades e variáveis SQLCMD disponíveis.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303137"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441253"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -269,7 +270,7 @@ Uma ação de exportação SqlPackage.exe exporta um banco de dados ativo do SQL
   
 ### <a name="help-for-export-action"></a>Ajuda para a ação Exportar
 
-|Parâmetro|Forma abreviada|Valor|Descrição|
+|Parâmetro|Forma abreviada|Valor|DESCRIÇÃO|
 |---|---|---|---|
 |**/Action:**|**/a**|Exportação|Especifica a ação a ser executada. |
 |**/AccessToken:**|**/at**|{string}| Especifica o token de acesso da autenticação com base em token a ser utilizado quando se conectar ao banco de dados de destino. |

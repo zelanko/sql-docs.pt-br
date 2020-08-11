@@ -1,5 +1,6 @@
 ---
 title: Regiões de dados e mapas (Construtor de Relatórios) | Microsoft Docs
+description: Explore os tipos e as características das regiões de dados e mapas para criar a exibição de seus conjuntos de dados de relatório no Construtor de Relatórios.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5cdc8e2cb16b4a73122ffbdc60a845a3b258a108
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad7082d259b4e8da970083e880aa664fbbe71c21
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080544"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012624"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Regiões de dados e mapas (Construtor de Relatórios e SSRS)
   Uma região de dados é um relatório que exibe dados de um conjunto de dados do relatório. Os dados do relatório podem ser exibidos como números e texto em uma tabela, matriz ou lista; graficamente em um gráfico ou medidor; e sobre um plano de fundo geográfico em um mapa. Tabelas, matrizes e listas se baseiam na região de dados *tablix* , que se expande conforme o necessário para exibir todos os dados do conjunto de dados. Uma região de dados tablix oferece suporte a vários grupos de linhas e colunas e a linhas, bem como colunas estáticas e dinâmicas. Um gráfico exibe vários grupos de categorias e séries em diversos formatos de gráfico. Um medidor exibe um único valor ou um valor agregado para um conjunto de dados. Um mapa exibe dados espaciais como elementos do mapa cuja aparência pode variar com base nos dados agregados de um conjunto de dados.  

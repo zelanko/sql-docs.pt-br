@@ -1,5 +1,6 @@
 ---
 title: Renomear um computador do servidor de relatório | Microsoft Docs
+description: Saiba como reconfigurar um servidor de relatório depois de uma alteração no nome do computador. O SQL Server Reporting Services talvez não esteja acessível após uma alteração no nome do computador.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67314051"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544518"
 ---
 # <a name="rename-a-report-server-computer"></a>Renomear um computador de servidor de relatório
   A renomeação de um computador provoca uma alteração de nome correspondente para o servidor Web e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (se estiver no mesmo computador). Em alguns casos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] talvez não possa ser acessado após uma alteração de nome do computador. Use as etapas fornecidas neste artigo para reconfigurar um servidor de relatório depois de uma alteração de nome do computador.  

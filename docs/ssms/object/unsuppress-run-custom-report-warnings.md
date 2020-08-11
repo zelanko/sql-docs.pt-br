@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7df3354d78d9736f08e412e6da5e200b9ad41858
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df96d2b9b4f141fb84e373979d122fec62b5c9b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243498"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001840"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Cancelar supressão da execução de avisos de relatório personalizado
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Há duas caixas de diálogo de aviso para relatórios personalizados. Este tópico descreve como cancelar a supressão da exibição dessas caixas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Por padrão, a caixa de diálogo **Executar Relatórios Personalizados** aparece antes da execução de um relatório personalizado. Se você marcar a caixa de seleção **Não mostrar este aviso novamente** , a caixa de diálogo não aparecerá mais. Além disso, por padrão, a caixa de diálogo **Executar Relatórios Personalizados** aparece quando você abre um relatório personalizado e, em seguida, clica em um link para abrir outro relatório personalizado. Essa caixa de diálogo exibe o caminho de preenchimento para o arquivo de relatório detalhado personalizado. Se você marcar a caixa de seleção **Não mostrar este aviso novamente** , a caixa de diálogo não aparecerá mais.  
@@ -29,21 +29,21 @@ Por padrão, a caixa de diálogo **Executar Relatórios Personalizados** aparece
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Para cancelar a supressão da caixa de diálogo de aviso do relatório personalizado principal  
   
-1.  Conecte-se a \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
+1.  Conecte-se a \<*Server*>\\<*Compartilhar*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
   
 2.  Clique com o botão direito do mouse em **reports.xml**e clique em **Editar**.  
   
-3.  Mude **<SuppressWarning>true\<\/SuppressWarning> para <SuppressWarning>false\<\/SuppressWarning>** .  
+3.  Altere **<SuppressWarning>true\<\/SuppressWarning> para <SuppressWarning>false\<\/SuppressWarning>** .  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Para cancelar a supressão da caixa de diálogo de aviso do relatório detalhado personalizado  
   
-1.  Conecte-se a \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
+1.  Conecte-se a \<*Server*>\\<*Compartilhar*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
   
 2.  Clique com o botão direito do mouse em **reports.xml**e clique em **Editar**.  
   
-3.  Mude **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> para <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** .  
+3.  Altere **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>para <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** .  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

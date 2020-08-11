@@ -1,5 +1,6 @@
 ---
-title: Requisitos do sistema (ODBC Driver for SQL Server) | Microsoft Docs
+title: Requisitos do sistema (ODBC Driver for SQL Server)
+description: Este artigo lista os requisitos do sistema do ODBC Driver para sistemas operacionais SQL Server em Linux e macOS.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921175"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391741"
 ---
-# <a name="system-requirements"></a>Requisitos do Sistema
+# <a name="system-requirements-linux-and-macos"></a>Requisitos do sistema (Linux e macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -33,7 +34,7 @@ A compatibilidade de versão do SQL dos drivers do Linux e do macOS é igual à 
 
 ## <a name="operating-system-support"></a>Suporte do sistema operacional
 
-As versões 17, 13,1 e 13 dos drivers Linux e macOS são compatíveis com as versões de 64 bits dos seguintes sistemas operacionais:
+As versões 17, 13.1 e 13 dos drivers Linux e macOS são compatíveis com a arquitetura x64 dos seguintes sistemas operacionais:
 
 |Sistema operacional com suporte     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|
@@ -66,7 +67,7 @@ Os pacotes de instalação para o [!INCLUDE[msCoName](../../../includes/msconame
   
 * Gerenciador de Driver UnixODBC 2.3.0 64 bits, compilado para SQLLEN/SQLULEN 64 bits. Não há suporte para versões posteriores do Gerenciador de Driver UnixODBC de 64 bits com o driver ODBC no Linux. Consulte [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) para obter mais informações.  
   
-* O driver ODBC para **Red Hat Enterprise Linux 5 (64 bits)** exige os seguintes pacotes e pode ser baixado aqui: [Microsoft ODBC Driver 11 para SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* O driver ODBC para **Red Hat Enterprise Linux 5 (64 bits)** requer os seguintes pacotes e pode ser baixado em [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -74,7 +75,7 @@ Os pacotes de instalação para o [!INCLUDE[msCoName](../../../includes/msconame
   * `krb5-libs`  
   * `openssl`  
   
-* O driver ODBC para **Red Hat Enterprise Linux 6 (64 bits)** exige os seguintes pacotes e pode ser baixado aqui: [Microsoft ODBC Driver 11 para SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* O driver ODBC para **Red Hat Enterprise Linux 6 (64 bits)** requer os seguintes pacotes e pode ser baixado em [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -82,7 +83,7 @@ Os pacotes de instalação para o [!INCLUDE[msCoName](../../../includes/msconame
   * `krb5-libs`  
   * `openssl`  
   
-* O driver ODBC para **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)** exige os seguintes pacotes e pode ser baixado aqui: [Versão prévia do Microsoft ODBC Driver 11 para SQL Server – SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+* O driver ODBC para **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)** requer os seguintes pacotes e pode ser baixado em [Versão prévia do Microsoft ODBC Driver 11 for SQL Server – SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

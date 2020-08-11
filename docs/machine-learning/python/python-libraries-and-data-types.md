@@ -2,22 +2,22 @@
 title: Converter tipos de dados do Python e do SQL
 description: Examine as conversões implícita e explícita de tipo de dados entre o Python e SQL Server em soluções de ciência de dados e de aprendizado de máquina.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.technology: machine-learning-services
+ms.date: 06/30/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f22f838bc78d4791e73a1d107cd253aae314d205
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2efa4bc739dcf39cd10672d81ebf66eceb6ecbb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671119"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Mapeamentos de tipo de dados entre o Python e o SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Para soluções do Python executadas no recurso de integração do Python nos Serviços de Machine Learning do SQL Server, examine a lista de tipos de dados não compatíveis e as conversões de tipo de dados que podem ser executadas implicitamente quando os dados são passados entre o Python e o SQL Server.
 
@@ -33,20 +33,24 @@ O Python dá suporte a um número limitado de tipos de dados em comparação com
 
 Esta tabela lista as conversões implícitas que são fornecidas. Nenhum outro tipo de dados é compatível.
 
-|SQLtype|Tipo do Python|
-|-------|-----------|
-|**bigint**|`numeric`|
-|**binary**|`raw`|
+|SQLtype|Tipo do Python|Descrição
+|-------|-----------|---------------------------------------------------------------------------------------------|
+|**bigint**|`float64`|
+|**binary**|`bytes`|
 |**bit**|`bool`|
 |**char**|`str`|
+|**date**|`datetime`|
+|**datetime**|`datetime`|Compatível com o SQL Server 2017 CU6 e versões superiores (com matrizes **NumPy** do tipo `datetime.datetime` ou **Pandas** `pandas.Timestamp`). O `sp_execute_external_script` agora é compatível com tipos `datetime` com segundos fracionários.|
 |**float**|`float64`|
 |**int**|`int32`|
 |**nchar**|`str`|
 |**nvarchar**|`str`|
 |**nvarchar(max)**|`str`|
-|**real**|`float32`|
-|**smallint**|`int16`|
-|**tinyint**|`uint8`|
+|**real**|`float64`|
+|**smalldatetime**|`datetime`|
+|**smallint**|`int32`|
+|**tinyint**|`int32`|
+|**uniqueidentifier**|`str`|
 |**varbinary**|`bytes`|
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|

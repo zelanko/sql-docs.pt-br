@@ -1,5 +1,6 @@
 ---
 title: uso do Orientador de Otimização do Mecanismo de Banco de Dados
+description: Saiba mais sobre como a GUI do Orientador de Otimização do Mecanismo de Banco de Dados do SQL Server ajusta bancos de dados, gerencia sessões de ajuste e exibe recomendações de ajuste.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: performance
@@ -9,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 385171c8465a06595a65c02ff457d003ce723a7f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285740"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458682"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: uso do Orientador de Otimização do Mecanismo de Banco de Dados
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O Orientador de Otimização do Mecanismo de Banco de Dados permite gerenciar sessões de ajuste e exibir recomendações de ajuste. Usuários com conhecimento avançado de estruturas de design físico podem usar essa ferramenta para executar a análise exploratória de ajuste de banco de dados. Os iniciantes em ajuste de banco de dados também podem usar a ferramenta para encontrar a melhor configuração de estruturas de design físico para as cargas de trabalho que forem ajustar. Esta lição oferece a base prática para administradores de banco de dados que são novos usuários da interface gráfica do Orientador de Otimização do Mecanismo de Banco de Dados e para administradores de sistema que podem não ter conhecimento extenso de estruturas de design físico.  
 

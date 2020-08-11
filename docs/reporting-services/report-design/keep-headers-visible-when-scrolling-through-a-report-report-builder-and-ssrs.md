@@ -1,5 +1,6 @@
 ---
 title: Manter os cabeçalhos visíveis ao rolar por um relatório (Construtor de Relatórios) | Microsoft Docs
+description: Congele os títulos de linha ou coluna para impedir que os rótulos de linha e coluna rolem para fora da exibição após a renderização de um relatório no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b727fcffec668fbe854222eeabab6263b82e81cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081987"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255483"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Manter os cabeçalhos visíveis ao rolar por um relatório (Construtor de Relatórios e SSRS)
   Para impedir que os rótulos de linha e coluna rolem para fora da exibição depois da renderização de um relatório, você pode congelar os títulos de linha ou coluna.  

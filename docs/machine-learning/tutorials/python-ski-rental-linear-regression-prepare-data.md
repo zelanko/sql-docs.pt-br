@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: Na parte dois desta série de tutoriais de quatro partes, você usará o Python para preparar dados a fim de prever aluguéis de esqui com o aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 424d61e24e9cd1163854d86961a34770eee36260
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730480"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Tutorial do Python: Preparar dados para treinar um modelo de regressão linear com o aprendizado de máquina do SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de regressão linear em Python com os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
@@ -26,11 +26,14 @@ Na parte dois desta série de tutoriais de quatro partes, você preparará os da
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de regressão linear em Python com os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de regressão linear em Python com os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
+::: moniker-end
 
 Neste artigo, você aprenderá a:
 
 > [!div class="checklist"]
-> * Carregar os dados do banco de dados do SQL Server em uma estrutura de dados do **Pandas**
+> * Carregar os dados do banco de dados em uma estrutura do **Pandas**
 > * Preparar os dados no Python removendo algumas colunas
 
 Na [parte um](python-ski-rental-linear-regression.md), você aprendeu a restaurar o banco de dados de exemplo.
@@ -47,7 +50,7 @@ Na [parte quatro](python-ski-rental-linear-regression-deploy-model.md), você ap
 
 Para usar os dados no Python, você os carregará do banco de dados em uma estrutura do Pandas.
 
-Crie um notebook do Python no Azure Data Studio e execute o script abaixo. Substitua `<SQL Server>` pelo seu próprio nome do SQL Server.
+Crie um notebook do Python no Azure Data Studio e execute o script abaixo. 
 
 O script Python abaixo importa o conjunto de dados da tabela **dbo.rental_data** em seu banco de dados para uma estrutura de dados **df** do Pandas.
 
@@ -60,7 +63,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 

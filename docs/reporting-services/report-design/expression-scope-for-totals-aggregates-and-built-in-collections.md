@@ -1,5 +1,6 @@
 ---
 title: Escopo das expressões para totais, agregações e coleções internas | Microsoft Docs
+description: Descubra a variedade de significados para o escopo em expressões para totais, agregações e coleções internas em relatórios no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 453d5d9e960ead988e4c7f57adc48e2de69b25a1
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579821"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681305"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Escopo das expressões para totais, agregações e coleções internas
   Quando você escrever expressões, descobrirá que o termo *escopo* é usado em vários contextos. O escopo pode especificar os dados a serem usados para avaliar uma expressão, o conjunto de caixas de texto em uma página renderizada, o conjunto de itens de relatório que podem ser mostrados ou ocultados com base em uma alternância. Você verá o termo *escopo* em tópicos relacionados a avaliações de expressão, sintaxe de função de agregação, visibilidade condicional e também em mensagens de erro relacionadas a estas áreas. Use as descrições a seguir para diferenciar qual significado de *escopo* se aplica:  
@@ -148,7 +149,7 @@ ms.locfileid: "65579821"
   
   
 ##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Especificando uma expressão de classificação para sincronizar a ordem de classificação  
- Ao adicionar um botão de classificação interativo a uma coluna de tabela, você pode sincronizar a classificação para vários itens que têm um escopo de conteúdo comum. Por exemplo, você pode adicionar um botão de classificação a um cabeçalho de coluna em uma matriz e especificar o escopo de conteúdo como o nome do conjunto de dados que é associado à matriz. Quando um usuário clicar no botão de classificação, não somente as linhas da matriz serão classificadas, mas também os grupos de série de gráficos que são associados ao mesmo conjunto de dados. Deste modo, todas as regiões de dados que dependem daquele conjunto de dados podem ser sincronizadas para apresentar a mesma ordem de classificação.  
+ Ao adicionar um botão de classificação interativo a uma coluna de tabela, você pode sincronizar a classificação para vários itens que têm um escopo de conteúdo comum. Por exemplo, você pode adicionar um botão de classificação a um cabeçalho de coluna em uma matriz e especificar o escopo de conteúdo como o nome do conjunto de dados que é associado à matriz. Quando um usuário clicar no botão de classificação, não somente as linhas da matriz serão classificadas, mas também os grupos de série de gráficos associados ao mesmo conjunto de dados. Deste modo, todas as regiões de dados que dependem daquele conjunto de dados podem ser sincronizadas para apresentar a mesma ordem de classificação.  
   
  Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   

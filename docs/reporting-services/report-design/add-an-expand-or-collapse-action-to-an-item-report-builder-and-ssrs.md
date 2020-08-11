@@ -1,6 +1,6 @@
 ---
 title: Adicionar uma ação de expandir ou recolher (Construtor de Relatórios e SSRS) | Microsoft Docs
-description: É possível habilitar um usuário para expandir ou recolher itens de maneira interativa em um relatório paginado. Ou para expandir ou recolher linhas e colunas associadas a um grupo para uma tabela ou matriz.
+description: Permita que um usuário expanda ou recolha itens, linhas e colunas associados a um grupo para uma tabela ou matriz em um relatório no Construtor de Relatórios.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78d67f7d34bd2e146f7f625c1fd8ddb538b3b3eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242546"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681295"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)
   É possível habilitar um usuário para expandir ou recolher itens de maneira interativa em um relatório paginado. Ou para expandir ou recolher linhas e colunas associadas a um grupo para uma tabela ou matriz. Para permitir que os usuários expandam ou recolham um item, defina as propriedades de visibilidade do item. A definição de trabalhos de visibilidade em um visualizador de relatórios HTML às vezes é chamada de uma ação de *detalhamento* .  
@@ -49,7 +49,7 @@ ms.locfileid: "75242546"
   
     -   Selecione **True** para ocultar o item de relatório.  
   
-    -   Selecione **\<Expression>** para abrir a caixa de diálogo **Expressão** para criar uma expressão que é avaliada em tempo de execução para determinar a visibilidade.  
+    -   Selecione **\<Expression>** para abrir a caixa de diálogo **Expressão** para criar uma expressão que seja avaliada em tempo de execução para determinar a visibilidade.  
   
 5.  Em **ToggleItem**, na caixa suspensa, selecione o nome de uma caixa de texto à qual adicionar a imagem de alternância.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75242546"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para adicionar uma ação de expansão e recolhimento a um item de relatório  
   
-1.  No modo de exibição de Design de relatório, clique com o botão direito do mouse no item de relatório para mostrar ou ocultar. Em seguida, clique em *\<item de relatório >* **Propriedades**. A caixa de diálogo *\<item de relatório>* **Propriedades** para o item de relatório abrirá.  
+1.  No modo de exibição de Design do relatório, clique com o botão direito do mouse no item de relatório a ser mostrado ou ocultado e clique em *\<report item>* **Propriedades**. A caixa de diálogo *\<report item>* **Propriedades** para o item de relatório é aberta.  
   
 2.  Clique em **Visibilidade**.  
   

@@ -1,6 +1,7 @@
 ---
 title: Definir opções de rastreamento globais
 titleSuffix: SQL Server Profiler
+description: Saiba como definir opções de rastreamento globais e leia sobre as opções que uma instância específica do SQL Server Profiler pode aplicar a todos os rastreamentos.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 65f9f3c32da239c7ae6f41dfbe74b7ee8bb9ce41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726860"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Definir opções de rastreamento globais (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tópico descreve como definir opções que se aplicam a todos os rastreamentos criados com uma instância específica do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -46,7 +47,7 @@ Este tópico descreve como definir opções que se aplicam a todos os rastreamen
   
     -   **Número padrão de threads de reprodução** controla o número de threads de processador a ser usado durante a reprodução. Um número maior de threads faz com que a repetição se conclua mais rápido, mas degrada o desempenho do servidor durante a repetição. A configuração recomendada é **4**. A tabela a seguir lista as opções disponíveis:  
   
-        |Valor|DESCRIÇÃO|  
+        |Valor|Descrição|  
         |-----------|-----------------|  
         |**2**|Valor mínimo. Usar dois threads na repetição.|  
         |**4**|Valor padrão.|  
@@ -62,7 +63,7 @@ Este tópico descreve como definir opções que se aplicam a todos os rastreamen
   
     -   **Intervalo de sondagem padrão do monitor de integridade (s)** define a frequência de sondagem dos threads de reprodução para processos de bloqueio. A tabela a seguir explica os valores.  
   
-        |Valor|DESCRIÇÃO|  
+        |Valor|Descrição|  
         |-----------|-----------------|  
         |**1**|Valor mínimo. Uma configuração **1** significa que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sondará processos de bloqueio uma vez a cada segundo.|  
         |**60**|Valor padrão. Sondar processos de bloqueio uma vez por minuto.|  

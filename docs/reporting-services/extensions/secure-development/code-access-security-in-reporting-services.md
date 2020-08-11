@@ -1,5 +1,6 @@
 ---
 title: Segurança de acesso do código no Reporting Services | Microsoft Docs
+description: Saiba mais sobre a segurança de acesso do código no Reporting Services. Saiba como as evidências, os grupos de códigos e os conjuntos de permissões nomeadas são fatorados em uma política de segurança.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d629f820dfa2efd87e6460c1c85566e7b33cde8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b17b8c6e3506d31e7576c2e0f5f155a9da597c7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193824"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529392"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Segurança de acesso do código no Reporting Services
   A segurança de acesso do código gira em torno desses conceitos centrais: evidência, grupos de código e conjuntos de permissões nomeadas. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], os componentes Gerenciador de Relatórios, Desingner de Relatórios e Servidor de Relatório têm um arquivo de política que configura a segurança de acesso do código para assemblies personalizados, bem como para extensões de dados, entrega, renderização e segurança. As seções a seguir fornecem uma visão geral da segurança de acesso do código. Para obter informações mais detalhadas sobre os tópicos abordados nesta seção, confira “Modelo de Política de Segurança” na documentação do SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

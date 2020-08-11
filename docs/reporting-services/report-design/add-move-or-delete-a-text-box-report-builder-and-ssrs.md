@@ -1,5 +1,6 @@
 ---
 title: Adicionar, mover ou excluir uma caixa de texto (Construtor de Relatórios) | Microsoft Docs
+description: Adicione uma caixa de texto ao corpo do relatório para exibir informações como títulos, opções de parâmetro, campos internos e datas no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bf0a50378979312991cf7cd149d838f4cbe2a3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2bb2436b448dc06fa68d4df98dfbc4e4ffd200
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081603"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462218"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Adicionar, mover ou excluir uma caixa de texto (Construtor de Relatórios e SSRS)
   As caixas de texto constituem o item de relatório mais utilizado em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Você pode adicionar uma caixa de texto ao corpo do relatório para exibir informações como títulos, opções de parâmetro, campos internos e datas.  

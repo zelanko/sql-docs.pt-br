@@ -1,5 +1,6 @@
 ---
 title: Especificar uma escala logarítmica (Construtor de Relatórios) | Microsoft Docs
+description: Aprimore a aparência do seu gráfico tornando seus dados mais gerenciáveis com uma escala logarítmica em um gráfico em um relatório paginado.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80ddb9e21a3bd61cf9f994cce3d5722ae5fcf3f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9525e71bf388b6a9265be3a101c03db65c622084
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080932"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688836"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>Especificar uma escala logarítmica (Construtor de Relatórios e SSRS)
   Se você tem dados que são logaritmicamente proporcionais, é recomendável usar uma escala logarítmica em um gráfico em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Isso ajuda a melhorar a aparência do gráfico tornando seus dados mais gerenciáveis. A maioria das escalas logarítmicas usa uma base de 10.  

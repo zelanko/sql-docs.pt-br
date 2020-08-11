@@ -1,47 +1,47 @@
 ---
 title: Funções auxiliares de sqlrutils
-description: Use a biblioteca de funções sqlrutils no SQL Server 2016 R Services e nos Serviços de Machine Learning do SQL Server com R para gerar procedimentos armazenados que contenham o script de R.
+description: O sqlrutils é um pacote de R da Microsoft que fornece um mecanismo para que os usuários de R coloquem seus scripts de R em um procedimento armazenado T-SQL, registrem esse procedimento armazenado em um banco de dados e executem o procedimento armazenado em um ambiente de desenvolvimento de R. O pacote está incluído nos Serviços de Machine Learning do SQL Server e no SQL Server 2016 R Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/15/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7c989ad848324536122c042e2b5a823b16b72657
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117389"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406139"
 ---
-# <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (biblioteca de R no SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (pacote de R nos Serviços de Machine Learning do SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-O pacote **sqlrutils** fornece um mecanismo para que os usuários de R coloquem seus scripts de R em um procedimento armazenado T-SQL, registrem esse procedimento armazenado em um banco de dados, e executem o procedimento armazenado em um ambiente de desenvolvimento de R. 
+O **sqlrutils** é um pacote de R da Microsoft que fornece um mecanismo para que os usuários de R coloquem seus scripts de R em um procedimento armazenado T-SQL, registrem esse procedimento armazenado em um banco de dados e executem o procedimento armazenado em um ambiente de desenvolvimento de R. O pacote está incluído nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) e no [SQL Server 2016 R Services](sql-server-r-services.md).
 
 Ao converter o código R para executar dentro de um único procedimento armazenado, você pode fazer um uso mais eficaz dos serviços de R do SQL Server, o que exige que o script de R seja inserido como um parâmetro de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). O pacote **sqlrutils** ajuda a criar esse script de R incorporado e definir os parâmetros relacionados de maneira apropriada.
 
 O pacote **sqlrutils** executa essas tarefas:
 
 - Salva o script T-SQL gerado como uma cadeia de caracteres dentro de uma estrutura de dados de R
-- Opcionalmente, gera um arquivo .sql para o script T-SQL, que você pode editar ou executar para criar um procedimento armazenado
+- Opcionalmente, gere um arquivo .sql para o script T-SQL, que você pode editar ou executar para criar um procedimento armazenado
 - Registra o procedimento armazenado criado recentemente na instância do SQL Server do seu ambiente de desenvolvimento de R
 
 Você também pode executar o procedimento armazenado em um ambiente de R, transmitindo parâmetros bem formados e processando os resultados. Ou, você pode usar o procedimento armazenado do SQL Server para oferecer suporte a cenários comuns de integração de banco de dados, como ETL, treinamento de modelo e pontuação de alto volume.
 
-  > [!NOTE]
-  > Se você pretende executar o procedimento armazenado em um ambiente de R chamando a função *executeStoredProcedure* , você deve usar um provedor ODBC 3.8, como o ODBC Driver 13 para SQL Server.  
+> [!NOTE]
+> Se você pretende executar o procedimento armazenado em um ambiente de R chamando a função *executeStoredProcedure* , você deve usar um provedor ODBC 3.8, como o ODBC Driver 13 para SQL Server.  
   
 ## <a name="full-reference-documentation"></a>Documentação de referência completa
 
-A biblioteca **sqlrutils** é distribuída em vários produtos da Microsoft, mas o uso é o mesmo com a biblioteca no SQL Server ou em outro produto. Como as funções são as mesmas, a [documentação para funções individuais do sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) é publicada em apenas uma localização sob a [referência de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para o Microsoft Machine Learning Server. Se existirem comportamentos específicos do produto, as discrepâncias serão indicadas na página de ajuda da função.
+O pacote **sqlrutils** é distribuído em vários produtos da Microsoft, mas o uso é o mesmo com o pacote no SQL Server ou em outro produto. Como as funções são as mesmas, a [documentação para funções individuais do sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) é publicada em apenas uma localização sob a [referência de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para o Microsoft Machine Learning Server. Se existirem comportamentos específicos do produto, as discrepâncias serão indicadas na página de ajuda da função.
 
 ## <a name="functions-list"></a>Lista de funções
 
 A seção a seguir fornece uma visão geral das funções que você pode chamar do pacote **sqlrutils** para desenvolver um procedimento armazenado contendo o código R inserido. Para obter detalhes sobre os parâmetros para cada função ou método, confira a Ajuda do R para o pacote: `help(package="sqlrutils")`
 
-|Função | DESCRIÇÃO |
+|Função | Descrição |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Executar um procedimento armazenado do SQL.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Obter uma lista de parâmetros de entrada para o procedimento armazenado.| 
@@ -57,7 +57,7 @@ A seção a seguir fornece uma visão geral das funções que você pode chamar 
 
 ## <a name="how-to-use-sqlrutils"></a>Como usar o sqlrutils
 
-As funções de biblioteca **sqlrutils** devem ser executadas em um computador que tenha SQL Server Machine Learning com R. Se você estiver trabalhando em uma estação de trabalho cliente, defina um contexto de computação remota para alternar a execução para SQL Server. O fluxo de trabalho para usar esse pacote inclui as seguintes etapas:
+As funções do pacote **sqlrutils** devem ser executadas em um computador que tenha o SQL Server Machine Learning com R. Se você estiver trabalhando em uma estação de trabalho cliente, defina um contexto de computação remota para alternar a execução para o SQL Server. O fluxo de trabalho para usar esse pacote inclui as seguintes etapas:
 
 + Definir parâmetros de procedimento armazenado (entradas, saídas ou ambos) 
 + Gerar e registrar o procedimento armazenado    
@@ -66,7 +66,7 @@ As funções de biblioteca **sqlrutils** devem ser executadas em um computador q
 Em uma sessão de R, carregue **sqlrutils** da linha de comando digitando `library(sqlrutils)`.
 
 > [!Note]
-> Você poderá carregar essa biblioteca no computador que não tem SQL Server (por exemplo, em uma instância do Cliente R) se alterar o contexto de computação para SQL Server e executar o código nesse contexto de computação.
+> Você poderá carregar esse pacote em um computador que não tem o SQL Server (por exemplo, em uma instância do Cliente R) se alterar o contexto de computação para o SQL Server e executar o código nesse contexto de computação.
 
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>Definir parâmetros e entradas de procedimento armazenado

@@ -1,6 +1,7 @@
 ---
 title: Executar um rastreamento que está em pausa ou interrompido
 titleSuffix: SQL Server Profiler
+description: Saiba como iniciar novamente a captura de dados de evento depois que um rastreamento tiver sido colocado em pausa ou interrompido no SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 14a10f509d16bcd6d68a482e51d171ba2acb1423
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7596c622bd82bb109051439cbcde5ff72b9cb84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731916"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>Executar um rastreamento que foi pausado ou interrompido (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tópico descreve como reiniciar um rastreamento que foi pausado ou interrompido, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 

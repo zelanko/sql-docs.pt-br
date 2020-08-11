@@ -1,5 +1,6 @@
 ---
 title: Configurar um computador multihomed para acesso
+description: Saiba como configurar o SQL Server e o Firewall do Windows para fornecer conexões de rede a uma instância do SQL Server em um ambiente multihomed.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244458"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894902"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este artigo descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75244458"
   
 1.  Clique em **Iniciar**, escolha **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
-2.  Em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, no painel do console, expanda **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuração de Rede**, expanda **Protocolos para \<instance name>** e clique duas vezes em **TCP/IP**.  
+2.  No **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, no painel do console, expanda **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuração de Rede**, expanda **Protocolos para \<instance name>** e clique duas vezes em **TCP/IP**.  
   
 3.  Na caixa de diálogo **Propriedades de TCP/IP** , na guia **Endereços IP** , vários endereços IP aparecem no formato **IP1**, **IP2**, até **IPAll**. Um desses é para o endereço IP do adaptador de loopback, 127.0.0.1. Endereços IP adicionais aparecem para cada Endereço IP configurado no computador.  
   

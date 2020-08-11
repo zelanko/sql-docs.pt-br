@@ -2,7 +2,7 @@
 title: Compatibilidade de UTF-8 com OLE DB Driver para SQL Server| Microsoft Docs
 description: Suporte ao UTF-8 no OLE DB Driver para SQL Server
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,24 +10,28 @@ ms.topic: reference
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: c18870d1d252ba849e11ce0bd040bbce89bd5855
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d2074ea992872da02a781ef48f633cd8539c931f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928275"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85986413"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Suporte ao UTF-8 no OLE DB Driver para SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 O Microsoft OLE DB Driver para SQL Server (versão 18.2.1) inclui o suporte à codificação UTF-8 do servidor. Para saber mais sobre o suporte à UTF-8 no SQL Server, confira:
 - [Suporte a ordenações e a Unicode](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Suporte para UTF-8](#ctp23)
+- [Suporte para UTF-8](../../../relational-databases/collations/collation-and-unicode-support.md#utf8)
 
-> [!IMPORTANT]
-> O Driver do Microsoft OLE DB para SQL Server usa a função [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) para determinar a codificação do buffer de entrada DBTYPE_STR. Os cenários nos quais o GetACP retorna uma codificação UTF-8 não são compatíveis. Se o buffer precisar armazenar dados Unicode, o tipo de dados de buffer deverá ser definido como DBTYPE_WSTR (UTF-16 codificado).
+A versão 18.4.0 do driver adiciona suporte para a codificação de cliente UTF-8 (habilitada com a caixa de seleção "Usar Unicode UTF-8 para suporte de idioma mundial" nas Configurações de Região no Windows 10).
+
+> [!NOTE]  
+> O Driver do Microsoft OLE DB para SQL Server usa a função [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) para determinar a codificação do buffer de entrada DBTYPE_STR.
+>
+> Os cenários em que GetACP retorna uma codificação UTF-8 (habilitados com a caixa de seleção "Usar Unicode UTF-8 para suporte de idioma mundial" nas Configurações de Região no Windows 10) têm suporte começando com a versão 18.4. Em versões anteriores, se o buffer precisar armazenar dados Unicode, o tipo de dados de buffer deverá ser definido como *DBTYPE_WSTR* (codificado como UTF-16).
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserção de dados em uma coluna CHAR ou VARCHAR com codificação UTF-8
 Ao criar um buffer de parâmetro de entrada para inserção, o buffer é descrito usando uma matriz de [estruturas DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Cada estrutura DBBINDING tem associado um único parâmetro ao buffer do consumidor e contém informações como o comprimento e o tipo dos valores de dados. Para um buffer de parâmetro de entrada do tipo CHAR, o *wType* da estrutura DBBINDING deve ser definido como DBTYPE_STR. Para um buffer de parâmetro de entrada do tipo WCHAR, o *wType* da estrutura DBBINDING deve ser definido como DBTYPE_WSTR.
@@ -50,23 +54,11 @@ Para o indicador DBTYPE_STR de tipo de buffer resultante, o driver converte os d
 
 Para o indicador DBTYPE_WSTR de tipo de buffer resultante, o driver converte os dados codificados em UTF-8 para a codificação UTF-16.
 
-<a name="ctp23"></a>
+## <a name="communication-with-servers-that-dont-support-utf-8"></a>Comunicação com servidores sem suporte para UTF-8
+O Driver do Microsoft OLE DB para SQL Server garante que os dados sejam expostos ao servidor de maneira que o servidor possa entender. Ao inserir dados de clientes habilitados para UTF-8, o driver traduz as cadeias de caracteres codificadas em UTF-8 para a página de código de ordenação do banco de dados antes de enviá-las ao servidor.
 
-### <a name="utf-8-support-sql-server-2019-ctp-23"></a>Suporte a UTF-8 (SQL Server 2019 CTP 2.3)
-
-O [!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] apresenta suporte completo para a amplamente utilizada codificação de caracteres UTF-8 como codificação de importação ou exportação ou como ordenação em nível de coluna ou banco de dados ou nível para dados de texto. A UTF-8 é permitida nos tipos de dados `CHAR` e `VARCHAR` e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`.
-
-Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para ordenações do Windows com suporte para caracteres suplementares, conforme introduzida no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
-
-Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres ASCII (Latinas) de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 resulta em 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, enquanto `CHAR(10)` requer 10 bytes para a mesma cadeia de caracteres Unicode.
-
-Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../../relational-databases/collations/collation-and-unicode-support.md).
-
-O **CTP 2.1** adiciona suporte para selecionar a ordenação de UTF-8 como padrão durante a instalação do [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
-
-O **CTP 2.2** adiciona suporte para usar codificação de caracteres UTF-8 com replicação do SQL Server.
-
-O **CTP 2.3** adiciona suporte para usar codificação de caracteres UTF-8 com uma ordenação BIN2 (UTF8_BIN2).
+> [!NOTE]  
+> O uso da interface [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) para inserir dados codificados em UTF-8 em uma coluna de texto herdada só é limitado a servidores que dão suporte a UTF-8. Para ver os detalhes, confira [Blobs e Objetos OLE](../ole-db-blobs/blobs-and-ole-objects.md).
 
 ## <a name="see-also"></a>Consulte Também  
 [Recursos do Driver do OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 

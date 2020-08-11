@@ -1,5 +1,6 @@
 ---
 title: Relatórios em modo local vs. modo conectado no Visualizador de Relatórios | Microsoft Docs
+description: Os relatórios do SQL Server Reporting Services podem ser configurados para serem executados em modo local ou conectado. Conheça os diferentes modos.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be9653d66ef541ebf27cb31c8092b79c2e1bf612
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d21d06182f259451f53fed45ba77a5cbacbb382d
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579872"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83766983"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Relatórios em modo local vs. modo conectado no Visualizador de Relatórios
 
@@ -30,7 +31,7 @@ ms.locfileid: "65579872"
 
 ## <a name="local-mode-vs-connected-mode-and-supported-extensions"></a>Modo local vs modo conectado e extensões com suporte
 
- **Modo local:** quando você tem uma extensão de dados compatível com o modo local, o Visualizador de Relatórios renderiza diretamente os relatórios do SharePoint. No *modo local* , não há nenhum servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você deve instalar o suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint, mas nenhum servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é necessário. Com o modo local, os usuários podem exibir relatórios, mas **não** têm acesso aos recursos do lado do servidor, como assinaturas e alertas de dados.  
+ **Modo local:** quando você possui uma extensão de dados que dá suporte ao modo local, o Visualizador de Relatórios renderiza diretamente os relatórios a partir do SharePoint. No *modo local* , não há nenhum servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você deve instalar o suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint, mas nenhum servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é necessário. Com o modo local, os usuários podem exibir relatórios, mas **não** têm acesso aos recursos do lado do servidor, como assinaturas e alertas de dados.  
   
  **Modo conectado**, também chamado de *modo remoto* requer um servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint, conectado ao farm do SharePoint para que o controle do Visualizador de Relatórios possa renderizar relatórios.  
   

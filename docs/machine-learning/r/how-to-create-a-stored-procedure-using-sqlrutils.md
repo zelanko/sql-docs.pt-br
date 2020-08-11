@@ -1,23 +1,23 @@
 ---
-title: Criar um procedimento armazenado do R
+title: Criar uma função de código R em pacote usando o pacote sqlrutils
 description: Use o pacote sqlrutils do R no SQL Server para agrupar o código de linguagem R em uma única função que pode ser passada como um argumento para um procedimento armazenado.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f1a53e3b2c5d6481bea436d7a7b6d045653a9e7d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117639"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483865"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Criar um procedimento armazenado usando sqlrutils
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo descreve as etapas para converter seu código R para ser executado como um procedimento armazenado T-SQL. Para obter os melhores resultados possíveis, seu código poderá precisar ser um pouco modificado, para garantir que todas as entradas possam ser parametrizadas.
 

@@ -1,5 +1,6 @@
 ---
-title: Usar o pool de conexões | Microsoft Docs
+title: Como usar o pool de conexões
+description: Saiba como o Driver JDBC para SQL Server fornece interfaces em conformidade com JDBC para dar suporte ao pool de conexões em Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4551e5a058e03d7a45d2dd21d91821a628e1da3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3bcacec5f85150f7de437d936463a3b3807f9ef
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924026"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391742"
 ---
 # <a name="using-connection-pooling"></a>Como usar o pool de conexões
 
@@ -30,7 +31,7 @@ O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte 
 
 As classes para a implementação do pool de conexões são as seguintes.  
   
-| Classe                                                           | Implementa                                                    | DESCRIÇÃO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Classe                                                           | Implementa                                                    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc. SQLServerXADataSource             | javax.sql.ConnectionPoolDataSource and javax.sql.XADataSource | Nós recomendamos que você use a classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) para todas as suas necessidades de servidor Java EE, porque ela implementa todo o pool de JDBC 3.0 e todas as interfaces XA.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | com.microsoft.sqlserver.jdbc. SQLServerConnectionPoolDataSource | javax.sql.ConnectionPoolDataSource                            | Esta classe é uma fábrica de conexão que permite que o servidor de aplicativos Java EE popule seu pool de conexão com conexões físicas. Se a configuração de seu fornecedor Java EE exigir uma classe que implementa javax.sql.ConnectionPoolDataSource, especifique o nome de classe como [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md). Nós geralmente recomendamos que você use a classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md), porque ela implementa tanto pool quanto interfaces XA, além de ter sido verificada em mais configurações de servidor Java EE. |

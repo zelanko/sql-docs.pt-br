@@ -1,5 +1,6 @@
 ---
 title: Criar, modificar e excluir fontes de dados compartilhadas | Microsoft Docs
+description: Aprenda a gerenciar fontes de dados que podem ser referenciadas por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do Reporting Services.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 027ff3184e38b1d1848c6a42d2387cd9a8677dc3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812281"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
   Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  
@@ -30,10 +31,10 @@ ms.locfileid: "77081821"
   
  Uma fonte de dados compartilhada é composta pelas seguintes partes:  
   
-|Parte|DESCRIÇÃO|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |Nome|Um nome que identifica o item dentro da hierarquia de pastas do servidor de relatórios.|  
-|DESCRIÇÃO|Uma descrição exibida com o item no portal da Web quando você exibe o conteúdo da pasta.|  
+|Descrição|Uma descrição exibida com o item no portal da Web quando você exibe o conteúdo da pasta.|  
 |Tipo de conexão|A extensão de processamento de dados usada com a fonte de dados. Você só poderá usar extensões de processamento de dados que estiverem implantadas no servidor de relatórios. Para obter mais informações sobre as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Cadeia de conexão|A cadeia de conexão para o banco de dados. Para saber mais e ver exemplos de cadeias de conexão para fontes de dados usadas com frequência, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo de credencial|Especifica como as credenciais são obtidas para a conexão e se elas serão usadas depois que a conexão for estabelecida. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  

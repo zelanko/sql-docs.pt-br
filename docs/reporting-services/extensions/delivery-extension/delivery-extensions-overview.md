@@ -1,5 +1,6 @@
 ---
 title: Visão geral das extensões de entrega | Microsoft Docs
+description: Leia uma visão geral das extensões de entrega, que você pode usar para entregar relatórios do Reporting Services de várias maneiras, como por meio de email ou compartilhamento de arquivos.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1aca4a83bb117624fdfd5a090c9caab2ff4b7efd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193772"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529152"
 ---
 # <a name="delivery-extensions-overview"></a>Visão geral de extensões de entrega
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite que os usuários criem e publiquem relatórios que, uma vez criados e publicados, podem ser entregues em vários locais. Além disso, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega e uma API de entrega que permite que os desenvolvedores criem extensões de entrega adicionais para estender ainda mais a funcionalidade de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  A tabela a seguir lista as extensões de entrega incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extensão da entrega|DESCRIÇÃO|  
+|Extensão da entrega|Descrição|  
 |------------------------|-----------------|  
 |Email do servidor de relatório|Usa um servidor SMTP para enviar relatórios de email a usuários individuais ou a grupos.|  
 |Compartilhamento de arquivos do servidor de relatórios|Usado para distribuir relatórios em sua organização para o compartilhamentos de arquivos de rede. Oferece a capacidade de copiar um relatório automaticamente para um compartilhamento de arquivo em uma agenda designada.|  

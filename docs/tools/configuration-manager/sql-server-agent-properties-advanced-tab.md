@@ -1,5 +1,6 @@
 ---
 title: Propriedades do SQL Server Agent (guia Avançado)
+description: Saiba mais sobre as opções na guia Avançado na caixa de diálogo Propriedades do SQL Server Agent, como o diretório de despejo e a ID da instância.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb8af410d7be3def6f5ddcad84f80d33147ebe4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dff90c068883bc1bdb8af47febe85c53e46528f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306707"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900751"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Propriedades do SQL Server Agent (guia Avançado)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Por padrão, cinco propriedades são exibidas na guia **Avançado** . Se as propriedades personalizadas estiverem definidas, elas também aparecerão nessa guia com seus valores.  
   
 ## <a name="options"></a>Opções  

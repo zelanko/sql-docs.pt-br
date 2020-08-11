@@ -1,5 +1,6 @@
 ---
 title: Depurando o código de extensão de entrega | Microsoft Docs
+description: Saiba como usar as ferramentas de depuração do Microsoft .NET Framework para analisar o código de extensão de entrega e localizar erros nele.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e28243c1cb41a8c7a85ddbe381302a18d161f2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193747"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529122"
 ---
 # <a name="debugging-delivery-extension-code"></a>Depurando o código de extensão de entrega
   O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece várias ferramentas de depuração que podem ajudar você a analisar seu código de extensão de entrega e localizar erros nele. A ferramenta mais adequada dependerá do que você está tentando realizar. Este exemplo usa o [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  

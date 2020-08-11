@@ -1,5 +1,6 @@
 ---
 title: Armazenar credenciais em uma fonte de dados do Reporting Services | Microsoft Docs
+description: Saiba como configurar credenciais armazenadas para servidores de relatórios tanto no modo nativo quanto no modo do SharePoint.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0fd3f93cd38c562d5374ecfa65d52b082eef07b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891852"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458188"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
 
@@ -61,7 +62,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
 7.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados.**  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<conta\> e selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor do banco de dados oferecer suporte a representação ou delegação, é possível selecionar **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados**.  
   
@@ -89,7 +90,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
 7.  Digite um **nome de usuário** e uma **senha**.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados.**  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<conta\> e selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
   
     -   Se o nome de usuário e a senha forem credenciais de banco de dados, não selecione **Usar como credenciais do Windows**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   
@@ -115,7 +116,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
 5.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados.**  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<conta\> e selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor do banco de dados oferecer suporte a representação ou delegação, é possível selecionar **Representar o usuário autenticado depois que uma conexão é estabelecida com a fonte de dados**.  
   
@@ -143,7 +144,7 @@ Você pode configurar credenciais armazenadas usadas por um servidor de relatór
   
 6.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a no formato \<domain>\\<account\> e, em seguida, selecione **Usar as credenciais do Windows.**  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<conta\> e selecione **Usar as credenciais do Windows.**  
   
     -   Se o nome de usuário e a senha forem credenciais de banco de dados, não selecione **Usar como credenciais do Windows**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   

@@ -1,5 +1,6 @@
 ---
 title: Como formatar números e datas (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como formatar números e datas em regiões de dados do Construtor de Relatórios selecionando um formato na página Número da caixa de diálogo Propriedades da região de dados.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db780abef8f2d0078ce398e2ab0d30f29ac82a6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 81a6c4e397ffba96af45a59a3ab26edaafeb05f4
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079825"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255479"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatando números e datas (Construtor de Relatórios e SSRS)
   Você pode formatar números e datas em regiões de dados selecionando um formato na página **Número** da caixa de diálogo **Propriedades** da região de dados correspondentes.  

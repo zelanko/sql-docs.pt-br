@@ -1,6 +1,6 @@
 ---
 title: 'Relatórios móveis do SQL Server: Passo a passo completo'
-description: Acompanhe a criação de relatórios móveis para qualquer tamanho de tela com o Publicador de Relatórios Móveis do SQL Server no portal da Web do Reporting Services e sua exibição nos aplicativos móveis do Power BI.
+description: Saiba como criar relatórios móveis no Publicador de Relatórios Móveis do SQL Server, salvar relatórios no portal da Web do Reporting Services e exibir relatórios em aplicativos móveis do Power BI.
 ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028889"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462350"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.

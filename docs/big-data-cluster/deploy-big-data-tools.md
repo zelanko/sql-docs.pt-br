@@ -5,20 +5,20 @@ description: Saiba como instalar as ferramentas usadas com clusters de Big Data 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafec0d1542cd2ec6a02557b400a17b6d0d0ddad
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 3fe867d6f075067d949becdbcae4630f1ad019d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784309"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas de Big Data do SQL Server 2019
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este artigo descreve as ferramentas de cliente que devem ser instaladas para criar, gerenciar e usar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. A seção a seguir fornece uma lista de ferramentas e links para instruções de instalação. Antes de implantar um cluster de Big Data, configure as ferramentas marcadas como necessárias no Windows ou no Linux.
 
@@ -37,6 +37,7 @@ A seguinte tabela lista as ferramentas comuns de cluster de Big Data e como inst
 | **mssql-cli** | Opcional | Interface de linha de comando moderna para consulta do SQL Server ([mais informações](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Para alguns scripts | Ferramenta de linha de comando herdada para consulta do SQL Server ([mais informações](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). Talvez seja necessário instalar o Microsoft ODBC Driver 11 for SQL Server antes de instalar o pacote SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Para alguns scripts | Ferramenta de linha de comando para transferência de dados com URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: instalar pacote do curl |
+| `oc` | Necessário para as implantações do Red Hat OpenShift e do Red Hat OpenShift no Azure. |`oc` é a CLI (interface de linha de comando) do OpenShift. | [Como instalar a CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
 <sup>1</sup> É necessário usar o `kubectl` versão 1.13 ou posterior. Além disso, a versão do `kubectl` deve estar acima ou abaixo de uma versão secundária do cluster do Kubernetes. Caso deseje instalar uma versão específica no cliente do `kubectl`, confira [Instalar o binário do `kubectl` por meio da ondulação](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (no Windows 10, use cmd.exe e não o Windows PowerShell para executar a ondulação).
 

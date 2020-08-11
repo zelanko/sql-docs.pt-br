@@ -1,5 +1,6 @@
 ---
 title: Especificar cores consistentes em gráficos com várias formas – Construtor de Relatórios – SSRS | Microsoft Docs
+description: Saiba como a escolha de cores de um gráfico de formas resulta no mapeamento de cada cor na paleta para um ponto de dados no conjunto de dados.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0c02b81c5ce7ea5363cf119c3a3618efd78f2aa
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578452"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688972"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Especificar cores consistentes em gráficos com várias formas (Construtor de Relatórios e SSRS)
   Em gráficos sem formas em um relatório paginado, o [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] seleciona uma nova cor na paleta com base no índice da série no gráfico. Por exemplo, a primeira série do gráfico é mapeada para a primeira cor da paleta. No entanto, esse comportamento é diferente em gráficos com forma. Em gráficos com forma, todas as cores da paleta são mapeadas para um ponto de dados no conjunto de dados. Por exemplo, o ponto de dados 1 é mapeado para a primeira cor da paleta, o ponto de dados 2 é mapeado para a segunda paleta de cores e assim por diante.  

@@ -1,5 +1,6 @@
 ---
 title: Gerenciar conjuntos de dados compartilhados | Microsoft Docs
+description: Saiba como gerenciar conjuntos de dados compartilhados no Reporting Services para, compartilhando uma consulta, ajudar a fornecer um conjunto consistente de informações para vários relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808416"
 ---
 # <a name="manage-shared-datasets"></a>Gerenciar conjuntos de dados compartilhados
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], os conjuntos de dados compartilhados recuperam dados de fontes de dados compartilhadas que se conectam a fontes de dados externas. Um conjunto de dados compartilhado fornece uma maneira de compartilhar uma consulta para ajudar a fornecer um conjunto de dados consistente para vários relatórios. A consulta do conjunto de dados pode incluir parâmetros de conjunto de dados. Você pode configurar um conjunto de dados compartilhado para armazenar em cache os resultados da consulta para combinações de parâmetros específicas no primeiro uso ou especificando uma agenda. Você pode usar um cache de conjunto de dados compartilhado em combinação com um cache de relatório e feeds de dados de relatório para ajudar a gerenciar o acesso a uma fonte de dados.  
@@ -41,8 +42,8 @@ ms.locfileid: "67220583"
 ### <a name="manage-shared-dataset-item-properties"></a>Gerenciar propriedades de item de conjunto de dados compartilhado  
  A tabela a seguir lista as propriedades de item que podem ser alteradas para um item de conjunto de dados compartilhado.  
   
-|||  
-|-|-|  
+|Propriedade|Descrição|  
+|--------|-----------|  
 |Editar nome|Alterar o nome do conjunto de dados compartilhado. Todas as referências de itens dependentes continuarão funcionando.|  
 |Editar Descrição|Alterar a descrição do conjunto de dados compartilhado.|  
 |Editar o tempo limite de execução da consulta|Definir o tempo limite de execução da consulta em segundos. Zere (0) segundo significa nenhum tempo limite. Determina o número de segundos antes do tempo limite da consulta do conjunto de dados se esgotar. Para especificar nenhum valor de tempo limite, use 0. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  

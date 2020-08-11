@@ -1,5 +1,6 @@
 ---
 title: Visão geral das extensões de processamento de dados | Microsoft Docs
+description: Veja quais extensões de processamento de dados estão incluídas com o Reporting Services e como adicionar processamento de dados personalizado ao seu serviço de relatório.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9c3407060e22a2be8f74214cd1ba6a44c1487c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194211"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529670"
 ---
 # <a name="data-processing-extensions-overview"></a>Visão geral das extensões de processamento de dados
   As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permitem que você se conecte a uma fonte de dados e recupere dados. Eles também servem como uma ponte entre uma fonte de dados e um conjunto de dados. As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são modeladas de acordo com um subconjunto das interfaces do provedor de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  A tabela a seguir lista as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extensão de processamento de dados|DESCRIÇÃO|  
+|Extensão de processamento de dados|Descrição|  
 |-------------------------------|-----------------|  
 |Extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Usa o Provedor de Dados .NET Framework para SQL Server para se conectar e recuperar dados do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
 |Extensão de processamento de dados para OLE DB|Usa o Provedor de Dados .NET Framework para OLE DB. Com essa extensão, o servidor de relatório pode consultar qualquer fonte de dados que tenha um provedor OLE DB.|  

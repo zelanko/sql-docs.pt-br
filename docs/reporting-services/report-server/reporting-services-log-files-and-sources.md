@@ -1,5 +1,6 @@
 ---
 title: Fontes e arquivos de log do Reporting Services | Microsoft Docs
+description: Saiba mais sobre os logs que os servidores de relatório e os ambientes de servidor de relatório usam no Reporting Services para registrar informações de execução e rastreamento.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a0f6270fc40d4a22db2d8b03deba8a53e57fbf6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1e9fad0dad3b5a5d90339403d2d596bb95bf0759
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65620317"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541437"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Fontes e arquivos de log do Reporting Services
   Um servidor de relatório e um ambiente de servidor de relatório usam uma variedade de destinos de log para registrar informações sobre operações e status do servidor. Há duas categorias básicas de registro em log, log de execução e log de rastreamento. O log de execução inclui informações sobre estatística de execução de relatório, auditoria, diagnóstico de desempenho e otimização. O log de rastreamento são informações sobre mensagens de erro e diagnóstico em geral.  
@@ -29,7 +30,7 @@ ms.locfileid: "65620317"
   
  A tabela a seguir fornece links para informações adicionais sobre cada log, incluindo o local e como exibir seu conteúdo.  
   
-|Log|DESCRIÇÃO|  
+|Log|Descrição|  
 |---------|-----------------|  
 |[ExecutionLog do servidor de relatório e exibição do ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)|O log de execução é um modo de exibição do SQL Server armazenado no banco de dados do servidor de relatório.<br /><br /> O log de execução do servidor de relatório contém dados sobre relatórios específicos, incluindo quando o relatório foi executado, quem o executou, quando foi entregue e qual formato de renderização foi usado.|  
 |Log de rastreamento do SharePoint|Para servidores de relatório executados no SharePoint, os logs de rastreamento do SharePoint contêm informações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você também pode configurar as informações específicas do [!INCLUDE[ssRS](../../includes/ssrs.md)] para o serviço de log unificado do SharePoint. Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  

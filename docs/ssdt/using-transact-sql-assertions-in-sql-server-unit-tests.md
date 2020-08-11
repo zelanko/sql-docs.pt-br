@@ -1,21 +1,21 @@
 ---
 title: Usando asserções Transact-SQL nos testes de unidade do SQL Server
+description: Saiba mais sobre asserções do Transact-SQL. Veja quando usar asserções em testes de unidade do SQL Server e quando usar condições de teste, além de exibir exemplos de uso de asserções.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898984"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usando asserções Transact-SQL nos testes de unidade do SQL Server
 
@@ -85,5 +85,5 @@ Para saber mais, confira [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/l
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Usar condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Como abrir um teste de unidade do SQL Server para edição](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Como: Abrir um teste de unidade do SQL Server a ser editado](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

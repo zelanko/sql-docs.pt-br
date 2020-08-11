@@ -1,48 +1,50 @@
 ---
 title: 'Tutorial: Preparar dados para executar o clustering no R'
 titleSuffix: SQL machine learning
-description: Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados do SQL para executar clustering no R com o aprendizado de máquina do SQL.
+description: Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados para executar clustering no R com o machine learning do SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728554"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Tutorial: preparar dados para executar clustering no R com o aprendizado de máquina do SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados do SQL para executar clustering no R com os Serviços de Machine Learning do Banco de Dados SQL ou em Clusters de Big Data.
+Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados para executar clustering no R com os Serviços de Machine Learning do SQL Server ou em Clusters de Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados do SQL para executar clustering em R com os Serviços de Machine Learning do Banco de Dados SQL.
+Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados para executar clustering no R com os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados do SQL para executar clustering no R com o SQL Database R Services.
+Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados para executar clustering no R com o SQL Server 2016 R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados para executar clustering no R com os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 
 Neste artigo, você aprenderá a:
 
 > [!div class="checklist"]
 > * Clientes separados em dimensões diferentes usando o R
-> * Carregar os dados do banco de dados SQL em uma estrutura de dados do R
+> * Carregar os dados do banco de dados em uma estrutura de dados do R
 
 Na [parte um](r-clustering-model-introduction.md), você instalou os pré-requisitos e restaurou o banco de dados de exemplo.
 
 Na [parte três](r-clustering-model-build.md), você aprenderá a criar e treinar um modelo de cluster K-means no R.
 
-Na [parte quatro](r-clustering-model-deploy.md), você aprenderá a criar um procedimento armazenado em um Banco de Dados SQL que pode executar clustering no R com base em novos dados.
+Na [parte quatro](r-clustering-model-deploy.md), você aprenderá a criar um procedimento armazenado em um banco de dados que possa executar clustering no R com base em novos dados.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -63,9 +65,9 @@ Na função **connStr**, substitua **ServerName** por suas informações de cone
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>Carregar os dados em um quadro de dados
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 Agora, use o script a seguir para retornar os resultados da consulta para uma estrutura de dados do R.
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ Se você não continuar com este tutorial, exclua o banco de dados tpcxbb_1gb.
 Na parte dois desta série de tutoriais, você aprendeu a:
 
 * Clientes separados em dimensões diferentes usando o R
-* Carregar os dados do banco de dados SQL em uma estrutura de dados do R
+* Carregar os dados do banco de dados em uma estrutura de dados do R
 
 Para criar um modelo de machine learning que usa esses dados do cliente, siga a parte três desta série de tutoriais:
 

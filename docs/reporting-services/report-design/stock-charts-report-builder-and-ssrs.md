@@ -1,5 +1,6 @@
 ---
 title: Gráficos de ações (Construtor de Relatórios) | Microsoft Docs
+description: Exiba dados financeiros ou científicos usando até quatro valores por ponto de dados usando marcadores como linhas ou triângulos no Construtor de Relatórios.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d59677d4259e8e25e8e58c20b461fe25e2f762dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 40a9ab1568ab2b61a1582f3dfbc62badbd480a1f
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077116"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012424"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Gráficos de ações (Construtor de Relatórios e SSRS)
 

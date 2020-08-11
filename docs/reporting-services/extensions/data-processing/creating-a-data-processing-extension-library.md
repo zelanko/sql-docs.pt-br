@@ -1,5 +1,6 @@
 ---
 title: Criando uma biblioteca de extensões de processamento de dados | Microsoft Docs
+description: Saiba como criar uma extensão de processamento de dados do Reporting Services. Veja o código de exemplo e confira a quais requisitos de namespace e de arquivo de biblioteca você precisa atender.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e3c3f4a30b828b889ebfe61617460ff58962fdc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43dbf019b4721c32f479b5862417e90f8e97f2f1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194076"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529142"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>Criando uma biblioteca de extensões de processamento de dados
   Cada extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que você cria deve ser atribuída a um namespace exclusivo e criada em uma biblioteca ou em um arquivo de assembly. O nome exato do namespace não é importante, mas deve ser exclusivo e não deve ser compartilhado com qualquer outra extensão. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] usa o namespace <xref:Microsoft.ReportingServices.DataProcessing> para as extensões de processamento de dados fornecidas com o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Crie os seus próprios namespaces exclusivos para as extensões de processamento de dados de sua empresa.  

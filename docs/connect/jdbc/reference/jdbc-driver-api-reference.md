@@ -1,5 +1,6 @@
 ---
-title: Referência da API do JDBC Driver | Microsoft Docs
+title: Referência de API do JDBC Driver
+description: A referência de API técnica das classes JDBC do JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 901eb239b09e44b3e1ed6524284ead9b8a38f3b3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e96f8eb6ff2e3f20a5d6804ba3083e668c0f3a7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923111"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391788"
 ---
 # <a name="jdbc-driver-api-reference"></a>Referência de API do JDBC Driver
 
@@ -71,7 +72,7 @@ A documentação da versão 6.0 do JDBC e algumas versões posteriores também e
 
 ## <a name="interfaces"></a>Interfaces  
   
-|Nome da Interface|DESCRIÇÃO|  
+|Nome da Interface|Descrição|  
 |--------------------|-----------------|  
 |[Interface ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Permite especificar o nome do procedimento armazenado para chamar juntamente com os parâmetros de entrada e saída.|  
 |[Interface ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Representa uma conexão JDBC com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
@@ -85,7 +86,7 @@ A documentação da versão 6.0 do JDBC e algumas versões posteriores também e
   
 ## <a name="classes"></a>Classes  
   
-|Nome da Classe|DESCRIÇÃO|  
+|Nome da Classe|Descrição|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Representa um objeto do tipo microsoft.sql.DateTimeOffset.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Representa um BLOB (objeto binário grande).|  

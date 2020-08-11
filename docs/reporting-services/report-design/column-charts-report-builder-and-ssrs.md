@@ -1,5 +1,6 @@
 ---
 title: Gráficos de colunas (Construtor de Relatórios) | Microsoft Docs
+description: Mostrar comparações ou alterações de dados em um período de tempo com um gráfico de colunas no Construtor de Relatórios. Exiba uma série como um conjunto de barras verticais agrupadas por categoria.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 926c2613000423d4b0bb2acb16f81183ee470966
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8973b80e17b2c6bbedcdd7140fa87148c64d6538
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082323"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881951"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   Um gráfico de coluna exibe uma série como um conjunto de barras verticais agrupadas por categoria. Os gráficos de coluna são úteis para mostrar alterações de dados em um período de tempo ou para ilustrar comparações entre itens. O gráfico de coluna plano está bem relacionado ao gráfico de barras, que exibe séries como conjuntos de barras horizontais e o gráfico de coluna de intervalo, que exibe uma série como conjuntos de barras verticais com pontos de início e término variáveis. Para obter mais informações, consulte [Bar Charts &#40;Report Builder  SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)[Range Charts &#40;Report Builder  SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  

@@ -1,6 +1,6 @@
 ---
 title: Paginação em relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
-description: A paginação se refere ao número de páginas dentro de um relatório paginado e ao modo como os itens de relatório são organizados nessas páginas. A paginação no Reporting Services depende da extensão de renderização que você usa para exibir e entregar o relatório.
+description: Saiba mais sobre o número de páginas dentro de um relatório paginado e como os itens de relatório são organizados nessas páginas no Construtor de Relatórios.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b308503f2aafb1fcbfd88b3e7509906cafad8a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006161"
 ---
 # <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginação em relatórios (Construtor de Relatórios e SSRS)
   A paginação se refere ao número de páginas dentro de um relatório paginado e ao modo como os itens de relatório são organizados nessas páginas. A paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varia, dependendo da extensão de renderização que você usa para exibir e entregar o relatório. Ao executar um relatório no servidor de relatórios, o relatório usa o processador HTML. O HTML segue um conjunto específico de regras de paginação. Por exemplo, se exportar o mesmo relatório para o PDF, o processador do PDF será utilizado e um conjunto de regras diferente será aplicado, portanto, o relatório será paginado de modo diferente. Para desenvolver com êxito um relatório que seja facilmente lido pelos seus usuários bem como que seja otimizado para o processador que pretende usar na entrega do relatório, você deve entender as regras utilizadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

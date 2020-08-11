@@ -1,23 +1,23 @@
 ---
 title: Criar condições de teste para o designer de teste de unidade do SQL Server
+description: Veja como estender a classe TestCondition para criar uma condição de teste personalizada para o designer de teste de unidade do SQL Server. Veja um exemplo de uma condição de teste personalizada.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241475"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518886"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Como: Criar condições de teste para o Designer de teste de unidade do SQL Server
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Como fazer: Criar condições de teste para o designer de teste de unidade do SQL Server
 
 Você pode usar a classe extensível [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) para criar novas condições de teste. Por exemplo, você pode criar uma nova condição de teste que verifica o número de colunas ou os valores em um conjunto de resultados.  
   
@@ -49,7 +49,7 @@ Este procedimento explica como criar uma condição de teste para aparecer no De
   
 10. Derive sua classe da classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Assine o assembly com um nome forte. Para saber mais, confira [Como assinar um assembly com um nome forte](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Assine o assembly com um nome forte. Para obter mais informações, confira [Como assinar um assembly com um nome forte](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Crie a biblioteca de classes.  
   
@@ -176,7 +176,7 @@ A classe para a condição de teste personalizada herda da classe base [TestCond
   
 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) deve ser adicionada às classes que estendem [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Este atributo permite que a classe seja descoberta pelo SQL Server Data Tools e usada durante o design e a execução de teste de unidade. O atributo utiliza dois parâmetros:  
   
-|Parâmetro de Atributos|Posição|DESCRIÇÃO|  
+|Parâmetro de Atributos|Posição|Descrição|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Identifica a cadeia de conexão na caixa de combinação "Condições de Teste". Esse nome deve ser exclusivo. Se duas condições tiverem o mesmo nome para exibição, a primeira condição encontrada será mostrada para o usuário e um aviso será mostrado no Gerenciador de Erros do Visual Studio.|  
 |ImplementingType|2|É usado para identificar exclusivamente a extensão. Você precisa alterar isso para corresponder ao tipo no qual você está colocando o atributo. Este exemplo usa o tipo **ResultSetColumnCountCondition**, portanto use **typeof(ResultSetColumnCountCondition)** . Se seu tipo for **NewTestCondition**, use **typeof(NewTestCondition)** .|  

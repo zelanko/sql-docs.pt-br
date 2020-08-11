@@ -1,5 +1,6 @@
 ---
 title: Personalizar a web part do Visualizador de Relatórios | Microsoft Docs
+description: Você pode usar a web part do Visualizador de Relatórios para exibir relatórios executados em um servidor do SQL Server Reporting Services configurado para integração do SharePoint.
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,16 +8,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c908965e745b32222fbddcc7f5691774f02ede4e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50ff7c29e6718d8d38829d9cb23f5fafb6cf4dea
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256677"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767039"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a web part do Visualizador de Relatórios
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -63,7 +64,7 @@ Use a Web part do Visualizador de Relatórios para exibir relatórios executados
   
  As propriedades personalizadas da web part do Visualizador de Relatórios são listadas abaixo.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |Relatório|Um caminho totalmente qualificado para um relatório que esteja no site do SharePoint atual ou em um site no mesmo aplicativo Web ou farm. Para obter os melhores resultados ao definir propriedades adicionais, clique em Aplicar depois de especificar a URL do relatório.|  
 |Destino do Hiperlink|HTML padrão que especifica o quadro de destino para exibir conteúdo vinculado no documento atual. Para relatórios que incluem hiperlinks para sites externos, você pode especificar se um documento de destino substitui o relatório existente dentro da janela atual ou se ele é aberto em uma nova janela do navegador. Os valores válidos incluem **_Top**, **_Blank**, e **_Self**. **_Top** usa a janela atual, **_Blank** carrega o documento em uma nova janela do navegador e **_Self** abre o documento dentro do quadro atual. Embora **_Parent** seja um valor válido para o atributo Target em HTML, não use-o em uma web part do Visualizador de Relatórios inserida em uma página.|  

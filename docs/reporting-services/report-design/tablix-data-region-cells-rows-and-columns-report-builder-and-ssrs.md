@@ -1,6 +1,6 @@
 ---
 title: Células, linhas e colunas em um Tablix | Microsoft Docs
-description: Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório paginado do SQL Server Reporting Services, você deve compreender como especificá-las para dados detalhados, para dados de grupo e para rótulos e totais.
+description: Entenda como especificar linhas e colunas para dados, rótulos e totais, permitindo que você controle a exibição em um relatório do SQL Server.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252395"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689445"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Células, linhas e colunas em uma região de dados Tablix (Construtor de Relatórios) e SSRS
 

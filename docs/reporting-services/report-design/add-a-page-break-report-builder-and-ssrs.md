@@ -1,5 +1,6 @@
 ---
 title: Adicionar uma quebra de página (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como adicionar um quebra de página a retângulos, regiões de dados ou grupos dentro de regiões de dados no Construtor de Relatórios para controlar as informações em cada página.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 39b0e385b533ecc479f99244488d13ae77a8b87f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0c82c048b8a0de2c22aa43b6ad61ab1609ebbff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054251"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Adicionar uma quebra de página (Construtor de Relatórios e SSRS)
   É possível adicionar uma quebra de página a retângulos, regiões de dados ou grupos dentro das regiões de dados para controlar a quantidade de informações em cada página. A adição de quebras de página pode melhorar o desempenho de relatórios publicados porque apenas os itens em cada página precisam ser processados conforme o relatório é exibido. Quando todo o relatório ocupa uma única página, todos os itens devem ser processados antes de o relatório ser exibido.  

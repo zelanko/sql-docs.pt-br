@@ -1,5 +1,6 @@
 ---
-title: Como enviar e recuperar dados UTF-8 usando a compatibilidade interna com UTF-8 | Microsoft Docs
+title: 'Como fazer: Enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8'
+description: Saiba como enviar e recuperar dados codificados em UTF-8 usando o suporte para UTF-8 integrado aos drivers para PHP.
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe406ec4c1a198a6657da987e58bcfea289c41fd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915992"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381009"
 ---
-# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Como enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8
+# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Como fazer: Enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Se você estiver usando o driver PDO_SQLSRV, pode especificar a codificação com o atributo PDO::SQLSRV_ATTR_ENCODING. Para obter mais informações, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  

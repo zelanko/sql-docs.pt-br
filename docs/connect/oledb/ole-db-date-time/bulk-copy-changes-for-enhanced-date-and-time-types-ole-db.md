@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 417bf44993ffc850da03d090e36c29cae472c104
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89a19fa639c7ae20aad776bdcd196dea0f0c8700
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015827"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004530"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Alterações de cópia em massa para tipos avançados de data e hora (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "68015827"
 ## <a name="format-files"></a>Arquivos de formato  
  Ao criar arquivos de formato interativamente, a tabela a seguir descreve a entrada usada para especificar os tipos de data/hora e os nomes de tipo de dados do arquivo de host correspondentes.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta à solicitação: "Insira o tipo de armazenamento de arquivo do campo <nome_do_campo> [\<padrão>]:"|  
+|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta à solicitação: "Insira o tipo de armazenamento de arquivo do campo <nome_do_campo> [\<default>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  

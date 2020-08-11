@@ -1,23 +1,24 @@
 ---
 title: Instalar instância do cluster de failover
+description: Saiba como instalar um cluster de failover SQL Server. Crie e configure uma instância de cluster de failover executando a Instalação do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230617"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897658"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalação do cluster de failover do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Para instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve criar e configurar uma instância de cluster de failover por meio da execução da Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installing-a-failover-cluster"></a>Instalando um cluster de failover  
@@ -39,7 +40,7 @@ ms.locfileid: "75230617"
   
     -   Todos os nós de um cluster de failover devem ser da mesma plataforma, de 32 ou de 64 bits, e devem executar a mesma edição e versão do sistema operacional. Além disso, as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de 64 bits devem ser instaladas em hardware de 64 bits executando as versões de 64 bits de sistemas operacionais Windows. Não há suporte para WOW64 para clustering de failover nesta versão.  
   
-3.  Especificar vários endereços IP para cada instância do cluster de failover. Você pode especificar vários endereços IP para cada sub-rede. Se os vários endereços IP estiverem na mesma sub-rede, a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] definirá a dependência como AND. Se você estiver clusterizando nós em várias sub-redes, a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] definirá a dependência como OR.  
+3.  Especificar vários endereços IP para cada instância do cluster de failover. É possível especificar vários endereços IP para cada sub-rede. Se os vários endereços IP estiverem na mesma sub-rede, a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] definirá a dependência como AND. Se você estiver clusterizando nós em várias sub-redes, a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] definirá a dependência como OR.  
 
 4.  A instância de cluster de failover (FCI) do SQL Server requer que os nós de cluster sejam ingressados no domínio. **Não há suporte** para as configurações a seguir:
     - FCI do SQL em clusters de grupo de trabalho. 

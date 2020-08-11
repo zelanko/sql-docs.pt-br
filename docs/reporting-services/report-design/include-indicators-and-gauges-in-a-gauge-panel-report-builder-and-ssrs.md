@@ -1,5 +1,6 @@
 ---
 title: Incluir indicadores e medidores em um painel de medidores (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como usar medidores e indicadores no painel do medidor, um contêiner de nível superior, em seus relatórios no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d9f5cf2619ea26c56f6511b829b5da524776602
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0aa88dd2643d4dca8f32fdf9903855bed416eaa2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881551"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Incluir indicadores e medidores em um painel de medidores (Construtor de Relatórios e SSRS)
   O painel de medidores é o contêiner de nível superior que mantém um ou mais medidores e indicadores. Os indicadores podem ser inseridos em medidores ou colocados ao lado deles no painel de medidores.  

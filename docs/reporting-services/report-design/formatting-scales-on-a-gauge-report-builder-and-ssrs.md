@@ -1,5 +1,6 @@
 ---
 title: Como formatar escalas em um medidor (Construtor de Relatórios) | Microsoft Docs
+description: Conheça o intervalo de números da escala de medidor limitado por um mínimo e um máximo em um relatório paginado no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 235406dc1a6ed138c5d40ef7364bb07b3e4e6ecf
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079627"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778888"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatando escalas de um medidor (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , a escala do medidor é o intervalo de números, limitados por um mínimo e um máximo, mostrado em um medidor. Normalmente, a escala de um medidor contém rótulos de marcas de escala do medidor que fornecem uma leitura precisa do que o ponteiro do medidor mostra. Geralmente, a escala de um medidor está associada a um ou mais ponteiros do medidor. Você pode ter mais de uma escala no mesmo medidor.  

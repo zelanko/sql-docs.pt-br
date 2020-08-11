@@ -1,5 +1,6 @@
 ---
 title: uso do utilitário de prompt de comando dta
+description: Saiba mais sobre as funcionalidades fornecidas pelo utilitário de prompt de comando dta além daquelas fornecidas pelo Orientador de Otimização do Mecanismo de Banco de Dados do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306969"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457485"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lição 3: Usando o utilitário de prompt de comando dta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lição 3: uso do utilitário de prompt de comando dta
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 O utilitário de prompt de comando **dta** oferece funcionalidade além da fornecida pelo Orientador de Otimização do Mecanismo de Banco de Dados.  
   
 Você pode usar suas ferramentas XML favoritas para criar arquivos de entrada para o utilitário usando o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Esse esquema é instalado durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e pode ser encontrado em: C:\Arquivos de Programas (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
@@ -34,13 +34,13 @@ Além disso, usando o esquema XML do Orientador de Otimização do Mecanismo de 
   
 A utilização da funcionalidade de entrada XML do Orientador de Otimização do Mecanismo de Banco de Dados ultrapassa o alcance desta lição.  
   
-Essa tarefa descreve a inicialização do utilitário **dta** , a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload) da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados  
+ Essa tarefa descreve a inicialização do utilitário **dta**, a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho usando o prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload) da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados  
   
 O tutorial usa o banco de dados de exemplo AdventureWorks2017. Por motivos de segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 As tarefas a seguir descrevem a abertura de um prompt de comando, a inicialização do utilitário de prompt de comando **dta** , a exibição da Ajuda sobre a sintaxe e o ajuste de uma carga de trabalho simples, MyScript.sql, que você criou em [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Pré-requisitos 
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
@@ -48,7 +48,7 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 - Baixar o [Banco de dados de exemplo do AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
 
 
-Instruções para restaurar bancos de dados no SSMS são encontradas em [Como restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
   > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e com as tarefas básicas de administração de banco de dados. 
@@ -93,7 +93,7 @@ Depois de você terminar as lições deste tutorial, recorra aos tópicos a segu
 -   [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md) para obter descrições sobre como executar tarefas com essa ferramenta. 
 -   [dta Utility](../../tools/dta/dta-utility.md) para obter material de referência sobre o utilitário de prompt de comando e o arquivo XML opcional que você pode usar para controlar a operação do utilitário.  
   
-Para retornar ao início do tutorial, consulte [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
+Para retornar ao início do tutorial, confira [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Mecanismo de Banco de Dados](../../relational-databases/database-engine-tutorials.md)  

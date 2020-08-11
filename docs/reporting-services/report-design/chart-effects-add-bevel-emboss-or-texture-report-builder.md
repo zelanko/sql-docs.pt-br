@@ -1,5 +1,6 @@
 ---
 title: Adicionar os estilos bisel, relevo e textura a um gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como especificar um efeito de desenho, como biséis, relevo ou texturas, para aumentar o impacto visual do seu gráfico no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc70f46d093336157fbc474abfa63460c42deb41
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078753"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462310"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Efeitos de gráfico – Adicionar bisel, alto-relevo ou textura (Construtor de Relatórios)
   Ao usar determinados tipos de gráficos, você pode especificar um efeito de desenho para aumentar o impacto visual do seu gráfico. Esses efeitos de desenho só são aplicados à série de seu gráfico. Eles não têm nenhum efeito sobre qualquer outro elemento do gráfico.  

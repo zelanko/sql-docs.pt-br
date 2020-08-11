@@ -1,5 +1,6 @@
 ---
 title: Configurações de site e recursos de site do Reporting Services (modo do SharePoint) | Microsoft Docs
+description: Há recursos personalizadas de nível de site e recursos de site que podem ser gerenciados na página Configurações de Site do SharePoint no modo SharePoint do Reporting Services.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73d357b6a601265df5e579f1b6acaff6ce8d648d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 558a741feb0e55646b4c45901965a0fb434f665f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580454"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767350"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Configurações de site e recursos de site do Reporting Services (modo do SharePoint)
 
@@ -26,7 +27,7 @@ O modo do SharePoint do Reporting Services contém vários recursos personalizad
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
-|Configuração do site|DESCRIÇÃO|  
+|Configuração do site|Descrição|  
 |------------------|-----------------|  
 |Configurações de Site do Reporting Services|Configurações que abrangem todo o site descritas neste tópico.|  
 |Gerenciar Alertas de Dados|Gerenciamento do recurso Alerta de Dados.|  
@@ -40,7 +41,7 @@ O modo do SharePoint do Reporting Services contém vários recursos personalizad
   
 ## <a name="options-for-reporting-services-site-settings"></a>Opções de configurações de site do Reporting Services
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Habilitar download do controle ActiveX RSClientPrint**|O controle exibe uma caixa de diálogo de impressão personalizada que fornece recursos de suporte comuns a outras caixas de diálogo de impressão, inclusive visualização de impressão, seleções de páginas para definir páginas e intervalos específicos, margens de páginas e orientação de página. Para saber mais sobre o controle, consulte [Usando o controle RSClientPrint em aplicativos personalizados](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**Habilitar erros remotos em modo local**|Mostrar ou ocultar mensagens de erro detalhadas em computadores remotos ao executar em modo local. Se você ver uma mensagem de erro semelhante à seguinte, pode ser útil habilitar erros remotos:<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

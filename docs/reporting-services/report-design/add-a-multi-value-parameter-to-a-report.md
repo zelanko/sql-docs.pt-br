@@ -1,5 +1,6 @@
 ---
 title: Adicionar um parâmetro com vários valores a um relatório | Microsoft Docs
+description: Saiba como adicionar um parâmetro a um relatório que permite ao usuário selecionar mais de um valor para o parâmetro no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac257b63b3cd36cc789a842c87aff9d5186f1206
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc464c7ffeb6f166a8c4c39c70dc4001468f3568
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575414"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779422"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Adicionar um parâmetro com vários valores a um relatório
   É possível adicionar um parâmetro a um relatório que permite ao usuário selecionar mais de um valor para o parâmetro.  

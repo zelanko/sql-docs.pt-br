@@ -1,5 +1,6 @@
 ---
 title: Propriedades do SQL Server Agent (guia Serviço)
+description: Saiba mais sobre as opções na guia Serviço na caixa de diálogo Propriedades do SQL Server Agent, como o caminho binário, a ID do processo e o modo de início.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac42d55dea9c8e422a279516afa632810bc83c7c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c6a0ea4bdce650fd7cc1f1ff28c297c9035bf025
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307132"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880383"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>Propriedades do SQL Server Agent (guia Serviço)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Este é o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
   
 ## <a name="options"></a>Opções  
@@ -47,7 +48,7 @@ ms.locfileid: "75307132"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: este serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
 -   Automático: este serviço tenta ser iniciado na inicialização do computador.  
   

@@ -1,5 +1,6 @@
 ---
 title: Referências globais internas e de usuários (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre os valores que podem ser usados em expressões para filtrar os resultados em um relatório no Construtor de Relatórios.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082212"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462190"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Referências de globais internas e referências de usuários (Construtor de Relatórios)
   A coleção de campos internos que inclui as coleções **Globals** e **User** representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de **Globals** fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de **User** fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  
@@ -42,7 +43,7 @@ ms.locfileid: "77082212"
 ### <a name="renderformat"></a>RenderFormat  
  A tabela a seguir descreve os membros de **RenderFormat**.  
   
-|Membro|Type|DESCRIÇÃO|  
+|Membro|Type|Descrição|  
 |------------|----------|-----------------|  
 |Nome|**Cadeia de caracteres**|O nome do renderizador conforme registrado no arquivo de configuração RSReportServer.<br /><br /> Disponível durante partes específicas do ciclo de processamento/renderização do relatório.|  
 |IsInteractive|**Booliano**|Se a solicitação de renderização atual usa um formato de renderização interativo.|  

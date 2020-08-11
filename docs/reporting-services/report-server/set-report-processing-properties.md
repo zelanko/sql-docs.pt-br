@@ -1,5 +1,6 @@
 ---
 title: Definir as propriedades do processamento de relatório | Microsoft Docs
+description: Saiba mais sobre as propriedades de execução de relatório no Servidor de Relatório que controlam a maneira como os relatórios são processados e como defini-los para cada relatório usando o portal da Web.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 62c38e222ede1678d7fd06089897b3a8435aa687
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140393"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547878"
 ---
 # <a name="set-report-processing-properties"></a>Definir propriedades de processamento de relatórios
   Propriedades de execução de relatório controlam como um relatório é processado. É necessário definir propriedades de execução individualmente para cada relatório.  

@@ -1,5 +1,6 @@
 ---
 title: Alta disponibilidade no SQL Server Reporting Services | Microsoft Docs
+description: Saiba mais sobre a melhor maneira de garantir a disponibilidade da funcionalidade do Reporting Services no SQL Server.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c9f44a580ef8207c58ec86ed9df668590266e1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7cac05af8a930b6926ca1b643a9eaef6d198e86a
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579918"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83766989"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>Alta disponibilidade no SQL Server Reporting Services
 

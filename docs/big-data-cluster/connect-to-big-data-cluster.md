@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b6f4b11848cd0108dec5f3a4e5de0c089a89b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784352"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar-se a um cluster de Big Data do SQL Server com o Azure Data Studio
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Este artigo descreve como se conectar a um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] do Azure Data Studio.
 
@@ -47,7 +47,7 @@ Para se conectar a um cluster de Big Data com o Azure Data Studio, faça uma nov
 
 1. Em **Tipo de conexão**, selecione **Microsoft SQL Server**.
 
-1. Digite o nome do ponto de extremidade que você encontrou para a instância mestre do SQL Server na caixa de texto **Nome do servidor** (por exemplo: **\<IP_Address\>,31433**). 
+1. Digite o nome do ponto de extremidade que você encontrou para a instância mestra do SQL Server na caixa de texto **Nome do servidor** (por exemplo: **\<IP_Address\>,31433**). 
 
 1. Escolha seu tipo de autenticação. Para a instância mestre do SQL Server em execução em um cluster de Big Data, somente a **Autenticação do Windows** e o **logon do SQL** têm suporte. 
 

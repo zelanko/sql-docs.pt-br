@@ -1,18 +1,19 @@
 ---
 title: Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS | Microsoft Docs
-ms.date: 11/18/2019
+description: Saiba como criar cadeias de conexão de dados e obtenha informações importantes sobre as credenciais de fonte de dados.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812291"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS
 
@@ -41,12 +42,12 @@ ms.locfileid: "74190919"
 |Fonte de dados do SAP NetWeaver BI|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados como **SAP NetWeaver Bl**. Para obter mais informações, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Fonte de dados do Hyperion Essbase|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados como **Hyperion Essbase**. Para obter mais informações, consulte [Tipo de conexão Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
 |Fonte de dados do Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Defina o tipo de fonte de dados como **Teradata**. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos. Para obter mais informações, consulte [Tipo de conexão Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Fonte de dados do Teradata|`Database=` *\<nome do banco de dados>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como **Teradata**, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
+|Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como **Teradata**, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
 |Fonte de dados XML, serviço Web|`data source=https://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL. Para obter mais informações, consulte [Tipo de conexão XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |Fonte de dados XML, documento XML|`https://localhost/XML/Customers.xml`|Defina o tipo de fonte de dados como **XML**. A cadeia de conexão é uma URL para o documento XML. 
-|Fonte de dados XML, documento XML inserido|*Vazio*|Defina o tipo de fonte de dados como **XML**. Os dados XML são inseridos na definição do relatório.|  
+|Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo de fonte de dados como **XML**. Os dados XML são inseridos na definição do relatório.|  
 |Lista do SharePoint|`data source=https://MySharePointWeb/MySharePointSite/`|Definir o tipo de fonte de dados como **lista do SharePoint**.|  
-| Conjunto de dados do Power BI Premium (do Reporting Services 2019 em diante) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;catálogo inicial = <YourDatasetName> | Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. |
+| Conjunto de dados do Power BI Premium (começando com o Reporting Services 2019 e o Servidor de Relatórios do Power BI de janeiro de 2020) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. |
 
   
  Se não for possível conectar a um servidor de relatório que use **localhost**, verifique se o protocolo de rede TCP/IP está habilitado. Para obter mais informações, consulte [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  

@@ -1,23 +1,23 @@
 ---
 title: Especificar scripts pré ou pós-implantação
+description: Saiba como usar scripts de pré-implantação e pós-implantação para executar instruções Transact-SQL antes e depois da execução do script de implantação principal.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf8067047edf1c3b9b6a837ed12d49cb5d95df1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244272"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901123"
 ---
-# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Como especificar scripts de pré-implantação ou pós-implantação
+# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Como fazer: Especificar scripts de pré-implantação ou pós-implantação
 
 Os scripts de pré-implantação e pós-implantação executam instruções do Transact\-SQL antes e após o script de implantação principal, que é gerado do projeto de banco de dados. O script pré-implantação não será executado ao atualizar destinos de resultados de comparação de esquema no Visual Studio. Um projeto pode ter somente um script de pré-implantação e um de pós-implantação. Esses scripts podem ser usados para várias finalidades. Por exemplo:  
   

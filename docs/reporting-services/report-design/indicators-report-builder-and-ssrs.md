@@ -1,5 +1,6 @@
 ---
 title: Indicadores (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre indicadores, os medidores pequenos que transmitem o estado de um valor de dados único em relatórios paginados no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,15 +16,15 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b440f82dc7d758e7f6eb17bdf0f13e818348423
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082073"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779508"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Construtor de Relatórios e SSRS)
-  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , os indicadores são medidores pequenos que transmitem o estado de um único valor de dados em um relance. Os ícones que representam indicadores e os respectivos estados são simples e visualmente efetivos mesmo quando usados em tamanhos pequenos.  
+  Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], os indicadores são medidores pequenos que transmitem o estado de um só valor de dados em um relance. Os ícones que representam indicadores e os respectivos estados são simples e visualmente efetivos mesmo quando usados em tamanhos pequenos.  
   
  Você pode declarar indicadores em seus relatórios mostrar o seguinte:  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77082073"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece conjuntos de indicadores internos e ícones de indicador a serem usados no estado em que se encontram, mas você também pode personalizar ícones de indicador e conjuntos de indicadores individuais para atender às suas necessidades.  
   
- Para obter mais informações sobre como usar indicadores como KPIs, consulte [Tutorial: Adicionar um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Saiba mais sobre como usar indicadores como KPIs no [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  É possível publicar indicadores separadamente de um relatório como partes do relatório. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

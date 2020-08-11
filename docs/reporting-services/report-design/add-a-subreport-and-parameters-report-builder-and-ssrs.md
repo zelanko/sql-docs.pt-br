@@ -1,5 +1,6 @@
 ---
 title: Adicionar sub-relatórios e parâmetros (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como adicionar um sub-relatório. Use sub-relatórios quando quiser criar um relatório principal como um contêiner para vários relatórios relacionados no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9131d15b8374df4b3db22946583d3349f0386e91
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080671"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462300"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Adicionar um sub-relatório e parâmetros (Construtor de Relatórios e SSRS)
   Adicione sub-relatórios a um relatório quando quiser criar um relatório principal que seja um contêiner para vários relatórios relacionados. Um sub-relatório é uma referência a outro relatório. Para relacionar os relatórios por valores de dados (por exemplo, para que diversos relatórios exibam dados para o mesmo cliente), é preciso criar um relatório com parâmetros (por exemplo, um relatório que exiba os detalhes de um cliente específico) como o sub-relatório. Ao adicionar um sub-relatório ao relatório principal, você também pode especificar os parâmetros que serão passados para o sub-relatório.  
@@ -57,7 +58,7 @@ ms.locfileid: "77080671"
 5.  Na caixa de listagem **Valor** , digite ou selecione um valor a ser passado para o sub-relatório. Esse valor pode ser um texto estático ou uma expressão que referencie um campo ou outro objeto no relatório principal.  
   
     > [!NOTE]  
-    >  No Construtor de Relatórios, se um parâmetro estiver ausente na lista **Parâmetros** , e se o sub-relatório tiver um valor padrão definido, o sub-relatório será processado corretamente.  
+    >   No Construtor de Relatórios, se um parâmetro estiver ausente na lista **Parâmetros** , e se o sub-relatório tiver um valor padrão definido, o sub-relatório será processado corretamente.  
     >   
     >  No Designer de Relatórios, todos os parâmetros exigidos pelo sub-relatório devem estar incluídos na lista **Parâmetros** . Se estiver faltando um parâmetro obrigatório, o sub-relatório não será exibido corretamente no relatório principal.  
   

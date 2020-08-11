@@ -1,5 +1,6 @@
 ---
-title: Referência da API do driver SQLSRV | Microsoft Docs
+title: Referência da API do driver JDBC
+description: A referência da API do driver SQLSRV para PHP descreve as funções disponíveis, bem como seus parâmetros e valores de retorno.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a05b7a39bce6fb263b63bdbfa4644c78175a584c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01dfb59cd433a545efbe7376fd369c897ee4f693
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928233"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381070"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Referência da API do driver JDBC
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +26,7 @@ O nome da API para o driver SQLSRV nos [!INCLUDE[ssDriverPHP](../../includes/ssd
 ## <a name="in-this-section"></a>Nesta seção  
 O driver SQLSRV contém as seguintes funções:  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|Começa uma transação.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Cancela uma instrução; descarta qualquer resultado pendente para a instrução.|  

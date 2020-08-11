@@ -1,5 +1,6 @@
 ---
 title: Adicionar, alterar ou excluir um parâmetro de relatório (Construtor de Relatórios) | Microsoft Docs
+description: Escolha dados de relatório, conecte relatórios relacionados e varie a apresentação do relatório com a adição de parâmetros de relatório em um relatório paginado no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b07c03980cf1eb2cc7f99ab6d4e6470485bb53f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9c4ab09d50b4d1055d18c5813647a5efee7bf532
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080596"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012254"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um parâmetro de relatório (Construtor de Relatórios e SSRS)
   Um parâmetro de relatório fornece uma maneira de escolher dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório. Você pode fornecer um valor padrão e uma lista de valores disponíveis e o usuário pode alterar a seleção.  

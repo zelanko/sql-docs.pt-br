@@ -1,5 +1,6 @@
 ---
 title: Imagens, caixas de texto, retângulos e linhas (Construtor de Relatórios) | Microsoft Docs
+description: Adicione interesse visual, realce informações importantes ou forneça informações relacionadas no Construtor de Relatórios. Adicione imagens, caixas de texto, retângulos e linhas.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18afd1d921969d84f0015b6e982b634feb46b097
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061025"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imagens, caixas de texto, retângulos e linhas (Construtor de Relatórios e SSRS)
   Além das regiões de dados, como tabelas, matrizes e gráficos, os relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usam outros itens de relatório, como imagens, caixas de texto e retângulos, para adicionar interesse visual, realçar informações importantes ou fornecer informações relacionadas. É possível alterar a formatação de um item de relatório. Por exemplo, você pode adicionar uma borda ou um preenchimento, alterar a visibilidade inicial ou a direção ou especificar um tamanho e local exatos para o item.  

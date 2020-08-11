@@ -1,21 +1,21 @@
 ---
 title: Azure Active Directory no SSDT
+description: Saiba mais sobre os métodos de autenticação do Azure Active Directory que o SSDT (SQL Server Data Tools) fornece para o Banco de Dados SQL do Azure e o Azure SQL Data Warehouse.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: jroth
+author: markingmyname
+ms.author: maghan
 reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8be8ec4b61c42c0a25c01a6511b5bf69da6a47fd
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286200"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519126"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Suporte do Azure Active Directory no SSDT (SQL Server Data Tools)
 

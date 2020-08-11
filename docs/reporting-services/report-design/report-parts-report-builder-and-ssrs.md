@@ -1,5 +1,6 @@
 ---
 title: Partes de relatório (Construtor de Relatórios) | Microsoft Docs
+description: Crie tabelas, matrizes, gráficos e imagens para serem publicados como partes de relatório separadas disponíveis para você poder reutilizá-las em outros relatórios paginados no Construtor de Relatórios.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6eaa6caa15f7cef82ca7d18caa8429b9df9978d8
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081114"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255251"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório paginados que foram publicados separadamente em um servidor de relatório e que podem ser reutilizados em outros relatórios paginados. As partes de relatório têm uma extensão de arquivo .rsc.  
@@ -55,7 +56,7 @@ ms.locfileid: "77081114"
   
 -   Mapas  
   
--   parâmetros  
+-   Parâmetros  
   
 -   Retângulos  
   

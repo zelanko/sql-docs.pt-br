@@ -1,5 +1,6 @@
 ---
 title: Referências de coleções de campos do conjunto de dados (Construtor de Relatórios) | Microsoft Docs
+description: Crie um conjunto de dados para exibição de valores individuais ou resumidos no painel Dados do Relatório do Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b2466036918d6c66db980a7a66259cef63fe20d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081903"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688858"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Coleções internas – referências de coleções de campos de conjuntos de dados (Construtor de Relatórios)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  
@@ -38,7 +39,7 @@ ms.locfileid: "77081903"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Detectando campos ausentes em consultas dinâmicas em tempo de execução  
- Por padrão, os itens na coleção Fields têm duas propriedades: Value e IsMissing. A propriedade IsMissing indica se um campo que foi definido para um conjunto de dados em tempo de design estará contido em um dos campos recuperados em tempo de execução. Por exemplo, a consulta pode chamar um procedimento armazenado cujo conjunto de resultados varia de acordo com um parâmetro de entrada ou a consulta pode ser `SELECT * FROM` *\<tabela>* , em que a definição da tabela foi alterada.  
+ Por padrão, os itens da coleção Fields têm duas propriedades: Value e IsMissing. A propriedade IsMissing indica se um campo que foi definido para um conjunto de dados em tempo de design estará contido em um dos campos recuperados em tempo de execução. Por exemplo, a consulta pode chamar um procedimento armazenado cujo conjunto de resultados varia de acordo com um parâmetro de entrada ou a consulta pode ser `SELECT * FROM` *\<tabela>*, em que a definição da tabela foi alterada.  
   
 > [!NOTE]  
 >  IsMissing detecta alterações no esquema do conjunto de dados entre o tempo de design e o tempo de execução de qualquer tipo de fonte de dados. IsMissing não pode ser usado para detectar membros vazios em um cubo multidimensional e não está relacionado aos conceitos da linguagem de consulta MDX de **EMPTY** e **NON EMPTY**.  

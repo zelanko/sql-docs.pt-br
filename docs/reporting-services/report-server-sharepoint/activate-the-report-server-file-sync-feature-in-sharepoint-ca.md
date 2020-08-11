@@ -1,5 +1,6 @@
 ---
 title: Ativar o recurso de sincronização de arquivo do servidor de relatório no SharePoint | Microsoft Docs
+description: O recurso Sincronização de Arquivos do Servidor de Relatório do Reporting Services utiliza manipuladores de eventos do SharePoint para sincronizar o catálogo do servidor de relatório com itens em bibliotecas de documentos.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a84c906df921bf4702d47e57400b7ad7b9e127f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5a0b7b6e50e07573c57882339e5fc3c7dd3cb39
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579451"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767400"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>Ativar o recurso de sincronização de arquivo do servidor de relatório no SharePoint
 
@@ -28,7 +29,7 @@ O recurso Sincronização de arquivos do Servidor de Relatório do [!INCLUDE[ssR
   
  Esse recurso pode ser ativado e desativado manualmente por site, mas não no nível de conjunto de sites.  
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
  O Suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o SharePoint deve ser instalado. Se o suplemento não estiver instalado, o recurso de sincronização de arquivos não estará visível na lista de recursos do site.  
   

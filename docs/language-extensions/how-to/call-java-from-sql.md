@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: Saiba como chamar classes Java de procedimentos armazenados do SQL Server usando a Extensão da Linguagem do SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735119"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Como chamar o runtime Java nas Extensões de Linguagem do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 As [Extensões de Linguagem do SQL Server](../language-extensions-overview.md) usam o procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) como a interface para chamar o runtime do Java. 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 Para obter mais informações, confira [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## <a name="loopback-connection-to-sql-server"></a>Conexão de loopback para o SQL Server
+
+Use uma conexão de loopback para se conectar novamente ao SQL Server por JDBC a fim de ler ou gravar dados de um Java executado de `sp_execute_external_script`. Você poderá usar isso quando não for possível usar os argumentos **InputDataSet** e **OutputDataSet** de `sp_execute_external_script`.
+Para fazer uma conexão de loopback no Windows, use o seguinte exemplo:
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+Para fazer uma conexão de loopback no Linux, o driver JDBC requer três propriedades de conexão definidas no seguinte certificado:
+
+[Autenticação de certificado do cliente](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -1,5 +1,6 @@
 ---
 title: Serviço SharePoint do Reporting Services e aplicativos de serviço | Microsoft Docs
+description: A criação de um aplicativo de serviço no modo do SharePoint do SQL Server Reporting Services torna o serviço disponível e gera o banco de dados de aplicativo do serviço.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1dfe62ba964b05f069009b51ddf62f376c12c906
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41a0f20b28e54c1680546625ae09df649499b2db
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580540"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764667"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Serviço SharePoint do Reporting Services e aplicativos de serviço
 

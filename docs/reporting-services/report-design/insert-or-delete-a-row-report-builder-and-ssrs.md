@@ -1,5 +1,6 @@
 ---
 title: Inserir ou excluir uma linha (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como adicionar ou excluir linhas em uma região de dados tablix em um relatório paginado no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6bdec71e808d577a764d2b0cc3fa99fc9cd522fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff37c91140ed4da0706c0eaf35ed258267e6e189
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082024"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681285"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Inserir ou excluir uma linha (Construtor de Relatórios e SSRS)
 Você pode adicionar ou excluir linhas em uma região de dados tablix em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Essa região pode ser uma tabela, uma matriz ou uma lista. Os procedimentos a seguir não se aplicam às regiões de dados de gráficos e medidores.  

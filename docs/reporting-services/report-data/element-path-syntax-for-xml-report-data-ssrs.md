@@ -1,5 +1,6 @@
 ---
 title: Sintaxe do caminho do elemento para dados de relatório XML | Microsoft Docs
+description: Saiba mais sobre a sintaxe de caminho do elemento e as convenções usadas para definir o caminho para dados de relatório XML no Designer de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a8404e6b993481202061644e68fa44a830fdca6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808456"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o **ElementPath** XML da **Consulta** XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
@@ -73,12 +74,12 @@ XMLLocalName :: =
 |Termo|Definição|  
 |----------|----------------|  
 |Caminho do elemento|Define a sequência de nós a serem transpostos dentro do documento XML para recuperar dados do campo para um conjunto de dados com uma fonte de dados XML.|  
-|**ElementNode**|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Clientes> é o nó do elemento raiz. \<Cliente> é um subelemento de \<Clientes>.|  
+|**ElementNode**|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Customers> é o nó do elemento raiz. \<Customer> é um subelemento de \<Customers>.|  
 |**XMLName**|O nome do nó. Por exemplo, o nome do nó Clientes é Clientes. Um **XMLName** pode ser prefixado com um identificador de namespace para nomear exclusivamente cada nó.|  
 |**Codificação**|Indica que o **Value** deste elemento é XML codificado e precisa ser decodificado e incluído como um subelemento desse elemento.|  
 |**FieldList**|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada ( **{}** ), nenhum campo deste nó será usado.<br /><br /> Um **FieldList** pode não conter um **Value** nem um **Element** ou **ElementNode**.|  
 |**Campo**|Especifica os dados recuperados como um campo do conjunto de dados.|  
-|**Atributo**|Um par de nome-valor dentro do **ElementNode**. Por exemplo, no nó do elemento \<ID do Cliente="1">, **ID** é um atributo e **\@ID(Integer)** retorna "1" com um tipo inteiro na **ID** do campo de dados correspondente.|  
+|**Atributo**|Um par de nome-valor dentro do **ElementNode**. Por exemplo, no nó do elemento \<Customer ID="1">, **ID** é um atributo e **\@ID(Integer)** retorna "1" com um tipo inteiro na **ID** do campo de dados correspondente.|  
 |**Valor**|O valor do elemento. **Value** pode ser usado apenas no último **ElementNode** no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se ele for incluído no final de um caminho do elemento, o valor de **Return {@}** será **Chair**.|  
 |**Element**|O valor do subelemento nomeado. Por exemplo, Clientes {}/Cliente {}/Sobrenome recupera valores apenas para o elemento Sobrenome.|  
 |**Tipo**|O tipo de dados opcional a ser usado para o campo criado desse elemento.|  
@@ -90,9 +91,9 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Quando o caminho do elemento está vazio, a consulta usa o caminho do elemento padrão: o primeiro caminho para uma coleção de nós folha. No primeiro exemplo, deixar o caminho do elemento vazio é equivalente a especificar o caminho do elemento /Clientes/Cliente/Pedidos/Pedido. Todos os valores e atributos do nó ao longo do caminho são retornados no conjunto de resultados, e os nomes de nós e de atributos são exibidos como campos do conjunto de dados.  
   
- **Exemplo nº 1**: *vazio*  
+ **Exemplo 1**: *Vazio*  
   
-|Order|Qtd|ID|Nome|LastName|Customer.ID|xmlns|  
+|Order|Qtd|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
 |Tabela|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
@@ -101,7 +102,7 @@ XMLLocalName :: =
   
  **Exemplo nº 2**: `Customers {}/Customer`  
   
-|Nome|LastName|ID|  
+|FirstName|LastName|ID|  
 |---------------|--------------|--------|  
 |Bobby|Moore|11|  
 |Crystal|Hu|20|  
@@ -126,7 +127,7 @@ XMLLocalName :: =
   
  **Exemplo nº 5**: `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-|Order.ID|Nome|LastName|ID|  
+|Order.ID|FirstName|LastName|ID|  
 |--------------|---------------|--------------|--------|  
 |1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  

@@ -1,5 +1,6 @@
 ---
 title: Implementando uma extensão de processamento de dados | Microsoft Docs
+description: Saiba como criar uma ponte entre uma fonte de dados e um conjunto de dados no Reporting Services implementando uma extensão de processamento de dados.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96458c62500794d06633299da57b4eccea9810da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b127a0382b8913d9e8ed95dbfa61f9c4113d5ff0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193928"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529531"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementando uma extensão de processamento de dados
   As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permitem que você se conecte a uma fonte de dados e recupere dados. Eles também servem como uma ponte entre uma fonte de dados e um conjunto de dados. As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são modeladas de acordo com um subconjunto das interfaces do provedor de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

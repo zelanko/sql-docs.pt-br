@@ -1,5 +1,6 @@
 ---
 title: Como instalar extensões de segurança personalizadas | Microsoft Docs
+description: Conheça o novo portal da Web que o Reporting Services 2016 introduziu. Veja como as alterações resultantes afetam a implementação de extensões de segurança personalizadas.
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223232"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529062"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Como instalar extensões de segurança personalizadas
 
@@ -51,7 +52,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Implantação e configuração
 
-As configurações básicas necessárias para a extensão de segurança personalizada são as mesmas das versões anteriores. São necessárias alterações em web.config e rsreportserver.config: para obter mais informações, consulte [Configurar a autenticação personalizada ou de formulários no servidor de relatório](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+As configurações básicas necessárias para a extensão de segurança personalizada são as mesmas das versões anteriores. São necessárias alterações para web.config e rsreportserver.config: Para obter mais informações, confira [Configurar a autenticação personalizada ou de formulários no servidor de relatório](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Não há mais um web.config separado para o Gerenciador de Relatórios; o portal herdará as mesmas configurações do ponto de extremidade do reportserver.
 

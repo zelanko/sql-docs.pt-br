@@ -1,5 +1,6 @@
 ---
 title: Posicionar rótulos em um gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Determine o tipo de gráfico que você está usando para saber como alterar a posição de rótulos nesse tipo e nessa forma de gráfico.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66083dc0ff720f5b836db0e6f0689c916d2b2fdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23969f84491a66d7aedfdb887128fa85aea34742
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082381"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688659"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Posicionar rótulos em um gráfico (Construtor de Relatórios e SSRS)
   Como cada tipo de gráfico em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tem uma forma diferente, os rótulos de ponto de dados são colocados em um local ideal de forma que não interfiram no gráfico. A posição padrão dos rótulos varia com o tipo de gráfico:  

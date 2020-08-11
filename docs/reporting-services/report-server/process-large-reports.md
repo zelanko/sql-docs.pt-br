@@ -1,5 +1,6 @@
 ---
 title: Processar relatórios grandes | Microsoft Docs
+description: Saiba como executar relatórios grandes corretamente no Servidor de Relatório seguindo as recomendações de configuração, renderização, implantação e distribuição.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140258"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544508"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
   Relatórios grandes apresentam certos desafios de processamento e requerem certas configurações para que sejam executados corretamente. Relatórios grandes não devem ser executados sob demanda, salvo se estiverem configurados para oferecer suporte à paginação.  

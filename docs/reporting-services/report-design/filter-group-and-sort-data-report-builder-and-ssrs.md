@@ -1,5 +1,6 @@
 ---
 title: Filtrar, agrupar e classificar dados (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre maneiras de controlar, organizar e classificar dados de relatório com expressões baseadas em campos de conjunto de dados, parâmetros no painel Dados do Relatório do Construtor de Relatórios.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eca67966ff36c2100df7d46f07e150ed6aa32d1c
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080172"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681385"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar e classificar dados (Construtor de Relatórios e SSRS)
   Em um relatório, as expressões são usadas para ajudar a controlar, organizar e classificar dados de relatório. Por padrão, quando você cria conjuntos de dados e cria o layout de relatório, as propriedades de itens de relatório são definidas automaticamente como expressões baseadas nos campos de conjuntos de dados, parâmetros e outros itens que aparecem no painel de dados do relatório. Também é possível adicionar um botão de classificação interativo a uma tabela ou célula de matriz para permitir que um usuário altere a ordem de classificação de linha interativamente para grupos ou linhas em grupos.  
@@ -107,7 +108,7 @@ ms.locfileid: "77080172"
   
  Todos os três tipos de classificação podem ser combinados no mesmo relatório. Por padrão, a ordem de classificação é determinada pela ordem em que os dados são retornados pela consulta de conjunto de dados. As expressões de classificação são aplicadas na região de dados e no grupo de regiões de dados. As classificações interativas são aplicadas depois das expressões de classificação.  
   
- Para expressões que contêm funções de agregação, a maioria dos resultados não é afetada pela ordem de classificação. Os valores de retorno para as seguintes funções de agregação são afetados pela ordem de classificação: primeiro, último e anterior. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Para expressões que contêm funções de agregação, a maioria dos resultados não é afetada pela ordem de classificação. Os valores de retorno para as seguintes funções de agregação são afetados pela ordem de classificação: Primeiro, Último e Anterior. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Classificando dados em uma consulta de conjunto de dados  
  Inclua a ordem de classificação na consulta de conjunto de dados para pré-classificar os dados antes que eles sejam recuperados para um relatório. Com a classificação de dados na consulta, o trabalho de classificação é feito pela fonte de dados em vez de pelo processador de relatório.  

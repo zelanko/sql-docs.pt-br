@@ -5,20 +5,20 @@ description: Saiba como usar um script de implantação para implantar Clusters 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77608387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85699828"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usar um script Python para implantar um cluster de Big Data do SQL Server no AKS (Serviço de Kubernetes do Azure)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Neste tutorial, use um script de implantação Python de exemplo para implantar um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] no AKS (Serviço Kubernetes do Azure).
 
@@ -85,7 +85,8 @@ Use as etapas a seguir para executar o script de implantação em um prompt do B
    > O tamanho padrão do computador **Standard_L8s** pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de computador diferente, verifique se o número total de discos que podem ser anexados entre os nós no cluster é maior ou igual a 24. Cada declaração de volume persistente no cluster requer um disco anexado. Atualmente, o cluster de Big Data requer 24 declarações de volume persistente. Por exemplo, o tamanho do computador [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) dá suporte a 32 discos anexados, portanto, você pode avaliar clusters de Big Data com um único nó desse tamanho de computador.
 
    > [!NOTE]
-   > A conta `sa` do SQL Server é desabilitada durante a implantação do cluster de Big Data. Um novo logon sysadmin é provisionado na instância mestra do SQL Server com o mesmo nome especificado para a entrada de **Nome de usuário** e a senha correspondente à entrada **Senha**. Os mesmos valores de **Nome de usuário** e **Senha** são usados para provisionar um usuário administrador do controlador. O único usuário com suporte para o gateway (Knox) é **raiz** e a senha é a mesma que a apresentada acima.
+   > A conta `sa` do SQL Server é desabilitada durante a implantação do cluster de Big Data. Um novo logon sysadmin é provisionado na instância mestra do SQL Server com o mesmo nome especificado para a entrada de **Nome de usuário** e a senha correspondente à entrada **Senha**. Os mesmos valores de **Nome de usuário** e **Senha** são usados para provisionar um usuário administrador do controlador. Em clusters implantados antes do SQL Server 2019 CU5, o único usuário compatível com o gateway (Knox) é **raiz** e a senha é a mesma que a apresentada acima.
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. O script será iniciado criando um cluster do AKS usando os parâmetros especificados. Esta etapa demora vários minutos.
 

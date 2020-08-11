@@ -1,5 +1,6 @@
 ---
 title: Extensões de processamento de dados e Provedores de Dados do .NET Framework | Microsoft Docs
+description: Saiba mais sobre extensões de processamento de dados (um componente instalado com o Reporting Services) e os provedores de dados do .NET Framework.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1be86b9522f0386fff2d1014c3d94c652411f029
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c3e14debc6e14ebff0ef31cb47f560271b1a9b6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812271"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensões de processamento de dados e provedores de dados do .NET Framework (SSRS)
   Uma extensão de processamento de dados [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um componente instalado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], projetado para recuperar dados de um tipo específico de fonte de dados e para fornecer funcionalidade adicional para oferecer suporte ao design de relatórios e processamento de relatórios. Uma extensão de processamento de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] é um componente disponível do [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou de fontes de terceiros que dá suporte às interfaces <xref:System.Data> que permitem que você recupere e modifique dados de um tipo específico de fonte de dados.  

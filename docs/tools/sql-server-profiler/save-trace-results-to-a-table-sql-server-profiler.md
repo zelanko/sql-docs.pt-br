@@ -1,6 +1,7 @@
 ---
 title: Salvar resultados de rastreamento em uma tabela
 titleSuffix: SQL Server Profiler
+description: Saiba como usar SQL Server Profiler para salvar resultados de rastreamento em uma tabela em um banco de dados do SQL Server. Descubra como especificar o número máximo de linhas a serem salvas.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 6fb406988c9aeb92e7f0c1d3689e5b513a7ea0d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bc7cb3a37d2fc7683321ca666f408f475b9ffa02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726902"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Salvar resultados de rastreamento em uma tabela (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tópico descreve como salvar resultados de rastreamento em uma tabela do banco de dados, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

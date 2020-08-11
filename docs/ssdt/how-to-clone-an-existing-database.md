@@ -1,23 +1,23 @@
 ---
 title: Clonar um banco de dados existente
+description: Saiba como clonar um banco de dados. Veja as etapas envolvidas na criação de um banco de dados, duplicando seu esquema e replicando seus dados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241586"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518896"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Como: Clonar um banco de dados existente
+# <a name="how-to-clone-an-existing-database"></a>Como fazer: Clonar um banco de dados existente
 
 Esta tarefa utiliza algumas das etapas que você aprendeu em procedimentos anteriores para criar um novo banco de dados para o qual importar os dados existentes. Além disso, ele usa as etapas abordadas [Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar o esquema de um banco de dados de origem e de projeto.  
   
@@ -55,5 +55,5 @@ Usando estas etapas, você pode criar um banco de dados de desenvolvimento ou te
 7.  Use o Editor de Dados para verificar se todas as tabelas no novo banco de dados `TradeDev` foram populadas.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

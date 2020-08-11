@@ -1,5 +1,6 @@
 ---
 title: Referências da coleção ReportItems (Construtor de Relatórios) | Microsoft Docs
+description: Descubra a coleção ReportItems. Essas caixas de texto no Construtor de Relatórios estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo de relatório.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb13f8e3ce8b64b64a8f575dd087a715cd6e5da
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081894"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462320"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Coleções internas – referências de coleções de ReportItems (Construtor de Relatórios)
   A coleção interna de **ReportItems** é o conjunto de caixas de texto de itens de relatório, como linhas de uma região de dados ou caixas de texto na superfície de design de relatório. A coleção de **ReportItems** inclui caixas de texto que estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo de relatório. Essa coleção é determinada em tempo de execução pelo processador de relatório e pelo renderizador de relatório. O escopo atual é alterado conforme o processador de relatório combina dados de relatório e os elementos de layout do item de relatório sucessivamente conforme o usuário exibe páginas de um relatório. É possível usar a coleção interna de **ReportItems** para produzir cabeçalhos de páginas em estilo de dicionário que mostram o primeiro e o último item em cada página.  
@@ -22,7 +23,7 @@ ms.locfileid: "77081894"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Usando a propriedade Value de ReportItems  
- Itens dentro da coleção **ReportItems** têm apenas uma propriedade: Value. O valor para um item de **ReportItems** pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
+ Itens na coleção **ReportItems** têm apenas uma propriedade: Value. O valor para um item de **ReportItems** pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
   
  Por exemplo:  
   

@@ -1,25 +1,25 @@
 ---
-title: Conceder permissões para scripts
-description: Como conceder permissões de usuário de banco de dados para a execução de script R e Python nos Serviços de Machine Learning do SQL Server.
+title: Conceder permissões para executar scripts do Python e do R
+description: Saiba como conceder aos usuários permissão para executar scripts do Python e do R externos nos Serviços de Machine Learning do SQL Server e conceder permissões de leitura, gravação ou DDL (linguagem de definição de dados) em bancos de dados.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/17/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 06/03/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55a76b070a5f54562957f138d55896b49dbb15f1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: da601b8c83e6e226da0329ec8d8c732d9877656a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775366"
 ---
-# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Conceder aos usuários permissão nos Serviços de Machine Learning do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>Conceder permissão aos usuários para executar scripts do Python e do R com os Serviços de Machine Learning do SQL Server
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Este artigo descreve como conceder aos usuários permissão para executar scripts externos nos Serviços de Machine Learning do SQL Server e conceder permissões de leitura, gravação ou DDL (linguagem de definição de dados) em bancos de dados.
+Saiba como conceder aos usuários permissão para executar scripts do Python e do R externos nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) e conceder permissões de leitura, gravação ou DDL (linguagem de definição de dados) em bancos de dados.
 
 Para obter mais informações, confira a seção de permissões em [Visão geral de segurança da estrutura de extensibilidade](../../machine-learning/concepts/security.md#permissions).
 
@@ -27,9 +27,9 @@ Para obter mais informações, confira a seção de permissões em [Visão geral
 
 ## <a name="permission-to-run-scripts"></a>Permissão para executar scripts
 
-Se você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por conta própria e está executando scripts R ou Python em sua própria instância, normalmente, você executa scripts como administrador. Portanto, você tem permissão implícita em várias operações e todos os dados no banco de dados.
+Você precisará conceder permissão, a cada usuário que executa scripts do R ou do Python com os Serviços de Machine Learning do SQL Server e que não tem status de administrador, para executar scripts externos em cada banco de dados em que a linguagem é usada.
 
-No entanto, a maioria dos usuários não tem essas permissões elevadas. Por exemplo, os usuários de uma organização que usam logons do SQL para acessar o banco de dados geralmente não têm permissões elevadas. Portanto, para cada usuário que está usando o R ou o Python, você deve conceder aos usuários dos Serviços de Machine Learning a permissão para executar scripts externos em cada banco de dados em que a linguagem é usada. Veja como:
+Para conceder permissão para executar o script externo, execute o seguinte script:
 
 ```sql
 USE <database_name>
@@ -38,15 +38,19 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> As permissões não são específicas da linguagem de script compatível. Em outras palavras, não há níveis de permissão separados para o script R versus o script Python. Caso você precise manter permissões separadas para essas linguagens, instale o R e o Python em instâncias separadas.
+> As permissões não são específicas da linguagem de script compatível. Em outras palavras, não há níveis de permissão separados para o script R versus o script Python.
 
-<a name="permissions-db"></a> 
+<a name="permissions-db"></a>
 
 ## <a name="grant-databases-permissions"></a>Conceder permissões de banco de dados
 
 Enquanto um usuário está executando scripts, talvez ele precise ler dados de outros bancos de dados. O usuário também pode precisar criar tabelas para armazenar os resultados e gravar dados nas tabelas.
 
-Para cada conta de usuário do Windows ou logon do SQL que está executando scripts R ou Python, verifique se ele tem as permissões apropriadas no banco de dados específico: `db_datareader` para ler dados, `db_datawriter` para salvar objetos no banco de dados ou `db_ddladmin` para criar objetos como procedimentos armazenados ou tabelas que contêm dados treinados e serializados.
+Para cada conta de usuário do Windows ou logon do SQL que esteja executando scripts de R ou Python, verifique se as permissões apropriadas estão presentes no banco de dados específico: 
+
++ `db_datareader` para ler dados.
++ `db_datawriter` para salvar objetos no banco de dados.
++ `db_ddladmin` para criar objetos como procedimentos armazenados ou tabelas que contêm dados treinados e serializados.
 
 Por exemplo, a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir concede ao logon SQL *MySQLLogin* os direitos para executar consultas T-SQL no banco de dados *ML_Samples*. Para executar essa instrução, o logon SQL já deve existir no contexto de segurança do servidor.
 

@@ -1,5 +1,6 @@
 ---
 title: Monitorando o desempenho do servidor de relatório | Microsoft Docs
+description: Saiba como monitorar o desempenho do servidor de relatório para avaliar a atividade do servidor, inspecionar tendências, diagnosticar gargalos e coletar dados sobre a configuração do sistema.
 ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67412652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547938"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitorando o desempenho do servidor de relatório
   Use as ferramentas de monitoramento de desempenho para monitorar o desempenho do servidor de relatório e avaliar a atividade do servidor, observar as tendências, diagnosticar gargalos do sistema e reunir dados que podem ajudar a determinar se a configuração atual do sistema é suficiente. Para ajustar o desempenho do servidor, você pode especificar com que frequência o domínio de aplicativo de servidor de relatório deve ser reciclado. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  

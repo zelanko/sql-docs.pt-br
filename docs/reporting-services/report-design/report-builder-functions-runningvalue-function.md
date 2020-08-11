@@ -1,5 +1,6 @@
 ---
 title: Função RunningValue (Construtor de Relatórios) | Microsoft Docs
+description: Familiarize-se com a função RunningValue, que retorna uma agregação contínua de todos os valores numéricos não nulos especificados pela expressão no Construtor de Relatórios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90054a62168032ca29d99819061537e6a0b179a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 053efc8ddd1f9f00c528c626aa204d612cb82369
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081162"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681275"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funções do Construtor de Relatórios – Função RunningValue
   Retorna uma agregação contínua de todos os valores numéricos não nulos especificados pela expressão, avaliados para o escopo fornecido.  

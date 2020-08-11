@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexão do SQL Server | Microsoft Docs
+description: Saiba mais sobre o tipo de conexão do SQL Server e a inclusão de dados de um banco de dados do SQL Server em seu relatório.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916bf1dc2bf861b46b01a069b6fbe15768e4bc1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e5b7527f0af44931307acc930468df8d4d6404e1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812216"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>O tipo de conexão do SQL Server (SSRS)
   Para incluir dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse tipo de fonte de dados interna é baseado na extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use esse tipo de fonte de dados para se conectar e para recuperar dados de uma versão atual e de versões anteriores de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -31,7 +32,7 @@ ms.locfileid: "77081356"
 Data Source=<server>;Initial Catalog=AdventureWorks  
 ```  
   
- Confira mais informações sobre exemplos de cadeias de conexão em [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para saber mais sobre exemplos de cadeias de conexão, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="credentials"></a><a name="Credentials"></a> Credenciais  
  As credenciais são necessárias para executar consultas, visualizar o relatório localmente e visualizá-lo no servidor de relatório.  

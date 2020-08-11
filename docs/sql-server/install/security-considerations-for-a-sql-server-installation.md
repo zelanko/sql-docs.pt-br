@@ -1,10 +1,11 @@
 ---
 title: Considerações de segurança
+description: Este artigo discute algumas práticas recomendadas de segurança que você deve considerar antes e depois de instalar o SQL Server.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -23,17 +24,17 @@ helpviewer_keywords:
 - file system security [SQL Server]
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 1038bdac62902f406a3af510f52bb98728720ab6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258959"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899656"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerações sobre segurança para uma instalação do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  A segurança é importante para todo produto e todo negócio. Seguindo práticas recomendadas simples, você pode evitar muitas vulnerabilidades de segurança. Este artigo discute algumas práticas recomendadas de segurança que você deve considerar antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e depois de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diretrizes de segurança para recursos específicos estão incluídas nos tópicos de referência para esses recursos.  
   

@@ -1,5 +1,6 @@
 ---
 title: Considerações sobre segurança para extensões | Microsoft Docs
+description: Saiba mais sobre as políticas, condições e requisitos de segurança que determinam como os servidores de relatório concedem permissões a extensões do Reporting Services.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fb6a43fba085319b8be4ff374fea7d089e8a529a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193369"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529930"
 ---
 # <a name="security-considerations-for-extensions"></a>Considerações de segurança para extensões
   Todos aplicativo que se destinam ao CLR (Common Language Runtime) devem interagir com o sistema de segurança CLR. Quando tal aplicativo é executado, é automaticamente avaliado e recebe um conjunto de permissões do CLR. Dependendo das permissões que o aplicativo receber, ele continuará sua execução ou vai gerar uma exceção de segurança. As configurações e as diretrizes locais de segurança dos arquivos de configuração de política de segurança para um determinado servidor de relatório definem as permissões de código recebidas por um assembly.  

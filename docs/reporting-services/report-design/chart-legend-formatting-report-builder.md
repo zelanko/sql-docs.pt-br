@@ -1,5 +1,6 @@
 ---
 title: Formatar a legenda em um gráfico (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como formatar uma legenda em um gráfico no Construtor de Relatórios com a caixa de diálogo Propriedades da Legenda ou usando o painel Propriedades.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080563"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255319"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Legenda de gráfico – formatação (Construtor de Relatórios)
   A legenda do gráfico contém descrições de cada categoria em um gráfico. Uma legenda sempre contém um ou mais itens de legenda, no qual cada item de legenda é composto por uma caixa colorida que representa a série, e uma cadeia de caracteres de texto que descreve a série, conforme indicado na ilustração a seguir.  

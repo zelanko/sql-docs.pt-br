@@ -12,26 +12,26 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdd7e624fea2f6c225c8839450e1d1d5f91a9de5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257158"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001928"
 ---
 # <a name="object-dependencies"></a>Dependências de objeto
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Alguns objetos de banco de dados têm dependências de outros objetos de banco de dados. Por exemplo, exibições e procedimentos armazenados dependem da existência de tabelas que contenham dados retornados pela exibição ou pelo procedimento. As **Dependências entre objetos (página Geral)** para o objeto atual lista ambos os objetos de banco de dados que devem estar presentes para o objeto funcionar corretamente e os objetos que dependem do objeto selecionado. Um objeto que faz referência a outro objeto em sua definição, e essa definição é armazenada no catálogo do sistema, é denominado *entidade de referência*. Um objeto que é referenciado por outro objeto é denominado *entidade referenciada*.  
   
 As **Dependências entre objetos (página Avançado)** do objeto atual lista os objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que dependem do objeto. Os objetos podem ser armazenados em servidores diferentes.  
   
 Use esta caixa de diálogo para entender as dependências antes de alterar ou excluir o objeto selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
-**Objetos que dependem do** _\<objeto selecionado>_  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
+**Objetos que dependem de** _\<selected object>_  
 Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e que dependem do objeto selecionado.  
   
-**Objetos dos quais** _\<objeto selecionado>_ **depende**  
+**Objetos dos quais** _\<selected object>_ **depende**  
 Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e dos quais depende o objeto selecionado.  
   
 **Dependências**  

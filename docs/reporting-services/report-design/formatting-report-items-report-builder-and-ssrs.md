@@ -1,5 +1,6 @@
 ---
 title: Como formatar itens de relatório (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como a formatação aprimora a legibilidade e torna seus relatórios mais atraentes no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079643"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779418"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatando itens de relatório (Construtor de Relatórios e SSRS)
   A formatação dos itens do relatório torna-o mais atraente e legível. Você pode formatar as caixas de texto e itens específicos das caixas de texto, as imagens, as expressões e os dados no modo de design de relatório.  
@@ -30,7 +31,7 @@ ms.locfileid: "77079643"
   
  É possível alterar as opções de formatação selecionando o item a ser formatado e abrindo a caixa de diálogo Propriedades do item. Por exemplo, se você quiser formatar o conteúdo de uma caixa de texto inteira ou uma palavra selecionada nela, clique com o botão direito do mouse no item e selecione **Propriedades da Caixa de Texto**. Em seguida, aplique os estilos de formatação desejados.  
   
- Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para começar rapidamente, confira [Tutorial: formatar o texto &#40Construtor de Relatórios&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

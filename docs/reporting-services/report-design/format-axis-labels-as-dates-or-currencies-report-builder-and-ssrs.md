@@ -1,5 +1,6 @@
 ---
 title: Formatar os rótulos do eixo como datas ou moedas (Construtor de Relatórios) | Microsoft Docs
+description: Especifique um intervalo de data ou de tempo para um eixo x formatando os rótulos de eixo e definindo o tipo de intervalo de eixo como um intervalo válido.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b65c752c479c86f88679cb01bd328dc2d22cf3be
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080017"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689427"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formatar rótulos de eixo como datas ou moedas (Construtor de Relatórios e SSRS)
 Quando você mostrar os valores DateTime formatados corretamente em um eixo em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um gráfico exibirá automaticamente esses valores como dias. Para especificar um intervalo de data/hora para o eixo x, como um intervalo de meses ou de horas, você deverá formatar os rótulos dos eixos e definir o tipo de intervalo de eixo para um intervalo de data ou hora válido.  

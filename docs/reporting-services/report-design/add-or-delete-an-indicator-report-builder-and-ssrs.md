@@ -1,5 +1,6 @@
 ---
 title: Adicionar ou excluir um indicador (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como adicionar ou excluir um indicador em seus relatórios paginados para transmitir o estado de um valor de dados no Construtor de Relatórios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 154faecf24a142578fc236a2cae6330ea7d89a76
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881253"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Adicionar ou excluir um indicador (Construtor de Relatórios e SSRS)
-  Em uma relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , os indicadores são medidores mínimos que transmitem o estado de um único valor de dados em um relance. Para obter mais informações sobre eles, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], os indicadores são medidores mínimos que transmitem o estado de um só valor de dados em um relance. Para obter mais informações sobre eles, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Geralmente, os indicadores são colocados nas células de uma tabela ou matriz, mas você também pode usar indicadores por si mesmos, lado a lado com indicadores ou indicadores inseridos.  
   

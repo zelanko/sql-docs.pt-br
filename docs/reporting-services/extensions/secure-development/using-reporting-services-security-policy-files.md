@@ -1,5 +1,6 @@
 ---
 title: Usando arquivos de política de segurança do Reporting Services | Microsoft Docs
+description: Saiba mais sobre os arquivos de configuração que o Reporting Services usa para armazenar as informações de política de segurança para assemblies de código. Saiba como modificá-los.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1390e53ddbc864f634b581bd2a1b42902c6b6bb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193317"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529322"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usando arquivos de política de segurança do Reporting Services
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança de componentes em três arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Os três arquivos de configuração correspondem a três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: o servidor de relatório e o serviço do Windows, o aplicativo Web do Gerenciador de Relatórios e a janela de exibição do Designer de Relatórios.  
@@ -34,7 +35,7 @@ ms.locfileid: "63193317"
 ## <a name="policy-files-in-reporting-services"></a>Arquivos de política do Reporting Services  
  A tabela a seguir lista os arquivos de configuração de política do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], sua localização (supondo uma instalação padrão) e suas respectivas funções.  
   
-|Nome do arquivo|Local (instalação padrão)|DESCRIÇÃO|  
+|Nome do arquivo|Local (instalação padrão)|Descrição|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|O arquivo de configuração de política de servidor de relatório. Estas políticas de segurança afetam principalmente expressões de relatório e assemblies personalizados após um relatório ser implantado em um servidor de relatório. Este arquivo de política também afeta dados personalizados, extensões de entrega, renderização e segurança implantados no servidor de relatório.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Arquivo de configuração de política do Gerenciador de Relatórios. Estas políticas de segurança afetam todos os assemblies que estendem o Gerenciador de Relatórios; por exemplo, extensões de interface de usuário de assinatura para entrega personalizada.|  

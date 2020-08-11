@@ -1,5 +1,6 @@
 ---
 title: Propriedades do Navegador do SQL Server (guia Serviço)
+description: Saiba mais sobre as opções na guia Serviço na caixa de diálogo Propriedades do SQL Server Browser, como o caminho binário, o nome do host e o modo de início.
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c9e5cb32206a2a2b81970a43308058dc2ad1c52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fa05db685f2597d92c6314f5b42a7e1976db4fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307091"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894260"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Propriedades do Navegador do SQL Server (guia Serviço)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   O programa Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado como um serviço no servidor. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
   
  Use a guia **Serviço** na caixa de diálogo **Propriedades do Navegador do SQL Server** para exibir as opções a seguir. Todas as propriedades, exceto **Modo Inicial** , são somente leitura.  
@@ -49,7 +50,7 @@ ms.locfileid: "75307091"
  **Modo Inicial**  
  Defina este serviço com as seguintes opções:  
   
--   Manual: este serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
+-   Manual: Esse serviço não é iniciado automaticamente na inicialização do computador. Você deve iniciá-lo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou outra ferramenta.  
   
 -   Automático: este serviço tenta ser iniciado na inicialização do computador.  
   

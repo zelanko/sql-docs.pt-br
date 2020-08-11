@@ -1,5 +1,6 @@
 ---
 title: Minigráficos e barras de dados (Construtor de Relatórios) | Microsoft Docs
+description: Descubra os benefícios de usar minigráficos e barras de dados no Construtor de Relatórios. Esses gráficos compactos transmitem muitas informações em muito pouco espaço.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d65843f0f1104947532bf71f97e5b4c34d2bb291
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c7721b8b5002c104ff5076b3b0d1c9bc8219fba
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880722"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos e barras de dados (Construtor de Relatórios e SSRS)
   Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente embutidas com o texto.   
@@ -33,15 +34,15 @@ ms.locfileid: "77080957"
 ##  <a name="types-of-sparklines"></a><a name="KindsofSparklines"></a> Tipos de minigráficos  
  Você pode criar praticamente tantos tipos de minigráficos quanto gráficos normais. Em geral, você não pode fazer minigráficos em 3D. Você pode fazer versões de minigráfico destes gráficos completos:  
   
--   [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): os gráficos de coluna básicos, empilhados e 100% empilhados.  
+-   [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): Os gráficos de coluna básicos, empilhados e 100% empilhados.  
   
--   [Gráficos de linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): todos os gráficos, exceto o gráfico de linhas 3D.  
+-   [Gráficos de linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): Todos exceto o gráfico de linha 3D.  
   
--   [Gráficos de áreas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): todos os gráficos, exceto o gráfico de áreas 3D  
+-   [Gráficos de áreas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): Todos exceto os gráficos de área 3D  
   
 -   [Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md): e gráficos de rosca, simples e 3D, mas não as outras formas como gráficos de funil e de pirâmide.  
   
--   [Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md): as ações, velas, barra de erros e gráficos de caixa.  
+-   [Gráficos de intervalo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md): Os gráficos de ações, vela, barra de erros e de caixa.  
   
 ##  <a name="data-bars"></a><a name="DataBars"></a> Barras de dados  
  Barras de dados geralmente representam um único ponto de dados, apesar de poderem representar vários pontos de dados, como os gráficos de barras normais. Normalmente contêm várias séries sem categoria ou possuem agrupamento de série.  
@@ -52,9 +53,9 @@ ms.locfileid: "77080957"
   
  Você pode fazer versões de barra de dados destes gráficos completos:  
   
--   [Gráficos de barras &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): os gráficos de barras básicos, empilhados e 100% empilhados.  
+-   [Gráficos de barras &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): Gráficos de barras básicos, empilhados 100% empilhadas.  
   
--   [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): os gráficos de coluna básicos, empilhados e 100% empilhados. Os gráficos de coluna podem ser minigráficos ou barras de dados.  
+-   [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): Gráficos de coluna básicos, empilhados e 100% empilhados. Os gráficos de coluna podem ser minigráficos ou barras de dados.  
   
 ##  <a name="aligning-sparkline-data-in-a-table-or-matrix"></a><a name="AlignDatainTableMatrix"></a> Alinhando dados de minigráfico em uma tabela ou matriz  
  Quando você insere um minigráfico em uma tabela ou matriz, é geralmente importante que os pontos de dados em cada minigráfico alinhem-se com os pontos de dados dos outros minigráficos naquela coluna. Caso contrário, será difícil comparar os dados nas linhas diferentes. Por exemplo, quando você compara dados de vendas por mês para vendedores diferentes em sua empresa, é importante que os meses estejam alinhados. Se um funcionário esteve fora durante o mês de abril, não haveria dados para aquele funcionário naquele mês. Você esperaria ver um intervalo para aquele mês e ver os dados durante os meses subsequentes alinhados com os dados para os outros funcionários. Você pode fazer isto alinhando o eixo horizontal. Para obter mais informações, consulte a seção sobre minigráficos em [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e consulte [Alinhar os dados de um gráfico em uma tabela ou matriz &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  

@@ -1,5 +1,6 @@
 ---
 title: Implementando uma extensão de entrega | Microsoft Docs
+description: Leia uma visão geral de como você pode estender a funcionalidade de entrega no Reporting Services implementando uma extensão de entrega personalizada.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c0004f844d6914cea330d3a0c7332de783116c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0ac797a8dd02a9d854c8bb2783435a087326f48
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193759"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529530"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implementando uma extensão de entrega
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite que os usuários criem e publiquem relatórios que, uma vez criados e publicados, podem ser entregues em vários locais. Além disso, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega e uma API de entrega que permite que os desenvolvedores criem extensões de entrega adicionais para estender ainda mais a funcionalidade de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

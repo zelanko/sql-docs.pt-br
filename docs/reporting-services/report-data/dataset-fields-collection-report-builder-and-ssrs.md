@@ -1,5 +1,6 @@
 ---
 title: Coleção de campos do conjunto de dados (Construtor de Relatórios) | Microsoft Docs
+description: Saiba mais sobre a coleção de campos de conjunto de dados. Os campos de um conjunto de dados representam os dados de uma conexão de dados. Um campo pode representar dados numéricos ou não numéricos.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d19ea6df08431db42e700cabccd7a05167dd89c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808566"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Os campos de um conjunto de dados representam os dados de uma conexão de dados. Um campo pode representar dados numéricos ou não numéricos. Os exemplos incluem valores de vendas, vendas totais, nomes de clientes, identificadores de banco de dados, URLs, imagens, dados espaciais e endereços de email. Na superfície de design, os campos aparecem como expressões em itens de relatório, como caixas de texto, tabelas e gráficos.  
@@ -89,7 +90,7 @@ ms.locfileid: "77077782"
   
      Por exemplo, os tipos de dados que o processador de relatório usa para os tipos de data e hora novos introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] são mostrados na tabela a seguir:  
   
-    |Tipo de dados SQL|Tipo de dados CLR|DESCRIÇÃO|  
+    |Tipo de dados SQL|Tipo de dados CLR|Descrição|  
     |-------------------|-------------------|-----------------|  
     |**Data**|**DateTime**|Somente data|  
     |**Hora**|**TimeSpan**|Somente hora|  

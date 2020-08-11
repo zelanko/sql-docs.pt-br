@@ -1,6 +1,6 @@
 ---
 title: Exibir valores de percentual em um gráfico de pizza (Construtor de Relatórios) | Microsoft Docs
-description: Em relatórios paginados do Reporting Services, por padrão, a legenda mostra as categorias. É recomendável ter percentuais na legenda ou nas próprias fatias da pizza.
+description: Saiba como exibir valores de percentual em um gráfico de pizza, na legenda ou nas fatias de pizza no Construtor de Relatórios.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b250f8bffdebeb0cb0f1e68a739bb808cb75abd
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487582"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681395"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Exibir valores de porcentagem em um gráfico de pizza (Construtor de Relatórios e SSRS)
 Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], por padrão, a legenda mostra as categorias. É recomendável ter percentuais na legenda ou nas próprias fatias da pizza.   
@@ -43,7 +43,7 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
 2.  Em **Legenda**, digite **#PERCENT** para a propriedade **Texto da legenda personalizada** .  
   
 ## <a name="see-also"></a>Consulte Também  
-* [Tutorial: Adicionar um gráfico de pizza ao relatório (construtor de relatórios)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+* [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

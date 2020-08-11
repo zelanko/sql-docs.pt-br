@@ -1,5 +1,6 @@
 ---
 title: Protocolos de rede e bibliotecas de rede | Microsoft Docs
+description: Um servidor pode ser configurado para monitorar vários protocolos de rede. É possível alterar a configuração usando o SQL Server Configuration Manager.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126069"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880448"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de rede e bibliotecas de rede
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Um servidor pode escutar ou monitorar vários protocolos de rede ao mesmo tempo. Entretanto, cada protocolo deve ser configurado. Se um protocolo específico não for configurado, o servidor não poderá escutar naquele protocolo. Após a instalação, você pode alterar as configurações de protocolo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

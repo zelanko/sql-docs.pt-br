@@ -1,5 +1,6 @@
 ---
 title: Permitir que uma caixa de texto seja expandida ou reduzida (Construtor de Relatórios) | Microsoft Docs
+description: Saiba como definir opções de propriedade em relatórios paginados do Construtor de Relatórios que permitem que uma caixa de texto seja expandida ou encolhida com base no conteúdo dela.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a31202c07faad2289e25283cfde9c87fb2e3d870
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e224794dde1c171c583106bf1680ba19da23ed2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994553"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Permitir que uma caixa de texto seja ampliada ou reduzida (Construtor de Relatórios e SSRS)
-  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , as caixas de texto não são apenas as caixas autônomas na superfície de design do relatório. Todas as células de uma tabela ou matriz (uma região de dados tablix) também contêm uma caixa de texto, que pode ser formatada da mesma maneira que caixas de texto autônomas. Por padrão, as caixas de texto têm tamanho fixo. Você pode definir opções que permitem a expansão ou redução da caixa de texto com base em seu conteúdo. Essas opções correspondem à propriedade **CanGrow** ou **CanShrink** no painel Propriedades.  
+  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], as caixas de texto não são apenas as caixas autônomas na superfície de design do relatório. Todas as células de uma tabela ou matriz (uma região de dados tablix) também contêm uma caixa de texto, que pode ser formatada da mesma maneira que caixas de texto autônomas. Por padrão, as caixas de texto apresentam um tamanho fixo. Você pode definir opções que permitem a expansão ou redução da caixa de texto com base em seu conteúdo. Essas opções correspondem à propriedade **CanGrow** ou **CanShrink** no painel Propriedades.  
   
 ## <a name="to-allow-a-text-box-to-grow-or-shrink"></a>Para permitir que uma caixa de texto cresça ou seja reduzida  
   

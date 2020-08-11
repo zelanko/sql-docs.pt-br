@@ -1,7 +1,7 @@
 ---
 title: Como usar o Always Encrypted com SqlClient
 description: Saiba como desenvolver aplicativos usando Microsoft.Data.SqlClient e Always Encrypted para manter os seus dados seguros.
-ms.date: 05/06/2020
+ms.date: 07/09/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886457"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217764"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Como usar o Always Encrypted com o Provedor de Dados do Microsoft .NET para SQL Server
 
@@ -74,6 +74,9 @@ Para configurar seu aplicativo:
 3. Forneça o protocolo de atestado a ser usado configurando a palavra-chave `Attestation Protocol` na cadeia de conexão. O valor dessa palavra-chave deve ser definido como "HGS".
 
 Para obter um tutorial passo a passo, confira [Tutorial: como desenvolver um aplicativo .NET usando o Always Encrypted com enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-apps.md).
+
+> [!NOTE]
+> O Always Encrypted com enclaves seguros tem suporte apenas do Windows.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperação e modificação de dados em colunas criptografadas
 
@@ -288,13 +291,13 @@ O processo para obter uma chave de criptografia de coluna:
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>Usando provedores internos de repositórios de chaves mestras de coluna
 
-O **Provedor de Dados do Microsoft .NET para SQL Server** é fornecido com os provedores internos de repositório de chaves mestras de coluna a seguir, que são pré-registrados com nomes do provedor específico (usados para pesquisar o provedor).
+O **Provedor de Dados do Microsoft .NET para SQL Server** é fornecido com os provedores internos de repositório de chaves mestras de coluna a seguir, que são pré-registrados com nomes do provedor específico (usados para pesquisar o provedor). Esses provedores de repositórios de chaves internos têm suporte apenas no Windows.
 
-| Classe | Descrição | Nome (de pesquisa) do provedor |
-|:---|:---|:---|
-|[Classe SqlColumnEncryptionCertificateStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Um provedor para o Repositório de Certificados do Windows. | MSSQL_CERTIFICATE_STORE |
-|[Classe SqlColumnEncryptionCngProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Um provedor de um repositório de chaves que dá suporte à [API de Criptografia da Microsoft: API Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia. | MSSQL_CNG_STORE |
-| [Classe SqlColumnEncryptionCspProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Um provedor de um repositório de chaves que dá suporte à [CAPI (Cryptography API) da Microsoft](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia. | MSSQL_CSP_PROVIDER |
+| Classe | Descrição | Nome (de pesquisa) do provedor | Plataforma |
+|:---|:---|:---|:---|
+|[Classe SqlColumnEncryptionCertificateStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Um provedor para o Repositório de Certificados do Windows. | MSSQL_CERTIFICATE_STORE | Windows |
+|[Classe SqlColumnEncryptionCngProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Um provedor de um repositório de chaves que dá suporte à [API de Criptografia da Microsoft: API Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia. | MSSQL_CNG_STORE | Windows |
+| [Classe SqlColumnEncryptionCspProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Um provedor de um repositório de chaves que dá suporte à [CAPI (Cryptography API) da Microsoft](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia. | MSSQL_CSP_PROVIDER | Windows |
 
 Não é necessário fazer alterações de código no aplicativo para usar esses provedores, mas observe o seguinte:
 
@@ -303,7 +306,11 @@ Não é necessário fazer alterações de código no aplicativo para usar esses 
 
 ### <a name="using-the-azure-key-vault-provider"></a>Como usar o provedor do Azure Key Vault
 
-O Cofre de Chaves do Azure é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se seus aplicativos estiverem hospedados no Azure). O **Provedor de Dados do Microsoft .NET para SQL Server** não inclui um provedor interno de repositório de chaves mestras de coluna para o Azure Key Vault, mas está disponível como um pacote NuGet que você pode integrar ao seu aplicativo com facilidade. Para obter detalhes, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de dados e armazenar as chaves de criptografia no Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+O Cofre de Chaves do Azure é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se seus aplicativos estiverem hospedados no Azure). O **Provedor de Dados do Microsoft .NET para SQL Server** não inclui um provedor interno de repositório de chaves mestras de coluna para o Azure Key Vault, mas está disponível como um pacote NuGet ([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider)) que você pode integrar ao seu aplicativo com facilidade. Para obter detalhes, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de dados e armazenar as chaves de criptografia no Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+
+| Classe | Descrição | Nome (de pesquisa) do provedor | Plataforma |
+|:---|:---|:---|:---|
+|[Classe SqlColumnEncryptionAzureKeyVaultProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Provedor do Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 Para obter exemplos que demonstram a execução de criptografia/descriptografia com o Azure Key Vault, veja o [Azure Key Vault trabalhando com o Always Encrypted](azure-key-vault-example.md) e o [Azure Key Vault trabalhando com o Always Encrypted com o Enclaves Seguros](azure-key-vault-enclave-example.md).
 
@@ -508,7 +515,8 @@ Com SqlBulkCopy, você pode copiar dados, que já estão criptografados e armaze
 - Configure ambas as conexões de banco de dados para a tabela de origem e a tabela de destino sem o Always Encrypted habilitado.
 - Defina a opção `AllowEncryptedValueModifications` (veja [SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)).
 
-Observação: Tenha cuidado ao especificar `AllowEncryptedValueModifications`, pois isso poderá causar a corrupção do banco de dados, já que o **Provedor de Dados do Microsoft .NET para SQL Server** não verifica se os dados estão realmente criptografados nem se eles estão criptografados corretamente, usando o mesmo tipo de criptografia, algoritmo e chave que a coluna de destino.
+> [!NOTE]
+> Tenha cuidado ao especificar `AllowEncryptedValueModifications`, pois isso poderá causar a corrupção do banco de dados, já que o **Provedor de Dados do Microsoft .NET para SQL Server** não verifica se os dados estão realmente criptografados nem se eles estão criptografados corretamente, usando o mesmo tipo de criptografia, algoritmo e chave que a coluna de destino.
 
 Aqui está um exemplo que copia dados de uma tabela em outra. Pressupõe-se que as colunas SSN e BirthDate estão criptografadas.
 

@@ -1,5 +1,6 @@
 ---
 title: Configurar o portal da Web | Microsoft Docs
+description: Saiba como configurar o aplicativo do portal da Web, usado para exibir relatórios, gerenciar o conteúdo do servidor de relatório e conceder acesso a um usuário ao servidor de relatório no modo nativo.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308396"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548048"
 ---
 # <a name="configure-the-web-portal"></a>Configurar o portal da Web
 
 o portal da Web é um aplicativo de front-end da Web usado para exibir relatórios, gerenciar o conteúdo do servidor de relatório e conceder acesso a um usuário ao servidor de relatório no modo nativo. o portal da Web é instalado com o serviço Web Servidor de Relatórios na mesma instância do servidor de relatório e, opcionalmente, configurado se você selecionar a opção **Instalar na configuração de modo nativo padrão** na Instalação. Também é possível configurar o portal da Web como uma tarefa pós-instalação. Este tópico fornece informações sobre os seguintes cenários de configuração do portal da Web:
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para usar o portal da Web, é necessário atender aos seguintes pré-requisitos:
 
@@ -80,7 +81,7 @@ Crie um pacote de marca personalizada para alterar as cores usadas no portal da 
 
 2. Abra o Internet Explorer.
 
-3. Insira a URL do portal da Web. Por padrão, considera-se https://\<**nome-do-seu-servidor**>/reports, mas se você tiver instalado o Reporting Services como uma instância nomeada, a URL padrão será https://\<**nome-do-seu-servidor**>/reports\< **_nomedainstância**>.
+3. Insira a URL do portal da Web. Por padrão, é https://\<**your-server-name**>/reports, mas se você tiver instalado o Reporting Services como uma instância nomeada, a URL padrão será https://\<**your-server-name**>/reports\<**_instancename**>.
 
 4. Selecione **Configurações de Site**.
 

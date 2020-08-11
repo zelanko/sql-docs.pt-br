@@ -1,5 +1,6 @@
 ---
 title: Registrar um SPN (Nome da Entidade de Serviço) para um servidor de relatório | Microsoft Docs
+description: Saiba como criar um SPN para o serviço do Servidor de Relatório se ele é executado como um usuário de domínio e se a sua rede usa o Kerberos para autenticação.
 ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544498"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar um SPN (Nome da Entidade de Serviço) para um servidor de relatório
   Se estiver implantando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma rede que use o protocolo Kerberos para autenticação mútua, você deverá criar um SPN (Nome da Entidade de Serviço) para o serviço Servidor de Relatório se configurá-lo para execução como uma conta de usuário do domínio.  
@@ -41,7 +42,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
   
  **HTTP** é a classe de serviço. O serviço Web Servidor de Relatórios é executado em HTTP.SYS. Uma criação por produto de um SPN para HTTP significa que todos os aplicativos Web no mesmo computador que são executados em HTTP.SYS (incluindo aplicativos hospedados no IIS) receberão tíquetes com base na conta de usuário do domínio. Se esses serviços forem executados em uma conta diferente, ocorrerá falha nas solicitações de autenticação. Para evitar esse problema, configure todos os aplicativos HTTP para que sejam executados na mesma conta ou considere a criação de cabeçalhos de host para cada aplicativo e, depois, a criação de SPNs separados para cada cabeçalho de host. Quando você configura cabeçalhos de host, é necessário fazer alterações de DNS, independentemente da configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Os valores especificados para \<*computername*> e \<*domainname*> identificam o endereço de rede exclusivo do computador que hospeda o servidor de relatório. Pode ser um nome de host local ou um nome de domínio totalmente qualificado (FQDN). Se tiver somente um domínio, você poderá omitir \<*domainname*> da linha de comando. \<*domain-user-account*> é a conta de usuário na qual o serviço Servidor de Relatório é executado e na qual o SPN deve ser registrado.  
+ Os valores especificados para \<*computername*> e \<*domainname*> identificam o endereço de rede exclusivo do computador que hospeda o servidor de relatório. Pode ser um nome de host local ou um nome de domínio totalmente qualificado (FQDN). Se tiver somente um domínio, você poderá omitir \<*domainname*> da linha de comando. \<*domain-user-account*> é a conta de usuário sob a qual o serviço Servidor de Relatório executa e na qual o SPN deve ser registrado.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Registrar um SPN para a conta de usuário do domínio  
   

@@ -1,23 +1,23 @@
 ---
 title: Criar objetos de banco de dados usando consultas
+description: Familiarize-se com o Editor de Transact-SQL. Veja como abrir este editor e exibir exemplos que mostram como usá-lo para criar uma tabela, função ou exibição.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df5dc9a0af721e8582ec7f9095efe73d03af2710
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241488"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518766"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Como: Criar novos objetos de banco de dados usando consultas
+# <a name="how-to-create-new-database-objects-using-queries"></a>Como fazer: Criar objetos de banco de dados usando consultas
 
 Se você preferir usar scripts para criar ou editar modos de exibição, procedimentos armazenados, funções, gatilhos ou tipos definidos pelo usuário, poderá usar o Editor Transact\-SQL. O Editor Transact\-SQL dá suporte a IntelliSense e a outra linguagem. Para saber mais, confira [Usar o Editor Transact-SQL para editar e executar scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   

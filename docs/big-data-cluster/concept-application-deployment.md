@@ -1,29 +1,29 @@
 ---
-title: O que é a Implantação de Aplicativos?
+title: O que é a implantação de aplicativos?
 titleSuffix: SQL Server Big Data Clusters
 description: Este artigo descreve a implantação de aplicativos em Clusters de Big Data do SQL Server 2019.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831578"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215445"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>O que é a Implantação de Aplicativos em um cluster de Big Data?
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>O que é a implantação de aplicativos em um cluster de Big Data?
 
-A Implantação de Aplicativos permite a implantação de aplicativos no cluster de Big Data fornecendo interfaces para criar, gerenciar e executar aplicativos. Os aplicativos implantados no cluster de Big Data se beneficiam do poder computacional do cluster e podem acessar os dados disponíveis no cluster. Isso aumenta a escalabilidade e o desempenho dos aplicativos, ao mesmo tempo que gerencia os aplicativos nos quais os dados residem. Os runtimes do aplicativo compatíveis com os Clusters de Big Data do SQL Server são o R, o Python, o SSIS e o MLeap.
+A implantação de aplicativos permite a implantação de aplicativos no cluster de Big Data fornecendo interfaces para criar, gerenciar e executar aplicativos. Os aplicativos implantados no cluster de Big Data se beneficiam do poder computacional do cluster e podem acessar os dados disponíveis no cluster. Isso aumenta a escalabilidade e o desempenho dos aplicativos, ao mesmo tempo que gerencia os aplicativos nos quais os dados residem. Os runtimes do aplicativo compatíveis com os Clusters de Big Data do SQL Server são o R, o Python, o SSIS e o MLeap.
 
-As seções a seguir descrevem a arquitetura e a funcionalidade da Implantação de Aplicativos.
+As seções a seguir descrevem a arquitetura e a funcionalidade da implantação de aplicativos.
 
-## <a name="application-deployment-architecture"></a>Arquitetura da Implantação de Aplicativos
+## <a name="application-deployment-architecture"></a>Arquitetura da implantação de aplicativos
 
 A implantação de aplicativos consiste em um controlador e manipuladores de runtime de aplicativo. Ao criar um aplicativo, um arquivo de especificação (`spec.yaml`) é fornecido. Esse arquivo `spec.yaml` contém tudo o que o controlador precisa saber para implantar o aplicativo com êxito. Este é um exemplo de conteúdo para `spec.yaml`:
 
@@ -53,9 +53,31 @@ Depois que o ReplicaSet for criado e os pods forem iniciados, um trabalho do Cro
 
 Quando um aplicativo é executado, o Serviço de Kubernetes do aplicativo executa as solicitações como proxy para uma réplica e retorna os resultados.
 
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> Considerações de segurança para implantações de aplicativos no OpenShift
+
+O SQL Server 2019 CU5 habilita o suporte para a implantação de Clusters de Big Data no Red Hat OpenShift, bem como um modelo de segurança atualizado para o BDC, para que contêineres com privilégios não sejam mais necessários. Além de não privilegiados, os contêineres são executados como um usuário não raiz por padrão em todas as novas implantações usando o SQL Server 2019 CU5.
+
+No momento do lançamento do CU5, a etapa de configuração dos aplicativos implantados com interfaces de [implantação de aplicativo](concept-application-deployment.md) ainda será executada como usuário *raiz*. Isso é necessário porque, durante a instalação, são instalados mais pacotes que o aplicativo usará. Outro código de usuário implantado como parte do aplicativo será executado como usuário de baixo privilégio. 
+
+Além disso, a funcionalidade **CAP_AUDIT_WRITE** é uma funcionalidade opcional necessária para permitir o agendamento de aplicativos SSIS que usam trabalhos cron. Quando o arquivo de especificação YAML do aplicativo especifica uma agenda, o aplicativo será disparado por meio de um trabalho cron, que requer a funcionalidade adicional.  Como alternativa, o aplicativo pode ser disparado sob demanda com *azdata app run* por meio de uma chamada do serviço Web, que não requer a funcionalidade CAP_AUDIT_WRITE. 
+
+> [!NOTE]
+> O SCC personalizado no [artigo de implantação do OpenShift](deploy-openshift.md) não inclui essa funcionalidade pois ela não é exigida por uma implantação padrão do cluster de Big Data. Para habilitar essa funcionalidade, você precisa primeiro atualizar o arquivo YAML do SCC personalizado para incluir CAP_AUDIT_WRITE no 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
+
 ## <a name="how-to-work-with-application-deployment"></a>Como trabalhar com a Implantação de Aplicativos
 
-As duas interfaces principais da Implantação de Aplicativos são: 
+As duas interfaces principais da implantação de aplicativos são: 
 - [Interface de linha de comando `azdata`](big-data-cluster-create-apps.md)
 - [Extensão do Azure Data Studio e Visual Studio Code](app-deployment-extension.md)
 

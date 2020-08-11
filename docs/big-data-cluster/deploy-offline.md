@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531980"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423155"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de Big Data do SQL Server
 
@@ -54,6 +54,10 @@ As etapas a seguir descrevem como efetuar pull das imagens de contêiner de clus
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> Não modifique as imagens do cluster de Big Data quando elas forem enviadas por push para seu repositório privado. A execução de uma implantação com imagens modificadas resultará em uma configuração de cluster de Big Data sem suporte.
+
 
 ### <a name="big-data-cluster-container-images"></a><a id="images"></a> Imagens de contêiner de cluster de Big Data
 
