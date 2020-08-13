@@ -19,11 +19,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012693"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180224"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86012693"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_executesql [ @stmt = ] statement  
@@ -86,10 +87,10 @@ sp_executesql [ @stmt = ] statement
   
  sp_executesql oferece suporte à configuração de valores de parâmetro separadamente da cadeia de caracteres [!INCLUDE[tsql](../../includes/tsql-md.md)], conforme mostrado no exemplo a seguir.  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
   
 /* Build the SQL string one time.*/  
 SET @SQLString =  
@@ -109,17 +110,17 @@ EXECUTE sp_executesql @SQLString, @ParmDefinition,
   
  Parâmetros de saída também podem ser usados com sp_executesql. O exemplo a seguir recupera um cargo da tabela `AdventureWorks2012.HumanResources.Employee` e o retorna no parâmetro de saída `@max_title`.  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @max_title varchar(30);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @max_title VARCHAR(30);  
   
 SET @IntVariable = 197;  
 SET @SQLString = N'SELECT @max_titleOUT = max(JobTitle)   
    FROM AdventureWorks2012.HumanResources.Employee  
    WHERE BusinessEntityID = @level';  
-SET @ParmDefinition = N'@level tinyint, @max_titleOUT varchar(30) OUTPUT';  
+SET @ParmDefinition = N'@level TINYINT, @max_titleOUT VARCHAR(30) OUTPUT';  
   
 EXECUTE sp_executesql @SQLString, @ParmDefinition, @level = @IntVariable, @max_titleOUT=@max_title OUTPUT;  
 SELECT @max_title;  
@@ -141,26 +142,26 @@ SELECT @max_title;
 ### <a name="a-executing-a-simple-select-statement"></a>a. Executando uma instrução SELECT simples  
  O exemplo a seguir cria e executa uma instrução `SELECT` simples que contém um parâmetro inserido chamado `@level`.  
   
-```  
+```sql  
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorks2012.HumanResources.Employee   
           WHERE BusinessEntityID = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   
 ### <a name="b-executing-a-dynamically-built-string"></a>B. Executando uma cadeia de caracteres dinamicamente construída  
  O exemplo a seguir mostra o uso de `sp_executesql` para executar uma cadeia de caracteres dinamicamente construída. O exemplo de procedimento armazenado é usado para inserir dados em um conjunto de tabelas que são usadas para particionar dados de vendas em um ano. Há uma tabela para cada mês do ano com o seguinte formato:  
   
-```  
+```sql  
 CREATE TABLE May1998Sales  
-    (OrderID int PRIMARY KEY,  
-    CustomerID int NOT NULL,  
-    OrderDate  datetime NULL  
+    (OrderID INT PRIMARY KEY,  
+    CustomerID INT NOT NULL,  
+    OrderDate  DATETIME NULL  
         CHECK (DATEPART(yy, OrderDate) = 1998),  
-    OrderMonth int  
+    OrderMonth INT  
         CHECK (OrderMonth = 5),  
-    DeliveryDate datetime  NULL,  
+    DeliveryDate DATETIME NULL,  
         CHECK (DATEPART(mm, OrderDate) = OrderMonth)  
     )  
 ```  
@@ -170,7 +171,7 @@ CREATE TABLE May1998Sales
 > [!NOTE]  
 >  Este é um exemplo simples para sp_executesql. O exemplo não contém verificação de erros e não inclui verificações para regras de negócios, como garantir que os números do pedido não sejam duplicados nas tabelas.  
   
-```  
+```sql  
 CREATE PROCEDURE InsertSales @PrmOrderID INT, @PrmCustomerID INT,  
                  @PrmOrderDate DATETIME, @PrmDeliveryDate DATETIME  
 AS  
@@ -206,18 +207,18 @@ GO
 ### <a name="c-using-the-output-parameter"></a>C. Usando o parâmetro OUTPUT  
  O exemplo a seguir usa um `OUTPUT` parâmetro para armazenar o conjunto de resultados gerado pela `SELECT` instrução no `@SQLString` parâmetro. Duas `SELECT` instruções são executadas e usam o valor do `OUTPUT` parâmetro.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @SalesOrderNumber nvarchar(25);  
-DECLARE @IntVariable int;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @SalesOrderNumber NVARCHAR(25);  
+DECLARE @IntVariable INT;  
 SET @SQLString = N'SELECT @SalesOrderOUT = MAX(SalesOrderNumber)  
     FROM Sales.SalesOrderHeader  
     WHERE CustomerID = @CustomerID';  
-SET @ParmDefinition = N'@CustomerID int,  
-    @SalesOrderOUT nvarchar(25) OUTPUT';  
+SET @ParmDefinition = N'@CustomerID INT,  
+    @SalesOrderOUT NVARCHAR(25) OUTPUT';  
 SET @IntVariable = 22276;  
 EXECUTE sp_executesql  
     @SQLString  
@@ -238,13 +239,13 @@ WHERE SalesOrderNumber = @SalesOrderNumber;
 ### <a name="d-executing-a-simple-select-statement"></a>D. Executando uma instrução SELECT simples  
  O exemplo a seguir cria e executa uma instrução `SELECT` simples que contém um parâmetro inserido chamado `@level`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorksPDW2012.dbo.DimEmployee   
           WHERE EmployeeKey = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   

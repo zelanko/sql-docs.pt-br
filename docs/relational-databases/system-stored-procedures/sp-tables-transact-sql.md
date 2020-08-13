@@ -18,11 +18,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85984669"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173080"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85984669"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
@@ -63,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`Determina se os caracteres sublinhado (_), porcentagem (%) e colchete ([ou]) são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -90,14 +91,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 ### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>a. Retornando uma lista de objetos que podem ser consultados no ambiente atual  
  O exemplo a seguir retorna uma lista de objetos que podem ser consultas no ambiente atual.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. Retornando informações sobre as tabelas em um esquema especificado  
  O exemplo a seguir retorna informações sobre as tabelas que pertencem ao esquema `Person` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tables   
@@ -111,14 +112,14 @@ EXEC sp_tables
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Retornando uma lista de objetos que podem ser consultados no ambiente atual  
  O exemplo a seguir retorna uma lista de objetos que podem ser consultas no ambiente atual.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Retornando informações sobre as tabelas em um esquema especificado  
  O exemplo a seguir retorna informações sobre as tabelas de dimensões no `AdventureWorksPDW201` banco de dados.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_tables   

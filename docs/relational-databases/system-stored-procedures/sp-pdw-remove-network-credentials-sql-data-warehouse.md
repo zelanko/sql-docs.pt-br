@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: be447109a1432fdf8c3f3ae4a44f34a2eed1fd46
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 200a473843e27d7096b71e675c140120da803bd2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196768"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173168"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "86196768"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
@@ -61,10 +61,10 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. Remover credenciais para executar um backup de banco de dados  
+### <a name="a-remove-credentials-for-performing-a-database-backup"></a>a. Remover credenciais para executar um backup de banco de dados  
  O exemplo a seguir remove as credenciais de nome de usuário e senha para acessar o servidor de destino que tem um endereço IP de 10.192.147.63.  
   
-```  
+```sql  
 EXEC sp_pdw_remove_network_credentials '10.192.147.63';  
 ```  
   

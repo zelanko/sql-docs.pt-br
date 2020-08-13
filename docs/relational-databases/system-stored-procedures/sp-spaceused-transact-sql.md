@@ -18,12 +18,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393941"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173075"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87393941"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
@@ -60,7 +60,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
   
  O argumento de *modo* pode ter os seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ALL|Retorna as estatísticas de armazenamento do objeto ou banco de dados, incluindo a parte local e a parte remota.|  
 |LOCAL_ONLY|Retorna as estatísticas de armazenamento apenas da parte local do objeto ou do banco de dados. Se o objeto ou banco de dados não estiver habilitado para Stretch, o retornará as mesmas estatísticas de quando @mode = All.|  
@@ -70,7 +70,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
   
 `[ @oneresultset = ] oneresultset`Indica se um único conjunto de resultados deve ser retornado. O argumento *oneresultset* pode ter os seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Quando * \@ objname* é nulo ou não é especificado, dois conjuntos de resultados são retornados. Dois conjuntos de resultados são o comportamento padrão.|  
 |1|Quando * \@ objname* = NULL ou não for especificado, um único conjunto de resultados será retornado.|  
