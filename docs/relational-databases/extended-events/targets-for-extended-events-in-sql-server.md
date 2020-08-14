@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4bf57fb080c7f634256364e9ce1ac0d601ad589
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756835"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863341"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 
@@ -156,7 +156,7 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 > [!NOTE]
 > O Banco de dados SQL do Azure é compatível apenas com armazenamento de arquivos `xel` no Armazenamento de Blobs do Azure. 
 >
-> Para um exemplo de código **event_file** específico para o Banco de Dados SQL (e para a Instância Gerenciada do Banco de Dados SQL), consulte [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file) (Código de destino do Arquivo de Evento para eventos estendidos no Banco de Dados SQL).
+> Para um exemplo de código **event_file** específico ao Banco de Dados SQL (e da Instância Gerenciada de SQL), confira [Código de destino do Arquivo de Evento para eventos estendidos no Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 

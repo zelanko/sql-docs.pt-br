@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112556"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988209"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,10 +61,10 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -867,10 +867,10 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**
+        **_\* Banco de Dados SQL \*_**
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Banco de dados individual/pool elástico do Banco de Dados SQL do Azure
+## <a name="sql-database"></a>Banco de Dados SQL
 
 ## <a name="overview"></a>Visão geral
 
-No banco de dados individual/pool elástico do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa instrução pode ser usada com um servidor SQL do Azure para criar um banco de dados individual ou um banco de dados em um pool elástico. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço e, se aplicável, o pool elástico para o novo banco de dados. Também pode ser usado para criar o banco de dados em um pool elástico. Além disso, ele pode ser usado para criar uma cópia do banco de dados em outro servidor de Banco de Dados SQL.
+No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa instrução pode ser usada com um SQL Server do Azure para criar um banco de dados individual ou um banco de dados em um pool elástico. Com esta instrução, você especifica o nome do banco de dados, a ordenação, o tamanho máximo, a edição e o objetivo de serviço e, se aplicável, o pool elástico para o novo banco de dados. Também pode ser usado para criar o banco de dados em um pool elástico. Além disso, ele pode ser usado para criar uma cópia do banco de dados em outro servidor de Banco de Dados SQL.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION Especifica a ordenação padrão do catálogo de metadados. *D
 
 EDITION Especifica a camada de serviço do banco de dados.
 
-Bancos de dados únicos e agrupados em um banco de dados individual/pool elástico. Os valores disponíveis são: "Básico", "Standard", "Premium","GeneralPurpose", "BusinessCritical" e "Hiperescala".
+Bancos de dados individuais e em pool. Os valores disponíveis são: "Básico", "Standard", "Premium","GeneralPurpose", "BusinessCritical" e "Hiperescala".
 
 MAXSIZE Especifica o tamanho máximo do banco de dados. MAXSIZE deve ser válido para a EDIÇÃO especificada (camada de serviço) A seguir, estão os valores com suporte para MAXSIZE e os padrões (D) para as camadas de serviço.
 
@@ -1273,10 +1273,10 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Instância gerenciada<br />do Banco de Dados SQL \*_**
+        **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-managed-instance"></a>Instância Gerenciada do Azure SQL
 
 ## <a name="overview"></a>Visão geral
 
-Na Instância Gerenciada de Banco de Dados do SQL, essa instrução é usada para criar um banco de dados. Ao criar um banco de dados em uma instância gerenciada, você deve especificar o nome do banco de dados e a ordenação.
+Na Instância Gerenciada de SQL do Azure, essa instrução é usada para criar um banco de dados. Ao criar um banco de dados em uma instância gerenciada, você deve especificar o nome do banco de dados e a ordenação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -1357,10 +1357,10 @@ Confira [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curre
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1482,10 +1482,10 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)

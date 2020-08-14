@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9068f7e2807c4883dc94094cd67d23ec04cf6a0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7936a8f83bf110592e142f0ff7d033233592c64
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915076"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863362"
 ---
 # <a name="ole-db-connection-manager"></a>Gerenciador de conexões OLE DB
 
@@ -87,10 +87,10 @@ Use a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** para adic
  Escolha uma conexão de dados e selecione **Excluir** para excluí-la.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Identidades gerenciadas para autenticação de recursos do Azure
-Ao executar pacotes SSIS no [Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), use a [identidade gerenciada](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associada ao data factory para autenticação do Banco de Dados SQL do Azure (ou da instância gerenciada). O factory designado pode acessar dados do banco de dados e copiá-los para o banco de dados usando essa identidade.
+Ao executar pacotes SSIS no [Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), use a [identidade gerenciada](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associada ao data factory para autenticação do Banco de Dados SQL do Azure ou da Instância Gerenciada. O factory designado pode acessar dados do banco de dados e copiá-los para o banco de dados usando essa identidade.
 
 > [!NOTE]
->  Ao usar a autenticação do Azure AD (Azure Active Directory) (incluindo a autenticação de identidade gerenciada) para se conectar ao Banco de Dados SQL do Azure (ou instância gerenciada), você pode encontrar um problema relacionado à falha na execução do pacote ou alteração inesperada do comportamento. Para saber mais, confira [Recursos e limitações do Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Ao usar a autenticação do Azure AD (Azure Active Directory) (incluindo a autenticação de identidade gerenciada) para se conectar ao Banco de Dados SQL do Azure ou à Instância Gerenciada, você pode enfrentar um problema relacionado à falha na execução do pacote ou a uma alteração inesperada de comportamento. Para saber mais, confira [Recursos e limitações do Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Para usar a autenticação de identidade gerenciada para o Banco de Dados SQL do Azure, siga estas etapas para configurar seu banco de dados:
 
@@ -108,7 +108,7 @@ Para usar a autenticação de identidade gerenciada para o Banco de Dados SQL do
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-Para usar a autenticação de identidade gerenciada para a instância gerenciada do Banco de Dados SQL do Azure, siga estas etapas a fim de configurar seu banco de dados:
+Para usar a autenticação de identidade gerenciada para a Instância Gerenciada de SQL do Azure, siga estas etapas para configurar seu banco de dados:
     
 1. [Provisione um administrador do Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) para a instância gerenciada no portal do Azure, caso ainda não tenha feito isso. O administrador do Azure AD pode ser um usuário ou um grupo do Azure AD. Se você conceder uma função de administrador ao grupo com a identidade gerenciada, ignore as etapas 2 a 4. O administrador terá acesso completo ao banco de dados.
 

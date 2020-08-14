@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332505"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864407"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -914,7 +914,7 @@ FROM sys.dm_exec_requests r
 WHERE r.command LIKE 'BACKUP%'
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 - [Dispositivos de backup](../../relational-databases/backup-restore/backup-devices-sql-server.md)
 - [Conjuntos de mídias, famílias de mídia e conjuntos de backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
@@ -941,7 +941,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\* Instância gerenciada do<br />Banco de Dados SQL \*_** &nbsp;
+        **_\* Instância Gerenciada do<br />Banco de Dados SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-managed-instance"></a>Instância Gerenciada do Azure SQL
 
-Faz backup de um Banco de Dados SQL colocado/hospedado em uma instância gerenciada do Banco de Dados SQL do Azure. A [instância gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) do Banco de Dados SQL tem backups automáticos e permite aos usuários criar backups `COPY_ONLY` de bancos de dados completos. Não há suporte para backups de instantâneo de arquivo, log e diferencial.
+Faz backup de um banco de dados SQL colocado/hospedado em uma Instância Gerenciada de SQL do Azure. A [Instância Gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) de SQL tem backups automáticos e permite aos usuários criar backups `COPY_ONLY` de bancos de dados completos. Não há suporte para backups de instantâneo de arquivo, log e diferencial.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>Argumentos
 
-DATABASE Especifica um backup completo do banco de dados. Durante um backup de banco de dados, a instância gerenciada faz backup suficiente do log de transações para produzir um banco de dados consistente quando o backup é restaurado.
+DATABASE Especifica um backup completo do banco de dados. Durante um backup de banco de dados, a Instância Gerenciada de SQL do Azure faz backup suficiente do log de transações para produzir um banco de dados consistente quando o backup é restaurado.
 
 > [!IMPORTANT]
-> Um backup de banco de dados criado em uma instância gerenciada só pode ser restaurado em outra instância gerenciada. Ele não pode ser restaurado para uma instância local do SQL Server (semelhante ao modo como um backup de um banco de dados do SQL Server 2016 não pode ser restaurado para uma instância do SQL Server 2012).
+> Um backup de banco de dados criado em uma instância gerenciada só pode ser restaurado em outra Instância Gerenciada de SQL do Azure. Ele não pode ser restaurado para uma instância local do SQL Server (semelhante ao modo como um backup de um banco de dados do SQL Server 2016 não pode ser restaurado para uma instância do SQL Server 2012).
 
-Ao restaurar um backup criado por BACKUP DATABASE (um *backup de dados*), o backup inteiro é restaurado. Para restaurar por meio de backups automáticos da instância gerenciada do Banco de Dados SQL do Azure, confira [Restaurar banco de dados de uma instância gerenciada](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+Ao restaurar um backup criado por BACKUP DATABASE (um *backup de dados*), o backup inteiro é restaurado. Para fazer a restauração por meio de backups automáticos da Instância Gerenciada de SQL do Azure, confira [Restaurar um banco de dados em uma Instância Gerenciada](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } É o banco de dados do qual é feito o backup do banco de dados completo. Se for fornecido como uma variável ( **@** _database\_name\_var_), esse nome poderá ser especificado como uma constante de cadeia de caracteres ( **@** _database\_name\_var_ **=** _database name_) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ] Exibe uma mensagem sempre que outro *percentual* fo
 
 A opção STATS informa a porcentagem concluída de acordo com o limite de relatório do próximo intervalo. Esse limite é aproximadamente a porcentagem especificada. Por exemplo, com STATS=10, se a quantidade concluída for 40%, a opção poderá exibir 43%. Para conjuntos de backup grandes, isso não é um problema, porque a porcentagem concluída muda muito lentamente entre chamadas de E/S concluídas.
 
-## <a name="limitations-for-sql-database-managed-instance"></a>Limitações para a instância gerenciada do Banco de Dados SQL
+## <a name="limitations-for-sql-managed-instance"></a>Limitações da Instância Gerenciada de SQL
 
 O tamanho máximo da faixa de backup é 195 GB (tamanho máximo do blob). Aumente o número de faixas no comando de backup para reduzir o tamanho da faixa individual e permaneça dentro desse limite.
 
@@ -1119,7 +1119,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5, COPY_ONLY;
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Restaurar banco de dados](restore-statements-transact-sql.md)
 
@@ -1131,7 +1131,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1208,7 +1208,7 @@ Por exemplo:
 
 Requer a permissão **BACKUP DATABASE** ou a associação à função de banco de dados fixa **db_backupoperator**. O banco de dados mestre não pode ser submetido a backup simplesmente por um usuário normal que tenha sido adicionado à função de banco de dados fixa **db_backupoperator**. O banco de dados mestre somente pode ser submetido a backup pela **SA**, pelo administrador da malha ou pelos membros da função de servidor fixa **sysadmin**.
 
-Requer uma conta do Windows que tenha permissão para acessar, criar e gravar no diretório de backup. O nome de conta do Windows e a senha também precisam ser armazenados no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Para adicionar essas credenciais de rede no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o procedimento armazenado [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+Requer uma conta do Windows que tenha permissão para acessar, criar e gravar no diretório de backup. O nome de conta do Windows e a senha também precisam ser armazenados no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Para adicionar essas credenciais de rede a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o procedimento armazenado [sp_pdw_add_network_credentials – SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
 
 Para obter mais informações sobre o gerenciamento de credenciais no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira a seção [Segurança](#Security).
 
@@ -1357,7 +1357,7 @@ WITH (
 ;
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [RESTORE DATABASE – Parallel Data Warehouse](../../t-sql/statements/restore-statements-transact-sql.md)
 

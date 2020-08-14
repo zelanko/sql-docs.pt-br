@@ -22,12 +22,12 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d16fcf886e074fb71a148a7f36741c1c7f0a3f74
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 7147c54dc8641697baf7ee519950ec959bf09b19
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392934"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822491"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 
@@ -80,7 +80,7 @@ CREATE SERVER AUDIT audit_name
  TO { FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR } Determina a localização do destino da auditoria. As opções são um arquivo binário, o log do Aplicativo do Windows ou o log de Segurança do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá gravar no log de segurança do Windows se não forem definidas configurações adicionais no Windows. Para obter mais informações, veja [Gravar eventos de auditoria do SQL Server no log de segurança](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
-> Na instância gerenciada do Banco de Dados SQL do Azure, a Auditoria do SQL funciona no nível do servidor. Os locais só podem ser `URL` ou `EXTERNAL_MONITOR`.
+> Na Instância Gerenciada de SQL do Azure, a Auditoria do SQL funciona no nível do servidor. Os locais só podem ser `URL` ou `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  O caminho do log de auditoria. O nome do arquivo é gerado com base no nome da auditoria e no GUID da auditoria.  

@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 718c095fb544c2c0b9436a3cfa70040fcf31d71c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111731"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988809"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Caixa de diálogo Propriedades de Assinatura de Replicação do SQL Server 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e
   
 > [!NOTE]  
 >  - Se um trabalho do Distribution Agent ou Merge Agent ainda não foi criado para a Assinatura, muitas propriedades de assinatura são exibidas agora. Para criar um trabalho de agente para uma assinatura pull, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (para uma assinatura de publicação transacional ou de instantâneo) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (para uma assinatura de publicação de mesclagem).  
-> - A instância gerenciada do Banco de Dados SQL do Azure pode ser um publicador, um distribuidor e um assinante para replicação de instantâneo e transacional. Bancos de dados SQL do Azure individuais ou em pool só podem ser assinantes por push para replicação de instantâneo e transacional. Para obter mais informações, consulte [Replicação transacional com o Banco de Dados SQL do Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+> - Os bancos de dados da Instância Gerenciada de SQL do Azure podem ser um publicador, um distribuidor e um assinante para a replicação transacional e de instantâneo. Os bancos de dados do Banco de Dados SQL do Azure só podem ser assinantes por push para a replicação transacional e de instantâneo. Para obter mais informações, consulte [Replicação transacional com o Banco de Dados SQL do Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opções do editor para todas as assinaturas  
  **Segurança**  

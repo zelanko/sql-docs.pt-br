@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392824"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046591"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ Exige a permissão **ALTER ANY CREDENTIAL**.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-basic-example"></a>a. Exemplo básico
+### <a name="a-creating-a-credential-for-windows-identity"></a>a. Como criar uma credencial para a identidade do Windows
 
 O exemplo a seguir cria a credencial chamada `AlterEgo`. A credencial contém o usuário do Windows `Mary5` e uma senha.
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Criando uma credencial usando um token SAS
 
-**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658) e instâncias gerenciadas no Banco de Dados SQL do Azure.
+**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658) e Instância Gerenciada de SQL do Azure.
 
 O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS. Veja um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, depois, criar uma credencial usando a assinatura de acesso compartilhado no [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. Como criar uma credencial para a identidade gerenciada
+
+O exemplo a seguir cria a credencial que representa a identidade gerenciada do SQL do Azure ou do serviço Azure Synapse. A senha e o segredo não são aplicáveis nesse caso.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

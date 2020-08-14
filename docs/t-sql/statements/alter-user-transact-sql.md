@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6e25763f585f063eeb25fd512b65a3e51c070e5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5626b98f81bcca2a21902cf0d38f44a256fa73e0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394661"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988447"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -47,10 +47,10 @@ Renomeia um usuário de banco de dados ou altera seu esquema padrão.
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -222,10 +222,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**
+        **_\* Banco de Dados SQL \*_**
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -237,7 +237,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Banco de dados individual/pool elástico do Banco de Dados SQL do Azure
+## <a name="sql-database"></a>Banco de Dados SQL
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -407,10 +407,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Instância gerenciada<br />do Banco de Dados SQL \*_**
+        **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -422,16 +422,16 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-managed-instance"></a>Instância Gerenciada do Azure SQL
 
 ## <a name="syntax"></a>Sintaxe
 
 > [!IMPORTANT]
-> Há suporte apenas para as seguintes opções na instância gerenciada do Banco de Dados SQL do Azure ao aplicar aos usuários com logons do Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` e `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-> </br> </br> Há uma nova extensão de sintaxe que foi adicionada para ajudar a remapear os usuários em um banco de dados que foi migrado para a instância gerenciada. A sintaxe ALTER USER ajuda a mapear usuários de banco de dados em um domínio federado e sincronizado com o Azure AD, para logons do Azure AD.
+> Só há suporte para as seguintes opções na Instância Gerenciada de SQL do Azure ao se aplicar aos usuários com logons do Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` e `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+> </br> </br> Há uma nova extensão de sintaxe que foi adicionada para ajudar a remapear os usuários em um banco de dados que foi migrado para a Instância Gerenciada de SQL do Azure. A sintaxe ALTER USER ajuda a mapear usuários de banco de dados em um domínio federado e sincronizado com o Azure AD, para logons do Azure AD.
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -521,7 +521,7 @@ ALTER USER userName
  Uma cláusula WITH LOGON habilita o remapeamento de um usuário para um logon diferente. Os usuários sem um logon, mapeados para um certificado ou mapeados para uma chave assimétrica não podem ser remapeados com essa cláusula. Somente os usuários do SQL e do Windows (ou grupos) podem ser remapeados. A cláusula WITH LOGIN não pode ser usada para alterar o tipo de usuário, como alterar uma conta do Windows para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A única exceção é ao alterar um usuário do Windows para um usuário do Azure AD.
 
 > [!NOTE]
-> As regras a seguir não se aplicam a usuários do Windows na instância gerenciada, pois não há suporte para a criação de logons do Windows na instância gerenciada. A opção WITH LOGIN só poderá ser usada se os logons do Azure AD estiverem presentes.
+> As regras a seguir não se aplicam aos usuários do Windows na Instância Gerenciada de SQL do Azure, pois não damos suporte à criação de logons do Windows na Instância Gerenciada de SQL do Azure. A opção WITH LOGIN só poderá ser usada se os logons do Azure AD estiverem presentes.
 
  O nome do usuário será renomeado automaticamente para o nome de logon se as condições a seguir forem verdadeiras.
 
@@ -540,21 +540,21 @@ O nome de um usuário mapeado para um logon do [!INCLUDE[ssNoVersion](../../incl
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>Comentários para usuários do Windows no SQL no local migrados para a instância gerenciada
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-azure-sql-managed-instance"></a>Comentários para os usuários do Windows no SQL local migrados para a Instância Gerenciada de SQL do Azure
 
 Esses comentários se aplicam a autenticações como usuários do Windows que foram federados e sincronizados com o Azure AD.
 
 > [!NOTE]
-> A funcionalidade de administrador do Azure AD para a instância gerenciada depois que a criação foi alterada. Para obter mais informações, confira [Nova funcionalidade de administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> A funcionalidade de administrador do Azure AD para a Instância Gerenciada de SQL do Azure após a criação foi alterada. Para obter mais informações, confira [Nova funcionalidade de administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - A validação de usuários ou de grupos do Windows que são mapeados para o Azure AD é feita por padrão por meio da API do Graph em todas as versões da sintaxe ALTER USER usadas para fins de migração.
 - Os usuários locais que receberam um alias (um nome diferente da conta original do Windows) manterão o nome com alias.
-- Para a autenticação do Azure AD, o parâmetro LOGIN se aplica somente à instância gerenciada e não pode ser usada com o banco de dados SQL.
+- Para a autenticação do Azure AD, o parâmetro LOGIN só se aplica à Instância Gerenciada de SQL do Azure e não pode ser usado com o Banco de Dados SQL.
 - Para exibir os logins de Entidades do Azure AD, use o seguinte comando: `select * from sys.server_principals`
 - Verifique se o tipo indicado do logon é `E` ou `X`.
 - A opção PASSWORD não pode ser usada para usuários do Azure AD.
 - Em todos os casos de migração, as funções e permissões de usuários ou grupos do Windows serão automaticamente transferidas para os novos usuários ou grupos do Azure AD.
-- Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER**, está disponível para alterar usuários e grupos do SQL local para usuários e grupos do Azure AD. O domínio do Windows deve ser federado com o Azure AD, e todos os membros do domínio do Windows devem existir no Azure AD ao usar essa extensão. A sintaxe **FROM EXTERNAL PROVIDER** se aplica à instância gerenciada e deve ser usada caso os usuários do Windows não tenham logons na instância do SQL original e precisem ser mapeados para usuários autônomos do banco de dados do Azure AD.
+- Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER**, está disponível para alterar usuários e grupos do SQL local para usuários e grupos do Azure AD. O domínio do Windows deve ser federado com o Azure AD, e todos os membros do domínio do Windows devem existir no Azure AD ao usar essa extensão. A sintaxe **FROM EXTERNAL PROVIDER** se aplica à Instância Gerenciada de SQL do Azure e deve ser usada caso os usuários do Windows não tenham logons na instância SQL original e precisem ser mapeados para usuários autônomos do banco de dados do Azure AD.
 - Nesse caso, o userName permitido pode ser:
 - Um usuário do Windows (_domain\user_).
 - Um grupo do Windows (_MyWidnowsGroup_).
@@ -628,13 +628,13 @@ GO
 
 ### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>D. Mapear o usuário no banco de dados para um logon do Azure AD após a migração
 
-O exemplo a seguir remapeia o usuário, `westus/joe`, para um usuário do Azure AD, `joe@westus.com`. Este exemplo é para logons que já existem na instância gerenciada. Isso precisará ser executado depois que você concluir uma migração do banco de dados para a instância gerenciada e quiser usar o logon do Azure AD para autenticar.
+O exemplo a seguir remapeia o usuário, `westus/joe`, para um usuário do Azure AD, `joe@westus.com`. Este exemplo é para logons que já existem na instância gerenciada. Isso precisará ser executado depois que você concluir uma migração de banco de dados para a Instância Gerenciada de SQL do Azure e quiser usar o logon do Azure AD para autenticação.
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>E. Mapear um antigo usuário do Windows no banco de dados sem um logon na instância gerenciada para um usuário do Azure AD
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user"></a>E. Mapear um usuário antigo do Windows no banco de dados sem um logon na Instância Gerenciada de SQL do Azure para um usuário do Azure AD
 
 O exemplo a seguir remapeia o usuário, `westus/joe`, sem um logon, para um usuário do Azure AD, `joe@westus.com`. O usuário federado deve existir no Azure AD.
 
@@ -650,7 +650,7 @@ O exemplo a seguir remapeia o nome do usuário, de `westus\joe` para `joe_alias`
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ```
 
-### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>G. Mapear um grupo do Windows que foi migrado na instância gerenciada para um grupo do Azure AD
+### <a name="g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group"></a>G. Mapear um grupo do Windows que foi migrado na Instância Gerenciada de SQL do Azure para um grupo do Azure AD
 
 O exemplo a seguir remapeia o grupo local antigo `westus\mygroup` para um grupo do Azure AD `mygroup` na instância gerenciada. O grupo deve existir no Azure AD.
 
@@ -665,7 +665,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [Tutorial: Como migrar usuários e grupos locais do Windows no SQL Server para a instância gerenciada do Banco de Dados SQL do Azure usando a sintaxe T-SQL DDL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [Tutorial: Como migrar usuários e grupos locais do Windows do SQL Server para a Instância Gerenciada de SQL do Azure usando a sintaxe T-SQL DDL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -675,10 +675,10 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -800,10 +800,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)

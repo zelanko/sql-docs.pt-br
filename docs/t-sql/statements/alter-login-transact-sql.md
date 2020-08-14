@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65f6869d0f4b4dec46d6b27e0f7ef856e4ae20b1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ef071062597fee3bb8a25b7cf6a866fa0ab393d1
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243517"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988425"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -46,10 +46,10 @@ Altera as propriedades de uma conta de logon do [!INCLUDE[ssNoVersion](../../inc
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -280,10 +280,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**
+        **_\* Banco de Dados SQL \*_**
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -295,7 +295,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Banco de dados individual/pool elástico do Banco de Dados SQL do Azure
+## <a name="sql-database"></a>Banco de Dados SQL
 
 ## <a name="sql-server"></a>SQL Server
 
@@ -452,10 +452,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Instância gerenciada<br />do Banco de Dados SQL \*_**
+        **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -467,12 +467,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-managed-instance"></a>Instância Gerenciada do Azure SQL
 
 ## <a name="syntax"></a>Sintaxe
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database managed instance
+-- Syntax for SQL Server and Azure SQL Managed Instance
 
 ALTER LOGIN login_name
     {
@@ -511,7 +511,7 @@ ALTER LOGIN login_name
 > A funcionalidade de administrador do Azure AD para a instância gerenciada depois que a criação foi alterada. Para obter mais informações, confira [Nova funcionalidade de administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance using Azure AD logins
+-- Syntax for Azure SQL Managed Instance using Azure AD logins
 
 ALTER LOGIN login_name
   {
@@ -654,7 +654,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 O exemplo seguinte mapeia o logon `Mary5` para a credencial de EKM `EKMProvider1`.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e à Instância Gerenciada do Banco de Dados SQL do Azure.
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e Instância Gerenciada de SQL do Azure.
 
 ```sql
 ALTER LOGIN Mary5
@@ -684,7 +684,7 @@ GO
 
 O exemplo seguinte altera a senha do logon `TestUser` para um valor em que o hash já foi aplicado.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e à Instância Gerenciada do Banco de Dados SQL do Azure.
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e Instância Gerenciada de SQL do Azure.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -717,10 +717,10 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -886,10 +886,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)

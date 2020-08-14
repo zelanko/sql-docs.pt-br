@@ -22,12 +22,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7e5bfe755ab485b1470f2dfe066165c577de2d1
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 67428f9b61dbca0798ee868b9e89a4bf8fe25332
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381120"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823680"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='** _next\_hop\_address_'  
 
- Para a instância gerenciada do Banco de Dados SQL do Azure, `ADDRESS` deve ser local.
+ Para a Instância Gerenciada de SQL do Azure, `ADDRESS` precisa ser local.
 
  Especifica o endereço de rede para essa rota. O *next_hop_address* especifica um endereço TCP/IP no seguinte formato:  
   

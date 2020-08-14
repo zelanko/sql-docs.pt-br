@@ -1,6 +1,6 @@
 ---
 title: INSERT (SQL Graph) | Microsoft Docs
-description: Sintaxe de INSERT para tabelas de borda ou nó do SQL Graph.
+description: Saiba mais sobre a sintaxe, as permissões e os argumentos para a instrução INSERT que adiciona uma ou mais linhas a um nó do SQL Graph ou a uma tabela de borda no SQL Server.
 ms.date: 05/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f772d95923a7fcfe3dce8bafaf4382be71ccce54
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7ffd99a9291e35024d1c8a209569e399b71b53de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484492"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899802"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

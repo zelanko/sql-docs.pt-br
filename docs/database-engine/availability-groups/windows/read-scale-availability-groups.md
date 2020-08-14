@@ -1,6 +1,6 @@
 ---
 title: Usar a escala de leitura com grupos de disponibilidade
-description: 'Uma descrição de como obter a escala de leitura ao usar Grupos de Disponibilidade AlwaysOn. '
+description: Conheça os detalhes de como obter a escala de leitura ao usar grupos de disponibilidade Always On e como usar grupos de disponibilidade distribuídos para a escala de leitura geográfica.
 ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 540f02a2b58fff4c2800dfcf16908d53935ed82c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882566"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565524"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Usar a escala de leitura com Grupos de Disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -12,12 +12,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60acfdfb738542c39c5974691811c482e36b9f9e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776071"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863297"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
 
@@ -26,7 +26,7 @@ ms.locfileid: "85776071"
 Alterações de esquema e de índice em tabelas com otimização de memória podem ser executadas usando a instrução ALTER TABLE. No SQL Server 2016 e no Banco de Dados SQL do Azure as operações ALTER TABLE em tabelas com otimização de memória são OFFLINE, o que significa que a tabela não está disponível para consulta enquanto a operação está em andamento. O aplicativo de banco de dados pode continuar em execução e qualquer operação que acessa a tabela será bloqueada até que o processo de alteração seja concluído. É possível combinar várias operações ADD, DROP ou ALTER em uma única instrução ALTER TABLE.
 
 > [!IMPORTANT]
-> A Instância Gerenciada do Banco de Dados SQL do Azure não oferece suporte a tabelas com otimização de memória na camada de serviço de Uso Geral.
+> A Instância Gerenciada de SQL do Azure não dá suporte a tabelas com otimização de memória na camada de serviço Uso Geral.
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

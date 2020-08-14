@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba782e0a2eee78e6f308ffee0d493fbac2032ce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113221"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864329"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -739,7 +739,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Instância gerenciada<br />do Banco de Dados SQL \*_**
+        **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -748,7 +748,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-managed-instance"></a>Instância Gerenciada do Azure SQL
 
 Esse comando permite restaurar um banco de dados inteiro de um backup de banco de dados completo (uma restauração completa) da conta do Armazenamento de Blobs do Azure.
 
@@ -760,7 +760,7 @@ Para outros comandos RESTORE com suporte, consulte:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> Para restaurar por meio de backups automáticos da instância gerenciada do Banco de Dados SQL do Azure, confira [Restauração do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> Para fazer a restauração por meio de backups automáticos da Instância Gerenciada de SQL, confira [Restauração do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -802,17 +802,17 @@ As opções de banco de dados a seguir são definidas/substituídas e não podem
 - O grupo de arquivos otimizado para memória será adicionado e o XTP, chamado, se ele não estiver no arquivo .bak de origem. Qualquer grupo de arquivos otimizado para memória existente é renomeado para XTP
 - As opções SINGLE_USER e RESTRICTED_USER são convertidas em MULTI_USER
 
-## <a name="limitations---sql-database-managed-instance"></a>Limitações – instância gerenciada do Banco de Dados SQL
+## <a name="limitations---sql-managed-instance"></a>Limitações – Instância Gerenciada de SQL
 
 Estas limitações se aplicam:
 
 - Arquivos .BAK que contêm vários conjuntos de backup não podem ser restaurados.
 - Arquivos .BAK que contêm vários arquivos de log não podem ser restaurados.
 - A restauração falhará se o .bak contiver dados FILESTREAM.
-- Os backups que contêm banco de dados que têm objetos na memória ativos não podem ser restaurados em uma instância gerenciada de Uso Geral.
+- Os backups que contêm bancos de dados que tenham objetos ativos na memória não podem ser restaurados em um nível de desempenho Uso Geral.
 - Os backups que contêm bancos de dados em modo somente leitura não podem ser restaurados no momento. Essa limitação será removida em breve.
 
-Para saber mais, confira [instância gerenciada](/azure/sql-database/sql-database-managed-instance)
+Para obter mais informações, confira [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance)
 
 ## <a name="restoring-an-encrypted-database"></a>Restaurando um banco de dados criptografado
 Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
@@ -886,7 +886,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

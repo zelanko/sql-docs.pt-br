@@ -1,6 +1,6 @@
 ---
-title: Extensão da instância gerenciada do Banco de Dados SQL do Azure
-description: Usar o Azure Data Studio com a instância gerenciada do SQL do Azure
+title: Extensão Instância Gerenciada do Banco de Dados SQL do Azure
+description: Usar o Azure Data Studio com a Instância Gerenciada de SQL do Azure
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774698"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988597"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Painel de instância gerenciada do Banco de Dados SQL do Azure para o Azure Data Studio (versão prévia)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Painel da Instância Gerenciada de SQL do Azure para o Azure Data Studio (versão prévia)
 
-A extensão da instância gerenciada do Banco de Dados SQL do Azure fornece um painel para trabalhar com uma [instância gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) no [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Essa extensão fornece os seguintes recursos:
+A extensão da Instância Gerenciada de SQL do Azure fornece um painel para trabalhar com uma [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) no [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Essa extensão fornece os seguintes recursos:
 
-- Mostra as propriedades da instância gerenciada, incluindo vCores e armazenamento usado
+- Mostra as propriedades da Instância Gerenciada de SQL, incluindo os vCores e o armazenamento usado
 - Monitora o uso de CPU e de armazenamento nas duas horas anteriores
 - Exibir avisos de configuração e recomendações de ajuste
 - Mostra o estado das réplicas de bancos de dados
@@ -30,7 +30,7 @@ A extensão da instância gerenciada do Banco de Dados SQL do Azure fornece um p
 ## <a name="install"></a>Instalar
 
 Você pode instalar a versão oficial dessa extensão. Siga as etapas na [documentação do Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-No painel **Extensões**, pesquise "instância gerenciada" e instale-a nele. Depois da instalação, você será notificado automaticamente sobre atualizações futuras de extensão.
+No painel **Extensões**, pesquise "Instância Gerenciada" e instale-a nele. Depois da instalação, você será notificado automaticamente sobre atualizações futuras de extensão.
 
 Com a extensão instalada, você verá uma guia **Instância Gerenciada** no Azure Data Studio. Aqui, é possível encontrar informações específicas para sua instância gerenciada.
 
@@ -38,7 +38,7 @@ Com a extensão instalada, você verá uma guia **Instância Gerenciada** no Azu
 
 A extensão exibe características técnicas e alguns usos de recursos de sua instância gerenciada.
 
-[ ![Propriedades da instância gerenciada](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Propriedades da Instância Gerenciada](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 O painel superior mostra os seguintes detalhes:
 
@@ -51,7 +51,7 @@ O painel superior mostra os seguintes detalhes:
 
 Ao selecionar o segundo painel na guia **Instância Gerenciada**, você recebe recomendações e alertas para ajudar a otimizar sua instância gerenciada.
 
-[ ![Recomendações para instância gerenciada](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[ ![Recomendações para a Instância Gerenciada](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 Você pode ver algumas das seguintes recomendações:
 
@@ -62,13 +62,13 @@ Você pode ver algumas das seguintes recomendações:
 - **Limites do arquivo de dados**. Caso os arquivos de dados estejam se aproximando dos [limites de E/S de arquivo na camada de serviço de uso geral](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), talvez seja necessário aumentar o tamanho do arquivo para melhorar o desempenho. Esse problema pode causar demanda de memória e reduzir os backups.
 - **Problemas de disponibilidade**. Um grande número de arquivos de log virtuais pode afetar o desempenho. Se houver uma falha de processo, esses problemas poderão resultar em uma recuperação de banco de dados mais longa na camada de serviço de uso geral.
 
-Examine periodicamente essas recomendações, investigue as causas raiz e adote ações corretivas. A extensão de instância gerenciada do Banco de Dados SQL do Azure fornece scripts que você pode executar para atenuar alguns dos problemas relatados.
+Examine periodicamente essas recomendações, investigue as causas raiz e adote ações corretivas. A extensão da Instância Gerenciada de SQL fornece scripts que você pode executar para atenuar alguns dos problemas relatados.
 
 ## <a name="replicas"></a>Réplicas
 
 O terceiro painel na guia **Instância Gerenciada** mostra o estado das réplicas de banco de dados em sua instância gerenciada.
 
-[ ![Réplicas de instância gerenciada](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[ ![Réplicas da Instância Gerenciada](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 Na camada de serviço de uso geral, cada banco de dados tem uma única réplica (primária). Em uma instância de nível comercialmente crítico, cada banco de dados tem uma réplica primária e três secundárias, uma das quais é usada para cargas de trabalho somente leitura. No painel **Réplicas**, você pode monitorar o processo de sincronização e verificar se todas as réplicas secundárias estão sincronizadas com a réplica primária.
 
@@ -76,15 +76,15 @@ Na camada de serviço de uso geral, cada banco de dados tem uma única réplica 
 
 O quarto painel da **Instância Gerenciada** mostra as entradas de log de erros do SQL mais recentes e relevantes.
 
-[ ![Entradas de log de instância gerenciada](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[ ![Entradas de log da Instância Gerenciada](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 Embora sua instância gerenciada gere um grande número de entradas de log, a maioria contém informações internas/do sistema. Além disso, algumas entradas de log mostram nomes de bancos de dados físicos (valores `GUID`) em vez de nomes de banco de dados lógicos reais.
 
-A extensão de instância gerenciada do Banco de Dados SQL do Azure filtra entradas de log desnecessárias com base no [método de Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). A extensão também exibe nomes de arquivos lógicos reais, em vez de nomes físicos.
+A extensão da Instância Gerenciada de SQL filtra as entradas de log desnecessárias com base no [método de Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). A extensão também exibe nomes de arquivos lógicos reais, em vez de nomes físicos.
 
 ## <a name="reporting-problems"></a>Relatar problemas
 
-Se você tiver problemas com a extensão da instância gerenciada do Banco de Dados SQL do Azure, vá para o [projeto GitHub da Extensão](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) e relate seu problema.
+Se você tiver problemas com a extensão da Instância Gerenciada de SQL, acesse o [projeto GitHub da Extensão](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) e relate seu problema.
 
 ## <a name="code-of-conduct"></a>Código de conduta
 

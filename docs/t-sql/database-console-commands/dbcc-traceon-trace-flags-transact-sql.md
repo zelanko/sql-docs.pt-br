@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 248377fa1c4d498d6ffeb5b72518b2baf322362a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248515"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877804"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – sinalizadores de rastreamento (Transact-SQL)
 
@@ -54,7 +54,7 @@ Use o comando `DBCC TRACESTATUS` para determinar quais sinalizadores de rastream
 A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> A Instância Gerenciada do Banco de Dados SQL do Azure dá suporte aos seguintes Sinalizadores de Rastreamento globais: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 e 11024. Os sinalizadores de rastreamentos de sessão ainda não são suportados na Instância Gerenciada.
+> A Instância Gerenciada de SQL do Azure dá suporte aos seguintes sinalizadores de rastreamento globais: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 e 11024. Os sinalizadores de rastreamentos de sessão ainda não são suportados na Instância Gerenciada.
  
 > [!NOTE]
 > Alguns sinalizadores de rastreamento foram introduzidos em versões específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre a versão aplicável, confira o artigo do Suporte da Microsoft associado a um sinalizador de rastreamento específico.

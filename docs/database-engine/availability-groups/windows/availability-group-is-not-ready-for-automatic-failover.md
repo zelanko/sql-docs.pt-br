@@ -1,6 +1,6 @@
 ---
 title: O grupo de disponibilidade não está pronto para o failover automático
-description: Identifique os possíveis motivos de um Grupo de Disponibilidade AlwaysOn não estar pronto para failover.
+description: Saiba como identificar os possíveis motivos de um grupo de disponibilidade Always On não estar pronto para failover.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d23e33effa5913689e4886c7a8fac6bf42cd9b7b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 79992ce77b803858c86d4bace6b9f6b128688447
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900885"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565558"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>O Grupo de Disponibilidade AlwaysOn não está pronto para o failover automático
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

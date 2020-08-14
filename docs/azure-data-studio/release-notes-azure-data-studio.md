@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411257"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988561"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
@@ -47,7 +47,7 @@ ms.locfileid: "87411257"
 | Novo recurso de tour adicionado | Na página inicial e na paleta de comandos, os usuários agora podem usar o tour para ver um passo a passo dos recursos mais usados, incluindo as visualizações de Conexões, Notebooks e o Marketplace de Extensões |
 | Novos recursos de notebook | &bull; &nbsp; Compatibilidade com cabeçalho na barra de ferramentas de Markdown<br/> &bull; &nbsp; Visualização lado a lado do Markdown nas células de texto
 | Arrastar e soltar colunas e tabelas no Editor de Consultas | Agora os usuários podem arrastar e soltar colunas e tabelas diretamente da visualização de Conexões no editor de consultas |
-| Ícone de conta do Azure adicionado à barra de atividades | Mais detectável para entrar no Azure |
+| Adição do ícone da conta do Azure à barra de atividades | Agora, os usuários podem ver com facilidade a seção de entrada no Azure |
 | Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 
@@ -60,7 +60,7 @@ ms.locfileid: "87411257"
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Adição do Azure Data Studio à integração do portal do Azure | Agora os usuários podem iniciar diretamente no portal do Azure por meio de uma conexão do BD SQL do Azure, do Postgres do Azure e muito mais. |
+| Adição do Azure Data Studio à integração do portal do Azure | Agora, os usuários podem iniciar diretamente no portal do Azure por meio de uma conexão do Banco de Dados SQL do Azure, do Postgres do Azure, entre outros. |
 | Novos recursos de notebook | &bull; &nbsp; Nova barra de ferramentas do Notebook <br/> &bull; &nbsp; Nova barra de ferramentas Editar Célula <br/> &bull; &nbsp; Atualizações de UX do assistente de dependências do Python <br/> &bull; &nbsp; Melhor espaçamento entre notebooks |
 | Anúncio da extensão da API Avaliação do SQL | Essa extensão adiciona a avaliação de melhores práticas do SQL Server no ADS. Ela expõe a API Avaliação do SQL, que anteriormente estava disponível para uso somente no módulo SqlServer do PowerShell e no SMO, para permitir que você avalie as instâncias de SQL Server e receba recomendações feitas pela equipe do SQL Server. Saiba mais sobre a API Avaliação do SQL e do que ela é capaz [neste artigo.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
 | [Aprimoramentos na Extensão de Machine Learning](https://go.microsoft.com/fwlink/?linkid=2129918) | Agora é compatível com a Instância Gerenciada de SQL do Azure. |
@@ -489,7 +489,7 @@ ms.locfileid: "87411257"
 
 ### <a name="bug-fixes-november-2018"></a>Correções de bugs, novembro de 2018
 
-- Correção do [problema 2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Conexão perdida com o BD de SQL do Azure
+- Correção do [problema 2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Conexão perdida com o Banco de Dados SQL do Azure
 - Correção do [problema 2914](https://github.com/Microsoft/azuredatastudio/issues/2914): Exceção "Argumento inválido" ao expandir o nó do banco de dados OE
 - Correção do [problema 2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Exibição de mensagens de várias linhas corretamente nos resultados da consulta
 - Correção do [problema 2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Correção da Edição do nome do documento de dados quando o nome da tabela contém caracteres especiais
@@ -506,7 +506,7 @@ ms.locfileid: "87411257"
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Apresentando o Azure Resource Explorer para navegar em Bancos de Dados SQL do Azure. | &nbsp; |
+| Apresentação do Azure Resource Explorer para navegação no Banco de Dados SQL do Azure. | &nbsp; |
 | Melhoria na robustez da conectividade do Pesquisador de Objetos e do Editor de Consultas. | &nbsp; |
 | Melhorias nas extensões do SQL Agent. | &nbsp; |
 | Atualização à extensão do SQL Server 2019 Preview. | Confira [Extensão Virtualização de Dados](data-virtualization-extension.md?view=sql-server-ver15). |
@@ -546,7 +546,7 @@ Versão de Disponibilidade Geral do Azure Data Studio (anteriormente SQL Operati
 | :----- | :------ |
 | Suporte para versão prévia do recurso do SQL Server 2019, incluindo suporte a [cluster de Big Data](../big-data-cluster/big-data-cluster-overview.md). | Conecte-se com o gateway do HDFS/Spark fornecido com a versão prévia do SQL Server 2019.<br/><br/>Navegue no HDFS, faça upload de arquivos, salve arquivos e inicie ações úteis, como Analisar no Notebook para arquivos CSV.<br/><br/>Envie trabalhos do Spark por meio do painel ou clique com o botão direito do mouse em uma conexão do HDFS/Spark no Pesquisador de Objetos. |
 | Notebooks do Azure Data Studio. | Crie ou abra Notebooks usando um visualizador de Notebook integrado. Nesta versão, o visualizador do Notebook é compatível com a conexão somente com kernels locais e com o cluster de Big Data do SQL Server 2019.<br/><br/>Use as bibliotecas PROSE Code Accelerator em seu Notebook para saber formatos de arquivo e tipos de dados que proporcionam uma rápida preparação de dados. |
-| Azure Resource Explorer. | A exibição Azure Resource Explorer permite procurar pontos de extremidade relacionados a dados para suas contas do Azure e criar conexões com eles no Pesquisador de Objetos. Nesta versão, os servidores e os Bancos de Dados SQL do Azure são compatíveis. |
+| Azure Resource Explorer. | A exibição Azure Resource Explorer permite procurar pontos de extremidade relacionados a dados para suas contas do Azure e criar conexões com eles no Pesquisador de Objetos. Nesta versão, há suporte para o Banco de Dados SQL do Azure. |
 | Assistente de criação de tabela externa do PolyBase no SQL Server. | Crie uma tabela externa e suas estruturas de metadados de suporte com um assistente fácil de usar. Nesta versão, há suporte para os servidores remotos SQL Server e Oracle. |
 | &nbsp; | &nbsp; |
 

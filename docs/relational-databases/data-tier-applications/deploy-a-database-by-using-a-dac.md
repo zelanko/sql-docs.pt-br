@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781694"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988765"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Use o Assistente **Implantar Banco de Dados no SQL Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ou entre dois servidores [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  Use o Assistente **Implantar Banco de Dados no Banco de Dados SQL do Microsoft Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ou entre dois servidores do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Antes de começar  
  O assistente usa um arquivo morto BACPAC DAC (aplicativo da camada de dados) para implantar os dados e as definições dos objetos de banco de dados. Ele executa uma operação de exportação de DAC do banco de dados de origem, e uma importação de DAC para o destino.  
@@ -68,7 +68,7 @@ ms.locfileid: "85781694"
   
 3.  Expanda o nó **Bancos de Dados** .  
   
-4.  Clique com o botão direito do mouse no banco de dados que deseja implantar, selecione **Tarefas**e selecione **Implantar Banco de Dados no SQL Azure...**  
+4.  Clique com o botão direito do mouse no banco de dados que deseja implantar, selecione **Tarefas** e **Implantar Banco de Dados no Banco de Dados SQL do Microsoft Azure**  
   
 5.  Conclua as etapas das caixas de diálogo do assistente:  
   

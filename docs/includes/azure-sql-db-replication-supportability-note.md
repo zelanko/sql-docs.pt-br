@@ -4,12 +4,12 @@ ms.service: sql-server
 ms.topic: include
 ms.date: 05/30/2019
 ms.author: mathoma
-ms.openlocfilehash: 9e51137a3a6449e4024b967b631976fc579dad4a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08a9352b6323b34b3b75cc32506e33f832889e45
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768269"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "88011011"
 ---
   > [!NOTE] 
-  > A instância gerenciada do Banco de Dados SQL do Azure pode ser um publicador, um distribuidor e um assinante para replicação de instantâneo e transacional. Bancos de dados SQL do Azure individuais ou em pool só podem ser assinantes por push para replicação de instantâneo e transacional. Para obter mais informações, consulte [Replicação transacional com o Banco de Dados SQL do Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+  > A Instância Gerenciada de SQL do Azure pode ser um publicador, um distribuidor e um assinante para a replicação transacional e de instantâneo. Os bancos de dados do Banco de Dados SQL do Azure só podem ser assinantes por push para a replicação transacional e de instantâneo. Para obter mais informações, consulte [Replicação transacional com o Banco de Dados SQL do Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 

@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d66be3ee4f5d4a5eb7237dbec55160b4d263d626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21fe129f15022532e9e7c8613159cfc7617fd6e4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767612"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864863"
 ---
 # <a name="snapshot-folder"></a>Pasta do Instantâneo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,14 +27,14 @@ A página **Pasta do Instantâneo** aparece no Assistente para Configurar a Dist
   
 A pasta de instantâneo é simplesmente um diretório que você designou como um compartilhamento, agentes que leem essa pasta e gravam nela devem ter permissões suficientes para acessá-la. Para obter mais informações sobre como proteger a pasta adequadamente, consulte [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md) (Proteger a pasta de instantâneo). Antes de implementar replicação, teste se os agentes de replicação poderão se conectar à pasta de instantâneo. Faça logon na conta que será usada por cada agente e depois tente acessar a pasta de instantâneo.  
 
-Para uma instância gerenciada do Banco de Dados SQL do Azure, a pasta de instantâneo deve ser um compartilhamento de arquivo do Azure. 
+Para a Instância Gerenciada de SQL do Azure, a pasta de instantâneo precisa ser um compartilhamento de arquivo do Azure. 
   
 ## <a name="options"></a>Opções  
  **Pasta do instantâneo**  
  Insira o caminho para a pasta onde você quer arquivos de instantâneo sejam armazenados.  
   
 > [!NOTE]  
->  A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use um compartilhamento de rede como um local de pasta de instantâneo. Caminhos locais (os que iniciam com uma letra da unidade, como C:\\) não são acessíveis a agentes em outros computadores.  
+> A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use um compartilhamento de rede como um local de pasta de instantâneo. Caminhos locais (os que iniciam com uma letra da unidade, como C:\\) não são acessíveis a agentes em outros computadores.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Modificar opções de instantâneo](../../relational-databases/replication/snapshot-options.md)   

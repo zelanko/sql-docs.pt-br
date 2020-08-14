@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472472"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823478"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services)
 
@@ -95,7 +95,7 @@ Tipo do destino. Atualmente, a tarefa Implantação do SSIS dá suporte a dois t
 
 #### <a name="destination-server"></a>Servidor de destino
 
-Nome do SQL Server de destino. Pode ser o nome de um SQL Server local, de um Banco de Dados SQL do Azure ou de uma Instância Gerenciada do Banco de Dados SQL do Azure. Essa propriedade só é visível quando o tipo de destino é SSISDB.
+Nome do SQL Server de destino. Pode ser o nome de um SQL Server local, de um Banco de Dados SQL do Azure ou de uma Instância Gerenciada de SQL do Azure. Essa propriedade só é visível quando o tipo de destino é SSISDB.
 
 #### <a name="destination-path"></a>Caminho de destino
 
@@ -184,7 +184,7 @@ Se a configuração feita por esse erro deve ser revertida quando um erro ocorre
 
 #### <a name="target-server"></a>Servidor de destino
 
-Nome do SQL Server de sestino. Pode ser o nome de um SQL Server local, de um Banco de Dados SQL do Azure ou de uma Instância Gerenciada do Banco de Dados SQL do Azure.
+Nome do SQL Server de sestino. Pode ser o nome de um SQL Server local, de um Banco de Dados SQL do Azure ou de uma Instância Gerenciada de SQL do Azure.
 
 #### <a name="authentication-type"></a>Tipo de autenticação
 

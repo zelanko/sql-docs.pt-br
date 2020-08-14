@@ -1,6 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
-description: Saiba mais sobre o Service Broker. Veja como ele fornece suporte nativo para mensagens no Mecanismo de Banco de Dados do SQL Server e na Instância Gerenciada do Banco de Dados SQL do Azure.
+description: Saiba mais sobre o Service Broker. Veja como ele fornece suporte nativo para mensagens no Mecanismo de Banco de Dados do SQL Server e na Instância Gerenciada de SQL do Azure.
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764043"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863390"
 ---
 # <a name="service-broker"></a>Agente de Serviço
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fornece suporte nativo a mensagens e enfileiramento no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Dessa maneira, fica mais fácil para os desenvolvedores a criação de aplicativos sofisticados que usam os componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para comunicação entre bancos de dados díspares e a criação de aplicativos distribuídos confiáveis.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fornece suporte nativo a mensagens e enfileiramento no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Dessa maneira, fica mais fácil para os desenvolvedores a criação de aplicativos sofisticados que usam os componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para comunicação entre bancos de dados díspares e a criação de aplicativos distribuídos confiáveis.  
   
 ## <a name="when-to-use-service-broker"></a>Quando usar o Service Broker
 
@@ -103,7 +103,7 @@ FROM ExpenseQueue;
 ## <a name="whats-new-in-service-broker"></a>Novidades no Service Broker  
  Nenhuma alteração significativa foi introduzida no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  As alterações a seguir foram introduzidas no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
-### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker e Instância Gerenciada do Banco de Dados SQL do Azure
+### <a name="service-broker-and-azure-sql-managed-instance"></a>Service Broker e Instância Gerenciada de SQL do Azure
 
 - Não há suporte para Service Broker entre instâncias 
  - `sys.routes` – Pré-requisito: selecione o endereço de sys.routes. O endereço deve ser o LOCAL em cada rota. Confira [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).

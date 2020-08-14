@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4aa3383d88121c1b9fce53c48c24ebfd3ebb73ff
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397069"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931537"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  É uma subconsulta que recupera linhas do banco de dados. *derived_table* é usada como entrada para a consulta externa.  
   
- *derived* *_table* pode usar o recurso do construtor de valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar várias linhas. Por exemplo, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Para obter mais informações, consulte [Construtor de valor de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived_table* pode usar o recurso do construtor de valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar várias linhas. Por exemplo, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Para obter mais informações, consulte [Construtor de valor de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  É um alias opcional para substituir um nome de coluna no conjunto de resultados da tabela derivada. Inclua um alias para cada coluna na lista de seleção e encerre a lista completa de aliases de coluna entre parênteses.  

@@ -8,7 +8,7 @@
 Alguns exemplos de código Transact-SQL escritos para SQL Server locais precisam de pequenas alterações para serem executados no serviço de Banco de Dados SQL do Azure na nuvem. Uma categoria desses exemplos de código envolve exibições do sistema cujos prefixos de nome diferem ligeiramente entre os dois sistemas de banco de dados:
 
 - **servidor\_** &nbsp; - &nbsp; _prefixo para local_
-- **banco de dados\_** &nbsp; - &nbsp; _prefixo para o serviço do BD SQL do Azure na nuvem_
+- **banco de dados\_** &nbsp; - &nbsp; _prefixo do Banco de Dados SQL do Azure_
 
 Para ilustração, a tabela a seguir lista e compara dois subconjuntos de exibições do sistema. Para resumir, os subconjuntos estão restritos aos nomes de exibição que também contêm a cadeia de caracteres `_event`. Os subconjuntos têm prefixos de nome diferentes porque eles vêm de dois sistemas de banco de dados diferentes.
 

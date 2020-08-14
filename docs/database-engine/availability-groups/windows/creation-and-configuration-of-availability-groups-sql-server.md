@@ -1,6 +1,6 @@
 ---
 title: Criar e configurar grupos de disponibilidade (índice de conteúdo)
-description: Um índice de links que ajudam você a criar e configurar grupos de disponibilidade Always On para o SQL Server.
+description: Saiba mais sobre as referências que você pode usar para criar e configurar grupos de disponibilidade Always On para o SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e11ba9aff326c6656a2c719ff00ef736022fc64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a20f798a107c6afb1d26a9f0707c35913a44d7b
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899879"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565007"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Referência para a criação e a configuração de grupos de disponibilidade Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

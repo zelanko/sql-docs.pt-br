@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768076"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988748"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85768076"
 - Os clientes que precisam fazer backup em blobs de páginas por meio de um servidor proxy precisarão usar o backuptourl.exe. 
 
 
-O backup de um banco de dados grande para o armazenamento de blobs está sujeito às limitações listadas em [Diferenças de T-SQL de instância gerenciada, limitações e problemas conhecidos](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+O backup de um banco de dados grande no armazenamento de blobs está sujeito às limitações listadas em [Diferenças, limitações e problemas conhecidos do T-SQL da Instância Gerenciada](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
  Se o banco de dados for muito grande, escolha uma das seguintes soluções:
 - use a compactação de backup ou

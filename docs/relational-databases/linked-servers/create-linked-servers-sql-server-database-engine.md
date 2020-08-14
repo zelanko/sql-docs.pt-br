@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1bb0bc0ec1b16af3882880ac1d528a8c7907994
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719037"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823734"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "85719037"
      Use o usuário remoto para mapear usuários não definidos em **Logon local**. O **Usuário Remoto** deve ser um logon de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor remoto.  
 
     > [!WARNING]
-    > Somente um usuário do SQL Server pode ser usado como um "Usuário remoto" em uma implantação de instância gerenciada do Banco de Dados SQL do Azure.  
+    > Só um usuário do SQL Server pode ser usado como um "Usuário Remoto" em uma implantação de instância gerenciada.  
 
      **Senha Remota**  
      Especifique a senha do Usuário Remoto.  

@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e4a00b8bff85625cf48f8ba1f5abf3fb14ce94a8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a2874fa0cd20ed8ff80f7815b0725ce14dd800b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113241"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864427"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL)
 
@@ -66,7 +66,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -687,17 +687,17 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Instância gerenciada<br />do Banco de Dados SQL \*_**<br />&nbsp;
+        **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-managed-instance"></a>Instância Gerenciada do Azure SQL
 
-Use esta instrução com um banco de dados na instância gerenciada do Banco de Dados SQL do Azure.
+Use esta instrução com um banco de dados na Instância Gerenciada de SQL do Azure.
 
-## <a name="syntax-for-databases-in-a-managed-instance"></a>Sintaxe para bancos de dados em uma instância gerenciada
+## <a name="syntax-for-azure-sql-managed-instance"></a>Sintaxe para a Instância Gerenciada de SQL do Azure
 
 ```syntaxsql
 ALTER DATABASE database_name

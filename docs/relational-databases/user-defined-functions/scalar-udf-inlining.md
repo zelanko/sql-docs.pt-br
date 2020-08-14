@@ -2,7 +2,7 @@
 title: Embutimento de UDF escalar no Microsoft SQL Server | Microsoft Docs
 description: Recurso de embutimento de UDF escalar para aprimorar o desempenho de consultas que invocam UDFs escalares no SQL Server (começando no SQL Server 2019).
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435579"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790299"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -164,6 +164,9 @@ Dependendo da complexidade da lógica na UDF, o plano de consulta resultante tam
 - A UDF não contém várias instruções RETURN <sup>6</sup>.
 - A UDF não é chamada de uma instrução RETURN <sup>6</sup>.
 - A UDF não faz referência à função `STRING_AGG` <sup>6</sup>. 
+- A UDF não faz referência a tabelas remotas <sup>7</sup>.
+- A consulta de chamada à UDF não usa `GROUPING SETS`, `CUBE` ou `ROLLUP` <sup>7</sup>.
+- A consulta de chamada à UDF não contém uma variável que é usada como um parâmetro de UDF para atribuição (por exemplo, `SELECT @y = 2` e `@x = UDF(@y)`)<sup>7</sup>.
 
 <sup>1</sup> `SELECT` com acúmulo/agregação variável não tem suporte para embutimento (como `SELECT @val += col1 FROM table1`).
 
@@ -176,6 +179,8 @@ Dependendo da complexidade da lógica na UDF, o plano de consulta resultante tam
 <sup>5</sup> Restrição adicionada no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
 
 <sup>6</sup> Restrição adicionada no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
+<sup>7</sup> Restrição adicionada ao [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
 
 > [!NOTE]
 > Para obter informações sobre os consertos (fixes) de Embutimento de UDF Escalar do T-SQL mais recentes e alterações nos cenários de qualificação de embutimento, confira o artigo da Base de Dados de Conhecimento: [CORREÇÃO: Problemas de Embutimento de UDF Escalar no SQL Server 2019](https://support.microsoft.com/help/4538581).

@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882073"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823921"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   O modelo de segurança do agente de replicação permite um controle refinado das contas nas quais os agentes de replicação executam e efetuam conexões: Uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, confira [Controle de acesso e identidade para replicação](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
-O modelo de segurança do agente de replicação é um pouco diferente para instâncias gerenciadas do Banco de Dados SQL do Azure, pois não há contas do Windows sob as quais os agentes serão executados. Em vez disso, tudo deve ser feito por meio da autenticação do SQL Server. 
+O modelo de segurança do agente de replicação é um pouco diferente para a Instância Gerenciada de SQL do Azure, pois não há contas do Windows nas quais os agentes serão executados. Em vez disso, tudo deve ser feito por meio da autenticação do SQL Server. 
   
 > [!IMPORTANT]  
 >  Quando um membro da função fixa do servidor **sysadmin** configura a replicação, os agentes de replicação podem ser configurados para representar a conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Isso é realizado não especificando um logon nem uma senha para um agente de replicação, contudo, não recomendamos essa abordagem. Em vez disso, como a melhor prática de segurança, recomendamos especificar uma conta para cada agente que tenha as permissões mínimas descritas na seção "Permissões exigidas pelos agentes", mais adiante nesse tópico.  

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331985"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988394"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -56,10 +56,10 @@ Na linha a seguir, selecione qualquer nome de produto de seu interesse. Fazer is
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1465,10 +1465,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_Banco de dados individual/pool elástico do \*Banco de Dados SQL<br /> \*_** &nbsp;
+        **_\* Banco de Dados SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1477,7 +1477,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Banco de dados individual/pool elástico do Banco de Dados SQL do Azure
+## <a name="sql-database"></a>Banco de Dados SQL
 
 Níveis de compatibilidade são opções `SET`, mas são descritas em [Nível de Compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -1831,7 +1831,7 @@ Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados.
 Controla o acesso de usuários ao banco de dados.
 
 RESTRICTED_USER     
-Permite que apenas membros da função de banco de dados fixa `db_owner` e das funções de servidor fixas `dbcreator` e `sysadmin` conectem-se ao banco de dados, mas não limita o seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a instância gerenciada do Banco de Dados SQL.
+Permite que apenas membros da função de banco de dados fixa `db_owner` e das funções de servidor fixas `dbcreator` e `sysadmin` conectem-se ao banco de dados, mas não limita o seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a Instância Gerenciada de SQL.
 
 MULTI_USER     
 Todos os usuários com permissões apropriadas para se conectar ao banco de dados são permitidos.
@@ -2357,10 +2357,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_Instância gerenciada do \*Banco de Dados SQL<br /> \*_** &nbsp;
+        **_\* Instância Gerenciada do<br />Banco de Dados SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2369,7 +2369,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-managed-instance"></a>Instância Gerenciada do Azure SQL
 
 Níveis de compatibilidade são opções `SET`, mas são descritas em [Nível de Compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -2660,7 +2660,7 @@ Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados.
 Controla o acesso de usuários ao banco de dados.
 
 RESTRICTED_USER     
-Permite que apenas membros da função de banco de dados fixa `db_owner` e das funções de servidor fixas `dbcreator` e `sysadmin` conectem-se ao banco de dados, mas não limita o seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a instância gerenciada do Banco de Dados SQL.
+Permite que apenas membros da função de banco de dados fixa `db_owner` e das funções de servidor fixas `dbcreator` e `sysadmin` conectem-se ao banco de dados, mas não limita o seu número. Todas as conexões com o banco de dados são desconectadas no período especificado pela cláusula de término da instrução ALTER DATABASE. Depois que o banco de dados fizer a transição para o estado RESTRICTED_USER, as tentativas de conexão realizadas por usuários não qualificados serão recusadas. **RESTRICTED_USER** não pode ser modificado com a Instância Gerenciada de SQL.
 
 MULTI_USER     
 Todos os usuários com permissões apropriadas para se conectar ao banco de dados são permitidos.
@@ -3151,10 +3151,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

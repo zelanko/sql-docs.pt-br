@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743333"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864497"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar o tamanho de um índice não clusterizado
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743333"
   
 4.  Calcule o tamanho dos dados de comprimento variável:  
   
-     Se houver colunas de comprimento variável na chave de índice, inclusive qualquer coluna de chave de clustering necessária, como anteriormente descrito nas Etapa 2.2, determine quanto espaço é usado para armazenar as colunas dentro da linha de índice:  
+     Se houver colunas de tamanho variável (colunas de chave ou incluídas), inclusive qualquer coluna de chave de clustering necessária, conforme anteriormente descrito na Etapa 2.2, determine quanto espaço é usado para armazenar as colunas dentro da linha de índice:  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      Os bytes adicionados a ***Max_Var_Key_Size*** servem para acompanhar cada fórmula de coluna variável. Essa fórmula presume que todas as colunas de tamanho variável estão 100% completas. Se você se previr que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usado, poderá ajustar o valor ***Max_Var_Leaf_Size*** com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
-     Se não houver colunas de tamanho variável, defina ***Variable_Leaf_Size*** como 0.  
+     Se não houver colunas de tamanho variável (colunas de chave ou incluídas), defina ***Variable_Leaf_Size*** como 0.  
   
 5.  Calcule o tamanho da linha de índice:  
   

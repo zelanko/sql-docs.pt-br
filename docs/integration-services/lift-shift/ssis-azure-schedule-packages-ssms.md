@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 194ad3581252d5baaca6d5bfaf4c8c2272efc610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915288"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864603"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Agendar a execução de pacotes SSIS implantados no Azure com o SSMS (SQL Server Management Studio)
 
@@ -23,7 +23,7 @@ ms.locfileid: "86915288"
 
 
 
-Você pode usar o SSMS (SQL Server Management Studio) para agendar pacotes SSIS implantados no Banco de Dados SQL do Azure. O SQL Server local e a Instância Gerenciada do Banco de Dados SQL do Azure têm o SQL Server Agent e o Agente de Instância Gerenciada, respectivamente, como um agendador de trabalhos do SSIS de primeira classe. Por outro lado, o Banco de Dados SQL não tem um agendador interno de trabalhos do SSIS de primeira classe. O recurso do SSMS descrito neste artigo oferece uma interface do usuário familiar que é semelhante ao SQL Server Agent para agendar pacotes implantados no Banco de Dados SQL.
+Você pode usar o SSMS (SQL Server Management Studio) para agendar pacotes SSIS implantados no Banco de Dados SQL do Azure. O SQL Server local e a Instância Gerenciada de SQL têm o SQL Server Agent e o Agente da Instância Gerenciada, respectivamente, como um agendador de trabalhos do SSIS de primeira classe. Por outro lado, o Banco de Dados SQL não tem um agendador interno de trabalhos do SSIS de primeira classe. O recurso do SSMS descrito neste artigo oferece uma interface do usuário familiar que é semelhante ao SQL Server Agent para agendar pacotes implantados no Banco de Dados SQL.
 
 Se estiver usando o Banco de Dados SQL para hospedar o Catálogo do SSIS, o `SSISDB`, você poderá usar esse recurso do SSMS para gerar os pipelines de Data Factory, as atividades e os gatilhos necessários para agendar pacotes SSIS. Posteriormente, você poderá opcionalmente editar e estender esses objetos no Data Factory.
 
