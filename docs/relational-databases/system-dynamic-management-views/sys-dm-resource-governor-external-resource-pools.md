@@ -1,7 +1,7 @@
 ---
 title: sys. dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.reviewer: ''
@@ -19,13 +19,13 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ee42a9a7b4fe026df8e9a424ed25224e7a7edb7b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: bfc975662e2efef22957bb78b03125d67d2188d5
+ms.sourcegitcommit: cd1a5d152d05aeee3252ce313e63d396734f85bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88170965"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239201"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Nome do Colmn      |Tipo de dados      |Descrição|  
+|Nome da coluna      |Tipo de dados      |Descrição|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|ID do pool de recursos. Não permite valor nulo. |
 | name|**sysname**|O nome do pool de recursos. Não permite valor nulo. 
@@ -44,16 +44,19 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
 | max_memory_percent|**int**|A configuração atual da porcentagem de memória total de servidor que pode ser usada pelas solicitações nesse pool de recursos. Não permite valor nulo. |
 | statistics_start_time|**datetime**|O momento em que as estatísticas deste pool foram redefinidas. Não permite valor nulo. 
 | peak_memory_kb|**bigint**|A quantidade máxima de memória usada, em quilobytes, para o pool de recursos. Não permite valor nulo. |
-| write_io_count|**int**|O total de E/Ss de gravação emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
-| read_io_count|**int**|O total de E/S lidas emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
-| total_cpu_kernel_ms|**bigint**|O tempo de kernel do usuário cumulativo da CPU em milissegundos desde que as estatísticas de administrador de recursos foram redefinidas. Não permite valor nulo. |
-| total_cpu_user_ms|**bigint**|O tempo de usuário cumulativo da CPU em milissegundos desde que as estatísticas de administrador de recursos foram redefinidas. Não permite valor nulo. |
+| write_io_count|**int**|O total de E/Ss de gravação emitidas desde que as estatísticas do Resource Governor foram redefinidas. Não permite valor nulo. |
+| read_io_count|**int**|O total de E/S lidas emitidas desde que as estatísticas do Resource Governor foram redefinidas. Não permite valor nulo. |
+| total_cpu_kernel_ms|**bigint**|O tempo do kernel do usuário da CPU cumulativo em milissegundos desde que as estatísticas do Resource Governor foram redefinidas. Não permite valor nulo. |
+| total_cpu_user_ms|**bigint**|O tempo de do usuário da CPU cumulativo em milissegundos desde que as estatísticas do Resource Governor foram redefinidas. Não permite valor nulo. |
 | active_processes_count|**int**|O número de processos externos em execução no momento da solicitação. Não permite valor nulo. |
 
  
 ## <a name="permissions"></a>Permissões
 
 Requer a permissão `VIEW SERVER STATE`.
+
+> [!NOTE]
+> O SQL Serviços de Machine Learning 2019 para Linux não oferece suporte à capacidade de definir a afinidade de CPU.
 
 ## <a name="see-also"></a>Consulte Também  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
