@@ -1,4 +1,5 @@
 ---
+description: Tópicos de instruções do OLE DB (provedor de OLE DB de cliente nativo)
 title: Tópicos de instruções (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12c76eaf2a48fcea81ecaf348e8907daecbeee08
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 43cfa6e21939d316657cd1d80ef7959721e057f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381072"
 ---
 # <a name="ole-db-how-to-topics-native-client-ole-db-provider"></a>Tópicos de instruções do OLE DB (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87243988"
   
 -   [Usar recursos avançados de data e hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
--   [Filestream e BD OLE](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
+-   [Filestream e OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
 -   [Enviar dados BLOB ao SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   

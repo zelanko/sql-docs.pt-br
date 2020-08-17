@@ -1,4 +1,5 @@
 ---
+description: Instr (MDX)
 title: InStr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 877fc4658081108e810e404dfc8d4a368c6964ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387352"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -39,7 +40,7 @@ InStr([start, ]searched_string, search_string[, compare])
  *Comparar*  
  (opcional) Um valor inteiro. Esse argumento é sempre ignorado. Ele é definido para compatibilidade com outras funções **InStr** em outras linguagens.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor inteiro com a posição inicial de *seqüência2* em *seqüência1*.  
   
  Além disso, a função **InStr** retorna os valores listados na tabela a seguir, dependendo da condição:  

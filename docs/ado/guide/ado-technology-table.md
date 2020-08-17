@@ -1,4 +1,5 @@
 ---
+description: Tabela de produtos e tecnologias
 title: Tabela de tecnologia do ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a524139113cffeaf437b91a41b4f10b4468d5fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355242"
 ---
 # <a name="products-and-technologies-table"></a>Tabela de produtos e tecnologias
 A tabela a seguir lista os produtos, as ferramentas e as tecnologias da Microsoft abordados no guia do programador do ADO. Ele fornece links, sempre que possível, para tópicos relevantes no guia.
@@ -32,7 +33,7 @@ A tabela a seguir lista os produtos, as ferramentas e as tecnologias da Microsof
 |Internet Explorer|[Códigos de erro do Internet Explorer](../../ado/guide/appendixes/internet-explorer-error-codes.md)|
 |Serviços de Informações da Internet (IIS)|[Registros e fluxos](../../ado/guide/data/records-and-streams.md)<br /><br /> [Fluxos e persistência](../../ado/guide/data/streams-and-persistence.md)<br /><br /> [Fluxos de comando](../../ado/guide/data/command-streams.md)<br /><br /> [Usar o ADO para publicação na Internet](../../ado/guide/data/using-ado-for-internet-publishing.md)<br /><br /> [Soluções para Acesso a dados remotos](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [Cenário RDS](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [Configurar servidores virtuais no IIS](../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)<br /><br /> [Proteger aplicativos RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> ["Erro do servidor de Internet: acesso negado"](../../ado/guide/remote-data-service/internet-server-error-access-denied.md)<br /><br /> [Microsoft OLE DB Provider para publicação na Internet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)<br /><br /> [Códigos de erro dos Serviços de Informações da Internet](../../ado/guide/appendixes/internet-information-services-error-codes.md)|
 |JScript|[Tratamento de erros em outras linguagens](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Programação ADO JScript](../../ado/guide/appendixes/jscript-ado-programming.md)<br /><br /> [Exemplos de código ADO no Microsoft JScript](../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)|
-|ODBCODBC|[Usar RDS com pool de conexões ODBC](../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Microsoft OLE DB Provider para ODBC](../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
+|ODBC|[Usar RDS com pool de conexões ODBC](../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Microsoft OLE DB Provider para ODBC](../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |OLE DB|[Provedores de OLE DB](../../ado/guide/data/ole-db-providers-ado.md)<br /><br /> [Apêndice A: Provedores](../../ado/guide/appendixes/appendix-a-providers.md)<br /><br /> [Erros do provedor](../../ado/guide/data/provider-errors.md)|
 |Oracle|[Microsoft OLE DB Provider for Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |SQL Server|[Controle de transações](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [Chamando um procedimento armazenado com um comando](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [Registro atual e o tamanho do conjunto de registros](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [Cursores de somente avanço](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [Fluxos de comando](../../ado/guide/data/command-streams.md)<br /><br /> [Recuperar conjuntos de resultados em fluxos](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [Executar o script SQL do catálogo de endereços](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [Garantir espaço suficiente de TempDB](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [Minimizar o uso de espaço de arquivo de log](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Provedor Microsoft OLE DB para SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|

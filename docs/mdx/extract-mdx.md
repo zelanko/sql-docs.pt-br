@@ -1,4 +1,5 @@
 ---
+description: Extract (MDX)
 title: Extrair (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b168794a38a515d4ace97d576710041eac86195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387512"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 

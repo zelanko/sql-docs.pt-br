@@ -1,4 +1,5 @@
 ---
+description: Visão geral e benefícios do ADO
 title: Introdução ao ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 811d850127b215e69c3710e7680f655714773f57
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355432"
 ---
 # <a name="ado-overview-and-benefits"></a>Visão geral e benefícios do ADO
 O ActiveX Data Objects (ADO) é uma interface de alto nível e fácil de usar para OLE DB. OLE DB é uma interface de baixo nível e alto desempenho para uma variedade de armazenamentos de dados. O ADO e o OLE DB podem trabalhar com dados relacionais (tabulares) e não relacionais (hierárquicos ou de fluxo).

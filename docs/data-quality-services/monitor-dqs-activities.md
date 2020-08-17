@@ -1,4 +1,5 @@
 ---
+description: Monitorar atividade do DQS
 title: Monitorar atividade do DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea7afe223bdbeb1d6e85347fe34f7d103a39621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353562"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorar atividade do DQS
 

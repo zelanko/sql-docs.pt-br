@@ -1,4 +1,5 @@
 ---
+description: Avaliar os bancos de dados MySQL para conversão (MySQLToSQL)
 title: Avaliando bancos de dados MySQL para conversão (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ebfe3523c155d0e1b58281e987341b6f83fcf9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5512d7230b1b59add11e0d72efba232bb3770099
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320792"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Avaliar os bancos de dados MySQL para conversão (MySQLToSQL)
 Antes de carregar objetos e migrar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você deve determinar qual será a complexidade da migração e quanto tempo a migração levará. O SSMA pode criar um relatório de avaliação que mostra a porcentagem de objetos que serão convertidos com êxito. O SSMA também permite que você exiba os problemas específicos que causam falhas de conversão.  

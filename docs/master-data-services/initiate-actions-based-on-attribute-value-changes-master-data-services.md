@@ -1,4 +1,5 @@
 ---
+description: Iniciar ações com base em alterações no valor do atributo (Master Data Services)
 title: Iniciar ações com base em alterações no valor do atributo
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d1f1833bd90afeebf9a655384510bd952a7b4ae1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f1dda8e8683ab06cddc3c30b79d0bbb370f4f230
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388442"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Iniciar ações com base em alterações no valor do atributo (Master Data Services)
 

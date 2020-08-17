@@ -1,4 +1,5 @@
 ---
+description: Uso (DMX)
 title: Uso (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cdbefcfeb6d638998ec2e0a01b8da5ca40f2aeaf
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394852"
 ---
 # <a name="usage-dmx"></a>Uso (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Ao usar o DMX (extensões de mineração de dados) para definir um novo modelo de Data Mining no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você deve especificar como o algoritmo de Data Mining que cria o modelo usará cada coluna. Especifique as colunas como um dos tipos seguintes:  
   
--   **Key**  
+-   **Chave**  
   
 -   **Key Sequence**  
   
@@ -46,7 +47,7 @@ ms.locfileid: "86971546"
  [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)   
  [&#40;as convenções de sintaxe de&#41; DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

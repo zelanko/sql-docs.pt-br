@@ -1,4 +1,5 @@
 ---
+description: Espelhamento de banco de dados – sys. dm_db_mirroring_connections
 title: sys. dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223b940f9568c764885ab214278fc97928cc1b7f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b10aa1339769b49a6bd05fbc96a102583960cd99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374672"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Espelhamento de banco de dados – sys. dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "85894710"
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|Um para um|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

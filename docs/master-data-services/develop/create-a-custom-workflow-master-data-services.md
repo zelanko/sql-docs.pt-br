@@ -1,4 +1,5 @@
 ---
+description: Criar um fluxo de trabalho personalizado (Master Data Services)
 title: Criar um fluxo de trabalho personalizado
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b30b9a9c8adf7386e0a645b082466dec5afe9220
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7328d550697e1c6e0edd076d748a594946372915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389852"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
 
@@ -53,7 +54,7 @@ ms.locfileid: "85897446"
 5.  Aplique a regra de negócio a um membro que dispara seu fluxo de trabalho personalizado.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>Crie o assembly de manipulador de fluxo de trabalho  
- Um fluxo de trabalho personalizado é um assembly da biblioteca de classes do .NET que implementa a interface [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . SQL Server serviço de integração do fluxo de trabalho do MDS chama o método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) para executar seu código. Por exemplo, o código que implementa [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , consulte o [exemplo de fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+ Um fluxo de trabalho personalizado é um assembly da biblioteca de classes do .NET que implementa a interface [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . SQL Server serviço de integração do fluxo de trabalho do MDS chama o método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  para executar seu código. Por exemplo, o código que implementa [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , consulte o [exemplo de fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
   
  Siga estas etapas para usar o Visual Studio 2010 para criar um assembly que o Serviço de Integração de Fluxo de trabalho MDS do SQL Server possa chamar para tratar um fluxo de trabalho personalizado:  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85897446"
   
 4.  Herdar de [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) em sua declaração de classe. A declaração de classe deve ser semelhante a: 'public class WorkflowTester : IWorkflowTypeExtender'.  
   
-5.  Implemente a interface [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . O método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) é chamado por SQL Server serviço de integração de fluxo de trabalho do MDS para iniciar o fluxo de trabalho.  
+5.  Implemente a interface [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . O método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  é chamado por SQL Server serviço de integração de fluxo de trabalho do MDS para iniciar o fluxo de trabalho.  
   
 6.  Copie o assembly para o local do SQL Server executável do serviço de integração do fluxo de trabalho do MDS, chamado Microsoft.MasterDataServices.Workflow.exe, em \<Your installation folder> \Master data Services\WebApplication\bin.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "85897446"
     </setting>  
     ```  
   
-3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de tag a seu assembly de manipulador de fluxo de trabalho. Por exemplo:  
+3.  Sob a configuração "ConnectionString" adicione uma configuração "WorkflowTypeExtenders" para associar um nome de tag a seu assembly de manipulador de fluxo de trabalho. Por exemplo:   
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -90,7 +91,7 @@ ms.locfileid: "85897446"
     </setting>  
     ```  
   
-     O texto interno da \<value> marca está na forma de \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>é um nome que você usa para identificar o assembly do manipulador de fluxo de trabalho ao criar uma regra de negócio no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>é o nome qualificado do namespace da sua classe de fluxo de trabalho, seguido por uma vírgula, seguido pelo nome de exibição do assembly. Se seu assembly usar um nome forte, você também terá que incluir informações de versão e seu PublicKeyToken. Você pode incluir várias \<setting> marcas se tiver criado vários manipuladores de fluxo de trabalho para diferentes tipos de fluxos de trabalho.  
+     O texto interno da \<value> marca está na forma de \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag> é um nome que você usa para identificar o assembly do manipulador de fluxo de trabalho ao criar uma regra de negócio no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name> é o nome qualificado do namespace da sua classe de fluxo de trabalho, seguido por uma vírgula, seguido pelo nome de exibição do assembly. Se seu assembly usar um nome forte, você também terá que incluir informações de versão e seu PublicKeyToken. Você pode incluir várias \<setting> marcas se tiver criado vários manipuladores de fluxo de trabalho para diferentes tipos de fluxos de trabalho.  
   
 > [!NOTE]  
 >  Dependendo da configuração do seu servidor, você poderá visualizar um erro do tipo "Acesso negado" ao tentar salvar o arquivo Microsoft.MasterDataServices.Workflow.exe.config. Se isso ocorrer, desabilite temporariamente o UAC (Controle de Conta de Usuário) no servidor. Para fazer isso, abra o Painel de controle e clique em **Sistema e Segurança**. Em **Central de Ações**, clique em **Alterar Configurações de Controle de Conta de Usuário**. Na caixa de diálogo **Configurações de Controle de Conta de Usuário**, deslize a barra para a parte inferior para que você nunca seja notificado. Reinicie seu computador e repita as etapas anteriores para editar seu arquivo de configuração. Depois de salvar o arquivo, reinicie suas configurações de UAC no nível padrão.  

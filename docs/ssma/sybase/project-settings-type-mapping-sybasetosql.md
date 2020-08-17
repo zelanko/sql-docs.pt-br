@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (mapeamento de tipo) (SybaseToSQL)
 title: Configurações do projeto (mapeamento de tipo) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372112"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configurações do projeto (mapeamento de tipo) (SybaseToSQL)
 A página mapeamento de tipos da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte os tipos de dados do ase Adaptive Server Enterprise para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos de dados.  

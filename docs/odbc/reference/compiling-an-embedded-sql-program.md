@@ -1,4 +1,5 @@
 ---
+description: Compilar um programa SQL inserido
 title: Compilando um programa SQL inserido | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb801dc532009410055b67031b3e036cc6b9c3d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5065d50bd9ae23cc7db8a2310b13792b461da2a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386072"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilar um programa SQL inserido
 Como um programa SQL inserido contém uma combinação de instruções de linguagem de host e SQL, ele não pode ser enviado diretamente a um compilador para o idioma do host. Em vez disso, ele é compilado por meio de um processo de várias etapas. Embora esse processo seja diferente do produto para o produto, as etapas são aproximadamente as mesmas para todos os produtos.  

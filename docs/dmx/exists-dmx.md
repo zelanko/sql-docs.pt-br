@@ -1,4 +1,5 @@
 ---
+description: Exists (DMX)
 title: Existe (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: a0fa41dfff8edc6ddddeb420027a436f235e54a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353332"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -56,7 +57,7 @@ WHERE [[Model] = 'Patch kit'
  Outra maneira de exibir os mesmos dados retornados por essa consulta é abrir o modelo no Visualizador de associação, clicar com o botão direito do mouse no **Kit de patch do conjunto = existing**, selecionar a opção **Drill-through** e, em seguida, selecionar **somente casos de modelo**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Sintaxe de filtro de modelo e exemplos &#40;Analysis Services – Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

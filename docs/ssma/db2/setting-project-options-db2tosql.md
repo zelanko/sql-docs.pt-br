@@ -1,4 +1,5 @@
 ---
+description: Configurando opções de projeto (DB2ToSQL)
 title: Configurando opções de projeto (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 307c726811d4071754ff118ebd56d7d43abd05f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321012"
 ---
 # <a name="setting-project-options-db2tosql"></a>Configurando opções de projeto (DB2ToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão de objetos, o carregamento de objetos, a interface do usuário e as configurações de migração de dados. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, verifique se as opções de configuração são apropriadas para o projeto.  

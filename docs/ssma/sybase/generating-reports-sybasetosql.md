@@ -1,4 +1,5 @@
 ---
+description: Geração de relatórios (SybaseToSQL)
 title: Gerando relatórios (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df30186091344addef429bfb125e90b898d21467
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ff4e618126d9bb720d5bd4e8323e333c421f74f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372172"
 ---
 # <a name="generating-reports-sybasetosql"></a>Geração de relatórios (SybaseToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  

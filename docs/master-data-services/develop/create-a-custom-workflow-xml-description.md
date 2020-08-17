@@ -1,4 +1,5 @@
 ---
+description: Criar um fluxo de trabalho personalizado – Descrição XML
 title: Descrição do XML do fluxo de trabalho personalizado
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7c49f9b2831942552844e6bb479d139988d84c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c12348fc830a187a8d88841c15e25ba726bef968
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389782"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Criar um fluxo de trabalho personalizado – Descrição XML
 

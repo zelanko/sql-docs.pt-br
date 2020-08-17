@@ -1,4 +1,5 @@
 ---
+description: Definição de dados MDX – UPDATE MEMBER
 title: Instrução UPDATE MEMBER (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b1333a8784ea5427dec3ed7223a3c7c1a09120d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387060"
 ---
 # <a name="mdx-data-definition---update-member"></a>Definição de dados MDX – UPDATE MEMBER
 
@@ -64,7 +65,7 @@ UPDATE MEMBER Cube_Name.Member_Name
 |VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Membros calculados visíveis podem ser adicionados a um conjunto com a função [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Um valor diferente de zero indica que o membro calculado é visível. O valor padrão dessa propriedade é *visível*.<br /><br /> Em geral, membros calculados não visíveis são usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
 |NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado por MDX para determinar o comportamento de membros calculados ao resolver células vazias.|  
 |CAPTION|Um valor de cadeia de caracteres que especifica a legenda que o aplicativo cliente usa para exibir o membro.|  
-|DISPLAY_FOLDER|Um valor de cadeia de caracteres que especifica o caminho da pasta de exibição onde o membro será mostrado pelo aplicativo cliente. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]pelo, a barra invertida (\\) como o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
+|DISPLAY_FOLDER|Um valor de cadeia de caracteres que especifica o caminho da pasta de exibição onde o membro será mostrado pelo aplicativo cliente. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , a barra invertida ( \\ ) como o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
 |ASSOCIATED_MEASURE_GROUP|O nome do grupo de medidas ao qual esse membro está associado.|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -1,4 +1,5 @@
 ---
+description: Fontes de dados
 title: Fontes de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b7e464963471b0cad41c5b93d50507d0fa9bf96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b9f980ad9ccd1fa38b6fce863703ec706e21a76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386052"
 ---
 # <a name="data-sources"></a>Fontes de dados
 Uma *fonte de dados* é simplesmente a fonte dos dados. Ele pode ser um arquivo, um banco de dados específico em um DBMS, ou até mesmo um Live Data feed. Os dados podem estar localizados no mesmo computador que o programa ou em outro computador em algum lugar em uma rede. Por exemplo, uma fonte de dados pode ser um DBMS do Oracle em execução em um sistema operacional do SO/2®, acessado pelo Novell® NetWare; um DBMS do IBM DB2 acessado por meio de um gateway; uma coleção de arquivos Xbase em um diretório de servidor; ou um arquivo de banco de dados local do Microsoft® Access.  

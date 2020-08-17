@@ -1,4 +1,5 @@
 ---
+description: Identificadores (MDX)
 title: Identificadores (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe8494558f7026355cb25e1415f9269fbeb1bed3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387492"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 
@@ -79,7 +80,7 @@ ms.locfileid: "68891215"
   
 -   Quando o nome de um objeto ou parte do nome usar palavras reservadas.  
   
-     Recomendamos que palavras-chave reservadas não sejam usadas como nomes de objeto. Os bancos de dados atualizados de versões anteriores [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do podem conter identificadores que incluem palavras não reservadas na versão anterior, mas agora estão reservados. Até que seja possível alterar o identificador do objeto, você pode fazer referência ao objeto usando um identificador delimitado.  
+     Recomendamos que palavras-chave reservadas não sejam usadas como nomes de objeto. Os bancos de dados atualizados de versões anteriores do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem conter identificadores que incluem palavras não reservadas na versão anterior, mas agora estão reservados. Até que seja possível alterar o identificador do objeto, você pode fazer referência ao objeto usando um identificador delimitado.  
   
 -   Quando o nome de um objeto usa caracteres não listados como identificadores qualificados.  
   
@@ -123,7 +124,7 @@ ms.locfileid: "68891215"
  Além disso, o identificador Measures no exemplo anterior foi delimitado para demonstrar a delimitação de mais de um identificador.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de linguagem MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
+ [Referência de linguagem MDX &#40;&#41;MDX ](../mdx/mdx-language-reference-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   

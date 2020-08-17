@@ -1,4 +1,5 @@
 ---
+description: Filter (MDX)
 title: Filtro (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 026e4720803d828ae9ba96a4d3df7f5a72d59e8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387502"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -37,7 +38,7 @@ Filter(Set_Expression, Logical_Expression )
 ## <a name="remarks"></a>Comentários  
  A função **Filter** avalia a expressão lógica especificada em relação a cada tupla no conjunto especificado. A função retorna um conjunto que consiste em cada tupla no conjunto especificado onde a expressão lógica é avaliada como **true**. Se nenhuma tupla for avaliada como **true**, um conjunto vazio será retornado.  
   
- A função **Filter** funciona de maneira semelhante à da função [IIF](../mdx/iif-mdx.md) . A função **IIF** retorna apenas uma das duas opções com base na avaliação de uma expressão lógica MDX, enquanto a função **Filter** retorna um conjunto de tuplas que atendem ao critério de pesquisa especificado. Na verdade, a função de **filtro** é `IIf(Logical_Expression, Set_Expression.Current, NULL)` executada em cada tupla no conjunto e retorna o conjunto resultante.  
+ A função **Filter** funciona de maneira semelhante à da função [IIF](../mdx/iif-mdx.md) . A função **IIF** retorna apenas uma das duas opções com base na avaliação de uma expressão lógica MDX, enquanto a função **Filter** retorna um conjunto de tuplas que atendem ao critério de pesquisa especificado. Na verdade, a função de **filtro** é executada `IIf(Logical_Expression, Set_Expression.Current, NULL)` em cada tupla no conjunto e retorna o conjunto resultante.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra o uso da função Filter no eixo Linhas de uma consulta para retornar somente as Datas em que o Valor das Vendas pela Internet é maior do que US$ 10.000:  

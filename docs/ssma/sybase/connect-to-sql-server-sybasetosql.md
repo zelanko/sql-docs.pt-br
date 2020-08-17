@@ -1,4 +1,5 @@
 ---
+description: Conectar-se ao SQL Server (SybaseToSQL)
 title: Conectar-se ao SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 78007a3d788c7387cd59c2fa1b9f3cf52466c525
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 115b5ca1eadac2e8042abcc6fae7add920889155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372482"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Conectar-se ao SQL Server (SybaseToSQL)
 Use a caixa de diálogo **conectar a SQL Server** para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja migrar para o. Para acessar a caixa de diálogo **conectar a SQL Server** , no menu **arquivo** , clique em **conectar-se a SQL Server**.  
@@ -32,7 +33,7 @@ Insira ou selecione a instância do SQL Server à qual se conectar. Por padrão,
 **Porta do servidor**  
 Se sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver configurada para aceitar conexões na porta padrão (1433), insira o número da porta. Caso contrário, deixe esse valor em branco.  
   
-**Backup de banco de dados**  
+**Banco de dados**  
 Especifique o banco de dados para o qual os objetos e a migração são migrados. Essa opção não está disponível ao reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Autenticação**  

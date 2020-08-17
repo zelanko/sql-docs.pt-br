@@ -1,4 +1,5 @@
 ---
+description: O que o driver faz
 title: O que o driver faz | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c0438478f5aa625ffdd4d3bcd1c0a6f0f80d3367
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f15473d1eb0e6344fbd5772f2b28233c07aa7a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386222"
 ---
 # <a name="what-the-driver-does"></a>O que o driver faz
 A tabela a seguir resume quais funções e atributos de instrução um driver ODBC *3. x* deve implementar para cursores de bloco e rolável.  

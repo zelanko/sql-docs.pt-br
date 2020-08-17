@@ -1,4 +1,5 @@
 ---
+description: Comentário (MDX)
 title: Comentário (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a06660c0e542f789caa4f4df353559cced4537f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387682"
 ---
 # <a name="comment-mdx"></a>Comentário (MDX)
 
@@ -32,7 +33,7 @@ ms.locfileid: "68006278"
  Cadeia de caracteres que contém o texto do comentário.  
   
 ## <a name="remarks"></a>Comentários  
- O servidor não avalia o texto entre os caracteres de comentário,/* e \*/. Eles podem ser inseridos em uma linha separada ou dentro de uma instrução MDX. Comentários de várias linhas devem ser indicados por\* / \*e/.  
+ O servidor não avalia o texto entre os caracteres de comentário,/* e \* /. Eles podem ser inseridos em uma linha separada ou dentro de uma instrução MDX. Comentários de várias linhas devem ser indicados por/ \* e \* /.  
   
  Não há comprimento máximo para comentários. Os comentários podem ser aninhados; por exemplo, `/* Test /*Comment*/ Text*/` é um exemplo de um comentário aninhado.  
   
@@ -53,8 +54,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Comentário de&#40;&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [--Comentário de &#40;&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [ Comentário de&#40;&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

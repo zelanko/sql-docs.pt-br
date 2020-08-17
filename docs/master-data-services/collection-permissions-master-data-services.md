@@ -1,4 +1,5 @@
 ---
+description: Permissões de coleção (Serviços de Dados Mestre)
 title: Permissões de coleção
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 04ffb34b92aa43c521a9a454a8068e74cf4fd615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390282"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permissões de coleção (Serviços de Dados Mestre)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85811607"
 > [!NOTE]  
 >  Essas permissões se aplicam apenas à área funcional **Explorer** da interface do usuário.  
   
-|Permissão|Description|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Ler**|O usuário pode ler membros da coleção e os atributos de membro.|  
 |**Criar**|O usuário pode criar membros da coleção e atribuir valores de atributo.|  
 |**Atualização**|O usuário pode atualizar membros da coleção, atributos e relacionamentos|  
-|**Excluir**|O usuário pode excluir os membros da coleção.|  
+|**Delete (excluir)**|O usuário pode excluir os membros da coleção.|  
 |**Deny**|Negar todo acesso aos membros da coleção.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas. Ao atribuir Criar, Atualizar e Excluir, a permissão de leitura é atribuída automaticamente.  

@@ -1,4 +1,5 @@
 ---
+description: Conectando-se ao banco de dados SQL do Azure (SybaseToSQL)
 title: Conectando-se ao banco de dados SQL do Azure (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12e090ef0b2c97fe57d27a61842dd7fe2cb99866
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: eacdca6cf260557171f5adf63f8590842de77fcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372342"
 ---
 # <a name="connecting-to-azure-sql-database-sybasetosql"></a>Conectando-se ao banco de dados SQL do Azure (SybaseToSQL)
 Para migrar bancos de dados do Sybase para o Azure SQL Database, você deve se conectar à instância de destino do banco de dados SQL do Azure. Quando você se conecta, o SSMA Obtém os metadados sobre todos os bancos de dados na instância do Azure SQL Database e exibe os metadados do banco de dados no Gerenciador de metadados do banco de dados SQL do Azure. O SSMA armazena informações da instância do banco de dados SQL do Azure à qual você está conectado, mas não armazena senhas.  
@@ -28,7 +29,7 @@ A conta usada para se conectar ao banco de dados SQL do Azure requer permissões
   
 1.  Para converter objetos Sybase em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe, atualizar metadados do banco de dados SQL do Azure ou salvar a sintaxe convertida em scripts, a conta deve ter permissão para fazer logon na instância do banco de dados SQL do Azure.  
   
-2.  Para carregar objetos de banco de dados no banco de dados SQL do Azure, o requisito mínimo de permissão é a associação na função de banco de dados **db_owner** no banco de dados de destino.  
+2.  Para carregar objetos de banco de dados no banco de dados SQL do Azure, o requisito mínimo de permissão é a associação na função de banco de dados  **db_owner** no banco de dados de destino.  
   
 ## <a name="establishing-an-azure-sql-database-connection"></a>Estabelecendo uma conexão de banco de dados SQL do Azure  
 Antes de converter objetos do banco de dados Sybase para a sintaxe do banco de dados SQL do Azure, você deve estabelecer uma conexão com a instância do banco de dados SQL do Azure onde você deseja migrar o banco de dados ou bancos de dados Sybase.  

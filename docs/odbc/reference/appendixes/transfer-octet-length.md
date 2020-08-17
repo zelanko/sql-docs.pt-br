@@ -1,4 +1,5 @@
 ---
+description: Comprimento do octeto de transferência
 title: Comprimento do octeto de transferência | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2019
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4204b47816747506a5672241eeeef736eca54856
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386342"
 ---
 # <a name="transfer-octet-length"></a>Comprimento do octeto de transferência
 O comprimento do octeto de transferência de uma coluna é o número máximo de bytes retornados para o aplicativo quando os dados são transferidos para seu tipo de dados C padrão. Para dados de caractere, o comprimento do octeto de transferência não inclui espaço para o caractere de terminação nula. O comprimento do octeto de transferência de uma coluna pode ser diferente do número de bytes necessários para armazenar os dados na fonte de dados.  
   
  O comprimento do octeto de transferência definido para cada tipo de dados SQL ODBC é mostrado na tabela a seguir.  
   
-|Identificador de tipo SQL|Comprimento|  
+|Identificador de tipo SQL|Tamanho|  
 |-------------------------|------------|  
 |Todos os tipos de caractere [a]|O comprimento definido ou máximo (para o tipo de variável) da coluna em bytes. Esse é o mesmo valor que o campo de descritor SQL_DESC_OCTET_LENGTH.|  
 |SQL_DECIMAL<br />SQL_NUMERIC|O número de bytes necessários para manter a representação de caracteres desses dados se o conjunto de caracteres for ANSI e o dobro desse número se o conjunto de caracteres for UNICODE. Esse é o número máximo de dígitos mais dois, pois os dados são retornados como uma cadeia de caracteres e os caracteres são necessários para os dígitos, um sinal e um ponto decimal. Por exemplo, o comprimento da transferência de uma coluna definida como numérica (10, 3) é 12.|  

@@ -1,4 +1,5 @@
 ---
+description: Executar o console do SSMA (SybaseToSQL)
 title: Executando o console do SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fee973fdcb79105d5fe7c412c10bdda2cd1bbec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372232"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o console do SSMA (SybaseToSQL)
 A Microsoft fornece um conjunto robusto de comandos de arquivo de script para executar e controlar atividades do SSMA. As seções que mais profundos detalham o mesmo.  
@@ -37,9 +38,9 @@ Os comandos de projeto lidam com a criação de projetos, abertura, salvamento e
 ### <a name="create-new-project"></a>create-new-project  
 Este comando cria um novo projeto do SSMA.  
   
--   `project-folder`indica a pasta do projeto que está sendo criado.  
+-   `project-folder` indica a pasta do projeto que está sendo criado.  
   
--   `project-name`indica o nome do projeto. {string}  
+-   `project-name` indica o nome do projeto. {string}  
   
 -   `overwrite-if-exists`Atributo opcional indica se um projeto existente deve ser substituído. Boolean  
   
@@ -66,9 +67,9 @@ O atributo ' Project-Type ' é **SQL-Server-2008** por padrão.
 ### <a name="open-project"></a>Abrir projeto  
 Esse comando abre o projeto.
 
--   `project-folder`indica a pasta do projeto que está sendo criado. O comando falhará se a pasta especificada não existir.  {string}  
+-   `project-folder` indica a pasta do projeto que está sendo criado. O comando falhará se a pasta especificada não existir.  {string}  
   
--   `project-name`indica o nome do projeto. O comando falhará se o projeto especificado não existir.  {string}  
+-   `project-name` indica o nome do projeto. O comando falhará se o projeto especificado não existir.  {string}  
   
 **Exemplo de sintaxe:**  
   
@@ -189,25 +190,25 @@ Se a conexão do banco de dados de origem não for executada antes da execução
   
 Falha ao conectar-se ao servidor de banco de dados de origem durante a execução do comando, também resulta na finalização do aplicativo de console.  
   
--   `conversion-report-folder:`Especifica a pasta na qual o relatório de avaliação pode ser armazenado. (atributo opcional)  
+-   `conversion-report-folder:` Especifica a pasta na qual o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
--   `object-name:`Especifica os objetos considerados para geração de relatórios de avaliação (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
+-   `object-name:` Especifica os objetos considerados para geração de relatórios de avaliação (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
   
--   `object-type:`Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+-   `object-type:` Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
--   `conversion-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+-   `conversion-report-overwrite:` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
--   `write-summary-report-to:`Especifica o caminho no qual o relatório será gerado.  
+-   `write-summary-report-to:` Especifica o caminho no qual o relatório será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **AssessmentReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -230,7 +231,7 @@ Falha ao conectar-se ao servidor de banco de dados de origem durante a execuçã
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <generate-assessment-report  
@@ -255,25 +256,25 @@ Esse comando executa a conversão de esquema da origem para o esquema de destino
   
 Se a conexão de banco de dados de origem ou de destino não for executada antes da execução desse comando ou se a conexão com o servidor de banco de dados de origem ou destino falhar durante a execução do comando, um erro será gerado e o aplicativo de console será encerrado.  
   
--   `conversion-report-folder:`Especifica a pasta na qual o relatório de avaliação pode ser armazenado. (atributo opcional)  
+-   `conversion-report-folder:` Especifica a pasta na qual o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
--   `object-name:`Especifica os objetos de origem considerados para converter o esquema (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
+-   `object-name:` Especifica os objetos de origem considerados para converter o esquema (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
   
--   `object-type:`Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+-   `object-type:` Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
--   `conversion-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+-   `conversion-report-overwrite:` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
--   `write-summary-report-to:`Especifica o caminho no qual o relatório de resumo será gerado.  
+-   `write-summary-report-to:` Especifica o caminho no qual o relatório de resumo será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **SchemaConversionReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -295,7 +296,7 @@ Se a conexão de banco de dados de origem ou de destino não for executada antes
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <convert-schema  
@@ -314,19 +315,19 @@ ou o
 ### <a name="migrate-data"></a>migrar-dados  
 Esse comando migra os dados de origem para o destino.  
   
--   `object-name:`Especifica os objetos de origem considerados para migrar dados (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
+-   `object-name:` Especifica os objetos de origem considerados para migrar dados (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
   
--   `object-type:`Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+-   `object-type:` Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
--   `write-summary-report-to:`Especifica o caminho no qual o relatório será gerado.  
+-   `write-summary-report-to:` Especifica o caminho no qual o relatório será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **DataMigrationReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -351,7 +352,7 @@ Esse comando migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou o  
+ou  
   
 ```xml  
 <migrate-data  
@@ -374,9 +375,9 @@ O comando de preparação de migração inicia o mapeamento de esquema entre os 
 ### <a name="map-schema"></a>mapa-esquema  
 Esse comando fornece o mapeamento de esquema do banco de dados de origem para o esquema de destino.  
   
--   `source-schema`Especifica o esquema de origem a ser migrado.  
+-   `source-schema` Especifica o esquema de origem a ser migrado.  
   
--   `sql-server-schema`Especifica o esquema de destino para o qual o esquema de origem será migrado.  
+-   `sql-server-schema` Especifica o esquema de destino para o qual o esquema de origem será migrado.  
   
 **Exemplo de sintaxe:**  
   
@@ -399,11 +400,11 @@ Se esse comando for executado no banco de dados de origem, um erro será encontr
   
 Se a conexão do banco de dados de destino não for executada antes da execução desse comando ou se a conexão com o servidor de banco de dados de destino falhar durante a execução do comando, um erro será gerado e o aplicativo de console será encerrado.  
   
--   `object-name:`Especifica os objetos de destino considerados para sincronização com o banco de dados de destino (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
+-   `object-name:` Especifica os objetos de destino considerados para sincronização com o banco de dados de destino (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
   
--   `object-type:`Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+-   `object-type:` Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
--   `on-error:`Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
+-   `on-error:` Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
   
     -   relatório-total-como-aviso  
   
@@ -411,7 +412,7 @@ Se a conexão do banco de dados de destino não for executada antes da execuçã
   
     -   script de falha  
   
--   `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
+-   `report-errors-to:` Especifica o local do relatório de erros para a operação de sincronização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -430,7 +431,7 @@ fail-script>" (optional)
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <synchronize-target  
@@ -439,7 +440,7 @@ ou o
   
   object-type="<object-category>"/>  
 ```  
-ou o  
+ou  
   
 ```xml  
 <synchronize-target>  
@@ -460,11 +461,11 @@ Se esse comando for executado no banco de dados de destino, um erro será gerado
   
 Este comando requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
--   `object-name:`Especifica os objetos de origem considerados para atualização do banco de dados de origem (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
+-   `object-name:` Especifica os objetos de origem considerados para atualização do banco de dados de origem (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
   
--   `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+-   `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
--   `on-error:`Especifica se os erros de atualização devem ser cancelados como avisos ou erros. Opções disponíveis para o no-erro:  
+-   `on-error:` Especifica se os erros de atualização devem ser cancelados como avisos ou erros. Opções disponíveis para o no-erro:  
   
     -   relatório-total-como-aviso  
   
@@ -472,7 +473,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
     -   script de falha  
   
--   `report-errors-to:`Especifica o local do relatório de erros para a operação de atualização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
+-   `report-errors-to:` Especifica o local do relatório de erros para a operação de atualização (atributo opcional). Se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -491,7 +492,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <refresh-from-database  
@@ -500,7 +501,7 @@ ou o
   
   object-type="<object-category>" />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <refresh-from-database>  
@@ -518,15 +519,15 @@ Esse comando é usado para salvar os scripts dos objetos em um arquivo mencionad
   
 Este comando requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
--   `object-name:`Especifica os objetos cujos scripts devem ser salvos (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
+-   `object-name:` Especifica os objetos cujos scripts devem ser salvos (dá suporte a nomes de objetos individuais ou a um nome de objeto de grupo).  
   
--   `object-type:`Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+-   `object-type:` Especifica o tipo do objeto chamado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
--   `metabase:`Especifica se é a metabase de origem ou de destino.  
+-   `metabase:` Especifica se é a metabase de origem ou de destino.  
   
--   `destination:`Especifica o caminho ou a pasta na qual o script deve ser salvo. Se o nome do arquivo não for fornecido, um nome de arquivo no formato (object_name valor do atributo). out será fornecido.
+-   `destination:` Especifica o caminho ou a pasta na qual o script deve ser salvo. Se o nome do arquivo não for fornecido, um nome de arquivo no formato (object_name valor do atributo). out será fornecido.
   
--   `overwrite:`Se for true, ele substituirá o mesmo nome de arquivo, se existir. Ele pode ter os valores (true/false).  
+-   `overwrite:` Se for true, ele substituirá o mesmo nome de arquivo, se existir. Ele pode ter os valores (true/false).  
   
 **Exemplo de sintaxe:**  
   
@@ -545,7 +546,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <save-as-script  
@@ -564,25 +565,25 @@ ou o
 ### <a name="convert-sql-statement"></a>instrução Convert-SQL-
 Esse comando converte a instrução SQL.  
   
--   `context`Especifica o nome do esquema.  
+-   `context` Especifica o nome do esquema.  
   
--   `destination`Especifica se a saída deve ser armazenada em um arquivo.  
+-   `destination` Especifica se a saída deve ser armazenada em um arquivo.  
   
     Se esse atributo não for especificado, a instrução T-SQL convertida será exibida no console do. (atributo opcional)  
   
--   `conversion-report-folder`Especifica a pasta na qual o relatório de avaliação pode ser armazenado. (atributo opcional)  
+-   `conversion-report-folder` Especifica a pasta na qual o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
--   `conversion-report-overwrite`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+-   `conversion-report-overwrite` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
--   `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta para o qual o T-SQL convertido deve ser armazenado. Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem tem um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
+-   `write-converted-sql-to` Especifica o arquivo (ou) caminho da pasta para o qual o T-SQL convertido deve ser armazenado. Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem tem um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
   
--   `sql`Especifica as instruções do Sybase SQL a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
+-   `sql` Especifica as instruções do Sybase SQL a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
   
--   `sql-files`Especifica o caminho dos arquivos SQL que precisa ser convertido em código T-SQL.  
+-   `sql-files` Especifica o caminho dos arquivos SQL que precisa ser convertido em código T-SQL.  
   
--   `write-summary-report-to`Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport.XML** será criado. (atributo opcional)  
+-   `write-summary-report-to` Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport.XML** será criado. (atributo opcional)  
   
     A criação do relatório de resumo tem duas subcategorias adicionais, ou seja:  
   
@@ -619,7 +620,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
 </convert-sql-statement>  
 ```  
-ou o  
+ou  
   
 ```  
 <convert-sql-statement  
@@ -644,7 +645,7 @@ ou o
   
 />  
 ```  
-ou o  
+ou  
   
 ```  
 <convert-sql-statement  

@@ -1,4 +1,5 @@
 ---
+description: Criando arquivos de script (DB2ToSQL)
 title: Criando arquivos de script (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: F
 ms.author: alexiva
-ms.openlocfilehash: ac87b3459a5a2ae5c8477ce0674facaf361f03b0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3df3cd8297dbf4f6be480f183b8b0f3acdcb8fe6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372722"
 ---
 # <a name="creating-script-files-db2tosql"></a>Criando arquivos de script (DB2ToSQL)
 A primeira etapa antes de iniciar o aplicativo do console do SSMA é criar o arquivo de script e, se necessário, criar o arquivo de valor da variável e o arquivo de conexão do servidor.  

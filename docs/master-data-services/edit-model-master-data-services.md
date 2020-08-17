@@ -1,4 +1,5 @@
 ---
+description: Editar Modelo (Master Data Services)
 title: Editar Modelo
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2a0a2bd63e5b69cd9e0b206f18414b41c823441d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6d409886b398aaace940cca8f21ee17682bfe2ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389532"
 ---
 # <a name="edit-model-master-data-services"></a>Editar Modelo (Master Data Services)
 

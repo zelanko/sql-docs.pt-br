@@ -1,4 +1,5 @@
 ---
+description: Exemplo de fonte de dados
 title: Exemplo de fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 48c87f0d9f0a48b7d216151178c15bb019c0cbaa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0d165279dc0b2f4b056d2e214461c7ef019956b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386042"
 ---
 # <a name="data-source-example"></a>Exemplo de fonte de dados
 Em computadores que executam o Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional ou Microsoft Windows® 95/98, as informações da fonte de dados do computador são armazenadas no registro. Dependendo de qual chave do registro as informações são armazenadas, a fonte de dados é conhecida como uma *fonte de dados do usuário* ou uma *fonte de dados do sistema*. As fontes de dados do usuário são armazenadas na chave HKEY_CURRENT_USER e estão disponíveis somente para o usuário atual. As fontes de dados do sistema são armazenadas sob a chave de HKEY_LOCAL_MACHINE e podem ser usadas por mais de um usuário em uma máquina. Eles também podem ser usados por serviços de todo o usuário, que podem, então, obter acesso à fonte de dados, mesmo que não haja usuários conectados à máquina. Para obter mais informações sobre fontes de dados do usuário e do sistema, consulte [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  

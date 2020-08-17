@@ -1,4 +1,5 @@
 ---
+description: Comments (sintaxe MDX)
 title: Comentários (sintaxe MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fa1312e361bf0ef673254c0eb804ed7b8b7ca7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387664"
 ---
 # <a name="comments-mdx-syntax"></a>Comments (sintaxe MDX)
 
@@ -34,8 +35,8 @@ ms.locfileid: "68001521"
  -- (hífens duplos)  
  Esses caracteres de comentário podem ser utilizados na mesma linha que o código a ser executado, ou em uma linha específica. Tudo que estiver a partir dos hífens duplos até o final da linha faz parte do comentário. Em um comentário de várias linhas, os hífens duplos devem ser exibidos no início de cada linha de comentário. Para obter mais informações, consulte [&#40;comentário&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
   
- /* ... \*/(pares de caracteres de barra invertida-asterisco)  
- Esses caracteres de comentário podem ser usados na mesma linha que o código a ser executado, nas linhas ou mesmo no código executável. Tudo do par de comentário aberto (/\*) para o par de comentário de\*fechamento (/) é considerado parte do comentário. Para um comentário de várias linhas, o par de caracteres de comentário aberto (\*/) deve iniciar o comentário e o par de caracteres de comentário de\*fechamento (/) deve terminar o comentário. Nenhum outro caractere de comentário pode aparecer em nenhuma linha do comentário. Para obter mais informações, consulte [/*... / \*(Comentário)](../mdx/comment-mdx.md).  
+ /* ... \* /(pares de caracteres de barra invertida-asterisco)  
+ Esses caracteres de comentário podem ser usados na mesma linha que o código a ser executado, nas linhas ou mesmo no código executável. Tudo do par de comentário aberto (/ \* ) para o par de comentário de fechamento ( \* /) é considerado parte do comentário. Para um comentário de várias linhas, o par de caracteres de comentário aberto (/ \* ) deve iniciar o comentário e o par de caracteres de comentário de fechamento ( \* /) deve terminar o comentário. Nenhum outro caractere de comentário pode aparecer em nenhuma linha do comentário. Para obter mais informações, consulte [/*. \* .. /(Comentário)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>Exemplo  
  A consulta a seguir mostra exemplos dos três tipos de comentário:  

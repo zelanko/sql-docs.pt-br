@@ -1,4 +1,5 @@
 ---
+description: Criando e gerenciando projetos (AccessToSQL)
 title: Criando e gerenciando projetos (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ed3c26296f856c87875e2f50766a57c3f6d0c66e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373052"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Criando e gerenciando projetos (AccessToSQL)
 Para migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, você deve primeiro criar um projeto do SSMA. O projeto é um arquivo que contém metadados sobre os bancos de dados do Access para os quais você deseja migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, metadados sobre a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure que receberá os objetos e dados migrados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as informações de conexão e as configurações do projeto.  
@@ -89,7 +90,7 @@ Quando você salva um projeto, o SSMA persiste as configurações do projeto e, 
   
         Salvar metadados pode levar vários minutos. Se você não quiser salvar os metadados neste ponto, não marque nenhuma caixa de seleção.  
   
-    2.  Clique em **Salvar**.  
+    2.  Clique em **Save** (Salvar).  
   
         O SSMA analisará os esquemas de acesso e salvará os metadados no arquivo de projeto.  
   

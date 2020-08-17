@@ -1,4 +1,5 @@
 ---
+description: IS (MDX)
 title: É (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aaf4151d8291ccd4249892c6ef8fce8a3d280f6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eab5fc86d89fccbe6ae56c4dba78ccde60e26d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387342"
 ---
 # <a name="is-mdx"></a>IS (MDX)
 
@@ -34,7 +35,7 @@ Expression1 IS ( Expression2 | NULL )
  *Expression2*  
  Uma expressão MDX válida que retorna uma referência de objeto MDX.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor booliano que retornará **true** se ambos os argumentos fizerem referência ao mesmo objeto; caso contrário, **false**. Se a palavra-chave **NULL** for especificada, o operador retornará **true** se *expression1* for **NULL**; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
@@ -62,6 +63,6 @@ Expression1 IS ( Expression2 | NULL )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

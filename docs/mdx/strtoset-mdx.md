@@ -1,4 +1,5 @@
 ---
+description: StrToSet (MDX)
 title: StrToSet (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 882ab646af51d4b1edbe0a1240eaaed7cbfa5422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386772"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
@@ -34,7 +35,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>Comentários  
  A função **StrToSet** retorna o conjunto especificado na expressão de cadeia de caracteres. A função **StrToSet** normalmente é usada com funções definidas pelo usuário para retornar uma especificação de conjunto de uma função externa de volta para uma instrução MDX ou quando uma consulta MDX é parametrizada.  
   
--   Quando o sinalizador restrito é usado, a especificação do conjunto deve conter nomes de membros qualificados ou não qualificados ou um conjunto de tuplas contendo nomes de membros qualificados ou não qualificados entre chaves {}. Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres fornecida não pode ser totalmente resolvida para nomes de membros qualificados ou não qualificados, surge o seguinte erro: "As restrições impostas pelo sinalizador CONSTRAINED na função STRTOVALUE foram violadas."  
+-   Quando o sinalizador restrito é usado, a especificação do conjunto deve conter nomes de membros qualificados ou não qualificados ou um conjunto de tuplas contendo nomes de membros qualificados ou não qualificados entre chaves {} . Esse sinalizador CONSTRAINED é usado para reduzir o risco de ataques de injeção pela cadeia de caracteres especificada. Se uma cadeia de caracteres fornecida não pode ser totalmente resolvida para nomes de membros qualificados ou não qualificados, surge o seguinte erro: "As restrições impostas pelo sinalizador CONSTRAINED na função STRTOVALUE foram violadas."  
   
 -   Quando o sinalizador CONSTRAINED não é usado, a especificação de conjunto especificada é resolvida como uma linguagem MDX válida que retorna um conjunto.  
   

@@ -1,4 +1,5 @@
 ---
+description: Instalando os componentes do SSMA em SQL Server (SybaseToSQL)
 title: Instalando os componentes do SSMA em SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372362"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalando os componentes do SSMA em SQL Server (SybaseToSQL)
 
@@ -30,8 +31,8 @@ Além disso, quando você migra dados para [!INCLUDE[ssNoVersion](../../includes
 
 Antes de instalar os componentes do SSMA para servidor Sybase no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verifique se o sistema atende aos seguintes requisitos:
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a instância está instalada.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou uma versão posterior.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instância está instalada.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 ou uma versão posterior.
 - A [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versão 4.7.2 ou posterior. Você pode obtê-lo no [centro de desenvolvedores .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - O provedor Sybase OLE DB/ADO.Net/ODBC e a conectividade com o servidor de banco de dados do SAP ASE que contém os bancos que você deseja migrar. Você pode instalar provedores da mídia de produto SAP ASE. Para obter informações sobre conectividade, consulte [conectando-se ao Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).
 - O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço navegador deve estar em execução durante a instalação. Isso é usado para preencher uma lista das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no assistente de instalação do. Você pode desabilitar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço navegador após a instalação.

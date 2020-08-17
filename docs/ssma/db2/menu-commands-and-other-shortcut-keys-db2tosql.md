@@ -1,4 +1,5 @@
 ---
+description: Comandos de menu e outras teclas de atalho (DB2ToSQL)
 title: Comandos de menu e outras teclas de atalho (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b24fb152402386ba3b22cad8be196cd2c042699e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320782"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menu e outras teclas de atalho (DB2ToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do aplicativo SSMA para DB2.  

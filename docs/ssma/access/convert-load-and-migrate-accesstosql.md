@@ -1,4 +1,5 @@
 ---
+description: Converter, carregar e migrar (AccessToSQL)
 title: Converter, carregar e migrar (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b4c161ef3abdb67351a16840336ef290ff57effd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e541bf7cecf1614fc7fcdb1bf44cb8d71910bc13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372912"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Converter, carregar e migrar (AccessToSQL)
 

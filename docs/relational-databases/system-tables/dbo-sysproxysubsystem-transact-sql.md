@@ -1,4 +1,5 @@
 ---
+description: dbo.sysproxysubsystem (Transact-SQL)
 title: dbo.sysproxysubsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 287cd7113fe416f59bfe4351cebd2aee59b17832
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f11103d163fab6209ef8ae65b48aae83ef9ee1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373782"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,6 +42,6 @@ ms.locfileid: "85890406"
   
 ## <a name="see-also"></a>Consulte Também  
  [dbo.syssubsistemas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
- [dbo.sysproxies &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [dbo.sysproxies &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

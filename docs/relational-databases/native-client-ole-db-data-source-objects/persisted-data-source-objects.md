@@ -1,4 +1,5 @@
 ---
+description: Objetos de fonte de dados persistentes no SQL Server Native Client
 title: Objetos de fonte de dados persistentes (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 482762127b8daa9d3fad3e4a3fd79a6ad9d179ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381472"
 ---
 # <a name="persisted-data-source-objects-in-sql-server-native-client"></a>Objetos de fonte de dados persistentes no SQL Server Native Client 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87242003"
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a objetos de fonte de dados persistentes com a interface **IPersistFile** .  
   
 ## <a name="examples"></a>Exemplos  
- **A. Inicialização de fonte de dados persistente:**  
+ **A. Persistir inicialização de fonte de dados:**  
   
  Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos nos parâmetros *pLocation* e *pDatasource* da função.  
   
@@ -140,7 +141,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Uso de inicialização de fonte de dados persistida:**  
+ **B. Usar a inicialização de fonte de dados persistida:**  
   
  Este exemplo usa um objeto de fonte de dados persistido com propriedades de inicialização adicionais que fornecem um logon e uma senha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

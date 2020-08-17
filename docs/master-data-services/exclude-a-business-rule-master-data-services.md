@@ -1,4 +1,5 @@
 ---
+description: Apagar uma regra de negócio (Master Data Services)
 title: Apagar uma regra de negócio
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bad539d25afec6da4a706e0986bfd9f4770c899
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bc69a5cfcd36e96ed6bc0778c72e6a3a09e6fb23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388952"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Apagar uma regra de negócio (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: sys. server_resource_stats (banco de dados SQL do Azure)
 title: sys. server_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376702"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (banco de dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +45,7 @@ A exibição **Sys. server_resource_stats** tem definições diferentes, depende
 |resource_name|nvarchar(128)|Nome do recurso.|
 |sku|nvarchar(128)|Instância Gerenciada camada de serviço da instância. O valores possíveis são os seguintes: <br><ul><li>Uso Geral</li></ul><ul><li>Comercialmente Crítico</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de geração de hardware: como Gen 4 ou Gen 5|
-|virtual_core_count|int|Representa o número de núcleos virtuais por instância (8, 16 ou 24 em visualização pública)|
+|virtual_core_count|INT|Representa o número de núcleos virtuais por instância (8, 16 ou 24 em visualização pública)|
 |avg_cpu_percent|decimal (5, 2)|Média de utilização de computação em porcentagem do limite do Instância Gerenciada camada de serviço utilizada pela instância. Ele é calculado como a soma do tempo de CPU de todos os pools de recursos para todos os bancos de dados na instância e dividido por tempo de CPU disponível para essa camada no intervalo especificado.|
 |reserved_storage_mb|BIGINT|Armazenamento reservado por instância (quantidade de espaço de armazenamento que o cliente comprou para a instância gerenciada)|
 |storage_space_used_mb|decimal (18, 2)|Armazenamento usado por todos os arquivos de banco de dados em uma instância gerenciada (incluindo bancos de dados do usuário e do sistema)|

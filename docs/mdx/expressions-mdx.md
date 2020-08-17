@@ -1,4 +1,5 @@
 ---
+description: Expressões (MDX)
 title: Expressões (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387522"
 ---
 # <a name="expressions-mdx"></a>Expressões (MDX)
 
@@ -84,7 +85,7 @@ WHERE [Product].[Category].[Bikes]
 |[Trabalhando com valores vazios](../mdx/working-with-empty-values.md)|Descreve o que é um valor vazio e como tais valores são controlados.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de linguagem MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
+ [Referência de linguagem MDX &#40;&#41;MDX ](../mdx/mdx-language-reference-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

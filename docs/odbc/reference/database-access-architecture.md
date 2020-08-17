@@ -1,4 +1,5 @@
 ---
+description: Arquitetura de acesso ao banco de dados
 title: Arquitetura de acesso ao banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0993dc9891d6ed74f6d149692dac2555346d3d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ce5761951c2a42d2521852a06bb77eab1130157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385812"
 ---
 # <a name="database-access-architecture"></a>Arquitetura de acesso ao banco de dados
 Uma das perguntas no desenvolvimento do ODBC era qual parte da arquitetura de acesso ao banco de dados é padronizada. As interfaces de programação do SQL descritas na seção anterior – SQL, módulos SQL e CLIs – são apenas uma parte dessa arquitetura. Na verdade, como o ODBC destina-se principalmente a conectar aplicativos com base em computadores para Minicomputer e DBMSs de mainframe, também havia vários componentes de rede, alguns dos quais poderiam ser padronizados.  

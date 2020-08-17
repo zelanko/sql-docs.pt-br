@@ -1,4 +1,5 @@
 ---
+description: Chamar SQLColumns em uma tabela com colunas esparsas
 title: Chamar SQLColumns em uma tabela com colunas esparsas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -12,11 +13,12 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a8cf47763d1705821cfc70708595185c21cf23c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0bdcb60ed1ca0b4c2d0cf3d5294b583a4914dff4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382282"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chamar SQLColumns em uma tabela com colunas esparsas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

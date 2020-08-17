@@ -1,4 +1,5 @@
 ---
+description: Transições de conexão
 title: Transições de conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339442"
 ---
 # <a name="connection-transitions"></a>Transições de conexão
 As conexões ODBC têm os seguintes Estados.  
@@ -53,7 +54,7 @@ As conexões ODBC têm os seguintes Estados.
   
  [4] essa linha mostra as transições quando *HandleType* foi SQL_HANDLE_DESC.  
   
- [5] chamar **SQLAllocHandle** com *OutputHandlePtr* apontando para um identificador válido substitui esse identificador sem considerar o conteúdo anterior ofthat identificador e pode causar problemas para drivers ODBC. É uma programação de aplicativo ODBC incorreta para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para * \*OutputHandlePtr* sem chamar **SQLFreeHandle** para liberar o identificador antes de realocá-lo. A substituição de identificadores ODBC de forma pode levar a comportamentos inconsistentes ou erros na parte de drivers ODBC.  
+ [5] chamar **SQLAllocHandle** com *OutputHandlePtr* apontando para um identificador válido substitui esse identificador sem considerar o conteúdo anterior ofthat identificador e pode causar problemas para drivers ODBC. É uma programação de aplicativo ODBC incorreta para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para * \* OutputHandlePtr* sem chamar **SQLFreeHandle** para liberar o identificador antes de realocá-lo. A substituição de identificadores ODBC de forma pode levar a comportamentos inconsistentes ou erros na parte de drivers ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

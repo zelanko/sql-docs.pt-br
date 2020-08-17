@@ -1,4 +1,5 @@
 ---
+description: Validar membros específicos em relação a regras de negócio (Master Data Services)
 title: Validar membros específicos em relação a regras de negócio
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ae7e5a0419e57d24a2f2d16b6b3407f2fb75bc77
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1ef5dca9c03c3e0299169f1262163d27055802a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388686"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>Validar membros específicos em relação a regras de negócio (Master Data Services)
 

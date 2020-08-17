@@ -1,4 +1,5 @@
 ---
+description: Termos do glossário do ADO
 title: Termos do glossário do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76940431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355452"
 ---
 # <a name="ado-glossary-terms"></a>Termos do glossário do ADO
 Este tópico define os termos relevantes para o ADO.
@@ -40,7 +41,7 @@ Este tópico define os termos relevantes para o ADO.
 ## <a name="b"></a>B
  Associação de entrada de um mapeamento entre um campo em uma tabela e uma variável. Nas extensões de Visual C++ do ADO, os campos do **conjunto de registros** são mapeados para as variáveis C/C++.
 
- bitmask um valor numérico destinado a uma comparação de valor bit a bit com outros valores numéricos, normalmente para sinalizar opções no parâmetro ou valores de retorno. Normalmente, essa comparação é feita com operadores lógicos de bit a bit, como **e** e **&** **ou** em Visual Basic, e **&#124;** em C++.
+ bitmask um valor numérico destinado a uma comparação de valor bit a bit com outros valores numéricos, normalmente para sinalizar opções no parâmetro ou valores de retorno. Normalmente, essa comparação é feita com operadores lógicos de bit a bit, como **e** e **ou** em Visual Basic, **&** e **&#124;** em C++.
 
  Por exemplo, os valores ADO **FieldAttributeEnum** podem ser usados como bitmasks para determinar os atributos de um campo. Suponha que você quisesse determinar se um campo era atualizável. Você poderia testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`
 
@@ -77,7 +78,7 @@ Este tópico define os termos relevantes para o ADO.
 
  operador de comparação um operador que compara duas expressões e retorna um valor booliano.
 
- Um parâmetro de critérios que pode ser expresso como ">" (maior que),\<"" (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (diferente de) ou "Like" (correspondência de padrões).
+ Um parâmetro de critérios que pode ser expresso como ">" (maior que), " \<" (less than), "=" (equal), "> =" (maior ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).
 
  componente um objeto que encapsula dados e código e fornece um conjunto bem especificado de serviços publicamente disponíveis.
 
@@ -119,7 +120,7 @@ Este tópico define os termos relevantes para o ADO.
  Propriedade dinâmica uma propriedade específica para um provedor de dados ou o serviço de cursor. A coleção **Properties** de um objeto é populada com elas automaticamente ("dinamicamente"). Um objeto não tem propriedades dinâmicas até que ele esteja conectado a uma fonte de dados por meio de um provedor de dados específico. Consulte também provedor de dados, cursor.
 
 ## <a name="e"></a>E
- Enumeração uma lista de constantes nomeadas. Os valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração é definida. No ADO, as enumerações são usadas para parâmetros numéricos e valores de retorno, para adicionar significado ao código ADO e para proteger o desenvolvedor dos valores numéricos (que podem mudar de versão para versão). Por exemplo, para abrir um **conjunto de registros**estático, use o valor enumerado **adOpenStatic** :`Recordset.Open ,,adOpenStatic`
+ Enumeração uma lista de constantes nomeadas. Os valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração é definida. No ADO, as enumerações são usadas para parâmetros numéricos e valores de retorno, para adicionar significado ao código ADO e para proteger o desenvolvedor dos valores numéricos (que podem mudar de versão para versão). Por exemplo, para abrir um **conjunto de registros**estático, use o valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
 
  Também conhecido como *constante enumerada*. Confira também *constante*.
 

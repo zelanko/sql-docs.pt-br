@@ -1,4 +1,5 @@
 ---
+description: Aplicativo
 title: Aplicativos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9184986883f64bd082ca1db472d887609d3071bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc811b075eb698e5127fc321406bf906012c6d12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386132"
 ---
-# <a name="applications"></a>Aplicativos
+# <a name="applications"></a>Aplicativo
 Um *aplicativo* é um programa que chama a API ODBC para acessar dados. Embora muitos tipos de aplicativos sejam possíveis, a maioria se enquadra em três categorias, que são usadas como exemplos em todo este guia.  
   
 -   **Aplicativos genéricos** Eles também são chamados de aplicativos com redução de encolhimento ou aplicativos prontos para serem acessados. Os aplicativos genéricos são projetados para funcionar com uma variedade de DBMSs diferentes. Os exemplos incluem uma planilha ou um pacote de estatísticas que usa o ODBC para importar dados para análise adicional e um processador de texto que usa o ODBC para obter uma lista de endereçamento de um banco de dados.  
