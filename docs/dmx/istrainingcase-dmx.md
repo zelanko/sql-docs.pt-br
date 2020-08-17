@@ -1,4 +1,5 @@
 ---
+description: IsTrainingCase (DMX)
 title: IsTrainingCase (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e6bdfe1e3d22a2d2c4752e43df254231725fa447
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352332"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -50,11 +51,11 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- Para obter outros exemplos de como consultar os casos usados em Data Mining, consulte [selecionar do modelo de &#60;&#62;. CASOS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) e [selecionar entre &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
+ Para obter outros exemplos de como consultar os casos usados em Data Mining, consulte [selecionar do modelo de &#60;&#62;. CASOS &#40;&#41;DMX ](../dmx/select-from-model-cases-dmx.md) e [selecionar entre &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Conjuntos de dados de treinamento e teste](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
   
   

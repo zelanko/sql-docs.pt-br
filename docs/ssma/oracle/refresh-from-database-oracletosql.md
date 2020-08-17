@@ -1,4 +1,5 @@
 ---
+description: Atualização do banco de dados (OracleToSQL)
 title: Atualizar do banco de dados (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320172"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Atualização do banco de dados (OracleToSQL)
 A caixa de diálogo **Atualizar do banco de dados** permite selecionar quais objetos atualizar do banco de dados Oracle. As linhas na caixa de diálogo são codificadas por cores com base no estado dos metadados:  

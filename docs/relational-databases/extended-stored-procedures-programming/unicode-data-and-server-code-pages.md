@@ -1,4 +1,5 @@
 ---
+description: Páginas de código do servidor e dados Unicode
 title: Dados Unicode e páginas de código do servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2fd22a9fa5410a5e9489d3e0cb72949b24ba298d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328862"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Páginas de código do servidor e dados Unicode
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

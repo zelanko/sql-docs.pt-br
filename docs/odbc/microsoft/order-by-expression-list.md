@@ -1,4 +1,5 @@
 ---
+description: Lista de expressão ORDER BY
 title: CLASSIFICAR por expressão-List | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5ef88186-a99f-4e2c-a3f3-98a42d4f03a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 272fa0be844569d322679d444807f8c332b4837b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd084a1012d445c89cacba168f21267238bc250f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340612"
 ---
 # <a name="order-by-expression-list"></a>Lista de expressão ORDER BY
 As expressões podem ser usadas na cláusula ORDER BY. Por exemplo, nas seguintes cláusulas, a tabela é ordenada por três expressões-chave: a + b, c + d e e.  

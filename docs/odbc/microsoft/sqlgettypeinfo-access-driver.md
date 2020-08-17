@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo (Driver do Access)
 title: SQLGetTypeInfo (driver de acesso) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ddfa9bd29f0834adf1c211f9b8a111db0b94d3fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ba0e135944a3ccfff454af0ff2ecc70512af2c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340072"
 ---
 # <a name="sqlgettypeinfo-access-driver"></a>SQLGetTypeInfo (Driver do Access)
 > [!NOTE]  

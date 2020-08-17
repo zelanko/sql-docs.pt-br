@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_audit_file (Transact-SQL)
 title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
@@ -21,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321792"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -49,9 +50,9 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    Esse argumento deve incluir um caminho (letra de unidade ou compartilhamento de rede) e um nome de arquivo, podendo conter um caractere curinga. Um único asterisco (*) pode ser usado para coletar vários arquivos de um conjunto de arquivos de auditoria. Por exemplo:  
+    Esse argumento deve incluir um caminho (letra de unidade ou compartilhamento de rede) e um nome de arquivo, podendo conter um caractere curinga. Um único asterisco (*) pode ser usado para coletar vários arquivos de um conjunto de arquivos de auditoria. Por exemplo:   
   
-    -   **\<path>\\\***-Coletar todos os arquivos de auditoria no local especificado.  
+    -   **\<path>\\\*** -Coletar todos os arquivos de auditoria no local especificado.  
   
     -   ** \<path> \ LOGINSAUDIT_ {GUID}***-coletar todos os arquivos de auditoria que têm o nome e o par GUID especificados.  
   
@@ -59,9 +60,9 @@ fn_get_audit_file ( file_pattern,
   
  - **Banco de dados SQL do Azure**:
  
-    Esse argumento é usado para especificar uma URL de BLOB (incluindo o ponto de extremidade de armazenamento e o contêiner). Embora não ofereça suporte a um curinga de asterisco, você pode usar um prefixo de nome de arquivo parcial (BLOB) (em vez do nome de blob completo) para coletar vários arquivos (BLOBs) que começam com esse prefixo. Por exemplo:
+    Esse argumento é usado para especificar uma URL de BLOB (incluindo o ponto de extremidade de armazenamento e o contêiner). Embora não ofereça suporte a um curinga de asterisco, você pode usar um prefixo de nome de arquivo parcial (BLOB) (em vez do nome de blob completo) para coletar vários arquivos (BLOBs) que começam com esse prefixo. Por exemplo: 
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-coleta todos os arquivos de auditoria (BLOBs) para o banco de dados específico.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -coleta todos os arquivos de auditoria (BLOBs) para o banco de dados específico.    
       
       - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** -coleta um arquivo de auditoria específico (BLOB).
   
@@ -179,7 +180,7 @@ Para obter um exemplo completo de como criar uma auditoria, consulte [Auditoria 
 Para obter informações sobre como configurar a auditoria do banco de dados SQL do Azure, consulte Introdução [à auditoria do banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR auditoria de servidor &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CRIAR auditoria de servidor &#40;&#41;Transact-SQL ](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

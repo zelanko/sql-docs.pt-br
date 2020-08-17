@@ -1,4 +1,5 @@
 ---
+description: Dados Unicode
 title: Dados Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73ea9035b05f04fec1527ca2aa98531a807db8cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f217e6b629936cc835d134c89d972bb1408b9d0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339112"
 ---
 # <a name="unicode-data"></a>Dados Unicode
 Os tipos de dados SQL Unicode são fornecidos para descrever os dados que residem em Unicode nativamente no DBMS. Um tipo de dados C Unicode é fornecido para permitir que um aplicativo vincule dados a um buffer Unicode. O Gerenciador de driver pode converter dados de um tipo C Unicode (SQL_C_WCHAR) para fazer com que ele funcione com um driver ANSI.  

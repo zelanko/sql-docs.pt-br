@@ -1,4 +1,5 @@
 ---
+description: Operadores de conjunto
 title: Definir operadores | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6ad0b92a970c3618584365d9ad6e99420daef05d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb4434c9fe1991e1398baaa9c7bfd9602995652d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341232"
 ---
 # <a name="set-operators"></a>Operadores de conjunto
 
@@ -26,12 +27,12 @@ ms.locfileid: "68037015"
 |--------------|-----------------|  
 |[- (Exceto)](../mdx/except-mdx-operator.md)|Retorna a diferença entre dois conjuntos, removendo membros duplicados.<br /><br /> Esse operador é funcionalmente equivalente à função [Except](../mdx/except-mdx-function.md) .|  
 |[* (Produto cruzado)](../mdx/crossjoin-mdx-operator-reference.md)|Retorna o produto cruzado de dois conjuntos.<br /><br /> Esse operador é funcionalmente equivalente à função de [interjunção](../mdx/crossjoin-mdx.md) .|  
-|[: (Range)](../mdx/range-mdx.md)|Retorna um conjunto ordenado naturalmente, com dois membros especificados como pontos de extremidade, e todos os membros entre os dois membros especificados incluídos como membros do conjunto.|  
+|[: (Intervalo)](../mdx/range-mdx.md)|Retorna um conjunto ordenado naturalmente, com dois membros especificados como pontos de extremidade, e todos os membros entre os dois membros especificados incluídos como membros do conjunto.|  
 |[+ (União)](../mdx/union-mdx-operator-reference.md)|Retorna uma união de dois conjuntos, exceto membros duplicados.<br /><br /> Esse operador é funcionalmente equivalente à função [Union &#40;MDX&#41;](../mdx/union-mdx.md) .|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Restrições do calendário gregoriano
 title: Restrições do calendário gregoriano | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f88842c7426e17af1fdc0533b8b97e2c559de237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e473c090a889d54de5ca63bd10b07b410936223f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339362"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Restrições do calendário gregoriano
 Os tipos de dados Date e DateTime, e os campos à direita dos tipos de dados Interval, devem estar em conformidade com as restrições do calendário gregoriano. Essas restrições são as seguintes:  

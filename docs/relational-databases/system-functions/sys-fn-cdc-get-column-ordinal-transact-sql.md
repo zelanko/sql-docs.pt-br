@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_get_column_ordinal (Transact-SQL)
 title: sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97c9c8d5b8c15bd2400874104bc1595aa93a4def
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: edf094b9476813e649bb12038f243407e8d11f2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322122"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções de captura de dados de alteração &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [Funções da captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [sys. sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   

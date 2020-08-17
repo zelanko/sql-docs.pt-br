@@ -1,4 +1,5 @@
 ---
+description: Consultar e atualizar dados do Visual FoxPro do Microsoft Access
 title: Consultando e atualizando dados do Visual FoxPro do Microsoft Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f11b49ed099ba29d0e7e013af99a8ad96ca6825c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82232cfa3c0bb32ccd87231f139e9aecf8342450
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340422"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Consultar e atualizar dados do Visual FoxPro do Microsoft Access
 Você pode consultar e atualizar dados armazenados em um banco de dado do Visual FoxPro de um banco de dados do Microsoft Access usando a opção vincular tabela.  

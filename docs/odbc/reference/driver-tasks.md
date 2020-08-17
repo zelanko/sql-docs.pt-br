@@ -1,4 +1,5 @@
 ---
+description: Tarefas de driver
 title: Tarefas do driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1b30df63a3c955d2ed074ab13649ea55c21a6da7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 263f591592063a45fdd5afdca4efdd75b5b915b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339052"
 ---
 # <a name="driver-tasks"></a>Tarefas de driver
 Tarefas específicas executadas por drivers incluem:  

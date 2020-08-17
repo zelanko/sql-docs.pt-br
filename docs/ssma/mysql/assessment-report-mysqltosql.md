@@ -1,4 +1,5 @@
 ---
+description: Relatório de avaliação (MySQLToSQL)
 title: Relatório de avaliação (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 362a1a5a79fa61b90ea02382018979a003f54424
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6db16aab94dccd4d347325af36c9957f19168059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320612"
 ---
 # <a name="assessment-report-mysqltosql"></a>Relatório de avaliação (MySQLToSQL)
 A janela relatório de avaliação mostra os resultados da conversão de objetos de banco de dados em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe e também pode ajudá-lo a estimar a complexidade e o custo de seus projetos de migração.  

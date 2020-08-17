@@ -1,4 +1,5 @@
 ---
+description: Excluir um atributo (Master Data Services)
 title: Excluir um atributo
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3f33b7b5b0f68eb5dd45bf62188efd38d9bc996d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0e9dd0776b2909f0227d1e2b22946f5d298bb721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344792"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Excluir um atributo (Master Data Services)
 

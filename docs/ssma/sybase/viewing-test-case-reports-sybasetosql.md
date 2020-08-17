@@ -1,4 +1,5 @@
 ---
+description: Exibir relatórios de caso de teste (SybaseToSQL)
 title: Exibindo relatórios de caso de teste (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99bad46468ff0138c07f531c9e32cdecc4fda5be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ef72ea67b28aae674a1ae4b51dc52d9875e3b0e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319872"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Exibir relatórios de caso de teste (SybaseToSQL)
 O relatório de caso de teste mostra os resultados da verificação de teste e as informações gerais de teste. No caso de uma falha de teste, as informações sobre quaisquer dados incompatíveis em objetos verificados também são exibidas.  

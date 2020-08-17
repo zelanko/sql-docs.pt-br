@@ -1,4 +1,5 @@
 ---
+description: sys.trace_categories (Transact-SQL)
 title: sys. trace_categories (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d8ffe8d193732b7619051e096b668f2f9c5f2c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c93fa579a54543ff1c08936796347c5bd1bc75d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375012"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "85882218"
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|ID exclusiva dessa categoria. Essa coluna também está na exibição de catálogo **Sys. trace_events** .|  
 |**name**|**nvarchar(128)**|Nome exclusivo dessa categoria. Este parâmetro não é localizado.|  
-|**type**|**tinyint**|Tipo de categoria:<br /><br /> 0 = Normal<br /><br /> 1 = Conexão<br /><br /> 2 = Erro|  
+|**tipo**|**tinyint**|Tipo de categoria:<br /><br /> 0 = Normal<br /><br /> 1 = Conexão<br /><br /> 2 = Erro|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys. TRACES &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys. trace_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
  [sys. trace_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   

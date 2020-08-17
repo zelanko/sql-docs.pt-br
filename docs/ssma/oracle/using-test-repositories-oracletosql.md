@@ -1,4 +1,5 @@
 ---
+description: Uso de repositórios de teste (OracleToSQL)
 title: Usando repositórios de teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ef417365ce2bb6993fb634d453c78d36d3c34965
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ce33aca0939a6a956f053824da1f7fdd35930b30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320072"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositórios de teste (OracleToSQL)
 O repositório de teste do SSMA armazena casos de teste e resultados de teste do SSMA Tester para uso posterior. Os dados do repositório são salvos nas tabelas de SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** do banco de dados **ssmatesterdb** .  

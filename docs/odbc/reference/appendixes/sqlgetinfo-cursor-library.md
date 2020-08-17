@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (Biblioteca de cursores)
 title: SQLGetInfo (biblioteca de cursores) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9067fd8b33cb2408f1ef6f0e58603eb4f1f7eb09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08fbc40dfc7245e6f72349acc2ac63de8f0838bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339312"
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (Biblioteca de cursores)
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.locfileid: "81307807"
 |SQL_FETCH_DIRECTION [1]|SQL_FD_FETCH_ABSOLUTE &#124; SQL_FD_FETCH_FIRST &#124; SQL_FD_FETCH_LAST &#124; SQL_FD_FETCH_NEXT &#124; SQL_FD_FETCH_PRIOR &#124; SQL_FD_FETCH_RELATIVE &#124; SQL_FD_FETCH_BOOKMARK|  
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT &#124; SQL_CA1_ABSOLUTE &#124; SQL_CA1_RELATIVE &#124; SQL_CA1_LOCK_NO_CHANGE &#124; SQL_CA1_POS_POSITION &#124; SQL_CA1_POSITIONED_DELETE &#124; SQL_CA1_POSITIONED_UPDATE &#124; SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_READ_ONLY_CONCUR &#124; SQL_CA2_OPT_VALUES_CONCURRENCY &#124; SQL_CA2_SENSITIVITY_UPDATES|  
-|SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK &#124; quaisquer valores retornados pelo driver **Observação:** quando os dados são recuperados com **SQLFetchScroll**, o **SQLGetData** dá suporte à funcionalidade especificada com as bitmasks SQL_GD_ANY_COLUMN e SQL_GD_BOUND.|  
+|SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK &#124; quaisquer valores retornados pelo driver **Observação:**  quando os dados são recuperados com **SQLFetchScroll**, o **SQLGetData** dá suporte à funcionalidade especificada com as bitmasks SQL_GD_ANY_COLUMN e SQL_GD_BOUND.|  
 |SQL_KEYSET_DRIVEN_CURSOR_ATTRIBUTES1|0|  
 |SQL_KEYSET_DRIVEN_CURSOR_ATTRIBUTES2|0|  
 |SQL_LOCK_TYPES [1]|SQL_LCK_NO_CHANGE|  

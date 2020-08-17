@@ -1,4 +1,5 @@
 ---
+description: Conjuntos de alterações (Master Data Services)
 title: Conjuntos de alterações
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b91f1d0b4fbfff3294502b0953462f97efc707
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7171e28103ebf0c18657a62a954faa1ca64cdf5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345012"
 ---
 # <a name="changesets-master-data-services"></a>Conjuntos de alterações (Master Data Services)
 

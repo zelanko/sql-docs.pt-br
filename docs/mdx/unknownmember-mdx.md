@@ -1,4 +1,5 @@
 ---
+description: UnknownMember (MDX)
 title: UnknownMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0489556836b943ba91d4e17b3a164aeca0c648d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341142"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 

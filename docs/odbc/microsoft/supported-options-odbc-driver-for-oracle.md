@@ -1,4 +1,5 @@
 ---
+description: Opções com suporte (Driver ODBC para Oracle)
 title: Opções com suporte (driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5dabb7130bb8eb1936d8cbaa946b31eb98210a3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee3d4718b1119e0d2a77019f8f91fe3367f5646b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339582"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>Opções com suporte (Driver ODBC para Oracle)
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: Limitações do parâmetro de procedimento armazenado
 title: Limitações de parâmetro de procedimento armazenado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbd748884575791d5f170e95bc5aa465b61624b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be3f28c748f1322c3557c1030e2fb79b12db399b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339592"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>Limitações do parâmetro de procedimento armazenado
 > [!IMPORTANT]  

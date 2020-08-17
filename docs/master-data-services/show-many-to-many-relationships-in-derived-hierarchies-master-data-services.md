@@ -1,4 +1,5 @@
 ---
+description: Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
 title: Mostrar relações muitos para muitos em Hierarquias Derivadas
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c8f0a7536605af05457de13ebcd2011083386010
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9a6c606cf05189d7845db6615add2365efb90c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342422"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
 
@@ -72,7 +73,7 @@ ms.locfileid: "85811386"
   
  Os níveis M2M podem estar ocultos, assim como outros níveis da Hierarquia Derivada.  
    
-### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a>Relação M2M no modelo de exemplo  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> Relação M2M no modelo de exemplo  
 Para obter uma demonstração de uma relação M2M, exiba a hierarquia derivada Clima da Região no modelo de exemplo Cliente incluído no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
 Como mostra a imagem a seguir, o nome do nível que modela essa relação é ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapeado por meio de RegionClimate.Region)**. O ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** mostra regiões agrupadas pelos tipos de climas aos quais elas estão associadas. Essa é uma relação M2M porque há regiões (membros filho) associadas a vários climas (pais). Por exemplo, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** está associado a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** e ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
@@ -91,7 +92,7 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="member-security"></a><a name="bkmk_member_security"></a> Segurança do membro  
- Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:  
+ Uma hierarquia que permite a duplicação do membro (permite que um membro tenha mais de um pai) não pode ser usada para atribuir permissões de segurança do membro. Por exemplo:   
   
 -   Uma RDH (Hierarquia Derivada Recursiva) que não ancora recursões nulas (cada membro no nível recursivo aparece sob ROOT e seu pai recursivo).  
   

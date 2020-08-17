@@ -1,4 +1,5 @@
 ---
+description: syspolicy_conditions (Transact-SQL)
 title: syspolicy_conditions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45fea43b9d7d35fd674a566982d67b4043403d06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 598c25263761041693d99a2c72526a2333c50e1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374922"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85900600"
 |modified_by|**sysname**|Logon que modificou a condição mais recentemente. É NULL se nunca foi modificada.|  
 |date_modified|**datetime**|Data e hora em que a condição foi criada. É NULL se nunca foi modificada.|  
 |is_name_condition|**smallint**|Especifica se a condição é uma condição de nomeação.<br /><br /> 0 = a expressão de condição não contém a variável @Name.<br /><br /> 1 = a expressão de condição contém a variável @Name.|  
-|faceta|**nvarchar(max)**|Nome da faceta na qual a condição é baseada.|  
+|facet|**nvarchar(max)**|Nome da faceta na qual a condição é baseada.|  
 |Expression|**nvarchar(max)**|A expressão dos estados da faceta.|  
 |obj_name|**sysname**|O nome de objeto é atribuído a @Name quando a expressão de condição contém esta variável.|  
   

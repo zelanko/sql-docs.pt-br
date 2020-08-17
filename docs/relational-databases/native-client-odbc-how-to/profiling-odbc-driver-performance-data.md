@@ -1,4 +1,5 @@
 ---
+description: Analisar dados de desempenho de driver (ODBC)
 title: Dados de desempenho do driver de perfil (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,11 +14,12 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eab6ed2d2f02526d8167275b24800c267001b194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bedad59ad9f61b7ab12b207bc87bf1c7e250c8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88329432"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Criar perfil de dados de desempenho do driver ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +45,7 @@ ms.locfileid: "86001122"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Para registrar os dados de desempenho de driver por programação  
   
-1.  Chame [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA_LOG e o caminho completo e o nome de arquivo do arquivo de log de dados de desempenho. Por exemplo:  
+1.  Chame [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_DATA_LOG e o caminho completo e o nome de arquivo do arquivo de log de dados de desempenho. Por exemplo:   
   
     ```  
     "C:\\Odbcperf.log"  

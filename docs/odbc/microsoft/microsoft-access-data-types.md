@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados do Microsoft Access
 title: Tipos de dados do Microsoft Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 024fb65b6fdc81ae0a8e007d1cee150c6a35b91c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24428c436e9e60c8ca5e42288b217f2c576cbd0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340762"
 ---
 # <a name="microsoft-access-data-types"></a>Tipos de dados do Microsoft Access
 A tabela a seguir mostra os tipos de dados do Microsoft Access, os tipos de dados usados para criar tabelas e os tipos de dados SQL ODBC.  
@@ -42,7 +43,7 @@ A tabela a seguir mostra os tipos de dados do Microsoft Access, os tipos de dado
 |NUMBER (FieldSize = único)|EXCLUSIVO|SQL_REAL|  
 |NUMBER (FieldSize = duplo)|DOUBLE|SQL_DOUBLE|  
 |NUMBER (FieldSize = BYTE)|BYTE NÃO ASSINADO|SQL_TINYINT|  
-|NUMBER (FieldSize = inteiro)|BAIXO|SQL_SMALLINT|  
+|NUMBER (FieldSize = inteiro)|SHORT|SQL_SMALLINT|  
 |NUMBER (FieldSize = inteiro longo)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  

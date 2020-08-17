@@ -1,4 +1,5 @@
 ---
+description: Segurança de objeto de banco de dados (Master Data Services)
 title: Segurança de objeto de banco de dados
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344902"
 ---
 # <a name="database-object-security-master-data-services"></a>Segurança de objeto de banco de dados (Master Data Services)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85811572"
   
  Para obter mais informações, consulte [visão geral: importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Validando dados em relação às regras de negócio  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> Validando dados em relação às regras de negócio  
   
 |Ação|Protegível|Permissões|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811572"
   
  Para obter mais informações, consulte [Procedimento armazenado de validação &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>Excluindo versões  
+##  <a name="deleting-versions"></a><a name="Versions"></a> Excluindo versões  
   
 |Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811572"
   
  Para obter mais informações, consulte [Excluir uma versão &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Aplicação imediata de permissões de membro de hierarquia  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> Aplicação imediata de permissões de membro de hierarquia  
   
 |Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: Funções e exibições de gerenciamento dinâmico de replicação geográfica (banco de dados SQL do Azure)
 title: Funções e exibições de gerenciamento dinâmico de replicação geográfica (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/24/2015
@@ -16,12 +17,12 @@ ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6dc7aeb2490c016274350afb86a251e3c2466ad5
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 783eeeb91274e80b49f075e7dbf169c41247b2a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374892"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>Funções e exibições de gerenciamento dinâmico de replicação geográfica (banco de dados SQL do Azure)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

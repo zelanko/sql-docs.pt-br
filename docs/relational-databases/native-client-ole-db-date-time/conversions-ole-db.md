@@ -1,4 +1,5 @@
 ---
+description: Conversões de SQL Server Native Client (OLE DB)
 title: Associações e conversões (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dec84f95cf60818336956e2d6e86d871a3fdc00
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a513ca320f072dc74b525ae4511973fa438a7624
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328032"
 ---
 # <a name="sql-server-native-client-conversions-ole-db"></a>Conversões de SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,15 +32,15 @@ ms.locfileid: "87245868"
   
 -   O formato das cadeias de caracteres de **datetime** e **datetimeoffset** é:  
   
-     *aaaa* - *mm* - *DD*[ *hh*:*mm*:*SS*[.* 9999999*] [± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   O formato de cadeias de caracteres **time** é:  
   
-     *hh*:*mm*:*SS*[.* 9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   O formato das cadeias de caracteres de **date** é:  
   
-     *aaaa* - *mm* - *DD*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. Consequentemente, algumas conversões executadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versões posteriores diferem da especificação OLE DB.  

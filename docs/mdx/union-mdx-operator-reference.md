@@ -1,4 +1,5 @@
 ---
+description: Referência do operador Union-MDX
 title: + Unida (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cd352b95853cc5fe52857a080b6ca2e515f5c013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84e6bc2b6b8460b90013ade5f0981af7f0ed8432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341185"
 ---
 # <a name="union---mdx-operator-reference"></a>Referência do operador Union-MDX
 
@@ -31,7 +32,7 @@ Set_Expression + Set_Expression
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um conjunto que contém os membros dos dois conjuntos especificados.  
   
 ## <a name="remarks"></a>Comentários  
@@ -53,6 +54,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

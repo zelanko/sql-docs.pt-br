@@ -1,4 +1,5 @@
 ---
+description: Funções ODBC e o Driver ODBC do Visual FoxPro
 title: Funções ODBC e o driver ODBC do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 260630321825a695b4f1d701f18fff08551ff673
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 017e66c137f6c0921f3a382c0832598c9415c9e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340732"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Funções ODBC e o Driver ODBC do Visual FoxPro
 Os tópicos nesta seção fornecem um breve resumo das funções da API ODBC e de quaisquer detalhes específicos do Visual FoxPro.  

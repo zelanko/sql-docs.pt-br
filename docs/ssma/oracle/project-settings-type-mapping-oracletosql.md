@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (mapeamento de tipo) (OracleToSQL)
 title: Configurações do projeto (mapeamento de tipo) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320442"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Configurações do projeto (mapeamento de tipo) (OracleToSQL)
 A página mapeamento de tipo da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte os tipos de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
@@ -62,9 +63,9 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |bArquivo|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|INT|  
 |blob|varbinary(max)|  
-|booleano|bit|  
+|boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |character|varchar(max)|  
@@ -75,8 +76,8 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |decimal|float [53]|  
 |double precision|float [53]|  
 |FLOAT|float [53]|  
-|int|int|  
-|integer|INT|  
+|INT|INT|  
+|inteiro|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [ \* .. 8000]<sup>*</sup>|varbinary [*]|  
@@ -91,7 +92,7 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |número|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |raw|varbinary(max)|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
@@ -106,9 +107,9 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |VARCHAR2|varchar(max)|  
 |XmlType|Xml|  
   
-<sup>*</sup>Aplica-se somente ao mapeamento de tipo de valor de retorno.  
+<sup>*</sup> Aplica-se somente ao mapeamento de tipo de valor de retorno.  
   
-<sup>**</sup>Aplica-se somente ao mapeamento de tipo de argumento.  
+<sup>**</sup> Aplica-se somente ao mapeamento de tipo de argumento.  
   
 ### <a name="default-column-type-mapping"></a>Mapeamento de tipo de coluna padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para colunas.  
@@ -137,8 +138,8 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |FLOAT|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54. *]|float [53]|  
-|int|int|  
-|integer|INT|  
+|INT|INT|  
+|inteiro|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [*.. 8000]|varbinary [*]|  
@@ -186,9 +187,9 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|INT|  
 |Blob|varbinary(max)|  
-|Boolean|bit|  
+|Booliano|bit|  
 |Char|char|  
 |variação de caractere [*.. 8000]|varchar [*]|  
 |variação de caractere [8001.. *]|varchar(max)|  
@@ -211,8 +212,8 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |Float|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54. *]|float [53]|  
-|Int|int|  
-|Integer|int|  
+|Int|INT|  
+|Integer|INT|  
 |inteiro [*.. \* ]|numeric [*] [0]|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
@@ -242,7 +243,7 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |numeric [*.. \* ] [\*..\*]|numeric [*] [ \* ]|  
 |nvarchar2[*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |RAW [*.. 8000]|varbinary [*]|  
 |RAW [8001.. *]|varbinary(max)|  
 |Real|float [53]|  

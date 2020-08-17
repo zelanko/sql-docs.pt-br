@@ -1,4 +1,5 @@
 ---
+description: Operador Except (MDX)
 title: '- Excepção (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cf0121d1be3cd2943a801f3c72ca4952b70ec681
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f45c01cb4a2c3e4383790637b6603f789048078d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341492"
 ---
 # <a name="except-mdx-operator"></a>Operador Except (MDX)
 
@@ -31,7 +32,7 @@ Set_Expression - Set_Expression
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um conjunto que contém membros que não são compartilhados pelos parâmetros especificados.  
   
 ## <a name="remarks"></a>Comentários  
@@ -52,6 +53,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

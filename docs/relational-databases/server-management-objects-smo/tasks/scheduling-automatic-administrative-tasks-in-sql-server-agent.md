@@ -1,4 +1,5 @@
 ---
+description: Agendando tarefas administrativas automáticas no SQL Server Agent
 title: Agendando tarefas administrativas automáticas no SQL Server Agent
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b455db0d597e4b7affb6da98497ae3638b095e9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2ca351a2e3a6104a4bcc5c8fb7192d0f00ea6a56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325609"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Agendando tarefas administrativas automáticas no SQL Server Agent
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

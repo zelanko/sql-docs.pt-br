@@ -1,4 +1,5 @@
 ---
+description: Aplicativos Unicode
 title: Aplicativos Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94bd5211c878904453624adb2acd0fe435ebc812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee2db77c569876b008d21149c500aa0f1f009b7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339152"
 ---
 # <a name="unicode-applications"></a>Aplicativos Unicode
 Você pode recompilar um aplicativo como um aplicativo Unicode de uma das duas maneiras:  
@@ -37,6 +38,6 @@ Você pode recompilar um aplicativo como um aplicativo Unicode de uma das duas m
   
  Um aplicativo pode ser escrito de modo que possa ser compilado como um aplicativo Unicode ou um aplicativo ANSI. Nesse caso, os tipos de dados de caractere podem ser declarados como SQL_C_TCHAR. Essa é uma macro que insere SQL_C_WCHAR se o aplicativo é compilado como um aplicativo Unicode ou insere SQL_C_CHAR se ele for compilado como um aplicativo ANSI. O programador de aplicativos deve ter cuidado com funções que usam o SQLPOINTER como argumento, pois o tamanho do argumento de comprimento será alterado (para tipos de dados de cadeia de caracteres) dependendo se o aplicativo for ANSI ou Unicode.  
   
- Uma função pode ser chamada de uma das três maneiras: como uma chamada de função somente Unicode (com o sufixo *W* ), como uma chamada de função somente ANSI ( *com o sufixo a)* ou como a função ODBC chamada sem sufixo. Os argumentos para as três formas de uma função são idênticos. Somente as funções com argumentos SQLCHAR \* ou SQLPOINTER que apontam para cadeias de caracteres exigem formulários Unicode e ANSI. Para funções que têm argumentos que podem ser declarados como um tipo de caractere, como **SQLBindCol** ou **SQLGetData** (que não têm formulários Unicode e ANSI), o argumento pode ser declarado como o tipo Unicode, o tipo ANSI ou, no caso de um argumento de tipo C, a SQL_C_TCHAR macro. Para obter mais informações, consulte [dados Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
+ Uma função pode ser chamada de uma das três maneiras: como uma chamada de função somente Unicode (com o sufixo *W* ), como uma chamada de função somente ANSI ( *com o sufixo a)* ou como a função ODBC chamada sem sufixo. Os argumentos para as três formas de uma função são idênticos. Somente as funções com argumentos SQLCHAR \* ou SQLpointer que apontam para cadeias de caracteres exigem formulários Unicode e ANSI. Para funções que têm argumentos que podem ser declarados como um tipo de caractere, como **SQLBindCol** ou **SQLGetData** (que não têm formulários Unicode e ANSI), o argumento pode ser declarado como o tipo Unicode, o tipo ANSI ou, no caso de um argumento de tipo C, a SQL_C_TCHAR macro. Para obter mais informações, consulte [dados Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
  Um aplicativo pode ser gravado como um aplicativo Unicode, mesmo que não haja drivers Unicode disponíveis para ele funcionar com o. O Gerenciador de driver mapeará funções e tipos de dados Unicode para ANSI. Há algumas restrições para os mapeamentos de Unicode para ANSI que podem ser executadas. A existência de um driver Unicode para o aplicativo Unicode com o qual trabalhar resultará em um melhor desempenho e removerá as restrições inerentes aos mapeamentos de Unicode para ANSI.

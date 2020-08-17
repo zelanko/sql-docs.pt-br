@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xtp_gc_stats (Transact-SQL)
 title: sys. dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05a08c554aabdb8e99a756e10e63f5dc3eb82184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 231f0f8438fa4aa98f97286be5766a5e6aa9dd73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322727"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85648019"
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|O número de linhas verificadas pelo subsistema de coleta de lixo desde que o servidor foi iniciado.|  
 |rows_no_sweep_needed|**bigint**|O número de linhas que foram removidas sem uma verificação de canto sujo.|  

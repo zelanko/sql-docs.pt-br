@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados Paradox
 title: Tipos de dados do Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44494e9945a84f978449b6bab02bd967e40d9a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340451"
 ---
 # <a name="paradox-data-types"></a>Tipos de dados Paradox
 O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL ODBC. A tabela a seguir lista todos os tipos de dados do Paradox e mostra os tipos de dados ODBC do SQL aos quais eles estão mapeados.  
@@ -40,7 +41,7 @@ O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL O
 |MEMORANDO [2]|SQL_LONGVARCHAR|  
 |DINHEIRO [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
-|BAIXO|SQL_SMALLINT|  
+|SHORT|SQL_SMALLINT|  
 |HORA [1]|SQL_TIMESTAMP|  
 |CARIMBO DE DATA/HORA [1]|SQL_TIMESTAMP|  
   

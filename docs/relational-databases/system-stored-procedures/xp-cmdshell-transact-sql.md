@@ -1,4 +1,5 @@
 ---
+description: xp_cmdshell (Transact-SQL)
 title: xp_cmdshell (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9faada50dc5e48f0b3835f65c69a2a1d130e7594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae4a2ca88d6c0ffd76e489e7cda186bbedf2471a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374132"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -174,6 +175,6 @@ EXEC master..xp_cmdshell @cmd;
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Configuração da Área de Superfície](../../relational-databases/security/surface-area-configuration.md)   
- [&#41;&#40;Transact-SQL de sp_xp_cmdshell_proxy_account](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_xp_cmdshell_proxy_account ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

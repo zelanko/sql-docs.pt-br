@@ -1,4 +1,5 @@
 ---
+description: Permissões de membro de hierarquia (Master Data Services)
 title: Permissões de membro de hierarquia
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344092"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permissões de membro de hierarquia (Master Data Services)
 
@@ -37,12 +38,12 @@ ms.locfileid: "85813298"
   
  As permissões de membro de hierarquia aplicam-se à versão do modelo que recebe as permissões, e a qualquer cópia futura da versão. Elas não se aplicam a versões anteriores a que você está atribuindo.  
   
-|Permissão|Description|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Ler**|Os membros são exibidos.<br /><br /> <br /><br /> Observação: se você atribuir apenas a permissão **Leitura** a **Raiz**, os membros sob **Raiz** serão somente leitura; porém, em hierarquias explícitas e coleções, o usuário poderá mover os membros para **Raiz** e adicionar novos membros a **Raiz**.|  
 |**Criar**|A permissão Criar não está disponível na permissão de membro da hierarquia.|  
 |**Atualização**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
-|**Excluir**|Os membros são exibidos e o usuário pode excluí-los.|  
+|**Delete (excluir)**|Os membros são exibidos e o usuário pode excluí-los.|  
 |**Deny**|Os membros não são exibidos.|  
   
  Na guia **Membros da Hierarquia** , as permissões que você atribui não entram em vigor imediatamente. A frequência com que as permissões são aplicadas depende da **Configuração de intervalo de processamento da segurança de membro** na tabela de Configurações do Sistema no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . É possível aplicar permissões de membros imediatamente seguindo as etapas em [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  

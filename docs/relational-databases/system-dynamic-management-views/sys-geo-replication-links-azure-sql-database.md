@@ -1,4 +1,5 @@
 ---
+description: sys.geo_replication_links (Banco de Dados SQL do Azure)
 title: sys. geo_replication_links (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -17,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c59f3379d2f210d96b97e497ecb8f332a6f93d2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0771578b9d9b478a9f6947fd131abb66b0654d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322292"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Banco de Dados SQL do Azure)
 
@@ -43,7 +44,7 @@ ms.locfileid: "85647901"
 |função|**tinyint**|Função de replicação geográfica, uma das:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo secundário, um de:<br /><br /> 0 = Não. O banco de dados secundário não estará acessível até o failover.<br /><br /> 1 = ReadOnly. O banco de dados secundário é acessível somente para conexões de cliente com ApplicationIntent = ReadOnly.<br /><br /> 2 = Todos. O banco de dados secundário pode ser acessado por qualquer conexão de cliente.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> Tudo<br /><br /> Somente leitura|  
+|secondary_allow_connections _desc|**nvarchar(256)**|Não<br /><br /> Tudo<br /><br /> Somente leitura|  
   
 ## <a name="permissions"></a>Permissões
 
@@ -67,6 +68,6 @@ FROM sys.geo_replication_links;
 
 ## <a name="see-also"></a>Consulte Também
 
- [ALTER DATABASE (banco de dados SQL do Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE (Banco de Dados SQL do Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys. dm_geo_replication_link_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys. dm_operation_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

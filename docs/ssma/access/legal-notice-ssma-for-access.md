@@ -1,4 +1,5 @@
 ---
+description: Aviso legal (SSMA para acesso)
 title: Aviso legal (SSMA para acesso) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e03216bca40411181135d42c6228591f99758346
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372882"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para acesso)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
