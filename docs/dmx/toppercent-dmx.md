@@ -1,4 +1,5 @@
 ---
+description: TopPercent (DMX)
 title: TopPercent (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1a8cb8bc64f81f05196fd2856c6b9b5c1a583eb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395172"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -104,7 +105,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

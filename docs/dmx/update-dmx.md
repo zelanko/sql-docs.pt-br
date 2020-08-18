@@ -1,4 +1,5 @@
 ---
+description: UPDATE (DMX)
 title: ATUALIZAÇÃO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: d74a59aaea079a5d3c1945b92813f6d276591b78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394872"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
