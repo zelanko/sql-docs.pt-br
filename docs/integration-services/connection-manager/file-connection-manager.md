@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de conexões de arquivos
 title: Gerenciador de Conexões de Arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11c5a2404ec0c5dd8a51f09b1b96a4b5518231ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351432"
 ---
 # <a name="file-connection-manager"></a>Gerenciador de conexões de arquivos
 
@@ -38,7 +39,7 @@ ms.locfileid: "86920780"
   
  A tabela a seguir lista os valores de **FileUsageType**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|O gerenciador de conexões de arquivos utiliza um arquivo existente.|  
 |**1**|O gerenciador de conexões de arquivos cria um arquivo.|  
@@ -79,7 +80,7 @@ ms.locfileid: "86920780"
  **Tipo de Uso**  
  Especifique se o **Gerenciador de Conexões de Arquivos** conecta a um arquivo ou pasta existente ou crie um novo arquivo ou pasta.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Criar arquivo|Crie um novo arquivo em tempo de execução.|  
 |Arquivo existente|Use um arquivo existente.|  

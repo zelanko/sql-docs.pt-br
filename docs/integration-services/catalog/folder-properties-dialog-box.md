@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Propriedades da Pasta
 title: Caixa de Diálogo de Propriedades da Pasta | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334105bde7936543fd1dba3167fd61e1b440fd5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351902"
 ---
 # <a name="folder-properties-dialog-box"></a>Caixa de diálogo Propriedades da Pasta
 
@@ -34,7 +35,7 @@ ms.locfileid: "86922642"
   
 2.  Na página **Geral** , selecione **Descrição** em **Geral** e insira uma descrição opcional.  
   
-3.  Na página **Permissões** , clique em **Procurar...** , selecione uma ou mais entidades de segurança de banco de dados e clique em **OK**.  
+3.  Na página **Permissões** , clique em **Procurar...**, selecione uma ou mais entidades de segurança de banco de dados e clique em **OK**.  
   
 4.  Selecione um nome em **Logons ou funções** e especifique as permissões apropriadas em **Permissões**.  
   

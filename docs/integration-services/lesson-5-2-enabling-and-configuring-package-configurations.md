@@ -1,4 +1,5 @@
 ---
+description: 'Lição 5-2: Habilitar e configurar as configurações do pacote'
 title: 'Etapa 2: Habilitar e configurar as configurações do pacote | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84f37f49d1b2a688463fcb974f6777bda601def4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7237d7356ffb97861779c4d5427fd4fb05083695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345322"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lição 5-2: Habilitar e configurar as configurações do pacote
 
@@ -44,11 +45,11 @@ Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e
   
 7.  Retorne à guia **Fluxo de Controle** e clique duas vezes no contêiner **Arquivo Foreach na Pasta** .  
   
-8.  Na página **Coleção** do **Editor de Loop Foreach**, selecione **Expressões** e, em seguida, selecione o botão de reticências **(…)** .  
+8.  Na página **Coleção** do **Editor de Loop Foreach**, selecione **Expressões** e, em seguida, selecione o botão de reticências **(…)**.  
   
 9. No **Editor de Expressões de Propriedades**, selecione a lista **Propriedade** e selecione **Directory**.  
   
-10. Na caixa **Expressão**, selecione o botão de reticências **(…)** .  
+10. Na caixa **Expressão**, selecione o botão de reticências **(…)**.  
   
 11. No **Construtor de Expressões**, expanda a pasta **Variáveis e Parâmetros** e arraste a variável **User::varFolderName** até a caixa **Expressão**.  
   
@@ -108,7 +109,7 @@ Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Criar e popular uma nova pasta de dados de exemplo  
   
-1.  No Windows Explorer, no nível de raiz da unidade (por exemplo, **C:\\** ), crie uma pasta chamada **Novos Dados de Exemplo**.  
+1.  No Windows Explorer, no nível de raiz da unidade (por exemplo, **C:\\**), crie uma pasta chamada **Novos Dados de Exemplo**.  
   
 2.  Localize os arquivos de exemplo no computador e copie três dos arquivos da pasta.  
   

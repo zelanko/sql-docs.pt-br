@@ -1,4 +1,5 @@
 ---
+description: Origem SAP BW
 title: Origem SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349022"
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
 
@@ -52,7 +53,7 @@ ms.locfileid: "86917812"
   
     2.  Para **Tipo de Ativação**, selecione **Programa de Servidor Registrado**.  
   
-    3.  Para **Communication Type with Target System (Tipo de Comunicação com o Sistema de Destino)** , selecione **Non-Unicode (Inactive MDMP Settings) (Não Unicode (configurações de MDMP inativo))** .  
+    3.  Para **Communication Type with Target System (Tipo de Comunicação com o Sistema de Destino)**, selecione **Non-Unicode (Inactive MDMP Settings) (Não Unicode (configurações de MDMP inativo))**.  
   
     4.  Atribuir uma ID de programa apropriada  
   
@@ -60,7 +61,7 @@ ms.locfileid: "86917812"
   
     1.  Vá para o Administrator Workbench (código de transação RSA1) e, no painel esquerdo, selecione **Destino do Open Hub**.  
   
-    2.  No painel central, clique com o botão direito do mouse em uma InfoArea e selecione **“Criar o destino do Open Hub”** .  
+    2.  No painel central, clique com o botão direito do mouse em uma InfoArea e selecione **“Criar o destino do Open Hub”**.  
   
     3.  Para **Tipo de Destino**, selecione **“Ferramenta de Terceiros”** e insira o destino de RFC criado anteriormente.  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86917812"
   
 3.  Crie um processo de transferência de dados (DTP):  
   
-    1.  No painel central da InfoArea, clique com o botão direito do mouse no destino criado anteriormente e selecione **“Criar o processo de transferência de dados”** .  
+    1.  No painel central da InfoArea, clique com o botão direito do mouse no destino criado anteriormente e selecione **“Criar o processo de transferência de dados”**.  
   
     2.  Configurar, salvar e ativar o DTP.  
   
@@ -142,6 +143,6 @@ ms.locfileid: "86917812"
 -   [Visualização](../../integration-services/data-flow/preview.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Componentes do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componentes do Microsoft Connector 1.1 para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

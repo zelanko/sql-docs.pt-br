@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas do destino SQL Server Compact Edition
 title: Propriedades personalizadas do destino SQL Server Compact Edition | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d6dcf8eddf87df3c7b327d927b8dabd34ae24c3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba01a1c05c9ea83babc36e5c639a4a4fa20a70d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348592"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Propriedades personalizadas do destino SQL Server Compact Edition
 
@@ -26,7 +27,7 @@ ms.locfileid: "86917782"
   
  A tabela a seguir descreve as propriedades personalizadas do destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |TableName|String|O nome da tabela de destino em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   

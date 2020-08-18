@@ -1,4 +1,5 @@
 ---
+description: Manipulando eventos programaticamente
 title: Manipular eventos programaticamente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08012fc9ac717476be0bc9e592b96d7391aa7a85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 35b458354433d923a6c028badae4e6f9fb02acf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352052"
 ---
 # <a name="handling-events-programmatically"></a>Manipulando eventos programaticamente
 

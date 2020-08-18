@@ -1,4 +1,5 @@
 ---
+description: OPENXML (Transact-SQL)
 title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363632"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *sinalizadores*  
  Indica o mapeamento usado entre os dados XML e o conjunto de linhas relacional, e como a coluna de derramamento é preenchida. *flags* é um parâmetro de entrada opcional e pode ser um dos valores a seguir.  
   
-|Valor do byte|DESCRIÇÃO|  
+|Valor do byte|Descrição|  
 |----------------|-----------------|  
 |**0**|O padrão será o mapeamento **centrado em atributo**.|  
 |**1**|Use o mapeamento **centrado em atributo**. Pode ser combinado com XML_ELEMENTS. Neste caso, o mapeamento **centrado em atributo** é aplicado primeiro. Em seguida, o mapeamento **centrado em elemento** é aplicado às colunas restantes.|  
@@ -61,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@mp:xmltex**.|  
   
  _SchemaDeclaration_  
- É a definição de esquema no formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ É a definição de esquema no formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  É o nome de coluna no conjunto de linhas.  
@@ -87,7 +88,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  A tabela a seguir descreve a estrutura da tabela de **borda**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem o valor de ID igual a 0. Os valores negativos da ID são reservados.|  
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por essa ID não é necessariamente o elemento pai, mas depende do NodeType do nó cujo pai é identificado por essa ID. Por exemplo, se o nó for um nó de texto, o pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
@@ -247,5 +248,5 @@ EXEC sp_xml_removedocument @idoc;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplos: usando OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
+ [Exemplos: uso do OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

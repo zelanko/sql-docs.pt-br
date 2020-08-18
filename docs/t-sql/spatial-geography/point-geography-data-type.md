@@ -1,4 +1,5 @@
 ---
+description: Point (tipo de dados geography)
 title: Point (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 04db3c6617669010f63e173415de0ebf6b7a3dca
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f833aeaa63838281eaff92c0dfe1e9fed799cdb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360322"
 ---
 # <a name="point-geography-data-type"></a>Point (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

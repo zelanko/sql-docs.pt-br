@@ -1,4 +1,5 @@
 ---
+description: transformação Agrupamento Difuso
 title: Transformação Agrupamento Difuso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4e00be6f692bd3e4bec21acec6c2de6359622b7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348438"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
 
@@ -148,7 +149,7 @@ ms.locfileid: "86919318"
  **Numerais**  
  Especifique a significância dos numerais à esquerda e à direita na comparação dos dados da coluna. Por exemplo, se os numerais à esquerda forem significativos, "123 Main Street" não será grupado com "456 Main Street".  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nenhum**|Numerais à esquerda e à direita não são significativos.|  
 |**À Esquerda**|Apenas numerais à esquerda são significativos.|  

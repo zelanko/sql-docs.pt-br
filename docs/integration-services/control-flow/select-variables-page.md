@@ -1,4 +1,5 @@
 ---
+description: Página Selecionar Variáveis
 title: Página Selecionar Variáveis | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9527c0d73ed47e893e51e8e192c170a310172e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349302"
 ---
 # <a name="select-variables-page"></a>Página Selecionar Variáveis
 

@@ -1,4 +1,5 @@
 ---
+description: Construtor de valor de tabela (Transact-SQL)
 title: Construtor de valor de tabela (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/23/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e7fe813ca74c5f8bfd8a7746a05613d95d3373c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ac95b5d2fc71636ca55a29e0d82a2a35f13b816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306751"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Construtor de valor de tabela (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

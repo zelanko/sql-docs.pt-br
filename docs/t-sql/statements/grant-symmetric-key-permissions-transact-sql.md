@@ -1,4 +1,5 @@
 ---
+description: Permissões de chave simétrica GRANT (Transact-SQL)
 title: Permissões GRANT de chave simétrica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8c5bdcd35de844bce5cb93647452b92621d9e2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e9a9656d9e9b353bb66b93d58e226c052123c4b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358182"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>Permissões de chave simétrica GRANT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

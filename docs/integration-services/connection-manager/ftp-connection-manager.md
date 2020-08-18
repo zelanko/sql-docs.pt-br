@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de conexões FTP
 title: Gerenciador de conexões FTP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb0b1a81a495639aa170b2047df3dd517fac1716
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6aac44dfdbbe1c88965ff7aa37249651d3f7c199
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350912"
 ---
 # <a name="ftp-connection-manager"></a>Gerenciador de conexões FTP
 

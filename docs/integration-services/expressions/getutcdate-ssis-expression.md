@@ -1,4 +1,5 @@
 ---
+description: GETUTCDATE (Expressão SSIS)
 title: GETUTCDATE (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ca0a021560dd99ec2ebdcd82c40255905cc0784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e14b4477f6a9ea6d39769cdb2f8a2883b361939
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347982"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (Expressão SSIS)
 

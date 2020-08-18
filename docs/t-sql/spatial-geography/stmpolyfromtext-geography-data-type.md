@@ -1,4 +1,5 @@
 ---
+description: STMPolyFromText (tipo de dados geography)
 title: STMPolyFromText (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: acd6437e3a87b13559be460358ca83d6a45630cd
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a040f71699425fb1030cc435d6b4d356d844e408
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305869"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *multipolygon_tagged_text*  
- É a representação WKT da instância de **geographyMultiPolygon** que você deseja retornar. *multipolygon_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geographyMultiPolygon** que você deseja retornar. *multipolygon_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geographyMultiPolygon** que você deseja retornar.  

@@ -1,4 +1,5 @@
 ---
+description: DATEPART (Expressão SSIS)
 title: DATEPART (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a87b6ca0118d181c21e46620a3cfd5e4c050d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348242"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (Expressão SSIS)
 
@@ -53,8 +54,8 @@ DATEPART(datepart, date)
   
 |datepart|Abreviações|  
 |--------------|-------------------|  
-|Ano|aa, aaaa|  
-|Quarter|qq, q|  
+|Year|aa, aaaa|  
+|Trimestre|qq, q|  
 |Month|mm, m|  
 |Dia do ano|dy, y|  
 |Dia|dd, d|  

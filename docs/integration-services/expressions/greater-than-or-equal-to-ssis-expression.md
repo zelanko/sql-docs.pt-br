@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (Maior ou igual a) (Expressão SSIS)'
 title: '&gt;= (Maior ou igual a) (Expressão SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 165c016e7352b1ca90b3962763074b2df81a83ee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b3cb7014c1f919503995921a6c90c5d4f5e52c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347822"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (Maior ou igual a) (Expressão SSIS)
 

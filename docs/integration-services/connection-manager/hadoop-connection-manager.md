@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de conexões do Hadoop
 title: Gerenciador de conexões do Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72f5629e6ac5200324a149ff7242122b0ae0c16c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350212"
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
 
@@ -175,7 +176,7 @@ No controlador de domínio:
 
     1. Vá para **Gerenciador do Servidor** > **Gerenciamento de Política de Grupo** > **Domínio**. A partir daí, vá para **Objetos de Política de Grupo** > **Política de Domínio Padrão ou Ativo** > **Editar**.
 
-    2. Na janela pop-up do **Editor de Gerenciamento de Política de Grupo**, vá para **Configuração do Computador** > **Políticas** > **Configurações do Windows**. A partir daí, vá para **Configurações de Segurança** > **Políticas Locais** > **Opções de Segurança**. Configurar a **Segurança de rede: configure os tipos de criptografia permitidos para o Kerberos**.
+    2. Na janela pop-up do **Editor de Gerenciamento de Política de Grupo**, vá para **Configuração do Computador** > **Políticas** > **Configurações do Windows**. A partir daí, vá para **Configurações de Segurança** > **Políticas Locais** > **Opções de Segurança**. Configure a **Segurança de rede: configure os tipos de Criptografia permitidos para o Kerberos**.
 
     3. Selecione o algoritmo de criptografia que deseja usar para se conectar ao KDC. Normalmente, você pode selecionar qualquer uma das opções.
 

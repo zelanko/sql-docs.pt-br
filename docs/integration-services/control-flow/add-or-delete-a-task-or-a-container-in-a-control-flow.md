@@ -1,4 +1,5 @@
 ---
+description: Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle
 title: Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a269b4c221696f1b152e50d8fe749fc55eead05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350062"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle
 

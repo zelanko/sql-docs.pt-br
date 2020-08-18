@@ -1,4 +1,5 @@
 ---
+description: Habilitando o registro em log programaticamente
 title: Habilitar o registro em log programaticamente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 297b5730db79d1a47295a2e454f6bd3433c56d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 358bd8e70acba47961909583c153669e21389105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352132"
 ---
 # <a name="enabling-logging-programmatically"></a>Habilitando o registro em log programaticamente
 
@@ -47,7 +48,7 @@ ms.locfileid: "86922696"
   
  A tabela a seguir lista os provedores de log disponíveis, sua descrição e as informações sobre <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
-|Provedor|DESCRIÇÃO|Propriedade ConfigString|  
+|Provedor|Descrição|Propriedade ConfigString|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Gera rastreamentos do SQL que podem ser capturados e exibidos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. A extensão de nome de arquivo padrão deste provedor é .trc.|Nenhuma configuração é necessária.|  
 |SQL Server|Escreve entradas de log de evento na tabela **sysssislog** em qualquer banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|O provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige a especificação da conexão ao banco de dados e também o nome do banco de dados de destino.|  

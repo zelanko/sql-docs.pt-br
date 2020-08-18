@@ -1,4 +1,5 @@
 ---
+description: STPolyFromText (tipo de dados geometry)
 title: STPolyFromText (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 199236c4dc25764b5eab8b5f2754981cf0c70aef
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0e2ce076523c0707c8764d9a21f38abdbf41e0a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359712"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *polygon_tagged_text*  
- É a representação WKT da instância de **geometryPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geometryPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryPolygon** que você deseja retornar.  
@@ -65,7 +66,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

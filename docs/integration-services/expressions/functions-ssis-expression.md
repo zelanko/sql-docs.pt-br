@@ -1,4 +1,5 @@
 ---
+description: Funções (Expressão SSIS)
 title: Funções (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72f03d8d53e9d85b9b274ad1ac821fdfc79a6f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0d2644192f6c38b98aaeec134b540ac269560d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348132"
 ---
 # <a name="functions-ssis-expression"></a>Funções (Expressão SSIS)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86917003"
   
  A linguagem da expressão fornece as seguintes funções matemáticas.  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[ABS &#40;Expressão SSIS&#41;](../../integration-services/expressions/abs-ssis-expression.md)|Retorna o valor positivo absoluto de uma expressão numérica.|  
 |[EXP &#40;Expressão SSIS&#41;](../../integration-services/expressions/exp-ssis-expression.md)|Retorna o exponente para base e da expressão especificada.|  
@@ -58,7 +59,7 @@ ms.locfileid: "86917003"
   
  O avaliador da expressão fornece as seguintes funções de cadeia de caracteres.  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;Expressão SSIS&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|Retorna o valor do código Unicode do caractere da extrema esquerda de uma expressão de caractere.|  
 |[FINDSTRING &#40;Expressão SSIS&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|Retorna o índice de base um da ocorrência especificada de uma cadeia de caracteres em uma expressão.|  
@@ -78,7 +79,7 @@ ms.locfileid: "86917003"
   
  O avaliador de expressão fornce as seguintes funções de data e hora.  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[DATEADD &#40;Expressão do SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|Retorna um novo valor DT_DBTIMESTAMP adicionando um intervalo de data ou hora a uma data especificada.|  
 |[DATEDIFF &#40;Expressão do SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|Retorna o número de limites de data e hora entre duas datas especificadas.|  
@@ -91,7 +92,7 @@ ms.locfileid: "86917003"
   
  O avaliador da expressão fornece as seguintes funções nulas.  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[ISNULL &#40;Expressão SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|Retorna um resultado booliano, baseando-se em se uma expressão é nula.|  
 |[NULL &#40;Expressão SSIS&#41;](../../integration-services/expressions/null-ssis-expression.md)|Retorna um valor nulo de um tipo de dados solicitado.|  

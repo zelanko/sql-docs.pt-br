@@ -1,4 +1,5 @@
 ---
+description: Categoria de evento de auditoria de segurança (SQL Server Profiler)
 title: Categoria de evento de auditoria de segurança – Profiler
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,20 +15,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c7f92e7c56cd6b13527d1d2e658dd04f51c4988f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330432"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria de evento de auditoria de segurança (SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A categoria de evento **Security Audit** contém eventos de auditoria de segurança.  
+   A categoria de evento **Security Audit** contém eventos de auditoria de segurança.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Audit Add DB User](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|Indica que um logon foi adicionado ou removido como um usuário de banco de dados para um banco de dados.|  
 |[Classe de evento Audit Add Login to Server Role](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|Indica que um logon foi adicionado ou removido de uma função de servidor fixa.|  
