@@ -1,4 +1,5 @@
 ---
+description: Alterações de comportamento e os drivers ODBC 3.x
 title: Alterações comportamentais e drivers ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8343573261d74a6a0c652cf425b12da91f7cb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f64aa4b627130308ea920918c2de6d98116020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411332"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Alterações de comportamento e os drivers ODBC 3.x
 O atributo de ambiente SQL_ATTR_ODBC_VERSION indica ao driver se ele precisa exibir o comportamento ODBC *2. x* ou o comportamento ODBC *3. x* . Como o atributo de ambiente SQL_ATTR_ODBC_VERSION é definido depende do aplicativo. Os aplicativos ODBC *3. x* devem chamar **SQLSetEnvAttr** para definir esse atributo depois de chamarem **SQLAllocHandle** para alocar um identificador de ambiente e antes que eles chamem **SQLAllocHandle** para alocar um identificador de conexão. Se eles não conseguirem fazer isso, o Gerenciador de driver retornará SQLSTATE HY010 (erro de sequência de função) na última chamada para **SQLAllocHandle**.  

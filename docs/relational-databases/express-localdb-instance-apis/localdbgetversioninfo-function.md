@@ -1,4 +1,5 @@
 ---
+description: Função LocalDBGetVersionInfo
 title: Função LocalDBGetVersionInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23b5c34bf378254e097a3f9c80417d8f96eac0c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c4e39c8bf22b4baeccfdd782d48fde7be342f68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408742"
 ---
 # <a name="localdbgetversioninfo-function"></a>Função LocalDBGetVersionInfo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

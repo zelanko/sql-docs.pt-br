@@ -1,4 +1,5 @@
 ---
+description: SQLGetStmtAttr (Biblioteca de cursores)
 title: SQLGetStmtAttr (biblioteca de cursores) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9b29d21c166751f5a57b7951cb6c028861cb501
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 1181347636bd687dcf9ac32d48e14134fef808d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411122"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (Biblioteca de cursores)
 > [!IMPORTANT]  
