@@ -1,4 +1,5 @@
 ---
+description: Arquivos de componentes ODBC
 title: Arquivos de componente ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33268b2973c6fd307a6f8730336c0ffa3603af2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5a3d5d0b8c9f47ed28d17109747607b489e1f34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449358"
 ---
 # <a name="odbc-component-files"></a>Arquivos de componentes ODBC
 Os arquivos de driver ODBC são exigidos por cada componente dos drivers de banco de dados ODBC da área de trabalho 4,0.  

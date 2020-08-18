@@ -1,4 +1,5 @@
 ---
+description: 'Apêndice A: Códigos de erro ODBC'
 title: 'Apêndice A: códigos de erro ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af288cf9f0564f6fe0dbef14f66143667120c656
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a587578ba74cd2ed36a919953000190a6274b62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411542"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Apêndice A: Códigos de erro ODBC
 Este tópico discute os valores SQLSTATE para ODBC 3. *x*. Para obter mais informações sobre o ODBC 3. valores *x* SQLSTATE, consulte [mapeamentos SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  

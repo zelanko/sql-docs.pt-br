@@ -1,4 +1,5 @@
 ---
+description: Mensagens retornadas pelo Driver ODBC para Oracle
 title: Mensagens retornadas pelo driver ODBC para Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 150bde1d-adb6-4e77-90e9-4dc93499a746
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b8bdaf4238bd220987364a77aaa1af837885c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90f6ed20dfa954925b94e212c172ba9b69ef9596
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412472"
 ---
 # <a name="messages-returned-by-the-odbc-driver-for-oracle"></a>Mensagens retornadas pelo Driver ODBC para Oracle
 > [!IMPORTANT]  

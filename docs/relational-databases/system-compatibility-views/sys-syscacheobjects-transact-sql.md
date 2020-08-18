@@ -1,4 +1,5 @@
 ---
+description: sys.syscacheobjects (Transact-SQL)
 title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d065ba57ab90e1bb035a6ef92100d351d93603
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25160eb8e7a25e2a4ec6d2f8b318fc78e7af61ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399672"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85899943"
 |**objid**|**int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Essa é a ID de objeto armazenada em **sysobjects** para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para objetos de cache como ad hoc ou preparado para SQL, **objID** é um valor gerado internamente.|  
 |**DBID**|**smallint**|A identificação do banco de dados no qual o objeto de cache foi compilado.|  
 |**dbidexec**|**smallint**|A identificação de banco de dados da qual a consulta é executada.<br /><br /> Para a maioria dos objetos, **dbidexec** tem o mesmo valor que **DBID**.<br /><br /> Para exibições do sistema, **dbidexec** é a ID do banco de dados do qual a consulta é executada.<br /><br /> Para consultas ad hoc, **dbidexec** é 0. Isso significa que **dbidexec** tem o mesmo valor que **DBID**.|  
-|**uid**|**smallint**|Indica o designer do plano para planos de consulta ad hoc e planos preparados.<br /><br /> -2 = O lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
+|**UID**|**smallint**|Indica o designer do plano para planos de consulta ad hoc e planos preparados.<br /><br /> -2 = O lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
 |**refcounts**|**int**|Número de outros objetos de cache que fazem referência a este objeto de cache. Uma contagem de 1 é a base.|  
 |**usecounts**|**int**|Número de vezes em que este objeto de cache foi usado desde o começo.|  
 |**pagesused**|**int**|Número de páginas consumidas pelo objeto de cache.|  

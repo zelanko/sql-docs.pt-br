@@ -1,4 +1,5 @@
 ---
+description: Comprimento do tipo de dados de intervalo
 title: Comprimento do tipo de dados do intervalo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68bb4daa47cb58d5a0ff7b680a2d2154fb14b345
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 589a13e0f0b2c6e6e42ade0f0dc32415556a0efc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483271"
 ---
 # <a name="interval-data-type-length"></a>Comprimento do tipo de dados de intervalo
 As regras a seguir são usadas para determinar o comprimento de um tipo de dados de intervalo em caracteres. O comprimento é expresso em número de caracteres. O número de bytes depende do conjunto de caracteres. O comprimento inclui os seguintes valores adicionados juntos:  

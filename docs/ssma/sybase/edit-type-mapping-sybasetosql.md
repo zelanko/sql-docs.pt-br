@@ -1,4 +1,5 @@
 ---
+description: Editar mapeamento de tipo (SybaseToSQL)
 title: Editar mapeamento de tipo (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 043eb1a2eaf9325d8a252598b26317017d92fa94
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3f9f5e0f498dbe6a8fe45a9c80cbf3c512f04bac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492261"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Editar mapeamento de tipo (SybaseToSQL)
 A caixa de diálogo **Editar mapeamento de tipo** permite especificar como os tipos são mapeados entre os objetos de banco de dados de origem e de destino.  
@@ -44,6 +45,6 @@ Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de da
   
 Se o tipo de dados for de comprimento variável, o campo a seguir aparecerá em **tipo de destino**:  
   
-**Substituir por**  
+**Replace with**  
 Especifique o comprimento de destino para esse mapeamento. Por exemplo, para o tipo de dados **nvarchar** , você pode inserir 20 para especificar que o tipo de dados de origem especificado deve ser mapeado para **nvarchar (20)**.  
   

@@ -1,4 +1,5 @@
 ---
+description: Execução assíncrona (método de notificação)
 title: Execução assíncrona (método de notificação) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c201d71d42c40277ad67cef25922e55e97de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483119"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Execução assíncrona (método de notificação)
 O ODBC permite a execução assíncrona de operações de conexão e instrução. Um thread de aplicativo pode chamar uma função ODBC no modo assíncrono e a função pode retornar antes que a operação seja concluída, permitindo que o thread do aplicativo execute outras tarefas. No SDK do Windows 7, para instruções assíncronas ou operações de conexão, um aplicativo determinou que a operação assíncrona foi concluída usando o método de sondagem. Para obter mais informações, consulte [execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir do SDK do Windows 8, você pode determinar que uma operação assíncrona seja concluída usando o método de notificação.  
@@ -330,7 +331,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Habilitar|não nulo|Notificação assíncrona|  
 |Habilitar|null|Sondagem assíncrona|  
-|Desabilitar|any|Síncrona|  
+|Desabilitar|any|Síncronos|  
   
  Um aplicativo pode desabilitar o modo de operação assíncrona temporal. O ODBC ignora valores de SQL_ATTR_ASYNC_DBC_EVENT se a operação assíncrona de nível de conexão estiver desabilitada. O ODBC ignora valores de SQL_ATTR_ASYNC_STMT_EVENT se a operação assíncrona de nível de instrução estiver desabilitada.  
   

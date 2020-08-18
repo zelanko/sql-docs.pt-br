@@ -1,4 +1,5 @@
 ---
+description: DELETE (DMX)
 title: EXCLUIR (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ce350c4d99fec986d8df06c364e6f6adac94324
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c6050a387af893e984b95c036181b7f16a269dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491517"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

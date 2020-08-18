@@ -1,4 +1,5 @@
 ---
+description: Tipo de cursor e combinações de simultaneidade
 title: Tipo de cursor e combinações de simultaneidade | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6397b5d675546bf41102f037b68c0022bec74df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae82825f7b5c6f670e111b859ee02ab4ab875626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412885"
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>Tipo de cursor e combinações de simultaneidade
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: Configurar opções programaticamente para drivers do Access
 title: Definindo opções programaticamente para o driver de acesso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a90f0a20569a2a0a5bb93dec7aa4b95b50093dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae798b3c3d91917e461bb6b5a58cb06734870d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412412"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Configurar opções programaticamente para drivers do Access
 

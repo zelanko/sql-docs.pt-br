@@ -1,4 +1,5 @@
 ---
+description: Considerações sobre programação de drivers do dBASE
 title: Considerações sobre programação de driver do dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a79032afa689e39aa225e7cab9c131486ef02e77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec4b99d432c67db6b68b381cfb67ca9ce5e0fa00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412732"
 ---
 # <a name="dbase-driver-programming-considerations"></a>Considerações sobre programação de drivers do dBASE
 Esta seção contém os seguintes tópicos.  

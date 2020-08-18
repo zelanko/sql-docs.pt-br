@@ -1,4 +1,5 @@
 ---
+description: MSreplication_objects (Transact-SQL)
 title: MSreplication_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57a4c20f6aac12f1671b88dc04b0366290abe127
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64cb218090b811b60bd45ec598b4615be9150ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492691"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

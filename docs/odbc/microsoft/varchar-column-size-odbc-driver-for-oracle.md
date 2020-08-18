@@ -1,4 +1,5 @@
 ---
+description: Tamanho de coluna VARCHAR (Driver ODBC para Oracle)
 title: Tamanho da coluna VARCHAR (driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f11e1de3171521c57c80beb207d33e67d26d3e33
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c490487f0edb15fe7d7165b79c4c5f1730a0dd22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449058"
 ---
 # <a name="varchar-column-size-odbc-driver-for-oracle"></a>Tamanho de coluna VARCHAR (Driver ODBC para Oracle)
 > [!IMPORTANT]  

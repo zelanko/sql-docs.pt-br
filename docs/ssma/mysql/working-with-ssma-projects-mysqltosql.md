@@ -1,4 +1,5 @@
 ---
+description: Trabalhar com projetos do SSMA (MySQLToSQL)
 title: Trabalhando com projetos do SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492409"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Trabalhar com projetos do SSMA (MySQLToSQL)
 Para migrar bancos de dados MySQL para SQL Server ou SQL Azure, você deve primeiro criar um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -81,7 +82,7 @@ Para migrar dados do MySQL para SQL Server ou SQL Azure, você deve criar um pro
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   Banco de Dados SQL do Azure  
   
@@ -105,7 +106,7 @@ Se os bancos de dados no projeto tiverem sido alterados ou não tiverem sido con
   
 1.  Para cada banco de dados que mostra um status de **metadados ausentes**, marque a caixa de seleção ao lado do nome do banco de dados. Salvar metadados pode levar vários minutos. Se você não quiser salvar os metadados neste ponto, não marque nenhuma caixa de seleção.  
   
-2.  Clique em **Salvar**.  
+2.  Clique em **Save** (Salvar).  
   
 O SSMA analisará os esquemas do MySQL e salvará os metadados no arquivo do projeto.  
   

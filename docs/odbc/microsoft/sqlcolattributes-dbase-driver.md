@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes (Driver do dBASE)
 title: SQLColAttributes (driver do dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9e9d5adb75a99784d7244852bfda0499e481fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2adb0f1ffb2fb311bcdb8e3387d3e7a1bfd34de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412232"
 ---
 # <a name="sqlcolattributes-dbase-driver"></a>SQLColAttributes (Driver do dBASE)
 > [!NOTE]  

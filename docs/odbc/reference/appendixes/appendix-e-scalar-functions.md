@@ -1,4 +1,5 @@
 ---
+description: 'Apêndice E: Funções escalares'
 title: 'Apêndice E: funções escalares | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea354a7f882bd1a75c5f16fb19350d69ca11d375
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a814de22df4a97e3c3b3abd0ddc30266fe02a30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411432"
 ---
 # <a name="appendix-e-scalar-functions"></a>Apêndice E: Funções escalares
 O ODBC especifica os seguintes tipos de funções escalares, com informações detalhadas sobre cada um desses tipos de função fornecidos nas seções correspondentes deste apêndice. As descrições de função incluem a sintaxe associada.  
   
  Este apêndice contém os tópicos a seguir.  
   
--   [Funções de Cadeia de Caracteres](../../../odbc/reference/appendixes/string-functions.md)  
+-   [Funções de cadeia de caracteres](../../../odbc/reference/appendixes/string-functions.md)  
   
 -   [Funções numéricas](../../../odbc/reference/appendixes/numeric-functions.md)  
   
 -   [Funções de hora, data e intervalo](../../../odbc/reference/appendixes/time-date-and-interval-functions.md)  
   
--   [Funções do sistema](../../../odbc/reference/appendixes/system-functions.md)  
+-   [Funções do Sistema](../../../odbc/reference/appendixes/system-functions.md)  
   
 -   [Função de conversão de tipo de dados explícitos](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)  
   

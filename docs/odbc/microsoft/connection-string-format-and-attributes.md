@@ -1,4 +1,5 @@
 ---
+description: Atributos e formato da cadeia de conexão
 title: Formato e atributos da cadeia de conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d95866976d2e83c058f83b3a0ae5e9a4e8888ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53efb4dd010913029185f0cbf27f0991f34815fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412926"
 ---
 # <a name="connection-string-format-and-attributes"></a>Atributos e formato da cadeia de conexão
 > [!IMPORTANT]  
@@ -31,9 +32,9 @@ ms.locfileid: "81281146"
 ```  
   
 > [!NOTE]  
->  O Microsoft ODBC driver for Oracle dá suporte ao formato de cadeia de conexão da primeira versão do driver, que `CONNECTSTRING`usou = em `SERVER=`vez de.  
+>  O Microsoft ODBC driver for Oracle dá suporte ao formato de cadeia de conexão da primeira versão do driver, que usou `CONNECTSTRING` = em vez de `SERVER=` .  
   
- Se você estiver se conectando a um provedor de fonte de dados que dá suporte à `Trusted_Connection=yes` autenticação do Windows, especifique o lugar das informações de ID de usuário e senha na cadeia de conexão.  
+ Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique `Trusted_Connection=yes` o lugar das informações de ID de usuário e senha na cadeia de conexão.  
   
  Você deve especificar o nome da fonte de dados se não especificar os atributos UID, PWD, SERVER (ou CONNECTstring) e DRIVER. No entanto, todos os outros atributos são opcionais. Se você não especificar um atributo, esse atributo será padronizado para aquele especificado na guia DSN relevante da caixa de diálogo **administrador de fonte de dados ODBC** . O valor do atributo pode diferenciar maiúsculas de minúsculas.  
   

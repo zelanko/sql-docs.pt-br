@@ -1,4 +1,5 @@
 ---
+description: Retornar os parâmetros de matriz de procedimentos armazenados
 title: Retornando parâmetros de matriz de procedimentos armazenados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc998dadc0e0c4a4bfe054bfd1d40296bc176393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6b18921e027e16f322c47da9757ef9c8ee7f1aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449278"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Retornar os parâmetros de matriz de procedimentos armazenados
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.locfileid: "81292856"
 ```  
   
 > [!NOTE]  
->  O \<parâmetro Max-Records-requested> deve ser maior ou igual ao número de linhas presentes no conjunto de resultados. Caso contrário, o Oracle retornará um erro que é passado para o usuário pelo driver.  
+>  O \<max-records-requested> parâmetro deve ser maior ou igual ao número de linhas presentes no conjunto de resultados. Caso contrário, o Oracle retornará um erro que é passado para o usuário pelo driver.  
 >   
 >  Os registros PL/SQL não podem ser usados como parâmetros de matriz. Cada parâmetro de matriz pode representar apenas uma coluna de uma tabela de banco de dados.  
   

@@ -1,4 +1,5 @@
 ---
+description: TopCount (MDX)
 title: TopCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7d917963d8500e06bf9d2adcd1057e72e50512a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412872"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 

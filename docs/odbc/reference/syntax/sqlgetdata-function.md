@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetData
 title: Função SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac11505b8e47dae8df53af27c64a7ee6372b3f28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a659e1bb5ad7765dbfcbcb01dbc16744de7cfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461074"
 ---
 # <a name="sqlgetdata-function"></a>Função SQLGetData
 **Conformidade**  
@@ -70,7 +71,7 @@ SQLRETURN SQLGetData(
  *BufferLength*  
  Entrada Comprimento do buffer **TargetValuePtr* em bytes.  
   
- O driver usa *BufferLength* para evitar a gravação após o final do \*buffer *TargetValuePtr* ao retornar dados de comprimento variável, como caracteres ou dados binários. Observe que o driver conta o caractere de terminação nula ao retornar dados de \*caractere para *TargetValuePtr*. *O *TargetValuePtr* deve, portanto, conter espaço para o caractere de terminação nula ou o driver truncará os dados.  
+ O driver usa *BufferLength* para evitar a gravação após o final do \* buffer *TargetValuePtr* ao retornar dados de comprimento variável, como caracteres ou dados binários. Observe que o driver conta o caractere de terminação nula ao retornar dados de caractere para \* *TargetValuePtr*. *O *TargetValuePtr* deve, portanto, conter espaço para o caractere de terminação nula ou o driver truncará os dados.  
   
  Quando o driver retorna dados de comprimento fixo, como um inteiro ou uma estrutura de data, o driver ignora *BufferLength* e assume que o buffer é grande o suficiente para manter os dados. Portanto, é importante que o aplicativo aloque um buffer grande o suficiente para dados de comprimento fixo ou o driver será gravado após o final do buffer.  
   
@@ -92,7 +93,7 @@ SQLRETURN SQLGetData(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLGetData** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetData** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -153,7 +154,7 @@ SQLRETURN SQLGetData(
  Se o argumento *TargetType* for um tipo de dados de intervalo, a precisão inicial do intervalo padrão (2) e a precisão do intervalo padrão de segundos (6), conforme definido nos campos SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION de ARD, respectivamente, serão usados para os dados. Se o argumento *TargetType* for um tipo de dados SQL_C_NUMERIC, a precisão padrão (definida pelo driver) e a escala padrão (0), conforme definido nos campos SQL_DESC_PRECISION e SQL_DESC_SCALE do ARD, serão usados para os dados. Se qualquer precisão ou escala padrão não for apropriada, o aplicativo deverá definir explicitamente o campo de descritor apropriado por uma chamada para **SQLSetDescField** ou **SQLSetDescRec**. Ele pode definir o campo SQL_DESC_CONCISE_TYPE como SQL_C_NUMERIC e chamar **SQLGetData** com um argumento *TargetType* de SQL_ARD_TYPE, o que fará com que os valores de precisão e escala nos campos do descritor sejam usados.  
   
 > [!NOTE]
->  No ODBC 2 *. x*, os aplicativos definem *TargetType* como SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP para indicar \*que *TargetValuePtr* é uma estrutura de data, hora ou timestamp. No ODBC 3 *. x*, os aplicativos definem *TargetType* como SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. O Gerenciador de driver faz mapeamentos apropriados, se necessário, com base na versão do aplicativo e do driver.  
+>  No ODBC 2 *. x*, os aplicativos definem *TargetType* como SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP para indicar que \* *TargetValuePtr* é uma estrutura de data, hora ou timestamp. No ODBC 3 *. x*, os aplicativos definem *TargetType* como SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. O Gerenciador de driver faz mapeamentos apropriados, se necessário, com base na versão do aplicativo e do driver.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Recuperando dados de comprimento variável em partes  
  **SQLGetData** pode ser usado para recuperar dados de uma coluna que contém dados de comprimento variável em partes – ou seja, quando o identificador do tipo de dados SQL da coluna é SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou um identificador específico de driver para um tipo de comprimento variável.  
@@ -189,7 +190,7 @@ SQLRETURN SQLGetData(
   
      **SQLGetData** nunca trunca os dados convertidos em tipos de dados de comprimento fixo; Ele sempre pressupõe que o comprimento de **TargetValuePtr* é o tamanho do tipo de dados.  
   
-6.  Coloca os dados convertidos (e possivelmente truncados) \*em *TargetValuePtr*. Observe que **SQLGetData** não pode retornar dados fora de linha.  
+6.  Coloca os dados convertidos (e possivelmente truncados) em \* *TargetValuePtr*. Observe que **SQLGetData** não pode retornar dados fora de linha.  
   
 7.  Coloca o comprimento dos dados em \* *StrLen_or_IndPtr*. Se *StrLen_or_IndPtr* era um ponteiro nulo, **SQLGetData** não retornará o comprimento.  
   

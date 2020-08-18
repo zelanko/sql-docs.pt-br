@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetDiagField
 title: Função SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a26319868a4b94b895da73d39b284f612fe35889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92043f5deb505d60ebe168a9c219c4d37a304ed5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461021"
 ---
 # <a name="sqlgetdiagfield-function"></a>Função SQLGetDiagField
 
@@ -79,7 +80,7 @@ SQLRETURN SQLGetDiagField(
  Se *DiagInfoPtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere de terminação nula para dados de caracteres) disponíveis para retornar no buffer apontado por *DiagInfoPtr*.  
   
  *BufferLength*  
- Entrada Se *DiagIdentifier* for um diagnóstico definido pelo ODBC e o *DiagInfoPtr* apontar para uma cadeia de caracteres ou um buffer binário, esse argumento deverá ter o \*comprimento de *DiagInfoPtr*. Se *DiagIdentifier* for um campo definido pelo ODBC e \* *DiagInfoPtr* for um inteiro, *BufferLength* será ignorado. Se o valor em * \*DiagInfoPtr* for uma cadeia de caracteres Unicode (ao chamar **SQLGetDiagFieldW**), o argumento *BufferLength* deverá ser um número par.  
+ Entrada Se *DiagIdentifier* for um diagnóstico definido pelo ODBC e o *DiagInfoPtr* apontar para uma cadeia de caracteres ou um buffer binário, esse argumento deverá ter o comprimento de \* *DiagInfoPtr*. Se *DiagIdentifier* for um campo definido pelo ODBC e \* *DiagInfoPtr* for um inteiro, *BufferLength* será ignorado. Se o valor em * \* DiagInfoPtr* for uma cadeia de caracteres Unicode (ao chamar **SQLGetDiagFieldW**), o argumento *BufferLength* deverá ser um número par.  
   
  Se *DiagIdentifier* for um campo definido pelo driver, o aplicativo indicará a natureza do campo para o Gerenciador de driver, definindo o argumento *BufferLength* . *BufferLength* pode ter os seguintes valores:  
   
@@ -89,7 +90,7 @@ SQLRETURN SQLGetDiagField(
   
 -   Se *DiagInfoPtr* for um ponteiro para um valor diferente de uma cadeia de caracteres ou uma cadeia de caracteres binária, *BufferLength* deverá ter o valor SQL_IS_POINTER.  
   
--   Se * \*DiagInfoPtr* contiver um tipo de dados de comprimento fixo, *BufferLength* será SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, conforme apropriado.  
+-   Se * \* DiagInfoPtr* contiver um tipo de dados de comprimento fixo, *BufferLength* será SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, conforme apropriado.  
   
  *StringLengthPtr*  
  Der Ponteiro para um buffer no qual retornar o número total de bytes (exceto o número de bytes necessários para o caractere de terminação nula) disponível para retornar em \* *DiagInfoPtr*, para dados de caractere. Se o número de bytes disponíveis para retornar for maior ou igual a *BufferLength*, o texto em \* *DiagInfoPtr* será truncado para *BufferLength* menos o comprimento de um caractere de terminação nula.  
@@ -97,7 +98,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_NO_DATA.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  **SQLGetDiagField** não publica registros de diagnóstico para si mesmo. Ele usa os seguintes valores de retorno para relatar o resultado de sua própria execução:  
   
 -   SQL_SUCCESS: a função retornou informações de diagnóstico com êxito.  
@@ -218,7 +219,7 @@ SQLRETURN SQLGetDiagField(
 |*conversão-definição*|"CRIAR TRADUÇÃO"|SQL_DIAG_CREATE_TRANSLATION|  
 |*atualização – posicionada na instrução*|"CURSOR DE ATUALIZAÇÃO DINÂMICA"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Update-Statement-pesquised*|"ATUALIZAR ONDE"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*cadeia de caracteres vazia*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown (desconhecido)|*cadeia de caracteres vazia*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.

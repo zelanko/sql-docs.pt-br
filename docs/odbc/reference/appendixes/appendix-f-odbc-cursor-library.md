@@ -1,4 +1,5 @@
 ---
+description: 'Apêndice F: Biblioteca de cursores ODBC'
 title: 'Apêndice F: biblioteca de cursores ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 325c7cdc5d2fb185ef3dbd2500a20230d90193bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411422"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Apêndice F: Biblioteca de cursores ODBC
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca de cursores ODBC (Odbccr32. dll) dá suporte a um bloco de cursores rolável para qualquer driver que esteja em conformidade com o nível de conformidade da API de nível 1 e possa ser redistribuído por desenvolvedores com seus aplicativos ou drivers. A biblioteca de cursores também dá suporte a instruções de atualização e exclusão posicionadas para conjuntos de resultados gerados por instruções **Select** . Embora ele dê suporte apenas a cursores estáticos e somente de encaminhamento, a biblioteca de cursores atende às necessidades de muitos aplicativos. Além disso, ele pode fornecer um bom desempenho, especialmente para conjuntos de resultados de tamanho pequeno para médio e para aplicativos que não têm um bom suporte a cursores.  
+ A biblioteca de cursores ODBC (Odbccr32.dll) dá suporte a blocos de interrolagem de bloco para qualquer driver que esteja em conformidade com o nível de conformidade da API de nível 1 e possa ser redistribuído por desenvolvedores com seus aplicativos ou drivers. A biblioteca de cursores também dá suporte a instruções de atualização e exclusão posicionadas para conjuntos de resultados gerados por instruções **Select** . Embora ele dê suporte apenas a cursores estáticos e somente de encaminhamento, a biblioteca de cursores atende às necessidades de muitos aplicativos. Além disso, ele pode fornecer um bom desempenho, especialmente para conjuntos de resultados de tamanho pequeno para médio e para aplicativos que não têm um bom suporte a cursores.  
   
  A biblioteca de cursores é uma DLL (biblioteca de vínculo dinâmico) que reside entre o Gerenciador de driver e o driver. Quando um aplicativo chama uma função, o Gerenciador de driver chama a função na biblioteca de cursores, que executa a função ou a chama no driver especificado. Para uma determinada conexão, um aplicativo especifica se a biblioteca de cursores sempre será usada, usada se o driver não oferecer suporte a cursores roláveis ou nunca usado.  
   
@@ -44,6 +45,6 @@ ms.locfileid: "81292426"
   
 -   [Exemplo de código de biblioteca de cursores](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
--   [Notas de implementação](../../../odbc/reference/appendixes/implementation-notes.md)  
+-   [Notas da implementação](../../../odbc/reference/appendixes/implementation-notes.md)  
   
 -   [Códigos de erro da Biblioteca de cursores do ODBC](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

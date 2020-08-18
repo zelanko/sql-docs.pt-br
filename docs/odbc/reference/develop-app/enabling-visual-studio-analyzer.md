@@ -1,4 +1,5 @@
 ---
+description: Habilitar o Visual Studio Analyzer
 title: Habilitando Visual Studio Analyzer | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d80d54dc4aeebcc5c32d07a2beebb9ded41bf355
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e657a6ea9bff73aee54b5d4fc474283e1109b11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483008"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Habilitar o Visual Studio Analyzer
 > [!IMPORTANT]  
@@ -29,7 +30,7 @@ ms.locfileid: "81300446"
   
 1.  Acesse o administrador de fonte de dados ODBC.  
   
-2.  Clique na guia **rastreamento** .  
+2.  Clique na guia **Rastreamento**.  
   
 3.  Clique em **Iniciar rastreamento de Visual Studio Analyzer**.  
   

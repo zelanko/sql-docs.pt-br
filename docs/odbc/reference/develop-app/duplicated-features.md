@@ -1,4 +1,5 @@
 ---
+description: Recursos duplicados
 title: Recursos duplicados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00f5529cfbfacebcad78a0a4433e84f34034694a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0aa03482efbadc8dac2fa887deb0f01d9b167214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483019"
 ---
 # <a name="duplicated-features"></a>Recursos duplicados
 As funções ODBC *2. x* a seguir foram duplicadas pelas funções ODBC *3. x* . Como resultado, as funções ODBC *2. x* são preteridas no ODBC *3. x*. As funções ODBC *3. x* são chamadas de funções de substituição.  

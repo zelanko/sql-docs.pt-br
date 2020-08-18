@@ -1,4 +1,5 @@
 ---
+description: Esquema de versão do driver
 title: Esquema de versão do driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 864a8bd892315b060fc6fcf42dbe69dfea61ae59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0414da00ffc5a220e3bf6b13837880b1116f58eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412722"
 ---
 # <a name="driver-version-scheme"></a>Esquema de versão do driver
 > [!IMPORTANT]  
@@ -28,7 +29,7 @@ ms.locfileid: "81303447"
 |Versão do driver|Número de build|Histórico de disponibilidade|  
 |--------------------|------------------|--------------------------|  
 |1.0|2.00.6235|Visual C++ 4,2 e Visual Basic 5,0, Enterprise Edition|  
-|2,0|2.73.7269|Visual Studio 97 e MDAC 1.5 a|  
+|2.0|2.73.7269|Visual Studio 97 e MDAC 1.5 a|  
 |2,0 atualizado|2.73.7283.01|IIS 4,0|  
 |2,0 atualizado|2.73.7283.03|MDAC 1.5 b e 1.5 c|  
 |2,0 atualizado|2.73.7356|SDK DO ODBC 3,5|  
