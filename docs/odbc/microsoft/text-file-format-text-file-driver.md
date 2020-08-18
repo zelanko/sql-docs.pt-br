@@ -1,4 +1,5 @@
 ---
+description: Text File Format (Driver de Arquivo de texto)
 title: Formato de arquivo de texto (driver de arquivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb402f0f186529da33974b77ffeecdd7ed788d53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449088"
 ---
 # <a name="text-file-format-text-file-driver"></a>Text File Format (Driver de Arquivo de texto)
 O driver de texto ODBC dá suporte a arquivos de texto delimitados e de largura fixa. Um arquivo de texto consiste em uma linha de cabeçalho opcional e zero ou mais linhas de texto.  
@@ -42,7 +43,7 @@ O driver de texto ODBC dá suporte a arquivos de texto delimitados e de largura 
 |Não itálico|Caracteres que devem ser inseridos conforme mostrado|  
 |*itálico*|Argumentos que são definidos em outro lugar na gramática|  
 |colchetes ([])|Itens opcionais|  
-|chaves ({})|Uma lista de opções mutuamente exclusivas|  
+|chaves ( {} )|Uma lista de opções mutuamente exclusivas|  
 |barras verticais (&#124;)|Separar opções mutuamente exclusivas|  
 |reticências (...)|Itens que podem ser repetidos uma ou mais vezes|  
   
@@ -67,7 +68,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  A largura de cada coluna em um arquivo de texto de largura fixa é especificada no arquivo Schema. ini.  
+>  A largura de cada coluna em um arquivo de texto de largura fixa é especificada no arquivo de Schema.ini.  
   
 ```  
   
@@ -87,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  O delimitador em um arquivo de texto delimitado por personalizado é especificado no arquivo Schema. ini.  
+>  O delimitador em um arquivo de texto delimitado por personalizado é especificado no arquivo de Schema.ini.  
   
 ```  
 quote-character ::= "  

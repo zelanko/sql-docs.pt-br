@@ -1,4 +1,5 @@
 ---
+description: 'Apêndice G: Diretrizes de driver para compatibilidade com versões anteriores'
 title: 'Apêndice G: diretrizes de driver para compatibilidade com versões anteriores | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1055f94cb54bba9262f210e5df5f028029aebf5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2c09485879c2f0d16518dcfc0a17f4bf3a13943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411402"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Apêndice G: Diretrizes de driver para compatibilidade com versões anteriores
 Este apêndice fornece informações para os gravadores de driver que trabalham no ODBC 3. drivers *x* que precisam dar suporte ao ODBC 2. aplicativos *x* . Para obter mais informações sobre compatibilidade com versões anteriores, consulte [compatibilidade com versões anteriores e conformidade com padrões](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

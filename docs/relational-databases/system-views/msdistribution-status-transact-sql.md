@@ -1,4 +1,5 @@
 ---
+description: MSdistribution_status (Transact-SQL)
 title: MSdistribution_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: df060b429b48eb1e1a99c48dbb2789fce3e10833
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 07acca59b78290d1cab5d0c528604a8a9616ece8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473088"
 ---
 # <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889159"
 |**DelivCmdsInDistDB**|**int**|O número de comandos entregues aos Assinantes.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

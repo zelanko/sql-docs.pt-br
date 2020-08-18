@@ -1,4 +1,5 @@
 ---
+description: Executar funções de catálogo
 title: Executando funções de catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c59cbda3-e214-4399-9edc-cfac86b378d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6469a5394e232ab9d9135fbbbd56ba7b791ccbcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19baae1518078c44b8e170fb623eab0087bac12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482909"
 ---
 # <a name="executing-catalog-functions"></a>Executar funções de catálogo
 Como uma função de catálogo cria um conjunto de resultados, é equivalente a executar qualquer instrução SQL que gere o conjunto de resultados. Na verdade, as funções de catálogo são geralmente implementadas executando instruções SQL predefinidas ou chamando procedimentos predefinidos que são fornecidos com o driver ou DBMS. Quase tudo que se aplica a instruções SQL que criam conjuntos de resultados também se aplica às funções de catálogo. Por exemplo, o atributo de instrução SQL_ATTR_MAX_ROWS limita o número de linhas retornadas pela função de catálogo, assim como limita o número de linhas retornadas por uma instrução **Select** .  

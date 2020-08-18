@@ -1,4 +1,5 @@
 ---
+description: Conectar-se ao banco de dados SQL do Azure (SybaseToSQL)
 title: Conectar-se ao banco de dados SQL do Azure (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50f130969949abd6f863c1a7d63c4a4e2d27decc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492309"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>Conectar-se ao banco de dados SQL do Azure (SybaseToSQL)
 Use a caixa de diálogo conectar ao banco de dados SQL do Azure para se conectar ao banco de dados do banco de dados SQL do Azure que você deseja migrar.  
@@ -26,7 +27,7 @@ Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar 
   
 Selecione ou insira o nome do servidor para se conectar ao banco de dados SQL do Azure.  
   
-**Backup de banco de dados**  
+**Banco de dados**  
   
 Selecione, insira ou **procure** o nome do banco de dados.  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.trace_event_bindings (Transact-SQL)
 title: sys. trace_event_bindings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10d27989dd5f6fe224d3fc8a70da27634b70ce32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e658148706de82ba382ca6acae4e1b02014ce92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460530"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85883603"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys. TRACES &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys. trace_categories &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys. trace_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   

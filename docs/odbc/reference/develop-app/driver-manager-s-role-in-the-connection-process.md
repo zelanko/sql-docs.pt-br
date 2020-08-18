@@ -1,4 +1,5 @@
 ---
+description: Função de&#39;s do Gerenciador de driver no processo de conexão
 title: Função de&#39;s do Gerenciador de driver no processo de conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0227a4063573cb05ecaa9434605ba35f2811bd06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb4eea978604960d87ef6c5b621e5801121c5f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483039"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Função de&#39;s do Gerenciador de driver no processo de conexão
 Lembre-se de que os aplicativos não chamam funções de driver diretamente. Em vez disso, eles chamam as funções do Gerenciador de driver com o mesmo nome e o Gerenciador de driver chama as funções de driver. Normalmente, isso ocorre quase imediatamente. Por exemplo, o aplicativo chama **SQLExecute** no Gerenciador de driver e, após algumas verificações de erro, o Gerenciador de driver chama **SQLExecute** no driver.  

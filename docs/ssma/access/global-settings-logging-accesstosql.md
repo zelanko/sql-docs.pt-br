@@ -1,4 +1,5 @@
 ---
+description: Configurações globais (log) (AccessToSQL)
 title: Configurações globais (log) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: dbb89fe23d8ca357bcac02b16100905e27c54d8e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc7bec3f7f4ce358ccbb725e039208f574ae7aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472558"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Configurações globais (log) (AccessToSQL)
 Use a caixa de diálogo **configurações globais** para especificar as configurações de log para o SSMA. Normalmente, você alteraria essas configurações apenas ao trabalhar com o suporte ao produto.  

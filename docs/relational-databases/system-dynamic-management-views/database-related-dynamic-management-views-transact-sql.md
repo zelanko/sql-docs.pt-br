@@ -1,4 +1,5 @@
 ---
+description: Exibições de gerenciamento dinâmico relacionadas a bancos de dados (Transact-SQL)
 title: Exibições de gerenciamento dinâmico relacionadas ao banco de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 757e536bd5110b1a4a5abb70a0fc3d899d70f852
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 2de737113a6ec114e3a296e5d826ed4034b2307c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460458"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico relacionadas a bancos de dados (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

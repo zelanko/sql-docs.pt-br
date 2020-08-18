@@ -1,4 +1,5 @@
 ---
+description: Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC)
 title: Cópia em massa, tipos aprimorados OLE DB
 ms.custom: ''
 ms.date: 12/18/2019
@@ -13,11 +14,12 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e2fedfdc15ae247a77523a405204ed0b52edda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 208cc75e186c0c1de32ed10d263359ffdbb7e039
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423878"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +29,7 @@ ms.locfileid: "86001696"
 ## <a name="format-files"></a>Arquivos de formato  
  Ao criar arquivos de formato interativamente, a tabela a seguir descreve a entrada usada para especificar os tipos de data/hora e os nomes de tipo de dados do arquivo de host correspondentes.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta ao prompt: "Insira o tipo de armazenamento de arquivo do campo <field_name> [ \<default> ]:"|  
+|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta à solicitação: "Insira o tipo de armazenamento de arquivo do campo <nome_do_campo> [\<default>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -144,5 +146,5 @@ ms.locfileid: "86001696"
 |||
 
 ## <a name="see-also"></a>Consulte Também  
- [Melhorias de data e hora &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
+ [Melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
  [Melhorias de data e hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

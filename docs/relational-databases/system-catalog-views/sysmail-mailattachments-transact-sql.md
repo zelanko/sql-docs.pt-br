@@ -1,4 +1,5 @@
 ---
+description: sysmail_mailattachments (Transact-SQL)
 title: sysmail_mailattachments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0fd6122ec99d4f5788fbe9f2b33478df7723f238
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3bdec861d8793d2943111a692d5bcde98b582cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460517"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,10 +49,10 @@ ms.locfileid: "85900970"
  Concedido à função de servidor fixa **sysadmin** e à função de banco de dados **DatabaseMailUserRole** . Quando executado por um membro da função de servidor fixa **sysadmin** , essa exibição mostra todos os anexos. Todos os outros usuários veem somente os anexos de mensagens que enviaram.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sysmail_allitems](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_faileditems](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_sentitems](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_unsentitems](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_allitems ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_faileditems ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_sentitems ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_unsentitems ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
   
   

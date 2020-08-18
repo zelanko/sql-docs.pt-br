@@ -1,4 +1,5 @@
 ---
+description: Estrutura de intervalo do C
 title: Estrutura de intervalo de C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89962558fdbd6f0de5b5e030fe504669d51c40be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411202"
 ---
 # <a name="c-interval-structure"></a>Estrutura de intervalo do C
 Cada um dos tipos de dados de intervalo de C listados na seção [tipos de dados c](../../../odbc/reference/appendixes/c-data-types.md) usa a mesma estrutura para conter os dados do intervalo. Quando **SQLFetch**, **SQLFetchScroll**ou **SQLGetData** é chamado, o driver retorna dados para a estrutura de SQL_INTERVAL_STRUCT, usa o valor que foi especificado pelo aplicativo para os tipos de dados C (na chamada de **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**) para interpretar o conteúdo de SQL_INTERVAL_STRUCT e popula o campo *interval_type* da estrutura com o valor de *Enumeração* correspondente ao tipo C. Observe que os drivers não lêem o campo *interval_type* para determinar o tipo do intervalo; Eles recuperam o valor do campo descritor de SQL_DESC_CONCISE_TYPE. Quando a estrutura é usada para dados de parâmetro, o driver usa o valor especificado pelo aplicativo no campo SQL_DESC_CONCISE_TYPE do APD para interpretar o conteúdo de SQL_INTERVAL_STRUCT, mesmo que o aplicativo defina o valor do campo *interval_type* para um valor diferente.  

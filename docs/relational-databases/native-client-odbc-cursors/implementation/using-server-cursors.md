@@ -1,4 +1,5 @@
 ---
+description: Usando cursores de servidor
 title: Usando cursores do servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3436e01cfe4c9585c6ecec8111077ecec13bd4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e282ca10124b83956626933867f287be38b001f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423918"
 ---
 # <a name="using-server-cursors"></a>Usando cursores de servidor
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

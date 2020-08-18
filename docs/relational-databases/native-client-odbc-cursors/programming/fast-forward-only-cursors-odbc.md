@@ -1,4 +1,5 @@
 ---
+description: Cursores de somente avanço rápido (ODBC)
 title: Cursores de somente avanço rápido (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 547d833e31e5f2862aace68c87e72b6e73055dce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3c365461cc7dc4874ae76978019da2c67e3b84fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423908"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Cursores de somente avanço rápido (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,6 +56,6 @@ ms.locfileid: "86006530"
 -   Como o tamanho do conjunto de linhas foi definido como 1 além do número de linhas do conjunto de resultados, o servidor detecta o final do cursor e o fecha.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detalhes de programação do cursor &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [Detalhes de programação do cursor &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   
