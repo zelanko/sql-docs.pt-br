@@ -1,4 +1,5 @@
 ---
+description: Configurar opções de pool de conexões ODBC
 title: Definindo opções de pool de conexões ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d8e66c506518b77320347ce9120254aa1cae287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d6f741654f9765e909a8a2e33bce5e7e596f8b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386592"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Configurar opções de pool de conexões ODBC
 O pooling de conexões permite que um aplicativo use uma conexão de um pool de conexões que não precisam ser restabelecidas para cada uso. Você pode usar a guia **pool de conexões** da caixa de diálogo administrador de fonte de **dados ODBC** para habilitar e desabilitar o monitoramento de desempenho. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  

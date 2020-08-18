@@ -1,4 +1,5 @@
 ---
+description: Funções de Cadeia de Caracteres
 title: Funções de cadeia de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d9323809028ad170a4811b1af8b6e276cdbb4293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a5301f49a033dbc6e84a5fe43d68c794a76e84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386472"
 ---
 # <a name="string-functions"></a>Funções de Cadeia de Caracteres
 A tabela a seguir lista as funções de manipulação de cadeia de caracteres. Um aplicativo pode determinar quais funções de cadeia de caracteres têm suporte por um driver chamando **SQLGetInfo** com um *tipo de informação* de SQL_STRING_FUNCTIONS.  
@@ -36,14 +37,14 @@ A tabela a seguir lista as funções de manipulação de cadeia de caracteres. U
   
 |Função|Descrição|  
 |--------------|-----------------|  
-|**ASCII (** _string_exp_ **)** (ODBC 1,0)|Retorna o valor do código ASCII do caractere da extrema esquerda de *string_exp* como um inteiro.|  
-|**BIT_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Retorna o comprimento em bits da expressão de cadeia de caracteres.<br /><br /> Não funciona apenas para tipos de dados de cadeia de caracteres, portanto, não converterá implicitamente *string_exp* em cadeia de caracteres, mas, em vez disso, retornará o tamanho (interno) de qualquer tipo de dados que for fornecido.|  
-|**Char (** _Code_ **)** (ODBC 1,0)|Retorna o caractere que tem o valor de código ASCII especificado pelo *código*. O valor do *código* deve estar entre 0 e 255; caso contrário, o valor de retorno será dependente da fonte de dados.|  
-|**CHAR_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Retorna o comprimento em caracteres da expressão de cadeia de caracteres, se a expressão de cadeia de caracteres for de um tipo de dados de caractere; caso contrário, retorna o comprimento em bytes da expressão de cadeia de caracteres (o menor inteiro não menor que o número de bits dividido por 8). (Essa função é a mesma que a função CHARACTER_LENGTH.)|  
-|**CHARACTER_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Retorna o comprimento em caracteres da expressão de cadeia de caracteres, se a expressão de cadeia de caracteres for de um tipo de dados de caractere; caso contrário, retorna o comprimento em bytes da expressão de cadeia de caracteres (o menor inteiro não menor que o número de bits dividido por 8). (Essa função é a mesma que a função CHAR_LENGTH.)|  
-|**Concat (** _string_exp1_,_string_exp2_**)** (ODBC 1,0)|Retorna uma cadeia de caracteres que é o resultado da concatenação de *string_exp2* para *string_exp1*. A cadeia de caracteres resultante é dependente de DBMS. Por exemplo, se a coluna representada por *string_exp1* contiver um valor nulo, o DB2 retornará nulo, mas SQL Server retornará a cadeia de caracteres não nula.|  
-|**Diferença (** _string_exp1_,_string_exp2_**)** (ODBC 2,0)|Retorna um valor inteiro que indica a diferença entre os valores retornados pela função SOUNDEX para *string_exp1* e *string_exp2*.|  
-|**Insert (** _string_exp1_, *início*, *comprimento*, _string_exp2_**)** (ODBC 1,0)|Retorna uma cadeia de caracteres em que os caracteres de *comprimento* foram excluídos da *string_exp1*, começando no *início*e onde *string_exp2* foi inserido no *string_exp,* começando no *início*.|  
+|**ASCII (** _string_exp_ **)**  (ODBC 1,0)|Retorna o valor do código ASCII do caractere da extrema esquerda de *string_exp* como um inteiro.|  
+|**BIT_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Retorna o comprimento em bits da expressão de cadeia de caracteres.<br /><br /> Não funciona apenas para tipos de dados de cadeia de caracteres, portanto, não converterá implicitamente *string_exp* em cadeia de caracteres, mas, em vez disso, retornará o tamanho (interno) de qualquer tipo de dados que for fornecido.|  
+|**Char (** _Code_ **)**  (ODBC 1,0)|Retorna o caractere que tem o valor de código ASCII especificado pelo *código*. O valor do *código* deve estar entre 0 e 255; caso contrário, o valor de retorno será dependente da fonte de dados.|  
+|**CHAR_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Retorna o comprimento em caracteres da expressão de cadeia de caracteres, se a expressão de cadeia de caracteres for de um tipo de dados de caractere; caso contrário, retorna o comprimento em bytes da expressão de cadeia de caracteres (o menor inteiro não menor que o número de bits dividido por 8). (Essa função é a mesma que a função CHARACTER_LENGTH.)|  
+|**CHARACTER_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Retorna o comprimento em caracteres da expressão de cadeia de caracteres, se a expressão de cadeia de caracteres for de um tipo de dados de caractere; caso contrário, retorna o comprimento em bytes da expressão de cadeia de caracteres (o menor inteiro não menor que o número de bits dividido por 8). (Essa função é a mesma que a função CHAR_LENGTH.)|  
+|**Concat (** _string_exp1_,_string_exp2_**)**  (ODBC 1,0)|Retorna uma cadeia de caracteres que é o resultado da concatenação de *string_exp2* para *string_exp1*. A cadeia de caracteres resultante é dependente de DBMS. Por exemplo, se a coluna representada por *string_exp1* contiver um valor nulo, o DB2 retornará nulo, mas SQL Server retornará a cadeia de caracteres não nula.|  
+|**Diferença (** _string_exp1_,_string_exp2_**)**  (ODBC 2,0)|Retorna um valor inteiro que indica a diferença entre os valores retornados pela função SOUNDEX para *string_exp1* e *string_exp2*.|  
+|**Insert (** _string_exp1_, *início*, *comprimento*, _string_exp2_**)**  (ODBC 1,0)|Retorna uma cadeia de caracteres em que os caracteres de *comprimento* foram excluídos da *string_exp1*, começando no *início*e onde *string_exp2* foi inserido no *string_exp,* começando no *início*.|  
 |**LCase (** _string_exp_ **)** (ODBC 1,0)|Retorna uma cadeia de caracteres igual a em *string_exp*, com todos os caracteres maiúsculos convertidos em minúsculas.|  
 |**Esquerda (** _string_exp_, _contagem_**)** (ODBC 1,0)|Retorna os caracteres de *contagem* mais à esquerda de *string_exp*.|  
 |**Comprimento (** _string_exp_ **)** (ODBC 1,0)|Retorna o número de caracteres em *string_exp,* excluindo os espaços em branco à direita.<br /><br /> **Comprimento** só aceita cadeias de caracteres. Portanto, o converterá implicitamente *string_exp* em uma cadeia de caracteres e retornará o comprimento dessa cadeia de caracteres (não o tamanho interno do tipo de dados).|  

@@ -1,4 +1,5 @@
 ---
+description: Subset (MDX)
 title: Subconjunto (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d0b7e79ebf0415011665ae63e7b9699200e374b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386722"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
 
@@ -31,7 +32,7 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Início*  
+ *Iniciar*  
  Uma expressão numérica válida que especifica a posição da primeira tupla a ser retornada.  
   
  *Count*  
