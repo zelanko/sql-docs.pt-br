@@ -1,4 +1,5 @@
 ---
+description: sys.partition_range_values (Transact-SQL)
 title: sys. partition_range_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33b23f7fe8679b8ff542e88e268c84b6fac6032
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 360b3fc0453fd629608df748ec084172a1305d82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401592"
 ---
 # <a name="syspartition_range_values-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

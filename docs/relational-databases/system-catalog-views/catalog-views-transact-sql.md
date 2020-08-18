@@ -1,4 +1,5 @@
 ---
+description: Exibições do catálogo do sistema (Transact-SQL)
 title: Exibições de catálogo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -23,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b106652573b5324794848dff69e9ae51c81a20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e0fd2e8ee936d9ecf9b7b433870edd3f6da19f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402602"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Exibições do catálogo do sistema (Transact-SQL)
 
@@ -57,13 +58,13 @@ As exibições do catálogo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion
         
         [Controle de Alterações exibições de catálogo &#40;Transact-SQL&#41;](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)
         
-        [Exibições de catálogo do assembly CLR &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
+        [Exibições de catálogo do assembly CLR &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
         
         [Exibições do Coletor de Dados &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)
         
-        [Espaços de dados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)
+        [Espaços de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)
         
-        [Database Mail exibições &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
+        [Database Mail exibições &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
         
         [Exibições de catálogo de testemunha de espelhamento de banco de dados &#40;Transact-SQL&#41;](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
         
@@ -75,13 +76,13 @@ As exibições do catálogo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion
         
         [Exibições de catálogo de propriedades estendidas &#40;Transact-SQL&#41;](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)
         
-        [Exibições de catálogo de operações externas &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
+        [Exibições de catálogo de operações externas &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
         
-        [Exibições de catálogo FileStream e Filetable &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+        [Exibições de catálogo FileStream e Filetable &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
         
         [Exibições de catálogo de pesquisa de texto completo e de busca semântica &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
         
-        [Exibições de catálogo de servidores vinculados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
+        [Exibições de catálogo de servidores vinculados &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
     :::column-end:::
     :::column:::
         [Mensagens &#40;para erros&#41; exibições de catálogo &#40;Transact-SQL&#41;](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
@@ -98,13 +99,13 @@ As exibições do catálogo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion
         
         [Exibições de catálogo de tipos escalares &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
         
-        [Exibições de catálogo de esquemas &#40;&#41;Transact-SQL](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
+        [Exibições de catálogo de esquemas &#40;&#41;Transact-SQL ](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
         
         [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
         
         [Exibições de catálogo do Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)
         
-        [Exibições do catálogo de configuração em todo o servidor &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)
+        [Exibições do catálogo de configuração em todo o servidor &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)
         
         [Exibições de catálogo de dados espaciais](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
@@ -118,6 +119,6 @@ As exibições do catálogo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Exibições do esquema de informações &#40;&#41;Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [Exibições do esquema de informações &#40;&#41;Transact-SQL ](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
 - [Consultando as perguntas frequentes do catálogo do sistema do SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)

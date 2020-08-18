@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_indexes (Transact-SQL)
 title: sys. fulltext_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca20bc73e071fea4a1a0f01acf2c0701b15aca25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b57b7f507e5721647ca44b7f75388fc5ce8de57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401652"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85764701"
 |**incremental_timestamp**|**binário (8)**|Valor do carimbo de data/hora a ser usado para o próximo rastreamento incremental.<br /><br /> NULL = Nenhum.|  
 |**stoplist_id**|**int**|ID da [restoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) associada a este índice de texto completo.|  
 |**data_space_id**|**int**|Grupo de arquivos no qual este índice de texto completo reside.|  
-|**property_list_id**|**int**|ID da lista de propriedades de pesquisa associada a este índice de texto completo. NULL indic que nenhuma lista de propriedades de pesquisa associada ao índice de texto completo. Para obter mais informações sobre essa lista de propriedades de pesquisa, use a exibição de catálogo de [&#41;registered_search_property_lists de &#40;do Transact-SQL](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) .|  
+|**property_list_id**|**int**|ID da lista de propriedades de pesquisa associada a este índice de texto completo. NULL indic que nenhuma lista de propriedades de pesquisa associada ao índice de texto completo. Para obter mais informações sobre essa lista de propriedades de pesquisa, use a exibição de catálogo de [&#41;registered_search_property_lists de &#40;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) .|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
@@ -72,10 +73,10 @@ GO
  [sys. fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
  [sys. fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [sys. fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
- [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [Descartar índice de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
