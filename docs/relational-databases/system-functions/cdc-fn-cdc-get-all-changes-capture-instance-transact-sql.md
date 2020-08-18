@@ -1,4 +1,5 @@
 ---
+description: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 title: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397562"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,8 +73,8 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN de confirmação associado à alteração que preserva a ordem de confirmação da alteração. Alterações confirmadas na mesma transação compartilham o mesmo valor LSN de confirmação.|  
 |**__$seqval**|**binary(10)**|Valor de sequência usado para solicitar alterações em uma linha dentro de uma transação.|  
-|**_ de $ operação**|**int**|Identifica a operação DML (linguagem de manipulação de dados) necessária para aplicar a linha de dados de alteração à fonte de dados de destino. Pode ser um dos seguintes:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores da coluna capturados são os valores anteriores à operação de atualização). Esse valor se aplica somente quando a opção de filtro de linha 'all update old' for especificada.<br /><br /> 4 = atualizar (valores de coluna capturados são os valores após a operação de atualização)|  
-|**_ de $ update_mask**|**varbinary(128)**|Uma máscara de bits com um bit correspondente a cada coluna capturada identificada para a instância de captura. Esse valor tem todos os bits definidos configurados como 1 quando **_ _ $ operation** = 1 ou 2. Quando **_ _ $ operation** = 3 ou 4, somente os bits correspondentes às colunas que foram alteradas são definidos como 1.|  
+|**__$operation**|**int**|Identifica a operação DML (linguagem de manipulação de dados) necessária para aplicar a linha de dados de alteração à fonte de dados de destino. Um dos seguintes pode ser feito:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores da coluna capturados são os valores anteriores à operação de atualização). Esse valor se aplica somente quando a opção de filtro de linha 'all update old' for especificada.<br /><br /> 4 = atualizar (valores de coluna capturados são os valores após a operação de atualização)|  
+|**__$update_mask**|**varbinary(128)**|Uma máscara de bits com um bit correspondente a cada coluna capturada identificada para a instância de captura. Esse valor tem todos os bits definidos configurados como 1 quando **_ _ $ operation** = 1 ou 2. Quando **_ _ $ operation** = 3 ou 4, somente os bits correspondentes às colunas que foram alteradas são definidos como 1.|  
 |**\<captured source table columns>**|varia|As colunas restantes retornadas pela função são as colunas capturadas identificadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   
 ## <a name="permissions"></a>Permissões  

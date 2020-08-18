@@ -1,4 +1,5 @@
 ---
+description: TopCount (DMX)
 title: TopCount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395722"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +39,7 @@ TopCount(<table expression>, <rank expression>, <count>)
   
  A função TopCount foi introduzida originalmente para habilitar previsões associativas e, em geral, produz os mesmos resultados de uma instrução que inclui cláusulas **selecionar Top** e **order by** . Você obterá um melhor desempenho para previsões associativas se usar a função **Predict (DMX)** , que dá suporte à especificação de um número de previsões a serem retornadas.  
   
- No entanto, há situações em que talvez você ainda precise usar o TopCount. Por exemplo, o DMX não dá suporte ao qualificador **Top** em uma instrução de subseleção. A função de [&#41;de PredictHistogram &#40;DMX](../dmx/predicthistogram-dmx.md) também não oferece suporte à adição de **Top**.  
+ No entanto, há situações em que talvez você ainda precise usar o TopCount. Por exemplo, o DMX não dá suporte ao qualificador **Top** em uma instrução de subseleção. A função de [&#41;de PredictHistogram &#40;DMX ](../dmx/predicthistogram-dmx.md) também não oferece suporte à adição de **Top**.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir são consultas de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). As consultas retornam os mesmos resultados, mas o primeiro exemplo usa TopCount e o segundo exemplo usa a função Predict.  
@@ -111,10 +112,10 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  Os resultados contêm as três principais previsões classificadas pelo valor de suporte. Você pode substituir $SUPPORT por $PROBABILITY ou $ADJUSTED_PROBABILITY para retornar previsões classificadas por probabilidade ou probabilidade ajustada. Para obter mais informações, consulte **Predict (DMX)**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
- [&#41;&#40;DMX BottomCount](../dmx/bottomcount-dmx.md)   
- [&#41;&#40;DMX TopPercent](../dmx/toppercent-dmx.md)   
- [TopSum &#40;&#41;DMX](../dmx/topsum-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
+ [&#41;&#40;DMX BottomCount ](../dmx/bottomcount-dmx.md)   
+ [&#41;&#40;DMX TopPercent ](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;&#41;DMX ](../dmx/topsum-dmx.md)  
   
   

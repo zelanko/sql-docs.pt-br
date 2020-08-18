@@ -1,4 +1,5 @@
 ---
+description: sys.fn_validate_plan_guide (Transact-SQL)
 title: sys. fn_validate_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396892"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|A identificação da mensagem de erro.|  
 |severidade|**tinyint**|O nível de severidade da mensagem, entre 1 e 25.|  
 |state|**smallint**|Número de estado do erro que indica o ponto no código no qual o erro ocorreu.|  
-|message|**nvarchar(2048)**|Texto da mensagem do erro.|  
+|mensagem|**nvarchar(2048)**|Texto da mensagem do erro.|  
   
 ## <a name="permissions"></a>Permissões  
  Os guias de plano com escopo OBJECT exigem a permissão VIEW DEFINITION ou ALTER nas permissões e objetos mencionados para compilar a consulta ou o lote fornecido no guia de plano Por exemplo, se um lote contiver instruções SELECT, serão solicitadas permissões SELECT nos objetos mencionados.  

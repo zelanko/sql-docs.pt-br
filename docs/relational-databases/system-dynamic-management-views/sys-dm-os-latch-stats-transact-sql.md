@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_latch_stats (Transact-SQL)
 title: sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398522"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,11 +40,11 @@ Retorna as informações sobre todas as esperas de trava organizadas por classe.
 |waiting_requests_count|**bigint**|Número de esperas em travas nessa classe. O contador é incrementado no início de uma espera de trava.|  
 |wait_time_ms|**bigint**|Tempo de espera total, em milissegundos, nas travas dessa classe.<br /><br /> **Observação:** Essa coluna é atualizada a cada cinco minutos durante uma espera de trava e no final de uma espera de trava.|  
 |max_wait_time_ms|**bigint**|Tempo máximo durante qual um objeto de memória esperou essa trava. Se o valor for exageradamente alto, pode indicar um deadlock interno.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
 ## <a name="remarks"></a>Comentários  
  sys.dm_os_latch_stats pode ser usado para identificar a origem de uma contenção de travamento, examinando os números e os tempos de espera relativos para as diferentes classes de trava. Em algumas situações, talvez seja possível resolver ou reduzir contenção de trava. Entretanto, pode haver situações em que seja necessário contatar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviço de Atendimento ao Cliente.  
@@ -60,7 +61,7 @@ GO
 > [!NOTE]  
 >  Essas estatísticas não persistirão se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado. Todos os dados são acumulados desde a última vez em que as estatísticas foram redefinidas ou desde que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciado.  
   
-## <a name="latches"></a><a name="latches"></a>Travas  
+## <a name="latches"></a><a name="latches"></a> Travas  
  Uma trava é um objeto de sincronização Lightweight interno semelhante a um bloqueio, que é usado por vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes. Uma trava é usada principalmente para sincronizar páginas de banco de dados durante operações como o acesso ao buffer ou ao arquivo. Cada trava é associada a uma única unidade de alocação. 
   
  Uma espera de trava ocorre quando uma solicitação de trava não pode ser concedida imediatamente, porque a trava foi retida por outro thread em um modo conflitante. Ao contrário dos bloqueios, a trava é liberada logo após a operação, mesmo em operações de gravação.  
@@ -72,7 +73,7 @@ GO
   
  A tabela a seguir contém breves descrições das diversas classes de trava.  
   
-|Classe de trava|Description|  
+|Classe de trava|Descrição|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Usada internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para inicializar a sincronização da criação de um buffer de anel de alocação.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Usada para inicializar a sincronização de caches internos de espaço livre para heaps.|  
@@ -194,6 +195,6 @@ GO
 |KTM_VIRTUAL_CLOCK|Somente para uso interno.|  
   
 ## <a name="see-also"></a>Consulte Também  
-[&#41;DBCC SQLPERF &#40;Transact-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[&#41;DBCC SQLPERF &#40;Transact-SQL ](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server, objeto Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_external_work (Transact-SQL)
 title: sys. dm_exec_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -22,12 +23,12 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8348ebacb68f2df122b73d6ad3480cadedd27c1b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d8854b1e784fb6bdbfe8f12d749a937e9f1a6b9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398282"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,13 +37,13 @@ ms.locfileid: "82821098"
   
  Consulte sys. dm_exec_external_work para identificar o trabalho girado para se comunicar com a fonte de dados externa (por exemplo, Hadoop ou SQL Server externo).  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|Identificador exclusivo para a consulta do polybase associado.|Consulte *request_ID* em [sys. dm_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|`int`|A solicitação que esse trabalho está executando.|Consulte *step_index* em [sys. dm_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|A solicitação que esse trabalho está executando.|Consulte *step_index* em  [sys. dm_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |dms_step_index|`int`|Etapa no plano DMS que esse trabalho está executando.|Consulte [Sys. dm_exec_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
 |compute_node_id|`int`|O nó no qual o trabalho está sendo executado.|Consulte [Sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|tipo|`nvarchar(60)`|O tipo de trabalho externo.|' Divisão de arquivo '|  
+|type|`nvarchar(60)`|O tipo de trabalho externo.|' Divisão de arquivo '|  
 |work_id|`int`|ID da divisão real.|Maior ou igual a 0.|  
 |input_name|`nvarchar(4000)`|Nome da entrada a ser lida|Nome do arquivo ao usar o Hadoop.|  
 |read_location|`bigint`|Deslocamento ou local de leitura.|Deslocamento do arquivo a ser lido.|  
@@ -56,7 +57,7 @@ ms.locfileid: "82821098"
 
 ## <a name="see-also"></a>Consulte Também  
  [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

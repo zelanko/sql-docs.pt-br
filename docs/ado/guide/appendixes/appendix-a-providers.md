@@ -1,4 +1,5 @@
 ---
+description: 'Apêndice A: provedores de dados e serviços'
 title: 'Apêndice A: provedores | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d14a3399eb771965d039126ebf3672a8ad3d5190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396402"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apêndice A: provedores de dados e serviços
 Esta seção aborda três tipos de provedores: provedores de dados, provedores de serviços e componentes de serviço. Os provedores se enquadram em duas categorias: aquelas que fornecem dados e aqueles que fornecem serviços. Um *provedor de dados* possui seus próprios dados e os expõe em formato de tabela para seu aplicativo. Um *provedor de serviços* encapsula um serviço, produzindo e consumindo dados, aumentando os recursos em seus aplicativos ADO. Um provedor de serviços também pode ser definido como um *componente de serviço*, que deve funcionar em conjunto com outros provedores de serviços ou componentes.

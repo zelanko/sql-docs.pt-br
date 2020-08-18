@@ -1,4 +1,5 @@
 ---
+description: Acessar dados para as operações do DQS
 title: Acessar dados para as operações do DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b9bb91a34a2755ba14f8e64eecae2dc14498a07d
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 62472a5d3cc8752373dab20481663ccbda829b97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396102"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
 

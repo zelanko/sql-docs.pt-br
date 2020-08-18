@@ -1,4 +1,5 @@
 ---
+description: Abrir uma base de dados de conhecimento
 title: Abrir uma base de dados de conhecimento
 ms.date: 06/04/2013
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3eec1826d383f51933a9d47ae4acd932ebda7759
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d93731b7e28aafbffdf659678c0017d37ce61db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395882"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir uma base de dados de conhecimento
 
@@ -34,7 +35,7 @@ ms.locfileid: "85882739"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para abrir uma base de dados de conhecimento.  
   
-##  <a name="open-a-knowledge-base"></a><a name="Open"></a>Abrir uma base de dados de conhecimento  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a> Abrir uma base de dados de conhecimento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,13 +71,13 @@ ms.locfileid: "85882739"
   
 -   Para abrir uma base de dados de conhecimento na lista Recente que foi bloqueada por outra pessoa, contate essa pessoa e peça a ela para desbloquear a base de dados de conhecimento.  
   
-##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>Acompanhamento: depois de abrir uma base de dados de conhecimento  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a> Acompanhamento: depois de abrir uma base de dados de conhecimento  
  Depois que você abrir uma base de dados de conhecimento, ela será colocada no estado indicado na coluna Estado da tabela Base de Dados de Conhecimento. Para as atividades de descoberta da base de dados de conhecimento e política de correspondência, a base de dados de conhecimento será aberta em uma página de assistente específica. Para a atividade de gerenciamento de domínio, a base de dados de conhecimento será aberta na página de gerenciamento de domínio. Para obter mais informações sobre os estados, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>Se a base de dados de conhecimento estiver bloqueada  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a> Se a base de dados de conhecimento estiver bloqueada  
  O ícone de bloqueio na primeira coluna mostra se a base de conhecimento está bloqueada. O nome de uma base de dados de conhecimento bloqueada estará em fonte vermelha. Uma base de dados de conhecimento que estiver sendo modificada por um usuário específico por meio de uma atividade de base de dados de conhecimento estará marcada como Bloqueada. Uma base de dados de conhecimento bloqueda não pode ser trabalhada por um segundo usuário. O usuário que está trabalhando na base de dados de conhecimento pode desbloqueá-la com um clique com o botão direito do mouse na base de conhecimento na tabela na página Abrir Base de Dados de Conhecimento e com um clique em **Desbloquear**ou publicando-a. Quando o cursor estiver posicionado em uma base de dados de conhecimento bloqueada, o DQS exibirá uma dica mostrando quem bloqueou a base de dados de conhecimento e quando ela foi bloqueada.  
   
-##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Estado de uma base de dados de conhecimento  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a> Estado de uma base de dados de conhecimento  
  O campo Estado indica em qual estágio de uma atividade a base de dados de conhecimento está. Se você abrir a base de dados de conhecimento, ela será aberta nesse estágio.  
   
 -   **\<Empty>**: O campo Estado estará vazio para uma base de dados de conhecimento se a base de dados de conhecimento tiver sido publicada clicando em **publicar** na atividade gerenciamento de domínio e clicando em **Sim – publicar a base de dados de conhecimento e sair**.  
