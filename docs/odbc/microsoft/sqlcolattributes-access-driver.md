@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes (Driver do Access)
 title: SQLColAttributes (driver de acesso) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15770ac260ad8ea864dc78bf00c5b9e8bd964dbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d9758bb5c473971d3ed9acea52559da0a4aac67d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412272"
 ---
 # <a name="sqlcolattributes-access-driver"></a>SQLColAttributes (Driver do Access)
 > [!NOTE]  

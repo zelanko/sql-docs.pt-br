@@ -1,4 +1,5 @@
 ---
+description: Instruções de manipulação de dados (DMX)
 title: Instruções de manipulação de dados (DMX) | Microsoft Docs
 ms.date: 10/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e4b87b8b77b5b8adae8bd549e25ff8a9dd2e223e
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1ecf62e5cee883fa4fed63d7edcf6ab62ffbc0cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413343"
 ---
 # <a name="dmx-statements---data-manipulation"></a>Instruções DMX – manipulação de dados
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,9 +23,9 @@ ms.locfileid: "86969817"
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[EXCLUIR&#41;&#40;DMX](../dmx/delete-dmx.md)|Desmarca o conteúdo treinado de um modelo de mineração.|  
+|[EXCLUIR&#41;&#40;DMX ](../dmx/delete-dmx.md)|Desmarca o conteúdo treinado de um modelo de mineração.|  
 |[INSERIR EM &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Treina modelos de mineração|  
-|[SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)|Pesquisa modelos de mineração.|  
+|[SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)|Pesquisa modelos de mineração.|  
 |[&#62;de consulta de dados de origem&#60;](../dmx/source-data-query.md)|Consulta fontes de dados para as instruções **INSERT INTO** e **Select** .|  
 |[ATUALIZAR &#40;DMX&#41;](../dmx/update-dmx.md)|Altera conteúdos no modelo de mineração|  
   

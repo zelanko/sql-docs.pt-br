@@ -1,4 +1,5 @@
 ---
+description: DROP MINING STRUCTURE (DMX)
 title: REMOVER A ESTRUTURA DE MINERAÇÃO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 607f8f18688f9a16b2f80131e728031b3ca78608
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ad77fb58a630765eb6361b30bde22a90f291b18d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413363"
 ---
 # <a name="drop-mining-structure-dmx"></a>DROP MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: Referência de operador de DMX (Data Mining Extensions)
 title: Referência do operador DMX (extensões de Data Mining) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 60271f810de7d577bebdaac4ed0ceb6e48c08d68
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ba8f03b86a93122b2dcd9b825adc656feae80cd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414292"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Referência de operador de DMX (Data Mining Extensions)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,8 +34,8 @@ ms.locfileid: "86971767"
 |[&#60;= &#40;menor ou igual a&#41; &#40;DMX&#41;](../dmx/less-than-or-equal-to-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for menor ou igual ao valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
 |[&#62;= &#40;maior ou igual a&#41; &#40;DMX&#41;](../dmx/greater-than-or-equal-to-dmx.md)|Operador de comparação. Para argumentos que avaliam valores não nulos; que retornam TRUE se o valor do argumento da esquerda for maior ou igual ao valor do argumento da direita; que retornam FALSE se for o contrário. Se um ou ambos os argumentos forem avaliados como um valor nulo, o operador retornará um valor nulo.|  
 |[E &#40;DMX&#41;](../dmx/and-dmx.md)|Operador lógico que executa uma conjunção ou duas expressões numéricas.|  
-|[NÃO &#40;&#41;DMX](../dmx/not-dmx.md)|Operador lógico que executa uma negação em uma expressão numérica.|  
-|[OU &#40;&#41;DMX](../dmx/or-dmx.md)|Operador lógico que executa uma disjunção em duas expressões numéricas.|  
+|[NÃO &#40;&#41;DMX ](../dmx/not-dmx.md)|Operador lógico que executa uma negação em uma expressão numérica.|  
+|[OU &#40;&#41;DMX ](../dmx/or-dmx.md)|Operador lógico que executa uma disjunção em duas expressões numéricas.|  
 |[+ &#40;positivo&#41; &#40;DMX&#41;](../dmx/positive-dmx.md)|Operador unário que retorna um valor positivo de expressão numérica.|  
 |[-&#40;&#41; &#40;DMX negativo&#41;](../dmx/negative-dmx.md)|Operador unário que retorna um valor negativo de expressão numérica.|  
 |[&#40;comentário de barra dupla&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)|Indica uma cadeia de caracteres de texto que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não deve executar. É possível aninhar comentários dentro de uma instrução DMX, incluí-los ao final de uma linha de código ou inseri-los em uma linha separada.|  
@@ -47,6 +48,6 @@ ms.locfileid: "86971767"
  [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)   
  [&#40;as convenções de sintaxe de&#41; DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [As extensões de mineração de dados &#40;elementos de sintaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)  
+ [Operadores &#40;&#41;DMX ](../dmx/operators-dmx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SELECIONAR da &lt; junção de previsão de modelo &gt; (DMX)
 title: SELECIONAR da &lt; junção de previsão de modelo &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 033b610da29267cd07076c01157744441c4450d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413292"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECIONAR da &lt; junção de previsão de modelo &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -88,7 +89,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Tem dois filhos vivendo em casa  
   
- Usando o modelo de mineração de árvore de decisão TM e as características conhecidas sobre o assunto, a consulta retorna um valor booliano que descreve se a pessoa comprou a bicicleta e um conjunto de valores tabulares, retornados pela função de [&#41;de PredictHistogram &#40;DMX](../dmx/predicthistogram-dmx.md) , que descrevem como a previsão foi feita.  
+ Usando o modelo de mineração de árvore de decisão TM e as características conhecidas sobre o assunto, a consulta retorna um valor booliano que descreve se a pessoa comprou a bicicleta e um conjunto de valores tabulares, retornados pela função de [&#41;de PredictHistogram &#40;DMX ](../dmx/predicthistogram-dmx.md) , que descrevem como a previsão foi feita.  
   
 ```  
 SELECT  
@@ -186,7 +187,7 @@ NATURAL PREDICTION JOIN
  Como a coluna que contém o atributo previsível `[v Assoc Seq Line Items]` é uma coluna de tabela, a consulta retorna uma única coluna que contém uma tabela aninhada. Por padrão a coluna de tabela aninhada é denominada `Expression`. Se seu provedor não oferecer suporte a conjuntos de linhas hierárquicos, você poderá usar a palavra-chave **achatada** , conforme mostrado neste exemplo para facilitar a exibição dos resultados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

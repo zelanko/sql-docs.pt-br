@@ -1,4 +1,5 @@
 ---
+description: CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
 title: CRIAR ESTRUTURA DE MINERAÇÃO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414022"
 ---
 # <a name="create-mining-structure-dmx"></a>CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Você pode definir vários valores de sinalizadores de modelagem para uma coluna. No entanto, é possível ter apenas um tipo de conteúdo e um tipo de dados para uma coluna.  
   
 ### <a name="column-relationships"></a>Relações de coluna  
- É possível adicionar uma cláusula a qualquer instrução de definição de coluna para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dá suporte ao uso da seguinte \<column relationship> cláusula.  
+ É possível adicionar uma cláusula a qualquer instrução de definição de coluna para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte ao uso da seguinte \<column relationship> cláusula.  
   
  **RELACIONADO A**  
  Indica uma hierarquia de valor. O destino de uma coluna RELATED TO pode ser a coluna de chave em uma tabela aninhada, uma coluna com um valor discreto na linha de caso ou outra coluna com uma cláusula RELATED TO, que indica uma hierarquia mais profunda.  

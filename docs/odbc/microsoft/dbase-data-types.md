@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados do dBASE
 title: Tipos de dados do dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eca7d603a136bd1921ee93656d38f59efcda5f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412762"
 ---
 # <a name="dbase-data-types"></a>Tipos de dados do dBASE
 A tabela a seguir mostra como os tipos de dados do dBASE são mapeados para tipos de dados ODBC do SQL. Observe que nem todos os tipos de dados SQL ODBC têm suporte.  

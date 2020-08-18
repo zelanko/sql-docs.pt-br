@@ -1,4 +1,5 @@
 ---
+description: Referência de instrução DMX (Data Mining Extensions)
 title: Referência de instrução DMX (Data Mining Extensions) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ce95adec18bd17dce45fdc988b6db92d66383c74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414092"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instruções (DMX) de extensões de mineração de dados
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "86971764"
  Use as instruções DMX (Data Mining Extensions) para realizar todas essas tarefas de forma programada.  
   
  Criando estruturas de mineração e modelos de mineração  
- Use a instrução [criar estrutura de mineração &#40;&#41;DMX](../dmx/create-mining-structure-dmx.md) para adicionar uma nova estrutura de mineração a um banco de dados. Em seguida, você pode usar a instrução [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) para adicionar modelos de mineração à estrutura de mineração.  
+ Use a instrução [criar estrutura de mineração &#40;&#41;DMX ](../dmx/create-mining-structure-dmx.md) para adicionar uma nova estrutura de mineração a um banco de dados. Em seguida, você pode usar a instrução [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) para adicionar modelos de mineração à estrutura de mineração.  
   
- Use a instrução [criar modelo de mineração &#40;&#41;DMX](../dmx/create-mining-model-dmx.md) para criar um novo modelo de mineração e uma estrutura de mineração associada.  
+ Use a instrução [criar modelo de mineração &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md) para criar um novo modelo de mineração e uma estrutura de mineração associada.  
   
  Processando estruturas de mineração e modelos de mineração  
  Use a instrução [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md) para processar uma estrutura de mineração e um modelo de mineração.  

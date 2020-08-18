@@ -1,4 +1,5 @@
 ---
+description: Configurar o ExtendedAnsiSQL
 title: Configurando ExtendedAnsiSQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b5c2e4ed4d8bd64d02fb6a62861db832f6b0898
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5a2d739a3093b0d1e806bc9aa3f8d136746954c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412442"
 ---
 # <a name="setting-extendedansisql"></a>Configurar o ExtendedAnsiSQL
 O atributo pode ser controlado na cadeia de conexão adicionando o atributo ExtendedAnsiSQL:  

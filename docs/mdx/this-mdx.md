@@ -1,4 +1,5 @@
 ---
+description: This (MDX)
 title: Este (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e00435741516fd1ed1942506084c26192b6d47da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413092"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -74,7 +75,7 @@ This
  `End Scope;`  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
  [Cálculos](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   
   

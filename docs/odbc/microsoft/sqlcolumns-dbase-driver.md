@@ -1,4 +1,5 @@
 ---
+description: SQLColumns (Driver do dBASE)
 title: SQLColumns (driver do dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 242e4c2c95340aaf8bd4a8d8d41959b388a1cf70
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4998c6a3105add42a874a3fe295960be6dec270
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412072"
 ---
 # <a name="sqlcolumns-dbase-driver"></a>SQLColumns (Driver do dBASE)
 > [!NOTE]  

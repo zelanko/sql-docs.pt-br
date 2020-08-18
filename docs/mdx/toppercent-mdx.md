@@ -1,4 +1,5 @@
 ---
+description: TopPercent (MDX)
 title: TopPercent (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412853"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -44,7 +45,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  A função **TopPercent** calcula a soma da expressão numérica especificada avaliada sobre o conjunto especificado, classificando o conjunto em ordem decrescente. A função retorna os elementos com os valores mais altos, cujo percentual cumulativo do valor total somado seja pelo menos o percentual especificado. Essa função retorna o subconjunto menor de um conjunto cujo total cumulativo é pelo menos o percentual especificado. Os elementos retornados são classificados do maior para menor.  
   
 > [!WARNING]  
->  Se *Numeric_Expression* retornar qualquer valor negativo, **TopPercent** retornará apenas uma (1) linha.  
+>  Se *Numeric_Expression*  retornar qualquer valor negativo, **TopPercent** retornará apenas uma (1) linha.  
 >   
 >  Consulte o segundo exemplo para obter uma apresentação detalhada desse comportamento.  
   

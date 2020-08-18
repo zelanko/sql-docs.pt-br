@@ -1,4 +1,5 @@
 ---
+description: SELECIONAR DISTINCT do &lt; modelo &gt; (DMX)
 title: SELECIONAR DISTINCT do &lt; modelo &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413262"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECIONAR DISTINCT do &lt; modelo &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,7 +48,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Comentários  
  A instrução **SELECT DISTINCT from** só funciona com uma única coluna ou com um conjunto de colunas relacionadas. Essa cláusula não funciona com um conjunto de colunas não relacionadas.  
   
- A instrução **SELECT DISTINCT from** permite que você referencie diretamente uma coluna dentro de uma tabela aninhada. Por exemplo:  
+ A instrução **SELECT DISTINCT from** permite que você referencie diretamente uma coluna dentro de uma tabela aninhada. Por exemplo:   
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -134,7 +135,7 @@ FROM [TM Decision Tree]
 >  O valor mínimo do bucket mínimo e o valor máximo do bucket máximo são apenas os valores mais alto e mais baixo observados. Os valores dentro desse intervalo observado são considerados como pertencentes aos buckets mínimo e máximo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Instruções de definição de dados (DMX)
 title: Instruções de definição de dados (DMX) | Microsoft Docs
 ms.date: 10/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c9646fa7e2ba438bb2f2b57ac37b2ceca5a957c
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 020dd7baa05a6b02c7acea681343361c559c7c22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413882"
 ---
 # <a name="dmx-statements---data-definition"></a>Instruções DMX – definição de dados 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,10 +24,10 @@ ms.locfileid: "86969835"
 |de|Descrição|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Cria uma estrutura de mineração nova no banco de dados.|  
-|[ALTERAR A ESTRUTURA DE MINERAÇÃO &#40;&#41;DMX](../dmx/alter-mining-structure-dmx.md)|Adiciona um modelo de mineração a uma estrutura de mineração existente|  
-|[CRIAR MODELO DE MINERAÇÃO &#40;&#41;DMX](../dmx/create-mining-model-dmx.md)|Cria uma estrutura de mineração e modelo de mineração novos no banco de dados.|  
+|[ALTERAR A ESTRUTURA DE MINERAÇÃO &#40;&#41;DMX ](../dmx/alter-mining-structure-dmx.md)|Adiciona um modelo de mineração a uma estrutura de mineração existente|  
+|[CRIAR MODELO DE MINERAÇÃO &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md)|Cria uma estrutura de mineração e modelo de mineração novos no banco de dados.|  
 |[DROP MINING MODEL &#40;DMX&#41;](../dmx/drop-mining-model-dmx.md)|Exclui um modelo de mineração do banco de dados.|  
-|[DESCARTAR A ESTRUTURA DE MINERAÇÃO &#40;&#41;DMX](../dmx/drop-mining-structure-dmx.md)|Exclui uma estrutura de mineração do banco de dados.|  
+|[DESCARTAR A ESTRUTURA DE MINERAÇÃO &#40;&#41;DMX ](../dmx/drop-mining-structure-dmx.md)|Exclui uma estrutura de mineração do banco de dados.|  
 |[EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)|Exporta um modelo de mineração ou estrutura de mineração e objetos associados em um arquivo .abf.|  
 |[IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)|Importa um modelo de mineração ou estrutura de mineração e objetos associados de um arquivo .abf.|  
 |[SELECIONAR EM &#40;DMX&#41;](../dmx/select-into-dmx.md)|Cria uma cópia de um modelo de mineração existente.|  

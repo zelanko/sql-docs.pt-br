@@ -1,4 +1,5 @@
 ---
+description: Referência de operador de interjunção-MDX
 title: '* Junção (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c957b72736fa8038f01175e3c65898a85704a56b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413142"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Referência de operador de interjunção-MDX
 
@@ -31,11 +32,11 @@ Set_Expression * Set_Expression
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um conjunto que contém o produto cruzado de ambos os parâmetros especificados.  
   
 ## <a name="remarks"></a>Comentários  
- O ** \* operador (interjunção)** é funcionalmente equivalente à função de [interjunção](../mdx/crossjoin-mdx.md) .  
+ O operador ** \* (interjunção)** é funcionalmente equivalente à função de [interjunção](../mdx/crossjoin-mdx.md) .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir demonstra o uso desse operador.  
@@ -54,6 +55,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   
