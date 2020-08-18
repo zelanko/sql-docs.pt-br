@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fe3f756c08229631a76effe5fc8b16bc5fe6f965
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947123"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216701"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -183,8 +183,7 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  Os índices de HASH podem ser usados para otimizar mais a carga de trabalho. Eles são particularmente otimizados para pesquisas de ponto e inserções de linhas. No entanto, lembre-se de que eles não dão suporte a exames de intervalo, exames ordenados ou pesquisas nas colunas de chave de índice. Consequentemente, tome cuidado ao usar esses índices. Além disso, é necessário especificar o bucket_count na hora da criação. Normalmente, ele deve ser definido entre uma e duas vezes o número de valores de chave de índice, mas valores superestimados não costumam ser um problema.  
   
-Para obter mais informações, confira os Manuais Online para obter mais detalhes sobre [diretrizes de índice](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) e diretrizes para [escolher o bucket_count certo](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
-
+Para obter mais informações, confira os Manuais Online para obter mais detalhes sobre [diretrizes de índice](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) e diretrizes para [escolher o bucket_count certo](https://sqlserver-help.com/tag/bucket_count/).  
 
 Os Manuais Online a seguir fornecem mais informações sobre os seguintes tópicos:
 - [Diretrizes de índice](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->

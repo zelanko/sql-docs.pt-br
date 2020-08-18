@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Visualizar Dados (Assistente de Importação e Exportação do SQL Server)
 title: Caixa de diálogo Visualizar Dados (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e59c3aa71cbbff6f955c67d033713f7a27dfbb28
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4608eed330a6ac8a64150197a591f68fcc832c65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347212"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Visualizar Dados (Assistente de Importação e Exportação do SQL Server)
 
@@ -43,7 +44,7 @@ Se você tiver selecionado uma tabela para cópia, o campo **Origem** exibirá u
 ## <a name="thats-not-right-i-want-to-change-something"></a>Isso não está correto, quero alterar algo
 Depois de visualizar os dados, é recomendável alterar as opções selecionadas nas páginas anteriores do assistente. Para fazer essas alterações, clique em **OK** para retornar à página **Selecionar Tabelas e Exibições de Origem** e clique em **Voltar** para retornar às páginas anteriores, nas quais é possível alterar as seleções.
 
-## <a name="whats-next"></a>O que vem a seguir?  
+## <a name="whats-next"></a>E agora?  
  Depois de visualizar os dados que você vai copiar e clicar em **OK**, a **caixa de diálogo Visualizar Dados** retornará para a página **Selecionar Tabelas e Exibições de Origem** ou **Configurar Destino Arquivo Simples** . Para obter mais informações, consulte [Selecionar tabelas e exibições de origem](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) ou [Configurar destino do arquivo simples](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Confira também

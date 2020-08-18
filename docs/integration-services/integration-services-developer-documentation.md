@@ -1,4 +1,5 @@
 ---
+description: Documentação do desenvolvedor do Integration Services
 title: Documentação do desenvolvedor do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346092"
 ---
 # <a name="integration-services-developer-documentation"></a>Documentação do desenvolvedor do Integration Services
 
@@ -64,16 +65,16 @@ ms.locfileid: "86919952"
  [Trabalhando programaticamente com gerenciadores de conexões](../integration-services/working-with-connection-managers-programmatically.md)  
  Lista os gerenciadores de conexões que você pode usar por meio do código gerenciado e os valores que os gerenciadores de conexões retornam quando o código chama o método **AcquireConnection**.  
   
- [Estender pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estendendo pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Descreve como estender o fluxo de controle por meio da tarefa Script ou o fluxo de dados por meio do componente Script.  
   
  [Estendendo pacotes com objetos personalizados](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Descreve como criar e programar tarefas personalizadas, componentes de fluxo de dados e outros objetos de pacote para uso em vários pacotes.  
   
- [Compilar Pacotes Programaticamente](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Compilando pacotes programaticamente](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Descreve como criar, configurar e salvar pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] programaticamente.  
   
- [Executar e gerenciar pacotes programaticamente](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [Executando e gerenciando pacotes programaticamente](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Descreve como enumerar, executar e gerenciar pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] programaticamente.  
   
 ## <a name="reference"></a>Referência  

@@ -1,4 +1,5 @@
 ---
+description: Executando Operação (Assistente de Importação e Exportação do SQL Server)
 title: Executando Operação (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c9749d32a0e08a6b755db739bb226540b519b85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347272"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Executando Operação (Assistente de Importação e Exportação do SQL Server)
 
@@ -42,7 +43,7 @@ Depois de examinar as escolhas que você fez no assistente e clicar em **Conclui
  **Status**  
  Exibe o sucesso ou falha de cada etapa.  
   
- **Mensagem**  
+ **Message**  
  Exibe mensagens informativas e mensagens de erro sobre a etapa. Clique em um item nesta coluna para obter mais informações sobre a etapa correspondente.
 
 ## <a name="interrupt-the-operation-or-save-the-results"></a>Interromper a operação ou salvar os resultados
@@ -52,7 +53,7 @@ Depois de examinar as escolhas que você fez no assistente e clicar em **Conclui
  **Report**  
  Exibe o relatório, salve o relatório em um arquivo, copie-o para a área de transferência ou envie-o por email.  
   
-## <a name="whats-next"></a>O que vem a seguir?  
+## <a name="whats-next"></a>E agora?  
  Depois que a operação que você configurou for executada e concluída com êxito, terminará de executar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 -   Se você executar a operação imediatamente, poderá abrir o destino selecionado para analisar os dados copiados pelo assistente.  
 -   Se você tiver salvado o pacote do SSIS criado pelo assistente, poderá abri-lo no SQL Server Data Tools para personalizá-lo e reutilizá-lo. Para obter informações sobre como personalizar o pacote salvo e executá-lo novamente mais tarde, consulte [Salvar pacote SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).

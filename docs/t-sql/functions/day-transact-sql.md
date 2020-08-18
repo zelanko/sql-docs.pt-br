@@ -1,4 +1,5 @@
 ---
+description: DAY (Transact-SQL)
 title: DAY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -23,12 +24,12 @@ ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e901af549839834daf9d0c7f6c75703f7dc018d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c785d96e43944e758627c948a5249971d05401be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310802"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

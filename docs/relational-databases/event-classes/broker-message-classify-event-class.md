@@ -1,4 +1,5 @@
 ---
+description: classe de evento Broker:Message Classify
 title: Classe de evento Broker:Message Classify | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62227ad9938f94a1381431b57ebed7c3f63c0169
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88331072"
 ---
 # <a name="brokermessage-classify-event-class"></a>classe de evento Broker:Message Classify
 
@@ -27,7 +28,7 @@ ms.locfileid: "85762999"
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Message Classify  
   
-|Coluna de dados|Tipo de dados|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Tipo de dados|Descrição|Número da coluna|Filtrável|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  

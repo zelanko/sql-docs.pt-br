@@ -1,4 +1,5 @@
 ---
+description: classe de evento Server Memory Change
 title: Classe de evento Server Memory Change | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f07f207cf61c65a3343faf855d1f270ec820433
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86f8e8a10a7207b75419a14b5b575a57297d9d81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88329933"
 ---
 # <a name="server-memory-change-event-class"></a>classe de evento Server Memory Change
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85727363"
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Colunas de dados da classe de evento Server Memory Change  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Sim|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Sim|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|Tipo de evento = 81.|27|Não|  
 |**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
