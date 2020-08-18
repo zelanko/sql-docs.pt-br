@@ -1,4 +1,5 @@
 ---
+description: Fornecer uma consulta de origem (Assistente de Importação e Exportação do SQL Server)
 title: Fornecer uma consulta de origem (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 267db7655133669266b9fc0c9f6b54819333a6fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edd3812cce0a5d0b956691f3a6bfb4f708495819
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347162"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Fornecer uma consulta de origem (Assistente de Importação e Exportação do SQL Server)
 
@@ -65,7 +66,7 @@ Se a sua fonte de dados for Excel, consulte [Fornecer uma consulta de origem par
 > Para obter informações detalhadas sobre como se conectar a arquivos do Excel, e sobre limitações e problemas conhecidos para carregar dados de ou para arquivos do Excel, consulte [Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md).
 
 Há três tipos de objetos do Excel que você pode consultar.
--   **Planilha.** Para consultar uma planilha, acrescente o caractere $ ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]** .
+-   **Planilha.** Para consultar uma planilha, acrescente o caractere $ ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]**.
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -83,7 +84,7 @@ Há três tipos de objetos do Excel que você pode consultar.
     SELECT * FROM [Sheet1$A1:B4]
     ```
 
-## <a name="whats-next"></a>O que vem a seguir?  
+## <a name="whats-next"></a>E agora?  
  Depois de escrever e testar a consulta SQL que seleciona os dados a serem copiados, a próxima página depende do destino dos dados.  
   
 -   Para a maioria dos destinos, a próxima página é **Selecionar Tabelas e Exibições de Origem**. Nessa página, examine a consulta que você forneceu e, opcionalmente, selecione colunas para copiar e visualizar os dados de exemplo. Para obter mais informações, consulte [Selecionar Tabelas e Exibições de Origem](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  

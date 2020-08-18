@@ -1,4 +1,5 @@
 ---
+description: Salvar e Executar Pacote (Assistente de Importação e Exportação do SQL Server)
 title: Salvar e executar Pacote (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8739c955343207a9a91660a9f8643ea807741e0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346882"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Salvar e Executar Pacote (Assistente de Importação e Exportação do SQL Server)
 
@@ -89,7 +90,7 @@ Se você iniciou o assistente de um projeto do Integration Services no Visual St
   
  Essas opções estarão disponíveis somente se você selecionar a opção **Salvar pacote SSIS** nesta página.  
   
-## <a name="whats-next"></a>O que vem a seguir?  
+## <a name="whats-next"></a>E agora?  
  Depois de especificar se deseja executar a operação de cópia imediatamente e salvar o pacote, a próxima página dependerá das opções que você escolher.  
   
 -   Se você tiver escolhido a opção para executar o pacote imediatamente, mas não para salvá-lo, a próxima página será **Concluir o assistente**. Nessa página, examine as escolhas feitas no assistente e inicie a operação de cópia. Para obter mais informações, consulte [Concluir o assistente](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  

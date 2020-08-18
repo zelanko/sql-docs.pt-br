@@ -1,4 +1,5 @@
 ---
+description: Compatibilidade com versões anteriores do Integration Services
 title: Compatibilidade com versões anteriores do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 983e78ef4eedaa8aee55bb3d4c6575519a7d6b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b7722cea77801e1292072bd948779a8e5688550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345652"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Integration Services
 

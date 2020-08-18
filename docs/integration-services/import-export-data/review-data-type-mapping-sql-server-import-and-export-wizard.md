@@ -1,4 +1,5 @@
 ---
+description: Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
 title: Examinar Mapeamento de Tipo de Dados (Assistente para Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa50c1de5a5cf1cd1963e60774617bd92713872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2376f29d6e488af4481e245440e995fd584dfea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347042"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
 
@@ -47,7 +48,7 @@ Neste exemplo, os resultados da consulta que o usuário forneceu serão copiados
   
  A tabela a seguir descreve as colunas na lista **Tabela** .  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |(Ícone de origem)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que todas as conversões de tipo de dados da tabela sejam bem sucedidas.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar as conversões individuais que o assistente executará. Para revisar essas conversões, selecione a tabela e revise as conversões das colunas individuais na lista **Mapeamento de tipo de dados** .<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar algumas das conversões da tabela de maneira segura.|  
 |**Origem**|O nome da tabela de origem.|  
@@ -63,7 +64,7 @@ Neste exemplo, cada coluna na origem será copiada para uma coluna com o mesmo n
 
 A tabela a seguir descreve as colunas da lista **Mapeamento de tipo de dados** . 
 
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |(Ícone de conversão)|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /> –   Um ícone de sinal de verificação **verde** indica que o assistente espera que a conversão de tipo de dados da coluna sejam bem sucedida.<br />–   Um ícone de aviso **amarelo** indica que você deveria examinar a conversão que o assistente executará. Para examinar a conversão, clique duas vezes na coluna para exibir a caixa de diálogo **Detalhes da Conversão de Coluna** . Para obter mais informações, consulte [Caixa de diálogo Detalhes da Conversão de Coluna](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />–   Um ícone de erro **vermelho** indica que o assistente não pode executar a conversão de maneira segura.|  
 |**Coluna de Origem**|O nome da coluna de origem.|  
@@ -86,15 +87,15 @@ Este exemplo mostra os valores padrão para as duas opções de tratamento de er
 
  **Se Houver Erro (global)**  
  Especifique como o assistente lida com erros:  
- -   Falha com um erro, e interrompe o processo de importação ou exportação. Esse é o valor padrão.
+ -   Falha com um erro, e interrompe o processo de importação ou exportação. Este é o valor padrão.
  -   Ignore o erro e continue o processo de importação ou exportação.  
   
  **Se Houver Truncamento (global)**  
  Especifique como o assistente controla truncamentos de dados:  
- -   Falha com um erro, e interrompe o processo de importação ou exportação. Esse é o valor padrão.
+ -   Falha com um erro, e interrompe o processo de importação ou exportação. Este é o valor padrão.
  -   Ignore o truncamento e continue o processo de importação ou exportação.  
    
-## <a name="whats-next"></a>O que vem a seguir?  
+## <a name="whats-next"></a>E agora?  
  Depois de examinar os avisos, especifique opções de conversão e como tratar erros. A página **Revisar mapeamento de tipo de dados** leva você de volta para a caixa de diálogo **Mapeamentos de coluna** . Para obter mais informações, consulte [Mapeamentos de coluna](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Confira também

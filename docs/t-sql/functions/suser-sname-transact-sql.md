@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308412"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
- É o número opcional de identificação de segurança do logon. *server_user_sid* é **varbinary(85)** . *server_user_sid* pode ser o número de identificação de segurança de qualquer logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou usuário ou grupo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se o *server_user_sid* não for especificado, serão retornadas informações sobre o usuário atual. Se o parâmetro contiver a palavra NULL, retornará NULL.  
+ É o número opcional de identificação de segurança do logon. *server_user_sid* é **varbinary(85)**. *server_user_sid* pode ser o número de identificação de segurança de qualquer logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou usuário ou grupo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se o *server_user_sid* não for especificado, serão retornadas informações sobre o usuário atual. Se o parâmetro contiver a palavra NULL, retornará NULL.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(128)**  

@@ -1,4 +1,5 @@
 ---
+description: Filtrar um rastreamento
 title: Filtrar um rastreamento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6ba791898d86f9e51baa9bd516e8a6752a94254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325098"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,14 +62,14 @@ ms.locfileid: "85751000"
   
  A disponibilidade do filtro depende da coluna de dados. Algumas colunas de dados não podem ser filtradas. As colunas de dados que podem ser filtradas só o podem por certos operadores relacionais, como mostra a tabela a seguir.  
   
-|Operador relacional|Símbolo do operador|DESCRIÇÃO|  
+|Operador relacional|Símbolo do operador|Descrição|  
 |-------------------------|---------------------|-----------------|  
 |Como|LIKE|Especifica que os dados de evento de rastreamento devem ser semelhantes ao texto digitado. Permite vários valores.|  
 |Não semelhante a|Não semelhante a|Especifica que os dados de evento de rastreamento não devem ser semelhantes ao texto digitado. Permite vários valores.|  
 |É igual a|=|Especifica que os dados de evento de rastreamento devem ser iguais ao valor digitado. Permite vários valores.|  
 |É diferente de|<>|Especifica que os dados de evento de rastreamento devem ser diferentes do valor digitado. Permite vários valores.|  
 |Maior que|>|Especifica que os dados de evento de rastreamento devem ser maiores que o valor digitado.|  
-|Maior que ou igual a|>=|Especifica que os dados de evento de rastreamento devem ser iguais ou maiores que o valor digitado.|  
+|Maior ou igual a|>=|Especifica que os dados de evento de rastreamento devem ser iguais ou maiores que o valor digitado.|  
 |Menor que|<|Especifica que os dados de evento de rastreamento devem ser menores que o valor digitado.|  
 |Menor que ou igual a|<=|Especifica que os dados de evento de rastreamento devem ser iguais ou menores que o valor digitado.|  
   
@@ -122,7 +123,7 @@ ms.locfileid: "85751000"
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**Gravidade**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar eventos nesta coluna de dados. Para obter mais informações, consulte [Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  

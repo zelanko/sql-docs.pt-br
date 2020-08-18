@@ -1,5 +1,6 @@
 ---
-title: COMMIT WORK (Transact-SQL) | Microsoft Docs
+description: COMMIT WORK (Transact-SQL)
+title: COMMIT WORK (Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - marking end of transactions [SQL Server]
 - COMMIT WORK statement
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b46633e17ee508a9e38ef1cc57cb76004ecdcba1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3b99eb919c732f303c4a94d289c8e960a8f6aa0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307875"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,14 +37,15 @@ ms.locfileid: "85706621"
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
 ```syntaxsql
-  
 COMMIT [ WORK ]  
 [ ; ]  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Comentários  
  Essa instrução funciona identicamente a COMMIT TRANSACTION, com exceção de que COMMIT TRANSACTION aceita um nome de transação definido pelo usuário. Esta sintaxe de COMMIT, com ou sem especificar a palavra-chave opcional WORK, é compatível com SQL-92.  
   

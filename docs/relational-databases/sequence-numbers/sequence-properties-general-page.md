@@ -1,4 +1,5 @@
 ---
+description: Propriedades da Sequência (página Geral)
 title: Propriedades de sequência (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325844"
 ---
 # <a name="sequence-properties-general-page"></a>Propriedades da Sequência (página Geral)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

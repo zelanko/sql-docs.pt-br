@@ -1,4 +1,5 @@
 ---
+description: 'Lição 5-3: Modificar o valor de configuração da propriedade Directory'
 title: 'Etapa 3: Modificar o valor de configuração da propriedade Directory | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a609b6c5edc5518904432cc199e5e624fb114ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a727a5c8d709e982582c26cff8d6cf09eb44ccc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345692"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lição 5-3: Modificar o valor de configuração da propriedade Directory
 
@@ -29,7 +30,7 @@ Nesta tarefa, você modificará a definição de configuração, armazenada no a
   
 1.  No Bloco de notas ou em qualquer outro editor de texto, localize e abra o arquivo de configuração **SSISTutorial.dtsConfig** criado usando o Assistente para Configuração de Pacote na tarefa anterior.  
   
-2.  Altere o valor do elemento **ConfiguredValue** para corresponder ao caminho da pasta **Novos Dados de Exemplo** criada na tarefa anterior. Não coloque o caminho entre aspas. Se a pasta **Novos Dados de Exemplo** estiver no nível raiz da unidade (por exemplo, **C:\\** ), o XML atualizado deverá ser semelhante à seguinte amostra:  
+2.  Altere o valor do elemento **ConfiguredValue** para corresponder ao caminho da pasta **Novos Dados de Exemplo** criada na tarefa anterior. Não coloque o caminho entre aspas. Se a pasta **Novos Dados de Exemplo** estiver no nível raiz da unidade (por exemplo, **C:\\**), o XML atualizado deverá ser semelhante à seguinte amostra:  
   
     ```
     <?xml version="1.0"?>

@@ -1,4 +1,5 @@
 ---
+description: Operadores de comparação (Transact-SQL)
 title: Operadores de comparação (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307397"
 ---
 # <a name="comparison-operators-transact-sql"></a>Operadores de comparação (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,14 +38,14 @@ ms.locfileid: "85706612"
 |[= (Igual a)](../../t-sql/language-elements/equals-transact-sql.md)|Igual a|  
 |[> (Maior que)](../../t-sql/language-elements/greater-than-transact-sql.md)|Maior que|  
 |[< (Menor que)](../../t-sql/language-elements/less-than-transact-sql.md)|Menor que|  
-|[>= (Maior ou igual a)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Maior que ou igual a|  
+|[>= (Maior ou igual a)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Maior ou igual a|  
 |[<= (Menor ou igual a)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Menor que ou igual a|  
 |[<> (Diferente de)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|É diferente de|  
-|[\!= (Não é igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Diferente de (não é padrão ISO)|  
+|[!= (Diferente de)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Diferente de (não é padrão ISO)|  
 |[\!< (Não é menor que)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Não é menor que (não é padrão ISO)|  
 |[\!> (Não é maior que)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Não é maior que (não é padrão ISO)|  
   
-## <a name="boolean-data-type"></a>Tipo de dados boolianos  
+## <a name="boolean-data-type"></a>Tipo de dados booliano  
  O resultado de um operador de comparação tem o tipo de dados **Boolean**. Ele tem três valores: TRUE, FALSE e UNKNOWN. Expressões que retornam um tipo de dados **Boolean** são conhecidas como expressões boolianas.  
   
  Ao contrário de outros tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um tipo de dados **Boolean** não pode ser especificado como o tipo de dados de uma variável ou coluna de tabela e não pode ser retornado em um conjunto de resultados.  
