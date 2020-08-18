@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_states (Transact-SQL)
 title: sys. dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b01d8ebe8f9a880e7f4a1dc06e324770dddaf1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398692"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,12 +54,12 @@ ms.locfileid: "85676315"
 |**last_connect_error_description**|**nvarchar(1024)**|Texto da mensagem de **last_connect_error_number** .|  
 |**last_connect_error_timestamp**|**datetime**|Carimbo de data/hora em que indica quando ocorreu o erro de **last_connect_error_number** .|  
   
-##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a>Funções e Estados operacionais  
+##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a> Funções e Estados operacionais  
  A função, **função**, reflete o estado de uma determinada réplica de disponibilidade e o estado operacional, **operational_state**, descreve se a réplica está pronta para processar solicitações de cliente para todo o banco de dados da réplica de disponibilidade. Veja a seguir um resumo dos Estados operacionais que são possíveis para cada função: resolução, primário e secundário.  
   
  **Resolvendo:** Quando uma réplica de disponibilidade está na função de resolução, os Estados operacionais possíveis são mostrados na tabela a seguir.  
   
-|Estado Operacional|Description|  
+|Estado Operacional|Descrição|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|Um comando de failover está sendo processado para o grupo de disponibilidade.|  
 |OFFLINE|Todos os dados da configuração da réplica de disponibilidade foram atualizados no cluster do WSFC e, também, em metadados locais, mas o grupo de disponibilidade atual não tem uma réplica primária.|  
@@ -67,7 +68,7 @@ ms.locfileid: "85676315"
   
  **Primário:** Quando uma réplica de disponibilidade está executando a função primária, ela é a réplica primária no momento. Os Estados operacionais possíveis são os mostrados na tabela a seguir.  
   
-|Estado Operacional|Description|  
+|Estado Operacional|Descrição|  
 |-----------------------|-----------------|  
 |PENDING|Este é um estado transiente, mas uma réplica primária pode ficar neste estado se os trabalhos não estiverem disponíveis para processar solicitações.|  
 |ONLINE|O recurso de grupo de disponibilidade está online, e todos os threads de trabalho do banco de dados foram coletados.|  
@@ -75,7 +76,7 @@ ms.locfileid: "85676315"
   
  **Secundário:** Quando uma réplica de disponibilidade está executando a função secundária, ela é atualmente uma réplica secundária. Os Estados operacionais possíveis são os mostrados na tabela a seguir.  
   
-|Estado Operacional|Description|  
+|Estado Operacional|Descrição|  
 |-----------------------|-----------------|  
 |ONLINE|A réplica secundária local está conectada à réplica primária.|  
 |FAILED|A réplica secundária local não está disponível para leitura e/ou gravação no cluster do WSFC.|  

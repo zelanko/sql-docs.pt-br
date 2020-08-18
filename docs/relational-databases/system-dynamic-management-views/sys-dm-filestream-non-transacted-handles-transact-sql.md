@@ -1,4 +1,5 @@
 ---
+description: sys.dm_filestream_non_transacted_handles (Transact-SQL)
 title: sys. dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d38b5e210e5a9c7a0b75d2ecb619ae84a61373e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398732"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85898883"
 |----------------|--------------|---------------------|  
 |database_id|INT|ID do banco de dados associado ao identificador.|  
 |object_id|INT|ID do objeto da FileTable à qual o identificador está associado.|  
-|handle_id|INT|Identificador de contexto de identificador exclusivo. Usado pelo [sp_kill_filestream_non_transacted_handles &#40;procedimento armazenado&#41;Transact-SQL](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) para eliminar um identificador específico.|  
+|handle_id|INT|Identificador de contexto de identificador exclusivo. Usado pelo [sp_kill_filestream_non_transacted_handles &#40;procedimento armazenado&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) para eliminar um identificador específico.|  
 |file_object_type|INT|O tipo do identificador. Indica o nível da hierarquia na qual o identificador foi aberto, ou seja, o banco de dados ou o item.|  
 |file_object_type_desc|nvarchar(120)|"Indefinido",<br />"SERVER_ROOT",<br />"DATABASE_ROOT",<br />"TABLE_ROOT",<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary (8)|Contém um identificador exclusivo para o processo que originou a solicitação.|  

@@ -1,4 +1,5 @@
 ---
+description: syscollector_config_store (Transact-SQL)
 title: syscollector_config_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccdb22362e8e52fe58aca8b7430d5329400a4908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 339bbba2335512c582251f960224baae15513618
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399782"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,13 +59,13 @@ FROM msdb.dbo.syscollector_config_store;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Exibições do coletor de dados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_set_warehouse_database_name](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_set_warehouse_instance_name](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
+ [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Exibições do coletor de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syscollector_set_warehouse_database_name ](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syscollector_set_warehouse_instance_name ](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
  [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 title: sys. dm_cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84b7a59ce701118f2c7e1fc28160ebc6d9e8b60d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75fac268f987b571945f1c48cc24920116033160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399514"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciamento extensível de chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à segurança &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

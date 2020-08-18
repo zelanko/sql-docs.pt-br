@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_distributed_requests (Transact-SQL)
 title: sys. dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0f878ef98d0935920db9b4abedbc753d10124a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398762"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "82821108"
   
  Com base na ID da sessão e da solicitação, um usuário pode recuperar as solicitações distribuídas reais geradas para serem executadas-via sys. dm_exec_distributed_requests. Por exemplo, uma consulta envolvendo SQL regular e tabelas SQL externas serão decompostas em várias instruções/solicitações executadas em vários nós de computação. Para acompanhar as etapas distribuídas em todos os nós de computação, apresentamos uma ID de execução ' global ' que pode ser usada para rastrear todas as operações nos nós de computação associados a uma solicitação e um operador específicos, respectivamente.  
   
-|Nome da coluna|Tipo de Dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|Chave para esta exibição. ID numérica exclusiva associada à solicitação.|Exclusivo em todas as solicitações no sistema.|  
 |execution_id|**nvarchar (32**|ID numérica exclusiva associada à sessão na qual essa consulta foi executada.||  
@@ -48,7 +49,7 @@ ms.locfileid: "82821108"
   
 ## <a name="see-also"></a>Consulte Também  
  [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Exibições de gerenciamento dinâmico de grupos de disponibilidade Always On-funções
 title: Always On exibições de gerenciamento dinâmico de grupos de disponibilidade – funções | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 090e7bb80e3e72ceb2a1d0a622097a89c4da7fe4
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91e7df2aa160d352b6b5e71e701d31e5dc3a0465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399512"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Exibições de gerenciamento dinâmico de grupos de disponibilidade Always On-funções
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_distributed_sql_requests (Transact-SQL)
 title: sys. dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,19 +23,19 @@ ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bfaaa65c08155263c15a1e4e4ddf17c20913e66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdda8279e49c5e1884cbd539e1a3158431e53b41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398842"
 ---
 # <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys. dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todas as distribuições de consultas SQL como parte de uma etapa SQL na consulta.  Esta exibição mostra os dados das últimas 1000 solicitações; as solicitações ativas sempre têm os dados presentes nessa exibição.  
   
-|Nome da coluna|Tipo de Dados|Description|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|execution_id e step_index compõem a chave para essa exibição. ID numérica exclusiva associada à solicitação.|Consulte a ID em [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|Índice da etapa de consulta da qual essa distribuição faz parte.|Consulte step_index em [Sys. dm_exec_distributed_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
@@ -51,7 +52,7 @@ ms.locfileid: "82827970"
   
 ## <a name="see-also"></a>Consulte Também  
  [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
