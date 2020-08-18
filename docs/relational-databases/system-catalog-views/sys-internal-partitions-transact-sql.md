@@ -1,4 +1,5 @@
 ---
+description: sys. internal_partitions (Transact-SQL)
 title: sys. internal_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -13,16 +14,17 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401452"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Retorna uma linha para cada conjunto de linhas que rastreia dados internos para índices columnstore em tabelas baseadas em disco. Esses conjuntos de linhas são internos a índices columnstore e rastreiam linhas excluídas, mapeamentos de rowgroup e grupos de itens de loja Delta. Eles controlam os dados para cada partição de tabela; cada tabela tem pelo menos uma partição. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]recria os conjuntos de linhas a cada vez que recria o índice columnstore.   
+  Retorna uma linha para cada conjunto de linhas que rastreia dados internos para índices columnstore em tabelas baseadas em disco. Esses conjuntos de linhas são internos a índices columnstore e rastreiam linhas excluídas, mapeamentos de rowgroup e grupos de itens de loja Delta. Eles controlam os dados para cada partição de tabela; cada tabela tem pelo menos uma partição. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recria os conjuntos de linhas a cada vez que recria o índice columnstore.   
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +45,7 @@ ms.locfileid: "86002722"
  Exige a associação à função `public`. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]recria novos índices internos columnstore cada vez que cria ou recria um índice columnstore.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recria novos índices internos columnstore cada vez que cria ou recria um índice columnstore.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -59,8 +61,8 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes do catálogo do sistema do SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   
