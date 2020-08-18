@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption (Driver do dBASE)
 title: SQLSetConnectOption (driver do dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32bfb4755d308706372c0d863f8246631c122f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b128693ef2dce5dcd9c67e38f4c493b03e19ef7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411742"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (Driver do dBASE)
 > [!NOTE]  
@@ -28,12 +29,12 @@ ms.locfileid: "81301517"
 |-------------|-------------|  
 |SQL_ACCESS_MODE|O SQL_ACCESS_MODE fOption pode ser definido como SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. No entanto, o driver não impedirá atualizações se SQL_ACCESS_MODE estiver definido como SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|O driver do dBASE dá suporte apenas SQL_AUTOCOMMIT sendo definido como ON (o estado padrão), pois ele não oferece suporte a transações.|  
-|SQL_CURRENT_QUALIFIER| Com suporte.|  
-|SQL_LOGIN_TIMEOUT|Sem suporte.|  
-|SQL_OPT_TRACE| Com suporte.|  
-|SQL_OPT_TRACEFILE| Com suporte.|  
-|SQL_PACKET_SIZE|Sem suporte.|  
-|SQL_QUIET_MODE|Sem suporte.|  
-|SQL_TRANSLATE_DLL|Sem suporte.|  
-|SQL_TRANSLATION_OPTION|Sem suporte.|  
-|SQL_TXN_ISOLATION|Sem suporte.|
+|SQL_CURRENT_QUALIFIER|Com suporte.|  
+|SQL_LOGIN_TIMEOUT|Não há suporte.|  
+|SQL_OPT_TRACE|Com suporte.|  
+|SQL_OPT_TRACEFILE|Com suporte.|  
+|SQL_PACKET_SIZE|Não há suporte.|  
+|SQL_QUIET_MODE|Não há suporte.|  
+|SQL_TRANSLATE_DLL|Não há suporte.|  
+|SQL_TRANSLATION_OPTION|Não há suporte.|  
+|SQL_TXN_ISOLATION|Não há suporte.|
