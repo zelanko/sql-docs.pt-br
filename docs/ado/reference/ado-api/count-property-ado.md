@@ -1,4 +1,5 @@
 ---
+description: Propriedade Count (ADO)
 title: Propriedade Count (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf53c6743e20ec3fe960d10dd16f5577a7d69f0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cc0e15e4f5157e28eb35325f09fa5f27a1540d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444348"
 ---
 # <a name="count-property-ado"></a>Propriedade Count (ADO)
 Indica o número de objetos em uma coleção.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um valor **longo** .  
   
 ## <a name="remarks"></a>Comentários  

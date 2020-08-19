@@ -1,4 +1,5 @@
 ---
+description: Usar um objeto Recordset
 title: Usando um objeto Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 183c8b3379d2ac90fa089f2f2834b46473961abf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fef7e779c11dac06b2cda5401250577e9bb7162e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452608"
 ---
 # <a name="using-a-recordset-object"></a>Usar um objeto Recordset
 Como alternativa, você pode usar **Recordset. Open** para estabelecer implicitamente uma conexão e emitir um comando nessa conexão em uma única operação. Por exemplo, em Visual Basic:  

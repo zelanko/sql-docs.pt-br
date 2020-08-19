@@ -1,4 +1,5 @@
 ---
+description: Configurando a tarefa Script no Editor da Tarefa Script
 title: Configurar a tarefa Script no Editor da Tarefa Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40edbb718dac8f1be4a33fa1766c757aa1962306
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b4a052ea59e3c72adda887c3084bca278059f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430248"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurando a tarefa Script no Editor da Tarefa Script
 
@@ -64,6 +65,6 @@ ms.locfileid: "86913933"
  Na página **Expressões** do **Editor da Tarefa Script**, você pode usar expressões para fornecer valores para as propriedades da tarefa Script listadas anteriormente e para muitas outras propriedades da tarefa. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Codificar e depurar a tarefa Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
+ [Codificando e depurando a tarefa Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Atualização e persistência de dados
 title: Atualizando e mantendo dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19e281e6108005279cd807e5ee76d383437b8814
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452648"
 ---
 # <a name="updating-and-persisting-data"></a>Atualização e persistência de dados
 Os capítulos anteriores discutiram como usar o ADO para obter dados em uma fonte de dados, como mover-se nos dados e até mesmo como editar os dados. É claro que, se o objetivo do seu aplicativo for permitir que os usuários façam alterações nos dados, você precisará entender como salvar essas alterações. Você pode persistir as alterações do **conjunto de registros** em um arquivo usando o método **Save** ou pode enviar as alterações de volta à fonte de dados para armazenamento usando os métodos **Update** ou **UpdateBatch** .  

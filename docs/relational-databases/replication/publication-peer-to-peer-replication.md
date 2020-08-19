@@ -1,4 +1,5 @@
 ---
+description: Publicação (replicação ponto a ponto)
 title: Publicação (replicação ponto a ponto) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c7643560c893824247271f1eb56f2def90754c83
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0dd57684b0297596057b5288b5d7e8d81f26aa17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498602"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Publicação (replicação ponto a ponto)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

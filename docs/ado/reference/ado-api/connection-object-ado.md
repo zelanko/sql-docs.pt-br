@@ -1,4 +1,5 @@
 ---
+description: Objeto Connection (ADO)
 title: Objeto de conexão (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49a270f143e57c1e093ac94732b67b6424c88607
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68b6a8dd0b0cd75f511c042981672444d9b3bcb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444508"
 ---
 # <a name="connection-object-ado"></a>Objeto Connection (ADO)
 Representa uma conexão aberta com uma fonte de dados.  
@@ -63,7 +64,7 @@ Representa uma conexão aberta com uma fonte de dados.
 >  Não use esse recurso (chamando um comando nomeado ou um procedimento armazenado como se fosse um método nativo no objeto de **conexão** ) em um aplicativo do Microsoft® .NET Framework, pois a implementação subjacente do recurso está em conflito com a maneira como o .NET Framework interopera com com.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Executar um comando como um método nativo de um objeto de conexão  
- Para executar um comando, dê um nome ao comando usando a propriedade [nome](../../../ado/reference/ado-api/name-property-ado.md) do objeto de **comando** . Defina a propriedade **ActiveConnection** do objeto de **comando** para a conexão. Em seguida, emita uma instrução em que o nome do comando seja usado como se fosse um método no objeto de **conexão** , seguido por qualquer parâmetro e um objeto **Recordset** se qualquer linha for retornada. Defina as propriedades do **conjunto de registros** para personalizar o **conjunto de registros**resultante. Por exemplo:  
+ Para executar um comando, dê um nome ao comando usando a propriedade [nome](../../../ado/reference/ado-api/name-property-ado.md) do objeto de **comando** . Defina a propriedade **ActiveConnection** do objeto de **comando** para a conexão. Em seguida, emita uma instrução em que o nome do comando seja usado como se fosse um método no objeto de **conexão** , seguido por qualquer parâmetro e um objeto **Recordset** se qualquer linha for retornada. Defina as propriedades do **conjunto de registros** para personalizar o **conjunto de registros**resultante. Por exemplo:   
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -79,7 +80,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Executar um procedimento armazenado como um método nativo de um objeto de conexão  
- Para executar um procedimento armazenado, emita uma instrução em que o nome do procedimento armazenado é usado como se fosse um método no objeto de **conexão** , seguido por qualquer parâmetro. O ADO fará uma "melhor adivinhação" dos tipos de parâmetro. Por exemplo:  
+ Para executar um procedimento armazenado, emita uma instrução em que o nome do procedimento armazenado é usado como se fosse um método no objeto de **conexão** , seguido por qualquer parâmetro. O ADO fará uma "melhor adivinhação" dos tipos de parâmetro. Por exemplo:   
   
 ```  
 Dim cnn As New ADODB.Connection  

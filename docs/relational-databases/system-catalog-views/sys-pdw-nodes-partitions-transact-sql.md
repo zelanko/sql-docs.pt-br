@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_partitions (Transact-SQL)
 title: sys. pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 32c64ad5faab1ef262cd754201cac40e4a076619
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: b13e5da130d7b122f9b79e1996ea3fdb0792e25a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475370"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86197361"
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Exemplo A: exibir linhas em cada partição dentro de cada distribuição 
 
-**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Para exibir o número de linhas em cada partição em cada distribuição, use [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 

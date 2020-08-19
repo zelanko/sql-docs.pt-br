@@ -1,4 +1,5 @@
 ---
+description: Conectar-se a uma fonte de dados do Visual FoxPro
 title: Conectando-se a uma fonte de dados do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ee35a5d8c6eaf3e1800097dffcd3fab079ff8db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9aef19b35a6dce2b6b1fa21b3878d2b8f219158
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483649"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Conectar-se a uma fonte de dados do Visual FoxPro
 Você pode se conectar a uma fonte de dados do Visual FoxPro usando seu aplicativo Microsoft Office ou usando a API do SQL.  

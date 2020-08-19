@@ -1,4 +1,5 @@
 ---
+description: Monitorar o desempenho com o Replication Monitor
 title: Monitorar o desempenho com o Replication Monitor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498723"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitorar o desempenho com o Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,11 +64,11 @@ ms.locfileid: "86918708"
   
 -   Excelente  
   
--   Bom  
+-   Satisfatório  
   
 -   Razoável  
   
--   Fraco  
+-   Ruim  
   
 -   Crítico (replicação transacional somente)  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86918708"
   
 -   Para a replicação transacional, a qualidade de desempenho é determinada pelo limite de latência. Se o limite não for definido, não será exibido um valor. A tabela a seguir mostra a correlação entre o limite e o valor de qualidade de desempenho. Por exemplo, se a latência for selecionada para 60 segundos e a latência real for de 30 segundos, a latência será 50% do limite, resultando em um valor Bom.  
   
-    |Excelente|Bom|Razoável|Fraco|Crítico|  
+    |Excelente|Satisfatório|Razoável|Ruim|Crítico|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
@@ -83,7 +84,7 @@ ms.locfileid: "86918708"
   
      A tabela seguinte mostra a correlação entre o desempenho médio e o valor de qualidade de desempenho. Por exemplo, se dez Assinantes tiverem sincronizado em uma conexão LAN com uma taxa média de 100 linhas por segundo, e uma das assinaturas sincronizar a uma taxa de 125 linhas por segundo, o desempenho da sincronização do Assinante será 125% da média, resultando em um valor Bom.  
   
-    |Excelente|Bom|Razoável|Fraco|  
+    |Excelente|Satisfatório|Razoável|Ruim|  
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   

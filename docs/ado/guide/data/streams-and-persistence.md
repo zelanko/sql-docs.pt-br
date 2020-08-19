@@ -1,4 +1,5 @@
 ---
+description: Fluxos e persistência
 title: Fluxos e persistência | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452768"
 ---
 # <a name="streams-and-persistence"></a>Fluxos e persistência
 O método [Save](../../../ado/reference/ado-api/save-method.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) armazena, ou *persiste*, um **conjunto de registros** em um arquivo e o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) restaura o **conjunto de registros** desse arquivo.  
@@ -104,7 +105,7 @@ Set rs = nothing
   
  Uma nova propriedade na [URL](../../../ado/reference/rds-api/url-property-rds.md)do [controle de origem](../../../ado/reference/rds-api/datacontrol-object-rds.md)de RDS, aponta para a página. asp que gera o **conjunto de registros**. Isso significa que um objeto **Recordset** pode ser obtido sem RDS usando o objeto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) do lado do servidor ou o usuário que está gravando um objeto comercial. Isso simplifica significativamente o modelo de programação do RDS.  
   
- Código do lado do servidor, chamadohttps://server/directory/recordset.asp:  
+ Código do lado do servidor, chamado https://server/directory/recordset.asp:  
   
 ```  
 <%  

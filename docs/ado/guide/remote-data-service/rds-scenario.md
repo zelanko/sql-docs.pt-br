@@ -1,4 +1,5 @@
 ---
+description: Cenário RDS
 title: Cenário RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d73bb03ceb08e61257c0e4fc6d3f6a627ddb746d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452088"
 ---
 # <a name="rds-scenario"></a>Cenário RDS
 > [!IMPORTANT]
@@ -35,15 +36,15 @@ ms.locfileid: "82763577"
   
  A interface do aplicativo consiste nas seguintes partes:  
   
--   Um RDS não Visual **. **Objeto de associação de dados de DataControl que é usado pelo cliente para se conectar ao Database.  
+-   Um RDS não Visual **. ** Objeto de associação de dados de DataControl que é usado pelo cliente para se conectar ao Database.  
   
 -   Caixas de texto HTML que atuam como campos de entrada para critérios de pesquisa de atributo de funcionário.  
   
 -   Botões de comando HTML para criar consultas, limpar campos de pesquisa, atualizar o banco de dados com informações de funcionários, cancelar alterações pendentes e navegar pelas linhas de dado exibidas na grade.  
   
--   Ligação de dados DHTML para exibir dados retornados de consultas em um banco de dados back-end (por meio do **RDS. **Objeto de vinculação de dados de DataControl) em uma tabela.  
+-   Ligação de dados DHTML para exibir dados retornados de consultas em um banco de dados back-end (por meio do **RDS. ** Objeto de vinculação de dados de DataControl) em uma tabela.  
   
--   Rotinas do VBScript que conectam cada um dos elementos que foram mencionados anteriormente e permitem que eles interajam. O código VBScript também é usado para inicializar o **RDS. Objeto DataControl** e cria dinamicamente os cabeçalhos de coluna na tabela HTML com os nomes de **RDS. **Campos do conjunto de registros de DataControl.  
+-   Rotinas do VBScript que conectam cada um dos elementos que foram mencionados anteriormente e permitem que eles interajam. O código VBScript também é usado para inicializar o **RDS. Objeto DataControl** e cria dinamicamente os cabeçalhos de coluna na tabela HTML com os nomes de **RDS. ** Campos do conjunto de registros de DataControl.  
   
  Siga os links da etapa para a etapa para configurar e executar o cenário e para saber mais sobre como o cenário funciona.  
   

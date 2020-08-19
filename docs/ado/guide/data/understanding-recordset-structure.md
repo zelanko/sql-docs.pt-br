@@ -1,4 +1,5 @@
 ---
+description: Noções básicas sobre a estrutura do conjunto de registros
 title: Compreendendo a estrutura do conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 963077a9dd5e7542fe8bc20d498019d07a1c15d7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 51775b83346f3a565d64502db20f21f22e77a31f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452658"
 ---
 # <a name="understanding-recordset-structure"></a>Noções básicas sobre a estrutura do conjunto de registros
 Cada **conjunto de registros** tem uma coleção **Fields** que consiste em um ou mais objetos **Field** . Um objeto de **campo** geralmente representa uma coluna de tabela. Os tópicos a seguir explicarão como navegar pela coleção **Fields** e obter informações sobre cada campo. Em seguida, eles discutirão que tipo de informações está disponível para você por meio do objeto **Field** e como usá-lo.  

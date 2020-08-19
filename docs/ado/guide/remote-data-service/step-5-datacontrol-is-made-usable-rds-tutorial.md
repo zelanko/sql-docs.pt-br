@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 5: O DataControl é tornado utilizável (Tutorial RDS)'
 title: 'Etapa 5: o DataControl é tornado utilizável (tutorial do RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71576df284f3345d1f72b4043e904ae39ab031d4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 18365d26c9b46fb651d68291dc5fa026f23e3bfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451908"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Etapa 5: O DataControl é tornado utilizável (Tutorial RDS)
 O objeto **Recordset** retornado está disponível para uso. Você pode examiná-lo, navegar ou editá-lo como faria com qualquer outro **conjunto de registros**. O que você pode fazer com o **conjunto de registros** depende do seu ambiente. Visual Basic e Visual C++ têm controles visuais que podem usar um **conjunto de registros** diretamente ou indiretamente com o auxílio de um controle de dados de habilitação.  

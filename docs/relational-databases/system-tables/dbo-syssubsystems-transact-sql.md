@@ -1,4 +1,5 @@
 ---
+description: dbo.syssubsystems (Transact-SQL)
 title: Subsistemas dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7de71454c59ede4bfea182ea605a0e9d59da2c00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f208311142cd5f58efdbda884d0e336de70e37c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469089"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85890362"
 |**subsystem_id**|**int**|ID do subsistema.|  
 |**subsistema**|**nvarchar(40)**|Nome do subsistema.|  
 |**description_id**|**int**|ID da mensagem da linha na exibição do catálogo **Sys. messages** que contém a descrição do subsistema.|  
-|**subsystem_dll**|**nvarchar (255)**|Local da DLL do subsistema.|  
-|**agent_exe**|**nvarchar (255)**|Caminho completo do executável que usa o subsistema.|  
+|**subsystem_dll**|**nvarchar(255)**|Local da DLL do subsistema.|  
+|**agent_exe**|**nvarchar(255)**|Caminho completo do executável que usa o subsistema.|  
 |**start_entry_point**|**nvarchar(30)**|Função que é chamada quando o subsistema é inicializado.|  
 |**event_entry_point**|**nvarchar(30)**|Função que é chamada quando uma etapa do subsistema é executada.|  
 |**stop_entry_point**|**nvarchar(30)**|Função que é chamada quando a execução de um subsistema é finalizada.|  
@@ -48,7 +49,7 @@ ms.locfileid: "85890362"
   
 ## <a name="see-also"></a>Consulte Também  
  [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.sysproxies &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [dbo.sysproxies &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

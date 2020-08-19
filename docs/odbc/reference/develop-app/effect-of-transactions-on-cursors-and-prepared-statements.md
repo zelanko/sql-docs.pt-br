@@ -1,4 +1,5 @@
 ---
+description: Efeito de transações em cursores e instruções preparadas
 title: Efeito de transações em cursores e instruções preparadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef3cb4095410b8ccb03b0a138f65b8df2cfb1a4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482969"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Efeito de transações em cursores e instruções preparadas
 A confirmação ou reversão de uma transação tem o seguinte efeito em cursores e planos de acesso:  

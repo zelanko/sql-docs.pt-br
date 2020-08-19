@@ -1,4 +1,5 @@
 ---
+description: Fazer backup de bancos de dados e restaurá-los usando o Always Encrypted
 title: Fazer backup de bancos de dados e restaurá-los usando o Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475513"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Fazer backup de bancos de dados e restaurá-los usando o Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ Quando você restaura um banco de dados, todos os dados criptografados e todos o
 Se você restaurou o banco de dados em um servidor diferente ou com outro nome, não precisa fazer nada especial para permitir que o aplicativo consulte os dados criptografados no banco de dados de destino, pois as chaves nos dois bancos de dados são iguais.
 
 Para obter informações detalhadas sobre como fazer backup de um banco de dados e restaurá-lo, confira:
-- [Visão geral de backup (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Restaurar um banco de dados em uma Instância Gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>Próximas etapas

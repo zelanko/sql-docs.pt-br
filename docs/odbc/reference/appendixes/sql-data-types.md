@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados SQL
 title: Tipos de dados SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3cc91213533aa39f30be1bc838cc014c20e70884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483149"
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos de SQL. Cada driver ODBC expõe apenas os tipos de dados SQL que o DBMS associado define. Informações sobre como um driver mapeia tipos SQL DBMS para os identificadores de tipo SQL definidos pelo ODBC e como um driver mapeia tipos SQL DBMS para seus próprios identificadores de tipo SQL específicos de driver são retornados por meio de uma chamada para **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados de colunas e parâmetros por meio de chamadas para **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**e **SQLSpecialColumns**.  
@@ -42,8 +43,8 @@ Cada DBMS define seus próprios tipos de SQL. Cada driver ODBC expõe apenas os 
 |SQL_WCHAR|WCHAR (*n*)|Cadeia de caracteres Unicode de comprimento de cadeia de caracteres fixa *n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Cadeia de caracteres de comprimento variável Unicode com um comprimento máximo de cadeia de caracteres *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Dados de caractere Unicode de comprimento variável. O comprimento máximo é dependente da fonte de dados|  
-|SQL_DECIMAL|DECIMAL (*p*,*s*)|Valor numérico assinado, exato com uma precisão de pelo menos *p* e escala *s.* (A precisão máxima é definida pelo driver.) (1 <= *p* <= 15; *s* <= *p*). quatro|  
-|SQL_NUMERIC|NUMERIC (*p*,*s*)|Valor numérico assinado, exato com uma precisão *p* e escala *s* (1 <= *p* <= 15; *s* <= *p*). quatro|  
+|SQL_DECIMAL|DECIMAL (*p*,*s*)|Valor numérico assinado, exato com uma precisão de pelo menos *p* e escala *s.* (A precisão máxima é definida pelo driver.) (1 <= *p* <= 15; *s*  <=  *p*). quatro|  
+|SQL_NUMERIC|NUMERIC (*p*,*s*)|Valor numérico assinado, exato com uma precisão *p* e escala *s* (1 <= *p* <= 15; *s*  <=  *p*). quatro|  
 |SQL_SMALLINT|SMALLINT|Valor numérico exato com precisão 5 e escala 0 (assinado:-32.768 <= *n* <= 32.767, não assinado: 0 <= *n* <= 65535) [3].|  
 |SQL_INTEGER|INTEGER|Valor numérico exato com precisão 10 e escala 0 (assinado:-2 [31] <= *n* <= 2 [31]-1, não assinado: 0 <= *n* <= 2 [32]-1) [3].|  
 |SQL_REAL|real|Um valor numérico assinado, aproximado com uma precisão binária 24 (zero ou valor absoluto 10 [-38] a 10 [38]).|  

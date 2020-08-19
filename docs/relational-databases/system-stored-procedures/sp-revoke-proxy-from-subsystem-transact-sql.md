@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_proxy_from_subsystem (Transact-SQL)
 title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c8dc5e9a20c9a00b840ec51d3339299cc3756a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d58ec6db017fee031a2de2e242a18281eb3b7a68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469204"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id`O número de identificação de proxy do proxy para revogar o acesso. O *proxy_id* é **int**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy para revogar o acesso. O *proxy_id* é **int**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy do qual revogar o acesso. O *proxy_name* é **sysname**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy do qual revogar o acesso. O *proxy_name* é **sysname**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @subsystem_id = ] id`O número de ID do subsistema ao qual revogar o acesso. O *subsystem_id* é **int**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_id = ] id` O número de ID do subsistema ao qual revogar o acesso. O *subsystem_id* é **int**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -63,7 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] execução de pacotes|  
 |**12**|Scripts PowerShell|  
   
-`[ @subsystem_name = ] 'subsystem_name'`O nome do subsistema ao qual revogar o acesso. O *subsystem_name* é **sysname**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema ao qual revogar o acesso. O *subsystem_name* é **sysname**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -103,6 +104,6 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Implementar segurança de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)   
- [&#41;&#40;Transact-SQL de sp_grant_proxy_to_subsystem](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_grant_proxy_to_subsystem ](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

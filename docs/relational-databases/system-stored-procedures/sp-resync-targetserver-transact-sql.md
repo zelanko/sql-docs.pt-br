@@ -1,4 +1,5 @@
 ---
+description: sp_resync_targetserver (Transact-SQL)
 title: sp_resync_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 858c2ffe0740c43892ff2245047823c9cecbd12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469198"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'`O nome do servidor a ser ressincronizado. *server* é **sysname**, sem padrão. Se **All** for especificado, todos os servidores de destino serão ressincronizados.  
+`[ @server_name = ] 'server'` O nome do servidor a ser ressincronizado. *server* é **sysname**, sem padrão. Se **All** for especificado, todos os servidores de destino serão ressincronizados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -67,8 +68,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_post_msx_operation](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_downloadlist ](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_post_msx_operation ](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

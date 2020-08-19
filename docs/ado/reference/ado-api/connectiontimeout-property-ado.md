@@ -1,4 +1,5 @@
 ---
+description: Propriedade ConnectionTimeout (ADO)
 title: Propriedade ConnectionTimeout (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 252707003d3471d611ffafb637250009da20504f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c117974f9335ef3aa939f742781f3f381ab6cbd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444438"
 ---
 # <a name="connectiontimeout-property-ado"></a>Propriedade ConnectionTimeout (ADO)
 Indica por quanto tempo aguardar ao estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.  

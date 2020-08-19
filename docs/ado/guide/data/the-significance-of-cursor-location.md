@@ -1,4 +1,5 @@
 ---
+description: A importância da posição do cursor
 title: O significado do local do cursor | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acfb19f341bef22a9922e075d144026b9ef5f29d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452718"
 ---
 # <a name="the-significance-of-cursor-location"></a>A importância da posição do cursor
 Cada cursor usa recursos temporários para manter seus dados. Esses recursos podem ser memória, um arquivo de paginação de disco, arquivos de disco temporário ou até mesmo armazenamento temporário no banco de dados. O cursor é chamado de cursor *do lado do cliente* quando esses recursos estão localizados no computador cliente. O cursor é chamado de cursor *do lado do servidor* quando esses recursos estão localizados no servidor.  

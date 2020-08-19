@@ -1,4 +1,5 @@
 ---
+description: Manipular dados multidimensionais
 title: Trabalhando com dados multidimensionais | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452388"
 ---
 # <a name="working-with-multidimensional-data"></a>Manipular dados multidimensionais
 Um *células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, geralmente não mais do que quatro eixos e geralmente apenas dois ou três. Um *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  
@@ -30,7 +31,7 @@ Um *células* é o resultado de uma consulta em dados multidimensionais. Ele con
   
  Por exemplo, um cubo tem as seis dimensões a seguir (Observe que esse esquema de cubos difere ligeiramente do exemplo fornecido em [visão geral dos dados e esquemas multidimensionais](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Vendedor  
+-   Salesperson  
   
 -   Geografia (hierarquia natural)-continentes, países, Estados e assim por diante  
   

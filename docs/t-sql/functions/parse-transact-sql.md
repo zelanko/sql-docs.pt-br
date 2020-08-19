@@ -1,4 +1,5 @@
 ---
+description: PARSE (Transact-SQL)
 title: PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/05/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36649527ab73d15de4c811bcbe5c3234980e6a86
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7dac50281c264412e288fe3fce25fda84d99b659
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459618"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -115,7 +116,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |magyar|Húngaro|1038|Hu-HU|  
 |polski|Polonês|1045|Pl-PL|  
 |română|Romeno|1048|Ro-RO|  
-|hrvatski|Croata|1\.050|hr-HR|  
+|hrvatski|Croata|1.050|hr-HR|  
 |slovenčina|Eslovaco|1051|Sk-SK|  
 |slovenski|Esloveno|1060|Sl-SI|  
 |ελληνικά|Grego|1032|El-GR|  

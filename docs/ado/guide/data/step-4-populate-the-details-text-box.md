@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 4: Preencher a caixa de texto de detalhes'
 title: 'Etapa 4: preencher a caixa de texto de detalhes | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59b074b3e635457f8d96060575d941e26846281d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452778"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Etapa 4: Preencher a caixa de texto de detalhes
 Para preencher a caixa de texto detalhes, crie uma nova sub-rotina chamada **recFields** e insira o código a seguir:  

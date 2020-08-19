@@ -1,4 +1,5 @@
 ---
+description: Processamento de transações
 title: Processamento de transações | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452698"
 ---
 # <a name="transaction-processing"></a>Processamento de transações
 Uma *transação* delimita o início e o fim de uma série de operações de acesso a dados executadas em uma conexão. Sujeito aos recursos transacionais de sua fonte de dados, o objeto de **conexão** também permite que você crie e gerencie transações. Por exemplo, usando o provedor de OLE DB da Microsoft para SQL Server acessar um banco de dados no Microsoft SQL Server, você pode criar várias transações aninhadas para os comandos que executar.  

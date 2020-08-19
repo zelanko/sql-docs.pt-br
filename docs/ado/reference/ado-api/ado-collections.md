@@ -1,4 +1,5 @@
 ---
+description: Coleções ADO
 title: Coleções do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451468"
 ---
 # <a name="ado-collections"></a>Coleções ADO
 As relações entre essas coleções e os objetos ADO são representadas no [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Cada coleção pode conter seu objeto correspondente. Por exemplo, um objeto de [erro](../../../ado/reference/ado-api/error-object.md) pode estar contido em uma coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) . Para obter mais informações sobre objetos, consulte [objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) ou um tópico de objeto específico.  
   
-|Coleta|Descrição|  
+|Coleção|Descrição|  
 |-|-|  
 |[Erros](../../../ado/reference/ado-api/errors-collection-ado.md)|Contém todos os objetos de **erro** criados em resposta a uma falha relacionada a um único provedor.|  
 |[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contém todos os objetos **Field** de um objeto **Recordset** .|  

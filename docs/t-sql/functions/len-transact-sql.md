@@ -1,4 +1,5 @@
 ---
+description: LEN (Transact-SQL)
 title: LEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/03/2015
@@ -20,12 +21,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce435d3fbc4f6549dfb654914b377541309cbfe
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdcfe164aa08677887c1c494309bcf1d9af4c6d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459685"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ LEN ( string_expression )
  É a [expression](../../t-sql/language-elements/expressions-transact-sql.md) da cadeia de caracteres a ser avaliada. *character_expression* pode ser uma constante, uma variável ou uma coluna de dados de caracteres e binários.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **bigint** if *expression* é dos tipos de dados **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** ; caso contrário, **int**.  
+ **bigint** if *expression* é dos tipos de dados **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**; caso contrário, **int**.  
   
  Se você estiver usando ordenações de caracteres suplementares, o valor inteiro retornado contará os pares alternativos UTF-16 como um único caractere. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   

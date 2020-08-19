@@ -1,4 +1,5 @@
 ---
+description: Ajuda F1 do Microsoft Connector for SAP BW
 title: Ajuda F1 do Microsoft Connector para SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aee724d88bfc203472c09d80e3e3ceec9bafa7f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430158"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Ajuda F1 do Microsoft Connector for SAP BW
 
@@ -68,7 +69,7 @@ ms.locfileid: "86923997"
   
 -   [Pesquisar InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
   
--   [Criar novo InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
+-   [Criar Novo InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [Criar InfoCube para os dados da transação](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
@@ -78,11 +79,11 @@ ms.locfileid: "86923997"
   
 -   [Criar InfoSource para os dados da transação](../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [Criar InfoSource para dados mestre](../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [Criar InfoSource para Dados Mestres](../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [Criar InfoPackage](../integration-services/data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Componentes do Microsoft Connector para SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componentes do Microsoft Connector 1.1 para SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

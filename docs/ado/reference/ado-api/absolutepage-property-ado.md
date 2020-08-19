@@ -1,4 +1,5 @@
 ---
+description: Propriedade AbsolutePage (ADO)
 title: Propriedade AbsolutePage (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da08a0c51c8d4d89329bbe9c36cacd7979c1e71
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eaa88db423e255efc419dd50ccb6ec34d309aa98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451788"
 ---
 # <a name="absolutepage-property-ado"></a>Propriedade AbsolutePage (ADO)
 Indica em qual página o registro atual reside.  

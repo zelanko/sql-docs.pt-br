@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_set_cache_directory (Transact-SQL)
 title: sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4f3a049a0433ed41c9ebb1f82f6f16f6222544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469182"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @cache_directory = ] 'cache_directory'`O diretório no sistema de arquivos onde os dados coletados são armazenados temporariamente. *cache_directory* é **nvarchar (255)**, com um valor padrão de NULL. Se nenhum valor for especificado, o valor temporário padrão do diretório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será utilizado.  
+`[ @cache_directory = ] 'cache_directory'` O diretório no sistema de arquivos onde os dados coletados são armazenados temporariamente. *cache_directory* é **nvarchar (255)**, com um valor padrão de NULL. Se nenhum valor for especificado, o valor temporário padrão do diretório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será utilizado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -68,7 +69,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

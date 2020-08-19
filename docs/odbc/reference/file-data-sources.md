@@ -1,4 +1,5 @@
 ---
+description: Fontes de dados do arquivo
 title: Fontes de dados de arquivo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d02c767adab90ee4a7b6ff93a34886c03b87780c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429038"
 ---
 # <a name="file-data-sources"></a>Fontes de dados do arquivo
 As *fontes de dados de arquivo* são armazenadas em um arquivo e permitem que as informações de conexão sejam usadas repetidamente por um único usuário ou compartilhadas entre vários usuários. Quando uma fonte de dados de arquivo é usada, o Gerenciador de driver faz a conexão com a fonte de dados usando as informações em um arquivo. DSN. Esse arquivo pode ser manipulado como qualquer outro arquivo. Uma fonte de dados de arquivo não tem um nome de fonte de dados, assim como uma fonte de dados de computador e não está registrada em nenhum usuário ou máquina.  

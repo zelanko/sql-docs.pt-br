@@ -1,4 +1,5 @@
 ---
+description: Informações do distribuidor, publicações
 title: Informações sobre o distribuidor, publicações | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -17,12 +18,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498759"
 ---
 # <a name="distributor-information-publications"></a>Informações do distribuidor, publicações
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +43,7 @@ As informações que são exibidas sobre as publicações com suporte do Distrib
   As informações de assinaturas de publicação de instantâneo incluem o nome do Publicador. Caso contrário, a funcionalidade e as informações fornecidas nesta caixa de diálogo serão iguais as da exibição Publicador. Para mais informações sobre como usar essa caixa de diálogo, consulte [Informações do publicador, lista de inspeção da assinatura &#40;publicação de instantâneo, SQL Server 2005 e posterior&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agentes
-A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados com o Publicador e o Assinante.  
+ A guia **Agentes** exibe informações sobre os agentes e trabalhos de manutenção associados com o Publicador e o Assinante.  
   
  Os agentes disponíveis na guia **Agentes** de uma exibição Distribuidor no Distribuidor incluem todos os agentes disponíveis na guia **Agentes** de um Publicador. No entanto, a guia **Agentes** de uma exibição Distribuidor no Distribuidor também inclui um Agente Distribuidor e um Merge Agent.  
   

@@ -1,4 +1,5 @@
 ---
+description: ConnectModeEnum
 title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444428"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Especifica as permissões disponíveis para modificar dados em uma [conexão](../../../ado/reference/ado-api/connection-object-ado.md), abrir um [registro](../../../ado/reference/ado-api/record-object-ado.md)ou especificar valores para a propriedade [Mode](../../../ado/reference/ado-api/mode-property-ado.md) dos objetos **Record** e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  

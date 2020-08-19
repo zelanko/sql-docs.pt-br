@@ -1,4 +1,5 @@
 ---
+description: Funções de API de nível 1 (Driver ODBC para Oracle)
 title: Funções de API de nível 1 (driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c82ab0f481fbc60d0308895640371e84886e77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483539"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funções de API de nível 1 (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ ms.locfileid: "81299946"
 |**SQLGetConnectOption**|Retorna a configuração atual de uma opção de conexão. Essa função tem suporte parcial. O driver dá suporte a todos os valores para o argumento *fOption* , mas não dá suporte a alguns valores de *vParam* para o argumento *fOption* [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Para obter mais informações, consulte [Opções de conexão](../../odbc/microsoft/connect-options.md).|  
 |**SQLGetData**|Recupera o valor de um único campo no registro atual do conjunto de resultados fornecido.|  
 |**SQLGetFunctions**|Retorna TRUE para todas as funções com suporte. Implementado pelo Gerenciador de driver.|  
-|**SQLGetInfo**|Retorna informações, incluindo SQLHDBC, SQLUSMALLINT, sqlpointr, SQLSMALLINT e SQLSMALLINT \*, sobre o driver ODBC para Oracle e a fonte de dados associada a um identificador de conexão, *HDBC*.|  
+|**SQLGetInfo**|Retorna informações, incluindo SQLHDBC, SQLUSMALLINT, sqlpointr, SQLSMALLINT e SQLSMALLINT \* , sobre o driver ODBC para Oracle e a fonte de dados associada a um identificador de conexão, *HDBC*.|  
 |**SQLGetStmtOption**|Retorna a configuração atual de uma opção de instrução. Para obter mais informações, consulte [Opções de instrução](../../odbc/microsoft/statement-options.md).|  
 |**SQLGetTypeInfo**|Retorna informações sobre os tipos de dados com suporte por uma fonte de dados. O driver retorna as informações em um conjunto de resultados SQL.|  
 |**SQLParamData**|Usado em conjunto com **SQLPutData** para especificar dados de parâmetro no tempo de execução da instrução.|  

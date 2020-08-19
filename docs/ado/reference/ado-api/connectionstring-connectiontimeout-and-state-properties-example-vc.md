@@ -1,4 +1,5 @@
 ---
+description: Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VC + +)
 title: Exemplo de propriedades de conexão (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f70a5e98a34811af2b6d2b173da3f6c4215682d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444458"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VC + +)
 Este exemplo demonstra diferentes maneiras de usar a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) para abrir um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) . Ele também usa a propriedade [connectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) para definir um período de tempo limite de conexão e a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) para verificar o estado das conexões. A função GetState é necessária para que este procedimento seja executado.  

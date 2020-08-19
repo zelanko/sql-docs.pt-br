@@ -1,4 +1,5 @@
 ---
+description: Suporte a colunas esparsas no SQL Server Native Client
 title: Suporte a colunas esparsas
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,18 +15,19 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd75d0e9202ec81be1fe89c6b7f3c97a4f983432
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1bf4383d8b0f6be0d3242d91c935559f8c98ff00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498842"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Suporte a colunas esparsas no SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client suporta colunas esparsas. Para obter mais informações sobre colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], confira [Usar colunas esparsas](../../../relational-databases/tables/use-sparse-columns.md) e [Usar conjuntos de colunas](../../../relational-databases/tables/use-column-sets.md).  
   
- Para obter mais informações sobre o suporte a colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [suporte a colunas esparsas &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [colunas esparsas dão suporte a &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
+ Para obter mais informações sobre o suporte a colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [suporte a colunas esparsas &#40;&#41;ODBC ](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [colunas esparsas dão suporte a &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
   
  Para obter informações sobre aplicativos de exemplo que demonstram esse recurso, confira [Amostras de programação do SQL Server Data](https://msftdpprodsamples.codeplex.com/).  
   

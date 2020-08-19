@@ -1,4 +1,5 @@
 ---
+description: Var (MDX)
 title: Var (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46aad9a9b7c328d23680df3c74bcf09a465b868d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483709"
 ---
 # <a name="var-mdx"></a>Var (MDX)
 

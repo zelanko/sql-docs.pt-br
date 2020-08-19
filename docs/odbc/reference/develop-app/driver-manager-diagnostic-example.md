@@ -1,4 +1,5 @@
 ---
+description: Exemplo de diagnóstico do Gerenciador de Driver
 title: Exemplo de diagnóstico do Gerenciador de driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 839095e5544cab73cdddd4f4b17a3d8d52136c9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d852436600ffb3ce5258e731d23c4579bf8964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483059"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Exemplo de diagnóstico do Gerenciador de Driver
 O Gerenciador de driver também pode gerar mensagens de diagnóstico. Por exemplo, se um aplicativo passasse uma opção de direção inválida para **SQLDataSources**, o Gerenciador de driver poderá Formatar e retornar os seguintes valores de **SQLGetDiagRec**:  

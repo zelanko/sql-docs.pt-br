@@ -1,4 +1,5 @@
 ---
+description: O Provedor OLE DB para publicação na Internet
 title: O provedor de OLE DB para publicação na Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7203dd65a652cfdc71c088777ac9dd42d1da098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452728"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>O Provedor OLE DB para publicação na Internet
 O [registro](../../../ado/reference/ado-api/record-object-ado.md) ADO e os objetos [Stream](../../../ado/reference/ado-api/stream-object-ado.md) podem ser usados com o provedor de OLE DB da Microsoft para publicação na Internet (provedor de publicação da Internet) para acessar e manipular recursos, como pastas da Web ou arquivos servidos pelo Microsoft FrontPage. Com o ADO, você pode especificar a origem de um **registro**, **fluxo**ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para ser uma URL. Em seguida, você pode carregar, baixar, mover, copiar e excluir recursos ou manipular diretamente as propriedades do recurso.  
@@ -32,19 +33,19 @@ O [registro](../../../ado/reference/ado-api/record-object-ado.md) ADO e os objet
   
  Há três maneiras de conectar o ADO ao provedor de publicação da Internet:  
   
--   Especifique "URL =" na cadeia de conexão. Por exemplo:  
+-   Especifique "URL =" na cadeia de conexão. Por exemplo:   
   
     ```  
     objConn.Open "URL=https://servername"  
     ```  
   
--   Especifique MSDAIPP. DSO para a palavra-chave *Provider* da cadeia de conexão. Por exemplo:  
+-   Especifique MSDAIPP. DSO para a palavra-chave *Provider* da cadeia de conexão. Por exemplo:   
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   Especifique MSDAIPP. DSO para a propriedade [Provider](../../../ado/reference/ado-api/provider-property-ado.md) do objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Por exemplo:  
+-   Especifique MSDAIPP. DSO para a propriedade [Provider](../../../ado/reference/ado-api/provider-property-ado.md) do objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Por exemplo:   
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

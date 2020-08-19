@@ -1,4 +1,5 @@
 ---
+description: Trabalhando com arquivos do Excel com a tarefa Script
 title: Trabalhando com arquivos do Excel com a tarefa Script | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f851b7a3cbbf665838a8b8c6d6af19cc0797040e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430348"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabalhando com arquivos do Excel com a tarefa Script
 
@@ -80,7 +81,7 @@ ms.locfileid: "86921068"
   
     -   Digite **ExcelFile**.  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione a variável **ExcelFile**.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "86921068"
   
     -   Digite **ExcelFileExists**.  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione a variável **ExcelFileExists**.  
   
@@ -150,7 +151,7 @@ public class ScriptMain
   
     -   Digite **ExcelTable** e **ExcelFile** separados por vírgula **.**  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione as variáveis **ExcelTable** e **ExcelFile**.  
   
@@ -158,7 +159,7 @@ public class ScriptMain
   
     -   Digite **ExcelTableExists**.  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione a variável **ExcelTableExists**.  
   
@@ -257,7 +258,7 @@ public class ScriptMain
   
     -   Digite **ExcelFolder**  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione a variável ExcelFolder.  
   
@@ -265,7 +266,7 @@ public class ScriptMain
   
     -   Digite **ExcelFiles**.  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione a variável ExcelFiles.  
   
@@ -332,7 +333,7 @@ public class ScriptMain
   
     -   Digite **ExcelFile**.  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione a variável ExcelFile.  
   
@@ -340,7 +341,7 @@ public class ScriptMain
   
     -   Digite **ExcelTables**.  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione a variável ExcelTables.  
   
@@ -445,7 +446,7 @@ public class ScriptMain
   
     -   Digite o nome de cada variável separado por vírgulas.  
   
-         -ou-  
+         - ou -  
   
     -   Clique no botão de reticências ( **…** ) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis**, selecione as variáveis.  
   

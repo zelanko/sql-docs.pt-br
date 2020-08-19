@@ -1,4 +1,5 @@
 ---
+description: Visão geral de dados e esquemas multidimensionais
 title: Visão geral de esquemas multidimensionais e dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452418"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Visão geral de dados e esquemas multidimensionais
 ## <a name="understanding-multidimensional-schemas"></a>Noções básicas sobre esquemas multidimensionais  
@@ -58,15 +59,15 @@ Hamburg, Munich, Stuttgart}
   
  Cada nível tem um conjunto de membros, da seguinte maneira:  
   
--   O mundo`= {All}`  
+-   O mundo `= {All}`  
   
--   Continentes`= {North America, Europe}`  
+-   Continentes `= {North America, Europe}`  
   
--   Países`= {Canada, USA, UK, Germany}`  
+-   Países `= {Canada, USA, UK, Germany}`  
   
--   Regiões`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Regiões `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Primeiras`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Primeiras `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Membros  
  Os membros no nível folha de uma hierarquia não têm filhos e os membros no nível raiz não têm nenhum pai. Todos os outros membros têm pelo menos um pai e pelo menos um filho. Por exemplo, uma passagem parcial da árvore de hierarquia na dimensão Geografia produz as seguintes relações pai-filho:  

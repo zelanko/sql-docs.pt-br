@@ -1,4 +1,5 @@
 ---
+description: Método CreateParameter (ADO)
 title: Método CreateParameter (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6bf45e2d458784972d7057e95878c9db3526ffac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444318"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Cria um novo objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) com as propriedades especificadas.  

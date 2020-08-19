@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método ConvertToString (VB)
 title: Exemplo do método ConvertTostring (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90472a43cefe87fdc255d9794f16fa32ca0aff16
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6470866492d4d323ac287071c3c87c6b45d723b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444398"
 ---
 # <a name="converttostring-method-example-vb"></a>Exemplo do método ConvertToString (VB)
 ```  

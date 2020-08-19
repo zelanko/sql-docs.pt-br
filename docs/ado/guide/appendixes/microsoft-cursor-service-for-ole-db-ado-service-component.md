@@ -1,4 +1,5 @@
 ---
+description: Serviço de cursor da Microsoft para OLE DB (componente de serviço ADO)
 title: Serviço de cursor da Microsoft para OLE DB (componente de serviço ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f83f151331fe483400edda90d7deb7c469b5574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444548"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Visão geral do serviço de cursor da Microsoft para OLE DB
 O serviço de cursor da Microsoft para OLE DB complementa as funções de suporte de cursor dos provedores de dados. Como resultado, o usuário percebe uma funcionalidade relativamente uniforme de todos os provedores de dados.
@@ -56,7 +57,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  Não há suporte para a propriedade dinâmica DBPROP_SERVERDATAONINSERT pelo serviço de cursor, mesmo que ele tenha suporte do provedor de dados subjacente.
 
-|Nome da propriedade|Description|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros criados com o data Shaping Service, esse valor indica a frequência com que as colunas calculadas e agregadas são calculadas. O padrão (valor = 1) é recalcular sempre que o serviço de data Shaping determinar que os valores foram alterados. Se o valor for 0, as colunas calculadas ou agregadas só serão calculadas quando a hierarquia for inicialmente compilada.|
 |Tamanho do lote (DBPROP_ADC_BATCHSIZE)|Indica o número de instruções UPDATE que podem ser agrupadas em lote antes de serem enviadas ao armazenamento de dados. Quanto mais instruções em um lote, menos viagens de ida e volta para o armazenamento de dados.|
@@ -82,11 +83,11 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamento de propriedade interna
  O serviço de cursor para OLE DB também afeta o comportamento de determinadas propriedades internas.
 
-|Nome da propriedade|Description|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa os tipos de cursores que estão disponíveis para um **conjunto de registros**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa os tipos de bloqueios disponíveis para um **conjunto de registros**. Habilita atualizações em lotes.|
-|[Classificar](../../../ado/reference/ado-api/sort-property.md)|Especifica um ou mais nomes de campos nos quais o **conjunto de registros** é classificado e se cada campo é classificado em ordem crescente ou decrescente.|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|Especifica um ou mais nomes de campos nos quais o **conjunto de registros** é classificado e se cada campo é classificado em ordem crescente ou decrescente.|
 
 ## <a name="method-behavior"></a>Comportamento do método
  O serviço de cursor para OLE DB habilita ou afeta o comportamento do método [Append](../../../ado/reference/ado-api/append-method-ado.md) do objeto [Field](../../../ado/reference/ado-api/field-object.md) ; e os métodos [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Ressync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)e [Save](../../../ado/reference/ado-api/save-method.md) do objeto **Recordset** .
