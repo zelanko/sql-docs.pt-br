@@ -1,4 +1,5 @@
 ---
+description: Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)
 title: Alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bb7151b0a36267fa1cd9cad24432f5d72f96b11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2da7ecd383b1db1ef9a66b3ac3fb75ef9fbf8723
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403872"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87934335"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Para alternar da versão atual do separador de palavras em inglês dos EUA para a versão anterior  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Use as etapas a seguir para adicionar novas chaves para as ClassIDs COM para o separador de palavras em inglês dos EUA anterior e interfaces de lematizador para LCID 1033:  
   
@@ -50,15 +51,15 @@ ms.locfileid: "87934335"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{188D6CC5-CB03-4C01-912E-47D21295D77E}** .  
+4.  Atualize o valor de chave **WBreakerClass** para **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
   
-5.  Atualize o valor de chave **StemmerClass** para **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** .  
+5.  Atualize o valor de chave **StemmerClass** para **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**.  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Para alternar da versão atual do separador de palavras em inglês do Reino Unido para a versão anterior  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Use as etapas a seguir para adicionar uma nova chave para as ClassIDs COM para o separador de palavras em inglês do Reino Unido anterior e interfaces de lematizador para LCID 2057:  
   
@@ -72,9 +73,9 @@ ms.locfileid: "87934335"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** .  
+4.  Atualize o valor de chave **WBreakerClass** para **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
   
-5.  Atualize o valor de chave **StemmerClass** para **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** .  
+5.  Atualize o valor de chave **StemmerClass** para **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**.  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -82,7 +83,7 @@ ms.locfileid: "87934335"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Para alternar da versão anterior do separador de palavras em inglês dos EUA para a versão atual  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar uma nova chave para as ClassIDs COM para o separador de palavras em inglês dos EUA atual e interfaces de lematizador para LCID 1033:  
   
@@ -96,15 +97,15 @@ ms.locfileid: "87934335"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
+4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
-5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
+5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Para alternar da versão anterior do separador de palavras em inglês do Reino Unido para a versão atual  
   
-1.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Se as chaves a seguir não existirem, use as etapas a seguir para adicionar uma nova chave para as ClassIDs COM para o separador de palavras em inglês do Reino Unido atual e interfaces de lematizador para LCID 2057:  
   
@@ -118,9 +119,9 @@ ms.locfileid: "87934335"
   
 3.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
+4.  Atualize o valor de chave **WBreakerClass** para **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
-5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
+5.  Atualize o valor de chave **StemmerClass** para **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

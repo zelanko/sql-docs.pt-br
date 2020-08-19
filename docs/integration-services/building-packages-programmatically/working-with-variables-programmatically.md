@@ -1,4 +1,5 @@
 ---
+description: Trabalhando com variáveis programaticamente
 title: Trabalhar com variáveis programaticamente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2eaa85cc4c4fe7a93ffe962b74527031bd7938e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394992"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente
 
@@ -162,7 +163,7 @@ End Module
  Observe que todas as variáveis com escopo no namespace **System** estão disponíveis para o pacote. Para obter mais informações, consulte [Variáveis de sistema](../../integration-services/system-variables.md).  
   
 ## <a name="namespaces"></a>Namespaces  
- O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornece dois namespaces padrão em que as variáveis residem; os namespaces **User** e **System**. Por padrão, qualquer variável personalizada criada pelo desenvolvedor é adicionada ao namespace **User**. As variáveis de sistema residem no namespace **System**. Você pode criar namespaces adicionais, além do namespace **User** para manter variáveis personalizadas e você pode alterar o nome do namespace **User**, mas não pode adicionar ou modificar variáveis no namespace **System** nem atribuir variáveis do sistema a outro namespace.  
+ O   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fornece dois namespaces padrão em que as variáveis residem; os namespaces **User** e **System**. Por padrão, qualquer variável personalizada criada pelo desenvolvedor é adicionada ao namespace **User**. As variáveis de sistema residem no namespace **System**. Você pode criar namespaces adicionais, além do namespace **User** para manter variáveis personalizadas e você pode alterar o nome do namespace **User**, mas não pode adicionar ou modificar variáveis no namespace **System** nem atribuir variáveis do sistema a outro namespace.  
   
  As variáveis de sistema que estão disponíveis diferem dependendo do tipo de contêiner. Para uma lista das variáveis de sistema disponíveis para pacotes, contêineres, tarefas e manipuladores de eventos, consulte [System Variables](../../integration-services/system-variables.md).  
   

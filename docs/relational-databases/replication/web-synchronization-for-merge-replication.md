@@ -1,4 +1,5 @@
 ---
+description: Sincronização da Web para replicação de mesclagem.
 title: Sincronização da Web para Replicação de Mesclagem | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfcb0ba165b7657a640bb509dc71dfaa441fd015
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404472"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

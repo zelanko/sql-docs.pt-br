@@ -1,4 +1,5 @@
 ---
+description: Usar o assistente para nova instância
 title: Usar o assistente para nova instância | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37b453c91ce19289aa2f8b8684c163dc0fc638a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07b9d1037b11f92857700330c66b2fda4170058d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394472"
 ---
 # <a name="use-the-new-instance-wizard"></a>Usar o assistente para nova instância
 
@@ -34,7 +35,7 @@ ms.locfileid: "86913960"
   
 -   [Selecionar as tabelas Oracle para capturar alterações](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
--   [Fazer alterações nas tabelas selecionadas para capturar alterações](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+-   [Fazer alterações às tabelas selecionadas para capturar alterações](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
 -   [Gerar e executar scripts de log suplementares](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   

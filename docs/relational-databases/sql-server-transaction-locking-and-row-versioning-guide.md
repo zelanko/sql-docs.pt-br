@@ -1,4 +1,5 @@
 ---
+description: Guia de Controle de Versão de Linha e Bloqueio de Transações
 title: Guia de Controle de Versão de Linha e Bloqueio de Transações
 ms.custom: seo-dt-2019
 ms.date: 03/10/2020
@@ -19,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87239276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403052"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
