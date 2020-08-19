@@ -1,4 +1,5 @@
 ---
+description: Função SQLWriteFileDSN
 title: Função SQLWriteFileDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e781f1be79e0079f33b3d0800c665f5f5e9fda4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bd63c368f4055821df41faceb7b9c33cf20bde3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421000"
 ---
 # <a name="sqlwritefiledsn-function"></a>Função SQLWriteFileDSN
 **Conformidade**  
@@ -60,8 +61,8 @@ BOOL SQLWriteFileDSN(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLWriteFileDSN** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLWriteFileDSN** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

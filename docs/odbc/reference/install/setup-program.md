@@ -1,4 +1,5 @@
 ---
+description: Programa de instalação
 title: Programa de instalação | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89cae70db65bd2aa54b8e9789a5c2b35696923e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cd4858214ff084a037002abd3bd34035160496b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421320"
 ---
 # <a name="setup-program"></a>Programa de instalação
 > **Observação:** A partir do Windows XP e do Windows Server 2003, **o ODBC está incluído no sistema operacional Windows**. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  

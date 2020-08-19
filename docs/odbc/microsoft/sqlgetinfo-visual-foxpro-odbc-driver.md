@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (Driver ODBC do Visual FoxPro)
 title: SQLGetInfo (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370661a9a0ade5c5159f93a9af37c17b675032c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421670"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
@@ -117,7 +118,7 @@ ms.locfileid: "81295186"
   
  O SQL_DRIVER_HSTMT é implementado pelo Gerenciador de driver.  
   
- SQL_DRIVER_NAME retorna "vfpodbc. dll".  
+ SQL_DRIVER_NAME retorna "vfpodbc.dll".  
   
  SQL_DRIVER_ODBC_VER retorna "2,50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR).  
   
@@ -221,7 +222,7 @@ ms.locfileid: "81295186"
   
  SQL_NULL_COLLATION retorna SQL_NC_LOW.  
   
- SQL_NUMERIC_FUNCTIONS retorna todas as funções, exceto SQL_FN_NUM_POWER, que não tem suporte pelo driver ODBC do Visual FoxPro. Há suporte para as seguintes funções:  
+ SQL_NUMERIC_FUNCTIONS retorna todas as funções, exceto SQL_FN_NUM_POWER, que não tem suporte pelo driver ODBC do Visual FoxPro. As seguintes funções não são compatíveis:  
   
 -   SQL_FN_NUM_ABS  
   
@@ -267,7 +268,7 @@ ms.locfileid: "81295186"
   
 -   SQL_FN_NUM_TAN  
   
-## <a name="o"></a>O   
+## <a name="o"></a>O  
  SQL_ODBC_API_CONFORMANCE retorna SQL_OAC_LEVEL1.  
   
  SQL_ODBC_SAG_CLI_CONFORMANCE retorna SQL_OSCC_COMPLIANT.  
@@ -298,7 +299,7 @@ ms.locfileid: "81295186"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION retorna SQL_QL_START.  
   
- SQL_QUALIFIER_NAME_SEPARATOR retorna '! ' ou '\\'. O separador entre Database e Table é '! ' para fontes de dados conectadas aos [bancos](../../odbc/microsoft/visual-foxpro-terminology.md)de\\dados e ' ' para fontes de dado que são diretórios de [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ SQL_QUALIFIER_NAME_SEPARATOR retorna '! ' ou ' \\ '. O separador entre Database e Table é '! ' para fontes de dados conectadas aos [bancos](../../odbc/microsoft/visual-foxpro-terminology.md)de dados e ' \\ ' para fontes de dado que são diretórios de [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
  SQL_QUALIFIER_TERM retorna "Database" ou "Directory". O qualificador é "Database" para fontes de dados conectadas a [bancos](../../odbc/microsoft/visual-foxpro-terminology.md)de dados e "Directory" para fontes de dado que são diretórios de [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
@@ -314,7 +315,7 @@ ms.locfileid: "81295186"
   
  SQL_SCROLL_OPTIONS retorna SQL_SO_STATIC ou SQL_SO_READONLY.  
   
- SQL_SEARCH_PATTERN_ESCAPE retorna "\\".  
+ SQL_SEARCH_PATTERN_ESCAPE retorna " \\ ".  
   
  SQL_SERVER_NAME retorna "".  
   
@@ -454,4 +455,4 @@ ms.locfileid: "81295186"
 ## <a name="u-z"></a>U-Z  
  SQL_UNION retorna SQL_U_UNION ou SQL_U_UNION_ALL.  
   
- SQL_USER_NAME retorna \<> em branco.
+ SQL_USER_NAME retorna \<blank> .

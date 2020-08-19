@@ -1,4 +1,5 @@
 ---
+description: SQLPutData
 title: SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a9648fac10c5bc6d5e893bad123bbe02c38bc29
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bd4bb999be51961d11dccf5cae107706dae9f6d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423978"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +39,7 @@ ms.locfileid: "86009904"
 ## <a name="diagnostics"></a>Diagnósticos  
  Há um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE específico de cliente nativo para SQLPutData:  
   
-|SQLSTATE|Erro do|Descrição|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |22026|Incompatibilidade de comprimento de dados String|Se o comprimento dos dados em bytes a ser enviado tiver sido especificado por um aplicativo, por exemplo, com SQL_LEN_DATA_AT_EXEC (*n*) em que *n* é maior que 0, o número total de bytes fornecidos pelo aplicativo via SQLPutData deve corresponder ao comprimento especificado.|  
   

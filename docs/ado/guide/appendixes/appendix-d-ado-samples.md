@@ -1,4 +1,5 @@
 ---
+description: 'Apêndice D: exemplos de ADO no SDK do Windows'
 title: 'Apêndice D: exemplos de ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9c3e853910f0be04b8cd483f5a21264ca096e9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae72176eb0913ef8563612e0847fe346a60eadc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422200"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Apêndice D: exemplos de ADO no SDK do Windows
 O SDK do Windows contém vários aplicativos de exemplo que demonstram o uso de código ADO e RDS. Esses exemplos destinam-se a ajudá-lo a aprender a usar o ADO e o RDS, mas não devem ser implantados em servidores de produção.
@@ -28,7 +29,7 @@ O SDK do Windows contém vários aplicativos de exemplo que demonstram o uso de 
 
  Para localizar os exemplos de ADO, navegue até a pasta raiz SDK do Windows, como C:\Arquivos de Programas\microsoft SDKs\Windows\v6.0. Em seguida, navegue até a subpasta Samples\dataaccess\ADO.
 
- Para começar a usar os aplicativos de exemplo ADO e RDS, abra default. htm nas pastas ADO e RDS samples, respectivamente. Esses arquivos descrevem cada aplicativo de exemplo disponível e explicam como configurar e executar os exemplos de como procurar o código-fonte de exemplo.
+ Para começar a usar os aplicativos de exemplo ADO e RDS, abra default.htm nas pastas ADO e RDS samples, respectivamente. Esses arquivos descrevem cada aplicativo de exemplo disponível e explicam como configurar e executar os exemplos de como procurar o código-fonte de exemplo.
 
  A documentação do ADO também contém exemplos de código em vários idiomas, que são incluídos como tópicos nesta ajuda online. Para obter mais informações sobre esses exemplos, consulte [exemplos de código do ADO](../../../ado/reference/ado-api/ado-code-examples.md).
 

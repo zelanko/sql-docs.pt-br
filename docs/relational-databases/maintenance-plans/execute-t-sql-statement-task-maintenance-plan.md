@@ -1,4 +1,5 @@
 ---
+description: Tarefa Executar Instrução T-SQL (Plano de Manutenção)
 title: Tarefa Executar Instrução T-SQL (Plano de Manutenção) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a38c1bcb1dc4f1aa48f69b2abd6c5d67924c7847
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d90a9aaa1b038d4d890c66ceb5f5e7b9c4befc81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424058"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Tarefa Executar Instrução T-SQL (Plano de Manutenção)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use a caixa de diálogo **Tarefa Executar Instrução T-SQL** para personalizar seu plano de manutenção adicionando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de sua escolha a esse plano de manutenção.  
+   Use a caixa de diálogo **Tarefa Executar Instrução T-SQL** para personalizar seu plano de manutenção adicionando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de sua escolha a esse plano de manutenção.  
   
 ## <a name="options"></a>Opções  
  **Conexão**  

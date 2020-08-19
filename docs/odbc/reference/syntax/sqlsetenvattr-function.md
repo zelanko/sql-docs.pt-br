@@ -1,4 +1,5 @@
 ---
+description: Função SQLSetEnvAttr
 title: Função SQLSetEnvAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640b1e6947d67b92e2b7f8e623597e1d99d4a877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f535c860df212c708f11339165b2d05d4a79647
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421110"
 ---
 # <a name="sqlsetenvattr-function"></a>Função SQLSetEnvAttr
 **Conformidade**  
@@ -63,14 +64,14 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLSetEnvAttr** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_ENV e um *identificador* de *EnvironmentHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLSetEnvAttr** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário. Se um driver não oferecer suporte a um atributo de ambiente, o erro poderá ser retornado somente durante o tempo de conexão.  
   
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |01S02|Valor da opção alterado|O driver não oferecia suporte ao valor especificado em *ValuePtr* e substituiu um valor semelhante. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY009|Uso inválido de ponteiro nulo|O argumento de atributo identificou um atributo de ambiente que exigia um valor de cadeia de caracteres e o argumento *ValuePtr* era um ponteiro nulo.|  
 |HY010|Erro de sequência de função|(DM) um identificador de conexão foi alocado em *EnvironmentHandle*.<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION** não foi definido com **SQLSetEnvAttr** e o *atributo* não é igual a **SQL_ATTR_ODBC_VERSION**. Você não precisará definir **SQL_ATTR_ODBC_VERSION** explicitamente se estiver usando **SQLAllocHandleStd**.|  

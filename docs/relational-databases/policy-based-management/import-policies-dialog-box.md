@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Importar Políticas
 title: Caixa de diálogo Importar Políticas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5e5667222a7d7591c61670f2058276035c299
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8cd6f4223d3cf23d9ccd98f5b8e4f787872132f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423690"
 ---
 # <a name="import-policies-dialog-box"></a>Caixa de diálogo Importar Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85749349"
   
 ## <a name="options"></a>Opções  
  **Arquivos a importar**  
- Para importar uma política de um arquivo XML, digite o caminho e o nome do arquivo ou use o botão Procurar ( **...** ).  
+ Para importar uma política de um arquivo XML, digite o caminho e o nome do arquivo ou use o botão Procurar (**...**).  
   
  **Substituir duplicatas por itens importados**  
  Selecione para substituir as políticas ou condições existentes com o mesmo nome, caso elas já existam nessa instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Uma condição com uma política dependente não pode ser substituída, a menos que a política dependente também esteja sendo substituída. Se esta opção não estiver selecionada uma condição existente que esteja usando a mesma expressão de condição não causará um erro.  
@@ -42,6 +43,6 @@ ms.locfileid: "85749349"
 ## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Importar política de Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)   
- [Exportar uma política do gerenciamento baseado em políticas](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)  
+ [Exportar uma política do Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados do C
 title: Tipos de dados C | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 979bfe85e1e78b55718e1f12fdcfcc7583097bb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dadd93f13418d520c4ab908ba0d9402d07c893a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421520"
 ---
 # <a name="c-data-types"></a>Tipos de dados do C
 Tipos de dados ODBC C indicam o tipo de dados dos buffers C usados para armazenar dados no aplicativo.  

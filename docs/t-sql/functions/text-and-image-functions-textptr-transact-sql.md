@@ -1,4 +1,5 @@
 ---
+description: Funções Text e Image – TEXTPTR (Transact-SQL)
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0150b1b9dace457b76130b7b0b3f863471637970
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422590"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ TEXTPTR ( column )
   
  Essas funções e instruções também são úteis quando você trabalha com os dados **text**, **ntext** e **image**.  
   
-|Função ou instrução|DESCRIÇÃO|  
+|Função ou instrução|Descrição|  
 |---------------------------|-----------------|  
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
 |DATALENGTH<b>(</b>_expression_ **)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  

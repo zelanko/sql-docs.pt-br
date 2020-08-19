@@ -1,4 +1,5 @@
 ---
+description: Tamanho da coluna, dígitos decimais, comprimento do octeto de transferência e tamanho de exibição-ODBC
 title: Tamanho da coluna, dígitos decimais, comprimento do octeto de transferência, tamanho de exibição | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55b8e9dd305764a89601e9ffd5a337e42a8d8db3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d00a23fb38bdece97ffcbde0974b7bdf893a5133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421500"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Tamanho da coluna, dígitos decimais, comprimento do octeto de transferência e tamanho de exibição-ODBC
 Os tipos de dados são caracterizados por seu tamanho de coluna (ou parâmetro), dígitos decimais, comprimento e tamanho de exibição. As seguintes funções ODBC retornam esses atributos para um parâmetro em uma instrução SQL ou para um tipo de dados SQL em uma fonte de dados. Cada função ODBC retorna um conjunto diferente desses atributos, da seguinte maneira:  

@@ -1,4 +1,5 @@
 ---
+description: Gravar drivers 3.x ODBC
 title: Gravando drivers ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421340"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Gravar drivers 3.x ODBC
 A tabela a seguir mostra o suporte de função em um ODBC 3. Driver *x* e um aplicativo ODBC e o mapeamento executado pelo Gerenciador de driver quando as funções são chamadas em relação a um ODBC 3. Driver *x* .  
@@ -111,7 +112,7 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. Driver *x* e um apl
   
  [3] os gravadores de driver devem observar que o ODBC 2. os atributos de coluna *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE e SQL_COLUMN_LENGTH devem ter suporte com **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** é parcialmente implementado pelo Gerenciador de driver quando um descritor está sendo copiado entre conexões que pertencem a drivers diferentes. Os drivers são necessários para dar suporte a **SQLCopyDesc** em duas de suas próprias conexões. Funções como **SQLDrivers**, que são implementadas exclusivamente pelo Gerenciador de driver, não aparecem nessa lista.  
+ [4]   **SQLCopyDesc** é parcialmente implementado pelo Gerenciador de driver quando um descritor está sendo copiado entre conexões que pertencem a drivers diferentes. Os drivers são necessários para dar suporte a **SQLCopyDesc** em duas de suas próprias conexões. Funções como **SQLDrivers**, que são implementadas exclusivamente pelo Gerenciador de driver, não aparecem nessa lista.  
   
  [5] em determinadas circunstâncias, os drivers podem precisar dar suporte a essa função. Para obter mais informações, consulte a página de referência da função.  
   

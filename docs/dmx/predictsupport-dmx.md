@@ -1,4 +1,5 @@
 ---
+description: PredictSupport (DMX)
 title: PredictSupport (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cea4913bf3668c89fb0c1c66632359a372f3d54b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422250"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -60,7 +61,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

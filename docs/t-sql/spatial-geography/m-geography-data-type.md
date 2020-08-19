@@ -1,4 +1,5 @@
 ---
+description: M (tipo de dados geography)
 title: M (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 580feb4d6727e84f982a09ca8a96337d5b1a31df
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77a79972671854e7e8538de7b943545955f61e89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422420"
 ---
 # <a name="m-geography-data-type"></a>M (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "86552534"
 ## <a name="return-types"></a>Tipos de retorno
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de **geography** não for um **Point** e também será nulo para as instâncias de **Point** para as quais ele não for definido.  
   
- Essa propriedade é somente leitura.  
+ Esta propriedade é somente para leitura.  
   
  Os valores de M não são usados nos cálculos feitos pela biblioteca e não serão usados em nenhum cálculo de biblioteca.  
   

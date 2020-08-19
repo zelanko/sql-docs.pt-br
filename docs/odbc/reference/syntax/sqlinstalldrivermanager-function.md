@@ -1,4 +1,5 @@
 ---
+description: Função SQLInstallDriverManager
 title: Função SQLInstallDriverManager | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b39e2c9304fd47394617d48f22ac91284af1b45d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421170"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Função SQLInstallDriverManager
 **Conformidade**  
@@ -56,8 +57,8 @@ BOOL SQLInstallDriverManager(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLInstallDriverManager** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLInstallDriverManager** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

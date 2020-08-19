@@ -1,4 +1,5 @@
 ---
+description: Categoria de evento CLR
 title: Categoria de eventos de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 978067f0d035fcd781d275bf77177e2b95383fdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab5397eb8ddcce4b4e455382cf40affee05d29bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420930"
 ---
 # <a name="clr-event-category"></a>Categoria de evento CLR
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85762992"
   
 ## <a name="assembly-load-event-class-data-columns"></a>Colunas de dados da classe de evento Assembly Load  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo que pediu a carga.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

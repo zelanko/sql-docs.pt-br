@@ -1,4 +1,5 @@
 ---
+description: HASHBYTES (Transact-SQL)
 title: HASHBYTES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2016
@@ -19,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30f72c8b6fff2d22c3ff7b493d8ba126db91c6c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5c622d1c39668ee1e58c3eb1e60512d6f8d6f729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422730"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 

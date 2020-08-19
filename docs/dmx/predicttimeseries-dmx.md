@@ -1,4 +1,5 @@
 ---
+description: PredictTimeSeries (DMX)
 title: PredictTimeSeries (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422259"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: catalog.operation_messages (Banco de Dados SSISDB)
 title: catalog.operation_messages (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2dddde1f4c6ac3cf058e45b0c049bd89fb76bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7b15cffb2f04217586e58fd53ff5b5224c66527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422020"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (Banco de Dados SSISDB)
 
@@ -29,14 +30,14 @@ ms.locfileid: "86912482"
 
   Exibe mensagens que são registradas em log durante operações no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|O ID (identificador exclusivo) da mensagem.|  
 |operation_id|**bigint**|A ID exclusiva da operação.|  
 |message_time|**datetimeoffset(7)**|A hora em que a mensagem foi criada.|  
 |message_type|**smallint**|O tipo da mensagem exibida.|  
 |message_source_type|**smallint**|A ID do tipo de origem da mensagem.|  
-|message|**nvarchar(max)**|O texto da mensagem.|  
+|mensagem|**nvarchar(max)**|O texto da mensagem.|  
 |extended_info_id|**bigint**|A ID de informações adicionais relacionadas à mensagem da operação, localizada na exibição [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
 ## <a name="remarks"></a>Comentários  
@@ -44,7 +45,7 @@ ms.locfileid: "86912482"
   
  Esta exibição exibe os tipos de mensagem a seguir:  
   
-|Valor **message_type**|DESCRIÇÃO|  
+|Valor **message_type**|Descrição|  
 |-----------------------------|-----------------|  
 |-1|Unknown (desconhecido)|  
 |120|Erro|  
@@ -54,7 +55,7 @@ ms.locfileid: "86912482"
 |20|Pós-validar|  
 |30|Pré-executar|  
 |40|Pós-executar|  
-|60|Andamento|  
+|60|Progresso|  
 |50|StatusChange|  
 |100|QueryCancel|  
 |130|TaskFailed|  
@@ -66,7 +67,7 @@ ms.locfileid: "86912482"
   
  Esta exibição exibe os tipos de origem de mensagem a seguir.  
   
-|**message_source_type**|DESCRIÇÃO|  
+|**message_source_type**|Descrição|  
 |-------------------------------|-----------------|  
 |10|APIs de entrada, como os procedimentos armazenados T-SQL e CLR|  
 |20|O processo externo usado para executar pacote (ISServerExec.exe)|  

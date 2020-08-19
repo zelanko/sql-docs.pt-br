@@ -1,4 +1,5 @@
 ---
+description: WRITETEXT (Transact-SQL)
 title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e55a8822677162472d9f005eec213e184003cf00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422390"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ WRITETEXT [BULK]
  É o nome da tabela e da coluna de **text**, **ntext** ou **image** a ser atualizado. Os nomes de tabela e de coluna precisam estar de acordo com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
   
  *text_ptr*  
- É um valor que armazena o ponteiro para os dados de **text**, **ntext** ou **image**. *text_ptr* precisa ser **binary(16)** . Para criar um ponteiro de texto, execute uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) com os dados não nulos para a coluna **text**, **ntext** ou **image**.  
+ É um valor que armazena o ponteiro para os dados de **text**, **ntext** ou **image**. *text_ptr* precisa ser **binary(16)**. Para criar um ponteiro de texto, execute uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) com os dados não nulos para a coluna **text**, **ntext** ou **image**.  
   
  WITH LOG  
  Ignorado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A criação de log é determinada pelo modelo de recuperação em vigor para o banco de dados.  

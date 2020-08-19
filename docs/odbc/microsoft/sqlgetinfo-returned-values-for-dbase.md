@@ -1,4 +1,5 @@
 ---
+description: Valores retornados SQLGetInfo para dBASE
 title: SQLGetInfo retornou valores para o dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea3a937fe7e877eaf70c405678d82111a691dd3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e19e4f46771166dbb08df4fa210f4cc161413aed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421720"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valores retornados SQLGetInfo para dBASE
 A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* e os valores correspondentes retornados por **SQLGetInfo**. Essas informações podem ser recuperadas passando o #defines de linguagem C listado para **SQLGetInfo** no argumento *fInfoType* . Para obter mais informações sobre os valores retornados por **SQLGetInfo**, consulte a *referência do programador de ODBC*.  
@@ -81,7 +82,7 @@ A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* 
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|O DSN do ODBC. ini ou "" se a palavra-chave do DRIVER for usada em ODBC. ini|  
+|SQL_DATA_SOURCE_NAME|O DSN do Odbc.ini ou "" se a palavra-chave do DRIVER for usada em Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N" (depende da fonte de dados).|  
 |SQL_DATABASE_NAME|Diretório do banco de dados atual|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,7 +95,7 @@ A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* 
 |SQL_DRIVER_HENV|Manipulado pelo Gerenciador de driver.|  
 |SQL_DRIVER_HLIB|Manipulado pelo Gerenciador de driver.|  
 |SQL_DRIVER_HSTMT|Manipulado pelo Gerenciador de driver.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4, 0.*nnnn*" (*nnnn* especifica a data de compilação)|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* 
 |SQL_GETDATA_EXTENSIONS|Vários valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_UPPER (o qualificador é retornado em casos mistos para que o Windows NT possa localizar o diretório.)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (aspas posteriores)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (aspas posteriores)|  
 |SQL_KEYWORDS|Vários valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* 
 |SQL_SCROLL_OPTIONS|Vários valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,.! '\_-+=\\ \[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` \@ #$%^& \* \_ -+= \\ } {" ';: \? / \><,.! ' \[ ] &#124; "|  
 |SQL_STRING_FUNCTIONS|Vários valores|  
 |SQL_SUBQUERIES|Vários valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  

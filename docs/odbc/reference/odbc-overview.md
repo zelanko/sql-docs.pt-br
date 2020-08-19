@@ -1,4 +1,5 @@
 ---
+description: Visão geral do ODBC
 title: Visão geral do ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a0515a882cd7d1c97a60e9262942bd7c397b0b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13f34a1ef329957854a8b33916b6b29506fc0ad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421310"
 ---
 # <a name="odbc-overview"></a>Visão geral do ODBC
 ODBC (Open Database Connectivity) é uma API (interface de programação de aplicativo) amplamente aceita para acesso ao banco de dados. Ele se baseia nas especificações da CLI (interface de nível de chamada) de Open Group e ISO/IEC para APIs de banco de dados e usa linguagem SQL (SQL) como seu idioma de acesso ao banco de dados.  

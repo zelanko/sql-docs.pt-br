@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetPrivateProfileString
 title: Função SQLGetPrivateProfileString | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c12fc8d08535960cbb239c14e017b2ad5faa6c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2223d46d507df2a9cf82e7feb800caf5b8f82cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421230"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>Função SQLGetPrivateProfileString
 **Conformidade**  
@@ -68,8 +69,8 @@ int SQLGetPrivateProfileString(
 ## <a name="returns"></a>Retornos  
  **SQLGetPrivateProfileString** retorna um valor inteiro que indica o número de caracteres lidos.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando uma chamada para **SQLGetPrivateProfileString** falha, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando uma chamada para **SQLGetPrivateProfileString** falha, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
@@ -77,9 +78,9 @@ int SQLGetPrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- O **SQLGetPrivateProfileString** é fornecido como uma maneira simples de drivers de porta e DLLs de instalação de driver do Microsoft® Windows® para o Microsoft Windows NT®/Windows 2000. Chamadas para **GetPrivateProfileString** que recuperam uma cadeia de caracteres de perfil do arquivo ODBC. ini devem ser substituídas por chamadas para **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** chama funções na API de® do Win32 para recuperar os nomes solicitados de valores ou dados correspondentes a um valor da subchave ODBC. ini das informações do sistema.  
+ O **SQLGetPrivateProfileString** é fornecido como uma maneira simples de drivers de porta e DLLs de instalação de driver do Microsoft® Windows® para o Microsoft Windows NT®/Windows 2000. Chamadas para **GetPrivateProfileString** que recuperam uma cadeia de caracteres de perfil do arquivo de Odbc.ini devem ser substituídas por chamadas para **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** chama funções na API de® do Win32 para recuperar os nomes solicitados de valores ou dados correspondentes a um valor da subchave Odbc.ini das informações do sistema.  
   
- O modo de configuração (conforme definido por **SQLSetConfigMode**) indica onde a entrada ODBC. ini que lista os valores de DSN está nas informações do sistema. Se o DSN for um DSN de usuário (o modo de configuração é USERDSN_ONLY), a função lerá da entrada ODBC. ini no HKEY_CURRENT_USER. Se o DSN for um DSN do sistema (SYSTEMDSN_ONLY), a função lerá da entrada ODBC. ini no HKEY_LOCAL_MACHINE. Se o modo de configuração for BOTHDSN, HKEY_CURRENT_USER será tentado e, se falhar, HKEY_LOCAL_MACHINE será usado.  
+ O modo de configuração (conforme definido por **SQLSetConfigMode**) indica onde os valores de DSN de listagem de entrada de Odbc.ini estão nas informações do sistema. Se o DSN for um DSN de usuário (o modo de configuração é USERDSN_ONLY), a função lerá da entrada de Odbc.ini no HKEY_CURRENT_USER. Se o DSN for um DSN do sistema (SYSTEMDSN_ONLY), a função lerá da entrada Odbc.ini no HKEY_LOCAL_MACHINE. Se o modo de configuração for BOTHDSN, HKEY_CURRENT_USER será tentado e, se falhar, HKEY_LOCAL_MACHINE será usado.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   

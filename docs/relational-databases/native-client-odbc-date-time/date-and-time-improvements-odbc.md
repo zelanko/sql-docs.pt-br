@@ -1,4 +1,5 @@
 ---
+description: Aprimoramentos de data e hora (ODBC)
 title: Melhorias de data e hora (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee9292901467ea496ebc66264ff194c9d55cf9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5cbed5106fdea4a74cec0c4d08d0da653b03c1e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423858"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Aprimoramentos de data e hora (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +33,10 @@ ms.locfileid: "86012722"
  [Suporte a tipos de dados para aprimoramentos de data e hora do ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  Fornece informações sobre tipos ODBC que oferecem suporte a tipos de dados de data e hora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Metadados &#40;&#41;ODBC](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [Metadados &#40;&#41;ODBC ](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
  Descreve as informações retornadas nos campos IPD (descritor de parâmetro de implementação) e IRD (descritor de linha de implementação), bem como os metadados de coluna retornados por **SQLColumns** e **SQLProcedureColumns**. Também descreve os metadados de tipo de dados retornados por **SQLGetTypeInfo**.  
   
- [conversões de tipo de dados DateTime &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
+ [conversões de tipo de dados DateTime &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
  Descreve como converter entre valores datetime e datetimeoffset.  
   
  [Suporte a Sql_variant para tipos de data e hora](../../relational-databases/native-client-odbc-date-time/sql-variant-support-for-date-and-time-types.md)  

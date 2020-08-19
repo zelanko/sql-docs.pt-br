@@ -1,4 +1,5 @@
 ---
+description: Publicadores
 title: Assinantes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 02ac1caf5add69f0df5522fe3d7ad4086b965e5f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 217081c950442fa766e742dc72f6733477210fa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423410"
 ---
 # <a name="subscribers"></a>Publicadores
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

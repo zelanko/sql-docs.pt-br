@@ -1,4 +1,5 @@
 ---
+description: Manter o valor padrão da máscara de afinidade
 title: Manter o valor padrão da máscara de afinidade | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8a9e592f6cf962eadcfb14c9c3a72968187f756a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95a429830df085a92b64f5c76ea3bfd220ad006b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423660"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Manter o valor padrão da máscara de afinidade
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Trabalhando com valores vazios
 title: Trabalhando com valores vazios | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f497ba1ccf84ac642144340af4d5597d773dcadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421890"
 ---
 # <a name="working-with-empty-values"></a>Trabalhando com valores vazios
 
@@ -54,7 +55,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 -   Quando o valor de célula vazio for um operando para o operador de concatenação de cadeia de caracteres (+), o valor de célula vazio será tratado como zero se o outro operando for um valor não vazio. Se ambos os operandos estiverem vazios, o operador de concatenação de cadeias de caracteres retornará o valor de célula vazio.  
   
--   Quando o valor de célula vazio for um operando para qualquer um dos operadores de comparação (=. <>, >=, \<=, >, <), o valor da célula vazia é tratado como zero ou uma cadeia de caracteres vazia, dependendo se o tipo de dados do outro operando é numérico ou de cadeia de caracteres, respectivamente. Se ambos os operandos estiverem vazios, os operandos serão tratados como zero.  
+-   Quando o valor de célula vazio for um operando para qualquer um dos operadores de comparação (=. <>, >=, \<=, > , <), o valor da célula vazia é tratado como zero ou uma cadeia de caracteres vazia, dependendo se o tipo de dados do outro operando é numérico ou de cadeia de caracteres, respectivamente. Se ambos os operandos estiverem vazios, os operandos serão tratados como zero.  
   
 -   Ao agrupar valores numéricos, o valor de célula vazio é agrupado no mesmo local como zero. Entre o valor de célula vazio e zero, vazio é agrupado antes de zero.  
   
@@ -143,8 +144,8 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

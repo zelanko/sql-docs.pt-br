@@ -1,4 +1,5 @@
 ---
+description: editores não SQL Server
 title: Publicadores não SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9114317fde7ff4145c1008ccaf51bb5f0cec855f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9560875e4db3a644644238b0140fadb33cf1877d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420440"
 ---
 # <a name="non-sql-server-publishers"></a>editores não SQL Server  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ A publicação de dados de origens que não são do [!INCLUDE[ssNoVersion](../..
   
  A publicação de banco de dados que não são do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é ideal para os seguintes cenários:  
   
-|Cenário|DESCRIÇÃO|  
+|Cenário|Descrição|  
 |--------------|-----------------|  
 |Implantações de aplicativos do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework|Desenvolva com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enquanto estiver operando em dados replicados de banco de dados que não são do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |Servidores de preparo de data warehouse|Mantenha os bancos de dados de preparo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sincronizado com um banco de dados não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  

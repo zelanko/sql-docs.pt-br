@@ -1,4 +1,5 @@
 ---
+description: Função SQLSetParam
 title: Função SQLSetParam | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8de09f7a17e87c70b40865cb690554af7f3cae1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af1dea558853a56b303a02c45606614c9580766c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421100"
 ---
 # <a name="sqlsetparam-function"></a>Função SQLSetParam
 **Conformidade**  

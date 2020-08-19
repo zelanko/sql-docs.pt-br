@@ -1,4 +1,5 @@
 ---
+description: DrilldownMemberTop (MDX)
 title: DrilldownMemberTop (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5bed7dfcf82b7f768ba1dc1e98128424665af6bd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fe58cf1c2793206c3217f4a0f7ea132d13a242ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421910"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -60,7 +61,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  A função **DrilldownMemberTop** é semelhante à função [DrilldownMember](../mdx/drilldownmember-mdx.md) , mas em vez de incluir todos os filhos de cada membro no primeiro conjunto que também está presente no segundo conjunto, a função **DrilldownMemberTop** retorna o número mais alto de membros filho para cada membro.  
   
- Consultar a propriedade XMLA MdpropMdxDrillFunctions permite que você verifique o nível de suporte que o servidor fornece para as funções de análise; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
+ Consultar a propriedade XMLA MdpropMdxDrillFunctions permite que você verifique o nível de suporte que o servidor fornece para as funções de análise; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir faz um detalhamento na categoria de vestuário para retornar as três subcategorias de vestuário com a quantidade superior de pedidos enviados.  

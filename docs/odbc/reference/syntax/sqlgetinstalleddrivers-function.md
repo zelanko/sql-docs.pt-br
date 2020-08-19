@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetInstalledDrivers
 title: Função SQLGetInstalledDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0599cb187dee9d3b860f619538b1e0dc148ad58d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421260"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>Função SQLGetInstalledDrivers
 **Conformidade**  
@@ -56,8 +57,8 @@ BOOL SQLGetInstalledDrivers(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLGetInstalledDrivers** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLGetInstalledDrivers** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

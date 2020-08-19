@@ -1,4 +1,5 @@
 ---
+description: Função SQLSetDescField
 title: Função SQLSetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 122d4b26d1d75811d4a8e252378ce8f81ca2c66b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c21d3a21e863d62a3cc8d685e81c6e3265c1551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421130"
 ---
 # <a name="sqlsetdescfield-function"></a>Função SQLSetDescField
 
@@ -76,25 +77,25 @@ SQLRETURN SQLSetDescField(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLSetDescField** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DESC e um *identificador* de *DescriptorHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLSetDescField** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
-|01S02|Valor da opção alterado|O driver não oferecia suporte ao valor especificado em * \*ValuePtr* (se *ValuePtr* era um ponteiro) ou o valor em *ValuePtr* (se *ValuePtr* era um valor inteiro) ou * \*ValuePtr* era inválido devido a condições de funcionamento de implementação, portanto, o driver substituiu um valor semelhante. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
-|07009|Índice de descritor inválido|O argumento *FieldIdentifier* era um campo de registro, o argumento *RecNumber* era 0 e o argumento *DescriptorHandle* se referia a um identificador de IPD.<br /><br /> O argumento *RecNumber* era menor que 0 e o argumento *DescriptorHandle* se referiu a um ARD ou a um APD.<br /><br /> O argumento *RecNumber* era maior que o número máximo de colunas ou parâmetros para os quais a fonte de dados pode dar suporte e o argumento *DescriptorHandle* referido a um APD ou ARD.<br /><br /> (DM) o argumento *FieldIdentifier* foi SQL_DESC_COUNT e * \** o argumento ValuePtr era menor que 0.<br /><br /> O argumento *RecNumber* era igual a 0 e o argumento *DescriptorHandle* se referiu a um APD alocado implicitamente. (Esse erro não ocorre com um descritor de aplicativo explicitamente alocado, pois não é conhecido se um descritor de aplicativo explicitamente alocado é um APD ou ARD até o tempo de execução.)|  
+|01S02|Valor da opção alterado|O driver não oferecia suporte ao valor especificado em * \* ValuePtr* (se *ValuePtr* era um ponteiro) ou o valor em *ValuePtr* (se *ValuePtr* era um valor inteiro) ou * \* ValuePtr* era inválido devido a condições de funcionamento de implementação, portanto, o driver substituiu um valor semelhante. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
+|07009|Índice de descritor inválido|O argumento *FieldIdentifier* era um campo de registro, o argumento *RecNumber* era 0 e o argumento *DescriptorHandle* se referia a um identificador de IPD.<br /><br /> O argumento *RecNumber* era menor que 0 e o argumento *DescriptorHandle* se referiu a um ARD ou a um APD.<br /><br /> O argumento *RecNumber* era maior que o número máximo de colunas ou parâmetros para os quais a fonte de dados pode dar suporte e o argumento *DescriptorHandle* referido a um APD ou ARD.<br /><br /> (DM) o argumento *FieldIdentifier* foi SQL_DESC_COUNT e o argumento * \* ValuePtr* era menor que 0.<br /><br /> O argumento *RecNumber* era igual a 0 e o argumento *DescriptorHandle* se referiu a um APD alocado implicitamente. (Esse erro não ocorre com um descritor de aplicativo explicitamente alocado, pois não é conhecido se um descritor de aplicativo explicitamente alocado é um APD ou ARD até o tempo de execução.)|  
 |08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado falhou antes da função concluir o processamento.|  
 |22001|Dados de cadeia de caracteres, truncados à direita|O argumento *FieldIdentifier* foi SQL_DESC_NAME e o argumento *BufferLength* era um valor maior que SQL_MAX_IDENTIFIER_LEN.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) o *DescriptorHandle* foi associado a um *StatementHandle* para o qual uma função de execução assíncrona (não esta) foi chamada e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* com o qual o *DescriptorHandle* estava associado e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *DescriptorHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLSetDescField** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados ao *DescriptorHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY016|Não é possível modificar um descritor de linha de implementação|O argumento *DescriptorHandle* foi associado a um IRD, e o argumento *FieldIdentifier* não foi SQL_DESC_ARRAY_STATUS_PTR ou SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|Informações de descritor inconsistentes|Os campos SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE não formam um tipo ODBC SQL válido ou um tipo SQL específico de driver válido (para IPDs) ou um tipo ODBC C válido (para APDs ou ARDs).<br /><br /> As informações de descritor verificadas durante uma verificação de consistência não estavam consistentes. (Consulte "verificação de consistência" em **SQLSetDescRec**.)|  
-|HY090|Comprimento de cadeia de caracteres ou buffer inválido|(DM) * \*ValuePtr* é uma cadeia de caracteres e *BufferLength* era menor que zero, mas não era igual a SQL_NTS.<br /><br /> (DM) o driver era um driver ODBC 2 *. x* , o descritor era um ARD, o argumento *ColumnNumber* foi definido como 0 e o valor especificado para o argumento *BufferLength* não era igual a 4.|  
+|HY090|Comprimento de cadeia de caracteres ou buffer inválido|(DM) * \* ValuePtr* é uma cadeia de caracteres e *BufferLength* era menor que zero, mas não era igual a SQL_NTS.<br /><br /> (DM) o driver era um driver ODBC 2 *. x* , o descritor era um ARD, o argumento *ColumnNumber* foi definido como 0 e o valor especificado para o argumento *BufferLength* não era igual a 4.|  
 |HY091|Identificador de campo de descritor inválido|O valor especificado para o argumento *FieldIdentifier* não era um campo definido pelo ODBC e não era um valor definido pela implementação.<br /><br /> O argumento *FieldIdentifier* era inválido para o argumento *DescriptorHandle* .<br /><br /> O argumento *FieldIdentifier* era um campo somente leitura definido pelo ODBC.|  
-|HY092|Identificador de atributo/opção inválido|O valor em * \*ValuePtr* não era válido para o argumento *FieldIdentifier* .<br /><br /> O argumento *FieldIdentifier* foi SQL_DESC_UNNAMED e *ValuePtr* foi SQL_NAMED.|  
+|HY092|Identificador de atributo/opção inválido|O valor em * \* ValuePtr* não era válido para o argumento *FieldIdentifier* .<br /><br /> O argumento *FieldIdentifier* foi SQL_DESC_UNNAMED e *ValuePtr* foi SQL_NAMED.|  
 |HY105|Tipo de parâmetro inválido|(DM) o valor especificado para o campo de SQL_DESC_PARAMETER_TYPE era inválido. (Para obter mais informações, consulte a seção "argumento*InputOutputType* " em **SQLBindParameter**.)|  
 |HY117|A conexão foi suspensa devido a um estado de transação desconhecido. Somente funções de desconexão e somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [novidades no ODBC 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).|  
 |HYT01|Tempo limite de conexão expirado|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -310,7 +311,7 @@ SQLRETURN SQLSetDescField(
  A contagem de registros nesse campo de um ARD não inclui uma coluna de indicador associado. A única maneira de desassociar uma coluna de indicador é definir o campo SQL_DESC_DATA_PTR como um ponteiro nulo.  
   
  **SQL_DESC_ROWS_PROCESSED_PTR [descritores de implementação]**  
- Em um IRD, esse campo \* de cabeçalho SQLULEN aponta para um buffer que contém o número de linhas buscadas após uma chamada para **SQLFetch** ou **SQLFetchScroll**, ou o número de linhas afetadas em uma operação em massa executada por uma chamada para **SQLBulkOperations** ou **SQLSetPos**, incluindo linhas de erro.  
+ Em um IRD, esse \* campo de cabeçalho SQLULEN aponta para um buffer que contém o número de linhas buscadas após uma chamada para **SQLFetch** ou **SQLFetchScroll**, ou o número de linhas afetadas em uma operação em massa executada por uma chamada para **SQLBulkOperations** ou **SQLSetPos**, incluindo linhas de erro.  
   
  Em um IPD, este campo de cabeçalho SQLUINTEGER * aponta para um buffer que contém o número de conjuntos de parâmetros que foram processados, incluindo conjuntos de erros. Nenhum número será retornado se esse for um ponteiro nulo.  
   

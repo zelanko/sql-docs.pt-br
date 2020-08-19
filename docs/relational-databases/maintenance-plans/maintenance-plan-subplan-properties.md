@@ -1,4 +1,5 @@
 ---
+description: Plano de manutenção (Propriedades do Subplano)
 title: Plano de manutenção (propriedades do subplano) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 440afb0c0b2c3f43de0bca54339b0f87872e9a90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d047b18ea2e749ff0a1bb624ba9b4ad197aec7b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420780"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plano de manutenção (Propriedades do Subplano)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use a caixa de diálogo **Plano de Manutenção (Propriedades do Subplano)** para especificar um nome, uma descrição e um agendamento para um subplano do plano de manutenção. Clique em **Propriedades do Subplano** na guia **Design** do plano de manutenção ou clique duas vezes em um subplano na grade de designer para exibir essa caixa de diálogo.  
+   Use a caixa de diálogo **Plano de Manutenção (Propriedades do Subplano)** para especificar um nome, uma descrição e um agendamento para um subplano do plano de manutenção. Clique em **Propriedades do Subplano** na guia **Design** do plano de manutenção ou clique duas vezes em um subplano na grade de designer para exibir essa caixa de diálogo.  
   
 ## <a name="options"></a>Opções  
  **Nome**  

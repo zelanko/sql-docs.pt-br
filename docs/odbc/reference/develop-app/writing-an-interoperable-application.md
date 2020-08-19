@@ -1,4 +1,5 @@
 ---
+description: Escrever um aplicativo interoperável
 title: Escrevendo um aplicativo interoperável | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 553e718e0759e47701e7f8c04561693358d5dc52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d8bff1848e20705ab64b8284ed42331c80fb23a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421360"
 ---
 # <a name="writing-an-interoperable-application"></a>Escrever um aplicativo interoperável
 Sempre que um aplicativo usa o mesmo código em relação a mais de um driver, esse código deve ser interoperável entre esses drivers. Na maioria dos casos, essa é uma tarefa fácil. Por exemplo, o código para buscar linhas com um cursor de somente avanço é o mesmo para todos os drivers. Em alguns casos, isso pode ser mais difícil. Por exemplo, o código para construir identificadores para uso em instruções SQL precisa considerar as convenções de nomenclatura de maiúsculas e minúsculas de identificador, de cotação e de uma parte, de duas partes e de três partes.  

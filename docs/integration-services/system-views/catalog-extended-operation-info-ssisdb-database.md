@@ -1,4 +1,5 @@
 ---
+description: catalog.extended_operation_info (Banco de Dados SSISDB)
 title: catalog.extended_operation_info (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dfc87963af1a7d55a8368b31d1ed94ccdc04b717
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4082c0bbf428a96776ae18fece7333f0401a2b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422070"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (Banco de Dados SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912542"
 
   Exibe informações estendidas de todas as operações no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|O identificador exclusivo (ID) da informação estendida.|  
 |operation_id|**bigint**|A ID exclusiva da operação que corresponde à informação estendida.|  

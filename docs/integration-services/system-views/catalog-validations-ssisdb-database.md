@@ -1,4 +1,5 @@
 ---
+description: catalog.validations (banco de dados SSISDB)
 title: catalog.validations (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6847053a171fbfac422457de2411e8329e339ec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421970"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (banco de dados SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912437"
 
   Exibe os detalhes de todas as validações de projeto e pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|O identificador exclusivo (ID) da validação.|  
 |environment_scope|**Char(1)**|Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação.|  
@@ -38,7 +39,7 @@ ms.locfileid: "86912437"
 |reference_id|**bigint**|A ID exclusiva da referência de ambiente do projeto que é usada pelo projeto para fazer referência a um ambiente.|  
 |operation_type|**smallint**|O tipo de operação. As operações mostradas nessa exibição incluem a validação de projeto (`300`) e a validação de pacote (`301`).|  
 |object_name|**nvarhcar(260)**|O nome do objeto.|  
-|object_type|**smallint**|O tipo do objeto. O objeto pode ser um projeto (`20`) ou um pacote (`30`).|  
+|object_type|**smallint**|O tipo de objeto. O objeto pode ser um projeto (`20`) ou um pacote (`30`).|  
 |object_id|**bigint**|A ID do objeto afetado pela operação.|  
 |start_time|**datetimeoffset(7)**|A hora de início da operação.|  
 |end_time|**datetimeoffsset(7)**|A hora em que a operação foi concluída.|  

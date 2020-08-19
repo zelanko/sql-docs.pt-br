@@ -1,4 +1,5 @@
 ---
+description: Função SQLSetDescRec
 title: Função SQLSetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b29879ff7635d6eb7d5a0f7489ff3994758d4a35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f0e423de06acf82e6c883531514c57c29d9407
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421120"
 ---
 # <a name="sqlsetdescrec-function"></a>Função SQLSetDescRec
 **Conformidade**  
@@ -87,7 +88,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLSetDescRec** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DESC e um *identificador* de *DescriptorHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLSetDescRec** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -95,7 +96,7 @@ SQLRETURN SQLSetDescRec(
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |07009|Índice de descritor inválido|O argumento *RecNumber* foi definido como 0 e o *DescriptorHandle* fez referência a um identificador de IPD.<br /><br /> O argumento *RecNumber* era menor que 0.<br /><br /> O argumento *RecNumber* era maior que o número máximo de colunas ou parâmetros aos quais a fonte de dados pode dar suporte e o argumento *DESCRIPTORHANDLE* era um APD, IPD ou ARD.<br /><br /> O argumento *RecNumber* era igual a 0 e o argumento *DescriptorHandle* se referiu a um APD alocado implicitamente. (Esse erro não ocorre com um descritor de aplicativo explicitamente alocado porque não é conhecido se um descritor de aplicativo explicitamente alocado é um APD ou ARD até o tempo de execução.)|  
 |08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado falhou antes da função concluir o processamento.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) o *DescriptorHandle* foi associado a um *StatementHandle* para o qual uma função de execução assíncrona (não esta) foi chamada e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* com o qual o *DescriptorHandle* estava associado e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *DescriptorHandle*. Esta função aynchronous ainda estava em execução quando a função **SQLSetDescRec** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados ao *DescriptorHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  

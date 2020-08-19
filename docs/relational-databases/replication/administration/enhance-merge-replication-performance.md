@@ -1,4 +1,5 @@
 ---
+description: Aprimorar o desempenho de replicação de mesclagem
 title: Aprimorar o desempenho de replicação de mesclagem | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70399a3d0e21fc75014828837e7b4cb7738d9966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423600"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Após considerar as dicas para o desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considere estas áreas adicionais específicas da replicação de mesclagem.  
+   Após considerar as dicas para o desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considere estas áreas adicionais específicas da replicação de mesclagem.  
   
 ## <a name="database-design"></a>Design de banco de dados  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85897886"
   
 -   Considere tabelas supernormalizadas que incluam tipos de dados LOB (Large Object).  
   
-     Quando a sincronização ocorre, o Merge Agent poderá precisar ler e transferir a linha de dados inteira de um Publicador ou Assinante. Se a linha contiver colunas que usam LOBs, esse processo poderá precisar alocar memória adicional e comprometer o desempenho negativamente, embora essas colunas possam não ter sido atualizadas. Para reduzir a probabilidade de ocorrer esse comprometimento no desempenho, considere colocar colunas LOB em uma tabela separada, usando uma relação um para um no resto dos dados de linha. Os tipos de dados **text**, **ntext**e **image** são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , respectivamente.  
+     Quando a sincronização ocorre, o Merge Agent poderá precisar ler e transferir a linha de dados inteira de um Publicador ou Assinante. Se a linha contiver colunas que usam LOBs, esse processo poderá precisar alocar memória adicional e comprometer o desempenho negativamente, embora essas colunas possam não ter sido atualizadas. Para reduzir a probabilidade de ocorrer esse comprometimento no desempenho, considere colocar colunas LOB em uma tabela separada, usando uma relação um para um no resto dos dados de linha. Os tipos de dados **text**, **ntext**e **image** são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, respectivamente.  
   
 ## <a name="publication-design"></a>Design de publicação  
   

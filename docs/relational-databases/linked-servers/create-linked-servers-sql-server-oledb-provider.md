@@ -1,4 +1,5 @@
 ---
+description: 'Consultas distribuídas do Microsoft SQL Server: Conectividade do OLE DB'
 title: Criar um provedor de servidor vinculado
 ms.date: 07/01/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420840"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Consultas distribuídas do Microsoft SQL Server: Conectividade do OLE DB
 
@@ -262,7 +263,7 @@ Se não houver suporte para `IDBSchemaRowset` com os conjuntos de linhas TABLES,
 
 Se o provedor der suporte a estatísticas de distribuição nas tabelas base, o SQL Server usará essas estatísticas. Há dois tipos de estatísticas de interesse para o processador de consultas do SQL Server:
 
-- **Cardinalidades de coluna (ou tupla)** . Esse é o número de valores exclusivos que estão em uma coluna (ou uma combinação de colunas) de uma tabela. Isso pode ser usado para estimar a seletividade dos predicados em relação às colunas. Um provedor que dá suporte a estatísticas de distribuição deve dar suporte a, pelo menos, um tipo de cardinalidade.
+- **Cardinalidades de coluna (ou tupla)**. Esse é o número de valores exclusivos que estão em uma coluna (ou uma combinação de colunas) de uma tabela. Isso pode ser usado para estimar a seletividade dos predicados em relação às colunas. Um provedor que dá suporte a estatísticas de distribuição deve dar suporte a, pelo menos, um tipo de cardinalidade.
 
 - **Histogramas**. Se a distribuição de valores não for uniforme, o número de valores exclusivos não será suficiente para estimar precisamente a seletividade dos predicados. Nesse caso, um histograma pode ser fornecido, que gera informações mais refinadas sobre a distribuição de valores de coluna em uma tabela.
 

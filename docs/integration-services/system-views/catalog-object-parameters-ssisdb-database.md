@@ -1,4 +1,5 @@
 ---
+description: catalog.object_parameters (Banco de Dados SSISDB)
 title: catalog.object_parameters (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca6cf256e00c992e492c6d1a6d1a698a739c871
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422040"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (Banco de Dados SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912495"
 
   Exibe os parâmetros para todos os pacotes e projetos no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|O ID (identificador exclusivo) do parâmetro.|  
 |project_id|**bigint**|O ID exclusivo do projeto.|  
@@ -34,7 +35,7 @@ ms.locfileid: "86912495"
 |object_name|**sysname**|O nome do projeto ou pacote correspondente.|  
 |parameter_name|**sysname(nvarchar(128))**|O nome do parâmetro.|  
 |data_type|**nvarchar(128)**|O tipo de dados do parâmetro.|  
-|obrigatório|**bit**|Quando o valor é `1`, o valor do parâmetro é necessário para iniciar a execução. Quando o valor é `0`, o valor de parâmetro não é necessário para iniciar a execução.|  
+|exigido|**bit**|Quando o valor é `1`, o valor do parâmetro é necessário para iniciar a execução. Quando o valor é `0`, o valor de parâmetro não é necessário para iniciar a execução.|  
 |sensitive|**bit**|Quando o valor é `1`, o valor do parâmetro é confidencial. Quando o valor é `0`, o valor do parâmetro não é confidencial.|  
 |descrição|**nvarchar(1024)**|Uma descrição opcional do pacote.|  
 |design_default_value|**sql_variant**|O valor padrão para o parâmetro que foi atribuído durante o design do projeto ou pacote.|  

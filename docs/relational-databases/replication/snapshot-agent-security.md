@@ -1,4 +1,5 @@
 ---
+description: Segurança do Snapshot Agent
 title: Segurança do Snapshot Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2eeaa27bc549be57503bfa13ec1de5807b9c7e35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc45667b583aa476d52f1248ff7f7a70573ab0f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420420"
 ---
 # <a name="snapshot-agent-security"></a>Segurança do Snapshot Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

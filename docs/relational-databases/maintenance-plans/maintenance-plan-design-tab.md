@@ -1,4 +1,5 @@
 ---
+description: Plano de manutenção (Guia Design)
 title: Plano de manutenção (Guia Design) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420870"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+   Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
  **Adicionar Subplano**  
@@ -69,7 +70,7 @@ ms.locfileid: "85666976"
   
  Depois que uma tarefa de manutenção é colocada na superfície de design, suas propriedades podem ser editadas como necessário. Por exemplo, o banco de dados específico para fazer o backup na tarefa Executar Backup do Banco de Dados é especificado depois que a tarefa é adicionada ao plano. Tarefas na superfície de design que não são configuradas corretamente contêm um ícone vermelho com um x branco.  
   
- Para adicionar uma tarefa a um plano, arraste o ícone da tarefa da caixa de ferramentas **Tarefas do Plano de Manutenção** até a superfície de design do plano ou clique duas vezes na tarefa na caixa de ferramentas, o que adiciona a tarefa à superfície de designer ativa no momento. Se a caixa de ferramentas **Tarefas do Plano de Manutenção** não estiver visível, escolha **Caixa de Ferramentas** no menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Exibir**do**. Expanda o nó **Tarefas do Plano de Manutenção** no painel **Caixa de Ferramentas** .  
+ Para adicionar uma tarefa a um plano, arraste o ícone da tarefa da caixa de ferramentas **Tarefas do Plano de Manutenção** até a superfície de design do plano ou clique duas vezes na tarefa na caixa de ferramentas, o que adiciona a tarefa à superfície de designer ativa no momento. Se a caixa de ferramentas **Tarefas do Plano de Manutenção** não estiver visível, escolha **Caixa de Ferramentas** no menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Exibir** do . Expanda o nó **Tarefas do Plano de Manutenção** no painel **Caixa de Ferramentas** .  
   
  Para remover uma tarefa de um plano, selecione a tarefa na superfície do designer e pressione a tecla **DELETE** ou clique com o botão direito do mouse e clique em **Excluir**.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "85666976"
  **Habilitar**  
  Restaura uma tarefa desabilitada.  
   
- **Agrupar**  
+ **Grupo**  
  Cria um grupo que contém uma ou mais tarefas.  
   
  **Desagrupar**  

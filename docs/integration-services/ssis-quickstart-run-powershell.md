@@ -1,4 +1,5 @@
 ---
+description: Executar um pacote do SSIS com o PowerShell
 title: Executar um pacote do SSIS com o PowerShell | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a86309c484cac3538b48c797665661341ca6648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422170"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Executar um pacote do SSIS com o PowerShell
 
@@ -22,11 +23,11 @@ ms.locfileid: "86921809"
 
 Este guia de início rápido demonstra como usar um script do PowerShell para se conectar a um servidor de banco de dados e executar um pacote do SSIS.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
-## <a name="supported-platforms"></a>Plataformas compatíveis
+## <a name="supported-platforms"></a>Plataformas com suporte
 
 Você pode usar as informações neste guia de início rápido para executar um pacote do SSIS nas seguintes plataformas:
 

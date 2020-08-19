@@ -1,4 +1,5 @@
 ---
+description: Aplicativos verticais
 title: Aplicativos verticais | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc88f38fd1ffe8b2ee0033ad0a2abc4f15fd5cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a12be9247af3f273526dd08ee99ff7cc301af822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421400"
 ---
 # <a name="vertical-applications"></a>Aplicativos verticais
 Normalmente, os aplicativos verticais executam uma tarefa bem definida em relação a um único DBMS. Por exemplo, um aplicativo de entrada de pedido rastreia os pedidos em uma empresa. O que esses tipos de aplicativos têm em comum é que o esquema de banco de dados geralmente é projetado pelo desenvolvedor do aplicativo e, enquanto o aplicativo pode funcionar com vários DBMSs diferentes, ele funciona com um único DBMS para um único cliente.  

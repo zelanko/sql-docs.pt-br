@@ -1,4 +1,5 @@
 ---
+description: SQLDriverConnect (Driver de Arquivo de texto)
 title: SQLDriverConnect (driver de arquivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2768669b7dbb2066de0acedd5711911be0eac8fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c2eb5c35e9f6ae56caa3c6e4ca7473defe3b8bc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421800"
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (Driver de Arquivo de texto)
 > [!NOTE]  
@@ -35,4 +36,4 @@ ms.locfileid: "81307097"
   
 |Driver|Palavras-chave necessárias|Exemplos|  
 |------------|-----------------------|--------------|  
-|Texto|Driver|Driver = {Microsoft Text driver (*. txt;\*. CSV)}; DefaultDir = c:\temp|
+|Texto|Driver|Driver = {Microsoft Text driver (*. txt; \* . CSV)}; DefaultDir = c:\temp|

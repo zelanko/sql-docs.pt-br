@@ -1,4 +1,5 @@
 ---
+description: Comportamento de tipos de data e hora aprimorados com versões anteriores do SQL Server (ODBC)
 title: Data e hora em versões do SQL (ODBC)
 ms.custom: ''
 ms.date: 12/18/2019
@@ -13,11 +14,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b96e7807fd29e417616f2aec406d6a07f37ccf6f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83616c86aec74aa7d30c71d9347722d89f1448e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420610"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamento de tipos de data e hora aprimorados com versões anteriores do SQL Server (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +99,7 @@ ms.locfileid: "86004347"
 |CREATE_PARAMS|NULO|NULO|NULO|NULO|NULO|NULO|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|PESQUISÁVEL|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULO|NULO|NULO|NULO|NULO|NULO|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULO|NULO|NULO|NULO|NULO|NULO|  
@@ -115,4 +117,4 @@ ms.locfileid: "86004347"
  Quando você está conectado a uma instância de servidor de uma versão anterior do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], qualquer tentativa de usar os novos tipos de servidor ou os códigos de metadados e campos de descritor associados resultará no retorno de SQL_ERROR. Um registro de diagnóstico será gerado com SQLSTATE HY004 e a mensagem "Tipo de dados SQL inválido para a versão do servidor na conexão" ou com 07006 e "Violação do atributo de tipo de dados restrito".  
   
 ## <a name="see-also"></a>Consulte Também  
- [Melhorias de data e hora &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

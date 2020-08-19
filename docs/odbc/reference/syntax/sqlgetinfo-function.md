@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetInfo
 title: Função SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b60dcdd90c71e1790464f24cd34dedfaa22e7c61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421270"
 ---
 # <a name="sqlgetinfo-function"></a>Função SQLGetInfo
 

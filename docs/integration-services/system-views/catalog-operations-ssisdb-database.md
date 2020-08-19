@@ -1,4 +1,5 @@
 ---
+description: catalog.operations (Banco de Dados SSISDB)
 title: catalog.operations (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46f17290ddc026d66910e4a28c1ea36d7ad0286b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 231fa098ababe70c8a375e3f3f357bcbe90d6f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422010"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (Banco de Dados SSISDB)
 
@@ -29,7 +30,7 @@ ms.locfileid: "86912459"
 
   Exibe os detalhes de todas as operações no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|O ID (identificador exclusivo) da operação.|  
 |operation_type|**smallint**|O tipo de operação.|  

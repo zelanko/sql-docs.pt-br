@@ -1,4 +1,5 @@
 ---
+description: SQLDrivers (Driver ODBC do Visual FoxPro)
 title: Sqldrives (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1b75d1cc79a5fe2b3113a6d65345956d5ea801f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d251e133d8ecb50cd07d73e12950631ca5209d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421780"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (Driver ODBC do Visual FoxPro)
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: Conversões do tipo de dados datetime do SQL para C
 title: Conversões de SQL para C | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bd8bff34cca52da2e865a020ff97211b09d9882
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: b317f23ef9e960fe407e68ef108f31ba0fcfa2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420630"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversões do tipo de dados datetime do SQL para C
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,6 +68,6 @@ ms.locfileid: "87331056"
  A tabela neste tópico descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se o tipo de servidor especificado em SQLBindParameter não corresponder ao tipo real no servidor, uma conversão implícita será executada pelo servidor e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de SQLBindParameter. Isso pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes daquelas listadas na tabela anterior. Por exemplo, quando uma data padrão precisar ser fornecida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1, e não a data atual.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Melhorias de data e hora &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.deny_permission (Banco de Dados SSISDB)
 title: catalog.deny_permission (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1de8ae0aeaa1aa260b20649ac9b831a11e0447
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1c0ec15f671e6319f82ed069f69d590d865f6682
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422180"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (Banco de Dados SSISDB)
 

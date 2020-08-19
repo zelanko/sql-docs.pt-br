@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetTypeInfo
 title: Função SQLGetTypeInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 47273c75a005f11b33e9929977b57607b36898de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47ff65a1c7912aef196c79b9b26c8286fb05fef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421190"
 ---
 # <a name="sqlgettypeinfo-function"></a>Função SQLGetTypeInfo
 **Conformidade**  
@@ -55,7 +56,7 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLGetTypeInfo** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetTypeInfo** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -66,7 +67,7 @@ SQLRETURN SQLGetTypeInfo(
 |24.000|Estado de cursor inválido|Um cursor estava aberto no *StatementHandle* e **SQLFetch** ou **SQLFetchScroll** foi chamado. Esse erro será retornado pelo Gerenciador de driver se **SQLFetch** ou **SQLFetchScroll** não tiver retornado SQL_NO_DATA e será retornado pelo driver se **SQLFetch** ou **SQLFetchScroll** tiver retornado SQL_NO_DATA.<br /><br /> Um conjunto de resultados foi aberto no *StatementHandle*, mas **SQLFetch** ou **SQLFetchScroll** não tinha sido chamado.|  
 |40001|Falha de serialização|A transação foi revertida devido a um deadlock de recurso com outra transação.|  
 |40003|Conclusão de instrução desconhecida|A conexão associada falhou durante a execução dessa função e o estado da transação não pode ser determinado.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY004|Tipo de dados SQL inválido|O valor especificado para o argumento *DataType* não era um identificador de tipo de dados SQL ODBC válido nem um identificador de tipo de dados específico de driver com suporte no driver.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*, então a função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  

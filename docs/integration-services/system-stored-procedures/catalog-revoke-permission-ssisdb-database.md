@@ -1,4 +1,5 @@
 ---
+description: catalog.revoke_permission (Banco de Dados SSISDB)
 title: catalog.revoke_permission (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7fd01336eca5b0717af288322a496c5b082b5b97
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0475b5adb825339c2c3c7a0927aabbea2bf889ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422090"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (Banco de Dados SSISDB)
 

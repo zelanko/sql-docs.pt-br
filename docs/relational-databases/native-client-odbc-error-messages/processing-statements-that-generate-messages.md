@@ -1,4 +1,5 @@
 ---
+description: Processando instruções que geram mensagens
 title: Processando instruções que geram mensagens | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,11 +26,12 @@ ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebd3a371915f17f0a04165dd66ac0ca4394456e7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca60a4bbe9652d20cb4db0f9f4522d2fa1ff1afc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420510"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Processando instruções que geram mensagens
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -98,7 +100,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>Usando as instruções PRINT e RAISERROR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]As instruções PRINT e RAISERROR também retornam dados chamando **SQLGetDiagRec**. As instruções PRINT fazem com que a execução da instrução SQL retorne SQL_SUCCESS_WITH_INFO, e uma chamada subsequente para **SQLGetDiagRec** retorna um *SQLSTATE* de 01000. Um RAISERROR com uma severidade de dez ou menor se comporta da mesma forma que PRINT. Um RAISERROR com uma severidade de 11 ou superior faz com que a execução seja retornada SQL_ERROR, e uma chamada subsequente para **SQLGetDiagRec** retorna *SQLSTATE* 42000. Por exemplo, a instrução a seguir retorna SQL_SUCCESS_WITH_INFO:  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] As instruções PRINT e RAISERROR também retornam dados chamando **SQLGetDiagRec**. As instruções PRINT fazem com que a execução da instrução SQL retorne SQL_SUCCESS_WITH_INFO, e uma chamada subsequente para **SQLGetDiagRec** retorna um *SQLSTATE* de 01000. Um RAISERROR com uma severidade de dez ou menor se comporta da mesma forma que PRINT. Um RAISERROR com uma severidade de 11 ou superior faz com que a execução seja retornada SQL_ERROR, e uma chamada subsequente para **SQLGetDiagRec** retorna *SQLSTATE* 42000. Por exemplo, a instrução a seguir retorna SQL_SUCCESS_WITH_INFO:  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  

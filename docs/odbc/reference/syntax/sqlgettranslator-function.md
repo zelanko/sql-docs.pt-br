@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetTranslator
 title: Função SQLGetTranslator | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bcd5aeebab8539b8b94db56ff30892f4a7dbbac1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d30268c846af4e95298d00edcd13def97c20c77d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421220"
 ---
 # <a name="sqlgettranslator-function"></a>Função SQLGetTranslator
 **Conformidade**  
@@ -76,8 +77,8 @@ BOOL SQLGetTranslator(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar ou se o usuário cancelar a caixa de diálogo.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLGetTranslator** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLGetTranslator** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
@@ -94,9 +95,9 @@ BOOL SQLGetTranslator(
   
  ![Caixa de diálogo Selecionar Conversor](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- Se *lpszName* contiver um nome de Tradutor válido, ele será selecionado. Caso contrário \<, nenhuma> de conversor será selecionada.  
+ Se *lpszName* contiver um nome de Tradutor válido, ele será selecionado. Caso contrário, \<No Translator> é selecionado.  
   
- Se o usuário não \<escolher nenhum Tradutor>, o conteúdo de *lpszName*, *lpszPath*e *pvOption* não será tocado. **SQLGetTranslator** define *pcbNameOut* e *PCBPATHOUT* como 0 e retorna true.  
+ Se o usuário escolher \<No Translator> , o conteúdo de *lpszName*, *lpszPath*e *pvOption* não será tocado. **SQLGetTranslator** define *pcbNameOut* e *PCBPATHOUT* como 0 e retorna true.  
   
  Se o usuário escolher um tradutor, **SQLGetTranslator** chamará **ConfigTranslator** na DLL de instalação do tradutor. Se **ConfigTranslator** retornar false, **SQLGetTranslator** retornará para sua caixa de diálogo. Se **ConfigTranslator** retornar true, **SQLGetTranslator** retornará true, junto com o nome do tradutor, o caminho e a opção de conversão selecionados.  
   

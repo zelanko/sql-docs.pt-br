@@ -1,4 +1,5 @@
 ---
+description: catalog.packages (Banco de dados SSISDB)
 title: catalog.packages (Banco de dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce44ec234d17c64e357f3bd1a26de1a0c2bb6361
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25e397e3c3b85f401857b58bd51df456b08fdb37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422000"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (Banco de dados SSISDB)
 
@@ -29,7 +30,7 @@ ms.locfileid: "86912442"
 
   Exibe os detalhes de todos os pacotes exibidos no catálogo do **SSISDB**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|O identificador exclusivo (ID) do pacote.|  
 |name|**nvarchar(256)**|O nome exclusivo do pacote.|  

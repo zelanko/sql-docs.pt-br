@@ -1,4 +1,5 @@
 ---
+description: Comando SET REPROCESS
 title: Definir comando de reprocessamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5a7eb5fd19ca538c4f25077926567011ae133e54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8daeebd38f295d437dc02c1c34126c30f6426b68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421820"
 ---
 # <a name="set-reprocess-command"></a>Comando SET REPROCESS
 Especifica quantas vezes ou por quanto tempo bloquear um arquivo ou registro após uma tentativa de bloqueio sem êxito.  

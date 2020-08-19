@@ -1,4 +1,5 @@
 ---
+description: Nó de Planos de Manutenção (Pesquisador de Objetos)
 title: Nó de planos de manutenção (Pesquisador de Objetos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: af9562d8e59d3690dd8a0d949945cdfec524d29f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae8337b89ea4dce9f2997bc2a3acaefb181d694d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420820"
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>Nó de Planos de Manutenção (Pesquisador de Objetos)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Esta seção contém a Ajuda de F1 para o nó **Planos de Manutenção** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+   Esta seção contém a Ajuda de F1 para o nó **Planos de Manutenção** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  

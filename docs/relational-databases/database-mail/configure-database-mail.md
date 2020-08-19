@@ -1,4 +1,5 @@
 ---
+description: Configurar o Database Mail
 title: Configurar o Database Mail | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -39,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421080"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85737631"
   
 -   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
   
--   **Para configurar o Database Mail usando:**  [Assistente de Configuração do Database Mail](#DBWizard), [Usando Modelos](#Template)  
+-   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Use a opção **DatabaseMail XPs** para habilitar o Database Mail neste servidor. Para obter mais informações, confira o tópico de referência [Opção Database Mail XPs de configuração de servidor](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -115,7 +116,7 @@ ms.locfileid: "85737631"
  Use a página **Selecionar Tarefa de Configuração** para indicar qual tarefa você concluirá sempre que usar o assistente. Se você mudar de ideia antes de concluir o assistente, use o botão **Voltar** para voltar para essa página e selecionar outra tarefa.  
   
 > [!NOTE]  
->  Se o Database Mail não tiver sido habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
+>  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
   
  **Instalar Database Mail executando as seguintes tarefas**  
  Execute todas as tarefas exigidas para instalar o Database Mail pela primeira vez. Essa opção inclui todas as outras três opções.  
@@ -138,7 +139,7 @@ ms.locfileid: "85737631"
   
  Uma conta do Database Mail só é usada no Database Mail. Uma conta do Database Mail não corresponde a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma conta do Microsoft Windows. O Database Mail pode ser enviado usando as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]usando outras credenciais que você forneça ou anonimamente. Quando a autenticação básica é usada, o nome do usuário e a senha em uma conta do Database Mail só são usados para autenticação no servidor de email. Uma conta não precisa corresponder a um usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a um usuário no computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Nome da conta**  
+ **Nome da Conta**  
  Digite o nome da nova conta.  
   
  **Descrição**  
@@ -185,7 +186,7 @@ ms.locfileid: "85737631"
 ###  <a name="manage-existing-account-page"></a><a name="ExistingAccount"></a> Página Gerenciar Conta Existente  
  Use esta página para gerenciar uma conta de Database Mail existente.  
   
- **Nome da conta**  
+ **Nome da Conta**  
  Selecione a conta a exibir, atualizar ou excluir.  
   
  **Delete (excluir)**  
@@ -292,7 +293,7 @@ ms.locfileid: "85737631"
  **Prioridade**  
  Exibe a prioridade de failover atual da conta.  
   
- **Nome da conta**  
+ **Nome da Conta**  
  Exibe o nome da conta.  
   
  **E-mail Address**  
@@ -303,7 +304,7 @@ ms.locfileid: "85737631"
 ###  <a name="add-account-to-profile-page"></a><a name="AddAccount"></a> Add Account to Profile Page  
  Use esta página para escolher a conta a ser adicionada ao perfil. Escolha uma conta existente na caixa **Nome da conta** ou clique em **Nova Conta**.  
   
- **Nome da conta**  
+ **Nome da Conta**  
  Selecione o nome da conta a ser adicionada ao perfil.  
   
  **Endereço de email**  
@@ -320,7 +321,7 @@ ms.locfileid: "85737631"
 ###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> Página Gerenciar Contas e Perfis  
  Use esta página para escolher uma tarefa para gerenciar um perfil ou conta.  
   
- **Criar uma conta nova**  
+ **Criar uma nova conta**  
  Crie uma conta nova.  
   
  **Visualizar, alterar ou excluir uma conta existente**  
@@ -344,7 +345,7 @@ ms.locfileid: "85737631"
  **Pública**  
  Selecione essa opção para tornar público o perfil especificado.  
   
- **Profile Name**  
+ **Nome do Perfil**  
  Exibe o nome do perfil.  
   
  **Perfil Padrão**  
@@ -365,7 +366,7 @@ ms.locfileid: "85737631"
  **Nome de usuário**  
  Selecione o nome de um usuário ou função no banco de dados **msdb** .  
   
- **Access**  
+ **Acesso**  
  Selecione se o usuário ou função tem acesso ao perfil especificado.  
   
  **Nome do perfil**  
@@ -392,7 +393,7 @@ ms.locfileid: "85737631"
  O tamanho máximo de um anexo, em bytes.  
   
  **Extensões de Arquivo de Anexo Proibidas**  
- Uma lista separada por vírgula de extensões que não podem ser enviadas como um anexo a uma mensagem de email. Clique no botão Procurar ( **...** ) para adicionar outras extensões.  
+ Uma lista separada por vírgula de extensões que não podem ser enviadas como um anexo a uma mensagem de email. Clique no botão Procurar (**...**) para adicionar outras extensões.  
   
  **Tempo Mínimo de Vida do Executável do Database Mail (segundos)**  
  O período mínimo de tempo, em segundos, que o processo de email externo permanece ativo. O processo permanece ativo enquanto houver emails na fila do Database Mail. Esse parâmetro especifica o tempo que o processo permanece ativo se não houver nenhuma mensagem a processar.  
@@ -419,7 +420,7 @@ ms.locfileid: "85737631"
  [Assistente de Configuração do Database](#DBWizard)  
   
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
- Use a página **Enviar Email de Teste de** _<instance_name>_ para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
+ Use a página **Enviar Email de Teste de**_<instance_name>_ para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
   
  **Perfil do Database Mail**  
  Selecione um perfil da lista do Database Mail. Esse é um campo obrigatório. Se nenhum perfil for mostrado, não há nenhum perfil ou você não tem permissão para um perfil. Use o **Assistente para Configuração do Database Mail** para criar e configurar perfis. Se nenhum perfil for listado, use o Assistente para Configuração do Database Mail para criar um perfil para seu uso.  

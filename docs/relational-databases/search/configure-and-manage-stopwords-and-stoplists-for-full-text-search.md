@@ -1,4 +1,5 @@
 ---
+description: Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo
 title: Configurar e gerenciar palavras irrelevantes (stop words) e listas de palavras irrelevantes (stoplists) para a pesquisa de texto completo
 ms.date: 02/02/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423380"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -127,7 +128,7 @@ Use a [Opção de configuração de servidor para transformar palavras de ruído
 |Instruções|1|  
 |are|2|  
 |applicable|3|  
-|para|4|  
+|como|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

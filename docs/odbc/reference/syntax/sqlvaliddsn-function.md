@@ -1,4 +1,5 @@
 ---
+description: Função SQLValidDSN
 title: Função SQLValidDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dfafca22d0b04f2147b1af24b53e787493efe67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4919887a6e0bad4526959d0cd31205019a597a0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421020"
 ---
 # <a name="sqlvaliddsn-function"></a>Função SQLValidDSN
 **Conformidade**  
@@ -48,8 +49,8 @@ BOOL SQLValidDSN(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se o nome da fonte de dados for válido. Ele retornará FALSE se o nome da fonte de dados for inválido ou a chamada de função falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLValidDSN** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. Um * \*pfErrorCode* será retornado somente se a chamada de função falhar, e não se false for retornado porque o nome da fonte de dados é inválido. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLValidDSN** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. Um * \* pfErrorCode* será retornado somente se a chamada de função falhar, e não se false for retornado porque o nome da fonte de dados é inválido. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: Um conjunto de resultados foi criado?
 title: Um conjunto de resultados foi criado? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c171a154dd16a291c5dbe1dcade8c01ea95fb084
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b65c254f48d9c3f5078c3b2c1f576ae54d4740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421380"
 ---
 # <a name="was-a-result-set-created"></a>Um conjunto de resultados foi criado?
 Na maioria das situações, os programadores de aplicativos sabem se as instruções que seu aplicativo executa criarão um conjunto de resultados. Esse é o caso se o aplicativo usar instruções SQL embutidas em código gravadas pelo programador. Normalmente, é o caso quando o aplicativo constrói instruções SQL em tempo de execução: o programador pode facilmente incluir um código que sinalize se uma instrução **Select** ou uma instrução **Insert** está sendo construída. Em algumas situações, o programador não pode, possivelmente, saber se uma instrução criará um conjunto de resultados. Isso será verdadeiro se o aplicativo fornecer uma maneira para o usuário inserir e executar uma instrução SQL. Também é verdadeiro quando o aplicativo constrói uma instrução em tempo de execução para executar um procedimento.  

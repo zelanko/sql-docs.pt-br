@@ -1,4 +1,5 @@
 ---
+description: catalog.explicit_object_permissions (Banco de Dados SSISDB)
 title: catalog.explicit_object_permissions (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cf55832764b595aac01b8fb8c69fb0516898bad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422080"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (Banco de Dados SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912532"
 
   Exibe apenas as permissões que foram explicitamente atribuídas ao usuário.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`).|  
 |object_id|**bigint**|O ID (identificador exclusivo) ou a chave primária do objeto protegido.|  

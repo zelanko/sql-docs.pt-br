@@ -1,4 +1,5 @@
 ---
+description: Usar SQLGetDiagRec e SQLGetDiagField
 title: Usando SQLGetDiagRec e SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69a17086253b40469b0ed98cb6f870f319f03f52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 402cb326ac91e13db0d3ab5421bd5ddb097fb3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421430"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Usar SQLGetDiagRec e SQLGetDiagField
 Os aplicativos chamam **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações de diagnóstico. Essas funções aceitam um ambiente, uma conexão, uma instrução ou um identificador de descritor e retornam o diagnóstico da função que usou por último esse identificador. O diagnóstico registrado em um determinado identificador é Descartado quando uma nova função é chamada usando esse identificador. Se a função retornou vários registros de diagnóstico, o aplicativo chamará essas funções várias vezes; o número total de registros de status é recuperado chamando **SQLGetDiagField** para o registro de cabeçalho (registro 0) com a opção SQL_DIAG_NUMBER.  

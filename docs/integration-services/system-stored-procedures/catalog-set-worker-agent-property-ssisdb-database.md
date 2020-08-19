@@ -1,4 +1,5 @@
 ---
+description: catalog.set_worker_agent_property (banco de dados SSISDB)
 title: catalog.set_worker_agent_property (banco de dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 121c39ddc217cbdc178ca8ea8221081ce33eee4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422110"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (banco de dados SSISDB)
 
@@ -39,10 +40,10 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 A ID do agente de trabalho do Trabalhador do Scale Out. O *WorkerAgentId* é **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-O nome da propriedade. O *PropertyName* é **nvarchar(256)** .
+O nome da propriedade. O *PropertyName* é **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-O valor da propriedade. O *PropertyValue* é **nvarchar(max)** .
+O valor da propriedade. O *PropertyValue* é **nvarchar(max)**.
 
 ## <a name="remarks"></a>Comentários
 Os nomes de propriedade válidos são **DisplayName**, **Description** e **Tags**.

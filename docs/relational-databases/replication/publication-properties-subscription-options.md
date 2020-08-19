@@ -1,4 +1,5 @@
 ---
+description: Propriedades da Publicação, Opções de Assinatura
 title: Propriedades da publicação, opções de assinatura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420490"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

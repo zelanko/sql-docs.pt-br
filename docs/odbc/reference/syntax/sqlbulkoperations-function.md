@@ -1,4 +1,5 @@
 ---
+description: Função SQLBulkOperations
 title: Função SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e065bc06150c3b12e469489c4d115d02c2142f14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421290"
 ---
 # <a name="sqlbulkoperations-function"></a>Função SQLBulkOperations
 **Conformidade**  
@@ -57,7 +58,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLBulkOperations** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLBulkOperations** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
  Para todos os sqlestaduais que podem retornar SQL_SUCCESS_WITH_INFO ou SQL_ERROR (exceto 01xxx sqlstates), SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em uma ou mais, mas não em todas as linhas de uma operação multirow, e SQL_ERROR será retornado se ocorrer um erro em uma operação de linha única.  
@@ -83,7 +84,7 @@ SQLRETURN SQLBulkOperations(
 |40003|Conclusão de instrução desconhecida|A conexão associada falhou durante a execução dessa função, e o estado da transação não pode ser determinado.|  
 |42000|Erro de sintaxe ou violação de acesso|O driver não pôde bloquear a linha conforme necessário para executar a operação solicitada no argumento de *operação* .|  
 |44000|Violação COM OPÇÃO DE VERIFICAÇÃO|O argumento da *operação* foi SQL_ADD ou SQL_UPDATE_BY_BOOKMARK e a inserção ou atualização foi executada em uma tabela exibida (ou uma tabela derivada da tabela exibida) que foi criada ESPECIFICANDO **with check option**, de forma que uma ou mais linhas afetadas pela inserção ou atualização não estarão mais presentes na tabela exibida.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLBulkOperations** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *StatementHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) o *StatementHandle* especificado não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute**ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLSetPos** foi chamado para *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) o driver era um ODBC 2. o driver *x* e **SQLBulkOperations** foi chamado para um *StatementHandle* antes de **SQLFetchScroll** ou **SQLFetch** ser chamado.<br /><br /> (DM) **SQLBulkOperations** foi chamado depois que **SQLExtendedFetch** foi chamado no *StatementHandle*.|  
@@ -230,20 +231,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>Fornecendo dados longos para inserções e atualizações em massa  
  Os dados longos podem ser fornecidos para inserções e atualizações em massa executadas por chamadas para **SQLBulkOperations**. Para inserir ou atualizar dados longos, um aplicativo executa as etapas a seguir, além das etapas descritas nas seções "executando inserções em massa" e "executando atualizações em massa usando indicadores" anteriormente neste tópico.  
   
-1.  Quando ele associa os dados usando **SQLBindCol**, o aplicativo coloca um valor definido pelo aplicativo, como o número da coluna, no buffer * \*TargetValuePtr* para as colunas de dados em execução. O valor pode ser usado posteriormente para identificar a coluna.  
+1.  Quando ele associa os dados usando **SQLBindCol**, o aplicativo coloca um valor definido pelo aplicativo, como o número da coluna, no buffer * \* TargetValuePtr* para as colunas de dados em execução. O valor pode ser usado posteriormente para identificar a coluna.  
   
-     O aplicativo coloca o resultado da macro SQL_LEN_DATA_AT_EXEC (*comprimento*) no buffer de * \*StrLen_or_IndPtr* . Se o tipo de dados SQL da coluna for SQL_LONGVARBINARY, SQL_LONGVARCHAR ou um tipo de dados específico da fonte de dados longa e o driver retornar "Y" para o tipo de informação SQL_NEED_LONG_DATA_LEN em **SQLGetInfo**, *Length* será o número de bytes de dados a serem enviados para o parâmetro; caso contrário, ele deve ser um valor não negativo e será ignorado.  
+     O aplicativo coloca o resultado da macro SQL_LEN_DATA_AT_EXEC (*comprimento*) no buffer de * \* StrLen_or_IndPtr* . Se o tipo de dados SQL da coluna for SQL_LONGVARBINARY, SQL_LONGVARCHAR ou um tipo de dados específico da fonte de dados longa e o driver retornar "Y" para o tipo de informação SQL_NEED_LONG_DATA_LEN em **SQLGetInfo**, *Length* será o número de bytes de dados a serem enviados para o parâmetro; caso contrário, ele deve ser um valor não negativo e será ignorado.  
   
 2.  Quando **SQLBulkOperations** é chamado, se houver colunas de dados em execução, a função retornará SQL_NEED_DATA e prosseguirá para a etapa 3, que segue. (Se não houver nenhuma coluna de dados em execução, o processo será concluído.)  
   
-3.  O aplicativo chama **SQLParamData** para recuperar o endereço do buffer * \*TargetValuePtr* para a primeira coluna de dados em execução a ser processada. **SQLParamData** retorna SQL_NEED_DATA. O aplicativo recupera o valor definido pelo aplicativo do buffer * \*TargetValuePtr* .  
+3.  O aplicativo chama **SQLParamData** para recuperar o endereço do buffer * \* TargetValuePtr* para a primeira coluna de dados em execução a ser processada. **SQLParamData** retorna SQL_NEED_DATA. O aplicativo recupera o valor definido pelo aplicativo do buffer * \* TargetValuePtr* .  
   
     > [!NOTE]  
     >  Embora os parâmetros de dados em execução se assemelham a colunas de dados em execução, o valor retornado por **SQLParamData** é diferente para cada um.  
   
      As colunas de dados em execução são colunas em um conjunto de linhas para o qual os dados serão enviados com **SQLPutData** quando uma linha é atualizada ou inserida com **SQLBulkOperations**. Eles são associados a **SQLBindCol**. O valor retornado por **SQLParamData** é o endereço da linha no buffer **TargetValuePtr* que está sendo processado.  
   
-4.  O aplicativo chama **SQLPutData** uma ou mais vezes para enviar dados para a coluna. Mais de uma chamada será necessária se o valor de dados não puder ser retornado no buffer * \*TargetValuePtr* especificado em **SQLPutData**; várias chamadas para **SQLPutData** para a mesma coluna são permitidas somente ao enviar dados de caractere C para uma coluna com um tipo de dados específico de fonte de caracteres, binário ou de dados ou ao enviar dados binários c para uma coluna com um tipo de dados de caractere, binário ou específico de fonte de dados.  
+4.  O aplicativo chama **SQLPutData** uma ou mais vezes para enviar dados para a coluna. Mais de uma chamada será necessária se nenhum valor de dados não puder ser retornado no buffer * \* TargetValuePtr* especificado em **SQLPutData**; várias chamadas para **SQLPutData** para a mesma coluna são permitidas somente ao enviar dados de caracteres c para uma coluna com um tipo de dados específico de caractere, binário ou de fonte de dados ou ao enviar dados binários c para uma coluna com um tipo de dados específico de fonte de dados, binário  
   
 5.  O aplicativo chama **SQLParamData** novamente para sinalizar que todos os dados foram enviados para a coluna.  
   
