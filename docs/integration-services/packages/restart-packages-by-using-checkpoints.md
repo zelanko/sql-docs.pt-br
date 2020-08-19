@@ -1,4 +1,5 @@
 ---
+description: Reiniciar pacotes por meio de pontos de verificação
 title: Reiniciar pacotes por meio de pontos de verificação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de6329a45f43d27dfcabb05252a17eb0ed3c6a2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425238"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
 
@@ -57,7 +58,7 @@ ms.locfileid: "86919158"
   
  A seguinte tabela lista as propriedades de pacote definidas para implementar pontos de verificação.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |CheckpointFileName|Especifica o nome do arquivo de ponto de verificação.|  
 |CheckpointUsage|Especifica se pontos de verificação são usados.|  
@@ -70,7 +71,7 @@ ms.locfileid: "86919158"
 ### <a name="checkpoint-usage"></a>Uso do ponto de verificação  
  A propriedade CheckpointUsage pode ser definida com os seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Never**|Especifica que o arquivo de ponto de verificação não é usado e o pacote executa a partir do início do fluxo de trabalho do pacote.|  
 |**Always**|Especifica que o arquivo de ponto de verificação sempre é usado e que o pacote reinicia a partir do ponto da falha de execução anterior. Se o arquivo de ponto de verificação não for localizado, o pacote falhará.|  

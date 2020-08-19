@@ -1,4 +1,5 @@
 ---
+description: catalog.set_customized_logging_level_value
 title: catalog.set_customized_logging_level_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0eb4147d63c18b910405d3f9b7db3939d44c28f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f5e101e0413381a2b633e758e0d67a0c4c8167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425148"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
@@ -35,12 +36,12 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  O nome de um nível de log personalizado existente.  
   
- O *level_name* é **nvarchar(128)** .  
+ O *level_name* é **nvarchar(128)**.  
   
  [ @property_name = ] *property_name*  
  O nome da propriedade a ser alterada. Os valores válidos são **PROFILE** e **EVENTS**.  
   
- O *property_name* é **nvarchar(128)** .  
+ O *property_name* é **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
  O novo valor para a propriedade especificada do nível de log personalizado especificado.  

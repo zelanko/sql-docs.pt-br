@@ -1,4 +1,5 @@
 ---
+description: Data, hora e literais de carimbo de data/hora
 title: Data, hora e literais de carimbo de hora | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d899938be4689daab50a773f189219a797794006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10fb362a8ab61595a9b7205492de9c1115ae7013
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424778"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Data, hora e literais de carimbo de data/hora
 A sequência de escape para literais de data, hora e timestamp é  
@@ -28,9 +29,9 @@ A sequência de escape para literais de data, hora e timestamp é
   
 |*tipo literal*|Significado|Formato do *valor*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Data|*aaaa*-*mm*mm-*DD*|  
+|**d**|Data|*aaaa* - *mm* - *DD*|  
 |**t**|Momento|*hh*:*mm*:*SS*[1]|  
-|**ts**|Timestamp|*aaaa*-*mm*mm-*DD* *hh*:*mm*:*SS*[.* f...*] uma|  
+|**CALs**|Timestamp|*aaaa* - *mm* - *DD* *hh*:*mm*:*SS*[.* f...*] uma|  
   
  [1] o número de dígitos à direita do ponto decimal em um literal de tempo ou carimbo de data/hora que contém um componente de segundos depende da precisão de segundos, conforme contido no campo descritor de SQL_DESC_PRECISION. (Para obter mais informações, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

@@ -1,4 +1,5 @@
 ---
+description: Utilitário de Execução de Pacotes (dtexecui)
 title: Utilitário de Execução de Pacotes (dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425278"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitário de Execução de Pacotes (dtexecui)
 
@@ -68,7 +69,7 @@ ms.locfileid: "87472485"
  **Origem do pacote**  
  Especifique o local do pacote a ser executado usando as seguintes opções:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-|-|  
 |**SQL Server**|Selecione esta opção quando o pacote estiver no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** _nome de usuário_ e **/PASSWORD** _senha_ ao prompt de comando.|  
 |**Sistema de Arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
@@ -248,7 +249,7 @@ ms.locfileid: "87472485"
  **Informações**  
  Selecione para informar mensagens de informações.  
   
- **Detalhado**  
+ **Verbose**  
  Selecione para usar relatório verboso.  
   
  **Log de console**  
@@ -272,7 +273,7 @@ ms.locfileid: "87472485"
  **GUID de Execução**  
  Selecione para informar a GUID da instância de execução do pacote.  
   
- **Mensagem**  
+ **Message**  
  Selecione para informar mensagens.  
   
  **Hora de início e Hora de término**  

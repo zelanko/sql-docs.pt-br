@@ -1,4 +1,5 @@
 ---
+description: Identificadores de conexão
 title: Identificadores de conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b03e0733e35984350d2a218b885dc148ca8f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4457fa72c40892e208057ac013d3da1e557a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424788"
 ---
 # <a name="connection-handles"></a>Identificadores de conexão
 Uma *conexão* consiste em um driver e uma fonte de dados. Um identificador de conexão identifica cada conexão. O identificador de conexão define não apenas o driver a ser usado, mas qual fonte de dados usar com esse driver. Dentro de um segmento de código que implementa o ODBC (o Gerenciador de driver ou um driver), o identificador de conexão identifica uma estrutura que contém informações de conexão, como as seguintes:  

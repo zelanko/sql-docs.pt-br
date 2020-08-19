@@ -1,4 +1,5 @@
 ---
+description: FLOOR (Expressão SSIS)
 title: FLOOR (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f0161fe842ad8271d04a69b9cb2726db3403314
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae36dec51176fd1e3d9b50f0c2697e9e17121412
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425538"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (Expressão SSIS)
 

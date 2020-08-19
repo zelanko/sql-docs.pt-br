@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectAttr (Biblioteca de cursores)
 title: SQLSetConnectAttr (biblioteca de cursores) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a87c85d727fb9eb2fc27613b9eecd3fe0ec51b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b809ad81e9edaca7fbe7d40952673a1698f113e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424888"
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr (Biblioteca de cursores)
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Lock:Deadlock Chain
 title: Classe de evento Lock:Deadlock Chain | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6057c32842121f6d27649fe3f2b8e201d6c9695a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2560955610dbbd5fa47d35fcce06df5c251010ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424208"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe de evento Lock:Deadlock Chain
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85717926"
   
 ## <a name="lockdeadlock-chain-event-class-data-columns"></a>Colunas de dados de classe de evento Lock:Deadlock Chain  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BinaryData|**imagem**|Identificador de recurso bloqueado.|2|Sim|  
 |DatabaseID|**int**|ID do banco de dados ao qual esse recurso pertence. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  

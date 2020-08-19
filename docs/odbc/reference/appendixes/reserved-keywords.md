@@ -1,4 +1,5 @@
 ---
+description: Palavras-chave reservadas
 title: Palavras-chave reservadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424978"
 ---
 # <a name="reserved-keywords"></a>Palavras-chave reservadas
 As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; no entanto, para garantir a compatibilidade com drivers que dão suporte à gramática SQL principal, os aplicativos devem evitar o uso de qualquer uma dessas palavras-chave. O valor de #**define** SQL_ODBC_KEYWORDS contém uma lista separada por vírgula dessas palavras-chave.  

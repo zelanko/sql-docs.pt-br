@@ -1,4 +1,5 @@
 ---
+description: Cadeias de Conexão
 title: Cadeias de conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbbb5b4672a8ea393380063887cfd77b3e910238
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fbb2d4b0c80a93b225bac754d2905b27e8844cbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424768"
 ---
 # <a name="connection-strings"></a>Cadeias de Conexão
 Uma cadeia de conexão contém informações usadas para estabelecer uma conexão. Uma cadeia de conexão completa contém todas as informações necessárias para estabelecer uma conexão. A cadeia de conexão é uma série de pares de palavras-chave/valor separados por ponto e vírgula. (Para obter a sintaxe completa de uma cadeia de conexão, consulte a descrição da função [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) .) A cadeia de conexão é usada por:  

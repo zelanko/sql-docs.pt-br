@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Lock:Acquired
 title: Classe de evento Lock:Acquired | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bab6bfa38cb33f046bc2c96e18f359d2b31526b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424248"
 ---
 # <a name="lockacquired-event-class"></a>Classe de evento Lock:Acquired
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85780174"
   
 ## <a name="lockacquired-event-class-data-columns"></a>Colunas de dados da classe de evento Lock:Acquired  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|**bigint**|ID da partição se o recurso de bloqueio for particionado.|52|Sim|  

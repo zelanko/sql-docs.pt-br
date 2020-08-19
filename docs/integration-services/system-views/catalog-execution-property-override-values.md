@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_property_override_values
 title: catalog.execution_property_override_values | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bad614fef3ce0a6942803464b618b2d9d3ce98b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 230e2057c8257a37eb96c683abaf8348307a0cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425088"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912549"
 
   Exibe os valores de substituição de propriedade que foram definidos durante a execução do pacote.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |property_id|**bigint**|ID exclusiva do valor de substituição de propriedade.|  
 |execution_id|**bigint**|ID exclusivo da instância de execução.|  

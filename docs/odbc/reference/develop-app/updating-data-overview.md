@@ -1,4 +1,5 @@
 ---
+description: Atualizar a visão geral de dados
 title: Visão geral de atualização de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b1755ea75426030a96ed7b349cc82f0fc7e282a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424418"
 ---
 # <a name="updating-data-overview"></a>Atualizar a visão geral de dados
 Os aplicativos podem atualizar os dados executando instruções SQL ou chamando **SQLSetPos** ou **SQLBulkOperations**. As instruções **Update**, **delete**e **Insert** agem diretamente na fonte de dados e geralmente são suportadas pelos drivers. As instruções UPDATE e Delete pesquisadas contêm uma especificação das linhas a serem alteradas. As instruções UPDATE e DELETE posicionadas e **SQLSetPos** atuam na fonte de dados por meio de um cursor e têm menos suporte.  

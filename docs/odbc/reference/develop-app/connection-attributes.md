@@ -1,4 +1,5 @@
 ---
+description: Atributos de conexão
 title: Atributos de conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c295ce88eedf1d4cddc4173f5dea39c44b01f83d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7db2fb6361f114f4864436116f5b0f2f5651e79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424798"
 ---
 # <a name="connection-attributes"></a>Atributos de conexão
 Os atributos de conexão são características da conexão. Por exemplo, pelo fato de as transações ocorrerem no nível da conexão, o nível de isolamento da transação é um atributo de conexão. Da mesma forma, o tempo limite de logon ou o número de segundos a aguardar durante a tentativa de conexão antes do tempo limite é um atributo de conexão.  

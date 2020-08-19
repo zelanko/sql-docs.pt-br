@@ -1,4 +1,5 @@
 ---
+description: Cursores mistos
 title: Cursores mistos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a91dacf8ea9c0ed0db2c3b64634ddd53b854a534
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b15aaee9d74319daa1a211610ce283d247fda2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424598"
 ---
 # <a name="mixed-cursors"></a>Cursores mistos
 

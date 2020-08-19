@@ -1,4 +1,5 @@
 ---
+description: Mapeamento SQLParamOptions
 title: Mapeamento de sqlparamoptions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b083800b660b8ccd26da747e4caf745531188e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a2204921708f6eb2ae7a65925d5c858a0020898
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424899"
 ---
 # <a name="sqlparamoptions-mapping"></a>Mapeamento SQLParamOptions
 Quando um aplicativo chama **Sqlparamoptions** por meio de um driver ODBC *3. x* , a chamada  

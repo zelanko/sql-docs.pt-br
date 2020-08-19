@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_parameter_value (Banco de Dados SSISDB)
 title: catalog.set_execution_parameter_value (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da59f45f073f579a02b84727fad0e5ffef3faec5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425108"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (Banco de Dados SSISDB)
 
@@ -65,7 +66,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  O *object_type* é **smallint**.  
   
  [ @parameter_name = ] *parameter_name*  
- O nome do parâmetro. O *parameter_name* é **nvarchar(128)** .  
+ O nome do parâmetro. O *parameter_name* é **nvarchar(128)**.  
   
  [ @parameter_value = ] *parameter_value*  
  O valor do parâmetro. O *parameter_value* é **sql_variant**.  
@@ -77,7 +78,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Defina o parâmetro *object_type* como 50.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Nenhum<br /><br /> O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
 |1|Basic<br /><br /> Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Esse é o valor padrão.|  

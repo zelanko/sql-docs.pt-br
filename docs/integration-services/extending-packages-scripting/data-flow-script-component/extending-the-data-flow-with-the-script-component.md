@@ -1,4 +1,5 @@
 ---
+description: Extending the Data Flow with the Script Component
 title: Estender o fluxo de dados com o componente Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425388"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
 
@@ -56,26 +57,26 @@ ms.locfileid: "86913409"
  [Compreender o Component Object Model do Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)  
  Um projeto de componente Script novo contém três itens de projeto com várias classes e propriedades e métodos gerados automaticamente.  
   
- [Usar variáveis no componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
+ [Usando variáveis no componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
  O item de projeto **ComponentWrapper** contém propriedades de acessador fortemente tipadas para variáveis de pacote.  
   
- [Conectar-se a fontes de dados no componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  
+ [Conectando-se a fontes de dados no componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  
  O item de projeto **ComponentWrapper** também contém propriedades de acessador fortemente tipadas para conexões definidas no pacote.  
   
- [Gerar eventos no componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)  
+ [Gerando eventos no componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)  
  Você pode gerar eventos para fornecer notificação de problemas e erros.  
   
- [Registrar o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)  
+ [Registrando o componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)  
  Você pode registrar informações para registrar provedores habilitados no pacote.  
   
  [Desenvolver tipos específicos de componentes de Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
  Estes exemplos simples explicam e se manifestam como usar o componente Script para desenvolver origens de fluxo de dados, transformações e destinos.  
   
- [Exemplos de componentes de Script adicionais](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [Exemplos de componentes Script adicionais](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  Esses exemplos simples explicam e demonstram alguns possíveis usos para o componente Script.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Componente Script](../../../integration-services/data-flow/transformations/script-component.md)   
- [Comparar a tarefa Script e o componente de Script](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
+ [Comparando a tarefa Script e o componente Script](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   
   

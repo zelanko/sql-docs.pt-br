@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados do Integration Services em expressões
 title: Tipos de dados do Integration Services em expressões | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae5e95da6599c4af10513ec72194671ba71561b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425528"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
 
@@ -27,7 +28,7 @@ ms.locfileid: "86914559"
 
   O avaliador de expressão usa tipos de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando dados são inseridos pela primeira vez em um fluxo de dados em um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o mecanismo de fluxo de dados converte todos os dados de coluna para um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , e os dados da coluna que uma expressão usa já têm um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As expressões usadas nas transformações Divisão Condicional e Coluna Derivada podem fazer referência a colunas porque elas fazem parte de um fluxo de dados que inclui dados de coluna.  
   
-## <a name="variables"></a>variáveis  
+## <a name="variables"></a>Variáveis  
  Expressões também podem usar variáveis. As variáveis têm um tipo de dados Variant e o avaliador de expressão converte o tipo de dados de uma variável a partir do subtipo Variant para um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] antes de avaliar a expressão. As variáveis podem usar só um subconjunto dos tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por exemplo, uma variável não pode usar um tipo de dados BLOB (Bloco do objeto binário grande).  
   
  Para obter mais informações sobre tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o mapeamento de tipos de dados Variant para tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Tipos de dados dos Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -94,9 +95,9 @@ ms.locfileid: "86914559"
   
 -   [&#60; &#40;Menor que&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Maior que ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Maior ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Menor que ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;Menor ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)  
   
  Uma função que usa um único argumento retorna um resultado com o mesmo tipo de dados que o argumento, com as seguintes exceções:  
   

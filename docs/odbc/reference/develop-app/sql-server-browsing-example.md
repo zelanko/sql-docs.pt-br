@@ -1,4 +1,5 @@
 ---
+description: Exemplo de navegação do SQL Server
 title: Exemplo de navegação de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14016832989c6fcba1dc39bc64434e72b049c18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424558"
 ---
 # <a name="sql-server-browsing-example"></a>Exemplo de navegação do SQL Server
 O exemplo a seguir mostra como **SQLBrowseConnect** pode ser usado para procurar as conexões disponíveis com um driver para SQL Server. Primeiro, o aplicativo solicita um identificador de conexão:  
@@ -38,7 +39,7 @@ SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,
  Como essa é a primeira chamada para **SQLBrowseConnect**, o Gerenciador de driver carrega o driver SQL Server e chama a função **SQLBrowseConnect** do driver com os mesmos argumentos recebidos do aplicativo.  
   
 > [!NOTE]  
->  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à `Trusted_Connection=yes` autenticação do Windows, especifique o lugar das informações de ID de usuário e senha na cadeia de conexão.  
+>  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique `Trusted_Connection=yes` o lugar das informações de ID de usuário e senha na cadeia de conexão.  
   
  O driver determina que esta é a primeira chamada para **SQLBrowseConnect** e retorna o segundo nível de atributos de conexão: servidor, nome de usuário, senha, nome do aplicativo e ID da estação de trabalho. Para o atributo de servidor, ele retorna uma lista de nomes de servidor válidos. O código de retorno de **SQLBrowseConnect** é SQL_NEED_DATA. Aqui está a cadeia de caracteres de resultado da procura:  
   

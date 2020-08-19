@@ -1,4 +1,5 @@
 ---
+description: Substituir precisão inicial e de segundos padrão para tipos de dados de intervalo
 title: Substituir a precisão inicial e de segundos para tipos de dados de intervalo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e60d5d8fc696ad8e2bd4cfb0c082ff214e066d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97375bf23a8530d78dea65dc75ce487cc4f807dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424998"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Substituir precisão inicial e de segundos padrão para tipos de dados de intervalo
 Quando o campo de SQL_DESC_TYPE de um ARD é definido como um tipo de data/hora ou intervalo C, chamando **SQLBindCol** ou **SQLSetDescField**, o campo SQL_DESC_PRECISION (que contém a precisão de segundos de intervalo) é definido com os seguintes padrões:  

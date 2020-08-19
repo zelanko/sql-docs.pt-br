@@ -1,4 +1,5 @@
 ---
+description: Usar matrizes de parâmetros
 title: Usando matrizes de parâmetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b584dc3d635e9fa8ce3228e4e89b0f24451fe165
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a592131165e7dc2370ab1d22a3d9eba5f9609dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424408"
 ---
 # <a name="using-arrays-of-parameters"></a>Usar matrizes de parâmetros
 Para usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um argumento de *atributo* de SQL_ATTR_PARAMSET_SIZE para especificar o número de conjuntos de parâmetros. Ele chama **SQLSetStmtAttr** com um argumento de *atributo* de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar o endereço de uma variável na qual o driver pode retornar o número de conjuntos de parâmetros processados, incluindo conjuntos de erros. Ele chama **SQLSetStmtAttr** com um argumento de *atributo* de SQL_ATTR_PARAM_STATUS_PTR para apontar para uma matriz na qual retornar informações de status para cada linha de valores de parâmetro. O driver armazena esses endereços na estrutura que ele mantém para a instrução.  

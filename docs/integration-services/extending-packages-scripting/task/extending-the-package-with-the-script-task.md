@@ -1,4 +1,5 @@
 ---
+description: Estendendo o pacote com a tarefa Script
 title: Estender o pacote com a tarefa Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c10db4b43ab6763d751af0eeb980979e74bf6c6e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425308"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Estendendo o pacote com a tarefa Script
 
@@ -42,25 +43,25 @@ ms.locfileid: "86917602"
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir fornecem mais informações sobre a tarefa Script.  
   
- [Configurar a tarefa Script no Editor da Tarefa Script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Configurando a tarefa Script no Editor da Tarefa Script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
  Explica como as propriedades que você configura no **Editor da Tarefa Script** afetam os recursos e o desempenho do código na tarefa Script.  
   
- [Codificar e depurar a tarefa Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
+ [Codificando e depurando a tarefa Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
  Explica como usar o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] VSTA (Tools for Applications) para desenvolver os scripts contidos na tarefa Script.  
   
- [Usar variáveis na tarefa Script](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
+ [Usando variáveis na tarefa Script](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  Explica como usar variáveis com a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.  
   
- [Conectar-se a fontes de dados na tarefa Script](../../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
+ [Conectando a fontes de dados na tarefa Script](../../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
  Explica como usar conexões com a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>.  
   
- [Gerar eventos na tarefa Script](../../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)  
+ [Gerando eventos na tarefa Script](../../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)  
  Explica como aumentar eventos com a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>.  
   
- [Registrar a tarefa Script em log](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)  
+ [Registrando a tarefa Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)  
  Explica como anotar informações com o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>.  
   
- [Retornar resultados da tarefa Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)  
+ [Retornando resultados da tarefa Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)  
  Explica como retornar resultados com a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> e a propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>.  
   
  [Exemplos de tarefa Script](../../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
@@ -68,6 +69,6 @@ ms.locfileid: "86917602"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefa Script](../../../integration-services/control-flow/script-task.md)   
- [Comparar a tarefa Script e o componente de Script](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
+ [Comparando a tarefa Script e o componente Script](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   
   

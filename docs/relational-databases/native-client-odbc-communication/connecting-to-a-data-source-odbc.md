@@ -1,4 +1,5 @@
 ---
+description: Conectando-se a uma fonte de dados (ODBC)
 title: Conectando-se a uma fonte de dados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,11 +25,12 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d9bb89822a24116b34f9be297b379c66512a081
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba7ad5c6c822bff351c09d264b25310e8ca51990
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425128"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Conectando-se a uma fonte de dados (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

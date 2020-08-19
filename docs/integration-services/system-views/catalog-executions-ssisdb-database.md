@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (Banco de Dados SSISDB)
 title: catalog.executions (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425098"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (Banco de Dados SSISDB)
 
@@ -29,7 +30,7 @@ ms.locfileid: "86912544"
 
   Exibe as instâncias de execução de pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pacotes que são executados com a tarefa Executar Pacote na mesma instância de execução que o pacote pai.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|O identificador global (ID) exclusivo da instância de execução.|  
 |folder_name|**sysname(nvarchar(128))**|O nome da pasta que contém o projeto.|  
@@ -43,7 +44,7 @@ ms.locfileid: "86912544"
 |executed_as_sid|**varbinary(85)**|A SID do usuário que iniciou a instância da execução.|  
 |executed_as_name|**nvarchar(128)**|O nome da entidade do banco de dados que foi usada para iniciar a instância de execução.|  
 |use32bitruntime|**bit**|Indica se o runtime de 32 bits é usado para executar o pacote em um sistema operacional de 64 bits. Quando o valor é `1`, a execução é realizada com o runtime de 32 bits. Quando o valor é `0`, a execução é realizada com o runtime de 64 bits.|  
-|object_type|**smallint**|O tipo do objeto. O objeto pode ser um projeto (`20`) ou um pacote (`30`).|  
+|object_type|**smallint**|O tipo de objeto. O objeto pode ser um projeto (`20`) ou um pacote (`30`).|  
 |object_id|**bigint**|A ID do objeto afetado pela operação.|  
 |status|**int**|O status da operação. Os possíveis valores são criado (`1`), em execução (`2`), cancelado (`3`), com falha (`4`), pendente (`5`), encerrado inesperadamente (`6`), êxito (`7`), parando (`8`) e concluído (`9`).|  
 |start_time|**datetimeoffset**|A hora em que a instância da execução foi iniciada.|  

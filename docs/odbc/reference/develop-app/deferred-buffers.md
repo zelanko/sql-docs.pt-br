@@ -1,4 +1,5 @@
 ---
+description: Buffers adiados
 title: Buffers adiados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f34c6d3d886a0a75c309dc4f5c71f5c7ba3df447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 320271c39c735eafcfb1d59d26e7d0400eaa6e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424698"
 ---
 # <a name="deferred-buffers"></a>Buffers adiados
 Um *buffer adiado* é aquele cujo valor é usado em algum momento *depois* de ser especificado em uma chamada de função. Por exemplo, **SQLBindParameter** é usado para *associar ou associar um buffer de dados* a um parâmetro em uma instrução SQL. O aplicativo especifica o número do parâmetro e passa o endereço, o comprimento do byte e o tipo do buffer. O driver salva essas informações, mas não examina o conteúdo do buffer. Posteriormente, quando o aplicativo executar a instrução, o driver recuperará as informações e as usará para recuperar os dados do parâmetro e enviá-los para a fonte de dados. Portanto, a entrada de dados no buffer é adiada. Como os buffers adiados são especificados em uma função e usados em outro, é um erro de programação de aplicativo liberar um buffer adiado enquanto o driver ainda espera que ele exista; para obter mais informações, consulte [alocando e liberando buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), mais adiante nesta seção.  

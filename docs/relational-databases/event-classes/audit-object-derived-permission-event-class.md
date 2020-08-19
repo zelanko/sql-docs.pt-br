@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Object Derived Permission
 title: Classe de evento Audit Object Derived Permission | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,22 +13,22 @@ ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bec9b17bd81481c68d5fdebac8f850ac8aedcf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dfa1428c57e22068df27756b01cd73cd3e1c7ceb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424268"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Classe de evento Audit Object Derived Permission
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Audit Object Derived Permission** registra quando um comando CREATE, ALTER ou DROP é emitido para um objeto especificado. Esse evento só acontecerá se o objeto não tiver permissões ou proprietários diretamente associados a ele.  
+   A classe de evento **Audit Object Derived Permission** registra quando um comando CREATE, ALTER ou DROP é emitido para um objeto especificado. Esse evento só acontecerá se o objeto não tiver permissões ou proprietários diretamente associados a ele.  
   
  Essa classe de evento poderá ser removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É recomendável que, em vez disso, você use a classe de evento **Audit Schema Object** .  
   
 ## <a name="audit-object-derived-permission-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Object Derived Permission  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  

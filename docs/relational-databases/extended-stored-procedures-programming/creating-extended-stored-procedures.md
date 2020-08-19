@@ -1,4 +1,5 @@
 ---
+description: Criando procedimentos armazenados estendidos
 title: Criando procedimentos armazenados estendidos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a649325e99d00aff6115ec5c0039dbbb1c7edb2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59a83b935549d1fdf856b61a41b6bc7727b177b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424178"
 ---
 # <a name="creating-extended-stored-procedures"></a>Criando procedimentos armazenados estendidos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

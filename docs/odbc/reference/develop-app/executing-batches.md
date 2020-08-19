@@ -1,4 +1,5 @@
 ---
+description: Lotes em execução
 title: Executando lotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bb923f95dfcfb731d472aad8ead7ff35053171
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424638"
 ---
 # <a name="executing-batches"></a>Lotes em execução
 Antes que um aplicativo execute um lote de instruções, ele deve primeiro verificar se há suporte. Para fazer isso, o aplicativo chama **SQLGetInfo** com as opções SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. A primeira opção retorna se as instruções de geração de contagem de linhas e de conjunto de resultados são suportadas em lotes e procedimentos explícitos, enquanto as duas últimas opções retornam informações sobre a disponibilidade de contagens de linhas e conjuntos de resultados na execução com parâmetros.  

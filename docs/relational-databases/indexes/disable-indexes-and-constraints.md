@@ -1,4 +1,5 @@
 ---
+description: Desabilitar índices e restrições
 title: Desabilitar índices e restrições | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424168"
 ---
 # <a name="disable-indexes-and-constraints"></a>Desabilitar índices e restrições
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -139,7 +140,7 @@ ms.locfileid: "85629776"
   
      Antes de execução o **Status** fica em branco.  
   
--   **Em andamento**  
+-   **Em Andamento**  
   
      A desabilitação dos índices foi iniciada mas não está concluída.  
   
@@ -151,11 +152,11 @@ ms.locfileid: "85629776"
   
      Foi encontrado um erro durante a operação de desabilitação do índice e a operação e a operação não foi concluída com êxito.  
   
--   **Stopped (parado)**  
+-   **Parado**  
   
      A desabilitação do índice não foi concluída com êxito porque o usuário interrompeu a operação.  
   
- **Mensagem**  
+ **Message**  
  Fornece o texto de mensagens de erro durante a operação de desabilitação. Durante a execução, os erros aparecem como hiperlinks. O texto dos hiperlinks descreve o corpo do erro. A coluna **Mensagem** raramente é grande o suficiente para acomodar o texto de mensagem completo. Há dois modos para obter o texto completo:  
   
 -   Mova o ponteiro de mouse sobre a célula de mensagem para exibir uma dica de ferramenta com o texto do erro.  

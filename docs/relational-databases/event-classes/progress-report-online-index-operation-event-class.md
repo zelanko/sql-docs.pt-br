@@ -1,4 +1,5 @@
 ---
+description: 'Classe de evento Progress Report: Online Index Operation'
 title: 'Classe de evento Progress Report: Online Index Operation'
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,20 +13,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 69f03978dd362f706216d4d21cb1225ad2a8d10d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dd043a813133a1e4d4d8e9c62b536d35e1db82a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424158"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Classe de evento Progress Report: Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Relatório de andamento: Classe de evento Operação de Índice Online
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento Progress Report: Online Index Operation  indica o progresso de uma operação de construção de índice online enquanto a operação de construção está em execução.  
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Colunas de dados de classe de evento Progress Report: Online Index Operation  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|**bigint**|Número de linhas inseridas.|52|Sim|  

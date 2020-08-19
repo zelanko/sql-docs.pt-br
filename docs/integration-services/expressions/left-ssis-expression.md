@@ -1,4 +1,5 @@
 ---
+description: LEFT (Expressão SSIS)
 title: LEFT (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67e83bd59e69d9113a3c95116cd2ecc590b31c4c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 619fea9cdf5f9445d9da3146f98453e0d5d60550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425458"
 ---
 # <a name="left-ssis-expression"></a>LEFT (Expressão SSIS)
 

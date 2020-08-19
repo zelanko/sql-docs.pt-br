@@ -1,4 +1,5 @@
 ---
+description: CalculationPassValue (MDX)
 title: CalculationPassValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d30326b709f7bd651b7941e48d412a7b875ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425038"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -54,14 +55,14 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  Se uma expressão de cadeia de caracteres for fornecida, a função retornará um valor de cadeia de caracteres avaliando a expressão de cadeia de caracteres MDX especificada na passagem de cálculo especificada e, opcionalmente, modificada por um sinalizador de acesso e um modificador de sinalizador de acesso *.*  
   
- Com a resolução de recursão automática no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], essa função tem pouco uso prático.  
+ Com a resolução de recursão automática no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , essa função tem pouco uso prático.  
   
 > [!NOTE]  
 >  Somente os administradores podem usar a função **CalculationPassValue** dentro de um script MDX. Um erro ocorre se um script MDX que contém essa função é executado no contexto de uma função que não tem privilégios de administrador.  
   
 ## <a name="see-also"></a>Consulte Também  
  [CalculationCurrentPass&#41;MDX &#40;](../mdx/calculationcurrentpass-mdx.md)   
- [&#40;de&#41;MDX IIf](../mdx/iif-mdx.md)   
+ [&#40;de&#41;MDX IIf ](../mdx/iif-mdx.md)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

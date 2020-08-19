@@ -1,4 +1,5 @@
 ---
+description: Campos adiados
 title: Campos adiados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8b313f2d77270e95830de1a524706aa7fe36e33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424688"
 ---
 # <a name="deferred-fields"></a>Campos adiados
 Os valores dos *campos adiados* não são usados quando eles são definidos, mas o driver salva os endereços das variáveis para um efeito adiado. Para um descritor de parâmetro de aplicativo, o driver usa o conteúdo das variáveis no momento da chamada para **SQLExecDirect** ou **SQLExecute**. Para um descritor de linha de aplicativo, o driver usa o conteúdo das variáveis no momento da busca.  

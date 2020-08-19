@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas da origem XML
 title: Propriedades personalizadas da origem XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9d64d5b477ff31334bc6b60b88e1bbb01811d8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425588"
 ---
 # <a name="xml-source-custom-properties"></a>Propriedades personalizadas da origem XML
 
@@ -26,16 +27,16 @@ ms.locfileid: "86920298"
   
  A tabela a seguir descreve as propriedades personalizadas da origem XML. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|O modo usado para acessar os dados XML.|  
-|UseInlineSchema|Boolean|Um valor que indica se deve ser usada uma definição de esquema embutido dentro da origem XML. O valor padrão dessa propriedade é **False**.|  
+|UseInlineSchema|Booliano|Um valor que indica se deve ser usada uma definição de esquema embutido dentro da origem XML. O valor padrão dessa propriedade é **False**.|  
 |XMLData|String|O arquivo ou variáveis dos quais é possível recuperar os dados XML.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
 |XMLSchemaDefinition|String|O caminho e nome de arquivo do arquivo de definição de esquema (.xsd).<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela a seguir descreve as propriedades personalizadas da saída da origem XML. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |RowsetID|String|Um valor que identifica o conjunto de linhas associado à saída.|  
   

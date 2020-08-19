@@ -1,4 +1,5 @@
 ---
+description: Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
 title: Realizar o balanceamento de carga de pacotes em servidores remotos usando o SQL Server Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4df8e04fc2ef1c68dd1759db2915a13e0bbaf67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d80feda3402c1aedcc0c1016c3de903524f68f17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425208"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
 
@@ -118,7 +119,7 @@ ms.locfileid: "86919165"
  A falha nesse cenário significa apenas que houve uma falha na chamada da tarefa remota do Trabalho do SQL Server Agent. Uma situação em que isso pode acontecer é quando o servidor remoto está inoperante e o agente não responde. No entanto, se o agente disparar, o pacote pai completará sua tarefa com êxito.  
   
 > [!NOTE]  
->  Você pode usar uma tarefa Executar SQL que contém uma instrução Transact-SQL de **sp_start_job N'nome_do_pacote'** . Para obter mais informações, consulte [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
+>  Você pode usar uma tarefa Executar SQL que contém uma instrução Transact-SQL de **sp_start_job N'nome_do_pacote'**. Para obter mais informações, consulte [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Ambiente de depuração  
  Durante o teste do pacote pai, use o ambiente de depuração do designer para executá-lo usando Depurar / Iniciar depuração (F5). Como alternativa, você pode usar o utilitário de prompt de comando, **dtexec**. Para saber mais, veja [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  

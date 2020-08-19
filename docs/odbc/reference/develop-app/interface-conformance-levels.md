@@ -1,4 +1,5 @@
 ---
+description: Níveis de conformidade de interface
 title: Níveis de conformidade da interface | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb77ab0e77fc8a811acd956673a4ad4fe8664828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424618"
 ---
 # <a name="interface-conformance-levels"></a>Níveis de conformidade de interface
 A finalidade do nivelamento é informar ao aplicativo quais recursos estão disponíveis para ele do driver. Um esquema de nivelamento baseado em funções não atinge o suficiente dessa meta. No ODBC 3. *x*, os drivers são classificados com base nos recursos que possuem. O suporte ao recurso pode incluir o suporte à função; Ele também pode incluir o suporte a um campo de descritor, um atributo de instrução, um valor "Y" para um tipo de informação retornado por **SQLGetInfo**e assim por diante.  

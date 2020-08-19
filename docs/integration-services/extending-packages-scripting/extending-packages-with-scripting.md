@@ -1,4 +1,5 @@
 ---
+description: Estendendo pacotes com scripts
 title: Estender pacotes com scripts | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7721e38ca3f9e19ecf3d8d4ee6113f1768427b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0c4a0b243fbb6935a0d456955e70b58f6ac1394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425328"
 ---
 # <a name="extending-packages-with-scripting"></a>Estendendo pacotes com scripts
 
@@ -33,7 +34,7 @@ ms.locfileid: "86915944"
  A tarefa e o componente Script permitem estender os fluxos de controle e de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com pouquíssima codificação. Os dois objetos usam o ambiente de desenvolvimento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA ([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) e a linguagem de programação [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# e se beneficiam de toda a funcionalidade oferecida pela biblioteca de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], bem como assemblies personalizados. A tarefa Script e o componente Script permitem ao desenvolvedor criar a funcionalidade personalizada sem precisar escrever todo o código de infraestrutura que costuma ser requerido no desenvolvimento de uma tarefa personalizada ou componente de fluxo de dados personalizado.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Comparar a tarefa Script e o componente de Script](../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
+ [Comparando a tarefa Script e o componente Script](../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
  Discute as semelhanças e diferenças entre a tarefa Script e o componente Script.  
   
  [Comparar soluções de script e objetos personalizados](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
@@ -56,7 +57,7 @@ ms.locfileid: "86915944"
  [Estendendo pacotes com objetos personalizados](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Discute como criar tarefas personalizadas de programa, componentes de fluxo de dados e outros objetos de pacote para uso em vários pacotes.  
   
- [Compilar Pacotes Programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Compilando pacotes programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Descreve como criar, configurar, executar, carregar, salvar e gerenciar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programaticamente.  
   
 ## <a name="see-also"></a>Consulte Também  

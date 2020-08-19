@@ -1,4 +1,5 @@
 ---
+description: Implantar projetos e pacotes do Integration Services (SSIS)
 title: Implantar projetos e pacotes do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 962b1db12c1208ea70c7cb906eb904bf17538a64
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425218"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
 
@@ -65,7 +66,7 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
   
 |Recurso|Descrição|  
 |-------------|-----------------|  
-|parâmetros|Um parâmetro especifica os dados que serão usados por um pacote. Você pode definir o escopo dos parâmetros no nível do pacote ou do projeto com parâmetros de pacote e de projeto, respectivamente. Os parâmetros podem ser usados em expressões ou tarefas. Quando o projeto é implantado no catálogo, você pode atribuir um valor literal para cada parâmetro ou usar o valor padrão que foi atribuído em tempo de design. Em lugar de um valor literal, você também pode fazer referência a uma variável de ambiente. Os valores de variáveis de ambiente são resolvidos na hora da execução do pacote.|  
+|Parâmetros|Um parâmetro especifica os dados que serão usados por um pacote. Você pode definir o escopo dos parâmetros no nível do pacote ou do projeto com parâmetros de pacote e de projeto, respectivamente. Os parâmetros podem ser usados em expressões ou tarefas. Quando o projeto é implantado no catálogo, você pode atribuir um valor literal para cada parâmetro ou usar o valor padrão que foi atribuído em tempo de design. Em lugar de um valor literal, você também pode fazer referência a uma variável de ambiente. Os valores de variáveis de ambiente são resolvidos na hora da execução do pacote.|  
 |Ambientes|Um ambiente é um contêiner de variáveis que podem ser referenciadas por projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cada projeto pode ter várias referências de ambiente, mas uma única instância de execução de pacote pode fazer referência apenas a variáveis de um único ambiente. Os ambientes permitem organizar os valores que você atribui a um pacote. Por exemplo, você pode ter ambientes denominados "Desenvolvimento", "Teste" e "Produção".|  
 |Variáveis de ambiente|Uma variável de ambiente define um valor literal que pode ser atribuído a um parâmetro durante a execução do pacote. Para usar uma variável de ambiente, crie uma referência de ambiente (no projeto que corresponde ao ambiente que tem o parâmetro), atribua um valor de parâmetro ao nome da variável de ambiente e especifique a referência de ambiente correspondente ao configurar uma instância de execução.|  
 |Catálogo do SSISDB|Todos os objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] são armazenados e gerenciados em uma instância do SQL Server em um banco de dados chamado de catálogo do SSISDB. O catálogo permite usar pastas para organizar seus projetos e ambientes. Cada instância do SQL Server pode ter um catálogo. Cada catálogo pode ter zero ou mais pastas. Cada pasta pode ter zero ou mais projetos e zero ou mais ambientes. Uma pasta do catálogo também pode ser usada como um limite para permissões para objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
@@ -94,7 +95,7 @@ Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir
 
 Para obter mais informações sobre o erro descrito nesta seção e sobre as permissões necessárias para a conta de serviço do SSIS, confira a seguinte postagem no blog:
  
-- [System.ComponentModel.Win32Exception: O cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de runtime para pacotes por meio de ambientes.  
@@ -135,7 +136,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
 1.  Abra o projeto no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]e, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto e clique em **Converter em Modelo de Implantação de Projeto**.  
   
-     -ou-  
+     - ou -  
   
      No Pesquisador de Objetos, no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse no nó **Projetos** e selecione **Importar Pacotes**.  
   
@@ -298,9 +299,9 @@ Inicie o assistente:
 
  ou
 
- - Pesquise o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: "C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTS\Binn". 
+ - Pesquisando o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: "C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
- > **OBSERVAÇÃO:** Se a página **Introdução** for exibida, clique em **Avançar** de modo a alternar para a página **Selecionar Origem** . 
+ > **OBSERVAÇÃO:** se a página **Introdução** for exibida, clique em **Avançar** para mudar para a página **Selecionar Fonte** . 
  
  As configurações nessa página são diferentes para cada modelo de implantação. Siga as etapas na seção [Project Deployment Model](#ProjectModel) ou na seção [Package Deployment Model](#PackageModel) de acordo com o modelo selecionado nessa página.  
   
@@ -451,7 +452,7 @@ Inicie o assistente:
   
     ```  
   
-2.  Chame [catalog.create_execution &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) para criar uma instância da execução do pacote e, opcionalmente, chame [catalog.set_execution_parameter_value &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) Para definir valores de parâmetro de runtime.  
+2.  Chame [catalog.create_execution &amp;#40;Banco de Dados SSISDB&amp;#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) para criar uma instância da execução do pacote e, opcionalmente, chame [catalog.set_execution_parameter_value &amp;#40;Banco de Dados SSISDB&amp;#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) Para definir valores de parâmetro de runtime.  
   
      No exemplo a seguir, catalog.create_execution cria uma instância de execução para package.dtsx que está contida no projeto SSISPackage_ProjectDeployment. O projeto está localizado na pasta Pacotes SSIS. A execution_id retornada pelo procedimento armazenado é usado na chamada para catalog.set_execution_parameter_value. Esse segundo procedimento armazenado define o parâmetro LOGGING_LEVEL como 3 (log detalhado) e define um parâmetro de pacote denominado Parameter1 com um valor de 1.  
   
@@ -567,7 +568,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> Definir opções na página Localizar Pacotes  
   
 > [!NOTE]  
->  A página **Localizar Pacotes** somente está disponível quando você executa o assistente de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>   A página **Localizar Pacotes** somente está disponível quando você executa o assistente de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  A opção a seguir é exibida na página quando você seleciona **Sistema de arquivos** na lista suspensa **Origem** . Selecione esta opção quando o pacote estiver no sistema de arquivos.  
   
@@ -609,7 +610,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Status**  
  Indica se um pacote está pronto para ser convertido ao modelo de implantação de projeto.  
   
- **Mensagem**  
+ **Message**  
  Exibe uma mensagem associada ao pacote.  
   
  **Senha**  
@@ -625,7 +626,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Nessa página, especifique o nome e o caminho de um novo arquivo de implantação de projeto (.ispac) ou selecione um arquivo existente.  
   
 > [!NOTE]  
->  A página **Selecionar destino** está disponível apenas quando você executa o assistente de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>   A página **Selecionar destino** somente está disponível quando você executa o assistente de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Caminho de saída**  
  Digite o caminho para o arquivo de implantação ou navegue para o arquivo clicando em **Procurar**.  
@@ -642,7 +643,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> Definir opções na página Especificar Propriedades do Projeto  
   
 > [!NOTE]  
->  A página **Especificar Propriedades do Projeto** está disponível apenas quando você executa o assistente de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+>   A página **Especificar Propriedades do Projeto** somente está disponível quando você executa o assistente de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **Nome do projeto**  
  Lista o nome do projeto.  

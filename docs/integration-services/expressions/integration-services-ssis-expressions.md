@@ -1,4 +1,5 @@
 ---
+description: Expressões do SSIS (Integration Services)
 title: Expressões do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5f9955f32db6b9d803541229a700671ec666b55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: def15673fbc8c92148fa8ab025d6e1769b2ee236
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425498"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
 
