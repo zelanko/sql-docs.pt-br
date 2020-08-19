@@ -1,4 +1,5 @@
 ---
+description: Propriedade ActiveCommand (ADO)
 title: Propriedade ActiveCommand (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38c0a0955e934b4f303937d978f739e00ac6c120
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451738"
 ---
 # <a name="activecommand-property-ado"></a>Propriedade ActiveCommand (ADO)
 Indica o objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) que criou o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) associado.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna uma **variante** que contém um objeto de **comando** . O padrão é uma referência de objeto nulo.  
   
 ## <a name="remarks"></a>Comentários  

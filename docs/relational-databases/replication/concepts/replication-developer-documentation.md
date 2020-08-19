@@ -1,4 +1,5 @@
 ---
+description: Documentação do desenvolvedor de replicação
 title: Documentação do desenvolvedor de replicação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 950723affaeb6c1e06f16d07967b8fea5adfca75
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf9fb1e0980680793f9aa87c6a7297089f619512
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490612"
 ---
 # <a name="replication-developer-documentation"></a>Documentação do desenvolvedor de replicação
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86914202"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que você controle programaticamente os agentes de replicação e administre e monitore programaticamente uma topologia de replicação. Para saber mais sobre como programar a replicação, consulte [Conceitos de programação da replicação](../../../relational-databases/replication/concepts/replication-programming-concepts.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Conceitos de programação da replicação](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
+ [Conceitos de programação de replicação](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
  Descreve as etapas de planejamento para desenvolver um aplicativo que use a replicação.  
   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  

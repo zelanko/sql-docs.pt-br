@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_queue_sp (Transact-SQL)
 title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f47e06875d2076e4ae9510d7cb1c5bf5f706c45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2cda00932e9cca82ef93be1b4c00a8aabd583737
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469124"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @queue_type = ] 'queue_type'`O argumento opcional Exclui emails do tipo especificado como o *queue_type*. *queue_type* é **nvarchar (6)** sem padrão. As entradas válidas são **email** e **status**.  
+`[ @queue_type = ] 'queue_type'` O argumento opcional Exclui emails do tipo especificado como o *queue_type*. *queue_type* é **nvarchar (6)** sem padrão. As entradas válidas são **email** e **status**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

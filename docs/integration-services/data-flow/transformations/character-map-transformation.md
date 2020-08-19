@@ -1,4 +1,5 @@
 ---
+description: Transformação Mapas de Caracteres
 title: Transformação Mapa de Caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46d4833b6879330e62b89470b8a542f8f6ed910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 84e3e3593e2a3cbee72d6df5cc7565bb908a8b53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430708"
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922438"
 ## <a name="mapping-operations"></a>Mapeando operações  
  A tabela a seguir descreve as operações de mapeamento suportadas pela transformação Mapa de Caracteres.  
   
-|Operação|DESCRIÇÃO|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Inversão de bytes|Inverte a ordem de bytes.|  
 |Largura inteira|Mapeia caracteres de meia largura para caracteres de largura inteira.|  
@@ -100,7 +101,7 @@ ms.locfileid: "86922438"
  **Destino**  
  Especifique entre salvar os resultados das operações de cadeia de caracteres no local, usando a coluna existente, ou salvar os dados modificados como uma nova coluna.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nova coluna|Salve os dados em uma nova coluna. Atribua o nome de coluna em **Alias de Saída**.|  
 |Alteração no local|Salve os dados modificados na coluna existente.|  
@@ -108,7 +109,7 @@ ms.locfileid: "86922438"
  **Operação**  
  Selecione na lista as funções de cadeia de caracteres a aplicar aos dados da coluna.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Letras minúsculas|Converter para letras minúsculas.|  
 |Letras Maiúsculas|Converter para letras maiúsculas.|  

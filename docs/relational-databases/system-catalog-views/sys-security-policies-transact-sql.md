@@ -1,4 +1,5 @@
 ---
+description: sys. security_policies (Transact-SQL)
 title: sys. security_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ccada998c6508d7dccfcee149f954e2e6978ff6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae97e6f310561339c24e712dd3d0f07552232bf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490138"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87395256"
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|A data UTC em que a política de segurança foi criada.|  
 |modify_date|**datetime**|A data UTC em que a política de segurança foi modificada.|  
-|is_ms_shipped|**bit**|Sempre false.|  
+|is_ms_shipped|**bit**|Sempre falso.|  
 |is_enabled|**bit**|Estado de especificação da política de segurança:<br /><br /> 0 = desabilitado<br /><br /> 1 = habilitado|  
 |is_not_for_replication|**bit**|A política foi criada com a opção NOT FOR REPLICATION.|  
 |uses_database_collation|**bit**|Usa a mesma ordenação do banco de dados.|  

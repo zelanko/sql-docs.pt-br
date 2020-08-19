@@ -1,4 +1,5 @@
 ---
+description: Método Synchronize21 (RDS)
 title: Método Synchronize21 (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438558"
 ---
 # <a name="synchronize21-method-rds"></a>Método Synchronize21 (RDS)
 Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão para uso com o ADO 2,1.  
@@ -58,7 +59,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  Uma variante usada para retornar uma matriz segura de status de linha para as linhas afetadas por sincronização. Não definido se nenhuma das seguintes opções de sincronização estiver definida: *RefreshWithUpdate*, *Refresh* e *RefreshConflicts*.  
   
 ## <a name="remarks"></a>Comentários  
- O parâmetro *handlerString* pode ser nulo. O que acontece nesse caso depende de como o servidor RDS está configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP. Handler" indica que o manipulador fornecido pela Microsoft (Msdfmap. dll) deve ser usado. Uma cadeia de caracteres de manipulador de "MASDFMAP. Handler, Sample. ini" indica que o manipulador Msdfmap. dll deve ser usado e que o argumento "Sample. ini" deve ser passado para o manipulador. Em seguida, Msdfmap. dll irá interpretar o argumento como uma direção para usar o Sample. ini para verificar a conexão e as cadeias de caracteres de consulta.  
+ O parâmetro *handlerString* pode ser nulo. O que acontece nesse caso depende de como o servidor RDS está configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP. Handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP. Handler, sample.ini" indica que o manipulador de Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. Msdfmap.dll, em seguida, irá interpretar o argumento como uma direção para usar a sample.ini para verificar a conexão e as cadeias de caracteres de consulta.  
   
 > [!NOTE]
 >  O método **Synchronize21** é simplesmente uma versão do [método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Onde você precisa usar o método **Synchronize** para se comunicar com o ADO 2,1, o método **Synchronize21** pode ser chamado em vez disso. Os recursos do método **Synchronize** no ADO 2,5 e versões posteriores são um superconjunto dos recursos fornecidos para o mesmo método no ADO 2,1.  

@@ -1,4 +1,5 @@
 ---
+description: Tarefa Criação de Perfil de Dados
 title: Tarefa Criação de Perfil de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430988"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
 
@@ -90,13 +91,13 @@ ms.locfileid: "86914818"
   
  Entre os tipos de número inteiro estão **bit**, **tinyint**, **smallint**, **int**e **bigint**.  
   
- Tipos de caracteres incluem **char**, **nchar**, **varchar**e **nvarchar** , mas não incluem **varchar(max)** nem **nvarchar(max)** .  
+ Tipos de caracteres incluem **char**, **nchar**, **varchar**e **nvarchar** , mas não incluem **varchar(max)** nem **nvarchar(max)**.  
   
  Entre os tipos de data e hora estão **datetime**, **smalldatetime**e **timestamp**.  
   
  Tipos numéricos incluem tipos **integer** (exceto **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**e **numeric**.  
   
- \*\* Não há suporte para os tipos **image**, **text**, **XML**, **udt** e **variant** em perfis que não sejam o Perfil Razão Nula de Coluna.  
+ \* Não há suporte para os tipos \* **image**, **text**, **XML**, **udt** e **variant** em perfis que não sejam o Perfil Razão Nula de Coluna.  
   
 ### <a name="valid-tables-and-columns"></a>Tabelas e colunas válidas  
  Se a tabela ou coluna estiver vazia, a Criação de perfis de dados executará as seguintes ações:  

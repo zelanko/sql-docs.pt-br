@@ -1,4 +1,5 @@
 ---
+description: Desenvolvendo objetos personalizados para o Integration Services
 title: Desenvolvendo objetos personalizados para o Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d5a99cc596db669cdb441d0276ba8a630595fdf6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7af6ecdaf2ca7d56142e16b470ed9aeaebaa0e61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430578"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desenvolvendo objetos personalizados para o Integration Services
 

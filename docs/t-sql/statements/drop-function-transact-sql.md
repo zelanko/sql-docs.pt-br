@@ -1,4 +1,5 @@
 ---
+description: DROP FUNCTION (Transact-SQL)
 title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2020
@@ -22,12 +23,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d0f955bbb373c48f55b9769485354050c2c86a3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4dfb731f2ce4bd0ed1beeea64aacf071267a7efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444613"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,6 +56,8 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ```  
    
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
  *IF EXISTS*    
  Remove condicionalmente a função somente se ela já existe. Disponível do [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 e no [!INCLUDE[sssds_md](../../includes/sssds-md.md)].

@@ -1,4 +1,5 @@
 ---
+description: Opções da solicitação do perfil Inclusão de Valor (tarefa Criação de Perfil de Dados)
 title: Opções da solicitação do perfil Inclusão de Valor (Tarefa Criação de Perfil de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bebe29e50ad4adaa6152eaef17de64a926433c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430928"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Inclusão de Valor (tarefa Criação de Perfil de Dados)
 
@@ -106,15 +107,15 @@ ms.locfileid: "86913822"
 > [!NOTE]  
 >  Quando você usa o curinga **(\*)** para **ColumnName**, **CompareOptions** é somente leitura e definido como **Default**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Padrão**|Classifica e compara dados com base na ordenação da coluna na tabela de origem.|  
+|**Default**|Classifica e compara dados com base na ordenação da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
  Se **DictionarySort**for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "Ã¥" é igual a "a".|  
@@ -129,7 +130,7 @@ ms.locfileid: "86913822"
  **InclusionThresholdSetting**  
  Selecione a configuração de limite para refinar a saída do perfil. O valor padrão dessa propriedade é **Especificado**. Para obter mais informações, consulte a seção "Compreendendo as configurações de limite" anteriormente neste tópico.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nenhuma**|Nenhum limite é especificado. A intensidade da chave é informada independentemente de seu valor.|  
 |**Especificado**|Use o limite especificado em **InclusionStrengthThreshold**. A intensidade de inclusão só será informada se for superior ao limite.|  
@@ -143,7 +144,7 @@ ms.locfileid: "86913822"
  **SupersetColumnsKeyThresholdSetting**  
  Especifique o limite de superconjunto. O valor padrão dessa propriedade é **Especificado**. Para obter mais informações, consulte a seção "Compreendendo as configurações de limite" anteriormente neste tópico.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nenhuma**|Nenhum limite é especificado. A intensidade de inclusão é informada independentemente da intensidade da chave da coluna de superconjunto.|  
 |**Especificado**|Use o limite especificado em **SupersetColumnsKeyThreshold**. A intensidade de inclusão só será informada se a intensidade da chave da coluna de superconjunto for maior que o limite.|  

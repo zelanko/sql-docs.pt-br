@@ -1,4 +1,5 @@
 ---
+description: Exibições do esquema
 title: Exibições de esquema | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1a9e421c4835d35e3c4f3c644e69b8c7601e8e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34e1b52b5e96b5fedb964e53f14a7b554d12aa05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429068"
 ---
 # <a name="schema-views"></a>Exibições do esquema
 Um aplicativo pode recuperar informações de metadados do DBMS chamando funções de catálogo ODBC ou usando exibições de INFORMATION_SCHEMA. As exibições são definidas pelo padrão ANSI SQL-92.  

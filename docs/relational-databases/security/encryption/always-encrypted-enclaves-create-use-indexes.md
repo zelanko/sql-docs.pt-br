@@ -1,4 +1,5 @@
 ---
+description: Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros
 title: Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fa36eeebc1f93ed0a2855627943d04dba8e3d7d
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 420e2bc398bbaa75c21130b2f9b8e8024d33fd83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490483"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

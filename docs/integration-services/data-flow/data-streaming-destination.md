@@ -1,4 +1,5 @@
 ---
+description: Destino do Fluxo de Dados
 title: Destino do Streaming de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3dd1ae26ab126e87a8f239597a573d24dbc8b3e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430898"
 ---
 # <a name="data-streaming-destination"></a>Destino do Fluxo de Dados
 
@@ -34,7 +35,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## <a name="data-feed-publishing-components"></a>Componentes de publicação de feed de dados  
- Os Componentes de publicação de feed de dados incluem: Provedor OLE DB para SSIS, Destino do Streaming de Dados e o Assistente de Publicação de Pacote do SSIS. O assistente permite que você publique um pacote do SSIS como uma exibição SQL em uma instância de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O assistente ajuda você na criação de um servidor vinculado que use o Provedor OLE DB para SSIS e uma exibição SQL que representa uma consulta no servidor vinculado. Execute a exibição para consultar os resultados do pacote do SSIS como um conjunto de dados tabulares.  
+ Os Componentes de publicação de feed de dados incluem: Provedor OLE DB para SSIS, Destino do Fluxo de Dados e o Assistente de Publicação de Pacote do SSIS. O assistente permite que você publique um pacote do SSIS como uma exibição SQL em uma instância de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O assistente ajuda você na criação de um servidor vinculado que use o Provedor OLE DB para SSIS e uma exibição SQL que representa uma consulta no servidor vinculado. Execute a exibição para consultar os resultados do pacote do SSIS como um conjunto de dados tabulares.  
   
  Para confirmar se o provedor SSISOLEDB está instalado no SQL Server Management Studio, expanda **Objetos de Servidor**, **Servidores Vinculados**, **Provedores**e confirme se o provedor **SSISOLEDB** é exibido. Clique duas vezes em **SSISOLEDB**, habilite **Permitir Inprocess** se ele não estiver habilitado e clique em **OK**.  
   
@@ -50,12 +51,12 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 3.  Execute a exibição SQL no SQL Server Management Studio e verifique os resultados do pacote do SSIS. A exibição envia a consulta para o Provedor OLE DB para SSIS por meio do servidor vinculado criado por você. O Provedor OLE DB para SSIS executa o pacote especificado na consulta e retorna o conjunto de resultados tabulares.  
   
 > [!IMPORTANT]  
->  Para obter etapas detalhadas, veja [Passo a passo: publicar um pacote do SSIS como uma exibição SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
+>   Para obter etapas detalhadas, veja [Walkthrough: Publish an SSIS Package as a SQL View](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
 
 ## <a name="configure-data-streaming-destination"></a>Configurar destino do fluxo de dados
   Configure o destino de fluxo de dados usando a caixa de diálogo **Editor Avançado para o Destino do Fluxo de Dados** . Abra essa caixa de diálogo clicando duas vezes no componente ou clicando com o botão direito do mouse no componente, no designer de fluxo de dados, e clicando em **Editar**.  
   
- Essa caixa de diálogo tem três guias: **Propriedades do Componente**, **Colunas de Entrada** e **Propriedades de Entrada e Saída**.  
+ A caixa de diálogo tem três guias: **Propriedades do Componente**, **Colunas de Entrada**, e **Propriedades de Entrada e Saída**.  
   
 ## <a name="component-properties-tab"></a>Guia Propriedades do Componente  
  Esta guia tem os seguintes campos editáveis:  

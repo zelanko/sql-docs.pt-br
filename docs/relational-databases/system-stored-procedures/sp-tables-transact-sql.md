@@ -1,4 +1,5 @@
 ---
+description: sp_tables (Transact-SQL)
 title: sp_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 66081d1f9dd7af2e368aea4d00d645bf62317d83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469171"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,20 +49,20 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'name'`É a tabela usada para retornar as informações do catálogo. o *nome* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga.  
+`[ @table_name = ] 'name'` É a tabela usada para retornar as informações do catálogo. o *nome* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga.  
   
-`[ @table_owner = ] 'owner'`É o proprietário da tabela usado para retornar as informações do catálogo. *Owner* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
+`[ @table_owner = ] 'owner'` É o proprietário da tabela usado para retornar as informações do catálogo. *Owner* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o proprietário não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o proprietário não estiver especificado e o usuário atual não possuir uma tabela com o nome especificado, este procedimento procurará uma tabela com o nome especificado, pertencente ao proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
-`[ @table_qualifier = ] 'qualifier'`É o nome do qualificador de tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @table_qualifier = ] 'qualifier'` É o nome do qualificador de tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]``É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela especificados. Eles incluem **tabela**, **sistematable**e **exibição**. o *tipo* é **varchar (100)**, com um padrão de NULL.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela especificados. Eles incluem **tabela**, **sistematable**e **exibição**. o *tipo* é **varchar (100)**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Aspas simples devem incluir cada tipo de tabela e aspas duplas devem incluir o parâmetro inteiro. Os tipos de tabela devem ser em maiúsculas. Se SET QUOTED_IDENTIFIER for ON, cada aspa simples deverá ser duplicada e o parâmetro inteiro deverá ser incluído entre aspas duplas.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se os caracteres sublinhado (_), porcentagem (%) e colchete ([ou]) são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres sublinhado (_), porcentagem (%) e colchete ([ou]) são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  

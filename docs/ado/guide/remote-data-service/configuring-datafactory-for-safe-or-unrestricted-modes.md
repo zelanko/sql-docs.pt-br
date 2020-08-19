@@ -1,4 +1,5 @@
 ---
+description: Configurar o DataFactory para modos seguros ou irrestritos
 title: Configurando o datafactory para modos seguros ou irrestritos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cff72ed7c02cb4f0e9dc2a719ee7e82b55e44408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0b01eada84095b94740319a6d63ed6b0066425d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452298"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configurar o DataFactory para modos seguros ou irrestritos
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.locfileid: "82750078"
   
 2.  O manipulador padrão, msdfmap. Handler, é registrado, está presente na lista de manipuladores seguros e marcado como o manipulador padrão.  
   
-3.  O arquivo Msdfmap. ini é instalado no diretório do Windows. Você deve configurar esse arquivo de acordo com suas necessidades, antes de usar o RDS no modo de três camadas.  
+3.  Msdfmap.ini arquivo é instalado no diretório do Windows. Você deve configurar esse arquivo de acordo com suas necessidades, antes de usar o RDS no modo de três camadas.  
   
  Opcionalmente, você pode configurar uma instalação de **DataFactory** irrestrita. **DataFactory** pode ser usado diretamente sem o manipulador personalizado. Os usuários ainda podem usar um manipulador personalizado modificando as cadeias de conexão, mas isso não é necessário. Para obter mais informações sobre as implicações de usar o objeto **RDSServer. datafactory** , consulte [Securing RDS Applications](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
   

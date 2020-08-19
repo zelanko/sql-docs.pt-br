@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade ActiveCommand (JScript)
 title: Exemplo da propriedade ActiveCommand (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: baa35cc22db15720f9dd3c06762240844f19def3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1d39a5cdfdf83f87f92a3b9087eda49a72a52f6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451728"
 ---
 # <a name="activecommand-property-example-jscript"></a>Exemplo da propriedade ActiveCommand (JScript)
 Este exemplo demonstra a propriedade [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) . Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **ActiveCommandJS. asp**.  

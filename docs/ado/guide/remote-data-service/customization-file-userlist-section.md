@@ -1,4 +1,5 @@
 ---
+description: Seção UserList do arquivo de personalização
 title: Seção UserList do arquivo de personalização | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 002bb8b92105547086ea8649a877b4a9d6f71d3b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452228"
 ---
 # <a name="customization-file-userlist-section"></a>Seção UserList do arquivo de personalização
 A seção **UserList** refere **-se** à seção Connect com o mesmo parâmetro de *identificador* de seção.  
@@ -36,7 +37,7 @@ A seção **UserList** refere **-se** à seção Connect com o mesmo parâmetro 
   
 |Parte|Descrição|  
 |----------|-----------------|  
-|*Usu*|O *nome de usuário* da pessoa que emprega essa conexão. Nomes de usuário válidos são estabelecidos com a caixa de diálogo de **Service Manager** do IIS.|  
+|*userName*|O *nome de usuário* da pessoa que emprega essa conexão. Nomes de usuário válidos são estabelecidos com a caixa de diálogo de **Service Manager** do IIS.|  
 |**_accessRights_**|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -o usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -o usuário pode ler ou gravar na fonte de dados.|  
   
 ## <a name="see-also"></a>Consulte Também  

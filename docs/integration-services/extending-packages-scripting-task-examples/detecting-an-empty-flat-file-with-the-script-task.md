@@ -1,4 +1,5 @@
 ---
+description: Detectando um arquivo simples vazio com a tarefa Script
 title: Detectar um arquivo simples vazio com a tarefa Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26b07dfb31b7fadf1a1135a0cf716a3051d3961a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5c1c5473eb307480b772d2cecd31b3ebb2a9bed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430428"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Detectando um arquivo simples vazio com a tarefa Script
 
@@ -32,7 +33,7 @@ ms.locfileid: "86923813"
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  O exemplo a seguir utiliza métodos do namespace **System.IO** para testar o arquivo simples especificado em um gerenciador de conexões de arquivo simples, a fim de determinar se o arquivo está vazio ou se ele contém apenas linhas esperadas que não são de dados, assim como títulos de coluna ou uma linha vazia. O script verifica primeiro o tamanho do arquivo; se o tamanho é zero bytes, o arquivo está vazio. Quando o tamanho do arquivo é maior que zero, o script lê linhas do arquivo até não encontrar mais linhas ou até o número de linhas exceder o número esperado de linhas que não são de dados. Quando o número de linhas no arquivo é menor que ou igual ao número esperado de linhas que não são de dados, o arquivo é considerado vazio. Os resultados são retornados como um valor booliano em uma variável de usuário, cujo valor pode ser usado para criar ramificação no fluxo de controle do pacote. O método **FireInformation** também exibe o resultado na Janela de **Saída** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA (Tools for Applications).  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  

@@ -1,4 +1,5 @@
 ---
+description: Exemplos de código ADO no Microsoft JScript
 title: Exemplos de código ADO no Microsoft JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db537a1d7fb8d5a440145c298a6ce524965a12b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bc7e233b109266a7918576dadb24631cbb210d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451518"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Exemplos de código ADO no Microsoft JScript
 Use os exemplos de código a seguir para saber como usar os métodos, as propriedades e os eventos do ADO ao escrever em JScript.  

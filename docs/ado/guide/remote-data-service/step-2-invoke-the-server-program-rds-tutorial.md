@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 2: Invocar o programa de servidor (Tutorial RDS)'
 title: 'Etapa 2: invocar o programa de servidor (tutorial RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e85b276ed8cc38419035d48357180c7952ff98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b864578b67eda29c703bcf4952a9a2878aafe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451938"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Etapa 2: Invocar o programa de servidor (Tutorial RDS)
 Quando você invoca um método no *proxy*do cliente, o programa real no servidor executa o método. Nesta etapa, você executará uma consulta no servidor.  
@@ -27,7 +28,7 @@ Quando você invoca um método no *proxy*do cliente, o programa real no servidor
   
  **Parte A** Se você não estivesse usando [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) neste tutorial, a maneira mais conveniente de executar essa etapa seria usar o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) . O **RDS. O DataControl** combina a etapa anterior de criação de um proxy, com esta etapa, emitindo a consulta.  
   
- Defina o **RDS. **Propriedade do [servidor](../../../ado/reference/rds-api/server-property-rds.md) de objeto DataControl para identificar onde o programa do servidor deve ser instanciado; a propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) para especificar a cadeia de conexão para acessar a fonte de dados; e a propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) para especificar o texto do comando de consulta. Em seguida, emita o método [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) para fazer com que o programa do servidor se conecte à fonte de dados, recupere as linhas especificadas pela consulta e retorne um objeto **Recordset** para o cliente.  
+ Defina o **RDS. ** Propriedade do [servidor](../../../ado/reference/rds-api/server-property-rds.md) de objeto DataControl para identificar onde o programa do servidor deve ser instanciado; a propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) para especificar a cadeia de conexão para acessar a fonte de dados; e a propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) para especificar o texto do comando de consulta. Em seguida, emita o método [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) para fazer com que o programa do servidor se conecte à fonte de dados, recupere as linhas especificadas pela consulta e retorne um objeto **Recordset** para o cliente.  
   
  Este tutorial não usa o **RDS. O DataControl**, mas é assim que se pareceria com:  
   

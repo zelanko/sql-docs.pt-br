@@ -1,4 +1,5 @@
 ---
+description: Implantar pacotes com o SSIS
 title: Implantar pacotes com o SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430648"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implantar pacotes com o SSIS
 
@@ -51,7 +52,7 @@ O objetivo deste tutorial é simular a complexidade dos problemas reais de impla
 ## <a name="what-you-learn"></a>O que você aprenderá    
 A melhor maneira de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é usando-os. Este tutorial guia você através das etapas para criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionar pacotes e outros arquivos necessários ao projeto. Após a conclusão do projeto, você criará um grupo de implantação, copiará o grupo para o computador de destino e instalará os pacotes no computador de destino.    
     
-## <a name="prerequisites"></a>Prerequisites    
+## <a name="prerequisites"></a>Pré-requisitos    
 Este tutorial destina-se aos usuários que já estão familiarizados com as operações básicas do sistema de arquivos, mas que tiveram exposição limitada aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para entender melhor os conceitos básicos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que serão usados neste tutorial, talvez seja útil concluir primeiro este tutorial do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [SSIS: Como criar um pacote ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>No computador de origem
@@ -66,7 +67,7 @@ O computador no qual você criará o pacote de implantação **deverá ter os se
 
 -   Você deve ter permissão para criar tabelas no banco de dados do AdventureWorks e para removê-las dele.
     
--   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) .    
     
 ### <a name="on-the-destination-computer"></a>No computador de destino
 
@@ -89,13 +90,13 @@ O computador no qual você implanta os pacotes **deve ter os seguintes component
 Se você planeja implantar pacotes no mesmo computador em que criará o grupo de implantação, esse computador deverá atender aos requisitos dos computadores de origem e de destino.    
         
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial    
-[Lição 1: Preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[Lição 1: preparar-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 Nesta lição, você irá se preparar para implantar uma solução ETL criando um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionando os pacotes e outros arquivos necessários ao projeto.    
     
-[Lição 2: Criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Lição 2: criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 Nesta lição, você compilará um utilitário de implantação e verificará se o grupo de implantação inclui os arquivos necessários.    
     
-[Lição 3: Instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Lição 3: instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 Nesta lição, você copiará o grupo de implantação para o computador de destino, instalará os pacotes e executará os pacotes.    
     
 

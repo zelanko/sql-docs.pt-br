@@ -1,4 +1,5 @@
 ---
+description: MIN_ACTIVE_ROWVERSION (Transact-SQL)
 title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29c44806ff3a5677f8d59841782e3a8bc4bb5044
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4f895b4bcd743cec45431ad55131c1118ace33b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467950"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87111454"
   Retorna o valor **rowversion** ativo mais baixo no banco de dados atual. Um valor **rowversion** ficará ativo se for usado em uma transação ainda não confirmada. Para obter mais informações, consulte [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
->  O tipo de dados **rowversion** também é conhecido como **timestamp**.  
+>   O tipo de dados **rowversion** também é conhecido como **timestamp**.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +45,7 @@ MIN_ACTIVE_ROWVERSION
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Tipos de retorno
- Retorna um valor **binary(8)** .  
+ Retorna um valor **binary(8)**.  
   
 ## <a name="remarks"></a>Comentários  
  MIN_ACTIVE_ROWVERSION é uma função não determinística que retorna o valor de **rowversion** ativo mais baixo no banco de dados atual. Um novo valor **rowversion** normalmente é gerado quando uma inserção ou atualização é executada em uma tabela que contém uma coluna do tipo **rowversion**. Se não houver nenhum valor ativo no banco de dados, MIN_ACTIVE_ROWVERSION retornará o mesmo valor como @@DBTS + 1.  

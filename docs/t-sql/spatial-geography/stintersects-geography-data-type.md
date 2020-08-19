@@ -1,4 +1,5 @@
 ---
+description: STIntersects (tipo de dados geography)
 title: STIntersects (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d7987b23c1f941684b7ab8b169c397d51e53eab
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: ce978df17e7f0fd904e630fb3e8eaf84db375765
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445228"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (tipo de dados geography)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,17 +33,20 @@ ms.locfileid: "87523208"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 .STIntersects ( other_geography )  
 ```  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
   
-## <a name="arguments"></a>Argumentos  
- *other_geography*  
- É outra instância de **geography** a ser comparada com a instância na qual `STIntersects()` é invocado.  
+## <a name="arguments"></a>Argumentos
+
+*other_geography*  
+É outra instância de **geography** a ser comparada com a instância na qual `STIntersects()` é invocado.  
   
-## <a name="return-types"></a>Tipos de retorno  
- Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
+## <a name="return-types"></a>Tipos de retorno
+
+Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de retorno do CLR: **SqlBoolean**  
   
@@ -67,6 +71,6 @@ ms.locfileid: "87523208"
  ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

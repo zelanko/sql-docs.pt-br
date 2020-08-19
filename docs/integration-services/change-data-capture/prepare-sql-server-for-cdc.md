@@ -1,4 +1,5 @@
 ---
+description: Preparar SQL Server para CDC
 title: Preparar o SQL Server para CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8b17436de4950b4dcda69e4c381477640821c9a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431078"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparar SQL Server para CDC
 
@@ -40,7 +41,7 @@ ms.locfileid: "86921732"
   
 -   **Autenticação do Windows**  
   
--   **Autenticação do SQL Server**: se você selecionar esta opção, deverá digitar o **Nome de Usuário** e **Senha** para o usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual você está se conectando.  
+-   **Autenticação do SQL Server**: se você selecionar esta opção, deverá digitar o **Nome de Usuário** e a **Senha** para o usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual você está se conectando.  
   
  Para preparar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Oracle CDC, o logon deve ter permissão de gravação no banco de dados MSXDBCDC. Insira as credenciais para um logon que tem permissão de gravação no banco de dados MSXDBCDC, como um membro da função `sysasmin` .  
   
@@ -51,7 +52,7 @@ ms.locfileid: "86921732"
   
 -   **Tempo limite de execução**: Digite o tempo (em segundos) que o Serviço do Windows do Oracle CDC espera que um comando seja executado antes de exceder o tempo limite. O valor padrão é **30**.  
   
--   **Criptografar conexão**: selecione **Criptografar Conexão** para a comunicação entre o Serviço Oracle CDC e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando uma conexão criptografada.  
+-   **Criptografar Conexão**: selecione **Criptografar Conexão** para a comunicação entre o Serviço Oracle CDC e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando uma conexão criptografada.  
   
 -   **Avançado**: digite as propriedades de conexão adicionais, se necessário.  
   

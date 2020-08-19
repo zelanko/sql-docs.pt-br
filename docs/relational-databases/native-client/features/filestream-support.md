@@ -1,4 +1,5 @@
 ---
+description: Suporte a FILESTREAM
 title: Compatibilidade com o FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26e1d47dea484e818870eb829f6de6318bac1c86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1229da063f1752ba68a0fc172f892bf23236194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498869"
 ---
 # <a name="filestream-support"></a>Suporte a FILESTREAM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM é uma forma de armazenar e acessar valores altos de binário, por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou por acesso direto ao sistema de arquivos do Windows. Um valor binário grande é um valor superior a 2 gigabytes (GB). Para saber mais sobre a compatibilidade com o FILESTREAM avançado, confira [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
- Quando uma conexão de banco de dados é aberta, ** \@ \@ TEXTSIZE** será definido como-1 ("ilimitado"), por padrão.  
+ Quando uma conexão de banco de dados for aberta, **\@\@TEXTSIZE** será definido, por padrão, como -1 ("ilimitado").  
   
  Também é possível acessar e atualizar colunas FILESTREAM usando as APIs do sistema de arquivos do Windows.  
   
@@ -33,7 +34,7 @@ ms.locfileid: "85885661"
   
 -   [Suporte a FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [Suporte a FILESTREAM &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [Suporte a FILESTREAM &#40;&#41;ODBC ](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [Acessar dados do FILESTREAM com OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85885661"
   
  Para criar colunas FILESTREAM ou detectar quais colunas existentes são colunas FILESTREAM, use a coluna **is_filestream** da exibição de catálogo [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).  
   
- Veja um exemplo a seguir:  
+ A seguir, é mostrado um exemplo:  
   
 ```  
 -- Create a table with a FILESTREAM column.  

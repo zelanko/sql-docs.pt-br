@@ -1,4 +1,5 @@
 ---
+description: Tutorial RDS (VBScript)
 title: Tutorial do RDS (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea18ea1d5df16d26b47bcddcdf284e51dc0c2fcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452078"
 ---
 # <a name="rds-tutorial-vbscript"></a>Tutorial RDS (VBScript)
 Este é o tutorial do RDS, escrito no Microsoft Visual Basic Scripting Edition. Para obter uma descrição do objetivo deste tutorial, consulte o [tutorial do RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -58,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  No entanto, para este tutorial, use o servidor imaginário, "yourServer".  
   
 > [!NOTE]
->  Preste atenção ao tipo de dados de argumentos **ByRef** . O VBScript não permite que você especifique o tipo de variável, portanto, você deve sempre passar uma **variante**. Ao usar HTTP, o RDS permitirá passar uma variante para um método que espera uma não variante se você a invocar com o **RDS. **Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace. Ao usar o DCOM ou um servidor em processo, você deve corresponder aos tipos de parâmetro nos lados do cliente e do servidor ou receberá um erro de "incompatibilidade de tipo".  
+>  Preste atenção ao tipo de dados de argumentos **ByRef** . O VBScript não permite que você especifique o tipo de variável, portanto, você deve sempre passar uma **variante**. Ao usar HTTP, o RDS permitirá passar uma variante para um método que espera uma não variante se você a invocar com o **RDS. ** Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace. Ao usar o DCOM ou um servidor em processo, você deve corresponder aos tipos de parâmetro nos lados do cliente e do servidor ou receberá um erro de "incompatibilidade de tipo".  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  

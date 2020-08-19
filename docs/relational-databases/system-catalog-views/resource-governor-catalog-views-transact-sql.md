@@ -1,4 +1,5 @@
 ---
+description: Exibições de catálogo de Administrador de Recursos (Transact-SQL)
 title: Exibições de catálogo Resource Governor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e8fb39de4ea879fa3713761ff43d8ae31f854f9b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 433dbcab6e9e39e64a2e0b441284675ae1c09a5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475473"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>Exibições de catálogo de Administrador de Recursos (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

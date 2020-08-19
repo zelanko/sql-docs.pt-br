@@ -1,4 +1,5 @@
 ---
+description: O RDS retorna o &quot; erro de fluxo não lido &quot;
 title: O RDS retorna o &quot; erro de fluxo não lido &quot; | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 039a881d0d38e6dc58661c92f59ba74bd9ea2bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452098"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>O RDS retorna o &quot; erro de fluxo não lido &quot;
 "Não foi possível ler o objeto de fluxo porque ele está vazio ou a posição atual está no final do fluxo. Para fluxos não vazios, defina a posição atual com a propriedade Position. Para determinar se um fluxo está vazio, verifique a propriedade Size. "  

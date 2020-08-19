@@ -1,4 +1,5 @@
 ---
+description: Método CopyTo (ADO)
 title: Método CopyTo (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8b34e47948cbc0742b0b7b0a4f413d56e4086cf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fbb9fc1c9d6f2a86a6f047b20962e5513798a26e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444358"
 ---
 # <a name="copyto-method-ado"></a>Método CopyTo (ADO)
 Copia o número especificado de caracteres ou bytes (dependendo do [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) no [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) para outro objeto de **fluxo** .  

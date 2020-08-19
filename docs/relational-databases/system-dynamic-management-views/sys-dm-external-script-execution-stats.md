@@ -1,4 +1,5 @@
 ---
+description: sys.dm_external_script_execution_stats
 title: sys. dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
@@ -20,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 4bdf4215b01df0f9011123eb42232bba594554ed
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489905"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

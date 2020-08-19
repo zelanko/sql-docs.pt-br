@@ -1,4 +1,5 @@
 ---
+description: Usar o Assistente para Indexação de Texto Completo
 title: Usar o Assistente para Indexação de Texto Completo | Microsoft Docs
 ms.date: 08/19/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490523"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +99,7 @@ ms.locfileid: "85628811"
      Especifique o grupo de arquivos no qual criar o índice de texto completo.  
   
      e. Selecione um valor:  
-      |Valor|DESCRIÇÃO|  
+      |Valor|Descrição|  
       |-----------|-----------------|
       |**<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou a exibição for particionada, o grupo de arquivos primário será utilizado|
       |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|
@@ -112,7 +113,7 @@ ms.locfileid: "85628811"
   
      Selecione um destes valores:  
   
-   |Valor|DESCRIÇÃO|  
+   |Valor|Descrição|  
     |-----------|-----------------|  
     |**<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
     |**<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  

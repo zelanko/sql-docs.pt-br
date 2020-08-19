@@ -1,4 +1,5 @@
 ---
+description: Argumentos em funções de catálogo
 title: Argumentos em funções de catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 819c10d0b137d5e0999c1e10bf22810392509f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef53514f41d28e93648970b03fa53927529d8344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483129"
 ---
 # <a name="arguments-in-catalog-functions"></a>Argumentos em funções de catálogo
 Todas as funções de catálogo aceitam argumentos com os quais um aplicativo pode restringir o escopo dos dados retornados. Por exemplo, a primeira e segunda chamadas para **SQLTables** no código a seguir retornam um conjunto de resultados que contém informações sobre todas as tabelas, enquanto a terceira chamada retorna informações sobre a tabela Orders:  

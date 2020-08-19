@@ -1,4 +1,5 @@
 ---
+description: Rolagem relativa e absoluta
 title: Rolagem relativa e absoluta | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae0ed5af8d116a3038b55b1e3d68231154c2a35c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c7471e7ee245d9cf70adc8c3453705453bc1aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482938"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Rolagem relativa e absoluta
 A maioria das opções de rolagem em **SQLFetchScroll** posiciona o cursor em relação à posição atual ou a uma posição absoluta. O **SQLFetchScroll** dá suporte à busca do próximo conjunto de linhas anterior, antes, primeiro e último, bem como à busca relativa (busque o conjunto de linha *n* linhas desde o início do conjunto de linhas atual) e a busca absoluta (busque o conjunto de linhas começando na linha *n*). Se *n* for negativo em uma busca absoluta, as linhas serão contadas a partir do final do conjunto de resultados. Portanto, uma busca absoluta da linha-1 significa buscar o conjunto de linhas que começa com a última linha no conjunto de resultados.  

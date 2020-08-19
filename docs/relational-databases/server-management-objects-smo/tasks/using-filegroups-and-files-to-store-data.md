@@ -1,4 +1,5 @@
 ---
+description: Usando grupos de arquivos e arquivos para armazenar dados
 title: Usando grupos de arquivos e arquivo para armazenar dados | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -17,11 +18,12 @@ ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68c07b3135009ba9cbbf124e1573932812f571ab
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b71e0797fceee89dafc2bca1811e83a536d43d49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490372"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Usando grupos de arquivos e arquivos para armazenar dados
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

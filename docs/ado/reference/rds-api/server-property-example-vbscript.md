@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Server (VBScript)
 title: Exemplo da Propriedade Server (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f7fee3011edc0db739518e5e3244fb6cbedc1f0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a330087a016e4417498e8e96120642428b2e3a08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438688"
 ---
 # <a name="server-property-example-vbscript"></a>Exemplo da propriedade Server (VBScript)
 > [!IMPORTANT]

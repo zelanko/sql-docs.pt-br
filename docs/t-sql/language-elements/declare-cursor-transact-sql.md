@@ -1,4 +1,5 @@
 ---
+description: DECLARE CURSOR (Transact-SQL)
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3544d4a9530be4ff90609593e8335c725a4f1a22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ecef1c20be4350646cb98fb96db8152074a97dda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445494"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +78,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Previne atualizações feitas por este cursor. O cursor não pode ser referenciado em uma cláusula `WHERE CURRENT OF` em um instrução `UPDATE` ou `DELETE`. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado.  
   
- UPDATE [OF *column_name* [ **,** ...*n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  Define colunas atualizáveis em um cursor. Se OF <column_name> [, <... n>] for especificada, somente as colunas listadas permitirão modificações. Se `UPDATE` for especificada sem uma lista de colunas, todas as colunas poderão ser atualizadas.  
   
 *cursor_name*  
@@ -136,7 +137,7 @@ Especifica que as atualizações posicionadas e exclusões realizadas pelo curso
   
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o cursor implicitamente em outro tipo se as cláusulas em *select_statement* entram em conflito com a funcionalidade do tipo de cursor solicitado. Para obter mais informações, consulte Conversões implícitas de cursor  
   
-FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
+FOR UPDATE [OF *column_name* [**,**...*n*]]  
 Define colunas atualizáveis em um cursor. Se `OF <column_name> [, <... n>]` for fornecido, somente as colunas listadas permitirão modificações. Se `UPDATE` for especificado sem uma lista de colunas, todas as colunas poderão ser atualizadas, a não ser que a opção de simultaneidade `READ_ONLY` seja especificada.  
   
 ## <a name="remarks"></a>Comentários  
@@ -158,7 +159,7 @@ Nomes de cursor só podem ser referenciados através de outras instruções [!IN
   
 Depois que um cursor ter sido declarado, esses procedimentos armazenados do sistema podem ser usados para determinar as características do cursor.  
   
-|Procedimentos armazenados do sistema|DESCRIÇÃO|  
+|Procedimentos armazenados do sistema|Descrição|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|Retorna uma lista de cursores atualmente visíveis na conexão e seus atributos.|  
 |**sp_describe_cursor**|Descreve os atributos de um cursor, por exemplo, se ele é de somente avanço ou de rolagem.|  

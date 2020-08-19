@@ -1,4 +1,5 @@
 ---
+description: Seção Conexão do arquivo de personalização
 title: Seção conexão de arquivo de personalização | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452258"
 ---
 # <a name="customization-file-connect-section"></a>Seção Conexão do arquivo de personalização
 O comportamento padrão do manipulador é negar todas as conexões. A seção **conectar** especifica exceções para esse comportamento. Por exemplo, se todas as seções de **conexão** estiverem ausentes ou vazias, por padrão, nenhuma conexão poderá ser feita.  

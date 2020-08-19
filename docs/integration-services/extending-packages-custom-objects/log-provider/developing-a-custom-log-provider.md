@@ -1,4 +1,5 @@
 ---
+description: Desenvolvendo um provedor de log personalizado
 title: Desenvolver um provedor de logs personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41da6c13c50ded80c5388da1b38dad582084b3c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69139c38d87c1a61a61b774efdd80db49ea8181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430488"
 ---
 # <a name="developing-a-custom-log-provider"></a>Desenvolvendo um provedor de log personalizado
 
@@ -36,16 +37,16 @@ ms.locfileid: "86916403"
 ## <a name="in-this-section"></a>Nesta seção  
  Esta seção descreve como criar, configurar e codificar um provedor de log personalizado.  
   
- [Criar um provedor de log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)  
+ [Criar um provedor de logs personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)  
  Descreve como criar as classes para um projeto de provedor de log personalizado.  
   
- [Codificar um provedor de log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
+ [Codificando um provedor de log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
  Descreve como implementar um provedor de log personalizado substituindo os métodos e propriedades da classe base.  
   
  [Desenvolver uma interface do usuário para um provedor de logs personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
  Não há suporte para interfaces do usuário personalizadas para provedores de logs personalizados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
-## <a name="related-topics"></a>Tópicos Relacionados  
+## <a name="related-topics"></a>Tópicos relacionados  
   
 ### <a name="information-common-to-all-custom-objects"></a>Informações comuns a todos os objetos personalizados  
  Para obter informações comuns a todos os tipos de objetos personalizados que você pode criar no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte os tópicos a seguir:  
@@ -62,7 +63,7 @@ ms.locfileid: "86916403"
 ### <a name="information-about-other-custom-objects"></a>Informações sobre outros objetos personalizados  
  Para obter informações sobre os outros tipos de objetos personalizados que você pode criar no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte os tópicos a seguir:  
   
- [Desenvolver uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Desenvolvendo uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Aborda como programar tarefas personalizadas.  
   
  [Desenvolver um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  

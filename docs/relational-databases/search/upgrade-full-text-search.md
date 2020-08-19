@@ -1,4 +1,5 @@
 ---
+description: Atualizar pesquisa de texto completo
 title: Atualizar a pesquisa de texto completo | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841c5bd53f2498a6e057495e3953744784beb211
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490542"
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -121,9 +122,9 @@ Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/ss
   
  **Para alterar o comportamento de atualização de texto completo em uma instância de servidor**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: use a ação **upgrade\_option** do [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Usar a ação da **opção\_de atualização** do [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use a **Opção de Atualização de Texto Completo** da caixa de diálogo **Propriedades do Servidor**. Para obter informações, consulte [Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use a **Opção de Atualização de Texto Completo** da caixa de diálogo **Propriedades do Servidor** . Para obter informações, consulte [Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Considerações sobre a restauração de um Catálogo de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Um método de atualização dos dados de texto completo de um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste em restaurar um backup completo do banco de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

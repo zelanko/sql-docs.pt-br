@@ -1,4 +1,5 @@
 ---
+description: Controle de acesso de dados confidenciais em pacotes
 title: Controle de acesso de dados confidenciais em pacotes | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b5347b8b3d241bc7d65fb4d344b74822150185e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430128"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
 
@@ -61,7 +62,7 @@ ms.locfileid: "86922034"
 ## <a name="protection-levels"></a>Níveis de proteção  
  A tabela a seguir descreve os níveis de proteção que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece. Os valores entre parênteses são valores da enumeração do <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> . Esses valores são exibidos na janela Propriedades usada para configurar as propriedades do pacote ao trabalhar com pacotes no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-|Nível de proteção|DESCRIÇÃO|  
+|Nível de proteção|Descrição|  
 |----------------------|-----------------|  
 |Não salvar dados confidenciais (**DontSaveSensitive**)|Elimina os valores das propriedades confidenciais no pacote quando o pacote é salvo. Este nível de proteção não criptografa dados, em vez disso impede que as propriedades marcadas como confidenciais sejam salvas com o pacote e, consequentemente, tornam os dados confidenciais indisponíveis para os outros usuários. Se um usuário diferente abrir o pacote, as informações confidenciais serão substituídas por espaços em branco e o usuário precisará fornecer as informações confidenciais.<br /><br /> Quando usado com o utilitário **dtutil** (dtutil.exe), esse nível de proteção corresponde ao valor de 0.|  
 |Criptografar tudo com senha (**EncryptAllWithPassword**)|Usa uma senha para criptografar todo o pacote. O pacote é criptografado usando uma senha fornecida pelo usuário quando o pacote é criado ou exportado. Para abrir o pacote no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou executá-lo com o utilitário de prompt de comando **dtexec** o usuário deve fornecer a senha do pacote. Sem a senha o usuário não pode acessar ou executar o pacote.<br /><br /> Quando usado com o utilitário **dtutil** , esse nível de proteção corresponde ao valor de 3.|  

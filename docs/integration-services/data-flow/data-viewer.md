@@ -1,4 +1,5 @@
 ---
+description: Visualizador de Dados
 title: Visualizador de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52565494c572fdb6a0eb24ccc0c591bf00005a79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8e3f659ec65cece6dd36f4fc0bc09ecae70a46c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430938"
 ---
 # <a name="data-viewer"></a>Visualizador de Dados
 
@@ -37,7 +38,7 @@ ms.locfileid: "86916743"
   
  **Observação** Desanexar um visualizador de dados não exclui o visualizador de dados. Se o visualizador de dados foi desanexado, os dados continuarão fluindo pelo caminho, mas os dados no visualizador não são atualizados para corresponder aos dados em cada buffer.  
   
- **Anexar**  
+ **Attach**  
  Anexe um visualizador de dados.  
   
  **Observação** Quando o visualizador de dados é anexado, ele exibe informações de cada buffer no fluxo de dados e, em seguida, pausa. Você pode avançar pelos buffers usando a seta verde.  

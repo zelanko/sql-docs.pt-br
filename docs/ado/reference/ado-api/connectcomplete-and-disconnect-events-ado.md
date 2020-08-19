@@ -1,4 +1,5 @@
 ---
+description: Eventos ConnectComplete e Disconnect (ADO)
 title: Eventos ConnectComplete e Disconnect (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88aa5ee6b1d4eabecb65323f557e4bf594da8629
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db04bbeed12f9097768763024270ece7275d5c3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444538"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>Eventos ConnectComplete e Disconnect (ADO)
 O evento **ConnectComplete** é chamado depois que uma conexão é iniciada. O evento de **desconexão** é chamado após o término de uma conexão.  

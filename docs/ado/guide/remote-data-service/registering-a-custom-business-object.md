@@ -1,4 +1,5 @@
 ---
+description: Registrar um objeto de negócios personalizado
 title: Registrando um objeto comercial personalizado | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f110447fbb0f00c037361b00945b228449caf4f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: df390d9e02f31913f74b82ed6196bc2442d1591a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452048"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrar um objeto de negócios personalizado
 Para iniciar com êxito um objeto comercial personalizado (. dll ou. exe) por meio do servidor Web, o ProgID do objeto comercial deve ser inserido no registro, conforme explicado neste procedimento. Esse recurso RDS protege a segurança do seu servidor Web executando somente executáveis aprovados.  

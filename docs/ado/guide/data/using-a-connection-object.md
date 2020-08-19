@@ -1,4 +1,5 @@
 ---
+description: Usar um objeto Connection
 title: Usando um objeto de conexão | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba23a9584e94df817e55b710ddadb073313e865b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7e3041abc535557f9f92e3a994d536fb07abde8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452618"
 ---
 # <a name="using-a-connection-object"></a>Usar um objeto Connection
-Antes de abrir um objeto de **conexão** , você deve definir determinadas informações sobre a fonte de dados e o tipo de conexão. A maioria dessas informações é mantida pelo parâmetro *ConnectionString* do [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) no objeto **Connection** ou pela [Propriedade ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) no objeto **Connection** . Uma cadeia de conexão consiste em uma lista de pares de argumento/valor separados por ponto e vírgula, com os valores entre aspas simples. Por exemplo:  
+Antes de abrir um objeto de **conexão** , você deve definir determinadas informações sobre a fonte de dados e o tipo de conexão. A maioria dessas informações é mantida pelo parâmetro *ConnectionString* do [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) no objeto **Connection** ou pela [Propriedade ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) no objeto **Connection** . Uma cadeia de conexão consiste em uma lista de pares de argumento/valor separados por ponto e vírgula, com os valores entre aspas simples. Por exemplo:   
   
 ```  
 Dim sConn As String  

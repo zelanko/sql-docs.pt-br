@@ -1,4 +1,5 @@
 ---
+description: Configurações necessárias de cliente
 title: Configurações necessárias do cliente | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452018"
 ---
 # <a name="required-client-settings"></a>Configurações necessárias de cliente
 > [!IMPORTANT]
@@ -31,11 +32,11 @@ ms.locfileid: "82749382"
   
 -   Especifique o nome do manipulador a ser usado na Propriedade do **manipulador** do objeto [DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) ou a palavra-chave "**Handler**=" da cadeia de conexão do objeto [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) . (Não é possível definir o manipulador na cadeia de conexão do objeto **Connection** .)  
   
- O RDS fornece um manipulador padrão no servidor chamado **MSDFMAP. Manipulador**. (O arquivo de personalização padrão é denominado MSDFMAP. INI.)  
+ O RDS fornece um manipulador padrão no servidor chamado **MSDFMAP. Manipulador**. (O arquivo de personalização padrão é denominado MSDFMAP.INI.)  
   
  **Exemplo**  
   
- Suponha que as seções a seguir em **MSDFMAP. INI** e o nome da fonte de dados, AdvWorks, foram definidos anteriormente:  
+ Suponha que as seções a seguir em **MSDFMAP.INI** e o nome da fonte de dados, AdvWorks, foram definidas anteriormente:  
   
 ```console
 [connect CustomerDataBase]  
