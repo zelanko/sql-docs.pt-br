@@ -1,4 +1,5 @@
 ---
+description: Membros (cadeia de caracteres) (MDX)
 title: Membros (cadeia de caracteres) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 05df2d0a846af30d46e702c1d5489945d57c9115
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95e90f488f4b9182fc237045b570bc9da02f47e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483819"
 ---
 # <a name="members-string-mdx"></a>Membros (cadeia de caracteres) (MDX)
 

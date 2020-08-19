@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_appdomains (Transact-SQL)
 title: sys. dm_clr_appdomains (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490039"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "85893981"
   
 |Estado|Descrição|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]solicitou que o CLR descarrega o **AppDomain**, geralmente porque o assembly que contém os objetos de banco de dados gerenciado foi alterado ou descartado.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitou que o CLR descarrega o **AppDomain**, geralmente porque o assembly que contém os objetos de banco de dados gerenciado foi alterado ou descartado.|  
 |E_APPDOMAIN_UNLOADED|O CLR descarregou o **AppDomain**. Normalmente, isso é o resultado de um procedimento de escalonamento devido à **ThreadAbortException**, à **OutOfMemory**ou a uma exceção sem tratamento no código do usuário.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|O **AppDomain** foi descarregado no CLR e foi definido para ser destruído pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_DESTROY|O **AppDomain** está no processo de ser destruído pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

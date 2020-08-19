@@ -1,4 +1,5 @@
 ---
+description: Tarefa de Fluxo de Dados
 title: Tarefa de Fluxo de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bc62cfc37e6a69f34faabf8a9622f5c0d79d5f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431028"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
 
@@ -92,7 +93,7 @@ ms.locfileid: "86919844"
   
  Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185: Saída de origem OLE DB: 1180: Classificação: 1181: Classificar entrada: 76", analisado em colunas. A mensagem foi gravada pelo evento **OnPipelineRowsSent** quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
   
-|Coluna|DESCRIÇÃO|Valor|  
+|Coluna|Descrição|Valor|  
 |------------|-----------------|-----------|  
 |**PathID**|O valor da propriedade **ID** do caminho entre a origem OLE DB e a transformação Classificação.|1185|  
 |**PathName**|O valor da propriedade **Nome** do caminho.|Saída da origem OLE DB|  
@@ -112,7 +113,7 @@ ms.locfileid: "86919844"
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuração programática da tarefa Fluxo de Dados  
  Para obter mais informações sobre como adicionar uma tarefa de fluxo de dados programaticamente em um pacote e definir propriedades de fluxo de dados, clique no tópico a seguir:  
   
--   [Adicionar a tarefa de Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [Adicionando a tarefa Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  

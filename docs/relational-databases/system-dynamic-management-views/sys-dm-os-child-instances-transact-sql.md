@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_child_instances (Transact-SQL)
 title: sys. dm_os_child_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58830fc28bea6432e32629c43c103f2ba9cd7ad5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5bb2094b96ef90cd8fc05e6d8ace1afeec69de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489854"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,13 +51,13 @@ ms.locfileid: "85898806"
 |**os_process_id**|**Int**|O número do processo do Windows para esta instância de usuário.|  
 |**os_process_creation_date**|**Horário**|A data e a hora em que este processo de instância de usuário foi iniciado pela última vez.|  
 |**heart_beat**|**nvarchar (5)**|Estado atual desta instância de usuário; ALIVE ou DEAD.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre a exibição de gerenciamento dinâmico, consulte [funções e exibições de gerenciamento dinâmico &#40;&#41;do Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
+ Para obter mais informações sobre a exibição de gerenciamento dinâmico, consulte [funções e exibições de gerenciamento dinâmico &#40;&#41;do Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instâncias de usuário para não administradores](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

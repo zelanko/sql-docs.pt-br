@@ -1,4 +1,5 @@
 ---
+description: Monitorando contadores de desempenho com a tarefa Script
 title: Monitorar contadores de desempenho com a tarefa Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a58e920e749709097ef70a0a6eac49acf8cb056b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 58ca41882200dbf8689b3d3b093b2191d904dc40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430408"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Monitorando contadores de desempenho com a tarefa Script
 
@@ -40,7 +41,7 @@ ms.locfileid: "86923792"
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  O exemplo a seguir cria um contador de desempenho personalizado e incrementa o contador. Primeiro, o exemplo determina se o contador de desempenho já existe. Se o contador de desempenho não tiver sido criado, o script chamará o método **Create** do objeto **PerformanceCounterCategory** para criá-lo. Depois que o contador de desempenho for criado, o script irá incrementá-lo. Por fim, o exemplo adota a prática ideal de chamar o método **Close** no contador de desempenho quando ele não é mais necessário.  
   
 > [!NOTE]  

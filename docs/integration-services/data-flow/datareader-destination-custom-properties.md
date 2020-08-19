@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas do destino DataReader
 title: Propriedades personalizadas do destino DataReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9394139b6085fc4f5d59a8202503f6c9e3d750f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8efd821c41f7a0eaa9a19633c7719795eaa12665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430868"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propriedades personalizadas do destino DataReader
 
@@ -26,10 +27,10 @@ ms.locfileid: "86916736"
   
  A tabela a seguir descreve as propriedades personalizadas do destino DataReader. Todas as propriedades, exceto **DataReader** , são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|O nome da classe do destino DataReader.|  
-|FailOnTimeout|Boolean|Indica se deve haver falha na ocorrência de **ReadTimeout** . O valor padrão dessa propriedade é **False**.|  
+|FailOnTimeout|Booliano|Indica se deve haver falha na ocorrência de **ReadTimeout** . O valor padrão dessa propriedade é **False**.|  
 |ReadTimeout|Integer|O número de milissegundos antes de um tempo limite. O valor padrão dessa propriedade é 30000 (30 segundos).|  
   
  A entrada e as colunas de entrada do destino DataReader não têm nenhuma propriedade personalizada.  

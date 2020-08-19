@@ -1,4 +1,5 @@
 ---
+description: Conformidade com SQL-92
 title: Conformidade com SQL-92 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ac0ae5873e545afb8fcac9dd003c984b1ed303a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d978b236c45d442732cd3602c3fbbb6d16dfd8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483429"
 ---
 # <a name="sql-92-compliance"></a>Conformidade com SQL-92
 Os drivers de banco de dados da área de trabalho ODBC e o mecanismo do Microsoft Jet subjacente não são compatíveis com SQL-92. Eles dão suporte a muitos recursos que foram definidos no SQL-92. Alguns recursos com suporte no driver não têm suporte no SQL-92. Para obter mais informações, consulte o *Guia do programador do Microsoft Jet mecanismo de banco de dados*. A seguir estão as principais diferenças entre as duas:  

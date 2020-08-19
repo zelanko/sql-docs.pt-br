@@ -1,4 +1,5 @@
 ---
+description: Minimizar o uso de espaço de arquivo de log
 title: Minimizando o uso do espaço do arquivo de log | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452158"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimizar o uso de espaço de arquivo de log
 Um arquivo de log pode ser preenchido rapidamente (o que interrompe o servidor), se houver um grande volume de atividade em um banco de dados SQL Server. Você pode definir o arquivo de log para **truncar no ponto de verificação** para estender significativamente a vida útil do arquivo de log para um banco de dados.  

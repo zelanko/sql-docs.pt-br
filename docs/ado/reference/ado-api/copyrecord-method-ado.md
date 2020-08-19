@@ -1,4 +1,5 @@
 ---
+description: Método CopyRecord (ADO)
 title: Método CopyRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444378"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
@@ -34,13 +35,13 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Fonte*  
+ *Origem*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL que especifica a entidade a ser copiada (por exemplo, um arquivo ou diretório). Se a *origem* for omitida ou especificar uma cadeia de caracteres vazia, o arquivo ou diretório representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md) atual será copiado.  
   
  *Destino*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL especificando o local onde a *fonte* será copiada.  
   
- *Usu*  
+ *UserName*  
  Opcional. Um valor de **cadeia de caracteres** que contém a ID de usuário que, se necessário, autoriza o acesso ao *destino*.  
   
  *Senha*  
@@ -52,7 +53,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Async*  
  Opcional. Um valor **booliano** que, quando **true**, especifica que essa operação deve ser assíncrona.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor de **cadeia de caracteres** que normalmente retorna o valor de *destino*. No entanto, o valor exato retornado é dependente do provedor.  
   
 ## <a name="remarks"></a>Comentários  

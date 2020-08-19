@@ -1,4 +1,5 @@
 ---
+description: Conectando a fontes de dados na tarefa Script
 title: Conectar-se a fontes de dados na Tarefa Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6820c80e8b497d24d7cbc9ff022fd772bd7f96e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d54dc51681e96ba34ec33f1a899f61983145c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430228"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Conectando a fontes de dados na tarefa Script
 

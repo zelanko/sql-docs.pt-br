@@ -1,4 +1,5 @@
 ---
+description: Desenvolvendo uma interface do usuário para um enumerador ForEach personalizado
 title: Desenvolver uma interface do usuário para um enumerador ForEach personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac765cc6b597fe569d687da3c4791169ce04a30
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55e03f664f2c0b9c5664c6bcb308cad21d628f84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430528"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>Desenvolvendo uma interface do usuário para um enumerador ForEach personalizado
 
@@ -34,7 +35,7 @@ ms.locfileid: "86915957"
   
 ## <a name="coding-the-user-interface-control-class"></a>Codificando a classe de controle de interface do usuário  
   
-### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário  
+### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário   
  Você substitui o método <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.Initialize%2A> para referências de cache ao objeto de host e às coleções de gerenciadores de conexões e variáveis definidas no pacote.  
   
 ### <a name="setting-properties-on-the-user-interface-control"></a>Definindo propriedades no controle de interface do usuário  
@@ -45,6 +46,6 @@ ms.locfileid: "86915957"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um enumerador Foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
- [Codificar um enumerador Foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
+ [Codificando um enumerador Foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
   
   

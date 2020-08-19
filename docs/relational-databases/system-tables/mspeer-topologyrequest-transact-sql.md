@@ -1,4 +1,5 @@
 ---
+description: MSpeer_topologyrequest (Transact-SQL)
 title: MSpeer_topologyrequest (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bc68682c968457d733e1b221b6983a95e46e204
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 613f84235f07daceab86300bc72528bd21693175
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469018"
 ---
 # <a name="mspeer_topologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85889615"
 |sent_date|**datetime**|Data e hora em que a solicitação de status de topologia foi iniciada.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

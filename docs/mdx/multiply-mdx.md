@@ -1,4 +1,5 @@
 ---
+description: '* Multiplicar LINGUAGEM'
 title: '* Multiplicar (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 396dded86adfe8faa6b6ad58b5eb8174d4323726
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ef1262509976b839f170bbc0b59b367889e4e8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483769"
 ---
 # <a name="-multiply-mdx"></a>* (Multiplicação) (MDX)
 
@@ -31,13 +32,13 @@ Numeric_Expression * Numeric_Expression
  *Numeric_Expression*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor com o tipo de dados do parâmetro com prioridade maior.  
   
 ## <a name="remarks"></a>Comentários  
  As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se uma expressão for avaliada como um valor nulo, o operador retornará um valor nulo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

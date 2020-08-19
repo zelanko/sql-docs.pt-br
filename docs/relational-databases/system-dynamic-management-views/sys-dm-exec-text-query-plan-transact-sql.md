@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_text_query_plan (Transact-SQL)
 title: sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
@@ -20,12 +21,12 @@ ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3608a821be446c864dfac54b99e131a982a80dc2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5ac6ddc739375eaaf5fbb7919c607377c346c21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489935"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ Retorna o plano de execução em formato de texto para um lote [!INCLUDE[tsql](.
 -   A saída do plano de consulta não é limitada em tamanho.  
 -   Instruções individuais podem ser especificadas dentro do lote.  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

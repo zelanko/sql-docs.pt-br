@@ -1,4 +1,5 @@
 ---
+description: Destino Oracle
 title: Destino Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f09d0cc0ad4a8d6ee1230bd846375b5b340cd4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430778"
 ---
 # <a name="oracle-destination"></a>Destino Oracle
 
@@ -83,10 +84,10 @@ A tabela a seguir descreve as propriedades personalizadas do destino Oracle. Tod
 |:-|:-|:-|:-|
 |BatchSize|Integer|O tamanho do lote para carregamento em massa. Esse é o número de linhas carregado como um lote.|Usado somente no modo de lote.|
 |DefaultCodePage|Integer|A página de código a ser usada quando a fonte de dados não tiver informações da página de código. <br>**Observação**: esta propriedade é definida somente pelo **Editor Avançado**.|Uso em ambos os modos.|
-|FastLoad|Boolean|Caso o carregamento rápido seja usado. O valor padrão é **false**. Esse também pode ser definido no [Editor de Destino do Oracle (Página do Gerenciador de Conexões)](#oracle-destination-editor-connection-manager-page). |Uso em ambos os modos.|
+|FastLoad|Booliano|Caso o carregamento rápido seja usado. O valor padrão é **false**. Esse também pode ser definido no [Editor de Destino do Oracle (Página do Gerenciador de Conexões)](#oracle-destination-editor-connection-manager-page). |Uso em ambos os modos.|
 |MaxErrors|Integer|O número de erros que pode ocorrer antes que o fluxo de dados cesse. O valor padrão é **0**, o que significa que não há limite para o número de erros.<br> Se o **Fluxo de redirecionamento** for selecionado na página de **Tratamento de erros**. Antes que o limite de número de erros seja atingido, todos os erros retornam na saída de erro. Para saber mais, confira o [Tratamento de erros](#error-handling).|Usado somente no modo de carregamento rápido.|
-|NoLogging|Boolean|Caso o registro em log do banco de dados esteja desabilitado. O valor padrão é **False**, o que significa que o registro em log está habilitado.|Uso em ambos os modos.|
-|Paralelo|Boolean|Se o carregamento paralelo for permitido. **True** indica que outras sessões de carregamento podem ser executadas na mesma tabela de destino.<br> Para saber mais, confira [Paralelismo](#parallelism).|Usado somente no modo de carregamento rápido.|
+|NoLogging|Booliano|Caso o registro em log do banco de dados esteja desabilitado. O valor padrão é **False**, o que significa que o registro em log está habilitado.|Uso em ambos os modos.|
+|Paralelo|Booliano|Se o carregamento paralelo for permitido. **True** indica que outras sessões de carregamento podem ser executadas na mesma tabela de destino.<br> Para saber mais, confira [Paralelismo](#parallelism).|Usado somente no modo de carregamento rápido.|
 |TableName|String|O nome da tabela com os dados que estão sendo usados.|Usado em ambos os modos.|
 |TableSubName|String|O subnome ou a subpartição. Esse valor é opcional.<br> **Observação**: Essa propriedade só pode ser definida no **Editor Avançado**.|Usado somente no modo de carregamento rápido.|
 |TransactionSize|Integer|O número de inserções que pode ser feito em uma única transação. O padrão é o **BatchSize**.|Usado somente no modo de lote.|
@@ -141,8 +142,8 @@ Especifique o método para selecionar dados da origem. As opções são mostrada
 
 |Opção|Descrição|
 |:-|:-|
-|Nome da tabela|Configurar o destino Oracle para funcionar no modo de lote. Opções:<br><br> **Nome da tabela ou da exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br><br> **Tamanho da transação**: insira o número de inserções que podem ser realizadas em uma única transação. O padrão é o **BatchSize**.<br><br> **Tamanho do lote**: digite o tamanho (número de linhas carregadas) do lote para o carregamento em massa.
-|Nome da tabela – Carregamento Rápido|Configurar o destino Oracle para funcionar no modo de carregamento rápido (Direct Path). <br><br>As opções disponíveis são:<br><br> **Nome da tabela ou da exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br><br> **Carregamento paralelo**: Caso o carregamento paralelo esteja habilitado. Para saber mais, confira [Paralelismo](#parallelism).<br><br> **Sem registro em log**: esta caixa de seleção desabilita o registro em log do banco de dados. Esse registro em log é um banco de dados Oracle usado para fins de recuperação, não relacionado ao rastreamento.<br><br> **Número máximo de erros**: o número máximo de erros que pode ocorrer antes que o fluxo de dados cesse. O valor padrão é 0, o que significa que não há limite de número.<br><br> Todos os erros que podem ocorrer retornam na saída de erro.<br><br> **Tamanho do buffer de transferência (KB)** : insira o tamanho do buffer de transferência. O tamanho padrão é 64 KB.|
+|Nome da tabela|Configurar o destino Oracle para funcionar no modo de lote. Opções:<br><br> **Nome da tabela ou exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br><br> **Tamanho da transação**: insira o número de inserções que podem ser realizadas em uma única transação. O padrão é o **BatchSize**.<br><br> **Tamanho do lote**: digite o tamanho (número de linhas carregadas) do lote para o carregamento em massa.
+|Nome da tabela – Carregamento Rápido|Configurar o destino Oracle para funcionar no modo de carregamento rápido (Direct Path). <br><br>As opções disponíveis são:<br><br> **Nome da tabela ou exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br><br> **Carregamento paralelo**: Caso o carregamento paralelo esteja habilitado. Para saber mais, confira [Paralelismo](#parallelism).<br><br> **Sem registro em log**: esta caixa de seleção desabilita o registro em log do banco de dados. Esse registro em log é um banco de dados Oracle usado para fins de recuperação, não relacionado ao rastreamento.<br><br> **Número máximo de erros**: o número máximo de erros que pode ocorrer antes que o fluxo de dados cesse. O valor padrão é 0, o que significa que não há limite de número.<br><br> Todos os erros que podem ocorrer retornam na saída de erro.<br><br> **Tamanho do buffer de transferência (KB)** : insira o tamanho do buffer de transferência. O tamanho padrão é 64 KB.|
 
 **Exibir dados existentes**
 

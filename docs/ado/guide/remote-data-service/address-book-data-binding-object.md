@@ -1,4 +1,5 @@
 ---
+description: Objeto de associação de dados do catálogo de endereço
 title: Objeto de associação de dados do catálogo de endereços | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9c9b8a4e64432b644b9d3bf66ce2f200f0c1de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452338"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de associação de dados do catálogo de endereço
 O aplicativo de catálogo de endereços usa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para associar dados do banco de dado SQL Server a um objeto visual (nesse caso, uma tabela DHTML) na página HTML do cliente do aplicativo. A lógica do programa VBScript orientada por eventos usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  
@@ -56,7 +57,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |***ID***|Define um identificador de todo o documento para o objeto inserido que é usado para identificá-lo no código.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>Serviços. Parâmetros de marca do DataControl  
- A tabela a seguir descreve os parâmetros específicos para o **RDS. Objeto DataControl** . (Para obter uma lista completa de **RDS. **Parâmetros de objeto DataControl e quando implementá-los, consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
+ A tabela a seguir descreve os parâmetros específicos para o **RDS. Objeto DataControl** . (Para obter uma lista completa de **RDS. ** Parâmetros de objeto DataControl e quando implementá-los, consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  

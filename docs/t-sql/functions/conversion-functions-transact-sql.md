@@ -1,4 +1,5 @@
 ---
+description: Funções de conversão (Transact-SQL)
 title: Funções de conversão (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -13,12 +14,12 @@ ms.assetid: 4147c593-96ba-402f-8bff-a7a32536b304
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dad772de67386fc3cdd51fadf88126d81abb7bde
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bee4f4569f8db1acbc46a98ae793f5ec2807ec87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459829"
 ---
 # <a name="conversion-functions-transact-sql"></a>Funções de conversão (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

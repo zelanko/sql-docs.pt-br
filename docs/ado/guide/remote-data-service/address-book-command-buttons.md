@@ -1,4 +1,5 @@
 ---
+description: Botões de comando do catálogo de endereços
 title: Botões de comando do catálogo de endereços | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452328"
 ---
 # <a name="address-book-command-buttons"></a>Botões de comando do catálogo de endereços
 O aplicativo de catálogo de endereços inclui os seguintes botões de comando:  
@@ -71,7 +72,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Quando `DC1.SubmitChanges` o é executado, o serviço de dados remoto empacota todas as informações de atualização e as envia para o servidor via http. A atualização é tudo ou nada; se uma parte da atualização não for bem-sucedida, nenhuma das alterações será feita e uma mensagem de status será retornada. `DC1.Refresh`Não é necessário após **SubmitChanges** com o Remote Data Service, mas garante dados atualizados.  
+ Quando `DC1.SubmitChanges` o é executado, o serviço de dados remoto empacota todas as informações de atualização e as envia para o servidor via http. A atualização é tudo ou nada; se uma parte da atualização não for bem-sucedida, nenhuma das alterações será feita e uma mensagem de status será retornada. `DC1.Refresh` Não é necessário após **SubmitChanges** com o Remote Data Service, mas garante dados atualizados.  
   
 ## <a name="cancel-changes-button"></a>Botão cancelar alterações  
  Clicar em **cancelar alterações** ativa o procedimento Sub Cancel_OnClick do VBScript, que executa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) (método `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  

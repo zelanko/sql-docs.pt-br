@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_status_sp (Transact-SQL)
 title: sysmail_help_status_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 036fcaabc96f8f8c4688ff5643d2d9e1febff050
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53f0512a2d6d57606a146c39325692b9c3d351e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469151"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +69,7 @@ STARTED
   
 ## <a name="see-also"></a>Consulte Também  
  [Database Mail programa externo](../../relational-databases/database-mail/database-mail-external-program.md)   
- [&#41;&#40;Transact-SQL de sysmail_start_sp](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_start_sp ](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
  [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

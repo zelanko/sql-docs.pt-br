@@ -1,4 +1,5 @@
 ---
+description: Trabalhando com facetas do Gerenciamento Baseado em Políticas
 title: Trabalhando com facetas do gerenciamento baseado em políticas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f8853222158fd4a5397e60bdffe4171cd8d66694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d785b99fd933cc0209df8ecb0674e65e0d340ea9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475586"
 ---
 # <a name="working-with-policy-based-management-facets"></a>Trabalhando com facetas do Gerenciamento Baseado em Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "85774080"
  Os procedimentos deste tópico exigem a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
 ## <a name="viewing-and-copying-facet-states"></a>Exibindo e copiando estados da faceta  
- [Exibir as facetas do gerenciamento baseado em políticas em um objeto do SQL Server](../../relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)  
+ [Exibir as facetas de Gerenciamento Baseado em Políticas em um objeto do SQL Server](../../relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)  
   
- [Copiar um estado de faceta do gerenciamento baseado em políticas para um arquivo XML](../../relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
+ [Copiar um estado de faceta do Gerenciamento Baseado em Políticas para um arquivo XML](../../relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

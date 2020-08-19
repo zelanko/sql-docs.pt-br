@@ -1,4 +1,5 @@
 ---
+description: Destino DataReader
 title: Destino do DataReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16e98a1cd172f3d325023430cfa03c66b3834faa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf921ace25411ba18fc59310b0ad44f996ed2247
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430888"
 ---
 # <a name="datareader-destination"></a>Destino DataReader
 

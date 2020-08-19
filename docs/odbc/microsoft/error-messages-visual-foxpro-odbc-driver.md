@@ -1,4 +1,5 @@
 ---
+description: Mensagens de erro (Driver ODBC do Visual FoxPro)
 title: Mensagens de erro (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31f894e58da93fe6091dba306f8b765d14bac2cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b76ec8703ebee8aa597849b23a5a22323caa350
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483599"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Mensagens de erro (Driver ODBC do Visual FoxPro)
 Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informações:  

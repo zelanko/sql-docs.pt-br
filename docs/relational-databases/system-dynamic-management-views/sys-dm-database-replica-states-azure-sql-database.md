@@ -1,4 +1,5 @@
 ---
+description: sys.dm_database_replica_states (Banco de Dados SQL do Azure)
 title: sys. dm_database_replica_states (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc81d2f5754052ae9fec57d7bd9d64b5337fdaba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a40c5ba80bc3e9929109d9acc5f58f454db243d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490027"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85754273"
 |**replica_id**|**uniqueidentifier**|O identificador da réplica de disponibilidade dentro do grupo de disponibilidade.|  
 |**group_database_id**|**uniqueidentifier**|O identificador do banco de dados dentro do grupo de disponibilidade. Esse identificador é idêntico em cada réplica à qual este banco de dados é unido.|  
 |**is_local**|**bit**|Se o banco de dados de disponibilidade é local, um dos seguintes:<br /><br /> 0 = O banco de dados não é local para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = O banco de dados é local para a instância do servidor.|  
-|**is_primary_replica**|**bit**|Retornará 1 se a réplica for primária ou 0 se for uma réplica secundária no grupo de disponibilidade ao qual o banco de dados pertence. Isso não se refere ao banco de dados primário ou secundário em um grupo de disponibilidade distribuído ou a uma relação de replicação geográfica ativa.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.|  
+|**is_primary_replica**|**bit**|Retornará 1 se a réplica for primária ou 0 se for uma réplica secundária no grupo de disponibilidade ao qual o banco de dados pertence. Isso não se refere ao banco de dados primário ou secundário em um grupo de disponibilidade distribuído ou a uma relação de replicação geográfica ativa.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posteriores.|  
 |**synchronization_state**|**tinyint**|Estado de movimentação de dados, um dos valores a seguir.<br /><br /> 0 = não está sincronizando. Para um banco de dados primário, indica que o banco de dados não está pronto para sincronizar seu log de transações com os bancos de dados secundários correspondentes. Para um banco de dados secundário, indica que o banco de dados não iniciou a sincronização de log devido a um problema de conexão, está sendo suspenso ou está passando por estados de transição durante a inicialização ou uma troca de função.<br /><br /> 1 = sincronizando. Para um banco de dados primário, indica que o banco de dados está pronto para aceitar uma solicitação de exame de um banco de dados secundário. Para um banco de dados secundário, indica que o movimento de dados ativo está ocorrendo para o banco de dados.<br /><br /> 2 = sincronizado. Um banco de dados primário mostra SYNCHRONIZED em vez de SYNCHRONIZING. Um banco de dados secundário de confirmação síncrona mostrará sincronizado quando o cache local informar que o banco de dados está pronto para failover e quando está sincronizando.<br /><br /> 3 = reversão. Indica a fase do processo de desfazer em que um banco de dados secundário está obtendo páginas ativamente do banco de dados primário.<br />**Cuidado:** Quando um banco de dados em uma réplica secundária está no estado revertendo, forçar o failover para a réplica secundária deixa o banco de dados em um estado no qual ele não pode ser iniciado como um banco de dados primário. O banco de dados precisará ser reconectado como um banco de dados secundário ou você precisará aplicar novos registros de log de um backup de log.<br /><br /> 4 = inicializando. Indica a fase de desfazer em que o log de transações que exigiu que um banco de dados secundário ficasse em dia com o LSN de desfazer está sendo enviado e protegido em uma réplica secundária.<br />**Cuidado:** Quando um banco de dados em uma réplica secundária está no estado de inicialização, forçar o failover para a réplica secundária deixa o banco de dados em um estado no qual ele não pode ser iniciado como um banco de dados primário. O banco de dados precisará ser reconectado como um banco de dados secundário ou você precisará aplicar novos registros de log de um backup de log.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Descrição do estado da movimentação de dados, um dos seguintes:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = A confirmação da transação não está sincronizada em relação a este banco de dados.<br /><br /> 1 = A confirmação da transação está sincronizada em relação a este banco de dados.<br /><br /> Para um banco de dados em uma réplica de disponibilidade de confirmação assíncrona, este valor é sempre 0.<br /><br /> Para um banco de dados em uma réplica de disponibilidade de confirmação síncrona, este valor é preciso somente no banco de dados primário.|  
@@ -70,7 +71,7 @@ ms.locfileid: "85754273"
 |**last_commit_lsn**|**numeric(25,0)**|O número de sequência de log real que corresponde ao último registro de confirmação no log de transações.<br /><br /> No banco de dados primário, corresponde ao último registro de confirmação processado. As linhas para bancos de dados secundários mostram o número de sequência de log que a réplica secundária enviou para a primária.<br /><br /> Na réplica secundária, é o último registro de confirmação refeito.|  
 |**last_commit_time**|**datetime**|A hora correspondente ao último registro de confirmação.<br /><br /> No banco de dados secundário, essa hora é a mesma do banco de dados primário.<br /><br /> Na réplica primária, cada linha de banco de dados secundário exibe a hora em que a réplica secundária que hospeda aquele banco de dados secundário relatou de volta para a réplica primária. A diferença no tempo entre a linha do banco de dados primário e uma determinada linha de banco de dados secundário representa aproximadamente o RPO (objetivo de ponto de recuperação), supondo que o processo de refazer seja atualizado e que o progresso tenha sido relatado de volta para a réplica primária pela réplica secundária.|  
 |**low_water_mark_for_ghosts**|**bigint**|Um número aumentado de maneira constante para o banco de dados, que indica uma marca d'água inferior usada pela limpeza de fantasma no banco de dados primário. Se esse número não estiver aumentando ao longo do tempo, isso indicará que a limpeza fantasma talvez não esteja ocorrendo. Para decidir quais linhas fantasmas devem ser limpas, a réplica primária usa o valor mínimo dessa coluna para este banco de dados em todas as réplicas de disponibilidade (inclusive a réplica primária).|  
-|**secondary_lag_seconds**|**bigint**|O número de segundos que a réplica secundária está atrás da réplica primária durante a sincronização.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
+|**secondary_lag_seconds**|**bigint**|O número de segundos que a réplica secundária está atrás da réplica primária durante a sincronização.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posteriores.|  
 |**quorum_commit_lsn**|**numeric(25,0)**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 |**quorum_commit_time**|**datetime**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 

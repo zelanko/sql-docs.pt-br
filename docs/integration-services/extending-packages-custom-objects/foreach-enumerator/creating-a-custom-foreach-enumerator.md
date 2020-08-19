@@ -1,4 +1,5 @@
 ---
+description: Criando um enumerador Foreach personalizado
 title: Criar um enumerador Foreach personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08eaa7d908f421ec3dd4e321e47985f8d7dd6c04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d98191945b17cb1471d6e255b8f41680a03cc459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430538"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Criando um enumerador Foreach personalizado
 
@@ -83,6 +84,6 @@ namespace Microsoft.Samples.SqlServer.Dts
   
 ## <a name="see-also"></a>Consulte Também  
  [Codificar um enumerador Foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
- [Desenvolver uma interface do usuário para um enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Desenvolvendo uma interface do usuário para um enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   

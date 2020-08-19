@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category (Transact-SQL)
 title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469140"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`É o nome da categoria de política. o *nome* é **sysname**e é obrigatório. o *nome* não pode ser nulo ou uma cadeia de caracteres vazia.  
+`[ @name = ] 'name'` É o nome da categoria de política. o *nome* é **sysname**e é obrigatório. o *nome* não pode ser nulo ou uma cadeia de caracteres vazia.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Determina se a assinatura do banco de dados é obrigatória para a categoria de política. *mandate_database_subscriptions* é um valor de **bit** , com um padrão de 1 (habilitado).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina se a assinatura do banco de dados é obrigatória para a categoria de política. *mandate_database_subscriptions* é um valor de **bit** , com um padrão de 1 (habilitado).  
   
-`[ @policy_category_id = ] policy_category_id`É o identificador para a categoria de política. *policy_category_id* é **int**e é retornada como saída.  
+`[ @policy_category_id = ] policy_category_id` É o identificador para a categoria de política. *policy_category_id* é **int**e é retornada como saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -75,7 +76,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_add_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_delete_policy_category](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_syspolicy_add_policy_category_subscription ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_delete_policy_category ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

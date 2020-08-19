@@ -1,4 +1,5 @@
 ---
+description: Assistente para Configurar a Distribuição
 title: Assistente para Configurar a Distribuição | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e08733a79e3088e9ae186d768843b9c958406184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c35d40300eb134f09b181c41a34bd5c7816a75fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475604"
 ---
 # <a name="configure-distribution-wizard"></a>Assistente para Configurar a Distribuição
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

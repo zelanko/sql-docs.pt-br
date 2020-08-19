@@ -1,4 +1,5 @@
 ---
+description: Opções de conexão
 title: Opções de conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25cfe2a897b0c312f91cd0c1e41ad6fa11725ab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22326ca650f575c6a4f0503093306d8b68581475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483679"
 ---
 # <a name="connect-options"></a>Opções de conexão
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: Criando, alterando e removendo padrões
 title: Criando, alterando e removendo padrões
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89818f129ec24f93ea50fa795e80fb77ee06ba9c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7f85a1b010c13ed68ea1693ef8f9e2c9c9353e4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490404"
 ---
 # <a name="creating-altering-and-removing-defaults"></a>Criando, alterando e removendo padrões
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

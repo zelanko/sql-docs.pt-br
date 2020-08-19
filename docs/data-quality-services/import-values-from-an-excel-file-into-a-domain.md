@@ -1,4 +1,5 @@
 ---
+description: Importar valores de um arquivo do Excel para um domínio
 title: Importar valores de um arquivo do Excel para um domínio
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf2b2f9d6b2f3ad72121db25758b2258363d8566
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431328"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores de um arquivo do Excel para um domínio
 
@@ -42,7 +43,7 @@ ms.locfileid: "85882806"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar valores de domínio de um arquivo do Excel.  
   
-##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Importar valores de um arquivo do Excel para um domínio  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a> Importar valores de um arquivo do Excel para um domínio  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -72,10 +73,10 @@ ms.locfileid: "85882806"
   
 14. Clique em **Concluir** para adicionar os valores à base de dados de conhecimento.  
   
-##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>Acompanhamento: depois de importar valores de um arquivo do Excel para um domínio  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a> Acompanhamento: depois de importar valores de um arquivo do Excel para um domínio  
  Depois que você importar valores para um domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="importing-synonyms"></a><a name="Synonyms"></a>Importando sinônimos  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a> Importando sinônimos  
  Os sinônimos são importados da seguinte maneira:  
   
 -   Primeiro, todos os valores são importados; depois, a conexão de sinônimo é estabelecida.  
@@ -90,7 +91,7 @@ ms.locfileid: "85882806"
   
 -   Se os valores não puderem ser conectados manualmente no aplicativo por algum motivo, isso não será aplicável através da operação de importação.  
   
-##  <a name="how-the-import-works"></a><a name="How"></a>Como a importação funciona  
+##  <a name="how-the-import-works"></a><a name="How"></a> Como a importação funciona  
  Os seguintes valores são importados por esta operação:  
   
  Na operação de importação, o DQS realiza a importação a partir de um arquivo do Excel, da seguinte maneira:  
