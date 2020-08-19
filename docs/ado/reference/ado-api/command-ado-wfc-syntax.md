@@ -1,4 +1,5 @@
 ---
+description: Comando (ADO – Sintaxe WFC)
 title: Comando (ADO – sintaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61b5a54778bb680b68e923d198831d770973d1a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fcbe8174b2866f3edfd9676d7873216fd16f5751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450888"
 ---
 # <a name="command-ado---wfc-syntax"></a>Comando (ADO – Sintaxe WFC)
 ## <a name="package-commswfcdata"></a>pacote com. ms. wfc. Data  
@@ -44,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- O método **ExecuteUpdate** é um método de caso especial que chama o método de **execução** ADO subjacente com determinados parâmetros. O método **ExecuteUpdate** não dá suporte ao retorno de um objeto **Recordset** , portanto, o parâmetro *Options* do método **Execute** é modificado com **AdoEnums. executeoptions. nograves**. Depois que o método **Execute** é concluído, seu parâmetro *RecordsAffected* atualizado é passado de volta para o método **ExecuteUpdate** , que finalmente é retornado como um **int**.  
+ O método **ExecuteUpdate** é um método de caso especial que chama o método de **execução** ADO subjacente com determinados parâmetros. O **método executeUpdate** não dá suporte ao retorno de um objeto **Recordset** , portanto, o parâmetro *Options* do método **Execute** é modificado com **AdoEnums.ExecuteOptions. nograves**. Depois que o método **Execute** é concluído, seu parâmetro *RecordsAffected* atualizado é passado de volta para o método **ExecuteUpdate** , que finalmente é retornado como um **int**.  
   
 ### <a name="properties"></a>Propriedades  
   

@@ -1,4 +1,5 @@
 ---
+description: Cláusula APPEND de forma
 title: Cláusula de ANEXAção de forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452858"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
 A cláusula comando de forma APPEND acrescenta uma coluna ou colunas a um **conjunto de registros**. Frequentemente, essas colunas são colunas de capítulo, que se referem a um **conjunto de registros**filho.  

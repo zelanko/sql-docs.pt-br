@@ -1,4 +1,5 @@
 ---
+description: Problemas de desempenho do driver de banco de dados de área de trabalho
 title: Problemas de desempenho do driver de banco de dados desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a819d99a995fd7b287beb66b94f1df526e05f201
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20c21c493d81df6afb4a338675f86ad96ccfab68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449548"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Problemas de desempenho do driver de banco de dados de área de trabalho
 Para garantir a compatibilidade com os aplicativos ANSI existentes, os tipos de dados SQL_WCHAR, SQL_WVARCHAR e SQL_WLONGVARCHAR são expostos como SQL_CHAR, SQL_VARCHAR e SQL_LONGVARCHAR para fontes de dados do Microsoft Access 4,0 ou superior. As fontes de dados não retornam tipos de dados de caracteres LARGOs, mas os dados ainda devem ser enviados para o Jet no formato de caracteres largos. É importante entender que a conversão ocorrerá se um parâmetro SQL_C_CHAR ou coluna de resultado estiver associado a um tipo de dados SQL_CHAR em um aplicativo ANSI.  

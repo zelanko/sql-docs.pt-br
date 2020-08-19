@@ -1,4 +1,5 @@
 ---
+description: Comandos parametrizados com comandos COMPUTE de intervenção
 title: Comandos com parâmetros com comandos de computação intermediários | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f5e4edf28f14763d4a7592f018f47135cae9981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453088"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos parametrizados com comandos COMPUTE de intervenção
 Um comando típico de acrescentar forma com parâmetros tem uma cláusula que cria um **conjunto de registros** pai com um comando de consulta e outra cláusula que cria um **conjunto de registros** filho com um comando de consulta parametrizada, ou seja, um comando que contém um espaço reservado de parâmetro (um ponto de interrogação, "?"). O conjunto de **registros** moldado resultante tem dois níveis, nos quais o pai ocupa o nível superior e o filho ocupa o nível inferior.  

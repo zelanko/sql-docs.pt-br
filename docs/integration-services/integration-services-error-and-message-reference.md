@@ -1,4 +1,5 @@
 ---
+description: Referência de mensagens e erros do Integration Services
 title: Referência de mensagens e erros do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2020
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32d2870ed0c64919b325a5a267ce695323bf4e04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c2e520aaf997bb5c03b84e8ed9df8b426972b5a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449891"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
 

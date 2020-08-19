@@ -1,4 +1,5 @@
 ---
+description: Modelar comandos em geral
 title: Comandos de forma em geral | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a0364d3b123f5d042a6e008a4312217e746b5b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452848"
 ---
 # <a name="shape-commands-in-general"></a>Modelar comandos em geral
 O data Shaping define as colunas de um **conjunto de registros**moldado, as relações entre as entidades representadas pelas colunas e a maneira como o **conjunto de registros** é preenchido com os dados.  

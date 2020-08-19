@@ -1,4 +1,5 @@
 ---
+description: Alterar valores de domínio
 title: Alterar valores de domínio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450010"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
 
@@ -44,7 +45,7 @@ ms.locfileid: "85901112"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para alterar valores de domínio.  
   
-##  <a name="change-domain-values"></a><a name="Change"></a>Alterar valores de domínio  
+##  <a name="change-domain-values"></a><a name="Change"></a> Alterar valores de domínio  
  A tabela **Valor** exibe o conhecimento adicionado à base de dados de conhecimento para um domínio único. Você pode selecionar um domínio diferente a qualquer momento na lista de domínios para exibir os valores desse domínio. As colunas do campo são as seguintes:  
   
 -   A coluna **Valor** exibe todos os valores que o processo de descoberta adicionou ao domínio selecionado de um campo no exemplo de dados. Qualquer valor projetado como erro será mostrado como sinônimo de um valor projetado como correto.  

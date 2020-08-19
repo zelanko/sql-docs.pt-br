@@ -1,4 +1,5 @@
 ---
+description: Fazendo backup e restaurando banco de dados do DQS
 title: Fazendo backup e restaurando banco de dados do DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5df48172681fef1ea75735702915ac1beedabee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03b58daec9def4e902e111719353110bfad1d69b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449959"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Fazendo backup e restaurando banco de dados do DQS
 
@@ -40,7 +41,7 @@ ms.locfileid: "85897566"
   
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
-##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>Fazer backup e restaurar bancos de dados do DQS  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a> Fazer backup e restaurar bancos de dados do DQS  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   

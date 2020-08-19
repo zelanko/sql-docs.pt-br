@@ -1,4 +1,5 @@
 ---
+description: 'C para SQL: carimbo de data/hora'
 title: 'C to SQL: timestamp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3102e5043527a1aa9463980c9dd546839cb92f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449028"
 ---
 # <a name="c-to-sql-timestamp"></a>C para SQL: carimbo de data/hora
 O identificador do tipo de dados de carimbo de data/hora ODBC C é:  
@@ -40,6 +41,6 @@ O identificador do tipo de dados de carimbo de data/hora ODBC C é:
   
  Para obter informações sobre quais valores são válidos em uma estrutura de SQL_C_TIMESTAMP, consulte [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md), anteriormente neste apêndice.  
   
- Quando os dados C do carimbo de data/hora são convertidos em dados SQL de caractere, os dados de caractere resultantes estão no "*aaaa*-*mm*-*DD* *hh*:*mm*:*SS*[.* f...*] " ao.  
+ Quando os dados C do carimbo de data/hora são convertidos em dados SQL de caractere, os dados de caractere resultantes estão no "*aaaa* - *mm* - *DD* *hh*:*mm*:*SS*[.* f...*] " ao.  
   
  O driver ignora o valor de comprimento/indicador ao converter dados do tipo de dados timestamp C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados timestamp C. O valor de comprimento/indicador é passado no argumento *StrLen_or_Ind* em **SQLPutData** e no buffer especificado com o argumento *StrLen_or_IndPtr* em **SQLBindParameter**. O buffer de dados é especificado com o argumento *DataPtr* em **SQLPutData** e o argumento *ParameterValuePtr* em **SQLBindParameter**.

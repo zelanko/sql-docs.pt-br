@@ -1,4 +1,5 @@
 ---
+description: 'Comando (Visual C++ índice de sintaxe com #import)'
 title: 'Comando (Visual C++ índice de sintaxe com #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfde0a07bee9f169fea3c0041afe0ac4d490a292
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 45f999fce96969331ddd8e235b120532919c22b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450858"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Comando (Visual C++ índice de sintaxe com #import)
 ## <a name="methods"></a>Métodos  

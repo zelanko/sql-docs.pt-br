@@ -1,4 +1,5 @@
 ---
+description: Persistência de dados
 title: Persistência de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1487cdbba81677cd58e3f130f5d05a8b9337588
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453078"
 ---
 # <a name="persisting-data"></a>Persistência de dados
 A computação portátil (por exemplo, usando laptops) gerou a necessidade de aplicativos que podem ser executados em um estado conectado e desconectado. O ADO adicionou suporte para isso fornecendo ao desenvolvedor a capacidade de salvar um **conjunto de registros** de cursor do cliente em disco e recarregá-lo mais tarde.  

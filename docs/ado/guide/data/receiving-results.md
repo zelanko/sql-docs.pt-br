@@ -1,4 +1,5 @@
 ---
+description: Receber resultados
 title: Recebendo resultados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e05bd86b908c8c6d7ac08525e425333d3e2f1ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3317441322d0f1be94ee1c897946d83f6291143c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452988"
 ---
 # <a name="receiving-results"></a>Receber resultados
 No ADO, a maioria dos comandos resulta em algumas informações retornadas ao chamador. Para comandos que retornam o conjunto de linhas, os resultados são recebidos em um objeto **Recordset** , que provavelmente é o mais usado dos objetos ADO.  
   
  Há várias maneiras de receber dados em um objeto **Recordset** de uma fonte de dados, incluindo a chamada do seguinte:  
   
--   [Método Connection. Execute](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Connection.Exemétodo graciosos](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Método Command. Execute](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Command.Exemétodo graciosos](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
 -   [Método Recordset. Open](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   

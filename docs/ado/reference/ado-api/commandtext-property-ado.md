@@ -1,4 +1,5 @@
 ---
+description: Propriedade CommandText (ADO)
 title: Propriedade CommandText (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fea58e679e11ac068189ad622b3dce627fc8a63
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bf1f8764aad6192f2b6a38f57835e269a6ac19f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450848"
 ---
 # <a name="commandtext-property-ado"></a>Propriedade CommandText (ADO)
 Indica o texto de um comando a ser emitido em relação a um provedor.  

@@ -1,4 +1,5 @@
 ---
+description: 'C para SQL: hora'
 title: 'C to SQL: time | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 264ce7751072b79163923f0c141542680f7b02bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1711d6a5acffa73a640a0e25f647c53b3daa868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449038"
 ---
 # <a name="c-to-sql-time"></a>C para SQL: hora
 O identificador para o tipo de dados de tempo ODBC C é:  

@@ -1,4 +1,5 @@
 ---
+description: Variáveis do SSIS (Integration Services)
 title: Variáveis do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449758"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
 
@@ -109,7 +110,7 @@ ms.locfileid: "86917474"
   
 **Escopo**    
  > [!NOTE]  
->  Você pode alterar as configurações dessa propriedade clicando em **Mover Variável** na janela **Variáveis** .  
+>   Você pode alterar as configurações dessa propriedade clicando em **Mover Variável** na janela **Variáveis** .  
   
  Uma variável é criada no escopo de um pacote ou no escopo de um contêiner, tarefa ou manipulador de eventos do pacote. Como o contêiner do pacote está no topo da hierarquia de contêineres, as variáveis com escopo de pacote funcionam como variáveis globais e podem ser usadas por todos os contêineres do pacote. Da mesma maneira, as variáveis definidas no escopo de um contêiner, como o contêiner Loop For, podem ser usadas por todas as tarefas ou contêineres no contêiner Loop For.  
   
@@ -135,7 +136,7 @@ O valor de uma variável definida pelo usuário pode ser literal ou uma express�
 
 | Tipo de dados | Valor padrão |
 |---|---|
-| Boolean | Falso |
+| Booliano | Falso |
 | Tipos de dados numéricos e binários | 0 (zero) |
 | Tipos de dados char e cadeia de caracteres | (cadeia de caracteres vazia) |
 | Objeto | System.Object |
@@ -147,7 +148,7 @@ Uma variável tem opções para definir o valor da variável e o tipo de dados d
   
 **ValueType**    
  > [!NOTE]  
->  O valor da propriedade é exibido na coluna **Tipo de dados** na janela **Variáveis** .  
+>   O valor da propriedade é exibido na coluna **Tipo de dados** na janela **Variáveis** .  
   
  Especifica o tipo de dados do valor da variável.  
 

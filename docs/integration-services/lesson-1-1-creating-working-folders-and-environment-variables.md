@@ -1,4 +1,5 @@
 ---
+description: Lição 1-1 – criar pastas de trabalho e variáveis de ambiente
 title: 'Etapa 1: criando pastas de trabalho e variáveis de ambiente | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449734"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lição 1-1 – criar pastas de trabalho e variáveis de ambiente
 
@@ -36,9 +37,9 @@ Se você planeja implantar os pacotes em um computador diferente, deverá criar 
   
 1.  Clique com o botão direito do mouse no menu Iniciar e clique em Explorar.  
   
-2.  Clique em **Disco Local (C:)** .  
+2.  Clique em **Disco Local (C:)**.  
   
-3.  No menu **Arquivo** , aponte para **Novo**e clique em **Pasta**.  
+3.  No menu **Arquivo** , aponte para **Novo** e clique em **Pasta**.  
   
 4.  Renomeie a Nova Pasta como **DeploymentTutorial**.  
   
@@ -87,7 +88,7 @@ Se você planeja implantar os pacotes em um computador diferente, deverá criar 
 10. Opcionalmente, reinicie o seu computador.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 2: Criando o projeto de implantação](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+[Etapa 2: Criar o projeto de implantação](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
   
   

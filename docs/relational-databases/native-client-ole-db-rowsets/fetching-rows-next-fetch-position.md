@@ -1,4 +1,5 @@
 ---
+description: Buscando linhas-próxima busca (provedor de OLE DB de cliente nativo)
 title: Próxima posição de busca (provedor de OLE DB de cliente nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 9ef74b3f-c9c0-492f-9b93-d65738a61abd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c431e6b69f117e23de9166d6f5798be43e488646
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c0f1fd4da86bdd0c7cbe0df0c832554566e93b88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448355"
 ---
 # <a name="fetching-rows---next-fetch--native-client-ole-db-provider"></a>Buscando linhas-próxima busca (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

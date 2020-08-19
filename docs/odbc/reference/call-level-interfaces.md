@@ -1,4 +1,5 @@
 ---
+description: Interfaces de nível de chamada
 title: Interfaces de nível de chamada | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4288a278f745d533c92d3d45892753ef1a74c2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad1e89f945dbb739c4c20103fc2330cbf4e562b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448954"
 ---
 # <a name="call-level-interfaces"></a>Interfaces de nível de chamada
 A técnica final para enviar instruções SQL para o DBMS é por meio de uma CLI (interface de nível de chamada). Uma interface de nível de chamada fornece uma biblioteca de funções do DBMS que podem ser chamadas pelo programa do aplicativo. Portanto, em vez de tentar misturar SQL com outra linguagem de programação, uma interface de nível de chamada é semelhante às bibliotecas rotineiras que a maioria dos programadores estão acostumados a usar, como cadeias de caracteres, e/s ou bibliotecas matemáticas em C. Observe que os DBMSs que dão suporte ao SQL incorporado já têm uma interface de nível de chamada No entanto, essas chamadas não são documentadas e estão sujeitas a alterações sem aviso prévio.  

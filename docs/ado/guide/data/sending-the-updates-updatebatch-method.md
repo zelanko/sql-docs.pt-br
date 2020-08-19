@@ -1,4 +1,5 @@
 ---
+description: 'Enviar as atualizações: método UpdateBatch'
 title: 'Enviando o método Updates: UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b5378cad96bc2827badc2e15a23d7f48f683381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452878"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Enviar as atualizações: método UpdateBatch
 O código a seguir abre um conjunto de registros no modo de lote, definindo a propriedade LockType como adLockBatchOptimistic e CursorLocation como adUseClient. Ele adiciona dois novos registros e altera o valor de um campo em um registro existente, salvando os valores originais e, em seguida, chama UpdateBatch para enviar as alterações de volta para a fonte de dados.  

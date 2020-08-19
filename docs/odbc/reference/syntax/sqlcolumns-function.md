@@ -1,4 +1,5 @@
 ---
+description: Função SQLColumns
 title: Função SQLColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: d5fc96b275badf5eab68f78e863648c3a73eaab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448769"
 ---
 # <a name="sqlcolumns-function"></a>Função SQLColumns
 **Conformidade**  

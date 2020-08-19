@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade CacheSize (VB)
 title: Exemplo da propriedade CacheSize (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 166f18abc1adac56640374ef6e0ce5405e7fdc54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fab0cc27720b6f5cff48441eef047dd219311c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451078"
 ---
 # <a name="cachesize-property-example-vb"></a>Exemplo da propriedade CacheSize (VB)
 Este exemplo usa a propriedade [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença no desempenho de uma operação executada com e sem um cache de 30 registros.  

@@ -1,4 +1,5 @@
 ---
+description: Função SQLColAttributes
 title: Função SQLColAttributes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef2dc0b9007542d5bf71f06a742cc58c0ae5f4ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c404a4f8ef1dd9bef246e811e200eed3d431c29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448792"
 ---
 # <a name="sqlcolattributes-function"></a>Função SQLColAttributes
 **Conformidade**  

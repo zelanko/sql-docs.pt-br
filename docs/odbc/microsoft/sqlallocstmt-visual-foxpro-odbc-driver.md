@@ -1,4 +1,5 @@
 ---
+description: SQLAllocStmt (Driver ODBC do Visual FoxPro)
 title: SQLAllocStmt (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 76a5be30378e1bf4101e72de621d803c084e6c66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c89c85b4c046fb3b080fd48ab75049b08e8ec0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449228"
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt (Driver ODBC do Visual FoxPro)
 > [!NOTE]  

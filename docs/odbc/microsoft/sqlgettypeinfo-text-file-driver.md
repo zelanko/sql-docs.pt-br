@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo (Driver de Arquivo de texto)
 title: SQLGetTypeInfo (driver de arquivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05a58975-093c-4bd9-bd72-b5f0026a6e36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b70b58e4760959db102450b5f8b7beed042df95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c023c4b18cd335f562541ad10885546f2163d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81294996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449158"
 ---
 # <a name="sqlgettypeinfo-text-file-driver"></a>SQLGetTypeInfo (Driver de Arquivo de texto)
 > [!NOTE]  

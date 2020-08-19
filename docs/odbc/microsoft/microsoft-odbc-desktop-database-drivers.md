@@ -1,4 +1,5 @@
 ---
+description: Drivers de banco de dados de área de trabalho do Microsoft ODBC
 title: Drivers de banco de dados do Microsoft ODBC Desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e60052bda67b792cbba81447d6ae20ebdeb565bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449428"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Drivers de banco de dados de área de trabalho do Microsoft ODBC
 O ODBC é uma API que usa o linguagem SQL (SQL) como linguagem de acesso ao banco de dados. Você pode acessar uma ampla variedade de DBMS (sistemas de gerenciamento de banco de dados) com o mesmo código-fonte ODBC que é diretamente incorporado ao código-fonte de um aplicativo. Com os drivers de banco de dados do Microsoft ODBC Desktop, um usuário de um aplicativo habilitado para ODBC pode abrir, consultar e atualizar um banco de dados de desktop por meio da interface ODBC.  

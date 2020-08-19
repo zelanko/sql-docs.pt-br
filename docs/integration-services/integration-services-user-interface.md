@@ -1,4 +1,5 @@
 ---
+description: Interface do usuário do Integration Services
 title: Interface do usuário do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a01b75cc3d3e804d9329b57676eecc28d17c121c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee0779a88ff4116215918b3f389a46f149e5bad7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449786"
 ---
 # <a name="integration-services-user-interface"></a>Interface do usuário do Integration Services
 

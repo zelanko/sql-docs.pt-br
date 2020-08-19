@@ -1,4 +1,5 @@
 ---
+description: Coleções (ADO – Sintaxe WFC)
 title: Coleções (ADO – sintaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5213e1c50f603663bb0405748f5dda882be5cfe
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1694de8b8be8d00f9117b70a3ac180e086164ab9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450918"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Coleções (ADO – Sintaxe WFC)
 **pacote com. ms. wfc. Data**  

@@ -1,4 +1,5 @@
 ---
+description: Cláusula COMPUTE de forma
 title: Cláusula de computação de forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452838"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula de computação de forma gera um **conjunto de registros**pai, cujas colunas consistem em uma referência ao conjunto de **registros**filho; colunas opcionais cujo conteúdo são colunas de capítulo, novo ou calculadas ou o resultado da execução de funções de agregação no **conjunto de registros** filho ou em um **conjunto de registros**com formato anterior; e quaisquer colunas do conjunto de **registros** filho listadas na cláusula opcional by.  
@@ -61,7 +62,7 @@ SHAPE child-command [AS] child-alias
   
  Se a cláusula BY for omitida, o **conjunto de registros** filho inteiro será tratado como um único grupo e o **conjunto de registros** pai conterá exatamente uma linha. Essa linha fará referência a todo o **conjunto de registros**filho. Omitir a cláusula BY permite que você calcule agregações "total geral" em todo o **conjunto de registros**filho.  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -81,8 +82,8 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
 |WA|Seattle|700.000|  
 |OU|Medford|200.000|  
 |OU|Portland|400.000|  
-|CA|Los Angeles|800.000|  
-|CA|San Diego|600.000|  
+|AC|Los Angeles|800.000|  
+|AC|San Diego|600.000|  
 |WA|Tacoma|500.000|  
 |OU|Corvallis|300.000|  
   
@@ -106,7 +107,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |SUM (RS. Média|rs|Estado|  
 |---------------------------|--------|-----------|  
-|1,3 milhões|Referência a child1|CA|  
+|1,3 milhões|Referência a child1|AC|  
 |1,2 milhões|Referência a child2|WA|  
 |1,1 milhões|Referência a child3|OU|  
   
@@ -114,8 +115,8 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |Estado|City|População|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800.000|  
-|CA|San Diego|600.000|  
+|AC|Los Angeles|800.000|  
+|AC|San Diego|600.000|  
   
 ## <a name="child2"></a>Filho2  
   

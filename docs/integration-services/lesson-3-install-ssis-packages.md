@@ -1,4 +1,5 @@
 ---
+description: 'Lição 3: Instalar os pacotes SSIS'
 title: 'Lição 3: instalar os pacotes SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4db3158c378d32dd472a9845e785be95130780b6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a56687640190b5f129071c6ad2836b3013ae2ac0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449697"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Lição 3: Instalar os pacotes SSIS
 
@@ -31,14 +32,14 @@ Nesta lição, você copiará o pacote de implantação para o computador de des
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+-   [Etapa 1: Copiar o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [Etapa 2: Executando o Assistente de Instalação de Pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [Etapa 2: Executar o Assistente de Instalação de Pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [Etapa 3: Testando os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [Etapa 3: Testar os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
-[Etapa 1: Copiando o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+[Etapa 1: Copiar o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
   
   

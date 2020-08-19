@@ -1,4 +1,5 @@
 ---
+description: 'Lição 2-2: Adicionar e configurar o contêiner Loop Foreach'
 title: 'Etapa 2: Adicionar e configurar o contêiner Loop Foreach | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ddf7e26e4eba9a3120d5a0052e29e8a763689556
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449653"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lição 2-2: Adicionar e configurar o contêiner Loop Foreach
 

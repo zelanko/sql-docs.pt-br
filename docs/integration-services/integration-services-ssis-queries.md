@@ -1,4 +1,5 @@
 ---
+description: Consultas do SSIS (Integration Services)
 title: Consultas do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01a292229c29720b91d66d1f607b375b759e75fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449791"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas do SSIS (Integration Services)
 
@@ -94,10 +95,10 @@ Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a se
  **Barra de ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar funções de consulta.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Painel Mostrar/Ocultar Diagrama**|Exibe ou oculta o painel **Diagrama** .|  
-|**Painel Mostrar/Ocultar Grade**|Exibe ou oculta o painel **Grade** .|  
+|**Mostrar/Ocultar Painel Grade**|Exibe ou oculta o painel **Grade** .|  
 |**Painel Mostrar/Ocultar SQL**|Exibe ou oculta o painel **SQL** .|  
 |**Painel Mostrar/Ocultar Resultados**|Exibe ou oculta o painel de **Resultados** .|  
 |**Executar**|Executa a consulta. Os resultados são exibidos no painel de Resultados.|  
@@ -111,7 +112,7 @@ Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a se
  **Definição da Consulta**  
  A definição de consulta fornece uma barra de ferramentas e painéis nos quais definir e testar a consulta.  
   
-|Painel|DESCRIÇÃO|  
+|Painel|Descrição|  
 |----------|-----------------|  
 |Painel**Diagrama**|Exibe a consulta em um diagrama. O diagrama mostra as tabelas incluídas na consulta e como elas estão unidas. Marque ou desmarque a caixa de seleção próxima a uma coluna em uma tabela para adicioná-la ou removê-la da saída da consulta.<br /><br /> Quando você adiciona tabelas à consulta, o Construtor de Consultas cria junções entre tabelas com base em tabelas, dependendo das chaves na tabela. Para adicionar uma junção, arraste um campo de uma tabela sobre um campo em outra tabela. Para gerenciar uma junção, clique com o botão direito do mouse na junção e selecione uma opção de menu.<br /><br /> Clique com o botão direito do mouse no painel **Diagrama** para adicionar ou remover tabelas, selecionar todas as tabelas e mostrar ou ocultar painéis.|  
 |Painel**Grade**|Exibe a consulta em uma grade. Você pode usar esse painel para adicionar e remover colunas da consulta e alterar as configurações de cada coluna.|  

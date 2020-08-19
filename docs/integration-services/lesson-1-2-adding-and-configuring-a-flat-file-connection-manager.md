@@ -1,4 +1,5 @@
 ---
+description: 'Lição 1-2: Adicionar e configurar um gerenciador de conexões de Arquivo Simples'
 title: 'Etapa 2: Adicionar e configurar um gerenciador de conexões de Arquivo Simples | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d03808293d5edbc9ae0be48b28f86df725304059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449728"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lição 1-2: Adicionar e configurar um gerenciador de conexões de Arquivo Simples
 
@@ -34,7 +35,7 @@ Nesta lição, você pode configurar as propriedades a seguir no seu gerenciador
 -   **Mapeamentos de dados:** os mapeamentos de tipo de dados especificados no gerenciador de conexões de Arquivo Simples são usados por todos os componentes de fonte de dados de arquivo simples que fazem referência ao gerenciador de conexões. Os tipos de dados podem ser mapeados manualmente usando o gerenciador de conexões de Arquivos Simples ou a caixa de diálogo **Sugerir Tipos de Coluna** . Nesta tarefa, você exibirá os mapeamentos sugeridos na caixa de diálogo **Sugerir Tipos de Coluna** e criará manualmente os mapeamentos necessários na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**.  
   
 > [!NOTE]
-> O gerenciador de conexões de Arquivos Simples fornece informações de localidade sobre o arquivo de dados. Se o computador não estiver configurado para usar a opção regional **Inglês (Estados Unidos)** , será preciso definir propriedades adicionais na caixa de diálogo Editor do Gerenciador de Conexões de **Arquivo Simples**.  
+> O gerenciador de conexões de Arquivos Simples fornece informações de localidade sobre o arquivo de dados. Se o computador não estiver configurado para usar a opção regional **Inglês (Estados Unidos)**, será preciso definir propriedades adicionais na caixa de diálogo Editor do Gerenciador de Conexões de **Arquivo Simples**.  
   
 ## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>Adicionar um gerenciador de conexões de Arquivo Simples ao pacote SSIS  
   

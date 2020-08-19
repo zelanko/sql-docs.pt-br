@@ -1,4 +1,5 @@
 ---
+description: Importar dados do Visual FoxPro para Microsoft Access
 title: Importando dados do Visual FoxPro para o Microsoft Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90ac16bbdbaf7f4dd29e14e66cf5b9dc666057f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38440ca61b8af951f201978013d30529b75a452b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449528"
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Importar dados do Visual FoxPro para Microsoft Access
 Você pode importar os dados armazenados em um banco de dado do Visual FoxPro para um Microsoft Access usando a opção de importação.  

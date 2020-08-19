@@ -1,4 +1,5 @@
 ---
+description: Códigos de erro do ODBC (Driver ODBC do Visual FoxPro)
 title: Códigos de erro ODBC (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a2f6da9d4e4799bb9c40ec1c2716b71f70c53695
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6f49c31325c2ca8a33296898579ffe6f9f1e2af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449308"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Códigos de erro do ODBC (Driver ODBC do Visual FoxPro)
 A tabela a seguir lista os códigos de erro do Visual FoxPro mapeados para valores SQLSTATE do código de erro ODBC. Os valores SQLSTATE mapeados vêm de [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) e [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Nenhum outro valor SQLSTATE de outra API ODBC é mapeado porque **SQLExecDirect** e **SQLPrepare** são as únicas funções que acessam o mecanismo do Visual FoxPro.  

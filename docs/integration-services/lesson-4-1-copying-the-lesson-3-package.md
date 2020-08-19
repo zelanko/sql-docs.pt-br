@@ -1,4 +1,5 @@
 ---
+description: 'Lição 4-1: Copiar o pacote da Lição 3'
 title: 'Etapa 1: Copiar o pacote da Lição 3 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5d6eec55e339d8aaf23d04b88d14fc945e8f0c7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7476bf5318efcdc7c188dda74a1231d8d4aed094
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449632"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>Lição 4-1: Copiar o pacote da Lição 3
 

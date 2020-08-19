@@ -1,4 +1,5 @@
 ---
+description: Função SQLConfigDataSource
 title: Função SQLConfigDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90a51193a8f4edbb013527c4dde0625b75131583
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8849ce5528380e4164a420227395bce5aa436eaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448739"
 ---
 # <a name="sqlconfigdatasource-function"></a>Função SQLConfigDataSource
 **Conformidade**  
@@ -33,7 +34,7 @@ ms.locfileid: "81299626"
  **Resumo**  
  O **SQLConfigDataSource** adiciona, modifica ou exclui fontes de dados.  
   
- A funcionalidade do **SQLConfigDataSource** também pode ser acessada com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ A funcionalidade do **SQLConfigDataSource** também pode ser acessada com [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +66,7 @@ BOOL SQLConfigDataSource(
   
  ODBC_REMOVE_SYS_DSN: remover uma fonte de dados do sistema existente.  
   
- ODBC_REMOVE_DEFAULT_DSN: Remova a seção especificação de fonte de dados padrão das informações do sistema. (Ele também remove a seção de especificação de driver padrão da entrada Odbcinst. ini nas informações do sistema. Esse *fRequest* executa a mesma função que a função de **SQLRemoveDefaultDataSource** preterida.) Quando essa opção é especificada, todos os outros parâmetros na chamada para **SQLConfigDataSource** devem ser nulos; Se eles não forem nulos, eles serão ignorados.  
+ ODBC_REMOVE_DEFAULT_DSN: Remova a seção especificação de fonte de dados padrão das informações do sistema. (Ele também remove a seção de especificação de driver padrão da entrada Odbcinst.ini nas informações do sistema. Esse *fRequest* executa a mesma função que a função de **SQLRemoveDefaultDataSource** preterida.) Quando essa opção é especificada, todos os outros parâmetros na chamada para **SQLConfigDataSource** devem ser nulos; Se eles não forem nulos, eles serão ignorados.  
   
  *lpszDriver*  
  Entrada Descrição do driver (geralmente o nome do DBMS associado) apresentado aos usuários em vez do nome do driver físico.  
@@ -76,8 +77,8 @@ BOOL SQLConfigDataSource(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar. Se não existir nenhuma entrada nas informações do sistema quando essa função for chamada, a função retornará FALSE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLConfigDataSource** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLConfigDataSource** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

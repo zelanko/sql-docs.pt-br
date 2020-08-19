@@ -1,4 +1,5 @@
 ---
+description: Gateway padrão
 title: Gateway padrão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67551845c0dd8c6a28c0c4bc1c50f54ee8232df1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 687097813d01b27ac49e657f11a2b763e2ca1214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448896"
 ---
 # <a name="standard-gateway"></a>Gateway padrão
 Um *Gateway* é uma parte do software que faz com que um DBMS se pareça com o outro. Ou seja, o gateway aceita a interface de programação, a gramática do SQL e o protocolo de fluxo de dados de um único DBMS e os converte para a interface de programação, a gramática do SQL e o protocolo de fluxo de dados do DBMS oculto. Por exemplo, os aplicativos escritos para usar o Microsoft® SQL Server™ também podem acessar dados do DB2 por meio do gateway do DB2 de tomada de decisões; Este produto faz com que o DB2 pareça SQL Server. Quando os gateways são usados, um gateway diferente deve ser gravado para cada banco de dados de destino.  

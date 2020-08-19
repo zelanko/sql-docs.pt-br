@@ -1,4 +1,5 @@
 ---
+description: 'Lição 4-4: Adicionar um destino de Arquivo Simples'
 title: 'Etapa 4: Adicionar um destino de Arquivo Simples | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da6900fe4c109dfaf96d22824fbd79dc45ab0916
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99266f19a7bb1476f16b5896deb8dfa3602e4032
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449633"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lição 4-4: Adicionar um destino de Arquivo Simples
 
@@ -47,7 +48,7 @@ Nesta tarefa, você salva todas essas informações sobre as linhas com falha em
   
 9. Na caixa de diálogo **Abrir**, para **Nome do arquivo**, insira *ErrorOutput.txt* e selecione **Abrir**.  
   
-10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**, verifique se **Localidade** é **Inglês (Estados Unidos)** e se **Página de código** é **1252 (ANSI-Latino I)** .  
+10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples**, verifique se **Localidade** é **Inglês (Estados Unidos)** e se **Página de código** é **1252 (ANSI-Latino I)**.  
   
 11. No painel de opções, selecione **Colunas**.  
   

@@ -1,4 +1,5 @@
 ---
+description: Criar um domínio composto
 title: Criar um domínio composto
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4af1fc255fd5691b3caaf3f5ce92a28740d1b7b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449888"
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
 
@@ -39,7 +40,7 @@ ms.locfileid: "85900484"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar um domínio composto.  
   
-##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a>Criar um domínio composto na atividade de descoberta da base de dados de conhecimento  
+##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a> Criar um domínio composto na atividade de descoberta da base de dados de conhecimento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85900484"
   
 7.  Clique no ícone **Criar um Domínio Composto** .  
   
-##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a>Criar um domínio composto na atividade de gerenciamento de domínio  
+##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a> Criar um domínio composto na atividade de gerenciamento de domínio  
   
 1.  Na home page do cliente Data Quality Services, clique em **Abrir base de dados de conhecimento** e selecione uma base de dados de conhecimento ou clique em **Nova base de dados de conhecimento** e insira propriedades para a nova base de dados de conhecimento.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "85900484"
   
 7.  Clique em **OK**.  
   
-##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>Definir propriedades de domínio composto  
+##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a> Definir propriedades de domínio composto  
   
 1.  Na caixa de diálogo **Criar um Domínio Composto** , insira um nome que seja exclusivo para a base de dados de conhecimento e uma descrição com até 256 caracteres.  
   
@@ -91,10 +92,10 @@ ms.locfileid: "85900484"
   
 6.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>Acompanhamento: depois de criar um domínio composto  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> Acompanhamento: depois de criar um domínio composto  
  Depois que você criar um domínio composto, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a>Análise baseada em conhecimento  
+##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a> Análise baseada em conhecimento  
  O Data Quality Services permite que você analise os dados com base no conhecimento, não apenas no delimitador ou na ordem. A análise baseada em conhecimento é usada quando fontes de dados complexas são mapeadas para um domínio composto e você não está usando serviços de dados de referência. Você pode usar a análise baseada em conhecimento para analisar os dados a partir da fonte de dados nos domínios únicos relevantes. Com a análise baseada em conhecimento, o DQS primeiro tentará usar o conhecimento para analisar os dados complexos em domínios únicos. Se possível, ela identificará partes da cadeia de caracteres como em um ou mais domínios e analisará a cadeia de caracteres em seus vários domínios. Por exemplo, suponha que tem "John B. Doe" como valores complexos em um campo de nome completo representado por um domínio composto de Nome Completo. Se o DQS identificar "John" como no domínio Nome e "Doe" como no domínio Sobrenome e o DQS adicionará "B." ao domínio de Segundo Nome com base no conhecimento do domínio.  
   
  Você poderá usar a análise baseada em conhecimento somente se também selecionar a análise baseada no delimitador. A análise baseada em conhecimento não substitui a análise baseada no delimitador, mas a aprimora. Somente se não houver nenhum conhecimento para fazer isso é que o DQS usará um delimitador para realizar a análise. Em algumas instâncias, o DQS poderá determinar parte da análise executando a análise baseada no conhecimento e depois determinar outra análise pela análise baseada no delimitador.  

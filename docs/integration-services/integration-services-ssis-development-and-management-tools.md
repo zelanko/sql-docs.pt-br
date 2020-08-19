@@ -1,4 +1,5 @@
 ---
+description: Ferramentas de desenvolvimento e gerenciamento do SSIS (Integration Services)
 title: Ferramentas de desenvolvimento e gerenciamento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4b64d20ecb26a143c373a1073b379f0ae9debfb1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449835"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Ferramentas de desenvolvimento e gerenciamento do SSIS (Integration Services)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86917534"
   
 -   O[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para gerenciar pacotes em um ambiente de produção.  
   
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools  
+## <a name="sql-server-data-tools"></a>Ferramentas de dados do SQL Server  
  Trabalhando no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode executar as seguintes tarefas:  
   
 -   Execute o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para criar pacotes básicos que copiam dados de uma origem para um destino.  

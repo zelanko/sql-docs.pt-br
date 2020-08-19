@@ -1,4 +1,5 @@
 ---
+description: Configurar níveis de severidade para arquivos de log do DQS
 title: Configurar níveis de severidade para arquivos de log do DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449908"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar níveis de severidade para arquivos de log do DQS
 
@@ -49,7 +50,7 @@ ms.locfileid: "85894219"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  É necessário ter a função dqs_administrator no banco de dados DQS_MAIN para configurar definições de severidade de log.  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Configurar níveis de severidade no nível de atividade  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> Configurar níveis de severidade no nível de atividade  
  Você pode definir configurações de severidade de log para as seguintes atividades no DQS: gerenciamento de domínio, descoberta de conhecimento, política de correspondência, limpeza de dados, correspondência de dados e serviços de dados de referência. Para fazer isso:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -65,7 +66,7 @@ ms.locfileid: "85894219"
   
 5.  Clique em **fechar**  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Configurar níveis de severidade no nível do módulo (avançado)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> Configurar níveis de severidade no nível do módulo (avançado)  
  A seção **Avançado** na guia **Configurações de Log** permite que você defina configurações de severidade de log em um nível de módulo. Módulos são assemblies do sistema DQS que implementam várias funcionalidades em um recurso no DQS. Por exemplo, a atividade de gerenciamento de domínio contém várias funcionalidades, como a definição de regras de domínio, a definição de condições de regra, a definição de regras do domínio cruzado para domínios compostos e assim por diante.  
   
  Às vezes, o nível de granularidade no nível de atividade não é suficiente. Talvez você queira investigar um problema que está ocorrendo em um módulo específico de uma atividade. Convém ter uma opção para configurar severidade de log no nível de módulo para isolar e controlar o problema com mais precisão.  

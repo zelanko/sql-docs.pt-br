@@ -1,4 +1,5 @@
 ---
+description: 'Coleções (Visual C++ índice de sintaxe com #import)'
 title: 'Coleções (Visual C++ índice de sintaxe com #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9142282c2ee2cda5a2b545a3ef164581403ccba3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450908"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Coleções (Visual C++ índice de sintaxe com #import)
 É útil saber que as coleções herdam determinados métodos e propriedades comuns.  

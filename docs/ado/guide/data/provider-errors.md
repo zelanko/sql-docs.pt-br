@@ -1,4 +1,5 @@
 ---
+description: Erros do provedor
 title: Erros do provedor | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453018"
 ---
 # <a name="provider-errors"></a>Erros do provedor
 Quando ocorre um erro de provedor, um erro de tempo de execução de-2147467259 é retornado. Ao receber esse erro, verifique a coleção de **erros** do objeto de **conexão** ativa, que conterá um ou mais erros que descrevem o que ocorreu.  
@@ -69,8 +70,8 @@ End Function
 |**Descrição**|Uma descrição de texto do erro que ocorreu.|  
 |**HelpContext, HelpFile**|Refere-se ao tópico da ajuda e ao arquivo de ajuda que contém uma descrição do erro que ocorreu.|  
 |**NativeError**|O número do erro específico do provedor.|  
-|**Automática**|Um inteiro longo que representa o número (listado no **ErrorValueEnum**) do erro que ocorreu.|  
-|**Fonte**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
+|**Número**|Um inteiro longo que representa o número (listado no **ErrorValueEnum**) do erro que ocorreu.|  
+|**Origem**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
 |**SQLState**|Um código de erro de cinco caracteres que o provedor retorna durante o processo de uma instrução SQL.|  
   
  O objeto de **erro** ADO é muito semelhante ao objeto padrão Visual Basic **Err** . Suas propriedades descrevem o erro que ocorreu. Além do número do erro, você também recebe duas partes de informação relacionadas. A propriedade **NativeError** contém um número de erro específico para o provedor que você está usando. No exemplo anterior, o provedor é o provedor de OLE DB da Microsoft para SQL Server, portanto **NativeError** conterá erros específicos para SQL Server. A propriedade **SQLSTATE** tem um código de cinco letras que descreve um erro em uma instrução SQL.  

@@ -1,4 +1,5 @@
 ---
+description: Projetos e soluções do Integration Services (SSIS)
 title: Projetos e soluções do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e10adad56ee8a27555d6ac4d5bd3cdfbf31e9abf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 623c423b50d589ce9e7964b436cba604dcb3203d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449812"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Projetos e soluções do Integration Services (SSIS)
 
@@ -68,7 +69,7 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
  A tabela a seguir descreve as pastas que aparecem em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-|Pasta|DESCRIÇÃO|  
+|Pasta|Descrição|  
 |------------|-----------------|
 |Gerenciadores de conexões|Contém Gerenciadores de Conexões de Projeto. Para obter mais informações, confira [Conexões do SSIS (Integration Services)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contém pacotes. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../integration-services/integration-services-ssis-packages.md).|  

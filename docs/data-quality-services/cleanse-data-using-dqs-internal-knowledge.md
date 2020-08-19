@@ -1,4 +1,5 @@
 ---
+description: Limpar dados usando o conhecimento do DQS (interno)
 title: Limpar dados usando o conhecimento do DQS (interno)
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1270595171ef164f29409f55a0083fa4f1afa49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee9c9e746dcc85e80ae96a7d04a84b12c594e98c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449939"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
 
@@ -184,7 +185,7 @@ ms.locfileid: "85894239"
   
 5.  Clique em **Concluir** para fechar o projeto de qualidade de dados.  
   
-##  <a name="profiler-statistics"></a><a name="Profiler"></a>Estatísticas do criador de perfil  
+##  <a name="profiler-statistics"></a><a name="Profiler"></a> Estatísticas do criador de perfil  
  A guia **Criador de Perfil** fornece estatísticas que indicam a qualidade dos dados de origem. A criação de perfil o ajuda a avaliar a efetividade da atividade de limpeza de dados e você pode determinar a extensão até a qual a limpeza de dados pôde aprimorar a qualidade dos dados.  
   
  A guia **Criador de Perfil** fornece as seguintes estatísticas para os dados de origem, por campo e domínio:  

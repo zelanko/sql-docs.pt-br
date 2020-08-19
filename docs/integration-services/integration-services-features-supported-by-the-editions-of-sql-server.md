@@ -1,4 +1,5 @@
 ---
+description: Recursos do Integration Services com suporte nas edições do SQL Server
 title: Recursos do Integration Services compatíveis com as edições do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da7a34d8e7e42229774b58ae27ec78738669086e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5cb516c1d7058d455919a3faffed5b653a1bae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449860"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Recursos do Integration Services compatíveis com as edições do SQL Server
 

@@ -1,4 +1,5 @@
 ---
+description: 'C para SQL: intervalos de ano-mês'
 title: 'C to SQL: intervalos de ano/mês | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ec7bfda0015883c8470dd453c7ae5de9bfd6cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffd9a3f7f14ff6af93f15521738bebdbc63a8f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449018"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C para SQL: intervalos de ano-mês
 Os identificadores para os tipos de dados ODBC C de intervalo de ano/mês são:  

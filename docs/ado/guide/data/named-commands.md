@@ -1,4 +1,5 @@
 ---
+description: Comandos nomeados
 title: Comandos nomeados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b630d589cf20039a72091fb526302d3652f8ed31
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453148"
 ---
 # <a name="named-commands"></a>Comandos nomeados
 [Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: você pode torná-lo um comando nomeado e, em seguida, chamar esse comando nomeado diretamente no objeto de **conexão** (atribuído à propriedade **ActiveConnection** do objeto **Command** ). Nomear um comando significa atribuir um nome à propriedade **Name** de um objeto **Command** . Por exemplo,  
