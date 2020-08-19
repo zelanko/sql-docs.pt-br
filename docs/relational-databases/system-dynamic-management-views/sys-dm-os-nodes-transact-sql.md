@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_nodes (Transact-SQL)
 title: sys. dm_os_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/13/2018
@@ -20,11 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43cc81a77f697334b3afb557e7b2e26ac0184427
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 716b3c816bb5246f91c25869de7e2647a10bbc64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447604"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +44,7 @@ A tabela seguinte fornece informações sobre esses nós.
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID do nó.|  
-|node_state_desc|**nvarchar(256)**|Descrição do estado do nó. Os valores são exibidos primeiro com os valores mutuamente exclusivos, seguidos pelos valores combinados. Por exemplo:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Há quatro valores de node_state_desc mutuamente exclusivos. Eles são listados abaixo com suas descrições.<br /><ul><li>ONLINE: o nó está online<li>OFFLINE: o nó está offline<li>IDLE: o nó não tem nenhuma solicitação de trabalho pendente e entrou em estado ocioso.<li>IDLE_READY: o nó não tem nenhuma solicitação de trabalho pendente e está pronto para entrar em um estado ocioso.</li></ul><br />Há três valores de node_state_desc combináveis, listados abaixo com suas descrições.<br /><ul><li>DAC: esse nó é reservado para a [conexão administrativa dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: nenhum thread novo pode ser criado neste nó devido a uma condição de memória insuficiente.<li>ADIÇÃO ativa: indica que os nós foram adicionados em resposta a um evento de adição de CPU a quente.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Descrição do estado do nó. Os valores são exibidos primeiro com os valores mutuamente exclusivos, seguidos pelos valores combinados. Por exemplo: <br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Há quatro valores de node_state_desc mutuamente exclusivos. Eles são listados abaixo com suas descrições.<br /><ul><li>ONLINE: o nó está online<li>OFFLINE: o nó está offline<li>IDLE: o nó não tem nenhuma solicitação de trabalho pendente e entrou em estado ocioso.<li>IDLE_READY: o nó não tem nenhuma solicitação de trabalho pendente e está pronto para entrar em um estado ocioso.</li></ul><br />Há três valores de node_state_desc combináveis, listados abaixo com suas descrições.<br /><ul><li>DAC: esse nó é reservado para a [conexão administrativa dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: nenhum thread novo pode ser criado neste nó devido a uma condição de memória insuficiente.<li>ADIÇÃO ativa: indica que os nós foram adicionados em resposta a um evento de adição de CPU a quente.</li></ul>|  
 |memory_object_address|**varbinary (8)**|Endereço de objeto de memória associado a esse nó. Relação um-para-um com [Sys. dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). memory_object_address.|  
 |memory_clerk_address|**varbinary (8)**|Endereço de administrador de memória associado a este nó. Relação um-para-um com [Sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address.|  
 |io_completion_worker_address|**varbinary (8)**|Endereço de trabalhador atribuído à conclusão de E/S deste nó. Relação um-para-um com [Sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address.|  
@@ -58,14 +60,14 @@ A tabela seguinte fornece informações sobre esses nós.
 |online_scheduler_mask|**bigint**|Identifica a máscara de afinidade de processo para este nó.|  
 |processor_group|**smallint**|Identifica o grupo de processadores para este nó.|  
 |cpu_count |**int** |Número de CPUs disponíveis para este nó. |
-|pdw_node_id|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="see-also"></a>Consulte Também    
- [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

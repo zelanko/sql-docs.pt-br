@@ -1,4 +1,5 @@
 ---
+description: Implementar notificações de evento
 title: Implementar notificações de evento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d957711571c65aa6eb8bf185f5bffb8e1a05c7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f70601ac1b686576f643e511873e0dfb860ec771
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447958"
 ---
 # <a name="implement-event-notifications"></a>Implementar notificações de evento
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

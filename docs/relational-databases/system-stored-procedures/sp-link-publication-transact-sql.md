@@ -1,4 +1,5 @@
 ---
+description: sp_link_publication (Transact-SQL)
 title: sp_link_publication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446943"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador a ser vinculado. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador a ser vinculado. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador a ser vinculado. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador a ser vinculado. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação à qual vincular. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação à qual vincular. a *publicação* é **sysname**, sem padrão.  
   
-`[ @security_mode = ] security_mode`É o modo de segurança usado pelo assinante para se conectar a um Publicador remoto para atualização imediata. *security_mode* é **int**e pode ser um desses valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` É o modo de segurança usado pelo assinante para se conectar a um Publicador remoto para atualização imediata. *security_mode* é **int**e pode ser um desses valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -63,11 +64,11 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Usa o contexto de segurança (Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Autenticação do Windows) do usuário que faz a alteração no Assinante.<br /><br /> Observação: essa conta também deve existir no Publicador com privilégios suficientes. Ao usar Autenticação do Windows, deve haver suporte para delegação de conta de segurança.|  
 |**2**|Usa um logon de servidor vinculado existente definido pelo usuário criado usando **sp_link_publication**.|  
   
-`[ @login = ] 'login'`É o logon. *login* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
+`[ @login = ] 'login'` É o logon. *login* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
   
-`[ @password = ] 'password'`É a senha. a *senha* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
+`[ @password = ] 'password'` É a senha. a *senha* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
   
-`[ @distributor = ] 'distributor'`É o nome do distribuidor. o *distribuidor* é **sysname**, com um padrão de NULL.  
+`[ @distributor = ] 'distributor'` É o nome do distribuidor. o *distribuidor* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -75,9 +76,9 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Comentários  
  **sp_link_publication** é usado pelas assinaturas de atualização imediata na replicação transacional.  
   
- **sp_link_publication** pode ser usado para assinaturas push e pull. Pode ser chamado antes ou depois que a assinatura é criada. Uma entrada é inserida ou atualizada no [MSsubscription_properties &#40;tabela do sistema&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  
+ **sp_link_publication** pode ser usado para assinaturas push e pull. Pode ser chamado antes ou depois que a assinatura é criada. Uma entrada é inserida ou atualizada no [MSsubscription_properties &#40;tabela do sistema&#41;Transact-SQL ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  
   
- Para assinaturas push, a entrada pode ser limpa por [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Para assinaturas pull, a entrada pode ser limpa por [sp_droppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) ou [sp_subscription_cleanup &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)&#41;. Você também pode chamar **sp_link_publication** com uma senha nula para limpar a entrada no MSsubscription_properties &#40;tabela do sistema [&#41;do Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) para questões de segurança.  
+ Para assinaturas push, a entrada pode ser limpa por [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Para assinaturas pull, a entrada pode ser limpa por [sp_droppullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) ou [sp_subscription_cleanup &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)&#41;. Você também pode chamar **sp_link_publication** com uma senha nula para limpar a entrada no MSsubscription_properties &#40;tabela do sistema [&#41;do Transact-SQL ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) para questões de segurança.  
   
  O modo padrão usado por um Assinante de atualização imediata quando ele se conecta ao Publicador não permite uma conexão usando Autenticação do Windows. Para se conectar ao modo de Autenticação do Windows, um servidor vinculado precisa ser definido como Publicador e o Assinante de atualização imediata deve usar essa conexão ao atualizar o Assinante. Isso requer que o **sp_link_publication** seja executado com *security_mode*  =  **2**. Ao usar Autenticação do Windows, deve haver suporte para delegação de conta de segurança.  
   
@@ -88,9 +89,9 @@ sp_link_publication [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_link_publication**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_droppullsubscription](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_subscription_cleanup](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droppullsubscription ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription_properties ](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_subscription_cleanup ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

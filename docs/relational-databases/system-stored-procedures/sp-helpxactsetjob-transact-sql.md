@@ -1,4 +1,5 @@
 ---
+description: sp_helpxactsetjob (Transact-SQL)
 title: sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f5a32c9706947471908966be59378a0d34147e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60d17af686d0ff289589d09dff0177b9696f17a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446961"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador ao qual o trabalho pertence. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador ao qual o trabalho pertence. o *Publicador* é **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -69,7 +70,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  Somente um membro da função de servidor fixa **sysadmin** pode executar **sp_helpxactsetjob**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar o trabalho do conjunto de transações para um Publicador Oracle &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [&#41;&#40;Transact-SQL de sp_publisherproperty](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [Configurar o trabalho do conjunto de transações para um Publicador Oracle &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [&#41;&#40;Transact-SQL de sp_publisherproperty ](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

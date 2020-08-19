@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_table (Transact-SQL)
 title: sp_fulltext_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 283fdb387e60eeed95cc33dc89711631f2465380
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447123"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,15 +50,15 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'qualified_table_name'`É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. *qualified_table_name* é **nvarchar (517)**, sem padrão.  
+`[ @tabname = ] 'qualified_table_name'` É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. *qualified_table_name* é **nvarchar (517)**, sem padrão.  
   
-`[ @action = ] 'action'`É a ação a ser executada. *Action* é **nvarchar (50)**, sem padrão, e pode ser um desses valores.  
+`[ @action = ] 'action'` É a ação a ser executada. *Action* é **nvarchar (50)**, sem padrão, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Criar**|Cria os metadados para um índice de texto completo para a tabela referenciada por *qualified_table_name* e especifica que os dados do índice de texto completo para essa tabela devem residir no *fulltext_catalog_name*. Essa ação também designa o uso de *unique_index_name* como a coluna de chave de texto completo. Este índice exclusivo já deve estar presente e deve ser definido em uma coluna da tabela.<br /><br /> Uma pesquisa de texto completo não pode ser executada nessa tabela até que o catálogo de texto completo seja populado.|  
 |**Suspensa**|Descarta os metadados no índice de texto completo para *qualified_table_name*. Se o índice de texto completo for ativo, será desativado automaticamente antes de ser descartado. Não é necessário remover colunas antes de descartar o índice de texto completo.|  
-|**Activate**|Ativa a capacidade de coleta de dados de índice de texto completo para *qualified_table_name*, após sua desativação. Deve haver pelo menos uma coluna participando do índice de texto completo para que ele seja ativado.<br /><br /> Um índice de texto completo torna-se ativo automaticamente (para população) assim que a primeira coluna é adicionada para indexação. Se a última coluna for descartada do índice, o índice se tornará inativo. Se o controle de alterações estiver ativo, a ativação de um índice inativo inicia um novo população.<br /><br /> Observe que isso não preenche realmente o índice de texto completo, mas simplesmente registra a tabela no catálogo de texto completo no sistema de arquivos para que as linhas de *qualified_table_name* possam ser recuperadas durante a próxima população de índice de texto completo.|  
+|**Ativar**|Ativa a capacidade de coleta de dados de índice de texto completo para *qualified_table_name*, após sua desativação. Deve haver pelo menos uma coluna participando do índice de texto completo para que ele seja ativado.<br /><br /> Um índice de texto completo torna-se ativo automaticamente (para população) assim que a primeira coluna é adicionada para indexação. Se a última coluna for descartada do índice, o índice se tornará inativo. Se o controle de alterações estiver ativo, a ativação de um índice inativo inicia um novo população.<br /><br /> Observe que isso não preenche realmente o índice de texto completo, mas simplesmente registra a tabela no catálogo de texto completo no sistema de arquivos para que as linhas de *qualified_table_name* possam ser recuperadas durante a próxima população de índice de texto completo.|  
 |**Ativar**|Desativa o índice de texto completo para *qualified_table_name* para que os dados do índice de texto completo não possam mais ser coletados para o *qualified_table_name*. Os metadados de índice de texto completo permanecem e a tabela pode ser reativada.<br /><br /> Se o controle de alterações estiver ativo, a desativação de um índice ativo congelará o estado do índice: qualquer população em andamento será interrompido e mais nenhuma alteração será propagada para o índice.|  
 |**start_change_tracking**|Inicia uma população incremental do índice de texto completo. Se a tabela não tiver um carimbo de data/hora, inicia uma população completa do índice de texto completo. Inicia o controle de alterações na tabela.<br /><br /> O controle de alterações de texto completo não rastreia nenhuma operação WRITETEXT ou UPDATETEXT executada em colunas indexadas de texto completo que são do tipo **Image**, **Text**ou **ntext**.|  
 |**stop_change_tracking**|Interrompe o controle de alterações na tabela.|  
@@ -68,9 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Inicia uma população incremental do índice de texto completo na tabela.|  
 |**Parar**|Interrompe uma população completa ou incremental.|  
   
-`[ @ftcat = ] 'fulltext_catalog_name'`É um nome de catálogo de texto completo válido e existente para uma ação de **criação** . Para todas as outras ações, esse parâmetro deve ser NULL. *fulltext_catalog_name* é **sysname**, com um padrão de NULL.  
+`[ @ftcat = ] 'fulltext_catalog_name'` É um nome de catálogo de texto completo válido e existente para uma ação de **criação** . Para todas as outras ações, esse parâmetro deve ser NULL. *fulltext_catalog_name* é **sysname**, com um padrão de NULL.  
   
-`[ @keyname = ] 'unique_index_name'`É uma coluna de chave única válida, um índice não nulo exclusivo em *qualified_table_name* para uma ação de **criação** . Para todas as outras ações, esse parâmetro deve ser NULL. *unique_index_name* é **sysname**, com um padrão de NULL.  
+`[ @keyname = ] 'unique_index_name'` É uma coluna de chave única válida, um índice não nulo exclusivo em *qualified_table_name* para uma ação de **criação** . Para todas as outras ações, esse parâmetro deve ser NULL. *unique_index_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -128,12 +129,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [INDEXproperty &#40;&#41;Transact-SQL](../../t-sql/functions/indexproperty-transact-sql.md)   
- [&#41;OBJECTPROPERTY &#40;Transact-SQL](../../t-sql/functions/objectproperty-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_fulltext_tables](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_fulltext_tables_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_fulltext_tables ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_fulltext_tables_cursor ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpindex ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Os procedimentos armazenados de pesquisa de texto completo e de semântica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

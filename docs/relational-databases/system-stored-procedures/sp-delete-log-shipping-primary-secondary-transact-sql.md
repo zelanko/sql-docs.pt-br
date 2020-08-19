@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_primary_secondary (Transact-SQL)
 title: sp_delete_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9c714d2f43ecf53f048f57dcb049bfd8acd0f2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 72d76081ac46d55bbb60843403b22a9ed4a9f9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447285"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @primary_database = ] 'primary_database'`É o nome do banco de dados no servidor primário. *primary_database* é **sysname**, sem padrão.  
+`[ @primary_database = ] 'primary_database'` É o nome do banco de dados no servidor primário. *primary_database* é **sysname**, sem padrão.  
   
-`[ @secondary_server = ] 'secondary_server'`É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
+`[ @secondary_server = ] 'secondary_server'` É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
   
-`[ @secondary_database = ] 'secondary_database'`É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
+`[ @secondary_database = ] 'secondary_database'` É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -58,7 +59,7 @@ sp_delete_log_shipping_primary_secondary
  **sp_delete_log_shipping_primary_secondary** deve ser executado do banco de dados **mestre** no servidor primário. Esse procedimento armazenado remove a entrada de um banco de dados secundário de **log_shipping_primary_secondaries** no servidor primário.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  No seguinte exemplo, `sp_delete_log_shipping_primary_secondary` é usado para excluir o banco de dados secundário `LogShipAdventureWorks` do servidor secundário `FLATIRON`.  

@@ -1,4 +1,5 @@
 ---
+description: sp_get_query_template (Transact-SQL)
 title: sp_get_query_template (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447085"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -113,7 +114,7 @@ SELECT @my_parameters;
 >  A ordem e a nomeação de parâmetros na saída de sp_get_query_template podem ser alteradas entre atualizações de QFE (Quick Fix Engineering), service pack e de versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As atualizações também podem fazer com que um conjunto diferente de literais constantes seja parametrizado para a mesma consulta e que um espaçamento diferente seja aplicado nos resultados de ambos os parâmetros de saída.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Especificar comportamento de parametrização de consulta usando guias de plano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

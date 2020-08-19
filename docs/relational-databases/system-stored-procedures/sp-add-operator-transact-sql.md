@@ -1,4 +1,5 @@
 ---
+description: sp_add_operator (Transact-SQL)
 title: sp_add_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 466cff492c5547357409cee1b11c7a6542971ae5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a22465af8c3d4e7e3bb0cabd76752d642c2f2423
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447453"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,34 +53,34 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter o caractere de porcentagem ( **%** ). o *nome* é **sysname**, sem padrão.  
+`[ @name = ] 'name'` O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter o caractere de porcentagem ( **%** ). o *nome* é **sysname**, sem padrão.  
   
-`[ @enabled = ] enabled`Indica o status atual do operador. *habilitado* é **tinyint**, com um padrão de **1** (habilitado). Se for **0**, o operador não será habilitado e não receberá notificações.  
+`[ @enabled = ] enabled` Indica o status atual do operador. *habilitado* é **tinyint**, com um padrão de **1** (habilitado). Se for **0**, o operador não será habilitado e não receberá notificações.  
   
-`[ @email_address = ] 'email_address'`O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* é **nvarchar (100)**, com um padrão de NULL.  
+`[ @email_address = ] 'email_address'` O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* é **nvarchar (100)**, com um padrão de NULL.  
   
- Você pode especificar um endereço de email físico ou um alias para *email_address*. Por exemplo:  
+ Você pode especificar um endereço de email físico ou um alias para *email_address*. Por exemplo:   
   
  '**jdoe**' ou '**jdoe \@ XYZ.com**'  
   
 > [!NOTE]  
 >  Você deve usar o endereço de email para Database Mail.  
   
-`[ @pager_address = ] 'pager_address'`O endereço do pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* é **nvarchar (100)**, com um padrão de NULL.  
+`[ @pager_address = ] 'pager_address'` O endereço do pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* é **nvarchar (100)**, com um padrão de NULL.  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`O tempo após o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time` O tempo após o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @weekday_pager_end_time = ] weekday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_end_time*é **int**, com um padrão de 180000, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_end_time*é **int**, com um padrão de 180000, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @saturday_pager_start_time = ] saturday_pager_start_time`O tempo após o qual o serviço **SQLSERVERAGENT** envia a notificação por pager para o operador especificado em sábados. *saturday_pager_start_time* é **int**, com um padrão de 090000, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` O tempo após o qual o serviço **SQLSERVERAGENT** envia a notificação por pager para o operador especificado em sábados. *saturday_pager_start_time* é **int**, com um padrão de 090000, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @saturday_pager_end_time = ] saturday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado em sábados. *saturday_pager_end_time*é **int**, com um padrão de **180000**, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado em sábados. *saturday_pager_end_time*é **int**, com um padrão de **180000**, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @sunday_pager_start_time = ] sunday_pager_start_time`O tempo após o qual o serviço **SQLSERVERAGENT** envia a notificação por pager para o operador especificado nos domingos. *sunday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` O tempo após o qual o serviço **SQLSERVERAGENT** envia a notificação por pager para o operador especificado nos domingos. *sunday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @sunday_pager_end_time = ] sunday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos domingos. *sunday_pager_end_time*é **int**, com um padrão de **180000**, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos domingos. *sunday_pager_end_time*é **int**, com um padrão de **180000**, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @pager_days = ] pager_days`É um número que indica os dias em que o operador está disponível para páginas (sujeito às horas de início/término especificadas). *pager_days*é **tinyint**, com um padrão de **0** , indicando que o operador nunca está disponível para receber uma página. Os valores válidos são de **0** a **127**. *pager_days*é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2** + **4** + **8** + **16** + **32**  =  **62**. A tabela a seguir lista o valor de cada dia da semana.  
+`[ @pager_days = ] pager_days` É um número que indica os dias em que o operador está disponível para páginas (sujeito às horas de início/término especificadas). *pager_days*é **tinyint**, com um padrão de **0** , indicando que o operador nunca está disponível para receber uma página. Os valores válidos são de **0** a **127**. *pager_days*é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2** + **4** + **8** + **16** + **32**  =  **62**. A tabela a seguir lista o valor de cada dia da semana.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -91,9 +92,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Friday|  
 |**64**|Sábado|  
   
-`[ @netsend_address = ] 'netsend_address'`O endereço de rede do operador para o qual a mensagem de rede é enviada. *netsend_address*é **nvarchar (100)**, com um padrão de NULL.  
+`[ @netsend_address = ] 'netsend_address'` O endereço de rede do operador para o qual a mensagem de rede é enviada. *netsend_address*é **nvarchar (100)**, com um padrão de NULL.  
   
-`[ @category_name = ] 'category'`O nome da categoria para este operador. a *categoria* é **sysname**, com um padrão de NULL.  
+`[ @category_name = ] 'category'` O nome da categoria para este operador. a *categoria* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -130,9 +131,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_operator](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_operator](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_operator](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_operator ](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_operator ](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_operator ](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

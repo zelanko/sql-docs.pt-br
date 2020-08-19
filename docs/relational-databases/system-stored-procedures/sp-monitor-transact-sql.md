@@ -1,4 +1,5 @@
 ---
+description: sp_monitor (Transact-SQL)
 title: sp_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446957"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,7 @@ total_read     total_write   total_errors    connections
 ```
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_who ](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

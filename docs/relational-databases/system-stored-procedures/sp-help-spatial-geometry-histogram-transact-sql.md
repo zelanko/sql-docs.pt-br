@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_histogram (Transact-SQL)
 title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6e17d2e4ae048c563a2130918d137d5c186b60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447022"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,23 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'tabname'`É o nome qualificado ou não qualificado da tabela para a qual o índice espacial foi especificado.  
+`[ @tabname = ] 'tabname'` É o nome qualificado ou não qualificado da tabela para a qual o índice espacial foi especificado.  
   
  As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* é **sysname**, sem padrão.  
   
-`[ @colname = ] 'colname'`É o nome da coluna espacial especificada. *ColName* é **sysname**, sem padrão.  
+`[ @colname = ] 'colname'` É o nome da coluna espacial especificada. *ColName* é **sysname**, sem padrão.  
   
-`[ @resolution = ] 'resolution'`É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. a *resolução* é um **tinyint**, sem padrão.  
+`[ @resolution = ] 'resolution'` É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. a *resolução* é um **tinyint**, sem padrão.  
   
-`[ @xmin = ] 'xmin'`É a propriedade de caixa delimitadora X-Minimum. *xmin* é um **float**, sem padrão.  
+`[ @xmin = ] 'xmin'` É a propriedade de caixa delimitadora X-Minimum. *xmin* é um **float**, sem padrão.  
   
-`[ @ymin = ] 'ymin'`É a propriedade da caixa delimitadora Y mínima. *ymin* é um **float**, sem padrão.  
+`[ @ymin = ] 'ymin'` É a propriedade da caixa delimitadora Y mínima. *ymin* é um **float**, sem padrão.  
   
-`[ @xmax = ] 'xmax'`É a propriedade de caixa delimitadora X-Maximum. *xmax* é um **float**, sem padrão.  
+`[ @xmax = ] 'xmax'` É a propriedade de caixa delimitadora X-Maximum. *xmax* é um **float**, sem padrão.  
   
-`[ @ymax = ] 'ymax'`É a propriedade de caixa delimitadora Y-Maximum. *ymax* é um **float**, sem padrão.  
+`[ @ymax = ] 'ymax'` É a propriedade de caixa delimitadora Y-Maximum. *ymax* é um **float**, sem padrão.  
   
-`[ @sample = ] 'sample'`É a porcentagem da tabela que é usada. Os valores válidos são de 0 a 100. o *exemplo* é um **float**. O valor padrão é 100.  
+`[ @sample = ] 'sample'` É a porcentagem da tabela que é usada. Os valores válidos são de 0 a 100. o *exemplo* é um **float**. O valor padrão é 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor de tabela é retornado. A grade a seguir descreve o conteúdo da coluna da tabela.  
@@ -68,7 +69,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa a ID exclusiva de cada célula. A contagem é iniciada a partir de 1.|  
-|**célula**|**Geometry**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**CÉL**|**geometria**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  

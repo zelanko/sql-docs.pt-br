@@ -1,4 +1,5 @@
 ---
+description: sp_dropextendedproc (Transact-SQL)
 title: sp_dropextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 032bca0112d1fb109ad96305426a55202d5349b9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0bf9c7d760b059c5608d4af1c13a7758aaa428c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447219"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85859967"
   Descarta um procedimento armazenado estendido.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a [integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a [integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,7 +43,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @functname = ] 'procedure'`É o nome do procedimento armazenado estendido a ser solto. o *procedimento* é **nvarchar (517)**, sem padrão.  
+`[ @functname = ] 'procedure'` É o nome do procedimento armazenado estendido a ser solto. o *procedimento* é **nvarchar (517)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -73,8 +74,8 @@ EXEC sp_dropextendedproc 'xp_hello';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addextendedproc](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpextendedproc](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addextendedproc ](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpextendedproc ](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

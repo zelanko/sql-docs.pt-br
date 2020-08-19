@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_memory_grants (Transact-SQL)
 title: sys. dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -20,12 +21,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ecaeedccefc4d385cacaa1198dcb6dd9189998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447555"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85734756"
 |**pool_id**|**int**|ID do pool de recursos a que este grupo de carga de trabalho pertence.|  
 |**is_small**|**tinyint**|Quando definido como 1, indica que esta concessão usa o sinal do recurso pequeno. Quando definido como 0, indica que um sinal normal é usado.|  
 |**ideal_memory_kb**|**bigint**|Tamanho, em quilobytes (KB), da concessão de memória para ajustar tudo na memória física. Ele tem como base a estimativa de cardinalidade.|  
-|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
 |**reserved_worker_count**|**bigint**|Número de [threads de trabalho](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)reservados.<br /><br />**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 |**used_worker_count**|**bigint**|Número de [threads de trabalho](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) usados neste momento.<br /><br />**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**max_used_worker_count**|**bigint**|Número máximo de [threads de trabalho](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) usados até este momento.<br /><br />**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -120,7 +121,7 @@ Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requer a permissão `V
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
- [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
- [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md)   
+ [Guia de arquitetura de thread e tarefa](../../relational-databases/thread-and-task-architecture-guide.md)   
   

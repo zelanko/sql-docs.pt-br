@@ -1,4 +1,5 @@
 ---
+description: sp_grantlogin (Transact-SQL)
 title: sp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: de02d84d781c5db2d86902034b500c6b4a02ea2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ddca7a999c1095bc1f6da91e62bd675c736dd96b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447058"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85891816"
   Cria um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [Create login](../../t-sql/statements/create-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [Create login](../../t-sql/statements/create-login-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`É o nome de um usuário ou grupo do Windows. O usuário ou grupo do Windows deve ser qualificado com um nome de domínio do Windows no formato usuário de *domínio* \\ *User*; por exemplo, **London\Joeb**. o *logon* é **sysname**, sem padrão.  
+`[ @loginame = ] 'login'` É o nome de um usuário ou grupo do Windows. O usuário ou grupo do Windows deve ser qualificado com um nome de domínio do Windows no formato usuário de *domínio* \\ *User*; por exemplo, **London\Joeb**. o *logon* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -65,7 +66,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CRIAR logon &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_requests (Transact-SQL)
 title: sys. dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447459"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197064"
 
   Contém informações sobre todas as solicitações no momento ou recentemente ativas no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Ele lista uma linha por solicitação/consulta.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Chave para esta exibição. ID numérica exclusiva associada à solicitação.|Exclusivo em todas as solicitações no sistema.|  
 |session_id|**nvarchar(32)**|ID numérica exclusiva associada à sessão na qual essa consulta foi executada. Consulte [Sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
@@ -35,7 +36,7 @@ ms.locfileid: "86197064"
 |end_compile_time|**datetime**|Hora em que o mecanismo concluiu a compilação da solicitação.|NULO para solicitações que ainda não foram compiladas; caso contrário, um **DateTime** válido menor que start_time e menor ou igual à hora atual.|
 |end_time|**datetime**|Hora em que a execução da solicitação foi concluída, falhou ou foi cancelada.|NULL para solicitações em fila ou ativas; caso contrário, um **DateTime** válido menor ou igual à hora atual.|  
 |total_elapsed_time|**int**|Tempo decorrido na execução desde que a solicitação foi iniciada, em milissegundos.|Entre 0 e a diferença entre submit_time e end_time.</br></br> Se total_elapsed_time exceder o valor máximo de um inteiro, total_elapsed_time continuará a ser o valor máximo. Essa condição irá gerar o aviso "o valor máximo foi excedido".</br></br> O valor máximo em milissegundos é o mesmo que 24,8 dias.|  
-|label|**nvarchar (255)**|Cadeia de caracteres de rótulo opcional associada a algumas instruções de consulta SELECT.|Qualquer cadeia de caracteres contendo ' a-z ', ' A-Z ', ' 0-9 ', ' _ '.|  
+|label|**nvarchar(255)**|Cadeia de caracteres de rótulo opcional associada a algumas instruções de consulta SELECT.|Qualquer cadeia de caracteres contendo ' a-z ', ' A-Z ', ' 0-9 ', ' _ '.|  
 |error_id|**nvarchar (36)**|ID exclusiva do erro associado à solicitação, se houver.|Consulte [Sys. dm_pdw_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); Defina como NULL se nenhum erro tiver ocorrido.|  
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a ID em [Sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |.|**nvarchar(4000)**|Mantém o texto completo da solicitação como enviado pelo usuário.|Qualquer consulta ou texto de solicitação válido. Consultas com mais de 4000 bytes são truncadas.|  

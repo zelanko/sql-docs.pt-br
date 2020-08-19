@@ -1,4 +1,5 @@
 ---
+description: sp_helpstats (Transact-SQL)
 title: sp_helpstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f88558a41c4a169ca61ec7cc615cd0ba5b991589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447020"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85736970"
   Retorna informações de estatísticas sobre colunas e índices na tabela especificada.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Para obter informações sobre estatísticas, consulte as exibições de catálogo [Sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) e [Sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Para obter informações sobre estatísticas, consulte as exibições de catálogo [Sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) e [Sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object_name'`Especifica a tabela na qual as informações de estatísticas são fornecidas. *object_name* é **nvarchar (520)** e não pode ser NULL. Um nome de uma ou duas partes pode ser especificado.  
+`[ @objname = ] 'object_name'` Especifica a tabela na qual as informações de estatísticas são fornecidas. *object_name* é **nvarchar (520)** e não pode ser NULL. Um nome de uma ou duas partes pode ser especificado.  
   
-`[ @results = ] 'value'`Especifica a extensão das informações a serem fornecidas. As entradas válidas são **All** e **stats**. **Todas as** listas estatísticas de todos os índices e também colunas que têm estatísticas criadas neles; **Estatísticas** lista apenas estatísticas não associadas a um índice. o *valor* é **nvarchar (5)** com um padrão de estatísticas.  
+`[ @results = ] 'value'` Especifica a extensão das informações a serem fornecidas. As entradas válidas são **All** e **stats**. **Todas as** listas estatísticas de todos os índices e também colunas que têm estatísticas criadas neles; **Estatísticas** lista apenas estatísticas não associadas a um índice. o *valor* é **nvarchar (5)** com um padrão de estatísticas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -99,7 +100,7 @@ EXEC sp_helpstats
  `PK_Customer_CustomerID        CustomerID`  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

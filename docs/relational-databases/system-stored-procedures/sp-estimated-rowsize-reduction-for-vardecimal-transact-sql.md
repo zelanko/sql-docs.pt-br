@@ -1,4 +1,5 @@
 ---
+description: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 title: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 584723414da47dbb0696ae991860d8bed50a3a26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40347ef5e273b19a4ae04362a5e80b6f8d813e5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447162"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table = ] 'table'`É o nome de três partes da tabela para a qual o formato de armazenamento deve ser alterado. *Table* é **nvarchar (776)**.  
+`[ @table = ] 'table'` É o nome de três partes da tabela para a qual o formato de armazenamento deve ser alterado. *Table* é **nvarchar (776)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -81,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_db_vardecimal_storage_format ](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

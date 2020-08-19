@@ -1,4 +1,5 @@
 ---
+description: sp_create_plan_guide_from_handle (Transact-SQL)
 title: sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a43abe560238f13f76cebc837adaac6a536f7fb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 909bd7489421abb4b9ee1650c267eb7a35c1e072
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447375"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

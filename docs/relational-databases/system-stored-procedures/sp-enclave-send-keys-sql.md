@@ -1,4 +1,5 @@
 ---
+description: sp_enclave_send_keys (Transact-SQL)
 title: sp_enclave_send_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2019
@@ -19,23 +20,23 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 57a7af110956bdf557ad751723f2497b6aa3ede0
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 09409a3c3b71a668d897d50d6bb22e51f21e51d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447179"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Envia as chaves de criptografia de colunas, definidas no banco de dados, para o enclave seguro do lado do servidor usado com o [Always Encrypted com Secure enclaves](../security/encryption/always-encrypted-enclaves.md).
 
-`sp_enclave_send_keys`Só envia as chaves que são habilitadas para enclave e criptografar colunas que usam criptografia aleatória e têm índices. Para uma consulta de usuário comum, um driver de cliente fornece o enclave com as chaves necessárias para cálculos na consulta. `sp_enclave_send_keys`envia todas as chaves de criptografia de coluna definidas no banco de dados e usadas para índices com colunas criptografadas. 
+`sp_enclave_send_keys` Só envia as chaves que são habilitadas para enclave e criptografar colunas que usam criptografia aleatória e têm índices. Para uma consulta de usuário comum, um driver de cliente fornece o enclave com as chaves necessárias para cálculos na consulta. `sp_enclave_send_keys` envia todas as chaves de criptografia de coluna definidas no banco de dados e usadas para índices com colunas criptografadas. 
 
-`sp_enclave_send_keys`fornece uma maneira fácil de enviar chaves para o enclave e popular o cache de chave de criptografia de coluna para operações de indexação subsequentes. Use `sp_enclave_send_keys` para habilitar:
+`sp_enclave_send_keys` fornece uma maneira fácil de enviar chaves para o enclave e popular o cache de chave de criptografia de coluna para operações de indexação subsequentes. Use `sp_enclave_send_keys` para habilitar:
 - Um DBA para recriar ou alterar índices ou estatísticas em colunas de banco de dados criptografadas, se o DBA não tiver acesso às chaves mestras de coluna. Consulte [invocar operações de indexação usando chaves de criptografia de coluna em cache](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]para concluir a recuperação de índices em colunas criptografadas. Consulte [recuperação de banco de dados](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] para concluir a recuperação de índices em colunas criptografadas. Consulte [recuperação de banco de dados](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Um aplicativo que usa .NET Framework Provedor de Dados para SQL Server carregar dados em massa em colunas criptografadas.
 
 Para invocar com êxito `sp_enclave_send_keys` , você precisa se conectar ao banco de dados com os cálculos de Always Encrypted e enclave habilitados para a conexão de banco de dados. Você também precisa ter acesso às chaves mestras de coluna, proteger as chaves de criptografia de coluna, você vai enviar e precisar de permissões para acessar os metadados de chave Always Encrypted no banco de dados. 
@@ -51,7 +52,7 @@ sp_enclave_send_keys
 
 Este procedimento armazenado não tem argumentos.
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor de retorno
 
 Este procedimento armazenado não tem nenhum valor de retorno.
   
@@ -69,7 +70,7 @@ Este procedimento armazenado não tem conjuntos de resultados.
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 - [Always Encrypted com enclaves seguros](../security/encryption/always-encrypted-enclaves.md) 
  
 - [Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)

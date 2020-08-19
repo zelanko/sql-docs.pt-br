@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_info (Transact-SQL)
 title: sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447658"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_encryptor_thumbprint|**varbinary(20)**| **Aplica-se a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Mostra a impressão digital do criptografador do VLF se o VLF for criptografado usando [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), caso contrário, NULL. |
 
 ## <a name="remarks"></a>Comentários
-A `sys.dm_db_log_info` função de gerenciamento dinâmico substitui `DBCC LOGINFO` a instrução.    
+A `sys.dm_db_log_info` função de gerenciamento dinâmico substitui a `DBCC LOGINFO` instrução.    
  
 ## <a name="permissions"></a>Permissões  
 Requer a `VIEW DATABASE STATE` permissão no banco de dados.  
@@ -110,8 +111,8 @@ GO
 ```
 
 ## <a name="see-also"></a>Consulte Também  
-[Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

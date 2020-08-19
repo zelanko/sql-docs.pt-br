@@ -1,4 +1,5 @@
 ---
+description: sp_get_distributor (Transact-SQL)
 title: sp_get_distributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a4dd6763c738d87aac706e3d1f648a101068dad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 737437b6bdd3de8b0d261345de47bad4fdf55eea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447098"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sp_get_distributor
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Script de informações do distribuidor e do Publicador](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
+ [Script de informações do Distribuidor e Publicador](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

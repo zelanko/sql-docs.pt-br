@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription_properties (Transact-SQL)
 title: sp_helpsubscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2eb1c4389c6dd5f3f30b42967aa7cec82808d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446972"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os Publicadores.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os Publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados do Publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados do Publicador.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** , que retorna informações sobre todas as publicações.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** , que retorna informações sobre todas as publicações.  
   
-`[ @publication_type = ] publication_type`É o tipo de publicação. *publication_type* é **int**, com um padrão de NULL. Se fornecido, *publication_type* deve ser um dos seguintes valores:  
+`[ @publication_type = ] publication_type` É o tipo de publicação. *publication_type* é **int**, com um padrão de NULL. Se fornecido, *publication_type* deve ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -73,15 +74,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**ftp_port**|**int**|Somente para compatibilidade com versões anteriores. Número da porta do serviço FTP para Distribuidor.|  
 |**ftp_login**|**sysname**|Somente para compatibilidade com versões anteriores. Nome de usuário usado para se conectar ao serviço FTP.|  
 |**ftp_password**|**nvarchar (524)**|Somente para compatibilidade com versões anteriores. Senha de usuário usada para se conectar ao serviço FTP.|  
-|**alt_snapshot_folder**|**nvarchar (255)**|Especifica o local da pasta alternativa para o instantâneo.|  
-|**working_directory**|**nvarchar (255)**|Nome do diretório de trabalho usado para armazenar dados e arquivos de esquema.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|Especifica o local da pasta alternativa para o instantâneo.|  
+|**working_directory**|**nvarchar(255)**|Nome do diretório de trabalho usado para armazenar dados e arquivos de esquema.|  
 |**use_ftp**|**bit**|Especifica o uso do FTP em vez do protocolo regular para recuperar instantâneos. Se for **1**, o FTP será usado.|  
 |**dts_package_name**|**sysame**|Especifica o nome do pacote DTS (Data Transformation Services).|  
 |**dts_package_password**|**nvarchar (524)**|Especifica a senha no pacote, se houver um.|  
 |**dts_package_location**|**int**|Local onde o pacote DTS é armazenado.<br /><br /> **0** = o local do pacote está no distribuidor.<br /><br /> **1** = o local do pacote está no Assinante.|  
 |**offload_agent**|**bit**|Especifica se o agente pode ser ativado remotamente. Se for **0**, o agente não poderá ser ativado remotamente.|  
 |**offload_server**|**sysname**|Especifica o nome da rede do servidor usado para ativação remota.|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|Especifica o caminho para a pasta onde os arquivos de instantâneo são salvos.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|Especifica o caminho para a pasta onde os arquivos de instantâneo são salvos.|  
 |**use_web_sync**|**bit**|Especifica se a assinatura pode ser sincronizada via HTTPS, em que o valor **1** significa que esse recurso está habilitado.|  
 |**internet_url**|**nvarchar(260)**|URL que representa o local do Replication Listener para sincronização da Web.|  
 |**internet_login**|**nvarchar(128)**|Logon que o Agente de Mesclagem usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  

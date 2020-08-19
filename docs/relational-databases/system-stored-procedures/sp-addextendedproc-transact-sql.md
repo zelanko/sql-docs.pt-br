@@ -1,4 +1,5 @@
 ---
+description: sp_addextendedproc (Transact-SQL)
 title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28711f289e86309baf6f2b54cf6c037d04d54d4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a64b9b173b6b76429723c47bcf55fab4257b073c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447394"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877998"
   Registra o nome de um novo procedimento armazenado estendido para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a [integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a [integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @functname = ] 'procedure'`É o nome da função a ser chamada na biblioteca de vínculo dinâmico (DLL). o *procedimento* é **nvarchar (517)**, sem padrão. Opcionalmente, o *procedimento* pode incluir o nome do proprietário no formato *proprietário. função*.  
+`[ @functname = ] 'procedure'` É o nome da função a ser chamada na biblioteca de vínculo dinâmico (DLL). o *procedimento* é **nvarchar (517)**, sem padrão. Opcionalmente, o *procedimento* pode incluir o nome do proprietário no formato *proprietário. função*.  
   
-`[ @dllname = ] 'dll'`É o nome da DLL que contém a função. *dll* é **varchar (255)**, sem padrão. É recomendável especificar o caminho completo da DLL.  
+`[ @dllname = ] 'dll'` É o nome da DLL que contém a função. *dll* é **varchar (255)**, sem padrão. É recomendável especificar o caminho completo da DLL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -77,10 +78,10 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
   
 ## <a name="see-also"></a>Consulte Também  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [CONCEDER &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
- [REVOGAr &#40;&#41;de Transact-SQL](../../t-sql/statements/revoke-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropextendedproc](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpextendedproc](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropextendedproc ](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpextendedproc ](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

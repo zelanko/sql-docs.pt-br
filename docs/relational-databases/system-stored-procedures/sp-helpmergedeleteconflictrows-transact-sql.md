@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergedeleteconflictrows (Transact-SQL)
 title: sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c0712dc9b72d9a515dce7f5948c81f49d509a49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c4cda70ec894a50561cd62dc459bac915f437cc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447014"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,20 +41,20 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
   
-`[ @source_object = ] 'source_object'`É o nome do objeto de origem. *source_object* é **nvarchar (386)**, com um padrão de NULL.  
+`[ @source_object = ] 'source_object'` É o nome do objeto de origem. *source_object* é **nvarchar (386)**, com um padrão de NULL.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar (386)**|Objeto de origem para o conflito de exclusão.|  
-|**rowguid**|**uniqueidentifier**|Identificador de linha para o conflito de exclusão.|  
+|**ROWGUID**|**uniqueidentifier**|Identificador de linha para o conflito de exclusão.|  
 |**conflict_type**|**int**|Código que indica tipo de conflito:<br /><br /> **1** = UpdateConflict: o conflito é detectado no nível de linha.<br /><br /> **2** = ColumnUpdateConflict: conflito detectado no nível da coluna.<br /><br /> **3** = UpdateDeleteWinsConflict: exclui o conflito do WINS.<br /><br /> **4** = UpdateWinsDeleteConflict: o ROWGUID excluído que perde o conflito é registrado nesta tabela.<br /><br /> **5** = UploadInsertFailed: não foi possível aplicar a inserção do Assinante no Publicador.<br /><br /> **6** = DownloadInsertFailed: a inserção do Publicador não pôde ser aplicada ao Assinante.<br /><br /> **7** = UploadDeleteFailed: a exclusão no Assinante não pôde ser carregada no Publicador.<br /><br /> **8** = DownloadDeleteFailed: a exclusão no Publicador não pôde ser baixada para o Assinante.<br /><br /> **9** = UploadUpdateFailed: não foi possível aplicar a atualização no Assinante no Publicador.<br /><br /> **10** = DownloadUpdateFailed: a atualização no Publicador não pôde ser aplicada ao Assinante.|  
 |**reason_code**|**Int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar (720)**|Descrição de erro que pode ser sensível ao contexto.|  

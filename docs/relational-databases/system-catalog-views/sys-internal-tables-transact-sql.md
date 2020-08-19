@@ -1,4 +1,5 @@
 ---
+description: sys.internal_tables (Transact-SQL)
 title: sys. internal_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447915"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -174,7 +175,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

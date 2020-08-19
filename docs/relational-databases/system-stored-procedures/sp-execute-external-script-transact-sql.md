@@ -1,4 +1,5 @@
 ---
+description: sp_execute_external_script (Transact-SQL)
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
@@ -20,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447178"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +50,7 @@ Para executar **sp_execute_external_script**, você deve primeiro instalar o ser
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 O procedimento armazenado **sp_execute_external_script** executa um script fornecido como um argumento de entrada para o procedimento e é usado com o [R Services](../../machine-learning/r/sql-server-r-services.md) no SQL Server 2016.
 
-Para o R Services, [r](../../machine-learning/concepts/extension-r.md) é o idioma com suporte.
+Para o R Services,  [r](../../machine-learning/concepts/extension-r.md) é o idioma com suporte.
 
 Para executar **sp_execute_external_script**, você deve primeiro instalar o R Services. Para obter mais informações, consulte [instalar SQL Server serviços de Machine Learning (Python e R) no Windows](../../machine-learning/install/sql-r-services-windows-install.md).
 ::: moniker-end
@@ -114,27 +115,27 @@ sp_execute_external_script
 
  ** \@ script** = N script de linguagem externa*de script especificado*como uma entrada literal ou variável. o *script* é **nvarchar (max)**.  
 
-`[ @input_data_1 =  N'input_data_1' ]`Especifica os dados de entrada usados pelo script externo na forma de uma [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. O tipo de dados de *input_data_1* é **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Especifica os dados de entrada usados pelo script externo na forma de uma [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. O tipo de dados de *input_data_1* é **nvarchar (max)**.
 
-`[ @input_data_1_name = N'input_data_1_name' ]`Especifica o nome da variável usada para representar a consulta definida por @input_data_1 . O tipo de dados da variável no script externo depende do idioma. No caso do R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. *input_data_1_name* é **sysname**.  O valor padrão é *InputDataSet*.  
+`[ @input_data_1_name = N'input_data_1_name' ]` Especifica o nome da variável usada para representar a consulta definida por @input_data_1 . O tipo de dados da variável no script externo depende do idioma. No caso do R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. *input_data_1_name* é **sysname**.  O valor padrão é *InputDataSet*.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`Usado para criar modelos por partição. Especifica o nome da coluna usada para ordenar o conjunto de resultados, por exemplo, por nome do produto. O tipo de dados da variável no script externo depende do idioma. No caso do R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular.
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` Usado para criar modelos por partição. Especifica o nome da coluna usada para ordenar o conjunto de resultados, por exemplo, por nome do produto. O tipo de dados da variável no script externo depende do idioma. No caso do R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular.
 
-`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`Usado para criar modelos por partição. Especifica o nome da coluna usada para segmentar dados, como região geográfica ou data. O tipo de dados da variável no script externo depende do idioma. No caso do R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` Usado para criar modelos por partição. Especifica o nome da coluna usada para segmentar dados, como região geográfica ou data. O tipo de dados da variável no script externo depende do idioma. No caso do R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. 
 ::: moniker-end
 
-`[ @output_data_1_name =  N'output_data_1_name' ]`Especifica o nome da variável no script externo que contém os dados a serem retornados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após a conclusão da chamada de procedimento armazenado. O tipo de dados da variável no script externo depende do idioma. Para R, a saída deve ser um quadro de dados. Para Python, a saída deve ser um quadro de dados pandas. *output_data_1_name* é **sysname**.  O valor padrão é *OutputDataSet*.  
+`[ @output_data_1_name =  N'output_data_1_name' ]` Especifica o nome da variável no script externo que contém os dados a serem retornados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após a conclusão da chamada de procedimento armazenado. O tipo de dados da variável no script externo depende do idioma. Para R, a saída deve ser um quadro de dados. Para Python, a saída deve ser um quadro de dados pandas. *output_data_1_name* é **sysname**.  O valor padrão é *OutputDataSet*.  
 
-`[ @parallel = 0 | 1 ]`Habilite a execução paralela de scripts R definindo o `@parallel` parâmetro como 1. O padrão para esse parâmetro é 0 (sem paralelismo). Se `@parallel = 1` e a saída estiver sendo transmitida diretamente para o computador cliente, a `WITH RESULT SETS` cláusula será necessária e um esquema de saída deverá ser especificado.  
+`[ @parallel = 0 | 1 ]` Habilite a execução paralela de scripts R definindo o `@parallel` parâmetro como 1. O padrão para esse parâmetro é 0 (sem paralelismo). Se `@parallel = 1` e a saída estiver sendo transmitida diretamente para o computador cliente, a `WITH RESULT SETS` cláusula será necessária e um esquema de saída deverá ser especificado.  
 
- + Para scripts R que não usam funções RevoScaleR, o uso do `@parallel` parâmetro pode ser benéfico para o processamento de conjuntos de grandes volumes, supondo que o script possa ser trivialmente paralelizado. Por exemplo, ao usar a `predict` função R com um modelo para gerar novas previsões, defina `@parallel = 1` como uma dica para o mecanismo de consulta. Se a consulta puder ser paralelizada, as linhas serão distribuídas de acordo com a configuração **MAXDOP** .  
+ + Para scripts R que não usam funções RevoScaleR, o uso do  `@parallel` parâmetro pode ser benéfico para o processamento de conjuntos de grandes volumes, supondo que o script possa ser trivialmente paralelizado. Por exemplo, ao usar a `predict` função R com um modelo para gerar novas previsões, defina `@parallel = 1` como uma dica para o mecanismo de consulta. Se a consulta puder ser paralelizada, as linhas serão distribuídas de acordo com a configuração **MAXDOP** .  
   
  + Para scripts R que usam funções RevoScaleR, o processamento paralelo é manipulado automaticamente e você não deve especificar `@parallel = 1` para a chamada **sp_execute_external_script** .  
   
-`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`Uma lista de declarações de parâmetro de entrada que são usadas no script externo.  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` Uma lista de declarações de parâmetro de entrada que são usadas no script externo.  
   
-`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Uma lista de valores para os parâmetros de entrada usados pelo script externo.  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Uma lista de valores para os parâmetros de entrada usados pelo script externo.  
 
 ## <a name="remarks"></a>Comentários
 
@@ -326,8 +327,8 @@ Para pontuação, você também pode usar a função nativa [PREDICT](../../t-sq
 + [Aprendizado de máquina do SQL](../../machine-learning/index.yml)
 + [Extensões de linguagem SQL Server](../../language-extensions/language-extensions-overview.md). 
 + [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
-+ [CRIAR biblioteca externa &#40;&#41;Transact-SQL](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [sp_prepare &#40;&#41;Transact SQL](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
++ [CRIAR biblioteca externa &#40;&#41;Transact-SQL ](../../t-sql/statements/create-external-library-transact-sql.md)  
++ [sp_prepare &#40;&#41;Transact SQL ](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [Opção de Configuração do servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

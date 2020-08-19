@@ -1,4 +1,5 @@
 ---
+description: sp_depends (Transact-SQL)
 title: sp_depends (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5133cd72de0f5b812b8425b6fb1b7f8ae82d8241
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba819cdb8b3e9108fbae3e6405a87b78964931a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447244"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85861400"
   Exibe informações sobre dependências de objeto de banco de dados, como as exibições e procedimentos que dependem de uma tabela ou exibição e, as tabelas e exibições que dependem da exibição ou procedimento. Não são informadas referências para objetos fora do banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [Sys. dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) e [Sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [Sys. dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) e [Sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,8 +69,8 @@ sp_depends [ @objname = ] '<object>'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**type**|**nvarchar (16)**|Tipo do item.|  
-|**atualizado**|**nvarchar (7)**|Caso o item seja atualizado.|  
+|**tipo**|**nvarchar (16)**|Tipo do item.|  
+|**atualizações**|**nvarchar (7)**|Caso o item seja atualizado.|  
 |**Selecione**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
 |**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
@@ -78,7 +79,7 @@ sp_depends [ @objname = ] '<object>'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**type**|**nvarchar (16)**|Tipo do item.|  
+|**tipo**|**nvarchar (16)**|Tipo do item.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
@@ -105,7 +106,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

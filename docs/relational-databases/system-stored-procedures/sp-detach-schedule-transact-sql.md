@@ -1,4 +1,5 @@
 ---
+description: sp_detach_schedule (Transact-SQL)
 title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447243"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho do qual remover o agendamento. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho do qual remover o agendamento. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho do qual remover o agendamento. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho do qual remover o agendamento. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @schedule_id = ] schedule_id`O número de identificação da agenda a ser removido do trabalho. *schedule_id* é **int**, com um padrão de NULL.  
+`[ @schedule_id = ] schedule_id` O número de identificação da agenda a ser removido do trabalho. *schedule_id* é **int**, com um padrão de NULL.  
   
-`[ @schedule_name = ] 'schedule_name'`O nome do agendamento a ser removido do trabalho. *schedule_name* é **sysname**, com um padrão de NULL.  
+`[ @schedule_name = ] 'schedule_name'` O nome do agendamento a ser removido do trabalho. *schedule_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  *Schedule_id* ou *schedule_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`Especifica se as agendas de trabalho não usadas devem ser excluídas. *delete_unused_schedule* é **bit**, com um padrão de **0**, o que significa que todos os agendamentos serão mantidos, mesmo que nenhum trabalho faça referência a eles. Se definido como **1**, as agendas de trabalho não utilizadas serão excluídas se nenhum trabalho fizer referência a elas.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica se as agendas de trabalho não usadas devem ser excluídas. *delete_unused_schedule* é **bit**, com um padrão de **0**, o que significa que todos os agendamentos serão mantidos, mesmo que nenhum trabalho faça referência a eles. Se definido como **1**, as agendas de trabalho não utilizadas serão excluídas se nenhum trabalho fizer referência a elas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -93,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_attach_schedule](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_attach_schedule ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_schedule ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

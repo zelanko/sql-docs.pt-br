@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_resource_pools (Transact-SQL)
 title: sys. dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf49fd0d828bd4f287431f2b95c47e07315448
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f19c80cd75788a2bc0f5bad73e0eb0098f9a8315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447526"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "87396711"
 |write_io_stall_queued_ms|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Tempo total (em milissegundos) entre a chegada de E/S de gravação e a emissão. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S. Ou seja, o pool de recursos MIN_IOPS_PER_VOLUME e as configurações de MAX_IOPS_PER_VOLUME são 0.<br /><br /> Este é o atraso introduzido pela administração do recurso de E/S.|  
 |io_issue_violations_total|**int**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Total de violações de problemas de E/S. Ou seja, o número de vezes em que a taxa de problema de E/S era inferior à taxa reservada. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S. Ou seja, o pool de recursos MIN_IOPS_PER_VOLUME e as configurações de MAX_IOPS_PER_VOLUME são 0.|  
 |io_issue_delay_total_ms|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Tempo total (em milissegundos) entre o problema agendado e o problema real de E/S. Permite valor nulo. Nulo se o pool de recursos não for administrado para E/S. Ou seja, o pool de recursos MIN_IOPS_PER_VOLUME e as configurações de MAX_IOPS_PER_VOLUME são 0.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="remarks"></a>Comentários  
  Os grupos de cargas de trabalho e os pools de recursos de Administrador de Recursos têm um mapeamento muitos para um. Como resultado, muitas das estatísticas de pool de recursos são extraídas das estatísticas de grupo de carga de trabalho.  

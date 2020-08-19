@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobactivity (Transact-SQL)
 title: sp_help_jobactivity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84dee2f945feaa59d96adb03fc6d531d7f2fd925
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dc9650d715468bb66b5594100b0ce605083328e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447078"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name*é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name*é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @session_id = ] session_id`A ID da sessão para relatar informações sobre o. *session_id* é **int**, com um padrão de NULL.  
+`[ @session_id = ] session_id` A ID da sessão para relatar informações sobre o. *session_id* é **int**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

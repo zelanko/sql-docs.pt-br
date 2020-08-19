@@ -1,4 +1,5 @@
 ---
+description: sys.resource_usage (Banco de Dados SQL do Azure)
 title: sys. resource_usage (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9ac9473dbdcc51a4c5313b27596ce38d0607d336
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7f5a7aadb3a16a673bca0d8c0ba34108a158693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447802"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

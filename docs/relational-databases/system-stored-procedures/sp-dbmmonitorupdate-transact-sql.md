@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorupdate (Transact-SQL)
 title: sp_dbmmonitorupdate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d1feb50ba79c7d9cb33218db1a256796d762b5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447321"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ sp_dbmmonitorupdate [ database_name ]
  Ao atualizar o status de espelhamento de um banco de dados, **sp_dbmmonitorupdate** inspeciona o valor mais recente de qualquer métrica de desempenho de espelhamento para a qual um limite de aviso foi especificado. Se o valor exceder o limiar, o procedimento adicionará um evento de informação ao log de evento. Todas as taxas são médias desde a última atualização. Para obter mais informações, veja [Usar os limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir atualiza o status de espelhamento apenas para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -74,11 +75,11 @@ EXEC sp_dbmmonitorupdate AdventureWorks2012 ;
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorchangealert](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitordropalert](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpalert](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorchangealert ](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorchangemonitoring ](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitordropalert ](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpalert ](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpmonitoring ](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

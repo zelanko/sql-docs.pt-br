@@ -1,4 +1,5 @@
 ---
+description: sp_cursorfetch (Transact-SQL)
 title: sp_cursorfetch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447348"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -192,7 +193,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursoropen ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

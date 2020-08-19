@@ -1,4 +1,5 @@
 ---
+description: sp_addpullsubscription (Transact-SQL)
 title: sp_addpullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98c966ecb91bebb4f11db49028ecf53a885cc888
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93efe6b64ade77e8a9761bf5efbbcb8454d75df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447406"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,22 +45,22 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
 
 > [!NOTE]
 > O nome do servidor pode ser especificado como `<Hostname>,<PortNumber>` . Talvez seja necessário especificar o número da porta para a conexão quando SQL Server for implantada no Linux ou no Windows com uma porta personalizada, e o serviço navegador estiver desabilitado.
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL. *publisher_db* é ignorado pelos Publicadores Oracle.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL. *publisher_db* é ignorado pelos Publicadores Oracle.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @independent_agent = ] 'independent_agent'`Especifica se há um Agente de Distribuição autônomo para esta publicação. *independent_agent* é **nvarchar (5)**, com um padrão de true. Se for **true**, haverá um agente de distribuição autônomo para essa publicação. Se for **false**, há um agente de distribuição para cada par de banco de dados do Publicador/Assinante. *independent_agent* é uma propriedade da publicação e deve ter o mesmo valor aqui que ela tem no Publicador.  
+`[ @independent_agent = ] 'independent_agent'` Especifica se há um Agente de Distribuição autônomo para esta publicação. *independent_agent* é **nvarchar (5)**, com um padrão de true. Se for **true**, haverá um agente de distribuição autônomo para essa publicação. Se for **false**, há um agente de distribuição para cada par de banco de dados do Publicador/Assinante. *independent_agent* é uma propriedade da publicação e deve ter o mesmo valor aqui que ela tem no Publicador.  
   
-`[ @subscription_type = ] 'subscription_type'`É o tipo de assinatura. *subscription_type* é **nvarchar (9)**, com um padrão de **anônimo**. Você deve especificar um valor de **pull** para *subscription_type*, a menos que queira criar uma assinatura sem registrar a assinatura no Publicador. Nesse caso, você deve especificar um valor de **Anonymous**. Isso é necessário em casos nos quais você não pode estabelecer uma conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Publicador durante configuração da assinatura.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type* é **nvarchar (9)**, com um padrão de **anônimo**. Você deve especificar um valor de **pull** para *subscription_type*, a menos que queira criar uma assinatura sem registrar a assinatura no Publicador. Nesse caso, você deve especificar um valor de **Anonymous**. Isso é necessário em casos nos quais você não pode estabelecer uma conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Publicador durante configuração da assinatura.  
   
-`[ @description = ] 'description'`É a descrição da publicação. a *Descrição* é **nvarchar (100)**, com um padrão de NULL.  
+`[ @description = ] 'description'` É a descrição da publicação. a *Descrição* é **nvarchar (100)**, com um padrão de NULL.  
   
-`[ @update_mode = ] 'update_mode'`É o tipo de atualização. *update_mode* é **nvarchar (30)** e pode ser um dos valores a seguir.  
+`[ @update_mode = ] 'update_mode'` É o tipo de atualização. *update_mode* é **nvarchar (30)** e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -69,7 +70,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 |**pós-falha**|Habilita a assinatura para atualização imediata com atualização enfileirada como um failover. Modificações de dados podem ser feitas no Assinante e propagadas ao Publicador imediatamente. Se o Publicador e o Assinante não estiverem conectados, as modificações de dados feitas no Assinante poderão ser armazenadas em uma fila até que o Assinante e o Publicador sejam reconectados.|  
 |**queued failover**|Habilita a assinatura como uma assinatura de atualização enfileirada com a capacidade de alterar para o modo de atualização imediata. Modificações de dados podem ser feitas no Assinante e armazenadas em uma fila até que a conexão seja estabelecida entre o Assinante e o Publicador. Quando uma conexão contínua é estabelecida, o modo de atualização pode ser alterado para atualização imediata. *Não há suporte para Publicadores Oracle*.|  
   
-`[ @immediate_sync = ] immediate_sync`É se os arquivos de sincronização são criados ou recriados sempre que o Agente de Instantâneo é executado. *immediate_sync* é **bit** com um padrão de 1 e deve ser definido com o mesmo valor que *immediate_sync* em **sp_addpublication**. *immediate_sync* é uma propriedade da publicação e deve ter o mesmo valor aqui que ela tem no Publicador.  
+`[ @immediate_sync = ] immediate_sync` É se os arquivos de sincronização são criados ou recriados sempre que o Agente de Instantâneo é executado. *immediate_sync* é **bit** com um padrão de 1 e deve ser definido com o mesmo valor que *immediate_sync* em **sp_addpublication**. *immediate_sync* é uma propriedade da publicação e deve ter o mesmo valor aqui que ela tem no Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -80,7 +81,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  Para assinaturas de atualização enfileiradas, use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexões com Assinantes, e especifique uma conta diferente para conexão com cada assinante. Ao criar uma assinatura pull que oferece suporte a atualização em fila, a replicação sempre define a conexão para usar a Autenticação do Windows (em assinaturas pull, a replicação não pode acessar metadados em Assinante com Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Nesse caso, você deve executar [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) para alterar a conexão para usar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação depois que a assinatura for configurada.  
   
- Se o [MSreplication_subscriptions &#40;tabela&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) não existir no Assinante, o **sp_addpullsubscription** o criará. Ele também adiciona uma linha ao [MSreplication_subscriptions &#40;tabela&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Para assinaturas pull, [sp_addsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) deve ser chamado primeiro no Publicador.  
+ Se o [MSreplication_subscriptions &#40;tabela&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) não existir no Assinante, o **sp_addpullsubscription** o criará. Ele também adiciona uma linha ao [MSreplication_subscriptions &#40;tabela&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Para assinaturas pull, [sp_addsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) deve ser chamado primeiro no Publicador.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
@@ -91,11 +92,11 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="see-also"></a>Consulte Também  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Criar uma assinatura atualizável para uma publicação transacional](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [&#41;&#40;Transact-SQL de sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droppullsubscription](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpullsubscription_agent ](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_change_subscription_properties ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droppullsubscription ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helppullsubscription ](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription_properties ](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_enumeratependingschemachanges (Transact-SQL)
 title: sp_enumeratependingschemachanges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b150b563cc9ea6bb555e6ea4f9caa1e6fe60193
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d659c3db5e76c1f4a4a60f0ad37b53ae7d62a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447185"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @starting_schemaversion = ] starting_schemaversion`É a alteração de esquema de número mais baixo a ser incluída no conjunto de resultados.  
+`[ @starting_schemaversion = ] starting_schemaversion` É a alteração de esquema de número mais baixo a ser incluída no conjunto de resultados.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -66,6 +67,6 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [&#41;sysmergeschemachange &#40;Transact-SQL](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [&#41;sysmergeschemachange &#40;Transact-SQL ](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

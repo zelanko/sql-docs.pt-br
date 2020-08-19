@@ -1,4 +1,5 @@
 ---
+description: Alternar chaves do Always Encrypted usando o PowerShell
 title: Alternar as chaves Always Encrypted usando o PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -11,12 +12,12 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5e9cbaffe30849f5e2bb2385f49fabd603bc1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f2010ad30f38d2e7bf89a18b833d93e00aec1f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448108"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Alternar chaves do Always Encrypted usando o PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -107,7 +108,7 @@ Um DBA recupera metadados da chave mestra de coluna a ser girada e das chaves de
 |Etapa 4. Recupere os metadados das chaves de criptografia de coluna, protegidas pela antiga chave mestra de coluna, incluindo seus valores criptografados. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | Não | Sim
 |Etapa 5. Compartilhe o local da chave mestra de coluna (o nome do provedor e o caminho principal da chave mestra de coluna) e dos valores criptografados das chaves de criptografia de coluna correspondentes, protegidas pela chave mestra de coluna antiga.| Confira os exemplos abaixo. | Não | Não
 
-### <a name="part-2-security-administrator"></a>Parte 2: Administrador de segurança
+### <a name="part-2-security-administrator"></a>Parte 2: Administrador de Segurança
 
 O Administrador de Segurança gera uma nova chave mestra de coluna, criptografa novamente as chaves de criptografia de coluna afetadas com a nova chave mestra de coluna e compartilha as informações da nova chave mestra de coluna, bem como o conjunto de novos valores criptografados para as chaves de criptografia de coluna afetadas, com o DBA.
 
@@ -191,7 +192,7 @@ for($i=0; $i -lt $ceks.Length; $i++){
 ```
 
 
-Parte 2: Administrador de segurança
+Parte 2: Administrador de Segurança
 
 ```powershell
 # Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, from your DBA, via a CSV file on a share drive.

@@ -1,4 +1,5 @@
 ---
+description: sp_help_notification (Transact-SQL)
 title: sp_help_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447033"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +45,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @object_type = ] 'object_type'`O tipo de informações a serem retornadas. *object_type*é **Char (9)**, sem padrão. *object_type* pode ser alertas, que lista os alertas atribuídos ao nome do operador fornecido *,* ou operadores, que lista os operadores responsáveis pelo nome do alerta fornecido *.*  
+`[ @object_type = ] 'object_type'` O tipo de informações a serem retornadas. *object_type*é **Char (9)**, sem padrão. *object_type* pode ser alertas, que lista os alertas atribuídos ao nome do operador fornecido *,* ou operadores, que lista os operadores responsáveis pelo nome do alerta fornecido *.*  
   
-`[ @name = ] 'name'`Um nome de operador (se *object_type* é operadores) ou um nome de alerta (se *object_type* for alertas). o *nome* é **sysname**, sem padrão.  
+`[ @name = ] 'name'` Um nome de operador (se *object_type* é operadores) ou um nome de alerta (se *object_type* for alertas). o *nome* é **sysname**, sem padrão.  
   
-`[ @enum_type = ] 'enum_type'`As informações de *object_type*retornadas. *enum_type* é real na maioria dos casos. *enum_type*é **Char (10)**, sem padrão, e pode ser um desses valores.  
+`[ @enum_type = ] 'enum_type'` As informações de *object_type*retornadas. *enum_type* é real na maioria dos casos. *enum_type*é **Char (10)**, sem padrão, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -56,7 +57,7 @@ sp_help_notification
 |ALL|Lista todos os*object_types* incluindo aqueles que não estão associados ao *nome*.|  
 |TARGET|Lista somente o *object_types* correspondente ao *target_name*fornecido, independentemente da associação com o*nome*.|  
   
-`[ @notification_method = ] notification_method`Um valor numérico que determina as colunas de método de notificação a serem retornadas. *notification_method* é **tinyint**e pode ser um dos valores a seguir.  
+`[ @notification_method = ] notification_method` Um valor numérico que determina as colunas de método de notificação a serem retornadas. *notification_method* é **tinyint**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -65,7 +66,7 @@ sp_help_notification
 |**4**|Netsend: retorna apenas a coluna **use_netsend** .|  
 |**7**|Tudo: retorna todas as colunas.|  
   
-`[ @target_name = ] 'target_name'`Um nome de alerta a ser pesquisado (se *object_type* é alertas) ou um nome de operador para pesquisar (se *object_type* forem operadores). *target_name* será necessário somente se *ENUM_TYPE* for o destino. *target_name* é **sysname**, com um padrão de NULL.  
+`[ @target_name = ] 'target_name'` Um nome de alerta a ser pesquisado (se *object_type* é alertas) ou um nome de operador para pesquisar (se *object_type* forem operadores). *target_name* será necessário somente se *ENUM_TYPE* for o destino. *target_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-valves"></a>Valores de código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -77,9 +78,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Número de identificador de alerta.|  
 |**alert_name**|**sysname**|Nome do alerta.|  
-|**use_email**|**int**|Email é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_pager**|**int**|Pager é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_netsend**|**int**|Pop-up de rede é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
+|**use_email**|**int**|Email é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**use_pager**|**int**|Pager é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**use_netsend**|**int**|Pop-up de rede é usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
 |**has_email**|**int**|Número de notificações de email enviadas para esse alerta.|  
 |**has_pager**|**int**|Número de notificações de pager enviadas para esse alerta.|  
 |**has_netsend**|**int**|Número de notificações do **net send** enviadas para este alerta.|  
@@ -90,12 +91,12 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Número de identificação do operador.|  
 |**operator_name**|**sysname**|Nome do operador.|  
-|**use_email**|**int**|O email é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_pager**|**int**|O pager é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**use_netsend**|**int**|É um pop-up de rede usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**has_email**|**int**|O operador tem um endereço de email:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**has_pager**|**int**|O operador tem um endereço de pager:<br /><br /> **1** = Sim<br /><br /> **0** = não|  
-|**has_netsend**|**int**|O operador tem uma notificação net send configurada.<br /><br /> **1** = Sim<br /><br /> **0** = não|  
+|**use_email**|**int**|O email é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**use_pager**|**int**|O pager é usado para enviar uma notificação ao operador:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**use_netsend**|**int**|É um pop-up de rede usado para notificar o operador:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**has_email**|**int**|O operador tem um endereço de email:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**has_pager**|**int**|O operador tem um endereço de pager:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**has_netsend**|**int**|O operador tem uma notificação net send configurada.<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
   
 ## <a name="remarks"></a>Comentários  
  Esse procedimento armazenado deve ser executado do banco de dados **msdb** .  
@@ -136,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_notification](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_notification](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_notification](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_notification ](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_notification ](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_notification ](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

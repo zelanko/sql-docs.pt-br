@@ -1,4 +1,5 @@
 ---
+description: sys.database_files (Transact-SQL)
 title: sys. database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
@@ -20,11 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c12fdc6ebdd5932715de28083ff5bbb9169d930
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c57ffe323ce471c8c5e524ff5b7ba7ee3a85adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447962"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86003033"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID do arquivo no banco de dados.|  
 |**file_guid**|**uniqueidentifier**|GUID do arquivo.<br /><br /> NULL = o banco de dados foi atualizado de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (válido para SQL Server 2005 e anterior).|  
-|**type**|**tinyint**|Tipo de arquivo:<br/><br /> 0 = linhas<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
+|**tipo**|**tinyint**|Tipo de arquivo:<br/><br /> 0 = linhas<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
 |**type_desc**|**nvarchar(60)**|Descrição do tipo de arquivo:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|O valor pode ser 0 ou maior que 0. Um valor igual a 0 representa o arquivo de log do banco de dados, e um valor maior que 0 representa a ID do grupo de arquivos no qual os dados estão armazenados.|  
 |**name**|**sysname**|Nome lógico do arquivo no banco de dados.|  
@@ -44,7 +46,7 @@ ms.locfileid: "86003033"
 |**state_desc**|**nvarchar(60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Tamanho atual do arquivo, em páginas de 8 KB.<br /><br /> 0 = Não aplicável<br /><br /> Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, o tamanho reflete o tamanho atual usado do contêiner.|  
 |**max_size**|**int**|Tamanho de arquivo máximo, em páginas de 8 KB:<br /><br /> 0 = Crescimento não é permitido.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, max_size reflete o tamanho máximo do contêiner.<br /><br /> Observe que os bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado relatarão-1 para o tamanho máximo do arquivo de log.|  
-|**growth**|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> >0 = o arquivo aumentará automaticamente.<br /><br /> Se is_percent_growth = 0, o incremento de crescimento estará em unidades de 8 KB de páginas, arredondado para o 64 KB mais próximo.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
+|**crescimento**|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> >0 = o arquivo aumentará automaticamente.<br /><br /> Se is_percent_growth = 0, o incremento de crescimento estará em unidades de 8 KB de páginas, arredondado para o 64 KB mais próximo.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
 |**is_media_read_only**|**bit**|1 = O arquivo está em mídia somente leitura.<br /><br /> 0 = O arquivo está em mídia de leitura/gravação.|  
 |**is_read_only**|**bit**|1 = Arquivo está marcado como somente leitura.<br /><br /> 0 = O arquivo está marcado como leitura/gravação.|  
 |**is_sparse**|**bit**|1 = O arquivo é um arquivo esparso.<br /><br /> 0 = O arquivo não é um arquivo esparso.<br /><br /> Para obter mais informações, consulte [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
@@ -81,11 +83,11 @@ FROM sys.database_files;
 Para obter mais informações ao usar o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , consulte [determinando o tamanho do banco de dados no banco de dados SQL do Azure V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) no blog da equipe do SQL Customer Advisory.
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de bancos de dados e arquivos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Exibição de catálogo do bancos de dados e de arquivos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Estados de arquivo](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Arquivos de banco de dados e grupos de arquivo](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   
