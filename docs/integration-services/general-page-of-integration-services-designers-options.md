@@ -1,4 +1,5 @@
 ---
+description: Página geral da opções dos Designers do Integration Services
 title: Página geral de Opções dos Designers do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 70f263d2df8e81f379857c88615b6056bc884b81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391112"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Página geral da opções dos Designers do Integration Services
 
@@ -59,6 +60,6 @@ ms.locfileid: "86914705"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral de segurança &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
- [Estender pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estendendo pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

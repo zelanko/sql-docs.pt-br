@@ -1,4 +1,5 @@
 ---
+description: Referência de erros e eventos (Integration Services)
 title: Referência de erros e eventos (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a35fad106dfac49d0e2f227c506658d91c420b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 814c5bb9915e448f97f0c769033d5fd695f76d95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391702"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referência de erros e eventos (Integration Services)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86914392"
   
 ## <a name="error-messages"></a>Mensagens de erro  
   
-|Nome simbólico de erro|DESCRIÇÃO|  
+|Nome simbólico de erro|Descrição|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Indica que o pacote não pode ser executado porque uma Transformação Cache está tentando gravar dados no cache na memória. No entanto, um gerenciador de conexões de Cache já carregou um arquivo de cache no cache na memória.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Indica que o pacote não pode ser executado porque ocorreu uma falha na conexão especificada.|  
@@ -55,7 +56,7 @@ ms.locfileid: "86914392"
 ## <a name="events-sqlispackage"></a>Eventos (SQLISPackage)  
  Para obter mais informações, consulte [Eventos registrados por um pacote do Integration Services](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
-|Evento|DESCRIÇÃO|  
+|Evento|Descrição|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Indica que um pacote foi iniciado.|  
 |SQLISPackage_12289|Indica que um pacote concluiu a execução com êxito.|  
@@ -69,7 +70,7 @@ ms.locfileid: "86914392"
 ## <a name="events-sqlisservice"></a>Eventos (SQLISService)  
  Para obter mais informações, consulte [Eventos registrados pelo serviço do Integration Services](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
-|Evento|DESCRIÇÃO|  
+|Evento|Descrição|  
 |-----------|-----------------|  
 |SQLISService_256|Indica que o serviço está prestes a ser iniciado.|  
 |SQLISService_257|Indica que o serviço foi iniciado.|  

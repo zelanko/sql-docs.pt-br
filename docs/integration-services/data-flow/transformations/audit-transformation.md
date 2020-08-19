@@ -1,4 +1,5 @@
 ---
+description: Transformação Auditoria
 title: Transformação Auditoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392272"
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
 
@@ -33,7 +34,7 @@ ms.locfileid: "86915731"
 ## <a name="system-variables"></a>Variáveis do sistema  
  A tabela a seguir descreve as variáveis do sistema que podem ser usadas por Auditar Transformação.  
   
-|Variável do sistema|Índice|DESCRIÇÃO|  
+|Variável do sistema|Índice|Descrição|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|O GUID que identifica a instância de execução do pacote.|  
 |**PackageID**|1|O identificador exclusivo do pacote.|  
@@ -70,7 +71,7 @@ ms.locfileid: "86915731"
  **Tipo de auditoria**  
  Selecione uma variável de sistema disponível para fornecer as informações de auditoria.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**GUID de instância de execução**|Insira o GUID que identifica com exclusividade a instância de execução do pacote.|  
 |**ID do Pacote**|Insira o GUID que identifica com exclusividade o pacote.|  

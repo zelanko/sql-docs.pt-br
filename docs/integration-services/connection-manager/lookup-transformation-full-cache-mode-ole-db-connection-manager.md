@@ -1,4 +1,5 @@
 ---
+description: Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB
 title: Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1b663d20972a8c4a788c9a12f6b9b5dcdf01307
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394202"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB
 
@@ -49,17 +50,17 @@ ms.locfileid: "86923113"
   
 7.  Na lista **Especificar como lidar com linhas sem entradas correspondentes** , selecione uma opção de tratamento de erro para as linhas sem entradas correspondentes.  
   
-8.  Na página Conexão, selecione um gerenciador de conexões da lista **Gerenciador de conexões OLE DB** ou clique em **Novo** para criar um novo gerenciador de conexões. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  Na página Conexão , selecione um gerenciador de conexões da lista **Gerenciador de conexões OLE DB** ou clique em **Novo** para criar um novo gerenciador de conexões. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Execute uma dessas tarefas:  
   
     -   Clique em **Usar uma tabela ou uma exibição**e selecione uma tabela ou exibição ou clique em **Nova** para criar uma tabela ou exibição.  
   
-         -ou-  
+         - ou -  
   
     -   Clique em **Use os resultados de uma consulta SQL**e crie uma consulta na janela **Comando SQL** ou clique em **Criar Consulta** para criar uma consulta usando as ferramentas gráficas que o **Construtor de Consultas** fornece.  
   
-         -ou-  
+         - ou -  
   
     -   Se preferir, clique em **Procurar** para importar uma instrução SQL de um arquivo.  
   

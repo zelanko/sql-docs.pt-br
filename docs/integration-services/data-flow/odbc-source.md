@@ -1,4 +1,5 @@
 ---
+description: Origem ODBC
 title: Origem ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392112"
 ---
 # <a name="odbc-source"></a>Origem ODBC
 
@@ -87,7 +88,7 @@ ms.locfileid: "86914968"
   
 -   [Extrair dados por meio da origem ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [Propriedades personalizadas da origem ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 ## <a name="odbc-source-editor-connection-manager-page"></a>Editor de Origem ODBC (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem ODBC** para selecionar o gerenciador de conexões ODBC para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -110,7 +111,7 @@ ms.locfileid: "86914968"
 #### <a name="data-access-mode"></a>Modo de acesso a dados  
  Especifique o método para selecionar dados da origem. As opções são mostradas na tabela a seguir:  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Nome da tabela|Recupere os dados de uma tabela ou exibição na fonte de dados ODBC. Quando você selecionar esta opção, selecione um valor na lista para o seguinte:|  
 ||**Nome da tabela ou exibição**: selecione uma tabela ou exibição disponível na lista ou digite uma expressão regular para identificar a tabela.|  
@@ -120,7 +121,7 @@ ms.locfileid: "86914968"
 ||Clique em **Procurar** para carregar a consulta SQL de um arquivo de texto.|  
 ||Clique em **Analisar consulta** para verificar a sintaxe do texto da consulta.|  
   
-#### <a name="preview"></a>Visualização  
+#### <a name="preview"></a>Versão Prévia  
  Clique em **Visualizar** para exibir até as primeiras 200 linhas dos dados extraídos da tabela ou exibição selecionada.  
   
 ## <a name="odbc-source-editor-columns-page"></a>Editor de Origem ODBC (página Colunas)
@@ -174,7 +175,7 @@ ms.locfileid: "86914968"
 #### <a name="truncation"></a>Truncation  
  Selecione como a origem ODBC deve tratar o truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
-#### <a name="description"></a>DESCRIÇÃO  
+#### <a name="description"></a>Descrição  
  Não usado.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Definir este valor para células selecionadas  

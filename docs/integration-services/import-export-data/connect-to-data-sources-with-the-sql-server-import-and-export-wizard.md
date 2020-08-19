@@ -1,4 +1,5 @@
 ---
+description: Conectar-se a fontes de dados com o Assistente de Importação e Exportação do SQL Server
 title: Conectar-se a fontes de dados (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94c0c2d183943c4fbbc2cbf0170120c3f9d680e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 17edb259e987dc7d6b3892171c62e79d91b2f5c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391472"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Conectar-se a fontes de dados com o Assistente de Importação e Exportação do SQL Server
 
@@ -31,7 +32,7 @@ Clique no link para saber mais sobre como se conectar a uma das seguintes fontes
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [Arquivos simples (arquivos de texto)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
--   [Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
+-   [Acesso](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Armazenamento de Blobs do Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
@@ -56,7 +57,7 @@ Aqui estão algumas outras tarefas básicas.
 
 -   **Inicie o assistente.** Se você está pronto para executar o assistente e apenas deseja saber como iniciá-lo, consulte [Iniciar o Assistente de Importação e Exportação do SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **Obtenha o assistente.** Se você desejar executar o assistente, mas não tiver o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, será possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+-   **Obter o assistente.** Se você desejar executar o assistente, mas não tiver o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, será possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="see-also"></a>Confira também
 [Escolher uma Fonte de Dados](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

@@ -1,4 +1,5 @@
 ---
+description: Contêineres do Integration Services
 title: Contêineres do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d8f17c8aa5b2e80939be7da8cbf81592bdd279
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cebc3b8d50578999fd59f42aa2d41f3d859cebac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393032"
 ---
 # <a name="integration-services-containers"></a>Contêineres do Integration Services
 
@@ -41,11 +42,11 @@ ms.locfileid: "86915432"
 ## <a name="container-types"></a>Tipos de contêineres  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece quatro tipos de contêineres para criar pacotes. A tabela a seguir lista os tipos de contêineres.  
   
-|Contêiner|DESCRIÇÃO|  
+|Contêiner|Descrição|  
 |---------------|-----------------|  
-|[Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)|Executa um fluxo de controle repetidamente usando um enumerador.|  
-|[Contêiner do Loop For](../../integration-services/control-flow/for-loop-container.md)|Executa um fluxo de controle repetidamente testando uma condição.|  
-|[Contêiner da Sequência](../../integration-services/control-flow/sequence-container.md)|Agrupa tarefas e contêineres em fluxos de controle que são subconjuntos do fluxo de controle de pacote.|  
+|[Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)|Executa um fluxo de controle repetidamente usando um enumerador.|  
+|[Contêiner Loop For](../../integration-services/control-flow/for-loop-container.md)|Executa um fluxo de controle repetidamente testando uma condição.|  
+|[Contêiner de sequência](../../integration-services/control-flow/sequence-container.md)|Agrupa tarefas e contêineres em fluxos de controle que são subconjuntos do fluxo de controle de pacote.|  
 |[Contêiner Host da Tarefa](../../integration-services/control-flow/task-host-container.md)|Fornece serviços a uma única tarefa.|  
   
  Pacotes e manipuladores de eventos também são tipos de contêineres. Para obter informações, consulte [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md) e [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
@@ -65,7 +66,7 @@ ms.locfileid: "86915432"
 |**ForcedExecutionValueType**|O tipo de dados de **ForcedExecutionValue**. O valor padrão dessa propriedade é **Int32**.|  
 |**ForceExecutionResult**|Um valor que especifica o resultado forçado da execução do pacote ou contêiner. Os valores são **None**, **Success**, **Failure**e **Completion**. O valor padrão para essa propriedade é **None**.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |**ForceExecutionValue**|Um valor Booliano que especifica se o valor de execução opcional do contêiner deve ser forçado a conter um valor específico. O valor padrão dessa propriedade é **False**.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
-|**ID**|É o GUID do contêiner que é atribuído quando o pacote é criado. Essa propriedade é somente leitura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
+|**ID**|É o GUID do contêiner que é atribuído quando o pacote é criado. Esta propriedade é somente para leitura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
 |**IsolationLevel**|É o nível de isolamento da transação de contêiner. Os valores são **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**e **Snapshot**. O valor padrão dessa propriedade é **Serializable**. Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**LocaleID**|É uma localidade do Microsoft Win32. O valor padrão dessa propriedade é a localidade do sistema operacional no computador local.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|É um valor que especifica o comportamento de log do contêiner. Os valores são **Disabled**, **Enabled**e **UseParentSetting**. O valor padrão dessa propriedade é **UseParentSetting**. Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
@@ -95,7 +96,7 @@ ms.locfileid: "86915432"
 ### <a name="event-handlers"></a>Manipuladores de eventos  
  Os manipuladores de eventos no nível de contêiner respondem a eventos gerados pelo contêiner ou aos objetos nele incluídos. Para obter mais informações, consulte [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### <a name="variables"></a>variáveis  
+### <a name="variables"></a>Variáveis  
  As variáveis usadas em contêineres incluem as variáveis do sistema no nível de contêiner fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e as variáveis definidas pelo usuário usadas pelo contêiner. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="break-points"></a>Pontos de interrupção  

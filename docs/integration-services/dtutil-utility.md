@@ -1,4 +1,5 @@
 ---
+description: utilitário dtutil
 title: Utilitário dtutil | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d200856e098317f3158c2ace61c8e7cbb0001e88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392152"
 ---
 # <a name="dtutil-utility"></a>utilitário dtutil
 
@@ -120,7 +121,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Códigos de saída do dtutil  
  O utilitário**dtutil** define um código de saída que alerta quando forem detectados erros de sintaxe, quando forem usados argumentos incorretos ou quando forem especificadas combinações de opções inválidas. Caso contrário, o utilitário indicará "A operação foi concluída com êxito". A tabela a seguir lista os valores que o utilitário **dtutil** pode definir ao sair.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|O utilitário foi executado com êxito.|  
 |1|O utilitário falhou.|  

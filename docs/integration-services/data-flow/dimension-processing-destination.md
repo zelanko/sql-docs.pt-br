@@ -1,4 +1,5 @@
 ---
+description: Destino de processamento de dimensões
 title: Destino de processamento de dimensões | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3458ea4fd1a8c82896fd1c06a76ee4bfd8074bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392632"
 ---
 # <a name="dimension-processing-destination"></a>Destino de processamento de dimensões
 
@@ -73,7 +74,7 @@ ms.locfileid: "86916705"
  **Método de processamento**  
  Selecione o método de processamento a aplicar à dimensão selecionada na lista. O valor padrão desta opção é **Completo**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Adicionar (incremental)**|Execute um processamento com incremento da dimensão.|  
 |**Full**|Execute um processamento completo da dimensão.|  
@@ -105,7 +106,7 @@ ms.locfileid: "86916705"
  **Ação de erro de chave**  
  Especifique como manipular registros que possuem valores de chave inaceitáveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Converta o valor de chave inaceitável em um valor **UnknownMember** .|  
 |**DiscardRecord**|Descarte o registro.|  
@@ -122,7 +123,7 @@ ms.locfileid: "86916705"
  **Ação se houver erro**  
  Caso tenha selecionado **Parar se houver erro**, especifique a ação a ser tomada quando o limite de erros for atingido.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**StopProcessing**|Pare o processamento.|  
 |**StopLogging**|Pare de registrar os erros.|  
@@ -130,7 +131,7 @@ ms.locfileid: "86916705"
  **Chave não encontrada**  
  Especifique a ação a ser tomada mediante erro de chave não encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -139,7 +140,7 @@ ms.locfileid: "86916705"
  **Chave duplicada**  
  Especifique a ação a ser tomada mediante erro de chave duplicada. Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -148,7 +149,7 @@ ms.locfileid: "86916705"
  **Chave nula convertida em desconhecida**  
  Especifique a ação a ser tomada quando uma chave nula foi convertida no valor **UnknownMember** . Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -157,14 +158,14 @@ ms.locfileid: "86916705"
  **Chave nula não permitida**  
  Especifique a ação a ser tomada quando chaves nulas não forem permitidas, e uma chave nula for encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
 |**ReportAndStop**|Relate o erro e pare o processamento.|  
   
  **Caminho do log de erros**  
- Para selecionar um destino, digite o caminho do log de erros ou clique no botão **Procurar(...)** .  
+ Para selecionar um destino, digite o caminho do log de erros ou clique no botão **Procurar(...)**.  
   
  **Procurar (...)**  
  Selecione um caminho para o log de erros.  

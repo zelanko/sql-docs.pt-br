@@ -1,4 +1,5 @@
 ---
+description: Loop em arquivos e tabelas do Excel com um contêiner do Loop Foreach
 title: Loop em arquivos e tabelas do Excel com um contêiner do Loop Foreach | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6bdcfd84f1b12c48e31bd9d56fe6db3e4155c543
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392622"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Loop em arquivos e tabelas do Excel com um contêiner do Loop Foreach
 

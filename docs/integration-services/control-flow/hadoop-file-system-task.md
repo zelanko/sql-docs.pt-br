@@ -1,4 +1,5 @@
 ---
+description: Tarefas do Sistema de Arquivos Hadoop
 title: Tarefa do Sistema de Arquivos Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 006c9d5ae0ade37cc3ecbe4d7912c49eafbf4069
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e2f94ab41aafe0b23af470555870ba4a93b918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393132"
 ---
 # <a name="hadoop-file-system-task"></a>Tarefas do Sistema de Arquivos Hadoop
 
@@ -33,7 +34,7 @@ ms.locfileid: "86918190"
 ## <a name="options"></a>Opções  
  Configure as opções a seguir na caixa de diálogo **Tarefa do Sistema de Arquivos Hadoop** .  
   
-|Campo|DESCRIÇÃO|  
+|Campo|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Hadoop**|Especifique um gerenciador de conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica onde os arquivos de destino estão hospedados.|  
 |**Caminho de arquivo do Hadoop**|Especifique o caminho de arquivo ou diretório no HDFS.|  

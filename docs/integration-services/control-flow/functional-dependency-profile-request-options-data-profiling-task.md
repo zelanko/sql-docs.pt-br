@@ -1,4 +1,5 @@
 ---
+description: Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
 title: Opções da solicitação do perfil Dependência Funcional (Tarefa Criação de Perfil de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393422"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
 
@@ -88,15 +89,15 @@ ms.locfileid: "86918200"
 > [!NOTE]  
 >  Quando você usa o curinga **(\*)** para **ColumnName**, **CompareOptions** é somente leitura e definido como **Default**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Padrão**|Classifica e compara dados com base na ordenação da coluna na tabela de origem.|  
+|**Default**|Classifica e compara dados com base na ordenação da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
  Se **DictionarySort**for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "Ã¥" é igual a "a".|  
@@ -111,7 +112,7 @@ ms.locfileid: "86918200"
  **ThresholdSetting**  
  Especifique a configuração de limite. O valor padrão dessa propriedade é **Especificado**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nenhuma**|Nenhum limite é especificado. A força de dependência funcional é informada independentemente do seu valor.|  
 |**Especificado**|Use o limite especificado em **FDStrengthThreshold**. A força de dependência funcional só será informada se for superior ao limite.|  

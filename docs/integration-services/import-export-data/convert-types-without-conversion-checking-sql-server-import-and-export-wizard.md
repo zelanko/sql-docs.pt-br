@@ -1,4 +1,5 @@
 ---
+description: Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server)
 title: Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e94009fd87412d9d015158e9a3cc4f3edde1ede
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5d7c53d4117d7634b6651069260c289657f82315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391462"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Converter tipos sem verificação de conversão (Assistente de Importação e Exportação do SQL Server)
 
@@ -37,7 +38,7 @@ O problema aqui é que o assistente não pode encontrar um arquivo de mapeamento
 
 As informações desta página não incluem o nome do arquivo de mapeamento ausente. Como o assistente não sabe se um arquivo existe para o provedor de dados especificado, ele não pode fornecer um nome para o arquivo ausente.
 
-## <a name="whats-next"></a>O que vem a seguir?  
+## <a name="whats-next"></a>E agora?  
  Após clicar em **Avançar** para continuar sem saber se as conversões de tipo de dados serão bem-sucedidas, a próxima página será **Salvar e Executar o Pacote**. Nesta página, especifique se deseja executar a operação de cópia imediatamente. Dependendo da sua configuração, você também poderá salvar o pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criado pelo assistente para personalizá-lo e reutilizá-lo posteriormente. Para obter mais informações, consulte [Salvar e Executar o Pacote](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Confira também

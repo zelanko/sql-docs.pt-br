@@ -1,4 +1,5 @@
 ---
+description: Tarefa do Hive do Hadoop
 title: Tarefa do Hive do Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a6a0bcdfcaa6e1ac287ef22c8515eef92c123d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8b6d1e651d6854fba575460a141f9e325e7f12f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393252"
 ---
 # <a name="hadoop-hive-task"></a>Tarefa do Hive do Hadoop
 
@@ -33,7 +34,7 @@ ms.locfileid: "86918187"
 ## <a name="options"></a>Opções  
  Configure as opções a seguir na caixa de diálogo **Editor de Tarefa do Hive do Hadoop** .  
   
-|Campo|DESCRIÇÃO|  
+|Campo|Descrição|  
 |-----------|-----------------|  
 |**Conexão do Hadoop**|Especifique um gerenciador de conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica onde o serviço WebHCat está hospedado.|  
 |**SourceType**|Especifique o tipo de fonte da consulta. Os valores disponíveis são **ScriptFile** e **DirectInput**.|  
