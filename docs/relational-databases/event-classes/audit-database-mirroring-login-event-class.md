@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Database Mirroring Login
 title: Classe de evento Audit Database Mirroring Login | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 577f5522e2f393c5fe91aca45ab08452853057aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b800c1fee12b34c17aeb28b252301bd13feef0f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428548"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Classe de evento Audit Database Mirroring Login
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85756114"
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Mirroring Login  
   
-|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Type|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Não usado nessa classe de evento.|10|Sim|  
 |**ClientProcessID**|**int**|Não usado nessa classe de evento.|9|Sim|  
@@ -54,7 +55,7 @@ ms.locfileid: "85756114"
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|DESCRIÇÃO|  
+|ID|Subclasse|Descrição|  
 |--------|--------------|-----------------|  
 |1|Login Success|Um evento Login Success informa que o processo de logon de espelhamento de banco de dados adjacente terminou com êxito.|  
 |2|Login Protocol Error|Um evento Login Protocol Error informa que o logon de espelhamento de banco de dados recebe uma mensagem bem formada, mas não válida para o estado atual do processo de logon. A mensagem pode ter sido perdida ou enviada fora de sequência.|  

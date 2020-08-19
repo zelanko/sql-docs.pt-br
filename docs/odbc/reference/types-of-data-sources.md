@@ -1,5 +1,6 @@
 ---
-title: Tipos de Fontes de Dados | Microsoft Docs
+description: Tipos de fontes de dados
+title: Tipos de fontes de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69ac838bebcbe9581cf2424a99b6b503af526fe7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 46662096833dddf4a094282ad453a7a0696f28b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81286728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428848"
 ---
 # <a name="types-of-data-sources"></a>Tipos de fontes de dados
-Existem dois tipos de fontes de dados: fontes de dados da máquina e fontes de dados de arquivos. Embora ambos contenham informações semelhantes sobre a origem dos dados, eles diferem na forma como essas informações são armazenadas. Por causa dessas diferenças, elas são usadas de maneiras um pouco diferentes.  
+Há dois tipos de fontes de dados: fontes de dados do computador e fontes de dados de arquivo. Embora ambos contenham informações semelhantes sobre a origem dos dados, eles diferem na forma como essas informações são armazenadas. Devido a essas diferenças, elas são usadas em modos um pouco diferentes.  
   
  Esta seção contém os seguintes tópicos.  
   
 -   [Fontes de dados do computador](../../odbc/reference/machine-data-sources.md)  
   
--   [Fontes de dados do arquivo](../../odbc/reference/file-data-sources.md)
+-   [Fontes de dados de arquivo](../../odbc/reference/file-data-sources.md)

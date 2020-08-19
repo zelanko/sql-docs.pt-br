@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados CLR grandes definidos pelo usuário (ODBC)
 title: Tipos de CLR grandes definidos pelo usuário (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428158"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos de dados CLR grandes definidos pelo usuário (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +137,7 @@ ms.locfileid: "86009749"
 |SQL_C_BINARY|Com suporte|  
 |SQL_C_CHAR|Porta|  
   
- \*Os dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
+ \* Os dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
   
  As conversões com suporte dos tipos de dados do C para SQL são as seguintes:  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009749"
 |SQL_C_BINARY|Com suporte|  
 |SQL_C_CHAR|Porta|  
   
- \*A conversão de cadeia de caracteres hexadecimal para dados binárias ocorre.  
+ \* A conversão de cadeia de caracteres hexadecimal para dados binárias ocorre.  
   
 ## <a name="sql_variant-support-for-udts"></a>Suporte SQL_VARIANT para UDTs  
  Não há suporte para UDTs em colunas de SQL_VARIANT.  
@@ -212,7 +214,7 @@ ms.locfileid: "86009749"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Os valores retornados para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Type|SubType|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Type|SubType|Tamanho|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -232,7 +234,7 @@ ms.locfileid: "86009749"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Os valores permitidos para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Type|SubType|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Type|SubType|Tamanho|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

@@ -1,4 +1,5 @@
 ---
+description: Restrições de chave primária e chave estrangeira
 title: Restrições de chave primária e chave estrangeira | Microsoft Doc
 ms.custom: ''
 ms.date: 07/25/2017
@@ -16,12 +17,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f9f47b2149bb308bf0e2ca8b5c975d24d11c37
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a7802c1bbf767ae45a2b25da21f8db3d8705c79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427498"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -130,7 +131,7 @@ ms.locfileid: "86004771"
 |Descreve como modificar relações de chave estrangeira.|[Modificar relações de chave estrangeira](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |Descreve como excluir relações de chave estrangeira.|[Excluir relações de chaves estrangeiras](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Descreve como exibir propriedades de chave estrangeira.|[Exibir propriedades de chave estrangeira](../../relational-databases/tables/view-foreign-key-properties.md)|  
-|Descreve como desabilitar restrições de chave estrangeira para replicação.|[Desabilitar restrições de chave estrangeira para a replicação](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
+|Descreve como desabilitar restrições de chave estrangeira para replicação.|[Desabilitar restrições FOREIGN KEY para replicação](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
 |Descreve como desabilitar restrições de chave estrangeira durante uma instrução INSERT e UPDATE.|[Desabilitar restrições de chave estrangeira com instruções INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   

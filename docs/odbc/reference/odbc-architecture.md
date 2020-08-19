@@ -1,4 +1,5 @@
 ---
+description: Arquitetura ODBC
 title: Arquitetura ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07435dc1a5fbe800f2260e914f315cfe93dd8d1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3afeb698d7eff9d09161a091e3de0194fea93ec2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428998"
 ---
 # <a name="odbc-architecture"></a>Arquitetura ODBC
 A arquitetura ODBC tem quatro componentes:  
@@ -41,4 +42,4 @@ A arquitetura ODBC tem quatro componentes:
   
 -   [Drivers](../../odbc/reference/drivers.md)  
   
--   [Fontes de Dados](../../odbc/reference/data-sources.md)
+-   [Fontes de dados](../../odbc/reference/data-sources.md)

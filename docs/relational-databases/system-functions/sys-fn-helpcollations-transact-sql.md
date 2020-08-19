@@ -1,4 +1,5 @@
 ---
+description: sys.fn_helpcollations (Transact-SQL)
 title: sys. fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -20,11 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91ff0f85ba496397025ea99012509edea9dd865
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427828"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -49,7 +51,7 @@ fn_helpcollations ()
 |Nome|**sysname**|Nome de ordenação padrão|  
 |Descrição|**nvarchar(1000)**|Descrição da ordenação.|  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a ordenações do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também dá suporte a um número limitado (<80) de agrupamentos chamados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos, que foram desenvolvidos antes dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos do Windows com suporte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os agrupamentos ainda têm suporte para compatibilidade com versões anteriores, mas não devem ser usados para novos trabalhos de desenvolvimento. Para obter mais informações sobre a ordenação do Windows, veja [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obter mais informações sobre ordenações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a ordenações do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dá suporte a um número limitado (<80) de agrupamentos chamados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos, que foram desenvolvidos antes dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos do Windows com suporte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os agrupamentos ainda têm suporte para compatibilidade com versões anteriores, mas não devem ser usados para novos trabalhos de desenvolvimento. Para obter mais informações sobre a ordenação do Windows, veja [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obter mais informações sobre ordenações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos
 

@@ -1,4 +1,5 @@
 ---
+description: sysmergearticles (Transact-SQL)
 title: sysmergearticles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b1678b9430127452fafa9e63cc2719efed088b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 677fc8a30daa3b9a921bb194c6f4d06635b43284
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427588"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,21 +33,21 @@ ms.locfileid: "85881366"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do artigo.|  
-|**type**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição ou exibição indexada (somente esquema).<br /><br /> **128** = função definida pelo usuário (somente esquema).<br /><br /> **160** = sinônimo (somente esquema).|  
+|**tipo**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição ou exibição indexada (somente esquema).<br /><br /> **128** = função definida pelo usuário (somente esquema).<br /><br /> **160** = sinônimo (somente esquema).|  
 |**objid**|**int**|O identificador de objeto.|  
 |**sync_objid**|**int**|A ID de objeto da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não é uma exibição; Use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
-|**ndescrição**|**nvarchar (255)**|A descrição breve do artigo.|  
+|**descrição**|**nvarchar(255)**|A descrição breve do artigo.|  
 |**pre_creation_command**|**tinyint**|A ação padrão a ser tomada quando o artigo é criado no banco de dados de assinatura:<br /><br /> **0 =** Nenhum – se a tabela já existir no Assinante, nenhuma ação será executada.<br /><br /> **1** = drop-remove a tabela antes de recriá-la.<br /><br /> **2** = Delete-emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.<br /><br /> **3** = truncar-igual a **2**, mas exclui páginas em vez de linhas. Porém, não exige uma cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|A ID da publicação à qual o artigo atual pertence.|  
 |**apelido**|**int**|O mapeamento de apelido para identificação do artigo.|  
 |**column_tracking**|**int**|Iindicates se o rastreamento de coluna está implementado para o artigo.|  
 |**status**|**tinyint**|Indica o status do artigo, que pode ser um dos seguintes:<br /><br /> **1** = não sincronizado – o script de processamento inicial para publicar a tabela será executado na próxima vez que o agente de instantâneo for executado.<br /><br /> **2** = ativo-o script de processamento inicial para publicar a tabela foi executado.<br /><br /> **5** = New_inactive-a ser adicionado.<br /><br /> **6** = New_active-a ser adicionado.|  
 |**conflict_table**|**sysname**|O nome da tabela local que contém os registros conflitantes para o artigo atual. Essa tabela é somente informativa e seu conteúdo pode ser modificado ou excluído por rotinas de resolução de conflitos personalizadas ou diretamente pelo administrador.|  
-|**creation_script**|**nvarchar (255)**|O script de criação para este artigo.|  
-|**conflict_script**|**nvarchar (255)**|O script de conflito para este artigo.|  
-|**article_resolver**|**nvarchar (255)**|O resolvedor de conflitos personalizado de nível de linha para este artigo.|  
+|**creation_script**|**nvarchar(255)**|O script de criação para este artigo.|  
+|**conflict_script**|**nvarchar(255)**|O script de conflito para este artigo.|  
+|**article_resolver**|**nvarchar(255)**|O resolvedor de conflitos personalizado de nível de linha para este artigo.|  
 |**ins_conflict_proc**|**sysname**|O procedimento usado para gravar em conflito com **conflict_table**.|  
 |**insert_proc**|**sysname**|O procedimento usado pelo resolvedor de conflitos padrão para inserir linhas durante a sincronização.|  
 |**update_proc**|**sysname**|O procedimento usado pelo resolvedor de conflitos padrão para atualizar linhas durante a sincronização.|  
@@ -64,7 +65,7 @@ ms.locfileid: "85881366"
 |**excluded_col_count**|**int**|O número de colunas excluídas.|  
 |**Columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary(128)**|Os bitmaps de colunas que foram excluídas da tabela de origem.|  
-|**resolver_info**|**nvarchar (255)**|O armazenamento de informações adicionais requeridas por resolvedores de conflitos personalizados.|  
+|**resolver_info**|**nvarchar(255)**|O armazenamento de informações adicionais requeridas por resolvedores de conflitos personalizados.|  
 |**view_sel_proc**|**nvarchar (290)**|O nome de um procedimento armazenado que o Merge Agent usa para popular inicialmente um artigo em uma publicação filtrada dinamicamente e para enumerar linhas alteradas em qualquer publicação filtrada.|  
 |**gen_cur**|**int**|O número gerado de alterações locais para a tabela base de um artigo.|  
 |**vertical_partition**|**int**|Especifica se a filtragem de coluna está habilitada em um artigo de tabela. **0** indica que não há nenhuma filtragem vertical e publica todas as colunas.|  
@@ -92,10 +93,10 @@ ms.locfileid: "85881366"
 |**preserve_rowguidcol**|**bit**|Indica se replicação usa uma coluna rowguid existente. Um valor de **1** significa que uma coluna ROWGUIDCOL existente é usada. **0** significa que a replicação adicionou a coluna ROWGUIDCOL.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergearticle ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergearticle ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
   
   

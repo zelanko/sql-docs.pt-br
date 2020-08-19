@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Database Object GDR
 title: Classe de evento Audit Database Object GDR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,20 +13,20 @@ ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b75ca42a906069969527d0803699e4c04b372dbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc47dbc1513716da3979111a60304fb1c9337d96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428608"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Classe de evento Audit Database Object GDR
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Audit Database Object GDR** ocorre quando uma instrução GRANT, REVOKE ou DENY tiver sido emitida para objetos de banco de dados, como assemblies e esquemas.  
+   A classe de evento **Audit Database Object GDR** ocorre quando uma instrução GRANT, REVOKE ou DENY tiver sido emitida para objetos de banco de dados, como assemblies e esquemas.  
   
 ## <a name="audit-database-object-gdr-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Object GDR  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  

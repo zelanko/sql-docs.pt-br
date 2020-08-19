@@ -1,4 +1,5 @@
 ---
+description: O Gerenciador de Driver
 title: O Gerenciador de driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 686a2b9673fb392f969a42f4cc86dd95a95668a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70508eba3f5fce81c6f6185f0ec6befbe0d33b26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428868"
 ---
 # <a name="the-driver-manager"></a>O Gerenciador de Driver
 O *Gerenciador de driver* é uma biblioteca que gerencia a comunicação entre aplicativos e drivers. Por exemplo, em plataformas Microsoft® Windows®, o Gerenciador de driver é uma DLL (biblioteca de vínculo dinâmico) escrita pela Microsoft e pode ser redistribuída por usuários do SDK redistribuível do MDAC 2,8 SP1.  
@@ -33,6 +34,6 @@ O *Gerenciador de driver* é uma biblioteca que gerencia a comunicação entre a
   
  Para a maior parte, o Gerenciador de driver apenas passa chamadas de função do aplicativo para o driver correto. No entanto, ele também implementa algumas funções (**Sqldatasourcees**, **sqldriveers**e **SQLGetFunctions**) e executa a verificação básica de erros. Por exemplo, o Gerenciador de driver verifica se os identificadores não são ponteiros nulos, se as funções são chamadas na ordem correta e se determinados argumentos de função são válidos. Para obter uma descrição completa dos erros verificados pelo Gerenciador de driver, consulte a seção de referência para cada função e [Apêndice B: tabelas de transição de estado ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- A função principal final do Gerenciador de driver é carregar e descarregar drivers. O aplicativo carrega e descarrega apenas o Gerenciador de driver. Quando desejar usar um driver específico, ele chamará uma função de conexão (**SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**) no Gerenciador de driver e especificará o nome de uma fonte de dados ou driver específico, como "accounting" ou "SQL Server". Usando esse nome, o Gerenciador de driver pesquisa as informações da fonte de dados para o nome do arquivo do driver, como sqlsrvr. dll. Em seguida, ele carrega o driver (supondo que ele ainda não esteja carregado), armazena o endereço de cada função no driver e chama a função de conexão no driver, que então se inicializa e se conecta à fonte de dados.  
+ A função principal final do Gerenciador de driver é carregar e descarregar drivers. O aplicativo carrega e descarrega apenas o Gerenciador de driver. Quando desejar usar um driver específico, ele chamará uma função de conexão (**SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**) no Gerenciador de driver e especificará o nome de uma fonte de dados ou driver específico, como "accounting" ou "SQL Server". Usando esse nome, o Gerenciador de driver pesquisa as informações da fonte de dados para o nome do arquivo do driver, como Sqlsrvr.dll. Em seguida, ele carrega o driver (supondo que ele ainda não esteja carregado), armazena o endereço de cada função no driver e chama a função de conexão no driver, que então se inicializa e se conecta à fonte de dados.  
   
  Quando o aplicativo é feito usando o driver, ele chama **SQLDisconnect** no Gerenciador de driver. O Gerenciador de driver chama essa função no driver, que se desconecta da fonte de dados. No entanto, o Gerenciador de driver mantém o driver na memória, caso o aplicativo se reconecte a ele. Ele descarrega o driver somente quando o aplicativo libera a conexão usada pelo driver ou usa a conexão para um driver diferente e nenhuma outra conexão usa o driver. Para obter uma descrição completa da função do Gerenciador de driver no carregamento e descarregamento de drivers, consulte [função do Gerenciador de driver no processo de conexão](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).

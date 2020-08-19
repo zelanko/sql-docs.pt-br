@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Exibir Políticas
 title: Caixa de diálogo Exibir Políticas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 93106e092c6f0b78f54a24af97ce5b0aa4101880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06ab429a5e3524485793bdf118f0c4039869f868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428018"
 ---
 # <a name="view-policies-dialog-box"></a>Caixa de diálogo Exibir Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

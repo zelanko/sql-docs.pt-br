@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (tipo de dados geometry)
 title: STLineFromText (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77d76ddaeab5952db35f6395d0d2b14a5b904290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427038"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *linestring_tagged_text*  
- É a representação WKT da instância de **geometryLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geometryLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryLineString** que você deseja retornar.  
@@ -48,9 +49,9 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC: **LineString**  
+ Tipo do OGC: **LineString**  
   
 ## <a name="remarks"></a>Comentários  
 Esse método gerará uma **FormatException** se a entrada não estiver bem formatada. Não há suporte para a notação de WKT de geometria calculada e de três dimensões dos recursos simples do OGC (Open Geospatial Consortium) para a Especificação do SQL versão 1.2.1. Veja exemplos da representação de valores Z (elevação) e M (medida) com suporte.
@@ -86,7 +87,7 @@ SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)
 SELECT @g.ToString();  
 ``` 
 ## <a name="see-also"></a>Consulte Também  
- [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

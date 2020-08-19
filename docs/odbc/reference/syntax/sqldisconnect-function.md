@@ -1,4 +1,5 @@
 ---
+description: Função SQLDisconnect
 title: Função SQLDisconnect | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5ea73919fbe90719d881fb43108ab1934933708
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 604f5af6f425506996e7e15b7db73878f3d8b2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428938"
 ---
 # <a name="sqldisconnect-function"></a>Função SQLDisconnect
 **Conformidade**  
@@ -49,7 +50,7 @@ SQLRETURN SQLDisconnect(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLDisconnect** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLDisconnect** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -58,7 +59,7 @@ SQLRETURN SQLDisconnect(
 |01002|Erro de desconexão|Ocorreu um erro durante a desconexão. No entanto, a desconexão foi bem-sucedida. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |08003|Conexão não aberta|(DM) a conexão especificada no argumento *ConnectionHandle* não foi aberta.|  
 |25000|Estado de transação inválido|Houve uma transação em andamento na conexão especificada pelo argumento *ConnectionHandle*. A transação permanece ativa.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *ConnectionHandle*. A função foi chamada e, antes de terminou a execução da [função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) , foi chamada no *ConnectionHandle*. Em seguida, a função foi chamada novamente no *ConnectionHandle*.<br /><br /> A função foi chamada e antes de concluir a execução de **SQLCancelHandle** foi chamada no *ConnectionHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para um *StatementHandle* associado ao *ConnectionHandle* e ainda estava em execução quando **SQLDisconnect** foi chamado.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *ConnectionHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para um *StatementHandle* associado ao *ConnectionHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.|  

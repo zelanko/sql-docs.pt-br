@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfo (Transact-SQL)
 title: sysmergepartitioninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44f44ede09eaf6eabfee9ef6b240e599c8eec744
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b987adef188e580b38f5f4df5b24b4f6ab22825b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427578"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85889251"
 |**partition_options**|**tinyint**|Define a forma pela qual os dados no artigo são particionados, o que habilita otimizações de desempenho quando todas as linhas pertencem a apenas uma partição ou assinatura. *partition_options* pode ser um dos valores a seguir.<br /><br /> **0** = a filtragem do artigo é estática ou não produz um subconjunto exclusivo de dados para cada partição, ou seja, uma partição de "sobreposição".<br /><br /> **1** = as partições estão sobrepostas e as atualizações DML feitas no Assinante não podem alterar a partição à qual uma linha pertence.<br /><br /> **2** = a filtragem do artigo produz partições não sobrepostas, mas vários assinantes podem receber a mesma partição.<br /><br /> **3** = a filtragem do artigo gera partições não sobrepostas que são exclusivas para cada assinatura.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

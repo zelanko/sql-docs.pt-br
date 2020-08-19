@@ -1,4 +1,5 @@
 ---
+description: sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 title: sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59d8214083046510d9c4d71724d1aab1c96b1e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427758"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +96,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
-|\<columns from @column_list>|**consoante**|As colunas identificadas no argumento **column_list** para o sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script para criar o wrapper. Se *column_list* for NULL, todas as colunas de origem rastreadas serão exibidas no conjunto de resultados.|  
+|\<columns from @column_list>|**varia**|As colunas identificadas no argumento **column_list** para o sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script para criar o wrapper. Se *column_list* for NULL, todas as colunas de origem rastreadas serão exibidas no conjunto de resultados.|  
 |__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para se aplicar a linha ao ambiente de destino. A operação irá variar com base no valor do argumento *row_filter_option* fornecido na seguinte chamada:<br /><br /> *row_filter_option* = ' all', ' tudo com máscara '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza a operação<br /><br /> *row_filter_option* = ' tudo com mesclagem '<br /><br /> 'D' – exclui a operação<br /><br /> 'M – insere ou atualiza a operação|  
 |\<columns from @update_flag_list>|**bit**|Um sinalizador de bit é nomeado acrescentando _uflag ao nome da coluna. O sinalizador assume um valor não nulo somente quando *row_filter_option* **= ' all com mask '** e \_ _CDC_OPERATION **= ' un '**. Ele é definido como 1 se a coluna correspondente foi modificada dentro da janela de consulta. Caso contrário, será 0.|  
   

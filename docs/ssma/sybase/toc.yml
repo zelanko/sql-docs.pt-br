@@ -10,7 +10,7 @@
   href: legal-notice-ssma-for-sybase.md
 - name: Novidades do SSMA
   href: what-s-new-in-ssma-for-sybase-sybasetosql.md
-- name: Instalando SSMA para cliente Sybase
+- name: Como instalar o SSMA para o cliente Sybase
   href: installing-ssma-for-sybase-client-sybasetosql.md
 - name: Novos Recursos de GUI no SSMA
   href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
@@ -20,7 +20,7 @@
   href: initializing-test-cases-sybasetosql.md
 - name: Trabalhar com arquivos de script de console de exemplo
   href: working-with-the-sample-console-script-files-sybasetosql.md
-- name: Migrando bancos de dados ASE do Sybase para o Banco de Dados SQL do Azure
+- name: Como migrar bancos de dados ASE do Sybase para o Banco de Dados SQL do Azure
   href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
 - name: Avaliar os objetos de banco de dados ASE do Sybase para conversão
   href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
@@ -56,13 +56,13 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: Selecionando e Configurando os Objetos Afetados
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: Conectar-se ao BD SQL do Azure
+- name: Como se conectar ao Banco de Dados SQL do Azure
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: Gerenciamento de senhas
   href: managing-passwords-sybasetosql.md
 - name: Definir opções do projeto
   href: setting-project-options-sybasetosql.md
-- name: Conectar-se ao BD SQL do Azure
+- name: Conectar-se ao Banco de Dados SQL do Azure
   href: connect-to-azure-sql-db-sybasetosql.md
 - name: Configurações de migração de dados
   href: data-migration-settings-sybasetosql.md
@@ -74,9 +74,9 @@
   href: troubleshooting-sybasetosql.md
 - name: Mapeando tipos de dados do Sybase ASE e do SQL Server
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-- name: Instalar os componentes do SSMA no SQL Server
+- name: Como instalar os componentes do SSMA no SQL Server
   href: installing-ssma-components-on-sql-server-sybasetosql.md
-- name: Migrar dados ASE do Sybase para o BD SQL do Azure
+- name: Como migrar dados ASE do Sybase para o Banco de Dados SQL do Azure
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
 - name: Conectar-se ao Sybase
   href: connect-to-sybase-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Synchronization
       href: project-settings-synchronization-sybasetosql.md
-    - name: BD SQL do Azure
+    - name: Banco de Dados SQL do Azure
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: (Migração
       href: project-settings-migration-sybasetosql.md

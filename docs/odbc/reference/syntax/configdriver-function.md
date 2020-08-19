@@ -1,4 +1,5 @@
 ---
+description: Função ConfigDriver
 title: Função ConfigDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a2da5fd5ce01bd97f13d7c8d805c615c1ac436a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d59765d1b6a6a662c02b459e07bac10895838a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428948"
 ---
 # <a name="configdriver-function"></a>Função ConfigDriver
 **Conformidade**  
@@ -61,7 +62,7 @@ BOOL ConfigDriver(
  Essa opção também pode ser específica de driver; nesse caso, o argumento *fRequest* para a primeira opção deve começar de ODBC_CONFIG_DRIVER_MAX + 1. O argumento *fRequest* para qualquer opção adicional também deve começar com um valor maior que ODBC_CONFIG_DRIVER_MAX + 1.  
   
  *lpszDriver*  
- Entrada O nome do driver, conforme registrado na chave Odbcinst. ini das informações do sistema.  
+ Entrada O nome do driver, conforme registrado na chave de Odbcinst.ini das informações do sistema.  
   
  *lpszArgs*  
  Entrada Uma cadeia de caracteres terminada em nulo que contém argumentos para um *fRequest*específico do driver.  
@@ -80,8 +81,8 @@ BOOL ConfigDriver(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **ConfigDriver** retorna false, um valor de * \*pfErrorCode* associado é Postado no buffer de erros do instalador por uma chamada para **SQLPostInstallerError** e pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **ConfigDriver** retorna false, um valor de * \* pfErrorCode* associado é Postado no buffer de erros do instalador por uma chamada para **SQLPostInstallerError** e pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

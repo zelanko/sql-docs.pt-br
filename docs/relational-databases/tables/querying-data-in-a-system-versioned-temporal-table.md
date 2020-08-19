@@ -1,4 +1,5 @@
 ---
+description: Consultando dados em uma tabela temporal com controle da versão do sistema
 title: Consultando dados em uma tabela temporal com controle de versão do sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 878db75acb871faa3f76ef6b3d3264c1bd78766e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4298cbc0c80937f01f37126c93b01f927c8cbd2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427478"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Como consultar dados em uma tabela temporal com controle da versão do sistema
 

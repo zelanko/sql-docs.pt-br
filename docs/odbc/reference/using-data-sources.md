@@ -1,4 +1,5 @@
 ---
+description: Usar fontes de dados
 title: Usando fontes de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 162f1c2bf8d75757ac2c29d60f675ac07ba8b00d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428828"
 ---
 # <a name="using-data-sources"></a>Usar fontes de dados
 As fontes de dados geralmente são criadas pelo usuário final ou por um técnico com um programa chamado *Administrador ODBC*. O Administrador ODBC solicita ao usuário o driver a ser usado e, em seguida, chama esse driver. O driver exibe uma caixa de diálogo que solicita as informações necessárias para se conectar à fonte de dados. Depois que o usuário inserir as informações, o driver a armazenará no sistema.  

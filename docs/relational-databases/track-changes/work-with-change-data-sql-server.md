@@ -1,4 +1,5 @@
 ---
+description: Trabalhar com dados de alterações (SQL Server)
 title: Trabalhar com dados de alterações
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427368"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabalhar com dados de alterações (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889091"
  Consulte o modelo Enumerar Alterações Delta Usando TRY CATCH para ver uma demonstração de como interceptar esses erros de TVF conhecidos e retornar informações mais pertinentes sobre a falha.  
   
 > [!NOTE]  
->  Para localizar modelos de Captura de Dados de Alterações no SQL Server Management Studio, no menu **Exibir** , clique em **Gerenciador de Modelos**, expanda **Modelos do SQL Server** e expanda a pasta **Captura de Dados de Alterações** .  
+>   Para localizar modelos de Change Data Capture no SQL Server Management Studio, no menu **Exibir** , clique em **Gerenciador de Modelos**, expanda **Modelos do SQL Server** e expanda a pasta **Change Data Capture** .  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> Funções de consulta  
  Dependendo das características da tabela de origem que estiver sendo rastreada e da configuração da instância de captura, serão geradas uma ou duas TVFs para consultar dados de alteração.  

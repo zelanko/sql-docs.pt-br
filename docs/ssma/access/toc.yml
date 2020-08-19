@@ -18,7 +18,7 @@
   href: save-metadata-accesstosql.md
 - name: Conectar-se ao SQL Server
   href: connecting-to-sql-server-accesstosql.md
-- name: Migrar dados do Access para o BD SQL do Azure
+- name: Como migrar dados do Access para o Banco de Dados SQL do Azure
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: Criando e gerenciando projeto
   href: creating-and-managing-projects-accesstosql.md
@@ -38,7 +38,7 @@
   href: new-project-ssma-accesstosql.md
 - name: Opções de linha de comando no Console do SSMA
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: Conectar-se ao BD SQL do Azure
+- name: Conectar-se ao Banco de Dados SQL do Azure
   href: connect-to-azure-sql-db-accesstosql.md
 - name: Relatório de avaliação
   href: assessment-report-accesstosql.md
@@ -60,7 +60,7 @@
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: Criar os arquivos de conexão de servidor
   href: creating-the-server-connection-files-accesstosql.md
-- name: Vincular aplicativos do Access ao Banco de Dados SQL do Azure
+- name: Como vincular aplicativos do Access ao Banco de Dados SQL do Azure
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: Criar arquivos de valor da variável
   href: creating-variable-value-files-accesstosql.md
@@ -68,7 +68,7 @@
   href: edit-type-mapping-accesstosql.md
 - name: Exportar um inventário do Access
   href: exporting-an-access-inventory-accesstosql.md
-- name: Migrar bancos de dados do Access para o BD SQL do Azure
+- name: Como migrar bancos de dados do Access para o Banco de Dados SQL do Azure
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: Mapeando bancos de dados de origem e destino
   href: mapping-source-and-target-databases-accesstosql.md
@@ -92,7 +92,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: Teclas de atalho
   href: shortcut-keys-accesstosql.md
-- name: Conectar-se ao BD SQL do Azure
+- name: Como se conectar ao Banco de Dados SQL do Azure
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: Definir as opções de conversão e de migração
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -112,7 +112,7 @@
       href: project-settings-gui-accesstosql.md
     - name: Conversão
       href: project-settings-conversion-accesstosql.md
-    - name: BD SQL do Azure
+    - name: Banco de Dados SQL do Azure
       href: project-settings-azure-sql-db-accesstosql.md
     - name: Mapeamento de tipo
       href: project-settings-type-mapping-accesstosql.md

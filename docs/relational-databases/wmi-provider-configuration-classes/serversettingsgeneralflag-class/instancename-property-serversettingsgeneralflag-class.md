@@ -1,4 +1,5 @@
 ---
+description: Propriedade InstanceName (classe ServerSettingsGeneralFlag)
 title: Propriedade InstanceName (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3da182870e5d2c674ce54269cedfc288d805efb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 30e8719aac08d87d4b4ce4f86f8766c46ca397b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427238"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>Propriedade InstanceName (classe ServerSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

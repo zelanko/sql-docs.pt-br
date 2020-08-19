@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
+  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606820"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86485297"
 landingContent:
 - title: Aprendizado de máquina no SQL Server
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Usar o R no T-SQL
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: Usar os Serviços de Machine Learning nas ferramentas do R
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: ML em clusters de Big Data
+    - text: Prever aluguel de esquis com árvore de decisão
+      url: tutorials/r-predictive-model-introduction.md
+    - text: Categorizar clientes usando cluster K-means
+      url: tutorials/r-clustering-model-introduction.md
+- title: Instância Gerenciada de SQL do Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Serviços de Machine Learning na Instância Gerenciada de SQL do Azure
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Diferenças principais entre o ML na Instância Gerenciada de SQL do Azure e o SQL Server
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: Implantar e fazer previsões com um modelo ONNX na Instância Gerenciada de SQL do Azure
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: Banco de Dados SQL do Azure no Edge
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Aprendizado de máquina e IA com ONNX no Banco de Dados SQL no Edge
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: Implantar e fazer previsões com um modelo ONNX no Banco de Dados SQL no Edge
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Extensão de ML do Azure Data Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: O que é a extensão de Machine Learning para o Azure Data Studio?
+      url: ../azure-data-studio/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: Gerenciar pacotes no banco de dados
+      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+    - text: Fazer previsões
+      url: ../azure-data-studio/machine-learning-extension-predictions.md
+    - text: Importar ou exibir modelos
+      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+- title: Clusters de Big Data do SQL Server
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: Integrar o Spark com o SQL Server
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: ML no Azure Synapse Analytics
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: Criar, desenvolver e manter notebooks do Azure Synapse Studio
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: ML no Banco de Dados SQL do Azure no Edge
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Aprendizado de máquina e IA com ONNX no Banco de Dados SQL no Edge
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: Implantar e fazer previsões com um modelo ONNX no Banco de Dados SQL no Edge
-      url: /azure/sql-database-edge/deploy-onnx

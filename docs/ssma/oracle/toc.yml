@@ -10,7 +10,7 @@
   href: sql-server-linux-convert-from-oracle.md
 - name: Aviso legal
   href: legal-notice-ssma-for-oracle.md
-- name: Instalando SSMA para cliente Oracle
+- name: Como instalar o SSMA para um cliente Oracle
   href: installing-ssma-for-oracle-client-oracletosql.md
 - name: Novos Recursos de GUI no SSMA
   href: new-gui-features-in-ssma-for-oracle-oracletosql.md
@@ -82,7 +82,7 @@
   href: assessing-oracle-schemas-for-conversion-oracletosql.md
 - name: Inicializando Caso de Teste
   href: initializing-test-cases-oracletosql.md
-- name: Instalar os componentes do SSMA no SQL Server
+- name: Como instalar os componentes do SSMA no SQL Server
   href: installing-ssma-components-on-sql-server-oracletosql.md
 - name: Finalizando a Preparação de Caso de Teste
   href: finishing-test-case-preparation-oracletosql.md

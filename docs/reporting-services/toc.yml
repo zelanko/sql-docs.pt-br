@@ -1053,7 +1053,7 @@
           href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
         - name: Conexões de conexão de lista do SharePoint
           href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-        - name: Tipo de conexão do SQL Azure
+        - name: Tipo de conexão do SQL do Azure
           href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
         - name: Tipo de conexão OLE DB
           href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md

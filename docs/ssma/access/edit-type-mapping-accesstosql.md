@@ -1,4 +1,5 @@
 ---
+description: Editar mapeamento de tipo (AccessToSQL)
 title: Editar mapeamento de tipo (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8a5406bd58e62e34bfaaa6046bd2feb9f58f73a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 246c8187a35b5990497712ab5b83ea4cb3acf59f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427058"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Editar mapeamento de tipo (AccessToSQL)
 A caixa de diálogo **Editar mapeamento de tipo** permite especificar como os tipos são mapeados entre os objetos de banco de dados de origem e de destino.  
@@ -44,6 +45,6 @@ Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de da
   
 Se o tipo de dados for de comprimento variável, o campo a seguir aparecerá em **tipo de destino**:  
   
-**Substituir por**  
+**Replace with**  
 Especifique o comprimento de destino para esse mapeamento. Por exemplo, para o tipo de dados **nvarchar** , você pode inserir 20 para especificar que o tipo de dados de origem especificado deve ser mapeado para **nvarchar (20)**.  
   

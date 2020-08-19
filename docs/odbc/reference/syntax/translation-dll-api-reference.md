@@ -1,4 +1,5 @@
 ---
+description: Referência de API de DLL de conversão
 title: Referência de API de DLL de tradução | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69033376-c315-4f52-8ee5-f23f07694bf8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 11889082fd9eb989f696520ef19749aff2be9f75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aab62467bf2e48231dc7d638720e922665f585f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428888"
 ---
 # <a name="translation-dll-api-reference"></a>Referência de API de DLL de conversão
 Esta seção descreve a sintaxe da API da DLL de tradução, que consiste em duas funções: **SQLDriverToDataSource** e **SQLDataSourceToDriver**. Essas funções devem ser incluídas na DLL que executa a tradução para o driver.  

@@ -1,4 +1,5 @@
 ---
+description: Usar colunas esparsas
 title: Usar colunas esparsas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2016
@@ -15,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee869a8bc2842bcc56fd0e8ab79c7668c28b50a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2b1acccba4fe2f9a9285160bfc25071d7399873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427458"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "85999866"
 |Tipo de dados|Bytes não esparsos|Bytes esparsos|Percentual de NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |**datetime2(0)**|6|10|57%|  
-|**datetime2(7)**|8|12|52%|  
+|**Datetime2 (7)**|8|12|52%|  
 |**time(0)**|3|7|69%|  
 |**time(7)**|5|9|60%|  
 |**datetimetoffset(0)**|8|12|52%|  
@@ -113,7 +114,7 @@ ms.locfileid: "85999866"
 |**xml**|2*|4*|60%|  
 |**hierarchyid**|2*|4*|60%|  
   
- \* O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
+ * O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
   
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga na memória necessária para atualizações em colunas esparsas  
  Quando for criar tabelas com colunas esparsas, tenha em mente que uma sobrecarga adicional de 2 bytes é necessária para cada coluna esparsa não nula na tabela quando uma linha está sendo atualizada. Em resultado dessa necessidade de memória adicional, as atualizações podem falhar inesperadamente com o erro 576 quando o tamanho total da linha, incluindo essa sobrecarga de memória, excede 8019, e nenhuma coluna pode ser retirada da linha.  

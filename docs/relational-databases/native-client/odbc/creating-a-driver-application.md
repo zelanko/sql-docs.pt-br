@@ -1,4 +1,5 @@
 ---
+description: Criar um aplicativo da driver
 title: Criar um Aplicativo
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,11 +25,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428188"
 ---
 # <a name="creating-a-driver-application"></a>Criar um aplicativo da driver
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,19 +80,19 @@ ms.locfileid: "86009770"
   
  Muitos drivers ODBC, incluindo o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client, oferecem extensões ODBC específicas do driver. Para aproveitar as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensões específicas do driver ODBC do Native Client, um aplicativo deve incluir o arquivo de cabeçalho sqlncli. h. Esse arquivo de cabeçalho contém:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de conexão específicos do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Atributos de conexão específicos do driver ODBC do Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de instrução específicos do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Atributos de instrução específicos do driver ODBC do Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de coluna específicos do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Atributos de coluna específicos do driver ODBC do Native Client.  
   
 -   Tipos de dados específicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Tipos de dados definidos pelo usuário específicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Tipos específicos de [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) do driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tipos específicos de [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) do driver ODBC do Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Campos de diagnóstico de driver ODBC do Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Campos de diagnóstico de driver ODBC do Native Client.  
   
 -   Códigos de função dinâmica de diagnóstico específicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

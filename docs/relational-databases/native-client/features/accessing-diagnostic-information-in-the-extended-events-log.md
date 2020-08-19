@@ -1,4 +1,5 @@
 ---
+description: Acessando SQL Server Native Client informações de diagnóstico no log de eventos estendidos
 title: Informações de diagnóstico no log de eventos estendidos
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6ab3874f5ad5260f4a69b3a35001e04414cbc34
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2bd0d3a60cfe69ba593be4fae9dec70f64b074de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428198"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>Acessando SQL Server Native Client informações de diagnóstico no log de eventos estendidos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

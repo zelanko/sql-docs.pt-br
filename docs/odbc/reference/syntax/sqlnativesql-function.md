@@ -1,4 +1,5 @@
 ---
+description: Função SQLNativeSql
 title: Função SQLNativeSql | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9666bc767affb3b6bb624c416614079193d4b921
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbdf43d1120065f981d43e58490e328c6ef7691c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428898"
 ---
 # <a name="sqlnativesql-function"></a>Função SQLNativeSql
 **Conformidade**  
@@ -62,15 +63,15 @@ SQLRETURN SQLNativeSql(
  Se *OutStatementText* for NULL, *TextLength2Ptr* ainda retornará o número total de caracteres (excluindo o caractere de terminação nula para dados de caracteres) disponíveis para retornar no buffer apontado por *OutStatementText*.  
   
  *BufferLength*  
- Entrada Número de caracteres no \*buffer *OutStatementText* . Se o valor retornado em * \*InStatementText* for uma cadeia de caracteres Unicode (ao chamar **SQLNativeSqlW**), o argumento *BufferLength* deverá ser um número par.  
+ Entrada Número de caracteres no buffer \* *OutStatementText* . Se o valor retornado em * \* InStatementText* for uma cadeia de caracteres Unicode (ao chamar **SQLNativeSqlW**), o argumento *BufferLength* deverá ser um número par.  
   
  *TextLength2Ptr*  
- Der Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo a terminação nula) disponíveis para retornar \*em *OutStatementText*. Se o número de caracteres disponíveis para retornar for maior ou igual a *BufferLength*, a cadeia de caracteres SQL traduzida em \* *OutStatementText* será truncada para *BufferLength* menos o comprimento de um caractere de terminação nula.  
+ Der Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo a terminação nula) disponíveis para retornar em \* *OutStatementText*. Se o número de caracteres disponíveis para retornar for maior ou igual a *BufferLength*, a cadeia de caracteres SQL traduzida em \* *OutStatementText* será truncada para *BufferLength* menos o comprimento de um caractere de terminação nula.  
   
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLNativeSql** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLNativeSql** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -81,7 +82,7 @@ SQLRETURN SQLNativeSql(
 |08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado falhou antes da função concluir o processamento.|  
 |22007|Formato de data e hora inválido|**InStatementText* continha uma cláusula escape com um valor de data, hora ou timestamp inválido.|  
 |24.000|Estado de cursor inválido|O cursor referido na instrução foi posicionado antes do início do conjunto de resultados ou após o final do conjunto de resultados. Esse erro não pode ser retornado por um driver que tem uma implementação de cursor do DBMS nativo.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY009|Uso inválido de ponteiro nulo|(DM) **InStatementText* era um ponteiro nulo.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o *ConnectionHandle* e ainda estava em execução quando essa função foi chamada.|  

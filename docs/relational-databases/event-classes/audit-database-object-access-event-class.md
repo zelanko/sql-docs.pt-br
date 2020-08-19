@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Database Object Access
 title: Classe de evento Audit Database Object Access | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,20 +13,20 @@ ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8e4d40ab803dd280fc0a05a21bf08c35d9f2e88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90e999df0c995d1b9ab4104a7af87eaa4984d1ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428568"
 ---
 # <a name="audit-database-object-access-event-class"></a>Classe de evento Audit Database Object Access
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Audit Database Object Access** ocorre quando são acessados objetos de banco de dados, como esquemas.  
+   A classe de evento **Audit Database Object Access** ocorre quando objetos de banco de dados, assim como esquemas, são acessados.  
   
 ## <a name="audit-database-object-access-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Object Access  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  

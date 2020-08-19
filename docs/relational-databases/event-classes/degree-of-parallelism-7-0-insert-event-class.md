@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Degree of Parallelism (7.0 Insert)
 title: Classe de evento Degree of Parallelism (7.0 Insert) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,22 +13,22 @@ ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d6b43d2ffc2ea3c41ebe9a17b5cb9dc5d01471
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97800bdd8137d20fabec298bce235bd2a4232b79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428578"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe de evento Degree of Parallelism (7.0 Insert)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Degree of Parallelism (7.0 Insert)** ocorre sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SELECT, INSERT, UPDATE ou DELETE.  
+   A classe de evento **Degree of Parallelism (7.0 Insert)** ocorre sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SELECT, INSERT, UPDATE ou DELETE.  
   
  Quando a classe de evento for incluída em um rastreamento, a quantidade de sobrecarga pode impedir o desempenho se esses eventos ocorrem com frequência. Para minimizar a sobrecarga, limite o uso desta classe de evento em rastreamentos que monitoram brevemente problemas específicos.  
   
 ## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Colunas de dados de classe de evento Degree of Parallelism (7.0 Insert)  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BinaryData**|**imagem**|Número de CPUs usadas para completar o processo com base nos seguintes valores:<br /><br /> 0x00000000, indica um plano em série sendo executado em série.<br /><br /> 0x01000000, indica um plano paralelo sendo executado em série.<br /><br /> >= 0x02000000 indica um plano paralelo sendo executado em paralelo.|2|Não|  

@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo 'Configurações do Editor' de Replicação do SQL Server
 title: "'Configurações do Editor' (SSMS) | Microsoft Docs"
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -16,16 +17,16 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a6232fc78b4c9b1d68a9cc96e6fed69138e5075f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427918"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>Caixa de diálogo 'Configurações do Editor' de Replicação do SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  A caixa de diálogo **Configurações do Publicador** permite alterar configurações para Publicadores adicionados ao painel esquerdo no Replication Monitor.  
+   A caixa de diálogo **Configurações do Publicador** permite alterar configurações para Publicadores adicionados ao painel esquerdo no Replication Monitor.  
   
 ## <a name="options"></a>Opções  
  **Conexão do Publicador**  
@@ -46,7 +47,7 @@ ms.locfileid: "85678484"
  **Mostrar este Publicador no grupo a seguir**  
  Selecione um grupo de Publicadores na lista. O Publicador é exibido nesse grupo no painel esquerdo. Grupos fornecem uma forma de organizar Publicadores e não causam nenhum efeito em funções de replicação.  
   
- **Novo grupo**  
+ **Novo Grupo**  
  Clique para criar um novo grupo de Publicadores. Um grupo de Publicadores é um modo conveniente de organizar Publicadores no Replication Monitor. Grupos não afetam a replicação de dados ou a relação entre servidores em uma topologia de replicação.  
   
 ## <a name="see-also"></a>Consulte Também  

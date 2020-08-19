@@ -1,4 +1,5 @@
 ---
+description: Resumo de funções de DLL da conversão
 title: Resumo da função de DLL de tradução | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f0cb262ba9461fe9b10a1223315bcd1360112c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0955faeea13cc44da8ca1856cf178076c3e9fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428878"
 ---
 # <a name="translation-dll-function-summary"></a>Resumo de funções de DLL da conversão
 A tabela a seguir descreve as funções de DLL de tradução. Para obter mais informações sobre a sintaxe e a semântica para cada função, consulte [referência da função DLL de tradução](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

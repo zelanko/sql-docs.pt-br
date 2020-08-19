@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Change Database Owner
 title: Classe de evento Audit Change Database Owner | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,20 +13,20 @@ ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9d850cc7b19d3470fe4e57f4b81e7b6eda13cd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 199c4ab91dd39e19bfd37d4336878bab711c6b4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428648"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Classe de evento Audit Change Database Owner
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Audit Change Database Owner** ocorre quando você usa a instrução ALTER AUTHORIZATION para alterar o proprietário de um banco de dados e as permissões necessárias para fazer isso estão marcadas.  
+   A classe de evento **Audit Change Database Owner** ocorre quando você usa a instrução ALTER AUTHORIZATION para alterar o proprietário de um banco de dados e as permissões necessárias para fazer isso estão marcadas.  
   
 ## <a name="audit-change-database-owner-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Change Database Owner  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

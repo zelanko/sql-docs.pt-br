@@ -1,4 +1,5 @@
 ---
+description: sys.sysdepends (Transact-SQL)
 title: O sys.sysdepende (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37992fea6207c8a125756f313c0460b2cf1b22b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 31842603ba31d2ff6b7e631f0652b1f86da469c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427908"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,8 +52,8 @@ ms.locfileid: "85894761"
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Exibições de compatibilidade &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_depends](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   
+ [Exibições de compatibilidade &#40;&#41;Transact-SQL ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_depends ](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   
  [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

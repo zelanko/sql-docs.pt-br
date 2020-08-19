@@ -1,4 +1,5 @@
 ---
+description: Erro de Dispositivo Não Pronto
 title: Erro de dispositivo não pronto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: aac655288c15e0edc906f90a82f34f8dd7151ec1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c522e7e6bb8a2dc8e75173d7cde0ad97d7997ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428078"
 ---
 # <a name="device-not-ready-error"></a>Erro de Dispositivo Não Pronto
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

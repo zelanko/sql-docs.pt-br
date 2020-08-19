@@ -1,4 +1,5 @@
 ---
+description: espelhamento de banco de dados ALTER DATABASE (Transact-SQL)
 title: Espelhamento de banco de dados de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb2c9c381bc02c043e253aa66f43001f48ebd9e4
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 03bd40c682b2d0ad36952c7f59c2b3d95d16a5e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426908"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Espelhamento de banco de dados de ALTER DATABASE (Transact-SQL)
 

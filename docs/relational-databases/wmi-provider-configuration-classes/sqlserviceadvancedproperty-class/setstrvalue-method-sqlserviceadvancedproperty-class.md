@@ -1,4 +1,5 @@
 ---
+description: Método SetStrValue (classe SqlServiceAdvancedProperty)
 title: Método SetStrValue (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b7e2ffa75190d8699e0110664dd179ab3f096ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a0a552b8d6544a5ea42c175e04396d3dcc48a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427118"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Método SetStrValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Define o valor da cadeia de caracteres de uma propriedade.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

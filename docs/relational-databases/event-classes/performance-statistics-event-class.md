@@ -1,4 +1,5 @@
 ---
+description: classe de evento Performance Statistics
 title: Classe de evento Performance Statistics | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef18eed87b0a01c16ad71285ff8adf1386383172
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88c0c8d1365d91489a7485e6eabed759b0515716
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428438"
 ---
 # <a name="performance-statistics-event-class"></a>classe de evento Performance Statistics
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85753326"
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULO|52|Sim|  
 |BinaryData|**imagem**|NULO|2|Sim|  
@@ -47,7 +48,7 @@ ms.locfileid: "85753326"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|**imagem**|O XML binário do plano compilado.|2|Sim|  
@@ -71,7 +72,7 @@ ms.locfileid: "85753326"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|**imagem**|O XML binário do plano compilado.|2|Sim|  
@@ -94,7 +95,7 @@ ms.locfileid: "85753326"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|**imagem**|NULO|2|Sim|  
@@ -114,7 +115,7 @@ ms.locfileid: "85753326"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULO|52|Sim|  
 |BinaryData|**imagem**|NULO|2|Sim|  
@@ -134,7 +135,7 @@ ms.locfileid: "85753326"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULO|52|Sim|  
 |BinaryData|**imagem**|NULO|2|Sim|  

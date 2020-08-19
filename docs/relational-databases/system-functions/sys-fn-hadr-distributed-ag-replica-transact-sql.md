@@ -1,4 +1,5 @@
 ---
+description: sys. fn_hadr_distributed_ag_replica (Transact-SQL)
 title: sys. fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49eabca032ab109be1f0aecb1d830c83d9305a7f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6b7dc6aacf18415b11f5a32e464a57fbbadadc07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427768"
 ---
 # <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -67,7 +69,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções de Grupos de Disponibilidade AlwaysOn &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [Funções de Grupos de Disponibilidade AlwaysOn &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Grupos de disponibilidade distribuídos &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   

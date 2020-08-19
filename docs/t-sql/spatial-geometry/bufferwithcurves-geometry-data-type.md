@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (tipo de dados geometria)
 title: BufferWithCurves (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49d71c0e7e149ed66d699e04126cdd1f6f9b726
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9a3a8ff7006a2ac48f8b357cd820d0c47e162885
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427068"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de dados geometria)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -29,16 +30,17 @@ ms.locfileid: "87442336"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos  
  *distance*  
  É um **float** que indica a distância máxima em que os pontos que formam o buffer podem estar da instância de **geometry**.  
   
-## <a name="return-types"></a>Tipos de retorno  
+## <a name="return-types"></a>Tipos de retorno
 Tipo de retorno do SQL Server: **geometry**  
   
  Tipo de retorno do CLR: **SqlGeometry**  
@@ -62,7 +64,7 @@ Tipo de retorno do SQL Server: **geometry**
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
 |--------------------|---------------------|---------------------------|  
 |distância < 0|Zero ou um|Instância de **GeometryCollection** vazia|  
-|distância < 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo. **Observação:** um buffer negativo pode criar uma **GeometryCollection** vazia|  
+|distância < 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo. **Observação:** Um buffer negativo pode criar uma **GeometryCollection** vazia|  
 |distância = 0|Todas as dimensões|Cópia da instância de **geometry** de invocação|  
 |distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   

@@ -1,4 +1,5 @@
 ---
+description: Perfis do Agente de Replicação
 title: Perfis do agente de replicação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 95166948ff2d447eaac439442230af91d75c1bf3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 49fc84b9ac85d17d85f63372c8bdd57d0619413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427978"
 ---
 # <a name="replication-agent-profiles"></a>Perfis do Agente de Replicação
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86922833"
 ## <a name="snapshot-agent-profiles"></a>Perfis do Agente de Instantâneo  
  A tabela abaixo mostra os parâmetros definidos no perfil padrão para o Agente de Instantâneo. Para obter mais informações sobre esses parâmetros, consulte [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  
   
-||padrão|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -56,7 +57,7 @@ ms.locfileid: "86922833"
 ## <a name="log-reader-agent-profiles"></a>Perfis do Log Reader Agent  
  A tabela abaixo mostra os parâmetros definidos nos perfis para o Log Reader Agent. Cada coluna na tabela representa um perfil nomeado. Para obter mais informações sobre esses parâmetros, consulte [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
-||padrão|histórico detalhado|  
+||default|histórico detalhado|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -68,7 +69,7 @@ ms.locfileid: "86922833"
 ## <a name="distribution-agent-profiles"></a>Perfis do Distribution Agent  
  A tabela abaixo mostra os parâmetros definidos nos perfis para o Distribution Agent. Cada coluna na tabela representa um perfil nomeado. Para obter mais informações sobre esses parâmetros, consulte [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|Continuar em erros de consistência de dados|Perfil de distribuição para fluxo contínuo do banco de dados OLE|  
+||default|histórico detalhado|Gerenciador de Sincronização do Windows|Continuar em erros de consistência de dados|Perfil de distribuição para fluxo contínuo do banco de dados OLE|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -89,7 +90,7 @@ ms.locfileid: "86922833"
 ## <a name="merge-agent-profiles"></a>Perfis do Merge Agent  
  A tabela abaixo mostra os parâmetros definidos nos perfis para o Merge Agent. Cada coluna na tabela representa um perfil nomeado. Para obter mais informações sobre esses parâmetros, consulte [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
-||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|validação do número de linhas.|validação do número de linhas e da soma de verificação|vínculo lento|servidor a servidor de alto volume|  
+||default|histórico detalhado|Gerenciador de Sincronização do Windows|validação do número de linhas.|validação do número de linhas e da soma de verificação|vínculo lento|servidor a servidor de alto volume|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -120,7 +121,7 @@ ms.locfileid: "86922833"
 ## <a name="queue-reader-agent-profiles"></a>Perfis do Queue Reader Agent  
  A tabela abaixo mostra os parâmetros definidos no perfil padrão para o Queue Reader Agent. Para obter mais informações sobre esses parâmetros, consulte [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md).  
   
-||padrão|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  

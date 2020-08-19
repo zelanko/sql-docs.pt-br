@@ -1,4 +1,5 @@
 ---
+description: O que&#39;s New no ODBC 3,8
 title: O que&#39;s New no ODBC 3,8 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65ba097629005598e6942577e3498813749fd91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 324d7133a5d63b2b6322357be79daa0ce263e092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428798"
 ---
 # <a name="what39s-new-in-odbc-38"></a>O que&#39;s New no ODBC 3,8
 O Windows 8 inclui uma versão atualizada do ODBC 3,8. O ODBC 3,8 no Windows 8 inclui os seguintes recursos:  

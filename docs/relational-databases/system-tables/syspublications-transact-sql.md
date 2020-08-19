@@ -1,4 +1,5 @@
 ---
+description: syspublications (Transact-SQL)
 title: syspublications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 597365b2fe3e119a399fb6f9498ad421f4a18060
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17791f5ee8039dc082a9de22a8dc963bda2df2ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427548"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85881325"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**descrição**|**nvarchar (255)**|A entrada descritiva para a publicação.|  
+|**descrição**|**nvarchar(255)**|A entrada descritiva para a publicação.|  
 |**name**|**sysname**|O nome exclusivo associado com a publicação.|  
 |**pubid**|**int**|A coluna de identidade que fornece um ID exclusivo para a publicação.|  
 |**repl_freq**|**tinyint**|A frequência da replicação:<br /><br /> **0** = baseado em transação.<br /><br /> **1** = atualização de tabela agendada.|  
@@ -50,13 +51,13 @@ ms.locfileid: "85881325"
 |**políticas**|**int**|A quantidade de alteração, em horas, a economizar para a publicação determinada.|  
 |**allowed_queued_tran**|**bit**|Especifica se foi habilitado o enfileiramento de alterações no Assinante até que elas possam ser aplicadas no Publicador. Se **1**, as alterações no Assinante serão enfileiradas.|  
 |**snapshot_in_defaultfolder**|**bit**|Especifica se arquivos de instantâneo são armazenados na pasta padrão.<br /><br /> **0** = arquivos de instantâneo foram armazenados no local alternativo especificado pelo *alternate_snapshot_folder*.<br /><br /> **1** = arquivos de instantâneo podem ser encontrados na pasta padrão.|  
-|**alt_snapshot_folder**|**nvarchar (255)**|Especifica o local da pasta alternativa para o instantâneo.|  
-|**pre_snapshot_script**|**nvarchar (255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Distribution Agent executará o script pré-instantâneo antes de executar qualquer script de objeto replicado, ao aplicar um instantâneo no Assinante.|  
-|**post_snapshot_script**|**nvarchar (255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Distribution Agent executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tiverem sido aplicados durante uma sincronização inicial.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|Especifica o local da pasta alternativa para o instantâneo.|  
+|**pre_snapshot_script**|**nvarchar(255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Distribution Agent executará o script pré-instantâneo antes de executar qualquer script de objeto replicado, ao aplicar um instantâneo no Assinante.|  
+|**post_snapshot_script**|**nvarchar(255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Distribution Agent executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tiverem sido aplicados durante uma sincronização inicial.|  
 |**compress_snapshot**|**bit**|Especifica que o instantâneo gravado no local de *alt_snapshot_folder* deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB.** 1** significa que o instantâneo será compactado.|  
 |**ftp_address**|**sysname**|O endereço de rede do serviço FTP para o Distribuidor. Especifica onde arquivos de instantâneo de publicação ficam localizados para serem retirados pelo Distribution Agent.|  
 |**ftp_port**|**int**|O número da porta do serviço FTP do Distribuidor. Especifica onde os arquivos de instantâneo de publicação estão localizados para serem retirados pelo Distribution Agent.|  
-|**ftp_subdirectory**|**nvarchar (255)**|Especifica onde os arquivos de instantâneo estarão disponíveis para a Agente de Distribuição a serem coletadas se a publicação der suporte à propagação de instantâneos usando FTP.|  
+|**ftp_subdirectory**|**nvarchar(255)**|Especifica onde os arquivos de instantâneo estarão disponíveis para a Agente de Distribuição a serem coletadas se a publicação der suporte à propagação de instantâneos usando FTP.|  
 |**ftp_login**|**sysname**|O nome de usuário usado para se conectar ao serviço FTP.|  
 |**ftp_password**|**nvarchar (524)**|A senha de usuário usada para se conectar ao serviço FTP.|  
 |**allow_dts**|**bit**|Especifica se a publicação permite transformações de dados. **1** especifica que as transformações DTS são permitidas.|  
@@ -74,10 +75,10 @@ ms.locfileid: "85881325"
 |**originator_id**|**smallint**|Identifica cada nó em uma topologia de replicação ponto a ponto com a finalidade de detecção de conflito. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpublication ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changepublication ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

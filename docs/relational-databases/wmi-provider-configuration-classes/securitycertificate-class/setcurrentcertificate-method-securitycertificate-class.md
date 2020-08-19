@@ -1,4 +1,5 @@
 ---
+description: Método SetCurrentCertificate (classe SecurityCertificate)
 title: Método SetCurrentCertificate (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7997103a062ac796ead5694befd1d9cebb600c95
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 001d9ccdff7db054760f1c7ae10bbce19269f694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427278"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Método SetCurrentCertificate (classe SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Define o certificado de segurança atual.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
