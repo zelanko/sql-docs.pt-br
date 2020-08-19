@@ -1,4 +1,5 @@
 ---
+description: classe de evento Database Mirroring State Change
 title: Classe de evento Database Mirroring State Change | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,22 +15,22 @@ ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7c1e9d1fe55b36560eb71675b3714b999d2512d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7c63c19ac6a6d80d7c61f8b2cdccc1b46871c145
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384302"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>classe de evento Database Mirroring State Change
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Database Mirroring State Change** indica quando muda o estado de um banco de dados espelho. Inclua esta classe de evento em rastreamentos que monitorem as condições de bancos de dados espelhados.  
+   A classe de evento **Database Mirroring State Change** indica quando muda o estado de um banco de dados espelhado. Inclua esta classe de evento em rastreamentos que monitorem as condições de bancos de dados espelhados.  
   
  Quando a classe de evento **Database Mirroring State Change** é incluída em um rastreamento, a sobrecarga relativa é baixa. A sobrecarga poderá ser maior se o estado dos bancos de dados espelhados aumentar.  
   
 ## <a name="data-database-mirroring-state-change-event-class-data-columns"></a>Colunas de dados da classe de evento Database Mirroring State Change  
   
-|Nome da coluna de dados|Tipo de Dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados espelho.|35|Sim|  

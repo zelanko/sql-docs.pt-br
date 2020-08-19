@@ -1,4 +1,5 @@
 ---
+description: classe de evento ExistingConnection
 title: Classe de evento ExistingConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a295cf1d803e6193b192d62d1f87975a5b241a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fe649ce36a65c98387e300f2640859edc78ab92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384412"
 ---
 # <a name="existingconnection-event-class"></a>classe de evento ExistingConnection
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85642189"
   
 ## <a name="existing-connection-event-class-data-columns"></a>Colunas de dados da classe de evento Existing Connection  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Despejo binário de sinalizadores de opção como definições de nível de sessão, incluindo nulos ANSI, preenchimento ANSI, fechar cursor ao confirmar, concatenação nula e identificadores entre aspas.|2|Sim|  

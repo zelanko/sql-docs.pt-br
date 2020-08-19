@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Backup e Restore
 title: Classe de evento Audit Backup and Restore | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 07e448a8d63b7047ecafe19aa6f7adfbb535338d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd3b8ca71c9a251343d001ca269e730acf71a217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384852"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Classe de evento Audit Backup e Restore
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  A classe de evento **Audit Backup/Restore** ocorre quando um comando de backup ou restauração é emitido.  
+   A classe de evento **Audit Backup/Restore** ocorre quando um comando de backup ou de restauração é emitido.  
   
 ## <a name="audit-backuprestore-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Backup/Restore  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

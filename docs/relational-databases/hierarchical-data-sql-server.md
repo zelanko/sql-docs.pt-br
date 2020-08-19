@@ -1,4 +1,5 @@
 ---
+description: Dados hierárquicos (SQL Server)
 title: Dados hierárquicos (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2019
@@ -18,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382522"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
 
@@ -54,7 +55,7 @@ ms.locfileid: "85640766"
   
 -   A comparação está na ordem de profundidade  
   
-     Dados dois valores de **hierarchyid** **a** r **b**, **a<b** significa que a vem antes de b em uma passagem de profundidade da árvore. Índices em tipos de dados **hierarchyid** estão na ordem de profundidade e os nós próximos uns dos outros em uma passagem de profundidade são armazenados próximos um ao outro. Por exemplo, os filhos de um registro são armazenados adjacentes àquele registro.  
+     Dados dois valores de **hierarchyid****a** r **b**, **a<b** significa que a vem antes de b em uma passagem de profundidade da árvore. Índices em tipos de dados **hierarchyid** estão na ordem de profundidade e os nós próximos uns dos outros em uma passagem de profundidade são armazenados próximos um ao outro. Por exemplo, os filhos de um registro são armazenados adjacentes àquele registro.  
   
 -   Suporte a inserções e exclusões arbitrárias  
   
@@ -540,7 +541,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de método de tipo de dados hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Usando o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

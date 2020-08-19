@@ -1,4 +1,5 @@
 ---
+description: Usar o SQL Server Profiler para criar um conjunto de coleta do Rastreamento do SQL
 title: Criar um conjunto de coleta do Rastreamento do SQL com o Profiler
 ms.date: 06/03/2020
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fdd751f282f1ba62150d5257dde04798962ecb84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386422"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar o SQL Server Profiler para criar um conjunto de coleta do Rastreamento do SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85715528"
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , clique em **Cancelar**.  
   
-3.  Para este cenário, verifique se os valores de duração estão configurados para serem exibidos em milissegundos (o padrão). Para fazer isso, siga estas etapas:  
+3.  Para este cenário, verifique se os valores de duração estão configurados para serem exibidos em milissegundos (o padrão). Para fazer isso, execute estas etapas:  
   
     1.  No menu **Ferramentas** , clique em **Opções**.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "85715528"
   
      É exibida a caixa de diálogo **Propriedades do Rastreamento** .  
   
-6.  Na guia **Geral** , faça o seguinte:  
+6.  Na guia **Geral**, siga um destes procedimentos:  
   
     1.  Na caixa **Nome do rastreamento** , digite o nome a ser usado para o rastreamento. Para este exemplo, o nome de rastreamento é **SPgt80**.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "85715528"
   
 4.  Clique em **Executar** para executar a consulta e criar o conjunto de coleta.  
   
-5.  No Pesquisador de Objetos, verifique se o conjunto de coleta foi criado. Para fazer isso, siga estas etapas:  
+5.  No Pesquisador de Objetos, verifique se o conjunto de coleta foi criado. Para fazer isso, execute estas etapas:  
   
     1.  Clique com o botão direito do mouse em **Gerenciamento**e clique em **Atualizar**.  
   
