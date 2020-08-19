@@ -1,4 +1,5 @@
 ---
+description: Propriedade PropertyNumValue (classe SqlServiceAdvancedProperty)
 title: Propriedade PropertyNumValue (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab13997991e9d33ad4b0cdca5338766cc83f9a85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 216f8ae6fc4e6dc86fe26b3b9cfff8a7e648d77b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418722"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Propriedade PropertyNumValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o valor numérico da propriedade avançada.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

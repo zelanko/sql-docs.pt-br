@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profile_sp (Transact-SQL)
 title: sysmail_help_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 372f2309176b9fcf9cbb36fbcaf89d710393bb44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419290"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`A ID do perfil para o qual retornar informações. *profile_id* é **int**, com um padrão de NULL.  
+`[ @profile_id = ] profile_id` A ID do perfil para o qual retornar informações. *profile_id* é **int**, com um padrão de NULL.  
   
-`[ @profile_name = ] 'profile_name'`O nome do perfil para o qual retornar informações. *profile_name* é **sysname**, com um padrão de NULL.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil para o qual retornar informações. *profile_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

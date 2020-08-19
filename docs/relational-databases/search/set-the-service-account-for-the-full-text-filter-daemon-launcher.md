@@ -1,4 +1,5 @@
 ---
+description: Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
 title: Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4603d4a14461bb05576a6f6ffe34db4968223718
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420370"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ O Iniciador do Daemon de Filtro de Texto Completo do SQL é um serviço de recon
   
 1.  No menu **Iniciar**, aponte para **Todos os Programas**, expanda [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e clique em **SQL Server 2016 Configuration Manager**.  
   
-2.  No **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em **Iniciador do Daemon de Filtro de Texto Completo do SQL (** _nome da instância_ **)** e clique em **Propriedades**.  
+2.  No **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**, clique com o botão direito do mouse em **Iniciador do Daemon de Filtro de Texto Completo do SQL (**_nome da instância_**)** e clique em **Propriedades**.  
   
 3.  Clique na guia **Fazer Logon** da caixa de diálogo e selecione ou digite a conta em que será executado os processos iniciados pelo serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   

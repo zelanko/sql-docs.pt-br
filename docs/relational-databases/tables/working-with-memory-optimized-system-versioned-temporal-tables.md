@@ -1,4 +1,5 @@
 ---
+description: Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória
 title: Trabalhando com tabelas temporais com controle de versão do sistema de otimização de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2016
@@ -11,12 +12,12 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16a064d023912782c29551cc88308df9cb8dbfad
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6dfc85f00616cc37a6e6440e711a5f3abab6f40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418940"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória
 
@@ -79,8 +80,8 @@ GO ;
 ## <a name="see-also"></a>Consulte Também
 
 - [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
-- [Criação de uma tabela temporal com controle da versão do sistema e otimização de memória](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)
-- [Monitorando tabelas temporais com controle da versão do sistema e otimização de memória](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)
+- [Criação de uma tabela temporal com controle da versão do sistema com otimização de memória](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)
+- [Monitorando tabelas temporais com controle da versão do sistema com otimização de memória](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)
 - [Considerações sobre desempenho com tabelas temporais com controle de versão do sistema e otimização de memória](../../relational-databases/tables/
 - [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)
 - [Verificações de consistência do sistema de tabela temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)

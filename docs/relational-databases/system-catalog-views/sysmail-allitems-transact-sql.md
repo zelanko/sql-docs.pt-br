@@ -1,4 +1,5 @@
 ---
+description: sysmail_allitems (Transact-SQL)
 title: sysmail_allitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c5a41e6f0c150638eeed8e1c7cdd4fbb3c6bf2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419910"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85891960"
 |**tiver**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
 |**copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem.|  
 |**blind_copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem, mas cujos nomes não aparecem no cabeçalho.|  
-|**Assunto**|**nvarchar (510)**|A linha de assunto da mensagem.|  
+|**subject**|**nvarchar (510)**|A linha de assunto da mensagem.|  
 |**body**|**varchar(max)**|O corpo da mensagem.|  
 |**body_format**|**varchar (20)**|O formato do corpo da mensagem. Os valores possíveis são TEXT e HTML.|  
 |**importance**|**varchar (6)**|O parâmetro de **importância** da mensagem.|  

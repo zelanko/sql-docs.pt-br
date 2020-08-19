@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_current_xevent_settings (Transact-SQL)
 title: managed_backup. fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cff78d30f768360c55b212742770d8caded6f5ee
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 164038c2009f273ae922e65c922c1d962a72b7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419520"
 ---
 # <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +43,7 @@ ms.locfileid: "86053442"
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  Essa função não tem nenhum argumento.  
   
 ## <a name="table-returned"></a>Tabela retornada  

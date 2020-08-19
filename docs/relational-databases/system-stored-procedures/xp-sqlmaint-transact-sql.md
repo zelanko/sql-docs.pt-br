@@ -1,4 +1,5 @@
 ---
+description: xp_sqlmaint (Transact-SQL)
 title: xp_sqlmaint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cfe66be84a9f631422c624eaf65152569d0405bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419180"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ xp_sqlmaint 'switch_string'
  Se esse procedimento for chamado por um usuário conectado com SQL Server autenticação, as opções **-U "***login_id***"** e **-P "***senha***"** serão precedidas para *switch_string* antes da execução. Se o usuário estiver conectado com a autenticação do Windows, *switch_string* será passado sem alterar para **sqlmaint**.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  No exemplo a seguir, `xp_sqlmaint` chama `sqlmaint` para executar verificações de integridade, criar um arquivo de relatório e atualizar `msdb.dbo.sysdbmaintplan_history`.  

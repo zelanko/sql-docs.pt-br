@@ -1,4 +1,5 @@
 ---
+description: Método PauseService (classe SqlService)
 title: Método PauseService (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b40beb0c20bf9100d01aa58739bc911e4068a266
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 946ac67a84cf0dd5e6de83d7a3ff5a1a71eb2cb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418692"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>Método PauseService (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Tenta colocar o serviço no estado de pausado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

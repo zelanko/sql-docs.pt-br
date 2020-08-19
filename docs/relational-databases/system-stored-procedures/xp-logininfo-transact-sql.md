@@ -1,4 +1,5 @@
 ---
+description: xp_logininfo (Transact-SQL)
 title: xp_logininfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b5a1a7067e1ebda150d0236020288514eb90a8fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44b76081c7ec5fdd3496b670b1884347d1a84d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419210"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @acctname = ] 'account_name'`É o nome de um usuário ou grupo do Windows com acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* é **sysname**, com um padrão de NULL. Se *account_name* não for especificado, todos os grupos do Windows e usuários do Windows que receberam permissão de logon explicitamente serão relatados. *account_name* deve ser totalmente qualificado. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'` É o nome de um usuário ou grupo do Windows com acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* é **sysname**, com um padrão de NULL. Se *account_name* não for especificado, todos os grupos do Windows e usuários do Windows que receberam permissão de logon explicitamente serão relatados. *account_name* deve ser totalmente qualificado. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
   
  **' todos '**  |  **' Members '**  
  Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. a ** \@ opção** é **varchar (10)**, com um padrão de NULL. A menos que **All** seja especificado, somente o primeiro caminho de permissão é exibido.  
   
-`[ @privilege = ] variable_name`É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* é **varchar (10)**, com um padrão de ' not desejable '. O nível de privilégio retornado é **usuário**, **administrador**ou **nulo**.  
+`[ @privilege = ] variable_name` É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* é **varchar (10)**, com um padrão de ' not desejable '. O nível de privilégio retornado é **usuário**, **administrador**ou **nulo**.  
   
  OUTPUT  
  Quando especificado, coloca *variable_name* no parâmetro de saída.  
@@ -59,7 +60,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**nome da conta**|**sysname**|Nome da conta do Windows completamente qualificada.|  
-|**type**|**Char (8)**|Tipo de conta do Windows. Os valores válidos são **User** ou **Group**.|  
+|**tipo**|**Char (8)**|Tipo de conta do Windows. Os valores válidos são **User** ou **Group**.|  
 |**privilégio**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **User**ou **NULL**.|  
 |**mapped login name**|**sysname**|Para contas de usuário que têm privilégio de usuário, **nome de logon mapeado** mostra o nome de logon mapeado que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta usar ao fazer logon com essa conta usando as regras mapeadas com o nome de domínio adicionado antes dela.|  
 |**permission path**|**sysname**|Associação de grupo que permitiu o acesso à conta.|  
@@ -86,10 +87,10 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_revokelogin](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_denylogin ](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grantlogin ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_revokelogin ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

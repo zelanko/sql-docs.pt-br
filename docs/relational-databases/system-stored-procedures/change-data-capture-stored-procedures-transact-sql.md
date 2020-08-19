@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados de captura de dados de alteração (Transact-SQL)
 title: Procedimentos armazenados da captura de dados de alterações (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0d5f3f10f20fb5489760a1e415309dcfd01482e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: c1f7ea900983571658406f8b32ec945a9da82635
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419330"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>Procedimentos armazenados de captura de dados de alteração (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

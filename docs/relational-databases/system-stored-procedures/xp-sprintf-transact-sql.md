@@ -1,4 +1,5 @@
 ---
+description: xp_sprintf (Transact-SQL)
 title: xp_sprintf (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 157b027580592f2d4663788911530c282bebfcc4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bd830fc35da8604538d0d70171988e218ee5200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419190"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,8 +68,8 @@ xp_sprintf { string OUTPUT , format }
  Requer associação à função **pública** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de xp_sscanf](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de xp_sscanf ](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

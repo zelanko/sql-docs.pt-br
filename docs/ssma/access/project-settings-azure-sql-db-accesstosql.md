@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (banco de dados SQL do Azure) (AccessToSQL)
 title: Configurações do projeto (banco de dados SQL do Azure) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9954fe012158526e87bd30512b13eca0314bc00e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418542"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a>Configurações do projeto (banco de dados SQL do Azure) (AccessToSQL)
 As configurações do projeto SQL Azure permitem que você configure o sufixo do banco de dados SQL do Azure a ser adicionado na caixa de diálogo de conexão e também permita a implementação do mecanismo de pulsação na conexão SQL Azure.  

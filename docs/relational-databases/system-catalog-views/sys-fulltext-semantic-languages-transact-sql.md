@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_semantic_languages (Transact-SQL)
 title: sys. fulltext_semantic_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 62b8f1fc18fd5c1253451a6a35eb13fd5e2b2105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420090"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87248771"
 |Nome da coluna|Type|Descrição|  
 |-|-|-|   
 |lcid|INT|LCID (ID de localidade do Microsoft Windows) do idioma.|  
-|name|sysname|É o valor do alias em [linguagens desys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondente ao valor de **LCID**ou a representação de cadeia de caracteres do LCID numérico.|  
+|name|sysname|É o valor do alias em [ linguagens desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondente ao valor de **LCID**ou a representação de cadeia de caracteres do LCID numérico.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, veja [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md).  

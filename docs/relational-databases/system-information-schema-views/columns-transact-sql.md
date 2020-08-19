@@ -1,4 +1,5 @@
 ---
+description: COLUMNS (Transact-SQL)
 title: COLUNAS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,11 +20,12 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 940c3210f25430550c11e0ad836d536427d2936a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68cda5769a53979223a1e2fa26a370a55b8af9bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419440"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +61,7 @@ ms.locfileid: "86012029"
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Se a coluna for do tipo de dados definido pelo usuário, essa coluna será o nome do tipo de dados definido pelo usuário. Caso contrário, será retornado NULL.|  
   
 ## <a name="remarks"></a>Comentários  
- A coluna **ORDINAL_POSITION** da **INFORMATION_SCHEMA. **A exibição de colunas não é compatível com o padrão de bit das colunas retornadas pela função COLUMNS_UPDATED. Para obter um padrão de bit compatível com COLUMNS_UPDATED, você deve fazer referência à propriedade **columnid** da função de sistema COLUMNPROPERTY ao consultar o **INFORMATION_SCHEMA. **Exibição de colunas. Por exemplo:  
+ A coluna **ORDINAL_POSITION** da **INFORMATION_SCHEMA. ** A exibição de colunas não é compatível com o padrão de bit das colunas retornadas pela função COLUMNS_UPDATED. Para obter um padrão de bit compatível com COLUMNS_UPDATED, você deve fazer referência à propriedade **columnid** da função de sistema COLUMNPROPERTY ao consultar o **INFORMATION_SCHEMA. ** Exibição de colunas. Por exemplo:  
   
 ```  
 USE AdventureWorks2012;  
@@ -71,10 +73,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Exibições do esquema de informações &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [Exibições do sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Exibições do esquema de informações &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.syscharsets &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
- [&#41;sys. Columns &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

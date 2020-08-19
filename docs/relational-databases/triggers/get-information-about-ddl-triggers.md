@@ -1,4 +1,5 @@
 ---
+description: Obter informações sobre gatilhos DDL
 title: Obter informações sobre gatilhos DDL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7453a890fb3b905c025003114c287584fdb35c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74380279e43df3165343e89754c1b124a0ef9363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418910"
 ---
 # <a name="get-information-about-ddl-triggers"></a>Obter informações sobre gatilhos DDL
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85757572"
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## <a name="database-scoped-ddl-triggers"></a>gatilhos DDL no escopo do banco de dados  
+## <a name="database-scoped-ddl-triggers"></a> gatilhos DDL no escopo do banco de dados  
  **Para obter informações sobre gatilhos no escopo do banco de dados**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  

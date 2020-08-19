@@ -1,4 +1,5 @@
 ---
+description: Conectar-se ao banco de dados SQL do Azure (AccessToSQL)
 title: Conectar-se ao banco de dados SQL do Azure (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418562"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Conectar-se ao banco de dados SQL do Azure (AccessToSQL)
 Use a caixa de diálogo conectar a SQL Azure para se conectar ao banco de dados no banco de dados SQL do Azure que você deseja migrar.  
@@ -27,7 +28,7 @@ Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar-
   
 Selecione ou insira o nome do servidor para se conectar ao SQL Azure.  
   
-**Backup de banco de dados**  
+**Banco de dados**  
   
 Selecione, insira ou **procure** o nome do banco de dados.  
   

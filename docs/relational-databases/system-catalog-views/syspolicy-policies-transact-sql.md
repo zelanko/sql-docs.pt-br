@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policies (Transact-SQL)
 title: syspolicy_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49ef90e030c2899e49adcb69e8765a57f623ace7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419800"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85900583"
 |policy_id|**int**|Identificador da política.|  
 |name|**sysname**|O nome da política.|  
 |condition_id|**int**|ID da condição imposta ou testada por esta política.|  
-|root_condition_id|**int**|Apenas para uso interno.|  
+|root_condition_id|**int**|Somente para uso interno.|  
 |date_created|**datetime**|Data e hora em que a política foi criada.|  
 |execution_mode|**int**|Modo de avaliação para a política. Os valores possíveis são:<br /><br /> 0 = Sob demanda<br /><br /> Este modo avalia a política quando especificado diretamente pelo usuário.<br /><br /> 1 = Ao alterar: impedir<br /><br /> Esse modo automatizado usa gatilhos DDL para impedir violações de política.<br /><br /> 2 = Ao alterar: log apenas<br /><br /> Este modo automatizado usa notificação de eventos para avaliar uma política quando ocorre uma alteração relevante e registra em log as violações de política.<br /><br /> 4 = Ao agendar<br /><br /> Este modo automatizado usa um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para avaliar periodicamente uma política. O modo registra as violações de política.<br /><br /> Observação: o valor 3 não é um valor possível.|  
 |policy_category|**int**|A ID da categoria das políticas do Gerenciamento Baseado em Políticas ao qual esta política pertence. Será NULL se for o grupo de políticas padrão.|  

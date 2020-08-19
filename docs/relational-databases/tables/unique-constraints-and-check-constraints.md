@@ -1,4 +1,5 @@
 ---
+description: Restrições exclusivas e restrições de verificação
 title: Restrições exclusivas e restrições de verificação | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2017
@@ -14,12 +15,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418960"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85727108"
 >  Restrições que incluem conversão de tipo de dados implícita ou explícita podem causar falhas em certas operações. Por exemplo, tais restrições definidas em tabelas que são fontes de opção de partição podem causar falha na operação ALTER TABLE...SWITCH. Evite a conversão de tipo de dados em definições de restrição.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitações de restrições CHECK  
- As restrições CHECK rejeitam valores avaliados como FALSE. Porque valores nulos avaliam a UNKNOWN, a sua presença em expressões pode anular uma restrição. Por exemplo, suponha que você coloque uma restrição em uma coluna **int** **MyColumn** especificando que **MyColumn** possa conter apenas o valor 10 (**MyColumn=10**). Se você inserir o valor NULL em **MyColumn**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserirá NULL e não retornará um erro.  
+ As restrições CHECK rejeitam valores avaliados como FALSE. Porque valores nulos avaliam a UNKNOWN, a sua presença em expressões pode anular uma restrição. Por exemplo, suponha que você coloque uma restrição em uma coluna **int****MyColumn** especificando que **MyColumn** possa conter apenas o valor 10 (**MyColumn=10**). Se você inserir o valor NULL em **MyColumn**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserirá NULL e não retornará um erro.  
   
  Uma restrição CHECK retorna TRUE quando a condição que está verificando não é FALSE para qualquer linha na tabela. Uma restrição CHECK funciona no nível de linha. Se a tabela acabou de ser criada e não tiver nenhuma linha, qualquer restrição CHECK nesta tabela é considerada válida. Esta situação pode produzir resultados inesperados, como no exemplo seguinte.  
   

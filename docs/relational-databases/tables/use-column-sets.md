@@ -1,4 +1,5 @@
 ---
+description: Usar conjuntos de colunas
 title: Usar conjuntos de colunas | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418970"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -112,7 +113,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Usando o tipo de dados sql_variant  
  O tipo de dados **sql_variant** pode armazenar vários tipos de dados diferentes, como **int**, **char**e **data**. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor **sql_variant** como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
   
-|Tipo de dados|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Comprimento máximo|Precisão|Escala|  
+|Tipo de dados|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Tamanho máximo|Precisão|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|'Padrão'|0|0|8000|Não aplicável**|Não aplicável|  
 |**nvarchar**|-1|'Padrão'|0|0|4000|Não aplicável|Não aplicável|  

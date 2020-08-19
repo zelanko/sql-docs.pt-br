@@ -1,4 +1,5 @@
 ---
+description: Esquemas de inventário de acesso (AccessToSQL)
 title: Esquemas de inventário de acesso (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -36,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418632"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventário de acesso (AccessToSQL)
 As seções a seguir descrevem as tabelas criadas pelo SSMA quando você exporta esquemas de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
