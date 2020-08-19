@@ -1,4 +1,5 @@
 ---
+description: Arquivos de cabeçalho
 title: Arquivos de cabeçalho | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec8eede80f88f10e0b1ca43696e75dddec121ffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476648"
 ---
 # <a name="header-files"></a>Arquivos de cabeçalho
 O arquivo de cabeçalho SQL. h contém protótipos para as funções e recursos no nível de conformidade da interface ODBC principal. O arquivo de cabeçalho sqlext. h contém protótipos para as funções e recursos nos níveis de conformidade da API nível 1 e nível 2. O arquivo de cabeçalho SqlTypes. h contém definições de tipo e indicadores para os tipos de dados SQL.  

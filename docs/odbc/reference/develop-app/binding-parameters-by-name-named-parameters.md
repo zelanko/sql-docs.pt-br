@@ -1,4 +1,5 @@
 ---
+description: Parâmetros de associação por nome (parâmetros nomeados)
 title: Ligando parâmetros por nome (parâmetros nomeados) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1e214f50488c4600ed39f76e91618cc5ce53de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75227b26b5f9f060089e6568e233d327e3f7faa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476838"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Parâmetros de associação por nome (parâmetros nomeados)
 Determinados DBMSs permitem que um aplicativo especifique os parâmetros para um procedimento armazenado pelo nome, em vez de por posição na chamada de procedimento. Esses parâmetros são chamados de *parâmetros nomeados*. O ODBC dá suporte ao uso de parâmetros nomeados. No ODBC, os parâmetros nomeados são usados somente em chamadas para procedimentos armazenados e não podem ser usados em outras instruções SQL.  
@@ -38,7 +39,7 @@ Determinados DBMSs permitem que um aplicativo especifique os parâmetros para um
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- Neste procedimento, o primeiro parâmetro, @title_id, tem um valor padrão de 1. Um aplicativo pode usar o código a seguir para invocar esse procedimento de modo que ele especifique apenas um parâmetro dinâmico. Esse parâmetro é um parâmetro nomeado com o nome "\@quote".  
+ Neste procedimento, o primeiro parâmetro, @title_id , tem um valor padrão de 1. Um aplicativo pode usar o código a seguir para invocar esse procedimento de modo que ele especifique apenas um parâmetro dinâmico. Esse parâmetro é um parâmetro nomeado com o nome " \@ quote".  
   
 ```  
 // Prepare the procedure invocation statement.  

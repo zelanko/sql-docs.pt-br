@@ -1,4 +1,5 @@
 ---
+description: Propriedade EditMode
 title: Propriedade EditMode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cbe93a06eb6521b2210edc08cdca421cd5de982
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e330e1bbe559940324962cfde772258d3345594b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444058"
 ---
 # <a name="editmode-property"></a>Propriedade EditMode
 Indica o status de edição do registro atual.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um valor [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) .  
   
 ## <a name="remarks"></a>Comentários  

@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscription (Transact-SQL)
 title: sp_changesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57844d95977ed2a56324698037fb576678b0f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486235"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,17 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser alterada. a *publicação*é **sysname**, sem padrão  
+`[ @publication = ] 'publication'` É o nome da publicação a ser alterada. a *publicação*é **sysname**, sem padrão  
   
-`[ @article = ] 'article'`É o nome do artigo a ser alterado. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo a ser alterado. o *artigo* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
   
-`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de assinatura. *destination_db* é **sysname**, sem padrão.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de assinatura. *destination_db* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'`É a propriedade a ser alterada para a assinatura fornecida. a *Propriedade* é **nvarchar (30)** e pode ser um dos valores na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para a assinatura fornecida. a *Propriedade* é **nvarchar (30)** e pode ser um dos valores na tabela.  
   
-`[ @value = ] 'value'`É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (4000)** e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'` É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (4000)** e pode ser um dos valores na tabela.  
   
 |Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -78,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Provedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* é **bit**, em que 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -97,7 +98,7 @@ sp_changesubscription [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropsubscription](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addsubscription ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsubscription ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

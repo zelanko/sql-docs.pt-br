@@ -1,4 +1,5 @@
 ---
+description: Manipulação de dados MDX – SELECT
 title: Instrução SELECT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477008"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX – SELECT
 
@@ -88,7 +89,7 @@ FROM
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Integer*  
+ *Inteiro*  
  Um inteiro entre 0 e 127.  
   
  *Cube_Name*  
@@ -116,7 +117,7 @@ FROM
   
  A opção NON VISUAL na instrução subselect lhe permite filtrar os membros enquanto mantém os totais verdadeiros, em vez dos totais filtrados. Isso lhe permite consultar as dez vendas principais (pessoas/produtos/regiões) e obter o total verdadeiro das vendas para todos os membros consultados, em vez do valor total das vendas para os dez principais retornados. Veja os exemplos abaixo para obter mais informações.  
   
- Os membros calculados podem ser incluídos no \<SELECT query axis clause> sempre que a conexão for aberta usando as *subconsultas*do parâmetro da cadeia de conexão = 1; consulte [propriedades xmla com suporte &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
+ Os membros calculados podem ser incluídos no \<SELECT query axis clause> sempre que a conexão for aberta usando as *subconsultas*do parâmetro da cadeia de conexão = 1; consulte [propriedades xmla com suporte &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
   
 ## <a name="autoexists"></a>autoexists  
  Quando dois ou mais atributos da dimensão são usados em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para assegurar que os membros desses atributos sejam devidamente confinados para atender aos critérios de todos os outros atributos. Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo Cidade, e outra expressão que confine os membros do atributo País a todos os países na Europa, isso resultará no confinamento dos membros de Cidade apenas às cidades que pertencem a países na Europa. Essas característica do Analysis Services é denominada Autoexists e se aplica apenas aos atributos na mesma dimensão. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser entendido como a interseção resultante das diferentes expressões de atributo sobre os registros da dimensão. Consulte estes exemplos abaixo:  
@@ -334,7 +335,7 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
   
- O comportamento de autoexisteções pode ser modificado usando o parâmetro Autoexists = [1 | 2 | 3] na cadeia de conexão; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso de parâmetro.  
+ O comportamento de autoexisteções pode ser modificado usando o parâmetro Autoexists = [1 | 2 | 3] na cadeia de conexão; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso de parâmetro.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros oito meses do ano civil 2003 que estão contidos na `Date` dimensão, do cubo **Adventure Works** .  
@@ -393,7 +394,7 @@ WHERE
   
  Gera os seguintes resultados:  
   
-|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Clothing|  
 |-|-|-|-|  
 |**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -419,7 +420,7 @@ WHERE
   
  A consulta anterior gera os seguintes resultados:  
   
-|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Clothing|  
 |-|-|-|-|  
 |Todos os Revendedores|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Revendedor de Valor Agregado|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -455,7 +456,7 @@ WHERE
   
 ## <a name="see-also"></a>Consulte Também  
  [Conceitos principais em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [Instruções de manipulação de dados MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Instruções de manipulação de dados MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Restringindo a consulta com os eixos de consulta e segmentação &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   

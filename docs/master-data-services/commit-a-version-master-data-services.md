@@ -1,4 +1,5 @@
 ---
+description: Confirmar uma versão (Master Data Services)
 title: Confirmar uma versão
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d5cb3ebca4ab30fdf17b40774d50f44942cba093
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 27564141f1f0f4c90a08449cbd9cffd7cea9dae0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430068"
 ---
 # <a name="commit-a-version-master-data-services"></a>Confirmar uma versão (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: sp_check_for_sync_trigger (Transact-SQL)
 title: sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fd7af5a486928e0dca9f5b2281e0b53c5038e74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e55fd24c9d4df46cb4703af31d2eda802a458ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486199"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Confirmar**|Gatilho DELETE|  
 |NULL (padrão)||  
   
-`[ @fonpublisher = ] fonpublisher`Especifica o local em que o procedimento armazenado é executado. *fonpublisher* é **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
+`[ @fonpublisher = ] fonpublisher` Especifica o local em que o procedimento armazenado é executado. *fonpublisher* é **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo retornado em * \@ trigger_op*.  

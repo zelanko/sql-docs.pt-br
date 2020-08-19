@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_tables (Transact-SQL)
 title: sp_help_fulltext_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36f8a5d8fb38802f14ac61c18d382e6052241d8a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf4b4130f02085dd077b877825856f9f22e2c1d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486006"
 ---
 # <a name="sp_help_fulltext_tables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893722"
   Retorna uma lista de tabelas que estão registradas para indexação de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use a exibição de catálogo **Sys. fulltext_indexes** em vez disso. Para obter mais informações, consulte [Sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use a exibição de catálogo **Sys. fulltext_indexes** em vez disso. Para obter mais informações, consulte [Sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`É o nome do catálogo de texto completo. *fulltext_catalog_name* é **sysname**, com um padrão de NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas ao banco de dados serão retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo serão recuperadas para cada tabela indexada de texto completo associada a esse catálogo. Se *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* estiver associado a *fulltext_catalog_name*; caso contrário, um erro será gerado.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. *fulltext_catalog_name* é **sysname**, com um padrão de NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas ao banco de dados serão retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo serão recuperadas para cada tabela indexada de texto completo associada a esse catálogo. Se *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* estiver associado a *fulltext_catalog_name*; caso contrário, um erro será gerado.  
   
-`[ @table_name = ] 'table_name'`É o nome da tabela de uma ou duas partes para a qual os metadados de texto completo são solicitados. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante para *table_name* será retornada.  
+`[ @table_name = ] 'table_name'` É o nome da tabela de uma ou duas partes para a qual os metadados de texto completo são solicitados. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante para *table_name* será retornada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -75,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [INDEXproperty &#40;&#41;Transact-SQL](../../t-sql/functions/indexproperty-transact-sql.md)   
- [&#41;OBJECTPROPERTY &#40;Transact-SQL](../../t-sql/functions/objectproperty-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_fulltext_table](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_fulltext_tables_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_fulltext_table ](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_fulltext_tables_cursor ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

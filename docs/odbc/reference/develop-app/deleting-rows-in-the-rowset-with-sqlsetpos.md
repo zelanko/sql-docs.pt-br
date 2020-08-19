@@ -1,4 +1,5 @@
 ---
+description: Excluir linhas no conjunto de linhas com SQLSetPos
 title: Excluindo linhas no conjunto de linhas com SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 940bcc3e2ee6a042394797d6038028cce64862f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42b61aa9af15526420b6f2d4ef7e8c945e0da105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476768"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>Excluir linhas no conjunto de linhas com SQLSetPos
 A operação de exclusão de **SQLSetPos** faz com que a fonte de dados exclua uma ou mais linhas selecionadas de uma tabela. Para excluir linhas com **SQLSetPos**, o aplicativo chama **SQLSetPos** com a *operação* definida como SQL_DELETE e *RowNumber* definido como o número da linha a ser excluída. Se *RowNumber* for 0, todas as linhas no conjunto de linhas serão excluídas.  

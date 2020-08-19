@@ -1,4 +1,5 @@
 ---
+description: DrillupMember (MDX)
 title: DrillupMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9db34a9117bf7405511b86e8e989d2e002cb12d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494939"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
@@ -40,7 +41,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  O primeiro conjunto pode conter tuplas em vez de membros. O detalhamento de tupla é uma extensão de OLE DB e retorna um conjunto de tuplas em vez de membros.  
   
 > [!IMPORTANT]  
->  Um membro será buscado somente se for seguido imediatamente por um filho ou um descendente. A ordem dos membros no conjunto é importante para as famílias de\* funções de\* busca detalhada e Drillup. Considere usar a função de **hierarquia** para ordenar adequadamente os membros do primeiro conjunto.  
+>  Um membro será buscado somente se for seguido imediatamente por um filho ou um descendente. A ordem dos membros no conjunto é importante para as \* \* famílias de funções de busca detalhada e Drillup. Considere usar a função de **hierarquia** para ordenar adequadamente os membros do primeiro conjunto.  
   
 ## <a name="example"></a>Exemplo  
  Os três exemplos a seguir são idênticos, exceto o segundo conjunto. No primeiro exemplo, o segundo conjunto são os Estados Unidos. Como resultado, Colorado é excluído do conjunto de resultados. É um descendente dos Estados Unidos.  

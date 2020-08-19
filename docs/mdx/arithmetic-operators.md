@@ -1,4 +1,5 @@
 ---
+description: Operadores aritméticos
 title: Operadores aritméticos | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995e7ce1cb6a3c5d06db1042c00f945ec01e1be6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494989"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
 
@@ -43,7 +44,7 @@ ms.locfileid: "68017078"
 -   Expressões entre parênteses têm precedência sobre todas as outras operações.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

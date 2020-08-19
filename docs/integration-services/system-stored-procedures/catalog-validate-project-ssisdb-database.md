@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_project (Banco de Dados SSISDB)
 title: catalog.validate_project (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dfda68b04a898efc7aa87e5a821e79717113544
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495346"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (Banco de Dados SSISDB)
 
@@ -46,7 +47,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  O nome do projeto. O *project_name* é **nvarchar(128)** .  
   
  [ @validate_type = ] *validate_type*  
- Indica o tipo de validação a ser executado. Use o caractere `F` para executar uma validação completa. Esse parâmetro é opcional, o caractere `F` será usado por padrão. O *validate_type* é **char(1)** .  
+ Indica o tipo de validação a ser executado. Use o caractere `F` para executar uma validação completa. Esse parâmetro é opcional, o caractere `F` será usado por padrão. O *validate_type* é **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Retorna o ID (identificador exclusivo) da validação. O *validation_id* é **bigint**.  

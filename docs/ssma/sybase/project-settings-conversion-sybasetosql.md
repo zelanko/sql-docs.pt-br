@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (conversão) (SybaseToSQL)
 title: Configurações do projeto (conversão) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d2f1c02b9a9400236381cdd30fb3deb570500c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 61795be0d1f851792846f2ede8c38eca1f3801b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468790"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configurações do projeto (conversão) (SybaseToSQL)
 A página conversão da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte a sintaxe do Sybase Adaptive Server Enterprise (ase) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure sintaxe.  
@@ -241,9 +242,9 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Armazenar objetos temporários definidos em procedimentos**  
 Essa configuração especifica se as definições de objetos temporários que aparecem nos procedimentos devem ser armazenadas nos metadados de origem durante a conversão.  
   
--   Selecione **Sim** para armazenar em metadados.  
+-   Selecione **Sim**  para armazenar em metadados.  
   
--   Selecione **não** se os objetos não precisarem ser armazenados.  
+-   Selecione **não**  se os objetos não precisarem ser armazenados.  
   
 **Modo padrão/otimista:** Ok  
   
@@ -261,7 +262,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo padrão/otimista/completo:** Marcar com erro  
   
 **Número da mensagem base RAISERROR**  
-As mensagens de usuário do ASE são armazenadas em cada banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]as mensagens do usuário são armazenadas centralmente e disponibilizadas por meio da exibição do catálogo **Sys. messages** . Além disso, as mensagens de usuário do ASE começam às 20000, mas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as mensagens de erro começam em 50001.  
+As mensagens de usuário do ASE são armazenadas em cada banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as mensagens do usuário são armazenadas centralmente e disponibilizadas por meio da exibição do catálogo **Sys. messages** . Além disso, as mensagens de usuário do ASE começam às 20000, mas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as mensagens de erro começam em 50001.  
   
 Essa configuração especifica o número a ser adicionado ao número de mensagem de usuário do ASE para convertê-lo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de usuário. Se o seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver mensagens de usuário na exibição de catálogo **Sys. messages** , talvez seja necessário alterar esse número para um valor mais alto. Isso é para que os números de mensagem convertidos não entrem em conflito com os números de mensagem existentes.  
   
@@ -324,7 +325,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 **Modo completo:** Função Replace  
   
 **função DATALENGTH**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure e ASE diferem no valor retornado pela função DATALENGTH quando o valor é um único espaço. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure retorna 0 e ase retorna 1.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure e ASE diferem no valor retornado pela função DATALENGTH quando o valor é um único espaço. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure retorna 0 e ase retorna 1.  
   
 -   Para usar o comportamento do ASE, selecione **substituir função**. Todas as chamadas para a função DATALENGTH são substituídas por uma expressão CASE para emular o comportamento de ASE do Sybase.  
   

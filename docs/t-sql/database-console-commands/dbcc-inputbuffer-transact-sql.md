@@ -1,4 +1,5 @@
 ---
+description: DBCC INPUTBUFFER (Transact-SQL)
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7b36dd3a0392a4054aa110e625f1ea5703f25b80
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b8b4c308530099bb54bf7a447adb46b6faac7e5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422850"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +69,7 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC INPUTBUFFER retorna um conjunto de linhas com as seguintes colunas.
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Tipo de evento. Pode ser **Evento de RPC** ou **Evento de Linguagem**. A saída será **Nenhum Evento** quando não for detectado nenhum último evento.|  
 |**Parâmetros**|**smallint**|0 = Texto<br /><br /> 1- *n* = Parâmetros|  

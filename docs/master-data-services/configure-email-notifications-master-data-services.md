@@ -1,4 +1,5 @@
 ---
+description: Configurar notificações por email (Master Data Services)
 title: Configurar notificações por email
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4e7c96e07ef421c4cc9a31efe359b963770e8886
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e4368235b528b1537ebb8b4302c58769509cfebb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430008"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Configurar notificações por email (Master Data Services)
 

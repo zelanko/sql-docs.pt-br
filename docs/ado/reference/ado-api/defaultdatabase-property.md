@@ -1,4 +1,5 @@
 ---
+description: Propriedade DefaultDatabase
 title: Propriedade DefaultDatabase | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a68a41985515e63e6e8520c30fc662c69e1ced6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7e16a5a5bc3a711477cca1507c889bd15e0f37a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444188"
 ---
 # <a name="defaultdatabase-property"></a>Propriedade DefaultDatabase
 Indica o banco de dados padrão para um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) .  

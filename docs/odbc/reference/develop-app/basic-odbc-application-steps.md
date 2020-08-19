@@ -1,4 +1,5 @@
 ---
+description: Etapas de aplicativo básico ODBC
 title: Etapas básicas do aplicativo ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29abb0ec5bbfa9b423290e3354d9455b639f8f59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1590714b8b376f4a69f9a2a3e3bf42796c5fe62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476868"
 ---
 # <a name="basic-odbc-application-steps"></a>Etapas de aplicativo básico ODBC
 Esta seção descreve o fluxo geral de aplicativos ODBC. É improvável que qualquer aplicativo chame todas essas funções exatamente nesta ordem. No entanto, a maioria dos aplicativos usa uma variação dessas etapas. As etapas básicas do aplicativo são mostradas na ilustração a seguir.  

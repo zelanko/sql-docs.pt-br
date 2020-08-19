@@ -1,4 +1,5 @@
 ---
+description: sp_addsynctriggers (Transact-SQL)
 title: sp_addsynctriggers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f11e2c1aaf4747d8e0edaf6fd44b62ec93ee4896
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 400b6ef96cd841c2115fcb13bd5e8b782816ce43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486248"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,41 +58,41 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sub_table = ] 'sub_table'`É o nome da tabela do Assinante. *sub_table* é **sysname**, sem padrão.  
+`[ @sub_table = ] 'sub_table'` É o nome da tabela do Assinante. *sub_table* é **sysname**, sem padrão.  
   
-`[ @sub_table_owner = ] 'sub_table_owner'`É o nome do proprietário da tabela do Assinante. *sub_table_owner* é **sysname**, sem padrão.  
+`[ @sub_table_owner = ] 'sub_table_owner'` É o nome do proprietário da tabela do Assinante. *sub_table_owner* é **sysname**, sem padrão.  
   
-`[ @publisher = ] 'publisher'`É o nome do servidor do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do servidor do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão. Se NULL, será usado o banco de dados atual.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão. Se NULL, será usado o banco de dados atual.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. A *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. A *publicação* é **sysname**, sem padrão.  
   
-`[ @ins_proc = ] 'ins_proc'`É o nome do procedimento armazenado que dá suporte a inserções de transações síncronas no Publicador. *ins_proc* é **sysname**, sem padrão.  
+`[ @ins_proc = ] 'ins_proc'` É o nome do procedimento armazenado que dá suporte a inserções de transações síncronas no Publicador. *ins_proc* é **sysname**, sem padrão.  
   
-`[ @upd_proc = ] 'upd_proc'`É o nome do procedimento armazenado que dá suporte a atualizações de transação síncronas no Publicador. *ins_proc* é **sysname**, sem padrão.  
+`[ @upd_proc = ] 'upd_proc'` É o nome do procedimento armazenado que dá suporte a atualizações de transação síncronas no Publicador. *ins_proc* é **sysname**, sem padrão.  
   
-`[ @del_proc = ] 'del_proc'`É o nome do procedimento armazenado que dá suporte a exclusões de transações síncronas no Publicador. *ins_proc* é **sysname**, sem padrão.  
+`[ @del_proc = ] 'del_proc'` É o nome do procedimento armazenado que dá suporte a exclusões de transações síncronas no Publicador. *ins_proc* é **sysname**, sem padrão.  
   
-`[ @cftproc = ] 'cftproc'`É o nome do procedimento gerado automaticamente usado por publicações que permitem atualização em fila. *cftproc* é **sysname**, sem padrão. Para publicações que permitem atualização imediata, este valor é o NULL. Este parâmetro se aplica a publicações que permitem atualização feita fila (Atualização Feita fila e Atualização Imediata com Atualização Feita fila como Failover).  
+`[ @cftproc = ] 'cftproc'` É o nome do procedimento gerado automaticamente usado por publicações que permitem atualização em fila. *cftproc* é **sysname**, sem padrão. Para publicações que permitem atualização imediata, este valor é o NULL. Este parâmetro se aplica a publicações que permitem atualização feita fila (Atualização Feita fila e Atualização Imediata com Atualização Feita fila como Failover).  
   
-`[ @proc_owner = ] 'proc_owner'`Especifica a conta de usuário no Publicador sob a qual todos os procedimentos armazenados gerados automaticamente para atualizar a publicação (na fila e/ou imediata) foram criados. *proc_owner* é **sysname** sem padrão.  
+`[ @proc_owner = ] 'proc_owner'` Especifica a conta de usuário no Publicador sob a qual todos os procedimentos armazenados gerados automaticamente para atualizar a publicação (na fila e/ou imediata) foram criados. *proc_owner* é **sysname** sem padrão.  
   
-`[ @identity_col = ] 'identity_col'`É o nome da coluna de identidade no Publicador. *identity_col* é **sysname**, com um padrão de NULL.  
+`[ @identity_col = ] 'identity_col'` É o nome da coluna de identidade no Publicador. *identity_col* é **sysname**, com um padrão de NULL.  
   
-`[ @ts_col = ] 'timestamp_col'`É o nome da coluna de **carimbo de data/hora** no Publicador. *timestamp_col* é **sysname**, com um padrão de NULL.  
+`[ @ts_col = ] 'timestamp_col'` É o nome da coluna de **carimbo de data/hora** no Publicador. *timestamp_col* é **sysname**, com um padrão de NULL.  
   
-`[ @filter_clause = ] 'filter_clause'`É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave WHERE. *filter_clause*é **nvarchar (4000)**, com um padrão de NULL.  
+`[ @filter_clause = ] 'filter_clause'` É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave WHERE. *filter_clause*é **nvarchar (4000)**, com um padrão de NULL.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'`É um mapa de bits das colunas de chave primária na tabela. *primary_key_bitmap* é **varbinary (4000)**, sem padrão.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` É um mapa de bits das colunas de chave primária na tabela. *primary_key_bitmap* é **varbinary (4000)**, sem padrão.  
   
-`[ @identity_support = ] identity_support`Habilita e desabilita o tratamento automático de intervalo de identidade quando a atualização em fila é usada. *identity_support* é um **bit**, com um padrão de **0**. **0** significa que não há suporte para intervalo de identidade, **1** habilita o tratamento automático de intervalo de identidade.  
+`[ @identity_support = ] identity_support` Habilita e desabilita o tratamento automático de intervalo de identidade quando a atualização em fila é usada. *identity_support* é um **bit**, com um padrão de **0**. **0** significa que não há suporte para intervalo de identidade, **1** habilita o tratamento automático de intervalo de identidade.  
   
-`[ @independent_agent = ] independent_agent`Indica se há um único Agente de Distribuição (um agente independente) para essa publicação, ou um Agente de Distribuição por par de banco de dados de publicação e de assinatura (um agente compartilhado). Esse valor reflete o valor da propriedade ndependent_agent da publicação definida no Publicador. *independent_agent* é um bit com um padrão de **0**. Se for **0**, o agente será um agente compartilhado. Se for **1**, o agente será um agente independente.  
+`[ @independent_agent = ] independent_agent` Indica se há um único Agente de Distribuição (um agente independente) para essa publicação, ou um Agente de Distribuição por par de banco de dados de publicação e de assinatura (um agente compartilhado). Esse valor reflete o valor da propriedade ndependent_agent da publicação definida no Publicador. *independent_agent* é um bit com um padrão de **0**. Se for **0**, o agente será um agente compartilhado. Se for **1**, o agente será um agente independente.  
   
-`[ @distributor = ] 'distributor'`É o nome do distribuidor. o *distribuidor* é **sysname**, sem padrão.  
+`[ @distributor = ] 'distributor'` É o nome do distribuidor. o *distribuidor* é **sysname**, sem padrão.  
   
-`[ @pubversion = ] pubversion`Indica a versão do Publicador. *pubversion* é **int**, com um padrão de 1. **1** significa que a versão do Publicador é [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 ou anterior; **2** significa que o Publicador é o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) ou posterior. *pubversion* deve ser definido explicitamente como **2** quando a versão do Publicador for [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 ou posterior.  
+`[ @pubversion = ] pubversion` Indica a versão do Publicador. *pubversion* é **int**, com um padrão de 1. **1** significa que a versão do Publicador é [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 ou anterior; **2** significa que o Publicador é o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) ou posterior. *pubversion* deve ser definido explicitamente como **2** quando a versão do Publicador for [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 ou posterior.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -103,8 +104,8 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addsynctriggers**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [&#41;&#40;Transact-SQL de sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [&#41;&#40;Transact-SQL de sp_script_synctran_commands ](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

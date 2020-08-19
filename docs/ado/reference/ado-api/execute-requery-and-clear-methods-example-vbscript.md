@@ -1,4 +1,5 @@
 ---
+description: Exemplo dos métodos Execute, Requery e Clear (VBScript)
 title: Exemplo dos métodos Execute, Requery e Clear (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0785e3e91c6d01f446e1d49b34a41beef052c48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 683b4303c3144916de9f974b7715df6480fee9fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443858"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Exemplo dos métodos Execute, Requery e Clear (VBScript)
 Este exemplo demonstra o método **Execute** quando executado a partir de um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) e um objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Ele também usa o método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para limpar o conteúdo da coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) . Os procedimentos ExecuteCommand e MyOutput são necessários para que este procedimento seja executado.  

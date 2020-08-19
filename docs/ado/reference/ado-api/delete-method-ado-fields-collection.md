@@ -1,4 +1,5 @@
 ---
+description: Método Delete (Coleção de campos ADO)
 title: Método Delete (coleção de campos ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 691ad580825e4d22cef8bea4f30c737415cfc6b3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fb60cea6ef2e741103e94f38955bb2afc688e228
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444168"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Método Delete (Coleção de campos ADO)
 Exclui um objeto da coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) .  

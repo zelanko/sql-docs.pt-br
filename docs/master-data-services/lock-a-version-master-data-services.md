@@ -1,4 +1,5 @@
 ---
+description: Bloquear uma versão (Master Data Services)
 title: Bloquear uma versão
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b98dff0acf3b2d7a8c3eed5d79e284bfca8f92fd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7f72b98acb33d906adc979313826f234812a8a4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495046"
 ---
 # <a name="lock-a-version-master-data-services"></a>Bloquear uma versão (Master Data Services)
 

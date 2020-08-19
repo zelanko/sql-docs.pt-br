@@ -1,4 +1,5 @@
 ---
+description: Head (MDX)
 title: Cabeçalho (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51a832bf38d3834c44f9b31f5bbfd27833d6d691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429918"
 ---
 # <a name="head-mdx"></a>Head (MDX)
 
@@ -55,10 +56,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#40;&#41;da parte final do MDX](../mdx/tail-mdx.md)   
+ [&#40;&#41;da parte final do MDX ](../mdx/tail-mdx.md)   
  [&#40;de tupla de item&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [Membro de &#40;de item&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
- [Classificação &#40;&#41;MDX](../mdx/rank-mdx.md)   
+ [Classificação &#40;&#41;MDX ](../mdx/rank-mdx.md)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

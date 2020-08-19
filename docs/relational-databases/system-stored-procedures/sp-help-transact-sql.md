@@ -1,4 +1,5 @@
 ---
+description: sp_help (Transact-SQL)
 title: sp_help (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -18,12 +19,12 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485999"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'name'`É o nome de qualquer objeto, em **sysobjects** ou qualquer tipo de dados definido pelo usuário na tabela **systypes** . *Name* é **nvarchar (** 776 **)**, com um padrão de NULL. Nomes de banco de dados não são aceitáveis.  Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
+`[ @objname = ] 'name'` É o nome de qualquer objeto, em **sysobjects** ou qualquer tipo de dados definido pelo usuário na tabela **systypes** . *Name* é **nvarchar (** 776 **)**, com um padrão de NULL. Nomes de banco de dados não são aceitáveis.  Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -105,8 +106,8 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome da coluna|Tipo de dados|Descrição|  
         |-----------------|---------------|-----------------|  
         |**Identidade**|**nvarchar (** 128 **)**|Nome da coluna cujo tipo de dados é declarado como identidade.|  
-        |**Seed**|**numeric**|O valor inicial para a coluna de identidade.|  
-        |**Progressiv**|**numeric**|Incremento a ser usado para obter valores nesta coluna.|  
+        |**Semente**|**numeric**|O valor inicial para a coluna de identidade.|  
+        |**Incremento**|**numeric**|Incremento a ser usado para obter valores nesta coluna.|  
         |**Não para replicação**|**int**|A propriedade IDENTITY não é imposta quando um logon de replicação, como **sqlrepl**, insere dados na tabela:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Conjunto de resultados adicionais retornado em colunas:  
@@ -192,12 +193,12 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helprotect](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpindex ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpuser](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Objetos desys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_helpuser ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [ Objetos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

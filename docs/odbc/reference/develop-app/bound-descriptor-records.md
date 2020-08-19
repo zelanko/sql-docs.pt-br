@@ -1,4 +1,5 @@
 ---
+description: Registros de descritor associados
 title: Registros do descritor associado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 155ef4951abddc7a73d9d4abfbc45248f33d653c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf88374967b5a9d8426d16c9e92c06e4eef32cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476798"
 ---
 # <a name="bound-descriptor-records"></a>Registros de descritor associados
 Quando o aplicativo define o SQL_DESC_DATA_PTR campo de um registro de descritor para que ele não contenha mais um valor nulo, o registro é considerado *associado*.  

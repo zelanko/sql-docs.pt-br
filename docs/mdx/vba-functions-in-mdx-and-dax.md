@@ -1,4 +1,5 @@
 ---
+description: Funções VBA no MDX e no DAX
 title: Funções VBA em MDX e DAX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429698"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funções VBA no MDX e no DAX
 
@@ -51,7 +52,7 @@ ms.locfileid: "68135015"
 |CVar|Somente MDX||  
 |CVErr|Sem suporte||  
 |Data|Somente MDX|**Aviso** O DAX implementa uma função diferente com o mesmo nome; a função data (ano, mês, dia), usada para gerar um valor de tipo de data dos argumentos especificados|  
-|DateAdd|Somente MDX|**Aviso** O DAX implementa uma função diferente com o mesmo nome; a função DATEADD\<(datas>, <number_of_intervals>\<, intervalo>), usada para deslocar as datas determinadas por um número de intervalos determinados|  
+|DateAdd|Somente MDX|**Aviso** O DAX implementa uma função diferente com o mesmo nome; a função DATEADD ( \<dates> , <number_of_intervals> \<interval> ), usada para deslocar as datas determinadas por um número de intervalos determinados|  
 |DateDiff|Somente MDX||  
 |DatePart|Somente MDX||  
 |DateSerial|Somente MDX||  
@@ -67,8 +68,8 @@ ms.locfileid: "68135015"
 |FileAttr|Sem suporte||  
 |FileDateTime|Sem suporte||  
 |FileLen|Sem suporte||  
-|Filtrar|Sem suporte|**Aviso** A linguagem MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto que resulta da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos especificados<br /><br /> **Aviso** O DAX implementa uma função diferente com o mesmo nome; a função FILTER\<(> de\<tabela, Filter>) retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos fornecidos|  
-|Fix|Somente MDX||  
+|Filtrar|Sem suporte|**Aviso** A linguagem MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto que resulta da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos especificados<br /><br /> **Aviso** O DAX implementa uma função diferente com o mesmo nome; a função FILTER ( \<table> , \<filter> ) retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos especificados|  
+|Correção|Somente MDX||  
 |Formato (Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|Sem suporte||  
 |FormatDateTime|Sem suporte||  
@@ -102,7 +103,7 @@ ms.locfileid: "68135015"
 |Join|Sem suporte||  
 |LBound|Sem suporte||  
 |LCase|Somente MDX||  
-|Left (à esquerda)|DAX, MDX||  
+|Esquerda|DAX, MDX||  
 |Len|DAX, MDX||  
 |Loc|Sem suporte||  
 |LOF|Sem suporte||  
@@ -128,7 +129,7 @@ ms.locfileid: "68135015"
 |Tarifa|Somente MDX||  
 |Substitua|Sem suporte||  
 |RGB|Somente MDX||  
-|Right|DAX, MDX||  
+|Direita|DAX, MDX||  
 |Rnd|Somente MDX||  
 |Round|DAX, MDX||  
 |RTrim|Somente MDX||  
@@ -136,7 +137,7 @@ ms.locfileid: "68135015"
 |Seek|Sem suporte||  
 |Sgn|DAX, MDX||  
 |Shell|Sem suporte||  
-|Sin|Somente MDX||  
+|Seno|Somente MDX||  
 |SLN|Somente MDX||  
 |Space|Somente MDX||  
 |Spc|Sem suporte||  
@@ -147,12 +148,12 @@ ms.locfileid: "68135015"
 |StrConv|Somente MDX||  
 |String|Somente MDX||  
 |StrReverse|Sem suporte||  
-|Opção|Somente MDX||  
+|Alternar|Somente MDX||  
 |SYD|Somente MDX||  
 |Tab|Sem suporte||  
 |Tan|Somente MDX||  
 |Hora|Sem suporte||  
-|Timer|Somente MDX||  
+|Temporizador|Somente MDX||  
 |TimeSerial|Somente MDX||  
 |TimeValue|DAX, MDX||  
 |Trim|DAX, MDX||  

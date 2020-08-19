@@ -1,4 +1,5 @@
 ---
+description: Configurar opções de rastreamento
 title: Definindo opções de rastreamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72e3805eded00b1bfa0c984d5ff0ace1ae1494fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476948"
 ---
 # <a name="setting-tracing-options"></a>Configurar opções de rastreamento
 A guia **rastreamento** da caixa de diálogo **administrador de fonte de dados ODBC** permite que você configure a maneira como as chamadas de função ODBC são rastreadas.  
@@ -42,7 +43,7 @@ A guia **rastreamento** da caixa de diálogo **administrador de fonte de dados O
   
 2.  Em ferramentas administrativas, abra o administrador de fonte de dados ODBC.  
   
-3.  Clique na guia **rastreamento** .  
+3.  Clique na guia **Rastreamento**.  
   
 4.  Configure o modo de rastreamento usando a caixa de seleção **rastreamento em todo o computador para todas as identidades de usuário** :  
   

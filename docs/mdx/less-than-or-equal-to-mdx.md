@@ -1,4 +1,5 @@
 ---
+description: '&lt;= (Menor que ou igual a) (MDX)'
 title: '&lt;= (Menor que ou igual a) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 00021ea9c23de80f6b025963543af2cf4be2f572
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c800f39898127d7e7b7fe9b0bef8df46040d834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429888"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (Menor que ou igual a) (MDX)
 
@@ -31,7 +32,7 @@ MDX_Expression <= MDX_Expression
  *MDX_Expression*  
  Uma expressão MDX válida.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor booliano baseado nas seguintes condições:  
   
 -   t**Rue** se ambos os parâmetros forem não nulos e o primeiro parâmetro tiver um valor que seja menor ou igual ao valor do segundo parâmetro.  
@@ -61,6 +62,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

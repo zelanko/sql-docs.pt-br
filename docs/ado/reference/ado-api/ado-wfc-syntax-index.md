@@ -1,4 +1,5 @@
 ---
+description: ADO – Índice de sintaxe WFC
 title: Índice de sintaxe ADO-WFC | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6e5c4fd54b5784e76067231096752a68dd52a6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451338"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO – Índice de sintaxe WFC
 A referência da linguagem ADO usa a linguagem de programação do Microsoft Visual Basic para ilustrar a sintaxe do método e da Propriedade do ADO. Esse índice é uma referência cruzada para os tópicos de referência da linguagem ADO, com base no ADO para classes do Windows Foundation (ADO/WFC). Quando surgirem diferenças na sintaxe, use as assinaturas de função neste índice, em oposição às listagens de sintaxe no tópico de referência de linguagem.  

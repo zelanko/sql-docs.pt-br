@@ -1,4 +1,5 @@
 ---
+description: Exemplo dos métodos Append e CreateParameter (JScript)
 title: Exemplo dos métodos Append e CreateParameter (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048a54ab758304bbfef50ffb1eaa98254b4fd496
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c0701577bbd569e1b7c01239bd3613591864696d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451298"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Exemplo dos métodos Append e CreateParameter (JScript)
 Este exemplo usa os métodos [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para executar um procedimento armazenado com um parâmetro de entrada. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **AppendJS. asp**.  

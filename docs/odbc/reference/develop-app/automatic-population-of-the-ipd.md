@@ -1,4 +1,5 @@
 ---
+description: Preenchimento automático do IPD
 title: População automática do IPD | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73c0456f1c78ccc19f1ff55a1ab288baedae2e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476878"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Preenchimento automático do IPD
 Alguns drivers são capazes de definir os campos do IPD depois que uma consulta parametrizada tiver sido preparada. Os campos de descritor são preenchidos automaticamente com informações sobre o parâmetro, incluindo o tipo de dados, a precisão, a escala e outras características. Isso é equivalente ao suporte a **SQLDescribeParam**. Essas informações podem ser particularmente valiosas para um aplicativo quando não há nenhuma outra maneira de descobri-lo, como quando uma consulta ad hoc é executada com parâmetros que o aplicativo não conhece.  

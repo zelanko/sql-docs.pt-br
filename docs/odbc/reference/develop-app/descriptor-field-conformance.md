@@ -1,4 +1,5 @@
 ---
+description: Conformidade de campo de descritor
 title: Conformidade do campo do descritor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cce33adfdbfceef56936b22c549b6762521b4798
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36687cf456f4fcbbaa3f4b029e51098815dec3f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476738"
 ---
 # <a name="descriptor-field-conformance"></a>Conformidade de campo de descritor
 A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho de descritor ODBC, em que isso é bem definido.  

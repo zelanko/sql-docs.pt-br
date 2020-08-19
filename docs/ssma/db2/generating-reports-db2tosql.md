@@ -1,4 +1,5 @@
 ---
+description: Gerando relatórios (DB2ToSQL)
 title: Gerando relatórios (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1ae04ceabe7a2063f8b9806894ff8e4d55c577fd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 75ed10de8af160939689fdaa883c6d7d9dc7915d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468859"
 ---
 # <a name="generating-reports-db2tosql"></a>Gerando relatórios (DB2ToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  

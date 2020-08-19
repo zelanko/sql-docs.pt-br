@@ -1,4 +1,5 @@
 ---
+description: Confirmar ou Enviar um Conjunto de Alterações (Master Data Services)
 title: Confirmar ou Enviar um Conjunto de Alterações
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0d6656052194b23b0107641d3c59ba8a84544731
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 47675ce7f7ac4704db9578564020c67fdc3b30b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430098"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>Confirmar ou Enviar um Conjunto de Alterações (Master Data Services)
 
