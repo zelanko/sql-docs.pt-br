@@ -1,4 +1,5 @@
 ---
+description: 'Lição 2: Criando e gerenciando dados em uma tabela hierárquica'
 title: 'Lição 2: Criando e gerenciando dados em uma tabela hierárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460218"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lição 2: criar e gerenciar dados em uma tabela hierárquica
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-Na Lição 1, você modificou uma tabela existente para usar o tipo de dados **hierarchyid** e populou a coluna **hierarchyid** com a representação dos dados existentes. Nesta lição, você iniciará com uma tabela nova, e inserindo dados usando os métodos hierárquicos. Em seguida, você vai consultar e manipular os dados usando os métodos hierárquicos. 
+ Na Lição 1, você modificou uma tabela existente para usar o tipo de dados **hierarchyid** e populou a coluna **hierarchyid** com a representação dos dados existentes. Nesta lição, você iniciará com uma tabela nova, e inserindo dados usando os métodos hierárquicos. Em seguida, você vai consultar e manipular os dados usando os métodos hierárquicos. 
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
 - Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [Bancos de dados de exemplo do AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-As instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Criar uma tabela por meio de um tipo de dados hierarchyid
 O exemplo a seguir cria uma tabela com o nome EmployeeOrg, que inclui dados de funcionário junto com sua hierarquia de relatórios. O exemplo cria a tabela no banco de dados AdventureWorks2017, mas isso é opcional. Para manter o exemplo simples, essa tabela inclui somente cinco colunas:  
@@ -292,7 +293,7 @@ Agora que a tabela HumanResources.EmployeeOrg está completamente populada, essa
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Reorganizar uma hierarquia é uma tarefa de manutenção comum. Nesta tarefa, usaremos a instrução UPDATE com o método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primeiramente uma única linha para um novo local da hierarquia. Em seguida, moveremos uma subárvore inteira para um novo local.  
   
-O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descreve a parte da hierarquia a ser modificada. Por exemplo, se uma hierarquia for **/1/4/2/3/** e você desejar alterar a seção **/1/4/** , a hierarquia se tornará **/2/1/2/3/** ; se deixar os últimos dois nós (**2/3/** ) inalterados, você precisará fornecer os nós que estão sendo alterados ( **/1/4/** ) como o primeiro argumento. O segundo argumento fornece o novo nível hierárquico, em nosso exemplo **/2/1/** . Os dois argumentos não precisam conter o mesmo número de níveis.  
+O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descreve a parte da hierarquia a ser modificada. Por exemplo, se uma hierarquia for **/1/4/2/3/** e você desejar alterar a seção **/1/4/** , a hierarquia se tornará **/2/1/2/3/**; se deixar os últimos dois nós (**2/3/**) inalterados, você precisará fornecer os nós que estão sendo alterados (**/1/4/**) como o primeiro argumento. O segundo argumento fornece o novo nível hierárquico, em nosso exemplo **/2/1/**. Os dois argumentos não precisam conter o mesmo número de níveis.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Mover uma linha única para um novo local hierárquico  
   
@@ -322,7 +323,7 @@ O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descre
     GO  
     ```  
   
-    Valentina encontra-se agora no nó **/3/1/** .  
+    Valentina encontra-se agora no nó **/3/1/**.  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>Reorganizar uma seção de hierarquia  
   
@@ -333,7 +334,7 @@ O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descre
     GO  
     ```  
   
-2.  Kevin agora se reporta a Wanida, que se reporta a Jill, que se reporta a David. Isso significa que Julio se encontra no nível **/3/1/1/** . Para mover todos os subordinados de Julieta para um novo administrador, atualizaremos todos os nós com **/3/** como seus **OrgNode** para um novo valor. Execute o seguinte código para atualizar Wanida, de modo que passe a se reportar a Sariya, mas deixando Kevin se reportando a Wanida:  
+2.  Kevin agora se reporta a Wanida, que se reporta a Jill, que se reporta a David. Isso significa que Julio se encontra no nível **/3/1/1/**. Para mover todos os subordinados de Julieta para um novo administrador, atualizaremos todos os nós com **/3/** como seus **OrgNode** para um novo valor. Execute o seguinte código para atualizar Wanida, de modo que passe a se reportar a Sariya, mas deixando Kevin se reportando a Wanida:  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

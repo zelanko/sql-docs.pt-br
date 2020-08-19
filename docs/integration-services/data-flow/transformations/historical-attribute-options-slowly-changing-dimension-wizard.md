@@ -1,4 +1,5 @@
 ---
+description: Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta)
 title: Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4dfa3579fb37fab94f8bc5731738ed024676018e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9610a734543c9199e54d3f8489d86e03089f10ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430698"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta)
 
@@ -32,7 +33,7 @@ ms.locfileid: "86919300"
  **Use uma única coluna para mostrar os registros atual e expirado**  
  Se você optar por usar uma única coluna para registrar o status de atributos históricos, estarão disponíveis as seguintes opções:  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Coluna para indicar o registro atual**|Selecione uma coluna na qual indicar o registro atual.|  
 |**Valor atual**|Use **Verdadeiro** ou **Atual** para mostrar se o registro é atual.|  
@@ -41,7 +42,7 @@ ms.locfileid: "86919300"
  **Use as datas de início e de término para identificar os registros atual e expirado**  
  A tabela de dimensão desta opção deve incluir uma coluna de data. Se você optar por mostrar atributos históricos por datas de início e de término, estarão disponíveis as seguintes opções:  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Coluna da data de início**|Selecione a coluna na tabela de dimensões que conterá a data de início.|  
 |**Coluna da data de término**|Selecione a coluna na tabela de dimensões que conterá a data de término.|  

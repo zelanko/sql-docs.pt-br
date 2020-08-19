@@ -1,4 +1,5 @@
 ---
+description: sp_helplinkedsrvlogin (Transact-SQL)
 title: sp_helplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aa2ba45d45ee2518102d8e2ec7d60a3299fca88
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a77a797d8da80746410b9f8a697b747f93242c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469263"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rmtsrvname = ] 'rmtsrvname'`É o nome do servidor vinculado ao qual o mapeamento de logon se aplica. *rmtsrvname* é **sysname**, com um padrão de NULL. Se for NULL, todos os mapeamentos de logon definidos em todos os servidores vinculados definidos no computador local que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
+`[ @rmtsrvname = ] 'rmtsrvname'` É o nome do servidor vinculado ao qual o mapeamento de logon se aplica. *rmtsrvname* é **sysname**, com um padrão de NULL. Se for NULL, todos os mapeamentos de logon definidos em todos os servidores vinculados definidos no computador local que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
   
-`[ @locallogin = ] 'locallogin'`É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon no servidor local que tem um mapeamento para o servidor vinculado *rmtsrvname*. *locallogin* é **sysname**, com um padrão de NULL. NULL especifica que todos os mapeamentos de logon definidos em *rmtsrvname* são retornados. Se não for NULL, um mapeamento para *locallogin* para *rmtsrvname* já deverá existir. *locallogin* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário do Windows. O usuário do Windows deve ter acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretamente ou por meio de sua associação em um grupo do Windows com acesso concedido.  
+`[ @locallogin = ] 'locallogin'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon no servidor local que tem um mapeamento para o servidor vinculado *rmtsrvname*. *locallogin* é **sysname**, com um padrão de NULL. NULL especifica que todos os mapeamentos de logon definidos em *rmtsrvname* são retornados. Se não for NULL, um mapeamento para *locallogin* para *rmtsrvname* já deverá existir. *locallogin* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário do Windows. O usuário do Windows deve ter acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretamente ou por meio de sua associação em um grupo do Windows com acesso concedido.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -125,8 +126,8 @@ Sales            Mary          0               sa
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droplinkedsrvlogin ](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

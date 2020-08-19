@@ -1,4 +1,5 @@
 ---
+description: sp_helprole (Transact-SQL)
 title: sp_helprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36414885089de27fc06dc4029ee57ef341707912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469247"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`É o nome de uma função no banco de dados atual. *role* é **sysname**, com um padrão de NULL. a *função* deve existir no banco de dados atual. Se a *função* não for especificada, as informações sobre todas as funções no banco de dados atual serão retornadas.  
+`[ @rolename = ] 'role'` É o nome de uma função no banco de dados atual. *role* é **sysname**, com um padrão de NULL. a *função* deve existir no banco de dados atual. Se a *função* não for especificada, as informações sobre todas as funções no banco de dados atual serão retornadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -70,11 +71,11 @@ EXEC sp_helprole
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Funções de nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [&#41;&#40;Transact-SQL de sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helprolemember](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsrvrolemember](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addapprole ](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addrole ](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droprole ](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprolemember ](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsrvrolemember ](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

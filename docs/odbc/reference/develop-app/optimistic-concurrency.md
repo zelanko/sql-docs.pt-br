@@ -1,4 +1,5 @@
 ---
+description: Simultaneidade otimista
 title: Simultaneidade otimista | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 30eba3ea03b4c798a74a8cb928014b582846607b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dce1982edbb8f5a417404c6e24e8a40d25b58e0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429128"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 A *simultaneidade otimista* deriva seu nome da pressuposição otimista de que as colisões entre as transações raramente ocorrerão; uma colisão deve ter ocorrido quando outra transação atualiza ou exclui uma linha de dados entre a hora em que é lida pela transação atual e a hora em que ela é atualizada ou excluída. É o oposto da *simultaneidade pessimista* ou do bloqueio, em que o desenvolvedor do aplicativo acredita que essas colisões são comuns.  

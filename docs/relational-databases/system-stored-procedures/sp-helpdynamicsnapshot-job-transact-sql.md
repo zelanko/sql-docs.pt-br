@@ -1,4 +1,5 @@
 ---
+description: sp_helpdynamicsnapshot_job (Transact-SQL)
 title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a155e7031a78cac6dcea4ca380f7b496d59170f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61e72b03e3bc6adff3a9e3d0858a8a2bdb4b5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469283"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,15 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os trabalhos de instantâneo de dados filtrados que correspondem ao *dynamic_snapshot_jobid*especificado e *dynamic_snapshot_jobname*para todas as publicações.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os trabalhos de instantâneo de dados filtrados que correspondem ao *dynamic_snapshot_jobid*especificado e *dynamic_snapshot_jobname*para todas as publicações.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`É o nome de um trabalho de instantâneo de dados filtrado. *dynamic_snapshot_jobname*é **sysname**, com o padrão **%** ', que retorna todos os trabalhos dinâmicos para uma publicação com o *dynamic_snapshot_jobid*especificado. Se um nome de trabalho não tiver sido explicitamente especificado quando o trabalho foi criado, o nome do trabalho terá o seguinte formato:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` É o nome de um trabalho de instantâneo de dados filtrado. *dynamic_snapshot_jobname*é **sysname**, com o padrão **%** ', que retorna todos os trabalhos dinâmicos para uma publicação com o *dynamic_snapshot_jobid*especificado. Se um nome de trabalho não tiver sido explicitamente especificado quando o trabalho foi criado, o nome do trabalho terá o seguinte formato:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`É um identificador para um trabalho de instantâneo de dados filtrado. *dynamic_snapshot_jobid*é **uniqueidentifier**, com o padrão NULL, que retorna todos os trabalhos de instantâneo que correspondem ao *dynamic_snapshot_jobname*especificado.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` É um identificador para um trabalho de instantâneo de dados filtrado. *dynamic_snapshot_jobid*é **uniqueidentifier**, com o padrão NULL, que retorna todos os trabalhos de instantâneo que correspondem ao *dynamic_snapshot_jobname*especificado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -64,7 +65,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**job_id**|**uniqueidentifier**|Identifica o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente no distribuidor.|  
 |**dynamic_filter_login**|**sysname**|Valor usado para avaliar a função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) em um filtro de linha com parâmetros definido para a publicação.|  
 |**dynamic_filter_hostname**|**sysname**|Valor usado para avaliar a função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) em um filtro de linha com parâmetros definido para a publicação.|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|Caminho para a pasta onde os arquivos de instantâneo são lidos se um filtro de linha com parâmetros for usado.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|Caminho para a pasta onde os arquivos de instantâneo são lidos se um filtro de linha com parâmetros for usado.|  
 |**frequency_type**|**int**|É a frequência de agendamento para execução do agente, que pode ser um dos valores a seguir.<br /><br /> **1** = uma vez<br /><br /> **2** = sob demanda<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = relativo mensal<br /><br /> **64** = inicialização automática<br /><br /> **128** = recorrente|  
 |**frequency_interval**|**int**|Os dias de execução do agente, que pode ter um destes valores.<br /><br /> **1** = domingo<br /><br /> **2** = segunda-feira<br /><br /> **3** = terça-feira<br /><br /> **4** = quarta-feira<br /><br /> **5** = quinta-feira<br /><br /> **6** = sexta-feira<br /><br /> **7** = sábado<br /><br /> **8** = dia<br /><br /> **9** = dias da semana<br /><br /> **10** = dias de semana|  
 |**frequency_subday_type**|**int**|É o tipo que define a frequência com que o agente é executado quando *frequency_type* é **4** (diariamente) e pode ser um desses valores.<br /><br /> **1** = na hora especificada<br /><br /> **2** = segundos<br /><br /> **4** = minutos<br /><br /> **8** = horas|  

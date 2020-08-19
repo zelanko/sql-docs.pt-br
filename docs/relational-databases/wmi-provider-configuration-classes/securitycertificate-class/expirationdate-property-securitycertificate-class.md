@@ -1,4 +1,5 @@
 ---
+description: Propriedade ExpirationDate (classe SecurityCertificate)
 title: Propriedade ExpirationDate (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc036845ba0aad6c9c3f12cdcf0a4b19df221922
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 879b10b0c0e1027640630ffcb0d3a6b092a22da1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460128"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Propriedade ExpirationDate (classe SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém a data em que o certificado de segurança deixar de ter efeito.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

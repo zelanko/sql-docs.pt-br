@@ -1,4 +1,5 @@
 ---
+description: Propriedade IssuedTo (classe SecurityCertificate)
 title: Propriedade emitidoto (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 235609e2018dfb9e8aac5f9eb017cb639d46de54
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe913eeae76f9b069502caa55249eb0a785a86ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460109"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>Propriedade IssuedTo (classe SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o objeto para o qual o certificado de segurança é emitido.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

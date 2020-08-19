@@ -1,4 +1,5 @@
 ---
+description: ODBC Source Custom Properties
 title: Propriedades personalizadas da origem ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fa4300180e7d3c6c5f637b4e81d92d70cfd20dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0c01d66062747788bd9bf05ca8cf06e8e5088a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430758"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
 
@@ -24,7 +25,7 @@ ms.locfileid: "86914738"
 
   A tabela a seguir descreve as propriedades personalizadas da origem ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |Conexão|Conexão ODBC|Uma conexão ODBC para acessar o banco de dados de origem.|  
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar o banco de dados. Os valores possíveis são Nome da Tabela (0) e Comando SQL (1).<br /><br /> O padrão é Nome da Tabela (0).|  
@@ -32,7 +33,7 @@ ms.locfileid: "86914738"
 |BindCharColumnAs|Inteiro (enumeração)|Essa propriedade determina como a fonte ODBC associa colunas a tipos de cadeia de caracteres de vários bytes, como SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR.<br /><br /> Os possíveis valores são Unicode (0), que associa as colunas como SQL_C_WCHAR e ANSI (1), que associa as colunas como SQL_C_CHAR). O valor padrão é Unicode (0).<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
 |BindNumericAs|Inteiro (enumeração)|Essa propriedade determina como a fonte ODBC associa colunas com dados numéricos a tipos de dados SQL_TYPE_NUMERIC e SQL_TYPE_DECIMAL.<br /><br /> As opções possíveis são Char (0), que associa as colunas como SQL_C_CHAR e Numeric (1), que associa as colunas como SQL_C_NUMERIC. O valor padrão é Char (0).<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
 |DefaultCodePage|Integer|A página de código a ser usada para colunas de saída de cadeia de caracteres.<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
-|ExposeCharColumnsAsUnicode|Boolean|Essa propriedade determina como o componente expõe colunas CHAR. O valor padrão é False, que indica as colunas CHAR que são expostas como cadeias de caracteres de vários bytes (DT_STR). Se True, as colunas CHAR são expostas como cadeias de caracteres amplas (DT_WSTR).<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
+|ExposeCharColumnsAsUnicode|Booliano|Essa propriedade determina como o componente expõe colunas CHAR. O valor padrão é False, que indica as colunas CHAR que são expostas como cadeias de caracteres de vários bytes (DT_STR). Se True, as colunas CHAR são expostas como cadeias de caracteres amplas (DT_WSTR).<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
 |FetchMethod|Inteiro (enumeração)|O método usado para adquirir os dados. As possíveis opções são Linha a linha (0) e Lote (1). O valor padrão é Lote (1).<br /><br /> Para obter mais informações sobre essas opções, consulte [Fonte ODBC](../../integration-services/data-flow/odbc-source.md).<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
 |SqlCommand|String|O comando SQL a ser executado quando AccessMode é definido como Comando SQL.|  
 |StatementTimeout|Integer|O número de segundos a aguardar a execução de uma instrução SQL antes de retornar com um erro para o aplicativo. O valor padrão é 0. Um valor de 0 indica se o sistema não alcança o tempo limite.|  

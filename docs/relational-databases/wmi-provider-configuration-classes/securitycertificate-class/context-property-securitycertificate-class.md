@@ -1,4 +1,5 @@
 ---
+description: Propriedade de contexto (classe SecurityCertificate)
 title: Propriedade Context (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03950f740e8e8f22144ef9bd4adcd791ac6a084e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a39850d2b4dfa2e298e48baf42db2cc60615c95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460129"
 ---
 # <a name="context-property-securitycertificate-class"></a>Propriedade de contexto (classe SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o contexto do certificado de segurança.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
