@@ -1,4 +1,5 @@
 ---
+description: ADOStreamConstruction Interface
 title: Interface ADOStreamConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451308"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction Interface
 A interface **ADOStreamConstruction** é usada para construir um objeto de **fluxo** ADO de um objeto OLE DB **IStream** em um aplicativo C/C++.  

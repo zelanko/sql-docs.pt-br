@@ -1,4 +1,5 @@
 ---
+description: Adicionar ou Editar Filtro
 title: Adicionar ou editar filtro | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 75b874fe2ded7f6baacdd65dddfd8ea3d371ba7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15859f0f54804417e1bb0e6a871b1d84d1e40191
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423640"
 ---
 # <a name="add-or-edit-filter"></a>Adicionar ou Editar Filtro
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

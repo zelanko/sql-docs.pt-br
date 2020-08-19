@@ -1,4 +1,5 @@
 ---
+description: 'Índice de sintaxe ADO for Visual C++ com #import'
 title: 'ADO para índice de sintaxe Visual C++ com #import | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451398"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Índice de sintaxe ADO for Visual C++ com #import
 Esse índice é uma referência cruzada para a referência da linguagem ADO com base em Microsoft Visual C++ e na diretiva **#import** .  
@@ -53,7 +54,7 @@ Esse índice é uma referência cruzada para a referência da linguagem ADO com 
   
 -   [Objeto Stream](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Eventos de Conexão](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Eventos de conexão](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Eventos do conjunto de registros](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   

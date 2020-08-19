@@ -1,4 +1,5 @@
 ---
+description: Level (MDX)
 title: Nível (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b419cbb05aa616f163f5878bda83c9d68203575d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfe1c3374b15b34a47fb1bd19b7233dd96db7151
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429878"
 ---
 # <a name="level-mdx"></a>Level (MDX)
 

@@ -1,4 +1,5 @@
 ---
+description: SQLSetDescField e SQLSetDescRec (Biblioteca de cursores)
 title: SQLSetDescField e SQLSetDescRec (biblioteca de cursores) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b85eb84cdf48a1c2a441b8994076a9023d254f2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cef4967a81a78e08dee733072359459c864b9627
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476938"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField e SQLSetDescRec (Biblioteca de cursores)
 > [!IMPORTANT]  

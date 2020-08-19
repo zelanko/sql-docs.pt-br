@@ -1,4 +1,5 @@
 ---
+description: Método DeleteRecord (ADO)
 title: Método DeleteRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 550638de710f709616e03cb79afd69f1e533ce9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94423c36dd89d6ea14ea39b7546ef1a5bef7c620
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444098"
 ---
 # <a name="deleterecord-method-ado"></a>Método DeleteRecord (ADO)
 Exclui uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -34,7 +35,7 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Fonte*  
+ *Origem*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL que identifica a entidade (por exemplo, o arquivo ou diretório) a ser excluída. Se a *origem* for omitida ou especificar uma cadeia de caracteres vazia, a entidade representada pelo [registro](../../../ado/reference/ado-api/record-object-ado.md) atual será excluída. Se o registro for um registro de coleção ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, como um diretório), todos os filhos (por exemplo, subdiretórios) também serão excluídos.  
   
  *Async*  

@@ -1,4 +1,5 @@
 ---
+description: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7226b42823ff51a00a22124b1fd1851c1943b97c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b8353cb7043f3835149104f0ab277af6de2ed45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414822"
 ---
 # <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765840"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
  Quando SET CURSOR_CLOSE_ON_COMMIT for ON, esta configuração fecha qualquer cursor aberto em confirmação ou reversão em conformidade com a ISO. Quando SET CURSOR_CLOSE_ON_COMMIT for OFF, o cursor não será fechado quando uma transação estiver confirmada.  
   
 > [!NOTE]  

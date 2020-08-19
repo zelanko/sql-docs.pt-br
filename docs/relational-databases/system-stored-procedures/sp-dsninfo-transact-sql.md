@@ -1,4 +1,5 @@
 ---
+description: sp_dsninfo (Transact-SQL)
 title: sp_dsninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59d0b995103ab01d3bf3b7ec5336ad16b97b1e6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 378b50379ab03124db37c296be273f0a68db59d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486069"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dsn = ] 'dsn'`É o nome do DSN ODBC ou OLE DB servidor vinculado. o *DSN* é **varchar (128)**, sem padrão.  
+`[ @dsn = ] 'dsn'` É o nome do DSN ODBC ou OLE DB servidor vinculado. o *DSN* é **varchar (128)**, sem padrão.  
   
-`[ @infotype = ] 'info_type'`É o tipo de informação a ser retornado. Se *info_type* não for especificado ou se NULL for especificado, todos os tipos de informações serão retornados. *info_type* é **varchar (128)**, com um padrão de NULL, e pode ser um desses valores.  
+`[ @infotype = ] 'info_type'` É o tipo de informação a ser retornado. Se *info_type* não for especificado ou se NULL for especificado, todos os tipos de informações serão retornados. *info_type* é **varchar (128)**, com um padrão de NULL, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -52,11 +53,11 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Especifica o nome do banco de dados.|  
 |**SQL_SUBSCRIBER**|Especifica que a fonte de dados pode ser um Assinante.|  
   
-`[ @login = ] 'login'`É o logon da fonte de dados. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. o *logon*é **varchar (128)**, com um padrão de NULL.  
+`[ @login = ] 'login'` É o logon da fonte de dados. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. o *logon*é **varchar (128)**, com um padrão de NULL.  
   
-`[ @password = ] 'password'`É a senha para o logon. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. a *senha*é **varchar (128)**, com um padrão de NULL.  
+`[ @password = ] 'password'` É a senha para o logon. Se a fonte de dados incluir um logon, especifique NULL ou omita o parâmetro. a *senha*é **varchar (128)**, com um padrão de NULL.  
   
-`[ @dso_type = ] dso_type`É o tipo de fonte de dados. *dso_type* é **int**e pode ser um desses valores.  
+`[ @dso_type = ] dso_type` É o tipo de fonte de dados. *dso_type* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -82,7 +83,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_dsninfo**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_enumdsn](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_enumdsn ](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

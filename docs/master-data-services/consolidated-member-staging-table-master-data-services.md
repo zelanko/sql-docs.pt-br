@@ -1,4 +1,5 @@
 ---
+description: Tabela de preparo de membros consolidados (Master Data Services)
 title: Tabela de preparo de membros consolidados
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ccf1ce5b444c86c8fe979f2865314d947d37ff8a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b0104722d3fcea882b08aab3f44becc334b2d52c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429978"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Tabela de preparo de membros consolidados (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85813112"
 
   Use a tabela de preparo de membros consolidados (stg.name_Consolidated) no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para criar, atualizar, desativar e excluir membros consolidados. Você também pode usar isso para atualizar valores de atributos para membros consolidados.  
   
-##  <a name="table-columns"></a><a name="TableColumns"></a>Colunas da tabela  
+##  <a name="table-columns"></a><a name="TableColumns"></a> Colunas da tabela  
  A tabela a seguir explica para o que cada um dos campos da tabela de preparo Consolidado é usado.  
   
 |Nome da coluna|Descrição|  

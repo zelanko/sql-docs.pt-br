@@ -1,4 +1,5 @@
 ---
+description: LinkMember (MDX)
 title: LinkMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d8d87caa0c844bd2754ba2d044936d43f8d48a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429858"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
 
@@ -52,7 +53,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Hierarquiar &#40;&#41;MDX](../mdx/hierarchize-mdx.md)   
+ [Hierarquiar &#40;&#41;MDX ](../mdx/hierarchize-mdx.md)   
  [Ascendentes&#41;MDX &#40;](../mdx/ascendants-mdx.md)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

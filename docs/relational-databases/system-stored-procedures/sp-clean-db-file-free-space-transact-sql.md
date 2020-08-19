@@ -1,4 +1,5 @@
 ---
+description: sp_clean_db_file_free_space (Transact-SQL)
 title: sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8c45d25dd63149145fc732642b873bc4e7a6193
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 834521f77db142d8aba63f5638df05bd83b64811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486170"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @dbname= '*database_name*'  
+ @dbname = '*database_name*'  
  É o nome do banco de dados a ser limpo. *dbname* é **sysname** e não pode ser nulo.  
   
- @fileid= '*file_number*'  
+ @fileid = '*file_number*'  
  É a ID de arquivo de dados a ser limpa. *file_number* é **int** e não pode ser NULL.  
   
- @cleaning_delay= '*delay_in_seconds*'  
+ @cleaning_delay = '*delay_in_seconds*'  
  Especifica um intervalo de atraso entre a limpeza das páginas. Isso ajuda a reduzir o efeito no sistema de E/S. *delay_in_seconds* é **int** com um padrão de 0.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -1,4 +1,5 @@
 ---
+description: Método Execute (comando ADO)
 title: Método Execute (comando ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f595938fba37e2529f95b763d18dd91731c0b39
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b33ada4ce6ac53c1caafbec80c19d1fd31deb6ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443888"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (comando ADO)
 Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na propriedade [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) do [objeto Command](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -40,7 +41,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *RecordsAffected*  
  Opcional. Uma variável **longa** para a qual o provedor retorna o número de registros afetados pela operação. O parâmetro *RecordsAffected* aplica-se somente a consultas de ação ou procedimentos armazenados. *RecordsAffected* não retorna o número de registros retornados por uma consulta de retorno de resultado ou procedimento armazenado. Para obter essas informações, use a propriedade [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . O método **Execute** não retornará as informações corretas quando usado com **adAsyncExecute**, simplesmente porque quando um comando é executado de forma assíncrona, o número de registros afetados pode ainda não ser conhecido no momento em que o método retorna.  
   
- *Parameters*  
+ *Parâmetros*  
  Opcional. Uma matriz **variante** de valores de parâmetro usada em conjunto com a cadeia de caracteres de entrada ou o fluxo especificado em **CommandText** ou **CommandStream**. (Os parâmetros de saída não retornarão valores corretos quando passados neste argumento).  
   
  *Opções*  

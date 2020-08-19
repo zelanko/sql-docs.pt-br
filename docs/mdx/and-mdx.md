@@ -1,4 +1,5 @@
 ---
+description: AND (MDX)
 title: E (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baff2f517f5fdd6dfbb23eb24ad51ed12589df52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429968"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -34,13 +35,13 @@ Expression1 AND Expression2
  *Expression2*  
  Uma expressão MDX válida que retorna um valor numérico.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor booliano que retornará true se ambos os parâmetros forem avaliados como **true**; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
  O operador **and** trata as expressões como valores Boolianos (zero, 0, como **false**; caso contrário, **true**) antes que o operador execute a conjunção lógica. A tabela a seguir ilustra como o operador **and** executa a conjunção lógica.  
   
-|*Expression1*|*Expression2*|Valor retornado|  
+|*Expression1*|*Expression2*|Valor de retorno|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
 |**true**|**false**|**false**|  
@@ -68,6 +69,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

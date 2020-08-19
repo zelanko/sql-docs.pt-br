@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Cancel (VC++)
 title: Exemplo do método Cancel (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d09659e486d58aec60609395f9a16cecfad8177
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc38f5f825bd7e913c32a17afd447f6dde650d60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451048"
 ---
 # <a name="cancel-method-example-vc"></a>Exemplo do método Cancel (VC++)
 Este exemplo usa o método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) para cancelar um comando em execução em um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) se a conexão estiver ocupada.  

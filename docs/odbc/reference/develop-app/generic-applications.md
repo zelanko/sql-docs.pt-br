@@ -1,4 +1,5 @@
 ---
+description: Aplicativos genéricos
 title: Aplicativos genéricos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 607676d5370f02ee1d39196bff9261bc897521ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9980edcaf34182b4c7f43aa8e935d095f2345138
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476678"
 ---
 # <a name="generic-applications"></a>Aplicativos genéricos
 Os aplicativos genéricos às vezes executam uma tarefa embutida em código, como uma planilha que recupera dados de um banco de dado. Eles também podem executar uma variedade de tarefas definidas pelo usuário, como um aplicativo de consulta genérico, permitindo que o usuário insira e execute uma instrução SQL. O que os aplicativos genéricos têm em comum é que eles devem trabalhar com uma variedade de DBMSs diferentes e que o desenvolvedor não sabe com antecedência quais são esses DBMSs.  

@@ -1,4 +1,5 @@
 ---
+description: Criar classes proxy do serviço Web do Master Data Manager
 title: Criar classes proxy do serviço Web do Master Data Manager
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 50cfe08b70fbc1c1b8d8a3f092234d8b712a2deb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7fcc185243cca0ba45f1f8be199649508fc4b56a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477148"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Criar classes proxy do serviço Web do Master Data Manager
 

@@ -1,4 +1,5 @@
 ---
+description: Tornar um grupo de atributos visível para os usuários (Master Data Services)
 title: Tornar um grupo de atributos visível para os usuários
 ms.custom: ''
 ms.date: 03/15/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 998eed940f93c90974848812e0e6dabf7cf9ca91
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c966c12bb8245571dcbfac0984d0434282e82c57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495009"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Tornar um grupo de atributos visível para os usuários (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Método Execute (conexão ADO)
 title: Método Execute (conexão ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1acbdc4966f46d5e155dab3fac059568699d4727
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443908"
 ---
 # <a name="execute-method-ado-connection"></a>Método Execute (conexão ADO)
 Executa a consulta especificada, a instrução SQL, o procedimento armazenado ou o texto específico do provedor.  

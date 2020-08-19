@@ -1,4 +1,5 @@
 ---
+description: DBCC DROPCLEANBUFFERS (Transact-SQL)
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
@@ -25,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68e9eca249d976398618a63e25b98c02dcf7f806
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f756dda5a0fc09eaad4e20fb6436a8fb5957fb2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468242"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -43,7 +44,7 @@ Remove todos os buffers limpos do pool de buffers e os objetos de columnstore do
 ## <a name="syntax"></a>Sintaxe
 Sintaxe do SQL Server:
 
-```sql
+```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
 Sintaxe do SQL Warehouse do Azure e do Parallel Data Warehouse:
@@ -52,7 +53,9 @@ Sintaxe do SQL Warehouse do Azure e do Parallel Data Warehouse:
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
 ```
 
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas. As mensagens informativas sempre são suprimidas no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   

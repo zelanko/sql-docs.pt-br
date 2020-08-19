@@ -1,4 +1,5 @@
 ---
+description: Instrução IF (MDX)
 title: Instrução IF (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41bd34fbd3d296f4aa38877e6d26e25eba9ae726
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62b5a2e7d2ae04b7cd11bb08a3a65ddad903b6cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429728"
 ---
 # <a name="mdx-scripting---if"></a>Script MDX – IF
 

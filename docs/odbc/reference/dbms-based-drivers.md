@@ -1,4 +1,5 @@
 ---
+description: Drivers baseados em DBMS
 title: Drivers baseados em DBMS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e7b7b153d0b0cb0a3e6a3d738908b0039b95679
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 844c25ca32bdf302312df6d23ca8e1d85fe198c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476908"
 ---
 # <a name="dbms-based-drivers"></a>Drivers baseados em DBMS
 Os drivers baseados em DBMS são usados com fontes de dados como Oracle ou SQL Server que fornecem um mecanismo de banco de dados autônomo para o driver usar. Esses drivers acessam os dados físicos por meio do mecanismo autônomo; ou seja, eles enviam instruções SQL para e recuperam os resultados do mecanismo.  

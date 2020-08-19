@@ -1,4 +1,5 @@
 ---
+description: Configurações globais (Janela de Saída) (AccessToSQL)
 title: Configurações globais (Janela de Saída) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bf18bdcee058ac913a303a04e2ff4510696724a6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 03ed181f7cb35619b0ab114116847a32efb8c636
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422990"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>Configurações globais (Janela de Saída) (AccessToSQL)
 Use a caixa de diálogo **configurações globais** para especificar as configurações do SSMA.  

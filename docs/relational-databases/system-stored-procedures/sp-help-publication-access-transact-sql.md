@@ -1,4 +1,5 @@
 ---
+description: sp_help_publication_access (Transact-SQL)
 title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485977"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser acessada. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser acessada. a *publicação* é **sysname**, sem padrão.  
   
-`[ @return_granted = ] 'return_granted'`É a ID de logon. *return_granted* é **bit**, com um padrão de 1. Se **0** for especificado e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação for usada, os logons disponíveis que aparecerem no Publicador, mas não no distribuidor serão retornados. Se **0** for especificado e a autenticação do Windows for usada, os logons não negados o acesso especificamente no Publicador ou distribuidor serão retornados.  
+`[ @return_granted = ] 'return_granted'` É a ID de logon. *return_granted* é **bit**, com um padrão de 1. Se **0** for especificado e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação for usada, os logons disponíveis que aparecerem no Publicador, mas não no distribuidor serão retornados. Se **0** for especificado e a autenticação do Windows for usada, os logons não negados o acesso especificamente no Publicador ou distribuidor serão retornados.  
   
-`[ @login = ] 'login'`É a ID de logon de segurança padrão. o *logon* é **sysname**, com um padrão de **%** .  
+`[ @login = ] 'login'` É a ID de logon de segurança padrão. o *logon* é **sysname**, com um padrão de **%** .  
   
-`[ @initial_list = ] initial_list`Especifica se todos os membros com acesso à publicação devem ser retornados ou apenas aqueles que tinham acesso antes da adição de novos membros à lista. *initial_list* é bit, com um padrão de **0**.  
+`[ @initial_list = ] initial_list` Especifica se todos os membros com acesso à publicação devem ser retornados ou apenas aqueles que tinham acesso antes da adição de novos membros à lista. *initial_list* é bit, com um padrão de **0**.  
   
  **1** retorna informações para todos os membros da função de servidor fixa **sysadmin** com logons válidos no distribuidor que existia quando a publicação foi criada, bem como o logon atual.  
   
@@ -72,8 +73,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_help_publication_access**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_grant_publication_access](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_revoke_publication_access](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grant_publication_access ](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_revoke_publication_access ](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Criar um pacote de implantação de modelo usando o Assistente
 title: Criar um pacote de implantação de modelo com o assistente
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8d754308b968d5222704eb1264da71d0efbeb39b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7c776d67ebf49e39ae3593d9ac570fe251abb728
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477068"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Criar um pacote de implantação de modelo usando o Assistente
 
@@ -46,7 +47,7 @@ ms.locfileid: "85811801"
   
 4.  Na página **Criar Pacote** , selecione um modelo da lista **Modelo** .  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Clique em **Download**.  
   
