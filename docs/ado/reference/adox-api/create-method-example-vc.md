@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Create (VC++)
 title: Exemplo do método Create (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e89a9fa34b4388fbfb283b223d637dde7fdf636
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 50cb2ca388b078fbd1adc044e28d523aa80a7522
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440168"
 ---
 # <a name="create-method-example-vc"></a>Exemplo do método Create (VC++)
 O código a seguir mostra como criar um novo banco de dados do Microsoft Jet com o método [Create](../../../ado/reference/adox-api/create-method-adox.md) .  

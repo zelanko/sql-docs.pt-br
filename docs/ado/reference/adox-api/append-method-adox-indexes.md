@@ -1,4 +1,5 @@
 ---
+description: Método Append (Índices do ADOX)
 title: Método Append (índices ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6996f3a0a3ad9f2ffa727a6cbd7b48d3fbf32777
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440538"
 ---
 # <a name="append-method-adox-indexes"></a>Método Append (Índices do ADOX)
 Adiciona um novo objeto de [índice](../../../ado/reference/adox-api/index-object-adox.md) à coleção de [índices](../../../ado/reference/adox-api/indexes-collection-adox.md) .  

@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Command e CommandText (VB)
 title: Exemplo das propriedades Command e CommandText (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 116aaa974255352e0d51171f804e86ac02191737
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a607b44311ab9229ecbcf8171e1a506d7b6713d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440258"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Exemplo da propriedade Command e CommandText (VB)
 O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) para atualizar o texto de um procedimento.  

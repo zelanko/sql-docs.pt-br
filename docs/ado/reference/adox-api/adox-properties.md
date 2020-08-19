@@ -1,4 +1,5 @@
 ---
+description: Propriedades ADOX
 title: Propriedades do ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6441c637b371cb059ebaad94380d6bfd4f24c8f9
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 2bb02d47575eaaa2e1eee4a443f86a7d103dabca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440548"
 ---
 # <a name="adox-properties"></a>Propriedades ADOX
 

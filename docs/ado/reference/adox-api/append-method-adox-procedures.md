@@ -1,4 +1,5 @@
 ---
+description: Método Append (Procedimentos do ADOX)
 title: Método Append (procedimentos ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8571790b596f037bb528df375c43c98b6b77c3a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440478"
 ---
 # <a name="append-method-adox-procedures"></a>Método Append (Procedimentos do ADOX)
 Adiciona um novo objeto de [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md) à coleção de [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) .  

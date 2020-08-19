@@ -1,4 +1,5 @@
 ---
+description: Método Connection Close, Exemplo da propriedade Table Type (VB)
 title: Método Connection Close, exemplo da propriedade de tipo Table (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7bd2e7f536cceb3a70ab70f0deda1bfe427fa45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440228"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Método Connection Close, Exemplo da propriedade Table Type (VB)
 Definir a propriedade [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) como **Nothing** deve fechar a conexão com o catálogo. As coleções associadas estarão vazias. Todos os objetos que foram criados a partir de objetos de esquema no catálogo ficarão órfãos. Todas as propriedades nesses objetos que foram armazenados em cache ainda estarão disponíveis, mas uma tentativa de ler propriedades que exigem uma chamada para o provedor falhará.  

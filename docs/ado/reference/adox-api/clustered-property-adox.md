@@ -1,4 +1,5 @@
 ---
+description: Propriedade Clustered (ADOX)
 title: Propriedade Clustered (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f4cbd0a305d7e2eae29884223ec6a67aed5fb4f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3c915fcaf1a3661e606f5e1c2cf9a04bafd91fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440358"
 ---
 # <a name="clustered-property-adox"></a>Propriedade Clustered (ADOX)
 Indica se o índice está clusterizado.  
@@ -33,7 +34,7 @@ Indica se o índice está clusterizado.
  Define e retorna um valor **booliano** .  
   
 ## <a name="remarks"></a>Comentários  
- O valor padrão é **False**.  
+ O valor padrão é **Falso**.  
   
  Esta propriedade é somente leitura em objetos de [índice](../../../ado/reference/adox-api/index-object-adox.md) que já foram acrescentados a uma coleção.  
   

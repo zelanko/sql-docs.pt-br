@@ -1,4 +1,5 @@
 ---
+description: Objeto Column (ADOX)
 title: Objeto Column (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e462e3bc7a8f5d4833c78bcaf6b4a45705c083
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 582014342380ed5ec77c8a6f0e2adacba52bbdcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440338"
 ---
 # <a name="column-object-adox"></a>Objeto Column (ADOX)
 Representa uma coluna de uma tabela, índice ou chave.  

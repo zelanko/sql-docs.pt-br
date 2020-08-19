@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Name, métodos Columns and Tables Append (VC++)
 title: Exemplo da propriedade Name, métodos e propriedades de colunas e tabelas (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 424813731993841bc503592e42459548dcaf5152
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 655c1d014f312ae0706b242bb8b108d871bcef3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440288"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Exemplo da propriedade Name, métodos Columns and Tables Append (VC++)
 O código a seguir demonstra como criar uma nova tabela.  

@@ -1,4 +1,5 @@
 ---
+description: Método Append (Tabelas do ADOX)
 title: Método Append (tabelas ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440468"
 ---
 # <a name="append-method-adox-tables"></a>Método Append (Tabelas do ADOX)
 Adiciona um novo objeto [Table](../../../ado/reference/adox-api/table-object-adox.md) à coleção [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
@@ -34,7 +35,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Tabela*  
+ *Table*  
  Um valor **Variant** que contém uma referência à **tabela** a ser acrescentada ou o nome da tabela a ser criada e acrescentada.  
   
 ## <a name="remarks"></a>Comentários  

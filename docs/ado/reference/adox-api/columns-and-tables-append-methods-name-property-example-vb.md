@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Name, Métodos Columns and Tables (VB)
 title: Exemplos de propriedades e métodos Append Methods, Name Property (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d25582b8059f59e20ffd3c96a86049bd692a4303
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8877bc3e17dfb38be273bd0782643d7fad00f53c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440298"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Exemplo da propriedade Name, Métodos Columns and Tables (VB)
 O código a seguir demonstra como criar uma nova tabela.  

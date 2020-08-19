@@ -1,4 +1,5 @@
 ---
+description: Exemplo dos métodos GetPermissions e SetPermissions (VC++)
 title: Exemplo dos métodos getPermissions e SetPermissions (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 238b9d82c3d71fde58a967b9d73d6a410f3883a5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 15680dc29e8731d03978d32f9b21ba33cb74794e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440028"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>Exemplo dos métodos GetPermissions e SetPermissions (VC++)
 Este exemplo demonstra os métodos [getPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . O código a seguir fornece acesso completo à tabela Orders para o usuário administrador.  

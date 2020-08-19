@@ -1,4 +1,5 @@
 ---
+description: Propriedade DeleteRule (ADOX)
 title: Propriedade DeleteRule (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508225919ae71461ef2e122171beede5cb7141c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23262afa30ca28c226964ebc17d4a3ac52971d5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440068"
 ---
 # <a name="deleterule-property-adox"></a>Propriedade DeleteRule (ADOX)
 Indica a ação executada quando uma chave primária é excluída.  
