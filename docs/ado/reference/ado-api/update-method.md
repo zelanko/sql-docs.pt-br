@@ -1,4 +1,5 @@
 ---
+description: Método Update
 title: Atualizar método | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 906a2ffb29345a2bbefdbf5a6bde6e71cd1c5af1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441638"
 ---
 # <a name="update-method"></a>Método Update
 Salva as alterações feitas na linha atual de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou a coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -33,7 +34,7 @@ recordset.Update Fields, Values
 record.Fields.Update  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Fields*  
  Opcional. Uma **variante** que representa um único nome ou uma matriz **variante** que representa nomes ou posições ordinais do campo ou campos que você deseja modificar.  
   

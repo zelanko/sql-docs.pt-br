@@ -1,4 +1,5 @@
 ---
+description: 'Conjunto de registros (Visual C++ índice de sintaxe com #import)'
 title: 'Conjunto de registros (Visual C++ índice de sintaxe com #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59e2205ccedd2b68194a92d30291e225ab7cc0b5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4fd33dedfaa68b77cfb1dcb71e8931f3b8f496f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442398"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>Conjunto de registros (Visual C++ índice de sintaxe com #import)
 ## <a name="methods"></a>Métodos  

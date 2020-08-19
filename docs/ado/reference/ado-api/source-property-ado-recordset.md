@@ -1,4 +1,5 @@
 ---
+description: Propriedade Source (Conjunto de registros ADO)
 title: Propriedade Source (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc7d3336b9c346a070266b4ef1d104d0e32eb042
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8306a1031600ccf03236a09249ed9b5f3d0bfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441998"
 ---
 # <a name="source-property-ado-recordset"></a>Propriedade Source (Conjunto de registros ADO)
 Indica a fonte de dados para um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  

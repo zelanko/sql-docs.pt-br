@@ -1,4 +1,5 @@
 ---
+description: Método OpenSchema
 title: Método OpenSchema | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442918"
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtém informações de esquema de banco de dados do provedor.  
@@ -40,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *QueryType*  
  Qualquer valor de [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) que representa o tipo de consulta de esquema a ser executado.  
   
- *Aos*  
+ *Critérios*  
  Opcional. Uma matriz de restrições de consulta para cada opção *QueryType* , conforme listado em [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaId*  

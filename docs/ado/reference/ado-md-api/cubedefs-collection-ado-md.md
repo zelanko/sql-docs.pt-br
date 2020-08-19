@@ -1,4 +1,5 @@
 ---
+description: Coleção CubeDefs (ADO MD)
 title: Coleção CubeDefs (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9d6834b4c6ec932ac0d25108b37df15fb778e5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1ae1657947db345eb9b0459d6fdf3e4fc589525e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441078"
 ---
 # <a name="cubedefs-collection-ado-md"></a>Coleção CubeDefs (ADO MD)
 Contém os objetos [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) que representam um cubo de um catálogo multidimensional.  

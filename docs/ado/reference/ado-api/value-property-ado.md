@@ -1,4 +1,5 @@
 ---
+description: Propriedade Value (ADO)
 title: Propriedade Value (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 719a647f42c66e73b9bd55ed0a7476dfb95934e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441588"
 ---
 # <a name="value-property-ado"></a>Propriedade Value (ADO)
 

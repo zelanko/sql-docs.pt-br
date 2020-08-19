@@ -1,4 +1,5 @@
 ---
+description: Método Open (Registro do ADO)
 title: Método Open (registro ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442968"
 ---
 # <a name="open-method-ado-record"></a>Método Open (Registro do ADO)
 Abre um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) existente ou cria um novo item representado pelo **registro**, como um arquivo ou diretório.  
@@ -34,7 +35,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Fonte*  
+ *Origem*  
  Opcional. Uma **variante** que pode representar a URL da entidade a ser representada por este objeto de **registro** , um **comando**, um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) aberto ou outro objeto de **registro** , uma cadeia de caracteres que contém uma instrução SQL SELECT ou um nome de tabela.  
   
  *ActiveConnection*  
@@ -49,7 +50,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Opções*  
  Opcional. Um valor [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) que especifica as opções para abrir o **registro**. O valor padrão é **adOpenRecordUnspecified**. Esses valores podem ser combinados.  
   
- *Usu*  
+ *UserName*  
  Opcional. Um valor de **cadeia de caracteres** que contém a ID de usuário que, se necessário, autoriza o acesso à *origem*.  
   
  *Senha*  

@@ -1,4 +1,5 @@
 ---
+description: Propriedade Status (campo ADO)
 title: Propriedade Status (campo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2880c63e42c1d64526db053a61f2824e6ac8305
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ef4e7b00823dcf9ce9da341ced08418a55a4bc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441948"
 ---
 # <a name="status-property-ado-field"></a>Propriedade Status (campo ADO)
 Indica o status de um objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um valor [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) . O valor padrão é **adFieldOK**.  
   
 ## <a name="remarks"></a>Comentários  

@@ -1,4 +1,5 @@
 ---
+description: Método ReadText
 title: Método ReadText | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afabd90ee6251be650036b285de0f08a3776723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c36e4dde000e89b3fe19b258f5d307232b2cb69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442528"
 ---
 # <a name="readtext-method"></a>Método ReadText
 Lê o número especificado de caracteres de um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) de texto.  
@@ -37,7 +38,7 @@ String = Stream.ReadText ( NumChars)
  *NumChars*  
  Opcional. Um valor **longo** que especifica o número de caracteres a serem lidos do arquivo ou um valor de [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) . O valor padrão é **adReadAll**.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  O método **READTEXT** lê um número especificado de caracteres, uma linha inteira ou todo o fluxo de um objeto de **fluxo** e retorna a cadeia de caracteres resultante.  
   
 ## <a name="remarks"></a>Comentários  

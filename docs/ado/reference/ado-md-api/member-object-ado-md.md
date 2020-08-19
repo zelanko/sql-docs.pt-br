@@ -1,4 +1,5 @@
 ---
+description: Objeto Member (ADO MD)
 title: Objeto member (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6e0797a4d273c51b950e3973d1864480755a20d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440918"
 ---
 # <a name="member-object-ado-md"></a>Objeto Member (ADO MD)
 Representa um membro de um nível em um cubo, os filhos de um membro de um nível ou um membro de uma posição ao longo de um eixo de um células.  
@@ -68,12 +69,12 @@ Representa um membro de um nível em um cubo, os filhos de um membro de um níve
   
  A coleção **Properties** contém propriedades fornecidas pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades real pode diferir dependendo da implementação do provedor. Consulte a documentação do seu provedor para obter uma lista mais completa das propriedades disponíveis.  
   
-|Name|Descrição|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual este cubo pertence.|  
 |ChildrenCardinality|O número de filhos de um membro.|  
 |CubeName|O nome do cubo.|  
-|Description|Uma descrição significativa do membro.|  
+|Descrição|Uma descrição significativa do membro.|  
 |DimensionUniqueName|O nome não ambíguo da [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|O nome não ambíguo da hierarquia.|  
 |LevelNumber|A distância entre o nível e a raiz da hierarquia.|  

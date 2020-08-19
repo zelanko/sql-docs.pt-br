@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Supports (VC++)
 title: Exemplo do método de suporte (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441758"
 ---
 # <a name="supports-method-example-vc"></a>Exemplo do método Supports (VC++)
 Este exemplo usa o método de [suporte](../../../ado/reference/ado-api/supports-method.md) para exibir as opções com suporte de um conjunto de registros aberto com tipos de cursor diferentes. A função DisplaySupport é necessária para que este exemplo seja executado.  

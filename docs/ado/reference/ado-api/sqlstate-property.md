@@ -1,4 +1,5 @@
 ---
+description: Propriedade SQLState
 title: Propriedade SQLState | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b40c35730b02352f1e8667941aa4c220a7ad4df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4216b6ce215db761c95bb830f7fdf26a05174b40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442008"
 ---
 # <a name="sqlstate-property"></a>Propriedade SQLState
 Indica o estado SQL de um determinado objeto de [erro](../../../ado/reference/ado-api/error-object.md) .  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um valor de **cadeia de caracteres** de cinco caracteres que segue o padrão ANSI SQL e indica o código de erro.  
   
 ## <a name="remarks"></a>Comentários  

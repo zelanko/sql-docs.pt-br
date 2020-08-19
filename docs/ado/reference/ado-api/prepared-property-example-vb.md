@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Prepared (VB)
 title: Exemplo da propriedade preparada (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d5cb8a583e5434e81922f556ae62e3d0f4f312f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bfddc290ee906402490743205ca939d82db2dad6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442678"
 ---
 # <a name="prepared-property-example-vb"></a>Exemplo da propriedade Prepared (VB)
 Este exemplo demonstra a propriedade [preparada](../../../ado/reference/ado-api/prepared-property-ado.md) abrindo dois objetos [Command](../../../ado/reference/ado-api/command-object-ado.md) -um preparado e um não preparado.  

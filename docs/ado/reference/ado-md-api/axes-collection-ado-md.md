@@ -1,4 +1,5 @@
 ---
+description: Coleção Axes (ADO MD)
 title: Coleção Axes (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c6a55b5ba59fab0fab3f873225f67b18d2d384
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc93e9ea8568a535067addbd51258074945200db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441308"
 ---
 # <a name="axes-collection-ado-md"></a>Coleção Axes (ADO MD)
 Contém os objetos [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) que definem um células.  

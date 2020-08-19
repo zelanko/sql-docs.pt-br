@@ -1,4 +1,5 @@
 ---
+description: Método Write
 title: Método Write | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 911a9dfb21c054dc95c54d9fb429d628d8e01fa4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b43e0f505a3c4455768c32abd93dbc89afe04a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441458"
 ---
 # <a name="write-method"></a>Método Write
 Grava dados binários em um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -34,7 +35,7 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Completo*  
+ *Buffer*  
  Uma **variante** que contém uma matriz de bytes a ser gravado.  
   
 ## <a name="remarks"></a>Comentários  

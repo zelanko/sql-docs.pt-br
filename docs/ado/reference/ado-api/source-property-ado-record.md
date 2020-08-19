@@ -1,4 +1,5 @@
 ---
+description: Propriedade Source (Registro ADO)
 title: Propriedade Source (registro ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1f8fb7ece2d2046706df91814b2d098e0a900d18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442038"
 ---
 # <a name="source-property-ado-record"></a>Propriedade Source (Registro ADO)
 Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md).  

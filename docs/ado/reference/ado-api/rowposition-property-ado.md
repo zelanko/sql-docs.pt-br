@@ -1,4 +1,5 @@
 ---
+description: Propriedade RowPosition (ADO)
 title: Propriedade de função (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2621e82fef8d7e9baffa9d6cc8c30c65ea476ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 330c090c9e4eedd6a083d58a55243d470514541f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442458"
 ---
 # <a name="rowposition-property-ado"></a>Propriedade RowPosition (ADO)
 Obtém ou define um OLE DB objeto de **função** de/em um objeto **ADORecordsetConstruction** . Quando você usa **put_RowPosition** para definir o **objeto de** rowgroup, o objeto **Recordset** resultante **usa o objeto** rowgroup para determinar a linha atual.  

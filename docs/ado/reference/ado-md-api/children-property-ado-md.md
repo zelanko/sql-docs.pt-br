@@ -1,4 +1,5 @@
 ---
+description: Propriedade Children (ADO MD)
 title: Propriedade Children (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e52923ae428ab7b0e633049594781bd4456f9df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 144e230b10ac6a73f88be7ab85e779bcda5f2cd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441178"
 ---
 # <a name="children-property-ado-md"></a>Propriedade Children (ADO MD)
 Retorna uma coleção de [Membros](../../../ado/reference/ado-md-api/members-collection-ado-md.md) para a qual o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) atual é o pai na hierarquia.  

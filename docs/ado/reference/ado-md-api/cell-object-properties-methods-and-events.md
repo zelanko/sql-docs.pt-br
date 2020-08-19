@@ -1,4 +1,5 @@
 ---
+description: Propriedades, métodos e eventos do objeto Cell
 title: Propriedades, métodos e eventos do objeto Cell | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60424bed2d6496ce23f7bf9ed28d4c49a222e3f2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb2a3fd6f848b43de981d1239657ebc5097202fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441228"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Cell
 ## <a name="propertiescollections"></a>Propriedades/coleções  

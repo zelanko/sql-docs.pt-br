@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Value (VC++)
 title: Exemplo da propriedade Value (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b124dc502df261972621b554cb2992d0e6014737
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0bcea6cd4ad8f786cf2e2a70b35f6f67dcae3127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441568"
 ---
 # <a name="value-property-example-vc"></a>Exemplo da propriedade Value (VC++)
 Este exemplo demonstra a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) com objetos de [campo](../../../ado/reference/ado-api/field-object.md) e [Propriedade](../../../ado/reference/ado-api/property-object-ado.md) exibindo valores de campo e propriedade para a tabela ***Employees*** .  

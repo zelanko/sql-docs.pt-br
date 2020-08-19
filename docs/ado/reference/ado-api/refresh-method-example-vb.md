@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Refresh (VB)
 title: Exemplo do método Refresh (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449c6d0da1ddb5915f694020f84a933fa67871e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 168bdaa7736c5f9d3c974d0a5f6aa4fae2b323bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442338"
 ---
 # <a name="refresh-method-example-vb"></a>Exemplo do método Refresh (VB)
 Este exemplo demonstra o uso do método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para atualizar a coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimento armazenado.  

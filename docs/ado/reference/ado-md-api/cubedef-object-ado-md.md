@@ -1,4 +1,5 @@
 ---
+description: Objeto CubeDef (ADO MD)
 title: Objeto CubeDef (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441148"
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
 Representa um cubo de um esquema multidimensional que contém um conjunto de dimensões relacionadas.  
@@ -38,7 +39,7 @@ Representa um cubo de um esquema multidimensional que contém um conjunto de dim
   
  A coleção **Properties** contém propriedades fornecidas pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades real pode diferir dependendo da implementação do provedor. Consulte a documentação do seu provedor para obter uma lista mais completa das propriedades disponíveis.  
   
-|Name|Descrição|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual este cubo pertence.|  
 |CreatedOn|Data e hora da criação do cubo.|  
@@ -46,7 +47,7 @@ Representa um cubo de um esquema multidimensional que contém um conjunto de dim
 |CubeName|O nome do cubo.|  
 |CubeType|O tipo do cubo.|  
 |DataUpdatedBy|ID de usuário da pessoa que está fazendo a última atualização de dados.|  
-|Description|Uma descrição significativa do cubo.|  
+|Descrição|Uma descrição significativa do cubo.|  
 |LastSchemaUpdate|Data e hora da última atualização do esquema.|  
 |SchemaName|O nome do esquema ao qual este cubo pertence.|  
 |SchemaUpdatedBy|ID de usuário da pessoa que está fazendo a última atualização de esquema.|  

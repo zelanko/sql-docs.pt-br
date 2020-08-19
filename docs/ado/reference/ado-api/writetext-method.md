@@ -1,4 +1,5 @@
 ---
+description: Método WriteText
 title: Método WriteText | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b561c8d798236fa0c6df262e2fc2db4c4729cb90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441488"
 ---
 # <a name="writetext-method"></a>Método WriteText
 Grava uma cadeia de caracteres de texto especificada em um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  

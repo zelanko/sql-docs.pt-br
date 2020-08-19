@@ -1,4 +1,5 @@
 ---
+description: Eventos WillChangeRecord e RecordChangeComplete (ADO)
 title: Eventos WillChangeRecord e RecordChangeComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34aa614b7e152f21479e09a16fd2ed9d22febfc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a6cb124e51c232b0a3a26e9eb84316e3bde7ecd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441518"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventos WillChangeRecord e RecordChangeComplete (ADO)
 O evento **WillChangeRecord** é chamado antes de um ou mais registros (linhas) serem alterados no [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) . O evento **RecordChangeComplete** é chamado após a alteração de um ou mais registros.  

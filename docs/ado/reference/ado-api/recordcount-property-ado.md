@@ -1,4 +1,5 @@
 ---
+description: Propriedade RecordCount (ADO)
 title: Propriedade RecordCount (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26691e405defc7b9d73a9ae02a287d81efda8af2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c7615a61622be136b0be951b71a1788d5f45bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442478"
 ---
 # <a name="recordcount-property-ado"></a>Propriedade RecordCount (ADO)
 
 Indica o número de registros em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
   
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor de retorno
 
 Retorna um valor **longo** que indica o número de registros no **conjunto**de registros.
   

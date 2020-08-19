@@ -1,4 +1,5 @@
 ---
+description: RecordCreateOptionsEnum
 title: RecordCreateOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ef305aefbd3c606f433bfd85b1b10ac2dd94db1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442468"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Especifica se um **registro** existente deve ser aberto ou um novo **registro** criado para o método [Open](../../../ado/reference/ado-api/open-method-ado-record.md) do objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) . Os valores podem ser combinados com um operador AND.  

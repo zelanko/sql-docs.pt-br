@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Type (Propriedade) (VB)
 title: Exemplo da propriedade Type (Propriedade) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2308d02f5e220a315cfa97d3b24172fccc5d5bf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f9c49ba9456af1f602fa5d2f399fc5172a5f1a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441688"
 ---
 # <a name="type-property-example-property-vb"></a>Exemplo da propriedade Type (Propriedade) (VB)
 Este exemplo demonstra a propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) . É um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

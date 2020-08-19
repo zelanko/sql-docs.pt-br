@@ -1,4 +1,5 @@
 ---
+description: Propriedade ParentURL (ADO)
 title: Propriedade ParentURL (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442748"
 ---
 # <a name="parenturl-property-ado"></a>Propriedade ParentURL (ADO)
 Indica uma cadeia de caracteres de URL absoluta que aponta para o [registro](../../../ado/reference/ado-api/record-object-ado.md) pai do objeto de **registro** atual.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um valor de **cadeia de caracteres** que indica a URL do **registro**pai.  
   
 ## <a name="remarks"></a>Comentários  
@@ -48,7 +49,7 @@ record.Open "second"
   
 -   O objeto **Record** representa uma entidade que não pode ser especificada com uma URL.  
   
- Essa propriedade é somente leitura.  
+ Esta propriedade é somente para leitura.  
   
 > [!NOTE]
 >  Essa propriedade só tem suporte por provedores de origem de documento, como o [provedor de OLE DB da Microsoft para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [registros e campos fornecidos pelo provedor](../../../ado/guide/data/records-and-provider-supplied-fields.md).  

@@ -1,4 +1,5 @@
 ---
+description: Método Save
 title: Salvar método | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442208"
 ---
 # <a name="save-method"></a>Método Save
 Salva o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um objeto de arquivo ou [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -33,7 +34,7 @@ Salva o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-
 recordset.Save Destination, PersistFormat  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Destino*  
  Opcional. Uma **variante** que representa o nome completo do caminho do arquivo em que o **conjunto de registros** deve ser salvo ou uma referência a um objeto de **fluxo** .  
   

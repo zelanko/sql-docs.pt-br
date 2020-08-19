@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Type (Campo) (VC++)
 title: Exemplo da propriedade Type (campo) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441708"
 ---
 # <a name="type-property-example-field-vc"></a>Exemplo da propriedade Type (Campo) (VC++)
 Este exemplo demonstra a propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) exibindo o nome da constante que corresponde ao valor da propriedade **Type** de todos os objetos [Field](../../../ado/reference/ado-api/field-object.md) na tabela ***Employees*** . A função FieldType é necessária para que este procedimento seja executado.  

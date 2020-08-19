@@ -1,4 +1,5 @@
 ---
+description: Propriedade Size (Parâmetro ADO)
 title: Propriedade Size (parâmetro ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f989ab60099673f95debbe4eb5f8217beb0ccd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 78a22e22f5bf65c211a18bd68767537af164b452
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442148"
 ---
 # <a name="size-property-ado-parameter"></a>Propriedade Size (Parâmetro ADO)
 Indica o tamanho máximo, em bytes ou caracteres, de um objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) .  

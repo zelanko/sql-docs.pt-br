@@ -1,4 +1,5 @@
 ---
+description: SchemaEnum
 title: SchemaEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442168"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica o tipo de **conjunto de registros** de esquema que o método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera.  
@@ -47,8 +48,8 @@ Especifica o tipo de **conjunto de registros** de esquema que o método [OpenSch
 |**adSchemaConstraintColumnUsage**|6|Retorna as colunas usadas por restrições referenciais, restrições exclusivas, restrições de verificação e asserções definidas no catálogo e pertencentes a um determinado usuário.<br /><br /> (CONSTRAINT_COLUMN_USAGE conjunto de linhas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Retorna as tabelas usadas por restrições referenciais, restrições exclusivas, restrições de verificação e asserções definidas no catálogo e pertencentes a um determinado usuário.<br /><br /> (CONSTRAINT_TABLE_USAGE conjunto de linhas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Retorna informações sobre os cubos disponíveis em um esquema (ou o catálogo, se o provedor não oferecer suporte a esquemas).<br /><br /> (Conjunto de linhas de CUBOs *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
-|**adSchemaDBInfoKeywords**|30|Retorna uma lista de palavras-chave específicas do provedor.<br /><br /> (IDBInfo:: getpalavra-chave)|\<Nenhum>|  
-|**adSchemaDBInfoLiterals**|31|Retorna uma lista de literais específicas do provedor em comandos de texto.<br /><br /> (IDBInfo:: GetLiteralInfo)|\<Nenhum>|  
+|**adSchemaDBInfoKeywords**|30|Retorna uma lista de palavras-chave específicas do provedor.<br /><br /> (IDBInfo:: getpalavra-chave)|\<None>|  
+|**adSchemaDBInfoLiterals**|31|Retorna uma lista de literais específicas do provedor em comandos de texto.<br /><br /> (IDBInfo:: GetLiteralInfo)|\<None>|  
 |**adSchemaDimensions**|33|Retorna informações sobre as dimensões em um determinado cubo. Ele tem uma linha para cada dimensão.<br /><br /> (Conjunto de linhas DIMENSIONs)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Retorna as colunas de chave estrangeira definidas no catálogo por um determinado usuário.<br /><br /> (FOREIGN_KEYS conjunto de linhas)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Retorna informações sobre as hierarquias disponíveis em uma dimensão.<br /><br /> (Conjunto de linhas de HIERARQUIAs)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
@@ -58,15 +59,15 @@ Especifica o tipo de **conjunto de registros** de esquema que o método [OpenSch
 |**adSchemaMeasures**|36|Retorna informações sobre as medidas disponíveis.<br /><br /> (Conjunto de linhas MEASUREs)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|Retorna informações sobre os membros disponíveis.<br /><br /> (Conjunto de linhas Membros)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE Tree Operator. Para obter mais informações, consulte OLE DB para OLAP (processamento analítico online).|  
 |**adSchemaPrimaryKeys**|28|Retorna as colunas de chave primária definidas no catálogo por um determinado usuário.<br /><br /> (PRIMARY_KEYS conjunto de linhas)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
-|**adSchemaProcedureColumns**|29|Retorna informações sobre as colunas de conjuntos de linhas retornadas por procedimentos.<br /><br /> (PROCEDURE_COLUMNS conjunto de linhas)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
+|**adSchemaProcedureColumns**|29|Retorna informações sobre as colunas de conjuntos de linhas retornados por procedimentos.<br /><br /> (PROCEDURE_COLUMNS conjunto de linhas)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
 |**adSchemaProcedureParameters**|26|Retorna informações sobre os parâmetros e códigos de retorno de procedimentos.<br /><br /> (PROCEDURE_PARAMETERS conjunto de linhas)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
 |**adSchemaProcedures**|16|Retorna os procedimentos definidos no catálogo que pertencem a um determinado usuário.<br /><br /> (Conjunto de linhas de procedimentos)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
 |**adSchemaProperties**|37|Retorna informações sobre as propriedades disponíveis para cada nível da dimensão.<br /><br /> (Conjunto de linhas Propriedades)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
-|**adSchemaProviderSpecific**|-1|Usado se o provedor definir suas próprias consultas de esquema não padrão.|\<> específicas do provedor|  
+|**adSchemaProviderSpecific**|-1|Usado se o provedor definir suas próprias consultas de esquema não padrão.|\<Provider specific>|  
 |**adSchemaProviderTypes**|22|Retorna os tipos de dados (base) suportados pelo provedor de dados.<br /><br /> (PROVIDER_TYPES conjunto de linhas)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Retorna as restrições referenciais definidas no catálogo que pertencem a um determinado usuário.<br /><br /> (REFERENTIAL_CONSTRAINTS conjunto de linhas)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Retorna os esquemas (objetos de banco de dados) que pertencem a um determinado usuário.<br /><br /> (Conjunto de linhas SCHEMATA)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Retorna os níveis de conformidade, opções e dialetos com suporte dos dados de processamento de implementação de SQL definidos no catálogo.<br /><br /> (SQL_LANGUAGES conjunto de linhas)|\<Nenhum>|  
+|**adSchemaSQLLanguages**|18|Retorna os níveis de conformidade, opções e dialetos com suporte dos dados de processamento de implementação de SQL definidos no catálogo.<br /><br /> (SQL_LANGUAGES conjunto de linhas)|\<None>|  
 |**adSchemaStatistics**|19|Retorna as estatísticas definidas no catálogo que pertencem a um determinado usuário.<br /><br /> (Conjunto de linhas de estatísticas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Retorna as restrições de tabela definidas no catálogo que pertencem a um determinado usuário.<br /><br /> (TABLE_CONSTRAINTS conjunto de linhas)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|Retorna os privilégios em tabelas definidas no catálogo que estão disponíveis ou foram concedidas por um determinado usuário.<br /><br /> (TABLE_PRIVILEGES conjunto de linhas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  

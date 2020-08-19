@@ -1,4 +1,5 @@
 ---
+description: Eventos WillChangeField e FieldChangeComplete (ADO)
 title: Eventos WillChangeField e FieldChangeComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4a4fb74e95bf0e1ba9dc9d0001b3d653f9294c1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be000a8ff9154c79c2b98c9bc57f79f3537743c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441528"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField e FieldChangeComplete (ADO)
 O evento **WillChangeField** é chamado antes de uma operação pendente Alterar o valor de um ou mais objetos de [campo](../../../ado/reference/ado-api/field-object.md) no [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). O evento **FieldChangeComplete** é chamado depois que o valor de um ou mais objetos de **campo** é alterado.  

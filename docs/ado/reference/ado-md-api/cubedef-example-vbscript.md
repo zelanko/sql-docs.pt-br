@@ -1,4 +1,5 @@
 ---
+description: Exemplo CubeDef (VBScript)
 title: Exemplo de CubeDef (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef0828d9bc67db5856b5299d03a8970b83c251ef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d807932f16ecdc7bdf35ba6b749fcd6345baa811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441158"
 ---
 # <a name="cubedef-example-vbscript"></a>Exemplo CubeDef (VBScript)
 Este exemplo exibe metadados de cubo em uma página da Web.  

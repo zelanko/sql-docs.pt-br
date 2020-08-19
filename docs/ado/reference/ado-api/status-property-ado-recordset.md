@@ -1,4 +1,5 @@
 ---
+description: Propriedade Status (Conjunto de registros ADO)
 title: Propriedade Status (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ba9ad977fe02a712a675b8a9e4bae4b3d038b1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7869ff91269d033b14a7f77e014da70962a1c1d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441928"
 ---
 # <a name="status-property-ado-recordset"></a>Propriedade Status (Conjunto de registros ADO)
 Indica o status do registro atual em relação às atualizações em lote ou outras operações em massa.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna uma soma de um ou mais valores [RecordStatusEnum](../../../ado/reference/ado-api/recordstatusenum.md) .  
   
 ## <a name="remarks"></a>Comentários  

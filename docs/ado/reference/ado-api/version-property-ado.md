@@ -1,4 +1,5 @@
 ---
+description: Propriedade Version (ADO)
 title: Propriedade Version (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dbd13ac245ad10d4300e76a4c86d326b8b9b9ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9c2a05f829ff0e9751634e9e50893cd1004db5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441558"
 ---
 # <a name="version-property-ado"></a>Propriedade Version (ADO)
 Indica o número de versão do ADO.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um valor de **cadeia de caracteres** que indica a versão.  
   
 ## <a name="remarks"></a>Comentários  

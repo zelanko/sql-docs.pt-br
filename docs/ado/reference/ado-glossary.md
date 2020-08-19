@@ -1,4 +1,5 @@
 ---
+description: Glossário ADO
 title: Glossário do ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441428"
 ---
 # <a name="ado-glossary"></a>Glossário ADO
 Este tópico define os termos relevantes para o ADO.  
@@ -100,7 +101,7 @@ Este tópico define os termos relevantes para o ADO.
  Operador de comparação  
  Um operador que compara duas expressões e retorna um valor booliano.  
   
- Um parâmetro de critérios que pode ser expresso como ">" (maior que), " \< " (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (diferente de) ou "Like" (correspondência de padrões).  
+ Um parâmetro de critérios que pode ser expresso como ">" (maior que), " \<" (less than), "=" (equal), "> =" (maior ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).  
   
  componente  
  Um objeto que encapsula dados e código e fornece um conjunto bem especificado de serviços publicamente disponíveis.  
@@ -160,7 +161,7 @@ Este tópico define os termos relevantes para o ADO.
   
 ## <a name="e"></a>E  
  Enumeração  
- Uma lista de constantes nomeadas. Os valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração é definida. No ADO, as enumerações são usadas para parâmetros numéricos e valores de retorno, para adicionar significado ao código ADO e para proteger o desenvolvedor dos valores numéricos (que podem mudar de versão para versão). Por exemplo, para abrir um **conjunto de registros**estático, use o valor enumerado **adOpenStatic** :`Recordset.Open ,,adOpenStatic`  
+ Uma lista de constantes nomeadas. Os valores enumerados não precisam ser exclusivos. No entanto, o nome de cada valor deve ser exclusivo dentro do escopo em que a enumeração é definida. No ADO, as enumerações são usadas para parâmetros numéricos e valores de retorno, para adicionar significado ao código ADO e para proteger o desenvolvedor dos valores numéricos (que podem mudar de versão para versão). Por exemplo, para abrir um **conjunto de registros**estático, use o valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
   
  Também conhecido como *constante enumerada*. Confira também *constante*.  
   

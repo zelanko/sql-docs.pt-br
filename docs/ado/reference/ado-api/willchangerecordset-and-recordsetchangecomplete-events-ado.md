@@ -1,4 +1,5 @@
 ---
+description: Eventos WillChangeRecordset e RecordsetChangeComplete (ADO)
 title: Eventos WillChangeRecordset e RecordsetChangeComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90bfb1c947c02540d07c3cbc11e45436f8bd4a58
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa7ec524d950a45dd11e1bc62a983810ab2550ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441508"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventos WillChangeRecordset e RecordsetChangeComplete (ADO)
 O evento **WillChangeRecordset** é chamado antes de uma operação pendente Alterar o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). O evento **RecordsetChangeComplete** é chamado depois que o **conjunto de registros** é alterado.  

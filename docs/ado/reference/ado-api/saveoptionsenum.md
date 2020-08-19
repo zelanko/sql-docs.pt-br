@@ -1,4 +1,5 @@
 ---
+description: SaveOptionsEnum
 title: SaveOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3423d215fa4a52286509769bb2ac0b75d2283a02
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 27284d84bb89c0e742c5166589a60fdc949e7b2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442188"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 Especifica se um arquivo deve ser criado ou substituído ao salvar de um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) . Os valores podem ser **adSaveCreateNotExist** ou **adSaveCreateOverWrite**..  

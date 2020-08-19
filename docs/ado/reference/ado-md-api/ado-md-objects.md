@@ -1,4 +1,5 @@
 ---
+description: Objetos do ADO MD
 title: Objetos de ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e655647e7f485a27764280faba1adac091f0b7b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 54e7eae0aaab754dbc57f1001263ea20c0bd8999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441348"
 ---
 # <a name="ado-md-objects"></a>Objetos do ADO MD
 
@@ -26,7 +27,7 @@ ms.locfileid: "87242546"
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Representa um eixo de posição ou de filtro de um células, que contém os membros selecionados de uma ou mais dimensões.|  
 |[Catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contém informações de esquema multidimensional (ou seja, cubos e dimensões subjacentes, hierarquias, níveis e membros) específicas para um provedor de dados multidimensional (MDP).|  
-|[CÉL](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção de coordenadas de eixo, contidas em um células.|  
+|[Célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção de coordenadas de eixo, contidas em um células.|  
 |[Células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros células.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Representa um cubo de um esquema multidimensional que contém um conjunto de dimensões relacionadas.|  
 |[Dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Representa uma das dimensões de um cubo multidimensional que contém uma ou mais hierarquias de membros.|  

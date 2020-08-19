@@ -1,4 +1,5 @@
 ---
+description: Método Read
 title: Método Read | Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75b39b758d48a173bcfbe84e3fecbd20cce5ee12
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6600c02af5c24fc1ce27a04422678f8a3f40a179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442548"
 ---
 # <a name="read-method"></a>Método Read
 Lê um número especificado de bytes de um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) binário.  
@@ -36,7 +37,7 @@ Variant = Stream.Read ( NumBytes)
  *NumBytes*  
  Opcional. Um valor **longo** que especifica o número de bytes a serem lidos do arquivo ou o valor de [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) **adReadAll**, que é o padrão.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  O método **Read** lê um número especificado de bytes ou o fluxo inteiro de um objeto de **fluxo** e retorna os dados resultantes como uma **variante**.  
   
 ## <a name="remarks"></a>Comentários  

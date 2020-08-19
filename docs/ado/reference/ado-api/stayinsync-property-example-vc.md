@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade StayInSync (VC++)
 title: Exemplo da propriedade StayInSync (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8b3c6da84e0b439671adcc4516acde22fd2adf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441888"
 ---
 # <a name="stayinsync-property-example-vc"></a>Exemplo da propriedade StayInSync (VC++)
 Este exemplo demonstra como a propriedade [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilita o acesso a linhas em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)hierárquico.  

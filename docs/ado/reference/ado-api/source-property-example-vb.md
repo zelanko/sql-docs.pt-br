@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Source (VB)
 title: Exemplo da propriedade Source (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f652b23e65b4f5669c6d369595933df4c5c6b9a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 635f091b668c8b0a0a8d654a65055e72c835d987
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442018"
 ---
 # <a name="source-property-example-vb"></a>Exemplo da propriedade Source (VB)
 Este exemplo demonstra a propriedade [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) abrindo três objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) com base em fontes de dados diferentes.  

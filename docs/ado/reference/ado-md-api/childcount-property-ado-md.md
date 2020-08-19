@@ -1,4 +1,5 @@
 ---
+description: Propriedade ChildCount (ADO MD)
 title: Propriedade ChildCount (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 858bed2c2fe04a1fbf0486b0e0bfc9a26447e4ef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 713958259b274e779802828d1940cabf25c5c222
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441198"
 ---
 # <a name="childcount-property-ado-md"></a>Propriedade ChildCount (ADO MD)
 Indica o número de membros para os quais o objeto de [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) atual é o pai em uma hierarquia.  

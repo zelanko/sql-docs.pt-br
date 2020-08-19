@@ -1,4 +1,5 @@
 ---
+description: Método Open (Fluxo do ADO)
 title: Método Open (fluxo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d59fcbbd7edea7ac87b2c080d27160cb98732759
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: baa3cb3eb5b2284a606362e31e0f185ab768c5f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442948"
 ---
 # <a name="open-method-ado-stream"></a>Método Open (Fluxo do ADO)
 Abre um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) para manipular fluxos de dados binários ou de texto.  
@@ -34,7 +35,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Fonte*  
+ *Origem*  
  Opcional. Um valor de **variante** que especifica a fonte de dados para o **fluxo**. A *origem* pode conter uma cadeia de caracteres de URL absoluta que aponta para um nó existente em uma estrutura de árvore conhecida, como um email ou sistema de arquivos. Uma URL deve ser especificada usando a palavra-chave URL ("URL =*esquema*://pasta*do servidor* / *folder*"). Como alternativa, a *origem* pode conter uma referência a um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) já aberto, que abre o fluxo padrão associado ao **registro**. Se a *origem* não for especificada, um **fluxo** será instanciado e aberto, associado a nenhuma fonte subjacente por padrão. Para obter mais informações sobre esquemas de URL e seus provedores associados, consulte [URLs absolutas e relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Modo*  
@@ -43,7 +44,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *OpenOptions*  
  Opcional. Um valor de [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) . O valor padrão é **adOpenStreamUnspecified**.  
   
- *Usu*  
+ *UserName*  
  Opcional. Um valor de **cadeia de caracteres** que contém a identificação de usuário que, se necessário, acessa o objeto de **fluxo** .  
   
  *Senha*  

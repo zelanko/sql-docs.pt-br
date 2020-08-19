@@ -1,4 +1,5 @@
 ---
+description: Método Refresh (ADO)
 title: Método Refresh (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 83a6153e0017dafb0ac48c27aebc49c51c9b22d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442348"
 ---
 # <a name="refresh-method-ado"></a>Método Refresh (ADO)
 Atualiza os objetos em uma coleção para refletir objetos disponíveis de e específicos para o provedor.  
@@ -37,7 +38,7 @@ collection.Refresh
 ## <a name="remarks"></a>Comentários  
  O método **Refresh** realiza diferentes tarefas, dependendo da coleção da qual você a chama.  
   
-### <a name="parameters"></a>parâmetros  
+### <a name="parameters"></a>Parâmetros  
  O uso do método **Refresh** na coleção [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) de um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) recupera informações de parâmetro do lado do provedor para o procedimento armazenado ou a consulta parametrizada especificada no objeto **Command** . A coleção estará vazia para provedores que não dão suporte a chamadas de procedimento armazenado ou consultas parametrizadas.  
   
  Você deve definir a [propriedade ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) do objeto **de comando** como um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) válido, a propriedade [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) para um comando válido e a propriedade [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) como **adCmdStoredProc** antes de chamar o método **Refresh** .  

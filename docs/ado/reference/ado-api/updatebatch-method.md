@@ -1,4 +1,5 @@
 ---
+description: Método UpdateBatch
 title: Método UpdateBatch | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f0a730a64a34e13f5a7554ecb700ab1e555a77d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441598"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Grava todas as atualizações de lote pendentes no disco.  

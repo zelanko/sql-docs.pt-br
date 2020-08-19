@@ -1,4 +1,5 @@
 ---
+description: Fluxo (Sintaxe do ADO para Visual C++)
 title: Stream (sintaxe ADO for Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b570b21caed38042cfe975332791251426236c98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 032987bbf7f1b8b0e4780f94ba5794f7f661f85b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441868"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Fluxo (Sintaxe do ADO para Visual C++)
 ## <a name="methods"></a>Métodos  

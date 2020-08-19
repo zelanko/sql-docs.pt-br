@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Refresh (VC++)
 title: Exemplo do método Refresh (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442328"
 ---
 # <a name="refresh-method-example-vc"></a>Exemplo do método Refresh (VC++)
 Este exemplo demonstra o uso do método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para atualizar a coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimento armazenado.  

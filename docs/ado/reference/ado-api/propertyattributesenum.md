@@ -1,4 +1,5 @@
 ---
+description: PropertyAttributesEnum
 title: PropertyAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcb17116d7332e9afb359a7dd47d69cb3eb75df4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442558"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Especifica os atributos de um objeto de [Propriedade](../../../ado/reference/ado-api/property-object-ado.md) .  

@@ -1,4 +1,5 @@
 ---
+description: Propriedade Type (Fluxo ADO)
 title: Propriedade Type (fluxo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de61f4877dc6adcdfaa9644f5f266cd827a1d096
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8fd1519092d72f8a562bb266d2aa6d547d8e37df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441728"
 ---
 # <a name="type-property-ado-stream"></a>Propriedade Type (Fluxo ADO)
 Indica o tipo de dados contidos no [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) (binário ou texto).  

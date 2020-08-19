@@ -1,4 +1,5 @@
 ---
+description: Método Supports
 title: Dá suporte ao método | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b0c05118b0f4b8f952b933bc2474bd1f0879865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441748"
 ---
 # <a name="supports-method"></a>Método Supports
 Determina se um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) especificado dá suporte a um tipo específico de funcionalidade.  

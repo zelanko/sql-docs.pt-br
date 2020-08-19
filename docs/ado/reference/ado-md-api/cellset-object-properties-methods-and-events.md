@@ -1,4 +1,5 @@
 ---
+description: Propriedades, métodos e eventos do objeto Cellset
 title: Propriedades, métodos e eventos do objeto células | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15b599884fffff5e9d6c289165b21a1d6f40b7a6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 40c897057efa549ba88d876b5ef923a89fb886f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441188"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Cellset
 ## <a name="propertiescollections"></a>Propriedades/coleções  

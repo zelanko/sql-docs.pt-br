@@ -1,4 +1,5 @@
 ---
+description: Coleção Members (ADO MD)
 title: Coleção Members (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8337bfd2e7fb8ece226709f86c3b57ef746baca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a39565e51270684a5514d499c658f950fe473a1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440868"
 ---
 # <a name="members-collection-ado-md"></a>Coleção Members (ADO MD)
 Contém os objetos de [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) de um nível ou uma posição ao longo de um eixo.  

@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Type (Campo) (VB)
 title: Exemplo da propriedade Type (campo) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441718"
 ---
 # <a name="type-property-example-field-vb"></a>Exemplo da propriedade Type (Campo) (VB)
 Este exemplo demonstra a propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) exibindo o nome da constante que corresponde ao valor da propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) de todos os objetos [Field](../../../ado/reference/ado-api/field-object.md) na tabela ***Employees*** . A função FieldType é necessária para que este procedimento seja executado.  

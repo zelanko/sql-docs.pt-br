@@ -1,4 +1,5 @@
 ---
+description: StreamOpenOptionsEnum
 title: StreamOpenOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d61b11ee6fedd4229433570f6b159cccf658853
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e2799d52ef8c46092132a36eb2fe4fb92f5d14d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441818"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 Especifica as opções para abrir um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) . Os valores podem ser combinados com uma operação ou.  
