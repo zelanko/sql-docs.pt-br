@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417342"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  É o nome do protegível. Se o protegível for o próprio servidor, esse valor deverá ser definido como NULL. *securable* é uma expressão escalar do tipo **sysname**. Não há nenhum padrão.  
   
  *securable_class*  
- É o nome da classe do protegível na qual a permissão é testada. *securable_class* é uma expressão escalar do tipo **nvarchar(60)** .  
+ É o nome da classe do protegível na qual a permissão é testada. *securable_class* é uma expressão escalar do tipo **nvarchar(60)**.  
   
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento securable_class deve ser definido com um dos seguintes valores: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
   
@@ -62,7 +63,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Uma expressão escalar opcional do tipo **sysname** que representa o nome da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
   
 > [!NOTE]  
->  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e posteriores, os subprotegíveis não podem usar colchetes no formato **'[** _nome do subprotegível_ **]'** . Em vez disso, use **'** _sub name_ **'** .  
+>  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e posteriores, os subprotegíveis não podem usar colchetes no formato **'[**_nome do subprotegível_**]'**. Em vez disso, use **'** _sub name_ **'** .  
   
  *sub-securable_class*  
  Uma expressão escalar opcional do tipo **nvarchar(60)** que representa a classe da subentidade protegível na qual a permissão é testada. O padrão é NULO.  

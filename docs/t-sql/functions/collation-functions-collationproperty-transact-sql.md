@@ -1,4 +1,5 @@
 ---
+description: Funções de ordenação – COLLATIONPROPERTY (Transact-SQL)
 title: COLLATIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
@@ -19,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24be72f48d101333eb0abfbf4cea9e5b13e9f0d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 329c9f7488eb283b9b6756e4281f3b03e812be0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417442"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funções de ordenação – COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ O nome da ordenação. O argumento *collation_name* tem um tipo de dados **nvarc
 *property*  
 A propriedade Collation. O argumento *property* tem um tipo de dados **varchar (128)** e pode ter qualquer um dos seguintes valores:
   
-|Nome da propriedade|DESCRIÇÃO|  
+|Nome da propriedade|Descrição|  
 |---|---|
 |**CodePage**|Página de código de não Unicode da ordenação. É o conjunto de caracteres usado para dados **varchar**. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/library/cc194886.aspx) e o [Apêndice H: Páginas de código](https://msdn.microsoft.com/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.<br /><br />Tipo de dados base: **int**|  
 |**LCID**|ID de localidade do Windows da ordenação. É a cultura usada para regras de classificação e comparação. Veja a [Estrutura de LCID](https://msdn.microsoft.com/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).<br /><br />Tipo de dados base: **int**|  

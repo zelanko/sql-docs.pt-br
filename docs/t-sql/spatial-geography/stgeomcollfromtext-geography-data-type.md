@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromText (tipo de dados geography)
 title: STGeomCollFromText (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d72d49a08deb05bc5e5750e98493047257c6f2ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6caf71740ca5c62e50af582df1a3d6f3866f6ec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416952"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *geometrycollection_tagged_text*  
- É a representação WKT da instância de **geography** que você deseja retornar. *geometrycollection_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geography** que você deseja retornar. *geometrycollection_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geography** que você deseja retornar.  

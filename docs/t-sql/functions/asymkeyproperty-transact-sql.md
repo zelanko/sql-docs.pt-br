@@ -1,4 +1,5 @@
 ---
+description: ASYMKEYPROPERTY (Transact-SQL)
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2cef30d8155c0a44820b9ab639c2a28964b02f76
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2ebd38bae5c1a2ad001f03e9ff2a192bf95a0de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417482"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ O Key_ID de uma chave assimétrica do banco de dados. Se você souber apenas o n
 Especifica que a saída retorna a descrição do algoritmo da chave assimétrica. Disponível somente para chaves assimétricas criadas de um módulo EKM.
   
 **'** string_sid **'**  
-Especifica que a saída retorna o SID da chave assimétrica no formato **nvarchar()** .
+Especifica que a saída retorna o SID da chave assimétrica no formato **nvarchar()**.
   
 **'** sid **'**  
 Especifica que a saída retorna o SID da chave assimétrica em formato binário.

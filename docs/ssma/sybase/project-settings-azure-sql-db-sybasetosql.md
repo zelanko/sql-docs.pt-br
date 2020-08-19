@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (banco de dados SQL do Azure) (SybaseToSQL)
 title: Configurações do projeto (banco de dados SQL do Azure) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b79d4e94126676e128d803176463b314348ed8a1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 39a099eb243d767d18402bcd6baeb6280dbeaad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418272"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a>Configurações do projeto (banco de dados SQL do Azure) (SybaseToSQL)
 As configurações do projeto do banco de dados SQL do Azure permitem configurar o sufixo do banco de dados SQL do Azure a ser adicionado na caixa de diálogo de conexão e também permitir a implementação do mecanismo de pulsação na conexão do banco de dados SQL  

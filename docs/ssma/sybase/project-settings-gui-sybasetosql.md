@@ -1,4 +1,5 @@
 ---
+description: Configurações de projeto (GUI) (SybaseToSQL)
 title: Configurações do projeto (GUI) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c709be1a8f455e4d2e50f60c3b31ba182192803c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2361f480d5f148140caa8e4fcbcb4d22374d9e04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418252"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Configurações de projeto (GUI) (SybaseToSQL)
 As configurações do projeto de GUI permitem que você configure como os dados são exibidos na guia **dados** e se deseja mostrar o relatório de avaliação após a conversão ou não.  

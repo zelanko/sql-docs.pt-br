@@ -1,4 +1,5 @@
 ---
+description: Executar casos de teste (OracleToSQL)
 title: Executando casos de teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418432"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
 Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  

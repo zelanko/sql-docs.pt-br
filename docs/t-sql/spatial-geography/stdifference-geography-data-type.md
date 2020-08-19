@@ -1,4 +1,5 @@
 ---
+description: STDifference (tipo de dados geography)
 title: STDifference (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8165c78e7eced334e31ed7b0ccb0d2bfbab74af4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 067d49755229cad03fe77ae981cf7673d68f536a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417032"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,6 +80,6 @@ SELECT @g.STDifference(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

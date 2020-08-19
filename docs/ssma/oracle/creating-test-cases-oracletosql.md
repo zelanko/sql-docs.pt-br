@@ -1,4 +1,5 @@
 ---
+description: Criar casos de teste (OracleToSQL)
 title: Criando casos de teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4f7183089fd67f413515034a557e4b73388f950f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418382"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Criar casos de teste (OracleToSQL)
 Use o assistente de caso de teste para criar um teste. Este assistente permite que você crie casos de teste escolhendo objetos testados e verificados e especificando os parâmetros de teste.  

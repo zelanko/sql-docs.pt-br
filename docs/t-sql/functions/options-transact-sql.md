@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;OPTIONS (Transact-SQL)'
 title: '@@OPTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6bfbf40042b47d4c6773b0887348e5f1f7075526
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 12e2d3418a021a3ffee5db530d35f0fc8522dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417222"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,6 +80,6 @@ RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)
 ## <a name="see-also"></a>Consulte Também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configurar as opções de configuração do servidor user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)  
+ [Configurar as opções de configuração de servidor user connections](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Palavras-chave reservadas (Transact-SQL)
 title: Palavras-chave reservadas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417102"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Palavras-chave reservadas (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -587,7 +588,7 @@ ms.locfileid: "87396335"
         DOUBLE
     :::column-end:::
     :::column:::
-        OPÇÃO
+        OPTION
     :::column-end:::
     :::column:::
         USER
@@ -770,7 +771,7 @@ A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL 
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **ADICIONAR**
     :::column-end:::
     :::column:::
         **EXTERNAL**
@@ -781,7 +782,7 @@ A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL 
 :::row-end:::  
 :::row:::
     :::column:::
-        **ALL**
+        **TODOS**
     :::column-end:::
     :::column:::
         **EXTRACT**
@@ -825,7 +826,7 @@ A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL 
 :::row-end:::  
 :::row:::
     :::column:::
-        **ANY**
+        **QUALQUER**
     :::column-end:::
     :::column:::
         **FLOAT**
@@ -1436,7 +1437,7 @@ A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL 
         **NONE**
     :::column-end:::
     :::column:::
-        **USER**
+        **USUÁRIO**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1944,7 +1945,7 @@ A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL 
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        ESTADO
     :::column-end:::
 :::row-end:::  
 :::row:::

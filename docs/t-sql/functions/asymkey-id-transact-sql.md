@@ -1,4 +1,5 @@
 ---
+description: ASYMKEY_ID (Transact-SQL)
 title: ASYMKEY_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 508840b147443fb82396d022b7438587cdf758ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f0fc2bad348f27caa34916f91909f9358a474231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417462"
 ---
 # <a name="asymkey_id-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

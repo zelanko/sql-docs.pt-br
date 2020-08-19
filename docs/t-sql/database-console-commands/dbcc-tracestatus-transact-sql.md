@@ -1,4 +1,5 @@
 ---
+description: DBCC TRACESTATUS (Transact-SQL)
 title: DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 2ae272f6d60670ffd1f3841e45b5b15fac9cc42d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 046c8fa60fc4bc4930089d8c7e9a87a3480bff23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417592"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +56,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 É um espaço reservado que indica que vários sinalizadores de rastreamento podem ser especificados.
   
 -1  
-Exibe o status dos sinalizadores de rastreamento habilitados globalmente. Se -1 for especificado sem *trace#* , todos os sinalizadores de rastreamento globais habilitados serão exibidos.
+Exibe o status dos sinalizadores de rastreamento habilitados globalmente. Se -1 for especificado sem *trace#*, todos os sinalizadores de rastreamento globais habilitados serão exibidos.
   
 WITH NO_INFOMSGS  
 Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
@@ -63,7 +64,7 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as informações do conjunto de resultados.
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |---|---|
 |**TraceFlag**|Nome do sinalizador de rastreamento|  
 |**Status**|Indica se o sinalizador de rastreamento está definido como ON ou OFF, globalmente ou para a sessão.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  

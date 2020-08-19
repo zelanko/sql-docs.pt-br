@@ -1,4 +1,5 @@
 ---
+description: COLUMNPROPERTY (Transact-SQL)
 title: COLUMNPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d62953d88773c6f378590db64aeeb3f94d6fe22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 360089db91ed52ba90f0566868b4f1c87eb2fd8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417422"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ Uma expressão que contém o nome da coluna ou parâmetro.
 *property*  
 Para o argumento *id*, o argumento *propriedade* especifica o tipo de informação que a função `COLUMNPROPERTY` retornará. O argumento *property* pode ter qualquer um destes valores:
   
-|Valor|DESCRIÇÃO|Valor retornado|  
+|Valor|Descrição|Valor retornado|  
 |---|---|---|
 |**AllowsNull**|Permite valores nulos.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**ColumnId**|Valor de ID da coluna que corresponde a **sys.columns.column_id**.|ID da coluna<br /><br /> **Observação:** ao consultar várias colunas, podem aparecer intervalos na sequência de valores de ID da coluna.|  

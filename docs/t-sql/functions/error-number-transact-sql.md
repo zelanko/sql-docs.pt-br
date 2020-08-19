@@ -1,4 +1,5 @@
 ---
+description: ERROR_NUMBER (Transact-SQL)
 title: ERROR_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b116fa8d49b3e007a35fe3bc846a29157839e22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 57db0e538738e809ad014b675abd8866e17257e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417412"
 ---
 # <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: INDEXPROPERTY (Transact-SQL)
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -20,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deeed76ed033531695b321c3e185e03dd988739c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417362"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  É uma expressão que contém o número de identificação do objeto da tabela ou exibição indexada para o qual fornecer as informações de propriedade de índice. *object_ID* é **int**.  
   
  *index_or_statistics_name*  
- É uma expressão que contém o nome do índice ou estatísticas para o qual retornar as informações de propriedade. *index_or_statistics_name* é **nvarchar(128)** .  
+ É uma expressão que contém o nome do índice ou estatísticas para o qual retornar as informações de propriedade. *index_or_statistics_name* é **nvarchar(128)**.  
   
  *property*  
  É uma expressão que contém o nome da propriedade do banco de dados a ser retornada. *property* é **varchar(128)** e pode ter um destes valores.  
@@ -55,7 +56,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  A menos que indicado o contrário, NULL é retornado quando *property* não é um nome de propriedade válido, *object_ID* não é uma ID de objeto válida, *object_ID* é um tipo de objeto sem suporte para a propriedade especificada ou o chamador não tem permissão para exibir os metadados do objeto.  
   
-|Propriedade|DESCRIÇÃO|Valor|  
+|Propriedade|Descrição|Valor|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Profundidade do índice.|Número de níveis de índice.<br /><br /> NULL = O índice XML ou saída não é válido.|  
 |**IndexFillFactor**|Valor do fator de preenchimento usado quando o índice foi criado ou reconstruído pela última vez.|Fator de preenchimento|  

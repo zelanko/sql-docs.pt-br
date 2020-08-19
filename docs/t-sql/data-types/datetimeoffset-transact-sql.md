@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417662"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -72,7 +73,7 @@ Define a data combinada com uma hora de um dia que possui reconhecimento de fuso
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Formatos de literal de cadeia de caracteres compatíveis com datetimeoffset
 A tabela a seguir lista os formatos de literal de cadeia de caracteres ISO 8601 compatíveis com **datetimeoffset**. Para obter informações sobre os formatos alfabéticos, numéricos, não separados e de hora para as partes de data e hora de **datetimeoffset**, consulte [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) e [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|DESCRIÇÃO|  
+|ISO 8601|Descrição|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Esses dois formatos não são afetados pelas configurações de localidade de sessão SET LANGUAGE e SET DATEFORMAT. Não são permitidos espaços entre as partes **datetimeoffset** e **datetime**.|  
 |AAAA-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Esse formato, pela definição ISO, indica que a parte de **datetime** deve ser expressa em UTC (Tempo Universal Coordenado). Por exemplo, 1999-12-12 12:30:30.12345 -07:00 deve ser representado como 1999-12-12 19:30:30.12345Z.|  
@@ -131,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-Se a conversão for feita em **time(n)** , a hora, o minuto, os segundos e os segundos fracionários serão copiados. O valor de fuso horário é truncado. Quando a precisão do valor de **datetimeoffset(n)** é maior que valor de **time(n)** , o valor é arredondado. O código a seguir mostra os resultados da conversão de um valor `datetimeoffset(4)` em um valor `time(3)`.
+Se a conversão for feita em **time(n)**, a hora, o minuto, os segundos e os segundos fracionários serão copiados. O valor de fuso horário é truncado. Quando a precisão do valor de **datetimeoffset(n)** é maior que valor de **time(n)**, o valor é arredondado. O código a seguir mostra os resultados da conversão de um valor `datetimeoffset(4)` em um valor `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -181,7 +182,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Se a conversão for feita em **datetime2(n)** , a data e a hora serão copiadas para o valor de **datetime2** e o fuso horário será truncado. Quando a precisão do valor de **datetime2(n)** é maior que a precisão do valor de **datetimeoffset(n)** , os segundos fracionários são truncados para serem ajustados. O código a seguir mostra os resultados da conversão de um valor `datetimeoffset(4)` em um valor `datetime2(3)`.
+Se a conversão for feita em **datetime2(n)**, a data e a hora serão copiadas para o valor de **datetime2** e o fuso horário será truncado. Quando a precisão do valor de **datetime2(n)** é maior que a precisão do valor de **datetimeoffset(n)**, os segundos fracionários são truncados para serem ajustados. O código a seguir mostra os resultados da conversão de um valor `datetimeoffset(4)` em um valor `datetime2(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  

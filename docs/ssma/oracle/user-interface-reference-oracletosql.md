@@ -1,4 +1,5 @@
 ---
+description: Referência da interface do usuário (OracleToSQL)
 title: Referência da interface do usuário (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f0fa992181878a185fc6ba12719f3b2edc5fa9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2d234e907cc8839219b942cc841aed02f45e3fbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418412"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Referência da interface do usuário (OracleToSQL)
 Esta seção inclui tópicos de ajuda para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração (SSMA) para Oracle.  

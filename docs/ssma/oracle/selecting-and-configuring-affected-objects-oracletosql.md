@@ -1,4 +1,5 @@
 ---
+description: Selecionar e configurar os objetos afetados (OracleToSQL)
 title: Selecionando e configurando objetos afetados (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418342"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selecionar e configurar os objetos afetados (OracleToSQL)
 Nesta página, você pode selecionar tabelas e chaves estrangeiras, alterações que devem ser comparadas quando o SSMA verifica os resultados da execução dos objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  

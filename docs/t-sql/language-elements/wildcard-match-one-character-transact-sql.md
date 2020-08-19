@@ -1,4 +1,5 @@
 ---
+description: _ (Curinga – corresponde a um caractere) (Transact-SQL)
 title: _ (curinga – corresponder a um caractere) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1d3e6c8d141f2923cb2fd9074999fde7c80dfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3699c5d71de477cca95b1ec8bacaa3b56b9e438d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417072"
 ---
 # <a name="_-wildcard---match-one-character-transact-sql"></a>_ (Curinga – corresponde a um caractere) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

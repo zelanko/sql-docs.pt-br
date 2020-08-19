@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (migração) (SybaseToSQL)
 title: Configurações do projeto (migração) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5e8a8f9c88537d0dc807efe7baf387ea917468d3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b05bfa4cf77043ae172f23940d1b8f0244a1e30c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418282"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Configurações do projeto (migração) (SybaseToSQL)
 A página migração da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA migra dados do Sybase Adaptive Server Enterprise (ase) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,7 +30,7 @@ O painel migração está disponível nas caixas de diálogo **configurações d
   
 |Termo|Definição|  
 |--------|--------------|  
-|**Substituir datas sem suporte**|Especifica se o SSMA deve corrigir datas anteriores à data de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** mais antiga (01 de janeiro de 1753).<br /><br />Para manter os valores de data atuais, selecione **não fazer nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]não aceitará datas antes de 1º de janeiro de 1753 em uma coluna DateTime. Se você usar datas mais antigas, deverá converter os valores DateTime em valores de caracteres.<br /><br />Para converter datas antes de 1º de janeiro de 1753 a NULL, selecione **substituir por NULL**.<br /><br />Para substituir datas antes de 1º de janeiro de 1753 com uma data com suporte, selecione **substituir pela data com suporte mais próxima**.<br /><br />**Modo padrão**: não fazer nada<br /><br />**Modo otimista**: não fazer nada<br /><br />**Modo completo**: substituir pela data mais próxima com suporte|  
+|**Substituir datas sem suporte**|Especifica se o SSMA deve corrigir datas anteriores à data de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** mais antiga (01 de janeiro de 1753).<br /><br />Para manter os valores de data atuais, selecione **não fazer nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não aceitará datas antes de 1º de janeiro de 1753 em uma coluna DateTime. Se você usar datas mais antigas, deverá converter os valores DateTime em valores de caracteres.<br /><br />Para converter datas antes de 1º de janeiro de 1753 a NULL, selecione **substituir por NULL**.<br /><br />Para substituir datas antes de 1º de janeiro de 1753 com uma data com suporte, selecione **substituir pela data com suporte mais próxima**.<br /><br />**Modo padrão**: não fazer nada<br /><br />**Modo otimista**: não fazer nada<br /><br />**Modo completo**: substituir pela data mais próxima com suporte|  
   
 ## <a name="migration-engine"></a>Mecanismo de migração  
   

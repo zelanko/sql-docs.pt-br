@@ -1,4 +1,5 @@
 ---
+description: Z (tipo de dados geography)
 title: Z (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5f10566504e9f0f982175249f627ddba7106a4d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a07d0999854ac26f275c2f983157b7513b0b141
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416982"
 ---
 # <a name="z-geography-data-type"></a>Z (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "86555727"
 ## <a name="return-types"></a>Tipos de retorno
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de **geography** não for um Point e também será nulo para as instâncias de **Point** para as quais ele não for definido.  
   
- Essa propriedade é somente leitura.  
+ Esta propriedade é somente para leitura.  
   
  As coordenadas Z não são usadas nos cálculos feitos pela biblioteca e não serão executadas em nenhum cálculo de biblioteca.  
   

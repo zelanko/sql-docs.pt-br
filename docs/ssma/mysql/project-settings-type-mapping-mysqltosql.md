@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (mapeamento de tipo) (MySQLToSQL)
 title: Configurações do projeto (mapeamento de tipo) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418482"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configurações do projeto (mapeamento de tipo) (MySQLToSQL)
 As configurações do projeto de mapeamento de tipo permitem que você defina mapeamentos de tipo padrão para o projeto do SSMA.  
@@ -69,7 +70,7 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |Blob [2.. 8000]|varbinary [*]|  
 |Blob [8001.. *]|varbinary(max)|  
 |bool|bit|  
-|booleano|bit|  
+|boolean|bit|  
 |char|nchar [1]|  
 |byte de caracteres|binário [1]|  
 |byte de caractere [0.. 1]|binário [1]|  
@@ -98,15 +99,15 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |FLOAT|float [24]|  
 |float [*.. 255] [ \* .. máximo|numeric [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
-|int|int|  
-|int [*.. 255]|int|  
-|integer|int|  
-|inteiro [*.. 255]|int|  
+|INT|INT|  
+|int [*.. 255]|INT|  
+|inteiro|INT|  
+|inteiro [*.. 255]|INT|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint[*.. 255]|int|  
+|mediumint|INT|  
+|mediumint[*.. 255]|INT|  
 |mediumtext|nvarchar(max)|  
 |caractere nacional|nchar [1]|  
 |caractere nacional [0.. 1]|nchar [1]|  
@@ -172,15 +173,15 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |int não assinado [*.. 255]|BIGINT|  
 |inteiro sem sinal|BIGINT|  
 |inteiro sem sinal [*.. 255]|BIGINT|  
-|MEDIUMINT não assinado|int|  
-|MEDIUMINT não assinado [*.. 255]|int|  
+|MEDIUMINT não assinado|INT|  
+|MEDIUMINT não assinado [*.. 255]|INT|  
 |numérico não assinado|numeric|  
 |numérico não assinado [*.. 65]|numeric [*] [0]|  
 |numérico não assinado [*.. 65] [ \* .. máximo|numeric [*] [ \* ]|  
 |real não assinado|float [53]|  
 |real não assinado [*.. 255 [[ \* .. máximo|numeric [*] [ \* ]|  
-|smallint não assinado|int|  
-|smallint não assinado [*.. 255]|int|  
+|smallint não assinado|INT|  
+|smallint não assinado [*.. 255]|INT|  
 |tinyint não assinado|TINYINT|  
 |tinyint não assinado [*.. 255]|TINYINT|  
 |varbinary [0.. 1]|varbinary [1]|  

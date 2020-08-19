@@ -1,4 +1,5 @@
 ---
+description: STEquals (tipo de dados geography)
 title: STEquals (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 730e84147c4201f9eca316335d2328dd50ceae76
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a2e27ef2c94a4b3755da8b425fbe6ae60212f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416962"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (tipo de dados geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,6 +63,6 @@ SELECT @g.STEquals(@h);
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

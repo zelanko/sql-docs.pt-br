@@ -1,4 +1,5 @@
 ---
+description: APP_NAME (Transact-SQL)
 title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5bba743ec083c5eda630e9d14799cae34726a848
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c8522004e6852ebb3e874811ec7eb198cdf0416a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417512"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

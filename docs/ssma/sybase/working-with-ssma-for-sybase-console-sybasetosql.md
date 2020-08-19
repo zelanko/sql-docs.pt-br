@@ -1,4 +1,5 @@
 ---
+description: Trabalhar com o Console do SSMA para Sybase (SybaseToSQL)
 title: Trabalhando com o console do SSMA para Sybase (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8a5921282769cb4c8a696a4718ad07bb3f8d7622
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3b71f795855c8edecf5fb4cfc0d752181257310f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418262"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Trabalhar com o Console do SSMA para Sybase (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistente de Migração (SSMA), versão para Sybase Adaptive Server Enterprise (ASE), agora é acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console, o SSMA permite a interface do nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de Migração (SSMA), versão para Sybase Adaptive Server Enterprise (ASE), agora é acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console, o SSMA permite a interface do nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
   
 Esta seção explica o procedimento para migrar o banco de dados ASE usando o aplicativo de console do SSMA.  
   

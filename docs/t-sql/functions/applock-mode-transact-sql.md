@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_MODE (Transact-SQL)
 title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9f7433be40f2a0a08ae075edfc3eaa9bd3252dca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417502"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
