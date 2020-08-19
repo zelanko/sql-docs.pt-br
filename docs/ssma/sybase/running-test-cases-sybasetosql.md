@@ -1,4 +1,5 @@
 ---
+description: Executar casos de teste (SybaseToSQL)
 title: Executando casos de teste (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ea2b250f59a29a16bc77ad23e28b0823461a8ace
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468747"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Executar casos de teste (SybaseToSQL)
 Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre o Sybase e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinada de acordo com as configurações de mapeamento de esquema para o projeto do SSMA atual.  
@@ -49,10 +50,10 @@ Os seguintes objetos são criados em Sybase no banco de dados SSMATESTER2005db o
 |USER_TABLE $ trg|Gatilho|Disparar a auditoria das alterações na tabela verificada.|  
 |USER_TABLE $ AUD|Tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
 |USER_TABLE $ AudID|Tabela|Tabela na qual as linhas novas e alteradas são salvas.|  
-|USER_TABLE|Visualizar|Representação simplificada das modificações da tabela.|  
-|USER_TABLE $ New|Visualizar|Representação simplificada de linhas inseridas e substituídas.|  
-|USER_TABLE $ new_id|Visualizar|Identificação de linhas inseridas e alteradas.|  
-|USER_TABLE $ Old|Visualizar|Representação simplificada de linhas excluídas e substituídas.|  
+|USER_TABLE|Exibir|Representação simplificada das modificações da tabela.|  
+|USER_TABLE $ New|Exibir|Representação simplificada de linhas inseridas e substituídas.|  
+|USER_TABLE $ new_id|Exibir|Identificação de linhas inseridas e alteradas.|  
+|USER_TABLE $ Old|Exibir|Representação simplificada de linhas excluídas e substituídas.|  
   
 O objeto a seguir é criado no banco de dados da tabela verificada no Sybase e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

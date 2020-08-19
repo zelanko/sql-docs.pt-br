@@ -1,4 +1,5 @@
 ---
+description: = (Igual a) (MDX)
 title: = (Igual a) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ec3cbcb928926d02dd6597116f8ce9af00bf8e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494929"
 ---
 # <a name="-equal-to-mdx"></a>= (Igual a) (MDX)
 
@@ -34,7 +35,7 @@ MDX_Expression = MDX_Expression
  *MDX_Expression*  
  Uma expressão MDX válida.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor booliano baseado nas seguintes condições:  
   
 -   **true** se o valor do primeiro parâmetro for igual ao valor do segundo parâmetro.  
@@ -75,6 +76,6 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

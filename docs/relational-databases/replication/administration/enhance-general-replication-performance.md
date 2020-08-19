@@ -1,4 +1,5 @@
 ---
+description: Aprimorar o desempenho geral da replicação
 title: Aprimorar o desempenho de replicação geral | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 47ce98ee7bb1e4cacc82b2125c0da08f5487c444
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423580"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "86902078"
   
 -   Limite o uso de tipos de dados LOB (objetos grandes).  
   
-     Os LOBs requerem mais espaço de armazenamento e processamento que outros tipos de dados de coluna. Não inclua essas colunas em artigos a menos que seja necessário para seu aplicativo. Os tipos de dados **text**, **ntext**e **image** são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , respectivamente.  
+     Os LOBs requerem mais espaço de armazenamento e processamento que outros tipos de dados de coluna. Não inclua essas colunas em artigos a menos que seja necessário para seu aplicativo. Os tipos de dados **text**, **ntext**e **image** são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, respectivamente.  
   
      Para replicação transacional, considere usar o perfil do Distribution Agent chamado **Perfil de distribuição para fluxo contínuo do banco de dados OLE**. Para saber mais, confira [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

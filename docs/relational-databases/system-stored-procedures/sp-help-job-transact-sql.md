@@ -1,4 +1,5 @@
 ---
+description: sp_help_job (Transact-SQL)
 title: sp_help_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5dcf8a6fa773497e119b73a9b623d414a1ad4d2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485995"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,34 +53,34 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Para exibir um trabalho específico, *job_id* ou *job_name* deve ser especificado.  Omita *job_id* e *job_name* para retornar informações sobre todos os trabalhos.
   
-`[ @job_aspect = ] 'job_aspect'`O atributo de trabalho a ser exibido. *job_aspect* é **varchar (9)**, com um padrão de NULL, e pode ser um desses valores.  
+`[ @job_aspect = ] 'job_aspect'` O atributo de trabalho a ser exibido. *job_aspect* é **varchar (9)**, com um padrão de NULL, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**ALL**|Informações de aspecto do trabalho|  
+|**TODOS**|Informações de aspecto do trabalho|  
 |**TRABALHO**|Informações do trabalho|  
 |**AGENDAMENTO**|Informações da agenda|  
 |**TAREFAS**|Informações de etapa do trabalho|  
 |**AOS**|Informações de destino|  
   
-`[ @job_type = ] 'job_type'`O tipo de trabalho a ser incluído no relatório. *job_type* é **varchar (12)**, com um padrão de NULL. *job_type* pode ser **local** ou **vários servidores**.  
+`[ @job_type = ] 'job_type'` O tipo de trabalho a ser incluído no relatório. *job_type* é **varchar (12)**, com um padrão de NULL. *job_type* pode ser **local** ou **vários servidores**.  
   
-`[ @owner_login_name = ] 'login_name'`O nome de logon do proprietário do trabalho. *login_name* é **sysname**, com um padrão de NULL.  
+`[ @owner_login_name = ] 'login_name'` O nome de logon do proprietário do trabalho. *login_name* é **sysname**, com um padrão de NULL.  
   
-`[ @subsystem = ] 'subsystem'`O nome do subsistema. *subsistema* é **nvarchar (40)**, com um padrão de NULL.  
+`[ @subsystem = ] 'subsystem'` O nome do subsistema. *subsistema* é **nvarchar (40)**, com um padrão de NULL.  
   
-`[ @category_name = ] 'category'`O nome da categoria. a *categoria* é **sysname**, com um padrão de NULL.  
+`[ @category_name = ] 'category'` O nome da categoria. a *categoria* é **sysname**, com um padrão de NULL.  
   
-`[ @enabled = ] enabled`Um número que indica se as informações são mostradas para trabalhos habilitados ou desabilitados. *habilitado* é **tinyint**, com um padrão de NULL. **1** indica trabalhos habilitados e **0** indica trabalhos desabilitados.  
+`[ @enabled = ] enabled` Um número que indica se as informações são mostradas para trabalhos habilitados ou desabilitados. *habilitado* é **tinyint**, com um padrão de NULL. **1** indica trabalhos habilitados e **0** indica trabalhos desabilitados.  
   
-`[ @execution_status = ] status`O status de execução para os trabalhos. o *status* é **int**, com um padrão de NULL, e pode ser um desses valores.  
+`[ @execution_status = ] status` O status de execução para os trabalhos. o *status* é **int**, com um padrão de NULL, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -91,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspenso.|  
 |**7**|Executando ações de conclusão.|  
   
-`[ @date_comparator = ] 'date_comparison'`O operador de comparação a ser usado em comparações de *Date_Created* e *date_modified*. *date_comparison* é **Char (1)** e pode ser =, \<, or > .  
+`[ @date_comparator = ] 'date_comparison'` O operador de comparação a ser usado em comparações de *Date_Created* e *date_modified*. *date_comparison* é **Char (1)** e pode ser =, \<, or > .  
   
-`[ @date_created = ] date_created`A data em que o trabalho foi criado. *Date_Created*é **DateTime**, com um padrão de NULL.  
+`[ @date_created = ] date_created` A data em que o trabalho foi criado. *Date_Created*é **DateTime**, com um padrão de NULL.  
   
-`[ @date_last_modified = ] date_modified`A data em que o trabalho foi modificado pela última vez. *date_modified* é **DateTime**, com um padrão de NULL.  
+`[ @date_last_modified = ] date_modified` A data em que o trabalho foi modificado pela última vez. *date_modified* é **DateTime**, com um padrão de NULL.  
   
-`[ @description = ] 'description_pattern'`A descrição do trabalho. *description_pattern* é **nvarchar (512)**, com um padrão de NULL. *description_pattern* pode incluir os caracteres curinga SQL Server para correspondência de padrões.  
+`[ @description = ] 'description_pattern'` A descrição do trabalho. *description_pattern* é **nvarchar (512)**, com um padrão de NULL. *description_pattern* pode incluir os caracteres curinga SQL Server para correspondência de padrões.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -111,7 +112,7 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Nome do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
 |**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
-|**ndescrição**|**nvarchar(512)**|Descrição do trabalho.|  
+|**descrição**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**category**|**sysname**|Categoria do trabalho.|  
 |**proprietário**|**sysname**|Proprietário do trabalho.|  
@@ -138,7 +139,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|Número de etapas que o trabalho possui.|  
 |**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
 |**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
-|**type**|**int**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
+|**tipo**|**int**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
   
  Se *job_id* ou *job_name* for especificado, **sp_help_job** retornará esses conjuntos de resultados adicionais para etapas de trabalho, agendas de trabalho e servidores de destino de trabalho.  
   
@@ -263,9 +264,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_job ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_job ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

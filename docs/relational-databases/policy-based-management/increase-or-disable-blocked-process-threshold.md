@@ -1,4 +1,5 @@
 ---
+description: Aumentar ou desabilitar o limite de processo bloqueado
 title: Aumentar ou desabilitar o limite de processo bloqueado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 71db8ef6-341b-4465-99db-5c63e48d4c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fbf49603290a921a29e0a985837771feb645e54c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3ddb1a904207960565b7d134961300b7e0ca591
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423730"
 ---
 # <a name="increase-or-disable-blocked-process-threshold"></a>Aumentar ou desabilitar o limite de processo bloqueado
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

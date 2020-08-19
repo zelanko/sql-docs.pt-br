@@ -1,4 +1,5 @@
 ---
+description: Criar um Conjunto de Alterações (Master Data Services)
 title: Criar um Conjunto de Alterações
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495030"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Criar um Conjunto de Alterações (Master Data Services)
 

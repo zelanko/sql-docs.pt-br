@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (tipo de dados geography)
 title: IsValidDetailed (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9022b3a86910ac8430b408de30dee3dfbcca4254
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6e272d607592660c123a25847143a4aeff075fc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422350"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (tipo de dados geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86555188"
 ## <a name="remarks"></a>Comentários  
  A tabela a seguir contém os valores de retorno possíveis:  
   
-|Valor retornado|DESCRIÇÃO|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |24400|Válido|  
 |24401|Não válido, motivo desconhecido.|  

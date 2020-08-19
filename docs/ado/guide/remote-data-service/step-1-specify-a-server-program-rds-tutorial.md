@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 1: Especificar um programa de servidor (Tutorial RDS)'
 title: 'Etapa 1: especificar um programa de servidor (tutorial RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7856a6a77720b4988c4a15afd86f24ff0070b28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b5c76aebd80ff4a5706c9226abc051c03940707
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451948"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Etapa 1: Especificar um programa de servidor (Tutorial RDS)
-No caso mais geral, use o [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md)Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace para especificar o programa de servidor padrão, [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ou seu próprio programa de servidor personalizado (objeto Business). Um programa de servidor é instanciado no servidor e uma referência ao programa do servidor, ou *proxy*, é retornada.  
+No caso mais geral, use o [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md) Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace para especificar o programa de servidor padrão, [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ou seu próprio programa de servidor personalizado (objeto Business). Um programa de servidor é instanciado no servidor e uma referência ao programa do servidor, ou *proxy*, é retornada.  
   
  Este tutorial usa o programa de servidor padrão:  
   

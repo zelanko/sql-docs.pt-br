@@ -1,4 +1,5 @@
 ---
+description: Funções criptográficas (Transact-SQL)
 title: Funções criptográficas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 77821dfc49bd1e3dba1bde1bc63da15bd9877bf6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f54a52f2fdb4e17d3e32ab47ca7e3dccfcb9aeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468158"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>Funções criptográficas (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

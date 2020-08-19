@@ -1,4 +1,5 @@
 ---
+description: Descrever parâmetros
 title: Descrevendo parâmetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4d9284294707da0a469bf75ff9812ad5f7855bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a41bee40403cc3562c41ccc13a15c706a0772e27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476748"
 ---
 # <a name="describing-parameters"></a>Descrever parâmetros
 **SQLBindParameter** tem argumentos que descrevem o parâmetro: seu tipo, precisão e escala SQL. O driver usa essas informações, ou *metadados,* para converter o valor do parâmetro para o tipo necessário para a fonte de dados. À primeira vista, pode parecer que o driver está em uma posição melhor para saber os metadados do parâmetro do que o aplicativo; Afinal, o driver pode facilmente descobrir os metadados de uma coluna de conjunto de resultados. Acontece que esse não é o caso. Primeiro, a maioria das fontes de dados não fornece uma maneira para o driver descobrir os metadados do parâmetro. Segundo, a maioria dos aplicativos já conhecem os metadados.  

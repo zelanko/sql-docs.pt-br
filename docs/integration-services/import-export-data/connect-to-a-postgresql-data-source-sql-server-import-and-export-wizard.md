@@ -1,4 +1,5 @@
 ---
+description: Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server)
 title: Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 023c791e27fba3c26ac3ccd9778f0beee44536b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495589"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server)
 
@@ -54,7 +55,7 @@ Para se conectar ao PostgreSQL com o Driver ODBC do PostgreSQL, monte uma cadeia
 > Obtenha ajuda para montar uma cadeia de conexão realmente certa. Em vez de fornecer uma cadeia de conexão, forneça um DSN (nome de fonte de dados) existente ou crie um novo. Para obter mais informações sobre essas opções, consulte [Conectar-se a uma fonte de dados ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Driver**  
-O nome do driver ODBC – um entre **PostgreSQL ODBC Driver(UNICODE)** e **PostgreSQL ODBC Driver(ANSI)** .
+O nome do driver ODBC – um entre **PostgreSQL ODBC Driver(UNICODE)** e **PostgreSQL ODBC Driver(ANSI)**.
 
 **Servidor**  
 O nome do servidor PostgreSQL. 
@@ -62,7 +63,7 @@ O nome do servidor PostgreSQL.
 **Porta**  
 A porta a ser usada para se conectar ao servidor PostgreSQL.
 
-**Backup de banco de dados**  
+**Banco de dados**  
 O nome do banco de dados PostgreSQL.
 
 **Uid** e **Pwd**   

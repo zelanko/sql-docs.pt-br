@@ -1,4 +1,5 @@
 ---
+description: Excluir uma hierarquia derivada (Master Data Services)
 title: Excluir uma hierarquia derivada
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 93e9a09dd93fc8da3d62840fd2b7463c48c4ece1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b86680615b5c823d5e1db08860ddbdd5ff52bd80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495017"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Excluir uma hierarquia derivada (Master Data Services)
 

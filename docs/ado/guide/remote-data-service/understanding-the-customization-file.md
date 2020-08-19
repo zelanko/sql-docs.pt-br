@@ -1,4 +1,5 @@
 ---
+description: Noções básicas sobre o arquivo de personalização
 title: Noções básicas sobre o arquivo de personalização | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451868"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização consiste em colchetes (**[]**) contendo um tipo e um parâmetro. Os quatro tipos de seção são indicados pelas cadeias de caracteres literais **Connect**, **SQL**, **UserList**ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador especificado pelo usuário ou nada.  
@@ -47,8 +48,8 @@ identifier
 |**SQL**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
 |**UserList**|Uma cadeia de caracteres literal que modifica os direitos de acesso de um usuário específico.|  
 |**logs**|Uma cadeia de caracteres literal que especifica um arquivo de log que registra erros operacionais.|  
-|**os**|Uma cadeia de caracteres literal que será usada se nenhum identificador for especificado ou encontrado.|  
-|*identificador*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres na cadeia de caracteres de **conexão** ou de **comando** .<br /><br /> -Use esta seção se o cabeçalho da seção contiver **Connect** e a cadeia de caracteres do identificador for encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho da seção contiver **SQL** e a cadeia de caracteres do identificador for encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho da seção contiver **UserList** e a cadeia de caracteres do identificador corresponder a um identificador de seção de **conexão** .|  
+|**default**|Uma cadeia de caracteres literal que será usada se nenhum identificador for especificado ou encontrado.|  
+|*ID*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres na cadeia de caracteres de **conexão** ou de **comando** .<br /><br /> -Use esta seção se o cabeçalho da seção contiver **Connect** e a cadeia de caracteres do identificador for encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho da seção contiver **SQL** e a cadeia de caracteres do identificador for encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho da seção contiver **UserList** e a cadeia de caracteres do identificador corresponder a um identificador de seção de **conexão** .|  
   
  O **DataFactory** chama o manipulador, passando parâmetros do cliente. O manipulador procura cadeias de caracteres inteiras nos parâmetros do cliente que correspondem aos identificadores nos cabeçalhos de seção apropriados. Se uma correspondência for encontrada, o conteúdo dessa seção será aplicado ao parâmetro do cliente.  
   

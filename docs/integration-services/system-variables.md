@@ -1,4 +1,5 @@
 ---
+description: Variáveis do sistema
 title: Variáveis do sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b1644491562c1d564a3df08da1b52eb69e947
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495290"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
 
@@ -35,7 +36,7 @@ ms.locfileid: "86912702"
 ## <a name="system-variables-for-packages"></a>Variáveis do sistema para pacotes  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para pacotes.  
   
-|Variável do sistema|Tipo de dados|DESCRIÇÃO|  
+|Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|O manipulador de um objeto de Evento do Windows que a tarefa pode sinalizar para indicar que a execução da tarefa deve ser interrompida.|  
 |**ContainerStartTime**|Datetime|A hora de início do contêiner.|  
@@ -63,14 +64,14 @@ ms.locfileid: "86912702"
 ## <a name="system-variables-for-containers"></a>Variáveis do sistema para contêineres  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para os contêineres Loop For, Loop Foreach e Sequência.  
   
-|Variável do sistema|Tipo de dados|DESCRIÇÃO|Contêiner|  
+|Variável do sistema|Tipo de dados|Descrição|Contêiner|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|A localidade que o contêiner usa.|Contêiner Loop For<br /><br /> Contêiner Loop Foreach<br /><br /> Contêiner de sequência|  
   
 ## <a name="system-variables-for-tasks"></a>Variáveis do sistema para tarefas  
  A tabela a seguir descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para tarefas.  
   
-|Variável do sistema|Tipo de dados|DESCRIÇÃO|  
+|Variável do sistema|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|O nome da tarefa.|  
 |**LocaleId**|Int32|A localidade que a tarefa usa.|  
@@ -81,7 +82,7 @@ ms.locfileid: "86912702"
 ## <a name="system-variables-for-event-handlers"></a>Variáveis do sistema para Manipuladores de Eventos  
  A tabela seguinte descreve as variáveis do sistema que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece para manipuladores de eventos. Nem todas as variáveis estão disponíveis para todos os manipuladores de eventos.  
   
-|Variável do sistema|Tipo de dados|DESCRIÇÃO|Manipulador de eventos|  
+|Variável do sistema|Tipo de dados|Descrição|Manipulador de eventos|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Cancelar**|Boolean|Indica se a execução do manipulador de eventos é interrompida quando ocorre um erro, aviso ou cancelamento de consulta.|Manipulador de eventos OnError<br /><br /> Manipulador de eventos OnWarning<br /><br /> Manipulador de eventos OnQueryCancel|  
 |**ErrorCode**|Int32|O identificador do erro.|Manipulador de eventos OnError<br /><br /> Manipulador de eventos OnInformation<br /><br /> Manipulador de eventos OnWarning|  

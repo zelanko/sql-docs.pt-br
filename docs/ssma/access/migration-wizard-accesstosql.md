@@ -1,4 +1,5 @@
 ---
+description: Assistente de migração (AccessToSQL)
 title: Assistente de migração (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8413487d4b367426c22795f7e82e58ec029706c3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8f2e2308cbee8aea34f8fa4b33de50ee69a2fdb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423030"
 ---
 # <a name="migration-wizard-accesstosql"></a>Assistente de migração (AccessToSQL)
 O assistente de migração orienta você pela migração de um ou mais bancos de dados de acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Usando o assistente, você criará um projeto, adicionará bancos de dados ao projeto, selecionará objetos para migrar e se conectará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você também irá converter, carregar e migrar esquemas e dados de acesso. Opcionalmente, você pode vincular tabelas de acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas ou SQL Azure.  

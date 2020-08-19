@@ -1,4 +1,5 @@
 ---
+description: CONCAT (Transact-SQL)
 title: CONCAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fe0c77173c617bc4f1003c31724af5dca32af28
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d0cf8a5da8735015aaabc9760abc08edcf5c3e15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468191"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,9 +57,9 @@ O tipo de retorno depende do tipo dos argumentos. Esta tabela ilustra o mapeamen
 |Tipo de entrada|Tipo e comprimento da saída|  
 |---|---|
 |1. Qualquer argumento de<br><br />um tipo de sistema do SQL-CLR<br><br />a UDT SQL-CLR<br><br />ou<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. Caso contrário, qualquer argumento de tipo<br><br />**varbinary(max)**<br><br />ou<br><br />**varchar(max)**|**varchar(max)** , a menos que um dos parâmetros seja um **nvarchar** de qualquer comprimento. Nesse caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)** .|  
+|2. Caso contrário, qualquer argumento de tipo<br><br />**varbinary(max)**<br><br />ou<br><br />**varchar(max)**|**varchar(max)**, a menos que um dos parâmetros seja um **nvarchar** de qualquer comprimento. Nesse caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)**.|  
 |3. Caso contrário, qualquer argumento de tipo **nvarchar** de no máximo 4.000 caracteres<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
-|4. Em todos os outros casos|**varchar**(<=8.000) (um **varchar** de no máximo 8.000 caracteres), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Naquele caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)** .|  
+|4. Em todos os outros casos|**varchar**(<=8.000) (um **varchar** de no máximo 8.000 caracteres), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Naquele caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)**.|  
   
 Quando `CONCAT` recebe argumentos de entrada **nvarchar** de comprimento <=4.000 caracteres, ou argumentos de entrada **varchar** de comprimento <=8.000 caracteres, conversões implícitas poderão afetar o comprimento das resultado. Outros tipos de dados têm comprimentos diferentes quando são convertidos implicitamente em cadeias de caracteres. Por exemplo, um **int** (14) tem um comprimento de cadeia de caracteres de 12, enquanto um **float** tem um comprimento de 32. Portanto, uma concatenação de dois inteiros retornará um resultado com um comprimento não inferior a 24.
   

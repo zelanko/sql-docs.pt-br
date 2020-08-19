@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_package (Banco de Dados SSISDB)
 title: catalog.validate_package (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34a5d09a65238ff469877138bf3de5e23cf46836
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 632a0039692cbb6d22dba736f268bffff9be6f74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495371"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (Banco de Dados SSISDB)
 
@@ -49,7 +50,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  O nome do projeto que contém o pacote. O *project_name* é **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- O nome do pacote. O *package_name* é **nvarchar(260)** .  
+ O nome do pacote. O *package_name* é **nvarchar(260)**.  
   
  [ @validation_id = ] *validation_id*  
  Retorna o ID (identificador exclusivo) da validação. O *validation_id* é **bigint**.  

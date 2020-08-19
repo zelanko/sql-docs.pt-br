@@ -1,4 +1,5 @@
 ---
+description: Implantar um projeto do SSIS com o código C# em um aplicativo .NET
 title: Implantar um projeto do SSIS com código .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4928f4394169987d4e3d06b6ddc9f4a4a33837c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 70bca79279d8db0bad18e1ee7ce9e4648dfb3c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495459"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implantar um projeto do SSIS com o código C# em um aplicativo .NET
 
@@ -30,7 +31,7 @@ Antes de começar, verifique se você tem o Visual Studio ou Visual Studio Code 
 
 Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
-## <a name="supported-platforms"></a>Plataformas compatíveis
+## <a name="supported-platforms"></a>Plataformas com suporte
 
 Você pode usar as informações neste guia de início rápido para implantar um projeto do SSIS nas seguintes plataformas:
 
@@ -53,12 +54,12 @@ Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informaçõe
 
 ## <a name="supported-authentication-method"></a>Método de autenticação compatível
 
-Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Confira os [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="create-a-new-visual-studio-project"></a>Criar um novo projeto do Visual Studio
 
 1. No Visual Studio, escolha **Arquivo**, **Novo**, **Projeto**. 
-2. Na caixa de diálogo **Novo Projeto**, expanda **Visual C#** .
+2. Na caixa de diálogo **Novo Projeto**, expanda **Visual C#**.
 3. Selecione **Aplicativo de Console** e digite *deploy_ssis_project* para o nome do projeto.
 4. Clique em **OK** para criar e abrir o novo projeto no Visual Studio.
 

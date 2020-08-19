@@ -1,4 +1,5 @@
 ---
+description: Constantes enumeradas do ADO
 title: Constantes enumeradas do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7d126d0783e448dab786a228b4e10a8ec7c0f840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451438"
 ---
 # <a name="ado-enumerated-constants"></a>Constantes enumeradas do ADO
 Para auxiliar na depuração, as enumerações do ADO listam um valor para cada constante. No entanto, esse valor é puramente consultivo e pode ser alterado de uma versão do ADO para outra. Seu código só deve depender do nome, não do valor real, de cada constante enumerada.  
   
-|Constante|Descrição|  
+|Constante|DESCRIÇÃO|  
 |-|-|  
 |[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|Para um objeto de **conjunto de registros** do RDS, especifica a prioridade de execução do thread assíncrono que recupera dados.|  
 |[ADCPROP_AUTORECALC_ENUM](../../../ado/reference/ado-api/adcprop-autorecalc-enum.md)|Especifica quando o provedor **MSDataShape** recalcula as colunas agregadas e calculadas em um **conjunto de registros**hierárquico.|  

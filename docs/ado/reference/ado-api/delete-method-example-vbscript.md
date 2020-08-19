@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Delete (VBScript)
 title: Exemplo do método Delete (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f88d533d22987b5aa2669ee421da951f74224eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 269a9d78ae8b97efca0bc4fac247640dfabc7248
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444128"
 ---
 # <a name="delete-method-example-vbscript"></a>Exemplo do método Delete (VBScript)
 Este exemplo usa o método [delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) para remover um registro especificado de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

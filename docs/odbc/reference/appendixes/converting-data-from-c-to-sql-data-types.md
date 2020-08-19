@@ -1,4 +1,5 @@
 ---
+description: Converter dados de C para tipos de dados SQL
 title: Convertendo dados de C para tipos de dados SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429708"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Converter dados de C para tipos de dados SQL
 Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recupera os dados de todos os parâmetros associados ao **SQLBindParameter** de locais de armazenamento no aplicativo. Quando um aplicativo chama **SQLSetPos**, o driver recupera os dados para uma atualização ou adição de uma operação de colunas associadas a **SQLBindCol**. Para parâmetros de dados em execução, o aplicativo envia os dados de parâmetro com **SQLPutData**. Se necessário, o driver converte os dados do tipo de dados especificado pelo argumento *ValueType* em **SQLBindParameter** para o tipo de dados especificado pelo argumento *ParameterType* em **SQLBindParameter**e, em seguida, envia os dados para a fonte de dados.  
@@ -53,7 +54,7 @@ Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recuper
 -   **Número de dígitos** -número de caracteres usados para representar um número, incluindo o sinal de subtração, o ponto decimal e o expoente (se necessário).  
   
 -   **Palavras em**   
-     ***itálico*** -elementos da gramática SQL. Para obter a sintaxe dos elementos gramaticais, consulte o [Apêndice C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***itálico***  -elementos da gramática SQL. Para obter a sintaxe dos elementos gramaticais, consulte o [Apêndice C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Esta seção contém os seguintes tópicos.  
   

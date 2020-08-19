@@ -1,4 +1,5 @@
 ---
+description: Propriedades ADO
 title: Propriedades do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 72a14ac3114a3b27a7570bc5961b9bd6ffff51cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451358"
 ---
 # <a name="ado-properties"></a>Propriedades ADO
 
@@ -45,7 +46,7 @@ ms.locfileid: "87242836"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica o local do serviço de cursor.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica o tipo de cursor usado em um objeto **Recordset** .|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica o nome do membro de dados que será recuperado do objeto referenciado pela propriedade **DataSource** .|  
-|[Fonte](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica um objeto que contém dados a serem representados como um objeto **Recordset** .|  
+|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica um objeto que contém dados a serem representados como um objeto **Recordset** .|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Indica o banco de dados padrão para um objeto de **conexão** .|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica a capacidade de dados de um objeto de **campo** .|  
 |[Descrição](../../../ado/reference/ado-api/description-property.md)|Descreve um objeto de **erro** .|  

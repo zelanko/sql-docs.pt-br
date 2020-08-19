@@ -1,4 +1,5 @@
 ---
+description: funções de cursor (Transact-SQL)
 title: Funções de cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d96a29366b5aa81905b3fa81efa6bdf19f51edf8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: feed3d608cf3031d03467b19494dabc7844460fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468064"
 ---
 # <a name="cursor-functions-transact-sql"></a>funções de cursor (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

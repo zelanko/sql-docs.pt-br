@@ -1,4 +1,5 @@
 ---
+description: catalog.environment_variables (Banco de Dados SSISDB)
 title: catalog.environment_variables (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de22e52f25658f467ed21952b1eb32356e4ff5af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495306"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (Banco de Dados SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912652"
 
   Exibe os detalhes de variável de ambiente para todos os ambientes no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|O ID (identificador exclusivo) da variável de ambiente.|  
 |environment_id|**bigint**|O ID exclusivo do ambiente ao qual a variável está associada.|  

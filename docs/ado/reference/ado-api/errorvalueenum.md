@@ -1,4 +1,5 @@
 ---
+description: ErrorValueEnum
 title: ErrorValueEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443928"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica o tipo de erro de tempo de execução do ADO.  
@@ -90,8 +91,8 @@ Especifica o tipo de erro de tempo de execução do ADO.
 |**adErrURLNamedRowDoesNotExist**|3737-2146824551 0x800A0E99|O registro nomeado por esta URL não existe.|  
 |**adErrVolumeNotFound**|3733-2146824555 0x800A0E95|O provedor não pode localizar o dispositivo de armazenamento indicado pela URL. Verifique se a URL foi digitada corretamente.|  
 |**adErrWriteFile**|3004-2146825284 0x800A0BBC|Falha ao gravar no arquivo.|  
-|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|Apenas para uso interno. Não use.|  
-|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Apenas para uso interno. Não use.|  
+|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|Somente para uso interno. Não use.|  
+|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Somente para uso interno. Não use.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com. ms. wfc. Data**  

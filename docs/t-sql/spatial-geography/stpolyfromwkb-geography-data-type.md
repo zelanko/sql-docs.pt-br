@@ -1,4 +1,5 @@
 ---
+description: STPolyFromWKB (tipo de dados geography)
 title: STPolyFromWKB (tipo de dados geography ) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1f83894fc743a9d1d9c779dc44c1243eb27696da
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: caa7913e9971a11413933ad2998f0d6042c9f4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422330"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_polygon*  
- É a representação WKB da instância de **geographyPolygon** que você deseja retornar. *WKB_polygon* é uma expressão **varbinary(max)** .  
+ É a representação WKB da instância de **geographyPolygon** que você deseja retornar. *WKB_polygon* é uma expressão **varbinary(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyPolygon** que você deseja retornar.  

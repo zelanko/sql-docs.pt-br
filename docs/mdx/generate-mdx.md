@@ -1,4 +1,5 @@
 ---
+description: Generate (MDX)
 title: Gerar (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9746d83589464f75bbc951c20dc15d04b7b2037d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429948"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 

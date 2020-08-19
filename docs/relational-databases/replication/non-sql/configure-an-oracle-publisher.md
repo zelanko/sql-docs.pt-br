@@ -1,4 +1,5 @@
 ---
+description: Configurar um publicador Oracle
 title: Configurar um publicador Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 09/05/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0a8c86710cdfce8a56c6a122b069773a16365cc2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cd84ccd988869181df7acf940109b3858a51d1ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423460"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

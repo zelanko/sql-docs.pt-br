@@ -1,4 +1,5 @@
 ---
+description: Teclas de atalho (SybaseToSQL)
 title: Teclas de atalho (Sybase para SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2dd0d404-383d-4e7e-a492-3eab5ab501d6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e908db2b229dc35d636ef0f61974d7088d0ec971
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ae433dbaaa4f3b18b1683d48f8bd35379c4000df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468688"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>Teclas de atalho (SybaseToSQL)
 Você pode usar atalhos de teclado para navegar pelo aplicativo SSMA. Para obter mais informações, consulte os tópicos a seguir.  

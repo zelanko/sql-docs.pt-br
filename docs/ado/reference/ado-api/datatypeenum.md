@@ -1,4 +1,5 @@
 ---
+description: DataTypeEnum
 title: DataTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ec805f403e3f76cacde3374cda091bf9b587b74c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444198"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica o tipo de dados de um [campo](../../../ado/reference/ado-api/field-object.md), [parâmetro](../../../ado/reference/ado-api/parameter-object.md)ou [Propriedade](../../../ado/reference/ado-api/property-object-ado.md). O indicador de tipo de OLE DB correspondente é mostrado entre parênteses na coluna Descrição da tabela a seguir.  
