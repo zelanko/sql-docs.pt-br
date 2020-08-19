@@ -1,4 +1,5 @@
 ---
+description: Exemplo de coleções Views e Fields (VB)
 title: Exemplo de coleções de exibições e campos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7b8650dc2714b7d21450aed5bf816bda21f8201
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 30be1e48aca9a942b0a98d0f119f1f8e8218144b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439328"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Exemplo de coleções Views e Fields (VB)
 O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) e o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para recuperar informações de campo para a exibição.  

@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Handler (VB)
 title: Exemplo da propriedade Handler (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 829059639c182fa607ccb9ffe62658705500692d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438968"
 ---
 # <a name="handler-property-example-vb"></a>Exemplo da propriedade Handler (VB)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751987"
   
  Este exemplo demonstra a propriedade do [manipulador](../../../ado/reference/rds-api/handler-property-rds.md) de objeto de [DataControl do RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Consulte [personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md) para obter mais detalhes.)  
   
- Suponha que as seções a seguir no arquivo de parâmetro, Msdfmap. ini, estejam localizadas no servidor:  
+ Suponha que as seções a seguir no arquivo de parâmetro, Msdfmap.ini, estejam localizadas no servidor:  
   
 ```  
 [connect AuthorDataBase]  

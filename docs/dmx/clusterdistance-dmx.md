@@ -1,4 +1,5 @@
 ---
+description: ClusterDistance (DMX)
 title: ClusterDistance (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2c87da38fb2f13c0c79dfc777b52e19139db584c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431128"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,11 +50,11 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>Funções de previsão relacionadas  
  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece as seguintes funções adicionais para consultar modelos de clusterização:  
   
--   Use a função de [&#41;de cluster &#40;DMX](../dmx/cluster-dmx.md) para retornar o cluster mais provável.  
+-   Use a função de [&#41;de cluster &#40;DMX ](../dmx/cluster-dmx.md) para retornar o cluster mais provável.  
   
 -   Use a função [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md) para obter a probabilidade de que um caso pertença a um cluster específico. Este valor serve como o inverso da distância de cluster.  
   
--   Use a função de [&#41;PredictHistogram &#40;DMX](../dmx/predicthistogram-dmx.md) para retornar um histograma da probabilidade do caso de entrada existente em cada um dos clusters do modelo.  
+-   Use a função de [&#41;PredictHistogram &#40;DMX ](../dmx/predicthistogram-dmx.md) para retornar um histograma da probabilidade do caso de entrada existente em cada um dos clusters do modelo.  
   
 -   Use a função [PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md) para retornar uma medida de 0 a 1 que indica a probabilidade de um caso de entrada estar considerando o modelo aprendido pelo algoritmo.  
   
@@ -125,9 +126,9 @@ NATURAL PREDICTION JOIN
 |0.97008209236394|  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;de cluster &#40;DMX](../dmx/cluster-dmx.md)   
+ [&#41;de cluster &#40;DMX ](../dmx/cluster-dmx.md)   
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

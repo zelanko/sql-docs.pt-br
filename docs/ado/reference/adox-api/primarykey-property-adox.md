@@ -1,4 +1,5 @@
 ---
+description: Propriedade PrimaryKey (ADOX)
 title: Propriedade PrimaryKey (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc9c4e847ff75b12e3d0c2b69db7dfc47a6b4877
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab3a4f6bd28c74dadb82d7e388866b4bf6100a06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439658"
 ---
 # <a name="primarykey-property-adox"></a>Propriedade PrimaryKey (ADOX)
 Indica se o índice representa a chave primária na tabela.  
@@ -33,7 +34,7 @@ Indica se o índice representa a chave primária na tabela.
  Define e retorna um valor **booliano** .  
   
 ## <a name="remarks"></a>Comentários  
- O valor padrão é **False**.  
+ O valor padrão é **Falso**.  
   
  Esta propriedade é somente leitura em objetos de [índice](../../../ado/reference/adox-api/index-object-adox.md) já anexados a uma coleção.  
   

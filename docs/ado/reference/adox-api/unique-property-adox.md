@@ -1,4 +1,5 @@
 ---
+description: Propriedade Unique (ADOX)
 title: Propriedade Unique (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18b2bc4fca3ebd999529b61ac3b7ec1e8254966e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81c423d625039e36ddccd9f806921e5e0a41174b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439408"
 ---
 # <a name="unique-property-adox"></a>Propriedade Unique (ADOX)
 Indica se as chaves de índice devem ser exclusivas.  
@@ -31,7 +32,7 @@ Indica se as chaves de índice devem ser exclusivas.
  Define e retorna um valor **booliano** .  
   
 ## <a name="remarks"></a>Comentários  
- O valor padrão é **False**.  
+ O valor padrão é **Falso**.  
   
  Esta propriedade é somente leitura em objetos de [índice](../../../ado/reference/adox-api/index-object-adox.md) já anexados a uma coleção.  
   

@@ -1,4 +1,5 @@
 ---
+description: Objeto Procedure (ADOX)
 title: Objeto de procedimento (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a56088e47a9f794f1862ef87bf142a8d3ab12c4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ee804ac6f4668f28d5f13754109b0f038d7e1ec4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439648"
 ---
 # <a name="procedure-object-adox"></a>Objeto Procedure (ADOX)
 Representa um procedimento armazenado. Quando usado em conjunto com o objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO, o objeto de **procedimento** pode ser usado para adicionar, excluir ou modificar procedimentos armazenados.  

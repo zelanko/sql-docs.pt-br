@@ -1,4 +1,5 @@
 ---
+description: Método SetPermissions (ADOX)
 title: Método SetPermissions (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3d5af996442e0451a80265b7fbd9fb31450f9475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439518"
 ---
 # <a name="setpermissions-method-adox"></a>Método SetPermissions (ADOX)
 Especifica as permissões para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) ou [usuário](../../../ado/reference/adox-api/user-object-adox.md) em um objeto.  

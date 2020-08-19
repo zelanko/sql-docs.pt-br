@@ -1,4 +1,5 @@
 ---
+description: BottomCount (DMX)
 title: BottomCount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431168"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -99,10 +100,10 @@ NATURAL PREDICTION JOIN
  **Observação** Este exemplo é fornecido apenas para ilustrar o uso de BottomCount. Dependendo do tamanho do conjunto de dados, esta consulta pode demorar muito para ser executada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
- [&#41;&#40;DMX BottomPercent](../dmx/bottompercent-dmx.md)   
- [&#41;&#40;DMX BottomSum](../dmx/bottomsum-dmx.md)   
- [&#41;&#40;DMX TopCount](../dmx/topcount-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
+ [&#41;&#40;DMX BottomPercent ](../dmx/bottompercent-dmx.md)   
+ [&#41;&#40;DMX BottomSum ](../dmx/bottomsum-dmx.md)   
+ [&#41;&#40;DMX TopCount ](../dmx/topcount-dmx.md)  
   
   

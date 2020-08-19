@@ -1,4 +1,5 @@
 ---
+description: Propriedade Name (ADOX)
 title: Propriedade Name (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -41,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: dbd0d9088ea39d604c53c462448ae1c94b3a9052
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439778"
 ---
 # <a name="name-property-adox"></a>Propriedade Name (ADOX)
 Indica o nome do objeto.  

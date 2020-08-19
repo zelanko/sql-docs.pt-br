@@ -1,4 +1,5 @@
 ---
+description: Propriedade FilterValue (RDS)
 title: Propriedade FilterValue (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d4585a237b2dcd32df1508aeb85b291d4d9296
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b8e80ffc13f4c1bae1d668bb85317345288caa2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438978"
 ---
 # <a name="filtervalue-property-rds"></a>Propriedade FilterValue (RDS)
 Indica o valor com o qual filtrar os registros.  

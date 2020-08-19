@@ -1,4 +1,5 @@
 ---
+description: Data Mining Query Task
 title: Tarefa Consulta de Mineração de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e678774a8da38b8ff2e8c64adc7309828d6dffb6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431018"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -87,12 +88,12 @@ ms.locfileid: "86919832"
  **Conexão**  
  Selecione um gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na lista, ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:**  [Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **Tópicos relacionados:**  [Gerenciador de conexões do Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **Novo**  
  Crie um novo gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **Tópicos relacionados:** [Referência de IU da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Estrutura de mineração**  
  Selecione uma estrutura de mineração na lista.  
@@ -119,12 +120,12 @@ ms.locfileid: "86919832"
  **Consulta de mineração de dados**  
  Digite uma consulta de mineração de dados.  
   
- **Tópicos relacionados:**  [Referência de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **Tópicos relacionados:**  [Referência de &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **Construir Nova Consulta**  
  Crie a consulta de mineração de dados usando uma ferramenta gráfica.  
   
- **Tópicos relacionados:** [Consulta de mineração de dados](../../integration-services/control-flow/data-mining-query.md)  
+ **Tópicos relacionados:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Opções da guia Mapeamento de Parâmetros  
  **Nome do parâmetro**  

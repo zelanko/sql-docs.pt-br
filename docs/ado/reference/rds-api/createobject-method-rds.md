@@ -1,4 +1,5 @@
 ---
+description: Método CreateObject (RDS)
 title: Método CreateObject (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439198"
 ---
 # <a name="createobject-method-rds"></a>Método CreateObject (RDS)
 Cria o proxy para o objeto comercial de destino e retorna um ponteiro para ele. Os pacotes de proxy e os dados de marshaling para o stub do lado do servidor para comunicações com o objeto comercial para enviar solicitações e dados pela Internet. Para objetos de componente em processo, nenhum proxy é usado, apenas um ponteiro para o objeto é fornecido.  

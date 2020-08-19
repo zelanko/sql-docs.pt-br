@@ -1,4 +1,5 @@
 ---
+description: InvokeService (RDS)
 title: InvokeService (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ead0a42c0c5239a0f3bb4cafecb584788e06832
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438908"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Retorna um ponteiro para a interface solicitada em uma versão mais compatível do objeto.  
   
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +47,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  fora O endereço da variável de ponteiro que recebe o ponteiro de interface solicitado em *riid*. Após o retorno bem-sucedido, o parâmetro *ppunkMoreFunctionalInterface* contém o ponteiro de interface solicitado para o objeto. Se o objeto não oferecer suporte à interface especificada em *riid*, *ppunkMoreFunctionalInterface* será definido como NULL.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor HRESULT que indica se a chamada para o método **InvokeService** foi bem-sucedida.  
   
 ## <a name="remarks"></a>Comentários  

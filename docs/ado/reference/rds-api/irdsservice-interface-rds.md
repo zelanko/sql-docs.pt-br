@@ -1,4 +1,5 @@
 ---
+description: Interface IRDSService (RDS)
 title: Interface IRDSService (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1759596c515b3bb41d1f52a5e8b0577314495bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f6d3c38bd6b694f0bd5a8540bcc51f56ace86de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438898"
 ---
 # <a name="irdsservice-interface-rds"></a>Interface IRDSService (RDS)
 Expõe o método [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) , que é usado para retornar um ponteiro para a interface solicitada em uma versão mais compatível do objeto.  

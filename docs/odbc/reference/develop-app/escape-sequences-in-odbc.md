@@ -1,4 +1,5 @@
 ---
+description: Sequências de escape no ODBC
 title: Sequências de escape no ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62745b749870fa33151fc1a5f6bd3a1bfc344ad7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429308"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape no ODBC
 Vários recursos de linguagem, como junções externas e chamadas de função escalar, são normalmente implementados por DBMSs. No entanto, as sintaxes para esses recursos tendem a ser específicas do DBMS, mesmo quando as sintaxes padrão são definidas por vários órgãos de padrões. Por isso, o ODBC define as sequências de escape que contêm as sintaxes padrão para os seguintes recursos de idioma:  
@@ -46,9 +47,9 @@ Vários recursos de linguagem, como junções externas e chamadas de função es
  A sequência de escape é reconhecida e analisada por drivers, que substituem as seqüências de escape por gramática específica do DBMS. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) no Apêndice C: gramática SQL.  
   
 > [!NOTE]  
->  No ODBC 2. *x*, essa foi a sintaxe padrão da sequência de escape: **--(\*fornecedor (**_nome do fornecedor_**),**_product-name__extensão_ **)** ** \*** do produto (nome do produto))--  
+>  No ODBC 2. *x*, essa foi a sintaxe padrão da sequência de escape: **--( \* fornecedor (**_nome do fornecedor_**), extensão do produto (nome do**_produto_**)**_extension_ ** \* )--**  
 >   
->  Além dessa sintaxe, uma sintaxe abreviada foi definida no formato: **{**_Extension_**}**  
+>  Além dessa sintaxe, uma sintaxe abreviada foi definida no formato:            **{**_Extension_**}**  
 >   
 >  No ODBC 3. *x*, a forma longa da sequência de escape foi preterida e a forma abreviada é usada exclusivamente.  
   

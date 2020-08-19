@@ -1,4 +1,5 @@
 ---
+description: Colunas de associação para uso com cursores em bloco
 title: Vinculando colunas para uso com cursores de bloco | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58e6359bd7b0ad5d44f75a3d844ef2e9872f2a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429438"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Colunas de associação para uso com cursores em bloco
 Como os cursores de bloco retornam várias linhas, os aplicativos que os usam devem associar uma matriz de variáveis a cada coluna, em vez de uma única variável. Essas matrizes são coletivamente conhecidas como *buffers de conjunto de linhas*. A seguir estão os dois estilos de associação:  

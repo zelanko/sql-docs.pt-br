@@ -1,4 +1,5 @@
 ---
+description: Método SetObjectOwner
 title: Método SetObjectOwner | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 615e62ad8a22c50851ea50a2a8511e0859b54652
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 216a01a6a182e7d2fad97a8ed88e6ca09719a33e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439528"
 ---
 # <a name="setobjectowner-method"></a>Método SetObjectOwner
 Especifica o proprietário de um objeto em um [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md).  

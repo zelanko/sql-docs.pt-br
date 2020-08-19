@@ -1,4 +1,5 @@
 ---
+description: Coleção Groups (ADOX)
 title: Coleção groups (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70c32ba5e4726aca7d6ad8b37c7df082d25b94b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439988"
 ---
 # <a name="groups-collection-adox"></a>Coleção Groups (ADOX)
 Contém todos os objetos de [grupo](../../../ado/reference/adox-api/group-object-adox.md) armazenados de um catálogo ou usuário.  

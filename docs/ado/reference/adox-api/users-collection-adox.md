@@ -1,4 +1,5 @@
 ---
+description: Coleção Users (ADOX)
 title: Coleção Users (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4befb68c861edee0f5c1423e86ee1fb21067c2a5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e69ecbf642982d6465c12e225f45199a0c1b33e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439368"
 ---
 # <a name="users-collection-adox"></a>Coleção Users (ADOX)
 Contém todos os objetos de [usuário](../../../ado/reference/adox-api/user-object-adox.md) armazenados de um [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) ou [grupo](../../../ado/reference/adox-api/group-object-adox.md).  

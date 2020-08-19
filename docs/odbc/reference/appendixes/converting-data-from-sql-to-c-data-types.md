@@ -1,4 +1,5 @@
 ---
+description: Converter dados de SQL para tipos de dados do C
 title: Convertendo dados de SQL para tipos de dados C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a10730cb3910c55679c264583801cd57c83bfc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1306564a9e4a5c1cbd9cac74508529a1e6df9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429688"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Converter dados de SQL para tipos de dados do C
 Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**ou **SQLGetData**, o driver recupera os dados da fonte de dados. Se necessário, ele converte os dados do tipo de dados no qual o driver o recuperou para o tipo de dados especificado pelo argumento *TargetType* em **SQLBindCol** ou **SQLGetData.** Por fim, ele armazena os dados no local apontado pelo argumento *TargetValuePtr* em **SQLBindCol** ou **SQLGetData** (e o campo SQL_DESC_DATA_PTR do ARD).  
@@ -40,7 +41,7 @@ Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**ou **SQLGetData**, o 
   
  Se o argumento *TargetType* em **SQLBindCol** ou **SQLGetData** contiver um identificador para um tipo de dados ODBC C não mostrado na tabela para um determinado tipo de dados ODBC SQL, **SQLFetch**, **SQLFetchScroll**ou **SQLGetData** retornará SQLSTATE 07006 (violação de atributo de tipo de dados restrito). Se o argumento *TargetType* contiver um identificador que especifica uma conversão de um tipo de dados SQL específico de driver para um tipo de dados ODBC C e essa conversão não for suportada pelo driver, **SQLFetch**, **SQLFETCHSCROLL**ou **SQLGetData** retornará SQLSTATE HYC00 (recurso opcional não implementado).  
   
- Embora não seja mostrado nas tabelas, o driver retorna SQL_NULL_DATA no buffer especificado pelo argumento *StrLen_or_IndPtr* quando o valor de dados SQL é nulo. Para obter uma explicação sobre o uso de *StrLen_or_IndPtr* quando várias chamadas são feitas para recuperar dados, consulte a descrição da função [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md). Quando os dados SQL são convertidos em dados de caractere C, a contagem \*de caracteres retornada em *StrLen_or_IndPtr* não inclui o byte de terminação nula. Se *TargetValuePtr* for um ponteiro nulo, **SQLGETDATA** retornará SQLSTATE HY009 (uso inválido de ponteiro nulo); no **SQLBindCol**, isso desassocia a coluna.  
+ Embora não seja mostrado nas tabelas, o driver retorna SQL_NULL_DATA no buffer especificado pelo argumento *StrLen_or_IndPtr* quando o valor de dados SQL é nulo. Para obter uma explicação sobre o uso de *StrLen_or_IndPtr* quando várias chamadas são feitas para recuperar dados, consulte a descrição da função [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md). Quando os dados SQL são convertidos em dados de caractere C, a contagem de caracteres retornada em \* *StrLen_or_IndPtr* não inclui o byte de terminação nula. Se *TargetValuePtr* for um ponteiro nulo, **SQLGETDATA** retornará SQLSTATE HY009 (uso inválido de ponteiro nulo); no **SQLBindCol**, isso desassocia a coluna.  
   
  Os seguintes termos e convenções são usados nas tabelas:  
   

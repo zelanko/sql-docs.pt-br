@@ -1,4 +1,5 @@
 ---
+description: Alocar o identificador de ambiente
 title: Alocando o identificador de ambiente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 390d7f4248d43e6fc6cb7910be5f42cb286f37e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429448"
 ---
 # <a name="allocating-the-environment-handle"></a>Alocar o identificador de ambiente
 A primeira tarefa para qualquer aplicativo ODBC é carregar o Gerenciador de driver; como isso é feito é dependente do sistema operacional. Por exemplo, em um computador que executa o Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional ou Microsoft Windows® 95/98, o aplicativo se vincula à biblioteca do Driver Manager ou chama **LoadLibrary** para carregar a DLL do Gerenciador de driver.  
   
  A próxima tarefa, que deve ser feita antes que um aplicativo possa chamar qualquer outra função ODBC, é inicializar o ambiente ODBC e alocar um identificador de ambiente, da seguinte maneira:  
   
-1.  O aplicativo declara uma variável do tipo SQLHENV. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável e a opção SQL_HANDLE_ENV. Por exemplo:  
+1.  O aplicativo declara uma variável do tipo SQLHENV. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável e a opção SQL_HANDLE_ENV. Por exemplo:   
   
     ```  
     SQLHENV henv1;  

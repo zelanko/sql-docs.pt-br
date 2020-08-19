@@ -1,4 +1,5 @@
 ---
+description: Aplicativos personalizados
 title: Aplicativos personalizados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df00a748ee4d5e3a63b32c95449417a1057b58e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56829c72264ba128554af0534e8a6bfa16254142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429388"
 ---
 # <a name="custom-applications"></a>Aplicativos personalizados
 Os aplicativos personalizados normalmente executam uma tarefa específica para alguns DBMSs. Por exemplo, um aplicativo pode recuperar dados de um único DBMS e gerar um relatório ou pode transferir dados entre vários DBMSs. O que esses aplicativos têm em comum é que esses DBMSs são conhecidos antes que o aplicativo seja escrito e seja improvável de mudar ao longo da vida útil do aplicativo.  

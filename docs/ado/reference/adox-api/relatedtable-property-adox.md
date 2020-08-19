@@ -1,4 +1,5 @@
 ---
+description: Propriedade RelatedTable (ADOX)
 title: Propriedade RelatedTable (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fa9707f4bda0974211fbba5f74ec10c14cf961
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe412b89b4aee37252db62e9a58b3a11c9d2b88e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439558"
 ---
 # <a name="relatedtable-property-adox"></a>Propriedade RelatedTable (ADOX)
 Indica o nome da tabela relacionada.  

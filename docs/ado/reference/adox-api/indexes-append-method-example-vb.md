@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Indexes Append (VB)
 title: Exemplo do método Indexes Append (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0702fa4580cadce688591b976102b25118f7a189
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1fd4f1229e5473cbc120df7a88d18cfef9ceac56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439948"
 ---
 # <a name="indexes-append-method-example-vb"></a>Exemplo do método Indexes Append (VB)
 O código a seguir demonstra como criar um novo índice. O índice está em duas colunas na tabela.  

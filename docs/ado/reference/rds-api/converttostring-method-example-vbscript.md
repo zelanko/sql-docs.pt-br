@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método ConvertToString (VBScript)
 title: Exemplo do método ConvertTostring (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfaba4a4ef4a67bb4b5970bf347674814caab13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d30d0268d974f8ab4cac2238ec8672c9948dcaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439175"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Exemplo do método ConvertToString (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O exemplo a seguir mostra como converter um **conjunto de registros** em uma cadeia de caracteres codificada em MIME usando o método **RDSServer. datafactory ConvertToString** . Em seguida, ele mostra como a cadeia de caracteres pode ser convertida novamente em um **conjunto de registros**. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **ConvertToString. htm**.  
+ O exemplo a seguir mostra como converter um **conjunto de registros** em uma cadeia de caracteres codificada em MIME usando o método **RDSServer. datafactory ConvertToString** . Em seguida, ele mostra como a cadeia de caracteres pode ser convertida novamente em um **conjunto de registros**. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **ConvertToString.htm**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  

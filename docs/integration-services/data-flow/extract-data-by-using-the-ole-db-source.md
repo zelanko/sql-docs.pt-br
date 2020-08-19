@@ -1,4 +1,5 @@
 ---
+description: Extrair dados por meio da origem OLE DB
 title: Extrair dados por meio da origem OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 190762cad4b58f5a1c127a664b901530dbaee68a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 15e55ec942331ef14458aad461c5b7c9432b0d6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430838"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extrair dados por meio da origem OLE DB
 

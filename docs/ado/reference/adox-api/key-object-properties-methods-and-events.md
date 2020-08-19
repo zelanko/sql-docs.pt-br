@@ -1,4 +1,5 @@
 ---
+description: Propriedades, Métodos e Eventos do objeto Key
 title: Propriedades, métodos e eventos do objeto Key | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eab25808c08196286353206c51caacefbc75c709
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d3b1d4dd70de6c11094990b633b0d370b348e8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439838"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Propriedades, Métodos e Eventos do objeto Key
 ## <a name="propertiescollections"></a>Propriedades/coleções  

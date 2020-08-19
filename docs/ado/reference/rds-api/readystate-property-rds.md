@@ -1,4 +1,5 @@
 ---
+description: Propriedade ReadyState (RDS)
 title: Propriedade ReadyState (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5e1eb89c0e4c7dcbef736d2968a4ffd97a37b93
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3bd2f05a90acbbade46e6897cabdee49246a68c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438748"
 ---
 # <a name="readystate-property-rds"></a>Propriedade ReadyState (RDS)
 Indica o progresso de um objeto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) à medida que ele recupera dados em seu objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  

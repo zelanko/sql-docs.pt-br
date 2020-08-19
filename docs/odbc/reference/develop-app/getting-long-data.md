@@ -1,4 +1,5 @@
 ---
+description: Obter dados Long
 title: Obtendo dados longos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da901c22eb26af063397b4af184179ebe5c75924
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3a40bc3f4f65f747776d747d79868340de06f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429278"
 ---
 # <a name="getting-long-data"></a>Obter dados Long
 DBMSs definem *dados longos* como qualquer caractere ou dados binários em um determinado tamanho, como 255 caracteres. Esses dados podem ser pequenos o suficiente para serem armazenados em um único buffer, como uma descrição de parte de vários milhares de caracteres. No entanto, pode ser muito longo para armazenar na memória, como documentos de texto longo ou bitmaps. Como esses dados não podem ser armazenados em um único buffer, eles são recuperados do driver em partes com **SQLGetData** depois que os outros dados na linha são buscados.  
@@ -33,7 +34,7 @@ DBMSs definem *dados longos* como qualquer caractere ou dados binários em um de
   
  Em relação a uma única coluna, **SQLGetData** se comporta como **SQLFetch**: recupera os dados da coluna, converte-os no tipo da variável do aplicativo e retorna-os nessa variável. Ele também retorna o comprimento de bytes dos dados no buffer de comprimento/indicador. Para obter mais informações sobre como **SQLFetch** retorna dados, consulte [buscando uma linha de dados](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- **SQLGetData** difere de **SQLFetch** em um aspecto importante. Se ele for chamado mais de uma vez em sucessivamente para a mesma coluna, cada chamada retornará uma parte sucessiva dos dados. Cada chamada, exceto a última chamada, retorna SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dados de cadeia de caracteres, truncados à direita); a última chamada retorna SQL_SUCCESS. É assim que o **SQLGetData** é usado para recuperar dados longos em partes. Quando não há mais dados a serem retornados, **SQLGetData** retorna SQL_NO_DATA. O aplicativo é responsável por colocar os dados longos juntos, o que pode significar concatenar as partes dos dados. Cada parte é terminada em nulo; o aplicativo deve remover o caractere de terminação nula se estiver concatenando as partes. A recuperação de dados em partes pode ser feita para indicadores de comprimento variável, bem como para outros dados longos. O valor retornado no buffer de comprimento/indicador diminui em cada chamada pelo número de bytes retornados na chamada anterior, embora seja comum que o driver não possa descobrir a quantidade de dados disponíveis e retornar um comprimento de bytes de SQL_NO_TOTAL. Por exemplo:  
+ **SQLGetData** difere de **SQLFetch** em um aspecto importante. Se ele for chamado mais de uma vez em sucessivamente para a mesma coluna, cada chamada retornará uma parte sucessiva dos dados. Cada chamada, exceto a última chamada, retorna SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dados de cadeia de caracteres, truncados à direita); a última chamada retorna SQL_SUCCESS. É assim que o **SQLGetData** é usado para recuperar dados longos em partes. Quando não há mais dados a serem retornados, **SQLGetData** retorna SQL_NO_DATA. O aplicativo é responsável por colocar os dados longos juntos, o que pode significar concatenar as partes dos dados. Cada parte é terminada em nulo; o aplicativo deve remover o caractere de terminação nula se estiver concatenando as partes. A recuperação de dados em partes pode ser feita para indicadores de comprimento variável, bem como para outros dados longos. O valor retornado no buffer de comprimento/indicador diminui em cada chamada pelo número de bytes retornados na chamada anterior, embora seja comum que o driver não possa descobrir a quantidade de dados disponíveis e retornar um comprimento de bytes de SQL_NO_TOTAL. Por exemplo:   
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  

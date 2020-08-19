@@ -1,4 +1,5 @@
 ---
+description: Método Execute (RDS)
 title: Método Execute (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439078"
 ---
 # <a name="execute-method-rds"></a>Método Execute (RDS)
 Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2,5 e posterior.  
@@ -43,7 +44,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *QueryString*  
  Um comando no idioma de comando com suporte do provedor de OLE DB identificado na cadeia de conexão. Para provedores baseados em SQL, o *QueryString* pode conter uma instrução de comando TRANSACT-SQL, mas para provedores não SQL (por exemplo, MSDataShape), isso pode não ser uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução de consulta.  
   
- Se um manipulador estiver sendo usado, o manipulador poderá alterar ou substituir o valor especificado aqui. Por exemplo, o manipulador normalmente substitui o *QueryString* por uma cadeia de caracteres de consulta de seu arquivo. ini. Por padrão, o arquivo Msdfmap. ini é usado.  
+ Se um manipulador estiver sendo usado, o manipulador poderá alterar ou substituir o valor especificado aqui. Por exemplo, o manipulador normalmente substitui o *QueryString* por uma cadeia de caracteres de consulta de seu arquivo. ini. Por padrão, o arquivo de Msdfmap.ini é usado.  
   
  *lFetchOptions*  
  Indica o tipo de busca assíncrona.  
@@ -78,7 +79,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  Um ponteiro para erro de informação retornado por execute. Se for NULL, nenhuma informação de erro será retornada.  
   
 ## <a name="remarks"></a>Comentários  
- O parâmetro *handlerString* pode ser nulo. O que acontece nesse caso depende de como o servidor RDS está configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP. Handler" indica que o manipulador fornecido pela Microsoft (Msdfmap. dll) deve ser usado. Uma cadeia de caracteres de manipulador de "MASDFMAP. Handler, Sample. ini" indica que o manipulador Msdfmap. dll deve ser usado e que o argumento "Sample. ini" deve ser passado para o manipulador. MSDFMAP. dll interpretará o argumento como uma direção para usar o Sample. ini para verificar a conexão e as cadeias de caracteres de consulta.  
+ O parâmetro *handlerString* pode ser nulo. O que acontece nesse caso depende de como o servidor RDS está configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP. Handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP. Handler, sample.ini" indica que o manipulador de Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. MSDFMAP.dll irá interpretar o argumento como uma direção para usar a sample.ini para verificar a conexão e as cadeias de caracteres de consulta.  
   
 ## <a name="applies-to"></a>Aplica-se A  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

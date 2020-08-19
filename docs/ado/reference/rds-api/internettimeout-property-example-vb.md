@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade InternetTimeout (VB)
 title: Exemplo da propriedade InternetTimeout (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ae038b3c4b438dfaed1f627c8f257e61a22f782
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0b2d5e2b34c5a82d222ee7018d0751cb7ec5f092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438938"
 ---
 # <a name="internettimeout-property-example-vb"></a>Exemplo da propriedade InternetTimeout (VB)
 > [!IMPORTANT]

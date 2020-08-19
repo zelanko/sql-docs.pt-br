@@ -1,4 +1,5 @@
 ---
+description: Comprimento dos dados da coluna
 title: Comprimento dos dados da coluna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0b7ad515661cce4c5b1d407be768cc3da131bb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96194272d6b291da53986330199d9c7972cef8f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429658"
 ---
 # <a name="length-of-column-data"></a>Comprimento dos dados da coluna
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: Alocar e liberar descritores
 title: Alocando e liberando descritores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 692c339af26b96aef3ffe4ba20f592c49b05d85e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2730adcfd39a81ace9c6cec5137fd685f9c7db34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429458"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>Alocar e liberar descritores
 Os descritores são implicitamente ou explicitamente alocados, conforme descrito nas seções a seguir.  

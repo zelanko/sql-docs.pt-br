@@ -1,4 +1,5 @@
 ---
+description: Extrair dados por meio da origem XML
 title: Extrair dados usando a origem XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2199bfc8ae7d6605dcf7ed92a8749683e17d3fd9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f3cd306d2cf6097fdb5e178f92e41d45de198783
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430828"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extrair dados por meio da origem XML
 

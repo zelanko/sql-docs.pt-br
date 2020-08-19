@@ -1,4 +1,5 @@
 ---
+description: Propriedade SQL
 title: Propriedade SQL | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438598"
 ---
 # <a name="sql-property"></a>Propriedade SQL
 Indica a cadeia de caracteres de consulta usada para recuperar o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Você pode definir a propriedade **SQL** em tempo de design no [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Marcas de objeto do objeto DataControl ou em tempo de execução no código de script.  
+ Você pode definir a propriedade **SQL** em tempo de design no [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Marcas de objeto do objeto DataControl ou em tempo de execução no código de script.  
   
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  

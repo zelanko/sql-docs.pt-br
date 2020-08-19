@@ -1,4 +1,5 @@
 ---
+description: Propriedades, Métodos e Eventos da coleção Tables
 title: Propriedades, métodos e eventos da coleção Tables | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6fbe78deda908af1c5a52cc73361671e794d2d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9721573586e2c8e6b54670746573a54d5faa6124
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439448"
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>Propriedades, Métodos e Eventos da coleção Tables
 ## <a name="properties"></a>Propriedades  

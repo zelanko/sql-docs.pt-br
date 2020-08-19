@@ -1,4 +1,5 @@
 ---
+description: Propriedades, Métodos e Eventos da coleção Procedures
 title: Propriedades, métodos e eventos da coleção procedures | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9bd7b39187e20b30e56a95a30b114e2eced1b68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a0558bf005ed06f508e7c5656a6a7aa51b79dc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439588"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Propriedades, Métodos e Eventos da coleção Procedures
 ## <a name="properties"></a>Propriedades  

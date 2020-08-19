@@ -1,4 +1,5 @@
 ---
+description: Método Reset (RDS)
 title: Método Reset (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c2f40460a4690e32cb3f94963c8cbc1f7f06c15
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438698"
 ---
 # <a name="reset-method-rds"></a>Método Reset (RDS)
 Executa a classificação ou o filtro em um **conjunto de registros** do lado do cliente com base nas propriedades de classificação e filtro especificadas.  

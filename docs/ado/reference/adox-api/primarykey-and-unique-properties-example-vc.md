@@ -1,4 +1,5 @@
 ---
+description: Exemplos das propriedades PrimaryKey e Unique (VC++)
 title: Exemplo de PrimaryKey e propriedades exclusivas (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13fbb034f1b8d41c0455482663b625dcb0475d62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 215e45631f223e68d2933c103c3503d0564d416c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439668"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>Exemplos das propriedades PrimaryKey e Unique (VC++)
 Este exemplo demonstra a [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e as propriedades [exclusivas](../../../ado/reference/adox-api/unique-property-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. As propriedades **PrimaryKey** e **Unique** são usadas para tornar uma coluna a chave primária para a qual valores duplicados não são permitidos.  

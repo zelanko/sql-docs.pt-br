@@ -1,4 +1,5 @@
 ---
+description: Propriedade SortColumn (RDS)
 title: Propriedade SortColumn (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83975a46087f75d58be304c543f6e6a45b6db7e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e8ae929c5606de2a0f58981affb403948e81b4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438628"
 ---
 # <a name="sortcolumn-property-rds"></a>Propriedade SortColumn (RDS)
 Indica por qual coluna classificar os registros.  

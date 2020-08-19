@@ -1,4 +1,5 @@
 ---
+description: Objeto DataControl (RDS)
 title: Objeto DataControl (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439137"
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Associa um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de consulta de dados a um ou mais controles (por exemplo, uma caixa de texto, controle de grade ou caixa de combinação) para exibir os dados do **conjunto de registros** em uma página da Web.  
@@ -51,7 +52,7 @@ Associa um [conjunto de registros](../../../ado/reference/ado-api/recordset-obje
  Todas as propriedades no **RDS. O DataControl** é opcional porque os objetos comerciais personalizados podem substituir sua funcionalidade.  
   
 > [!NOTE]
->  Se você consultar vários resultados, somente o primeiro [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) será retornado. Se vários conjuntos de resultados forem necessários, atribua cada um ao seu próprio **controle**de data. Um exemplo de uma consulta para vários resultados pode ser o seguinte:`"Select * from Authors, Select * from Topics"`  
+>  Se você consultar vários resultados, somente o primeiro [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) será retornado. Se vários conjuntos de resultados forem necessários, atribua cada um ao seu próprio **controle**de data. Um exemplo de uma consulta para vários resultados pode ser o seguinte: `"Select * from Authors, Select * from Topics"`  
   
  Adicionar "DFMode = 20;" à sua cadeia de conexão ao usar o **RDS. O objeto DataControl** pode melhorar o desempenho do servidor quando você atualiza os dados. Com essa configuração, o objeto **RDSServer. datafactory** no servidor usa um modo menos intensivo de recursos. No entanto, os seguintes recursos não estão disponíveis nesta configuração:  
   
@@ -97,7 +98,7 @@ Associa um [conjunto de registros](../../../ado/reference/ado-api/recordset-obje
   
  Quando você define o **RDS. Objeto DataControl** em uma página da Web, use valores de **altura** e **largura** diferente de zero, como 1 (para evitar a inclusão de espaço extra).  
   
- Os componentes do cliente do serviço de dados remoto já estão incluídos como parte do Internet Explorer 4,0; Portanto, você não precisa incluir um parâmetro CODEBASE em seu **RDS. **Marca de objeto DataControl.  
+ Os componentes do cliente do serviço de dados remoto já estão incluídos como parte do Internet Explorer 4,0; Portanto, você não precisa incluir um parâmetro CODEBASE em seu **RDS. ** Marca de objeto DataControl.  
   
  Com o Internet Explorer 4,0 ou posterior, você pode associar dados usando controles HTML e controles ActiveX® somente se eles estiverem marcados como controles de modelo de apartamento.  
   

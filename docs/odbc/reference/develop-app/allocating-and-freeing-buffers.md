@@ -1,4 +1,5 @@
 ---
+description: Alocar e liberar buffers
 title: Alocando e liberando buffers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 629c613e8c0aba4675b2b95c9c9ccd82fb7cdfb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429468"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Alocar e liberar buffers
 Todos os buffers são alocados e liberados pelo aplicativo. Se um buffer não for adiado, ele precisará existir somente pela duração da chamada para uma função. Por exemplo, **SQLGetInfo** retorna o valor associado a uma opção específica no buffer apontado pelo argumento *InfoValuePtr* . Esse buffer pode ser liberado imediatamente após a chamada para **SQLGetInfo**, conforme mostrado no exemplo de código a seguir:  
@@ -34,7 +35,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- Como os buffers adiados são especificados em uma função e usados em outro, é um erro de programação de aplicativo para liberar um buffer adiado enquanto o driver ainda espera que ele exista. Por exemplo, o endereço \*do buffer *ValuePtr* é passado para **SQLBindCol** para uso posterior por **SQLFetch**. Esse buffer não pode ser liberado até que a coluna não esteja associada, como com uma chamada para **SQLBindCol** ou **SQLFreeStmt** , conforme mostrado no exemplo de código a seguir:  
+ Como os buffers adiados são especificados em uma função e usados em outro, é um erro de programação de aplicativo para liberar um buffer adiado enquanto o driver ainda espera que ele exista. Por exemplo, o endereço do buffer \* *ValuePtr* é passado para **SQLBindCol** para uso posterior por **SQLFetch**. Esse buffer não pode ser liberado até que a coluna não esteja associada, como com uma chamada para **SQLBindCol** ou **SQLFreeStmt** , conforme mostrado no exemplo de código a seguir:  
   
 ```  
 SQLRETURN    rc;  

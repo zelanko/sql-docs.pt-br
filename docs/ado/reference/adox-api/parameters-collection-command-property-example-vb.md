@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Command, coleção Parameters (VB)
 title: Coleção Parameters, exemplo da Propriedade Command (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4feb9c7ec12bbf560c874b15389adcd3a7eec04a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439738"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Exemplo da propriedade Command, coleção Parameters (VB)
 O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) com o objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) para recuperar informações de parâmetro para o procedimento.  

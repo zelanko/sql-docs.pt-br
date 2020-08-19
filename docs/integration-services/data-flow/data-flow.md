@@ -1,4 +1,5 @@
 ---
+description: Fluxo de Dados
 title: Fluxo de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430958"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
 
@@ -101,7 +102,7 @@ ms.locfileid: "86916832"
 ### <a name="sources-available-for-download"></a>Fontes disponíveis para download  
  A tabela a seguir lista mais tipos de fontes que podem ser baixadas do site da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Fonte|DESCRIÇÃO|  
+|Fonte|Descrição|  
 |------------|-----------------|  
 |Fonte Oracle|A fonte Oracle é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Fonte SAP BI|A fonte SAP BI é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -122,9 +123,9 @@ ms.locfileid: "86916832"
   
 -   [Transformação Coluna Derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Transformação Agrupamento Difuso](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
+-   [transformação Agrupamento Difuso](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
   
--   [Transformação Pesquisa Difusa](../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
+-   [transformação Pesquisa Difusa](../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
 -   [Transformação Comando OLE DB](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)  
   
@@ -162,7 +163,7 @@ ms.locfileid: "86916832"
 ### <a name="destinations-available-for-download"></a>Destinos disponíveis para download  
  A tabela a seguir lista mais tipos de destinos que podem ser baixados do site da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Fonte|DESCRIÇÃO|  
+|Fonte|Descrição|  
 |------------|-----------------|  
 |Destino Oracle|O destino Oracle é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Destino SAP BI|O destino SAP BI é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -184,7 +185,7 @@ ms.locfileid: "86916832"
 ### <a name="inputs"></a>Entradas  
  Destinos e transformações têm entradas. Uma entrada contém uma ou mais colunas de entrada, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As entradas podem ser configuradas para monitorar e controlar o fluxo de dados: por exemplo, você pode especificar se o componente deverá falhar em resposta a um erro, ignorar os erros ou redirecionar linhas de erro à saída de erro. Você também pode atribuir uma descrição à entrada ou atualizar o nome da entrada. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , as entradas são configuradas usando a caixa de diálogo **Editor Avançado** . Para obter mais informações sobre o **Editor Avançado** , consulte [Integration Services User Interface](../../integration-services/integration-services-user-interface.md).  
   
-### <a name="outputs"></a>outputs  
+### <a name="outputs"></a>Saídas  
  Fontes e transformações sempre têm saídas. Uma saída contém uma ou mais colunas de saída, que podem fazer referência a colunas externas se o componente de fluxo de dados tiver sido configurado para usá-las. As saídas podem ser configuradas para fornecer informações úteis ao processamento downstream dos dados. Por exemplo, você pode indicar se a saída é classificada. Você também pode fornecer uma descrição para a saída ou atualizar o nome da saída. No Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , as saídas são configuradas usando a caixa de diálogo **Editor Avançado** .  
   
 ### <a name="error-outputs"></a>Saídas de erro  

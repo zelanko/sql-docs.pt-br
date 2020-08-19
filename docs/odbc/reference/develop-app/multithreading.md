@@ -1,4 +1,5 @@
 ---
+description: Multithreading
 title: Multithreading | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10d1b401ac780d24184c4c2337199e99973e916
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 470a3d3a4d76ae038e3c80b9aa9b93dfd1d0ed79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429238"
 ---
 # <a name="multithreading"></a>Multithreading
 Em sistemas operacionais multithread, os drivers devem ser thread-safe. Ou seja, deve ser possível que os aplicativos usem o mesmo identificador em mais de um thread. Como isso é feito é específico do driver e é provável que os drivers serializarão qualquer tentativa de usar simultaneamente o mesmo identificador em dois threads diferentes.  

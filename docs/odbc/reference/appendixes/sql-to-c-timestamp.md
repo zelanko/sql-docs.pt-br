@@ -1,4 +1,5 @@
 ---
+description: 'SQL para C: carimbo de data/hora'
 title: 'SQL para C: carimbo de data/hora | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 552bab585e4480fd922c9b9a6b112830f5c11ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a2904f01b5ecadbfc224d052366197e41163cd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429538"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL para C: carimbo de data/hora
 
@@ -50,4 +51,4 @@ A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL de 
   
  [f] Este é o tamanho do tipo de dados C correspondente.  
 
-Quando os dados SQL de carimbo de data/hora são convertidos em dados de caracteres C, a cadeia de caracteres resultante está no "*aaaa*-*mm*-*DD* *hh*:*mm*:*SS*[.* f...*] " formato, onde até nove dígitos podem ser usados para segundos fracionários. Esse formato não é afetado pela configuração de país do Windows®. (Exceto para o ponto decimal e os segundos fracionários, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados timestamp SQL.)
+Quando os dados SQL de carimbo de data/hora são convertidos em dados de caracteres C, a cadeia de caracteres resultante está no "*aaaa* - *mm* - *DD* *hh*:*mm*:*SS*[.* f...*] " formato, onde até nove dígitos podem ser usados para segundos fracionários. Esse formato não é afetado pela configuração de país do Windows®. (Exceto para o ponto decimal e os segundos fracionários, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados timestamp SQL.)

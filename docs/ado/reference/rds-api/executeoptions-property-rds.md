@@ -1,4 +1,5 @@
 ---
+description: Propriedade ExecuteOptions (RDS)
 title: Propriedade executeoptions (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439028"
 ---
 # <a name="executeoptions-property-rds"></a>Propriedade ExecuteOptions (RDS)
 Indica se a execução assíncrona está habilitada.  
@@ -29,7 +30,7 @@ Indica se a execução assíncrona está habilitada.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um dos valores a seguir.  
   
-|Constante|Description|  
+|Constante|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**adcExecSync**|Executa a próxima atualização do conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de forma síncrona.|  
 |**adcExecAsync**|Padrão. Executa a próxima atualização do conjunto de **registros** de forma assíncrona.|  
@@ -40,9 +41,9 @@ Indica se a execução assíncrona está habilitada.
 ## <a name="remarks"></a>Comentários  
  Se **executeoptions** for definido como **adcExecAsync**, isso executará de forma assíncrona a próxima chamada de **atualização** no [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Conjunto de registros**do objeto DataControl.  
   
- Se você tentar chamar [redefine](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)ou [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) enquanto outra operação assíncrona pode alterar o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)O **conjunto de registros** do objeto DataControl está em execução, ocorre um erro.  
+ Se você tentar chamar [redefine](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)ou [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) enquanto outra operação assíncrona pode alterar o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) O **conjunto de registros** do objeto DataControl está em execução, ocorre um erro.  
   
- Se ocorrer um erro durante uma operação assíncrona, o **RDS. **O valor [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) do objeto DataControl é alterado de **adcReadyStateLoaded** para **adcReadyStateComplete**, e o valor da propriedade **Recordset** permanece como *Nothing*.  
+ Se ocorrer um erro durante uma operação assíncrona, o **RDS. ** O valor [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) do objeto DataControl é alterado de **adcReadyStateLoaded** para **adcReadyStateComplete**, e o valor da propriedade **Recordset** permanece como *Nothing*.  
   
 ## <a name="applies-to"></a>Aplica-se A  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

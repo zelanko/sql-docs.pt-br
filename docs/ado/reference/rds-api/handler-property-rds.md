@@ -1,4 +1,5 @@
 ---
+description: Propriedade Handler (RDS)
 title: Propriedade do manipulador (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438948"
 ---
 # <a name="handler-property-rds"></a>Propriedade Handler (RDS)
 Indica o nome de um programa de personalização do lado do servidor (manipulador) que estende a funcionalidade do [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)e quaisquer parâmetros usados pelo *manipulador*.  
@@ -47,7 +48,7 @@ DataControl.Handler = String
   
  O nome do manipulador e seus parâmetros, se houver, são separados por vírgulas (","). O comportamento imprevisível ocorrerá se um ponto-e-vírgula (";") aparecer em qualquer lugar dentro da *cadeia de caracteres*. Você pode escrever seu próprio manipulador, desde que ele dê suporte à interface **IDataFactoryHandler** .  
   
- O nome do manipulador padrão é **MSDFMAP. E seu**parâmetro padrão é um arquivo de personalização chamado **MSDFMAP. INI**. Use essa propriedade para invocar arquivos de personalização alternativos criados pelo administrador do servidor.  
+ O nome do manipulador padrão é **MSDFMAP. E seu**parâmetro padrão é um arquivo de personalização chamado **MSDFMAP.INI**. Use essa propriedade para invocar arquivos de personalização alternativos criados pelo administrador do servidor.  
   
  A alternativa para definir a propriedade do **manipulador** é especificar um manipulador e parâmetros na propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) ; ou seja, "**Handler =**_handlename, parâmetro1, parâmetro2,...;_".  
   

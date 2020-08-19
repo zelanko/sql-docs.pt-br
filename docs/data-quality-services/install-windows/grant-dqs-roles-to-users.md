@@ -1,4 +1,5 @@
 ---
+description: Conceder funções DQS a usuários
 title: Conceder funções DQS a usuários
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 23e87edda8602c74a981dbbecd61d84d1e1217cb
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: f3437cc5a42bb479ed76575f5d109ab8d6c874f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431228"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder funções DQS a usuários
 

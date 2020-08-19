@@ -1,4 +1,5 @@
 ---
+description: Exemplo das propriedades NumericScale e Precision do objeto Column (VC++)
 title: NumericScale e propriedades de precisão do exemplo de coluna (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3acf3c8c8533d6ac1c803c5bb42acd530c0b0df2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 44fa488fe5f35f5287511ab09d7c2bb22b0f2369
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439768"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Exemplo das propriedades NumericScale e Precision do objeto Column (VC++)
 Este exemplo demonstra as propriedades [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [Precision](../../../ado/reference/adox-api/precision-property-adox.md) do objeto [Column](../../../ado/reference/adox-api/column-object-adox.md) . Esse código exibe seu valor para a tabela **detalhes do pedido** do banco de dados *Northwind* .  

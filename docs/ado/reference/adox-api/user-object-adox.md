@@ -1,4 +1,5 @@
 ---
+description: Objeto User (ADOX)
 title: Objeto user (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55315ab64f87c6aba1c988c752c4e21811fef35c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c81caba440367712e5743bc1e224bd3968a2990
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439388"
 ---
 # <a name="user-object-adox"></a>Objeto User (ADOX)
 Representa uma conta de usuário que tem permissões de acesso em um banco de dados protegido.  

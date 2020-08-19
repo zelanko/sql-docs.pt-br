@@ -1,4 +1,5 @@
 ---
+description: Coleção Tables (ADOX)
 title: Coleção Tables (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f788376d76692f3dc86011cc1d35b293116250a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d959578d647e74248fdb58b8c27269c0454c304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439468"
 ---
 # <a name="tables-collection-adox"></a>Coleção Tables (ADOX)
 Contém todos os objetos de [tabela](../../../ado/reference/adox-api/table-object-adox.md) de um catálogo.  

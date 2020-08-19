@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b6ca67706406b74d9579dd234cee6df15959d5b8
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 214a1e1aedf3fcc07fa9bcb3367dc43968ea2e72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431278"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Criar um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "87565232"
   
     1.  Este exemplo do [!INCLUDE[tsql](../../../includes/tsql-md.md)] cria esses bancos de dados e os alteram para usar o modelo de recuperação completo:  
   
-        ```  
+        ```sql  
         -- Create sample databases:  
         CREATE DATABASE MyDb1;  
         GO  
@@ -102,18 +102,17 @@ ms.locfileid: "87565232"
   
     2.  O exemplo de código a seguir cria um backup completo de banco de dados de *MyDb1* e *MyDb2*. Este exemplo de código usa um compartilhamento de backup fictício, \\\\*FILESERVER*\\*SQLbackups*.  
   
-        ```  
+        ```sql  
         -- Backup sample databases:  
         BACKUP DATABASE MyDb1   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
   
         BACKUP DATABASE MyDb2   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
-  
         ```  
   
  [&#91;TopOfExample&#93;](#ExampleConfigAGWinAuth)  
@@ -130,26 +129,24 @@ ms.locfileid: "87565232"
   
 1.  Crie um ponto de extremidade de espelhamento de banco de dados chamado *dbm_endpoint* na instância de servidor em que você pretende criar o grupo de disponibilidade (uma instância denominada `AgHostInstance` em `COMPUTER01`). Esse ponto de extremidade usa a porta 7022. Observe que a instância de servidor na qual você cria o grupo de disponibilidade hospedará a réplica primária.  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the primary replica:  
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 2.  Crie um ponto de extremidade *dbm_endpoint* na instância de servidor que hospedará a réplica secundária (a instância de servidor padrão em `COMPUTER02`). Esse ponto de extremidade usa a porta 5022.  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the secondary replica:   
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=5022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 3.  > [!NOTE]  
@@ -159,7 +156,7 @@ ms.locfileid: "87565232"
   
      O exemplo de código a seguir mostra as instruções do [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar um logon e conceder a ele a permissão em um ponto de extremidade. A conta de domínio da instância de servidor remoto é representada aqui como *domain_name*\\*user_name*.  
   
-    ```  
+    ```sql  
     -- If necessary, create a login for the service account, domain_name\user_name  
     -- of the server instance that will host the other replica:  
     USE master;  
@@ -176,9 +173,8 @@ ms.locfileid: "87565232"
   
      O exemplo de código a seguir cria um grupo de disponibilidade chamado *MyAG* na instância de servidor em que os bancos de dados de exemplo, *MyDb1* e *MyDb2*, foram criados. Na `AgHostInstance`COMPUTER01 *, a instância de servidor local* é especificada primeiro. Essa instância hospedará a réplica primária inicial. Uma instância de servidor remota, a instância de servidor padrão em *COMPUTER02*, é especificada para hospedar uma réplica secundária. Ambas as réplicas de disponibilidade são configuradas para usar o modo de confirmação assíncrona com failover manual (para réplicas de confirmação assíncrona, failover manual significa failover forçado com possível perda de dados).  
   
-    ```  
-  
-              -- Create the availability group, MyAG:   
+    ```sql
+    -- Create the availability group, MyAG:   
     CREATE AVAILABILITY GROUP MyAG   
        FOR   
           DATABASE MyDB1, MyDB2   
@@ -204,7 +200,7 @@ ms.locfileid: "87565232"
   
      O exemplo de código a seguir une a réplica secundária de `COMPUTER02` ao grupo de disponibilidade `MyAG` .  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- join the secondary replica to the availability group:  
     ALTER AVAILABILITY GROUP MyAG JOIN;  
@@ -215,19 +211,18 @@ ms.locfileid: "87565232"
   
      O exemplo de código a seguir cria os bancos de dados secundários *MyDb1* e *MyDb2* restaurando backups de banco de dados que usam RESTORE WITH NORECOVERY.  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- Restore database backups using the WITH NORECOVERY option:  
     RESTORE DATABASE MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NORECOVERY  
+        WITH NORECOVERY;  
     GO  
   
     RESTORE DATABASE MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH NORECOVERY  
-    GO  
-  
+        WITH NORECOVERY;  
+    GO 
     ```  
   
 7.  Na instância de servidor que hospeda a réplica primária, faça backup do log de transações em cada banco de dados primário.  
@@ -237,19 +232,18 @@ ms.locfileid: "87565232"
   
      O exemplo de código a seguir cria um backup de log de transações em MyDb1 e MyDb2.  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the primary replica,   
     -- Backup the transaction log on each primary database:  
     BACKUP LOG MyDb1   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NOFORMAT  
+        WITH NOFORMAT;  
     GO  
   
     BACKUP LOG MyDb2   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITHNOFORMAT  
-    GO  
-  
+        WITHNOFORMAT;  
+    GO
     ```  
   
     > [!TIP]  
@@ -262,16 +256,16 @@ ms.locfileid: "87565232"
     > [!IMPORTANT]  
     >  Quando você estiver preparando um banco de dados secundário real, precisará aplicar cada backup de log feito desde o backup de banco de dados do qual criou o banco de dados secundário, começando pelo mais antigo e sempre usando RESTORE WITH NORECOVERY. É claro que, se você restaurar os backups de banco de dados completo e diferencial, precisará apenas aplicar os backups de log feitos após o backup diferencial.  
   
-    ```  
+    ```sql  
     -- Restore the transaction log on each secondary database,  
     -- using the WITH NORECOVERY option:  
     RESTORE LOG MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     RESTORE LOG MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     ```  
   
@@ -279,7 +273,7 @@ ms.locfileid: "87565232"
   
      O exemplo de código a seguir une o banco de dados secundário *MyDb1* e, em seguida, os bancos de dados secundários *MyDb2* ao grupo de disponibilidade *MyAG* .  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the secondary replica,   
     -- join each secondary database to the availability group:  
     ALTER DATABASE MyDb1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -287,7 +281,6 @@ ms.locfileid: "87565232"
   
     ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
     GO  
-  
     ```  
   
 ###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> Concluir o exemplo de código para procedimento de configuração de exemplo  
@@ -313,7 +306,7 @@ ms.locfileid: "87565232"
 > [!NOTE]  
 >  Para obter mais códigos de exemplo [!INCLUDE[tsql](../../../includes/tsql-md.md)] de criação de um grupo de disponibilidade, veja [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md).  
   
-```  
+```sql  
 -- on the server instance that will host the primary replica,   
 -- create sample databases:  
 CREATE DATABASE MyDb1;  
@@ -329,26 +322,26 @@ GO
 -- Backup sample databases:  
 BACKUP DATABASE MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 BACKUP DATABASE MyDb2   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 -- Create the endpoint on the server instance that will host the primary replica:  
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- Create the endpoint on the server instance that will host the secondary replica:   
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- If both service accounts run under the same domain account, skip this step. Otherwise,   
@@ -406,18 +399,18 @@ GO
 -- Restore database backups onto this server instance, using RESTORE WITH NORECOVERY:  
 RESTORE DATABASE MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 RESTORE DATABASE MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 -- Back up the transaction log on each primary database:  
 BACKUP LOG MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NOFORMAT  
+    WITH NOFORMAT;  
 GO  
   
 BACKUP LOG MyDb2   
@@ -429,11 +422,11 @@ GO
 -- using the WITH NORECOVERY option:  
 RESTORE LOG MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
 RESTORE LOG MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
   
 -- On the server instance that hosts the secondary replica,   
@@ -443,7 +436,6 @@ GO
   
 ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
 GO  
-  
 ```  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  

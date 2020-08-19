@@ -1,4 +1,5 @@
 ---
+description: Exemplo do objeto DataControl (VBScript)
 title: Exemplo do objeto DataControl (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb581ab66f4422b392c0031c1e69faa00e21069f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c237a4259838beca54f0016b8a34f191e169d0ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439158"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Exemplo do objeto DataControl (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O código a seguir mostra como definir o [RDS. Parâmetros de DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) em tempo de design e associá-los a um controle com reconhecimento de dados. Recorte e cole esse código entre o \< corpo> e \< /Body> marcas em um documento HTML normal e nomeie-o **DataControlDesignVBS. asp**. O script ASP identificará seu servidor.  
+ O código a seguir mostra como definir o [RDS. Parâmetros de DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) em tempo de design e associá-los a um controle com reconhecimento de dados. Recorte e cole esse código entre \<Body> as \</Body> marcas e em um documento HTML normal e nomeie-o **DataControlDesignVBS. asp**. O script ASP identificará seu servidor.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -92,7 +93,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- O exemplo a seguir mostra como definir os parâmetros necessários de **RDS. Controle** de data em tempo de execução. Para testar este exemplo, recorte e cole esse código entre o \< corpo> e \< /Body> marcas em um documento HTML normal e nomeie-o **DataControlRuntimeVBS. asp**. O script ASP identificará seu servidor.  
+ O exemplo a seguir mostra como definir os parâmetros necessários de **RDS. Controle** de data em tempo de execução. Para testar este exemplo, recorte e cole esse código entre \<Body> as \</Body> marcas e em um documento HTML normal e nomeie-o **DataControlRuntimeVBS. asp**. O script ASP identificará seu servidor.  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  

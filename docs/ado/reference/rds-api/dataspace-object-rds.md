@@ -1,4 +1,5 @@
 ---
+description: Objeto DataSpace (RDS)
 title: Objeto DataSpace (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e0340eb56ec2b72c0f917f33a639ed5227d2c0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439058"
 ---
 # <a name="dataspace-object-rds"></a>Objeto DataSpace (RDS)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.locfileid: "82752566"
   
  O serviço de dados remoto precisa de proxies de objeto de negócios para que os componentes do lado do cliente possam se comunicar com objetos comerciais localizados na camada intermediária. Os proxies facilitam o empacotamento, o empacotamento e o transporte (marshaling) dos dados do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do aplicativo entre os limites do processo ou da máquina.  
   
- O serviço de dados remotos usa o **RDS. **Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace para criar proxies de objeto comercial. O proxy de objeto comercial é criado dinamicamente sempre que uma instância de seu equivalente de objeto comercial de camada intermediária é criada. O serviço de dados remoto oferece suporte aos seguintes protocolos: HTTP, HTTPS (soquetes de segurança HTTP), DCOM e em processo (os componentes cliente e o objeto comercial residem no mesmo computador).  
+ O serviço de dados remotos usa o **RDS. ** Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace para criar proxies de objeto comercial. O proxy de objeto comercial é criado dinamicamente sempre que uma instância de seu equivalente de objeto comercial de camada intermediária é criada. O serviço de dados remoto oferece suporte aos seguintes protocolos: HTTP, HTTPS (soquetes de segurança HTTP), DCOM e em processo (os componentes cliente e o objeto comercial residem no mesmo computador).  
   
 > [!NOTE]
 >  O RDS se comporta de maneira "sem estado" quando o **RDS. O objeto DataSpace** usa os protocolos http ou HTTPS. Ou seja, todas as informações internas sobre uma solicitação do cliente são descartadas depois que o servidor retorna uma resposta.  

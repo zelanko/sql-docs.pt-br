@@ -1,4 +1,5 @@
 ---
+description: Coleção Indexes (ADOX)
 title: Coleção de índices (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 916671fdf9722c7894ee122f3d68167a8047b72c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439908"
 ---
 # <a name="indexes-collection-adox"></a>Coleção Indexes (ADOX)
 Contém todos os objetos de [índice](../../../ado/reference/adox-api/index-object-adox.md) de uma tabela.  
