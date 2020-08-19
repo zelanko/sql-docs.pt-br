@@ -1,4 +1,5 @@
 ---
+description: Excluir um Aplicativo da Camada de Dados
 title: Excluir um aplicativo da camada de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 555867ca058b1249c30dc330512a8e6bc0fe3d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bde888ff6091ae8d05445acce1afb1469843c18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386632"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "85781727"
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
- **Avançar >** : continua para a página **Escolher Método**.  
+ **Avançar >**: continua para a página **Escolher Método**.  
   
  **Cancelar** : finaliza o assistente sem excluir um aplicativo da camada de dados ou banco de dados.  
   
@@ -104,7 +105,7 @@ ms.locfileid: "85781727"
   
  **< Anterior** – Retorna à página **Introdução**.  
   
- **Avançar >** : continua para a página **Resumo**.  
+ **Avançar >**: continua para a página **Resumo**.  
   
  **Cancelar** : finaliza o assistente sem excluir o DAC ou o banco de dados.  
   
@@ -117,7 +118,7 @@ ms.locfileid: "85781727"
   
  **< Anterior**: retorna para a página **Escolher Método** para escolher um método de exclusão diferente.  
   
- **Avançar >** : exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
+ **Avançar >**: exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
   
  **Cancelar** : finaliza o assistente sem excluir a instância de DAC.  
   
