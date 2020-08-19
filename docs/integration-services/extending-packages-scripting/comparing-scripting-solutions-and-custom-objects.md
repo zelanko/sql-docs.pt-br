@@ -1,4 +1,5 @@
 ---
+description: Comparando soluções de script e objetos personalizados
 title: Comparar soluções de script e objetos personalizados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c57c208eb0e8c359d25b85766a738d72e591696
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0e862da85c7c3c2e2255bbd522045b507b5d471
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430308"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>Comparando soluções de script e objetos personalizados
 

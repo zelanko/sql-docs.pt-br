@@ -1,4 +1,5 @@
 ---
+description: Liberando um identificador de instrução
 title: Liberando um identificador de instrução | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,11 +19,12 @@ ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ae605b755eb5b0eb4848077a48c54940680649f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5cf58becc532153617ebcbd3cafc6c89d21b4d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499149"
 ---
 # <a name="freeing-a-statement-handle"></a>Liberando um identificador de instrução
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

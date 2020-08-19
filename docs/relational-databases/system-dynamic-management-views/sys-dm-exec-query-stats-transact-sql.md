@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_stats (Transact-SQL)
 title: sys. dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
@@ -20,12 +21,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489965"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87865314"
 Retorna estatísticas de desempenho de agregação de planos de consulta em cache no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A exibição contém uma linha por instrução de consulta dentro do plano em cache e o tempo de vida das linhas é ligado ao próprio plano. Quando um plano é removido do cache, as linhas correspondentes são eliminadas desta exibição.  
   
 > [!NOTE]
-> - Os resultados de **Sys. dm_exec_query_stats** podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
+> - Os resultados de **Sys. dm_exec_query_stats**  podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
 > - Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_exec_query_stats**.    
 
   
@@ -115,7 +116,7 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**last_spills**|**bigint**|O número de páginas despejadas na última vez em que a consulta foi executada.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**max_spills**|**bigint**|O número máximo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|Número total de leituras de servidor de página remota executadas por execuções deste plano desde sua compilação.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
 |**last_page_server_reads**|**bigint**|Número de leituras de servidor de página remota executadas na última vez em que o plano foi executado.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
 |**min_page_server_reads**|**bigint**|O número mínimo de servidores de página remotos lê que esse plano já realizou durante uma única execução.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
@@ -126,7 +127,7 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
    
 ## <a name="remarks"></a>Comentários  
  As estatísticas na exibição são atualizadas quando uma consulta é concluída.  

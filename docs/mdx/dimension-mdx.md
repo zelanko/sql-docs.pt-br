@@ -1,4 +1,5 @@
 ---
+description: Função Dimension (MDX)
 title: Dimensão (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 58bee93a4cef37a8a5a71211b292a16392687f12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d4fff9d6ade52d4e8209e2a6e0cbecf99837d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484029"
 ---
 # <a name="dimension-mdx"></a>Função Dimension (MDX)
 
@@ -73,7 +74,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Consulte Também  
  [Contar &#40;níveis de hierarquia&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
  [Contagem &#40;definida&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Níveis &#40;&#41;MDX](../mdx/levels-mdx.md)   
+ [Níveis &#40;&#41;MDX ](../mdx/levels-mdx.md)   
  [Membros &#40;definidos&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

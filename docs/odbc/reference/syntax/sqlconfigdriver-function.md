@@ -1,4 +1,5 @@
 ---
+description: Função SQLConfigDriver
 title: Função SQLConfigDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0da15cef06e5d8392408108ce88b53f7885eb65e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04ee54bba13730504ed08cfc1307858edea56282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476152"
 ---
 # <a name="sqlconfigdriver-function"></a>Função SQLConfigDriver
 **Conformidade**  
@@ -33,7 +34,7 @@ ms.locfileid: "81301241"
  **Resumo**  
  **SQLConfigDriver** carrega a DLL de configuração de driver apropriada e chama a função **ConfigDriver** .  
   
- A funcionalidade do **SQLConfigDriver** também pode ser acessada com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ A funcionalidade do **SQLConfigDriver** também pode ser acessada com [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,8 +83,8 @@ BOOL SQLConfigDriver(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLConfigDriver** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLConfigDriver** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

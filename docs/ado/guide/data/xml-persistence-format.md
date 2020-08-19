@@ -1,4 +1,5 @@
 ---
+description: Formato de persistência XML
 title: Formato de persistência XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452508"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistência XML
 O ADO usa a codificação UTF-8 para o fluxo XML que ele mantém.  
@@ -68,7 +69,7 @@ xmlns:z="#RowsetSchema">
   
  As definições de esquema estão em conformidade com a [especificação de dados XML do W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) e podem ser totalmente validadas (embora a validação não ocorra no Internet Explorer 5). XML-os dados atualmente são o único formato de esquema com suporte para persistência de conjunto de registros.  
   
- A seção de dados tem três linhas que contêm informações sobre transportadoras. Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas as \< marcas RS: data> devem estar presentes. Sem dados, você pode escrever a tag de forma abreviada como simplesmente \< RS: data/>. Qualquer marca prefixada com "RS" indica que está no namespace definido por urn: schemas-microsoft-com: Rowset.  
+ A seção de dados tem três linhas que contêm informações sobre transportadoras. Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas as \<rs:data> marcas devem estar presentes. Sem dados, você pode escrever a tag de forma abreviada como simplesmente \<rs:data/> . Qualquer marca prefixada com "RS" indica que está no namespace definido por urn: schemas-microsoft-com: Rowset.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

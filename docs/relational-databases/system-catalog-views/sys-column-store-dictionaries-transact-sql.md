@@ -1,4 +1,5 @@
 ---
+description: sys.column_store_dictionaries (Transact-SQL)
 title: sys. column_store_dictionaries (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e7ccd7c93d42cb30eeb2fc24b79c358d519579b6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdc7ea16b6803f846f6163312669c0a27f855ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475441"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85764768"
 |**column_id**|**int**|ID da coluna columnstore começando com 1. A primeira coluna tem ID = 1, a segunda coluna tem ID = 2, etc.|  
 |**dictionary_id**|**int**|Pode haver dois tipos de dicionários, globais e locais, associados a um segmento de coluna. Um dictionary_id de 0 representa o dicionário global que é compartilhado entre todos os segmentos de coluna (um para cada grupo de linhas) para essa coluna.|  
 |**version**|**int**|Versão de formato do dicionário.|  
-|**type**|**int**|Tipo de dicionário:<br /><br /> 1-dicionário de hash contendo valores **int**<br /><br /> 2-não usado<br /><br /> 3-dicionário de hash contendo valores de cadeia de caracteres<br /><br /> 4-dicionário de hash que contém valores **float**<br /><br /> Para obter mais informações sobre dicionários, consulte [Guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**tipo**|**int**|Tipo de dicionário:<br /><br /> 1-dicionário de hash contendo valores **int**<br /><br /> 2-não usado<br /><br /> 3-dicionário de hash contendo valores de cadeia de caracteres<br /><br /> 4-dicionário de hash que contém valores **float**<br /><br /> Para obter mais informações sobre dicionários, consulte [Guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|A última ID de dados no dicionário.|  
 |**entry_count**|**bigint**|Número de entradas no dicionário.|  
 |**on_disk_size**|**bigint**|Tamanho do dicionário em bytes.|  
@@ -49,14 +50,14 @@ Requer a permissão `VIEW DEFINITION` na tabela. As colunas a seguir retornam NU
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [&#41;sys. Columns &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
- [Guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)   
- [Guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)   
+ [Guia de Índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)   
+ [Guia de Índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   

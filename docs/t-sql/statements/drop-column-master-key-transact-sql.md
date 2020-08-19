@@ -1,4 +1,5 @@
 ---
+description: DROP COLUMN MASTER KEY (Transact-SQL)
 title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 69d223d694c1a53c36db976c6dbf38b386d18951
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: abff6ef56417f78194970a04fd863f8c599bddb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444682"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,7 +45,7 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  O nome da chave mestra de coluna.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários
  A chave mestra de coluna só pode ser descartada se não houver nenhum valor de chave de criptografia de coluna criptografado com a chave mestra de coluna. Para remover valores de chave de criptografia de coluna, use a instrução [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  

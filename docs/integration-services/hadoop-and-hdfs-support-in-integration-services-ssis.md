@@ -1,4 +1,5 @@
 ---
+description: Suporte para Hadoop e HDFS no Integration Services (SSIS)
 title: Suporte para Hadoop e HDFS no SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b958b948261a70200f9529be7e6e7a71ce0cf363
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 89d3ff18d58014a19985ab4fc35f35992068f60e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430218"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Suporte para Hadoop e HDFS no Integration Services (SSIS)
 

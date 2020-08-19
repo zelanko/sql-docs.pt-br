@@ -1,4 +1,5 @@
 ---
+description: CREATE INDEX para Paradox
 title: CRIAR índice para o Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e68484efdc5194f93f2acab31973377d9c66f1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0274f3f7cfdb79bf64e3616b16b7f3383063e07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483639"
 ---
 # <a name="create-index-for-paradox"></a>CREATE INDEX para Paradox
 A sintaxe da instrução CREATE INDEX para o driver ODBC Paradox é:  

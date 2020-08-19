@@ -1,4 +1,5 @@
 ---
+description: KPITrend (MDX)
 title: Kpistrend (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc672146a8f00902012f21f48cbfed460eb48690
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483909"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (MDX)
 

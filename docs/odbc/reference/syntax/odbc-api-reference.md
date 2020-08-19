@@ -1,4 +1,5 @@
 ---
+description: Referência de API do ODBC
 title: Referência da API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476177"
 ---
 # <a name="odbc-api-reference"></a>Referência de API do ODBC
 Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cada função é definida como uma função de linguagem de programação C. As descrições incluem o seguinte:  
@@ -33,7 +34,7 @@ Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cad
   
 -   Valores retornados  
   
--   Diagnóstico  
+-   Diagnósticos  
   
 -   Comentários sobre o uso e a implementação  
   

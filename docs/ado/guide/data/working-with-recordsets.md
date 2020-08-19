@@ -1,4 +1,5 @@
 ---
+description: Trabalhar com conjuntos de registros
 title: Trabalhando com conjuntos de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452518"
 ---
 # <a name="working-with-recordsets"></a>Trabalhar com conjuntos de registros
 O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem dos dados no conjunto de resultados, pesquisar um registro específico com base nos critérios fornecidos e até mesmo otimizar essas operações de pesquisa usando índices. A possibilidade de esses recursos estarem disponíveis para uso depende do provedor e, em alguns casos, da propriedade [index](../../../ado/reference/ado-api/index-property.md) – a estrutura da própria fonte de dados.  
@@ -53,7 +54,7 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
   
  Somente um nome de coluna única pode ser especificado para o critério. Em outras palavras, esse método não oferece suporte a pesquisas de várias colunas.  
   
- O operador de comparação para o critério pode ser " **>** " (maior que), " **\<** " (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).  
+ O operador de comparação para o critério pode ser " **>** " (maior que), "* * \<**" (less than), "=" (equal), "> =" (maior que ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).  
   
  O valor do critério pode ser uma cadeia de caracteres, um número de ponto flutuante ou uma data. Os valores de cadeia de caracteres são delimitados por aspas simples ou marcas "#" (sinal numérico) (por exemplo, "estado = ' WA '" ou "estado = #WA #"). Os valores de data são delimitados com marcas "#" (sinal numérico) (por exemplo, "start_date > #7/22/97 #").  
   
@@ -87,7 +88,7 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
   
 -   *FieldName* deve ser um nome de campo válido do **conjunto de registros**. Se o nome do campo contiver espaços, você deverá colocar o nome entre colchetes.  
   
--   O *operador* deve ser um dos seguintes: **\<** , **>** ,,,, **\<=** **>=** **<>** **=** ou **like**.  
+-   O *operador* deve ser um dos seguintes: **\<**, **>** , **\<=**, **>=** , **<>** , **=** ou **like**.  
   
 -   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo,,, `'Smith'` `#8/24/95#` `12.345` ou `$50.00` ). Use aspas simples (') com cadeias de caracteres e sinais de sustenido ( `#` ) com datas. Para números, você pode usar pontos decimais, sinais de dólar e notação científica. Se o *operador* for **como**, o *valor* poderá usar caracteres curinga. Somente o asterisco ( \* ) e o sinal de porcentagem (%) caracteres curinga são permitidos e devem ser o último caractere na cadeia de caracteres. O *valor* não pode ser nulo.  
   
@@ -111,7 +112,7 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
 ### <a name="filtering-with-a-constant"></a>Filtrando com uma constante  
  As constantes a seguir estão disponíveis para filtrar **conjuntos de registros**.  
   
-|Constante|Description|  
+|Constante|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filtros para exibir somente os registros afetados pela última chamada de **exclusão**, **ressincronização**, **UpdateBatch**ou **CancelBatch** .|  
 |**adFilterConflictingRecords**|Filtros para exibir os registros que falharam na última atualização do lote.|  

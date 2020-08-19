@@ -1,4 +1,5 @@
 ---
+description: Desenvolvendo uma interface do usuário para um provedor de logs personalizado
 title: Desenvolver uma interface do usuário para um provedor de logs personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8ffd790e725daa8aaf40f0c2c54724bd5d42876b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4b1807cc004c21d58b75ef25713b7fdb62ac8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430478"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>Desenvolvendo uma interface do usuário para um provedor de logs personalizado
 
@@ -29,6 +30,6 @@ ms.locfileid: "86916396"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um provedor de logs personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [Codificar um provedor de log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
+ [Codificando um provedor de log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
   
   

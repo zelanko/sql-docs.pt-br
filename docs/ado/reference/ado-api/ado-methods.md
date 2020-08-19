@@ -1,4 +1,5 @@
 ---
+description: Métodos ADO
 title: Métodos ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10f9aaf7aefa87586df77dd0da5ac1be336d4f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451378"
 ---
 # <a name="ado-methods"></a>Métodos ADO
 
 |Método|Descrição|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Cria um novo registro para um objeto **Recordset** atualizável.|  
-|[Acrescentar](../../../ado/reference/ado-api/append-method-ado.md)|Anexa um objeto a uma coleção. Se a coleção for de **campos**, um novo objeto de **campo** poderá ser criado antes de ser anexado à coleção.|  
+|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Anexa um objeto a uma coleção. Se a coleção for de **campos**, um novo objeto de **campo** poderá ser criado antes de ser anexado à coleção.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Anexa dados a um **campo**de dados binário ou de texto grande ou a um objeto de **parâmetro** .|  
 |[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gerencia o processamento de transações dentro de um objeto de **conexão** da seguinte maneira:<br /><br /> **BeginTrans** – inicia uma nova transação.<br /><br /> **CommitTrans** -salva todas as alterações e encerra a transação atual. Ele também pode iniciar uma nova transação.<br /><br /> **RollbackTrans** -cancela as alterações e encerra a transação atual. Ele também pode iniciar uma nova transação.|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela a execução de uma chamada de método pendente e assíncrona.|  

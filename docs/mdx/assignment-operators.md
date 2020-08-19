@@ -1,4 +1,5 @@
 ---
+description: Operadores de atribuição
 title: Operadores de atribuição | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0e587e4c87b8d209c86476b1500ca6bbe3d026a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 786df2b518a42f2b04c69f56c56586ca3416d781
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484059"
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 

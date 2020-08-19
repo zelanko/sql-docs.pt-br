@@ -1,4 +1,5 @@
 ---
+description: Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados
 title: Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 54581ad36eea167316d9e6c4cdb68b23e69a1cbd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d9cb92a6815e41bfffbcf449c98077ab71d25467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430818"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados
 

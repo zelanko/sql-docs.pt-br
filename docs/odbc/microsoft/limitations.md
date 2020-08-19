@@ -1,4 +1,5 @@
 ---
+description: Limitações
 title: Limitações | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92605f083cb0e49381b7d309e05b2c93944d3c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7fe340faaf8841b0674c8c2e7031a2d00cd78db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483499"
 ---
 # <a name="limitations"></a>Limitações
 Esta seção descreve as limitações dos drivers de banco de dados da área de trabalho ODBC em relação aos seguintes tópicos:  
   
 |Funções|Instruções|Cláusulas, tipos e assim por diante|  
 |---------------|----------------|-------------------------------|  
-|[Função de Agregação](../../odbc/microsoft/aggregate-function-limitations.md)|[Instrução ALTER TABLE](../../odbc/microsoft/alter-table-statement-limitations.md)|[Nome da coluna](../../odbc/microsoft/column-name-limitations.md)|  
-|[Função escalar](../../odbc/microsoft/scalar-function-limitations.md)|[Instrução de chamada](../../odbc/microsoft/call-statement-limitations.md)|[Tipo de dados](../../odbc/microsoft/data-type-limitations.md)|  
+|[Função de agregação](../../odbc/microsoft/aggregate-function-limitations.md)|[Instrução ALTER TABLE](../../odbc/microsoft/alter-table-statement-limitations.md)|[Nome da coluna](../../odbc/microsoft/column-name-limitations.md)|  
+|[Função escalar](../../odbc/microsoft/scalar-function-limitations.md)|[Instrução de chamada](../../odbc/microsoft/call-statement-limitations.md)|[Tipo de Dados](../../odbc/microsoft/data-type-limitations.md)|  
 |[Funções Set](../../odbc/microsoft/set-functions-limitations.md)|[Instrução CREATE INDEX](../../odbc/microsoft/create-index-statement-limitations.md)|[Aritmética de data](../../odbc/microsoft/date-arithmetic-limitations.md)|  
 |[Classificação](../../odbc/microsoft/sorting-limitations.md)|[Instrução CREATE TABLE](../../odbc/microsoft/create-table-statement-limitations.md)|[Identificadores](../../odbc/microsoft/identifiers-limitations.md)|  
 |[Função CONVERT](../../odbc/microsoft/convert-function-limitations.md)|[Instrução DELETE](../../odbc/microsoft/delete-statement-limitations.md)|[Nome do índice](../../odbc/microsoft/index-name-limitations.md)|  
@@ -39,9 +40,9 @@ Esta seção descreve as limitações dos drivers de banco de dados da área de 
 |||[Predicado LIKE](../../odbc/microsoft/like-predicate-limitations.md)|  
 |||[NÃO NULO](../../odbc/microsoft/not-null-limitations.md)|  
 |||[Cláusula ORDER BY](../../odbc/microsoft/order-by-clause-limitations.md)|  
-|||[Nome da Tabela](../../odbc/microsoft/table-name-limitations.md)|  
+|||[Nome da tabela](../../odbc/microsoft/table-name-limitations.md)|  
 |||[Referências de tabela](../../odbc/microsoft/table-references-limitations.md)|  
-|||[Modos de exibição](../../odbc/microsoft/views-limitations.md)|  
+|||[Exibições](../../odbc/microsoft/views-limitations.md)|  
 |||[Cláusula WHERE](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[Cláusula WHERE CURRENT OF](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[Cadeia de caracteres](../../odbc/microsoft/string-limitations.md)|

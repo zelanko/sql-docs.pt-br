@@ -1,4 +1,5 @@
 ---
+description: Índices de sintaxe ADO
 title: Índices de sintaxe do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfe797f2edf7df81ee8d70469d516b1c3f7d0b6f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f6394e390339d7770187650f0a19035cca2e0e85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451348"
 ---
 # <a name="ado-syntax-indexes"></a>Índices de sintaxe ADO
 A sintaxe para chamar métodos e propriedades do ADO difere dependendo do seu ambiente de desenvolvimento. O restante da referência da linguagem ADO usa a linguagem de programação do Microsoft Visual Basic para ilustrar a sintaxe do método e da Propriedade do ADO. No entanto, consulte as seções a seguir para obter exemplos de sintaxe mais específicos com base na sua linguagem de programação e metodologia:  
