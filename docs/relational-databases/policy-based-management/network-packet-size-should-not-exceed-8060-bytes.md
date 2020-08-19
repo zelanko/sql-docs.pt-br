@@ -1,4 +1,5 @@
 ---
+description: O tamanho do pacote de rede não dever exceder 8060 bytes
 title: O tamanho do pacote de rede não deve exceder 8060 Bytes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7800bf2c9724cec7ba8100e7268e1760e39d3afe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec56bc58723d14f0997da2ce5c69a2a81451a90c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406432"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>O tamanho do pacote de rede não dever exceder 8060 bytes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Reiniciar Assinatura(s) - todas as assinaturas
 title: Reinicializar Assinatura(s) – todas as assinaturas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,16 +16,16 @@ ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9da983b0f59625c6bd2404512e99d4f0928bff01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cee027fbc0e614e7aa6bbc14292b79141a9b4df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405532"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Reiniciar Assinatura(s) - todas as assinaturas
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  A caixa de diálogo **Reiniciar Assinatura(s)** permite marcar todas as assinaturas de uma publicação para reinicialização. A reinicialização envolve a aplicação de um instantâneo a cada Assinante; é executada pelo Distribution Agent para assinaturas em publicações transacionais e pelo Merge Agent para assinaturas em publicações de mesclagem.  
+   A caixa de diálogo **Reiniciar Assinaturas** permite marcar todas as assinaturas de uma publicação para reinicialização. A reinicialização envolve a aplicação de um instantâneo a cada Assinante; é executada pelo Distribution Agent para assinaturas em publicações transacionais e pelo Merge Agent para assinaturas em publicações de mesclagem.  
   
 ## <a name="options"></a>Opções  
  **Usar o instantâneo atual**  

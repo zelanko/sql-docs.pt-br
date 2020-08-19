@@ -1,4 +1,5 @@
 ---
+description: classe de evento Showplan Text
 title: Classe de evento Showplan Text | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20ad4337407a46d91adbbeb080b662a2e4e99f28
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d174fc7a6eeeacdf353b7e0c2bf6c10ec7cbf1ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409752"
 ---
 # <a name="showplan-text-event-class"></a>classe de evento Showplan Text
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85726170"
   
 ## <a name="showplan-text-event-class-data-columns"></a>Colunas de dados da classe de evento Showplan Text  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Custo estimado do texto do Plano de Exibição.|2|Não|  

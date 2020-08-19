@@ -1,4 +1,5 @@
 ---
+description: Criar índices clusterizados
 title: Criar índices clusterizados | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd2576b845d1cb04d69f2eef2ab32b6289a14480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408492"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,13 +84,13 @@ ms.locfileid: "85760832"
   
 1.  No Pesquisador de Objetos, expanda a tabela na qual você deseja criar um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...** .  
+2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...**.  
   
 3.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 4.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
-5.  Na caixa de diálogo **Selecionar Colunas de** _table\_name_, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
+5.  Na caixa de diálogo **Selecionar Colunas de **_table\_name_, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
   
 6.  Clique em **OK**.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "85760832"
   
 1.  No Pesquisador de Objetos, expanda o banco de dados na qual você deseja criar uma tabela com um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Tabelas** e clique em **Nova Tabela...** .  
+2.  Clique com o botão direito do mouse na pasta **Tabelas** e clique em **Nova Tabela...**.  
   
 3.  Crie uma tabela como você faria normalmente. Para obter mais informações, veja [Criar tabelas &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   

@@ -1,4 +1,5 @@
 ---
+description: Republicar dados
 title: Republicar dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08dd294c6d9c0283c6f8e3616c8289d28f2e8ef2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f68cdd2d985c9c91829d4b1b12e9aa47e3a8d04a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404792"
 ---
 # <a name="republish-data"></a>Republicar dados
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "85716674"
   
  A replicação fornece suporte aos cenários de republicação mostrados na tabela a seguir.  
   
-|Publicador|Assinante de publicação|Subscriber|  
+|Publisher|Assinante de publicação|Subscriber|  
 |---------------|---------------------------|----------------|  
 |Publicação transacional|Assinatura transacional/publicação transacional|Assinatura transacional|  
 |Publicação transacional|Assinatura transacional/publicação de mesclagem*|Assinatura de mesclagem|  

@@ -1,4 +1,5 @@
 ---
+description: Especificar opções de esquema para replicação do SQL Server
 title: Especificar opções de esquema para replicação do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 23feed230e83ab794103df48f0ac678a2a807f33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f160e1c9014e6b54590c50726c9b3bbae0e64f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405882"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>Especificar opções de esquema para replicação do SQL Server
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

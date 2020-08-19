@@ -1,4 +1,5 @@
 ---
+description: classe de Evento Showplan Statistics Profile
 title: Classe de eventos Showplan Statistics Profile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 470f1a6b694db95d9a58169b9b3b11b7d45768ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6cd4b9cdde57c6515adca2ab69358226b28a59b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409692"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>classe de Evento Showplan Statistics Profile
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85726184"
   
 ## <a name="showplan-statistics-profile-event-class-data-columns"></a>Colunas de dados da classe de eventos Showplan Statistics Profile  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Custo estimado da consulta.|2|Não|  

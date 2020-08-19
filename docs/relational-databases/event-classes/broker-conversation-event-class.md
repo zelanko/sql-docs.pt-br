@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Broker:Conversation
 title: Classe de evento Broker:Conversation | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410222"
 ---
 # <a name="brokerconversation-event-class"></a>Classe de evento Broker:Conversation
 
@@ -27,7 +28,7 @@ ms.locfileid: "85679508"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Conversation  
   
-|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Type|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
@@ -46,7 +47,7 @@ ms.locfileid: "85679508"
 |**Prioridade**|**int**|O nível de prioridade da conversa.|5|Sim|  
 |**RoleName**|**nvarchar**|A função do identificador de conversa. É **initiator** (iniciador) ou **target**(destino).|38|Não|  
 |**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
-|**Severity**|**int**|A severidade do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|29|Não|  
+|**Gravidade**|**int**|A severidade do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se esse evento informar um erro.|29|Não|  
 |**SPID**|**int**|A identificação de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|Horário de início do evento, quando disponível.|14|Sim|  
 |**TextData**|**ntext**|O estado atual da conversa. Pode ter um dos seguintes valores:|1|Sim|  
@@ -61,7 +62,7 @@ ms.locfileid: "85679508"
   
  A tabela a seguir lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|DESCRIÇÃO|  
+|ID|Subclasse|Descrição|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **SEND Message** quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa uma instrução SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **END CONVERSATION** quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa uma instrução END CONVERSATION que não inclui a cláusula WITH ERROR.|  

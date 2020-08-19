@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Showplan All for Query Compile
 title: Classe de evento Showplan All for Query Compile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c828eae145f5d3eacf3c6fd938c4f92b72f343d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409852"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Classe de evento Showplan All for Query Compile
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85726194"
   
 ## <a name="showplan-all-for-query-compile-event-class-data-columns"></a>Colunas de dados da classe de evento Showplan All for Query Compile  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Custo estimado da consulta.|2|Não|  

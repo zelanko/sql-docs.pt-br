@@ -1,4 +1,5 @@
 ---
+description: Ajuda de F1 de Propriedades do Índice
 title: Ajuda de F1 de propriedades do índice | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -19,12 +20,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 43ef52303110cb26b145348edc6aa9ec09bf38de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408132"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

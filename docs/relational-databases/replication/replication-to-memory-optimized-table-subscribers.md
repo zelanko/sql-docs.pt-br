@@ -1,4 +1,5 @@
 ---
+description: Replicação para assinantes de tabela com otimização de memória
 title: Replicação para assinantes de tabela com otimização de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 11/21/2016
@@ -11,12 +12,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cf09640b63328dde0dee11b0b5f4bcd037cb1524
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7345d2ed17d8eca7bac386f4abe58893827ff00e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404962"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

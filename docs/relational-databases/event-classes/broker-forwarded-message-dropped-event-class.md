@@ -1,4 +1,5 @@
 ---
+description: classe de evento Broker:Forwarded Message Dropped
 title: Classe de evento Broker:Forwarded Message Dropped | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11ac4c7c86b2add288271d56b91f7d9ab0848476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409862"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>classe de evento Broker:Forwarded Message Dropped
 
@@ -27,7 +28,7 @@ ms.locfileid: "85715414"
   
 ## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Forwarded Message Dropped  
   
-|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Type|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|**bigint**|Número de sequência da mensagem.|52|Não|  
@@ -49,9 +50,9 @@ ms.locfileid: "85715414"
 |ObjectId|**int**|O valor de vida útil da mensagem encaminhada.|22|Não|  
 |ObjectName|**nvarchar**|O ID da mensagem encaminhada.|34|Não|  
 |OwnerName|**nvarchar**|O identificador da instância do agente de destino da mensagem.|37|Não|  
-|RoleName|**nvarchar**|A função do identificador de conversa. Um destes:<br /><br /> \- Iniciador. Este Broker iniciou a conversa.<br /><br /> \- Destino. Este Broker é o destino da conversa.|38|Não|  
+|RoleName|**nvarchar**|A função do identificador de conversa. Um destes:<br /><br /> - Iniciador. Este Broker iniciou a conversa.<br /><br /> - Destino. Este Broker é o destino da conversa.|38|Não|  
 |ServerName|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
-|Severity|**int**|Número de severidade do texto no evento.|29|Não|  
+|Severidade|**int**|Número de severidade do texto no evento.|29|Não|  
 |SPID|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |Estado|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  

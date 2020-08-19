@@ -1,4 +1,5 @@
 ---
+description: Backup desatualizado
 title: Backup desatualizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06828fc48cffdaba01befd0eb46051e3810883d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc6ed007c64cf8541a342e0181df519c181eac3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406412"
 ---
 # <a name="outdated-backup"></a>Backup desatualizado
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

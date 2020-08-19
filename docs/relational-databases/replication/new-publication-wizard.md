@@ -1,4 +1,5 @@
 ---
+description: New Publication Wizard
 title: Assistente para nova publicação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -40,18 +41,18 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 679534bfdd567a0bbe48e43188d846b99e16e860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405822"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta seção fornece informações sobre as seguintes páginas do Assistente para Nova Publicação:  
   
--   [Publicador Oracle](../../relational-databases/replication/oracle-publisher.md)  
+-   [Editor Oracle](../../relational-databases/replication/oracle-publisher.md)  
   
 -   [Senha Administrativa](../../relational-databases/replication/administrative-password.md)  
   

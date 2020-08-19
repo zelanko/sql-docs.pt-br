@@ -1,4 +1,5 @@
 ---
+description: Configurações de distribuidor
 title: Configurações de distribuidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,16 +16,16 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5fd12812dc7bafd03c542c8561182ff5ce82ac2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406402"
 ---
 # <a name="distributor-settings"></a>Configurações de distribuidor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  A caixa de diálogo **Configurações do Distribuidor** permite alterar configurações para Distribuidores que foram adicionados ao painel esquerdo no Replication Monitor.  
+   A caixa de diálogo **Configurações do Distribuidor** permite alterar configurações para Distribuidores que foram adicionados ao painel esquerdo no Replication Monitor.  
   
 ## <a name="options"></a>Opções  
  **Conectar automaticamente quando o Replication Monitor for iniciado**  
@@ -42,7 +43,7 @@ ms.locfileid: "85653320"
  **Mostre para todos os Publicadores deste Distribuidor no grupo a seguir**  
  Selecione um grupo de Publicadores na lista. O Publicador é exibido nesse grupo no painel esquerdo. Grupos fornecem uma forma de organizar Publicadores e não afetam a maneira como a replicação funciona.  
   
- **Novo grupo**  
+ **Novo Grupo**  
  Clique para criar um novo grupo de Publicadores. Um grupo de Publicadores é um modo conveniente de organizar Publicadores no Replication Monitor. Grupos não afetam a replicação de dados ou a relação entre servidores em uma topologia de replicação.  
   
 ## <a name="see-also"></a>Consulte Também  
