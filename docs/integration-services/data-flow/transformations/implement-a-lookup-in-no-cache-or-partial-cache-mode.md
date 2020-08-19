@@ -1,4 +1,5 @@
 ---
+description: Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
 title: Implementar uma pesquisa no modo Sem cache ou Cache parcial | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a91460e1e357bb1fa0893de5f43ceab1e342ab39
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430668"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
 
@@ -64,11 +65,11 @@ ms.locfileid: "86919255"
   
     -   Clique em **Use os resultados de uma consulta SQL**e crie uma consulta na janela **Comando SQL** .  
   
-         -ou-  
+         - ou -  
   
          Clique em **Criar Consulta** para criar uma consulta usando as ferramentas gráficas que o **Construtor de Consultas** fornece.  
   
-         -ou-  
+         - ou -  
   
          Clique em **Procurar** para importar uma instrução SQL de um arquivo.  
   

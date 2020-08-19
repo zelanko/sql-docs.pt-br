@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKALLOC (Transact-SQL)
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459946"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 
@@ -116,7 +117,7 @@ DBCC CHECKALLOC usa um instantâneo de banco de dados interno para fornecer a co
 ## <a name="understanding-dbcc-error-messages"></a>Compreendendo mensagens de erro DBCC  
 Depois que o comando DBCC CHECKALLOC é encerrado, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indicará que o comando foi finalizado, um valor de estado e a duração da execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |---|---|  
 |0|O número do erro 8930 foi gerado. Isso indica um dano de metadados que provocou a finalização do comando DBCC.|  
 |1|O erro número 8967 foi gerado. Ocorreu um erro interno de DBCC.|  
@@ -136,7 +137,7 @@ Um reparo pode ser executado em uma transação de usuário. Isso permite que al
 ## <a name="result-sets"></a>Conjuntos de resultados  
 As tabelas a seguir descrevem as informações retornadas por DBCC CHECKALLOC.
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |---|---|  
 |FirstIAM|Somente para uso interno.|  
 |Root|Somente para uso interno.|  
@@ -146,14 +147,14 @@ As tabelas a seguir descrevem as informações retornadas por DBCC CHECKALLOC.
   
 DBCC CHECKALLOC também relata um resumo de alocação para cada índice e partição em cada arquivo. Esse resumo descreve a distribuição dos dados.
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |---|---|  
 |Reserved pages|As páginas alocadas para o índice e as páginas não usadas em extensões alocadas.|  
 |Used pages|Páginas alocadas e usadas pelo índice.|  
 |Partition ID|Somente para uso interno.|  
 |Alloc unit ID|Somente para uso interno.|  
 |Dados em linha|As páginas contêm dados de índice ou de heap.|  
-|Dados LOB|As páginas contêm dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **XML** e **image**.|  
+|Dados LOB|As páginas contêm dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **XML** e **image**.|  
 |Dados do estouro de linha|As páginas contêm dados de coluna do comprimento de variável que foram enviados por push para fora da linha.|  
   
 DBCC CHECKALLOC retorna o conjunto de resultados a seguir (os valores podem variar), exceto quando ESTIMATEONLY ou NO_INFOMSGS é especificado.

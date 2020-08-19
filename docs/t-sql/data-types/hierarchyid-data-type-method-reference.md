@@ -1,4 +1,5 @@
 ---
+description: referência de método do tipo de dados hierarchyid
 title: hierarchyid (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 367f467a7b4a4d497897adf1c56f8053600d0a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459955"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>referência de método do tipo de dados hierarchyid
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ Um valor do tipo de dados **hierarchyid** representa uma posição em uma hierar
 -   Extremamente compacto  
      O número médio de bits necessários para representar um nó em uma árvore com *n* nós depende da média de fanout (o número médio de filhos de um nó). Para fanouts pequenos (0-7), o tamanho é de aproximadamente 6\*logA*n* bits, em que A é o fanout médio. Um nó em uma hierarquia organizacional de 100.000 pessoas com um fanout médio de 6 níveis usa cerca de 38 bits. Isso é arredondado para 40 bits, ou 5 bytes, para armazenamento.  
 -   A comparação está na ordem de profundidade  
-     Dados dois valores de **hierarchyid** **a** r **b**, **a<b** significa que a vem antes de b em uma passagem de profundidade da árvore. Índices em tipos de dados **hierarchyid** estão na ordem de profundidade e os nós próximos uns dos outros em uma passagem de profundidade são armazenados próximos um ao outro. Por exemplo, os filhos de um registro são armazenados adjacentes àquele registro. Para obter mais informações, consulte [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
+     Dados dois valores de **hierarchyid****a** r **b**, **a<b** significa que a vem antes de b em uma passagem de profundidade da árvore. Índices em tipos de dados **hierarchyid** estão na ordem de profundidade e os nós próximos uns dos outros em uma passagem de profundidade são armazenados próximos um ao outro. Por exemplo, os filhos de um registro são armazenados adjacentes àquele registro. Para obter mais informações, consulte [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Suporte a inserções e exclusões arbitrárias  
      Usando o método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) , é sempre possível gerar um irmão à direita de qualquer nó determinado, à esquerda de qualquer nó determinado ou entre dois irmãos. A propriedade de comparação é mantida quando um número arbitrário de nós é inserido ou excluído da hierarquia. A maioria das inserções e exclusões preserva a propriedade de densidade. Porém, inserções entre dois nós produzirão valores hierarchyid com uma representação ligeiramente menos compacta.  
 -   A codificação usada no tipo **hierarchyid** está limitada a 892 bytes. Por conseguinte, os nós que têm muitos níveis em sua representação para se ajustarem a 892 bytes não podem ser representados pelo tipo **hierarchyid**.  
@@ -55,11 +56,11 @@ O tipo **hierarchyid** logicamente codifica informações sobre um único nó em
   
 -   /0.1/0.2/  
   
-Podem ser inseridos nós em qualquer local. Nós inseridos após **/1/2/** , mas antes de **/1/3/** , podem ser representados como **/1/2.5/** . Nós inseridos antes de 0 têm a representação lógica como um número negativo. Por exemplo, um nó que vem antes de **/1/1/** pode ser representado como **/1/-1/** . Nós não podem ter zeros à esquerda. Por exemplo, **/1/1.1/** é válido, mas **/1/1.01/** não é válido. Para evitar erros, insira nós usando o método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
+Podem ser inseridos nós em qualquer local. Nós inseridos após **/1/2/**, mas antes de **/1/3/**, podem ser representados como **/1/2.5/**. Nós inseridos antes de 0 têm a representação lógica como um número negativo. Por exemplo, um nó que vem antes de **/1/1/** pode ser representado como **/1/-1/**. Nós não podem ter zeros à esquerda. Por exemplo, **/1/1.1/** é válido, mas **/1/1.01/** não é válido. Para evitar erros, insira nós usando o método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
   
 ## <a name="data-type-conversion"></a>Conversão de tipo de dados
 O tipo de dados **hierarchyid** pode ser convertido em outros tipos de dados, da seguinte maneira:
--   Use o método [ToString()](../../t-sql/data-types/tostring-database-engine.md) para converter o valor de **hierarchyid** na representação lógica como um tipo de dados **nvarchar(4000)** .  
+-   Use o método [ToString()](../../t-sql/data-types/tostring-database-engine.md) para converter o valor de **hierarchyid** na representação lógica como um tipo de dados **nvarchar(4000)**.  
 -   Use [Read ()](../../t-sql/data-types/read-database-engine.md) e [Write ()](../../t-sql/data-types/write-database-engine.md) para converter **hierarchyid** em **varbinary**.  
 -   Para transmitir parâmetros de **hierarchyid** por SOAP, primeiro converta-os em cadeias de caracteres.  
   

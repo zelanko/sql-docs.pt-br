@@ -1,4 +1,5 @@
 ---
+description: Estendendo pacotes com objetos personalizados
 title: Estendendo pacotes com objetos personalizados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2c6aa25210cff5f5663c4684728caee1f01db01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3837f3fe73a3ee9d099199e959d65afd1df4e95b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430568"
 ---
 # <a name="extending-packages-with-custom-objects"></a>Estendendo pacotes com objetos personalizados
 
@@ -38,7 +39,7 @@ ms.locfileid: "86902452"
  [Compilando, implantando e depurando objetos personalizados](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
  Discute as abordagens comuns para criar, implantar e testar os diversos tipos de objetos personalizados.  
   
- [Desenvolver uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Descreve o processo de codificação de uma tarefa personalizada.  
   
  [Desenvolver um gerenciador de conexões personalizado](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
@@ -58,10 +59,10 @@ ms.locfileid: "86902452"
  Lista os códigos de erro predefinidos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com seus nomes simbólicos e descrições.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Estender pacotes com scripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estendendo pacotes com scripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Discute como estender o fluxo de controle usando a tarefa Script ou estender o fluxo de dados usando o componente Script.  
   
- [Compilar Pacotes Programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Compilando pacotes programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Descreve como criar, configurar, executar, carregar, salvar e gerenciar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programaticamente.  
   
 ## <a name="see-also"></a>Consulte Também  
