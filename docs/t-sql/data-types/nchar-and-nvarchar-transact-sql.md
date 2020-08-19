@@ -1,4 +1,5 @@
 ---
+description: nchar e nvarchar (Transact-SQL)
 title: nchar e nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2019
@@ -16,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 30a696079d07f0b4dc6c76ee78a712a553b10ef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445935"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ Se você usar **nchar** ou **nvarchar**, recomendamos que:
 - Use **nvarchar** quando os tamanhos das entradas de dados de coluna variarem consideravelmente.  
 - Use **nvarchar(max)** quando os tamanhos das entradas de dados de coluna variarem consideravelmente e o tamanho da cadeia de caracteres puder exceder 4.000 pares-bytes.  
   
-**sysname** é um tipo de dados definido pelo usuário e fornecido pelo sistema que é funcionalmente equivalente a **nvarchar(128)** , com exceção de que não permite valor nulo. **sysname** é usado para referenciar nomes de objetos de banco de dados.
+**sysname** é um tipo de dados definido pelo usuário e fornecido pelo sistema que é funcionalmente equivalente a **nvarchar(128)**, com exceção de que não permite valor nulo. **sysname** é usado para referenciar nomes de objetos de banco de dados.
   
 Os objetos que usam **nchar** ou **nvarchar** recebem a ordenação padrão do banco de dados, a menos que uma ordenação específica seja atribuída com o uso da cláusula COLLATE.
   

@@ -1,4 +1,5 @@
 ---
+description: Método SetEnable (classe ServerNetworkProtocolIPAddress)
 title: Método SetEnable (ServerNetworkProtocolIPAddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86b90feb1a4e95d481746266380c178f6cb3f44b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52f19e66fcb11941dadfcaf9e1bb85e8001b0b1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446135"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>Método SetEnable (classe ServerNetworkProtocolIPAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Habilita o endereço IP.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

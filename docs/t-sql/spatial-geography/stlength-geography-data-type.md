@@ -1,4 +1,5 @@
 ---
+description: STLength (tipo de dados geography)
 title: STLength (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a2f1fa88c2e0e6243e471c88ee7c0158d28eb797
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5fe53017aa78bd4025a251611fd6f50c67d4401a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445151"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (tipo de dados geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,6 +59,6 @@ SELECT @g.STLength();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: COMMIT TRANSACTION (Transact-SQL)
 title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
@@ -29,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8ead92fb3a4f44bee96cdf12dc8bddc164fe310
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 46622a1249834fa4d768abebf8864ba1ebe5d80e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445535"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

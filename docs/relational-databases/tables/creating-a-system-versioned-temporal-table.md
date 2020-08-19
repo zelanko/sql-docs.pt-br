@@ -1,4 +1,5 @@
 ---
+description: Como criar uma tabela temporal com controle da versão do sistema
 title: Criando uma tabela temporal com controle da versão do sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 11/15/2019
@@ -11,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecc9c02dc9126364c5e20de3678bc013053085ee
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8a68b5fa8944612cd4262ef97cb16c8963398dec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446493"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle de versão do sistema
 

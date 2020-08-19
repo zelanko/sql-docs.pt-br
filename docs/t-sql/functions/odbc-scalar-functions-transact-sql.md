@@ -1,4 +1,5 @@
 ---
+description: Funções escalares ODBC (Transact-SQL)
 title: Funções escalares do ODBC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -52,12 +53,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445677"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funções escalares ODBC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ ms.locfileid: "86003822"
   
 ### <a name="string-functions"></a>Funções de Cadeia de Caracteres  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|Retorna o comprimento em bits da expressão de cadeia de caracteres.<br /><br /> Retorna o tamanho interno do tipo de dados fornecido, sem converter string_exp em cadeia de caracteres.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Retorna uma cadeia de caracteres que é o resultado da concatenação de string_exp2 com string_exp1. A cadeia de caracteres resultante é dependente de DBMS. Por exemplo, se a coluna representada por string_exp1 tivesse um valor NULL, DB2 retornaria NULL, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornaria a cadeia de caracteres non-NULL.|  
@@ -80,13 +81,13 @@ ms.locfileid: "86003822"
   
 ### <a name="numeric-function"></a>Função numérica  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Retorna numeric_exp truncado com posições integer_exp à direita da casa decimal. Se integer_exp for negativo, numeric_exp será truncado com as posições &#124;integer_exp&#124; à esquerda da vírgula decimal.|  
   
 ### <a name="time-date-and-interval-functions"></a>Funções de hora, data e intervalo  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Retorna a data atual.|  
 |CURDATE( ) (ODBC 3.0)|Retorna a data atual.|  

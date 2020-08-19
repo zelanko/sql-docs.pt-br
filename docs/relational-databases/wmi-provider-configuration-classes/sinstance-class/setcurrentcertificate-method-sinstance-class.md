@@ -1,4 +1,5 @@
 ---
+description: Método SetCurrentCertificate (classe SInstance)
 title: Método SetCurrentCertificate (SInstance)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b28c8e5091aaaa0c0387e9cfdd8723dae5ddc908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3640d05ceee5c6cbc540cf054e00f027620a5748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446479"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>Método SetCurrentCertificate (classe SInstance)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Define o certificado de segurança atual.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_reinitpullsubscription (Transact-SQL)
 title: sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9a581803d232f704dd27592a354c6331660ac03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74a3aa00a5b298639b1e643842af1d834a664d58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446838"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de todos, que marca todas as assinaturas para reinicialização.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de todos, que marca todas as assinaturas para reinicialização.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -67,7 +68,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Consulte Também  
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   
- [Reinicializar assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

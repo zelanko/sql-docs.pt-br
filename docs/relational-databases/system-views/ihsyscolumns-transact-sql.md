@@ -1,4 +1,5 @@
 ---
+description: IHsyscolumns (Transact-SQL)
 title: IHsyscolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 38522539230fd35aca058f9a26b53a3f4baa682b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 264aea54b51140d7d571a7312bf9947de7589eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446528"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,10 +34,10 @@ ms.locfileid: "85889183"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome da coluna ou do parâmetro do procedimento.|  
 |**id**|**int**|A ID de objeto da tabela à qual essa coluna pertence ou a ID do procedimento armazenado com a qual esse parâmetro está associado.|  
-|**xtype**|**tinyint**|O tipo de armazenamento físico de [tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**xtype**|**tinyint**|O tipo de armazenamento físico de [ tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|A ID do tipo de dados estendido definido pelo usuário.|  
-|**length**|**bigint**|O comprimento máximo do armazenamento físico dos [tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|O comprimento máximo do armazenamento físico dos [ tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|A ID da coluna ou do parâmetro.|  
@@ -51,10 +52,10 @@ ms.locfileid: "85889183"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|O deslocamento para a linha na qual essa coluna aparece.|  
 |**CollationID**|**int**|A ID de ordenação da coluna. NULL para colunas que não são baseadas em caracteres.|  
-|**idioma**|**int**|O identificador de idioma para a coluna.|  
+|**linguagem**|**int**|O identificador de idioma para a coluna.|  
 |**status**|**int**|O bitmap usado para descrever uma propriedade da coluna ou do parâmetro:<br /><br /> **0x08** = Column permite valores nulos.<br /><br /> **0x10** = o preenchimento ANSI estava em vigor quando colunas **varchar** ou **varbinary** foram adicionadas. Os espaços em branco à direita são preservados para os zeros **varchar** e à direita são preservados para colunas **varbinary** .<br /><br /> **0x40** = Parameter é um parâmetro de saída.<br /><br /> **0x80** = Column é uma coluna de identidade.|  
-|**type**|**int**|O tipo de armazenamento físico de [tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
-|**UserType**|**tinyint**|A ID do tipo de dados definido pelo usuário de [tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**tipo**|**int**|O tipo de armazenamento físico de [ tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**UserType**|**tinyint**|A ID do tipo de dados definido pelo usuário de [ tipos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|O nível de precisão para essa coluna.|  
 |**scale**|**int**|A escala para essa coluna.|  
@@ -65,9 +66,9 @@ ms.locfileid: "85889183"
 |**tdscollation**|**int**|O nome da ordenação da coluna quando retornado em um protocolo TDS (Tabular Data Stream).|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

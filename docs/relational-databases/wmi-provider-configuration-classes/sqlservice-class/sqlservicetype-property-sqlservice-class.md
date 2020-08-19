@@ -1,4 +1,5 @@
 ---
+description: Propriedade SqlServiceType (classe SqlService)
 title: Propriedade SqlServiceType (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6818c721d6f555ea2cf8e03aa7ed664fe10c04cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91c54b33387dec747aca2c5b9c274bb709057821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446130"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Propriedade SqlServiceType (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o tipo do serviço gerenciado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

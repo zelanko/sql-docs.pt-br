@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método GetString (VC++)
 title: Exemplo do método GetString (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1b01ef4a6cbb0b8cdc3d00d86302eababfac34a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a70c445858b24dfe8cffc44c2dea70e9d007ab9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443488"
 ---
 # <a name="getstring-method-example-vc"></a>Exemplo do método GetString (VC++)
 Este exemplo demonstra o método [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  

@@ -1,4 +1,5 @@
 ---
+description: sp_table_validation (Transact-SQL)
 title: sp_table_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446728"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table = ] 'table'`É o nome da tabela. a *tabela* é **sysname**, sem padrão.  
+`[ @table = ] 'table'` É o nome da tabela. a *tabela* é **sysname**, sem padrão.  
   
-`[ @expected_rowcount = ] expected_rowcountOUTPUT`Especifica se o número esperado de linhas na tabela deve ser retornado. *expected_rowcount* é **int**, com um padrão de NULL. Se for NULL, o número de linhas atual será retornado como um parâmetro de saída. Se um valor for fornecido, esse valor será verificado no número de linhas atual para identificar qualquer diferença.  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` Especifica se o número esperado de linhas na tabela deve ser retornado. *expected_rowcount* é **int**, com um padrão de NULL. Se for NULL, o número de linhas atual será retornado como um parâmetro de saída. Se um valor for fornecido, esse valor será verificado no número de linhas atual para identificar qualquer diferença.  
   
-`[ @expected_checksum = ] expected_checksumOUTPUT`Especifica se deve retornar a soma de verificação esperada para a tabela. *expected_checksum* é **numérico**, com um padrão de NULL. Se for NULL, a soma de verificação atual será retornada como um parâmetro de saída. Se um valor for fornecido, esse valor será verificado na soma de verificação atual para identificar qualquer diferença.  
+`[ @expected_checksum = ] expected_checksumOUTPUT` Especifica se deve retornar a soma de verificação esperada para a tabela. *expected_checksum* é **numérico**, com um padrão de NULL. Se for NULL, a soma de verificação atual será retornada como um parâmetro de saída. Se um valor for fornecido, esse valor será verificado na soma de verificação atual para identificar qualquer diferença.  
   
-`[ @rowcount_only = ] type_of_check_requested`Especifica o tipo de soma de verificação ou o número de linhas a ser executado. *type_of_check_requested* é **smallint**, com um padrão de **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Especifica o tipo de soma de verificação ou o número de linhas a ser executado. *type_of_check_requested* é **smallint**, com um padrão de **1**.  
   
  Se **0**, execute um número de linhas e uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soma de verificação compatível com 7,0.  
   
@@ -59,9 +60,9 @@ sp_table_validation [ @table = ] 'table'
   
  Se **2**, execute um número de linhas e uma soma de verificação binária.  
   
-`[ @owner = ] 'owner'`É o nome do proprietário da tabela. *Owner* é **sysname**, com um padrão de NULL.  
+`[ @owner = ] 'owner'` É o nome do proprietário da tabela. *Owner* é **sysname**, com um padrão de NULL.  
   
-`[ @full_or_fast = ] full_or_fast`É o método usado para calcular o número de linhas. *full_or_fast* é **tinyint**, com um padrão de **2**, e pode ser um desses valores.  
+`[ @full_or_fast = ] full_or_fast` É o método usado para calcular o número de linhas. *full_or_fast* é **tinyint**, com um padrão de **2**, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -69,11 +70,11 @@ sp_table_validation [ @table = ] 'table'
 |**1**|A contagem rápida de **sysindexes. Rows**. A contagem de linhas em **sysindexes** é muito mais rápida do que contar linhas na tabela real. No entanto, como **sysindexes** é atualizado lentamente, o número de linhas pode não ser preciso.|  
 |**2** (padrão)|Efetua contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, uma contagem completa (*) sempre será usada.|  
   
-`[ @shutdown_agent = ] shutdown_agent`Se o Agente de Distribuição estiver executando **sp_table_validation**, especifica se o agente de distribuição deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de replicação não será desligado. Se **1**, o erro 20578 é gerado e o agente de replicação é sinalizado para desligar. Esse parâmetro é ignorado quando **sp_table_validation** é executado diretamente por um usuário.  
+`[ @shutdown_agent = ] shutdown_agent` Se o Agente de Distribuição estiver executando **sp_table_validation**, especifica se o agente de distribuição deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de replicação não será desligado. Se **1**, o erro 20578 é gerado e o agente de replicação é sinalizado para desligar. Esse parâmetro é ignorado quando **sp_table_validation** é executado diretamente por um usuário.  
   
-`[ @table_name = ] table_name`É o nome da tabela do modo de exibição usado para mensagens de saída. *table_name* é **sysname**, com um padrão de ** \@ Table**.  
+`[ @table_name = ] table_name` É o nome da tabela do modo de exibição usado para mensagens de saída. *table_name* é **sysname**, com um padrão de ** \@ Table**.  
   
-`[ @column_list = ] 'column_list'`É a lista de colunas que devem ser usadas na função de soma de verificação. *column_list* é **nvarchar (4000)**, com um padrão de NULL. Habilita validação de artigos de mesclagem para especificar uma lista de colunas que exclui colunas computadas e colunas de carimbo de data e hora.  
+`[ @column_list = ] 'column_list'` É a lista de colunas que devem ser usadas na função de soma de verificação. *column_list* é **nvarchar (4000)**, com um padrão de NULL. Habilita validação de artigos de mesclagem para especificar uma lista de colunas que exclui colunas computadas e colunas de carimbo de data e hora.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Se executar uma validação de soma de verificação e a soma de verificação esperada for igual à soma de verificação na tabela, **sp_table_validation** retornará uma mensagem de que a tabela passou na validação da soma de verificação. Caso contrário, retornará uma mensagem de que a tabela pode estar fora de sincronização e informará a diferença entre o número de linhas esperado e o atual.  
@@ -93,10 +94,10 @@ sp_table_validation [ @table = ] 'table'
  Para executar **sp_table_validation**, você deve ter permissões SELECT na tabela que está sendo validada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [SOMA de verificação &#40;&#41;Transact-SQL](../../t-sql/functions/checksum-transact-sql.md)   
+ [SOMA de verificação &#40;&#41;Transact-SQL ](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_article_validation](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_publication_validation](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_article_validation ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_publication_validation ](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

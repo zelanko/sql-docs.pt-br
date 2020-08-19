@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-SQL)
 title: sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -19,11 +20,12 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446898"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,9 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumentos
 
-`[ @name = ] 'module_name'`É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é `nvarchar` , sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.
+`[ @name = ] 'module_name'` É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é `nvarchar` , sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.
 
-`[ @namespace = ] ' < class > '`É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessário. `<class>` é `nvarchar(20)`. As entradas válidas são `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '` É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessário. `<class>` é `nvarchar(20)`. As entradas válidas são `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Valores do código de retorno  
 
@@ -62,7 +64,7 @@ Os metadados de criptografia para parâmetros de um módulo podem ficar desatual
 
 Quando as propriedades de criptografia de uma tabela são modificadas, `sp_refresh_parameter_encryption` devem ser executadas para qualquer módulo que referencie diretamente ou indiretamente a tabela. Esse procedimento armazenado pode ser chamado nesses módulos em qualquer ordem, sem exigir que o usuário atualize primeiro o módulo interno antes de passar para seus chamadores.
 
-`sp_refresh_parameter_encryption`não afeta nenhuma permissão, propriedades estendidas ou `SET` opções associadas ao objeto. 
+`sp_refresh_parameter_encryption` não afeta nenhuma permissão, propriedades estendidas ou `SET` opções associadas ao objeto. 
 
 Para atualizar um gatilho DDL de nível de servidor, execute este procedimento armazenado a partir do contexto de qualquer banco de dados.
 

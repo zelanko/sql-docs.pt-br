@@ -1,4 +1,5 @@
 ---
+description: Propriedade Filter
 title: Propriedade de filtro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443678"
 ---
 # <a name="filter-property"></a>Propriedade Filter
 Indica um filtro para dados em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

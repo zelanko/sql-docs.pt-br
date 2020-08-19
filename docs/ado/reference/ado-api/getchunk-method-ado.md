@@ -1,4 +1,5 @@
 ---
+description: Método GetChunk (ADO)
 title: Método GetChunk (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f41cd6a590c318f3268eb5292b2086685a36848
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38e1375f0439cbc17d19c3a416bbc51cea01239b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443588"
 ---
 # <a name="getchunk-method-ado"></a>Método GetChunk (ADO)
 Retorna todos, ou uma parte, do conteúdo de um objeto de [campo](../../../ado/reference/ado-api/field-object.md) de dados binário ou de texto grande.  

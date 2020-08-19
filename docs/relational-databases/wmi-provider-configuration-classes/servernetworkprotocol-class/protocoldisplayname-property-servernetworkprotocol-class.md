@@ -1,4 +1,5 @@
 ---
+description: Propriedade ProtocolDisplayName (classe ServerNetworkProtocol)
 title: Propriedade ProtocolDisplayName (ServerNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef5bc5afbbe656e98de36f6c1d1b222de269f9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce617b04cdef28b96b2c22cafa1af5a2cbcac0a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446188"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>Propriedade ProtocolDisplayName (classe ServerNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome para exibição do protocolo de rede do servidor.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

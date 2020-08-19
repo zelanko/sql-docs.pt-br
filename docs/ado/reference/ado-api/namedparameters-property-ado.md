@@ -1,4 +1,5 @@
 ---
+description: Propriedade NamedParameters (ADO)
 title: Propriedade namedParameters (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 432a4968a301e51c1ca69e3b84ea80e0a19e32bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ff11a0f5211c0f77ccd36b58ea6b8a5699a390cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443177"
 ---
 # <a name="namedparameters-property-ado"></a>Propriedade NamedParameters (ADO)
 Indica se os nomes de parâmetro devem ser passados para o provedor.  

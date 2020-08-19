@@ -1,4 +1,5 @@
 ---
+description: dbo.syscategories (Transact-SQL)
 title: Categorias de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 92d4883df378521af717266c31a0decfaa403c5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1c4a0fd7272a859672b70742a8c79eb1ac6690a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446669"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

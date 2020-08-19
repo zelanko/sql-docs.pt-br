@@ -1,4 +1,5 @@
 ---
+description: Método MoveRecord (ADO)
 title: Método MoveRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443148"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Move a entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
@@ -34,13 +35,13 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Fonte*  
+ *Origem*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL que identifica o **registro** a ser movido. Se a *origem* for omitida ou especificar uma cadeia de caracteres vazia, o objeto representado por esse **registro** será movido. Por exemplo, se o **registro** representar um arquivo, o conteúdo do arquivo será movido para o local especificado pelo *destino*.  
   
  *Destino*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL especificando o local onde a *fonte* será movida.  
   
- *Usu*  
+ *UserName*  
  Opcional. Um valor de **cadeia de caracteres** que contém a ID de usuário que, se necessário, autoriza o acesso ao *destino*.  
   
  *Senha*  
@@ -52,7 +53,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Async*  
  Opcional. Um valor **booliano** que, quando **true**, especifica que essa operação deve ser assíncrona.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor de **cadeia de caracteres** . Normalmente, o valor de *destino* é retornado. No entanto, o valor exato retornado é dependente do provedor.  
   
 ## <a name="remarks"></a>Comentários  

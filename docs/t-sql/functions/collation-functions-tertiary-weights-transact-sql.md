@@ -1,4 +1,5 @@
 ---
+description: Funções de ordenação – TERTIARY_WEIGHTS (Transact-SQL)
 title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445888"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>Funções de ordenação – TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de cadeia de caracteres do tipo **char**, **varchar** ou **varchar(max)** definida em uma ordenação SQL terciária. Para obter uma lista dessas ordenações, consulte Comentários.
   
 ## <a name="return-types"></a>Tipos de retorno
-`TERTIARY_WEIGHTS` retorna **varbinary** quando *non_Unicode_character_string_expression* é **char** ou **varchar** e retorna **varbinary(max)** quando *non_Unicode_character_string_expression* tem um tipo de dados **varchar(max)** .
+`TERTIARY_WEIGHTS` retorna **varbinary** quando *non_Unicode_character_string_expression* é **char** ou **varchar** e retorna **varbinary(max)** quando *non_Unicode_character_string_expression* tem um tipo de dados **varchar(max)**.
   
 ## <a name="remarks"></a>Comentários  
 `TERTIARY_WEIGHTS` retorna NULL quando uma coleção SQL terciária não define a *non_Unicode_character_string_expression*. Esta tabela mostra as ordenações SQL terciárias:
@@ -87,7 +88,7 @@ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de c
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-Use `TERTIARY_WEIGHTS` para a definição de uma coluna computada que é definida com base nos valores de uma coluna **char**, **varchar** ou **varchar(max)** . A definição de índice na coluna computada e na coluna **char**, **varchar** ou **varchar(max)** pode melhorar o desempenho quando a cláusula ORDER BY de uma consulta especifica essa coluna **char**, **varchar** ou **varchar(max)** .
+Use `TERTIARY_WEIGHTS` para a definição de uma coluna computada que é definida com base nos valores de uma coluna **char**, **varchar** ou **varchar(max)**. A definição de índice na coluna computada e na coluna **char**, **varchar** ou **varchar(max)** pode melhorar o desempenho quando a cláusula ORDER BY de uma consulta especifica essa coluna **char**, **varchar** ou **varchar(max)**.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir cria uma coluna computada em uma tabela, que aplica a função `TERTIARY_WEIGHTS` aos valores de uma coluna `char`:

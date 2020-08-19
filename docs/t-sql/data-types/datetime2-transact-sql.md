@@ -1,4 +1,5 @@
 ---
+description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445968"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -67,7 +68,7 @@ As tabelas a seguir listam os formatos de literal de cadeia de caracteres ISO 86
 |---|---|
 |AAAA-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> AAAA-MM-DDThh:mm:ss[.nnnnnnn]|Esse formato não é afetado pelas configurações de localidade da sessão SET LANGUAGE e SET DATEFORMAT. O **T**, os dois pontos (:) e o ponto final (.) são incluídos no literal de cadeia de caracteres; por exemplo, '2007-05-02T19:58:47.1234567'.|  
   
-|ODBCODBC|DESCRIÇÃO|  
+|ODBCODBC|Descrição|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.segundos fracionários]' }|Específico de API ODBC:<br /><br /> O número de dígitos à esquerda do ponto decimal, que representa os segundos fracionários, pode ser especificado de 0 até 7 (100 nanossegundos).|  
   
@@ -104,7 +105,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-Quando a conversão é de **time(n)** , o componente de hora é copiado e o componente de data é definido como '1900-01-01'. O exemplo a seguir mostra os resultados da conversão de um valor `time(7)` em um valor `datetime2`.  
+Quando a conversão é de **time(n)**, o componente de hora é copiado e o componente de data é definido como '1900-01-01'. O exemplo a seguir mostra os resultados da conversão de um valor `time(7)` em um valor `datetime2`.  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -132,7 +133,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-Quando a conversão é de **datetimeoffset(n)** , os componentes de data e hora são copiados. O fuso horário é truncado. O exemplo a seguir mostra os resultados da conversão de um valor `datetimeoffset(7)` em um valor `datetime2`.  
+Quando a conversão é de **datetimeoffset(n)**, os componentes de data e hora são copiados. O fuso horário é truncado. O exemplo a seguir mostra os resultados da conversão de um valor `datetimeoffset(7)` em um valor `datetime2`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';

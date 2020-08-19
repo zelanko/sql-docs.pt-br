@@ -1,4 +1,5 @@
 ---
+description: Método GetChildren (ADO)
 title: Método GetChildren (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7255b88c6c8ee7f6045c13ef3b7af926141a42a3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 906c20d19143f4f1e8fe0b6c1e91585893acfa5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443578"
 ---
 # <a name="getchildren-method-ado"></a>Método GetChildren (ADO)
 Retorna um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) cujas linhas representam os filhos de um [registro](../../../ado/reference/ado-api/record-object-ado.md)de coleção.  

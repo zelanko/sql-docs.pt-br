@@ -1,4 +1,5 @@
 ---
+description: sp_restoremergeidentityrange (Transact-SQL)
 title: sp_restoremergeidentityrange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3051a630fe797e6856f110348af945a681bb83ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1858ef748ebf063fe3e541542003f46861821eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446797"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com o valor padrão de **todos**. Quando especificado, somente intervalos de identidade para aquela publicação são restaurados.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com o valor padrão de **todos**. Quando especificado, somente intervalos de identidade para aquela publicação são restaurados.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um valor padrão de **todos**. Quando especificado, somente intervalos de identidade para aquele artigo são restaurados.  
+`[ @article = ] 'article'` É o nome do artigo. o *artigo* é **sysname**, com um valor padrão de **todos**. Quando especificado, somente intervalos de identidade para aquele artigo são restaurados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -54,8 +55,8 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_restoremergeidentityrange**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergearticle ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergearticle ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

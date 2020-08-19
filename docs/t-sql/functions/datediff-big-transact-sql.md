@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF_BIG (Transact-SQL)
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d79d9417dc980f2a35ced5c0fddea5d1f49b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a50a1fe5872afad4df5f7e8811c3babd139ce354
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445843"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

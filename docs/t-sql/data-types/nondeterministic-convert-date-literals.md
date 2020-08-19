@@ -1,4 +1,5 @@
 ---
+description: Conversão não determinística de cadeias de caracteres literais de data em valores de DATA
 title: Conversão não determinística de literais de data | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445864"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversão não determinística de cadeias de caracteres literais de data em valores de DATA
 
@@ -81,7 +82,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 No Japão e na China, DATEFORMAT de **amd** é usado. As partes do formato estão em uma sequência lógica da maior unidade para a menor. Assim, esse formato é bem classificado. Esse formato é considerado o formato _internacional_. É internacional porque os quatro dígitos do ano são não ambíguos e nenhum país na Terra usa o formato arcaico do **adm**.
 
-Em outros países, como Alemanha e França, DATEFORMAT é **dma**, que significa **'dd-mm-aaaa'** . O formato **dma** não é bem classificado, mas é uma sequência lógica da menor unidade para a maior.
+Em outros países, como Alemanha e França, DATEFORMAT é **dma**, que significa **'dd-mm-aaaa'**. O formato **dma** não é bem classificado, mas é uma sequência lógica da menor unidade para a maior.
 
 Os Estados Unidos e os Estados Federados da Micronésia, são os únicos países que usam **mda**, que não é classificado. A sequência mista de formato corresponde ao padrão de discurso verbal em datas faladas.
 

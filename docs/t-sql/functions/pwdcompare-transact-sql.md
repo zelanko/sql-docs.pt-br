@@ -1,4 +1,5 @@
 ---
+description: PWDCOMPARE (Transact-SQL)
 title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445604"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +47,10 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>Argumentos
  **'** *clear_text_password* **'**  
- É a senha não criptografada. *clear_text_password* é **sysname** (**nvarchar(128)** ).  
+ É a senha não criptografada. *clear_text_password* é **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- É o hash de criptografia de uma senha. *password_hash* é **varbinary(128)** .  
+ É o hash de criptografia de uma senha. *password_hash* é **varbinary(128)**.  
   
  *version*  
  Parâmetro obsoleto que poderá ser definido como 1 se *password_hash* representar um valor de um logon anterior a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] que foi migrado para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, mas nunca convertido no sistema [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. *version* é **int**.  

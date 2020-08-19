@@ -1,4 +1,5 @@
 ---
+description: STGeometryN (tipo de dados geography)
 title: STGeometryN (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1deed4d716bbee62dac425a9d71780aec445602e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445238"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +60,6 @@ SELECT @g.STGeometryN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

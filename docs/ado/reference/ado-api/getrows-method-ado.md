@@ -1,4 +1,5 @@
 ---
+description: Método GetRows (ADO)
 title: Método GetRows (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443558"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
 Recupera vários registros de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) em uma matriz.  
@@ -40,7 +41,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Linhas*  
  Opcional. Um valor [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) que indica o número de registros a serem recuperados. O padrão é **adGetRowsRest**.  
   
- *Início*  
+ *Iniciar*  
  Opcional. Um valor de **cadeia de caracteres** ou uma **variante** que é avaliada como o indicador para o registro do qual a operação **GetRows** deve começar. Você também pode usar um valor [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
  *Fields*  

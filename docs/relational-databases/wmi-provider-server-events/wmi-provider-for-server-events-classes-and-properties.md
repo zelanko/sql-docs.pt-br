@@ -1,4 +1,5 @@
 ---
+description: Provedor WMI para classes e propriedades de eventos de servidor
 title: Provedor WMI para classes e propriedades de eventos de servidor
 ms.custom: ''
 ms.date: 03/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 000aafb6c7fa7d0c78c0fa5a5596727b8736caad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f57bfbda8864ef04d79d09ea2483fbf940de255a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446108"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Provedor WMI para classes e propriedades de eventos de servidor
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

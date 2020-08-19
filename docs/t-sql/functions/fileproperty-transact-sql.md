@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTY (Transact-SQL)
 title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bebbaff7f4a09732705bc7168ca034f8f99a3e2c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f05d17efce6b568d5abd2cc81f3a7954f19fb34e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445747"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,12 +48,12 @@ FILEPROPERTY ( file_name , property )
 
 ## <a name="arguments"></a>Argumentos
  *file_name*  
- É uma expressão que contém o nome do arquivo associado ao banco de dados atual para o qual retornar as informações de propriedade. *file_name* é **nchar(128)** .  
+ É uma expressão que contém o nome do arquivo associado ao banco de dados atual para o qual retornar as informações de propriedade. *file_name* é **nchar(128)**.  
   
  *property*  
  É uma expressão que contém o nome da propriedade do arquivo a ser retornada. *property* é **varchar(128)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|Valor retornado|  
+|Valor|Descrição|Valor retornado|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|O grupo de arquivos é somente leitura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = A entrada não é válida.|  
 |**IsPrimaryFile**|Arquivo é o arquivo primário.|1 = True<br /><br /> 0 = False<br /><br /> NULL = A entrada não é válida.|  

@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfoview (Transact-SQL)
 title: sysmergepartitioninfoview (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4b48506662283ab71516affa7665a6b0c0af9d3c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c194b2442762f2ec9373cc730cbc4835bce45983
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446509"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,21 +33,21 @@ ms.locfileid: "85881237"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo.|  
-|**type**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **0x0A** = tabela.<br /><br /> **0x20** = somente esquema de procedimento.<br /><br /> **0x40** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **0x80** = somente esquema de função.|  
+|**tipo**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **0x0A** = tabela.<br /><br /> **0x20** = somente esquema de procedimento.<br /><br /> **0x40** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **0x80** = somente esquema de função.|  
 |**objid**|**int**|O identificador do objeto publicado.|  
 |**sync_objid**|**int**|A ID de objeto da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não é uma exibição; Use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
-|**ndescrição**|**nvarchar (255)**|A descrição breve do artigo.|  
+|**descrição**|**nvarchar(255)**|A descrição breve do artigo.|  
 |**pre_creation_command**|**tinyint**|A ação padrão a ser tomada quando o artigo é criado no banco de dados de assinatura:<br /><br /> **0** = None-se a tabela já existir no Assinante, nenhuma ação será executada.<br /><br /> **1** = descartar a tabela antes de recriá-la.<br /><br /> **2** = Delete-emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.<br /><br /> **3** = truncar-igual a 2, mas exclui páginas em vez de linhas. Porém, não exige uma cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|A ID da publicação à qual o artigo atual pertence.|  
 |**apelido**|**int**|O mapeamento de apelido para identificação do artigo.|  
 |**column_tracking**|**int**|Indica se o controle de coluna é implementado para o artigo.|  
 |**status**|**tinyint**|Indica o status do artigo, que pode ser um dos seguintes:<br /><br /> **1** = não sincronizado – o script de processamento inicial para publicar a tabela será executado na próxima vez que o agente de instantâneo for executado.<br /><br /> **2** = ativo-o script de processamento inicial para publicar a tabela foi executado.|  
 |**conflict_table**|**sysname**|O nome da tabela local que contém os registros conflitantes para o artigo atual. Essa tabela é somente informativa e seu conteúdo pode ser modificado ou excluído por rotinas de resolução de conflitos personalizadas ou diretamente pelo administrador.|  
-|**creation_script**|**nvarchar (255)**|O script de criação para este artigo.|  
-|**conflict_script**|**nvarchar (255)**|O script de conflito para este artigo.|  
-|**article_resolver**|**nvarchar (255)**|O resolvedor de conflito para esse artigo.|  
+|**creation_script**|**nvarchar(255)**|O script de criação para este artigo.|  
+|**conflict_script**|**nvarchar(255)**|O script de conflito para este artigo.|  
+|**article_resolver**|**nvarchar(255)**|O resolvedor de conflito para esse artigo.|  
 |**ins_conflict_proc**|**sysname**|O procedimento usado para gravar informações de conflito na tabela de conflitos.|  
 |**insert_proc**|**sysname**|O procedimento usado para inserir linhas durante a sincronização.|  
 |**update_proc**|**sysname**|O procedimento usado para atualizar linhas durante a sincronização.|  
@@ -64,7 +65,7 @@ ms.locfileid: "85881237"
 |**excluded_col_count**|**int**|O número de colunas excluídas do artigo.|  
 |**Columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary(128)**|O bitmap que descreve as colunas excluídas do artigo.|  
-|**resolver_info**|**nvarchar (255)**|O armazenamento de informações adicionais requeridas por resolvedores de conflitos personalizados.|  
+|**resolver_info**|**nvarchar(255)**|O armazenamento de informações adicionais requeridas por resolvedores de conflitos personalizados.|  
 |**view_sel_proc**|**nvarchar (290)**|O nome de um procedimento armazenado que o Agente de Mesclagem usa para fazer a população inicial de um artigo em uma publicação filtrada dinamicamente e para enumerar linhas alteradas em qualquer publicação filtrada.|  
 |**gen_cur**|**bigint**|Gera número de alterações locais para a tabela base de um artigo.|  
 |**vertical_partition**|**int**|Especifica se a filtragem de coluna está habilitada em um artigo de tabela. **0** indica que não há nenhuma filtragem vertical e publica todas as colunas.|  
@@ -108,9 +109,9 @@ ms.locfileid: "85881237"
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergepartition](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergepartition ](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergepartition ](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   
   

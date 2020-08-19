@@ -1,4 +1,5 @@
 ---
+description: Método SetStringValue (classe ClientNetworkProtocolProperty)
 title: Método SetStringValue (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60392a04607e2bc2c5c4b06edd940409d58af1a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81424c3ca4819c04dd70483fcaa691278a6e10da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446258"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Método SetStringValue (classe ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Define o valor da cadeia de caracteres da propriedade atual referenciado pelo valor [PropertyIdx Property (classe ClientNetworkProtocolProperty) (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -51,6 +52,6 @@ object.SetStringValue(StrValue)
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

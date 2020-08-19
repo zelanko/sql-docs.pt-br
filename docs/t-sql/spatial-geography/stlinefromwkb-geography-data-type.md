@@ -1,4 +1,5 @@
 ---
+description: STLineFromWKB (tipo de dados geography)
 title: STLineFromWKB (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a11b2e6c50e452d56001591d297922f6e2a65ca0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e90b8b95cfeee90bc6e582dc5a587d49ca313d40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445196"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_linestring*  
- É a representação WKB da instância de **geography de LineString** que você deseja retornar. *WKB_linestring* é uma expressão **varbinary(max)** .  
+ É a representação WKB da instância de **geography de LineString** que você deseja retornar. *WKB_linestring* é uma expressão **varbinary(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geography LineString** que você deseja retornar.  
@@ -48,7 +49,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
  Tipo do OGC: **LineString**  
   

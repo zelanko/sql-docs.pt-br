@@ -1,4 +1,5 @@
 ---
+description: sp_register_custom_scripting (Transact-SQL)
 title: sp_register_custom_scripting (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446853"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,25 +41,25 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @type = ] 'type'`É o tipo de procedimento armazenado personalizado ou script que está sendo registrado. o *tipo* é **varchar (16)**, sem padrão, e pode ser um dos valores a seguir.  
+`[ @type = ] 'type'` É o tipo de procedimento armazenado personalizado ou script que está sendo registrado. o *tipo* é **varchar (16)**, sem padrão, e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**inserido**|Procedimento armazenado personalizado registrado é executado quando uma instrução INSERT é replicada.|  
+|**insert**|Procedimento armazenado personalizado registrado é executado quando uma instrução INSERT é replicada.|  
 |**update**|Procedimento armazenado personalizado registrado é executado quando uma instrução UPDATE é replicada.|  
 |**delete**|Procedimento armazenado personalizado registrado é executado quando uma instrução DELETE é replicada.|  
 |**custom_script**|O script é executado ao término do gatilho DDL (Data Definition Language).|  
   
-`[ @value = ] 'value'`Nome de um procedimento armazenado ou nome e caminho totalmente qualificado para o [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script que está sendo registrado. o *valor* é **nvarchar (1024)**, sem padrão.  
+`[ @value = ] 'value'` Nome de um procedimento armazenado ou nome e caminho totalmente qualificado para o [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script que está sendo registrado. o *valor* é **nvarchar (1024)**, sem padrão.  
   
 > [!NOTE]  
 >  A especificação de NULL para o parâmetro *Value*cancelará o registro de um script previamente registrado, que é o mesmo que executar [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Quando o valor do *tipo* é **custom_script**, o nome e o caminho completo de um [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script são esperados. Caso contrário, o *valor* deve ser o nome de um procedimento armazenado registrado.  
   
-`[ @publication = ] 'publication'`Nome da publicação para a qual o procedimento armazenado personalizado ou o script está sendo registrado. a *publicação* é **sysname**, com um padrão de **NULL**.  
+`[ @publication = ] 'publication'` Nome da publicação para a qual o procedimento armazenado personalizado ou o script está sendo registrado. a *publicação* é **sysname**, com um padrão de **NULL**.  
   
-`[ @article = ] 'article'`Nome do artigo para o qual o procedimento armazenado personalizado ou o script está sendo registrado. o *artigo* é **sysname**, com um padrão de **NULL**.  
+`[ @article = ] 'article'` Nome do artigo para o qual o procedimento armazenado personalizado ou o script está sendo registrado. o *artigo* é **sysname**, com um padrão de **NULL**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -72,6 +73,6 @@ sp_register_custom_scripting [ @type  = ] 'type'
  Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** ou a função de banco de dados fixa **db_ddladmin** podem ser executados **sp_register_custom_scripting**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_unregister_custom_scripting ](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

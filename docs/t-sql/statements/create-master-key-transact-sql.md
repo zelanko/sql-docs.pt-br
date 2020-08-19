@@ -1,4 +1,5 @@
 ---
+description: CREATE MASTER KEY (Transact-SQL)
 title: CREATE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -24,12 +25,12 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd067638bdcf9ee624fa714334ff8c8a78c0e69
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1f9a640dff75d54a4377f512b3a1e17200f48377
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444898"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 

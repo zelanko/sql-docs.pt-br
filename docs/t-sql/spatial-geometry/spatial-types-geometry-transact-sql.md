@@ -1,4 +1,5 @@
 ---
+description: Tipos espaciais – geometria (Transact-SQL)
 title: geometria (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f5a594bc69dc90931161218c3fbe938121fb4c9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4db170e5d18b1d2e13d0e6a23ecc879856d71eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445078"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>Tipos espaciais – geometria (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

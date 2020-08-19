@@ -1,4 +1,5 @@
 ---
+description: sp_msx_defect (Transact-SQL)
 title: sp_msx_defect (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5968f8ae8c44f5a20ca93b10c653c950c842cadc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8ad8a12d53113f394e2df1a70456261867471ab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446879"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @forced_defection = ] forced_defection`Especifica se a remoção deve ou não ser forçada se o SQLServerAgent mestre tiver sido permanentemente perdido devido a um banco de dados **msdb** corrompido irreversível ou nenhum backup de banco de dados **msdb** . *forced_defection*é **bit**, com um padrão de **0**, que indica que nenhuma remoção forçada deve ocorrer. Um valor de **1** força A remoção.  
+`[ @forced_defection = ] forced_defection` Especifica se a remoção deve ou não ser forçada se o SQLServerAgent mestre tiver sido permanentemente perdido devido a um banco de dados **msdb** corrompido irreversível ou nenhum backup de banco de dados **msdb** . *forced_defection*é **bit**, com um padrão de **0**, que indica que nenhuma remoção forçada deve ocorrer. Um valor de **1** força A remoção.  
   
  Depois de forçar uma remoção executando **sp_msx_defect**, um membro da função de servidor fixa **sysadmin** no SQLSERVERAGENT mestre deve executar o seguinte comando para concluir a remoção:  
   
@@ -63,7 +64,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  Para executar este procedimento armazenado, o usuário deve ser um membro da função de servidor fixa **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_msx_enlist](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_msx_enlist ](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

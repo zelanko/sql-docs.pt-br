@@ -1,4 +1,5 @@
 ---
+description: sp_update_agent_profile (Transact-SQL)
 title: sp_update_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a529df241a5d827c277f3a39110ae04697a13e17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4695c5fdf07748937fdd1380170626e21942fd11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446676"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @agent_type = ] 'agent_type'`É o tipo de agente. *agent_type* é **int**, sem padrão, e pode ser um desses valores.  
+`[ @agent_type = ] 'agent_type'` É o tipo de agente. *agent_type* é **int**, sem padrão, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -47,9 +48,9 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|Merge Agent.|  
 |**9**|Queue Reader Agent.|  
   
-`[ @agent_id = ] 'agent_id'`É a ID do agente. *agent_id* é **int**, sem padrão.  
+`[ @agent_id = ] 'agent_id'` É a ID do agente. *agent_id* é **int**, sem padrão.  
   
-`[ @profile_id = ] 'profile_id'`É a ID do perfil que o agente deve usar. *profile_id* é **int**, sem padrão. Para exibir uma lista de perfis definidos para cada agente, use [sp_help_agent_profile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Para obter mais informações sobre perfis de sistema, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+`[ @profile_id = ] 'profile_id'` É a ID do perfil que o agente deve usar. *profile_id* é **int**, sem padrão. Para exibir uma lista de perfis definidos para cada agente, use [sp_help_agent_profile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Para obter mais informações sobre perfis de sistema, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -62,10 +63,10 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
   
 ## <a name="see-also"></a>Consulte Também  
  [Perfis do agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [&#41;&#40;Transact-SQL de sp_add_agent_profile](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_change_agent_profile](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_drop_agent_profile](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_agent_profile](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_agent_profile ](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_change_agent_profile ](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_drop_agent_profile ](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_agent_profile ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

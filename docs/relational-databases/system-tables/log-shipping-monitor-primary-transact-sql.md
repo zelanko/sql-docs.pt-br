@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_primary (Transact-SQL)
 title: log_shipping_monitor_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b071535ced290b10c059f6b450895a71b0f7ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d74a594c4a8b9140f550fd02878cd4994779fe42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446558"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +50,13 @@ ms.locfileid: "85890188"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_change_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_log_shipping_primary_database ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_change_log_shipping_primary_database ](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_log_shipping_primary_database ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_refresh_log_shipping_monitor ](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_log_shipping_monitor_primary ](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_log_shipping_alert_job ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
  [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

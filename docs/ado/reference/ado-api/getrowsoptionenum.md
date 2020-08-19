@@ -1,4 +1,5 @@
 ---
+description: GetRowsOptionEnum
 title: GetRowsOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b1c38e266cc84816a4ad751112d5744edf3e3e4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 76926e0190ad8cfe1d7451d89182a365a6c59993
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443538"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Especifica quantos registros recuperar de um conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_publication_access (Transact-SQL)
 title: sp_revoke_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cb9b695000cbeb359eb6b762c8d1800651aa963f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0be8037325faba0cecb0988903677c14260b8a47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446768"
 ---
 # <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser acessada. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser acessada. a *publicação* é **sysname**, sem padrão.  
   
-`[ @login = ] 'login'`É a ID de logon. o *logon* é **sysname**, sem padrão.  
+`[ @login = ] 'login'` É a ID de logon. o *logon* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -53,8 +54,8 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_revoke_publication_access**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_grant_publication_access](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_publication_access](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grant_publication_access ](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_publication_access ](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [Proteger o Publicador](../../relational-databases/replication/security/secure-the-publisher.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

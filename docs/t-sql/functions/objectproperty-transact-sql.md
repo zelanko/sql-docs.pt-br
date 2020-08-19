@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTY (Transact-SQL)
 title: OBJECTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 762cfe49193118072bbd165556b6b35163dee15c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cae6d8b524e12a959ec373549a7be0af75aa16b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445732"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -115,7 +116,7 @@ OBJECTPROPERTY ( id , property )
 |IsTrigger|Qualquer objeto no escopo do esquema|Gatilho.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Qualquer objeto no escopo do esquema|Restrição UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabela|Tabela definida pelo usuário.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|Visualizar|Exibição.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsView|Exibir|Exibição.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|Qualquer objeto no escopo do esquema|Proprietário do objeto.<br /><br /> **Observação:** o proprietário do esquema não é necessariamente o proprietário do objeto. Por exemplo, objetos filho (aqueles em que *parent_object_id* é nonnull) sempre retornarão a mesma ID do proprietário como o pai.<br /><br /> Não nula = A ID de usuário do banco de dados do proprietário do objeto.|  
 |SchemaId|Qualquer objeto no escopo do esquema| ID do esquema ao qual o objeto pertence.| 
 |TableDeleteTrigger|Tabela|A tabela tem um gatilho DELETE.<br /><br /> >1 = ID do primeiro gatilho com o tipo especificado.|  

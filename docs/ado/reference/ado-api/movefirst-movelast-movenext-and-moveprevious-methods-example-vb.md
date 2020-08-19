@@ -1,4 +1,5 @@
 ---
+description: Exemplo dos métodos MoveFirst, MoveLast, MoveNext e MovePrevious (VB)
 title: Mover ponteiro de registro do exemplo de conjunto de registros (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4f0d0394e660bc691b4e13a2971d9d3181bbcee
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38725ffc91ff14d45c8f7d3fa1fb65825833f797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443188"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>Exemplo dos métodos MoveFirst, MoveLast, MoveNext e MovePrevious (VB)
 Este exemplo usa os métodos [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) para mover o ponteiro de registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no comando fornecido. O procedimento MoveAny é necessário para que este procedimento seja executado.  

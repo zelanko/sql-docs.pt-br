@@ -1,4 +1,5 @@
 ---
+description: Método Find (ADO)
 title: Método Find (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acd6b92e6f22f5a345421e3070e530eb148ded5f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d4c633cd1296c9433fbb7dfc185146c8b65e686b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443648"
 ---
 # <a name="find-method-ado"></a>Método Find (ADO)
 Pesquisa um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, a linha inicial e o deslocamento da linha inicial podem ser especificados. Se os critérios forem atendidos, a posição da linha atual será definida no registro encontrado; caso contrário, a posição será definida como o final (ou início) do **conjunto de registros**.  
@@ -34,7 +35,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Aos*  
+ *Critérios*  
  Um valor de **cadeia de caracteres** que contém uma instrução que especifica o nome da coluna, o operador de comparação e o valor a ser usado na pesquisa.  
   
  *SkipRows*  
@@ -43,13 +44,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  Opcional. Um valor [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) que especifica se a pesquisa deve começar na linha atual ou na próxima linha disponível na direção da pesquisa. Uma pesquisa malsucedida será interrompida no final do conjunto de **registros** se o valor for **adSearchForward**. Uma pesquisa malsucedida será interrompida no início do conjunto de **registros** se o valor for **adSearchBackward**.  
   
- *Início*  
+ *Iniciar*  
  Opcional. Um indicador de **variante** que funciona como a posição inicial da pesquisa.  
   
 ## <a name="remarks"></a>Comentários  
  Somente um nome de coluna única pode ser especificado em *critérios*. Este método não oferece suporte a pesquisas de várias colunas.  
   
- O operador de comparação em *critérios* pode ser " **>** " (maior que), " **\<** " (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).  
+ O operador de comparação em *critérios* pode ser " **>** " (maior que), "* * * \<**" (less than), "=" (equal), "> =" (maior ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).  
   
  O valor em *critérios* pode ser uma cadeia de caracteres, um número de ponto flutuante ou uma data. Os valores de cadeia de caracteres são delimitados por aspas simples ou marcas "#" (sinal numérico) (por exemplo, "State = ' WA '" ou "state = #WA #"). Os valores de data são delimitados com marcas "#" (sinal numérico) (por exemplo, "start_date > #7/22/97 #"). Esses valores podem conter horas, minutos e segundos para indicar carimbos de data/hora, mas não devem conter milissegundos ou erros ocorrerão.  
   

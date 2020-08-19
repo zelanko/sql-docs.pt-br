@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444882"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

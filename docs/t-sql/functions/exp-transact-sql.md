@@ -1,4 +1,5 @@
 ---
+description: EXP (Transact-SQL)
 title: EXP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 949a07ae18a46101ea7ae905812aa5cd2072c37a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a866a13a9abf74781e114a1fab4928a0c2cb1042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445792"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ EXP ( float_expression )
 ## <a name="remarks"></a>Comentários  
  A constante **e** (2,718281...) é a base dos logaritmos naturais.  
   
- O expoente de um número é a constante **e** elevada à potência do número. Por exemplo, EXP(1,0) = e^1,0 = 2,71828182845905 e EXP(10) = e^10 = 22026,4657948067.  
+ O expoente de um número é a constante **e** elevado à potência do número. Por exemplo, EXP(1,0) = e^1,0 = 2,71828182845905 e EXP(10) = e^10 = 22026,4657948067.  
   
  O exponencial do logaritmo natural de um número é o próprio número: EXP (LOG (*n*)) = *n*. Além disso, o logaritmo natural do exponencial de um número é o próprio número: LOG (EXP (*n*)) = *n*.  
   

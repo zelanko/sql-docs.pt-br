@@ -1,4 +1,5 @@
 ---
+description: sp_replshowcmds (Transact-SQL)
 title: sp_replshowcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beb5ba1371c3a3e8748e5a4963106d659e7dd31f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446818"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @maxtrans = ] maxtrans`É o número de transações sobre as quais retornar informações. *maxtrans* é **int**, com um padrão de **1**, que especifica o número máximo de transações com replicação pendente para o qual **sp_replshowcmds** retorna informações.  
+`[ @maxtrans = ] maxtrans` É o número de transações sobre as quais retornar informações. *maxtrans* é **int**, com um padrão de **1**, que especifica o número máximo de transações com replicação pendente para o qual **sp_replshowcmds** retorna informações.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_replshowcmds** é um procedimento de diagnóstico que retorna informações sobre o banco de dados de publicação do qual ele é executado.  
@@ -48,7 +49,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**originator_id**|**int**|ID do originador de comando, sempre **0**.|  
 |**publisher_database_id**|**int**|ID do banco de dados do Publicador, sempre **0**.|  
 |**article_id**|**int**|ID do artigo.|  
-|**type**|**int**|Tipo de comando.|  
+|**tipo**|**int**|Tipo de comando.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="remarks"></a>Comentários  
@@ -68,10 +69,10 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>Consulte Também  
  [Mensagens de erro](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [&#41;&#40;Transact-SQL de sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_repldone](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_repltrans](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_repldone ](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_replflush ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_repltrans ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

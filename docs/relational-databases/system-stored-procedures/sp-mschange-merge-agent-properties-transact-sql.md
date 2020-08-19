@@ -1,4 +1,5 @@
 ---
+description: sp_MSchange_merge_agent_properties (Transact-SQL)
 title: sp_MSchange_merge_agent_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65cb1e298293c0be44439fb732554baa2914788a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e81812af12cf7789c48d890ced2aa06a5829ad0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446908"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,19 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'`É a propriedade de publicação a ser alterada. a *Propriedade* é **sysname**, sem padrão.  
+`[ @property = ] 'property'` É a propriedade de publicação a ser alterada. a *Propriedade* é **sysname**, sem padrão.  
   
-`[ @value = ] 'value'`É o novo valor da propriedade. o *valor* é **nvarchar (524)**, com um padrão de NULL.  
+`[ @value = ] 'value'` É o novo valor da propriedade. o *valor* é **nvarchar (524)**, com um padrão de NULL.  
   
  Essa tabela descreve as propriedades do trabalho de Agente de Mesclagem que podem ser alteradas e restrições nos valores dessas propriedades.  
   
@@ -88,7 +89,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** no distribuidor podem executar **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addmergepushsubscription_agent ](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergesubscription ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

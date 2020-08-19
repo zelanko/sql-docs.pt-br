@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (tipo de dados de geografia)
 title: STLineFromText (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5a18ea2d855cd40c15eb3659a782a706139f7a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eaf35bb927fc876725a134f50b74bf73e5c48f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445149"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (tipo de dados de geografia)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *linestring_tagged_text*  
- É a representação WKT da instância de **geographyLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geographyLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyLineString** que você deseja retornar.  
@@ -48,7 +49,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
  Tipo do OGC: **LineString**  
   

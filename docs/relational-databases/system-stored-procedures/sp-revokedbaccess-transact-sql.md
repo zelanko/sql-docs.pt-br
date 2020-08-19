@@ -1,4 +1,5 @@
 ---
+description: sp_revokedbaccess (Transact-SQL)
 title: sp_revokedbaccess (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cec7eb26b749328d5bbf0f95f74a0de3b0f30a07
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cd16821bcbac3c814a7b164fa16501bca7a8f523
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446770"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901352"
   Remove um usuário de banco de dados do banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [drop User](../../t-sql/statements/drop-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [drop User](../../t-sql/statements/drop-user-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name_in_db = ] 'name'`É o nome do usuário do banco de dados a ser removido. *Name* é um **sysname** sem padrão. *nome* pode ser o nome de um logon de servidor, um logon do Windows ou um grupo do Windows e deve existir no banco de dados atual. Ao especificar um logon do Windows ou um grupo do Windows, especifique o nome pelo qual o logon ou grupo é conhecido no banco de dados.  
+`[ @name_in_db = ] 'name'` É o nome do usuário do banco de dados a ser removido. *Name* é um **sysname** sem padrão. *nome* pode ser o nome de um logon de servidor, um logon do Windows ou um grupo do Windows e deve existir no banco de dados atual. Ao especificar um logon do Windows ou um grupo do Windows, especifique o nome pelo qual o logon ou grupo é conhecido no banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -67,8 +68,8 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#41;descartar &#40;Transact-SQL do usuário](../../t-sql/statements/drop-user-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

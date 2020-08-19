@@ -1,4 +1,5 @@
 ---
+description: Exemplo da propriedade Item (VB)
 title: Exemplo da Propriedade Item (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443388"
 ---
 # <a name="item-property-example-vb"></a>Exemplo da propriedade Item (VB)
 Este exemplo demonstra como a propriedade [Item](../../../ado/reference/ado-api/item-property-ado.md) acessa os membros de uma coleção. O exemplo abre a tabela ***autores*** do banco de dados ***pubs*** com um comando com parâmetros.  

@@ -1,4 +1,5 @@
 ---
+description: Modificar relações de chave estrangeira
 title: Modificar relações de chave estrangeira | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -17,12 +18,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cfad7e7107c5391280331846e9275ef10112adb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446398"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "86007093"
      **Categoria Geral**  
      Expanda para mostrar **Verificar Dados Existentes ao Criar ou Habilitar Novamente** e **Especificações de Tabelas e Colunas**.  
   
-     **Check Existing Data on Creation or Re-Enabling**  
+     **Verificar Dados Existentes ao Criar ou Habilitar Novamente**  
      Verifique todos os dados anteriores existentes na tabela quando a restrição foi criada ou habilitada novamente, em relação à restrição.  
   
      **Categoria de Especificações de Tabelas e Colunas**  
@@ -120,7 +121,7 @@ ms.locfileid: "86007093"
      **Categoria de Especificação INSERT e UPDATE**  
      Expanda para mostrar informações pelo **Excluir Regra** e o **Atualizar Regra** para a relação.  
   
-     **Excluir Regra**  
+     **Excluir regra**  
      Especifique o que acontece se um usuário tenta excluir uma linha com dados que é envolvida em uma relação de chave estrangeira:  
   
     -   **Sem Ação** Uma mensagem de erro avisa ao usuário que a exclusão não é permitida e o DELETE será revertido.  

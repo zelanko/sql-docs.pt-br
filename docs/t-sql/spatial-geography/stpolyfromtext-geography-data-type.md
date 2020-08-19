@@ -1,4 +1,5 @@
 ---
+description: STPolyFromText (tipo de dados geography)
 title: STPolyFromText (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6fb63e1a853c96c972578a1be757dfcefd87751
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 154aff97ba24cf2dfd357a123e4075e78a534ecc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445138"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (tipo de dados geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *polygon_tagged_text*  
- É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geographyPolygon** que você deseja retornar. *polygon_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyPolygon** que você deseja retornar.  
@@ -48,7 +49,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
+ Tipo de retorno CLR: **SqlGeography**  
   
  Tipo do OGC: **Polygon**  
   

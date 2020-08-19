@@ -1,4 +1,5 @@
 ---
+description: STIsValid (tipo de dados geography)
 title: STIsValid (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4549b317f3b6948fd72e0c5c2856255b8a6bd507
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a75d380ce9eed834f24eee2d8e643f3abd5748b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445164"
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid (tipo de dados geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +60,6 @@ DECLARE @g geography
 ## <a name="see-also"></a>Consulte Também  
  [STGeometryType &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
  [MakeValid &#40;tipos de dados geography&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
- [Métodos OGC em instâncias geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

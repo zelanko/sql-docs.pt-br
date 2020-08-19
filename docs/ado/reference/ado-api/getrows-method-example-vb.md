@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método GetRows (VB)
 title: Exemplo do método GetRows (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72c6a4755b05399605828e73f69bca7b8da632eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443518"
 ---
 # <a name="getrows-method-example-vb"></a>Exemplo do método GetRows (VB)
 Este exemplo usa o método [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) para recuperar um número especificado de linhas de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O método **GetRows** retornará menos do que o número desejado de linhas em dois casos: se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) tiver sido atingido ou se **GetRows** tentar recuperar um registro que foi excluído por outro usuário. A função retornará **false** somente se ocorrer o segundo caso. A função GetRowsOK é necessária para que este procedimento seja executado.  

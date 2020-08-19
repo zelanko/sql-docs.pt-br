@@ -1,4 +1,5 @@
 ---
+description: OPENJSON (Transact-SQL)
 title: OPENJSON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2f91b160ed5fc6dbab1c9d7ec225b479dc6b82d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445658"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -64,8 +65,6 @@ Por padrão, a função com valor de tabela **OPENJSON** retorna três colunas q
 ![Sintaxe da cláusula WITH no TVF OPENJSON](../../relational-databases/json/media/openjson-shema-syntax.png "Sintaxe de OPENJSON WITH")
 
 *with_clause* contém uma lista de colunas com seus tipos para **OPENJSON** retornar. Por padrão, **OPENJSON** faz a correspondência de chaves na *jsonExpression* com os nomes de coluna na *with_clause* (nesse caso, a correspondência de chave implica a diferenciação entre maiúsculas e minúsculas). Se um nome de coluna não corresponder a um nome de chave, você poderá fornecer um *column_path* opcional, que é uma [Expressão de demarcador JSON](../../relational-databases/json/json-path-expressions-sql-server.md) que referencia uma chave dentro da *jsonExpression*. 
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 

@@ -1,4 +1,5 @@
 ---
+description: Exemplo do método Move (VBScript)
 title: Exemplo do método Move (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443218"
 ---
 # <a name="move-method-example-vbscript"></a>Exemplo do método Move (VBScript)
 Este exemplo usa o método [move](../../../ado/reference/ado-api/move-method-ado.md) para posicionar o ponteiro de registro, com base na entrada do usuário.  

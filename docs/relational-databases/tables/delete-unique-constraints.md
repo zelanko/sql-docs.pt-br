@@ -1,4 +1,5 @@
 ---
+description: Excluir restrições exclusivas
 title: Excluir restrições exclusivas | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2016
@@ -17,12 +18,12 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bcd1b8b4cd08a3bb2cb0c8700c82de8d7657779
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95234d86bc68c063d90226bb23e09533bea446ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446415"
 ---
 # <a name="delete-unique-constraints"></a>Excluir restrições exclusivas
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
