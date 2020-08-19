@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULLS (Transact-SQL)
 title: SET ANSI_NULLS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2020
@@ -25,12 +26,12 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 5a00bccbb5de02e49579bf7ada5ef13e96e57ed9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 493c92c8e49a5b341306513f7db43f5e25b9a3c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416152"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,9 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
 Quando ANSI_NULLS é definido como ON, uma instrução SELECT que usa WHERE *column_name* = **NULL** retornará zero linha, mesmo que haja valores nulos em *column_name*. Uma instrução SELECT usando WHERE *column_name* <> **NULL** retorna zero linha mesmo que haja valores não nulos em *column_name*.  
   
 Quando ANSI_NULLS for OFF, os operadores de comparação Igual a (=) e Não Igual a (<>) não seguem o padrão ISO. Uma instrução SELECT que usa WHERE *column_name* = **NULL** retorna as linhas que têm valores nulos em *column_name*. Uma instrução SELECT que usa WHERE *column_name* <> **NULL** retorna as linhas que têm valores não nulos na coluna. Além disso, uma instrução SELECT que usa WHERE *column_name* <> *XYZ_value* retorna todas as linhas que não são *XYZ_value* e que não são nulas.  

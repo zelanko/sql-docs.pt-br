@@ -1,4 +1,5 @@
 ---
+description: classe de evento Background Job Error
 title: Classe de evento Background Job Error | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,20 +13,20 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5524bd8ed316780a9b0b8babd66e2c2582fb0585
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410422"
 ---
 # <a name="background-job-error-event-class"></a>classe de evento Background Job Error
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Background Job Error** ocorre quando um trabalho em segundo plano é encerrado de maneira anormal. Essa condição pode exigir a atenção de um administrador do sistema.  
+   A classe de evento **Background Job Error** ocorre quando um trabalho em segundo plano é encerrado de maneira anormal. Essa condição pode exigir a atenção de um administrador do sistema.  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Colunas de dados da classe de evento Background Job Error  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pelo trabalho. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
@@ -38,7 +39,7 @@ ms.locfileid: "85763086"
 |**IntegerData2**|**int**|Número de sequência do trabalho.|55|Sim|  
 |**ObjectID**|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Esta coluna exibe os logons do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|64|Sim|  
-|**Severity**|**int**|Nível de severidade do erro na última tentativa (**EventSubClass** 1, apenas).|20|Sim|  
+|**Gravidade**|**int**|Nível de severidade do erro na última tentativa (**EventSubClass** 1, apenas).|20|Sim|  
 |**StartTime**|**datetime**|Hora em que o trabalho foi criado.|14|Sim|  
 |**State**|**int**|Estado do erro na última tentativa (**EventSubClass** 1, apenas).|30|Sim|  
 |**TextData**|**ntext**|Texto descritivo do valor de subclasse do evento.|1|Sim|  

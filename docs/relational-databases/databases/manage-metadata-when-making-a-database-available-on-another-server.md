@@ -1,4 +1,5 @@
 ---
+description: Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 title: Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412842"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85726454"
   
  Para obter mais informações sobre esse recurso, veja [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **OBSERVAÇÃO:** Contas proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais. Para saber a identificação da credencial de uma conta proxy, use a tabela do sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
+> **OBSERVAÇÃO:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais. Para saber a identificação da credencial de uma conta proxy, use a tabela do sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
 ##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
@@ -129,7 +130,7 @@ ms.locfileid: "85726454"
   
  Para permitir a descriptografia automática da chave mestra do banco de dados em uma instância do servidor, uma cópia dessa chave é criptografada usando a chave mestra do serviço. Esta cópia criptografada é armazenada no banco de dados e no **mestre**. Normalmente, a cópia armazenada em **mestre** é silenciosamente atualizada sempre que a chave mestra é alterada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta primeiramente descriptografar a chave mestra do banco de dados com a chave de serviço mestra da instância. Se essa descriptografia falhar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o repositório de credenciais em busca das credenciais de chave mestra que têm o mesmo GUID de família do banco de dados cuja chave mestra é necessária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de banco de dados com cada credencial compatível até que a descriptografia obtenha êxito ou não haja mais credenciais. Uma chave mestra não criptografada pela chave mestra de serviço deve ser aberta usando a instrução OPEN MASTER KEY e uma senha.  
   
- Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute a seguinte instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **=“** _senha_ **”** . Recomendamos que você habilite a descriptografia automática da chave mestra do banco de dados executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute a seguinte instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **=“** _senha_ **”** . Recomendamos que, em seguida, a descriptografia automática da chave mestra do banco de dados seja habilitada executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Para obter informações sobre como habilitar a descriptografia automática da chave mestra de um banco de dados espelho, veja [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -156,7 +157,7 @@ ms.locfileid: "85726454"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Eventos da Instrumentação de Gerenciamento do Windows (WMI)  
  O Provedor WMI para Eventos do Servidor permite usar o WMI para monitorar eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Qualquer aplicativo que dependa de eventos em nível de servidor expostos por meio do provedor WMI do qual um banco de dados dependa deve ser definido no computador da instância do servidor de destino. O provedor de eventos WMI cria notificações de eventos com um serviço de destino definido no **msdb**.  
   
-> **OBSERVAÇÃO:** Para obter mais informações, veja [Provedor WMI para conceitos de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
+> **OBSERVAÇÃO:** para obter mais informações, consulte [Provedor WMI para conceitos de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
  **Para criar um alerta do WMI usando o SQL Server Management Studio**  
   
@@ -183,7 +184,7 @@ ms.locfileid: "85726454"
  Os procedimentos armazenados estendidos executam diretamente no espaço de endereço de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e podem produzir vazamentos de memória ou outros problemas que reduzem o desempenho e a confiabilidade do servidor. Você deve pensar em armazenar procedimentos armazenados estendidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja separada da instância que contém os dados referenciados. Você também deve considerar o uso de consultas distribuídas para acessar o banco de dados.  
   
   > [!IMPORTANT]
-  > Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.  
+  > Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.   
   
  Para obter mais informações, veja [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) e [REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
@@ -193,7 +194,7 @@ ms.locfileid: "85726454"
   
  Além disso, se o componente de [separadores de palavras e lematizadores](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) ou o componente de [filtros de pesquisa de texto completo](../../relational-databases/search/configure-and-manage-filters-for-search.md) tiver versões diferentes nas instâncias de servidor original e de destino, o índice e as consultas de texto completo poderão se comportar de maneira diferente. O [dicionário de sinônimos](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) também é armazenado em arquivos específicos da instância. Você deve transferir uma cópia desses arquivos para um local equivalente na instância do servidor de destino ou recriá-los na nova instância.  
   
-> **OBSERVAÇÃO:** Quando você anexa um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que contém arquivos de catálogo de texto completo a uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , os arquivos de catálogo são anexados de seus locais anteriores junto com os outros arquivos de banco de dados, assim como ocorre no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
+> **OBSERVAÇÃO:** quando você anexa um banco de dados [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que contém arquivos de catálogo de texto completo a uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , os arquivos de catálogo são anexados de seus locais anteriores junto com os outros arquivos de banco de dados, assim como ocorre no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
   
  Para obter mais informações, consulte também:  
   
@@ -242,7 +243,7 @@ ms.locfileid: "85726454"
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Exibir informações de etapas de trabalho](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
@@ -259,7 +260,7 @@ ms.locfileid: "85726454"
   
  Para gerar um script para alguns ou todos os objetos na cópia original do banco de dados, é possível usar o Assistente para Gerar Scripts e, na caixa de diálogo **Escolher Opções de Script** , configurar a opção **Logons de Script** como **True**.  
   
-> **OBSERVAÇÃO:** Saiba mais sobre como configurar logons para um banco de dados espelhado em [Configurar contas de logon para espelhamento de banco de dados ou para Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) e [Gerenciamento de logons e trabalhos após a troca de função &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> **OBSERVAÇÃO:** para obter informações sobre como configurar logons para um banco de dados espelhado, consulte [Configurar contas de logon para espelhamento de banco de dados ou para Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) e [Gerenciamento de logons e trabalhos após a troca de função &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a><a name="permissions"></a> Permissões  
@@ -287,7 +288,7 @@ ms.locfileid: "85726454"
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>Permissões em nível de servidor para um certificado ou chave assimétrica  
  As permissões em nível de servidor não podem ser concedidas diretamente a um certificado ou chave assimétrica. Em vez disso, as permissões em nível de servidor são concedidas a um logon mapeado que é criado exclusivamente para um certificado ou chave assimétrica específica. Portanto, cada certificado ou chave assimétrica que exija permissões em nível de servidor, precisa de seu próprio *logon mapeado por certificado* ou *logon mapeado por chave assimétrica*. Para conceder permissões em nível de servidor para um certificado ou chave assimétrica, conceda as permissões a seu logon mapeado.  
   
-> **OBSERVAÇÃO:** Um logon mapeado só é usado para autorização de código assinada com o certificado ou chave assimétrica correspondente. Logons mapeados não podem ser usados para autenticação.  
+> **OBSERVAÇÃO:** um logon mapeado só é usado para autorização de código assinada com o certificado ou a chave assimétrica correspondente. Logons mapeados não podem ser usados para autenticação.  
   
  O logon mapeado e suas permissões residem no **mestre**. Se um certificado ou chave assimétrica residir em outro banco de dados que não seja o **mestre**, ele deverá ser recriado no **mestre** e mapeado para um logon. Se você mover, copiar ou restaurar o banco de dados para outra instância de servidor, será necessário recriar seu certificado ou chave assimétrica no banco de dados **mestre** da instância do servidor de destino, mapeá-lo para um logon e conceder as permissões em nível de servidor necessárias ao logon.  
   
