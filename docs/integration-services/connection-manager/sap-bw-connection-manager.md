@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de Conexões SAP BW
 title: Gerenciador de Conexões de SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c619db7e6386bb31b39b7a347f319ae45ddfacbc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425998"
 ---
 # <a name="sap-bw-connection-manager"></a>Gerenciador de Conexões SAP BW
 
@@ -72,7 +73,7 @@ ms.locfileid: "86921432"
   
     -   Clique duas vezes no gerenciador de conexões SAP BW.  
   
-         -ou-  
+         - ou -  
   
     -   Clique com o botão direito do mouse no gerenciador de conexões SAP BW e selecione **Editar**.  
   
@@ -121,7 +122,7 @@ ms.locfileid: "86921432"
 > [!NOTE]  
 >  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga** .  
   
- **Agrupar**  
+ **Grupo**  
  Se estiver se conectando a um grupo de servidores com balanceamento de carga, especifique o nome do grupo de servidores.  
   
 > [!NOTE]  
@@ -152,6 +153,6 @@ ms.locfileid: "86921432"
  Teste a conexão usando os valores que você forneceu. Depois de clicar em **Testar Conexão**, uma caixa de mensagem aparecerá e indicará se a conexão foi bem-sucedida ou falhou.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Componentes do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componentes do Microsoft Connector 1.1 para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

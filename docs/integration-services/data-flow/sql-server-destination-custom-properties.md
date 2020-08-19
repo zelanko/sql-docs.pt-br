@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas do destino SQL Server
 title: Propriedades personalizadas de destino do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28b2257dc78950815fd65682c57713486993aaf9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06ca0836b3c588e8b598ae60b47e540562f18802
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425788"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Propriedades personalizadas do destino SQL Server
 
@@ -28,17 +29,17 @@ ms.locfileid: "86917772"
   
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|AlwaysUseDefaultCodePage|Boolean|Força o uso do valor da propriedade DefaultCodePage. O valor padrão dessa propriedade é **False**.|  
-|BulkInsertCheckConstraints|Boolean|Um valor que especifica se a inserção em massa verifica restrições. O valor padrão dessa propriedade é **True**.|  
-|BulkInsertFireTriggers|Boolean|Um valor que especifica se a inserção em massa aciona gatilhos em tabelas. O valor padrão dessa propriedade é **False**.|  
+|AlwaysUseDefaultCodePage|Booliano|Força o uso do valor da propriedade DefaultCodePage. O valor padrão dessa propriedade é **False**.|  
+|BulkInsertCheckConstraints|Booliano|Um valor que especifica se a inserção em massa verifica restrições. O valor padrão dessa propriedade é **True**.|  
+|BulkInsertFireTriggers|Booliano|Um valor que especifica se a inserção em massa aciona gatilhos em tabelas. O valor padrão dessa propriedade é **False**.|  
 |BulkInsertFirstRow|Integer|Um valor que especifica a primeira linha a ser inserida. O valor padrão dessa propriedade é **-1**, que indica que nenhum valor foi atribuído|  
-|BulkInsertKeepIdentity|Boolean|Um valor que especifica se podem ser inseridos valores em colunas de identidade. O valor padrão dessa propriedade é **False**.|  
-|BulkInsertKeepNulls|Boolean|Um valor que especifica se a inserção em massa mantém valores Nulos. O valor padrão dessa propriedade é **False**.|  
+|BulkInsertKeepIdentity|Booliano|Um valor que especifica se podem ser inseridos valores em colunas de identidade. O valor padrão dessa propriedade é **False**.|  
+|BulkInsertKeepNulls|Booliano|Um valor que especifica se a inserção em massa mantém valores Nulos. O valor padrão dessa propriedade é **False**.|  
 |BulkInsertLastRow|Integer|Um valor que especifica a última linha a ser inserida. O valor padrão dessa propriedade é **-1**, que indica que nenhum valor foi atribuído.|  
 |BulkInsertMaxErrors|Integer|Um valor que especifica o número de erros que podem ocorrer antes que a inserção em massa seja interrompida. O valor padrão dessa propriedade é **-1**, que indica que nenhum valor foi atribuído.|  
 |BulkInsertOrder|String|Os nomes das colunas de classificação. Cada coluna pode ser classificada em ordem crescente ou decrescente. Se forem usadas várias colunas de classificação, os nomes de coluna serão separados por vírgulas.|  
 |BulkInsertTableName|String|A tabela ou exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados para o qual os dados são copiados.|  
-|BulkInsertTablock|Boolean|Um valor que especifica se a tabela é bloqueada durante a inserção em massa. O valor padrão dessa propriedade é **True**.|  
+|BulkInsertTablock|Booliano|Um valor que especifica se a tabela é bloqueada durante a inserção em massa. O valor padrão dessa propriedade é **True**.|  
 |DefaultCodePage|Integer|A página de código a ser usada quando informações de página de código não estão disponíveis na fonte de dados.|  
 |MaxInsertCommitSize|Integer|Um valor que especifica o número máximo de linhas a serem inseridas em um lote. Quando o valor é zero, todas as linhas são inseridas em um único lote.|  
 |Tempo limite|Integer|Um valor que especifica a duração em segundos da espera do destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até a conclusão, se não houver dados disponíveis para inserção. O valor 0 significa que não há tempo limite para o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O valor padrão dessa propriedade é 30.|  

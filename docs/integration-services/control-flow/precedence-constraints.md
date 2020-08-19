@@ -1,4 +1,5 @@
 ---
+description: Restrições de precedência
 title: Restrições de precedência | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba2b9f0e9dbf23eea54da531305553db712ad677
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2c1ffab719566875a7c9f7f6090a12aef5675f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425908"
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
 
@@ -120,7 +121,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
  Especifique o valor de restrição: **Success**, **Failure** ou **Completion**.  
   
 > [!NOTE]  
->  A linha de restrição de precedência é verde para **Sucesso**, realçado para **Falha**e azul para **Conclusão**.  
+>   A linha de restrição de precedência é verde para **Success**, realçado para **Failure**e azul para **Completion**.  
   
  **Expression**  
  Se usar as operações **Expressão**, **Expressão e Restrição**ou **Expressão ou Restrição**, digite uma expressão ou inicie o Construtor de Expressões para criar a expressão. A expressão deve ser avaliada como um booliano.  

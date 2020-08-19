@@ -1,4 +1,5 @@
 ---
+description: Contêiner de sequência
 title: Contêiner da Sequência | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 805332397fb843ea1496f1471a0b054fa53f8957
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82e34adab1dc0f732f96d5e248b98ff8fc7186c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425888"
 ---
 # <a name="sequence-container"></a>Contêiner de sequência
 

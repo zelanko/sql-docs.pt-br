@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: uso do OData Source| Microsoft Docs'
+description: 'Tutorial: Usando o OData Source'
+title: 'Tutorial: usando o OData Source| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 616a19e5c6af2c3818e3d9737e72b0f7cd7486e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425668"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usando o OData Source
 

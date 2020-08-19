@@ -1,4 +1,5 @@
 ---
+description: transformação Dimensão de Alteração Lenta
 title: Transformação Dimensão de Alteração Lenta | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71fdb19fb47f953ceb6266be38d5c3b191a30f91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d037d4f8a002a0c5636d005ec7b0be28adf3a1b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425708"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
 
@@ -68,7 +69,7 @@ ms.locfileid: "86919473"
   
  A tabela a seguir descreve as saídas de transformação e os requisitos de seus fluxos de dados subsequentes. Os requisitos descrevem o fluxo de dados que o Assistente de Dimensão da Alteração Lenta cria.  
   
-|Saída|DESCRIÇÃO|Requisitos de fluxo de dados|  
+|Saída|Descrição|Requisitos de fluxo de dados|  
 |------------|-----------------|----------------------------|  
 |**Saída de Atualizações de Atributos de Alteração**|O registro na tabela de pesquisa é atualizado. Esta saída é usada para linhas de atributos de alteração.|Uma transformação Comando OLE DB atualiza o registro usando uma instrução UPDATE.|  
 |**Saída de Atributos Fixos**|Os valores em linhas que não devem ser alterados não correspondem a valores na tabela de pesquisa. Esta saída é usada para linhas de atributos fixos.|Nenhum fluxo de dados padrão é criado. Se a transformação está configurada para continuar depois de encontrar alterações em colunas de atributo fixo, você deve criar um fluxo de dados que capture essas linhas.|  

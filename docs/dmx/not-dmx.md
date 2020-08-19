@@ -1,4 +1,5 @@
 ---
+description: NOT (DMX)
 title: NÃO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 03a8ea859160af36b9c822bf01c4197e8b4c3175
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426258"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ NOT Expression1
  *Expression1*  
  Expressão DMX válida que retorna um valor numérico.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Valor booliano que retorna FALSE se o argumento avaliar como TRUE; do contrário, FALSE.  
   
 ## <a name="remarks"></a>Comentários  
@@ -44,7 +45,7 @@ NOT Expression1
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores lógicos &#40;&#41;DMX](../dmx/operators-logical.md)   
- [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)  
+ [Operadores lógicos &#40;&#41;DMX ](../dmx/operators-logical.md)   
+ [Operadores &#40;&#41;DMX ](../dmx/operators-dmx.md)  
   
   

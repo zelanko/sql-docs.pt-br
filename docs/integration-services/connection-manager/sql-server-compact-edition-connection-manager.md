@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de Conexões do SQL Server Compact Edition
 title: Gerenciador de Conexões do SQL Server Compact Edition | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 777c360fd17082c06ff9aa4b0356ff3a95cbd332
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425938"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gerenciador de Conexões do SQL Server Compact Edition
 
@@ -100,7 +101,7 @@ ms.locfileid: "86917202"
   
  A opção Modo tem quatro valores, como descrito na tabela seguinte.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Somente Leitura**|Especifica acesso somente de leitura ao banco de dados.|  
 |**Leitura Gravação**|Especifica a permissão de leitura e gravação ao banco de dados.|  

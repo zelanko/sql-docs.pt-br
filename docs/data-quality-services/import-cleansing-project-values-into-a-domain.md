@@ -1,4 +1,5 @@
 ---
+description: Importar valores de projeto de limpeza para um domínio
 title: Importar valores de projeto de limpeza para um domínio
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06600482f843ecf014b5ec8648bc8079c871be6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426348"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
 

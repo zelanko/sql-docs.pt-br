@@ -1,4 +1,5 @@
 ---
+description: Propriedades da origem do OData
 title: Propriedades do OData Source | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe4a3c3d1375095a4766186e1b854ea038b54ac9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e6af5b248d0d6822b81c070bffc09e1f270abb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425838"
 ---
 # <a name="odata-source-properties"></a>Propriedades da origem do OData
 
@@ -26,7 +27,7 @@ Ao clicar com o botão direito do mouse em **OData Source** no fluxo de dados e 
 
 ## <a name="properties"></a>Propriedades 
 
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |-|-|  
 |CollectionName|Nome da coleção que você deseja recuperar do serviço OData. A propriedade **CollectionName** é usada quando **UseResourcePath** é falso.<br /><br /> Esta propriedade pode ser definida via expressão, o que permite que você defina o valor em runtime. No entanto, se os metadados da coleção não corresponderem aos metadados que existiam em tempo de design, um erro de validação ocorrerá, fazendo com que a execução do fluxo de dados falhe.|  
 |DefaultStringLength|Este valor especifica o comprimento padrão para as colunas de cadeia de caracteres que não têm nenhum comprimento máximo.<br /><br /> **Padrão:** 4000|  

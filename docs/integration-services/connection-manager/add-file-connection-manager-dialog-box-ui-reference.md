@@ -1,4 +1,5 @@
 ---
+description: Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos
 title: Referência de interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 226dd6c94787af8c32d17cd7bf923a860645c5ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8096ccaf1fc92710e46970744a7a4f7cbe000700
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426028"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921701"
  **Tipo de uso**  
  Especifique os tipos de arquivos a serem usados para o gerenciador de conexões de vários arquivos.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Criar arquivos**|O gerenciador de conexões criará os arquivos.|  
 |**Arquivos existentes**|O gerenciador de conexões utilizará arquivos existentes.|  

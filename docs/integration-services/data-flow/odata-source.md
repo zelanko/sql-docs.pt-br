@@ -1,4 +1,5 @@
 ---
+description: Origem do OData
 title: OData Source | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425818"
 ---
 # <a name="odata-source"></a>Origem do OData
 
@@ -60,11 +61,11 @@ Para o tipo de dados **Decimal**, a precisão e a escala são determinadas pelos
 |Linhas|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
 |10000|113 segundos|74 segundos|68 segundos|  
-|1\.000.000|1\.110 segundos|853 segundos|665 segundos|  
+|1.000.000|1.110 segundos|853 segundos|665 segundos|  
   
 ## <a name="related-topics-in-this-section"></a>Tópicos relacionados nesta seção  
   
--   [Tutorial: Uso do OData Source](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Tutorial: Usando o OData Source](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Modifique a consulta de origem do OData em runtime](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -107,7 +108,7 @@ Para o tipo de dados **Decimal**, a precisão e a escala são determinadas pelos
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Use o caminho da coleção ou do recurso = Caminho do recurso  
  **Resource path**  
- Digite um caminho de recurso. Por exemplo:  funcionários  
+ Digite um caminho de recurso. Por exemplo: Funcionários  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor de Origem OData** para selecionar as colunas externas (origem) a serem incluídas na saída e para mapeá-las para as colunas de saída.  
@@ -150,6 +151,6 @@ Para o tipo de dados **Decimal**, a precisão e a escala são determinadas pelos
  Aplique a opção de tratamento de erros às células selecionadas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciador de Conexões OData](../../integration-services/connection-manager/odata-connection-manager.md)  
+ [Gerenciador de conexões do OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

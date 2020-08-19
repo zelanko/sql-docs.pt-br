@@ -1,4 +1,5 @@
 ---
+description: Script de log suplementar Oracle
 title: Script de log suplementar Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec1835467ed0fb3ac23d570d26d8416cd83521b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425988"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de log suplementar Oracle
 
@@ -37,7 +38,7 @@ ms.locfileid: "86901122"
  **Salvar como**  
  Salva o script em um arquivo de texto. Isto é usado se um administrador de banco de dados Oracle (DBA) precisar examinar e executar o script suplementar de registro em log. O programa deixa salvar o script em um arquivo de texto que você pode enviar posteriormente para o DBA da Oracle por email ou por outros meios para ser executa posteriormente (usando o utilitário SQL*Plus Oracle ou outra ferramenta para executar scripts em um banco de dados Oracle).  
   
- **Copy**  
+ **Cópia**  
  Copiar o script para a área de transferência. Quando você estiver pronto, poderá colar o script em qualquer local necessário no caso de um administrador de banco de dados Oracle (DBA) precisa examinar e executar o script suplementar de registro em log.  
   
 ## <a name="see-also"></a>Consulte Também  

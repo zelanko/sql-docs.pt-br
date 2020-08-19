@@ -1,4 +1,5 @@
 ---
+description: Origem XML
 title: Origem XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 310381f04bc48eeb3d4732ea1e9b0d7fd99aed43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425608"
 ---
 # <a name="xml-source"></a>Origem XML
 
@@ -84,7 +85,7 @@ ms.locfileid: "86920292"
   
 -   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriedades personalizadas de origem XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
+-   [Propriedades personalizadas da origem XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, clique em um dos tópicos a seguir:  
   

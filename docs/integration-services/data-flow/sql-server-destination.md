@@ -1,4 +1,5 @@
 ---
+description: destino do SQL Server
 title: Destino do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425798"
 ---
 # <a name="sql-server-destination"></a>destino do SQL Server
 
@@ -68,7 +69,7 @@ ms.locfileid: "86917760"
   
  Para obter mais informações sobre as opções de carregamento em massa, consulte [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-#### <a name="performance-improvements"></a>Melhorias no desempenho  
+#### <a name="performance-improvements"></a>Melhorias de desempenho  
  Para melhorar o desempenho de uma inserção de massa e o acesso aos dados de tabela durante a operação de inserção em massa, você deve alterar as opções padrão conforme o seguinte:  
   
 -   Não verificar restrições na tabela de destino ou exibir durante a operação de importação em massa.  

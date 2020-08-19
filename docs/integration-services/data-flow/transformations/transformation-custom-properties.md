@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas da transformação
 title: Propriedades personalizadas de transformação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -41,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425688"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
 

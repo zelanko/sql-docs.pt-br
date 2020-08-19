@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Gravando instruções Transact-SQL'
 title: 'Tutorial: Escrevendo instruções Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/03/2016
@@ -14,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae6f97bd7aeea2bb587f5c572204d76f7167aafa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426468"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Gravando instruções Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,13 +36,13 @@ Este tutorial lhe mostrará como criar um banco de dados, criar uma tabela no ba
   
 Este tutorial divide-se em três lições:  
   
-[Lição 1: criando Objetos de Banco de Dados](../t-sql/lesson-1-creating-database-objects.md)  
+[Lição 1: Criando objetos de banco de dados](../t-sql/lesson-1-creating-database-objects.md)  
 Nesta lição, você irá criar um banco de dados; criar uma tabela no banco de dados; inserir dados em uma tabela; atualizar e ler dados.  
   
-[Lição 2: configurando permissões em objetos de banco de dados](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[Lição 2: Configurando permissões em objetos de banco de dados](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 Nesta lição, você criará um logon e um usuário. Você também criará uma exibição e um procedimento armazenado e, então, concederá a permissão de usuário ao procedimento armazenado.  
   
-[Lição 3: excluindo objetos de banco de dados](../t-sql/lesson-3-deleting-database-objects.md)  
+[Lição 3: Excluindo objetos de banco de dados](../t-sql/lesson-3-deleting-database-objects.md)  
 Nesta lição, você removerá o acesso aos dados; excluirá dados de uma tabela; deletará a tabela e, por fim, excluirá o banco de dados.  
   
 ## <a name="requirements"></a>Requisitos  

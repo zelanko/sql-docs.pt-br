@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT (Transact-SQL)
 title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426778"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ AS constant_expression [ ; ]
  O nome do padrão. Os nomes padrão devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do proprietário do padrão é opcional.  
   
 *constant_expression*  
-Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Você pode usar qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. As funções definidas pelo usuário não podem ser usadas. Coloque as constantes de caractere e de data entre aspas simples ( **'** ); as constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
+Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Você pode usar qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. As funções definidas pelo usuário não podem ser usadas. Coloque as constantes de caractere e de data entre aspas simples (**'**); as constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
   
 ## <a name="remarks"></a>Comentários  
  Só é possível criar um nome padrão no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando você criar um padrão, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
@@ -81,8 +82,8 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que 
   
 |Definição da coluna|Nenhuma entrada, nenhum padrão|Nenhuma entrada, padrão|Insere NULL, nenhum padrão|Insere NULL, padrão|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULO|padrão|NULO|NULO|  
-|**NOT NULL**|Erro|padrão|erro|erro|  
+|**NULL**|NULO|default|NULO|NULO|  
+|**NOT NULL**|Erro|default|erro|error|  
   
  Para renomear um padrão, use **sp_rename**. Para obter um relatório sobre um padrão, use **sp_help**.  
   

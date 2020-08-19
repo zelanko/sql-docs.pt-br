@@ -1,4 +1,5 @@
 ---
+description: Tarefa Script
 title: Tarefa Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ff96f3fd227507d57051cec69f5704b7b64749
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425878"
 ---
 # <a name="script-task"></a>Tarefa Script
 
@@ -130,13 +131,13 @@ ms.locfileid: "86921150"
  Caso altere o nome do método no projeto do VSTA, será preciso alterar o valor da propriedade **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Digite uma lista, separada por vírgulas, de variáveis somente leitura disponíveis para o script ou clique no botão de reticências ( **...** ) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
+ Digite uma lista, separada por vírgulas, de variáveis somente leitura disponíveis para o script ou clique no botão de reticências (**...**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
 > [!NOTE]  
 >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  
   
  **ReadWriteVariables**  
- Digite uma lista, separada por vírgulas, de variáveis de leitura/gravação disponíveis para o script ou clique no botão de reticências ( **…** ) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
+ Digite uma lista, separada por vírgulas, de variáveis de leitura/gravação disponíveis para o script ou clique no botão de reticências (**…**) e selecione as variáveis na caixa de diálogo **Selecionar variáveis**.  
   
 > [!NOTE]  
 >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  

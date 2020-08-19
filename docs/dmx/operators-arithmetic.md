@@ -1,4 +1,5 @@
 ---
+description: Operadores aritméticos (DMX)
 title: Operadores aritméticos (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c01879c7b99b1cc9c184513c1e95ec174d8f39d7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 77b9f300859b6ce1250ed9d36a33a88a3dd12fe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426188"
 ---
 # <a name="operators---arithmetic"></a>Operadores – aritméticos
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "86971591"
  [&#40;as convenções de sintaxe de&#41; DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [As extensões de mineração de dados &#40;elementos de sintaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Expressões &#40;DMX&#41;](../dmx/expressions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
- [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
+ [Operadores &#40;&#41;DMX ](../dmx/operators-dmx.md)   
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

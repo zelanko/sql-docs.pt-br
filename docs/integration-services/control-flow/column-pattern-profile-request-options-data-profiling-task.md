@@ -1,4 +1,5 @@
 ---
+description: Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
 title: Opções da solicitação de Perfil de Padrão de Coluna (tarefa Criação de Perfil de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0119d52241741d318f4fd6aba17467144d3e9fb0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425968"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
 

@@ -1,4 +1,5 @@
 ---
+description: Nome de ordenação do Windows (Transact-SQL)
 title: Nome de ordenação do Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426518"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de ordenação do Windows (Transact-SQL)
 
@@ -74,12 +75,12 @@ A omissão dessa opção especifica que não diferencia caracteres kana, **KS** 
 A omissão dessa opção especifica que não diferencia a largura, **WS** especifica que faz distinção de caracteres de largura.
 
 *VariationSelectorSensitivity*  
-- **Aplica-se a:** começando com [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Aplica-se ao**: A partir do [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - A omissão dessa opção especifica que não diferencia seletor de variação, **VSS** especifica que diferencia seletor de variação.
 
 **UTF8**  
-- **Aplica-se a:** começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Aplica-se ao**: A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Especifica a codificação UTF-8 a ser usada para tipos de dados qualificados. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 

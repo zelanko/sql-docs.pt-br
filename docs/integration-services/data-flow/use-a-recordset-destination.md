@@ -1,4 +1,5 @@
 ---
+description: Usar um destino do conjunto de registros
 title: Usar um destino do conjunto de registros | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425598"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
 
@@ -157,7 +158,7 @@ ms.locfileid: "86916636"
   
     5.  Em **MessageSourceType**, selecione **Entrada Direta**.  
   
-5.  Na página **Expressões** do **Editor da Tarefa Enviar Email**, clique no botão de reticências ( **...** ) para abrir o **Editor de Expressões de Propriedade**.  
+5.  Na página **Expressões** do **Editor da Tarefa Enviar Email**, clique no botão de reticências (**...**) para abrir o **Editor de Expressões de Propriedade**.  
   
 6.  No **Editor de Expressões de Propriedade**, insira as seguintes informações:  
   
