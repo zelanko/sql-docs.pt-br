@@ -1,4 +1,5 @@
 ---
+description: Propriedade Name (classe SecurityCertificate)
 title: Propriedade Name (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 423b505e282a67fbba6ff39c0efdd84fc5988908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ecf025247ad57e9bcf5f9f39393f5b602629704e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488460"
 ---
 # <a name="name-property-securitycertificate-class"></a>Propriedade Name (classe SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome do certificado de segurança.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

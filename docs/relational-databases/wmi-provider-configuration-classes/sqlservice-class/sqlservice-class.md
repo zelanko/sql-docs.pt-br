@@ -1,4 +1,5 @@
 ---
+description: Classe SqlService
 title: Classe SqlService
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5d58acb2ceaf113da5701915e644d33fd5311b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd3b6052d45cdfa8378be561ec3663b7a97fab4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488342"
 ---
 # <a name="sqlservice-class"></a>Classe SqlService
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

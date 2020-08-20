@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (conversão) (AccessToSQL)
 title: Configurações do projeto (conversão) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 49df8709518a9654ca5c286c4381b274546007cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488258"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Configurações do projeto (conversão) (AccessToSQL)
 As configurações do projeto de conversão permitem que você configure como os objetos são convertidos de objetos de banco de dados do Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos do banco de dados SQL do Azure.  

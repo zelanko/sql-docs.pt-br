@@ -1,4 +1,5 @@
 ---
+description: Método SetEnable (classe ServerNetworkProtocol)
 title: Método SetEnable (ServerNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b1e6d30aebbaad4981d216e99383ff1d136203d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 34ddb0d6220decf65a9a94f8313c3227bca917bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488414"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>Método SetEnable (classe ServerNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Habilita o protocolo de rede do servidor.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

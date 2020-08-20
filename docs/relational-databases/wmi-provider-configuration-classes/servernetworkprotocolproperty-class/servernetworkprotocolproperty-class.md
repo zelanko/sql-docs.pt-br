@@ -1,4 +1,5 @@
 ---
+description: Classe ServerNetworkProtocolProperty
 title: Classe ServerNetworkProtocolProperty
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e548826432fb19263c7a54cb84109cf4731f9eb7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a9185e085dd3fe871fcf81e152f5704ed94fb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488352"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>Classe ServerNetworkProtocolProperty
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

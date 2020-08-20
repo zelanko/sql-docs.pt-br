@@ -1,4 +1,5 @@
 ---
+description: Assistente para localizar bancos de dados (selecionar arquivos) (AccessToSQL)
 title: Assistente para localizar bancos de dados (selecionar arquivos) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2b1aeed74dc475d3e14130ace1772ce5f604d63b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488319"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistente para localizar bancos de dados (selecionar arquivos) (AccessToSQL)
 A página Selecionar arquivos do assistente para localizar bancos de dados lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo a ser adicionado ao SSMA, selecione a linha que contém o nome do arquivo. Quando terminar de selecionar arquivos, clique em **Avançar** para exibir a página verificar seleção.  
@@ -47,7 +48,7 @@ O tamanho do banco de dados, em bytes.
 **Criado**  
 A data e a hora em que o banco de dados foi criado.  
   
-**Alteração**  
+**Modificado**  
 A data e a hora da última atualização do banco de dados.  
   
 ## <a name="see-also"></a>Consulte Também  

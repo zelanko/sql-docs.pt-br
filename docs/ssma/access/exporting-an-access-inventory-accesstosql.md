@@ -1,4 +1,5 @@
 ---
+description: Exportando um inventário de acesso (AccessToSQL)
 title: Exportando um inventário de acesso (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488329"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportando um inventário de acesso (AccessToSQL)
 Se você tiver vários bancos de dados do Access e não tiver certeza sobre quais deles serão migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poderá exportar um inventário de todos os bancos de dados do Access em um projeto do. Em seguida, você pode examinar e consultar os metadados de inventário para determinar quais bancos de dados e objetos nesses bancos de dados migram. Esse inventário permite que você encontre rapidamente respostas para perguntas, como as seguintes:  
@@ -90,7 +91,7 @@ Para obter mais informações sobre como criar projetos, consulte [criando e ger
   
     Você pode usar os botões **selecionar tudo** e **desmarcar todos** na parte superior da lista para selecionar ou limpar todos os bancos de dados. Você também pode manter a tecla CTRL pressionada para selecionar várias linhas ou manter a tecla SHIFT pressionada para selecionar um intervalo de linhas.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página verificar, clique em **concluir**.  
   

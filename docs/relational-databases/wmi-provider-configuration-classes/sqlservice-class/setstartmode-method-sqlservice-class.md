@@ -1,4 +1,5 @@
 ---
+description: Método SetStartMode (classe SqlService)
 title: Método setstart (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 15cfa1eddcd9a32b51984d3833c288fc006d395b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b60886ac53fc31a2c0a0da469ace5adfdb1b1d74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488339"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>Método SetStartMode (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Modifica o modo de início da instância do serviço.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
