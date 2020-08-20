@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_articles (Transact-SQL)
 title: MSsubscription_articles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e44a88869e4a064896e15a1040e90d6ff66e9da3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25fea9fb4f556c31b4986ae4ea113a95f6d48242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485464"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889331"
 |**cft_table**|**sysname**|O nome da tabela de conflito para este artigo, para tipo de replicação de atualização enfileirada.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
 title: Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 49e339520d7b60a1035081f8840aed8fe17b7279
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa0d5c4164af7f6cc6e0c62987a7fab3d5ed3405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484125"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
 
@@ -64,7 +65,7 @@ Para se conectar a uma fonte de dados usada com frequência, consulte uma das p�
 -   [Conectar-se a arquivos simples (arquivos de texto)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectar-se ao Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectar-se ao Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Conectar-se ao ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Conecte-se ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectar-se ao Armazenamento de Blobs do Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [Conectar-se ao PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectar-se ao MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)

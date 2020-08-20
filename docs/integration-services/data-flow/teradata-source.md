@@ -1,4 +1,5 @@
 ---
+description: Conectar-se à origem do Teradata
 title: Conectar-se à origem do Teradata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16c534788803c2c29fc36817fb63e112c8c84b1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484470"
 ---
 # <a name="connect-to-the-teradata-source"></a>Conectar-se à origem do Teradata
 
@@ -45,14 +46,14 @@ As propriedades personalizadas da origem do Teradata são listadas na tabela a s
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar o banco de dados. Os valores possíveis são *Nome da Tabela* e *Comando SQL*. O valor padrão é *Nome da Tabela*.|
 |BlockSize|Integer|O tamanho do bloco, em bytes, usado ao retornar dados para o cliente. O valor padrão é 1.048.576 (1 MB). O valor mínimo é 256 bytes. O valor máximo é 16.775.168 bytes.<br> Essa propriedade está no painel **Editor Avançado**.|
 |BufferMaxSize|Integer|O tamanho máximo total do buffer de dados retornado pela função GetBuffer. Esse tamanho deve ser grande o suficiente para manter pelo menos uma linha de dados, incluindo o cabeçalho da linha, a linha de dados real e o trailer do buffer. O tamanho padrão máximo total do buffer de dados é de 16.775.552 bytes. <br>Confira mais informações em [Exportar dados de um banco de dados do Teradata usando GetBuffer](https://docs.teradata.com/reader/TvVKKmxaBAoyETJZD8zz_g/oaxiwNJmnCa6UctY4k498w).|
-|BufferMode|Boolean|O valor padrão é *True*. O valor deverá ser *True* se o recurso PutBuffer for usado. Essa propriedade está no painel **Editor Avançado**.|
-|DataEncryption|Boolean|O valor padrão é *False*. A criptografia de segurança completa será usada se o valor for *True*.|
+|BufferMode|Booliano|O valor padrão é *True*. O valor deverá ser *True* se o recurso PutBuffer for usado. Essa propriedade está no painel **Editor Avançado**.|
+|DataEncryption|Booliano|O valor padrão é *False*. A criptografia de segurança completa será usada se o valor for *True*.|
 |DefaultCodePage|Integer|A página de código a usar quando a fonte de dados não tiver informações sobre a página de código. Essa propriedade está no painel **Editor Avançado**.|
 |DetailedTracingLevel|Inteiro (enumeração)|Selecione uma das seguintes opções para o rastreamento avançado: <br> *Off*: sem registro em log avançado. <br> *Geral*: o rastreamento geral de atividades específicas do driver é registrado. <br> *CLI*: o rastreamento de atividades relacionadas ao CLIv2 é registrado. <br> *Notificar Método*: o rastreamento de atividades relacionadas ao recurso de notificação é registrado. <br> *Biblioteca Comum*: o rastreamento de atividades da biblioteca opcommon é registrado. <br> *Tudo*: todo o rastreamento de atividades anteriores é registrado. <br> O arquivo de log de rastreamento avançado é definido na propriedade `DetailedTracingFile`. <br> A propriedade `DetailedTracingFile` deverá ser definida se a opção não estiver *desativada*. Essa propriedade está no painel **Editor Avançado**.|
 |DetailedTracingFile|String|O caminho do arquivo de log gerado automaticamente quando *DetailedTracingLevel* não está *desativado*. Essa propriedade está no painel **Editor Avançado**.|
-|DiscardLargeRow|Boolean|O valor padrão é *False*. Removerá as linhas grandes (maiores que 64 KB) se o valor for *True*.|
-|ExtendedStringColumnsAllocation|Boolean|*Fator de Alocação Máxima de Caracteres de Transferência* será usado se o valor for *True*. <br> Esse valor deverá ser definido como *True* se a propriedade `Export Width Table ID` do banco de dados do Teradata estiver definida como *Padrões Máximos*. <br> O valor padrão é *False*.|
-|JobMaxRowSize|Integer|Pode haver suporte ao tamanho máximo da linha. Esse valor será necessário se o valor `DiscardLargeRow` for *True*.<br>Valores válidos: <br>*64* (valor padrão): pode haver suporte para comprimentos de linha de 2 bytes. <br>*1024*: pode haver suporte para comprimentos de linha de 4 bytes.|
+|DiscardLargeRow|Booliano|O valor padrão é *False*. Removerá as linhas grandes (maiores que 64 KB) se o valor for *True*.|
+|ExtendedStringColumnsAllocation|Booliano|*Fator de Alocação Máxima de Caracteres de Transferência* será usado se o valor for *True*. <br> Esse valor deverá ser definido como *True* se a propriedade `Export Width Table ID` do banco de dados do Teradata estiver definida como *Padrões Máximos*. <br> O valor padrão é *False*.|
+|JobMaxRowSize|Integer|Pode haver suporte ao tamanho máximo da linha. Esse valor será necessário se o valor `DiscardLargeRow` for *True*.<br>Valores válidos:  <br>*64* (valor padrão): pode haver suporte para comprimentos de linha de 2 bytes. <br>*1024*: pode haver suporte para comprimentos de linha de 4 bytes.|
 |MaxSessions|Integer|O número máximo de sessões que estão conectadas. Esse valor deve ser maior que um. O valor padrão é uma sessão para cada AMP (Processador de Módulo de Acesso) disponível.|
 |MinSessions|Integer|O número mínimo de sessões que estão conectadas. Esse valor deve ser maior que um. O valor padrão é uma sessão para cada AMP disponível.|
 |QueryBandSessInfo|Varchar|Uma expressão de banda de consulta baseada em sessão e definida pelo usuário em um formato de cadeia de conexão. Use essa propriedade para monitoramento e governança de estornos. Essa propriedade está no painel **Editor Avançado**.|
@@ -61,7 +62,7 @@ As propriedades personalizadas da origem do Teradata são listadas na tabela a s
 |TableName|String|O nome da tabela com os dados a serem usados quando `AccessMode` estiver definido como *Nome da Tabela*.|
 |TenacityHours|Integer|O número de horas que o driver TPT tenta fazer logon quando o número máximo de operações de carregamento/exportação ainda estiver em execução. O valor padrão é *4 horas*. Essa propriedade está no painel **Editor Avançado**.|
 |TenacitySleep|Integer|O número de minutos que o driver TPT pausa antes de tentar fazer logon quando o limite é atingido. O limite é definido pelas propriedades `MaxSessions` e `TenacityHours`. O valor padrão é 6 minutos. Essa propriedade está no painel **Editor Avançado**.|
-|UnicodePassThrough|Boolean|*Desativado* (valor padrão): desabilita a passagem Unicode. <br>*Em*: habilita a passagem Unicode.|
+|UnicodePassThrough|Booliano|*Desativado* (valor padrão): desabilita a passagem Unicode. <br>*Em*: habilita a passagem Unicode.|
 
 ## <a name="configure-the-teradata-source"></a>Configurar a origem do Teradata
 

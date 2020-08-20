@@ -1,4 +1,5 @@
 ---
+description: Propriedade Enabled (classe ServerNetworkProtocolIpAddress)
 title: Propriedade Enabled (ServerNetworkProtocolIpAddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55dec08596dab429fad1b283b37697ca1c4896d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 585601724ebc34139c554bde6c85d14028e5e05e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485185"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Propriedade Enabled (classe ServerNetworkProtocolIpAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém a propriedade booliana que especifica se um endereço IP está habilitado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: Desenvolvendo um componente de fluxo de dados personalizado
 title: Desenvolver um componente de fluxo de dados personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d29e650bb3dc812b4b64f3bb0c336d094adf1e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e47c1f8efed8920a32eac7625ab15deb6e9c167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484207"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Desenvolvendo um componente de fluxo de dados personalizado
 
@@ -33,7 +34,7 @@ ms.locfileid: "86921232"
   A tarefa de fluxo de dados consiste em componentes que se conectam a uma variedade de fontes de dados e, em seguida, transformam e roteiam esses dados em alta velocidade. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um modelo de objeto extensível que permite que os desenvolvedores criem origens, transformações e destinos personalizados que você pode usar no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e em pacotes implantados. Esta seção contém tópicos com orientações para desenvolvimento de componentes de fluxo de dados personalizados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criar um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
+ [Criando um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
  Descreve as etapas iniciais de criação de um componente de fluxo de dados personalizado.  
   
  [Métodos de tempo de design de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
@@ -102,7 +103,7 @@ ms.locfileid: "86921232"
 ### <a name="information-about-other-custom-objects"></a>Informações sobre outros objetos personalizados  
  Para obter informações sobre os outros tipos de objetos personalizados que você pode criar no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte os tópicos a seguir:  
   
- [Desenvolver uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Desenvolvendo uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Aborda como programar tarefas personalizadas.  
   
  [Desenvolver um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  

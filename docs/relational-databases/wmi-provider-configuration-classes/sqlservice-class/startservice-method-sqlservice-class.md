@@ -1,4 +1,5 @@
 ---
+description: Método StartService (classe SqlService)
 title: Método StartService (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a6b3048ae439cdca6727f1547c2aa956bca325f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5add2aebb0a2a148b803fadbab454d2d72c2bf3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485052"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Método StartService (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Tenta colocar o serviço em seu estado iniciado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -43,7 +44,7 @@ object.StartService()
  Um valor uint32 que especifica um dos seguintes estados de inicialização.  
   
  0  
- Êxito. A solicitação foi aceita.  
+ Sucesso. A solicitação foi aceita.  
   
  1  
  Sem suporte. A solicitação não terá suporte.  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_plan_attributes (Transact-SQL)
 title: sys. dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481964"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ Na tabela acima, o **atributo** pode ter os seguintes valores:
 |dbid|**int**|É o identificador do banco de dados que contém a entidade à qual o plano se refere.<br /><br /> Para planos ad hoc ou preparados, é o identificador do banco de dados da partir do qual o lote é executado.|  
 |dbid_execute|**int**|Para objetos do sistema armazenados no banco de dados de **recursos** , a ID do banco de dados do qual o plano armazenado em cache é executado. 0 para todos os outros casos.|  
 |user_id|**int**|Um valor de -2 indica que o lote enviado não depende da resolução de nome implícita e pode ser compartilhado entre usuários diferentes. Este é o método preferencial. Qualquer outro valor representa a identificação do usuário que submete a consulta no banco de dados.| 
-|language_id|**smallint**|A identificação de idioma da conexão que criou o objeto de cache. Para obter mais informações, consulte [linguagens desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|A identificação de idioma da conexão que criou o objeto de cache. Para obter mais informações, consulte [ linguagens desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|O formato de data da conexão que criou o objeto de cache. Para obter mais informações, veja [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Primeiro valor de data. Para obter mais informações, veja [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Bits de status interno que fazem parte da chave de consulta do cache.|  
@@ -81,7 +82,7 @@ Na tabela acima, o **atributo** pode ter os seguintes valores:
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="remarks"></a>Comentários  
   
@@ -111,7 +112,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica que a opção de banco de dados PARAMETERIZATION foi definida como FORCED quando o plano foi compilado.|131072|  
-|ROWCOUNT|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Para[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursores  
  Cursores inativos são colocados em cache em um plano compilado de forma que a memória usada para armazenar o cursor pode ser usada de novo por usuários simultâneos de cursores. Por exemplo, suponha que um lote declara e usa um cursor sem desalocá-lo. Se houver dois usuários executando o mesmo lote, haverá dois cursores ativos. Quando os cursores são desalocados (potencialmente em lotes diferentes), a memória usada para armazenar o cursor é gravada em cache e não é liberada. Esta lista de cursores inativos é mantida no plano compilado. Na próxima vez que um usuário executar o lote, a memória de cursor em cache será usada novamente e inicializada adequadamente como um cursor ativo.  
@@ -167,9 +168,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLGetStmtAttr
 title: SQLGetStmtAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be21c239bd01dea39022a75a3220f7093b4a3bef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9982af6b823e4a1e179ae2361c14ea85be0dc8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482636"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

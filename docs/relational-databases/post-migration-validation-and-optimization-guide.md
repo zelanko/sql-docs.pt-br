@@ -1,4 +1,5 @@
 ---
+description: Validação pós-migração e guia de otimização
 title: Validação pós-migração e guia de otimização | Microsoft Docs
 ms.date: 01/09/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482479"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
 
@@ -29,9 +30,9 @@ A etapa pós-migração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Abaixo estão alguns dos cenários comuns de desempenho encontrados após a migração para a plataforma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e como resolvê-los. Isso inclui cenários que são específicos para migração de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versões mais antigas para versões mais recentes), bem como migração de plataforma externa (como Oracle, DB2, MySQL e Sybase) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Regressões de consulta devido a alteração em versão da CE
+## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Regressões de consulta devido à alteração na versão CE
 
-**Aplica-se a:** migração de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Aplica-se a: migração de ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Ao migrar de versões mais antigas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ou mais recente e atualizar o [nível de compatibilidade do banco de dados](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) para o mais recente disponível, uma carga de trabalho poderá ser exposta ao risco de regressão de desempenho.
 

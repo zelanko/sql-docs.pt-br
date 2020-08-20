@@ -1,4 +1,5 @@
 ---
+description: DrilldownMemberBottom (MDX)
 title: DrilldownMemberBottom (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 442f9c57124e06236d50d60f0e5db1de3ebbe731
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b55b71a77a8513619edfde723da0e9d761af3d19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483979"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 
@@ -60,7 +61,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  A função **DrilldownMemberBottom** é semelhante à função [DrilldownMember](../mdx/drilldownmember-mdx.md) , mas em vez de incluir todos os filhos de cada membro no primeiro conjunto que também está presente no segundo conjunto, a função **DrilldownMemberBottom** retorna o número mais baixo de membros filho para cada membro.  
   
- Consultar a propriedade XMLA MdpropMdxDrillFunctions permite que você verifique o nível de suporte que o servidor fornece para as funções de análise; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
+ Consultar a propriedade XMLA MdpropMdxDrillFunctions permite que você verifique o nível de suporte que o servidor fornece para as funções de análise; consulte [Propriedades XMLA com suporte &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obter detalhes.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

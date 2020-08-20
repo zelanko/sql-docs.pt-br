@@ -1,4 +1,5 @@
 ---
+description: Gerar e executar scripts de log suplementares
 title: Gerar e executar o script de log suplementar | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b78ee09c6ecdbbdb18cd48ef7d765841e3d8a60
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a54fc6cab8ea15556aec82f810e2b678f1c78c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484660"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Gerar e executar scripts de log suplementares
 
@@ -42,6 +43,6 @@ ms.locfileid: "86921585"
   
 ## <a name="see-also"></a>Consulte Também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Examinar e gerar scripts de log suplementares](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+ [Revisar e gerar scripts de log suplementares](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
   

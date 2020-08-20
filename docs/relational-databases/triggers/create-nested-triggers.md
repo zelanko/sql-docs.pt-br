@@ -1,4 +1,5 @@
 ---
+description: Criar gatilhos aninhados
 title: Criar gatilhos aninhados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 357dae5608e938eda4ea4fd42a92420f9297958e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485363"
 ---
 # <a name="create-nested-triggers"></a>Criar gatilhos aninhados
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

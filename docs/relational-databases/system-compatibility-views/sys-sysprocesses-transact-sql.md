@@ -1,4 +1,5 @@
 ---
+description: sys.sysprocesses (Transact-SQL)
 title: Processos de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f195a452ffde16d7de821841367e259a686578f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89e9bf9ab596e24148851f68ffa30515079fb51f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482063"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85899774"
 |last_batch|**datetime**|Última vez que um processo de cliente executou uma chamada de procedimento armazenado remoto ou uma instrução EXECUTE.|  
 |ecid|**smallint**|ID do contexto de execução usado para identificar exclusivamente os subthreads que operam em nome de um único processo.|  
 |open_tran|**smallint**|Número de transações abertas para o processo.|  
-|status|**nchar(30)**|Status do ID do processo. Os valores possíveis são:<br /><br /> **inativo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está redefinindo a sessão.<br /><br /> **running** = a sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, consulte [usando vários conjuntos de resultados ativos &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = a sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **Rollback** = a sessão tem uma reversão de transação em andamento.<br /><br /> **pendente** = a sessão está aguardando que um thread de trabalho fique disponível.<br /><br /> **executável** = a tarefa na sessão está na fila executável de um Agendador enquanto aguarda para obter uma Quantum de tempo.<br /><br /> **Spinloop** = a tarefa na sessão está aguardando que um spinlock fique livre.<br /><br /> **suspenso** = a sessão está aguardando que um evento, como e/s, seja concluído.|  
+|status|**nchar(30)**|Status do ID do processo. Os valores possíveis são:<br /><br /> **inativo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está redefinindo a sessão.<br /><br /> **running** = a sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, confira [Usando o MARS &#40;conjunto de resultados ativos múltiplos&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = a sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **Rollback** = a sessão tem uma reversão de transação em andamento.<br /><br /> **pendente** = a sessão está aguardando que um thread de trabalho fique disponível.<br /><br /> **executável** = a tarefa na sessão está na fila executável de um Agendador enquanto aguarda para obter uma Quantum de tempo.<br /><br /> **Spinloop** = a tarefa na sessão está aguardando que um spinlock fique livre.<br /><br /> **suspenso** = a sessão está aguardando que um evento, como e/s, seja concluído.|  
 |sid|**binary(86)**|GUID (Identificador Global Exclusivo) do usuário.|  
 |hostname|**nchar(128)**|Nome da estação de trabalho.|  
 |program_name|**nchar(128)**|Nome do programa aplicativo.|  

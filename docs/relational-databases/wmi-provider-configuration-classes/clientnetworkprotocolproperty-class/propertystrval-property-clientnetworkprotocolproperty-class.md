@@ -1,4 +1,5 @@
 ---
+description: Propriedade PropertyStrVal (classe ClientNetworkProtocolProperty)
 title: Propriedade PropertyStrVal (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef3591e79a6341b23d13f2d6ababab6d3c69e9b2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5795681582fd9dd4243fbd6b01c24ba739b02efa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485235"
 ---
 # <a name="propertystrval-property-clientnetworkprotocolproperty-class"></a>Propriedade PropertyStrVal (classe ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o valor da cadeia de caracteres da propriedade atual referenciado pelo valor [PropertyIdx Property (classe ClientNetworkProtocolProperty) (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -45,6 +46,6 @@ object.PropertyStrVal [= value]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

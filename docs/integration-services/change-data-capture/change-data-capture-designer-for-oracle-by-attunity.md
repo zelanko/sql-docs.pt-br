@@ -1,4 +1,5 @@
 ---
+description: Change Data Capture Designer para Oracle da Attunity
 title: Change Data Capture Designer para Oracle da Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4b2bcc1153aa1e90d38a7aedf83d176d34294cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484709"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer para Oracle da Attunity
 
@@ -46,20 +47,20 @@ ms.locfileid: "86918646"
   
 -   [Os bancos de dados Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Referência da Ajuda F1 do Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Referência da Ajuda F1 Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
 -   [Guia de instruções do Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [Conexão do SQL Server para a criação de instância](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [Conexão de SQL Server para a criação de instância](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
--   [Propriedades avançadas de conexão](../../integration-services/change-data-capture/advanced-connection-properties.md)  
+-   [Propriedades Avançadas de Conexão](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [Credenciais Oracle para executar scripts](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [Credenciais Oracle para executar script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Script de log suplementar Oracle](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   
 -   [Script de implantação de instância CDC](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [Permissões necessárias para conexão do SQL Server para o CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [Permissões necessárias para conexão do SQL Server para o Designer CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

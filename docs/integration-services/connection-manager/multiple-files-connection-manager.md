@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de conexões de vários arquivos
 title: Gerenciador de Conexões de Vários Arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5d84724471eba8f1b5215a976e51e8c498352e05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 62f034f56006b8a1eb417d7b9c2ea6d0bd2436cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484622"
 ---
 # <a name="multiple-files-connection-manager"></a>Gerenciador de conexões de vários arquivos
 
@@ -39,7 +40,7 @@ ms.locfileid: "86923136"
   
  A tabela a seguir lista os valores de **FileUsageType**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|O gerenciador de conexões de vários arquivos utiliza um arquivo existente.|  
 |**1**|O gerenciador de conexões de vários arquivos cria um arquivo.|  

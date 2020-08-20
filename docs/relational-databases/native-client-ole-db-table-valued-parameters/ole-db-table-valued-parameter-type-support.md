@@ -1,4 +1,5 @@
 ---
+description: Suporte ao tipo de parâmetro com valor de tabela OLE DB (provedor de OLE DB de cliente nativo)
 title: Suporte ao tipo de parâmetro com valor de tabela (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd9c434ea94c2861f0031aadc2ead229b31d743f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6852ac833d45f132d514f9e707e6a3c2103c82b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482587"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>Suporte ao tipo de parâmetro com valor de tabela OLE DB (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ CoType RowsetTVP
  Para obter informações sobre propriedades do OLE DB que dão suporte a parâmetros com valor de tabela, confira [Suporte ao tipo de parâmetro com valor de tabela OLE DB &#40;Propriedades&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Os parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

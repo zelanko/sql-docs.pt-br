@@ -1,4 +1,5 @@
 ---
+description: Criação de conjunto de linhas de parâmetro com valor de tabela no SQL Server Native Client
 title: Criação de conjunto de linhas de parâmetro com valor de tabela (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7847c9119e1f67963414a0e22dd9241466b1e1c
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482569"
 ---
 # <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Criação de conjunto de linhas de parâmetro com valor de tabela no SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "87331889"
  Os parâmetros *pTableID* e *pUnkOuter* devem ser definidos como no cenário estático. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo obtém as informações de tipo (restrições e informações de coluna) do servidor e retorna um objeto de conjunto de linhas de parâmetro com valor de tabela por meio do parâmetro *ppRowset* . Essa operação requer comunicação com o servidor e, portanto, não tem desempenho tão bom quanto no cenário estático. O cenário dinâmico só funciona com chamadas de procedimento com parâmetros.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Os parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment (Banco de Dados SSISDB)
 title: catalog.create_environment (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d7d856d9a90e86c4e1fe188a7526312500b4e3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3657b4d171dd3cef40fbde37c8a13dceaebd0b20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484100"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (Banco de Dados SSISDB)
 
@@ -42,7 +43,7 @@ catalog.create_environment [ @folder_name = ] folder_name
  O nome do ambiente. O *environment_name* é **nvarchar(128)** .  
   
  [@environment_description=] *environment_description*  
- Uma descrição opcional do ambiente. O *environment_description* é **nvarchar(1024)** .  
+ Uma descrição opcional do ambiente. O *environment_description* é **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

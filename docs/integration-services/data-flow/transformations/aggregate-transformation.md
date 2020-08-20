@@ -1,4 +1,5 @@
 ---
+description: Transformação Agregação
 title: Transformação Agregação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1e643fdbf50bee27763395430c24cabd9e47816
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69db57924486ea2cf1e02c76f78a2ed75a559fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484465"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
 
@@ -36,7 +37,7 @@ ms.locfileid: "86912304"
 ## <a name="operations"></a>Operações  
  A transformação Agregação oferece suporte às seguintes operações.  
   
-|Operação|DESCRIÇÃO|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |Agrupar por|Divide conjuntos de dados em grupos. As colunas contendo qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, veja [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |SUM|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, veja [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
@@ -154,7 +155,7 @@ ms.locfileid: "86912304"
  **Escala de Chave**  
  Na exibição avançada, especifique, opcionalmente, o número aproximado de chaves que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se as propriedades **Escala de Chave** e **Chaves** forem definidas, o valor de **Chaves** terá precedência.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Chave de Escala não é usada.|  
 |Baixo|A agregação pode gravar aproximadamente 500.000 chaves.|  
@@ -176,11 +177,11 @@ ms.locfileid: "86912304"
  **Operação**  
  Escolha na lista de operações disponíveis, usando a tabela abaixo como guia.  
   
-|Operação|DESCRIÇÃO|  
+|Operação|Descrição|  
 |---------------|-----------------|  
 |**GroupBy**|Divide conjuntos de dados em grupos. Colunas que contêm qualquer tipo de dados podem ser utilizadas para agrupamento. Para obter mais informações, consulte GROUP BY.|  
 |**Sum**|Soma os valores em uma coluna. Somente colunas com tipos de dados numéricos podem ser somadas. Para obter mais informações, consulte SUM.|  
-|**Médio**|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, consulte AVG.|  
+|**Média**|Retorna a média dos valores da coluna em uma coluna. A média só poderá ser obtida em colunas com tipos de dados numéricos. Para obter mais informações, consulte AVG.|  
 |**Count**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
 |**CountDistinct**|Retorna o número de valores não nulos exclusivos de um grupo. Para obter mais informações, consulte COUNT e Distinct.|  
 |**Mínimo**|Retorna o valor mínimo de um grupo. Restrito a tipos de dados numéricos.|  
@@ -192,7 +193,7 @@ ms.locfileid: "86912304"
  **Count Distinct Scale**  
  Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se forem especificadas **CountDistinctScale** e **CountDistinctKeys** , **CountDistinctKeys** terá precedência.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **CountDistinctScale** não é usada.|  
 |Baixo|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
@@ -214,7 +215,7 @@ ms.locfileid: "86912304"
  **Escala de Chave**  
  Especifique, opcionalmente, o número aproximado de chaves que a agregação espera. A transformação usa estas informações para otimizar seu tamanho de cache inicial. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de chave** e o **Número de chaves** , o **Número de chaves** terá precedência.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **Escala de chave** não é usada.|  
 |Baixo|A agregação pode gravar aproximadamente 500.000 chaves.|  
@@ -227,7 +228,7 @@ ms.locfileid: "86912304"
  **Escala de distinção de contagem**  
  Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se for especificada a **Escala de Distinção de Contagem** e as **Chaves de Distinção de Contagem** , as **Chaves de Distinção de Contagem** terão precedência.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Escala de Distinção de Contagem não é usada.|  
 |Baixo|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
@@ -238,7 +239,7 @@ ms.locfileid: "86912304"
  Especifique, opcionalmente, o número exato de valores de distinção que a agregação pode gravar. Se for especificada a **Escala de Distinção de Contagem** e as **Chaves de Distinção de Contagem** , as **Chaves de Distinção de Contagem** terão precedência.  
   
  **Estender fator automaticamente**  
- Use um valor entre 1 e 100 para especificar a porcentagem pela qual a memória pode ser estendida durante a agregação. Por padrão, o valor desta opção é **25%** .  
+ Use um valor entre 1 e 100 para especificar a porcentagem pela qual a memória pode ser estendida durante a agregação. Por padrão, o valor desta opção é **25%**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   

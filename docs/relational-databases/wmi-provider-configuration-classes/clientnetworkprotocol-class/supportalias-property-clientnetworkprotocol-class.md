@@ -1,4 +1,5 @@
 ---
+description: Propriedade SupportAlias (classe ClientNetworkProtocol)
 title: Propriedade SupportAlias (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1699ac7afd32bc94ffcdf432e1bb8f0d00960ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 24eb0c2099dc651ada4d796d9ad65cad747bc67a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485205"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Propriedade SupportAlias (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém a propriedade booliana que especifica se o protocolo de rede atual especificado pelo [método Setordenavalue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) dá suporte a aliases.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -49,6 +50,6 @@ object.SupportAlias [= value]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

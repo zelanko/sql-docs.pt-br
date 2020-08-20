@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
 title: Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 742e3aef907a5537ef6ac158fd3219251bc7762e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e512c1834a74be5c45ce81fd859eaebb375be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484128"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
 

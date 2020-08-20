@@ -1,4 +1,5 @@
 ---
+description: Provisionar chaves habilitadas para enclave
 title: Provisionar chaves habilitadas para enclave | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ac3a5c0f7f1752fe26581db1f14f25e2d157508
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 13e6fd165c65aa8aeaed4394ec91a17c82b72097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482229"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Provisionar chaves habilitadas para enclave
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

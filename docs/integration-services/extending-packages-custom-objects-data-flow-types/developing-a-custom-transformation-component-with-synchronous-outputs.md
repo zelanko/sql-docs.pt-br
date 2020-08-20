@@ -1,4 +1,5 @@
 ---
+description: Desenvolvendo um componente de transformação personalizado com saídas síncronas
 title: Desenvolver um componente de transformação personalizado com saídas síncronas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b4c465ddb7efab8c5e2398facc51e89425389cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 755fdbcd3ecf01e0b76548f728d77c66ebe011a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484295"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas síncronas
 
@@ -115,7 +116,7 @@ End Class
   
  O <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> da coluna determina os valores que são definidos para as outras propriedades. A tabela a seguir mostra os requisitos nas propriedades dependentes para cada <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Os tipos de dados não listados têm as propriedades dependentes definidas como zero.  
   
-|Tipo de dados|Comprimento|Escala|Precisão|CodePage|  
+|Tipo de dados|Tamanho|Escala|Precisão|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Maior que 0 e menor ou igual a 28.|0|0|  
 |DT_CY|0|0|0|0|  
@@ -328,6 +329,6 @@ End Namespace
 ## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo um componente de transformação personalizado com saídas assíncronas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
  [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [Criar uma transformação síncrona com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Criando uma transformação síncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   

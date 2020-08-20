@@ -1,4 +1,5 @@
 ---
+description: Método StoptService (classe SqlService)
 title: Método StopService (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8fe68790b30ffdc54e9f30e4f85675eb595d09e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f4c01a00f1ce264cc26ebbfd7f4ad6a682e5ba6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485089"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>Método StoptService (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Tenta colocar o serviço no estado de interrompido.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

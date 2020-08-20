@@ -1,4 +1,5 @@
 ---
+description: Usar funções concisas
 title: Usando funções concisas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63313e3dfaec8dbcd91f3bb084bbaab46da40c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0dcd16c1380c95921d5e4bb58831e2dd939ecf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482791"
 ---
 # <a name="using-concise-functions"></a>Usar funções concisas
 Algumas funções ODBC recebem acesso implícito aos descritores. Os gravadores de aplicativos podem encontrá-los mais convenientes do que chamar **SQLSetDescField** ou **SQLGetDescField**. Essas funções são chamadas de funções *concisas* porque executam várias funções, incluindo configuração ou obtenção de campos de descritor. Algumas funções concisas permitem que um aplicativo defina ou recupere vários campos de descritor relacionados em uma única chamada de função.  

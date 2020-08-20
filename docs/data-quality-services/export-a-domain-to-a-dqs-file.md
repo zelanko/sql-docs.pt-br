@@ -1,4 +1,5 @@
 ---
+description: Exportar um domínio para um arquivo .dqs
 title: Exportar um domínio para um arquivo .dqs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3e37309a430b92e12493c178eeaf7a117a41552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484837"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar um domínio para um arquivo .dqs
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895354"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para poder exportar um domínio para um arquivo de dados .dqs.  
   
-##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>Exportar um domínio para um arquivo. DQS  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a> Exportar um domínio para um arquivo. DQS  
  Você pode exportar de qualquer página Gerenciamento de Domínio. O comando de exportação está disponível de um controle na interface do usuário e de um comando no menu de contexto do painel Lista de Domínios.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  

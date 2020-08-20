@@ -1,4 +1,5 @@
 ---
+description: Log de solicitações
 title: Log de solicitações | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c0a129bd8985180a9094b8846e685c0d4025313
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe85b46fcdcfdb398993dc073f69a8c31aa08742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484542"
 ---
 # <a name="request-log"></a>Log de solicitações
 
@@ -52,7 +53,7 @@ ms.locfileid: "86922742"
  **Tipo**  
  Exibe o tipo do evento que foi registrado em log. A tabela seguinte lista os possíveis tipos de evento.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |S|Mensagem de êxito.|  
 |E|Mensagem de erro|  

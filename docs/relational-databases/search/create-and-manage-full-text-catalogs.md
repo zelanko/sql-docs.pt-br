@@ -1,4 +1,5 @@
 ---
+description: Criar e gerenciar catálogos de texto completo
 title: Criar e gerenciar catálogos de texto completo | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b391b06d12908023375fbbf40005d1d04af60a5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d876cbff20f80261bbd7737d72f0117acb8f3ac6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482281"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +89,7 @@ Execute a instrução Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
   
 3.  Clique com o botão direito do mouse no nome do catálogo de texto completo que deseja recriar e selecione **Recriar**.  
   
-4.  Para a pergunta **Deseja excluir o catálogo de texto completo e recriá-lo?** , clique em **OK**.  
+4.  Para a pergunta **Deseja excluir o catálogo de texto completo e recriá-lo?**, clique em **OK**.  
   
 5.  Na caixa de diálogo **Recriar Catálogo de Texto Completo** , clique em **Fechar**.  
    
@@ -100,7 +101,7 @@ Execute a instrução Transact-SQL [ALTER FULLTEXT CATALOG ... REBUILD](
   
 3.  Selecione **Recriar Tudo**.  
   
-4.  Para a pergunta **Deseja excluir todos os catálogos de texto completo e recriá-los?** , clique em **OK**.  
+4.  Para a pergunta **Deseja excluir todos os catálogos de texto completo e recriá-los?**, clique em **OK**.  
   
 5.  Na caixa de diálogo **Recriar Todos os Catálogos de Texto Completo** , clique em **Fechar**.  
   

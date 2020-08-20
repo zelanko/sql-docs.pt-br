@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF (Expressão SSIS)
 title: DATEDIFF (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f869de30e8f6b6c65d01cc3189d9e63abfb57e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e7133fffcea2afe188e00f2c80aa51d6825386c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484410"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (Expressão SSIS)
 
@@ -52,8 +53,8 @@ DATEDIFF(datepart, startdate, endate)
   
 |datepart|Abreviações|  
 |--------------|-------------------|  
-|Ano|aa, aaaa|  
-|Quarter|qq, q|  
+|Year|aa, aaaa|  
+|Trimestre|qq, q|  
 |Month|mm, m|  
 |Dia do ano|dy, y|  
 |Dia|dd, d|  

@@ -1,4 +1,5 @@
 ---
+description: Desenvolvendo uma interface do usuário para um componente de fluxo de dados
 title: Desenvolvendo uma interface do usuário para um componente de fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da478b08a23550735c5a93d192a39fe741c91a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 047cbf40a98c2d513c23865dc2b45e00b1fa17b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484196"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desenvolvendo uma interface do usuário para um componente de fluxo de dados
 
@@ -93,7 +94,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Usando os serviços do Designer SSIS  
  O parâmetro **IServiceProvider** do método <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fornece acesso aos seguintes serviços do Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|Serviço|DESCRIÇÃO|  
+|Serviço|Descrição|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Usado para determinar se o componente foi gerado como parte de uma operação copiar/colar ou recortar/colar.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Usado acessar conexões existentes ou criar novas conexões no pacote.|  
@@ -286,6 +287,6 @@ End Namespace
 ```
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
+ [Criando um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   

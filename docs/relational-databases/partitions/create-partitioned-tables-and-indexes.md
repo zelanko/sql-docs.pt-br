@@ -1,4 +1,5 @@
 ---
+description: Criar tabelas e índices particionados
 title: Criar tabelas e índices particionados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147a5490d2940caebc9184e8049e7c430959b081
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482514"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Criar tabelas e índices particionados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -111,13 +112,13 @@ ms.locfileid: "85787542"
   
 #### <a name="to-create-a-partitioned-table"></a>Para criar uma tabela particionada  
   
-1.  Clique com o botão direito do mouse na tabela que você deseja particionar, aponte para **Armazenamento**e clique em **Criar Partição...** .  
+1.  Clique com o botão direito do mouse na tabela que você deseja particionar, aponte para **Armazenamento**e clique em **Criar Partição...**.  
   
 2.  No **Assistente para Criar Partição**, na página **Bem-vindo ao Assistente para Criar Partição** , clique em **Avançar**.  
   
 3.  Na página **Selecione uma Coluna de Particionamento** , na grade **Colunas de particionamento disponíveis** , selecione a coluna em que deseja particionar sua tabela. Somente colunas com tipos de dados que possam ser usados para particionar dados serão exibidas na grade **Colunas de particionamento disponíveis** . Se você selecionar uma coluna computada como a coluna de particionamento, a coluna deverá ser designada como persistente.  
   
-     As opções que você tem para as colunas de particionamento e o intervalo de valores são determinadas, basicamente, pela extensão na qual seus dados podem ser agrupados de forma lógica. Por exemplo, você pode optar por dividir seus dados em agrupamentos lógicos por meses ou trimestres de um ano. As consultas que você planejar fazer nos seus dados determinarão se o agrupamento lógico é adequado para o gerenciamento de suas partições de tabela. Todos os tipos de dados são válidos para uso como colunas de particionamento, exceto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipos de dados de alias ou tipos de dados CLR definidos pelo usuário.  
+     As opções que você tem para as colunas de particionamento e o intervalo de valores são determinadas, basicamente, pela extensão na qual seus dados podem ser agrupados de forma lógica. Por exemplo, você pode optar por dividir seus dados em agrupamentos lógicos por meses ou trimestres de um ano. As consultas que você planejar fazer nos seus dados determinarão se o agrupamento lógico é adequado para o gerenciamento de suas partições de tabela. Todos os tipos de dados são válidos para uso como colunas de particionamento, exceto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipos de dados de alias ou tipos de dados CLR definidos pelo usuário.  
   
      As opções adicionais a seguir estão disponíveis nessa página:  
   
@@ -203,7 +204,7 @@ ms.locfileid: "85787542"
   
                 -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro** ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
         2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   

@@ -1,4 +1,5 @@
 ---
+description: Propriedade PropertyIdx (classe ClientNetworkProtocolProperty)
 title: Propriedade valor PropertyIdx Property (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e7f690e8d529d1c587f6f19f55a525ef3b74b77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ca822cf7cde476254410b944258b14415319cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485231"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Propriedade PropertyIdx (classe ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém ou define o valor de índice da propriedade na matriz de propriedade referenciada pela [propriedade Properties (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/properties-property-clientnetworkprotocol-class.md) do objeto da [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -45,6 +46,6 @@ object.PropertyIdx [= value]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

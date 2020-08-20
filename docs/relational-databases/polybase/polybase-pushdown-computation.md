@@ -1,4 +1,5 @@
 ---
+description: Cálculos de aplicação no PolyBase
 title: Cálculos de aplicação no PolyBase | Microsoft Docs
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
 ms.date: 04/23/2019
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b8af2373969353597036a3c538d0a8ab8945ae24
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b028d0476b55d17a7eca9a8cace18d9ca206bc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482491"
 ---
 # <a name="pushdown-computations-in-polybase"></a>Cálculos de aplicação no PolyBase
 

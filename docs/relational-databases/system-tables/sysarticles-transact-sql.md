@@ -1,4 +1,5 @@
 ---
+description: sysarticles (Transact-SQL)
 title: sysarticles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 055e2c7999b2dddf7bb0561e912652ad9046b53e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 174d8adeaced4a98639e8474184ba3e1359f79cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485392"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,21 +33,21 @@ ms.locfileid: "85889290"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|A coluna de identidade que fornece um número de ID exclusivo para o artigo.|  
-|**creation_script**|**nvarchar (255)**|O script de esquema para o artigo.|  
-|**del_cmd**|**nvarchar (255)**|O tipo de comando de replicação usado ao replicar exclusões com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**ndescrição**|**nvarchar (255)**|A entrada descritiva para o artigo.|  
+|**creation_script**|**nvarchar(255)**|O script de esquema para o artigo.|  
+|**del_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar exclusões com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
+|**descrição**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
 |**dest_table**|**sysname**|O nome da tabela de destino.|  
 |**sem**|**int**|A ID do procedimento armazenado, usado para particionamento horizontal.|  
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo, usada para filtragem horizontal.|  
-|**ins_cmd**|**nvarchar (255)**|O tipo de comando de replicação usado ao replicar inserções com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
+|**ins_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar inserções com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**name**|**sysname**|O nome associado ao artigo, exclusivo dentro da publicação.|  
 |**objid**|**int**|A ID do objeto de tabela publicada.|  
 |**pubid**|**int**|A ID da publicação à qual o artigo pertence.|  
 |**pre_creation_cmd**|**tinyint**|O comando de pré-criação para DROP TABLE, DELETE TABLE ou TRUNCATE:<br /><br /> **0** = nenhum.<br /><br /> **1** = descartar.<br /><br /> **2** = excluir.<br /><br /> **3** = truncar.|  
 |**status**|**tinyint**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **1** = o artigo está ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções parametrizadas.<br /><br /> **24** = ambos incluem o nome da coluna em instruções INSERT e usam instruções parametrizadas.<br /><br /> **64** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Por exemplo, um artigo ativo usando instruções parametrizadas teria um valor de **17** nesta coluna. Um valor de **0** significa que o artigo está inativo e nenhuma propriedade adicional é definida.|  
 |**sync_objid**|**int**|A ID da tabela ou exibição que representa a definição de artigo.|  
-|**type**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo baseado em log.<br /><br /> **3** = artigo baseado em log com filtro manual.<br /><br /> **5** = artigo baseado em log com exibição manual.<br /><br /> **7** = artigo baseado em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = execução de procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **128** = função (somente esquema).|  
-|**upd_cmd**|**nvarchar (255)**|O tipo de comando de replicação usado ao replicar atualizações com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
+|**tipo**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo baseado em log.<br /><br /> **3** = artigo baseado em log com filtro manual.<br /><br /> **5** = artigo baseado em log com exibição manual.<br /><br /> **7** = artigo baseado em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = execução de procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **128** = função (somente esquema).|  
+|**upd_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar atualizações com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**schema_option**|**binário (8)**|Um bitmask das opções de geração de esquema para o artigo, que controla de qual parte do esquema de artigo é feito um script para entrega no Assinante. Para obter mais informações sobre opções de esquema, consulte [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**sysname**|O proprietário da tabela no banco de dados de destino.|  
 |**ins_scripting_proc**|**int**|O procedimento armazenado personalizado registrado ou script executado quando uma instrução INSERT é replicada.|  
@@ -56,10 +57,10 @@ ms.locfileid: "85889290"
 |**fire_triggers_on_snapshot**|**bit**|Indica se os gatilhos replicados são executados ou não quando o instantâneo é aplicado, que pode ter um destes valores:<br /><br /> **0** = gatilhos não são executados.<br /><br /> **1** = gatilhos são executados.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changearticle ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
   
   

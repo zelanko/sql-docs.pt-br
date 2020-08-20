@@ -1,4 +1,5 @@
 ---
+description: Registrando em log e definindo entradas de log em um componente de fluxo de dados
 title: Registrar em log e definir entradas de log em um componente de fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1f8a82b02a7743362f3769725074501b584140a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f221b2d27723714edce8c3b0cc893b1d71b4164a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484159"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Registrando em log e definindo entradas de log em um componente de fluxo de dados
 

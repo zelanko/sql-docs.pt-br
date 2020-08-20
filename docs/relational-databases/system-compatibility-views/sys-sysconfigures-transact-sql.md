@@ -1,4 +1,5 @@
 ---
+description: sys.sysconfigures (Transact-SQL)
 title: sys.sysconfigura (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 213c4ec07b733b355de8cd7cdb0ae0b14f165584
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f67d5742c5de1f806194090ebe366693cc8c9457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482144"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85900522"
 |-----------------|---------------|-----------------|  
 |**value**|**int**|Valor modificável pelo usuário para a variável. Isso só será usado pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] se RECONFIGURE tiver sido executado.|  
 |**config**|**int**|Número variável de configuração.|  
-|**mente**|**nvarchar (255)**|Explicação da opção de configuração.|  
+|**mente**|**nvarchar(255)**|Explicação da opção de configuração.|  
 |**status**|**smallint**|Bitmap que indica o status da opção. Os possíveis valores incluem os seguintes:<br /><br /> 0 = Estático. A definição entra em vigor quando o servidor é reinicializado.<br /><br /> 1 = Dinâmico. A variável é implementada quando a instrução RECONFIGURE é executada.<br /><br /> 2 = Avançado. A variável é exibida somente quando a **opção Mostrar opções avançadas** está definida. A definição entra em vigor quando o servidor é reinicializado.<br /><br /> 3 = Dinâmico e avançado.|  
   
 ## <a name="see-also"></a>Consulte Também  

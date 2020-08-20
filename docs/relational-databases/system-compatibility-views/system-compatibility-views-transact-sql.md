@@ -1,4 +1,5 @@
 ---
+description: Exibições de compatibilidade do sistema (Transact-SQL)
 title: Exibições de compatibilidade do sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482023"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Exibições de compatibilidade do sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,23 +46,23 @@ ms.locfileid: "85652211"
 |**UserType**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**uid**|**sysobjects**|**sys.objects**|  
-|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
-|**grantor**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**UID**|**sysobjects**|**sys.objects**|  
+|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**cesso**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**uid**|**systypes**|**sys.types**|  
-|**uid**|**sysusers**|**sys.database_principals**|  
+|**UID**|**systypes**|**sys.types**|  
+|**UID**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Quando referenciado em um banco de dados de usuário, as tabelas do sistema que foram anunciadas como preteridas no SQL Server 2000 (como **syslanguages** ou **syscacheobjects**) agora estão associadas à exibição de compatibilidade traseira no esquema **Sys** . Desde que as tabelas de sistema do SQL Server 2000 foram substituídas por várias versões, essa alteração não é considerada uma alteração de quebra.  
   
  Exemplo: se um usuário criar uma tabela de usuário chamada **syslanguages** em um banco de dados de usuário, no SQL Server 2008, a instrução `SELECT * from dbo.syslanguages;` nesse banco de dados retornará os valores da tabela de usuário. A partir do SQL Server 2012, essa prática retornará dados da exibição do sistema **sys.sysidiomas**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

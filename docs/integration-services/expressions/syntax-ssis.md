@@ -1,4 +1,5 @@
 ---
+description: Sintaxe (SSIS)
 title: Sintaxe (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50e6319c78bedccb0b34cd48a2d09e6b6cc0ba3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3262135632cc10036bf03c93edd448de16fbbc79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484389"
 ---
 # <a name="syntax-ssis"></a>Sintaxe (SSIS)
 

@@ -1,4 +1,5 @@
 ---
+description: Truncamento de dados (SSIS)
 title: Truncamento de dados (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa36ccd8a161c15cf4d12d1f92bb1ec36b1ac0b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 12431bc9717b28552cc79d6f7d8e3026ed90c7cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484449"
 ---
 # <a name="data-truncation-ssis"></a>Truncamento de dados (SSIS)
 

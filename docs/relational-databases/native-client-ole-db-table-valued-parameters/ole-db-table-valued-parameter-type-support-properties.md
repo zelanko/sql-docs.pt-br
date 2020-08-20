@@ -1,4 +1,5 @@
 ---
+description: OLE DB suporte ao tipo de parâmetro com valor de tabela em SQL Server Native Client (Propriedades)
 title: OLE DB tipo de parâmetro com valor de tabela (Propriedades)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9a79a82eaf8f3623435bd2330d87686eb9834c7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 96fdbd152eacf5a23f530f5bd5caa7cebb801980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482603"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB suporte ao tipo de parâmetro com valor de tabela em SQL Server Native Client (Propriedades)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +101,7 @@ ms.locfileid: "87246724"
 |||
 
 ## <a name="see-also"></a>Consulte Também  
- [Suporte ao tipo de parâmetro com valor de tabela OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Suporte para o tipo de parâmetro com valor de tabela do OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

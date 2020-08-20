@@ -1,4 +1,5 @@
 ---
+description: Propriedade State (classe SqlService)
 title: Propriedade de estado (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5273d7dd27753b62a22520f2d1aa1f9a28dc8b5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 606c991cd1f5b20f888fc2a2bf9d500e4e5ec410
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485054"
 ---
 # <a name="state-property-sqlservice-class"></a>Propriedade State (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém ou define o estado atual do serviço.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -54,7 +55,7 @@ object.State [= value]
  Stop Pending. O serviço está aguardando paras ser interrompido.  
   
  4  
- Running. O serviço está sendo executado.  
+ Running. O serviço está em execução.  
   
  5  
  Continue Pending. O serviço está aguardando para prosseguir.  
@@ -63,7 +64,7 @@ object.State [= value]
  Pause Pending. O serviço está aguardando para ser pausado.  
   
  7  
- Em pausa. O serviço foi pausado.  
+ Em pausa. O serviço está em pausa.  
   
 ## <a name="remarks"></a>Comentários  
   

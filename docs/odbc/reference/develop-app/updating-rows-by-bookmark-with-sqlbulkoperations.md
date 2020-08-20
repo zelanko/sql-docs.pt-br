@@ -1,4 +1,5 @@
 ---
+description: Atualizar linhas por indicador com SQLBulkOperations
 title: Atualizando linhas por indicador com SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9981136d546d53b131cff0d71edcdeab5b2e650c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482869"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Atualizar linhas por indicador com SQLBulkOperations
 Ao atualizar uma linha por indicador, o **SQLBulkOperations** faz com que a fonte de dados atualize uma ou mais linhas da tabela. As linhas são identificadas pelo indicador em uma coluna de indicador associado. A linha é atualizada usando dados nos buffers de aplicativo para cada coluna associada (exceto quando o valor no buffer de comprimento/indicador de uma coluna é SQL_COLUMN_IGNORE). As colunas não associadas não serão atualizadas.  

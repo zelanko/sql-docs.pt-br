@@ -1,4 +1,5 @@
 ---
+description: sysmergesubsetfilters (Transact-SQL)
 title: sysmergesubsetfilters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a106c5e60570d553c00d6ec077caacf43a716eee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7257cd9ab4de29343015fa1050c336d3e8a69e65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485408"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85881334"
 |**filter_type**|**tinyint**|Especifica o tipo de filtro, que pode ser um dos seguintes:<br /><br /> 1 = Filtro de junção.<br /><br /> 2 = Vínculo de registro lógico.<br /><br /> 3 = Vínculo de um filtro de junção e um registro lógico.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Definição de dados MDX – CREATE SET
 title: Instrução CREATE SET (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483879"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definição de dados MDX – CREATE SET
 
@@ -92,12 +93,12 @@ SELECT [Core Products] ON 0
  Especifica que o conjunto não é visível a usuários que consultam o cubo.  
   
 ## <a name="standard-properties"></a>Propriedades padrão  
- Cada conjunto tem um conjunto de propriedades padrão. Quando um aplicativo cliente é conectado ao [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as propriedades padrão têm suporte ou estão disponíveis para serem compatíveis, conforme escolhe o administrador.  
+ Cada conjunto tem um conjunto de propriedades padrão. Quando um aplicativo cliente é conectado ao [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , as propriedades padrão têm suporte ou estão disponíveis para serem compatíveis, conforme escolhe o administrador.  
   
 |Identificador de propriedade|Significado|  
 |-------------------------|-------------|  
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o conjunto.|  
-|DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o conjunto. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]pelo, a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição para um conjunto definido, use um ponto-e-vírgula (;) para separar as pastas.|  
+|DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o conjunto. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , a barra invertida ( \\ ) é o separador de nível. Para fornecer várias pastas de exibição para um conjunto definido, use um ponto-e-vírgula (;) para separar as pastas.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instrução DROP SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   

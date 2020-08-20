@@ -1,4 +1,5 @@
 ---
+description: Aplicar as alterações no destino
 title: Aplicar as alterações ao destino | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8886f2f5b40b9a3a2032323be935d8df126c381
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484734"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Aplicar as alterações no destino
 
@@ -106,6 +107,6 @@ ms.locfileid: "86919702"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>Aperfeiçoando inserções e atualizações usando a funcionalidade MERGE  
  É possível otimizar o processamento de inserções e atualizações combinando determinadas opções de captura de dados de alteração com o uso da palavra-chave Transact-SQL MERGE. Para obter mais informações sobre a palavra-chave MERGE, consulte [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md).  
   
- Na instrução Transact-SQL que recupera os dados de alteração, é possível especificar *all with merge* como o valor do parâmetro *row_filter_option* ao chamar a função **cdc.fn_cdc_get_net_changes_<capture_instance>** . Essa função de captura de dados de alteração opera com mais eficiência quando não tem que realizar o processamento extra, necessário para distinguir inserções de atualizações. Ao especificar o valor do parâmetro *all with merge* , o valor de **__$operation** dos dados de alteração é 1 para exclusões ou 5 para alterações causadas por inserções ou atualizações. Para obter mais informações sobre a função Transact-SQL usada para recuperar os dados de alteração, consulte [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Após recuperar as alterações com o valor de parâmetro *all with merge* , é possível aplicar exclusões e enviar as linhas restantes para uma tabela temporária ou uma tabela de preparo. Em seguida, em uma tarefa Executar SQL de downstream, é possível usar uma única instrução MERGE para aplicar todas as inserções ou atualizações da tabela de preparo para o destino.  
+ Na instrução Transact-SQL que recupera os dados de alteração, é possível especificar *all with merge* como o valor do parâmetro *row_filter_option* ao chamar a função **cdc.fn_cdc_get_net_changes_<capture_instance>**. Essa função de captura de dados de alteração opera com mais eficiência quando não tem que realizar o processamento extra, necessário para distinguir inserções de atualizações. Ao especificar o valor do parâmetro *all with merge* , o valor de **__$operation** dos dados de alteração é 1 para exclusões ou 5 para alterações causadas por inserções ou atualizações. Para obter mais informações sobre a função Transact-SQL usada para recuperar os dados de alteração, consulte [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Após recuperar as alterações com o valor de parâmetro *all with merge* , é possível aplicar exclusões e enviar as linhas restantes para uma tabela temporária ou uma tabela de preparo. Em seguida, em uma tarefa Executar SQL de downstream, é possível usar uma única instrução MERGE para aplicar todas as inserções ou atualizações da tabela de preparo para o destino.  
   
   

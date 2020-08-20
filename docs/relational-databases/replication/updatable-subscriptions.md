@@ -1,4 +1,5 @@
 ---
+description: Assinaturas Atualizáveis
 title: Assinaturas atualizáveis | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3cf65d8667e0fcedcb148e926a80969ec7a05642
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 016414e9f6565c8c2593b478b295a3565f21266c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482249"
 ---
 # <a name="updatable-subscriptions"></a>Assinaturas Atualizáveis
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

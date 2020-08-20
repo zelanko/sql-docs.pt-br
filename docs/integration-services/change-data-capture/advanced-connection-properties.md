@@ -1,4 +1,5 @@
 ---
+description: Propriedades Avançadas de Conexão
 title: Propriedades da Conexão Avançadas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 925b7155af44d77dc33506c0ff4d574be9970eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fd7ed8863356ff3e6b67d456628bd3dbc1ab6a5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484733"
 ---
 # <a name="advanced-connection-properties"></a>Propriedades Avançadas de Conexão
 
@@ -37,6 +38,6 @@ ms.locfileid: "86916548"
   
 ## <a name="see-also"></a>Consulte Também  
  [Acessar o CDC Designer Console](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [Conexão do SQL Server para a criação de instância](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+ [Conexão de SQL Server para a criação de instância](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
   

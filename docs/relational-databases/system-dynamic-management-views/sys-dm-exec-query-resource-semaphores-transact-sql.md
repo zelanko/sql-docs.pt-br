@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_resource_semaphores (Transact-SQL)
 title: sys. dm_exec_query_resource_semaphores (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -20,11 +21,12 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d252d5976b07f688d890ed8ccf43a7b0a0c96b2c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 05b70bac6280afebbfa0586343e25aaa26d30bf4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481932"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,12 +54,12 @@ ms.locfileid: "86012872"
 |**timeout_error_count**|**bigint**|Número total de erros de tempo-limite desde a inicialização do servidor. NULL para o sinal do recurso da consulta pequena.|  
 |**forced_grant_count**|**bigint**|Número total de concessões de memória mínimas forçadas desde a inicialização do servidor. NULL para o sinal do recurso da consulta pequena.|  
 |**pool_id**|**int**|ID do pool de recursos ao qual pertence este sinal do recurso.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
 ## <a name="remarks"></a>Comentários  
  As consultas que usam exibições de gerenciamento dinâmico com ORDER BY ou agregações podem aumentar o uso da memória e, dessa forma, contribuir para o problema que estão solucionando.  

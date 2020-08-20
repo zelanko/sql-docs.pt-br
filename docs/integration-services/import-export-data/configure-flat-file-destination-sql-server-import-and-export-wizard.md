@@ -1,4 +1,5 @@
 ---
+description: Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
 title: Configurar destino de arquivo simples (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 413464d787e3f2fac1ae16d497dcaabb55b90ab8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3ccc72824732f1c76dde974916c83cc9a6c434a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484179"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
 
@@ -43,7 +44,7 @@ ms.locfileid: "86913329"
  **Delimitador de linha**  
  Selecione da lista de delimitadores para separar linhas na saída. Não há nenhuma opção para especificar um delimitador de linha *personalizado*.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Delimite as linhas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite linhas com um retorno de carro.|  
@@ -57,7 +58,7 @@ ms.locfileid: "86913329"
  **Delimitador de coluna**  
  Selecione da lista de delimitadores para separar colunas na saída. Não há nenhuma opção para especificar um delimitador de coluna *personalizado*.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Delimite as colunas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|Delimite colunas com um retorno de carro.|  

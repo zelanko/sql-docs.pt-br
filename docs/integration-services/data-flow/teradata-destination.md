@@ -1,4 +1,5 @@
 ---
+description: Destino do Teradata
 title: Destino do Teradata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2091999bce0fbacb99083239a7eb209fa8939505
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484499"
 ---
 # <a name="teradata-destination"></a>Destino do Teradata
 
@@ -81,31 +82,31 @@ A tabela a seguir descreve as propriedades personalizadas do destino do Teradata
 
 |Nome da propriedade|Tipo de Dados|Descrição|
 |:-|:-|:-|
-|AlwaysDropErrorTable|Boolean|O padrão é **False**. Remova todas as tabelas de erro se for **True**, mesmo que o destino do Teradata falhe na leitura.|
-|ArraySupport|Boolean|O padrão é **True**. Os grupos DML usam ArraySupport se for **True**. Aplicável somente ao Fluxo de TPT. Essa propriedade está no **Editor Avançado**.|
+|AlwaysDropErrorTable|Booliano|O padrão é **False**. Remova todas as tabelas de erro se for **True**, mesmo que o destino do Teradata falhe na leitura.|
+|ArraySupport|Booliano|O padrão é **True**. Os grupos DML usam ArraySupport se for **True**. Aplicável somente ao Fluxo de TPT. Essa propriedade está no **Editor Avançado**.|
 |Buffers|Integer|O número de buffers de solicitação a aumentar, o valor pode ser definido de 2 a 64. Aplicável somente ao Fluxo de TPT. Essa propriedade está no **Editor Avançado**.|
-|BufferMode|Boolean|O padrão é **True**. Deve ser **True** se o recurso PutBuffer for usado. Essa propriedade está no **Editor Avançado**.|
+|BufferMode|Booliano|O padrão é **True**. Deve ser **True** se o recurso PutBuffer for usado. Essa propriedade está no **Editor Avançado**.|
 |BufferSize|Integer|O tamanho do buffer de saída (em KB) usado para enviar os totais de carregamento. O valor padrão é 1.024. Aplicável somente para o Carregamento do TPT. Essa propriedade está no **Editor Avançado**.|
-|DataEncryption|Boolean|O padrão é **False**. A criptografia de segurança completa será usada se for **True**.|
+|DataEncryption|Booliano|O padrão é **False**. A criptografia de segurança completa será usada se for **True**.|
 |DefaultCodePage|Integer|A página de código a ser usada quando a fonte de dados não tiver informações da página de código. <br>**Observação**: Essa propriedade está no **Editor Avançado**.|
 |DetailedTracingLevel|Inteiro (Enumeração)|Selecione uma das seguintes opções para o rastreamento avançado: <br> **Off**: sem registro em log avançado. <br> **Geral**: o rastreamento geral de atividades específicas do driver é registrado. <br> **CLI**: o rastreamento de atividades relacionadas ao CLIv2 é registrado. <br> **Notificar Método**: o rastreamento de atividades relacionadas ao recurso de notificação é registrado. <br> **Biblioteca Comum**: o rastreamento de atividades da biblioteca opcommon é registrado. <br> **Tudo**: o rastreamento de todas as atividades acima é registrado. <br> O arquivo de log de rastreamento avançado é definido na propriedade **DetailedTracingFile**. <br> A propriedade **DetailedTracingFile** deve ser definida se a opção não estiver desativada. <br> Essa propriedade está no **Editor Avançado**.|
 |DetailedTracingFile|String|O caminho do arquivo de log gerado automaticamente quando **DetailedTracingLevel** não está **desativado**. Essa propriedade está no **Editor Avançado**.|
-|DiscardLargeRow|Boolean|O padrão é **False**. Remover linhas grandes (maiores que 64K) se for **True**|
+|DiscardLargeRow|Booliano|O padrão é **False**. Remover linhas grandes (maiores que 64K) se for **True**|
 |ErrorTableName|String|Nome da tabela de erros. O padrão é o nome da tabela de destino|
-|ExtendedStringColumnsAllocation|Boolean|**Fator de Alocação Máxima de Caracteres de Transferência** será usado se for **True**. <br> Esse valor deve ser definido como **True** se a propriedade **Exportar ID da Tabela de Largura** do banco de dados do Teradata estiver definida como **Padrões Máximos**. <br> O padrão é **False**.|
-|FastLoad|Boolean|O carregamento rápido é usado se for **True**. O valor padrão é **false**. Também pode ser definido no [Editor de Destino do Teradata (Página do Gerenciador de Conexões)](#teradata-destination-editor-connection-manager-page).|
+|ExtendedStringColumnsAllocation|Booliano|**Fator de Alocação Máxima de Caracteres de Transferência** será usado se for **True**. <br> Esse valor deve ser definido como **True** se a propriedade **Exportar ID da Tabela de Largura** do banco de dados do Teradata estiver definida como **Padrões Máximos**. <br> O padrão é **False**.|
+|FastLoad|Booliano|O carregamento rápido é usado se for **True**. O valor padrão é **false**. Também pode ser definido no [Editor de Destino do Teradata (Página do Gerenciador de Conexões)](#teradata-destination-editor-connection-manager-page).|
 |MaxErrors|Integer|O número de erros que pode ocorrer antes que o fluxo de dados cesse. O valor padrão é **0**, o que significa que não há limite para o número de erros.<br> Se o **Fluxo de redirecionamento** for selecionado na página de **Tratamento de erros**. Antes que o limite de número de erros seja atingido, todos os erros retornam na saída de erro. Confira mais informações em [Editor de Destino do Teradata (Página Saída de Erro)](#teradata-destination-editor-error-output-page).|
 |MaxSessions|Integer|O número máximo de sessões que estão conectadas. Esse valor deve ser maior que um. O valor padrão é uma sessão para cada AMP disponível.|
 |MinSessions|Integer|O número mínimo de sessões que estão conectadas. Esse valor deve ser maior que um. O valor padrão é uma sessão para cada AMP disponível.|
 |Pack|Integer|O número de instruções a serem empacotadas em uma solicitação com várias instruções. O padrão é 20, o máximo permitido é 2400. Aplicável somente ao Fluxo de TPT. Essa propriedade está no **Editor Avançado**.|
-|PackMaximum|Boolean|Determina dinamicamente o fator máximo do pacote para o trabalho de fluxo atual se for **True**. Aplicável somente ao Fluxo de TPT. Essa propriedade está no **Editor Avançado**.|
+|PackMaximum|Booliano|Determina dinamicamente o fator máximo do pacote para o trabalho de fluxo atual se for **True**. Aplicável somente ao Fluxo de TPT. Essa propriedade está no **Editor Avançado**.|
 |QueryBandSessInfo|Varchar|Uma expressão de banda de consulta definida pelo usuário e com base em sessão para habilitar o monitoramento e a governança de estornos. Essa propriedade deve estar no formato de cadeia de conexão. Essa propriedade está no **Editor Avançado**.|
 |ReplicationOveride|Inteiro (enumeração)|Opções: <br> **Padrão**: a instrução No SET SESSION OVERRIDE REPLICATION é enviada ao banco de dados. As configurações padrão do banco de dados são usadas. <br> **Em**: os controles de serviço de replicação normais são substituídos. <br> **Off**: os controles de serviço de replicação normais são usados. <br> Essa propriedade é aplicável somente ao Fluxo de TPT. <br> Essa propriedade está no **Editor Avançado**.|
-|Robust|Boolean|A lógica de reinicialização robusta é usada em operações de recuperação e reinicialização se for **True**. Essa propriedade é aplicável somente ao **Fluxo de TPT**. Essa propriedade está no **Editor Avançado**.|
+|Robust|Booliano|A lógica de reinicialização robusta é usada em operações de recuperação e reinicialização se for **True**. Essa propriedade é aplicável somente ao **Fluxo de TPT**. Essa propriedade está no **Editor Avançado**.|
 |TableName|String|O nome da tabela com os dados que estão sendo usados.|
 |TenacityHours|Integer|O número de horas que o driver TPT tenta fazer logon quando o número máximo de operações de carregamento/exportação ainda estiver em execução. O padrão é de 4 horas. Essa propriedade está no **Editor Avançado**|
 |TenacitySleep|Integer|Os minutos que o driver TPT pausa antes de tentar fazer logon quando o limite é atingido. O limite é definido pelas propriedades **MaxSessions** e **TenacityHours**. O padrão é seis minutos. Essa propriedade está no **Editor Avançado**|
-|UnicodePassThrough|Boolean|Off (padrão): desabilita a Passagem Unicode. <br>On: habilita a Passagem Unicode.|
+|UnicodePassThrough|Booliano|Off (padrão): desabilita a Passagem Unicode. <br>On: habilita a Passagem Unicode.|
 
 ## <a name="configuring-the-teradata-destination"></a>Configurar o destino do Teradata
 

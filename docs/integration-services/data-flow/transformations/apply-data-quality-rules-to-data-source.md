@@ -1,4 +1,5 @@
 ---
+description: Aplicar regras de qualidade de dados à fonte de dados
 title: Aplicar regras de qualidade de dados à fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 883ed4efb2a6dc35a77e54a9a366cb020961c312
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 58e6e75f520bcd966cf2b1ae8e2edbc0f7a568f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484409"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>Aplicar regras de qualidade de dados à fonte de dados
 
