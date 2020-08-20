@@ -97,9 +97,7 @@
               href: ../machine-learning/tutorials/python-clustering-model-build.md
             - name: 4 - Deploy the model (Implantar o modelo)
               href: ../machine-learning/tutorials/python-clustering-model-deploy.md
-        - name: Criar um modelo Python usando revoscalepy
-          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: Python para desenvolvedores do SQL
+        - name: Dicas de táxi de NYC (classificação)
           items:
             - name: 1 – Introdução
               href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
@@ -111,6 +109,8 @@
               href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
             - name: 5 – Previsões
               href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
+        - name: Criar um modelo Python usando revoscalepy
+          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
     - name: R
       items:
         - name: Tutoriais do R
@@ -135,9 +135,7 @@
               href: ../machine-learning/tutorials/r-clustering-model-build.md
             - name: 4 - Deploy the model (Implantar o modelo)
               href: ../machine-learning/tutorials/r-clustering-model-deploy.md
-        - name: Criar modelos baseados em partição
-          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: R para desenvolvedores do SQL
+        - name: Dicas de táxi de NYC (classificação)
           items:
             - name: 1. Introdução
               href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
@@ -149,6 +147,8 @@
               href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
             - name: 5. Previsões
               href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
+        - name: Criar modelos baseados em partição
+          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: Usar ML do SQL nas ferramentas do R
           items:
             - name: 1. Introdução
