@@ -1,4 +1,5 @@
 ---
+description: sp_add_category (Transact-SQL)
 title: sp_add_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481673"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +46,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'`A classe da categoria a ser adicionada. a *classe* é **varchar (8)** com um valor padrão de trabalho e pode ser um desses valores.  
+`[ @class = ] 'class'` A classe da categoria a ser adicionada. a *classe* é **varchar (8)** com um valor padrão de trabalho e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -53,7 +54,7 @@ sp_add_category
 |ALERT|Adiciona uma categoria de alerta.|  
 |OPERATOR|Adiciona uma categoria de operador.|  
   
-`[ @type = ] 'type'`O tipo de categoria a ser adicionado. o *tipo* é **varchar (12)**, com um valor padrão de **local**e pode ser um desses valores.  
+`[ @type = ] 'type'` O tipo de categoria a ser adicionado. o *tipo* é **varchar (12)**, com um valor padrão de **local**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -61,7 +62,7 @@ sp_add_category
 |VÁRIOS SERVIDORES|Uma categoria de trabalho multisservidor.|  
 |Nenhuma|Uma categoria para uma classe que não seja trabalho **.**|  
   
-`[ @name = ] 'name'`O nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. o *nome* é **sysname**, sem padrão.  
+`[ @name = ] 'name'` O nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. o *nome* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -90,10 +91,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_category](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [Trabalhos dedbo.sys&#40;&#41;de Transact-SQL](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_category ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_category ](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_category ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [ Trabalhos dedbo.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

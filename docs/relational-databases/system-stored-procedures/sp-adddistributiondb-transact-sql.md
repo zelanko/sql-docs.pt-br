@@ -1,4 +1,5 @@
 ---
+description: sp_adddistributiondb (Transact-SQL)
 title: sp_adddistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0f213880d00be458bb453aefd5957fe431dd053
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481532"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,31 +54,31 @@ sp_adddistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] database'`É o nome do banco de dados de distribuição a ser criado. o *banco de dados* é **sysname**, sem padrão. Se o banco de dados especificado já existir e não estiver marcado como banco de dados de distribuição, os objetos necessários para habilitar a distribuição serão instalados e o banco de dados será marcado como banco de dados de distribuição. Se o banco de dados especificado já estiver habilitado como um banco de dados de distribuição, um erro será retornado.  
+`[ @database = ] database'` É o nome do banco de dados de distribuição a ser criado. o *banco de dados* é **sysname**, sem padrão. Se o banco de dados especificado já existir e não estiver marcado como banco de dados de distribuição, os objetos necessários para habilitar a distribuição serão instalados e o banco de dados será marcado como banco de dados de distribuição. Se o banco de dados especificado já estiver habilitado como um banco de dados de distribuição, um erro será retornado.  
   
-`[ @data_folder = ] 'data_folder'_`É o nome do diretório usado para armazenar o arquivo de dados do banco de dado de distribuição. *DATA_FOLDER* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o diretório de dados dessa instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado, por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` .  
+`[ @data_folder = ] 'data_folder'_` É o nome do diretório usado para armazenar o arquivo de dados do banco de dado de distribuição. *DATA_FOLDER* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o diretório de dados dessa instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado, por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` .  
   
-`[ @data_file = ] 'data_file'`É o nome do arquivo de banco de dados. *data_file* é **nvarchar (255)**, com um padrão de **banco de dados**. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
+`[ @data_file = ] 'data_file'` É o nome do arquivo de banco de dados. *data_file* é **nvarchar (255)**, com um padrão de **banco de dados**. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
-`[ @data_file_size = ] data_file_size`É o tamanho inicial do arquivo de dados em megabytes (MB). *data_file_size i*s **int**, com um padrão de 5 MB.  
+`[ @data_file_size = ] data_file_size` É o tamanho inicial do arquivo de dados em megabytes (MB). *data_file_size i*s **int**, com um padrão de 5 MB.  
   
-`[ @log_folder = ] 'log_folder'`É o nome do diretório para o arquivo de log do banco de dados. *log_folder* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado (por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @log_folder = ] 'log_folder'` É o nome do diretório para o arquivo de log do banco de dados. *log_folder* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o diretório de dados para aquela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado (por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
-`[ @log_file = ] 'log_file'`É o nome do arquivo de log. *log_file* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
+`[ @log_file = ] 'log_file'` É o nome do arquivo de log. *log_file* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
-`[ @log_file_size = ] log_file_size`É o tamanho inicial do arquivo de log em megabytes (MB). *log_file_size* é **int**, com um padrão de 0 MB, o que significa que o tamanho do arquivo é criado usando o menor tamanho de arquivo de log permitido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+`[ @log_file_size = ] log_file_size` É o tamanho inicial do arquivo de log em megabytes (MB). *log_file_size* é **int**, com um padrão de 0 MB, o que significa que o tamanho do arquivo é criado usando o menor tamanho de arquivo de log permitido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @min_distretention = ] min_distretention`É o período de retenção mínimo, em horas, antes de as transações serem excluídas do banco de dados de distribuição. *min_distretention* é **int**, com um padrão de 0 hora.  
+`[ @min_distretention = ] min_distretention` É o período de retenção mínimo, em horas, antes de as transações serem excluídas do banco de dados de distribuição. *min_distretention* é **int**, com um padrão de 0 hora.  
   
-`[ @max_distretention = ] max_distretention`É o período de retenção máximo, em horas, antes de as transações serem excluídas. *max_distretention* é **int**, com um padrão de 72 horas. Assinaturas que não receberam comandos replicados mais antigos do que o período máximo de retenção de distribuição são marcadas como inativas e precisam ser reiniciadas. RAISERROR 21011 é emitido para cada assinatura inativa. Um valor de **0** significa que as transações replicadas não são armazenadas no banco de dados de distribuição.  
+`[ @max_distretention = ] max_distretention` É o período de retenção máximo, em horas, antes de as transações serem excluídas. *max_distretention* é **int**, com um padrão de 72 horas. Assinaturas que não receberam comandos replicados mais antigos do que o período máximo de retenção de distribuição são marcadas como inativas e precisam ser reiniciadas. RAISERROR 21011 é emitido para cada assinatura inativa. Um valor de **0** significa que as transações replicadas não são armazenadas no banco de dados de distribuição.  
   
-`[ @history_retention = ] history_retention`É o número de horas para reter o histórico. *history_retention* é **int**, com um padrão de 48 horas.  
+`[ @history_retention = ] history_retention` É o número de horas para reter o histórico. *history_retention* é **int**, com um padrão de 48 horas.  
   
-`[ @security_mode = ] security_mode`É o modo de segurança a ser usado ao conectar-se ao distribuidor. *security_mode* é **int**, com um padrão de 1. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação; **1** especifica a autenticação integrada do Windows.  
+`[ @security_mode = ] security_mode` É o modo de segurança a ser usado ao conectar-se ao distribuidor. *security_mode* é **int**, com um padrão de 1. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação; **1** especifica a autenticação integrada do Windows.  
   
-`[ @login = ] 'login'`É o nome de logon usado ao conectar-se ao distribuidor para criar o banco de dados de distribuição. Isso será necessário se *security_mode* for definido como **0**. *login* é **sysname**, com um padrão de NULL.  
+`[ @login = ] 'login'` É o nome de logon usado ao conectar-se ao distribuidor para criar o banco de dados de distribuição. Isso será necessário se *security_mode* for definido como **0**. *login* é **sysname**, com um padrão de NULL.  
   
-`[ @password = ] 'password'`É a senha usada ao conectar-se ao distribuidor. Isso será necessário se *security_mode* for definido como **0**. a *senha* é **sysname**, com um padrão de NULL.  
+`[ @password = ] 'password'` É a senha usada ao conectar-se ao distribuidor. Isso será necessário se *security_mode* for definido como **0**. a *senha* é **sysname**, com um padrão de NULL.  
   
 `[ @createmode = ] createmode`*createmode* é **int**, com um padrão de 1, e pode ser um dos valores a seguir.  
   
@@ -89,9 +90,9 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
-`[ @deletebatchsize_xact = ] deletebatchsize_xact`Especifica o tamanho do lote a ser usado durante a limpeza de transações expiradas das tabelas MSRepl_Transactions. *deletebatchsize_xact* é **int**, com um padrão de 5000. Esse parâmetro foi introduzido pela primeira vez no SQL Server 2017, seguido por versões no SQL Server 2012 SP4 e SQL Server 2016 SP2.  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact` Especifica o tamanho do lote a ser usado durante a limpeza de transações expiradas das tabelas MSRepl_Transactions. *deletebatchsize_xact* é **int**, com um padrão de 5000. Esse parâmetro foi introduzido pela primeira vez no SQL Server 2017, seguido por versões no SQL Server 2012 SP4 e SQL Server 2016 SP2.  
 
-`[ @deletebatchsize_cmd = ] deletebatchsize_cmd`Especifica o tamanho do lote a ser usado durante a limpeza de comandos expirados das tabelas MSRepl_Commands. *deletebatchsize_cmd* é **int**, com um padrão de 2000. Esse parâmetro foi introduzido pela primeira vez no SQL Server 2017, seguido por versões no SQL Server 2012 SP4 e SQL Server 2016 SP2. 
+`[ @deletebatchsize_cmd = ] deletebatchsize_cmd` Especifica o tamanho do lote a ser usado durante a limpeza de comandos expirados das tabelas MSRepl_Commands. *deletebatchsize_cmd* é **int**, com um padrão de 2000. Esse parâmetro foi introduzido pela primeira vez no SQL Server 2017, seguido por versões no SQL Server 2012 SP4 e SQL Server 2016 SP2. 
  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -165,10 +166,10 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [&#41;&#40;Transact-SQL de sp_changedistributiondb](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdistributiondb](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changedistributiondb ](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropdistributiondb ](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_copymergesnapshot (Transact-SQL)
 title: sp_copymergesnapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64d4a6bb067c53b13592074fc1c08b2e35fc4830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13e7be3229332ece6a95966de84ef5ed59e28289
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481403"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação cujo conteúdo do instantâneo deve ser copiado. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação cujo conteúdo do instantâneo deve ser copiado. a *publicação* é **sysname**, sem padrão.  
   
-`[ @destination_folder = ] 'destination_folder'`É o nome da pasta em que o conteúdo do instantâneo de publicação deve ser copiado. *destination_folder*é **nvarchar (255)**, sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou em mídia removível (como CD-ROMs ou discos removíveis).  
+`[ @destination_folder = ] 'destination_folder'` É o nome da pasta em que o conteúdo do instantâneo de publicação deve ser copiado. *destination_folder*é **nvarchar (255)**, sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou em mídia removível (como CD-ROMs ou discos removíveis).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados de pesquisa de texto completo e pesquisa semântica (Transact-SQL)
 title: Procedimentos armazenados de pesquisa de texto completo e de semântica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5029929c9e355c34d3e1937eb3f5f15eb5c8ab84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0edf572ad6ae1e94455abcdba60286b0c6664254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481600"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>Procedimentos armazenados de pesquisa de texto completo e pesquisa semântica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para implementar e consultar índices de texto completo e índices semânticos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para implementar e consultar índices de texto completo e índices semânticos.  
   
 ## <a name="full-text-search-stored-procedures"></a>Procedimentos armazenados de pesquisa de texto completo  
  [sp_fulltext_catalog](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)  
  Cria e remove um catálogo de texto completo, e inicia e interrompe a ação de indexação de um catálogo. Catálogos de texto completo podem ser criados para cada banco de dados.  
   
- [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use [criar catálogo de texto completo](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [alterar catálogo de texto](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)completo e [remover catálogo de texto completo](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use [criar catálogo de texto completo](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [alterar catálogo de texto](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)completo e [remover catálogo de texto completo](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) .  
   
  [sp_fulltext_column](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)  
  Especifica se ou não uma determinada coluna de uma tabela participa da indexação de texto completo.  
   
- [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) .  
   
  [sp_fulltext_database](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)  
  Não tem efeito nos catálogos de texto completo no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores e tem suporte apenas para compatibilidade com versões anteriores.  
@@ -70,22 +71,22 @@ ms.locfileid: "85898132"
  [sp_help_fulltext_catalogs](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
  Retorna o ID, o nome, o diretório raiz, o status e o número de tabelas indexadas de texto completo para o catálogo de texto completo especificado.  
   
- [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a exibição de catálogo [Sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a exibição de catálogo [Sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
  [sp_help_fulltext_catalogs_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)  
  Usa um cursor para retornar a ID, o nome, o diretório raiz, o status e o número de tabelas indexadas de texto completo para o catálogo de texto completo especificado.  
   
- [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a exibição de catálogo [Sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a exibição de catálogo [Sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
  [sp_help_fulltext_columns](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)  
  Retorna as colunas designadas para indexação de texto completo.  
   
- [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a exibição de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a exibição de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
   
  [sp_help_fulltext_columns_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)  
  Usa um cursor para retornar as colunas designadas para indexação de texto completo.  
   
- [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a exibição de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a exibição de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
   
  [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
  Retorna informações dos separadores de palavras, filtro e manipuladores de protocolo registrados, bem como uma lista de identificadores de bancos de dados e de catálogos de texto completo que usaram um componente especificado.  
@@ -96,7 +97,7 @@ ms.locfileid: "85898132"
  [sp_help_fulltext_tables_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)  
  Retorna uma lista de tabelas que estão registradas para indexação de texto completo.  
   
- [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a exibição de catálogo [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a exibição de catálogo [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) .  
   
 ## <a name="semantic-search-stored-procedures"></a>Procedimentos armazenados da pesquisa semântica  
  [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)  
@@ -108,7 +109,7 @@ ms.locfileid: "85898132"
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de pesquisa de texto completo e de busca semântica &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
  [Exibições e funções de gerenciamento dinâmico de pesquisa de texto completo e de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)  
   
   

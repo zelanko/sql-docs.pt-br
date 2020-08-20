@@ -1,4 +1,5 @@
 ---
+description: sp_add_targetsvrgrp_member (Transact-SQL)
 title: sp_add_targetsvrgrp_member (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 347f9581db7da96d93d69a25625af1bc40260f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481568"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @group_name = ] 'group_name'`O nome do grupo. *group_name* é **sysname**, sem padrão.  
+`[ @group_name = ] 'group_name'` O nome do grupo. *group_name* é **sysname**, sem padrão.  
   
-`[ @server_name = ] 'server_name'`O nome do servidor que deve ser adicionado ao grupo especificado. *server_name* é **nvarchar (30)**, sem padrão.  
+`[ @server_name = ] 'server_name'` O nome do servidor que deve ser adicionado ao grupo especificado. *server_name* é **nvarchar (30)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -69,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_targetsvrgrp_member](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_targetsvrgrp_member ](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

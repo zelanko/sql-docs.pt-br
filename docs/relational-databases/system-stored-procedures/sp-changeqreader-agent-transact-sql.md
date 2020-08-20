@@ -1,4 +1,5 @@
 ---
+description: sp_changeqreader_agent (Transact-SQL)
 title: sp_changeqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99dcccc85577d854996b37743ee8f8cdd32bbebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481428"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'`É o logon da [!INCLUDE[msCoName](../../includes/msconame-md.md)] conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão de NULL.  
+`[ @job_login = ] 'job_login'` É o logon da [!INCLUDE[msCoName](../../includes/msconame-md.md)] conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão de NULL.  
   
-`[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, com um padrão de NULL.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, com um padrão de NULL.  
   
-`[ @frompublisher = ] frompublisher`É se o procedimento estiver sendo executado no Publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado do Publicador no banco de dados de publicação.  
+`[ @frompublisher = ] frompublisher` É se o procedimento estiver sendo executado no Publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado do Publicador no banco de dados de publicação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -59,7 +60,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changeqreader_agent**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar as configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
   

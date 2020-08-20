@@ -1,4 +1,5 @@
 ---
+description: sp_changepublication (Transact-SQL)
 title: sp_changepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481490"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL.  
   
-`[ @property = ] 'property'`É a propriedade de publicação a ser alterada. a *Propriedade* é **nvarchar (255)**.  
+`[ @property = ] 'property'` É a propriedade de publicação a ser alterada. a *Propriedade* é **nvarchar (255)**.  
   
-`[ @value = ] 'value'`É o novo valor da propriedade. o *valor* é **nvarchar (255)**, com um padrão de NULL.  
+`[ @value = ] 'value'` É o novo valor da propriedade. o *valor* é **nvarchar (255)**, com um padrão de NULL.  
   
  Essa tabela descreve as propriedades da publicação que podem ser alteradas e restrições nos valores dessas propriedades.  
   
@@ -72,7 +73,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|Na atualização de Assinantes, se ocorrer um conflito a assinatura deverá ser reiniciada. Essa propriedade só poderá ser alterada se não houver assinaturas ativas. Sem suporte para Publicadores Oracle.|  
 ||**sub wins**|Política de resolução de conflito para atualização de Assinantes onde o Assinante vence o conflito. Essa propriedade só poderá ser alterada se não houver assinaturas ativas. Sem suporte para Publicadores Oracle.|  
 |**conflict_retention**||**int** que especifica o período de retenção de conflito, em dias. A retenção padrão é 14 dias. **0** significa que nenhuma limpeza de conflito é necessária. Sem suporte para Publicadores Oracle.|  
-|**ndescrição**||Entrada opcional que descreve a publicação.|  
+|**descrição**||Entrada opcional que descreve a publicação.|  
 |**enabled_for_het_sub**|**true**|Permite que a publicação dê suporte a Assinantes que não são do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** não pode ser alterada quando há assinaturas para a publicação. Talvez seja necessário executar [procedimentos armazenados de replicação (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) para atender aos seguintes requisitos antes de definir **enabled_for_het_sub** como true:<br /> - **allow_queued_tran** deve ser **false**.<br /> - **allow_sync_tran** deve ser **false**.<br /> Alterar **enabled_for_het_sub** para **verdadeiro** pode alterar as configurações de publicação existentes. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|A publicação não dá suporte a Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|A publicação é habilitada para a Internet, e o FTP (File Transfer Protocol) pode ser usado para transferir os arquivos de instantâneo a um assinante. Os arquivos de sincronização da publicação são colocados no seguinte diretório: C:\Arquivos de Programas\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* não pode ser nulo. Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -115,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Desabilita o `DROP TABLE` suporte à dll para artigos que fazem parte da replicação transacional. Esse é o valor **padrão** para essa propriedade.|
 |**NULL** (padrão)||Retorna a lista de valores com suporte para a *Propriedade*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   - **0** especifica que as alterações no artigo não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   - **1** especifica que as alterações no artigo podem fazer com que o instantâneo seja inválido. Se houver assinaturas existentes que exigem um novo instantâneo, esse valor dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.   
 Consulte a seção Comentários das propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
@@ -125,7 +126,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
   - **0** especifica que as alterações no artigo não fazem com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   - **1** especifica que as alterações no artigo fazem com que a assinatura existente seja reinicializada e dá permissão para que a reinicialização da assinatura ocorra.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
   > [!NOTE]  
   >  o *Publicador* não deve ser usado ao alterar as propriedades do artigo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -166,9 +167,9 @@ Para listar objetos de publicação no Active Directory usando o parâmetro **pu
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [&#41;&#40;Transact-SQL de sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droppublication](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpublication ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droppublication ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_add_schedule (Transact-SQL)
 title: sp_add_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: aed71a51ab9852272c16e193367c12df77bb76a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481586"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,11 +55,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_name = ] 'schedule_name'`O nome da agenda. *schedule_name* é **sysname**, sem padrão.  
+`[ @schedule_name = ] 'schedule_name'` O nome da agenda. *schedule_name* é **sysname**, sem padrão.  
   
-`[ @enabled = ] enabled`Indica o status atual da agenda. *habilitado* é **tinyint**, com um padrão de **1** (habilitado). Se for **0**, o agendamento não será habilitado. Quando o agendamento não está habilitado, nenhum trabalho é executado nele.  
+`[ @enabled = ] enabled` Indica o status atual da agenda. *habilitado* é **tinyint**, com um padrão de **1** (habilitado). Se for **0**, o agendamento não será habilitado. Quando o agendamento não está habilitado, nenhum trabalho é executado nele.  
   
-`[ @freq_type = ] freq_type`Um valor que indica quando um trabalho deve ser executado. *freq_type* é **int**, com um padrão de **0**, e pode ser um desses valores.  
+`[ @freq_type = ] freq_type` Um valor que indica quando um trabalho deve ser executado. *freq_type* é **int**, com um padrão de **0**, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -70,7 +71,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|Executar quando o serviço SQL Agent for iniciado|  
 |**128**|Executar quando o computador estiver ocioso (sem suporte no [Azure SQL instância gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
-`[ @freq_interval = ] freq_interval`Os dias em que um trabalho é executado. *freq_interval* é **int**, com um padrão de **1**, e depende do valor de *freq_type*.  
+`[ @freq_interval = ] freq_interval` Os dias em que um trabalho é executado. *freq_interval* é **int**, com um padrão de **1**, e depende do valor de *freq_type*.  
   
 |Valor de *freq_type*|Efeito no *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -82,7 +83,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (quando o serviço SQLServerAgent é iniciado)|*freq_interval* não é usado.|  
 |**128**|*freq_interval* não é usado.|  
   
-`[ @freq_subday_type = ] freq_subday_type`Especifica as unidades para *freq_subday_interval*. *freq_subday_type* é **int**, com um padrão de **0**, e pode ser um desses valores.  
+`[ @freq_subday_type = ] freq_subday_type` Especifica as unidades para *freq_subday_interval*. *freq_subday_type* é **int**, com um padrão de **0**, e pode ser um desses valores.  
   
 |Valor|Descrição (unidade)|  
 |-----------|--------------------------|  
@@ -91,9 +92,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|minutos|  
 |**0x8**|Horas|  
   
-`[ @freq_subday_interval = ] freq_subday_interval`O número de períodos de *freq_subday_type* a ocorrer entre cada execução de um trabalho. *freq_subday_interval* é **int**, com um padrão de **0**. Observação: o intervalo deve ser maior que 10 segundos. *freq_subday_interval* é ignorado nesses casos em que *freq_subday_type* é igual a **1**.  
+`[ @freq_subday_interval = ] freq_subday_interval` O número de períodos de *freq_subday_type* a ocorrer entre cada execução de um trabalho. *freq_subday_interval* é **int**, com um padrão de **0**. Observação: o intervalo deve ser maior que 10 segundos. *freq_subday_interval* é ignorado nesses casos em que *freq_subday_type* é igual a **1**.  
   
-`[ @freq_relative_interval = ] freq_relative_interval`A ocorrência de um trabalho de *freq_interval* em cada mês, se *freq_interval* for 32 (relativo mensal). *freq_relative_interval* é **int**, com um padrão de **0**, e pode ser um desses valores. *freq_relative_interval* é ignorado nesses casos em que *freq_type* não é igual a 32.  
+`[ @freq_relative_interval = ] freq_relative_interval` A ocorrência de um trabalho de *freq_interval* em cada mês, se *freq_interval* for 32 (relativo mensal). *freq_relative_interval* é **int**, com um padrão de **0**, e pode ser um desses valores. *freq_relative_interval* é ignorado nesses casos em que *freq_type* não é igual a 32.  
   
 |Valor|Descrição (unidade)|  
 |-----------|--------------------------|  
@@ -103,25 +104,25 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**8**|Quarto|  
 |**16**|Último|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor`O número de semanas ou meses entre a execução agendada de um trabalho. *freq_recurrence_factor* será usado somente se *freq_type* for **8**, **16**ou **32**. *freq_recurrence_factor* é **int**, com um padrão de **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` O número de semanas ou meses entre a execução agendada de um trabalho. *freq_recurrence_factor* será usado somente se *freq_type* for **8**, **16**ou **32**. *freq_recurrence_factor* é **int**, com um padrão de **0**.  
   
-`[ @active_start_date = ] active_start_date`A data em que a execução de um trabalho pode começar. *active_start_date* é **int**, com um padrão de NULL, que indica a data de hoje. A data é formatada como DDMMAAAA. Se *active_start_date* não for NULL, a data deverá ser maior ou igual a 19900101.  
+`[ @active_start_date = ] active_start_date` A data em que a execução de um trabalho pode começar. *active_start_date* é **int**, com um padrão de NULL, que indica a data de hoje. A data é formatada como DDMMAAAA. Se *active_start_date* não for NULL, a data deverá ser maior ou igual a 19900101.  
   
  Depois que a agenda estiver criada, reveja a data de início e confirme se essa é a data correta. Para obter mais informações, consulte a seção "data de início do agendamento" em [criar e anexar agendas a trabalhos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  Para agendamentos semanais ou mensais, o agente ignora se active_start_date está no passado e usa a data atual. Quando um agendamento do SQL Agent é criado usando o sp_add_schedule, há uma opção para especificar o parâmetro active_start_date que é a data em que a execução do trabalho será iniciada. Se o tipo de agendamento for semanal ou mensal e o parâmetro active_start_date for definido como uma data no passado, o parâmetro active_start_date será ignorado e a data atual será usada para active_start_date.  
   
-`[ @active_end_date = ] active_end_date`A data em que a execução de um trabalho pode parar. *active_end_date* é **int**, com um padrão de **99991231**, que indica 31 de dezembro de 9999. Formatada como AAAAMMDD.  
+`[ @active_end_date = ] active_end_date` A data em que a execução de um trabalho pode parar. *active_end_date* é **int**, com um padrão de **99991231**, que indica 31 de dezembro de 9999. Formatada como AAAAMMDD.  
   
-`[ @active_start_time = ] active_start_time`A hora em qualquer dia entre *active_start_date* e *active_end_date* para iniciar a execução de um trabalho. *active_start_time* é **int**, com um padrão de **000000**, que indica 12:00:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @active_start_time = ] active_start_time` A hora em qualquer dia entre *active_start_date* e *active_end_date* para iniciar a execução de um trabalho. *active_start_time* é **int**, com um padrão de **000000**, que indica 12:00:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @active_end_time = ] active_end_time`A hora em qualquer dia entre *active_start_date* e *active_end_date* para encerrar a execução de um trabalho. *active_end_time* é **int**, com um padrão de **235959**, que indica 11:59:59 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @active_end_time = ] active_end_time` A hora em qualquer dia entre *active_start_date* e *active_end_date* para encerrar a execução de um trabalho. *active_end_time* é **int**, com um padrão de **235959**, que indica 11:59:59 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @owner_login_name = ] 'owner_login_name'`O nome da entidade de segurança do servidor que possui a agenda. *owner_login_name* é **sysname**, com um padrão de NULL, que indica que o agendamento pertence ao criador.  
+`[ @owner_login_name = ] 'owner_login_name'` O nome da entidade de segurança do servidor que possui a agenda. *owner_login_name* é **sysname**, com um padrão de NULL, que indica que o agendamento pertence ao criador.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT`Um identificador exclusivo para a agenda. *schedule_uid* é uma variável do tipo **uniqueidentifier**.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` Um identificador exclusivo para a agenda. *schedule_uid* é uma variável do tipo **uniqueidentifier**.  
   
-`[ @schedule_id = ] _schedule_idOUTPUT`Um identificador para a agenda. *schedule_id* é uma variável do tipo **int**.  
+`[ @schedule_id = ] _schedule_idOUTPUT` Um identificador para a agenda. *schedule_id* é uma variável do tipo **int**.  
   
 `[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -195,10 +196,10 @@ GO
  [Agendar um trabalho](../../ssms/agent/schedule-a-job.md)   
  [Criar uma agenda](../../ssms/agent/create-a-schedule.md)   
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_schedule](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_schedule](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_jobschedule ](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_schedule ](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_schedule ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_schedule ](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_control_dbmasterkey_password (Transact-SQL)
 title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/09/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481431"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -77,7 +78,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  **Possível problema de compatibilidade com versões anteriores:** Atualmente, o procedimento armazenado não verifica se existe uma chave mestra. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, a chave mestra deve existir e a senha usada no procedimento armazenado **sp_control_dbmasterkey_password** deve ser a mesma senha que uma das senhas usadas para criptografar a chave mestra do banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -102,8 +103,8 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. Credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   
   

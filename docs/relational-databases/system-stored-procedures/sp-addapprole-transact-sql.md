@@ -1,4 +1,5 @@
 ---
+description: sp_addapprole (Transact-SQL)
 title: sp_addapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4c3420396f1a8149a7c5811f1c7422a6fb960f13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa68e8b0d965fae3a1c27f5ca2705bc003d7b616
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481531"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877900"
   Adiciona uma função de aplicativo ao banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [criar função de aplicativo](../../t-sql/statements/create-application-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [criar função de aplicativo](../../t-sql/statements/create-application-role-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`É o nome da nova função de aplicativo. *role* é **sysname**, sem padrão. a *função* deve ser um identificador válido e já não pode existir no banco de dados atual.  
+`[ @rolename = ] 'role'` É o nome da nova função de aplicativo. *role* é **sysname**, sem padrão. a *função* deve ser um identificador válido e já não pode existir no banco de dados atual.  
   
  Os nomes de função de aplicativo podem conter de 1 até 128 caracteres, inclusive cartas, símbolos e números. Os nomes de função não podem conter uma barra invertida ( \\ ) nem ser nulo ou uma cadeia de caracteres vazia (' ').  
   
-`[ @password = ] 'password'`É a senha necessária para ativar a função de aplicativo. a *senha* é **sysname**, sem padrão. a *senha* não pode ser nula.  
+`[ @password = ] 'password'` É a senha necessária para ativar a função de aplicativo. a *senha* é **sysname**, sem padrão. a *senha* não pode ser nula.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

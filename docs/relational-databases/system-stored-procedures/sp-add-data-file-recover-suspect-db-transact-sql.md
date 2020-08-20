@@ -1,4 +1,5 @@
 ---
+description: sp_add_data_file_recover_suspect_db (Transact-SQL)
 title: sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce146a12cb794952cc218a3dadb22318b700460c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae07b655dd7b693876c61b600315ac8874d988ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481621"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,21 +46,21 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbName = ] 'database_ '`É o nome do banco de dados. o *banco de dados* é **sysname**, sem padrão.  
+`[ @dbName = ] 'database_ '` É o nome do banco de dados. o *banco de dados* é **sysname**, sem padrão.  
   
-`[ @filegroup = ] 'filegroup_name_ '`É o grupo de arquivos ao qual adicionar o arquivo. *filegroup_name* é **nvarchar (260)**, com um padrão NULL, que indica o arquivo primário.  
+`[ @filegroup = ] 'filegroup_name_ '` É o grupo de arquivos ao qual adicionar o arquivo. *filegroup_name* é **nvarchar (260)**, com um padrão NULL, que indica o arquivo primário.  
   
-`[ @name = ] 'logical_file_name_ '`É o nome usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para referenciar o arquivo. O nome deve ser exclusivo no servidor. *logical_file_name* é **nvarchar (260)**, sem padrão.  
+`[ @name = ] 'logical_file_name_ '` É o nome usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para referenciar o arquivo. O nome deve ser exclusivo no servidor. *logical_file_name* é **nvarchar (260)**, sem padrão.  
   
-`[ @filename = ] 'os_file_name_ '`É o caminho e o nome de arquivo usados pelo sistema operacional para o arquivo. O arquivo precisa residir em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* é **nvarchar (260)**, sem padrão.  
+`[ @filename = ] 'os_file_name_ '` É o caminho e o nome de arquivo usados pelo sistema operacional para o arquivo. O arquivo precisa residir em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* é **nvarchar (260)**, sem padrão.  
   
-`[ @size = ] 'size_ '`É o tamanho inicial do arquivo. o *tamanho* é **nvarchar (20)**, com um padrão de NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB. O valor mínimo é 512 KB. Se o *tamanho* não for especificado, o padrão será 1 MB.  
+`[ @size = ] 'size_ '` É o tamanho inicial do arquivo. o *tamanho* é **nvarchar (20)**, com um padrão de NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB. O valor mínimo é 512 KB. Se o *tamanho* não for especificado, o padrão será 1 MB.  
   
-`[ @maxsize = ] 'max_size_ '`É o tamanho máximo para o qual o arquivo pode crescer. *max_size* é **nvarchar (20)**, com um padrão de NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB.  
+`[ @maxsize = ] 'max_size_ '` É o tamanho máximo para o qual o arquivo pode crescer. *max_size* é **nvarchar (20)**, com um padrão de NULL. Especifique um número inteiro; não inclua um decimal. Os sufixos MB e KB podem ser usados para especificar megabytes ou quilobytes. O padrão é MB.  
   
  Se *max_size* não for especificado, o arquivo será aumentado até que o disco esteja cheio. O log de aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows adverte o administrador quando o disco está quase cheio.  
   
-`[ @filegrowth = ] 'growth_increment_ '`É a quantidade de espaço adicionada ao arquivo toda vez que um novo espaço é necessário. *growth_increment* é **nvarchar (20)**, com um padrão de NULL. Um valor de 0 indica que não houve crescimento. Especifique um número inteiro; não inclua um decimal. O valor pode ser especificado em MB, KB ou porcentagem (%). Quando a % é especificada, o incremento de crescimento é a porcentagem especificada do tamanho do arquivo no momento em que ocorre o incremento. Se um número for especificado sem um sufixo MB, KB, ou %, o padrão será MB.  
+`[ @filegrowth = ] 'growth_increment_ '` É a quantidade de espaço adicionada ao arquivo toda vez que um novo espaço é necessário. *growth_increment* é **nvarchar (20)**, com um padrão de NULL. Um valor de 0 indica que não houve crescimento. Especifique um número inteiro; não inclua um decimal. O valor pode ser especificado em MB, KB ou porcentagem (%). Quando a % é especificada, o incremento de crescimento é a porcentagem especificada do tamanho do arquivo no momento em que ocorre o incremento. Se um número for especificado sem um sufixo MB, KB, ou %, o padrão será MB.  
   
  Se *growth_increment* for NULL, o valor padrão será 10% e o valor mínimo será 64 KB. O tamanho especificado é arredondado para o mais próximo de 64 KB.  
   
@@ -84,7 +85,7 @@ EXEC sp_add_data_file_recover_suspect_db db1, fg1, file2,
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_log_file_recover_suspect_db](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_log_file_recover_suspect_db ](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

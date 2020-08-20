@@ -1,4 +1,5 @@
 ---
+description: sp_configure (Transact-SQL)
 title: sp_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -18,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd39c7f2a803dc778f8d29530b63daa46fc4b7e2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 17a4e6aa23b7792daf2d7fe27c694f88cc8abe70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481418"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -60,11 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @configname = ] 'option_name'`É o nome de uma opção de configuração. *option_name* é **varchar(35)** , com um padrão de NULL. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconhece qualquer cadeia de caracteres única que faça parte do nome de configuração. Se não for especificado, a lista completa de opções será retornada.  
+`[ @configname = ] 'option_name'` É o nome de uma opção de configuração. *option_name* é **varchar(35)** , com um padrão de NULL. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconhece qualquer cadeia de caracteres única que faça parte do nome de configuração. Se não for especificado, a lista completa de opções será retornada.  
   
  Para obter informações sobre as opções de configuração disponíveis e suas configurações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'`É a nova definição de configuração. *value* é **int**, com um padrão NULL. O valor máximo depende da opção individual.  
+`[ @configvalue = ] 'value'` É a nova definição de configuração. *value* é **int**, com um padrão NULL. O valor máximo depende da opção individual.  
   
  Para ver o valor máximo de cada opção, consulte a coluna **máximo** da exibição do catálogo **sys.configurations** .  
   
@@ -173,7 +174,7 @@ EXEC sp_configure @configname='hadoop connectivity';
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  

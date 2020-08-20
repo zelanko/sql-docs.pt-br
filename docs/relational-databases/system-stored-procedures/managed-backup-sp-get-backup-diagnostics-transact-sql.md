@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 title: managed_backup. sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 54e81df3d503b5c520ed812fefec8601d4979cd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481598"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
