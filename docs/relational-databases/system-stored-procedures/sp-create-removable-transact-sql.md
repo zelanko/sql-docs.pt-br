@@ -1,4 +1,5 @@
 ---
+description: sp_create_removable (Transact-SQL)
 title: sp_create_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b004ff5c004d51bcd0af402fc081f96745d9b9ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489482"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85869879"
   Cria um banco de dados de mídia removível. Cria três ou mais arquivos (um para as tabelas de catálogo de sistema, um para o log de transações e um ou mais para as tabelas de dados) e coloca o banco de dados nesses arquivos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]É recomendável que você use [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,27 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`É o nome do banco de dados a ser criado para uso em mídia removível. *dbname* é **sysname**.  
+`[ @dbname = ] 'dbname'` É o nome do banco de dados a ser criado para uso em mídia removível. *dbname* é **sysname**.  
   
-`[ @syslogical = ] 'syslogical'`É o nome lógico do arquivo que contém as tabelas do catálogo do sistema. o *syslog* é **sysname**.  
+`[ @syslogical = ] 'syslogical'` É o nome lógico do arquivo que contém as tabelas do catálogo do sistema. o *syslog* é **sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'`É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de catálogo de sistema. *sysphysical* é **nvarchar (260)**.  
+`[ @sysphysical = ] 'sysphysical'` É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de catálogo de sistema. *sysphysical* é **nvarchar (260)**.  
   
-`[ @syssize = ] syssize`É o tamanho, em megabytes, do arquivo que contém as tabelas do catálogo do sistema. *syssize* é **int**. O *syssize* mínimo é 1.  
+`[ @syssize = ] syssize` É o tamanho, em megabytes, do arquivo que contém as tabelas do catálogo do sistema. *syssize* é **int**. O *syssize* mínimo é 1.  
   
-`[ @loglogical = ] 'loglogical'`É o nome lógico do arquivo que contém o log de transações. *loglogical* é **sysname**.  
+`[ @loglogical = ] 'loglogical'` É o nome lógico do arquivo que contém o log de transações. *loglogical* é **sysname**.  
   
-`[ @logphysical = ] 'logphysical'`É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém o log de transações. *logphysical* é **nvarchar (260)**.  
+`[ @logphysical = ] 'logphysical'` É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém o log de transações. *logphysical* é **nvarchar (260)**.  
   
-`[ @logsize = ] logsize`É o tamanho, em megabytes, do arquivo que contém o log de transações. *logs* é **int**. O mínimo de *logs* é 1.  
+`[ @logsize = ] logsize` É o tamanho, em megabytes, do arquivo que contém o log de transações. *logs* é **int**. O mínimo de *logs* é 1.  
   
-`[ @datalogical1 = ] 'datalogical'`É o nome lógico de um arquivo que contém as tabelas de dados. *datalogicl* é **sysname**.  
+`[ @datalogical1 = ] 'datalogical'` É o nome lógico de um arquivo que contém as tabelas de dados. *datalogicl* é **sysname**.  
   
  Deve ser de 1 a 16 arquivos de dados. Geralmente, mais de um arquivo de dados é criado quando é esperado que o banco de dados seja grande e deve ser distribuído em vários discos.  
   
-`[ @dataphysical1 = ] 'dataphysical'`É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de dados. *datafísico* é **nvarchar (260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de dados. *datafísico* é **nvarchar (260)**.  
   
-`[ @datasize1 = ] 'datasize'`É o tamanho, em megabytes, de um arquivo que contém tabelas de dados. o *DataSize* é **int**. O tamanho mínimo do *DataSize* é 1.  
+`[ @datasize1 = ] 'datasize'` É o tamanho, em megabytes, de um arquivo que contém tabelas de dados. o *DataSize* é **int**. O tamanho mínimo do *DataSize* é 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -120,12 +121,12 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>Consulte Também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_certify_removable](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_certify_removable ](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbremove](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpfile](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpfilegroup](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbremove ](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_detach_db ](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpfile ](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpfilegroup ](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorhelpalert (Transact-SQL)
 title: sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab1a8338a25394b3a750e09e0b0da6c6099c97ee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 942696e1d05ac149780ca226d4a6ba500a3aa11c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489403"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +81,7 @@ sp_dbmmonitorhelpalert database_name
 |5|Período de retenção|Horas|  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma linha que indica se um aviso está habilitado para a métrica de desempenho da transação mais antiga não enviada do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -97,11 +98,11 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorchangealert](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitordropalert](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorupdate](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorchangealert ](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorchangemonitoring ](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitordropalert ](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorupdate ](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbmmonitorhelpmonitoring ](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

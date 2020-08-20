@@ -1,4 +1,5 @@
 ---
+description: sp_add_jobserver (Transact-SQL)
 title: sp_add_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a93fb689cf812ad48a9c77469621a2d523796bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17759b079b8f2263d6cfe025d8550d35747ab080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489661"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @server_name = ] 'server'`O nome do servidor no qual direcionar o trabalho. o *servidor* é **nvarchar (30)**, com um padrão de N ' (local) '. o *servidor* pode ser **(local)** para um servidor local ou o nome de um servidor de destino existente.  
+`[ @server_name = ] 'server'` O nome do servidor no qual direcionar o trabalho. o *servidor* é **nvarchar (30)**, com um padrão de N ' (local) '. o *servidor* pode ser **(local)** para um servidor local ou o nome de um servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -107,8 +108,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_apply_job_to_targets ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_jobserver ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

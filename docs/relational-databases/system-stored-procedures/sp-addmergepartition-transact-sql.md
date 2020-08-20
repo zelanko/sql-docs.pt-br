@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepartition (Transact-SQL)
 title: sp_addmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1bf10e593c23b4f31f418df45e9ad0fe03dbdcdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489631"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É a publicação de mesclagem na qual a partição está sendo criada. a *publicação* é **sysname**, sem padrão. Se *SUSER_SNAME* for especificado, o valor do *nome do host* deverá ser nulo.  
+`[ @publication = ] 'publication'` É a publicação de mesclagem na qual a partição está sendo criada. a *publicação* é **sysname**, sem padrão. Se *SUSER_SNAME* for especificado, o valor do *nome do host* deverá ser nulo.  
   
-`[ @suser_sname = ] 'suser_sname'`É o valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) no Assinante. *SUSER_SNAME* é **sysname**, sem padrão.  
+`[ @suser_sname = ] 'suser_sname'` É o valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) no Assinante. *SUSER_SNAME* é **sysname**, sem padrão.  
   
-`[ @host_name = ] 'host_name'`É o valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) no Assinante. *HOST_NAME* é **sysname**, sem padrão.  
+`[ @host_name = ] 'host_name'` É o valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) no Assinante. *HOST_NAME* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

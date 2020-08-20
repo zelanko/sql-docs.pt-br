@@ -1,4 +1,5 @@
 ---
+description: sp_create_plan_guide (Transact-SQL)
 title: sp_create_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc0818b0406aaa322a9fc28563f54c06b88c732c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0595885b12cc70d5634058eeb9650ee323921ba5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489519"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@ stmt =] N '*statement_text*'  
  É uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] para a qual deve ser criada um guia de plano. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] otimizador de consulta reconhece uma consulta que corresponde a *statement_text*, *plan_guide_name* entra em vigor. Para que a criação de um guia de plano seja bem sucedido, *statement_text* deve aparecer no contexto especificado pelos \@ parâmetros Type, \@ module_or_batch e \@ params.  
   
- *statement_text* deve ser fornecido de forma que permita que o otimizador de consulta coincida com a instrução correspondente fornecida no lote ou no módulo identificado por \@ module_or_batch e \@ params. Para obter mais informações, consulte a seção “Comentários”. O tamanho de *statement_text* é limitado apenas pela memória disponível do servidor.  
+ *statement_text* deve ser fornecido de forma que permita que o otimizador de consulta coincida com a instrução correspondente fornecida no lote ou no módulo identificado por \@ module_or_batch e \@ params. Para obter mais informações, consulte a seção "Comentários". O tamanho de *statement_text* é limitado apenas pela memória disponível do servidor.  
   
  [ \@ Type =] N ' {Object | SQL | MODELO} '  
  É o tipo de entidade na qual *statement_text* aparece. Isso especifica o contexto para correspondência de *statement_text* a *plan_guide_name*.  
@@ -65,7 +66,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Indica *statement_text* aparece no contexto de um [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado, função escalar, função com valor de tabela de várias instruções ou [!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho DML no banco de dados atual.  
   
  SQL  
- Indica *statement_text* aparece no contexto de uma instrução ou um lote autônomo que pode ser enviado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de qualquer mecanismo. [!INCLUDE[tsql](../../includes/tsql-md.md)]as instruções enviadas por objetos Common Language Runtime (CLR) ou procedimentos armazenados estendidos, ou usando EXEC N '*sql_string*', são processadas como lotes no servidor e, portanto, devem ser identificadas como \@ tipo **=** ' SQL '. Se SQL for especificado, a PARAMETRIZAção de dica de consulta {FORCEd | SIMPLE} não pode ser especificado no \@ parâmetro hints.  
+ Indica *statement_text* aparece no contexto de uma instrução ou um lote autônomo que pode ser enviado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de qualquer mecanismo. [!INCLUDE[tsql](../../includes/tsql-md.md)] as instruções enviadas por objetos Common Language Runtime (CLR) ou procedimentos armazenados estendidos, ou usando EXEC N '*sql_string*', são processadas como lotes no servidor e, portanto, devem ser identificadas como \@ tipo **=** ' SQL '. Se SQL for especificado, a PARAMETRIZAção de dica de consulta {FORCEd | SIMPLE} não pode ser especificado no \@ parâmetro hints.  
   
  TEMPLATE  
  Indica que o guia de plano se aplica a qualquer consulta que parametriza ao formulário indicado em *statement_text*. Se o modelo for especificado, somente a PARAMETRIZAção {FORCEd | SIMPLE} a dica de consulta pode ser especificada no \@ parâmetro hints. Para obter mais informações sobre guias de plano de modelo, consulte [especificar comportamento de parametrização de consulta usando guias de plano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
@@ -326,15 +327,15 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Guias de plano](../../relational-databases/performance/plan-guides.md)   
- [&#41;&#40;Transact-SQL de sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
- [sys. plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
+ [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
+ [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_get_query_template ](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

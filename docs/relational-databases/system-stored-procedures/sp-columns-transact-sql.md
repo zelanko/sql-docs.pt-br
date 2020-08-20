@@ -1,4 +1,5 @@
 ---
+description: sp_columns (Transact-SQL)
 title: sp_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
@@ -18,12 +19,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5dec6803d57bbb67286dc7b9ceb1b573644c2863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489541"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,17 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@table_name = ] object`É o nome do objeto usado para retornar as informações do catálogo. o *objeto* pode ser uma tabela, exibição ou outro objeto que tenha colunas como funções com valor de tabela. o *objeto* é **nvarchar (384)**, sem padrão. Há suporte para a correspondência do padrão curinga.  
+`[ \@table_name = ] object` É o nome do objeto usado para retornar as informações do catálogo. o *objeto* pode ser uma tabela, exibição ou outro objeto que tenha colunas como funções com valor de tabela. o *objeto* é **nvarchar (384)**, sem padrão. Há suporte para a correspondência do padrão curinga.  
   
-`[ \@table_owner = ] owner`É o proprietário do objeto do objeto usado para retornar as informações do catálogo. *Owner* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de objeto padrão do DBMS subjacente se aplicarão.  
+`[ \@table_owner = ] owner` É o proprietário do objeto do objeto usado para retornar as informações do catálogo. *Owner* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de objeto padrão do DBMS subjacente se aplicarão.  
   
  Se o usuário atual possuir um objeto com o nome especificado, as colunas desse objeto serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir um objeto com o *objeto*especificado, **sp_columns** procurará um objeto com o *objeto* especificado de Propriedade do proprietário do banco de dados. Se existir, as colunas desse objeto serão retornadas.  
   
-`[ \@table_qualifier = ] qualifier`É o nome do qualificador de objeto. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para objetos (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ela representa o nome do servidor do ambiente de banco de dados do objeto.  
+`[ \@table_qualifier = ] qualifier` É o nome do qualificador de objeto. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para objetos (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ela representa o nome do servidor do ambiente de banco de dados do objeto.  
   
-`[ \@column_name = ] column`É uma única coluna e é usada quando é desejada apenas uma coluna de informações de catálogo. a *coluna* é **nvarchar (384)**, com um padrão de NULL. Se a *coluna* não for especificada, todas as colunas serão retornadas. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *coluna* representa o nome da coluna, conforme listado na tabela **syscolumns** . Há suporte para a correspondência do padrão curinga. Para interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão SQL-92 (os caracteres curinga % e _).  
+`[ \@column_name = ] column` É uma única coluna e é usada quando é desejada apenas uma coluna de informações de catálogo. a *coluna* é **nvarchar (384)**, com um padrão de NULL. Se a *coluna* não for especificada, todas as colunas serão retornadas. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *coluna* representa o nome da coluna, conforme listado na tabela **syscolumns** . Há suporte para a correspondência do padrão curinga. Para interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão SQL-92 (os caracteres curinga % e _).  
   
-`[ \@ODBCVer = ] ODBCVer`É a versão do ODBC que está sendo usada. *ODBCVer* é **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para as diferenças de comportamento entre as versões 2 e 3, consulte a especificação ODBC **SQLColumns** .  
+`[ \@ODBCVer = ] ODBCVer` É a versão do ODBC que está sendo usada. *ODBCVer* é **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para as diferenças de comportamento entre as versões 2 e 3, consulte a especificação ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -114,7 +115,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_tables ](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Procedimentos armazenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_hosts (Transact-SQL)
 title: sys. dm_os_hosts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e3d49d77dbee94bb365d58b7012c45cdaddf4f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e740acbef6a2980c0fed6c27b4d7c892883803b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489809"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85898789"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary (8)**|Endereço de memória interna do objeto de host.|  
-|**type**|**nvarchar(60)**|Tipo de componente hospedado. Por exemplo,<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server Native Interface<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB Provider<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access Run Time|  
+|**tipo**|**nvarchar(60)**|Tipo de componente hospedado. Por exemplo,<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server Native Interface<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB Provider<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access Run Time|  
 |**name**|**nvarchar(32)**|Nome do host.|  
 |**enqueued_tasks_count**|**int**|Número total de tarefas que o host colocou nas filas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**active_tasks_count**|**int**|Número de tarefas em execução atualmente que o host colocou nas filas.|  
@@ -44,12 +45,12 @@ ms.locfileid: "85898789"
 |**completed_ios_in_bytes**|**bigint**|Contagem total de bytes das E/S concluídas por meio deste host.|  
 |**active_ios_count**|**int**|Número total de solicitações de E/S relacionadas a este host que neste momento está aguardando conclusão.|  
 |**default_memory_clerk_address**|**varbinary (8)**|Endereço da memória do objeto de administrador de memória associado a este host. Para obter mais informações, consulte [Sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="remarks"></a>Comentários  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que os componentes, como um provedor OLE DB, que não fazem parte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executável, aloquem memória e participem de programação não preemptiva. Esses componentes são hospedados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e todos os recursos alocados por eles são controlados. A hospedagem permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa cuidar mais dos recursos usados por componentes externos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executável.  
@@ -79,7 +80,7 @@ GROUP BY h.type;
 ## <a name="see-also"></a>Consulte Também  
 
  [sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

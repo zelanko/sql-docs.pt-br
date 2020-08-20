@@ -1,4 +1,5 @@
 ---
+description: sp_add_job (Transact-SQL)
 title: sp_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 76503d17117e6a6dd0787539d96c6e16f3a0bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489657"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,21 +58,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'`O nome do trabalho. O nome deve ser exclusivo e não pode conter o caractere de porcentagem ( **%** ). *job_name*é **nvarchar (128)**, sem padrão.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. O nome deve ser exclusivo e não pode conter o caractere de porcentagem ( **%** ). *job_name*é **nvarchar (128)**, sem padrão.  
   
-`[ @enabled = ] enabled`Indica o status do trabalho adicionado. *habilitado*é **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não é executado de acordo com seu agendamento; no entanto, ele pode ser executado manualmente.  
+`[ @enabled = ] enabled` Indica o status do trabalho adicionado. *habilitado*é **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não é executado de acordo com seu agendamento; no entanto, ele pode ser executado manualmente.  
   
-`[ @description = ] 'description'`A descrição do trabalho. a *Descrição* é **nvarchar (512)**, com um padrão de NULL. Se a *Descrição* for omitida, "nenhuma descrição disponível" será usada.  
+`[ @description = ] 'description'` A descrição do trabalho. a *Descrição* é **nvarchar (512)**, com um padrão de NULL. Se a *Descrição* for omitida, "nenhuma descrição disponível" será usada.  
   
-`[ @start_step_id = ] step_id`O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*é **int**, com um padrão de 1.  
+`[ @start_step_id = ] step_id` O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*é **int**, com um padrão de 1.  
   
-`[ @category_name = ] 'category'`A categoria para o trabalho. a *categoria*é **sysname**, com um padrão de NULL.  
+`[ @category_name = ] 'category'` A categoria para o trabalho. a *categoria*é **sysname**, com um padrão de NULL.  
   
-`[ @category_id = ] category_id`Um mecanismo independente de linguagem para especificar uma categoria de trabalho. *category_id*é **int**, com um padrão de NULL.  
+`[ @category_id = ] category_id` Um mecanismo independente de linguagem para especificar uma categoria de trabalho. *category_id*é **int**, com um padrão de NULL.  
   
-`[ @owner_login_name = ] 'login'`O nome do logon que possui o trabalho. *logon*é **sysname**, com um padrão de NULL, que é interpretado como o nome de logon atual. Somente os membros da função de servidor fixa **sysadmin** podem definir ou alterar o valor de ** \@ owner_login_name**. Se os usuários que não são membros da função **sysadmin** definida ou alterarem o valor de ** \@ owner_login_name**, a execução desse procedimento armazenado falhará e um erro será retornado.  
+`[ @owner_login_name = ] 'login'` O nome do logon que possui o trabalho. *logon*é **sysname**, com um padrão de NULL, que é interpretado como o nome de logon atual. Somente os membros da função de servidor fixa **sysadmin** podem definir ou alterar o valor de ** \@ owner_login_name**. Se os usuários que não são membros da função **sysadmin** definida ou alterarem o valor de ** \@ owner_login_name**, a execução desse procedimento armazenado falhará e um erro será retornado.  
   
-`[ @notify_level_eventlog = ] eventlog_level`Um valor que indica quando inserir uma entrada no log de aplicativos do Microsoft Windows para esse trabalho. *eventlog_level*é **int**e pode ser um desses valores.  
+`[ @notify_level_eventlog = ] eventlog_level` Um valor que indica quando inserir uma entrada no log de aplicativos do Microsoft Windows para esse trabalho. *eventlog_level*é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -80,24 +81,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (padrão)|Caso haja falha|  
 |**3**|Sempre|  
   
-`[ @notify_level_email = ] email_level`Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores que *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores que *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level`Um valor que indica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*é **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores que *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Um valor que indica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*é **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores que *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level`Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*é **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores que *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*é **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores que *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'`O nome de email da pessoa para a qual enviar email quando *email_level* for atingido. *email_name* é **sysname**, com um padrão de NULL.  
+`[ @notify_email_operator_name = ] 'email_name'` O nome de email da pessoa para a qual enviar email quando *email_level* for atingido. *email_name* é **sysname**, com um padrão de NULL.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'`O nome do operador para o qual a mensagem de rede é enviada após a conclusão deste trabalho. *netsend_name*é **sysname**, com um padrão de NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` O nome do operador para o qual a mensagem de rede é enviada após a conclusão deste trabalho. *netsend_name*é **sysname**, com um padrão de NULL.  
   
-`[ @notify_page_operator_name = ] 'page_name'`O nome da pessoa a ser paginada após a conclusão deste trabalho. *page_name*é **sysname**, com um padrão de NULL.  
+`[ @notify_page_operator_name = ] 'page_name'` O nome da pessoa a ser paginada após a conclusão deste trabalho. *page_name*é **sysname**, com um padrão de NULL.  
   
-`[ @delete_level = ] delete_level`Um valor que indica quando excluir o trabalho. *delete_value*é **int**, com um padrão de 0, o que significa nunca. *delete_level*usa os mesmos valores que *eventlog_level*.  
+`[ @delete_level = ] delete_level` Um valor que indica quando excluir o trabalho. *delete_value*é **int**, com um padrão de 0, o que significa nunca. *delete_level*usa os mesmos valores que *eventlog_level*.  
   
 > [!NOTE]  
 >  Quando *delete_level* é **3**, o trabalho é executado apenas uma vez, independentemente de quaisquer agendas definidas para o trabalho. Além disso, se um trabalho excluir a si próprio, todo o histórico do trabalho também será excluído.  
   
-`[ @job_id = ] _job_idOUTPUT`O número de identificação do trabalho atribuído ao trabalho, se criado com êxito. *job_id*é uma variável de saída do tipo **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] _job_idOUTPUT` O número de identificação do trabalho atribuído ao trabalho, se criado com êxito. *job_id*é uma variável de saída do tipo **uniqueidentifier**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -168,16 +169,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_jobstep](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_jobserver](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_jobstep ](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_jobserver ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_apply_job_to_targets ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_job ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_jobserver ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_remove_job_from_targets ](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_job ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_jobstep ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_job ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

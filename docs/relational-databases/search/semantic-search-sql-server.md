@@ -1,4 +1,5 @@
 ---
+description: Pesquisa semântica (SQL Server)
 title: Pesquisa semântica (SQL Server) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 4ef517636a0bc1f727f2dc6a59093af773007cc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8da5b57c26ad2b99ab11b058b9d3362ff48569e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490514"
 ---
 # <a name="semantic-search-sql-server"></a>Pesquisa semântica (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave*estatisticamente relevantes. Portanto, ele usa essas frases-chave para identificar e indexar *documentos semelhantes ou relacionados*.  
+A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave* estatisticamente relevantes. Portanto, ele usa essas frases-chave para identificar e indexar *documentos semelhantes ou relacionados*.  
   
 ##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a> O que é possível fazer com a pesquisa semântica?  
  A pesquisa semântica tem como base o recurso de pesquisa de texto completo existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas habilita novos cenários que ampliam as pesquisas de palavra-chave. Enquanto a pesquisa de texto completo permite que você consulte as *palavras* em um documento, a pesquisa semântica permite a consulta do *significado* do documento. Agora, as soluções possíveis incluem a extração automática de marcas, a descoberta de conteúdo relacionado e a navegação hierárquica por conteúdo semelhante. Por exemplo, você pode consultar o índice de frases-chave para criar a taxonomia para uma organização ou para um corpo de documentos. Ou, você pode consultar o índice de similaridade do documento para identificar os currículos que correspondem a uma descrição do trabalho.  
@@ -101,7 +102,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Habilitar a pesquisa semântica em tabelas e colunas](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
  Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
   
- [Localizar frases chave em documentos com a pesquisa semântica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
+ [Localizar frases chave em documentos com pesquisa semântica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
  Descreve como localizar as frases chave em documentos ou colunas de texto configuradas para indexação semântica estatística.  
   
  [Localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)  
@@ -111,7 +112,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  Descreve o processo de indexação semântica e as tarefas relacionadas a monitoramento e gerenciamento dos índices.  
   
 ##  <a name="related-content"></a><a name="relcontent"></a> Related content  
- [DDL, funções, procedimentos armazenados e exibições de pesquisa semântica](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
+ [Pesquisa de semântica DDL, funções, procedimentos armazenados e exibições](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
  Lista as instruções Transact-SQL e os objetos de banco de dados do SQL Server adicionados ou alterados para oferecer suporte à pesquisa semântica estatística.  
   
   

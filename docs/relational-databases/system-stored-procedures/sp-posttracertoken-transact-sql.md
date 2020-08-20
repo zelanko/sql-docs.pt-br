@@ -1,4 +1,5 @@
 ---
+description: sp_posttracertoken (Transact-SQL)
 title: sp_posttracertoken (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e1bcab6a1db0f8c92b82475689f24b53d72316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489125"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação para a qual a latência está sendo medida. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação para a qual a latência está sendo medida. a *publicação* é **sysname**, sem padrão.  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`É a ID do token de rastreamento inserido. *tracer_token_id* é **int** com um padrão de NULL e é um parâmetro de saída. Esse valor pode ser usado para executar [sp_helptracertokenhistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) ou [sp_deletetracertokenhistory &#40;Transact-SQL](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)&#41;sem primeiro executar [sp_helptracertokens &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` É a ID do token de rastreamento inserido. *tracer_token_id* é **int** com um padrão de NULL e é um parâmetro de saída. Esse valor pode ser usado para executar [sp_helptracertokenhistory &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) ou [sp_deletetracertokenhistory &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)&#41;sem primeiro executar [sp_helptracertokens &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL e não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL e não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -60,6 +61,6 @@ sp_posttracertoken [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_posttracertoken**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [Medir a latência e validar conexões para replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

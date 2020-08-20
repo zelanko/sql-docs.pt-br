@@ -1,4 +1,5 @@
 ---
+description: sp_server_info (Transact-SQL)
 title: sp_server_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489120"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -40,7 +41,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @attribute_id = ] 'attribute_id'`É a ID de inteiro do atributo. *attribute_id* é **int**, com um padrão de NULL.  
+`[ @attribute_id = ] 'attribute_id'` É a ID de inteiro do atributo. *attribute_id* é **int**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -53,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nome do atributo.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Configuração atual do atributo.|  
   
- A tabela a seguir lista os atributos. [!INCLUDE[msCoName](../../includes/msconame-md.md)]As bibliotecas de cliente ODBC atualmente usam os atributos **1**, **2**, **18**, **22**e **500** no momento da conexão.  
+ A tabela a seguir lista os atributos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] As bibliotecas de cliente ODBC atualmente usam os atributos **1**, **2**, **18**, **22**e **500** no momento da conexão.  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME Descrição|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -69,7 +70,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**17**|TX_ISOLATION<br /><br /> Especifica o nível de isolamento inicial da transação que o servidor assume, o qual corresponde a um nível de isolamento definido em SQL-92.|2|  
 |**anos**|COLLATION_SEQ<br /><br /> Especifica a ordenação do conjunto de caracteres para este servidor.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**aprimora**|SAVEPOINT_SUPPORT<br /><br /> Especifica se o DBMS subjacente oferece suporte a pontos de salvamento nomeados.|S|  
-|**20,00**|MULTI_RESULT_SETS<br /><br /> Especifica se o banco de dados subjacente ou o próprio gateway oferece suporte a vários conjuntos de resultados (várias instruções podem ser enviadas pelo gateway com vários conjuntos de resultados retornados ao cliente).|S|  
+|**20**|MULTI_RESULT_SETS<br /><br /> Especifica se o banco de dados subjacente ou o próprio gateway oferece suporte a vários conjuntos de resultados (várias instruções podem ser enviadas pelo gateway com vários conjuntos de resultados retornados ao cliente).|S|  
 |**22**|ACCESSIBLE_TABLES<br /><br /> Especifica se em **sp_tables**, o gateway retorna apenas tabelas, exibições e assim por diante, acessível pelo usuário atual (ou seja, o usuário que tem pelo menos permissões SELECT para a tabela).|S|  
 |**100**|USERID_LENGTH<br /><br /> Especifica o número máximo de caracteres para um nome de usuário.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> Especifica o termo do fornecedor do DBMS de um qualificador de tabela (a primeira parte de um nome de tabela com três partes).|Banco de Dados|  

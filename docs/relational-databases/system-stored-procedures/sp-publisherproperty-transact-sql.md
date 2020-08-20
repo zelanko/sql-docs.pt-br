@@ -1,4 +1,5 @@
 ---
+description: sp_publisherproperty (Transact-SQL)
 title: sp_publisherproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b04284605289d731b0a8eb955830ab149827114
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489190"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador heterogêneo. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador heterogêneo. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @propertyname = ] 'propertyname'`É o nome da propriedade que está sendo definida. *PropertyName* é **sysname**e pode ser um dos valores a seguir.  
+`[ @propertyname = ] 'propertyname'` É o nome da propriedade que está sendo definida. *PropertyName* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**xactsetbatching**|Se forem agrupadas transações no Publicador em conjuntos transacionalmente consistentes para processamento subsequente, conhecidos como Xactsets. Um valor **habilitado** significa que Xactsets pode ser criado, que é o padrão. Um valor **desabilitado** significa que os Xactsets existentes são processados por nenhum novo Xactsets é criado.|  
 |**xactsetjob**|Se o trabalho Xactset estiver habilitado para a criação de Xactsets. Um valor **habilitado** significa que o trabalho Xactset é executado periodicamente para criar Xactsets no Publicador. Um valor **desabilitado** significa que o Xactsets só será criado pelo agente de leitor de log quando ele sondar o Publicador em busca de alterações.|  
@@ -79,7 +80,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** no distribuidor podem executar **sp_publisherproperty**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar o trabalho do conjunto de transações para um Publicador Oracle &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Configurar o trabalho do conjunto de transações para um Publicador Oracle &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

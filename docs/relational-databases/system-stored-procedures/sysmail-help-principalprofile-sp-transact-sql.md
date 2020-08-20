@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_principalprofile_sp (Transact-SQL)
 title: sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8325480c2869f9b3e35caab51935eba36d888afb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488947"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id`É a ID do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser listada. *principal_id* é **int**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_id = ] principal_id` É a ID do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser listada. *principal_id* é **int**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
   
-`[ @principal_name = ] 'principal_name'`É o nome do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser listada. *principal_name* é **sysname**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_name = ] 'principal_name'` É o nome do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser listada. *principal_name* é **sysname**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
   
-`[ @profile_id = ] profile_id`É a ID do perfil para a associação a ser listada. *profile_id* é **int**, com um padrão de NULL. *Profile_id* ou *profile_name* pode ser especificado.  
+`[ @profile_id = ] profile_id` É a ID do perfil para a associação a ser listada. *profile_id* é **int**, com um padrão de NULL. *Profile_id* ou *profile_name* pode ser especificado.  
   
-`[ @profile_name = ] 'profile_name'`É o nome do perfil para a associação a ser listada. *profile_name* é **sysname**, com um padrão de NULL. *Profile_id* ou *profile_name* pode ser especificado.  
+`[ @profile_name = ] 'profile_name'` É o nome do perfil para a associação a ser listada. *profile_name* é **sysname**, com um padrão de NULL. *Profile_id* ou *profile_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

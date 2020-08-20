@@ -1,4 +1,5 @@
 ---
+description: Sobre as propriedades de OLE DB SQL Server Native Client
 title: Sobre propriedades OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87f6d05fa4d58f6ba7ca94476a4bf5b36bb09226
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b7c6e88a9f8a5083e18744e954a6063cda076750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490716"
 ---
 # <a name="about-sql-server-native-client-ole-db-properties"></a>Sobre as propriedades de OLE DB SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

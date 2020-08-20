@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_monitor_secondary (Transact-SQL)
 title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfdf2e7f08f9fc5c5ef602188c6c291b53de6063
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e9bfac5c9cbb8594667f33a3abcc0a3a7561b49d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489349"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @secondary_server = ] 'secondary_server'`É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
+`[ @secondary_server = ] 'secondary_server'` É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
   
-`[ @secondary_database = ] 'secondary_database'`É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
+`[ @secondary_database = ] 'secondary_database'` É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

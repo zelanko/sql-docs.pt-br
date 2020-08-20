@@ -1,4 +1,5 @@
 ---
+description: dbo.sysschedules (Transact-SQL)
 title: Agendas de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488857"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

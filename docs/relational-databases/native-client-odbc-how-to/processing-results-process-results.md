@@ -1,4 +1,5 @@
 ---
+description: Resultados do processamento – Resultados do processo
 title: Resultados do processo (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,11 +14,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0afae97770982f4ecd6b08d53f8df04e6e2e7ac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490829"
 ---
 # <a name="processing-results---process-results"></a>Resultados do processamento – Resultados do processo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,6 +63,6 @@ O processamento de resultados em um aplicativo ODBC envolve primeiro determinar 
 >  Para cancelar o processamento de um conjunto de resultados antes que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) retorne SQL_NO_DATA, chame [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Consulte Também  
-[Recuperar informações do conjunto de resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Recuperar informações do conjunto de resultados &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

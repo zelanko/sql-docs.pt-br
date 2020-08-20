@@ -1,4 +1,5 @@
 ---
+description: sp_remove_job_from_targets (Transact-SQL)
 title: sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40f7d8812fe83648871bedbb3538202f5c519a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489132"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho do qual remover os servidores de destino ou os grupos de servidores de destino especificados. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho do qual remover os servidores de destino ou os grupos de servidores de destino especificados. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho do qual remover os servidores de destino ou grupos de servidores de destino especificados. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho do qual remover os servidores de destino ou grupos de servidores de destino especificados. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_name* é **sysname**, com um padrão de NULL.  
   
-`[ @target_server_groups = ] 'target_server_groups'`Uma lista separada por vírgulas de grupos de servidores de destino a serem removidos do trabalho especificado. *target_server_groups* é **nvarchar (1024)**, com um padrão de NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Uma lista separada por vírgulas de grupos de servidores de destino a serem removidos do trabalho especificado. *target_server_groups* é **nvarchar (1024)**, com um padrão de NULL.  
   
-`[ @target_servers = ] 'target_servers'`Uma lista separada por vírgulas de servidores de destino a serem removidos do trabalho especificado. *target_servers* é **nvarchar (1024)**, com um padrão de NULL.  
+`[ @target_servers = ] 'target_servers'` Uma lista separada por vírgulas de servidores de destino a serem removidos do trabalho especificado. *target_servers* é **nvarchar (1024)**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -71,8 +72,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_apply_job_to_targets ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_jobserver ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

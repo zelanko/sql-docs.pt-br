@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profileaccount_sp (Transact-SQL)
 title: sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a393c3902d8ee9c5af45a10358fbb9fa371af18e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488978"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`A ID do perfil para adicionar a conta. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id` A ID do perfil para adicionar a conta. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
   
-`[ @profile_name = ] 'profile_name'`O nome do perfil ao qual adicionar a conta. *profile_name* é **sysname**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil ao qual adicionar a conta. *profile_name* é **sysname**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
   
-`[ @account_id = ] account_id`A ID da conta a ser adicionada ao perfil. *account_id* é **int**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
+`[ @account_id = ] account_id` A ID da conta a ser adicionada ao perfil. *account_id* é **int**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
   
-`[ @account_name = ] 'account_name'`O nome da conta a ser adicionada ao perfil. *account_name* é **sysname**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
+`[ @account_name = ] 'account_name'` O nome da conta a ser adicionada ao perfil. *account_name* é **sysname**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
   
-`[ @sequence_number = ] sequence_number`O número de sequência da conta no perfil. *sequence_number* é **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
+`[ @sequence_number = ] sequence_number` O número de sequência da conta no perfil. *sequence_number* é **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

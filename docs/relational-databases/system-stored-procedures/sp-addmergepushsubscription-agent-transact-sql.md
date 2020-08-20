@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepushsubscription_agent (Transact-SQL)
 title: sp_addmergepushsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f29d2f67f50ecda28b0675ed6e716afd390ca899
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1b441a47237d09cce422996f592076c879572c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489583"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,40 +63,40 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, com um padrão de NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`É o modo de segurança a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_security_mode* é **int**, com um padrão de 1. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` É o modo de segurança a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_security_mode* é **int**, com um padrão de 1. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows.  
   
-`[ @subscriber_login = ] 'subscriber_login'`É o logon do assinante a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_login* será necessário se *subscriber_security_mode* for definido como **0**. *subscriber_login* é **sysname**, com um padrão de NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` É o logon do assinante a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_login* será necessário se *subscriber_security_mode* for definido como **0**. *subscriber_login* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_password = ] 'subscriber_password'`É a senha do assinante para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *subscriber_password* será necessário se *subscriber_security_mode* for definido como **0**. *subscriber_password* é **sysname**, com um padrão de NULL. Se uma senha de assinante for usada, será criptografada automaticamente.  
-  
-> [!IMPORTANT]  
->  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
-  
-`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de 1. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows.  
-  
-`[ @publisher_login = ] 'publisher_login'`É o logon a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_login* é **sysname**, com um padrão de NULL.  
-  
-`[ @publisher_password = ] 'publisher_password'`É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão de NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` É a senha do assinante para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *subscriber_password* será necessário se *subscriber_security_mode* for definido como **0**. *subscriber_password* é **sysname**, com um padrão de NULL. Se uma senha de assinante for usada, será criptografada automaticamente.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um valor padrão de NULL. Essa conta do Windows é sempre usada para conexões do agente com o Distribuidor e para conexões com o Assinante e o Publicador ao usar a autenticação integrada do Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode` É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de 1. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows.  
   
-`[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
+`[ @publisher_login = ] 'publisher_login'` É o logon a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_login* é **sysname**, com um padrão de NULL.  
+  
+`[ @publisher_password = ] 'publisher_password'` É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão de NULL.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @job_name = ] 'job_name'`É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando a assinatura é sincronizada usando um trabalho existente em vez de um trabalho recém-criado (o padrão). Se você não for membro da função de servidor fixa **sysadmin** , deverá especificar *job_login* e *job_password* ao especificar *job_name*.  
+`[ @job_login = ] 'job_login'` É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um valor padrão de NULL. Essa conta do Windows é sempre usada para conexões do agente com o Distribuidor e para conexões com o Assinante e o Publicador ao usar a autenticação integrada do Windows.  
   
-`[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a Agente de Mesclagem. *frequency_type* é **int**e pode ser um dos valores a seguir.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
+  
+> [!IMPORTANT]  
+>  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
+  
+`[ @job_name = ] 'job_name'` É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando a assinatura é sincronizada usando um trabalho existente em vez de um trabalho recém-criado (o padrão). Se você não for membro da função de servidor fixa **sysadmin** , deverá especificar *job_login* e *job_password* ao especificar *job_name*.  
+  
+`[ @frequency_type = ] frequency_type` É a frequência com a qual agendar a Agente de Mesclagem. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -112,7 +113,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 > [!NOTE]  
 >  A especificação de um valor de **64** faz com que a agente de mesclagem seja executada no modo contínuo. Isso corresponde à definição do parâmetro **-Continuous** para o agente. Para obter mais informações, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
-`[ @frequency_interval = ] frequency_interval`Os dias em que o Agente de Mesclagem é executado. *frequency_interval* é **int**e pode ser um dos valores a seguir.  
+`[ @frequency_interval = ] frequency_interval` Os dias em que o Agente de Mesclagem é executado. *frequency_interval* é **int**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -128,7 +129,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**10**|Dias de fim de semana|  
 |NULL (padrão)||  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`É a data da Agente de Mesclagem. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um dos valores a seguir.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data da Agente de Mesclagem. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -139,9 +140,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**16**|Último|  
 |NULL (padrão)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de NULL.  
   
-`[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
+`[ @frequency_subday = ] frequency_subday` É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -151,17 +152,17 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**8**|Hora|  
 |NULL (padrão)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`É o intervalo para *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo para *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`É a hora do dia em que o Agente de Mesclagem é agendado pela primeira vez, formatado como HHMMSS. *active_start_time_of_day* é **int**, com um padrão de NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia em que o Agente de Mesclagem é agendado pela primeira vez, formatado como HHMMSS. *active_start_time_of_day* é **int**, com um padrão de NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`É a hora do dia em que a Agente de Mesclagem para de ser agendada, formatada como HHMMSS. *active_end_time_of_day* é **int**, com um padrão de NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que a Agente de Mesclagem para de ser agendada, formatada como HHMMSS. *active_end_time_of_day* é **int**, com um padrão de NULL.  
   
-`[ @active_start_date = ] active_start_date`É a data em que o Agente de Mesclagem é agendado pela primeira vez, formatado como AAAAMMDD. *active_start_date* é **int**, com um padrão de NULL.  
+`[ @active_start_date = ] active_start_date` É a data em que o Agente de Mesclagem é agendado pela primeira vez, formatado como AAAAMMDD. *active_start_date* é **int**, com um padrão de NULL.  
   
-`[ @active_end_date = ] active_end_date`É a data em que a Agente de Mesclagem para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de NULL.  
+`[ @active_end_date = ] active_end_date` É a data em que a Agente de Mesclagem para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá ser sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá ser sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -176,11 +177,11 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addmergepushsubscription_agent**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar uma assinatura push](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [&#41;&#40;Transact-SQL de sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergesubscription](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addmergesubscription ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergesubscription ](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergesubscription ](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergesubscription ](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

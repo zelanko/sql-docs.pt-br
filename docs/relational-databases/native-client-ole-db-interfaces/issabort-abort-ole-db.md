@@ -1,4 +1,5 @@
 ---
+description: 'ISSAbort:: Abort (provedor de OLE DB de cliente nativo)'
 title: 'ISSAbort:: Abort (provedor de OLE DB de cliente nativo) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0da4aced1b1c5eaba473e88d4d2938c9f4f42d2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 392d02ccff41fa3ab7d1ab50fa6801279b1b18f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490825"
 ---
 # <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort:: Abort (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ HRESULT Abort(void);
  O lote não foi cancelado.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor; para obter informações detalhadas, use a interface [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) .  
+ Um erro específico do provedor ocorreu. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).  
   
  E_UNEXPECTED  
  A chamada para o método era inesperada. Por exemplo, o objeto está em um estado de zumbi porque **ISSAbort::Abort** já foi chamado.  

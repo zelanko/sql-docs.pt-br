@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobs_in_schedule (Transact-SQL)
 title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55dbd9d513383fc4ed299dd56be5022b68f68bac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c314f209e1b020598d1a0ab2ef946f2494ca989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489356"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id`O identificador do agendamento para o qual listar informações. *schedule_id* é **int**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_id = ] schedule_id` O identificador do agendamento para o qual listar informações. *schedule_id* é **int**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
   
-`[ @schedule_name = ] 'schedule_name'`O nome do agendamento para o qual listar informações. *schedule_name* é **sysname**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_name = ] 'schedule_name'` O nome do agendamento para o qual listar informações. *schedule_name* é **sysname**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,7 +58,7 @@ sp_help_jobs_in_schedule
 |**originating_server**|**nvarchar(30)**|Nome do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
 |**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
-|**ndescrição**|**nvarchar(512)**|Descrição do trabalho.|  
+|**descrição**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**category**|**sysname**|Categoria do trabalho.|  
 |**proprietário**|**sysname**|Proprietário do trabalho.|  
@@ -84,7 +85,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Número de etapas que o trabalho possui.|  
 |**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
 |**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
-|**type**|**int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
+|**tipo**|**int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
   
 ## <a name="remarks"></a>Comentários  
  Este procedimento lista informações sobre trabalhos anexados à agenda especificada.  
@@ -116,9 +117,9 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_attach_schedule](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_detach_schedule](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_attach_schedule ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_schedule ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_detach_schedule ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

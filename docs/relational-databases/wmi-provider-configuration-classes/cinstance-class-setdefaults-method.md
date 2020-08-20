@@ -1,4 +1,5 @@
 ---
+description: Classe CInstance – Método SetDefaults
 title: Método SetDefaults (CInstance)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 452b4e1a869eaf2b133d62c9ba8a1847d1891c86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5c74d4d45b374ae9c33b38a9872526333890856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488517"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Classe CInstance – Método SetDefaults
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Define todos os valores padrão para a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente com a opção de substituir os dados existentes.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -51,6 +52,6 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

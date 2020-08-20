@@ -1,4 +1,5 @@
 ---
+description: sp_helplanguage (Transact-SQL)
 title: sp_helplanguage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72f2e867c8139045b107cbb99871742c26440ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489317"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @language = ] 'language'`É o nome do idioma alternativo para o qual exibir informações. o *idioma* é **sysname**, com um padrão de NULL. Se o *idioma* for especificado, serão retornadas informações sobre o idioma especificado. Se o idioma não for especificado, as informações sobre todos os idiomas no modo de exibição de compatibilidade de **idiomassys.sys** serão retornadas.  
+`[ @language = ] 'language'` É o nome do idioma alternativo para o qual exibir informações. o *idioma* é **sysname**, com um padrão de NULL. Se o *idioma* for especificado, serão retornadas informações sobre o idioma especificado. Se o idioma não for especificado, as informações sobre todos os idiomas no modo de exibição de compatibilidade de ** idiomassys.sys** serão retornadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -84,7 +85,7 @@ sp_helplanguage;
 ## <a name="see-also"></a>Consulte Também  
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [DEFINIR o idioma &#40;&#41;Transact-SQL](../../t-sql/statements/set-language-transact-sql.md)   
+ [DEFINIR o idioma &#40;&#41;Transact-SQL ](../../t-sql/statements/set-language-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

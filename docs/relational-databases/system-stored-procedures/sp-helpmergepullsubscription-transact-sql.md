@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepullsubscription (Transact-SQL)
 title: sp_helpmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489305"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . Se a *publicação* for **%** , as informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual serão retornadas.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . Se a *publicação* for **%** , as informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual serão retornadas.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador*é **sysname**, com um padrão de **%** .  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador*é **sysname**, com um padrão de **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de **%** .  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de **%** .  
   
-`[ @subscription_type = ] 'subscription_type'`Indica se as assinaturas pull devem ser mostradas. *subscription_type*é **nvarchar (10)**, com um padrão de **' pull '**. Os valores válidos são **' push '**, **' pull '** ou **' both '**.  
+`[ @subscription_type = ] 'subscription_type'` Indica se as assinaturas pull devem ser mostradas. *subscription_type*é **nvarchar (10)**, com um padrão de **' pull '**. Os valores válidos são **' push '**, **' pull '** ou **' both '**.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -63,7 +64,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
 |**prioridade**|**float (8)**|A prioridade da assinatura. O valor deve ser menor que **100, 0**.|  
 |**sync_type**|**tinyint**|O tipo de sincronização da assinatura:<br /><br /> **1** = automático<br /><br /> **2** = o instantâneo não é usado.|  
-|**ndescrição**|**nvarchar (255)**|Uma descrição breve da assinatura pull.|  
+|**descrição**|**nvarchar(255)**|Uma descrição breve da assinatura pull.|  
 |**merge_jobid**|**binary(16)**|ID do trabalho do Agente de Mesclagem.|  
 |**enabled_for_syncmgr**|**int**|Se a assinatura pode ou não ser sincronizada pelo Gerenciador de Sincronização da [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar (26)**|Hora da última sincronização bem-sucedida da assinatura pelo Merge Agent.|  
@@ -78,14 +79,14 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**ftp_port**|**int**|Disponível somente para compatibilidade com versões anteriores. É o número da porta do serviço FTP para o Distribuidor.|  
 |**ftp_login**|**sysname**|Disponível somente para compatibilidade com versões anteriores. É o nome de usuário usado para se conectar ao serviço FTP.|  
 |**ftp_password**|**sysname**|Disponível somente para compatibilidade com versões anteriores. É a senha de usuário usada para se conectar ao serviço FTP.|  
-|**alt_snapshot_folder**|**nvarchar (255)**|Local onde a pasta de instantâneo é armazenada se o local for diferente ou for uma adição ao local padrão.|  
-|**working_directory**|**nvarchar (255)**|Caminho completamente qualificado para o diretório onde os arquivos de instantâneo são transferidos usando o FTP quando essa opção é especificada.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|Local onde a pasta de instantâneo é armazenada se o local for diferente ou for uma adição ao local padrão.|  
+|**working_directory**|**nvarchar(255)**|Caminho completamente qualificado para o diretório onde os arquivos de instantâneo são transferidos usando o FTP quando essa opção é especificada.|  
 |**use_ftp**|**bit**|A assinatura está assinando a publicação pela Internet e as propriedades de endereçamento do FTP estão configuradas. Se **0**, a assinatura não está usando o FTP. Se **1**, a assinatura está usando FTP.|  
 |**offload_agent**|**bit**|Especifica se o agente pode ser ativado e executado remotamente. Se for **0**, o agente não poderá ser ativado remotamente.|  
 |**offload_server**|**sysname**|O nome do servidor usado para ativação remota.|  
 |**use_interactive_resolver**|**int**|Retorna se o resolvedor interativo é usado ou não durante a reconciliação. Se for **0**, o resolvedor interativo não será usado.|  
 |**subid**|**uniqueidentifier**|A ID do Assinante.|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|O caminho para a pasta onde os arquivos de instantâneo são salvos.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|O caminho para a pasta onde os arquivos de instantâneo são salvos.|  
 |**last_sync_status**|**int**|O status de sincronização:<br /><br /> **1** = Iniciando em<br /><br /> **2** = com êxito<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = repetindo após uma falha anterior<br /><br /> **6** = com falha<br /><br /> **7** = falha na validação<br /><br /> **8** = validação aprovada<br /><br /> **9** = desligamento solicitado|  
 |**last_sync_summary**|**sysname**|Descrição dos últimos resultados da sincronização.|  
 |**use_web_sync**|**bit**|Especifica se a assinatura pode ser sincronizada via HTTPS, em que o valor **1** significa que esse recurso está habilitado.|  
@@ -108,9 +109,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
  Somente os membros da função de servidor fixa **sysadmin** e a função de banco de dados fixa **db_owner** podem executar **sp_helpmergepullsubscription**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergepullsubscription](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergepullsubscription ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergepullsubscription ](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergepullsubscription ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

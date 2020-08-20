@@ -1,4 +1,5 @@
 ---
+description: '&lt;esquema &gt; de conflict_ _ &lt; tabela &gt; (Transact-SQL)'
 title: '&lt;esquema &gt; de conflict_ _ &lt; tabela &gt; (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/15/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72e364d451a78726c1ac98c42659db9c8f6034b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4a378eeef86204f87ce8eaa13a442752636c066
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488867"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>&lt;esquema &gt; de conflict_ _ &lt; tabela &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85890583"
 |\<base table column names>|\<base table column types>|A tabela de conflito contém uma coluna para cada coluna na tabela base.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

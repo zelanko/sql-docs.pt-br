@@ -1,4 +1,5 @@
 ---
+description: Obter informações sobre uma exibição
 title: Obter informações sobre uma exibição | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95611ab79850954506150785b4a4e26c50efe126
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488585"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "87396435"
 
      As propriedades a seguir aparecem na caixa de diálogo **Propriedades da Exibição** .  
   
-     **Backup de banco de dados**  
+     **Banco de dados**  
      Nome do banco de dados que contém esta exibição.  
   
      **Servidor**  

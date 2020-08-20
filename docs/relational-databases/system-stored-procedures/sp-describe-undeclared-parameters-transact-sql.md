@@ -1,4 +1,5 @@
 ---
+description: sp_describe_undeclared_parameters (Transact-SQL)
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2018
@@ -18,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489425"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -45,7 +46,7 @@ sp_describe_undeclared_parameters
 > Para usar esse procedimento armazenado no Azure Synapse Analytics (anteriormente conhecido como SQL DW), o nível de compatibilidade de um banco de dados precisa ser maior que 10. 
 
 ## <a name="arguments"></a>Argumentos  
-`[ \@tsql = ] 'Transact-SQL\_batch'`Uma ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. O *Transact-SQL_batch* pode **ser nvarchar (**_n_**)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Uma ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. O *Transact-SQL_batch* pode **ser nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params fornece uma cadeia de caracteres de declaração para parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, da mesma forma que sp_executesql funciona. *Os parâmetros* podem ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
@@ -169,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Dedução simples  
   
-     Se E ( \@ p) = \@ p e TT ( \@ p) existirem, ou seja, se \@ p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduzirá o tipo de dados de \@ p para ser TT ( \@ p). Por exemplo:  
+     Se E ( \@ p) = \@ p e TT ( \@ p) existirem, ou seja, se \@ p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduzirá o tipo de dados de \@ p para ser TT ( \@ p). Por exemplo:   
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -217,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  O tipo de dados que produz o menor número de conversões implícitas em E ( \@ p) é selecionado. Se um tipo de dados específico produzir um tipo de dados para E ( \@ p) diferente de TT ( \@ p), o algoritmo de dedução de tipo considerará que isso é uma conversão implícita extra do tipo de dados de E ( \@ p) a TT ( \@ p).  
   
-     Por exemplo:  
+     Por exemplo:   
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -277,6 +278,6 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_describe_first_result_set ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

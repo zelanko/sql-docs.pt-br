@@ -1,4 +1,5 @@
 ---
+description: 'ISSCommandWithParameters:: ParameterProperties em SQL Server Native Client (OLE DB)'
 title: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8de1c2991660e7908b6fd1df1132c62c74044944
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ec0621d8967f2fa351e9147815bddf2d80f0e300
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490733"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-in-sql-server-native-client-ole-db"></a>ISSCommandWithParameters:: ParameterProperties em SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +72,7 @@ struct SSPARAMPROPS {
 
  Aprimoramentos no mecanismo de banco de dados desde o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitem que ISSCommandWithParameters::SetParameterProperties obtenha descrições mais precisas dos resultados esperados. Esses resultados mais precisos podem ser diferentes dos valores retornados por ISSCommandWithParameters::SetParameterProperties em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |*iOrdinal*|O ordinal do parâmetro passado.|  
 |*cPropertySets*|O número de estruturas DBPROPSET em *rgPropertySets*.|  

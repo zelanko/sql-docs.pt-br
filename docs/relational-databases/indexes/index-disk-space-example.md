@@ -1,4 +1,5 @@
 ---
+description: Exemplo de espaço em disco de índice
 title: Exemplo de espaço em disco de índice | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d12125849b83fb6701b18bd3d7c46b9d9b9828a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490942"
 ---
 # <a name="index-disk-space-example"></a>Exemplo de espaço em disco de índice
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -110,17 +111,17 @@ ms.locfileid: "85668287"
   
 |Operação de índice|Os requisitos de espaço em disco para os locais das seguintes estruturas|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operação de índice offline com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1018 MB<br /><br /> \- Tabela e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
+|Operação de índice offline com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1018 MB<br /><br /> - Tabela e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
 |Operação de índice offline com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 816 MB<br /><br /> -Tabela e índices existentes: 363 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
-|Operação de índice online com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1058 MB<br /><br /> \- Tabela e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb** (inclui índice de mapeamento): 242 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
-|Operação de índice online com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 856 MB<br /><br /> -Tabela e índices existentes: 363 MB*<br /><br /> \- Índice de mapeamento temporário: 40 MB\*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
+|Operação de índice online com SORT_IN_TEMPDB = ON|Espaço total durante a operação: 1058 MB<br /><br /> - Tabela e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb** (inclui índice de mapeamento): 242 MB*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
+|Operação de índice online com SORT_IN_TEMPDB = OFF|Espaço total durante a operação: 856 MB<br /><br /> -Tabela e índices existentes: 363 MB*<br /><br /> - Índice de mapeamento temporário: 40 MB\*<br /><br /> -Novos índices: 453 MB<br /><br /> Espaço total necessário após a operação: 453 MB|  
   
- \* Este espaço é desalocado depois que a operação de índice estiver confirmada.  
+ * Este espaço é desalocado depois que a operação de índice estiver confirmada.  
   
  Este exemplo não considera qualquer espaço em disco temporário adicional necessário em **tempdb** para registros de versão criados por atualização de usuário simultâneos e exclui operações.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Requisitos de espaço em disco para operações de DDL de índice](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Espaço em disco de log de transações para operações de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

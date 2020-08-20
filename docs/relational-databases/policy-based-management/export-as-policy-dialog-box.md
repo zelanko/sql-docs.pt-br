@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Exportar como Política
 title: Caixa de diálogo Exportar como Política | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40fe56e0cd726ca9dd3c129bd46dabd38c4aecfa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a866e30681ec9d224af77e19cbf74909c6b8f104
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490625"
 ---
 # <a name="export-as-policy-dialog-box"></a>Caixa de diálogo Exportar como Política
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85749413"
  Selecione para salvar a política na instância do servidor local.  
   
  **Para arquivo**  
- Para salvar a política como um arquivo XML, digite o caminho e nome do arquivo ou use o botão Procurar ( **...** ).  
+ Para salvar a política como um arquivo XML, digite o caminho e nome do arquivo ou use o botão Procurar (**...**).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

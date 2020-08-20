@@ -1,4 +1,5 @@
 ---
+description: sp_addrole (Transact-SQL)
 title: sp_addrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489559"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`É o nome da nova função de banco de dados. *role* é um **sysname**, sem padrão. a *função* deve ser um identificador válido (ID) e ainda não deve existir no banco de dados atual.  
+`[ @rolename = ] 'role'` É o nome da nova função de banco de dados. *role* é um **sysname**, sem padrão. a *função* deve ser um identificador válido (ID) e ainda não deve existir no banco de dados atual.  
   
-`[ @ownername = ] 'owner'`É o proprietário da nova função de banco de dados. *Owner* é um **sysname**, com um padrão do usuário em execução atual. o *proprietário* deve ser um usuário de banco de dados ou uma função de banco de dados no banco de dados atual.  
+`[ @ownername = ] 'owner'` É o proprietário da nova função de banco de dados. *Owner* é um **sysname**, com um padrão do usuário em execução atual. o *proprietário* deve ser um usuário de banco de dados ou uma função de banco de dados no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -52,7 +53,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="remarks"></a>Comentários  
  Os nomes de funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter de 1 a 128 caracteres, incluindo letras, símbolos e números. Os nomes das funções de banco de dados não podem: conter um caractere de barra invertida ( \\ ), ser nulo ou uma cadeia de caracteres vazia (**' '**).  
   
- Depois de adicionar uma função de banco de dados, use [sp_addrolemember &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) para adicionar entidades de segurança à função. Quando as instruções GRANT, DENY ou REVOKE são usadas para aplicar permissões na função de banco de dados, os membros da função de banco de dados herdam essas permissões como se elas fossem aplicadas diretamente em suas contas.  
+ Depois de adicionar uma função de banco de dados, use [sp_addrolemember &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) para adicionar entidades de segurança à função. Quando as instruções GRANT, DENY ou REVOKE são usadas para aplicar permissões na função de banco de dados, os membros da função de banco de dados herdam essas permissões como se elas fossem aplicadas diretamente em suas contas.  
   
 > [!NOTE]  
 >  Novas funções de servidor não podem ser criadas. As funções podem ser criadas somente no nível do banco de dados.  
@@ -70,7 +71,7 @@ EXEC sp_addrole 'Managers';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   

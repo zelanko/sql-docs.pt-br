@@ -1,4 +1,5 @@
 ---
+description: sp_addmessage (Transact-SQL)
 title: sp_addmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adf32fad3c233023529d362cd7382ca6376b3cee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a7c1c41cf9b745efea8b2368d5120f0b03d3ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489560"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msgnum = ] msg_id`É a ID da mensagem. *msg_id* é **int** com um padrão de NULL. *msg_id* para mensagens de erro definidas pelo usuário pode ser um inteiro entre 50.001 e 2.147.483.647. A combinação de *msg_id* e *idioma* deve ser exclusiva; um erro será retornado se a ID já existir para o idioma especificado.  
+`[ @msgnum = ] msg_id` É a ID da mensagem. *msg_id* é **int** com um padrão de NULL. *msg_id* para mensagens de erro definidas pelo usuário pode ser um inteiro entre 50.001 e 2.147.483.647. A combinação de *msg_id* e *idioma* deve ser exclusiva; um erro será retornado se a ID já existir para o idioma especificado.  
   
-`[ @severity = ]severity`É o nível de severidade do erro. a *severidade* é **smallint** com um padrão de NULL. Os níveis válidos são de 1 a 25. Para obter mais informações sobre severidades, consulte [Severidade de erro do mecanismo de banco de dados](../../relational-databases/errors-events/database-engine-error-severities.md).  
+`[ @severity = ]severity` É o nível de severidade do erro. a *severidade* é **smallint** com um padrão de NULL. Os níveis válidos são de 1 a 25. Para obter mais informações sobre severidades, consulte [Severidade de erro do mecanismo de banco de dados](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
-`[ @msgtext = ] 'msg'`É o texto da mensagem de erro. *msg* é **nvarchar (255)** com um padrão de NULL.  
+`[ @msgtext = ] 'msg'` É o texto da mensagem de erro. *msg* é **nvarchar (255)** com um padrão de NULL.  
   
-`[ @lang = ] 'language'`É o idioma desta mensagem. o *idioma* é **sysname** com um padrão de NULL. Como vários idiomas podem ser instalados no mesmo servidor, *Language* especifica o idioma em que cada mensagem é gravada. Quando o *idioma* é omitido, o idioma é o padrão para a sessão.  
+`[ @lang = ] 'language'` É o idioma desta mensagem. o *idioma* é **sysname** com um padrão de NULL. Como vários idiomas podem ser instalados no mesmo servidor, *Language* especifica o idioma em que cada mensagem é gravada. Quando o *idioma* é omitido, o idioma é o padrão para a sessão.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`É se a mensagem deve ser gravada no log de aplicativos do Windows quando ele ocorre. ** \@ WITH_LOG** é **varchar (5)** com um padrão de false. Se for TRUE, o erro sempre será gravado no log do aplicativo do Windows. Se for FALSE, o erro nem sempre será gravado no log do aplicativo do Windows, mas poderá ser gravado dependendo de como foi gerado. Somente os membros da função de servidor **sysadmin** podem usar essa opção.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` É se a mensagem deve ser gravada no log de aplicativos do Windows quando ele ocorre. ** \@ WITH_LOG** é **varchar (5)** com um padrão de false. Se for TRUE, o erro sempre será gravado no log do aplicativo do Windows. Se for FALSE, o erro nem sempre será gravado no log do aplicativo do Windows, mas poderá ser gravado dependendo de como foi gerado. Somente os membros da função de servidor **sysadmin** podem usar essa opção.  
   
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @replace = ] 'replace'`Se especificado como a *substituição*da cadeia de caracteres, uma mensagem de erro existente será substituída pelo novo texto da mensagem e pelo nível de severidade. *replace* é **varchar (7)** com um padrão de NULL. Essa opção deve ser especificada se *msg_id* já existir. Se você substituir uma mensagem em inglês dos EUA, o nível de severidade será substituído por todas as mensagens em todos os outros idiomas que têm o mesmo *msg_id*.  
+`[ @replace = ] 'replace'` Se especificado como a *substituição*da cadeia de caracteres, uma mensagem de erro existente será substituída pelo novo texto da mensagem e pelo nível de severidade. *replace* é **varchar (7)** com um padrão de NULL. Essa opção deve ser especificada se *msg_id* já existir. Se você substituir uma mensagem em inglês dos EUA, o nível de severidade será substituído por todas as mensagens em todos os outros idiomas que têm o mesmo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -158,7 +159,7 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>Consulte Também  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_altermessage ](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

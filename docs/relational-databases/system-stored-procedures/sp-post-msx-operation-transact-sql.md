@@ -1,4 +1,5 @@
 ---
+description: sp_post_msx_operation (Transact-SQL)
 title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489176"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @operation = ] 'operation'`O tipo de operação para a operação postada. a *operação*é **varchar (64)**, sem padrão. As operações válidas dependem do *object_type*.  
+`[ @operation = ] 'operation'` O tipo de operação para a operação postada. a *operação*é **varchar (64)**, sem padrão. As operações válidas dependem do *object_type*.  
   
 |Tipo de objeto|Operação|  
 |-----------------|---------------|  
@@ -53,15 +54,15 @@ sp_post_msx_operation
 |**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**AGENDAMENTO**|INSERT<br /><br /> UPDATE<br /><br /> Delete (excluir)|  
   
-`[ @object_type = ] 'object'`O tipo de objeto para o qual uma operação deve ser postada. Os tipos válidos são **trabalho**, **servidor**e **agendamento**. o *objeto* é **varchar (64)**, com um padrão de **trabalho**.  
+`[ @object_type = ] 'object'` O tipo de objeto para o qual uma operação deve ser postada. Os tipos válidos são **trabalho**, **servidor**e **agendamento**. o *objeto* é **varchar (64)**, com um padrão de **trabalho**.  
   
-`[ @job_id = ] job_id`O número de identificação do trabalho ao qual a operação se aplica. *job_id* é **uniqueidentifier**, sem padrão. **0x00** indica todos os trabalhos. Se *Object* for **SERVER**, o *job_id*não será necessário.  
+`[ @job_id = ] job_id` O número de identificação do trabalho ao qual a operação se aplica. *job_id* é **uniqueidentifier**, sem padrão. **0x00** indica todos os trabalhos. Se *Object* for **SERVER**, o *job_id*não será necessário.  
   
-`[ @specific_target_server = ] 'target_server'`O nome do servidor de destino para o qual a operação especificada se aplica. Se *job_id* for especificado, mas *target_server* não for especificado, as operações serão lançadas para todos os servidores de trabalho do trabalho. *target_server* é **nvarchar (30)**, com um padrão de NULL.  
+`[ @specific_target_server = ] 'target_server'` O nome do servidor de destino para o qual a operação especificada se aplica. Se *job_id* for especificado, mas *target_server* não for especificado, as operações serão lançadas para todos os servidores de trabalho do trabalho. *target_server* é **nvarchar (30)**, com um padrão de NULL.  
   
-`[ @value = ] value`O intervalo de sondagem, em segundos. *value* é **int**, com um padrão NULL. Especifique esse parâmetro somente se a *operação* for **set-Poll**.  
+`[ @value = ] value` O intervalo de sondagem, em segundos. *value* é **int**, com um padrão NULL. Especifique esse parâmetro somente se a *operação* for **set-Poll**.  
   
-`[ @schedule_uid = ] schedule_uid`O identificador exclusivo para o agendamento ao qual a operação se aplica. *schedule_uid* é **uniqueidentifier**, sem padrão.  
+`[ @schedule_uid = ] schedule_uid` O identificador exclusivo para o agendamento ao qual a operação se aplica. *schedule_uid* é **uniqueidentifier**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -82,15 +83,15 @@ sp_post_msx_operation
  Para executar esse procedimento armazenado, os usuários devem receber a função de servidor fixa **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_jobserver](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_start_job](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_stop_job](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_operator](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_jobserver ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_job ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_jobserver ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_targetserver ](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_resync_targetserver ](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_start_job ](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_stop_job ](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_job ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_operator ](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

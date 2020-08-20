@@ -1,4 +1,5 @@
 ---
+description: sp_OACreate (Transact-SQL)
 title: sp_OACreate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74daa037fab18fc2ddb4126f8cf5f33e9d4e5159
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e28f5bcd2f539ae9ab457c2ab14ed7aee6121b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489215"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *progid*  
+ *ProgID*  
  É o identificador programático (ProgID) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **'**_OLEComponent_**.** _Objeto_**'**  
   
  *OLEComponent* é o nome do componente do servidor de automação OLE e *Object* é o nome do objeto OLE. O objeto OLE especificado deve ser válido e deve dar suporte à interface **IDispatch** .  
@@ -83,7 +84,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  O OLE objeto criado é destruído automaticamente no término do lote de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures`a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
+ Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures` a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
   

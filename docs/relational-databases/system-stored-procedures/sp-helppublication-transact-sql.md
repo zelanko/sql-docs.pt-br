@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication (Transact-SQL)
 title: sp_helppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd5452439cc3467cc840ac11dd9ce3cf880a4ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489295"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser exibida. a *publicação* é sysname, com um padrão de **%** , que retorna informações sobre todas as publicações.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser exibida. a *publicação* é sysname, com um padrão de **%** , que retorna informações sobre todas as publicações.  
   
-`[ @found = ] 'found' OUTPUT`É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de **23456**. **1** indica que a publicação foi encontrada. **0** indica que a publicação não foi encontrada.  
+`[ @found = ] 'found' OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de **23456**. **1** indica que a publicação foi encontrada. **0** indica que a publicação não foi encontrada.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é sysname, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é sysname, com um padrão de NULL.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser especificado ao solicitar informações de publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -59,7 +60,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |task||Usado para compatibilidade com versões anteriores.|  
 |frequência de replicação|**tinyint**|Tipo de frequência de replicação:<br /><br /> **0** = transacional<br /><br /> **1** = instantâneo|  
 |método de sincronização|**tinyint**|Modo de sincronização:<br /><br /> **0** = programa de cópia em massa nativo (utilitário**bcp** )<br /><br /> **1** = cópia em massa de caractere<br /><br /> **3** = simultâneo, o que significa que a cópia em massa nativa (utilitário**bcp**) é usada, mas as tabelas não são bloqueadas durante o instantâneo<br /><br /> **4** = Concurrent_c, o que significa que a cópia em massa de caracteres é usada, mas as tabelas não são bloqueadas durante o instantâneo|  
-|descrição|**nvarchar (255)**|Descrição opcional para a publicação.|  
+|descrição|**nvarchar(255)**|Descrição opcional para a publicação.|  
 |immediate_sync|**bit**|Se os arquivos de sincronização serão criados ou recriados em cada execução do Agente de Instantâneo.|  
 |enabled_for_internet|**bit**|Se os arquivos de sincronização para a publicação são expostos na Internet pelo FTP (File Transfer Protocol) e outros serviços.|  
 |allow_push|**bit**|Se são permitidas assinaturas push na publicação.|  
@@ -74,13 +75,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |has subscription|**bit**|Se a publicação tem assinatura ativas. **1** significa que a publicação tem assinaturas ativas e **0** significa que a publicação não tem assinaturas.|  
 |allow_queued_tran|**bit**|Especifica se o serviço de enfileiramento de alterações no Assinante foi desabilitado até que possam ser aplicadas no Publicador. Se **0**, as alterações no Assinante não serão enfileiradas.|  
 |snapshot_in_defaultfolder|**bit**|Especifica se arquivos de instantâneo são armazenados na pasta padrão. Se **0**, os arquivos de instantâneo foram armazenados no local alternativo especificado pelo *alternate_snapshot_folder*. Se **1**, os arquivos de instantâneo podem ser encontrados na pasta padrão.|  
-|alt_snapshot_folder|**nvarchar (255)**|Especifica o local da pasta alternativa para o instantâneo.|  
-|pre_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Agente de Distribuição executará o script pré-instantâneo antes de executar qualquer script de objeto replicado, ao aplicar um instantâneo no Assinante.|  
-|post_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Agente de Distribuição executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tentam sido aplicados durante uma sincronização inicial.|  
+|alt_snapshot_folder|**nvarchar(255)**|Especifica o local da pasta alternativa para o instantâneo.|  
+|pre_snapshot_script|**nvarchar(255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Agente de Distribuição executará o script pré-instantâneo antes de executar qualquer script de objeto replicado, ao aplicar um instantâneo no Assinante.|  
+|post_snapshot_script|**nvarchar(255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Agente de Distribuição executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tentam sido aplicados durante uma sincronização inicial.|  
 |compress_snapshot|**bit**|Especifica que o instantâneo gravado no local de *alt_snapshot_folder* deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **0** especifica que o instantâneo não será compactado.|  
 |ftp_address|**sysname**|O endereço de rede do serviço FTP para o Distribuidor. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Agente de Distribuição ou por um Assinante.|  
 |ftp_port|**int**|O número da porta do serviço FTP do Distribuidor.|  
-|ftp_subdirectory|**nvarchar (255)**|Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo Agente de Distribuição ou Agente de Mesclagem do Assinante se a publicação oferecer suporte à propagação de instantâneo usando o FTP.  |  
+|ftp_subdirectory|**nvarchar(255)**|Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo Agente de Distribuição ou Agente de Mesclagem do Assinante se a publicação oferecer suporte à propagação de instantâneo usando o FTP.  |  
 |ftp_login|**sysname**|O nome de usuário usado para se conectar ao serviço FTP.|  
 |allow_dts|**bit**|Especifica que a publicação permite transformações de dados. **0** especifica que as transformações DTS não são permitidas.|  
 |allow_subscription_copy|**bit**|Especifica se a capacidade para copiar os bancos de dados de assinatura que assinam esta publicação foi habilitada. **0** significa que a cópia não é permitida.|  
@@ -119,9 +120,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [&#41;&#40;Transact-SQL de sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droppublication](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpublication ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changepublication ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droppublication ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

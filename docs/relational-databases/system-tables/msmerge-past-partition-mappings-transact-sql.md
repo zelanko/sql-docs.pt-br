@@ -1,4 +1,5 @@
 ---
+description: MSmerge_past_partition_mappings (Transact-SQL)
 title: MSmerge_past_partition_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2895684bc8769a16120d4831ccc9b0dc9a6f2391
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c61039aa752dc27bb493d27c7062ee80b7e26278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488736"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,13 +34,13 @@ ms.locfileid: "85889762"
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|O número de publicação, que é armazenado em **sysmergepublications**.|  
 |**tablenick**|**int**|O apelido da tabela publicada.|  
-|**rowguid**|**uniqueidentifier**|O identificador para a linha determinada.|  
+|**ROWGUID**|**uniqueidentifier**|O identificador para a linha determinada.|  
 |**partition_id**|**int**|A ID da partição à qual a linha pertence. O valor será-1 se a alteração de linha for relevante para todos os assinantes.|  
 |**geração**|**bigint**|O valor da geração na qual a alteração de partição ocorreu.|  
 |**motivo**|**tinyint**|Interno-somente uso.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

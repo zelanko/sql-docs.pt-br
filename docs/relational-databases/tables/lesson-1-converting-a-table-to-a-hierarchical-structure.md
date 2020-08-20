@@ -1,4 +1,5 @@
 ---
+description: 'Lição 1: conversão de uma tabela em uma estrutura hierárquica'
 title: 'Lição 1: Convertendo uma tabela em uma estrutura hierárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/22/2018
@@ -12,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18a7ad2ca8c66f2960fae9a051d0d2546adb02f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488554"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lição 1: Convertendo uma tabela em uma estrutura hierárquica
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lição 1: conversão de uma tabela em uma estrutura hierárquica
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Os clientes que possuem tabelas que usam autojunções para expressar relações hierárquicas podem converter as tabelas em uma estrutura hierárquica usando esta lição como guia. É relativamente fácil fazer a migração dessa representação para outra usando **hierarchyid**. Depois da migração, os usuários terão uma representação hierárquica compacta e fácil de entender, que poderá ser indexada de várias formas para proporcionar consultas eficientes.  
   
 Esta lição examina uma tabela existente, cria uma tabela contendo uma coluna **hierarchyid** , popula a tabela com os dados da tabela de origem e, depois, demonstra três estratégias de indexação. Eis os tópicos desta lição:  
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
 - Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [Bancos de dados de exemplo do AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-As instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Examinar a estrutura atual da tabela Employee
 O banco de dados Adventureworks2017 (ou posterior) de exemplo contém uma tabela **Employee** no esquema **HumanResources**. Para evitar alterar a tabela original, este passo cria uma cópia da tabela **Employee** nomeada **EmployeeDemo**. Para simplificar o exemplo, você copia só cinco colunas da tabela original. Então, você consulta a tabela **HumanResources.EmployeeDemo** para revisar como os dados são estruturados em uma tabela sem usar o tipo de dados **hierarchyid** .  
@@ -94,7 +95,7 @@ Observe que a cláusula **ORDER BY** fez com que a saída listasse os relatório
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>Popular uma tabela com os dados hierárquicos existentes
-Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo** . Essa tarefa tem as seguintes etapas:  
+ Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo**. Essa tarefa tem as seguintes etapas:  
   
 -   Crie uma nova tabela que contém uma coluna **hierarchyid** . Essa coluna pode substituir as colunas **EmployeeID** e **ManagerID** existentes. Entretanto, você manterá essas colunas. Isso porque os aplicativos existentes podem se referir a essas colunas e, também, para ajudar a compreender os dados depois da transferência. A definição da tabela especifica que **OrgNode** é a chave primária, exigindo que a coluna contenha valores exclusivos. O índice clusterizado da coluna **OrgNode** armazenará a data na sequência **OrgNode** .    
 -   Crie uma tabela temporária que será usada para localizar quantos funcionários se reportam diretamente a cada gerenciador. 

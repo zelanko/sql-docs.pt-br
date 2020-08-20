@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados do sistema (Transact-SQL)
 title: Procedimentos armazenados do sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
@@ -22,12 +23,12 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480b45d5b241b2c19b081d7a50f0d46c6e2ea6fd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e0308664a32b75e51b3f7a92a72d8fe5295b22ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488973"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimentos armazenados do sistema (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

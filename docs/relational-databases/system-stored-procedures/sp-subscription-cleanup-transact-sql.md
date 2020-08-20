@@ -1,4 +1,5 @@
 ---
+description: sp_subscription_cleanup (Transact-SQL)
 title: sp_subscription_cleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 50ed280cf691c974a7a17991e4c4a28f851191e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d75293627b229b942e6d81753320a4bbb0fffbf9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489068"
 ---
 # <a name="sp_subscription_cleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. Se for NULL, assinaturas que usam uma publicação de agente compartilhada no banco de dados de publicação serão excluídas.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. Se for NULL, assinaturas que usam uma publicação de agente compartilhada no banco de dados de publicação serão excluídas.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -58,8 +59,8 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_subscription_cleanup**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_expired_subscription_cleanup](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_mergesubscription_cleanup](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_expired_subscription_cleanup ](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_mergesubscription_cleanup ](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

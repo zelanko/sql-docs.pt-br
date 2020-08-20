@@ -1,4 +1,5 @@
 ---
+description: sp_polybase_join_group (Transact-SQL)
 title: sp_polybase_join_group | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2016
@@ -14,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc4a9d78289f6d3fdf3272c6581d9baab586122f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6e9e76c30adf6ec3ec241c5f5bc8589802a2cad0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489671"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Adiciona uma instância de SQL Server como um nó de computação a um grupo de polybase para cálculo de expansão.  
   
- A instância de SQL Server deve ter o recurso [polybase](../../relational-databases/polybase/polybase-guide.md) instalado.  O polybase permite a integração de fontes de dados não SQL Server, como o Hadoop e o armazenamento de BLOBs do Azure. Consulte também [sp_polybase_leave_group &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ A instância de SQL Server deve ter o recurso  [polybase](../../relational-databases/polybase/polybase-guide.md) instalado.  O polybase permite a integração de fontes de dados não SQL Server, como o Hadoop e o armazenamento de BLOBs do Azure. Consulte também [sp_polybase_leave_group &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

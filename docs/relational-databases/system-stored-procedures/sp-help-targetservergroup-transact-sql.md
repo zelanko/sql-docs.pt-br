@@ -1,4 +1,5 @@
 ---
+description: sp_help_targetservergroup (Transact-SQL)
 title: sp_help_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10f96877b346396166f2980d47085c726a66bc19
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75d725bec30d25d46216e292d7e96ff8f2b5f899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489353"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @name = ] 'name'`É o nome do grupo de servidores de destino para o qual retornar informações. o *nome* é **sysname**, com um padrão de NULL.  
+`[ @name = ] 'name'` É o nome do grupo de servidores de destino para o qual retornar informações. o *nome* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -81,9 +82,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_targetservergroup ](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_targetservergroup ](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_targetservergroup ](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

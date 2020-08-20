@@ -1,4 +1,5 @@
 ---
+description: syspublications (Exibição de sistema) (Transact-SQL)
 title: syspublications (exibição do sistema) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d19bf233bf1f240f6ada8a1e110b331cc7ca6ce8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 051a57d3cce26d7367cff1ce3afc720534e920bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488656"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Exibição de sistema) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85881210"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**descrição**|**nvarchar (255)**|A entrada descritiva para a publicação.|  
+|**descrição**|**nvarchar(255)**|A entrada descritiva para a publicação.|  
 |**name**|**sysname**|O nome exclusivo associado com a publicação.|  
 |**pubid**|**int**|A coluna de identidade que fornece um ID exclusivo para a publicação.|  
 |**repl_freq**|**tinyint**|A frequência da replicação:<br /><br /> **0** = baseado em transação (transacional).<br /><br /> **1** = atualização de tabela agendada (instantâneo).|  
@@ -74,10 +75,10 @@ ms.locfileid: "85881210"
 |**originator_id**|**smallint**|Identifica cada nó em uma topologia de replicação ponto a ponto com a finalidade de detecção de conflito. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpublication ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changepublication ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

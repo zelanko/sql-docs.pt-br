@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergealternatepublisher (Transact-SQL)
 title: sp_helpmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 408d619ac06403c2d07b4b71b859cf49f6e2a071
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9d20e6273aaafd2c589dbd7e04b38e60890d5c21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489307"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador alternativo. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador alternativo. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -51,7 +52,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publisher_db**|**sysname**|Nome do banco de dados de publicação.|  
 |**alternate_publication**|**sysname**|Nome da publicação.|  
 |**alternate_distributor**|**sysname**|Nome do distribuidor.|  
-|**friendly_name**|**nvarchar (255)**|Descrição do Publicador alternativo.|  
+|**friendly_name**|**nvarchar(255)**|Descrição do Publicador alternativo.|  
 |**habilitado**|**bit**|Especifica se o servidor é um Publicador alternativo. **1** especifica que o Publicador está habilitado como um Publicador alternativo. **0** especifica que não está habilitado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

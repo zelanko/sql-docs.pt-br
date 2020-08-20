@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepullsubscription (Transact-SQL)
 title: sp_addmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: daa2f455f4b1b1bbb4f809797857f62b82137915
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af86ada2400422732d910752538de54f42b01437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489599"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,22 +44,22 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. O *Publicador* é **sysname**, com um padrão do nome do servidor local. O Publicador deve ser um servidor válido.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. O *Publicador* é **sysname**, com um padrão do nome do servidor local. O Publicador deve ser um servidor válido.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_type = ] 'subscriber_type'`É o tipo de assinante. *subscriber_type* é **nvarchar (15)** e pode ser **global**, **local** ou **anônimo**. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, as assinaturas locais são conhecidas como assinaturas de cliente e as assinaturas globais são chamadas de assinaturas de servidor.  
+`[ @subscriber_type = ] 'subscriber_type'` É o tipo de assinante. *subscriber_type* é **nvarchar (15)** e pode ser **global**, **local** ou **anônimo**. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, as assinaturas locais são conhecidas como assinaturas de cliente e as assinaturas globais são chamadas de assinaturas de servidor.  
   
-`[ @subscription_priority = ] subscription_priority`É a prioridade da assinatura. *subscription_priority*é **real**, com um padrão de NULL. Para assinaturas locais e anônimas, a prioridade é **0,0**. A prioridade é usada pelo resolvedor padrão para escolher um vencedor quando são detectados conflitos. Para assinantes globais, a prioridade de assinatura deve ser abaixo de 100, que é a prioridade do publicador.  
+`[ @subscription_priority = ] subscription_priority` É a prioridade da assinatura. *subscription_priority*é **real**, com um padrão de NULL. Para assinaturas locais e anônimas, a prioridade é **0,0**. A prioridade é usada pelo resolvedor padrão para escolher um vencedor quando são detectados conflitos. Para assinantes globais, a prioridade de assinatura deve ser abaixo de 100, que é a prioridade do publicador.  
   
-`[ @sync_type = ] 'sync_type'`É o tipo de sincronização de assinatura. *sync_type*é **nvarchar (15)**, com um padrão de **automático**. Pode ser **automático** ou **nenhum**. Se **automático**, o esquema e os dados iniciais para tabelas publicadas serão transferidos para o assinante primeiro. Se não **houver nenhum**, supõe-se que o Assinante já tem o esquema e os dados iniciais para tabelas publicadas. Tabelas de sistema e dados sempre são transferidos.  
+`[ @sync_type = ] 'sync_type'` É o tipo de sincronização de assinatura. *sync_type*é **nvarchar (15)**, com um padrão de **automático**. Pode ser **automático** ou **nenhum**. Se **automático**, o esquema e os dados iniciais para tabelas publicadas serão transferidos para o assinante primeiro. Se não **houver nenhum**, supõe-se que o Assinante já tem o esquema e os dados iniciais para tabelas publicadas. Tabelas de sistema e dados sempre são transferidos.  
   
 > [!NOTE]  
 >  Não recomendamos especificar um valor de **nenhum**.  
   
-`[ @description = ] 'description'`É uma breve descrição dessa assinatura pull. a *Descrição*é **nvarchar (255)**, com um padrão de NULL. Esse valor é exibido pelo Replication Monitor na coluna **nome amigável** , que pode ser usado para classificar as assinaturas de uma publicação monitorada.  
+`[ @description = ] 'description'` É uma breve descrição dessa assinatura pull. a *Descrição*é **nvarchar (255)**, com um padrão de NULL. Esse valor é exibido pelo Replication Monitor na coluna **nome amigável** , que pode ser usado para classificar as assinaturas de uma publicação monitorada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -79,10 +80,10 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="see-also"></a>Consulte Também  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [&#41;&#40;Transact-SQL de sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergepullsubscription](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergepullsubscription_agent ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergepullsubscription ](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergepullsubscription ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergepullsubscription ](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

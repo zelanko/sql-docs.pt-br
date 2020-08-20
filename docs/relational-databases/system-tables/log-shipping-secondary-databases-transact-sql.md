@@ -1,4 +1,5 @@
 ---
+description: log_shipping_secondary_databases (Transact-SQL)
 title: log_shipping_secondary_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5dcc3f2a76f069d90fd756410a8b478552c6f6b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cee2eca7d0f75b6a27c17056f70195f3aae14d99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488849"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "85890118"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_log_shipping_secondary_database ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_log_shipping_secondary_database ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
  [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

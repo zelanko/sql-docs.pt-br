@@ -1,4 +1,5 @@
 ---
+description: sp_addpushsubscription_agent (Transact-SQL)
 title: sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dffc53fbce2350314d773ce4cd376fae84256a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: d4ea11d1169244d8fb7d15d2b26e377e44fd645e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489606"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,37 +70,37 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome da instância do assinante ou o nome do ouvinte do AG se o banco de dados do assinante for um grupo de disponibilidade. o *assinante* é **sysname**, com um padrão de NULL. 
+`[ @subscriber = ] 'subscriber'` É o nome da instância do assinante ou o nome do ouvinte do AG se o banco de dados do assinante for um grupo de disponibilidade. o *assinante* é **sysname**, com um padrão de NULL. 
 
 > [!NOTE]
 > O nome do servidor pode ser especificado como `<Hostname>,<PortNumber>` . Talvez seja necessário especificar o número da porta para a conexão quando SQL Server for implantada no Linux ou no Windows com uma porta personalizada, e o serviço navegador estiver desabilitado.
 
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, com um padrão de NULL. Para um assinante não SQL Server, especifique um valor de **(destino padrão)** para *subscriber_db*.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, com um padrão de NULL. Para um assinante não SQL Server, especifique um valor de **(destino padrão)** para *subscriber_db*.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`É o modo de segurança a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_security_mode* é **int**, com um padrão de 1. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** especifica a autenticação do Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` É o modo de segurança a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_security_mode* é **int**, com um padrão de 1. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** especifica a autenticação do Windows.  
   
 > [!IMPORTANT]  
 >  Para assinaturas de atualização enfileiradas, use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexões com Assinantes, e especifique uma conta diferente para conexão com cada assinante. Para todas as outras assinaturas, use a Autenticação do Windows.  
   
-`[ @subscriber_login = ] 'subscriber_login'`É o logon do assinante a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_login* é **sysname**, com um padrão de NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` É o logon do assinante a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_login* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_password = ] 'subscriber_password'`É a senha do Assinante. *subscriber_password* será necessário se *subscriber_security_mode* for definido como **0**. *subscriber_password* é **sysname**, com um padrão de NULL. Se uma senha de assinante for usada, será criptografada automaticamente.  
+`[ @subscriber_password = ] 'subscriber_password'` É a senha do Assinante. *subscriber_password* será necessário se *subscriber_security_mode* for definido como **0**. *subscriber_password* é **sysname**, com um padrão de NULL. Se uma senha de assinante for usada, será criptografada automaticamente.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta sob a qual o agente é executado. No Azure SQL Instância Gerenciada use uma conta de SQL Server. *job_login* é **nvarchar (257)**, com um valor padrão de NULL. Essa conta do Windows é sempre usada para conexões do agente com o Distribuidor e para conexões com o Assinante ao usar a autenticação integrada do Windows.  
+`[ @job_login = ] 'job_login'` É o logon da conta sob a qual o agente é executado. No Azure SQL Instância Gerenciada use uma conta de SQL Server. *job_login* é **nvarchar (257)**, com um valor padrão de NULL. Essa conta do Windows é sempre usada para conexões do agente com o Distribuidor e para conexões com o Assinante ao usar a autenticação integrada do Windows.  
   
-`[ @job_password = ] 'job_password'`É a senha para a conta na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
+`[ @job_password = ] 'job_password'` É a senha para a conta na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @job_name = ] 'job_name'`É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando a assinatura for sincronizada usando um trabalho existente em vez de um trabalho recém-criado (o padrão). Se você não for membro da função de servidor fixa **sysadmin** , deverá especificar *job_login* e *job_password* ao especificar *job_name*.  
+`[ @job_name = ] 'job_name'` É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando a assinatura for sincronizada usando um trabalho existente em vez de um trabalho recém-criado (o padrão). Se você não for membro da função de servidor fixa **sysadmin** , deverá especificar *job_login* e *job_password* ao especificar *job_name*.  
   
-`[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a Agente de Distribuição. *frequency_type* é **int**e pode ser um dos valores a seguir.  
+`[ @frequency_type = ] frequency_type` É a frequência com a qual agendar a Agente de Distribuição. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -115,9 +116,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!NOTE]  
 >  A especificação de um valor de **64** faz com que a agente de distribuição seja executada no modo contínuo. Isso corresponde à definição do parâmetro **-Continuous** para o agente. Para obter mais informações, consulte [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-`[ @frequency_interval = ] frequency_interval`É o valor a ser aplicado à frequência definida por *frequency_type*. *frequency_interval* é **int**, com um padrão de 1.  
+`[ @frequency_interval = ] frequency_interval` É o valor a ser aplicado à frequência definida por *frequency_type*. *frequency_interval* é **int**, com um padrão de 1.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`É a data da Agente de Distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um dos valores a seguir.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` É a data da Agente de Distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -127,9 +128,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**8**|Quarto|  
 |**16**|Último|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de 0.  
   
-`[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
+`[ @frequency_subday = ] frequency_subday` É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -138,40 +139,40 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**4** (padrão)|Minuto|  
 |**8**|Hora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`É o intervalo para *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo para *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de 5.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`É a hora do dia em que o Agente de Distribuição é agendado pela primeira vez, formatado como HHMMSS. *active_start_time_of_day* é **int**, com um padrão de 0.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia em que o Agente de Distribuição é agendado pela primeira vez, formatado como HHMMSS. *active_start_time_of_day* é **int**, com um padrão de 0.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`É a hora do dia em que a Agente de Distribuição para de ser agendada, formatada como HHMMSS. *active_end_time_of_day* é **int**, com um padrão de 235959.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que a Agente de Distribuição para de ser agendada, formatada como HHMMSS. *active_end_time_of_day* é **int**, com um padrão de 235959.  
   
-`[ @active_start_date = ] active_start_date`É a data em que o Agente de Distribuição é agendado pela primeira vez, formatado como AAAAMMDD. *active_start_date* é **int**, com um padrão de 0.  
+`[ @active_start_date = ] active_start_date` É a data em que o Agente de Distribuição é agendado pela primeira vez, formatado como AAAAMMDD. *active_start_date* é **int**, com um padrão de 0.  
   
-`[ @active_end_date = ] active_end_date`É a data em que a Agente de Distribuição para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de 99991231.  
+`[ @active_end_date = ] active_end_date` É a data em que a Agente de Distribuição para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de 99991231.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname** com um padrão de NULL. Por exemplo, para especificar um nome de pacote de `DTSPub_Package` , o parâmetro seria `@dts_package_name = N'DTSPub_Package'` .  
+`[ @dts_package_name = ] 'dts_package_name'` Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname** com um padrão de NULL. Por exemplo, para especificar um nome de pacote de `DTSPub_Package` , o parâmetro seria `@dts_package_name = N'DTSPub_Package'` .  
   
-`[ @dts_package_password = ] 'dts_package_password'`Especifica a senha necessária para executar o pacote. *dts_package_password* é **sysname** com um padrão de NULL.  
+`[ @dts_package_password = ] 'dts_package_password'` Especifica a senha necessária para executar o pacote. *dts_package_password* é **sysname** com um padrão de NULL.  
   
 > [!NOTE]  
 >  Você deve especificar uma senha se *dts_package_name* for especificado.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Especifica o local do pacote. *dts_package_location* é um **nvarchar (12)**, com um padrão de distribuidor. O local do pacote pode ser **distribuidor** ou **assinante**.  
+`[ @dts_package_location = ] 'dts_package_location'` Especifica o local do pacote. *dts_package_location* é um **nvarchar (12)**, com um padrão de distribuidor. O local do pacote pode ser **distribuidor** ou **assinante**.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`É se a assinatura pode ser sincronizada por meio do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá ser sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` É se a assinatura pode ser sincronizada por meio do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá ser sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, com um valor padrão de NULL.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um valor padrão de NULL.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`É o identificador de programação (PROGID) exclusivo com o qual o provedor de OLE DB para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados não está registrado. *subscriber_provider* é **sysname**, com o valor padrão de NULL. *subscriber_provider* deve ser exclusivo para o provedor de OLE DB instalado no distribuidor. Só há suporte para *subscriber_provider* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
+`[ @subscriber_provider = ] 'subscriber_provider'` É o identificador de programação (PROGID) exclusivo com o qual o provedor de OLE DB para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados não está registrado. *subscriber_provider* é **sysname**, com o valor padrão de NULL. *subscriber_provider* deve ser exclusivo para o provedor de OLE DB instalado no distribuidor. Só há suporte para *subscriber_provider* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`É o nome da fonte de dados como compreendido pelo provedor de OLE DB. *subscriber_datasrc* é **nvarchar (4000)**, com um valor padrão de NULL. *subscriber_datasrc* é passado como a propriedade DBPROP_INIT_DATASOURCE para inicializar o provedor de OLE DB. Só há suporte para *subscriber_datasrc* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'` É o nome da fonte de dados como compreendido pelo provedor de OLE DB. *subscriber_datasrc* é **nvarchar (4000)**, com um valor padrão de NULL. *subscriber_datasrc* é passado como a propriedade DBPROP_INIT_DATASOURCE para inicializar o provedor de OLE DB. Só há suporte para *subscriber_datasrc* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
   
-`[ @subscriber_location = ] 'subscriber_location'`É o local do banco de dados como compreendido pelo provedor de OLE DB. *subscriber_location* é **nvarchar (4000)**, com um valor padrão de NULL. *subscriber_location* é passado como a propriedade DBPROP_INIT_LOCATION para inicializar o provedor de OLE DB. Só há suporte para *subscriber_location* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
+`[ @subscriber_location = ] 'subscriber_location'` É o local do banco de dados como compreendido pelo provedor de OLE DB. *subscriber_location* é **nvarchar (4000)**, com um valor padrão de NULL. *subscriber_location* é passado como a propriedade DBPROP_INIT_LOCATION para inicializar o provedor de OLE DB. Só há suporte para *subscriber_location* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`É a OLE DB cadeia de conexão específica do provedor que identifica a fonte de dados. *subscriber_provider_string* é **nvarchar (4000)**, com um valor padrão de NULL. *subscriber_provider_string* é passado para IDataInitialize ou definido como a propriedade DBPROP_INIT_PROVIDERSTRING para inicializar o provedor de OLE DB. Só há suporte para *subscriber_provider_string* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'` É a OLE DB cadeia de conexão específica do provedor que identifica a fonte de dados. *subscriber_provider_string* é **nvarchar (4000)**, com um valor padrão de NULL. *subscriber_provider_string* é passado para IDataInitialize ou definido como a propriedade DBPROP_INIT_PROVIDERSTRING para inicializar o provedor de OLE DB. Só há suporte para *subscriber_provider_string* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`É o catálogo a ser usado ao estabelecer uma conexão com o provedor de OLE DB. *subscriber_catalog* é **sysname**, com o valor padrão de NULL. *subscriber_catalog* é passado como a propriedade DBPROP_INIT_CATALOG para inicializar o provedor de OLE DB. Só há suporte para *subscriber_catalog* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
+`[ @subscriber_catalog = ] 'subscriber_catalog'` É o catálogo a ser usado ao estabelecer uma conexão com o provedor de OLE DB. *subscriber_catalog* é **sysname**, com o valor padrão de NULL. *subscriber_catalog* é passado como a propriedade DBPROP_INIT_CATALOG para inicializar o provedor de OLE DB. Só há suporte para *subscriber_catalog* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -190,9 +191,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [Criar uma assinatura para um assinante não SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropsubscription](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addsubscription ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changesubscription ](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsubscription ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription ](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

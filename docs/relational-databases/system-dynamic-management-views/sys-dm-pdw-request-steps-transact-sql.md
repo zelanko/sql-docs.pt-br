@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_request_steps (Transact-SQL)
 title: sys. dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -12,19 +13,19 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4144e068354d43e2e8a5f9ea5bd6af7ad40a0e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489721"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contém informações sobre todas as etapas que compõem uma determinada solicitação ou consulta no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Ele lista uma linha por etapa de consulta.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id e step_index compõem a chave para essa exibição.<br /><br /> ID numérica exclusiva associada à solicitação.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id e step_index compõem a chave para essa exibição.<br /><br /> A posição desta etapa na sequência de etapas que compõem a solicitação.|0 a (n-1) para uma solicitação com n etapas.|  

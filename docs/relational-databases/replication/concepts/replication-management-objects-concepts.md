@@ -1,4 +1,5 @@
 ---
+description: Replication Management Objects Concepts
 title: Conceitos dos objetos de gerenciamento de replicação | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a2e6f065c29956873d48ada5e7add52a0528784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95b4db25e874d4afe51ea47d5def4b316990c056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490620"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "86915829"
   
 2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** aparecerá.  
   
-3.  Na caixa de diálogo **Tipos de Projeto**, selecione **Projetos do Visual C#** . No painel **Modelos**, selecione **Aplicativos do Windows**.  
+3.  Na caixa de diálogo **Tipos de Projeto**, selecione **Projetos do Visual C#**. No painel **Modelos**, selecione **Aplicativos do Windows**.  
   
 4.  (Opcional) Em **Nome**, digite o nome do novo aplicativo.  
   
@@ -193,6 +194,6 @@ ms.locfileid: "86915829"
   
 ## <a name="see-also"></a>Consulte Também  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Conceitos de programação da replicação](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
+ [Conceitos de programação de replicação](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

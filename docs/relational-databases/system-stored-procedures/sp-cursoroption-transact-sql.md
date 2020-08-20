@@ -1,4 +1,5 @@
 ---
+description: sp_cursoroption (Transact-SQL)
 title: sp_cursoroption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 581a154dfefa7823e9a1c0cefa53518352c66d55
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1deb0895de1b0a3694465ccb0f9e95228fbedd0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489468"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>Valores do código de retorno  
  O parâmetro *Value* pode retornar um dos valores de *código* a seguir.  
   
-|Retornar valor|Descrição|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -71,7 +72,7 @@ sp_cursoroption cursor, code, value
   
  O parâmetro *Value* retorna um dos seguintes valores de scrollopt.  
   
-|Retornar valor|Descrição|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -80,15 +81,15 @@ sp_cursoroption cursor, code, value
   
  O parâmetro *Value* retorna um dos seguintes valores de ccopt.  
   
-|Retornar valor|Descrição|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  
 |0x0004 ou 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_cursor](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursor ](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursoropen ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpsrvrolemember (Transact-SQL)
 title: sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 559a88809e903c56221088e811b1b04875f3849a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be34b5879a21824e5e0b92fbe3187fce039d6ffa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489239"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'`É o nome de uma função de servidor fixa. *role* é **sysname**, com um padrão de NULL. Se a *função*não for especificada, o conjunto de resultados incluirá informações sobre todas as funções de servidor fixas.  
+`[ @srvrolename = ] 'role'` É o nome de uma função de servidor fixa. *role* é **sysname**, com um padrão de NULL. Se a *função*não for especificada, o conjunto de resultados incluirá informações sobre todas as funções de servidor fixas.  
   
  a *função* pode ser qualquer um dos valores a seguir.  
   
@@ -85,9 +86,9 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helprolemember](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprole ](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprolemember ](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

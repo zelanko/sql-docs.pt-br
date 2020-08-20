@@ -1,4 +1,5 @@
 ---
+description: core.sp_purge_data (Transact-SQL)
 title: Core. sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b7432238a3bedc85f6f9d971299fa7de2705df8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2ab402b1641e72225bf579d5b0aa5a21b345637
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489727"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -108,7 +109,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

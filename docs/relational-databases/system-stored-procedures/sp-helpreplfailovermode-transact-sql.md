@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplfailovermode (Transact-SQL)
 title: sp_helpreplfailovermode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 846057680d9f97d5fc1e1bb2683a720a63f71585
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5503291dc5011366ab6fe3b4a2d60b0a1310ba79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489269"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador que está participando da atualização deste assinante. o *Publicador* é **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador que está participando da atualização deste assinante. o *Publicador* é **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação que está participando da atualização deste assinante. a *publicação*é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que está participando da atualização deste assinante. a *publicação*é **sysname**, sem padrão.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`Retorna o valor inteiro do modo de failover e é um parâmetro de **saída** . *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** para atualização em fila.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Retorna o valor inteiro do modo de failover e é um parâmetro de **saída** . *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** para atualização em fila.  
   
-`[ @failover_mode = ] 'failover_mode' OUTPUT`Retorna o modo no qual as modificações de dados são feitas no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão de NULL. É um parâmetro de **saída** .  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` Retorna o modo no qual as modificações de dados são feitas no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão de NULL. É um parâmetro de **saída** .  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -66,6 +67,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_setreplfailovermode](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_setreplfailovermode ](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

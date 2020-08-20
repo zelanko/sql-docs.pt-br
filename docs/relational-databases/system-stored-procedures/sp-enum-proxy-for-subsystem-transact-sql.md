@@ -1,4 +1,5 @@
 ---
+description: sp_enum_proxy_for_subsystem (Transact-SQL)
 title: sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489406"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -43,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] proxy_id`O número de identificação do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
+`[ @proxy_id = ] proxy_id` O número de identificação do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
   
-`[ @subsystem_id = ] subsystem_id`O número de identificação do subsistema para o qual listar informações. O *subsystem_id* é **int**, com um padrão de NULL. O *subsystem_id* ou o *subsystem_name* pode ser especificado.  
+`[ @subsystem_id = ] subsystem_id` O número de identificação do subsistema para o qual listar informações. O *subsystem_id* é **int**, com um padrão de NULL. O *subsystem_id* ou o *subsystem_name* pode ser especificado.  
   
-`[ @subsystem_name = ] 'subsystem_name'`O nome do subsistema para o qual listar informações. O *subsystem_name* é **sysname**, com um padrão de NULL. O *subsystem_id* ou o *subsystem_name* pode ser especificado.  
+`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema para o qual listar informações. O *subsystem_name* é **sysname**, com um padrão de NULL. O *subsystem_id* ou o *subsystem_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -103,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_grant_proxy_to_subsystem](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_grant_proxy_to_subsystem ](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

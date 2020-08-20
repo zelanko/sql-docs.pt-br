@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_configure_sp (Transact-SQL)
 title: sysmail_help_configure_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 307b1a1259210890d0b21abdc7a26f0e321e49b3
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c030fbc4ee2c329f8c13e525c07961794b28608e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488946"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @parameter_name = ] 'parameter_name'`O nome da definição de configuração a ser recuperada. Quando especificado, o valor da definição de configuração é retornado no parâmetro de saída ** \@ parameter_value** . Quando nenhum ** \@ parameter_name** é especificado, esse procedimento armazenado retorna um conjunto de resultados que contém todas as definições de configuração de Database Mail na instância.  
+`[ @parameter_name = ] 'parameter_name'` O nome da definição de configuração a ser recuperada. Quando especificado, o valor da definição de configuração é retornado no parâmetro de saída ** \@ parameter_value** . Quando nenhum ** \@ parameter_name** é especificado, esse procedimento armazenado retorna um conjunto de resultados que contém todas as definições de configuração de Database Mail na instância.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

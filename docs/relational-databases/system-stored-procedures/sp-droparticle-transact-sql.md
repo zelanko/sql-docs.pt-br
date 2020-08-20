@@ -1,4 +1,5 @@
 ---
+description: sp_droparticle (Transact-SQL)
 title: sp_droparticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b150636804bc4d312f6f6bfbe046ef7e9612207
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7616e6c58400d67be184b0634ea749692b30292
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489461"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,19 +43,19 @@ sp_droparticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação que contém o artigo a ser Descartado. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo a ser Descartado. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo a ser removido. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo a ser removido. o *artigo* é **sysname**, sem padrão.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** especifica que as alterações no artigo podem fazer com que o instantâneo seja inválido e, se houver assinaturas existentes que exijam um novo instantâneo, concederá permissão para o instantâneo existente ser marcado como obsoleto e um novo instantâneo gerado.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser usado ao alterar as propriedades do artigo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -67,7 +68,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_droparticle** é usado em instantâneo e replicação transacional.  
   
- Para artigos filtrados horizontalmente, **sp_droparticle** verifica a coluna **tipo** do artigo na tabela de [&#41;sysarticles &#40;Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) para determinar se um modo de exibição ou filtro também deve ser removido. Se uma exibição ou filtro foram gerados automaticamente, serão descartados com o artigo. Se foram criados manualmente, não serão descartados.  
+ Para artigos filtrados horizontalmente, **sp_droparticle** verifica a coluna **tipo** do artigo na tabela de [&#41;sysarticles &#40;Transact-SQL ](../../relational-databases/system-tables/sysarticles-transact-sql.md) para determinar se um modo de exibição ou filtro também deve ser removido. Se uma exibição ou filtro foram gerados automaticamente, serão descartados com o artigo. Se foram criados manualmente, não serão descartados.  
   
  A execução de **sp_droparticle** para descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use `DROP <object>` para remover esses objetos manualmente, se necessário.  
   
@@ -80,10 +81,10 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="see-also"></a>Consulte Também  
  [Excluir um artigo](../../relational-databases/replication/publish/delete-an-article.md)   
  [Adicionar e remover artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [&#41;&#40;Transact-SQL de sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helparticlecolumns](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changearticle ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helparticlecolumns ](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

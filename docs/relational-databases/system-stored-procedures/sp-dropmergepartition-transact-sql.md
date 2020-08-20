@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepartition (Transact-SQL)
 title: sp_dropmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,11 +17,12 @@ ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7320f894800c1893afb69c73c6e5324eedbaa939
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2bf72972d35a85812e9d16939572a31358d53d12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489476"
 ---
 # <a name="sp_dropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,11 +41,11 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication] = 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication] = 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @suser_sname = ] 'suser_sname'`É o valor da função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) no Assinante usado para definir a partição. *SUSER_SNAME* é **sysname**, sem padrão.  
+`[ @suser_sname = ] 'suser_sname'` É o valor da função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) no Assinante usado para definir a partição. *SUSER_SNAME* é **sysname**, sem padrão.  
   
-`[ @host_name = ] 'host_name'`É o valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) no Assinante usado para definir a partição. *HOST_NAME* é **sysname**, sem padrão.  
+`[ @host_name = ] 'host_name'` É o valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) no Assinante usado para definir a partição. *HOST_NAME* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -55,6 +57,6 @@ sp_dropmergepartition [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_dropmergepartition**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  
+ [Gerenciar partições para uma publicação de mesclagem com filtros parametrizados](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)  
   
   

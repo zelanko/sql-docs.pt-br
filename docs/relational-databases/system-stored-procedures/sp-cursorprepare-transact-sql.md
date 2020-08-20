@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepare (Transact-SQL)
 title: sp_cursorprepare (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a2b001c3e08c9d68be113e351bcf0482205e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489410"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -147,9 +148,9 @@ exec sp_cursorclose @p2
  { *\<local variable name>**\<data type>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_cursorexecute](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_cursorunprepare](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursorexecute ](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursoropen ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursorunprepare ](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

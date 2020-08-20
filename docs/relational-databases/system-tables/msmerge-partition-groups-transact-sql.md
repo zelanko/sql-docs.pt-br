@@ -1,4 +1,5 @@
 ---
+description: MSmerge_partition_groups (Transact-SQL)
 title: MSmerge_partition_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 71df50ce6f94602d06bc46229887983233641610
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fd91cdbce03ade08552673aeda3128959c31e5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488759"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889739"
 |**HOST_NAME_FN**|**nvarchar(128)**|O valor fornecido ao usar filtros de linha com parâmetros para gerar partições. Para obter mais informações, consulte [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

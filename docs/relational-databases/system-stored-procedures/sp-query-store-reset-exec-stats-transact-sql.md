@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_reset_exec_stats (Transact-SQL)
 title: sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,11 +22,12 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d818d6ebf8c00d788f422c19b0bf32edaff0c24
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb4dc0ab26f2b3df03dc290054270f3c8a705f69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489119"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,7 +44,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] plan_id`É a ID do plano de consulta a ser limpo. *plan_id* é um **bigint**, sem padrão.  
+`[ @plan_id = ] plan_id` É a ID do plano de consulta a ser limpo. *plan_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -71,11 +73,11 @@ EXEC sp_query_store_reset_exec_stats 3;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_query_store_force_plan](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_query_store_remove_query](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_query_store_unforce_plan](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_query_store_force_plan ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_query_store_remove_query ](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_query_store_unforce_plan ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [&#41;&#40;Transact-SQL de sp_query_store_flush_db](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_query_store_flush_db ](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [Repositório de Consultas exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

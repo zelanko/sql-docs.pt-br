@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups_history_ex (Banco de Dados SQL do Azure)
 title: sys. dm_resource_governor_workload_groups_history_ex (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489710"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -32,33 +33,33 @@ Retorna o instantâneo a um intervalo de 20 segundos para os últimos 32 minutos
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**pool_id**| int |ID do pool de recursos. Não permite valor nulo.|
-|**group_id**| int |ID do grupo de carga de trabalho. Não permite valor nulo.|
+|**pool_id**| INT |ID do pool de recursos. Não permite valor nulo.|
+|**group_id**| INT |ID do grupo de carga de trabalho. Não permite valor nulo.|
 |**name**| nvarchar(256) |Nome do grupo de carga de trabalho. Não permite valor nulo.|
 |**snapshot_time**| DATETIME |DateTime do instantâneo de estatísticas do grupo de recursos feito.|
-|**duration_ms**| int |Duração entre o instantâneo atual e o anterior.|
-|**active_worker_count**| int |Total de trabalhos no instantâneo atual.|
-|**active_request_count**| int |Conta de solicitação atual. Não permite valor nulo.|
-|**active_session_count**| int |Total de sessões ativas no instantâneo atual.|
+|**duration_ms**| INT |Duração entre o instantâneo atual e o anterior.|
+|**active_worker_count**| INT |Total de trabalhos no instantâneo atual.|
+|**active_request_count**| INT |Conta de solicitação atual. Não permite valor nulo.|
+|**active_session_count**| INT |Total de sessões ativas no instantâneo atual.|
 |**total_request_count**| BIGINT |Conta cumulativa de solicitações concluídas no grupo de carga de trabalho. Não permite valor nulo.|
-|**delta_request_count**| int |Contagem de solicitações concluídas no grupo de cargas de trabalho desde o último instantâneo. Não permite valor nulo.|
+|**delta_request_count**| INT |Contagem de solicitações concluídas no grupo de cargas de trabalho desde o último instantâneo. Não permite valor nulo.|
 |**total_cpu_usage_ms**| BIGINT |Uso cumulativo da CPU, em milissegundos, pelo grupo de carga de trabalho. Não permite valor nulo.|
-|**delta_cpu_usage_ms**| int |Uso da CPU em milissegundos desde o último instantâneo. Não permite valor nulo.|
-|**delta_cpu_usage_preemptive_ms**| int |As chamadas do Win32 preemptivas não são regidas pelo RG da CPU do SQL, desde o último instantâneo.|
-|**delta_reads_reduced_memgrant_count**| int |A contagem de concessões de memória que atingiu o limite máximo de tamanho de consulta desde o último instantâneo. Não permite valor nulo.|
-|**reads_throttled**| int |Número total de leituras limitadas.|
-|**delta_reads_queued**| int |O IOs de leitura total enfileirado desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
-|**delta_reads_issued**| int |O IOs de leitura total emitido desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
-|**delta_reads_completed**| int |O IOs de leitura total foi concluído desde o último instantâneo. Não permite valor nulo.|
+|**delta_cpu_usage_ms**| INT |Uso da CPU em milissegundos desde o último instantâneo. Não permite valor nulo.|
+|**delta_cpu_usage_preemptive_ms**| INT |As chamadas do Win32 preemptivas não são regidas pelo RG da CPU do SQL, desde o último instantâneo.|
+|**delta_reads_reduced_memgrant_count**| INT |A contagem de concessões de memória que atingiu o limite máximo de tamanho de consulta desde o último instantâneo. Não permite valor nulo.|
+|**reads_throttled**| INT |Número total de leituras limitadas.|
+|**delta_reads_queued**| INT |O IOs de leitura total enfileirado desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
+|**delta_reads_issued**| INT |O IOs de leitura total emitido desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
+|**delta_reads_completed**| INT |O IOs de leitura total foi concluído desde o último instantâneo. Não permite valor nulo.|
 |**delta_read_bytes**| BIGINT |O número total de bytes lidos desde o último instantâneo. Não permite valor nulo.|
-|**delta_read_stall_ms**| int |Tempo total (em milissegundos) entre a chegada de e/s de leitura e a conclusão desde o último instantâneo. Não permite valor nulo.|
-|**delta_read_stall_queued_ms**| int |Tempo total (em milissegundos) entre a chegada de e/s de leitura e o problema desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s. Delta_read_stall_queued_ms diferente de zero significa que a e/s está sendo afetada pelo RG.|
-|**delta_writes_queued**| int |O IOs de gravação total enfileirado desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
-|**delta_writes_issued**| int |O IOs de gravação total emitido desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
-|**delta_writes_completed**| int |O IOs de gravação total foi concluído desde o último instantâneo. Não permite valor nulo.|
+|**delta_read_stall_ms**| INT |Tempo total (em milissegundos) entre a chegada de e/s de leitura e a conclusão desde o último instantâneo. Não permite valor nulo.|
+|**delta_read_stall_queued_ms**| INT |Tempo total (em milissegundos) entre a chegada de e/s de leitura e o problema desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s. Delta_read_stall_queued_ms diferente de zero significa que a e/s está sendo afetada pelo RG.|
+|**delta_writes_queued**| INT |O IOs de gravação total enfileirado desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
+|**delta_writes_issued**| INT |O IOs de gravação total emitido desde o último instantâneo. Permite valor nulo. NULL se o grupo de recursos não for regido para e/s.|
+|**delta_writes_completed**| INT |O IOs de gravação total foi concluído desde o último instantâneo. Não permite valor nulo.|
 |**delta_writes_bytes**| BIGINT |O número total de bytes gravados desde o último instantâneo. Não permite valor nulo.|
-|**delta_write_stall_ms**| int |Tempo total (em milissegundos) entre a chegada de e/s de gravação e a conclusão desde o último instantâneo. Não permite valor nulo.|
-|**delta_background_writes**| int |O total de gravações realizadas por tarefas em segundo plano desde o último instantâneo.|
+|**delta_write_stall_ms**| INT |Tempo total (em milissegundos) entre a chegada de e/s de gravação e a conclusão desde o último instantâneo. Não permite valor nulo.|
+|**delta_background_writes**| INT |O total de gravações realizadas por tarefas em segundo plano desde o último instantâneo.|
 |**delta_background_write_bytes**| BIGINT |O tamanho total de gravação realizado pelas tarefas em segundo plano desde o último instantâneo, em bytes.|
 |**delta_log_bytes_used**| BIGINT |Log usado desde o último instantâneo em bytes.|
 |**delta_log_temp_db_bytes_used**| BIGINT |Log de tempdb usado desde o último instantâneo em bytes.|
@@ -66,13 +67,13 @@ Retorna o instantâneo a um intervalo de 20 segundos para os últimos 32 minutos
 |**delta_suboptimal_plan_generations**| BIGINT |A contagem de gerações de planos de qualidade inferior ocorridas neste grupo de cargas de trabalho devido à pressão de memória desde o último instantâneo. Não permite valor nulo.
 |**max_memory_grant_kb**| BIGINT |Concessão máxima de memória para o grupo em KB.|
 |**max_request_cpu_msec**| BIGINT |Uso máximo da CPU, em milissegundos, para uma única solicitação. Não permite valor nulo.|
-|**max_concurrent_request**| int |Configuração atual do número máximo de solicitações simultâneas. Não permite valor nulo.|
-|**max_io**| int |Limite máximo de e/s para o grupo.|
-|**max_global_io**| int |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.
-|**max_queued_io**| int |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
+|**max_concurrent_request**| INT |Configuração atual do número máximo de solicitações simultâneas. Não permite valor nulo.|
+|**max_io**| INT |Limite máximo de e/s para o grupo.|
+|**max_global_io**| INT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.
+|**max_queued_io**| INT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 |**max_log_rate_kb**| BIGINT |Taxa máxima de log (quilobytes-bytes por segundo) em nível de grupo de recursos.|
-|**max_session**| int |Limite de sessão do grupo.|
-|**max_worker**| int |Limite de trabalho para o grupo.|
+|**max_session**| INT |Limite de sessão do grupo.|
+|**max_worker**| INT |Limite de trabalho para o grupo.|
 |||
 
 ## <a name="permissions"></a>Permissões

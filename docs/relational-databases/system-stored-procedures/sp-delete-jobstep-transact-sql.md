@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobstep (Transact-SQL)
 title: sp_delete_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77557dee97475ef713c88c969de98a241d955eea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7fc21ae11a1ade4780b99a86d03b7c9948c05663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489400"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho do qual a etapa será removida. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho do qual a etapa será removida. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho do qual a etapa será removida. *job_name*é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho do qual a etapa será removida. *job_name*é **sysname**, com um padrão de NULL.  
   
 > **Observação:** O *job_id* ou *job_name* deve ser especificado; Não é possível especificar ambos.  
   
-`[ @step_id = ] step_id`O número de identificação da etapa que está sendo removida. *step_id*é **int**, sem padrão.  
+`[ @step_id = ] step_id` O número de identificação da etapa que está sendo removida. *step_id*é **int**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -92,9 +93,9 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir ou modificar trabalhos](../../ssms/agent/view-or-modify-jobs.md)   
- [&#41;&#40;Transact-SQL de sp_add_jobstep](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_jobstep ](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_jobstep ](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_jobstep ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

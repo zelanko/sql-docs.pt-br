@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_network_credentials (Transact-SQL)
 title: sys. dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8be0dde15dea7c02cda9fb59cdc71680ec494178
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922c1ec6594f01488515bc1e9f18efa07a53e884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489748"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87395946"
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|ID numérica exclusiva associada ao nó.|  
 |target_server_name|**nvarchar(32)**|Endereço IP do servidor de destino que [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] será acessado usando as credenciais de nome de usuário e senha.|  
-|Nome de Usuário|**nvarchar(32)**|Nome de usuário para o qual a senha é armazenada.|  
+|username|**nvarchar(32)**|Nome de usuário para o qual a senha é armazenada.|  
 |last_modified|**datetime**|DateTime da última operação que modificou a credencial.|  
   
 ## <a name="permissions"></a>Permissões  

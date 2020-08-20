@@ -1,4 +1,5 @@
 ---
+description: O SQLXML não é instalado no SQL Server
 title: O SQLXML não é instalado no SQL Server
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3412b02a7164a5cb57421c52b3662e226bf7e537
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c0fee1b0ad59aa8a07e8f95decd94e84c6af225
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490352"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>O SQLXML não é instalado no SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85665916"
  Se um aplicativo for executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exigir o sqlxml 4,0, você precisará baixar e instalar o sqlxml 4,0 SP1.  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>Comportamento do SQLXML 4.0 SP1 com novos tipos de dados que usam o SQLOLEDB e o SQL Server Native Client OLE DB Provider  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o introduziu os seguintes tipos de dados, que os desenvolvedores que usam o SQLXML talvez queiram usar:  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o introduziu os seguintes tipos de dados, que os desenvolvedores que usam o SQLXML talvez queiram usar:  
   
 -   **Data**  
   

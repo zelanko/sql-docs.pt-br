@@ -1,4 +1,5 @@
 ---
+description: 'ISSCommandWithParameters:: ParameterProperties em SQL Server Native Client (OLE DB)'
 title: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a017c6b3f9002fe0c57581a332ee2282f4de1924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0ec5b9666e5b61bfc018825848ca543e42d38c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490777"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-in-sql-server-native-client-ole-db"></a>ISSCommandWithParameters:: ParameterProperties em SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ struct SSPARAMPROPS {
 };
 ```
 
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |*iOrdinal*|O ordinal do parâmetro passado.|  
 |*cPropertySets*|O número de estruturas DBPROPSET em *rgPropertySets*.|  

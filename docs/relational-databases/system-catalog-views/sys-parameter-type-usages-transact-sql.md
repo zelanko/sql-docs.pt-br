@@ -1,4 +1,5 @@
 ---
+description: sys.parameter_type_usages (Transact-SQL)
 title: sys. parameter_type_usages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dbb261f10afb2fbf9e01f27dc82beccc4d3a145
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf978fffdcf5929a27c25f4769bf30a043b77787
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490297"
 ---
 # <a name="sysparameter_type_usages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: 'ISSAsynchStatus:: Abort (provedor de OLE DB de cliente nativo)'
 title: 'ISSAsynchStatus:: Abort (provedor de OLE DB de cliente nativo) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,12 +17,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490866"
 ---
 # <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus:: Abort (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **ISSAsynchStatus::Abort** foi chamado em um objeto de fonte de dados no qual **IDBInitialize::Initialize** não foi chamado ou não foi concluído.  
   
- **ISSAsynchStatus:: Abort** foi chamado em um objeto de fonte de dados no qual **IDBInitialize:: Initialize** foi chamado, mas subsequentemente cancelado antes da inicialização ou atingiu o tempo limite. O objeto de fonte de dados ainda não foi inicializado.  
+ **ISSAsynchStatus::Abort** foi chamado em um objeto de fonte de dados no qual **IDBInitialize::Initialize** foi chamado, mas, subsequentemente, foi cancelado antes da inicialização ou seu tempo limite foi atingido. O objeto de fonte de dados permanece não inicializado.  
   
  **ISSAsynchStatus::Abort** foi chamado em um conjunto de linhas no qual **ITransaction::Commit** ou **ITransaction::Abort** foi chamado anteriormente, e o conjunto de linhas não sobreviveu à operação de confirmação ou anulação e está em um estado zumbi.  
   

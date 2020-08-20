@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_default (Transact-SQL)
 title: sp_help_agent_default (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad0ae89b2cc2b09222fea863a008104e43ccfd15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489459"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] _profile_idOUTPUT`É a ID da configuração padrão para o tipo de agente. *profile_id* é **int**, sem padrão. *profile_id* também é um parâmetro de saída e retorna a ID da configuração padrão para o tipo de agente.  
+`[ @profile_id = ] _profile_idOUTPUT` É a ID da configuração padrão para o tipo de agente. *profile_id* é **int**, sem padrão. *profile_id* também é um parâmetro de saída e retorna a ID da configuração padrão para o tipo de agente.  
   
-`[ @agent_type = ] 'agent_type'`É o tipo de agente. *agent_type* é **int**, sem padrão, e pode ser um desses valores.  
+`[ @agent_type = ] 'agent_type'` É o tipo de agente. *agent_type* é **int**, sem padrão, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
