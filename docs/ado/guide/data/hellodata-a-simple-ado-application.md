@@ -1,4 +1,5 @@
 ---
+description: 'HelloData: um aplicativo ADO simples'
 title: 'HelloData: um aplicativo ADO simples | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453278"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: um aplicativo ADO simples
 Este aplicativo simples percorre cada uma das quatro principais operações do ADO: obtendo, examinando, editando e atualizando dados. Essas operações são executadas em relação ao banco de dados de exemplo Northwind incluído com o Microsoft® SQL Server. Para se concentrar nos conceitos básicos do ADO e evitar a aglomeração de código, o tratamento de erros no exemplo é mínimo.  
@@ -44,17 +45,17 @@ Este aplicativo simples percorre cada uma das quatro principais operações do A
   
 |Tipo de controle|Propriedade|Valor|  
 |------------------|--------------|-----------|  
-|Formulário|Name|Form1|  
+|Formulário|Nome|Form1|  
 ||Altura|6500|  
 ||Largura|6500|  
-|DataGrid do MS|Name|grdDisplay1|  
-|TextBox|Name|txtDisplay1|  
+|DataGrid do MS|Nome|grdDisplay1|  
+|TextBox|Nome|txtDisplay1|  
 ||Multilinha|true|  
-|Botão de comando|Name|cmdGetData|  
+|Botão de comando|Nome|cmdGetData|  
 ||Legenda|Get Data|  
-|Botão de comando|Name|cmdExamineData|  
+|Botão de comando|Nome|cmdExamineData|  
 ||Legenda|Examinar dados|  
-|Botão de comando|Name|cmdEditData|  
+|Botão de comando|Nome|cmdEditData|  
 ||Legenda| Editar dados|  
-|Botão de comando|Name|cmdUpdateData|  
+|Botão de comando|Nome|cmdUpdateData|  
 ||Legenda|Atualizar dados|

@@ -1,4 +1,5 @@
 ---
+description: Informações de erro relacionadas ao campo
 title: Informações de erro relacionadas a campo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e61850ca788f6cff11d2a665000f68b89cd3ed45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7402b8cf349d95869ff292194ce6d64c3fb6f4bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453388"
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionadas ao campo
 Se um erro estiver diretamente relacionado a um campo, por exemplo, se os dados estiverem ausentes ou se forem do tipo incorreto para o campo – você poderá recuperar mais informações sobre a causa do problema examinando a propriedade **status** do objeto **Field** . Esta propriedade foi aprimorada para fornecer informações específicas sobre o problema. Portanto, por exemplo, quando uma chamada para **UpdateBatch** falha, a causa do problema pode ser determinada examinando a propriedade **status** dos **campos** em cada um dos registros afetados. A propriedade conterá um dos valores na constante **FieldStatusEnum** . A tabela a seguir inclui os valores que são de interesse particular quando ocorre um erro.  

@@ -1,4 +1,5 @@
 ---
+description: Fluxos de comando
 title: Fluxos de comando | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2db139f3f5ae4ff701e36179a9df7ce30eecd94e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453658"
 ---
 # <a name="command-streams"></a>Fluxos de comando
 O ADO sempre tem suporte para entrada de comando no formato de cadeia de caracteres especificado pela propriedade **CommandText** . Como alternativa, com o ADO 2,7 ou posterior, você também pode usar um fluxo de informações para entrada de comando atribuindo o fluxo à propriedade **CommandStream** . Você pode atribuir um objeto de **fluxo** ADO ou qualquer objeto que ofereça suporte à interface com **IStream** .  
@@ -40,7 +41,7 @@ adoStreamQuery.Open
   
  O conteúdo do fluxo de consulta será uma consulta de modelo XML.  
   
- A consulta de modelo requer uma referência ao namespace de XML identificado pelo prefixo SQL: da \< marca SQL: query>. Uma instrução SQL SELECT é incluída como o conteúdo do modelo XML e atribuída a uma variável de cadeia de caracteres da seguinte maneira:  
+ A consulta de modelo requer uma referência ao namespace XML identificado pelo prefixo SQL: da \<sql:query> marca. Uma instrução SQL SELECT é incluída como o conteúdo do modelo XML e atribuída a uma variável de cadeia de caracteres da seguinte maneira:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

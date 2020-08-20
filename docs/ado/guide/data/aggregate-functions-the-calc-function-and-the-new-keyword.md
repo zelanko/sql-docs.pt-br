@@ -1,4 +1,5 @@
 ---
+description: Funções de agregação, a função CALC e a palavra-chave NEW
 title: Funções de agregação, a função CALC e a nova palavra-chave | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453748"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funções de agregação, a função CALC e a palavra-chave NEW
 O data Shaping oferece suporte às funções a seguir. O nome atribuído ao capítulo que contém a coluna a ser operada é o *Chapter-alias*.  

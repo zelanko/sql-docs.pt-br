@@ -1,4 +1,5 @@
 ---
+description: Antecipar erros
 title: Antecipando erros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f28a6dc9d79ba59229609cbde94642e31274b9eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453728"
 ---
 # <a name="anticipating-errors"></a>Antecipar erros
 A prevenção de erros é pelo menos tão importante quanto o tratamento de erros. Esta seção final contém uma pequena lista de precauções que seu aplicativo pode tomar para ajudar a tornar os erros menos prováveis.  

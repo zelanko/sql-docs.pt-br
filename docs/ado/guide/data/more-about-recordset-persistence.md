@@ -1,4 +1,5 @@
 ---
+description: Mais informações sobre a persistência do conjunto de registros
 title: Mais sobre a persistência do conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c45f457cdf633cc16052ed2945f71da176efe472
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453178"
 ---
 # <a name="more-about-recordset-persistence"></a>Mais informações sobre a persistência do conjunto de registros
 O objeto Recordset ADO dá suporte ao armazenamento do conteúdo de um objeto **Recordset** em um arquivo usando seu método [Save](../../../ado/reference/ado-api/save-method.md) . O arquivo armazenado persistente pode existir em uma unidade local, servidor ou como uma URL em um site da Web. Posteriormente, o arquivo pode ser restaurado com o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) do objeto **Recordset** ou o método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) do objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -58,7 +59,7 @@ Dim rs as New ADODB.Recordset
 rs.Open "c:\yourFile.adtg"  
 ```  
   
-### <a name="open-a-persisted-file-with-connectionexecute"></a>Abra um arquivo persistente com Connection. execute:  
+### <a name="open-a-persisted-file-with-connectionexecute"></a>Abra um arquivo persistente com Connection.Exegraciosos:  
   
 ```  
 Dim conn as New ADODB.Connection  

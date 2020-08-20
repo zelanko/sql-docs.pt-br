@@ -1,4 +1,5 @@
 ---
+description: Seção de dados
 title: Seção de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453568"
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas junto com quaisquer atualizações, inserções ou exclusões pendentes. A seção de dados pode conter zero ou mais linhas. Ele só pode conter dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas sem dados podem ser omitidas. Se um atributo ou subelemento for usado na seção de dados e essa construção não tiver sido definida na seção de esquema, ela será silenciosamente ignorada.  
   
-## <a name="string"></a>Cadeia de caracteres  
+## <a name="string"></a>String  
  Caracteres XML reservados em dados de texto devem ser substituídos por entidades de caracteres apropriadas. Por exemplo, no nome da empresa "João ' s garagem", a aspa simples deve ser substituída por uma entidade. A linha real seria semelhante ao seguinte:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Os seguintes caracteres são reservados em XML e devem ser substituídos por entidades de caracteres: {', ", &, \< , >}.  
+ Os seguintes caracteres são reservados em XML e devem ser substituídos por entidades de caracteres: {', ", &, \<,> }.  
   
 ## <a name="binary"></a>Binário  
  Os dados binários são de bin. Hex codificados (ou seja, um byte é mapeado para dois caracteres, um caractere por Nibble).  

@@ -1,4 +1,5 @@
 ---
+description: Visão geral de data shaping
 title: Visão geral do data Shaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6258c44d267462cea097c5553c9814b10d3787f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d0f6502ccfa58b28f0faeaf10b2670a42759a2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453548"
 ---
 # <a name="data-shaping-overview"></a>Visão geral de data shaping
 A *modelagem de dados* significa criar relações hierárquicas entre duas ou mais entidades lógicas em uma consulta. A hierarquia pode ser vista em relações pai-filho entre um registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e um ou mais registros (também conhecido como um capítulo) de outro **conjunto**de registros. Em uma relação pai-filho, o **conjunto de registros** pai contém o **conjunto de registros**filho. Um exemplo dessa relação hierárquica é os clientes e pedidos. Para cada cliente em um banco de dados, pode haver zero ou mais pedidos. A relação hierárquica pode ser recursiva, o que significa que os registros de neto podem ser aninhados em um registro filho. Em princípio, um registro hierárquico pode ser aninhado em qualquer profundidade. Na prática, o ADO limita a recursão a um máximo de 512 **conjuntos de registros**s.  

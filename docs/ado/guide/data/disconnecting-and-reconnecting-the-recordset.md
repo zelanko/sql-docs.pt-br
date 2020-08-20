@@ -1,4 +1,5 @@
 ---
+description: Desconectar e reconectar o conjunto de registros
 title: Desconectando e reconectando o conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ef30165a05bc472bfe34cec4e7f669d545d7768
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f372951375954a4ed93213cc7cbfd7bc99ef1ecf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453478"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Desconectar e reconectar o conjunto de registros
 Um dos recursos mais poderosos encontrados no ADO é a capacidade de abrir um conjunto de registros do lado do cliente de uma fonte de dados e, em seguida, desconectar o conjunto de registros da fonte de dados. Depois que o conjunto de registros tiver sido desconectado, a conexão com a fonte de dados poderá ser fechada, liberando assim os recursos no servidor usado para mantê-lo. Você pode continuar a exibir e editar os dados no conjunto de registros enquanto ele estiver desconectado e depois reconectar-se à fonte de dados e enviar suas atualizações no modo de lote.  

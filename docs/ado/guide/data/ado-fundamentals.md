@@ -1,4 +1,5 @@
 ---
+description: Conceitos básicos do ADO
 title: Conceitos básicos do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453768"
 ---
 # <a name="ado-fundamentals"></a>Conceitos básicos do ADO
 O ADO fornece aos desenvolvedores um modelo de objeto lógico e poderoso para acessar, editar e atualizar dados programaticamente de uma ampla variedade de fontes de dados por meio de interfaces de sistema OLE DB. O uso mais comum do ADO é consultar uma tabela ou tabelas em um banco de dados relacional, recuperar e exibir os resultados em um aplicativo e, talvez, permitir que os usuários façam e salvem alterações nos dados. Outras tarefas incluem o seguinte:  

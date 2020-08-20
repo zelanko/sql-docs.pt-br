@@ -1,4 +1,5 @@
 ---
+description: Criando uma cadeia de conexão
 title: Criando uma cadeia de conexão | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453618"
 ---
 # <a name="creating-a-connection-string"></a>Criando uma cadeia de conexão
-Uma cadeia de conexão consiste em uma lista de pares de argumento/valor (ou seja, parâmetros), separados por ponto e vírgula. Por exemplo:  
+Uma cadeia de conexão consiste em uma lista de pares de argumento/valor (ou seja, parâmetros), separados por ponto e vírgula. Por exemplo:   
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  

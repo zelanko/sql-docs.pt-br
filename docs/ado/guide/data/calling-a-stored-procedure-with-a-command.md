@@ -1,4 +1,5 @@
 ---
+description: Chamar um procedimento armazenado com um comando
 title: Chamando um procedimento armazenado com um comando | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 998bda7d2c940b16f298fdfe436a2d60b27f09ba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c510bd71d8b81eae9f86e48c398cc6ff7e81cea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453688"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Chamar um procedimento armazenado com um comando
 Você pode usar um comando para chamar um procedimento armazenado. O exemplo de código no final deste tópico refere-se a um procedimento armazenado no banco de dados de exemplo Northwind, chamado CustOrdersOrders, que é definido da seguinte maneira.  
