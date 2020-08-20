@@ -1,4 +1,5 @@
 ---
+description: Permissões de esquema GRANT (Transact-SQL)
 title: Permissões GRANT de esquema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2017
@@ -18,12 +19,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1c5c45e9ad2ffe46a836708c5686097c61227f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 25d81e7dae5f3c02311ec47148a855c0ad3304d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472255"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>Permissões de esquema GRANT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +81,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
->  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
+>  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo:  Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
   
  Um esquema é um item protegível em nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um esquema estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   

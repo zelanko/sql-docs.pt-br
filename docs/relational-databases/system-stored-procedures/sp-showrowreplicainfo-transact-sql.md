@@ -1,4 +1,5 @@
 ---
+description: sp_showrowreplicainfo (Transact-SQL)
 title: sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09ab29ef7e164aa89d99d4e34ffd1e71fc4a18a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473745"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ownername = ] 'ownername'`É o nome do proprietário da tabela. *OwnerName* é **sysname**, com um padrão de NULL. Esse parâmetro é útil para diferenciar tabelas se um banco de dados contiver várias tabelas com o mesmo nome, mas cada tabela tiver um proprietário diferente.  
+`[ @ownername = ] 'ownername'` É o nome do proprietário da tabela. *OwnerName* é **sysname**, com um padrão de NULL. Esse parâmetro é útil para diferenciar tabelas se um banco de dados contiver várias tabelas com o mesmo nome, mas cada tabela tiver um proprietário diferente.  
   
-`[ @tablename = ] 'tablename'`É o nome da tabela que contém a linha para a qual as informações são retornadas. *TableName* é **sysname**, com um padrão de NULL.  
+`[ @tablename = ] 'tablename'` É o nome da tabela que contém a linha para a qual as informações são retornadas. *TableName* é **sysname**, com um padrão de NULL.  
   
-`[ @rowguid = ] rowguid`É o identificador exclusivo da linha. *ROWGUID* é **uniqueidentifier**, sem padrão.  
+`[ @rowguid = ] rowguid` É o identificador exclusivo da linha. *ROWGUID* é **uniqueidentifier**, sem padrão.  
   
-`[ @show = ] 'show'`Determina a quantidade de informações a serem retornadas no conjunto de resultados. *show* é **nvarchar (20)** com um padrão de ambos. Se for **linha**, apenas as informações de versão de linha serão retornadas. Se houver **colunas**, somente as informações de versão de coluna serão retornadas. Se **ambas**, as informações de linha e coluna forem retornadas.  
+`[ @show = ] 'show'` Determina a quantidade de informações a serem retornadas no conjunto de resultados. *show* é **nvarchar (20)** com um padrão de ambos. Se for **linha**, apenas as informações de versão de linha serão retornadas. Se houver **colunas**, somente as informações de versão de coluna serão retornadas. Se **ambas**, as informações de linha e coluna forem retornadas.  
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultado para informações de linha  
   
@@ -56,9 +57,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nome do banco de dados que fez essa entrada.|  
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
 |**version**|**int**|Versão da entrada.|  
-|**current_state**|**nvarchar (9)**|Retorna informações sobre o estado atual da linha.<br /><br /> os dados de linha **y** representam o estado atual da linha.<br /><br /> os dados de **n** linhas não representam o estado atual da linha.<br /><br /> **\<n/a>**-Não aplicável.<br /><br /> **\<unknown>**-O estado atual não pode ser determinado.|  
+|**current_state**|**nvarchar (9)**|Retorna informações sobre o estado atual da linha.<br /><br /> os dados de linha **y** representam o estado atual da linha.<br /><br /> os dados de **n** linhas não representam o estado atual da linha.<br /><br /> **\<n/a>** -Não aplicável.<br /><br /> **\<unknown>** -O estado atual não pode ser determinado.|  
 |**rowversion_table**|**nchar (17)**|Indica se as versões de linha são armazenadas na tabela de [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou na tabela [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
-|**mente**|**nvarchar (255)**|Informações adicionais sobre essa entrada de versão de linha. Geralmente, esse campo fica vazio.|  
+|**mente**|**nvarchar(255)**|Informações adicionais sobre essa entrada de versão de linha. Geralmente, esse campo fica vazio.|  
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultado para informações de coluna  
   
@@ -69,7 +70,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
 |**version**|**int**|Versão da entrada.|  
 |**ColName**|**sysname**|Nome da coluna de artigo que a entrada de versão da coluna representa.|  
-|**mente**|**nvarchar (255)**|Informações adicionais sobre essa entrada de versão de coluna. Geralmente, esse campo fica vazio.|  
+|**mente**|**nvarchar(255)**|Informações adicionais sobre essa entrada de versão de coluna. Geralmente, esse campo fica vazio.|  
   
 ## <a name="result-set-for-both"></a>Conjunto de resultados para ambas  
  Se o valor for escolhido para *Mostrar*, os conjuntos de resultados de linha e de **coluna serão retornados** .  

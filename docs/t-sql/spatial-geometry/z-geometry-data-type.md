@@ -1,4 +1,5 @@
 ---
+description: Z (tipo de dados geometry)
 title: Z (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 854a5afed2e6764cf9c5224a6c52a6f1284b9ba1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2e90df19c6d6946c17b554c9195c03bce3f55ca8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472361"
 ---
 # <a name="z-geometry-data-type"></a>Z (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,12 +42,12 @@ O valor Z (elevação) da instância. A semântica do valor de elevação é def
 ## <a name="return-types"></a>Tipos de retorno
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de geometria não for um ponto, como também para qualquer instância de **Point** para a qual ele não foi definido.  
   
- Essa propriedade é somente leitura.  
+ Esta propriedade é somente para leitura.  
   
  As coordenadas Z não são usadas nos cálculos feitos pela biblioteca e não estão presentes em nenhum cálculo de biblioteca.  
   

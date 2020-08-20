@@ -1,4 +1,5 @@
 ---
+description: Configurações globais (editor) (AccessToSQL)
 title: Configurações globais (editor) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 16bcd1255e1094412d8ff48917bab145aae19632
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0d603037d791002ebbdee50dcb7c90e99fdd8e68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472546"
 ---
 # <a name="global-settings-editor-accesstosql"></a>Configurações globais (editor) (AccessToSQL)
 Use a página Editor da caixa de diálogo **configurações globais** para especificar as configurações das janelas do editor de códigos.  

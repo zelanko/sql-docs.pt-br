@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collection_item (Transact-SQL)
 title: sp_syscollector_delete_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0753ed820012d0bbae1fb263b7881aad663ee45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdb7e5d54cd9e9edacf13e99c4a9b95cc9938cca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473638"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,9 +69,9 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_create_collection_item](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [&#41;&#40;Transact-SQL de sp_syscollector_create_collection_item ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

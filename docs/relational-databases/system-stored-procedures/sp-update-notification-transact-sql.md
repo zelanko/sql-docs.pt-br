@@ -1,4 +1,5 @@
 ---
+description: sp_update_notification (Transact-SQL)
 title: sp_update_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b3018d982558f5d023d25695a541c8b109c015f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ddc8e2afae79b458d39f577d75176ba6f9dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473509"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert'`O nome do alerta associado a esta notificação. o *alerta* é **sysname**, sem padrão.  
+`[ @alert_name = ] 'alert'` O nome do alerta associado a esta notificação. o *alerta* é **sysname**, sem padrão.  
   
-`[ @operator_name = ] 'operator'`O operador que será notificado quando o alerta ocorrer. o *operador* é **sysname**, sem padrão.  
+`[ @operator_name = ] 'operator'` O operador que será notificado quando o alerta ocorrer. o *operador* é **sysname**, sem padrão.  
   
-`[ @notification_method = ] notification`O método pelo qual o operador é notificado. a *notificação*é **tinyint**, sem padrão, e pode ser um ou mais desses valores.  
+`[ @notification_method = ] notification` O método pelo qual o operador é notificado. a *notificação*é **tinyint**, sem padrão, e pode ser um ou mais desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -82,9 +83,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_notification](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_notification](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_notification](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_notification ](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_notification ](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_notification ](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

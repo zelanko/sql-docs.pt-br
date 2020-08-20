@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collector_type (Transact-SQL)
 title: sp_syscollector_update_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 477fb448d91939933cea7132ad8b532de7a162e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473569"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collector_type_uid = ] 'collector_type_uid'`É o GUID para o tipo de coletor. *collector_type_uid* é **uniqueidentifier**e, se for NULL, ele será criado automaticamente e retornado como saída.  
+`[ @collector_type_uid = ] 'collector_type_uid'` É o GUID para o tipo de coletor. *collector_type_uid* é **uniqueidentifier**e, se for NULL, ele será criado automaticamente e retornado como saída.  
   
-`[ @name = ] 'name'`É o nome do tipo de coletor. o *nome* é **sysname** e deve ser especificado.  
+`[ @name = ] 'name'` É o nome do tipo de coletor. o *nome* é **sysname** e deve ser especificado.  
   
-`[ @parameter_schema = ] 'parameter_schema'`É o esquema XML para esse tipo de coletor. *parameter_schema* é o **XML** e pode ser exigido por determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
+`[ @parameter_schema = ] 'parameter_schema'` É o esquema XML para esse tipo de coletor. *parameter_schema* é o **XML** e pode ser exigido por determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
   
-`[ @collection_package_id = ] collection_package_id`É um identificador local exclusivo que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote de coleta usado pelo conjunto de coleta. *collection_package_id* é **uniqueidentifier** e é necessário. Para obter o valor de *collection_package_id*, consulte a exibição do sistema dbo.syscollector_collector_types no banco de dados msdb.  
+`[ @collection_package_id = ] collection_package_id` É um identificador local exclusivo que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote de coleta usado pelo conjunto de coleta. *collection_package_id* é **uniqueidentifier** e é necessário. Para obter o valor de *collection_package_id*, consulte a exibição do sistema dbo.syscollector_collector_types no banco de dados msdb.  
   
-`[ @upload_package_id = ] upload_package_id`É um identificador local exclusivo que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote de carregamento usado pelo conjunto de coleta. *upload_package_id* é **uniqueidentifier** e é obrigatório. Para obter o valor de *upload_package_id*, consulte a exibição do sistema dbo.syscollector_collector_types no banco de dados msdb.  
+`[ @upload_package_id = ] upload_package_id` É um identificador local exclusivo que aponta para o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote de carregamento usado pelo conjunto de coleta. *upload_package_id* é **uniqueidentifier** e é obrigatório. Para obter o valor de *upload_package_id*, consulte a exibição do sistema dbo.syscollector_collector_types no banco de dados msdb.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -101,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

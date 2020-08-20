@@ -1,4 +1,5 @@
 ---
+description: Adicionar colunas a uma tabela (Mecanismo de Banco de Dados)
 title: Adicionar colunas a uma tabela (mecanismo de banco de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473063"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Adicionar colunas a uma tabela (Mecanismo de Banco de Dados)
 
@@ -52,12 +53,12 @@ Exige a permissão ALTER na tabela.
    Trata-se também de um valor obrigatório e será atribuído o valor padrão, se você não selecionar um.
 
    > [!NOTE]
-   > O valor padrão de **Opções** pode ser alterado na caixa de diálogo de **Ferramentas do Banco de Dados**.
+   >  O valor padrão de **Opções** pode ser alterado na caixa de diálogo de **Ferramentas do Banco de Dados**.
 
 5. Prossiga com a definição de outras propriedades de coluna na guia **Propriedades da Coluna** .
 
     > [!NOTE]
-    > Valores padrão de propriedades de coluna são adicionados quando uma nova coluna é criada. Contudo, é possível alterá-los na guia **Propriedades da Coluna** .
+    >  Valores padrão de propriedades de coluna são adicionados quando uma nova coluna é criada. Contudo, é possível alterá-los na guia **Propriedades da Coluna** .
 
 6. Quando você terminar de adicionar as colunas, no menu **Arquivo**, escolha **Salvar** _nome da tabela_.
   

@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados com suporte (Driver ODBC para Oracle)
 title: Tipos de dados com suporte (driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d53cdb9a270149866b2a480496f39adcb20e4d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471508"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Tipos de dados com suporte (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -28,22 +29,22 @@ ms.locfileid: "81301111"
   
 |Tipo de dados|Oracle 7,3|Oracle8|  
 |---------------|----------------|-------------|  
-|BFILE|n/d|Sem suporte|  
-|BLOB|n/d|Sem suporte|  
+|BFILE|N/D|Sem suporte|  
+|BLOB|N/D|Sem suporte|  
 |CHAR|Com suporte|Com suporte|  
-|CLOB|n/d|Sem suporte|  
+|CLOB|N/D|Sem suporte|  
 |DATE|Com suporte|Com suporte|  
 |FLOAT|Com suporte|Com suporte|  
 |INTEGER|Com suporte|Com suporte|  
 |LONG|Com suporte|Com suporte|  
 |LONG RAW|Com suporte|Com suporte|  
-|NCHAR|n/d|Sem suporte|  
-|NCLOB|n/d|Sem suporte|  
+|NCHAR|N/D|Sem suporte|  
+|NCLOB|N/D|Sem suporte|  
 |NUMBER|Com suporte|Com suporte|  
-|NVARCHAR2|n/d|Sem suporte|  
+|NVARCHAR2|N/D|Sem suporte|  
 |RAW|Com suporte|Com suporte|  
 |VARCHAR2|Com suporte|Com suporte|  
-|MLSLABEL|Sem suporte.|Sem suporte.|  
+|MLSLABEL|Não há suporte.|Não há suporte.|  
   
 > [!NOTE]  
 >  Para obter mais informações sobre o tamanho permitido da coluna VARCHAR, consulte [varchar Column size](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) neste guia.

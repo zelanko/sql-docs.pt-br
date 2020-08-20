@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_configure (Transact-SQL)
 title: sp_syspolicy_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473568"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`É o nome da configuração que você deseja configurar. o *nome* é **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
+`[ @name = ] 'name'` É o nome da configuração que você deseja configurar. o *nome* é **sysname**, é necessário e não pode ser nulo ou uma cadeia de caracteres vazia.  
   
  o *nome* pode ser qualquer um dos seguintes valores:  
   
@@ -50,7 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Especifica se o Gerenciamento Baseado em Políticas registra em log avaliações de política com êxito.  
   
-`[ @value = ] value`É o valor que está associado ao valor especificado para *Name*. o *valor* é **sql_variant**e é necessário.  
+`[ @value = ] value` É o valor que está associado ao valor especificado para *Name*. o *valor* é **sql_variant**e é necessário.  
   
 -   Se você especificar ' Enabled ' para *Name*, poderá usar qualquer um dos seguintes valores:  
   
@@ -110,8 +111,8 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_set_config_enabled](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_set_config_history_retention](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_set_log_on_success](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_syspolicy_set_config_enabled ](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_set_config_history_retention ](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_set_log_on_success ](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Carregando objetos de banco de dados convertidos em SQL Server (AccessToSQL)
 title: Carregando objetos de banco de dados convertidos em SQL Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0f4517c58cf748cb3832b0718ac7891c2a309df0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 41a1613a879579e809c8fd6a85d5c9b58c7b2b9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472570"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Carregando objetos de banco de dados convertidos em SQL Server (AccessToSQL)
 Depois de ter convertido objetos de banco de dados do Access para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você pode carregar os objetos de banco de dados resultantes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode fazer com que o SSMA crie os objetos, ou pode criar o script dos objetos e executar os scripts por conta própria. Além disso, o SSMA permite que você atualize os metadados de destino com o conteúdo real do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do banco de dados SQL do Azure.  

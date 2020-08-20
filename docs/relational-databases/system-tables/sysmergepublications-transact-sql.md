@@ -1,4 +1,5 @@
 ---
+description: sysmergepublications (Transact-SQL)
 title: sysmergepublications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8443d522edc8eeddeea51c775d2d29e6286e84cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 51a23c71b99ff57cb9dda76dd65cfc25fcf4a097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473173"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "85881392"
 |**programa**|**sysname**|O nome do servidor padrão.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador padrão.|  
 |**name**|**sysname**|O nome da publicação.|  
-|**ndescrição**|**nvarchar (255)**|Uma descrição breve da publicação.|  
+|**descrição**|**nvarchar(255)**|Uma descrição breve da publicação.|  
 |**políticas**|**int**|O período de retenção para todo o conjunto de publicação, em que a unidade é indicada pelo valor da coluna **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indica se a publicação é filtrada:<br /><br /> **0** = não filtrado.<br /><br /> **1** = filtrado.|  
 |**pubid**|**uniqueidentifier**|O número de identificação exclusivo desta publicação. Isso é gerado quando a publicação é adicionada.|  
 |**designmasterid**|**uniqueidentifier**|Reservado para uso futuro.|  
-|**parentID**|**uniqueidentifier**|Indica a publicação pai da qual a publicação ponto a ponto ou de subconjunto atual foi criada (usado para topologias de publicação hierárquicas).|  
+|**parentid**|**uniqueidentifier**|Indica a publicação pai da qual a publicação ponto a ponto ou de subconjunto atual foi criada (usado para topologias de publicação hierárquicas).|  
 |**sync_mode**|**tinyint**|O modo de sincronização desta publicação:<br /><br /> **0** = nativo.<br /><br /> **1** = caractere.|  
 |**allow_push**|**int**|Indica se a publicação permite assinaturas push.<br /><br /> **0** = assinaturas push não permitidas.<br /><br /> **1** = assinaturas push são permitidas.|  
 |**allow_pull**|**int**|Indica se a publicação permite assinaturas pull.<br /><br /> **0** = assinaturas pull não permitidas.<br /><br /> **1** = assinaturas pull são permitidas.|  
@@ -50,13 +51,13 @@ ms.locfileid: "85881392"
 |**enabled_for_internet**|**bit**|Indica se os arquivos de sincronização para a publicação são expostos à Internet pelo FTP e outros serviços.<br /><br /> **0** = os arquivos de sincronização podem ser acessados pela Internet.<br /><br /> **1** = os arquivos de sincronização não podem ser acessados pela Internet.|  
 |**dynamic_filters**|**bit**|Indica se a publicação é filtrada usando um filtro de linha com parâmetros.<br /><br /> **0** = a publicação não é filtrada por linha.<br /><br /> **1** = a publicação é de linha filtrada.|  
 |**snapshot_in_defaultfolder**|**bit**|Especifica se arquivos de instantâneo são armazenados na pasta padrão:<br /><br /> **0** = os arquivos de instantâneo estão na pasta padrão.<br /><br /> **1** = os arquivos de instantâneo são armazenados no local especificado por **alt_snapshot_folder**.|  
-|**alt_snapshot_folder**|**nvarchar (255)**|O local da pasta alternativa para o instantâneo.|  
-|**pre_snapshot_script**|**nvarchar (255)**|Ponteiro para um. o arquivo **SQL** que o agente de mesclagem executa antes de qualquer um dos scripts do objeto de replicação ao aplicar o instantâneo no Assinante.|  
-|**post_snapshot_script**|**nvarchar (255)**|O ponteiro para um. o arquivo **SQL** que o agente de mesclagem é executado depois que todos os outros scripts e dados de objeto de replicação são aplicados durante uma sincronização inicial.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|O local da pasta alternativa para o instantâneo.|  
+|**pre_snapshot_script**|**nvarchar(255)**|Ponteiro para um. o arquivo **SQL** que o agente de mesclagem executa antes de qualquer um dos scripts do objeto de replicação ao aplicar o instantâneo no Assinante.|  
+|**post_snapshot_script**|**nvarchar(255)**|O ponteiro para um. o arquivo **SQL** que o agente de mesclagem é executado depois que todos os outros scripts e dados de objeto de replicação são aplicados durante uma sincronização inicial.|  
 |**compress_snapshot**|**bit**|Especifica se o instantâneo gravado no local de **alt_snapshot_folder** é compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **0** especifica que o arquivo não está compactado.|  
 |**ftp_address**|**sysname**|Endereço de rede do serviço de protocolo FTP (FTP) para o distribuidor. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem separados pelo Agente de Mesclagem se o FTP estiver habilitado.|  
 |**ftp_port**|**int**|O número da porta do serviço FTP do Distribuidor.|  
-|**ftp_subdirectory**|**nvarchar (255)**|O subdiretório onde os arquivos de instantâneo estão disponíveis para serem separados pelo Agente de Mesclagem.|  
+|**ftp_subdirectory**|**nvarchar(255)**|O subdiretório onde os arquivos de instantâneo estão disponíveis para serem separados pelo Agente de Mesclagem.|  
 |**ftp_login**|**sysname**|O nome de usuário usado para se conectar ao serviço FTP.|  
 |**ftp_password**|**nvarchar (524)**|A senha de usuário usada para se conectar ao serviço FTP.|  
 |**conflict_retention**|**int**|Especifica o período de retenção, em dias, durante o qual os conflitos são retidos. Após esse período, a linha de conflito é excluída da tabela de conflitos.|  
@@ -87,10 +88,10 @@ ms.locfileid: "85881392"
 |**automatic_reinitialization_policy**|**bit**|Indica se as alterações são carregadas do Assinante antes da ocorrência de uma reinicialização automática.<br /><br /> **1** = as alterações são carregadas do assinante antes que ocorra uma reinicialização automática.<br /><br /> **0** = as alterações não são carregadas antes de uma reinicialização automática.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergepublication ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergepublication ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_start_collection_set (Transact-SQL)
 title: sp_syscollector_start_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56fa6b114d58512f9cdec9c3da2575539af0d03b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 949b62ea945a287e710b416f27de7f5fbfd2abca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473609"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collection_set_id = ] collection_set_id`É o identificador local exclusivo para o conjunto de coleta. *collection_set_id* é **int** com um valor padrão de NULL. *collection_set_id* deverá ter um valor se o *nome* for nulo.  
+`[ @collection_set_id = ] collection_set_id` É o identificador local exclusivo para o conjunto de coleta. *collection_set_id* é **int** com um valor padrão de NULL. *collection_set_id* deverá ter um valor se o *nome* for nulo.  
   
-`[ @name = ] 'name'`É o nome do conjunto de coleta. o *nome* é **sysname** com um valor padrão de NULL. o *nome* deve ter um valor se *collection_set_id* for nulo.  
+`[ @name = ] 'name'` É o nome do conjunto de coleta. o *nome* é **sysname** com um valor padrão de NULL. o *nome* deve ter um valor se *collection_set_id* for nulo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -72,8 +73,8 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

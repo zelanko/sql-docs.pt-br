@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_create_collection_item (Transact-SQL)
 title: sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc35ba06f17b3b067e3b7ba9059c27e1f6db2d18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 133f564d4f131e187334e5ebe5d4a2561dd21dcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473662"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,12 +117,12 @@ EXEC sp_syscollector_create_collection_item
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_update_collection_item](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_delete_collection_item](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
- [&#41;&#40;Transact-SQL de syscollector_collector_types](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [&#41;&#40;Transact-SQL de sp_syscollector_update_collection_item ](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syscollector_delete_collection_item ](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de syscollector_collector_types ](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syscollector_create_collection_set ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

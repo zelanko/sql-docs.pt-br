@@ -1,4 +1,5 @@
 ---
+description: Propriedade ProtocolDisplayName (classe ClientNetworkProtocol)
 title: Propriedade ProtocolDisplayName (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52981676cb367d2b8693443ef534652f371edc8e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c78af16cb184b3e759e5a6292518669dcee68347
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472927"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Propriedade ProtocolDisplayName (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome de exibição do protocolo de rede do cliente especificado por [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

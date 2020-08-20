@@ -1,4 +1,5 @@
 ---
+description: Configurar opções programaticamente para drivers do Paradox
 title: Definindo opções programaticamente para o driver do Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d04de1f0de4baca5b3f474ef9fbcf3f886e6906f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85b63df9e18b835c96bc0e59f7c937ece69f3999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471568"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Configurar opções programaticamente para drivers do Paradox
 

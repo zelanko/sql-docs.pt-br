@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_log_sp (Transact-SQL)
 title: sysmail_delete_log_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae70fc03530ac80596ead5fe6e2e1927e323c5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473360"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @logged_before = ] 'logged_before'`Exclui entradas até a data e a hora especificadas pelo argumento *logged_before* . *logged_before* é **DateTime** com NULL como padrão. NULL indica todas as datas.  
+`[ @logged_before = ] 'logged_before'` Exclui entradas até a data e a hora especificadas pelo argumento *logged_before* . *logged_before* é **DateTime** com NULL como padrão. NULL indica todas as datas.  
   
-`[ @event_type = ] 'event_type'`Exclui entradas de log do tipo especificado como o *event_type*. *event_type* é **varchar (15)** sem padrão. As entradas válidas são **êxito**, **aviso**, **erro**e **informativo**. NULL indica todos os tipos de evento.  
+`[ @event_type = ] 'event_type'` Exclui entradas de log do tipo especificado como o *event_type*. *event_type* é **varchar (15)** sem padrão. As entradas válidas são **êxito**, **aviso**, **erro**e **informativo**. NULL indica todos os tipos de evento.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -85,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sysmail_event_log](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
- [Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [&#41;&#40;Transact-SQL de sysmail_event_log ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_delete_mailitems_sp ](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+ [Criar um trabalho do SQL Server Agent para arquivar mensagens e logs de eventos do Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

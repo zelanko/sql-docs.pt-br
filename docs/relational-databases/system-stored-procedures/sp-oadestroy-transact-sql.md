@@ -1,4 +1,5 @@
 ---
+description: sp_OADestroy (Transact-SQL)
 title: sp_OADestroy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 363d89a420d6fd927293fc39525e1a95d7ebd4b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5bb9f3e59cf27c9bfbac1430c0d7c0830170367d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473923"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sp_OADestroy objecttoken
  Se **sp_OADestroy** não for chamado, o objeto OLE criado será automaticamente destruído no final do lote.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures`a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
+ Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures` a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir destrói o objeto **SqlServer** criado anteriormente.  

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 title: sys. sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f451e3d6083a32db87c7e453413cf6b318e739f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0963985b2f6f83d9be8c19be35fd16b0451dda8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473396"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @new_collection_value= *valor*  
+ @new_collection_value = *valor*  
  Determina se a coleta de estatísticas no nível do procedimento está ativada (1) ou desativada (0).  
   
- @new_collection_valueé definido como zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado.  
+ @new_collection_value é definido como zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado.  
   
- @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
+ @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
  A ID de banco de dados e a ID de objeto do procedimento armazenado compilado nativamente. Se a coleta de estatísticas estiver habilitada para a instância ([Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), as estatísticas em um procedimento armazenado compilado nativamente serão coletadas. Se você desativar a coleção de estatísticas na instância, ela não será desativada para cada procedimento armazenado compilado de forma nativa.  
   
  Use [Sys. databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys. procedimentos &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)ou [object_id &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md) para obter IDs para um banco de dados e um procedimento armazenado.  
   
- @old_collection_value= *valor*  
+ @old_collection_value = *valor*  
  Retorna o status atual.  
   
 ## <a name="return-code"></a>Código de retorno  
@@ -83,7 +84,7 @@ SELECT @c AS 'collection status';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

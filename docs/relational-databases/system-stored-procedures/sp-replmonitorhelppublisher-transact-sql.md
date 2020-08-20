@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelppublisher (Transact-SQL)
 title: sp_replmonitorhelppublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3edb7c7b7e2db67132b943bb0d37e04516c8981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2a37168d22bd931faa6f8033c847620b9606b11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473868"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador cujo status está sendo monitorado. o *Publicador* é **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os Publicadores que usam o Distribuidor.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador cujo status está sendo monitorado. o *Publicador* é **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os Publicadores que usam o Distribuidor.  
   
-`[ @refreshpolicy = ] refreshpolicy`Somente para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Somente para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -49,7 +50,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 |**programa**|**sysname**|É o nome de um Publicador.|  
 |**distribution_db**|**sysname**|É o nome do banco de dados de distribuição usado por um determinado Publicador.|  
 |**status**|**int**|Status máximo de todos os agentes de replicação associados com publicações neste Publicador, que pode ter um destes valores.<br /><br /> **1** = iniciado<br /><br /> **2** = com êxito<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = repetindo<br /><br /> **6** = com falha|  
-|**alerta**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente a uma publicação neste Publicador, que pode ser o resultado do OR lógico de um ou mais destes valores.<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional não foi sincronizada dentro do limite do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite do período de retenção.<br /><br /> **8** = mergefastrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
+|**warning**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente a uma publicação neste Publicador, que pode ser o resultado do OR lógico de um ou mais destes valores.<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional não foi sincronizada dentro do limite do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite do período de retenção.<br /><br /> **8** = mergefastrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
 |**publicationcount**|**int**|É o número de publicações que pertencem ao Publicador.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -62,6 +63,6 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
  Somente os membros da função de servidor fixa **sysadmin** no distribuidor ou membros das funções de banco de dados fixas **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_replmonitorhelppublisher**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

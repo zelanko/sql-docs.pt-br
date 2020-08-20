@@ -1,4 +1,5 @@
 ---
+description: sp_update_proxy (Transact-SQL)
 title: sp_update_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb6af87e40c663ae6e1d7465919abb2f14f85979
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 052f78652c02b7486d930dbb7071a6b2a981074b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473484"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id`O número de identificação do proxy a ser alterado. O *proxy_id* é **int**, com um padrão de NULL.  
+`[ @proxy_id = ] id` O número de identificação do proxy a ser alterado. O *proxy_id* é **int**, com um padrão de NULL.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy a ser alterado. O *proxy_name* é **sysname**, com um padrão de NULL.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy a ser alterado. O *proxy_name* é **sysname**, com um padrão de NULL.  
   
-`[ @credential_name = ] 'credential_name'`O nome da nova credencial para o proxy. O *credential_name* é **sysname**, com um padrão de NULL. *Credential_name* ou *credential_id* pode ser especificado.  
+`[ @credential_name = ] 'credential_name'` O nome da nova credencial para o proxy. O *credential_name* é **sysname**, com um padrão de NULL. *Credential_name* ou *credential_id* pode ser especificado.  
   
-`[ @credential_id = ] credential_id`O número de identificação da nova credencial para o proxy. O *credential_id* é **int**, com um padrão de NULL. *Credential_name* ou *credential_id* pode ser especificado.  
+`[ @credential_id = ] credential_id` O número de identificação da nova credencial para o proxy. O *credential_id* é **int**, com um padrão de NULL. *Credential_name* ou *credential_id* pode ser especificado.  
   
-`[ @new_name = ] 'new_name'`O novo nome do proxy. O *new_name* é **sysname**, com um padrão de NULL. Quando fornecido, o procedimento altera o nome do proxy para *new_name*. Quando esse argumento for NULL, o nome do proxy permanecerá inalterado.  
+`[ @new_name = ] 'new_name'` O novo nome do proxy. O *new_name* é **sysname**, com um padrão de NULL. Quando fornecido, o procedimento altera o nome do proxy para *new_name*. Quando esse argumento for NULL, o nome do proxy permanecerá inalterado.  
   
-`[ @enabled = ] is_enabled`É se o proxy está habilitado. O sinalizador *is_enabled* é **tinyint**, com um padrão de NULL. Quando *is_enabled* é **0**, o proxy não é habilitado e não pode ser usado por uma etapa de trabalho. Quando esse argumento for NULL, o status do proxy permanecerá inalterado.  
+`[ @enabled = ] is_enabled` É se o proxy está habilitado. O sinalizador *is_enabled* é **tinyint**, com um padrão de NULL. Quando *is_enabled* é **0**, o proxy não é habilitado e não pode ser usado por uma etapa de trabalho. Quando esse argumento for NULL, o status do proxy permanecerá inalterado.  
   
-`[ @description = ] 'description'`A nova descrição do proxy. A *Descrição* é **nvarchar (512)**, com um padrão de NULL. Quando esse argumento for NULL, a descrição do proxy permanecerá inalterada.  
+`[ @description = ] 'description'` A nova descrição do proxy. A *Descrição* é **nvarchar (512)**, com um padrão de NULL. Quando esse argumento for NULL, a descrição do proxy permanecerá inalterada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -90,9 +91,9 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Implementar segurança de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)   
- [&#41;&#40;Transact-SQL de sp_add_proxy](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_grant_login_to_proxy](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_revoke_login_from_proxy](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_add_proxy ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_proxy ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grant_login_to_proxy ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_revoke_login_from_proxy ](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

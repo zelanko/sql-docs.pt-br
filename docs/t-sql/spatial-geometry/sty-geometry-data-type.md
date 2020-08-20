@@ -1,4 +1,5 @@
 ---
+description: STY (tipo de dados geometry)
 title: STY (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fd5f297b3fb2ea2700a6de0600896a6742fed8fc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ae260a3587e3f0f9ea08829a89bfe78901cfb0e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472380"
 ---
 # <a name="sty-geometry-data-type"></a>STY (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ A propriedade de coordenada Y de uma instância de **Point**.
 ## <a name="return-types"></a>Tipos de retorno
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo do CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de **geometry** for um ponto. Essa propriedade é somente leitura.  

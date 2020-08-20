@@ -1,4 +1,5 @@
 ---
+description: sp_sproc_columns (Transact-SQL)
 title: sp_sproc_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c26e1b6272f4c3cdf6a1e8ed644ab9d03052948a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d6686a4e1032a1df681786db7a5ad56fd457e83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473734"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,22 +47,22 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @procedure_name = ] 'name'`É o nome do procedimento usado para retornar informações do catálogo. *Name* é **nvarchar (** 390 **)**, com um padrão de%, que significa todas as tabelas no banco de dados atual. Há suporte para a correspondência do padrão curinga.  
+`[ @procedure_name = ] 'name'` É o nome do procedimento usado para retornar informações do catálogo. *Name* é **nvarchar (** 390 **)**, com um padrão de%, que significa todas as tabelas no banco de dados atual. Há suporte para a correspondência do padrão curinga.  
   
-`[ @procedure_owner = ] 'owner'`É o nome do proprietário do procedimento. *Owner*é **nvarchar (** 384 **)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de procedimento padrão do DBMS subjacente se aplicarão.  
+`[ @procedure_owner = ] 'owner'` É o nome do proprietário do procedimento. *Owner*é **nvarchar (** 384 **)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de procedimento padrão do DBMS subjacente se aplicarão.  
   
  Se o usuário atual possuir um procedimento com o nome especificado, serão retornadas informações sobre esse procedimento. Se o *proprietário*não for especificado e o usuário atual não possuir um procedimento com o nome especificado, **sp_sproc_columns** procurará um procedimento com o nome especificado que pertence ao proprietário do banco de dados. Se o procedimento existir, serão retornadas informações sobre suas colunas.  
   
-`[ @procedure_qualifier = ] 'qualifier'`É o nome do qualificador de procedimento. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*Qualifier.Owner.Name*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @procedure_qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*Qualifier.Owner.Name*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-`[ @column_name = ] 'column_name'`É uma única coluna e é usada quando apenas uma coluna de informações de catálogo é desejada. *column_name* é **nvarchar (** 384 **)**, com um padrão de NULL. Se *column_name* for omitido, todas as colunas serão retornadas. Há suporte para a correspondência do padrão curinga. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
+`[ @column_name = ] 'column_name'` É uma única coluna e é usada quando apenas uma coluna de informações de catálogo é desejada. *column_name* é **nvarchar (** 384 **)**, com um padrão de NULL. Se *column_name* for omitido, todas as colunas serão retornadas. Há suporte para a correspondência do padrão curinga. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
   
-`[ @ODBCVer = ] 'ODBCVer'`É a versão do ODBC que está sendo usada. *ODBCVer* é **int**, com um padrão de 2, que indica a versão do ODBC 2,0. Para obter mais informações sobre a diferença entre o ODBC versão 2,0 e a versão 3,0 do ODBC, consulte a especificação ODBC **SQLProcedureColumns** para odbc versão 3,0  
+`[ @ODBCVer = ] 'ODBCVer'` É a versão do ODBC que está sendo usada. *ODBCVer* é **int**, com um padrão de 2, que indica a versão do ODBC 2,0. Para obter mais informações sobre a diferença entre o ODBC versão 2,0 e a versão 3,0 do ODBC, consulte a especificação ODBC **SQLProcedureColumns** para odbc versão 3,0  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se os caracteres sublinhado (_), porcentagem (%) e colchete ([]) são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres sublinhado (_), porcentagem (%) e colchete ([]) são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -73,14 +75,14 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**COLUMN_TYPE**|**smallint**|Este campo sempre retorna um valor:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|Código de inteiro para um tipo de dados de ODBC. Se este tipo de dados não puder ser mapeado para um tipo ISO, o valor será NULL. O nome do tipo de dados nativo é retornado na coluna **type_name** .|  
 |**TYPE_NAME**|**sysname**|Representação em cadeia de caracteres do tipo de dados. É o nome do tipo de dados como apresentado pelo DBMS subjacente.|  
-|**Preciso**|**int**|Número de dígitos significativos. O valor de retorno para a coluna de **precisão** está na base 10.|  
+|**PRECISION**|**int**|Número de dígitos significativos. O valor de retorno para a coluna de **precisão** está na base 10.|  
 |**COMPRIMENTO**|**int**|Tamanho da transferência dos dados.|  
 |**ESCALONÁVE**|**smallint**|Número de dígitos à direita da vírgula decimal.|  
 |**RADIX**|**smallint**|É a base para tipos numéricos.|  
 |**ANULA**|**smallint**|Especifica a nulidade:<br /><br /> 1 = O tipo de dados pode ser criado permitindo valores nulos.<br /><br /> 0 = Não são permitidos valores nulos.|  
 |**COMENTÁRIOS**|**varchar (** 254 **)**|Descrição da coluna de procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valor padrão da coluna.|  
-|**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL como ele aparece no campo **tipo** do descritor. Essa coluna é igual à **data_type** coluna, exceto para os tipos de dados **DateTime** e **intervalo** ISO. Esta coluna sempre retorna um valor.|  
+|**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL como ele aparece no campo **tipo** do descritor. Esta coluna é igual à coluna **DATA_TYPE**, com exceção dos tipos de dados **datetime** e **interval** ISO. Esta coluna sempre retorna um valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|O subcódigo de **interval** ISO de **datetime**, se o valor de **SQL_DATA_TYPE** for **SQL_DATETIME** ou **SQL_INTERVAL**. Para tipos de dados diferentes de **DateTime** e o **intervalo**ISO, esse campo é nulo.|  
 |**CHAR_OCTET_LENGTH**|**int**|Comprimento máximo em bytes de uma coluna de tipo de dados **Binary** ou de **caractere** . Para todos os outros tipos de dados, essa coluna retorna um valor nulo.|  
 |**ORDINAL_POSITION**|**int**|Posição ordinal da coluna na tabela. A primeira coluna na tabela é 1. Esta coluna sempre retorna um valor.|  

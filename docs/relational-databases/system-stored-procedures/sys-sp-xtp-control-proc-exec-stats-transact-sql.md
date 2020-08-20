@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 title: sys. sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d011be97c90f156b8cd26cfb8fcc85963b75161
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: e189cd4e7a5ec9f488cce78ee6cc159c8700a463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473392"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +39,12 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @new_collection_value= *valor*  
+ @new_collection_value = *valor*  
  Determina se a coleta de estatísticas no nível do procedimento está ativada (1) ou desativada (0).  
   
- @new_collection_valueé definido como zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o banco de dados é iniciado.  
+ @new_collection_value é definido como zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o banco de dados é iniciado.  
   
- @old_collection_value= *valor*  
+ @old_collection_value = *valor*  
  Retorna o status atual.  
   
 ## <a name="return-code"></a>Código de retorno  
@@ -53,7 +54,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  Requer associação à função sysadmin fixa.  
   
 ## <a name="code-samples"></a>Exemplos de Código  
- Para definir @new_collection_value e consultar o valor de@new_collection_value:  
+ Para definir @new_collection_value e consultar o valor de @new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  
@@ -63,7 +64,7 @@ select @c as 'collection status'
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

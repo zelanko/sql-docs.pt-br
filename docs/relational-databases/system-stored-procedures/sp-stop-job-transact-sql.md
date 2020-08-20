@@ -1,4 +1,5 @@
 ---
+description: sp_stop_job (Transact-SQL)
 title: sp_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473666"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'`O nome do trabalho a ser interrompido. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho a ser interrompido. *job_name* é **sysname**, com um padrão de NULL.  
   
-`[ @job_id = ] job_id`O número de identificação do trabalho a ser interrompido. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho a ser interrompido. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @originating_server = ] 'master_server'`O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* é **nvarchar (128)**, com um padrão de NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
+`[ @originating_server = ] 'master_server'` O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* é **nvarchar (128)**, com um padrão de NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
   
 > [!NOTE]  
 >  Apenas um dos três primeiros parâmetros pode ser especificado.  
   
-`[ @server_name = ] 'target_server'`O nome do servidor de destino específico no qual parar um trabalho multisservidor. *target_server* é **nvarchar (128)**, com um padrão de NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
+`[ @server_name = ] 'target_server'` O nome do servidor de destino específico no qual parar um trabalho multisservidor. *target_server* é **nvarchar (128)**, com um padrão de NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -92,10 +93,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_start_job](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_job ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_job ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_start_job ](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_job ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

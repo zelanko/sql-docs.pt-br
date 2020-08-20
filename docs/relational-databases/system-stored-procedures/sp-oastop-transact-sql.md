@@ -1,4 +1,5 @@
 ---
+description: sp_OAStop (Transact-SQL)
 title: sp_OAStop (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1abb0f8f6407fe2674002821484e58cdbdd183b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ec53c344fc3b69351c8b7e5d8165db1120471c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473936"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_OAStop
  Um único ambiente de execução é compartilhado por todos os clientes que usam os procedimentos armazenados de automação OLE. Se um cliente chamar **sp_OAStop** o ambiente de execução compartilhado será interrompido para todos os clientes. Depois que o ambiente de execução for interrompido, qualquer chamada para **sp_OACreate** reiniciará o ambiente de execução.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures`a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
+ Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures` a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir interrompe o ambiente execução compartilhado de automação OLE.  

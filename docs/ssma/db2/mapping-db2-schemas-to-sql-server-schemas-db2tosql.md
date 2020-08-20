@@ -1,4 +1,5 @@
 ---
+description: Mapeando esquemas do DB2 para esquemas de SQL Server (DB2ToSQL)
 title: Mapeando esquemas do DB2 para esquemas de SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ed1535a9e8af398b9cac7742ab955822cb6034d0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a5c60984f9f1ed8da7238c254ac8b939dc1a9dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472502"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mapeando esquemas do DB2 para esquemas de SQL Server (DB2ToSQL)
 No DB2, cada banco de dados tem um ou mais esquemas. Por padrão, o SSMA migra todos os objetos em um esquema do DB2 para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados chamado para o esquema. No entanto, você pode personalizar o mapeamento entre os esquemas e bancos de dados do DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

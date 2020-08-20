@@ -1,4 +1,5 @@
 ---
+description: SQLTables (Driver ODBC do Visual FoxPro)
 title: Sqltablenames (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5467fc8c1717d5ceb548b3950a0894fd2a1b4499
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 089208ab612984283e3f87c4ad03aca0ccfa2b38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471548"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (Driver ODBC do Visual FoxPro)
 > [!NOTE]  

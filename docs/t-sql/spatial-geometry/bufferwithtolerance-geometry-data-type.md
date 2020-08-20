@@ -1,4 +1,5 @@
 ---
+description: BufferWithTolerance (tipo de dados geometry)
 title: BufferWithTolerance (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ea306ec0acca8cdb2a21a1ecbeff2c5efe5bf56b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472511"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

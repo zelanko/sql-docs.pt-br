@@ -1,4 +1,5 @@
 ---
+description: sp_srvrolepermission (Transact-SQL)
 title: sp_srvrolepermission (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473703"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'`É o nome da função de servidor fixa para a qual as permissões são retornadas. *role* é **sysname**, com um padrão de NULL. Se nenhuma função for especificada, as permissões de todas as funções de servidor fixas serão retornadas. a *função* pode ter um dos valores a seguir.  
+`[ @srvrolename = ] 'role'` É o nome da função de servidor fixa para a qual as permissões são retornadas. *role* é **sysname**, com um padrão de NULL. Se nenhuma função for especificada, as permissões de todas as funções de servidor fixas serão retornadas. a *função* pode ter um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -83,9 +84,9 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropsrvrolemember](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsrvrole](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addsrvrolemember ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsrvrolemember ](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsrvrole ](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

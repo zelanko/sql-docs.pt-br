@@ -1,4 +1,5 @@
 ---
+description: sp_setreplfailovermode (Transact-SQL)
 title: sp_setreplfailovermode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf4ad48531567972d8fc9b1916d6c5f56bb28f68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b5f75b17d54b5e119970af1bad9e12eaecf067d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473818"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome da publicação. a *publicação* é **sysname**, sem padrão. A publicação já deve existir.  
+`[ @publisher = ] 'publisher'` É o nome da publicação. a *publicação* é **sysname**, sem padrão. A publicação já deve existir.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @failover_mode = ] 'failover_mode'`É o modo de failover para a assinatura. *failover_mode* é **nvarchar (10)** e pode ser um desses valores.  
+`[ @failover_mode = ] 'failover_mode'` É o modo de failover para a assinatura. *failover_mode* é **nvarchar (10)** e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -57,7 +58,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 > [!NOTE]  
 >  O Serviço de Enfileiramento de Mensagens da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi preterido e não tem mais suporte.  
   
-`[ @override = ] override`Somente para uso interno.  
+`[ @override = ] override` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

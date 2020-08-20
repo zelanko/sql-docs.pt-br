@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profileaccount_sp (Transact-SQL)
 title: sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473334"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`A ID de perfil do perfil a ser atualizado. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id` A ID de perfil do perfil a ser atualizado. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
   
-`[ @profile_name = ] 'profile_name'`O nome do perfil do perfil a ser atualizado. *profile_name* é **sysname**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil do perfil a ser atualizado. *profile_name* é **sysname**, com um padrão de NULL. O *profile_id* ou o *profile_name* deve ser especificado.  
   
-`[ @account_id = ] account_id`A ID da conta a ser atualizada. *account_id* é **int**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
+`[ @account_id = ] account_id` A ID da conta a ser atualizada. *account_id* é **int**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
   
-`[ @account_name = ] 'account_name'`O nome da conta a ser atualizada. *account_name* é **sysname**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
+`[ @account_name = ] 'account_name'` O nome da conta a ser atualizada. *account_name* é **sysname**, com um padrão de NULL. O *account_id* ou o *account_name* deve ser especificado.  
   
-`[ @sequence_number = ] sequence_number`O novo número de sequência para a conta. *sequence_number* é **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
+`[ @sequence_number = ] sequence_number` O novo número de sequência para a conta. *sequence_number* é **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -1,4 +1,5 @@
 ---
+description: Order (MDX)
 title: Ordem (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471738"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 

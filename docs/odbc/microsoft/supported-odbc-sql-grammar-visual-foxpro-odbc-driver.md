@@ -1,4 +1,5 @@
 ---
+description: Gramática SQL do ODBC com suporte (Driver ODBC do Visual FoxPro)
 title: Gramática SQL ODBC com suporte (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3057520e5aca5277a68971513ef28427f27208ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471498"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Gramática SQL do ODBC com suporte (Driver ODBC do Visual FoxPro)
 O driver ODBC do Microsoft Visual FoxPro oferece suporte ao seguinte:  
@@ -43,11 +44,11 @@ O driver ODBC do Microsoft Visual FoxPro oferece suporte ao seguinte:
   
  Além da gramática SQL ODBC com suporte, o driver ODBC do Visual FoxPro dá suporte à sintaxe de linguagem nativa do Visual FoxPro completa para os seguintes comandos do Visual FoxPro:  
   
- [ALTERAR TABELA](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
- [Delete (excluir)](../../odbc/microsoft/delete-sql-command.md)  
+ [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
  [EXCLUIR MARCA](../../odbc/microsoft/delete-tag-command.md)  
   

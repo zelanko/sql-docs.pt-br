@@ -1,4 +1,5 @@
 ---
+description: Criar rótulos de correspondência no Microsoft Word usando dados do Visual FoxPro
 title: Criando etiquetas de endereçamento no Microsoft Word usando dados do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c3ca6c729cfa988e2560192d705bc24e9e7b4fa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b70bed514893ab719b1f982f0facde9669e137a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471606"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Criar rótulos de correspondência no Microsoft Word usando dados do Visual FoxPro
 Você pode usar dados do Visual FoxPro em um documento do Microsoft Word para Windows 95 ou Windows 98. Por exemplo, talvez você queira criar etiquetas de endereçamento das informações do cliente armazenadas em uma tabela do Visual FoxPro.  

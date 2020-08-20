@@ -1,4 +1,5 @@
 ---
+description: Selecione do &lt; modelo &gt; . DIMENSION_CONTENT (DMX)
 title: Selecione do &lt; modelo &gt; . DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e3d7bbfcce023ce994f71a5897a1cbf4b0095419
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471972"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>Selecione do &lt; modelo &gt; . DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -79,7 +80,7 @@ FROM [TM Decision Tree].Dimension_Content
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

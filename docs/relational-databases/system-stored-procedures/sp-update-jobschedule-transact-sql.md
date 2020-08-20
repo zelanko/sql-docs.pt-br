@@ -1,4 +1,5 @@
 ---
+description: sp_update_jobschedule (Transact-SQL)
 title: sp_update_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5a526a5a304d790cfa0bd373f6c9f7225ffe3d2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92aa7a001a365ed9d24c0e856b304b723e57c9c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473513"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,6 +53,6 @@ ms.locfileid: "85891329"
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_schedule](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_update_schedule ](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   
   

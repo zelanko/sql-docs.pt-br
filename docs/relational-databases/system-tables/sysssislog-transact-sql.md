@@ -1,4 +1,5 @@
 ---
+description: sysssislog (Transact-SQL)
 title: sysssislog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 264f6495c12a350983af22c1bef325278238a514
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473091"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85889262"
   Contém uma linha para cada entrada de log gerada por pacotes ou as tarefas e contêineres em tempo de execução. Essa tabela é criada no banco de dados msdb quando você instala o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se você configurar o registro em log para registrar em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente, uma tabela sysssislog com esse formato será criada no banco de dados especificado.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]grava entradas de log nesta tabela **somente** quando os pacotes usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de log.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] grava entradas de log nesta tabela **somente** quando os pacotes usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de log.  
   
   
 |Nome da coluna|Tipo de dados|Descrição|  
@@ -46,7 +47,7 @@ ms.locfileid: "85889262"
 |endtime|**datetime**|A hora em que o pacote foi concluído.<br /><br /> Este recurso não está implementado. O valor na coluna endtime sempre é igual ao valor na coluna starttime.|  
 |datacode|**int**|Um valor inteiro opcional que geralmente indica o resultado da execução do contêiner ou da tarefa.|  
 |databytes|**imagem**|Uma matriz de byte opcional que contém informações adicionais.|  
-|message|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
+|mensagem|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Registro em Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md)   

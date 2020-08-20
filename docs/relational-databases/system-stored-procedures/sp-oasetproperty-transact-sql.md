@@ -1,4 +1,5 @@
 ---
+description: sp_OASetProperty (Transact-SQL)
 title: sp_OASetProperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0fe6c5074f8f9d6bb34bf3dfed8c8506fea1c939
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b15d0c0e7d28973ef0803041b421c30517f0665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473918"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  Para obter mais informações sobre códigos de retorno HRESULT, consulte [códigos de retorno de automação OLE e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures`a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
+ Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures` a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir define a `HostName` Propriedade (do objeto **SqlServer** criado anteriormente) com um novo valor.  

@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused (Transact-SQL)
 title: sp_spaceused (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473772"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,11 +53,11 @@ Para [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../.
 Se *objname* não for especificado, os resultados serão retornados para todo o banco de dados.  
 *objname* é **nvarchar (776)**, com um padrão de NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] oferecem suporte apenas a objetos de banco de dados e de tabela.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] oferecem suporte apenas a objetos de banco de dados e de tabela.
   
-`[ @updateusage = ] 'updateusage'`Indica que o DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso do espaço. Quando *objname* não for especificado, a instrução será executada no banco de dados inteiro; caso contrário, a instrução será executada em *objname*. Os valores podem ser **true** ou **false**. o *UPDATEUSAGE* é **varchar (5)**, com um padrão de **false**.  
+`[ @updateusage = ] 'updateusage'` Indica que o DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso do espaço. Quando *objname* não for especificado, a instrução será executada no banco de dados inteiro; caso contrário, a instrução será executada em *objname*. Os valores podem ser **true** ou **false**. o *UPDATEUSAGE* é **varchar (5)**, com um padrão de **false**.  
   
-`[ @mode = ] 'mode'`Indica o escopo dos resultados. Para uma tabela ou banco de dados ampliado, o parâmetro *Mode* permite que você inclua ou exclua a parte remota do objeto. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Indica o escopo dos resultados. Para uma tabela ou banco de dados ampliado, o parâmetro *Mode* permite que você inclua ou exclua a parte remota do objeto. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  O argumento de *modo* pode ter os seguintes valores:  
   
@@ -68,7 +69,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
   
  o *modo* é **varchar (11)**, com um padrão de **n' all' '**.  
   
-`[ @oneresultset = ] oneresultset`Indica se um único conjunto de resultados deve ser retornado. O argumento *oneresultset* pode ter os seguintes valores:  
+`[ @oneresultset = ] oneresultset` Indica se um único conjunto de resultados deve ser retornado. O argumento *oneresultset* pode ter os seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -247,13 +248,13 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [&#41;DBCC UPDATEUSAGE &#40;Transact-SQL](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [&#41;DBCC UPDATEUSAGE &#40;Transact-SQL ](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. partitions &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys. partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

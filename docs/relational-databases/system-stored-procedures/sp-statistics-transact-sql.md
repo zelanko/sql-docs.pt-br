@@ -1,4 +1,5 @@
 ---
+description: sp_statistics (Transact-SQL)
 title: sp_statistics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: bd5a7fa747241cfbfa767219894ba937a63ce7c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473715"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,19 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table_name'`Especifica a tabela usada para retornar as informações do catálogo. *table_name* é **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
+`[ @table_name = ] 'table_name'` Especifica a tabela usada para retornar as informações do catálogo. *table_name* é **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
   
-`[ @table_owner = ] 'owner'`É o nome do proprietário da tabela usado para retornar as informações do catálogo. *TABLE_OWNER* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de tabela padrão do DBMS subjacente se aplicarão.  
+`[ @table_owner = ] 'owner'` É o nome do proprietário da tabela usado para retornar as informações do catálogo. *TABLE_OWNER* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de tabela padrão do DBMS subjacente se aplicarão.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, os índices dessa tabela serão retornados. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela com o *nome*especificado, esse procedimento procurará uma tabela com o *nome* especificado de Propriedade do proprietário do banco de dados. Caso exista, os índices da tabela serão retornados.  
   
-`[ @table_qualifier = ] 'qualifier'`É o nome do qualificador de tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @table_qualifier = ] 'qualifier'` É o nome do qualificador de tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-`[ @index_name = ] 'index_name'`É o nome do índice. *index_name* é **sysname**, com um padrão de%. Há suporte para a correspondência do padrão curinga.  
+`[ @index_name = ] 'index_name'` É o nome do índice. *index_name* é **sysname**, com um padrão de%. Há suporte para a correspondência do padrão curinga.  
   
-`[ @is_unique = ] 'is_unique'`É se apenas índices exclusivos (se **Y**) devem ser retornados. *is_unique* é **Char (1)**, com um padrão de **N**.  
+`[ @is_unique = ] 'is_unique'` É se apenas índices exclusivos (se **Y**) devem ser retornados. *is_unique* é **Char (1)**, com um padrão de **N**.  
   
-`[ @accuracy = ] 'accuracy'`É o nível de cardinalidade e a precisão da página para estatísticas. a *precisão* é **Char (1)**, com um padrão de **Q**. Especifique **E** para certificar-se de que as estatísticas sejam atualizadas para que a cardinalidade e as páginas sejam precisas.  
+`[ @accuracy = ] 'accuracy'` É o nível de cardinalidade e a precisão da página para estatísticas. a *precisão* é **Char (1)**, com um padrão de **Q**. Especifique **E** para certificar-se de que as estatísticas sejam atualizadas para que a cardinalidade e as páginas sejam precisas.  
   
  O valor **E** (SQL_ENSURE) solicita que o driver recupere as estatísticas incondicionalmente.  
   
@@ -97,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  
   
-## <a name="example-sssdwfull-and-sspdw"></a>Exemplo: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>Exemplo: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna informações sobre a `DimEmployee` tabela.  
   
 ```sql  

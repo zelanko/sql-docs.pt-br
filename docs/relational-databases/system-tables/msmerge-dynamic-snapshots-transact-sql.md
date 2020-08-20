@@ -1,4 +1,5 @@
 ---
+description: MSmerge_dynamic_snapshots (Transact-SQL)
 title: MSmerge_dynamic_snapshots (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e3c700e28ff105c6e99ebde9e7dbe8c4a82109a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b03489bc2901bc13de483cf90e62fbc9645fab66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473221"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85889828"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|A ID da partição de mesclagem.|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|O local do instantâneo de dados filtrado para a partição.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|O local do instantâneo de dados filtrado para a partição.|  
 |**last_updated**|**datetime**|A data que o instantâneo de dados filtrado foi atualizado.|  
   
 ## <a name="see-also"></a>Consulte Também  

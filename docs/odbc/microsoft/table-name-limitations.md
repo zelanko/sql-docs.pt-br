@@ -1,4 +1,5 @@
 ---
+description: Limitações de nome de tabela
 title: Limitações de nome de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 738c563961eae56471f0238d9726a1ebb0bdc76e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef1395ab9e112e045fb90dc6f06a83b96bc48697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471468"
 ---
 # <a name="table-name-limitations"></a>Limitações de nome de tabela
 Os nomes de tabela podem conter quaisquer caracteres válidos (por exemplo, espaços). Se os nomes de tabela contiverem caracteres, exceto letras, números e sublinhados, o nome deverá ser delimitado ao colocá-lo entre aspas (').  
   
  Quando o driver do Microsoft Excel é usado e um nome de tabela não é qualificado por uma referência de banco de dados, o banco de dados padrão é implícito. Se um nome no Microsoft Excel incluir o caractere "!", ele será automaticamente convertido para o caractere "$" em vez disso.  
   
- O nome da tabela do Microsoft Excel \<que faz referência ao nome de arquivo> tem suporte para arquivos do microsoft Excel 3,0 e 4,0. O nome da tabela do Microsoft Excel \<que faz referência ao nome da pasta de trabalho> tem suporte para arquivos do Microsoft Excel 5,0, 7,0 ou 97.  
+ O nome da tabela do Microsoft Excel a que as referências \<filename> tem suporte para arquivos do Microsoft excel 3,0 e 4,0. O nome da tabela do Microsoft Excel a que as referências \<workbook-name> tem suporte para arquivos do Microsoft excel 5,0, 7,0 ou 97.  
   
  Quando o driver do dBASE é usado, os caracteres com um valor ASCII maior que 127 são convertidos em sublinhados.  
   

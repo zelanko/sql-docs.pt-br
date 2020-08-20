@@ -1,4 +1,5 @@
 ---
+description: Lição 3-2 – executar o Assistente de Instalação de Pacotes
 title: 'Etapa 2: executar o Assistente de Instalação de Pacotes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30bc07edc2d6d513eb9078e1758caf99a2822cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472036"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lição 3-2 – executar o Assistente de Instalação de Pacotes
 
@@ -40,17 +41,17 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
   
 4.  Na página Implantar Pacotes SSIS, selecione a opção **Implantação no SQL Server** , marque a caixa de seleção **Validar pacotes após instalação** e clique em **Avançar**.  
   
-5.  Na página Especificar SQL Server de Destino, especifique o **(local)** , na caixa **Nome do servidor** .  
+5.  Na página Especificar SQL Server de Destino, especifique o **(local)**, na caixa **Nome do servidor** .  
   
 6.  Se a instância do SQL Server der suporte à Autenticação do Windows, selecione **Usar Autenticação do Windows**; caso contrário, selecione **Usar Autenticação do SQL Server** e forneça um nome de usuário e uma senha.  
   
 7.  Verifique se a caixa de seleção **Depender do armazenamento do servidor para criptografia** está desmarcada.  
   
-8.  Clique em **Avançar.**  
+8.  Clique em **Avançar**.  
   
 9. Na página Selecionar Pasta de Instalação, clique em **Procurar**.  
   
-10. Na caixa de diálogo **Procurar Pasta** , expanda **Meu Computador** e clique em **Disco Local (C:)** .  
+10. Na caixa de diálogo **Procurar Pasta** , expanda **Meu Computador** e clique em **Disco Local (C:)**.  
   
 11. Clique em **Criar Nova Pasta** e substitua o nome padrão da pasta criada, **Nova Pasta**, por **DeploymentTutorialInstall**.  
   
@@ -103,7 +104,7 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
     > Um arquivo de log temporário é criado para ser usado na validação do pacote. Esse arquivo não é usado quando o pacote é executado.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 3: Testando os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[Etapa 3: Testar os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Serviço Integration Services &#40;Serviço SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

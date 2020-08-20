@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_account_sp (Transact-SQL)
 title: sysmail_delete_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 749aee08d548f3658c5cfba3e44e4cbf4667f6b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473385"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id`O número de ID da conta a ser excluída. *account_id* é **int**, sem padrão. O *account_id* ou *account_name* deve ser especificado.  
+`[ @account_id = ] account_id` O número de ID da conta a ser excluída. *account_id* é **int**, sem padrão. O *account_id* ou *account_name* deve ser especificado.  
   
-`[ @account_name = ] 'account_name'`O nome da conta a ser excluída. *account_name* é **sysname**, sem padrão. O *account_id* ou *account_name* deve ser especificado.  
+`[ @account_name = ] 'account_name'` O nome da conta a ser excluída. *account_name* é **sysname**, sem padrão. O *account_id* ou *account_name* deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -69,12 +70,12 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Criar uma conta de Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail objetos de configuração](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [&#41;&#40;Transact-SQL de sysmail_add_account_sp](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_delete_profile_sp](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_delete_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_help_account_sp](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_help_profile_sp](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_help_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sysmail_update_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sysmail_add_account_sp ](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_delete_profile_sp ](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_delete_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_help_account_sp ](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_help_profile_sp ](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_help_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_update_profileaccount_sp ](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
   
   

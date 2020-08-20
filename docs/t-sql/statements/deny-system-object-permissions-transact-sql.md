@@ -1,4 +1,5 @@
 ---
+description: Permissões de objeto do sistema DENY (Transact-SQL)
 title: Permissões DENY do objeto do sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e4e866d6cc2c117599f276b51569321cc2ba6107
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5d3e39d3a9533a75089c3126503abdd338c25ca1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472311"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema DENY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
- [ **sys.** ]  
+ [ **sys.**]  
  O qualificador **sys** só é necessário quando você está referenciando exibições do catálogo e exibições de gerenciamento dinâmico.  
   
  *system_object*  

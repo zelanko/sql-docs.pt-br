@@ -1,4 +1,5 @@
 ---
+description: sp_stored_procedures (Transact-SQL)
 title: sp_stored_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac4bc1262eeb87aae42f11bf7c67ca0dc58848ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d51536a973871e3907ba693306812b7681ab63d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473672"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -43,9 +44,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sp_name = ] 'name'`É o nome do procedimento usado para retornar informações do catálogo. o *nome* é **nvarchar (390)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga.  
+`[ @sp_name = ] 'name'` É o nome do procedimento usado para retornar informações do catálogo. o *nome* é **nvarchar (390)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga.  
   
-`[ @sp_owner = ] 'schema'`É o nome do esquema ao qual o procedimento pertence. o *esquema* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de procedimento padrão do DBMS subjacente se aplicarão.  
+`[ @sp_owner = ] 'schema'` É o nome do esquema ao qual o procedimento pertence. o *esquema* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de procedimento padrão do DBMS subjacente se aplicarão.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o esquema atual contiver um procedimento com o nome especificado, será retornado esse procedimento. Se um procedimento armazenado não qualificado for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] procurará o procedimento na ordem seguinte:  
   
@@ -55,9 +56,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   O esquema **dbo** no banco de dados atual.  
   
-`[ @qualifier = ] 'qualifier'`É o nome do qualificador de procedimento. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas no formulário (_qualificador_**.** _esquema_**.** _nome_. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas no formulário (_qualificador_**.** _esquema_**.** _nome_. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se o sublinhado (_), percentual (%) ou colchetes []) é interpretado como caracteres curinga. *fUsePattern* é **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se o sublinhado (_), percentual (%) ou colchetes []) é interpretado como caracteres curinga. *fUsePattern* é **bit**, com um padrão de 1.  
   
  **0** = a correspondência de padrões está desativada.  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_settriggerorder (Transact-SQL)
 title: sp_settriggerorder (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 564e38166cd26ea1fff2bc5154fea115e21b3131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473781"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,9 +44,9 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`É o nome do gatilho e o esquema ao qual ele pertence, se aplicável, cuja ordem deve ser definida ou alterada. [_triggerschema_**.**] *triggername* é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` É o nome do gatilho e o esquema ao qual ele pertence, se aplicável, cuja ordem deve ser definida ou alterada. [_triggerschema_**.**] *triggername* é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
   
-`[ @order = ] 'value'`É a configuração para a nova ordem do gatilho. o *valor* é **varchar (10)** e pode ser qualquer um dos valores a seguir.  
+`[ @order = ] 'value'` É a configuração para a nova ordem do gatilho. o *valor* é **varchar (10)** e pode ser qualquer um dos valores a seguir.  
   
 > [!IMPORTANT]  
 >  O **primeiro** e o **último** gatilho devem ser dois gatilhos diferentes.  
@@ -53,10 +54,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**First**|O disparador é acionado em primeiro lugar.|  
-|**Última**|O disparador é acionado em último lugar.|  
-|**Nenhum**|O disparador é acionado em ordem indefinida.|  
+|**Last**|O disparador é acionado em último lugar.|  
+|**Nenhuma**|O disparador é acionado em ordem indefinida.|  
   
-`[ @stmttype = ] 'statement_type'`Especifica a instrução SQL que dispara o gatilho. *statement_type* é **varchar (50)** e pode ser inserir, atualizar, excluir, fazer logon ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado em [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
+`[ @stmttype = ] 'statement_type'` Especifica a instrução SQL que dispara o gatilho. *statement_type* é **varchar (50)** e pode ser inserir, atualizar, excluir, fazer logon ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado em [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
   
  Um gatilho pode ser designado como o **primeiro** ou **último** gatilho para um tipo de instrução somente depois que esse gatilho tiver sido definido como um gatilho para esse tipo de instrução. Por exemplo, o disparador de **TR1** pode ser designado **primeiro** para INSERT na tabela **T1** se o **TR1** for definido como um gatilho de inserção. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro se o **TR1**, que foi definido somente como um gatilho de inserção, é definido como um gatilho **First**ou **Last**, para uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
   
@@ -125,7 +126,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

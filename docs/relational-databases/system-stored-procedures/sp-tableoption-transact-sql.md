@@ -1,4 +1,5 @@
 ---
+description: sp_tableoption (Transact-SQL)
 title: sp_tableoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/11/2017
@@ -18,12 +19,12 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06655c8dd684ca89d6e67b065d3943ee57f752fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473555"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +80,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   A opção texto em linha está habilitada.  
   
--   O comprimento da cadeia de caracteres é menor que o limite especificado em@OptionValue  
+-   O comprimento da cadeia de caracteres é menor que o limite especificado em @OptionValue  
   
 -   Há bastante espaço disponível na linha de dados.  
   
@@ -134,9 +135,9 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [As tabelas sys. Tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [&#41;OBJECTPROPERTY &#40;Transact-SQL](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_setsubscriptionxactseqno (Transact-SQL)
 title: sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc63f645fe2c825e0c8dac27cbf5aeb138123c0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473774"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão. Para um Publicador não SQL Server, *publisher_db* é o nome do banco de dados de distribuição.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão. Para um Publicador não SQL Server, *publisher_db* é o nome do banco de dados de distribuição.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão. Quando o Agente de Distribuição é compartilhado por mais de uma publicação, você deve especificar um valor de todos para *publicação*.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão. Quando o Agente de Distribuição é compartilhado por mais de uma publicação, você deve especificar um valor de todos para *publicação*.  
   
-`[ @xact_seqno = ] xact_seqno`É o LSN da próxima transação no distribuidor a ser aplicado ao Assinante. *xact_seqno* é **varbinary (16)**, sem padrão.  
+`[ @xact_seqno = ] xact_seqno` É o LSN da próxima transação no distribuidor a ser aplicado ao Assinante. *xact_seqno* é **varbinary (16)**, sem padrão.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -67,7 +68,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  **sp_setsubscriptionxactseqno** não pode ser usada em uma topologia de replicação transacional ponto a ponto.  
   
- **sp_setsubscriptionxactseqno** pode ser usado para ignorar uma transação específica que está causando um erro quando se aplica ao Assinante. Quando houver uma falha e após o Agente de Distribuição parar, chame [sp_helpsubscriptionerrors &#40;&#41;do Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) no distribuidor para recuperar o valor de xact_seqno da transação com falha e, em seguida, chame **sp_setsubscriptionxactseqno**, passando esse valor para *xact_seqno*. Isso assegurará que somente os comandos após esse LSN sejam processados.  
+ **sp_setsubscriptionxactseqno** pode ser usado para ignorar uma transação específica que está causando um erro quando se aplica ao Assinante. Quando houver uma falha e após o Agente de Distribuição parar, chame [sp_helpsubscriptionerrors &#40;&#41;do Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) no distribuidor para recuperar o valor de xact_seqno da transação com falha e, em seguida, chame **sp_setsubscriptionxactseqno**, passando esse valor para *xact_seqno*. Isso assegurará que somente os comandos após esse LSN sejam processados.  
   
  Especifique um valor de **0** para *xact_seqno* para entregar todos os comandos pendentes no banco de dados de distribuição para o Assinante.  
   

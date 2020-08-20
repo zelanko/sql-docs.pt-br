@@ -1,4 +1,5 @@
 ---
+description: Permissões GRANT do Agente de Serviços (Transact-SQL)
 title: Permissões GRANT do Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72cc7e6fa6d87afe2fcce8ea6c695117d140af79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472189"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>Permissões GRANT do Agente de Serviços (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,19 +58,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser concedida em um Service Broker protegível.  Listada abaixo.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Especifica o contrato no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Especifica o tipo de mensagem no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Especifica a associação de serviço remoto na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Especifica a rota na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- SERVICE **::** _nome_do_serviço_  
+ SERVICE **::**_nome_do_serviço_  
  Especifica o serviço no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  

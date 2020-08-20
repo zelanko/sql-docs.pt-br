@@ -1,4 +1,5 @@
 ---
+description: MSrepl_errors (Transact-SQL)
 title: MSrepl_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 982e54a31231a9a425c55a3c3f1849a1e64c500f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab4195f63afdda44bb5e4abff1e27f8738903ea3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473177"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85889540"
 |**session_id**|**int**|A ID da sessão de agente na qual ocorreu o erro.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 title: sys. sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 17b73b2acd00e7ea299c1d9e64bbac270485c678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473453"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +116,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  A associação entra em vigor da próxima vez que o banco de dados é colocado online.  
  
- B. Exemplo expandido de exemplo acima, que inclui algumas verificações básicas.  Execute o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] em[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. Exemplo expandido de exemplo acima, que inclui algumas verificações básicas.  Execute o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';

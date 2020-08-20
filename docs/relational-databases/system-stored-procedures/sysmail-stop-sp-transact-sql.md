@@ -1,4 +1,5 @@
 ---
+description: sysmail_stop_sp (Transact-SQL)
 title: sysmail_stop_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e503667d51da42f5d103ae479dba3b4a1cba7fce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6630ddcb05645422ba2049636637a3e480e543c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473336"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +73,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [&#41;&#40;Transact-SQL de sysmail_start_sp](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sysmail_start_sp ](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
  [Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

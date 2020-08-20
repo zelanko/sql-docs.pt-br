@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS IO (Transact-SQL)
 title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25b6b222e68325e75d4be8ae10cae6e95ff408e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472188"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,9 @@ ms.locfileid: "85765690"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
  Quando STATISTICS IO está definida como ON, as informações estatísticas são exibidas. Quando está definida como OFF, as informações não são exibidas.   
   
  Depois que essa opção é definida como ON, todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] retornam a informações de estatística até que a opção seja definida como OFF.  
@@ -60,9 +63,9 @@ SET STATISTICS IO { ON | OFF }
 |**leituras lógicas**|Número de páginas lidas do cache de dados.|  
 |**physical reads**|Número de páginas lidas do disco.|  
 |**leituras antecipadas**|Número de páginas colocadas no cache para a consulta.|  
-|**leituras lógicas lob**|Número de páginas lidas do cache de dados. Inclui **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou páginas de índice columnstore.|  
-|**leituras físicas lob**|Número de páginas lidas do disco. Inclui **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou páginas de índice columnstore.|  
-|**leituras antecipadas lob**|Número de páginas colocadas no cache para a consulta. Inclui **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou páginas de índice columnstore.|
+|**leituras lógicas lob**|Número de páginas lidas do cache de dados. Inclui **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** ou páginas de índice columnstore.|  
+|**leituras físicas lob**|Número de páginas lidas do disco. Inclui **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** ou páginas de índice columnstore.|  
+|**leituras antecipadas lob**|Número de páginas colocadas no cache para a consulta. Inclui **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** ou páginas de índice columnstore.|
 
  A configuração de SET STATISTICS IO é definida no momento da execução e não no momento da análise.
 

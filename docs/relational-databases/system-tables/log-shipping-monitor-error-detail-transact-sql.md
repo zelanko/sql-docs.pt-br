@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_error_detail (Transact-SQL)
 title: log_shipping_monitor_error_detail (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1abbc89dcd085d65f2b44aab54d731f17184b9a7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25c1187b463a52c4f5340356c23b77430ef0123f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473242"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,11 +54,11 @@ ms.locfileid: "85890185"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [&#41;&#40;Transact-SQL de log_shipping_monitor_history_detail](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de log_shipping_monitor_history_detail ](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_log_shipping_primary_database ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_log_shipping_secondary_database ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_refresh_log_shipping_monitor ](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

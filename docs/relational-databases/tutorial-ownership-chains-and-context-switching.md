@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Ownership Chains and Context Switching'
 title: 'Tutorial: Ownership Chains and Context Switching'
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6e8c2aeabcbfa73de3a0b02b6b3e6a637bcf1eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472942"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadeias de propriedade e comutação de contexto
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Este tutorial usa um cenário para ilustrar os conceitos de segurança do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envolvendo cadeias de propriedade e alternância de contexto de usuário.  
   
@@ -52,7 +53,7 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 Para obter instruções sobre como restaurar um banco de dados no SQL Server Management Studio, veja [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
-Use o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o código a seguir para abrir o banco de dados `AdventureWorks2017` e use a instrução `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] para verificar se o usuário dbo é exibido como o contexto.  
+Use o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o código a seguir para abrir o banco de dados `AdventureWorks2017` e use a instrução [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` para verificar se o usuário dbo é exibido como o contexto.  
   
 ```sql
 USE AdventureWorks2017;  

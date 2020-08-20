@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collection_set (Transact-SQL)
 title: sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9adfe94e791f8c0b0bb38305c538bd72918a71e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bc45db14899bca41f279fee8e452f81030e8aab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473605"
 ---
 # <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,8 +72,8 @@ EXEC dbo.sp_syscollector_delete_collection_set
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

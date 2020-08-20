@@ -1,4 +1,5 @@
 ---
+description: Operadores (sintaxe MDX)
 title: Operadores (sintaxe MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471768"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxe MDX)
 
@@ -30,7 +31,7 @@ ms.locfileid: "68892111"
   
  O MDX oferece suporte para os operadores listados na tabela a seguir:  
   
-|Para executar este tipo de operação|Uso|  
+|Para executar este tipo de operação|Use|  
 |---------------------------------------|---------|  
 |Atribuir um valor a uma variável ou associar uma coluna de conjunto de resultados a um alias.|[Operadores de atribuição](../mdx/assignment-operators.md)|  
 |Adicionar, subtrair, multiplicar, dividir.|[Operadores aritméticos](../mdx/arithmetic-operators.md)|  
@@ -46,7 +47,7 @@ ms.locfileid: "68892111"
  Ao usar vários operadores, a ordem em que o MDX avalia os operadores é importante. Similarmente, o usuário dos operadores pode exigir que apenas um tipo de dados seja convertido em outro tipo de dados antes que os operadores possam ser avaliados.  
   
 ## <a name="evaluating-complex-expressions"></a>Avaliando expressões complexas  
- Você pode criar uma expressão usando os operadores para combinar várias expressões menores. Nessas expressões complexas, a linguagem MDX avalia os operadores em ordem com base na definição de precedência de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]operador usada pelo. O MDX executa os operadores com prioridade mais alta antes de executar os operadores com prioridade mais baixa.  
+ Você pode criar uma expressão usando os operadores para combinar várias expressões menores. Nessas expressões complexas, a linguagem MDX avalia os operadores em ordem com base na definição de precedência de operador usada pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . O MDX executa os operadores com prioridade mais alta antes de executar os operadores com prioridade mais baixa.  
   
 ### <a name="understanding-operator-precedence"></a>Entendendo a prioridade dos operadores  
  A lista a seguir mostra a prioridade dos operadores, da mais alta para a mais baixa. Os operadores que estão na mesma linha têm a mesma prioridade e são avaliados da esquerda para a direita, a não ser que seja definido de outro modo pelos parênteses:  
@@ -67,7 +68,7 @@ ms.locfileid: "68892111"
   
 -   EXISTING  
   
--   <>, >=, =, \<=, > <  
+-   <>, >=, =, \<=, > , <  
   
 -   NOT  
   
@@ -91,14 +92,14 @@ ms.locfileid: "68892111"
   
 |Tipo original|Tipo necessário|Conversão|  
 |-------------------|-----------------|----------------|  
-|Nível|Definir|\<> de nível. Members|  
-|Hierarquia|Membro|\<hierarquia>. DefaultMember|  
-|Membro|Tupla|(\<Membro>)|  
-|Tupla|Membro|\<> de tupla. Item (0)|  
-|Tupla|Escalar|\<> de tupla. valor|  
+|Nível|Definir|\<level>. Members|  
+|Hierarquia|Membro|\<hierarchy>. DefaultMember|  
+|Membro|Tupla|(\<Member>)|  
+|Tupla|Membro|\<tuple>. Item (0)|  
+|Tupla|Escalar|\<tuple>. valor|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

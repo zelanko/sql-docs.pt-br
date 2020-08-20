@@ -1,4 +1,5 @@
 ---
+description: Funções (sintaxe de MDX)
 title: Funções (sintaxe MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 126cfdf6ef690a48d0b9ff17a6963ba37d3ade82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 732c14e823e9b25b423ce1d0d7c5a84c6f8ccd28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471848"
 ---
 # <a name="functions-mdx-syntax"></a>Funções (sintaxe de MDX)
 

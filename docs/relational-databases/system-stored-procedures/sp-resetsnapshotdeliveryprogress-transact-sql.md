@@ -1,4 +1,5 @@
 ---
+description: sp_resetsnapshotdeliveryprogress (Transact-SQL)
 title: sp_resetsnapshotdeliveryprogress (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a6a4c0114077910f34f548db1f2b0b26d652f4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473823"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @verbose_level = ] verbose_level`Especifica a quantidade de informações retornadas. *verbose_level*é **int**, com um padrão de **1**. Um valor de **1** significa que um erro será retornado se os bloqueios necessários não puderem ser obtidos na tabela **MSsnapshotdeliveryprogress** e **0** significa que nenhum erro será retornado.  
+`[ @verbose_level = ] verbose_level` Especifica a quantidade de informações retornadas. *verbose_level*é **int**, com um padrão de **1**. Um valor de **1** significa que um erro será retornado se os bloqueios necessários não puderem ser obtidos na tabela **MSsnapshotdeliveryprogress** e **0** significa que nenhum erro será retornado.  
   
-`[ @drop_table = ] 'drop_table'`É descartar ou truncar a tabela que contém informações sobre o progresso do instantâneo. *DROP_TABLE* é **nvarchar (5)**, com um padrão de **false**. false significa que a tabela é truncada, e true significa que a tabela é removida.  
+`[ @drop_table = ] 'drop_table'` É descartar ou truncar a tabela que contém informações sobre o progresso do instantâneo. *DROP_TABLE* é **nvarchar (5)**, com um padrão de **false**. false significa que a tabela é truncada, e true significa que a tabela é removida.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

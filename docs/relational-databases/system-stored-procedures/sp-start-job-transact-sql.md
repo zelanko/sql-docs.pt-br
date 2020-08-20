@@ -1,4 +1,5 @@
 ---
+description: sp_start_job (Transact-SQL)
 title: sp_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcf38d9b430943669a17e0ab1dd449eb4c75a18b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473721"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +46,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'`O nome do trabalho a ser iniciado. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho a ser iniciado. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_name* é **sysname**, com um padrão de NULL.  
   
-`[ @job_id = ] job_id`O número de identificação do trabalho a ser iniciado. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho a ser iniciado. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'`O servidor de destino no qual iniciar o trabalho. *server_name* é **nvarchar (128)**, com um padrão de NULL. *server_name* deve ser um dos servidores de destino aos quais o trabalho está atualmente direcionado.  
+`[ @server_name = ] 'server_name'` O servidor de destino no qual iniciar o trabalho. *server_name* é **nvarchar (128)**, com um padrão de NULL. *server_name* deve ser um dos servidores de destino aos quais o trabalho está atualmente direcionado.  
   
-`[ @step_name = ] 'step_name'`O nome da etapa na qual começar a execução do trabalho. Aplica-se apenas a trabalhos locais. *step_name* é **sysname**, com um padrão de NULL  
+`[ @step_name = ] 'step_name'` O nome da etapa na qual começar a execução do trabalho. Aplica-se apenas a trabalhos locais. *step_name* é **sysname**, com um padrão de NULL  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -91,10 +92,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_stop_job](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_job ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_job ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_stop_job ](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_job ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
