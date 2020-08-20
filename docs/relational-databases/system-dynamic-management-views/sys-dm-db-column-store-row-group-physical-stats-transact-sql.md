@@ -21,16 +21,17 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dc6a94205c7432f6fee305d58a27ec1eb0e0c33
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447677"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646118"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Fornece informações atuais em nível de rowgroup sobre todos os índices columnstore no banco de dados atual.  
 
@@ -44,7 +45,7 @@ Isso estende a exibição de catálogo [Sys. column_store_row_groups &#40;&#41;T
 |**row_group_id**|**int**|ID deste grupo de linhas. Para tabelas particionadas, o valor é exclusivo na partição.<br /><br /> -1 para uma parte final da memória.|  
 |**delta_store_hobt_id**|**bigint**|O hobt_id para um grupo de linhas no armazenamento Delta.<br /><br /> NULL se o grupo de linhas não estiver no repositório Delta.<br /><br /> NULL para a parte final de uma tabela na memória.|  
 |**state**|**tinyint**|Número de ID associado *state_description*.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = MARCA PARA EXCLUSÃO<br /><br /> COMPACTado é o único Estado que se aplica a tabelas na memória.|  
-|**state_desc**|**nvarchar(60)**|Descrição do estado do grupo de linhas:<br /><br /> 0-invisível-um grupo de linhas que está sendo compilado. Por exemplo:  <br />Um grupo de linhas no columnstore é invisível enquanto os dados estão sendo compactados. Quando a compactação é concluída, uma opção de metadados altera o estado do grupo de linhas columnstore de invisível para COMPACTado e o estado do grupo de linhas deltastore de CLOSED para marca para exclusão.<br /><br /> 1-abrir um grupo de linhas deltastore que está aceitando novas linhas. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> 2-CLOSED-um grupo de linhas no repositório Delta que contém o número máximo de linhas e está aguardando o processo de movimentação de tupla compactá-lo no columnstore.<br /><br /> 3-COMPACTado-um grupo de linhas que é compactado com compactação columnstore e armazenado no columnstore.<br /><br /> 4-marcas de exclusão – um grupo de linhas que estava anteriormente no deltastore e que não é mais usado.|  
+|**state_desc**|**nvarchar(60)**|Descrição do estado do grupo de linhas:<br /><br /> 0-invisível-um grupo de linhas que está sendo compilado. Por exemplo: <br />Um grupo de linhas no columnstore é invisível enquanto os dados estão sendo compactados. Quando a compactação é concluída, uma opção de metadados altera o estado do grupo de linhas columnstore de invisível para COMPACTado e o estado do grupo de linhas deltastore de CLOSED para marca para exclusão.<br /><br /> 1-abrir um grupo de linhas deltastore que está aceitando novas linhas. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> 2-CLOSED-um grupo de linhas no repositório Delta que contém o número máximo de linhas e está aguardando o processo de movimentação de tupla compactá-lo no columnstore.<br /><br /> 3-COMPACTado-um grupo de linhas que é compactado com compactação columnstore e armazenado no columnstore.<br /><br /> 4-marcas de exclusão – um grupo de linhas que estava anteriormente no deltastore e que não é mais usado.|  
 |**total_rows**|**bigint**|Número de linhas fisicamente armazenadas no grupo de linhas. Para grupos de linhas compactados. Inclui as linhas marcadas como excluídas.|  
 |**deleted_rows**|**bigint**|Número de linhas fisicamente armazenadas em um grupo de linhas compactado que são marcadas para exclusão.<br /><br /> 0 para grupos de linhas que estão no repositório Delta.|  
 |**size_in_bytes**|**bigint**|Tamanho combinado, em bytes, de todas as páginas deste grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  

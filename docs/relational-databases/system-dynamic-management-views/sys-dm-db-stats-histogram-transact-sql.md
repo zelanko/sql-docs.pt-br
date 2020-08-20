@@ -21,16 +21,16 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 783a7033e9db323ea774b4456c2159670104fecb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de7e998ff91295c62d28efbcdbde4a40c3bfdf14
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481997"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646146"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Retorna o histograma de estatísticas para o objeto de banco de dados especificado (tabela ou exibição indexada) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados atual. Similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
