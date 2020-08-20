@@ -1,4 +1,5 @@
 ---
+description: Funções de API (Driver ODBC para Oracle)
 title: Funções de API (driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22caca270e9023057e9a4e146482a57bf4bad754
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a19eb25f15cfea874d7ac84b9ad41a8a342c4859
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500389"
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>Funções de API (Driver ODBC para Oracle)
 > [!IMPORTANT]  

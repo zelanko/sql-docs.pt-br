@@ -1,4 +1,5 @@
 ---
+description: Schema.ini File (Driver de Arquivo de texto)
 title: Arquivo de Schema.ini (driver de arquivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed041e43a211f58a34b4e2476d9e0b62ff5d162b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 8b4bbebfa6eb184bf81cba4a9faf5e3200f428de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500219"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini File (Driver de Arquivo de texto)
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado usando um arquivo de informações de esquema. O arquivo de informações de esquema sempre é denominado Schema.ini e sempre é mantido no mesmo diretório que a fonte de dados de texto. O arquivo de informações de esquema fornece o IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo de Schema.ini sempre é necessário para acessar dados de comprimento fixo. Você deve usar um arquivo de Schema.ini quando sua tabela de texto contiver dados DateTime, de moeda ou decimais, ou sempre que desejar mais controle sobre a manipulação dos dados na tabela.  
@@ -55,7 +56,7 @@ Quando o driver de texto é usado, o formato do arquivo de texto é determinado 
 |----------------------|------------------|---------------------------------|  
 |**Delimitado por tabulação**|Os campos no arquivo são delimitados por guias.|Formato = TabDelimited|  
 |**Delimitado por CSV**|Os campos no arquivo são delimitados por vírgulas (valores separados por vírgula).|Formato = CSVDelimited|  
-|**Personalizado**|Os campos no arquivo são delimitados por qualquer caractere que você escolher para inserir na caixa de diálogo. Todos, exceto as aspas duplas ("), são permitidas, incluindo em branco.|Formato = delimitado (*caractere personalizado*)<br /><br /> -ou-<br /><br /> Sem delimitador especificado:<br /><br /> Formato = delimitado ()|  
+|**Personalizado**|Os campos no arquivo são delimitados por qualquer caractere que você escolher para inserir na caixa de diálogo. Todos, exceto as aspas duplas ("), são permitidas, incluindo em branco.|Formato = delimitado (*caractere personalizado*)<br /><br /> - ou -<br /><br /> Sem delimitador especificado:<br /><br /> Formato = delimitado ()|  
 |**Comprimento fixo**|Os campos no arquivo têm um comprimento fixo.|Formato = Cadeia|  
   
 ## <a name="specifying-the-fields"></a>Especificando os campos  
@@ -99,7 +100,7 @@ n=ColumnName type [Width] [#]
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*ColumnName*|O nome de texto da coluna. Se o nome da coluna contiver espaços inseridos, você deverá colocá-los entre aspas duplas.|  
-|*tipo*|Os tipos de dados são os seguintes:<br /><br /> **Tipos de dados do Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Texto<br /><br /> Memo<br /><br /> **Tipos de dados ODBC** Char (o mesmo que Text)<br /><br /> Float (igual a Double)<br /><br /> Inteiro (igual a curto)<br /><br /> LongChar (o mesmo que Memo)<br /><br /> *Formato de data* /data|  
+|*tipo*|Os tipos de dados são os seguintes:<br /><br /> **Tipos de dados do Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> long<br /><br /> Moeda<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Texto<br /><br /> Memo<br /><br /> **Tipos de dados ODBC** Char (o mesmo que Text)<br /><br /> Float (igual a Double)<br /><br /> Inteiro (igual a curto)<br /><br /> LongChar (o mesmo que Memo)<br /><br /> *Formato de data* /data|  
 |**Largura**|O valor da cadeia de caracteres literal `Width` . Indica que o número a seguir designa a largura da coluna (opcional para arquivos delimitados por caractere; necessário para arquivos de comprimento fixo).|  
 |*#*|O valor inteiro que designa a largura da coluna (obrigatório se a **largura** for especificada).|  
   
@@ -113,7 +114,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>Especificando formatos e conversões de tipo de dados  
  O arquivo de Schema.ini contém várias opções que você pode usar para especificar como os dados são convertidos ou exibidos. A tabela a seguir lista cada uma dessas opções.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**DateTimeFormat**|Pode ser definido como uma cadeia de caracteres de formato que indica datas e horas. Você deve especificar essa entrada se todos os campos de data/hora na importação/exportação forem manipulados com o mesmo formato. Todos os formatos do Microsoft Jet, exceto A.M. e P.M. têm suporte. Se não houver nenhuma cadeia de caracteres de formato, as opções de imagem e hora da data abreviada do painel de controle do Windows serão usadas.|  
 |**DecimalSymbol**|Pode ser definido como qualquer caractere único que é usado para separar o inteiro da parte fracionária de um número.|  

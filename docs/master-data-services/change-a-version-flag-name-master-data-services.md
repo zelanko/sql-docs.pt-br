@@ -1,4 +1,5 @@
 ---
+description: Alterar o nome de um sinalizador de versão (Master Data Services)
 title: Alterar o nome de um sinalizador de versão
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 379422cdfe776eb0c7696c3d77df2562a7f0af41
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f1ecc54348d15fa3bbe2c7c9176572d4c61b8df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500722"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Alterar o nome de um sinalizador de versão (Master Data Services)
 

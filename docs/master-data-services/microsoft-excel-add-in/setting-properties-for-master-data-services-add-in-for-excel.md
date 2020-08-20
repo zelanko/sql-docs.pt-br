@@ -1,4 +1,5 @@
 ---
+description: Definindo propriedades para o Suplemento do Master Data Services para Excel
 title: Definindo propriedades
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0a4778ae941b22bf362d926881b1cd3ba806059
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b790b0f733a862f93249ecf85490d914e8e8d3b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500559"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Definindo propriedades para o Suplemento do Master Data Services para Excel
 

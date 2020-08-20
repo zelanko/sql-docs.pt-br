@@ -1,4 +1,5 @@
 ---
+description: '&lt;consulta de dados &gt; de origem – OPENROWSET'
 title: OPENROWSET (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b19b897b65ffb3a4c9e940370ffdead1e10b6d31
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8da3686e7772b7e997690d509c8092917635497a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500752"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;consulta de dados &gt; de origem – OPENROWSET
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

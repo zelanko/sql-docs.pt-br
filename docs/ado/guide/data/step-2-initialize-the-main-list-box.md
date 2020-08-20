@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 2: Inicializar a caixa de listagem principal'
 title: 'Etapa 2: inicializar a caixa de listagem principal | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f746b454b18de7d88ca4c42d049eb058f671ba8e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760812"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512292"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Etapa 2: Inicializar a caixa de listagem principal
 Para declarar os objetos de registro global e conjunto de registros, insira o seguinte código no (geral) (declarações) para Form1:  
@@ -45,7 +46,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Esse código instancia os objetos de registro global e conjunto de registros. O objeto Record, `grec` , é aberto com uma URL especificada como a ActiveConnection. Se a URL existir, ela será aberta; Se ele ainda não existir, ele será criado. Observe que você deve substituir " <https://servername/foldername/> " por uma URL válida do seu ambiente.  
+ Esse código instancia os objetos de registro global e conjunto de registros. O objeto Record, `grec` , é aberto com uma URL especificada como a ActiveConnection. Se a URL existir, ela será aberta; Se ele ainda não existir, ele será criado. Observe que você deve substituir `https://servername/foldername/` por uma URL válida do seu ambiente.  
   
  O objeto recordset, `grs` , é aberto nos filhos do registro, `grec` . Em seguida, `lstMain` é populado com os nomes de arquivo dos recursos publicados na URL.  
   

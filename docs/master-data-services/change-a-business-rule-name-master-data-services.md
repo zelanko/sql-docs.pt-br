@@ -1,4 +1,5 @@
 ---
+description: Alterar o nome de uma regra de negócio (Master Data Services)
 title: Alterar o nome de uma regra de negócio
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9de8fba3f5a9ba04cccf475ed4a1ebcef1dced74
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c575f408d0682554eb3ead69e3915d226d4975b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500690"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Alterar o nome de uma regra de negócio (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Properties (MDX)
 title: Propriedades (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d571ed020c1b36ea2e09beca7d2ccbef5899951f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500469"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 

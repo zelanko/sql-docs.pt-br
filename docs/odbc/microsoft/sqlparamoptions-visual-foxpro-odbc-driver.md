@@ -1,4 +1,5 @@
 ---
+description: SQLParamOptions (Driver ODBC do Visual FoxPro)
 title: Sqlparamoptions (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dd714ce7774265a2afd00d42894d644a516bc402
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e40af7f0bb03c0b5245717880e67e72b38559aed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500189"
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions (Driver ODBC do Visual FoxPro)
 > [!NOTE]  

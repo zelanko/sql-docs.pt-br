@@ -1,4 +1,5 @@
 ---
+description: Funções de API do ODBC com suporte
 title: Funções de API ODBC com suporte | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec6ceaf57d8fe3c5325f85a9644cf4c8016663e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61dca7de4a9a532789a2b448fad812ae3daf76ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500089"
 ---
 # <a name="supported-odbc-api-functions"></a>Funções de API do ODBC com suporte
 A finalidade do nivelamento é informar ao aplicativo quais recursos estão disponíveis para ele do driver. Os drivers de banco de dados do Microsoft ODBC Desktop dão suporte a todas as funções de núcleo e nível 1.  

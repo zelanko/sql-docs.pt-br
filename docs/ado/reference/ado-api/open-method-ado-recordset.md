@@ -1,4 +1,5 @@
 ---
+description: Método Open (Conjunto de registros ADO)
 title: Método Open (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8a4514e677b2b50effdadd2eac24c9f195a1f07
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762174"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512252"
 ---
 # <a name="open-method-ado-recordset"></a>Método Open (Conjunto de registros ADO)
 Abre um cursor em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -34,7 +35,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Fonte*  
+ *Origem*  
  Opcional. Uma **variante** que é avaliada como um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) válido, uma instrução SQL, um nome de tabela, uma chamada de procedimento armazenado, uma URL ou o nome de um objeto de arquivo ou de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) que contém um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)armazenado de forma persistente.  
   
  *ActiveConnection*  
@@ -60,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  O uso do método **Open** em um objeto **Recordset** abre um cursor que representa os registros de uma tabela base, os resultados de uma consulta ou um **conjunto de registros**salvo anteriormente.  
   
- Use o argumento de *origem* opcional para especificar uma fonte de dados usando uma das seguintes opções: uma variável de objeto de **comando** , uma instrução SQL, um procedimento armazenado, um nome de tabela, uma URL ou um nome de caminho de arquivo completo. Se *Source* for um nome de caminho de arquivo, ele pode ser um caminho completo ("c:\dir\file.RST"), um caminho relativo (".. \File.RST ") ou uma URL (" <https://files/file.rst> ").  
+ Use o argumento de *origem* opcional para especificar uma fonte de dados usando uma das seguintes opções: uma variável de objeto de **comando** , uma instrução SQL, um procedimento armazenado, um nome de tabela, uma URL ou um nome de caminho de arquivo completo. Se *Source* for um nome de caminho de arquivo, ele pode ser um caminho completo ("c:\dir\file.RST"), um caminho relativo (".. \File.RST ") ou uma URL ( `https://files/file.rst` ).  
   
  Não é uma boa ideia usar o argumento de *origem* do método **Open** para executar uma consulta de ação que não retorna registros porque não há uma maneira fácil de determinar se a chamada foi bem-sucedida. O **conjunto de registros** retornado por tal consulta será fechado. Para executar uma consulta que não retorna registros, como uma instrução SQL INSERT, chame o método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) de um objeto **Command** ou o método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) de um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) em vez disso.  
   

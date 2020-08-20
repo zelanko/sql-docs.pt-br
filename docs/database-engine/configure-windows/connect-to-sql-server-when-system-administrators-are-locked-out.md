@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717083"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512308"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Você pode iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 Ao iniciar uma instância no modo de usuário único, primeiro interrompa o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Caso contrário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode se conectar primeiro, usando a única conexão disponível ao servidor e impedindo que você faça logon.
 
-Também é possível que um aplicativo cliente desconhecido assuma a única conexão disponível antes de você poder fazer logon. Para evitar que isso aconteça, você pode usar a opção `-m` seguida por um nome de aplicativo para limitar as conexões a uma conexão no aplicativo especificado. Por exemplo, iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com `-m"sqlcmd"` limita as conexões a uma conexão que se identifica como o programa cliente **sqlcmd**. Para conectar-se pelo Editor de Consulta no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.  
+Também é possível que um aplicativo cliente desconhecido assuma a única conexão disponível antes de você poder fazer logon. Para evitar que isso aconteça, você pode usar a opção `-m` seguida por um nome de aplicativo para limitar as conexões a uma conexão no aplicativo especificado. Por exemplo, iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com `-mSQLCMD` limita as conexões a uma conexão que se identifica como o programa cliente **sqlcmd**. Para conectar-se pelo Editor de Consulta no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ A tabela a seguir resume as diferentes maneiras de iniciar a sua instância no m
 | Opção | Descrição | Quando usar |
 |:---|:---|:---|
 |`-m` | Limita as conexões a uma conexão | Quando não há outros usuários tentando se conectar à instância ou você não tem certeza do nome do aplicativo que está usando para se conectar à instância. |
-|`-m"sqlcmd"`| Limita conexões a uma conexão que precisa se identificar como o programa cliente **sqlcmd**| Quando você planeja se conectar à instância com **sqlcmd** e deseja impedir que outros aplicativos usem a única conexão disponível. |
+|`-mSQLCMD`| Limita conexões a uma conexão que precisa se identificar como o programa cliente **sqlcmd**| Quando você planeja se conectar à instância com **sqlcmd** e deseja impedir que outros aplicativos usem a única conexão disponível. |
 |`-m"Microsoft SQL Server Management Studio - Query"`| Limita as conexões a uma conexão que precisa se identificar como o aplicativo **Microsoft SQL Server Management Studio – Consulta**.| Quando você planeja se conectar à instância com o Editor de Consulta no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e deseja impedir que outros aplicativos usem a única conexão disponível. |
 |`-f`| Limita as conexões a uma conexão e inicia a instância na configuração mínima | Quando alguma outra configuração está impedindo a inicialização. |
 | &nbsp; | &nbsp; | &nbsp; |

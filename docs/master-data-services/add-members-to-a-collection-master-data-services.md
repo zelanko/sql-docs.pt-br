@@ -1,4 +1,5 @@
 ---
+description: Adicionar membros a uma coleção (Master Data Services)
 title: Adicionar membros a uma coleção
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 69f218494a40878e4e24e86a34ebd834de0f8abd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 141bdb831dce76b00e0ce14ea5616341d052451a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500836"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Adicionar membros a uma coleção (Master Data Services)
 

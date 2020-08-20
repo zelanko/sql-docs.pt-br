@@ -1,4 +1,5 @@
 ---
+description: StructureColumn (DMX)
 title: StructureColumn (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 43e02efd8594497ad4f3c02679a475531489141c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500751"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,7 +44,7 @@ StructureColumn('structure column name')
   
  Os resultados retornados de uma consulta usando a função **StructureColumn** são afetados pela presença de filtros no modelo. Quer dizer, o filtro do modelo controla os casos que são incluídos no modelo de mineração. Desse modo, uma consulta na coluna de estrutura pode retornar somente os casos que foram usados no modelo de mineração. Consulte a seção Exemplos deste tópico para observar o exemplo de um código que mostra o efeito dos filtros de modelo de mineração nas tabelas de caso e em uma tabela aninhada.  
   
- Para obter mais informações sobre como usar essa função em uma instrução DMX SELECT, consulte [selecionar do modelo de &#60;&#62;. CASOS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) ou [selecione &#60;&#62; de estrutura. CASOS](../dmx/select-from-structure-cases.md).  
+ Para obter mais informações sobre como usar essa função em uma instrução DMX SELECT, consulte [selecionar do modelo de &#60;&#62;. CASOS &#40;&#41;DMX ](../dmx/select-from-model-cases-dmx.md) ou [selecione &#60;&#62; de estrutura. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>Mensagens de erro  
  O erro de segurança a seguir ocorrerá se o usuário não tiver permissão de detalhamento na estrutura de mineração pai:  
@@ -137,7 +138,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

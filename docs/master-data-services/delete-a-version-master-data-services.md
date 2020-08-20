@@ -1,4 +1,5 @@
 ---
+description: Excluir uma versão (Master Data Services)
 title: Excluir uma versão
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6faf2fc9b6b4ac3b8004771df79af34a3d255fa8
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1e1fb93c02edc21cceae90470c35a99d17748c6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500576"
 ---
 # <a name="delete-a-version-master-data-services"></a>Excluir uma versão (Master Data Services)
 

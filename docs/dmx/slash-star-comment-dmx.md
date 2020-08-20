@@ -1,4 +1,5 @@
 ---
+description: Barra asterisco (comentário) (DMX)
 title: Barra asterisco (comentário) (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f09533b68ab6dc3c771a09b70faf71087ed69a62
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 011d72bfcb0b72d1b73579e81dc6f82e4d50da69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500849"
 ---
 # <a name="slash-star-comment-dmx"></a>Barra asterisco (comentário) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -42,6 +43,6 @@ ms.locfileid: "86970379"
  [&#40;comentário de barra dupla&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [--Comentário de &#40;&#41; &#40;Resumo de&#41; do DMX](../dmx/comment-dmx-summary.md)   
  [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)  
+ [Operadores &#40;&#41;DMX ](../dmx/operators-dmx.md)  
   
   

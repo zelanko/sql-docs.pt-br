@@ -1,4 +1,5 @@
 ---
+description: Funções escalares
 title: Funções escalares | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85548baf08c5403ca5c4b9886c34e9dbd4c45759
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: d741984a369a5b0667be0a7516ae896ad07b9aa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500259"
 ---
 # <a name="scalar-functions"></a>Funções escalares
 Os drivers de banco de dados do Microsoft ODBC Desktop dão suporte às seguintes funções escalares:  

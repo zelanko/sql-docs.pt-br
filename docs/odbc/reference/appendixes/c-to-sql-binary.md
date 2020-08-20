@@ -1,4 +1,5 @@
 ---
+description: 'C para SQL: binário'
 title: 'C to SQL: Binary | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 818de0086ce3996cc1f6194311d2a2bb80c9f564
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87e6d6a58afb41f03027fbfd25aaca50af5e7bd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500039"
 ---
 # <a name="c-to-sql-binary"></a>C para SQL: binário
 O identificador para o tipo de dados ODBC C binário é:  

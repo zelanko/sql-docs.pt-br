@@ -1,4 +1,5 @@
 ---
+description: Excluir um modelo (Master Data Services)
 title: Excluir um modelo
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7badbd43fd526ff66b599f04e6aeb36443cd3684
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cdd631bd3a37722a6f87709931b2f45046c81e24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500588"
 ---
 # <a name="delete-a-model-master-data-services"></a>Excluir um modelo (Master Data Services)
 

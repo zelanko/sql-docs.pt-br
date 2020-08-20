@@ -1,4 +1,5 @@
 ---
+description: Atualizar o Analysis Services
 title: Fazer upgrade do Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -21,12 +22,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 61b67a70b3193763a46a7aa99783397ee57d0e92
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 74894762db3d65e3789922c39e3571c531906c82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500932"
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
 
@@ -79,12 +80,12 @@ ms.locfileid: "87362595"
   
 |Modelo de banco de dados|Nível de Compatibilidade|Versões compatíveis|  
 |-|-|-|  
-|Tabular|1\.400|Microsoft SQL Server 2017|
+|Tabular|1.400|Microsoft SQL Server 2017|
 |Tabular|1200|SQL Server 2016|  
 |Tabular|1103|SQL Server 2014|  
 |Tabular|1100|SQL Server 2012|  
 |Multidimensional|1100|SQL Server 2012 e posterior|  
-|Multidimensional|1\.050|SQL Server 2005, 2008, 2008 R2|  
+|Multidimensional|1.050|SQL Server 2005, 2008, 2008 R2|  
   
  Para saber mais, consulte [Nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) e [Nível de compatibilidade de modelos de tabela do Analysis Services](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services) para obter mais informações.  
   

@@ -1,4 +1,5 @@
 ---
+description: Criar um atributo de link (Master Data Services)
 title: Criar um atributo de link
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8b22b60f005ab7e982491685db0ff59dd2c73346
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 129cfe3eec5b99bc486e5a47cd7f90ac0733d13e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500667"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Criar um atributo de link (Master Data Services)
 
@@ -44,9 +45,9 @@ ms.locfileid: "85813092"
 |Coluna|Descrição|  
 |------------|-----------------|  
 |Status|O status do atributo.<br /><br /> Quando você clica em salvar, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|  
-|Name|O nome do atributo.|  
+|Nome|O nome do atributo.|  
 |Nome de exibição|O nome de exibição do atributo.|  
-|Description|A descrição do atributo.|  
+|Descrição|A descrição do atributo.|  
 |Exibir Largura em Pixels|A largura do atributo.|  
 |Tipo e Propriedades|As informações de tipo e de tipo de dados do atributo.|  
 |Habilitar Controle de Alterações|Especifica se o atributo está habilitado para o controle de alterações e mostra o número do grupo entre parênteses.|  

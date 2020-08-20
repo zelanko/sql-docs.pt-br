@@ -1,4 +1,5 @@
 ---
+description: 'C para SQL: caractere'
 title: 'C to SQL: caractere | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: acde0d2a79492607185d56d3082797c79a100fa2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ab8f1c0471c6e079f792aa40119f13cb31ca9ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500019"
 ---
 # <a name="c-to-sql-character"></a>C para SQL: caractere
 Os identificadores para o tipo de dados ODBC C são:  

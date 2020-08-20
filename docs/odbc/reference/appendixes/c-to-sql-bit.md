@@ -1,4 +1,5 @@
 ---
+description: 'C para SQL: bit'
 title: 'C to SQL: bit | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a96982573d83cf01947f82dc2014ee2c470931e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b62f85ddb3a89d27e078f316560cec466043743a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500029"
 ---
 # <a name="c-to-sql-bit"></a>C para SQL: bit
 O identificador para o tipo de dados ODBC C é:  

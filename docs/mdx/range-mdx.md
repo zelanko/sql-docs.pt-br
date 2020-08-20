@@ -1,4 +1,5 @@
 ---
+description: ': (Intervalo) (MDX)'
 title: ': (Intervalo) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d52a78a1fcdefa4ee7bf09fa4125b488165e09c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500459"
 ---
 # <a name="-range-mdx"></a>: (Intervalo) (MDX)
 
@@ -31,7 +32,7 @@ Member_Expression : Member_Expression
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um conjunto que contém os membros especificados e todos os membros entre os membros especificados.  
   
 ## <a name="remarks"></a>Comentários  
@@ -62,6 +63,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

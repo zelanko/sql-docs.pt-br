@@ -1,4 +1,5 @@
 ---
+description: '&lt;consulta de dados de origem&gt;'
 title: '&lt;consulta de dados de origem &gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500750"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de dados de origem&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "86970261"
 ## <a name="query-types"></a>Tipos de consultas  
  As três modos mais comuns para especificar dados de origem são:  
   
- [&#40;DE&#41;DE OPENQUERY DO DMX](../dmx/source-data-query-openquery.md)  
+ [&#40;DE&#41;DE OPENQUERY DO DMX ](../dmx/source-data-query-openquery.md)  
  Esta instrução consulta dados que são externos a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], usando uma fonte de dados existente.  
   
  Embora **OPENQUERY** seja semelhante na função para **OPENROWSET**, **OPENQUERY** tem os seguintes benefícios:  
@@ -35,7 +36,7 @@ ms.locfileid: "86970261"
  [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Esta instrução consulta dados que são externos a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], usando uma fonte de dados existente.  
   
- [&#41;DE FORMA &#40;DMX](../dmx/source-data-query-shape.md)  
+ [&#41;DE FORMA &#40;DMX ](../dmx/source-data-query-shape.md)  
  Esta instrução consulta múltiplas fontes de dados para criar uma tabela aninhada. Usando **Shape**, você pode combinar dados de várias fontes em uma única tabela hierárquica. Isto permite a você aproveitar a capacidade do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de aninhar tabelas inserindo uma tabela dentro de outra.  
   
  Para especificar os dados de origem, você pode usar também as seguintes opções:  
