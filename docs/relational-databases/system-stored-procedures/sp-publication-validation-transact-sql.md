@@ -1,4 +1,5 @@
 ---
+description: sp_publication_validation (Transact-SQL)
 title: sp_publication_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485823"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @rowcount_only = ] 'rowcount_only'`É se deve retornar apenas o número de linhas da tabela. *rowcount_only* é **smallint** e pode ser um dos valores a seguir.  
+`[ @rowcount_only = ] 'rowcount_only'` É se deve retornar apenas o número de linhas da tabela. *rowcount_only* é **smallint** e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -51,7 +52,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1** (padrão)|Só execute uma verificação de número de linhas.|  
 |**2**|Execute uma verificação de número de linhas e soma de verificação binária.<br /><br /> Observação: para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes da versão 7,0, apenas uma validação de número de linhas é executada.|  
   
-`[ @full_or_fast = ] 'full_or_fast'`É o método usado para calcular o número de linhas. *full_or_fast* é **tinyint** e pode ser um dos valores a seguir.  
+`[ @full_or_fast = ] 'full_or_fast'` É o método usado para calcular o número de linhas. *full_or_fast* é **tinyint** e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -59,9 +60,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|A contagem rápida de **sysindexes. Rows**. A contagem de linhas em [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápida do que a contagem de linhas na tabela real. No entanto, como [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é atualizado lentamente, o número de linhas pode não ser preciso.|  
 |**2** (padrão)|Efetua contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, uma contagem completa (*) sempre será usada.|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'`É se o Agente de Distribuição deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de replicação não será desligado. Se for **1**, o agente de replicação será desligado depois que o último artigo for validado.  
+`[ @shutdown_agent = ] 'shutdown_agent'` É se o Agente de Distribuição deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de replicação não será desligado. Se for **1**, o agente de replicação será desligado depois que o último artigo for validado.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser usado ao solicitar a validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -81,8 +82,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Validar dados no Assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [&#41;&#40;Transact-SQL de sp_article_validation](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_table_validation](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_article_validation ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_table_validation ](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

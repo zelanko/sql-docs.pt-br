@@ -1,4 +1,5 @@
 ---
+description: sp_helpntgroup (Transact-SQL)
 title: sp_helpntgroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f52bf995a4d8f24d2b987ad08602cf9184cff8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9ad0853553de51ba53b363bc400facde0c01652e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485925"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ntname = ] 'name'`É o nome do grupo do Windows. o *nome* é **sysname**, com um padrão de NULL. o *nome* deve ser um grupo válido do Windows com acesso ao banco de dados atual. Se o *nome* não for especificado, todos os grupos do Windows com acesso ao banco de dados atual serão incluídos na saída.  
+`[ @ntname = ] 'name'` É o nome do grupo do Windows. o *nome* é **sysname**, com um padrão de NULL. o *nome* deve ser um grupo válido do Windows com acesso ao banco de dados atual. Se o *nome* não for especificado, todos os grupos do Windows com acesso ao banco de dados atual serão incluídos na saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -68,9 +69,9 @@ EXEC sp_helpntgroup;
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_grantdbaccess](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_revokedbaccess](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grantdbaccess ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprole ](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_revokedbaccess ](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

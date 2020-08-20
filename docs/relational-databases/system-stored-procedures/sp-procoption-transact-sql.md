@@ -1,4 +1,5 @@
 ---
+description: sp_procoption (Transact-SQL)
 title: sp_procoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485826"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ProcName = ] 'procedure'`É o nome do procedimento para o qual definir uma opção. o *procedimento* é **nvarchar (776)**, sem padrão.  
+`[ @ProcName = ] 'procedure'` É o nome do procedimento para o qual definir uma opção. o *procedimento* é **nvarchar (776)**, sem padrão.  
   
-`[ @OptionName = ] 'option'`É o nome da opção a ser definida. O único valor para a *opção* é **Startup**.  
+`[ @OptionName = ] 'option'` É o nome da opção a ser definida. O único valor para a *opção* é **Startup**.  
   
-`[ @OptionValue = ] 'value'`É se a opção deve ser definida em (**true** ou **on**) ou off (**false** ou **off**). o *valor* é **varchar (12)**, sem padrão.  
+`[ @OptionValue = ] 'value'` É se a opção deve ser definida em (**true** ou **on**) ou off (**false** ou **off**). o *valor* é **varchar (12)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número de erro (falha)  
@@ -54,7 +55,7 @@ sp_procoption [ @ProcName = ] 'procedure'
  Os procedimentos de inicialização devem estar no banco de dados **mestre** e não podem conter parâmetros de entrada ou saída. A execução dos procedimentos armazenados inicia quando todos os bancos de dados são recuperados e a mensagem "A recuperação foi concluída" é registrada na inicialização.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir define um procedimento para execução automática.  

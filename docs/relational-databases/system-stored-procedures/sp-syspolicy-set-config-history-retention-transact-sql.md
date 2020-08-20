@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_config_history_retention (Transact-SQL)
 title: sp_syspolicy_set_config_history_retention (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e718d545e6aeba709578f1857be81e8603a11b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8b33adfbe57765cf52b3b3572bf30b263999e773
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485597"
 ---
 # <a name="sp_syspolicy_set_config_history_retention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @value = ] value`É o número de dias para reter o histórico do gerenciamento baseado em políticas. o *valor* é **sqlvariant**.  
+`[ @value = ] value` É o número de dias para reter o histórico do gerenciamento baseado em políticas. o *valor* é **sqlvariant**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -73,6 +74,6 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_configure](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_syspolicy_configure ](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

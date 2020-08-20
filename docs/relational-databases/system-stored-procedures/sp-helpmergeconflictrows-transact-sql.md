@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergeconflictrows (Transact-SQL)
 title: sp_helpmergeconflictrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66dc9c8ac6cc21d74cbf2a6474ad74a2cffba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485929"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação. Por exemplo, se a tabela de **MSmerge_conflict_Customers** tiver linhas de conflito para as publicações **wa** e **CA** , a passagem de um nome de publicação **CA** recupera os conflitos que pertencem à publicação de **autoridade de certificação** .  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação. Por exemplo, se a tabela de **MSmerge_conflict_Customers** tiver linhas de conflito para as publicações **wa** e **CA** , a passagem de um nome de publicação **CA** recupera os conflitos que pertencem à publicação de **autoridade de certificação** .  
   
-`[ @conflict_table = ] 'conflict_table'`É o nome da tabela de conflitos. *conflict_table* é **sysname**, sem padrão. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, as tabelas de conflitos são nomeadas usando o artigo nomes de formato com **MSmerge_conflict \_ _publicação \_ _**, com uma tabela para cada artigo publicado.  
+`[ @conflict_table = ] 'conflict_table'` É o nome da tabela de conflitos. *conflict_table* é **sysname**, sem padrão. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, as tabelas de conflitos são nomeadas usando o artigo nomes de formato com **MSmerge_conflict \_ _publicação \_ _**, com uma tabela para cada artigo publicado.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts`Indica se o conjunto de resultados contém informações sobre conflitos de registro lógico. *logical_record_conflicts* é **int**, com um valor padrão de 0. **1** significa que as informações de conflito de registro lógico são retornadas.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Indica se o conjunto de resultados contém informações sobre conflitos de registro lógico. *logical_record_conflicts* é **int**, com um valor padrão de 0. **1** significa que as informações de conflito de registro lógico são retornadas.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpmergeconflictrows** retorna um conjunto de resultados que consiste na estrutura de tabela base e essas colunas adicionais.  

@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpmergesession (Transact-SQL)
 title: sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485683"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,28 +43,28 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @agent_name = ] 'agent_name'`É o nome do agente. *agent_name* é **nvarchar (100)** sem padrão.  
+`[ @agent_name = ] 'agent_name'` É o nome do agente. *agent_name* é **nvarchar (100)** sem padrão.  
   
-`[ @hours = ] hours`É o intervalo de tempo, em horas, para o qual as informações de sessão histórica do agente são retornadas. *horas* é **int**, que pode ser um dos intervalos a seguir.  
+`[ @hours = ] hours` É o intervalo de tempo, em horas, para o qual as informações de sessão histórica do agente são retornadas. *horas* é **int**, que pode ser um dos intervalos a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |< **0**|Retorna informações sobre execuções de agente anteriores, até um máximo de 100 execuções.|  
 |**0** (padrão)|Retorna informações sobre todas as execuções de agente anteriores.|  
 |> **0**|Retorna informações sobre execuções do agente que ocorreram nas últimas *horas* do número de horas.|  
   
-`[ @session_type = ] session_type`Filtra o conjunto de resultados com base no resultado final da sessão. *session_type* é **int**e pode ser um desses valores.  
+`[ @session_type = ] session_type` Filtra o conjunto de resultados com base no resultado final da sessão. *session_type* é **int**e pode ser um desses valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Sessões de agente com um resultado de repetição ou êxito.|  
 |**0**|Sessões de agente com um resultado de falha.|  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no Assinante.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no Assinante.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, com um padrão de NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no Assinante.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, com um padrão de NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no Assinante.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no Assinante.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. Esse parâmetro é usado ao executar **sp_replmonitorhelpmergesession** no Assinante.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -95,6 +96,6 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição no distribuidor ou no banco de dados de assinatura no assinante podem executar **sp_replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

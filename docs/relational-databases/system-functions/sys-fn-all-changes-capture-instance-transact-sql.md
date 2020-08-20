@@ -1,4 +1,5 @@
 ---
+description: sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 title: sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486317"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +88,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|O LSN de confirmação da transação que é associado à alteração. Todas as alterações que são confirmadas na mesma transação compartilham o mesmo LSN de confirmação.|  
 |__CDC_SEQVAL|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
-|\<columns from @column_list>|**consoante**|As colunas identificadas no argumento *column_list* para sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script que cria a função de wrapper.|  
+|\<columns from @column_list>|**varia**|As colunas identificadas no argumento *column_list* para sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script que cria a função de wrapper.|  
 |__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para aplicar a linha ao ambiente de destino. Ele irá variar com base no valor do argumento *row_filter_option* fornecido na chamada:<br /><br /> *row_filter_option* = ' all'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> *row_filter_option* = ' todas as atualizações antigas '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> 'UO' – atualiza os valores antigos da operação|  
 |\<columns from @update_flag_list>|**bit**|Um sinalizador de bits é nomeado acrescentando _uflag ao nome da coluna. O sinalizador é sempre definido como nulo quando \_ _CDC_OPERATION é ', ' I ', de ' atualizadas '. Quando \_ _CDC_OPERATION for ' un ', ele será definido como 1 se a atualização tiver produzido uma alteração na coluna correspondente. Caso contrário, será 0.|  
   

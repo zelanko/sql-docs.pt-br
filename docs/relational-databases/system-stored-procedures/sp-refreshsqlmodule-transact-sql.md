@@ -1,4 +1,5 @@
 ---
+description: sp_refreshsqlmodule (Transact-SQL)
 title: sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2018
@@ -26,12 +27,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0c2621ffb96ad93d75e5b59e11963f93bf0f32eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485861"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,9 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'module\_name'`É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.  
+`[ @name = ] 'module\_name'` É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.  
   
-`[ , @namespace = ] ' \<class> '`É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, \<class> é necessário. *\<class>* é **nvarchar**(20). As entradas válidas são:  
+`[ , @namespace = ] ' \<class> '` É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, \<class> é necessário. *\<class>* é **nvarchar**(20). As entradas válidas são:  
 
 * DATABASE_DDL_TRIGGER
 

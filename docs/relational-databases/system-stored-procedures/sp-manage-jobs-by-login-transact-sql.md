@@ -1,4 +1,5 @@
 ---
+description: sp_manage_jobs_by_login (Transact-SQL)
 title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7d27bab8fd7593b92f52d33fd847facab4ee0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485877"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @action = ] 'action'`A ação a ser tomada para o logon especificado. a *ação* é **varchar (10)**, sem padrão. Quando a *ação*é **excluída**, **sp_manage_jobs_by_login** exclui todos os trabalhos de propriedade de *current_owner_login_name*. Quando a *ação* é **reatribuída**, todos os trabalhos são atribuídos a *new_owner_login_name*.  
+`[ @action = ] 'action'` A ação a ser tomada para o logon especificado. a *ação* é **varchar (10)**, sem padrão. Quando a *ação*é **excluída**, **sp_manage_jobs_by_login** exclui todos os trabalhos de propriedade de *current_owner_login_name*. Quando a *ação* é **reatribuída**, todos os trabalhos são atribuídos a *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'`O nome de logon do proprietário do trabalho atual. *current_owner_login_name* é **sysname**, sem padrão.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` O nome de logon do proprietário do trabalho atual. *current_owner_login_name* é **sysname**, sem padrão.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'`O nome de logon do novo proprietário do trabalho. Use esse parâmetro somente se a *ação* for **reatribuir**. *new_owner_login_name* é **sysname**, com um padrão de NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` O nome de logon do novo proprietário do trabalho. Use esse parâmetro somente se a *ação* for **reatribuir**. *new_owner_login_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -72,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_job ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

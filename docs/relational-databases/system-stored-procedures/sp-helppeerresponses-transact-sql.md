@@ -1,4 +1,5 @@
 ---
+description: sp_helppeerresponses (Transact-SQL)
 title: sp_helppeerresponses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b6e6ed76873abba0988045a1c336b4a34fb5d48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1570b01ca8ae3d62303e64760dbc8664981bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485915"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @request_id = ] request_id`É a ID de uma solicitação de status específica. *request_id* é **int**, sem padrão.  
+`[ @request_id = ] request_id` É a ID de uma solicitação de status específica. *request_id* é **int**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -60,7 +61,7 @@ sp_helppeerresponses [ @request_id = ] request_id
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_helppeerresponses**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_deletepeerrequesthistory](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_deletepeerrequesthistory ](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helppeerrequests ](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpsubscription (Transact-SQL)
 title: sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9597e7a3512307367568ee14800fcbf69a3045f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485651"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,22 +45,22 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador cujo status está sendo monitorado. o *Publicador* é **sysname**, com um valor padrão de NULL. Se for **NULL**, as informações serão retornadas para todos os Publicadores que usam o distribuidor.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador cujo status está sendo monitorado. o *Publicador* é **sysname**, com um valor padrão de NULL. Se for **NULL**, as informações serão retornadas para todos os Publicadores que usam o distribuidor.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados publicado. *publisher_db* é **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os bancos de dados publicados no Publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicado. *publisher_db* é **sysname**, com um valor padrão de NULL. Se for NULL, as informações serão retornadas para todos os bancos de dados publicados no Publicador.  
   
-`[ @publication = ] 'publication'`É o nome da publicação que está sendo monitorada. a *publicação* é **sysname**, com um valor padrão de NULL.  
+`[ @publication = ] 'publication'` É o nome da publicação que está sendo monitorada. a *publicação* é **sysname**, com um valor padrão de NULL.  
   
-`[ @publication_type = ] publication_type`Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
+`[ @publication_type = ] publication_type` Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Publicação transacional.|  
 |**1**|Publicação de instantâneo.|  
 |**2**|Publicação de mesclagem.|  
 |NULL (padrão)|A replicação tenta determinar o tipo de publicação.|  
   
-`[ @mode = ] mode`É o modo de filtragem a ser usado ao retornar informações de monitoramento de assinatura. o *modo* é **int**e pode ser um desses valores.  
+`[ @mode = ] mode` É o modo de filtragem a ser usado ao retornar informações de monitoramento de assinatura. o *modo* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -72,18 +73,18 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Retorna somente assinaturas que estão sendo atualmente sincronizadas.|  
 |**7**|Retorna somente assinaturas que não estão sendo atualmente sincronizadas.|  
   
-`[ @topnum = ] topnum`Restringe o conjunto de resultados para apenas o número especificado de assinaturas na parte superior dos dados retornados. *topnum* é **int**, sem padrão.  
+`[ @topnum = ] topnum` Restringe o conjunto de resultados para apenas o número especificado de assinaturas na parte superior dos dados retornados. *topnum* é **int**, sem padrão.  
   
-`[ @exclude_anonymous = ] exclude_anonymous`Se as assinaturas pull anônimas forem excluídas do conjunto de resultados. *exclude_anonymous* é **bit**, com um padrão de **0**; um valor de **1** significa que as assinaturas anônimas são excluídas e o valor **0** significa que elas estão incluídas.  
+`[ @exclude_anonymous = ] exclude_anonymous` Se as assinaturas pull anônimas forem excluídas do conjunto de resultados. *exclude_anonymous* é **bit**, com um padrão de **0**; um valor de **1** significa que as assinaturas anônimas são excluídas e o valor **0** significa que elas estão incluídas.  
   
-`[ @refreshpolicy = ] refreshpolicy`Somente para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Somente para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Verifica o status de todos os agentes de replicação associados com a publicação e retorna o status mais alto encontrado na seguinte ordem:<br /><br /> **6** = com falha<br /><br /> **5** = repetindo<br /><br /> **2** = parado<br /><br /> **4** = ocioso<br /><br /> **3** = em andamento<br /><br /> **1** = iniciado|  
-|**alerta**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente à publicação, que pode ser o resultado de OR lógico de um ou mais desses valores.<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional não foi sincronizada dentro do limite do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite do período de retenção.<br /><br /> **8** = mergefastrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
+|**warning**|**int**|Aviso de limite máximo gerado por uma assinatura pertencente à publicação, que pode ser o resultado de OR lógico de um ou mais desses valores.<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional não foi sincronizada dentro do limite do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem não foi sincronizada dentro do limite do período de retenção.<br /><br /> **8** = mergefastrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
 |**farão**|**sysname**|É o nome do Assinante.|  
 |**subscriber_db**|**sysname**|É o nome do banco de dados usado para a assinatura.|  
 |**publisher_db**|**sysname**|É o nome do banco de dados de publicação.|  
@@ -125,6 +126,6 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_replmonitorhelpsubscription**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

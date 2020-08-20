@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99e27db247ca38897b65ef73c38e3eb48e1f1358
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba22b7025aa30216d94804440fec2c86eea5fc09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485642"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @target_type = ] 'target_type'`É o tipo de destino da assinatura de categoria. *target_type* é **sysname**, é necessário e deve ser definido como ' database '.  
+`[ @target_type = ] 'target_type'` É o tipo de destino da assinatura de categoria. *target_type* é **sysname**, é necessário e deve ser definido como ' database '.  
   
-`[ @target_object = ] 'target_object'`É o nome do banco de dados que assinará a categoria. *target_object* é **sysname**e é obrigatório.  
+`[ @target_object = ] 'target_object'` É o nome do banco de dados que assinará a categoria. *target_object* é **sysname**e é obrigatório.  
   
-`[ @policy_category = ] 'policy_category'`É o nome da categoria de política à qual assinar. *policy_category* é **sysname**e é obrigatório.  
+`[ @policy_category = ] 'policy_category'` É o nome da categoria de política à qual assinar. *policy_category* é **sysname**e é obrigatório.  
   
  Para obter valores para *policy_category*, consulte a exibição do sistema msdb.dbo.syspolicy_policy_categories.  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`É o identificador para a assinatura de categoria. *policy_category_subscription_id* é **int**e é retornada como saída.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` É o identificador para a assinatura de categoria. *policy_category_subscription_id* é **int**e é retornada como saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -76,7 +77,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_update_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_unsubscribe_from_policy_category](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_syspolicy_update_policy_category_subscription ](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_unsubscribe_from_policy_category ](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

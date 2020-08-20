@@ -1,4 +1,5 @@
 ---
+description: sp_msx_set_account (Transact-SQL)
 title: sp_msx_set_account (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9e0e355c033c0ee33dd8c503875d03a163f998b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2b044279361f2ddd7118c7feda70a963de18761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485844"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @credential_name = ] 'credential_name'`O nome da credencial a ser usada para fazer logon no servidor mestre. O nome fornecido deve ser o nome de uma credencial existente. O *credential_name* ou *credential_id* deve ser especificado.  
+`[ @credential_name = ] 'credential_name'` O nome da credencial a ser usada para fazer logon no servidor mestre. O nome fornecido deve ser o nome de uma credencial existente. O *credential_name* ou *credential_id* deve ser especificado.  
   
-`[ @credential_id = ] credential_id`O identificador da credencial a ser usada para fazer logon no servidor mestre. Ele deve ser um identificador para uma credencial existente. O *credential_name* ou *credential_id* deve ser especificado.  
+`[ @credential_id = ] credential_id` O identificador da credencial a ser usada para fazer logon no servidor mestre. Ele deve ser um identificador para uma credencial existente. O *credential_name* ou *credential_id* deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -70,7 +71,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [CRIAR CREDENCIAl &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_msx_get_account](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_msx_get_account ](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

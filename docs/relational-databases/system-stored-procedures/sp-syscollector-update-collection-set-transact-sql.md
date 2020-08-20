@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_set (Transact-SQL)
 title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485655"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,15 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collection_set_id = ] collection_set_id`É o identificador local exclusivo para o conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *Name* for NULL.  
+`[ @collection_set_id = ] collection_set_id` É o identificador local exclusivo para o conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *Name* for NULL.  
   
-`[ @name = ] 'name'`É o nome do conjunto de coleta. o *nome* é **sysname** e deve ter um valor se *collection_set_id* for NULL.  
+`[ @name = ] 'name'` É o nome do conjunto de coleta. o *nome* é **sysname** e deve ter um valor se *collection_set_id* for NULL.  
   
-`[ @new_name = ] 'new_name'`É o novo nome para o conjunto de coleta. *new_name* é **sysname**e, se usado, não pode ser uma cadeia de caracteres vazia. *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` É o novo nome para o conjunto de coleta. *new_name* é **sysname**e, se usado, não pode ser uma cadeia de caracteres vazia. *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
   
-`[ @target = ] 'target'`Reservado para uso futuro.  
+`[ @target = ] 'target'` Reservado para uso futuro.  
   
-`[ @collection_mode = ] collection_mode`É o tipo de coleção de dados a ser usado. *collection_mode* é **smallint** e pode ter um dos seguintes valores:  
+`[ @collection_mode = ] collection_mode` É o tipo de coleção de dados a ser usado. *collection_mode* é **smallint** e pode ter um dos seguintes valores:  
   
  0 - Modo de cache. A coleta e o carregamento de dados estão em agendas separadas. Especifique o modo cache para a coleta contínua.  
   
@@ -71,21 +72,21 @@ sp_syscollector_update_collection_set
   
  Se a alteração do modo não armazenado em cache para o modo em cache (0), você também deverá especificar *schedule_uid* ou *schedule_name*.  
   
-`[ @days_until_expiration = ] days_until_expiration`É o número de dias que os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* é **smallint**. *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
+`[ @days_until_expiration = ] days_until_expiration` É o número de dias que os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* é **smallint**. *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
   
-`[ @proxy_id = ] proxy_id`É o identificador exclusivo de uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta proxy do Agent. *proxy_id* é **int**.  
+`[ @proxy_id = ] proxy_id` É o identificador exclusivo de uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta proxy do Agent. *proxy_id* é **int**.  
   
-`[ @proxy_name = ] 'proxy_name'`É o nome do proxy. *proxy_name* é **sysname** e permite valor nulo.  
+`[ @proxy_name = ] 'proxy_name'` É o nome do proxy. *proxy_name* é **sysname** e permite valor nulo.  
   
-`[ @schedule_uid = ] 'schedule_uid'`É o GUID que aponta para uma agenda. *schedule_uid* é **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` É o GUID que aponta para uma agenda. *schedule_uid* é **uniqueidentifier**.  
   
  Para obter *schedule_uid*, consulte a tabela do sistema sysschedules.  
   
  Quando *collection_mode* é definido como 0, *schedule_uid* ou *schedule_name* deve ser especificado. Quando *collection_mode* for definido como 1, *schedule_uid* ou *schedule_name* será ignorado se for especificado.  
   
-`[ @schedule_name = ] 'schedule_name'`É o nome da agenda. *schedule_name* é **sysname** e permite valor nulo. Se especificado, *schedule_uid* deve ser nulo. Para obter *schedule_name*, consulte a tabela do sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` É o nome da agenda. *schedule_name* é **sysname** e permite valor nulo. Se especificado, *schedule_uid* deve ser nulo. Para obter *schedule_name*, consulte a tabela do sistema sysschedules.  
   
-`[ @logging_level = ] logging_level`É o nível de log. *logging_level* é **smallint** com um dos seguintes valores:  
+`[ @logging_level = ] logging_level` É o nível de log. *logging_level* é **smallint** com um dos seguintes valores:  
   
  0 - informações de execução de log e eventos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] que monitoram:  
   
@@ -107,7 +108,7 @@ sp_syscollector_update_collection_set
   
  O valor padrão para *logging_level* é 1.  
   
-`[ @description = ] 'description'`É a descrição do conjunto de coleta. a *Descrição* é **nvarchar (4000)**.  
+`[ @description = ] 'description'` É a descrição do conjunto de coleta. a *Descrição* é **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -179,9 +180,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
- [&#41;&#40;Transact-SQL de syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [Agendas dedbo.sys&#40;&#41;de Transact-SQL](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [&#41;&#40;Transact-SQL de syscollector_collection_sets ](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [ Agendas dedbo.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_update_job (Transact-SQL)
 title: sp_update_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99d15bc1a877d73598d84c66185a76b004b72de9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 88123b9997d1111c0254d38fd770bb1fd8949d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485555"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,25 +57,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho a ser atualizado. *job_id*é **uniqueidentifier**.  
+`[ @job_id = ] job_id` O número de identificação do trabalho a ser atualizado. *job_id*é **uniqueidentifier**.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **nvarchar (128)**.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* é **nvarchar (128)**.  
   
 > **Observação:** *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @new_name = ] 'new_name'`O novo nome para o trabalho. *new_name* é **nvarchar (128)**.  
+`[ @new_name = ] 'new_name'` O novo nome para o trabalho. *new_name* é **nvarchar (128)**.  
   
-`[ @enabled = ] enabled`Especifica se o trabalho está habilitado (**1**) ou não está habilitado (**0**). *habilitado* é **tinyint**.  
+`[ @enabled = ] enabled` Especifica se o trabalho está habilitado (**1**) ou não está habilitado (**0**). *habilitado* é **tinyint**.  
   
-`[ @description = ] 'description'`A descrição do trabalho. a *Descrição* é **nvarchar (512)**.  
+`[ @description = ] 'description'` A descrição do trabalho. a *Descrição* é **nvarchar (512)**.  
   
-`[ @start_step_id = ] step_id`O número de identificação da primeira etapa a ser executada para o trabalho. *step_id* é **int**.  
+`[ @start_step_id = ] step_id` O número de identificação da primeira etapa a ser executada para o trabalho. *step_id* é **int**.  
   
-`[ @category_name = ] 'category'`A categoria do trabalho. *Category* é **nvarchar (128)**.  
+`[ @category_name = ] 'category'` A categoria do trabalho. *Category* é **nvarchar (128)**.  
   
-`[ @owner_login_name = ] 'login'`O nome do logon que possui o trabalho. o *logon* é **nvarchar (128)** somente membros da função de servidor fixa **sysadmin** podem alterar a propriedade do trabalho.  
+`[ @owner_login_name = ] 'login'` O nome do logon que possui o trabalho. o *logon* é **nvarchar (128)** somente membros da função de servidor fixa **sysadmin** podem alterar a propriedade do trabalho.  
   
-`[ @notify_level_eventlog = ] eventlog_level`Especifica quando inserir uma entrada no log de aplicativos do Microsoft Windows para este trabalho. *eventlog_level*é **int**e pode ser um desses valores.  
+`[ @notify_level_eventlog = ] eventlog_level` Especifica quando inserir uma entrada no log de aplicativos do Microsoft Windows para este trabalho. *eventlog_level*é **int**e pode ser um desses valores.  
   
 |Valor|Descrição (ação)|  
 |-----------|----------------------------|  
@@ -83,21 +84,21 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**2**|Caso haja falha|  
 |**3**|Sempre|  
   
-`[ @notify_level_email = ] email_level`Especifica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**. *email_level*usa os mesmos valores que *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Especifica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**. *email_level*usa os mesmos valores que *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level`Especifica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*é **int**. *netsend_level*usa os mesmos valores que *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Especifica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*é **int**. *netsend_level*usa os mesmos valores que *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level`Especifica quando enviar uma página após a conclusão deste trabalho. *page_level* é **int**. *page_level*usa os mesmos valores que *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Especifica quando enviar uma página após a conclusão deste trabalho. *page_level* é **int**. *page_level*usa os mesmos valores que *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'operator_name'`O nome do operador para o qual o email é enviado quando *email_level* é atingido. *email_name* é **nvarchar (128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` O nome do operador para o qual o email é enviado quando *email_level* é atingido. *email_name* é **nvarchar (128)**.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'`O nome do operador para o qual a mensagem de rede é enviada. *netsend_operator* é **nvarchar (128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` O nome do operador para o qual a mensagem de rede é enviada. *netsend_operator* é **nvarchar (128)**.  
   
-`[ @notify_page_operator_name = ] 'page_operator'`O nome do operador para o qual uma página é enviada. *page_operator* é **nvarchar (128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` O nome do operador para o qual uma página é enviada. *page_operator* é **nvarchar (128)**.  
   
-`[ @delete_level = ] delete_level`Especifica quando excluir o trabalho. *delete_value*é **int**. *delete_level*usa os mesmos valores que *eventlog_level*.  
+`[ @delete_level = ] delete_level` Especifica quando excluir o trabalho. *delete_value*é **int**. *delete_level*usa os mesmos valores que *eventlog_level*.  
   
-`[ @automatic_post = ] automatic_post`Reservado.  
+`[ @automatic_post = ] automatic_post` Reservado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -136,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_job ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_job ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

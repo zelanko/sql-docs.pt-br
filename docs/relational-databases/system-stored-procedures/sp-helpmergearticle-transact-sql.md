@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticle (Transact-SQL)
 title: sp_helpmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 814ed354c296d1f9860b3abf92a7208cdecdacf7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec07e77bcc2dbf3c0503e348b509848880705424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485948"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação sobre a qual recuperar informações. a *publicação*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os artigos de mesclagem contidos em todas as publicações no banco de dados atual.  
+`[ @publication = ] 'publication'` É o nome da publicação sobre a qual recuperar informações. a *publicação*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os artigos de mesclagem contidos em todas as publicações no banco de dados atual.  
   
-`[ @article = ] 'article'`É o nome do artigo para o qual retornar informações. o *artigo*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os artigos de mesclagem na publicação fornecida.  
+`[ @article = ] 'article'` É o nome do artigo para o qual retornar informações. o *artigo*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os artigos de mesclagem na publicação fornecida.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -52,17 +53,17 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Nome do objeto de origem do qual adicionar o artigo.|  
 |**sync_object_owner**|**sysname**|Nome do proprietário da exibição que define o artigo publicado.|  
 |**sync_object**|**sysname**|Nome do objeto personalizado usado para estabelecer os dados iniciais para a partição.|  
-|**ndescrição**|**nvarchar (255)**|Descrição do artigo.|  
+|**descrição**|**nvarchar(255)**|Descrição do artigo.|  
 |**status**|**tinyint**|Estado do artigo que pode ser um dos seguintes:<br /><br /> **1** = inativo<br /><br /> **2** = ativo<br /><br /> **5** = operação DDL (linguagem de definição de dados) pendente<br /><br /> **6** = operação DDL com um instantâneo recém-gerado<br /><br /> Observação: quando um artigo é reinicializado, os valores de **5** e **6** são alterados para **2**.|  
-|**creation_script**|**nvarchar (255)**|Caminho e nome de um script de esquema de artigo opcional usados para criar o artigo no banco de dados de assinatura.|  
+|**creation_script**|**nvarchar(255)**|Caminho e nome de um script de esquema de artigo opcional usados para criar o artigo no banco de dados de assinatura.|  
 |**conflict_table**|**nvarchar (270)**|Nome da tabela que armazena os conflitos de entrada ou atualização.|  
-|**article_resolver**|**nvarchar (255)**|Resolvedor personalizado para o artigo.|  
+|**article_resolver**|**nvarchar(255)**|Resolvedor personalizado para o artigo.|  
 |**subset_filterclause**|**nvarchar(1000)**|Cláusula WHERE especificando filtragem horizontal.|  
 |**pre_creation_command**|**tinyint**|Método de pré-criação, que pode ser um dos seguintes:<br /><br /> **0** = nenhum<br /><br /> **1** = remover<br /><br /> **2** = excluir<br /><br /> **3** = truncar|  
 |**schema_option**|**binário (8)**|Bitmap da opção de geração de esquema para o artigo. Para obter informações sobre essa opção de bitmap, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) ou [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
-|**type**|**smallint**|Tipo do artigo que pode ser um dos seguintes:<br /><br /> **10** = tabela<br /><br /> **32** = procedimento armazenado<br /><br /> **64** = exibição ou exibição indexada<br /><br /> **128** = função definida pelo usuário<br /><br /> **160** = somente esquema sinônimo|  
+|**tipo**|**smallint**|Tipo do artigo que pode ser um dos seguintes:<br /><br /> **10** = tabela<br /><br /> **32** = procedimento armazenado<br /><br /> **64** = exibição ou exibição indexada<br /><br /> **128** = função definida pelo usuário<br /><br /> **160** = somente esquema sinônimo|  
 |**column_tracking**|**int**|Configuração para rastreamento em nível de coluna; em que **1** significa que o controle no nível de coluna está ativado e **0** significa que o controle no nível de coluna está desativado.|  
-|**resolver_info**|**nvarchar (255)**|Nome do resolvedor do artigo.|  
+|**resolver_info**|**nvarchar(255)**|Nome do resolvedor do artigo.|  
 |**vertical_partition**|**bit**|Se o artigo for verticalmente particionado; em que **1** significa que o artigo está verticalmente particionado e **0** significa que ele não é.|  
 |**destination_owner**|**sysname**|Proprietário do objeto de destino. Aplicável apenas em procedimentos armazenados de mesclagem, exibições e artigos de esquema UDF (função definida pelo usuário).|  
 |**identity_support**|**int**|Se o tratamento automático do intervalo de identidades estiver habilitado; onde **1** está habilitado e **0** está desabilitado.|  
@@ -98,9 +99,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades do artigo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [&#41;&#40;Transact-SQL de sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergearticle](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergearticle ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergearticle ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergearticle ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

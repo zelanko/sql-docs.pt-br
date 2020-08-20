@@ -1,4 +1,5 @@
 ---
+description: sp_update_category (Transact-SQL)
 title: sp_update_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485556"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'`A classe da categoria a ser atualizada. a *classe*é **varchar (8)**, sem padrão, e pode ser um desses valores.  
+`[ @class = ] 'class'` A classe da categoria a ser atualizada. a *classe*é **varchar (8)**, sem padrão, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -50,9 +51,9 @@ sp_update_category
 |**TRABALHO**|Atualiza uma categoria de trabalho.|  
 |**OPERADOR**|Atualiza uma categoria de operador.|  
   
-`[ @name = ] 'old_name'`O nome atual da categoria. *old_name*é **sysname**, sem padrão.  
+`[ @name = ] 'old_name'` O nome atual da categoria. *old_name*é **sysname**, sem padrão.  
   
-`[ @new_name = ] 'new_name'`O novo nome da categoria. *new_name*é **sysname**, sem padrão.  
+`[ @new_name = ] 'new_name'` O novo nome da categoria. *new_name*é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -78,9 +79,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_category](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_category](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_category ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_category ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_category ](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

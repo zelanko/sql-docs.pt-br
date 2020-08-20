@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_condition (Transact-SQL)
 title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1df9ab11c50340b75d51481822f4a8925df34a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485610"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`É o nome da condição que você deseja renomear. *Name* é **sysname**e deve ser especificado se *condition_id* for NULL.  
+`[ @name = ] 'name'` É o nome da condição que você deseja renomear. *Name* é **sysname**e deve ser especificado se *condition_id* for NULL.  
   
-`[ @condition_id = ] condition_id`É o identificador da condição que você deseja renomear. *condition_id* é **int**e deverá ser especificado se *Name* for NULL.  
+`[ @condition_id = ] condition_id` É o identificador da condição que você deseja renomear. *condition_id* é **int**e deverá ser especificado se *Name* for NULL.  
   
-`[ @new_name = ] 'new_name'`É o novo nome da condição. *new_name* é **sysname**e é obrigatório. Não pode ser NULL ou uma cadeia de caracteres vazia.  
+`[ @new_name = ] 'new_name'` É o novo nome da condição. *new_name* é **sysname**e é obrigatório. Não pode ser NULL ou uma cadeia de caracteres vazia.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

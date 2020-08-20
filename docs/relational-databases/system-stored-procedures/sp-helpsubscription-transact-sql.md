@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription (Transact-SQL)
 title: sp_helpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b1bd6fc81b1af824ded4b193fe34455035edbd56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485893"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação associada. a *publicação* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para este servidor.  
+`[ @publication = ] 'publication'` É o nome da publicação associada. a *publicação* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para este servidor.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **tudo**, apenas uma entrada será retornada para a assinatura completa em uma publicação.  
+`[ @article = ] 'article'` É o nome do artigo. o *artigo* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **tudo**, apenas uma entrada será retornada para a assinatura completa em uma publicação.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante no qual obter informações de assinatura. o *assinante* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e os artigos selecionados.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante no qual obter informações de assinatura. o *assinante* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e os artigos selecionados.  
   
-`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de **%** .  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de **%** .  
   
-`[ @found = ] 'found'OUTPUT`É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de 23456.  
+`[ @found = ] 'found'OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de 23456.  
   
  **1** indica que a publicação foi encontrada.  
   
  **0** indica que a publicação não foi encontrada.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**e usa como padrão o nome do servidor atual.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**e usa como padrão o nome do servidor atual.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser especificado, exceto quando é um Publicador Oracle.  
@@ -72,11 +73,11 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**status da assinatura**|**tinyint**|O status da assinatura:<br /><br /> **0** = inativo<br /><br /> **1** = assinado<br /><br /> **2** = ativo|  
 |**tipo de sincronização**|**tinyint**|O tipo de sincronização da assinatura:<br /><br /> **1** = automático<br /><br /> **2** = nenhum|  
 |**tipo de assinatura**|**int**|O tipo de assinatura:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
-|**full subscription**|**bit**|Se a assinatura é para todos os artigos na publicação:<br /><br /> **0** = não<br /><br /> **1** = Sim|  
-|**nome da assinatura**|**nvarchar (255)**|O nome da assinatura.|  
+|**full subscription**|**bit**|Se a assinatura é para todos os artigos na publicação:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
+|**nome da assinatura**|**nvarchar(255)**|O nome da assinatura.|  
 |**update mode**|**int**|**0** = somente leitura<br /><br /> **1** = atualização imediata-assinatura|  
 |**distribution job id**|**binary(16)**|A ID de trabalho do Distribution Agent.|  
-|**loopback_detection**|**bit**|A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **0** = envia de volta.<br /><br /> **1** = não envia de volta.<br /><br /> Usado com replicação transacional bidirecional. Para obter mais informações, consulte [replicação transacional bidirecional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|**loopback_detection**|**bit**|A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **0** = envia de volta.<br /><br /> **1** = não envia de volta.<br /><br /> Usado com replicação transacional bidirecional. Para obter mais informações, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Especifica se execução de descarga de um agente de replicação foi definida para executar no Assinante.<br /><br /> Se for **0**, o agente será executado no Publicador.<br /><br /> Se **1**, o agente será executado no Assinante.|  
 |**offload_server**|**sysname**|Nome do servidor habilitado para ativação de agente remota. Se for NULL, a offload_server atual listada na tabela [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) será usada.|  
 |**dts_package_name**|**sysname**|Especifica o nome do pacote DTS (Data Transformation Services).|  
@@ -104,9 +105,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  As permissões de execução assumem como padrão a função **pública** . Só são retornadas informações aos usuários sobre assinaturas criadas por eles. As informações sobre todas as assinaturas são retornadas aos membros da função de servidor fixa **sysadmin** no Publicador ou membros da função de banco de dados fixa **db_owner** no banco de dados de publicação.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changesubstatus](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropsubscription](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addsubscription ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changesubstatus ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsubscription ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

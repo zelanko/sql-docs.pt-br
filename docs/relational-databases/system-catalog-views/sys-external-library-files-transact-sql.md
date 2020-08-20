@@ -1,4 +1,5 @@
 ---
+description: sys.external_library_files (Transact-SQL)
 title: sys. external_library_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
@@ -18,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a7f6038f9929d1220d3fb272ce3bdd9aa726a551
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f0d4ef2a22c2d84030686f13304528c6e7980fc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486308"
 ---
 # <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

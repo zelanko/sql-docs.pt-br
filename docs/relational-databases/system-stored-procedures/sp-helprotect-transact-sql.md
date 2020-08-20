@@ -1,4 +1,5 @@
 ---
+description: sp_helprotect (Transact-SQL)
 title: sp_helprotect (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eab1ad6fa3e71f4ef5c39ca06b081ed6b3889d29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485891"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,15 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'object_statement'`É o nome do objeto no banco de dados atual ou uma instrução que tem as permissões a serem relatadas. *object_statement* é **nvarchar (776)**, com um padrão de NULL, que retorna todas as permissões de objeto e instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no _proprietário_do formulário **.** _objeto_.  
+`[ @name = ] 'object_statement'` É o nome do objeto no banco de dados atual ou uma instrução que tem as permissões a serem relatadas. *object_statement* é **nvarchar (776)**, com um padrão de NULL, que retorna todas as permissões de objeto e instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no _proprietário_do formulário **.** _objeto_.  
   
  Se *object_statement* for uma instrução, ela poderá ser uma instrução CREATE.  
   
-`[ @username = ] 'security_account'`É o nome da entidade de segurança para a qual as permissões são retornadas. *security_account* é **sysname**, com um padrão de NULL, que retorna todas as entidades de segurança no banco de dados atual. *security_account* deve existir no banco de dados atual.  
+`[ @username = ] 'security_account'` É o nome da entidade de segurança para a qual as permissões são retornadas. *security_account* é **sysname**, com um padrão de NULL, que retorna todas as entidades de segurança no banco de dados atual. *security_account* deve existir no banco de dados atual.  
   
-`[ @grantorname = ] 'grantor'`É o nome da entidade de segurança que concedeu permissões. *concessor* é **sysname**, com um padrão de NULL, que retorna todas as informações de permissões concedidas por qualquer entidade de segurança no banco de dados.  
+`[ @grantorname = ] 'grantor'` É o nome da entidade de segurança que concedeu permissões. *concessor* é **sysname**, com um padrão de NULL, que retorna todas as informações de permissões concedidas por qualquer entidade de segurança no banco de dados.  
   
-`[ @permissionarea = ] 'type'`É uma cadeia de caracteres que indica se as permissões de objeto devem ser exibidas (cadeia de caracteres **o**), permissões de instrução (cadeias de caracteres **s**) ou ambas (**so**). o *tipo* é **varchar (10)**, com um padrão de **sistema operacional**. **o** *tipo* pode ser qualquer combinação de o e **s**, com ou sem vírgulas ou espaços entre **o** e **s**.  
+`[ @permissionarea = ] 'type'` É uma cadeia de caracteres que indica se as permissões de objeto devem ser exibidas (cadeia de caracteres **o**), permissões de instrução (cadeias de caracteres **s**) ou ambas (**so**). o *tipo* é **varchar (10)**, com um padrão de **sistema operacional**. **o** *tipo* pode ser qualquer combinação de o e **s**, com ou sem vírgulas ou espaços entre **o** e **s**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -67,7 +68,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Proprietário**|**sysname**|Nome do proprietário do objeto.|  
 |**Objeto**|**sysname**|Nome do objeto.|  
 |**Entidade autorizada**|**sysname**|Nome do principal para o qual foram concedidas permissões.|  
-|**Cesso**|**sysname**|Nome do principal que concedeu permissões ao usuário autorizado especificado.|  
+|**Concessor**|**sysname**|Nome do principal que concedeu permissões ao usuário autorizado especificado.|  
 |**Protejatype**|**nvarchar (10)**|Nome do tipo de proteção:<br /><br /> GRANT REVOKE|  
 |**Ação**|**nvarchar(60)**|Nome da permissão. As instruções de permissão válidas dependem do tipo de objeto.|  
 |**Coluna**|**sysname**|Tipo de permissão:<br /><br /> Todas = Permissão que cobre todas as colunas atuais do objeto.<br /><br /> Nova = Permissão que cobre qualquer coluna nova que possa ser alterada (com a instrução ALTER) no objeto no futuro.<br /><br /> Todas+Nova = combinação de Todas e Nova.<br /><br /> Retornará um ponto se o tipo de permissão não se aplicar às colunas.|  
@@ -133,9 +134,9 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [NEGAR &#40;&#41;de Transact-SQL](../../t-sql/statements/deny-transact-sql.md)   
- [CONCEDER &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
- [REVOGAr &#40;&#41;de Transact-SQL](../../t-sql/statements/revoke-transact-sql.md)   
+ [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
