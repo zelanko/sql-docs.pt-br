@@ -1,4 +1,5 @@
 ---
+description: Caminhos do Integration Services
 title: Caminhos do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4443598b2fa59e51a9c8ec6b5161b913f2890056
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495846"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
 
@@ -156,7 +157,7 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
  A tabela a seguir descreve as propriedades configuráveis dos caminhos em um fluxo de dados. O mecanismo de fluxo de dados também atribui valores a propriedades somente leitura adicionais que não são listadas aqui.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Inteiro (enumeração)|Um valor que indica se uma anotação deve ser exibida com o caminho na superfície do designer. Os valores possíveis são **AsNeeded**, **SourceName**, **PathName**e **Never**. O valor padrão é **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|A entrada associada ao caminho.|  

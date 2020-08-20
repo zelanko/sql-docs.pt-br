@@ -1,4 +1,5 @@
 ---
+description: Ajuda F1 do Assistente de Atualização de Pacotes SSIS
 title: Ajuda F1 do Assistente de Atualização de Pacote do SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bd61166df6d257c6088b1e62c2c5b262207f958
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e47bae183dc2d0e790a6f0cb6be207d30cd4834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495499"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ajuda F1 do Assistente de Atualização de Pacotes SSIS
 
@@ -52,7 +53,7 @@ ms.locfileid: "86921916"
  **Origem do pacote**  
  Selecione o local de armazenamento que contém os pacotes a serem atualizados. Os valores dessa opção estão relacionados na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Sistema de Arquivos**|Indica que os pacotes a serem atualizados estão em uma pasta no computador local.<br /><br /> Para que o assistente faça backup dos pacotes originais antes de atualizá-los, esses pacotes devem ser armazenados no sistema de arquivos. Para obter mais informações, consulte o tópico de instruções.|  
 |**Armazenamento de Pacotes SSIS**|Indica que os pacotes a serem atualizados estão no armazenamento de pacotes. O repositório de pacotes consiste no conjunto de pastas do sistema de arquivos gerenciado pelo serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Selecione esse valor para exibir as opções dinâmicas de **Origem do pacote** correspondentes.|  
@@ -104,7 +105,7 @@ ms.locfileid: "86921916"
  **Origem do pacote**  
  Especifique onde os pacotes de atualização serão armazenados. Os valores dessa opção estão relacionados na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Sistema de Arquivos**|Indica que os pacotes atualizados serão salvos em uma pasta no computador local.|  
 |**Armazenamento de Pacotes SSIS**|Indica que os pacotes atualizados serão salvos no armazenamento de pacotes do Integration Services. O repositório de pacotes consiste no conjunto de pastas do sistema de arquivos gerenciado pelo serviço do Integration Services. Para obter mais informações, consulte [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Selecione esse valor para exibir as opções dinâmicas de **Origem do pacote** correspondentes.|  
@@ -230,7 +231,7 @@ ms.locfileid: "86921916"
  **Status**  
  Exibe o resultado de cada ação.  
   
- **Mensagem**  
+ **Message**  
  Exibe as mensagens de erro que cada ação gera.  
   
  **Parar**  

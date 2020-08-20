@@ -1,4 +1,5 @@
 ---
+description: Single Table Quick Profile Form (Data Profiling Task)
 title: Formulário de Perfil Rápido de Tabela Única (Tarefa Criação de Perfil de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495948"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Single Table Quick Profile Form (Data Profiling Task)
 
@@ -40,7 +41,7 @@ ms.locfileid: "86920969"
  **Computação**  
  Selecione quais perfis devem ser computados.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Perfil Razão Nula de Coluna**|Compute um perfil Razão Nula de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> Este perfil informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Para obter mais informações sobre as configurações para este perfil, consulte [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Perfil Estatísticas de Coluna**|Compute um perfil Estatísticas de Coluna usando as configurações padrão para todas as colunas aplicáveis na tabela ou exibição selecionada.<br /><br /> Este perfil informa estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas **datetime** . Este perfil pode ajudá-lo a identificar problemas em seus dados, como datas inválidas. Para obter mais informações sobre as configurações para este perfil, consulte [Opções da solicitação do perfil de Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md).|  

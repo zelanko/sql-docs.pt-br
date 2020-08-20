@@ -1,4 +1,5 @@
 ---
+description: Criando os arquivos de conexão do servidor (DB2ToSQL)
 title: Criando os arquivos de conexão do servidor (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4a1ee05cbf14f18a34b15161eec88df04be5539b
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 5a27b74e529d917cf746d617e08dd44f9953a800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497753"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Criando os arquivos de conexão do servidor (DB2ToSQL)
 

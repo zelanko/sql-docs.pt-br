@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_version_store (Transact-SQL)
 title: sys. dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,12 +21,12 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccd2b0e596fc9787a655aa7ef6f612327f7f41b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98ffd185ba1b91fdcef503647feb92856fe46a0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498348"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85676346"
  Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com ordenações diferentes de bancos de dados diferentes. Use **Sys. dm_tran_version_store** para localizar as versões anteriores das linhas na representação binária, pois elas existem no repositório de versão.  
   
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 sys.dm_tran_version_store  
@@ -61,7 +62,7 @@ sys.dm_tran_version_store
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa um cenário de teste no qual quatro transações simultâneas, cada uma identificada por um XSN (número de sequência de transação), estão sendo executadas em um banco de dados no qual as opções ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT estão definidas como ON. As seguintes transações estão sendo executadas:  
@@ -132,7 +133,7 @@ record_length_second_part_in_bytes record_image_second_part
  A saída mostra que XSN-57 criou três versões de linha de uma tabela e XSN-58 criou uma versão da linha de outra tabela.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

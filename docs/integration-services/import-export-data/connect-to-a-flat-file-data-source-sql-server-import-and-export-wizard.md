@@ -1,4 +1,5 @@
 ---
+description: Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server)
 title: Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 661f4a95e7904fbec1147d0fd6a372b64a09d76e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495637"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server)
 
@@ -64,7 +65,7 @@ Página|Recomendação  |Type
  **Formato**  
  Selecione se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores. Especifique o delimitador na página **Colunas**.|  
 |Largura fixa|As colunas têm uma largura fixa.|  
@@ -79,7 +80,7 @@ Página|Recomendação  |Type
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
@@ -106,7 +107,7 @@ Página|Recomendação  |Type
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -120,7 +121,7 @@ Página|Recomendação  |Type
  **Delimitador de coluna**  
  Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|As colunas são delimitadas por um retorno de carro.|  
@@ -178,7 +179,7 @@ Na página **Colunas**, verifique se a lista de colunas e os delimitadores que o
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -204,7 +205,7 @@ Na captura de tela, observe que a coluna **id**, que contém números, inicialme
  **Configurar as propriedades de cada coluna**  
  Selecione uma coluna no painel esquerdo para exibir suas propriedades no painel direito. Consulte a tabela a seguir para obter uma descrição das propriedades de coluna. Algumas das propriedades listadas são configuráveis apenas em determinados formatos de arquivo simples e em colunas de determinados tipos de dados.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Nome**|Forneça um nome de coluna descritivo. Se você não inserir um nome, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um nome automaticamente no formato Coluna 0, Coluna 1 e assim por diante.|
 |**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}** . As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}** . As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}** . As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}** . As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}** . As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}** . As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}** . As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}** . As colunas são delimitadas por uma barra vertical.|
@@ -219,7 +220,7 @@ Na captura de tela, observe que a coluna **id**, que contém números, inicialme
 **Novo**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
 |**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  
@@ -287,7 +288,7 @@ Para um destino de arquivo simples, há apenas uma única página de opções, c
  **Formato**  
  Selecione se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores. Especifique o delimitador na página **Colunas**.|  
 |Largura fixa|As colunas têm uma largura fixa.|  

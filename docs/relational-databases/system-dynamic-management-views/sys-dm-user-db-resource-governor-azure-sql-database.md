@@ -1,4 +1,5 @@
 ---
+description: sys. dm_user_db_resource_governance (Transact-SQL)
 title: sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498248"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 

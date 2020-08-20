@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496935"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,12 +72,12 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  Especifica o serviço que inicia a caixa de diálogo. O nome especificado deve ser o nome de um serviço no banco de dados atual. A fila especificada para o serviço iniciador recebe mensagens retornadas pelo serviço de destino e mensagens criadas pelo Service Broker para essa conversa.  
   
  TO SERVICE **'** _target_service_name_ **'**  
- Especifica o serviço de destino com o qual iniciar a caixa de diálogo. O *target_service_name* é do tipo **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para correspondência com a cadeia de caracteres *target_service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não leva em conta a ordenação atual.  
+ Especifica o serviço de destino com o qual iniciar a caixa de diálogo. O *target_service_name* é do tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para correspondência com a cadeia de caracteres *target_service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não leva em conta a ordenação atual.  
   
  *service_broker_guid*  
  Especifica o banco de dados que hospeda o serviço de destino. Quando mais de um banco de dados hospeda uma instância do serviço de destino, é possível se comunicar com um banco de dados específico fornecendo um *service_broker_guid*.  
   
- O *service_broker_guid* é do tipo **nvarchar(128)** . Para localizar o *service_broker_guid* de um banco de dados, execute a seguinte consulta no banco de dados:  
+ O *service_broker_guid* é do tipo **nvarchar(128)**. Para localizar o *service_broker_guid* de um banco de dados, execute a seguinte consulta no banco de dados:  
   
 ```  
 SELECT service_broker_guid  

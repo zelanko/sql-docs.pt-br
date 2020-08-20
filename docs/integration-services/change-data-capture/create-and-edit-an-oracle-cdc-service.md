@@ -1,4 +1,5 @@
 ---
+description: Criar e editar um Serviço Oracle CDC
 title: Criar e editar um serviço Oracle CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18aa250838107e9b28fc5a1a2ad7646e5dccf072
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496226"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Criar e editar um Serviço Oracle CDC
 
@@ -82,7 +83,7 @@ ms.locfileid: "86916199"
   
 -   **Tempo limite de execução**: Digite o tempo (em segundos) que o Serviço do Windows do Oracle CDC espera que um comando seja executado antes de exceder o tempo limite. O valor padrão é **30**.  
   
--   **Criptografar conexão**: selecione **Criptografar Conexão** para a comunicação entre o Serviço Oracle CDC e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando uma conexão criptografada.  
+-   **Criptografar Conexão**: selecione **Criptografar Conexão** para a comunicação entre o Serviço Oracle CDC e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando uma conexão criptografada.  
   
 -   **Avançado**: digite as propriedades de conexão adicionais, se necessário.  
   
@@ -92,6 +93,6 @@ ms.locfileid: "86916199"
  A mesma senha mestre também deve ser usada quando outras instâncias são configuradas do mesmo serviço em outros nós em um cluster em configuração de alta disponibilidade. Se você perder ou modificar a senha mestra, todas as senhas de mineração de logs armazenadas em bancos de dados de Instância Oracle CDC devem ser reinseridas usando o CDC Designer Console.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Como criar e editar um serviço CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
+ [Como criar e editar um Serviço CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

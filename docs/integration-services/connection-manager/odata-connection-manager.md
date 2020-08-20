@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de conexões do OData
 title: Gerenciador de Conexões OData | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496085"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
 
@@ -61,7 +62,7 @@ Para se conectar ao Microsoft Dynamics AX Online ou ao Microsoft Dynamics CRM On
 ## <a name="odata-connection-manager-properties"></a>Propriedades do gerenciador de conexões do OData  
  A lista a seguir descreve as propriedades do gerenciador de conexões OData.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |-|-|  
 |Url|URL do documento de serviço.|  
 |UserName|O nome de usuário a ser usado para autenticação, se necessário.|  

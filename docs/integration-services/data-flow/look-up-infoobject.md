@@ -1,4 +1,5 @@
 ---
+description: Pesquisar InfoObject
 title: Pesquisar InfoObject | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fc863ce6460977b2eb91c53531983a0dde92668
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93050f2a583f3fa378778397470506787c7001f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495844"
 ---
 # <a name="look-up-infoobject"></a>Pesquisar InfoObject
 
@@ -39,9 +40,9 @@ ms.locfileid: "86916493"
   
 4.  Na página **Gerenciador de Conexões** , na caixa do grupo **Criar Objetos SAP BW** , selecione uma destas opções:  
   
-    1.  Selecione **InfoCube**. Em seguida, clique em **Criar**. Na caixa de diálogo **Criar InfoCube para os Dados da Transação** , clique em **Pesquisar** na coluna **IObject** para uma das linhas na lista. Cada linha representa uma coluna no fluxo de dados do pacote.  
+    1.  Selecione **InfoCube**. Em seguida, clique em **Criar**. Na caixa de diálogo **Criar InfoCube para os Dados da Transação**, clique em **Pesquisar** na coluna **IObject** para uma das linhas na lista. Cada linha representa uma coluna no fluxo de dados do pacote.  
   
-    2.  Selecione **InfoSource**. Em seguida, clique em **Criar**. Na caixa de diálogo **Criar InfoSource** , selecione **Dados da Transação**. Na caixa de diálogo **Criar InfoSource para os Dados da Transação** , clique em **Pesquisar** na coluna **IObject** para uma das linhas na lista. Cada linha representa uma coluna no fluxo de dados do pacote.  
+    2.  Selecione **InfoSource**. Em seguida, clique em **Criar**. Na caixa de diálogo **Criar InfoSource** , selecione **Dados da Transação**. Na caixa de diálogo **Criar InfoSource para os Dados da Transação**, clique em **Pesquisar** na coluna **IObject** para uma das linhas na lista. Cada linha representa uma coluna no fluxo de dados do pacote.  
   
     3.  Selecione **InfoSource**. Em seguida, clique em **Criar**. Na caixa de diálogo **Criar InfoSource** , selecione **Dados mestres**. Na caixa de diálogo **Criar InfoSource para Dados Mestres** , clique em **Pesquisar**.  
   

@@ -1,4 +1,5 @@
 ---
+description: Gerenciando funções de pacote programaticamente (Serviço SSIS)
 title: Gerenciar funções de pacote programaticamente (Serviço SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ca7748f3a768edf438fa2da1b4db836bbde2012
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33922748916193e875799839fbbf6fe0f7a76a26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495502"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>Gerenciando funções de pacote programaticamente (Serviço SSIS)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86913305"
 
   Ao trabalhar programaticamente com pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], talvez você queira determinar quais funções estão disponíveis para aplicar a pacotes ou determinar/definir as funções aplicadas a um único pacote. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece diversos métodos para atender a esses requisitos.  
   
- As funções se aplicam apenas aos pacotes armazenados no banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdb**do**. Para obter mais informações sobre funções de pacote, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
+ As funções se aplicam apenas aos pacotes armazenados no banco de dados  **msdb** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre funções de pacote, veja [Funções do Integration Services &#40;Serviço do SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
  Todos os métodos discutidos neste tópico exigem uma referência ao assembly **Microsoft.SqlServer.ManagedDTS**. Após adicionar a referência em um novo projeto, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> usando uma instrução **using** ou **Imports**.  
   

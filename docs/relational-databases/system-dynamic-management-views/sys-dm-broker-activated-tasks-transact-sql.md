@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_activated_tasks (Transact-SQL)
 title: sys. dm_broker_activated_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e8e606ecddc6b57549947a1c72ba8115262bef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a09275a9b000ab673e187fdb2e1a47d35c1e548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498352"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85893966"
 
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**SPID**|**int**|ID da sessão do procedimento armazenado ativado. É NULLABLE.|  
+|**spid**|**int**|ID da sessão do procedimento armazenado ativado. É NULLABLE.|  
 |**database_id**|**smallint**|ID do banco de dados no qual a fila está definida. É NULLABLE.|  
 |**queue_id**|**int**|ID do objeto da fila para a qual o procedimento armazenado foi ativado. É NULLABLE.|  
 |**procedure_name**|**nvarchar (650)**|Nome do procedimento armazenado ativado. É NULLABLE.|  
@@ -52,7 +53,7 @@ ms.locfileid: "85893966"
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Um para um|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

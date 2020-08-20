@@ -1,4 +1,5 @@
 ---
+description: Selecione do &lt; modelo &gt; . CONTEÚDO (DMX)
 title: Selecione do &lt; modelo &gt; . CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496268"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Selecione do &lt; modelo &gt; . CONTEÚDO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -46,7 +47,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- A **seleção de** _\<model>_ **. **A instrução de conteúdo retorna o conteúdo específico de cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar uma **seleção de \<model> . **A instrução de conteúdo para retornar valores na coluna NODE_RULE do modelo.  
+ A **seleção de** _\<model>_ **. **A instrução de conteúdo retorna o conteúdo específico de cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar uma **seleção de \<model> . ** A instrução de conteúdo para retornar valores na coluna NODE_RULE do modelo.  
   
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
   
@@ -143,7 +144,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Consulte Também  
- [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

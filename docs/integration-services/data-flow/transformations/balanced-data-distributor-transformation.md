@@ -1,4 +1,5 @@
 ---
+description: Transformação de BDD (Balanced Data Distributor)
 title: Transformação Distribuidor de Dados Equilibrado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b31421a4362fc281141b642ac76d4008df9c3b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 17650c2fd72996ea0d8f0eb080fbc170d779fdbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495706"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformação de BDD (Balanced Data Distributor)
 
@@ -41,6 +42,6 @@ ms.locfileid: "86922473"
  Observe que, se o gargalo em um pacote SSIS for devido à taxa na qual os dados podem ser lidos da origem, o componente de BDD não ajudará a melhorar o desempenho. Se a causa do gargalo em um pacote SSIS for a falta de suporte do destino ao paralelismo, o BDD não ajudará; porém, você pode executar todas as transformações em paralelo e usar a transformação Union All para combinar os dados de saída provenientes de diferentes caminhos da saída da transformação de BDD antes de enviar os dados para o destino.  
   
 > [!IMPORTANT]  
->  Consulte o vídeo [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278) na biblioteca do TechNet para obter uma apresentação com uma demonstração sobre o uso da transformação.  
+>   Consulte o [vídeo Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278) na biblioteca do TechNet para obter uma apresentação com uma demonstração sobre o uso da transformação.  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 title: SET ANSI_NULL_DFLT_OFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc993ab2b3dbe8d167a91bcf4c52e786844c73fe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6768c48004f8b39d6806fae05a1b1571d774e85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496494"
 ---
 # <a name="set-ansi_null_dflt_off-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,9 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 SET ANSI_NULL_DFLT_OFF OFF
 ```
 
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
  Esta configuração somente afetará a capacidade de nulidade de novas colunas quando a capacidade de nulidade da coluna não estiver especificada nas instruções CREATE TABLE e ALTER TABLE. Por padrão, quando SET ANSI_NULL_DFLT_OFF for ON, novas colunas criadas com o uso das instruções ALTER TABLE e CREATE TABLE serão NOT NULL se o status da capacidade de nulidade da coluna não for especificado explicitamente. SET ANSI_NULL_DFLT_OFF não afeta as colunas criadas com o uso de um NULL ou NOT NULL explícito.  
   
  SET ANSI_NULL_DFLT_OFF e SET ANSI_NULL_DFLT_ON não podem ser definidos como ON ao mesmo tempo. Se uma opção for definida como ON, a outra será definida como OFF. Portanto, ANSI_NULL_DFLT_OFF ou SET ANSI_NULL_DFLT_ON pode ser definido como ON ou ambos podem ser definidos como OFF. Se uma das opções for ON, essa configuração (SET ANSI_NULL_DFLT_OFF ou SET ANSI_NULL_DFLT_ON) entrará em vigor. Se ambas as opções forem definidas como OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o valor da coluna is_ansi_null_default_on na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
@@ -63,11 +66,10 @@ SET ANSI_NULL_DFLT_OFF OFF
   
  Para exibir a configuração atual dessa configuração, execute a consulta a seguir.  
   
-```  
+```sql  
 DECLARE @ANSI_NULL_DFLT_OFF VARCHAR(3) = 'OFF';  
 IF ( (2048 & @@OPTIONS) = 2048 ) SET @ANSI_NULL_DFLT_OFF = 'ON';  
 SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;  
-  
 ```  
   
 ## <a name="permissions"></a>Permissões  
@@ -76,7 +78,7 @@ SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra os efeitos de `SET ANSI_NULL_DFLT_OFF` com ambas as configurações da opção de banco de dados Padrão ANSI null.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -116,28 +118,28 @@ GO
 ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT OFF;  
 GO  
 -- Create table t4.  
-CREATE TABLE t4 (a tinyint) ;  
+CREATE TABLE t4 (a TINYINT) ;  
 GO   
 -- NULL INSERT should fail.  
-INSERT INTO t4 (a) VALUES (null);  
+INSERT INTO t4 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to ON and create table t5.  
 SET ANSI_NULL_DFLT_OFF ON;  
 GO  
-CREATE TABLE t5 (a tinyint);  
+CREATE TABLE t5 (a TINYINT);  
 GO   
 -- NULL insert should fail.  
-INSERT INTO t5 (a) VALUES (null);  
+INSERT INTO t5 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to OFF and create table t6.  
 SET ANSI_NULL_DFLT_OFF OFF;  
 GO  
-CREATE TABLE t6 (a tinyint);   
+CREATE TABLE t6 (a TINYINT);   
 GO   
 -- NULL insert should fail.  
-INSERT INTO t6 (a) VALUES (null);  
+INSERT INTO t6 (a) VALUES (NULL);  
 GO  
   
 -- Drop tables t1 through t6.  

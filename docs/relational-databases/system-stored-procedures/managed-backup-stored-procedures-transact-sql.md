@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados de backup gerenciado (Transact-SQL)
 title: Procedimentos armazenados de backup gerenciado (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,11 +13,12 @@ dev_langs:
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 739c95d16b28bac2f5e5b53975fe72f872e984e0
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7cad3ee246c9ca0e9867c2726091d1e0d269780a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498085"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a>Procedimentos armazenados de backup gerenciado (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

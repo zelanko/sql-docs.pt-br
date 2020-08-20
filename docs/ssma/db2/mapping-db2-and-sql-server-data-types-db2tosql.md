@@ -1,4 +1,5 @@
 ---
+description: Mapeando tipos de dados DB2 e SQL Server (DB2ToSQL)
 title: Mapeando tipos de dados DB2 e SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497767"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapeando tipos de dados DB2 e SQL Server (DB2ToSQL)
 Tipos de banco de dados DB2 são diferentes dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados. Ao converter objetos de banco de dados DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, você deve especificar como mapear tipos de dado do DB2 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode aceitar os mapeamentos de tipo de dados padrão ou pode personalizar os mapeamentos, conforme mostrado nas seções a seguir.  
@@ -74,7 +75,7 @@ O procedimento a seguir mostra como mapear tipos de dados no nível do projeto, 
   
     4.  Em **tipo de destino**, selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados de destino.  
   
-        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento dos dados na caixa **substituir por** e, em seguida,[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento dos dados na caixa **substituir por** e, em seguida, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Para remover um mapeamento de tipo de dados personalizado, faça o seguinte:  
   

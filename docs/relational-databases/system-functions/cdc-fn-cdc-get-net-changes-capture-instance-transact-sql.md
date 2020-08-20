@@ -1,4 +1,5 @@
 ---
+description: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 title: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9e801649cceee2aacdda530fa47c53db500bad6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498187"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

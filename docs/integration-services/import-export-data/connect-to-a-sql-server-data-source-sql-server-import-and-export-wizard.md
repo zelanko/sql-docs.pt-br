@@ -1,4 +1,5 @@
 ---
+description: Conectar-se a uma fonte de dados do SQL Server (Assistente de Importação e Exportação do SQL Server)
 title: Conectar-se a uma fonte de dados do SQL Server (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495568"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do SQL Server (Assistente de Importação e Exportação do SQL Server)
 

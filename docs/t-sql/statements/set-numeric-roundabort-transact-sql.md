@@ -1,4 +1,5 @@
 ---
+description: SET NUMERIC_ROUNDABORT (Transact-SQL)
 title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dccf50490a8304507d621fc1e7fcdb06fb33a13
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a465bbf4a058bbb45974298623d11fb4c04f85a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496490"
 ---
 # <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,9 @@ Especifica o nível dos relatórios de erro gerados quando o arredondamento de u
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
 Quando SET NUMERIC_ROUNDABORT é ON, um erro é gerado depois de ocorrer uma perda de precisão em uma expressão. Se definido como OFF, perdas de precisão não geram mensagens de erro. O resultado é arredondado de acordo com a precisão da coluna ou variável que armazena o resultado.  
   
 A perda de precisão ocorre quando é feita uma tentativa de armazenar um valor com uma precisão fixa em uma coluna ou variável com menos precisão.  

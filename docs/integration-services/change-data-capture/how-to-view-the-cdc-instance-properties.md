@@ -1,4 +1,5 @@
 ---
+description: Como exibir as propriedades de instância CDC
 title: Como exibir as propriedades de instância CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb49d9d3bc3b0c0ebc05b8c3e17b5a98c85c66e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 670f64d956c8b8b7df281c66598a79a38ed7ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496112"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Como exibir as propriedades de instância CDC
 

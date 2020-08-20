@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_packages (Transact-SQL)
 title: sys. dm_xe_packages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 98c43952212ffd101bfc822f68c39a1e04bce150
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498242"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86942348"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|O nome do pacote. A descrição é exposta no próprio pacote. Não permite valor nulo.|  
 |guid|**uniqueidentifier**|O GUID que identifica o pacote. Não permite valor nulo.|  
-|description|**nvarchar (3072)**|A descrição do pacote. a descrição é definida pelo autor do pacote e não permite valor nulo.|  
+|descrição|**nvarchar (3072)**|A descrição do pacote. a descrição é definida pelo autor do pacote e não permite valor nulo.|  
 |funcionalidades|**int**|Bitmap que descreve os recursos deste pacote. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Uma lista de todas as funcionalidades possíveis para este pacote. Permite valor nulo.|  
 |module_guid|**nvarchar(60)**|O GUID do módulo que expõe este pacote. Não permite valor nulo.|  

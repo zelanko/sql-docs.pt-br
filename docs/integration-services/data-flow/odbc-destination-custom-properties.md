@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas de destino ODBC
 title: Propriedades personalizadas de destino ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efd46a4579553a1662713112a0fb6659a11b85da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae44b6ea06ea2ae00e8cfd52ad924f61a0b79895
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495773"
 ---
 # <a name="odbc-destination-custom-properties"></a>Propriedades personalizadas de destino ODBC
 
@@ -24,7 +25,7 @@ ms.locfileid: "86915892"
 
   A tabela a seguir descreve as propriedades personalizadas do destino ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |Conexão|Conexão ODBC|Uma conexão ODBC para acessar o banco de dados de destino.|  
 |BatchSize|Integer|O tamanho do lote para carregamento em massa. Esse é o número de linhas carregado como um lote. Isso só será válido se houver suporte para a associação de parâmetro row-wise. Se não houver suporte para a associação de parâmetro row-wise, o tamanho do lote será 1.|  

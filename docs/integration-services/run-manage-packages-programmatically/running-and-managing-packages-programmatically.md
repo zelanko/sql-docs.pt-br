@@ -1,4 +1,5 @@
 ---
+description: Executando e gerenciando pacotes programaticamente
 title: Executar e gerenciar pacotes programaticamente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbee736c5f74a2fa4258e6271e5ddce98a7fc626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495503"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Executando e gerenciando pacotes programaticamente
 
@@ -42,25 +43,25 @@ ms.locfileid: "86913282"
  Você também pode usar o namespace para implantar e gerenciar projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter uma visão geral do namespace e dos snippets de códigos, consulte a entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)em blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Compreender as diferenças entre execução local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
+ [Compreendendo as diferenças entre execução local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
  Discute diferenças críticas entre a execução de um pacote localmente ou no servidor.  
   
- [Carregar e executar um pacote local programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
+ [Carregando e executando um pacote local programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
  Descreve como executar um pacote existente de um aplicativo cliente no computador local.  
   
- [Carregar e executar um pacote remoto programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
+ [Carregando e executando um pacote remoto programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
  Descreve como executar um pacote existente de um aplicativo cliente e como garantir que o pacote seja executado no servidor.  
   
- [Carregar a saída de um pacote local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+ [Carregando a saída de um pacote local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
  Descreve como executar um pacote no computador local e carregar a saída do fluxo de dados em um aplicativo cliente, utilizando o destino DataReader e o namespace DtsClient.  
   
- [Enumerar pacotes disponíveis programaticamente](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+ [Enumerando pacotes disponíveis programaticamente](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
  Descreve como descobrir pacotes disponíveis que são gerenciados pelo serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- [Gerenciar pacotes e pastas programaticamente](../../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
+ [Gerenciando pacotes e pastas programaticamente](../../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
  Descreve como criar, renomear e excluir pacotes e pastas.  
   
- [Gerenciar de pacotes em execução programaticamente](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
+ [Gerenciando pacotes em execução programaticamente](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  Descreve como listar pacotes que estão em execução atualmente, examinar suas propriedades e interromper um pacote em execução.  
   
  [Gerenciar funções de pacote programaticamente &#40;Serviço SSIS&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
@@ -71,13 +72,13 @@ ms.locfileid: "86913282"
  Lista os códigos de erro predefinidos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com seus nomes simbólicos e descrições.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Estender pacotes com scripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estendendo pacotes com scripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Discute como estender o fluxo de controle usando a tarefa Script, e como estender o fluxo de dados usando o componente Script.  
   
  [Estendendo pacotes com objetos personalizados](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Discute como criar tarefas personalizadas de programa, componentes de fluxo de dados e outros objetos de pacote para uso em vários pacotes.  
   
- [Compilar Pacotes Programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Compilando pacotes programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Discute como criar, configurar e salvar pacotes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programaticamente.  
   
 ## <a name="see-also"></a>Consulte Também  

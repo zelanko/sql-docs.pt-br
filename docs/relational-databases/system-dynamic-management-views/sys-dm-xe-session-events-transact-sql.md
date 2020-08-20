@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_session_events (Transact-SQL)
 title: sys. dm_xe_session_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9773b25e7f6e1b0a6a4ecc3bd9a093cd7dd29300
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf341fc33337e0205544ce8fbd56b3ead705f894
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498239"
 ---
 # <a name="sysdm_xe_session_events-transact-sql"></a>sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_TEXT (Transact-SQL)
 title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4bad95475a55257a9f65bfc84b673b58c7e8ed47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe517575d1f02ed558912b0964463aeec0569b6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496363"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,9 @@ ms.locfileid: "85765703"
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
  A configuração de SHOWPLAN_TEXT é definida durante a execução ou tempo de execução, e não no momento da análise.  
   
  Quando SET STATISTICS TEXT estiver ON (acionado), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna informações de execução para cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], sem executá-las. Depois que essa opção estiver definida como ON, as informações do plano de execução sobre todas as instruções [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subsequentes serão retornadas, até que a opção esteja definida como OFF. Por exemplo, se uma instrução CREATE TABLE for executada enquanto SET SHOWPLAN_TEXT estiver como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna uma mensagem de erro de uma instrução SELECT subsequente envolvendo essa mesma tabela, informando ao usuário que a tabela especificada não existe. Portanto, haverá falha nas referências subsequentes para essa tabela. Quando SET SHOWPLAN_TEXT for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa instruções sem gerar um relatório com informações do plano de execução.  
@@ -58,7 +61,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT retorna informações como um conjunto de linhas que formam uma árvore hierárquica que representa as etapas cumpridas pelo processador de consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à medida que ele executa cada instrução. Cada instrução refletida na saída contém uma única linha com o texto da instrução, seguida de várias linhas com os detalhes das etapas de execução. A tabela exibe a coluna contida na saída.  
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**StmtText**|Para linhas que não são do tipo PLAN_ROW, essa coluna conterá o texto da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para linhas do tipo PLAN_ROW, essa coluna contém uma descrição da operação. Essa coluna contém o operador físico e pode também conter, opcionalmente, o operador lógico. Essa coluna também pode ser seguida de uma descrição, determinada pelo operador físico. Para obter mais informações sobre operadores físicos, veja a coluna **Argument** em [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
 |||

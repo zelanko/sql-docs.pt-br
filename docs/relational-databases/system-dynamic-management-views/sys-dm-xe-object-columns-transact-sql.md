@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_object_columns (Transact-SQL)
 title: sys. dm_xe_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 005455742f1fbb782e663672c0cc104bd1cb28f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8d615d2c2de89262c0c760c56431e77b6e06086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498266"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85898605"
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o objeto. Não permite valor nulo.|  
 |type_name|**nvarchar(256)**|O nome do tipo desta coluna. Não permite valor nulo.|  
 |type_package_guid|**uniqueidentifier**|O GUID do pacote que contém o tipo de dados de coluna. Não permite valor nulo.|  
-|column_type|**nvarchar(60)**|Indica como essa coluna é usada. Não permite valor nulo. column_type pode ser um dos seguintes:<br /><br /> readonly. A coluna contém um valor estático que não pode ser alterado.<br /><br /> data. A coluna contém dados de tempo de execução mostrados pelo objeto.<br /><br /> customizable. A coluna contém um valor que pode ser alterado.<br /><br /> Observação: alterar esse valor pode modificar o comportamento do objeto.|  
+|column_type|**nvarchar(60)**|Indica como essa coluna é usada. Não permite valor nulo. column_type pode ser um dos seguintes:<br /><br /> readonly. A coluna contém um valor estático que não pode ser alterado.<br /><br /> do modelo. A coluna contém dados de tempo de execução mostrados pelo objeto.<br /><br /> customizable. A coluna contém um valor que pode ser alterado.<br /><br /> Observação: alterar esse valor pode modificar o comportamento do objeto.|  
 |column_value|**nvarchar(256)**|Exibe valores estáticos associados à coluna de objeto. Permite valor nulo.|  
 |funcionalidades|**int**|Um bitmap que descreve as capacidades desta coluna. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Uma descrição dos recursos desta coluna de objeto. Este valor pode ser um dos seguintes:<br /><br /> Mandatory. O valor deve ser definido ao associar o objeto pai a uma sessão de evento.<br /><br /> Permite valor nulo.|  

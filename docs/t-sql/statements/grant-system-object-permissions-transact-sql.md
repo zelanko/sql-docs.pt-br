@@ -1,4 +1,5 @@
 ---
+description: Permissões de objeto do sistema GRANT (Transact-SQL)
 title: Permissões GRANT do objeto do sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 329ff28afd0aa96ba7fde0058c4cdfb179d61db3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496685"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema GRANT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  As permissões em objetos do sistema serão preservadas nas atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Os objetos do sistema são visíveis na exibição de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . As permissões em objetos do sistema são visíveis na exibição de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) do banco de dados mestre.  
+ Os objetos do sistema são visíveis na exibição de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . As permissões em objetos do sistema são visíveis na exibição de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) do banco de dados mestre .  
   
  A consulta a seguir retorna informações sobre permissões de objetos do sistema:  
   

@@ -1,4 +1,5 @@
 ---
+description: Trabalhar com projetos do SSMA (SybaseToSQL)
 title: Trabalhando com projetos do SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c9bc3f8f81d8701a584a1f4d6caee1b442746b76
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a1a73e1dbc1c494080427ae5dfd686dd3c18abc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497626"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Trabalhar com projetos do SSMA (SybaseToSQL)
 Para migrar bancos de dados do Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, você primeiro cria um projeto do SSMA. O projeto é um arquivo que contém metadados sobre os bancos de dados ASE que você deseja migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, metadados sobre a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure que receberá os objetos e dados migrados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure informações de conexão e as configurações do projeto.  
@@ -70,7 +71,7 @@ Para migrar dados de bancos de dado ASE para [!INCLUDE[ssNoVersion](../../includ
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

@@ -1,4 +1,5 @@
 ---
+description: Carregar dados por meio do destino OLE DB
 title: Carregar dados por meio do destino OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71879f64bbe46900b27c467f37d4fdacd9cb7b13
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3165371fc1153636ae869b650468342e3614b024
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495816"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Carregar dados por meio do destino OLE DB
 

@@ -1,4 +1,5 @@
 ---
+description: Trabalhar com os arquivos de script de console de exemplo (SybaseToSQL)
 title: Trabalhando com os arquivos de script de console de exemplo (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7db44b317ee91044748519b93c7cdc175c96a94d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 072073fae690812ed2a51cb74073eea95552392a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497603"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Trabalhar com os arquivos de script de console de exemplo (SybaseToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência e o uso do usuário. Esta seção descreve a maneira de personalizar facilmente esses scripts para atender às necessidades do usuário final.  
@@ -81,7 +82,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    -   `source-schema:`Especifica o banco de dados de origem que exige a conversão.  
+    -   `source-schema:` Especifica o banco de dados de origem que exige a conversão.  
   
     -   `sql-server-schema`: Especifica o banco de dados de destino que deve ser migrado para  
   
@@ -95,7 +96,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    `object-name`: Especifique o nome do banco de dados/objeto de origem que exige a conversão. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
+    `object-name`: Especifique o nome do banco de dados/objeto de origem que exige a conversão. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no `object-name`  
   
     **Nome do comando**  
   
@@ -107,7 +108,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    `object-name:`Especifique o nome do banco de dados/objeto do SQL Server que requer a criação. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
+    `object-name:` Especifique o nome do banco de dados/objeto do SQL Server que requer a criação. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no `object-name`  
   
     **Nome do comando**  
   
@@ -119,7 +120,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    `object-name:`Especifica o nome do banco de dados/tabelas de origem que exige a migração. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
+    `object-name:` Especifica o nome do banco de dados/tabelas de origem que exige a migração. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no `object-name`  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando arquivos de valor de variável &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  

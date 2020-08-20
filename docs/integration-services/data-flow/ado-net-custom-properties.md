@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas do ADO NET
 title: Propriedades personalizadas ADO NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f05fbdb725e2304e7f30dce7a6801bb8300e4c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a44bc28763df210a16a7376408ff342b91ac6d9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495923"
 ---
 # <a name="ado-net-custom-properties"></a>Propriedades personalizadas do ADO NET
 

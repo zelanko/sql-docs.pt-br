@@ -1,4 +1,5 @@
 ---
+description: Editor de Origem SAP BW (página Gerenciador de Conexões)
 title: Editor de Origem SAP BW (página Gerenciador de Conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52972f7b21a9eb7ff2fa0059e8d52848e8cc9ab4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495719"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de Origem SAP BW (página Gerenciador de Conexões)
 
@@ -61,7 +62,7 @@ ms.locfileid: "86917824"
  **Modo de execução**  
  Especifique o método para extrair os dados da origem.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**P - Disparar Cadeia de Processo**|Disparar uma cadeia de processo. Nesse caso, o pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inicia o processo de extração.|  
 |**A - Aguardar Notificação**|Aguarde a notificação do sistema SAP Netweaver BW para iniciar a extração dos dados. Nesse caso, o sistema do SAP Netweaver BW inicia o processo de extração.|  

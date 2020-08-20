@@ -1,4 +1,5 @@
 ---
+description: Tarefa Criar Cluster do Azure HDInsight
 title: Tarefa Criar Cluster do Azure HDInsight | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: f86a35316de80caa1a6db487518f0080f6097a17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496070"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tarefa Criar Cluster do Azure HDInsight
 
@@ -43,7 +44,7 @@ A tabela a seguir fornece uma descrição para os campos nessa caixa de diálogo
 |AzureStorageConnection|Selecione um Gerenciador de conexão de armazenamento do Azure existente ou crie um novo, relacionado a uma conta de armazenamento do Azure, que será associado com o cluster HDInsight.|
 |SubscriptionId|Especifique a ID da assinatura na qual o cluster HDInsight será criado.|
 |ResourceGroup|Especifique o grupo de recursos do Azure no qual o cluster HDInsight será criado.|
-|Location|Especifique o local do cluster HDInsight. O cluster deve ser criado no mesmo local que a conta de Armazenamento do Azure especificada.|  
+|Local|Especifique o local do cluster HDInsight. O cluster deve ser criado no mesmo local que a conta de Armazenamento do Azure especificada.|  
 |ClusterName|Especifique um nome para o cluster HDInsight que será criado.|  
 |clusterSize|Especifique o número de nós a serem criados no cluster.|  
 |BlobContainer|Especifique o nome do contêiner de armazenamento padrão a ser associado ao cluster HDInsight.|  

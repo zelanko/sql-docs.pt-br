@@ -1,4 +1,5 @@
 ---
+description: Relatório de avaliação (AccessToSQL)
 title: Relatório de avaliação (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: de675e479217170a465126d8fe242d01c778abf0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5f1058947591fdd454ce181b2d098f88b183cbe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497822"
 ---
 # <a name="assessment-report-accesstosql"></a>Relatório de avaliação (AccessToSQL)
 A janela relatório de avaliação mostra os resultados da conversão de objetos de banco de dados em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe e também pode ajudá-lo a estimar a complexidade e o custo de seus projetos de migração.  

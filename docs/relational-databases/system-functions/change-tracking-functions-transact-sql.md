@@ -1,4 +1,5 @@
 ---
+description: Funções de controle de alterações (Transact-SQL)
 title: Funções de Controle de Alterações (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -16,12 +17,12 @@ ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08a9d5907c93b020f45ec8405361626266ec1300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69a301c266ce546733ef1fb26bf1479a5c2d8a2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498198"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>Funções de controle de alterações (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
 title: DM db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0b26edb80b254ca6c7d3b161e618d2a6ad5849f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498329"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85718784"
   
 |Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|class|**int** NÃO NULO|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = Índices e heaps|  
+|classe|**int** NÃO NULO|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = Índices e heaps|  
 |class_desc|**nvarchar (60)** NÃO NULO|Descrição da classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NÃO NULO|ID de objeto da restrição ou ID de objeto da tabela que contém índice ou heap.|  
 |minor_id|**int** NULO|**NULL** para restrições<br /><br /> Index_id para índices e heaps|  
@@ -67,7 +68,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Order|Objeto afetado|Ação corretiva|  
 |-----------|---------------------|-----------------------|  
-|1|**Índices**|Reconstrua qualquer índice identificado por **Sys. dm_db_objects_impacted_on_version_change** por exemplo:`ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Índices**|Reconstrua qualquer índice identificado por **Sys. dm_db_objects_impacted_on_version_change** por exemplo:  `ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Objeto**|Todas as restrições definidas por **sys.dm_db_objects_impacted_on_version_change** devem ser revalidadas depois que os dados Geometry e Geography forem recomputados na tabela subjacente. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

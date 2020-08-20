@@ -1,4 +1,5 @@
 ---
+description: Implantar um projeto do SSIS por meio do prompt de comando com ISDeploymentWizard.exe
 title: Implantar um projeto do SSIS por meio do prompt de comando | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 949a073a9e31afd0e203dc4c9f3b497c2551504b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495463"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implantar um projeto do SSIS por meio do prompt de comando com ISDeploymentWizard.exe
 
@@ -24,13 +25,13 @@ Este guia de início rápido demonstra como implantar um projeto do SSIS por mei
 
 Para obter mais informações sobre o Assistente de implantação do Integration Services, consulte [Assistente de Implantação do Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 A validação descrita neste artigo para implantação no Banco de Dados SQL do Azure requer SQL Server Data Tools (SSDT) versão 17.4 ou posterior. Para obter a versão mais recente do SSDT, consulte [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
-## <a name="supported-platforms"></a>Plataformas compatíveis
+## <a name="supported-platforms"></a>Plataformas com suporte
 
 Você pode usar as informações neste guia de início rápido para implantar um projeto do SSIS nas seguintes plataformas:
 
@@ -51,7 +52,7 @@ Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informaçõe
 
 ## <a name="supported-authentication-method"></a>Método de autenticação compatível
 
-Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Confira os [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar o Assistente de Implantação do Integration Services
 1. Abra uma janela de Prompt de Comando.

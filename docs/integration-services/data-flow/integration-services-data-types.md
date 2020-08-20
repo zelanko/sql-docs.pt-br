@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados do Integration Services
 title: Tipos de dados do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495863"
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
 
@@ -36,7 +37,7 @@ ms.locfileid: "86904780"
   
  A tabela a seguir lista os tipos de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Alguns dos tipos de dados na tabela têm informações de precisão e escala que se aplicam a eles. Para obter mais informações sobre precisão e escala, consulte [Precisão, escala e comprimento &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-|Tipo de dados|DESCRIÇÃO|  
+|Tipo de dados|Descrição|  
 |---------------|-----------------|  
 |DT_BOOL|Um valor booliano.|  
 |DT_BYTES|Um valor de dados binários. O comprimento é variável e o comprimento de máximo é 8000 bytes.|  
@@ -56,7 +57,7 @@ ms.locfileid: "86904780"
 |DT_I4|Um inteiro assinado de quatro bytes.|  
 |DT_I8|Um inteiro assinado de oito bytes.|  
 |DT_NUMERIC|Um valor numérico exato com precisão e escala fixas. Esse tipo de dados é um inteiro não assinado de 16 bytes com um sinal separado, uma escala de 0 a -38 e uma precisão máxima de 38.|  
-|DT_R4|Um valor de ponto flutuante de precisão única.|  
+|DT_R4|Um valor de ponto flutuante de precisão simples.|  
 |DT_R8|Um valor de ponto flutuante de precisão dupla.|  
 |DT_STR|Uma cadeia de caracteres [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS com terminação nula com um comprimento máximo de 8000 caracteres. (Se um valor de coluna contiver terminadores nulos adicionais, a cadeia será truncada na ocorrência do primeiro nulo.)|  
 |DT_UI1|Um inteiro não assinado de um byte.|  
@@ -113,7 +114,7 @@ ms.locfileid: "86904780"
   
 |Converter DT_FILETIME para|Result|  
 |-----------------------------|------------|  
-|DT_FILETIME|Sem alteração.|  
+|DT_FILETIME|Nenhuma alteração.|  
 |DT_DATE|Converte o tipo de dados.|  
 |DT_DBDATE|Remove o valor de hora.|  
 |DT_DBTIME|Remove o valor de data.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos fracionários que o tipo de dados DT_DBTIME pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -127,7 +128,7 @@ ms.locfileid: "86904780"
 |Converter DT_DATE em|Result|  
 |-------------------------|------------|  
 |DT_FILETIME|Converte o tipo de dados.|  
-|DT_DATE|Sem alteração.|  
+|DT_DATE|Nenhuma alteração.|  
 |DT_DBDATE|Remove o valor de hora representado pelo tipo de dados DT_DATA.|  
 |DT_DBTIME|Remove o valor de data representado pelo tipo de dados DT_DATE.|  
 |DT_DBTIME2|Remove o valor de data representado pelo tipo de dados DT_DATE.|  
@@ -141,7 +142,7 @@ ms.locfileid: "86904780"
 |---------------------------|------------|  
 |DT_FILETIME|Define os campos de hora no tipo de dados DT_FILETIME como zero.|  
 |DT_DATE|Define os campos de hora no tipo de dados DT_DATE como zero.|  
-|DT_DBDATE|Sem alteração.|  
+|DT_DBDATE|Nenhuma alteração.|  
 |DT_DBTIME|Define os campos de hora no tipo de dados DT_DBTIME como zero.|  
 |DT_DBTIME2|Define os campos de hora no tipo de dados DT_DBTIME2 como zero.|  
 |DT_DBTIMESTAMP|Define os campos de hora no tipo de dados DT_DBTIMESTAMP como zero.|  
@@ -155,7 +156,7 @@ ms.locfileid: "86904780"
 |DT_FILETIME|Define o campo de data no tipo de dados DT_FILETIME como a data atual.|  
 |DT_DATE|Define o campo de data no tipo de dados DT_DATE como a data atual.|  
 |DT_DBDATE|Define o campo de data no tipo de dados DT_DBDATE como a data atual.|  
-|DT_DBTIME|Sem alteração.|  
+|DT_DBTIME|Nenhuma alteração.|  
 |DT_DBTIME2|Converte o tipo de dados.|  
 |DT_DBTIMESTAMP|Define o campo de data no tipo de dados DT_DBTIMESTAMP como a data atual.|  
 |DT_DBTIMESTAMP2|Define o campo de data no tipo de dados DT_DBTIMESTAMP2 como a data atual.|  
@@ -183,7 +184,7 @@ ms.locfileid: "86904780"
 |DT_DBDATE|Remove o valor de hora representado pelo tipo de dados DT_DBTIMESTAMP.|  
 |DT_DBTIME|Remove o valor de data representado pelo tipo de dados DT_DBTIMESTAMP.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIME pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIME2|Remove o valor de data representado pelo tipo de dados DT_DBTIMESTAMP.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIME2 pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
-|DT_DBTIMESTAMP|Sem alteração.|  
+|DT_DBTIMESTAMP|Nenhuma alteração.|  
 |DT_DBTIMESTAMP2|Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMP2 pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Define o campo de fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como zero.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMPOFFSET pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
   
@@ -252,7 +253,7 @@ ms.locfileid: "86904780"
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
 |DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, definido pelo usuário|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
-|DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
+|DT_TEXT|texto||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
  Para obter informações sobre o mapeamento de tipos de dados no fluxo de dados, consulte [Trabalhando com tipos de dados no fluxo de dados](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   

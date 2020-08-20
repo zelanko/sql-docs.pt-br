@@ -1,4 +1,5 @@
 ---
+description: Classificar dados para as transformações Mesclagem e Junção de Mesclagem
 title: Classificar dados para as transformações Mesclagem e Junção de Mesclagem | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5a9d622868c934065a47b6bb3c02b49b4de36371
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495682"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Classificar dados para as transformações Mesclagem e Junção de Mesclagem
 

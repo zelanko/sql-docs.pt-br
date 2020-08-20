@@ -1,4 +1,5 @@
 ---
+description: Determinar se os dados de alteração estão prontos
 title: Determinar se os dados de alterações estão prontos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496210"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar se os dados de alteração estão prontos
 
@@ -338,6 +339,6 @@ ms.locfileid: "86921682"
 ## <a name="next-step"></a>Próxima etapa  
  Após determinar que os dados de alteração estão prontos, a próxima etapa será preparar para consultar os dados de alteração.  
   
- **Próximo tópico:** [Preparar para consultar os dados de alterações](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **Próximo tópico:** [Preparar para consultar os dados de alteração](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

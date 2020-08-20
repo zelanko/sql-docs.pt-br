@@ -1,4 +1,5 @@
 ---
+description: Conexão para o SQL Server para exclusão
 title: Conexão ao SQL Server para exclusão | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c2db76002be78fba04d324036b3eb5af1b81585a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1688ed8c1e95edabfea6b022b605a18a0e99d690
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496293"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Conexão para o SQL Server para exclusão
 

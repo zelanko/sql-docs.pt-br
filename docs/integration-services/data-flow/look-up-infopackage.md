@@ -1,4 +1,5 @@
 ---
+description: Pesquisar InfoPackage
 title: Pesquisar InfoPackage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43ad94c5f4cc7d97b99dd0cfadda9811e4ce5f05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 348ac42f2903b039e88a073cb24b1ae6d95dec7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495809"
 ---
 # <a name="look-up-infopackage"></a>Pesquisar InfoPackage
 
@@ -63,7 +64,7 @@ ms.locfileid: "86916492"
  **Tipo**  
  Exibe o tipo do InfoPackage. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Trans.|Dados da transação.|  
 |Atr.|Dados de atributo|  
@@ -75,7 +76,7 @@ ms.locfileid: "86916492"
  **InfoSource**  
  Exibe o nome do InfoSource, se houver, associado ao InfoPackage.  
   
- **Source System**  
+ **Sistema de origem**  
  Exibe o nome do sistema de origem.  
   
  Quando a lista de InfoPackages é exibida, selecione o InfoPackage que você quer e o destino preencherá as opções associadas com os valores necessários.  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_locks (Transact-SQL)
 title: sys. dm_tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,11 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3e453de669cc69373b8e3fc1fc76a1056721bec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bce5288ed4861cb1b090c851179739ea12d9ee71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498340"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,11 +59,11 @@ ms.locfileid: "86000251"
 |**request_owner_guid**|**uniqueidentifier**|GUID do proprietário específico desta solicitação. Esse valor é usado apenas uma transação distribuída em que o valor corresponde ao GUID de MS DTC da transação.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Este valor representa a ID de lockspace do solicitante. Essa ID determina se dois solicitantes são compatíveis entre si e podem receber bloqueios nos modos que de outra forma entrariam em conflito entre si.|  
 |**lock_owner_address**|**varbinary (8)**|Endereço de memória da estrutura de dados interna que é usada para rastrear esta solicitação. Esta coluna pode ser unida à coluna **resource_address** em **sys.dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
  
 ## <a name="remarks"></a>Comentários  
  Um status de solicitação concedida indica que um bloqueio foi concedido em um recurso ao solicitante. Uma solicitação de espera indica que a solicitação ainda não foi concedida. Os tipos da solicitação de espera a seguir são retornados pela coluna **request_status**:  
@@ -88,7 +90,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
   
  As transações distribuídas não associadas a uma ID de sessão são órfãs e recebem o valor da ID de sessão igual a -2. Para obter mais informações, consulte [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
 
-## <a name="locks"></a><a name="locks"></a>Bloquea
+## <a name="locks"></a><a name="locks"></a> Bloquea
 Os bloqueios são mantidos nos recursos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como linhas lidas ou modificadas durante uma transação, para evitar o uso simultâneo de recursos por transações diferentes. Por exemplo, se um bloqueio exclusivo (X) for mantido em uma linha de uma tabela por uma transação, nenhuma outra transação poderá modificar essa linha até que o bloqueio seja liberado. Minimizar bloqueios aumenta a simultaneidade, o que pode melhorar o desempenho. 
 
 ## <a name="resource-details"></a>Detalhes dos recursos  
@@ -96,15 +98,15 @@ Os bloqueios são mantidos nos recursos [!INCLUDE[ssNoVersion](../../includes/ss
   
 |Tipo de recurso|Descrição do recurso|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
-|DATABASE|Representa um banco de dados.|Não Aplicável|  
-|FILE|Representa um arquivo de banco de dados. Esse arquivo pode ser um arquivo de log ou de dados.|Não Aplicável|  
+|DATABASE|Representa um banco de dados.|Não aplicável|  
+|FILE|Representa um arquivo de banco de dados. Esse arquivo pode ser um arquivo de log ou de dados.|Não aplicável|  
 |OBJECT|Representa um objeto de banco de dados. Esse objeto pode ser uma tabela de dados, uma exibição, um procedimento armazenado, um procedimento armazenado estendido ou qualquer objeto que tenha uma ID de objeto.|ID de objeto|  
 |PAGE|Representa uma única página em um arquivo de dados.|ID do HoBt. Esse valor corresponde a **sys.partitions.hobt_id**. A ID do HoBt não está sempre disponível para os recursos PAGE porque ela representa informações extras que podem ser fornecidas pelo chamador, e nem todos os chamadores podem fornecer essas informações.|  
 |KEY|Representa uma linha em um índice.|ID do HoBt. Esse valor corresponde a **sys.partitions.hobt_id**.|  
-|EXTENT|Representa uma extensão de arquivo de dados. Uma extensão é um grupo de oito páginas contíguas.|Não Aplicável|  
+|EXTENT|Representa uma extensão de arquivo de dados. Uma extensão é um grupo de oito páginas contíguas.|Não aplicável|  
 |RID|Representa uma linha física em um heap.|ID do HoBt. Esse valor corresponde a **sys.partitions.hobt_id**. A ID do HoBt não está sempre disponível para os recursos RID porque ela representa informações extras que podem ser fornecidas pelo chamador, e nem todos os chamadores podem fornecer essas informações.|  
-|APPLICATION|Representa um recurso especificado de aplicativo.|Não Aplicável|  
-|METADATA|Representa informações de metadados.|Não Aplicável|  
+|APPLICATION|Representa um recurso especificado de aplicativo.|Não aplicável|  
+|METADATA|Representa informações de metadados.|Não aplicável|  
 |HOBT|Representa um heap ou uma árvore B. Essas são as estruturas de caminho de acesso básicas.|ID do HoBt. Esse valor corresponde a **sys.partitions.hobt_id**.|  
 |ALLOCATION_UNIT|Representa um conjunto de páginas relacionadas, como uma partição de índice. Cada unidade de alocação cobre uma única cadeia de página IAM.|ID da unidade de alocação. Esse valor corresponde a **sys.allocation_units.allocation_unit_id**.|  
   
@@ -198,7 +200,7 @@ Os bloqueios são mantidos nos recursos [!INCLUDE[ssNoVersion](../../includes/ss
   
 |Recurso|Formatar|Descrição|  
 |--------------|------------|-----------------|  
-|DATABASE|Não Aplicável|A ID de banco de dados já está disponível na coluna **resource_database_id**.|  
+|DATABASE|Não aplicável|A ID de banco de dados já está disponível na coluna **resource_database_id**.|  
 |FILE|<file_id>|ID do arquivo representado por esse recurso.|  
 |OBJECT|<object_id>|ID do objeto representado por esse recurso. Este objeto pode ser qualquer objeto listado em **sys.objects**, não apenas uma tabela.|  
 |PAGE|<file_id>:<page_in_file>|Representa o arquivo e a ID da página representada por esse recurso.|  
@@ -206,8 +208,8 @@ Os bloqueios são mantidos nos recursos [!INCLUDE[ssNoVersion](../../includes/ss
 |EXTENT|<file_id>:<page_in_files>|Representa o arquivo e a ID da extensão representada por esse recurso. A ID de extensão é igual à ID da página da primeira página na extensão.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Representa a ID da página e a ID da linha representada por esse recurso. Observe que se a ID de objeto associada for 99, esse recurso representará um dos oito slots de página misturados na primeira página IAM de uma cadeia IAM.|  
 |APPLICATION|\<DbPrincipalId>: \<upto 32 characters> :(<hash_value>)|Representa a ID do banco de dados principal usado para fazer o escopo desse recurso de bloqueio de aplicativo. Também incluídos estão até 32 caracteres da cadeia de caracteres de recurso que corresponde a este recurso de bloqueio de aplicativo. Em certos casos, podem ser exibidos só 2 caracteres devido à cadeia de caracteres cheia que já não está mais disponível. Esse comportamento ocorre apenas no momento da recuperação do banco de bancos com relação aos bloqueios que são readquiridos como parte do processo de recuperação. O valor de hash representa um hash da cadeia de caracteres de recurso cheia, que corresponde a esse recurso de bloqueio de aplicativo.|  
-|HOBT|Não Aplicável|ID do HOBT está incluída como **resource_associated_entity_id**.|  
-|ALLOCATION_UNIT|Não Aplicável|A ID da unidade de alocação está incluída como **resource_associated_entity_id**.|  
+|HOBT|Não aplicável|ID do HOBT está incluída como **resource_associated_entity_id**.|  
+|ALLOCATION_UNIT|Não aplicável|A ID da unidade de alocação está incluída como **resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -385,6 +387,6 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
 [sys. dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
-[Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
 [SQL Server, objeto Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)      

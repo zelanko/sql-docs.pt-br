@@ -1,4 +1,5 @@
 ---
+description: Transformação Exportar Colunas
 title: Transformação Exportar Colunas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495707"
 ---
 # <a name="export-column-transformation"></a>Transformação Exportar Colunas
 

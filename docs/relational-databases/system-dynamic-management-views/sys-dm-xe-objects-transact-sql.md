@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_objects (Transact-SQL)
 title: sys. dm_xe_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f4e4a404c2bc2ac49ad9916cef668e1eb1656ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498271"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85898583"
  |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|O nome do objeto. o nome é exclusivo dentro de um pacote para um tipo de objeto específico. Não permite valor nulo.|  
-|object_type|**nvarchar(60)**|O tipo do objeto. object_type é um dos seguintes:<br /><br /> event<br /><br /> ação<br /><br /> destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> Não permite valor nulo.|  
+|object_type|**nvarchar(60)**|O tipo do objeto. object_type é um dos seguintes:<br /><br /> event<br /><br /> ação<br /><br /> destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Não permite valor nulo.|  
 |package_guid|**uniqueidentifier**|A GUID para o pacote que expõe esta ação. Há uma relação muitos para uma com sys.dm_xe_packages.package_id. Não permite valor nulo.|  
 |descrição|**nvarchar(256)**|Uma descrição da ação. a descrição é definida pelo autor do pacote. Não permite valor nulo.|  
 |funcionalidades|**int**|Um bitmap que descreve as funcionalidades do objeto. Permite valor nulo.|  

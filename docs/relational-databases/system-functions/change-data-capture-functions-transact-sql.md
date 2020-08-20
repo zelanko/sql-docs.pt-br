@@ -1,4 +1,5 @@
 ---
+description: Funções do Change Data Capture (Transact-SQL)
 title: Funções de captura de dados de alterações (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f32f9e69b49faeeef0c20b1d8c9d6d2e84d6618
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 466ee70540b93e50e1dea62be5beab6599d5bfb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498172"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Funções do Change Data Capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "87243387"
 :::row-end:::
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de captura de dados de alterações &#40;&#41;Transact-SQL](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
+ [Tabelas da captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
  [Procedimentos armazenados de captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

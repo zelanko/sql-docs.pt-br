@@ -1,4 +1,5 @@
 ---
+description: Sintaxe da hierarquia de objetos (Transact-SQL)
 title: Sintaxe de hierarquia de objeto (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be02e82ef4ba1718f15bd083e3ffc3b86058a24b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498099"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintaxe da hierarquia de objetos (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

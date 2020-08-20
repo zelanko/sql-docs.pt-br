@@ -1,4 +1,5 @@
 ---
+description: Permissões de texto completo REVOKE (Transact-SQL)
 title: Permissões REVOKE de texto completo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1c127761678432295e1e41bb84581df52f7252d5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a4f331b478aeb81ef7ceed5777928b4f82898b0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496563"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>Permissões de texto completo REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

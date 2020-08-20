@@ -1,4 +1,5 @@
 ---
+description: gerenciador de conexões ODBC
 title: Gerenciador de Conexões ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b362f60e2fb38ce9a9eda476dd4b1077055da18
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496082"
 ---
 # <a name="odbc-connection-manager"></a>gerenciador de conexões ODBC
 

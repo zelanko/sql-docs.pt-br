@@ -1,4 +1,5 @@
 ---
+description: SET FORCEPLAN (Transact-SQL)
 title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88d97ef1c5f56a6329e59bdf6c29b8d89bc696e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496432"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765801"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
  SET FORCEPLAN basicamente substitui a lógica usada pelo otimizador de consulta para processar uma instrução SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os dados retornados pela instrução SELECT são os mesmos independentemente dessa configuração. A única diferença é o modo pelo qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processa as tabelas para satisfazer a consulta.  
   
  Também podem ser usadas dicas do otimizador de consulta em consultas para afetar a forma como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processa a instrução SELECT.  

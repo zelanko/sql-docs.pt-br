@@ -1,4 +1,5 @@
 ---
+description: Contêiner Host da Tarefa
 title: Contêiner do Host da Tarefa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c934687c159d81ddaa20852844859801dc248405
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fd2ab8fe157992077618f426f68931c8c87d8ed7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495977"
 ---
 # <a name="task-host-container"></a>Contêiner Host da Tarefa
 

@@ -1,4 +1,5 @@
 ---
+description: Atualizar do banco de dados (AccessToSQL)
 title: Atualizar do banco de dados (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06174be45e178f3fb7c612925e78795bf4eeaa7c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 471b1b3891d017858c0f0d035f8207bc8a1d2539
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497771"
 ---
 # <a name="refresh-from-database-accesstosql"></a>Atualizar do banco de dados (AccessToSQL)
 A caixa **de diálogo atualizar do banco de dados** permite que você Selecione quais objetos atualizar do banco de dados do Access. As linhas na caixa de diálogo são codificadas por cores com base no estado dos metadados:  

@@ -1,4 +1,5 @@
 ---
+description: Transformação de Limpeza DQS
 title: Transformação de Limpeza DQS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495687"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformação de Limpeza DQS
 
@@ -47,7 +48,7 @@ ms.locfileid: "86919366"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Abrir projetos do Integration Services no Data Quality Client](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [Abrir projetos do Integration Services no cliente Data Quality](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
 -   [Importar valores de projeto de limpeza para um domínio](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86919366"
  **Base de conhecimento de qualidade de dados**  
  Selecione uma base de dados de conhecimento do DQS para a fonte de dados conectada. Para obter mais informações sobre a base de dados de conhecimento do DQS, consulte [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Criptografar conexão**  
+ **Criptografar a conexão**  
  Especifique se é preciso criptografar a conexão para criptografar a transferência de dados entre o Servidor DQS e o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
  **Domínios disponíveis**  
@@ -105,7 +106,7 @@ ms.locfileid: "86919366"
   
  Os valores válidos são os seguintes:  
   
--   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Esse é o valor padrão.  
+-   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Este é o valor padrão.  
   
 -   **Redirecionar Linha**, que indica que os dados de entrada não estão inseridos no banco de dados do Data Quality Services e são redirecionados para a saída do erro.  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86919366"
  **Confiança**  
  Indique se é preciso incluir o nível de confiança para os dados corrigidos. O nível de confiança indica a extensão de certeza do DQS para a correção ou sugestão. Para obter mais informações sobre níveis de confiança, consulte [Limpeza de dados](../../../data-quality-services/data-cleansing.md).  
   
- **Reason**  
+ **Motivo**  
  Indique se é preciso incluir a razão para a correção de dados.  
   
  **Dados acrescentados**  

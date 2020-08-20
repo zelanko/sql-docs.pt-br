@@ -1,4 +1,5 @@
 ---
+description: Opções de solicitação do perfil Distribuição de Comprimento de Coluna (tarefa Criação de Perfil de Dados)
 title: Opções de solicitação do perfil Distribuição de Comprimento de Coluna (tarefa Criação de Perfil de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f3833327f518b935874b79747ef9cd6b129143a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8eea376c7dc204b326f7ad4bb5ac41d0a76e4ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496012"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Opções de solicitação do perfil Distribuição de Comprimento de Coluna (tarefa Criação de Perfil de Dados)
 

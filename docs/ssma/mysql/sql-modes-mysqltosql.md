@@ -1,4 +1,5 @@
 ---
+description: Modos SQL (MySQLToSQL)
 title: Modos SQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497713"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos SQL (MySQLToSQL)
 O SSMA para MySQL pode operar em modos SQL diferentes e pode aplicar esses modos de forma diferente para clientes diferentes.  
@@ -27,7 +28,7 @@ Os modos definem a sintaxe SQL que o MySQL deve dar suporte e o tipo de verifica
   
 -   As grades de modos SQL na categoria de bancos de dados Category, Database, tabela, Table Statements, as views categoria, Table, View, functions, Procedures, UDF e Event Object Level contêm as seguintes colunas: **SQL Mode Name**, **modos SQL herdados**e **modos SQL efetivos**.  
   
--   A grade de modos SQL no procedimento armazenado, na função armazenada e no nível de gatilho contém as seguintes colunas: **nome do modo SQL**, **modos SQL originais**e **modos SQL efetivos**.  
+-   A grade de modos SQL no procedimento armazenado, na função armazenada e no nível de gatilho contém as seguintes colunas: **nome do modo SQL**,  **modos SQL originais**e **modos SQL efetivos**.  
   
 > [!NOTE]  
 > Os modos de grupo serão mostrados em negrito, sob a coluna ' nome do modo SQL '.  

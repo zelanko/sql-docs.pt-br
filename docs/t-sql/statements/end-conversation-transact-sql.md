@@ -1,4 +1,5 @@
 ---
+description: END CONVERSATION (Transact-SQL)
 title: END CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16fa18b79361cf6d448d7d75b63208e882ac0b36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 76784d22919fc492c715ffa876c825e14794a511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496698"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +60,7 @@ END CONVERSATION conversation_handle
  É o código de erro. O *failure_code* é do tipo **int**. O código de falha é um código definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa. O código de falha deve ser maior que 0.  
   
  DESCRIPTION =*failure_text*  
- É a mensagem de erro. O *failure_text* é do tipo **nvarchar(3000)** . O texto da falha é um texto definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa.  
+ É a mensagem de erro. O *failure_text* é do tipo **nvarchar(3000)**. O texto da falha é um texto definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa.  
   
  WITH CLEANUP  
  Remove todas as mensagens e entradas da exibição do catálogo para um lado de uma conversa que não pode ser concluída normalmente. O outro lado da conversa não é notificado da limpeza. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove o ponto de extremidade da conversa, todas as mensagens da conversa na fila de transmissão e todas as mensagens da conversa na fila de serviço. Os administradores podem usar essa opção para remover conversas que não podem ser concluídas normalmente. Por exemplo, se o serviço remoto tiver sido removido permanentemente, um administrador poderá usar WITH CLEANUP para remover conversas para esse serviço. Não use WITH CLEANUP no código de um aplicativo do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Se END CONVERSATION WITH CLEANUP for executado antes de o ponto de extremidade de recepção confirmar o recebimento de uma mensagem, o ponto de extremidade de envio enviará a mensagem novamente. Isto poderá executar novamente o diálogo.  

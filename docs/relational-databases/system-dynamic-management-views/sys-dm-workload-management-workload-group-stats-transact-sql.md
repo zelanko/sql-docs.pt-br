@@ -1,4 +1,5 @@
 ---
+description: sys. dm_workload_management_workload_groups_stats (Transact-SQL)
 title: sys. dm_workload_management_workload_groups_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2019
@@ -11,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 38ed2b42a24dbaec27e3014bc0b1d783722fa91f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a439ebecacd29c2ca412e5ba90fac6b6b5af2b24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498299"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]

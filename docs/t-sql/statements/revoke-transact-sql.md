@@ -1,4 +1,5 @@
 ---
+description: REVOKE (Transact-SQL)
 title: REVOKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -29,12 +30,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80d1eeb52c557fc1966a70e62dcfb37b9759369d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cb01b06486996a43eba3401644c34663eb05b800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496545"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -178,7 +179,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
 |Catálogo de texto completo|[Permissões REVOKE de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |Lista de palavras irrelevantes de texto completo|[Permissões REVOKE de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |Função|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Logon|[Permissões REVOKE de entidade de segurança do servidor &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Logon|[Permissões REVOKE de entidade do servidor &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |Tipo de mensagem|[Permissões REVOKE do Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Objeto|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Fila|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
@@ -196,7 +197,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
 |Tabela|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Type|[Permissões REVOKE de tipo &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |Usuário|[Permissões REVOKE da entidade de segurança do banco de dados &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Visualizar|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Exibir|[Permissões de Objeto REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Coleção de esquema XML|[Permissões REVOKE de coleção de esquemas XML &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
