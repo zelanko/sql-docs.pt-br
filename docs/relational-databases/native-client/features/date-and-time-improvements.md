@@ -1,4 +1,5 @@
 ---
+description: Aprimoramentos de data e hora do SQL Server Native Client
 title: Aprimoramentos de data e hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47faf3970acd56bdc02c790c835837c1d2055dd5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d95150bfc204607b4a89449b66cc8b89b433b1b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498975"
 ---
 # <a name="sql-server-native-client-date-and-time-improvements"></a>Aprimoramentos de data e hora do SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
