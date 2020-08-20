@@ -1,4 +1,5 @@
 ---
+description: backupset (Transact-SQL)
 title: conjunto de backup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492832"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86091847"
 |**expiration_date**|**datetime**|Data e hora de vencimento do conjunto de backup. Pode ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificação do fornecedor de software que escreve o cabeçalho de mídia de backup. Pode ser NULL.|  
 |**name**|**nvarchar(128)**|Nome do conjunto de backup. Pode ser NULL.|  
-|**ndescrição**|**nvarchar (255)**|Descrição do conjunto de backup. Pode ser NULL.|  
+|**descrição**|**nvarchar(255)**|Descrição do conjunto de backup. Pode ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nome do usuário que realizou a operação de backup. Pode ser NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]número de versão principal. Pode ser NULL.|  
 |**software_minor_version**|**tinyint**|Número de versão secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
@@ -63,7 +65,7 @@ ms.locfileid: "86091847"
 |**database_creation_date**|**datetime**|Data e hora em que o banco de dados foi originalmente criado. Pode ser NULL.|  
 |**backup_start_date**|**datetime**|Data e hora em que a operação de backup foi iniciada. Pode ser NULL.|  
 |**backup_finish_date**|**datetime**|Data e hora em que a operação de backup foi concluída. Pode ser NULL.|  
-|**type**|**Char (1)**|Tipo de backup. Pode ser:<br /><br /> D = Banco de dados<br /><br /> I = Banco de dados diferencial<br /><br /> L = Log<br /><br /> G = Arquivo ou grupo de arquivos<br /><br /> G = Arquivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Pode ser NULL.|  
+|**tipo**|**Char (1)**|Tipo de backup. Pode ser:<br /><br /> D = Banco de dados<br /><br /> I = Banco de dados diferencial<br /><br /> L = Log<br /><br /> G = Arquivo ou grupo de arquivos<br /><br /> G = Arquivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Pode ser NULL.|  
 |**sort_order**|**smallint**|Ordem de classificação do servidor que está executando a operação de backup. Pode ser NULL. Para obter mais informações sobre ordens de classificação e agrupamentos, consulte [suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Página de código do servidor que está executando a operação de backup. Pode ser NULL. Para obter mais informações sobre páginas de código, consulte [agrupamento e suporte a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Configuração de nível de compatibilidade para o banco de dados. Pode ser:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Pode ser NULL.<br /><br /> Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
@@ -98,7 +100,7 @@ ms.locfileid: "86091847"
 |**compressed_backup_size**|**Numeric (20, 0)**|Contagem total de bytes do backup armazenado em disco.<br /><br /> Para calcular a taxa de compactação, use **compressed_backup_size** e **backup_size**.<br /><br /> Durante uma atualização do **msdb** , esse valor é definido como nulo. o que indica um backup não compactado.|  
 |**key_algorithm**|**nvarchar(32)**|O algoritmo de criptografia usado para criptografar o backup. O valor de NO_Encryption indica que o backup não foi criptografado.|  
 |**encryptor_thumbprint**|**varbinary(20)**|A impressão digital do criptografador que pode ser usada para localizar o certificado ou chave assimétrica no banco de dados. Quando o backup não tiver sido criptografado, esse valor será NULL.|  
-|**encryptor_type**|**nvarchar(32)**|O tipo de criptografador usado: certificado ou chave assimétrica. . Quando o backup não tiver sido criptografado, esse valor será NULL.|  
+|**encryptor_type**|**nvarchar(32)**|O tipo de criptografador usado: Certificado ou Chave Assimétrica. . Quando o backup não tiver sido criptografado, esse valor será NULL.|  
   
 ## <a name="remarks"></a>Comentários  
  RESTOre VERIFYONLY de *backup_device* com LOADHISTORY popula a coluna da tabela **backupmediaset** com os valores apropriados do cabeçalho conjunto de mídias.  

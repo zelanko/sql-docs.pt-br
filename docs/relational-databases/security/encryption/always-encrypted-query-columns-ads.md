@@ -1,4 +1,5 @@
 ---
+description: Consultar colunas usando o Always Encrypted com o Azure Data Studio
 title: Consultar colunas usando o Always Encrypted com o Azure Data Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 5/19/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99ed0b0c5424b995f336511ef267d842ba4fe81b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493807"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Consultar colunas usando o Always Encrypted com o Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

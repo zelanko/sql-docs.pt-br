@@ -1,4 +1,5 @@
 ---
+description: Personalizar a ordem das chamadas (SybaseToSQL)
 title: Personalizando a ordem das chamadas (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 279a4a9edb64beb545e0747febb114beeb2d9939
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ec7345f10d78ecbbdcc55567e1abe08da885adc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492247"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>Personalizar a ordem das chamadas (SybaseToSQL)
 Nesta etapa, você seleciona a ordem na qual os objetos a serem testados serão invocados.  

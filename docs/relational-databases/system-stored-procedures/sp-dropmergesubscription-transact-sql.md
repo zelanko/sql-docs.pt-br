@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergesubscription (Transact-SQL)
 title: sp_dropmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6e2a01f60f982d3803fbad72cfbad6202b90315
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4d5b3726aecea192501255efedf0be970549e612
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493245"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. A publicação já deve existir e estar em conformidade com as regras para identificadores.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. A publicação já deve existir e estar em conformidade com as regras para identificadores.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscription_database*é **sysname**, com um padrão de NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscription_database*é **sysname**, com um padrão de NULL.  
   
-`[ @subscription_type = ] 'subscription_type'`É o tipo de assinatura. *subscription_type*é **nvarchar (15)** e pode ser um desses valores.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*é **nvarchar (15)** e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -58,9 +59,9 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**recebimento**|Assinatura pull.|  
 |**ambos** (padrão)|Assinaturas push e pull.|  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar uma assinatura sem tarefas de limpeza no Distribuidor. Também é útil, se for necessário reinstalar o Distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar uma assinatura sem tarefas de limpeza no Distribuidor. Também é útil, se for necessário reinstalar o Distribuidor.  
   
-`[ @reserved = ] reserved`É reservado para uso futuro. *reservado* é **bit**, com um padrão de **0**.  
+`[ @reserved = ] reserved` É reservado para uso futuro. *reservado* é **bit**, com um padrão de **0**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -77,8 +78,8 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="see-also"></a>Consulte Também  
  [Excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Excluir uma assinatura pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [&#41;&#40;Transact-SQL de sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addmergesubscription ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergesubscription ](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergesubscription ](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

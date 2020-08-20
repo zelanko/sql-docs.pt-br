@@ -1,4 +1,5 @@
 ---
+description: sp_unprepare (Transact-SQL)
 title: sp_unprepare (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ ms.assetid: 14320251-c551-49d8-b933-057406114978
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9db62857bf8d6b81b6999910d8dfa68e73dca3e3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 53d8ec3c7f3976da32bb49d448b76ce96b3f8a3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492926"
 ---
 # <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -67,5 +68,5 @@ EXEC sp_unprepare @P1;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_prepare &#40;&#41;Transact SQL](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [sp_prepare &#40;&#41;Transact SQL ](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 

@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_system_components (Transact-SQL)
 title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493198"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  Retorna informações de todos os componentes de texto completo.  
   
-`[ @component_type = ] component_type`Especifica o tipo de componente. *component_type* pode ser um dos seguintes:  
+`[ @component_type = ] component_type` Especifica o tipo de componente. *component_type* pode ser um dos seguintes:  
   
 -   **separador**  
   
@@ -57,7 +58,7 @@ sp_help_fulltext_system_components
   
  Se um caminho completo for especificado, *param* também deverá ser especificado com o caminho completo para a DLL do componente, ou uma mensagem de erro será retornada.  
   
-`[ @param = ] param`Dependendo do tipo de componente, este é um dos seguintes: um LCID (identificador de localidade), a extensão de arquivo com o prefixo ".", o nome completo do componente do manipulador de protocolo ou o caminho completo para a DLL do componente.  
+`[ @param = ] param` Dependendo do tipo de componente, este é um dos seguintes: um LCID (identificador de localidade), a extensão de arquivo com o prefixo ".", o nome completo do componente do manipulador de protocolo ou o caminho completo para a DLL do componente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -72,7 +73,7 @@ sp_help_fulltext_system_components
 |**clsid**|**uniqueidentifier**|Identificador de classe do componente.|  
 |**FullPath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é um membro da função de servidor fixa **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|A versão do componente.|  
-|**manufacturer**|**sysname**|Nome do fabricante do componente.|  
+|**fabricante**|**sysname**|Nome do fabricante do componente.|  
   
  O conjunto de resultados a seguir será retornado somente se existir um ou mais de um catálogo de texto completo que use *component_type*.  
   

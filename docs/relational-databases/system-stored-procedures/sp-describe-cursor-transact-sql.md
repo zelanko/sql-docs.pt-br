@@ -1,4 +1,5 @@
 ---
+description: sp_describe_cursor (Transact-SQL)
 title: sp_describe_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e8b245778ea29c162cc023f707c717dfc5a01a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97f7d5b17fdd06199b11bfa82c6795407e28127f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493289"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -138,10 +139,10 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Cursores](../../relational-databases/cursors.md)   
- [&#41;&#40;Transact-SQL de CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARAR CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_describe_cursor_columns](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de CURSOR_STATUS ](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursor_list ](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_describe_cursor_columns ](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_describe_cursor_tables ](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_tables_cursor (Transact-SQL)
 title: sp_help_fulltext_tables_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9341f19f4f48dc46cb4cda11f1553c421ef13e8
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 74dc3af395ff6b9a3182ac97a0cb99dacc2e4513
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493192"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "86091627"
   Usa um cursor ao retornar uma lista de tabelas que são registradas para indexação de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a nova exibição de catálogo **Sys. fulltext_indexes** . Para obter mais informações, consulte [Sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a nova exibição de catálogo **Sys. fulltext_indexes** . Para obter mais informações, consulte [Sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +46,11 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @cursor_return = ] @cursor_variable OUTPUT`É a variável de saída do tipo **cursor**. O cursor é somente leitura, rolável e dinâmico.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` É a variável de saída do tipo **cursor**. O cursor é somente leitura, rolável e dinâmico.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`É o nome do catálogo de texto completo. *fulltext_catalog_name* é **sysname**, com um padrão de NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas ao banco de dados serão retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo serão recuperadas para cada tabela indexada de texto completo associada a esse catálogo. Se *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* estiver associado a *fulltext_catalog_name*; caso contrário, um erro será gerado.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. *fulltext_catalog_name* é **sysname**, com um padrão de NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas ao banco de dados serão retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo serão recuperadas para cada tabela indexada de texto completo associada a esse catálogo. Se *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* estiver associado a *fulltext_catalog_name*; caso contrário, um erro será gerado.  
   
-`[ @table_name = ] 'table_name'`É o nome da tabela de uma ou duas partes para a qual os metadados de texto completo são solicitados. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante para *table_name* será retornada.  
+`[ @table_name = ] 'table_name'` É o nome da tabela de uma ou duas partes para a qual os metadados de texto completo são solicitados. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante para *table_name* será retornada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -86,10 +88,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [INDEXproperty &#40;&#41;Transact-SQL](../../t-sql/functions/indexproperty-transact-sql.md)   
- [&#41;OBJECTPROPERTY &#40;Transact-SQL](../../t-sql/functions/objectproperty-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_fulltext_table](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_fulltext_tables](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_fulltext_table ](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_fulltext_tables ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

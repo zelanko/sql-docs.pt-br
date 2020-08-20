@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492956"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`É o identificador da assinatura da categoria de política que você deseja atualizar. *policy_category_subscription_id* é **int**e é obrigatório.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` É o identificador da assinatura da categoria de política que você deseja atualizar. *policy_category_subscription_id* é **int**e é obrigatório.  
   
-`[ @target_type = ] 'target_type'`É o tipo de destino da assinatura de categoria. *target_type* é **sysname**, com um padrão de NULL.  
+`[ @target_type = ] 'target_type'` É o tipo de destino da assinatura de categoria. *target_type* é **sysname**, com um padrão de NULL.  
   
  Se você especificar *target_type*, o valor deverá ser definido como ' database '.  
   
-`[ @target_object = ] 'target_object'`É o nome do banco de dados que assinará a categoria de política. *target_object* é **sysname**, com um padrão de NULL.  
+`[ @target_object = ] 'target_object'` É o nome do banco de dados que assinará a categoria de política. *target_object* é **sysname**, com um padrão de NULL.  
   
-`[ @policy_category = ] 'policy_category'`É o nome da categoria de política que você deseja que o banco de dados assine. *policy_category* é **sysname**, com um padrão de NULL.  
+`[ @policy_category = ] 'policy_category'` É o nome da categoria de política que você deseja que o banco de dados assine. *policy_category* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -87,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_add_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_delete_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_syspolicy_add_policy_category_subscription ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_delete_policy_category_subscription ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

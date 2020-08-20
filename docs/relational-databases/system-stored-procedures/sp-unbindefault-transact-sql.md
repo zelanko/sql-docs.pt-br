@@ -1,4 +1,5 @@
 ---
+description: sp_unbindefault (Transact-SQL)
 title: sp_unbindefault (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8ca77607b6b83f437792800060c368db91ae3bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a78e7ac859e4750f543befd2e574214dae35386
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492957"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891414"
   Desvincula, ou remove, um padrão de uma coluna ou de um tipo de dados de alias no banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Recomendamos que você crie definições padrão usando a palavra-chave DEFAULT nas instruções [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Recomendamos que você crie definições padrão usando a palavra-chave DEFAULT nas instruções [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object_name'`É o nome da tabela e da coluna ou do tipo de dados do alias do qual o padrão deve ser desassociado. *object_name* é **nvarchar (776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias.  
+`[ @objname = ] 'object_name'` É o nome da tabela e da coluna ou do tipo de dados do alias do qual o padrão deve ser desassociado. *object_name* é **nvarchar (776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias.  
   
  Ao desvincular um padrão de um tipo de dados de alias, as colunas desse tipo de dados que tiverem o mesmo padrão também serão desvinculadas. As colunas desse tipo de dados com padrões vinculados diretamente não serão afetadas.  
   
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como caracteres de identificador delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'`É usado somente ao desassociar um padrão de um tipo de dados de alias. *futureonly_flag* é **varchar (15)**, com um padrão de NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes do tipo de dados não perdem o padrão especificado.  
+`[ @futureonly = ] 'futureonly_flag'` É usado somente ao desassociar um padrão de um tipo de dados de alias. *futureonly_flag* é **varchar (15)**, com um padrão de NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes do tipo de dados não perdem o padrão especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -100,11 +101,11 @@ EXEC sp_unbindefault '[t.3].c1';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [Descartar padrão &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_bindefault ](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_principalprofile_sp (Transact-SQL)
 title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bdfeab82f6964abb5e48758cb4b8adba096e5b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492800"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id`A ID do usuário de banco de dados ou função no banco de dados **msdb** para a associação a ser alterada. *principal_id* é **int**, com um padrão de NULL. O *principal_id* ou *principal_name* deve ser especificado.  
+`[ @principal_id = ] principal_id` A ID do usuário de banco de dados ou função no banco de dados **msdb** para a associação a ser alterada. *principal_id* é **int**, com um padrão de NULL. O *principal_id* ou *principal_name* deve ser especificado.  
   
-`[ @principal_name = ] 'principal_name'`O nome do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser atualizada. *principal_name* é **sysname**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
+`[ @principal_name = ] 'principal_name'` O nome do usuário do banco de dados ou da função no banco de dados **msdb** para a associação a ser atualizada. *principal_name* é **sysname**, com um padrão de NULL. *Principal_id* ou *principal_name* pode ser especificado.  
   
-`[ @profile_id = ] profile_id`A ID do perfil para a associação a ser alterada. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_id = ] profile_id` A ID do perfil para a associação a ser alterada. *profile_id* é **int**, com um padrão de NULL. O *profile_id* ou *profile_name* deve ser especificado.  
   
-`[ @profile_name = ] 'profile_name'`O nome do perfil para a associação a ser alterada. *profile_name* é **sysname**, com um padrão de NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil para a associação a ser alterada. *profile_name* é **sysname**, com um padrão de NULL. O *profile_id* ou *profile_name* deve ser especificado.  
   
-`[ @is_default = ] 'is_default'`É se esse perfil é o perfil padrão para o usuário do banco de dados. Um usuário de banco de dados pode ter somente um perfil padrão. *is_default* é **bit**, sem padrão.  
+`[ @is_default = ] 'is_default'` É se esse perfil é o perfil padrão para o usuário do banco de dados. Um usuário de banco de dados pode ter somente um perfil padrão. *is_default* é **bit**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

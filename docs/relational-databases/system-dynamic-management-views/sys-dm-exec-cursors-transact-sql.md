@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cursors (Transact-SQL)
 title: sys. dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493702"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,8 +65,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|No caso dos cursores FAST_FORWARD e DYNAMIC, retornará 0 se o cursor não estiver aberto ou se for posicionado antes da primeira linha. Caso contrário, ele retornará -1.<br /><br /> No caso dos cursores STATIC e KEYSET, retornará 0, se o cursor não estiver aberto, e -1, se o cursor for posicionado antes da primeira linha.<br /><br /> Caso contrário, retorna o número da linha onde está posicionado.|  
 |**ansi_position**|**int**|Posição de cursor dentro do buffer de busca.|  
 |**worker_time**|**bigint**|Tempo gasto, em microssegundos, pelos trabalhados que executam este cursor.|  
-|**reads**|**bigint**|Número de leituras executadas pelo cursor.|  
-|**writes**|**bigint**|Número de gravações executadas pelo cursor.|  
+|**pareça**|**bigint**|Número de leituras executadas pelo cursor.|  
+|**registra**|**bigint**|Número de gravações executadas pelo cursor.|  
 |**dormant_duration**|**bigint**|Milissegundos desde o início da última consulta (aberta ou de busca) neste cursor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -81,7 +82,7 @@ dm_exec_cursors (session_id | 0 )
   
  A tabela a seguir fornece informações sobre o tipo de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Type|Description|  
+|Type|Descrição|  
 |----------|-----------------|  
 |Keyset|O cursor foi declarado como Keyset (conjunto de chaves).|  
 |Dinâmico|O cursor foi declarado como Dynamic (dinâmico).|  
@@ -117,7 +118,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   

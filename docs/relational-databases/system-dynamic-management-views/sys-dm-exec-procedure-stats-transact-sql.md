@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_procedure_stats (Transact-SQL)
 title: sys. dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,11 +21,12 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 116196bf58c37c63fe64ce9566dd21d3191c022b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493750"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86000262"
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, todas as linhas que contêm dados que não pertencem ao locatário conectado serão filtradas.  
   
 > [!NOTE]
-> Os resultados de **Sys. dm_exec_procedure_stats** podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
+> Os resultados de **Sys. dm_exec_procedure_stats**  podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
 > Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
@@ -73,7 +75,7 @@ ms.locfileid: "86000262"
 |**last_spills**|**bigint**|O número de páginas despejadas na última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**min_spills**|**bigint**|O número mínimo de páginas que esse procedimento armazenado já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**max_spills**|**bigint**|O número máximo de páginas que esse procedimento armazenado já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br />**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br />**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|O número total de leituras de servidor de página executadas por execuções deste procedimento armazenado desde que ele foi compilado.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
 |**last_page_server_reads**|**bigint**|O número de leituras do servidor de página executadas na última vez em que o procedimento armazenado foi executado.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
 |**min_page_server_reads**|**bigint**|O número mínimo de leituras do servidor de páginas que esse procedimento armazenado já realizou durante uma única execução.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
@@ -84,7 +86,7 @@ ms.locfileid: "86000262"
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
    
 ## <a name="remarks"></a>Comentários  
  As estatísticas da exibição serão atualizadas quando uma execução de procedimento armazenado for concluída.  

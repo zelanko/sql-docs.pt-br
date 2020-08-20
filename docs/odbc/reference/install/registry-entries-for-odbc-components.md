@@ -1,4 +1,5 @@
 ---
+description: Entradas do Registro para componentes ODBC
 title: Entradas de registro para componentes ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3364f2b38fdb0c41ae0493b545740b17ee712bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491331"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Entradas do Registro para componentes ODBC
 > [!NOTE]  
@@ -33,7 +34,7 @@ ms.locfileid: "81296166"
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- Como o Odbcinst. ini é uma subchave da árvore de HKEY_LOCAL_MACHINE, as informações sobre os componentes ODBC estão disponíveis para todos os usuários do computador.  
+ Como Odbcinst.ini é uma subchave da árvore de HKEY_LOCAL_MACHINE, as informações sobre os componentes ODBC estão disponíveis para todos os usuários do computador.  
   
  Esta seção contém os seguintes tópicos.  
   

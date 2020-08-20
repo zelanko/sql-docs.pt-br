@@ -1,4 +1,5 @@
 ---
+description: Função SQLFreeHandle
 title: Função SQLFreeHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491267"
 ---
 # <a name="sqlfreehandle-function"></a>Função SQLFreeHandle
 **Conformidade**  
@@ -72,12 +73,12 @@ SQLRETURN SQLFreeHandle(
   
  Se **SQLFreeHandle** retornar SQL_ERROR, o identificador ainda será válido.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLFreeHandle** retorna SQL_ERROR, um valor SQLSTATE associado pode ser obtido na estrutura de dados de diagnóstico para o identificador que o **SQLFreeHandle** tentou liberar, mas não pôde fazê-lo. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLFreeHandle** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) o argumento *HandleType* foi SQL_HANDLE_ENV e pelo menos uma conexão estava em um estado alocado ou conectado. **SQLDisconnect** e **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DBC deve ser chamado para cada conexão antes de chamar **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) o argumento *HandleType* foi SQL_HANDLE_DBC e a função foi chamada antes de chamar **SQLDisconnect** para a conexão.<br /><br /> (DM) o argumento *HandleType* foi SQL_HANDLE_DBC. Uma função de execução assíncrona foi chamada com *identificador* e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) o argumento *HandleType* foi SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado com o identificador de instrução e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) o argumento *HandleType* foi SQL_HANDLE_STMT. Uma função de execução assíncrona foi chamada no identificador de instrução ou no identificador de conexão associado e a função ainda estava sendo executada quando essa função foi chamada.<br /><br /> (DM) o argumento *HandleType* foi SQL_HANDLE_DESC. Uma função de execução assíncrona foi chamada no identificador de conexão associado; e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) todos os identificadores de subsidiárias e outros recursos não foram liberados antes de o **SQLFreeHandle** ser chamado.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados ao *identificador* e ao *handletype* definido como SQL_HANDLE_STMT ou SQL_HANDLE_DESC retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  
 |HY013|Erro de gerenciamento de memória|O argumento *HandleType* foi SQL_HANDLE_STMT ou SQL_HANDLE_DESC, e a chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  

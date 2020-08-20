@@ -1,4 +1,5 @@
 ---
+description: Remover componentes do SSMA para Oracle (OracleToSQL)
 title: Removendo o SSMA for Oracle Components (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492376"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Remover componentes do SSMA para Oracle (OracleToSQL)
 Quando terminar de migrar bancos de dados do Oracle para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , talvez você queira desinstalar os componentes do SSMA. Você pode desinstalar os componentes do cliente a qualquer momento. No entanto, você não deve desinstalar o pacote de extensão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que os bancos de dados migrados não usem mais funções no esquema de **ssma_oracle** do **sysdb** .  

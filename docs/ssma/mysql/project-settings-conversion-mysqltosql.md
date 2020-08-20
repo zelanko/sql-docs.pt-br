@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (conversão) (MySQLToSQL)
 title: Configurações do projeto (conversão) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492429"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configurações do projeto (conversão) (MySQLToSQL)
 A página conversão da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte a sintaxe do MySQL em sintaxe SQL Server ou SQL Azure.  
@@ -86,10 +87,10 @@ O painel de conversão está disponível nas caixas de diálogo **configuraçõe
 |||  
 |-|-|  
 |**Termo**|**Definição**|  
-|**Caixa delimitadora padrão {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para índices espaciais**|Define o valor padrão para o parâmetro {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} da caixa delimitadora usada em índices espaciais.<br /><br />**Modo padrão**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo otimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**Densidade de grade padrão para índices espaciais**|Define o valor padrão para LEVEL_1, LEVEL_2, LEVEL_3 e LEVEL_4 da densidade de grade usada em índices espaciais.<br /><br />**Modo padrão**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo otimista**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo completo**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão|  
+|**Caixa delimitadora padrão {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para índices espaciais**|Define o valor padrão para o parâmetro {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} da caixa delimitadora usada em índices espaciais.<br /><br />**Modo Padrão**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo otimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Densidade de grade padrão para índices espaciais**|Define o valor padrão para LEVEL_1, LEVEL_2, LEVEL_3 e LEVEL_4 da densidade de grade usada em índices espaciais.<br /><br />**Modo Padrão**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo otimista**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo completo**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão|  
   
-### <a name="transactions"></a>Transações  
+### <a name="transactions"></a>Transactions  
   
 |||  
 |-|-|  

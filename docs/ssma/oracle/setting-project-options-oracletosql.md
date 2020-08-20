@@ -1,4 +1,5 @@
 ---
+description: Definir opções do projeto (OracleToSQL)
 title: Configurando opções de projeto (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492345"
 ---
 # <a name="setting-project-options-oracletosql"></a>Definir opções do projeto (OracleToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão de objetos, o carregamento de objetos, a interface do usuário e as configurações de migração de dados. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, verifique se as opções de configuração são apropriadas para o projeto.  

@@ -1,4 +1,5 @@
 ---
+description: Assistente para localizar bancos de dados (verificar seleção) (AccessToSQL)
 title: Assistente para localizar bancos de dados (verificar seleção) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c03d8cf571974e7c84f31659a40c67d832d0b6ef
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 88165279f18873ee4b4e1e7c9d575653b4f56d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492529"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Assistente para localizar bancos de dados (verificar seleção) (AccessToSQL)
 A página verificar seleção do assistente para localizar bancos de dados lista os arquivos a serem adicionados ao SSMA. Se a lista de arquivos estiver incorreta, clique em **voltar** para modificar a lista. Caso contrário, clique em **concluir** para adicionar os arquivos.  

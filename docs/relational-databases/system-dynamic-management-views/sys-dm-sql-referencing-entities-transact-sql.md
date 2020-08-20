@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referencing_entities (Transact-SQL)
 title: sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493569"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,15 +61,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- `schema_name.referenced_entity_name`É o nome da entidade referenciada.  
+ `schema_name.referenced_entity_name` É o nome da entidade referenciada.  
   
  `schema_name` é necessário, exceto quando a classe referenciada é a PARTITION_FUNCTION.  
   
- `schema_name.referenced_entity_name`é **nvarchar (517)**.  
+ `schema_name.referenced_entity_name` é **nvarchar (517)**.  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`É a classe da entidade referenciada. Apenas uma classe pode ser especificada por instrução.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` É a classe da entidade referenciada. Apenas uma classe pode ser especificada por instrução.  
   
- `<referenced_class>`é **nvarchar**(60).  
+ `<referenced_class>` é **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -100,7 +101,7 @@ sys.dm_sql_referencing_entities (
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
 |Tabela|Sim*|Sim|  
-|Exibir|Sim|Sim|  
+|Visualizar|Sim|Sim|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
 |procedimento armazenado CLR|Não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |Coleção de esquemas XML|Não|Sim|  
 |Função de partição|Não|Sim|  
   
- \*Uma tabela é rastreada como uma entidade de referência somente quando faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquema XML na definição de uma coluna computada, restrição de verificação ou restrição padrão.  
+ \* Uma tabela é rastreada como uma entidade de referência somente quando faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquema XML na definição de uma coluna computada, restrição de verificação ou restrição padrão.  
   
  ** Os procedimentos armazenados numerados com um valor inteiro maior que 1 não são controlados como entidade que faz referência nem como entidade referenciada.  
   

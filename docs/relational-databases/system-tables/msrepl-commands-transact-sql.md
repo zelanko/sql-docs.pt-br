@@ -1,4 +1,5 @@
 ---
+description: MSrepl_commands (Transact-SQL)
 title: MSrepl_commands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d4dcbee03f1d5514e2b24520409804b1f27cefe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65b6e3924202153ff061da018bcce40ec9de0524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492722"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85889520"
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|A ID do banco de dados Publicador.|  
 |**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
-|**type**|**int**|O tipo de comando.|  
+|**tipo**|**int**|O tipo de comando.|  
 |**article_id**|**int**|A ID do artigo.|  
 |**originator_id**|**int**|A ID do originador.|  
 |**command_id**|**int**|A ID do comando.|  
@@ -43,8 +44,8 @@ ms.locfileid: "85889520"
 |**originator_lsn**|**varbinary(16)**|Identifica o LSN para o comando na publicação de origem. Usado em replicação transacional ponto a ponto.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
   
   

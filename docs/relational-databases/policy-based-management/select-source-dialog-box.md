@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Selecionar Origem
 title: Caixa de diálogo Selecionar fonte | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ebbe01dcc03ef670ac41ca0842f702c8e637cb37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ea25aebc5368295f13105ecc58d18e86bfc6071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493969"
 ---
 # <a name="select-source-dialog-box"></a>Caixa de diálogo Selecionar Origem
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +28,11 @@ ms.locfileid: "85760463"
   
  **Para abrir essa caixa de diálogo**  
   
--   Em Servidores Registrados, clique com o botão direito do mouse em **Grupos do Servidor Local** ou em qualquer servidor em **Grupos de Servidores Locais**ou em **Servidores de Gerenciamento Central**e selecione **Avaliar Políticas**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar ( **...** ).  
+-   Em Servidores Registrados, clique com o botão direito do mouse em **Grupos do Servidor Local** ou em qualquer servidor em **Grupos de Servidores Locais**ou em **Servidores de Gerenciamento Central**e selecione **Avaliar Políticas**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar (**...**).  
   
--   No Pesquisador de Objetos, expanda **Gerenciamento**, expanda **Gerenciamento de Políticas**, clique com o botão direito do mouse em **Políticas**e selecione **Importar Política**. Na caixa de diálogo **Importar** , clique no botão Procurar ( **...** ).  
+-   No Pesquisador de Objetos, expanda **Gerenciamento**, expanda **Gerenciamento de Políticas**, clique com o botão direito do mouse em **Políticas**e selecione **Importar Política**. Na caixa de diálogo **Importar** , clique no botão Procurar (**...**).  
   
--   No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, banco de dados ou objeto de banco de dados, selecione **Políticas**e depois **Avaliar**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar ( **...** ).  
+-   No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor, banco de dados ou objeto de banco de dados, selecione **Políticas**e depois **Avaliar**. Na página **Seleção de Política** da caixa de diálogo **Avaliar Políticas** , clique no botão Procurar (**...**).  
   
 ## <a name="options"></a>Opções  
  **Arquivos**  

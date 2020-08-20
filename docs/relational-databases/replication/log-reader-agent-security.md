@@ -1,4 +1,5 @@
 ---
+description: Segurança do Log Reader Agent
 title: Segurança do Agente de Leitor de Log | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,16 +16,16 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 33d63d25aa2b20959a4b36f63ba2a7f518c0230a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19bd3e83dbac4222dcdb476c5d952c0773a623e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493959"
 ---
 # <a name="log-reader-agent-security"></a>Segurança do Log Reader Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  A caixa de diálogo **Segurança do Log Reader Agent** permite especificar:  
+   A caixa de diálogo **Segurança do Log Reader Agent** permite especificar:  
   
 -   A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o Log Reader Agent é executado no Distribuidor. A conta do Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta.  
   

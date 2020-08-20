@@ -1,4 +1,5 @@
 ---
+description: Descendants (MDX)
 title: Descendentes (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b883d1ce73a7259b285748e5a66f283a7d830424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491435"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -48,7 +49,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
- *Distância*  
+ *Alcance*  
  Uma expressão numérica válida que especifica a distância do membro especificado.  
   
  *Desc_Flag*  
@@ -61,7 +62,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Se uma expressão de conjunto for especificada, a função **descendentes** será resolvida individualmente para cada membro do conjunto e o conjunto será criado novamente. Em outras palavras, a sintaxe usada para a função **descendentes** é funcionalmente equivalente à função de [geração](../mdx/generate-mdx.md) MDX.  
   
- Se nenhum nível ou distância for especificado, o valor padrão para o nível usado pela função será determinado chamando a função [Level](../mdx/level-mdx.md) (<\<membro>>. Nível) para o membro especificado (se um membro for especificado) ou chamando a função de **nível** para cada membro do conjunto especificado (se um conjunto for especificado). Se nenhuma expressão de nível, distância ou sinalizadores forem especificados, a função será executada como se a sintaxe seguinte fosse usada:  
+ Se nenhum nível ou distância for especificado, o valor padrão para o nível usado pela função será determinado chamando a função de [nível](../mdx/level-mdx.md) (<\<Member>>. Nível) para o membro especificado (se um membro for especificado) ou chamando a função de **nível** para cada membro do conjunto especificado (se um conjunto for especificado). Se nenhuma expressão de nível, distância ou sinalizadores forem especificados, a função será executada como se a sintaxe seguinte fosse usada:  
   
  `Descendants`  
   

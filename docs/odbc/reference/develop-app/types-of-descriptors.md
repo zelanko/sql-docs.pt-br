@@ -1,4 +1,5 @@
 ---
+description: Tipos de descritores
 title: Tipos de descritores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a6c7b55194eb61c1a909ced2296e4ad2050b674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ef6bcaa737e26a4a3125e980f6f6bf3c3cff070
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491341"
 ---
 # <a name="types-of-descriptors"></a>Tipos de descritores
 Um descritor é usado para descrever um dos seguintes:  

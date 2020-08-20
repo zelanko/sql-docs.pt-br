@@ -1,4 +1,5 @@
 ---
+description: Inicializar Assinaturas
 title: Inicializar assinaturas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e3214e9bdeca599fa3dce6c81cf57bbd640cd39d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ac308953d49527d1be7b71e667d7cb573c356ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493979"
 ---
 # <a name="initialize-subscriptions"></a>Inicializar Assinaturas
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_bindefault (Transact-SQL)
 title: sp_bindefault (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -18,12 +19,12 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f72269bbeef0954cff5a312909c55797d82b8f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493452"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716115"
   Associa um padrão a uma coluna ou a um tipo de dados de alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Recomendamos que você crie definições padrão usando a palavra-chave DEFAULT das instruções [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos que você crie definições padrão usando a palavra-chave DEFAULT das instruções [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,16 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @defname = ] 'default'`É o nome do padrão que é criado por criar padrão. o *padrão* é **nvarchar (776)**, sem padrão.  
+`[ @defname = ] 'default'` É o nome do padrão que é criado por criar padrão. o *padrão* é **nvarchar (776)**, sem padrão.  
   
-`[ @objname = ] 'object_name'`É o nome da tabela e da coluna ou do tipo de dados do alias ao qual o padrão deve ser associado. *object_name* é **nvarchar (776)** sem padrão. Não é possível definir *object_name* com os tipos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**ou CLR definidos pelo usuário.  
+`[ @objname = ] 'object_name'` É o nome da tabela e da coluna ou do tipo de dados do alias ao qual o padrão deve ser associado. *object_name* é **nvarchar (776)** sem padrão. Não é possível definir *object_name* com os tipos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**ou CLR definidos pelo usuário.  
   
  Se *object_name* for um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome de duas ou três partes, ele será resolvido primeiro como uma tabela e uma coluna; e se essa resolução falhar, ela será resolvida como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados alias herdam *Default*, a menos que um padrão tenha sido associado diretamente à coluna. Um padrão não pode ser associado a uma coluna de tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp**ou CLR definida pelo usuário, uma coluna com a propriedade Identity, uma coluna computada ou uma coluna que já tenha uma restrição default.  
   
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como identificadores delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'`É usado somente ao associar um padrão a um tipo de dados de alias. *futureonly_flag* é **varchar (15)** com um padrão de NULL. Quando esse parâmetro é definido como **futureonly**, as colunas existentes desse tipo de dados não podem herdar o novo padrão. Este parâmetro nunca é usado ao associar um padrão a uma coluna. Se *futureonly_flag* for NULL, o novo padrão será associado a qualquer coluna do tipo de dados de alias que atualmente não tem nenhum padrão ou que esteja usando o padrão existente do tipo de dados de alias.  
+`[ @futureonly = ] 'futureonly_flag'` É usado somente ao associar um padrão a um tipo de dados de alias. *futureonly_flag* é **varchar (15)** com um padrão de NULL. Quando esse parâmetro é definido como **futureonly**, as colunas existentes desse tipo de dados não podem herdar o novo padrão. Este parâmetro nunca é usado ao associar um padrão a uma coluna. Se *futureonly_flag* for NULL, o novo padrão será associado a qualquer coluna do tipo de dados de alias que atualmente não tem nenhum padrão ou que esteja usando o padrão existente do tipo de dados de alias.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -116,7 +117,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [Descartar padrão &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_unbindefault](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_unbindefault ](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

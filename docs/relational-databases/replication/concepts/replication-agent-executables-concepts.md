@@ -1,4 +1,5 @@
 ---
+description: Conceitos dos executáveis do Replication Agent
 title: Conceitos dos executáveis do agente de replicação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3d7c330823951444afe33c78cbfd88d0c5bb002c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7a27ed17835067fd3d98eaa1651993fec8488d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493973"
 ---
 # <a name="replication-agent-executables-concepts"></a>Conceitos dos executáveis do Replication Agent
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

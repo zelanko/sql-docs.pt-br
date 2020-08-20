@@ -1,4 +1,5 @@
 ---
+description: Executando o console do SSMA (AccessToSQL)
 title: Executando o console do SSMA (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c10360a252847aec9f65b9e6e1709b9fbffecce4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 655b6f64391ebf8c7fd28d179000753ed4f95faa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492509"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Executando o console do SSMA (AccessToSQL)
 A Microsoft fornece um conjunto robusto de comandos de arquivo de script e opções de linha de comando para executar e controlar atividades do SSMA. As seções que mais profundos detalham o mesmo.  
@@ -28,13 +29,13 @@ Create-New-Project: cria um novo projeto do SSMA.
   
 **Script**  
   
--   `project-folder`indica a pasta do projeto que está sendo criado.  
+-   `project-folder` indica a pasta do projeto que está sendo criado.  
   
--   `project-name`indica o nome do projeto. {string}  
+-   `project-name` indica o nome do projeto. {string}  
   
 -   `overwrite-if-exists`Atributo opcional indica se um projeto existente deve ser substituído. Boolean  
   
--   `project-type`é um atributo opcional.  As opções a seguir estão disponíveis para o tipo de projeto:  
+-   `project-type` é um atributo opcional.  As opções a seguir estão disponíveis para o tipo de projeto:  
   
     -   SQL-Server-2005  
   
@@ -75,9 +76,9 @@ Open-Project: abre um projeto existente.
   
 **Script**  
   
--   `project-folder`indica a pasta do projeto que está sendo criado. O comando falhará se a pasta especificada não existir.  {string}  
+-   `project-folder` indica a pasta do projeto que está sendo criado. O comando falhará se a pasta especificada não existir.  {string}  
   
--   `project-name`indica o nome do projeto. O comando falhará se o projeto especificado não existir.  {string}  
+-   `project-name` indica o nome do projeto. O comando falhará se o projeto especificado não existir.  {string}  
   
 **Exemplo de sintaxe:**  
   
@@ -157,7 +158,7 @@ Load-Access-Database: usado para carregar arquivos de banco de dados de acesso
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-ou o  
+ou  
   
 ```xml  
 <load-access-database>  
@@ -191,7 +192,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou o  
+ou  
   
 ```xml  
 <force-load>  
@@ -266,25 +267,25 @@ gerar-avaliação-relatório
   
 **Script**
 
-- `assessment-report-folder:`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+- `assessment-report-folder:` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
-- `object-name:`Especifica os objetos considerados para geração de relatórios de avaliação (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+- `object-name:` Especifica os objetos considerados para geração de relatórios de avaliação (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-- `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+- `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-- `assessment-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+- `assessment-report-overwrite:` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-- `write-summary-report-to:`Especifica o caminho onde o relatório será gerado.  
+- `write-summary-report-to:` Especifica o caminho onde o relatório será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **AssessmentReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    - `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    - `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    - `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    - `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -308,7 +309,7 @@ gerar-avaliação-relatório
 />  
 ```
 
-ou o
+ou
   
 ```xml  
 <generate-assessment-report  
@@ -341,25 +342,25 @@ converter esquema
   
 **Script**
 
-- `conversion-report-folder:`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+- `conversion-report-folder:` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
-- `object-name:`Especifica os objetos de origem considerados para converter o esquema (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+- `object-name:` Especifica os objetos de origem considerados para converter o esquema (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-- `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+- `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-- `conversion-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+- `conversion-report-overwrite:` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-- `write-summary-report-to:`Especifica o caminho onde o relatório será gerado.  
+- `write-summary-report-to:` Especifica o caminho onde o relatório será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **SchemaConversionReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    - `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    - `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    - `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    - `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -382,7 +383,7 @@ converter esquema
 />  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <convert-schema  
@@ -406,19 +407,19 @@ migrar-dados
   
 **Script**
   
-- `object-name:`Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+- `object-name:` Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-- `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+- `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-- `write-summary-report-to:`Especifica o caminho onde o relatório será gerado.  
+- `write-summary-report-to:` Especifica o caminho onde o relatório será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **DataMigrationReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    - `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    - `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    - `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    - `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -444,7 +445,7 @@ migrar-dados
 </migrate-data>  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <migrate-data  
@@ -476,7 +477,7 @@ link-Tables: esse comando vincula a tabela de origem (acesso) à tabela de desti
 </link-tables>  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <link-tables>  
@@ -504,7 +505,7 @@ Desvincular tabelas: esse comando desvincula a tabela de origem (acesso) da tabe
 </unlink-tables>  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <unlink-tables>  
@@ -524,9 +525,9 @@ mapa-esquema: mapeamento de esquema do banco de dados de origem para o esquema d
   
 **Script**
   
-- `source-schema`Especifica o esquema de origem que pretendemos migrar.  
+- `source-schema` Especifica o esquema de origem que pretendemos migrar.  
   
-- `sql-server-schema`Especifica o esquema de destino onde queremos que ele seja migrado.  
+- `sql-server-schema` Especifica o esquema de destino onde queremos que ele seja migrado.  
   
 **Exemplo de sintaxe:**  
   
@@ -554,11 +555,11 @@ sincronizar destino
   
 **Script**
   
-- `object-name:`Especifica os objetos de destino considerados para sincronização com o banco de dados de destino (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+- `object-name:` Especifica os objetos de destino considerados para sincronização com o banco de dados de destino (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-- `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+- `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-- `on-error:`Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
+- `on-error:` Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
   
     - relatório-total-como-aviso  
   
@@ -566,7 +567,7 @@ sincronizar destino
   
     - script de falha  
   
-- `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
+- `report-errors-to:` Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -586,7 +587,7 @@ sincronizar destino
 />  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <synchronize-target  
@@ -596,7 +597,7 @@ ou o
   object-type="category"/>  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <synchronize-target>  
@@ -622,11 +623,11 @@ atualizar-do-banco de dados
   
 Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
-- `object-name:`Especifica os objetos de origem considerados para atualização do banco de dados de origem (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+- `object-name:` Especifica os objetos de origem considerados para atualização do banco de dados de origem (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-- `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+- `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-- `on-error:`Especifica se é para especificar erros de atualização como avisos ou erro. Opções disponíveis para o no-erro:  
+- `on-error:` Especifica se é para especificar erros de atualização como avisos ou erro. Opções disponíveis para o no-erro:  
   
     - relatório-total-como-aviso  
   
@@ -634,7 +635,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
     - script de falha  
   
-- `report-errors-to:`Especifica o local do relatório de erros para a operação de atualização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
+- `report-errors-to:` Especifica o local do relatório de erros para a operação de atualização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -654,7 +655,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
 />  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <refresh-from-database  
@@ -664,7 +665,7 @@ ou o
   object-type="category"/>  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <refresh-from-database>  
@@ -688,15 +689,15 @@ Usado para salvar os scripts dos objetos em um arquivo mencionado quando metabas
   
 Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
-- `object-name:`Especifica os objetos cujos scripts devem ser salvos. (Ele pode ter nomes de objetos individuais ou um nome de objeto de grupo)  
+- `object-name:` Especifica os objetos cujos scripts devem ser salvos. (Ele pode ter nomes de objetos individuais ou um nome de objeto de grupo)  
   
-- `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+- `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-- `metabase:`Especifica se é a metabase de origem ou de destino.  
+- `metabase:` Especifica se é a metabase de origem ou de destino.  
   
-- `destination:`Especifica o caminho ou a pasta em que o script deve ser salvo; Se o nome do arquivo não for fornecido, um nome de arquivo no formato (object_name valor do atributo). out  
+- `destination:` Especifica o caminho ou a pasta em que o script deve ser salvo; Se o nome do arquivo não for fornecido, um nome de arquivo no formato (object_name valor do atributo). out  
   
-- `overwrite:`Se for true, ele substituirá se os mesmos nomes de fileexistirem. Ele pode ter os valores (true/false).  
+- `overwrite:` Se for true, ele substituirá se os mesmos nomes de fileexistirem. Ele pode ter os valores (true/false).  
   
 **Exemplo de sintaxe:**  
   
@@ -716,7 +717,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
 />  
 ```
 
-ou o  
+ou  
   
 ```xml  
 <save-as-script  

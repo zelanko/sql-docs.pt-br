@@ -1,4 +1,5 @@
 ---
+description: Categoria de eventos de erros e de avisos (Mecanismo de Banco de Dados)
 title: Categoria de evento de erros e de avisos
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,24 +15,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d31361a5512a93620d6ae2fbab34ff918a0837ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8243110252460d8838897139903f306937caf57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491100"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Categoria de eventos de erros e de avisos (Mecanismo de Banco de Dados)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A categoria de evento **Errors and Warnings** contém eventos de erros gerais e advertências.  
+   A categoria de evento **Errors and Warnings** contém eventos de erros gerais e advertências.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Attention](../../relational-databases/event-classes/attention-event-class.md)|Indica que ocorreu um evento **Atenção** .|  
 |[Classe de evento Background Job Error](../../relational-databases/event-classes/background-job-error-event-class.md)|Indica que uma tarefa em segundo plano terminou de forma anormal.|  
-|[Classe de evento Bitmap Warning](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Indica que a filtragem de bitmap foi desabilitada em uma consulta.|  
+|[classe de evento Bitmap Warning](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Indica que a filtragem de bitmap foi desabilitada em uma consulta.|  
 |[Classe de evento Blocked Process Report](../../relational-databases/event-classes/blocked-process-report-event-class.md)|Indica que uma tarefa foi bloqueada para mais do que um período de tempo especificado.|  
 |[Classe de evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Indica que o gerenciador de recursos detecta uma consulta que excede o limite de CPU especificado.|  
 |[Classe de evento ErrorLog](../../relational-databases/event-classes/errorlog-event-class.md)|Indica que eventos de erro foram registrados no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

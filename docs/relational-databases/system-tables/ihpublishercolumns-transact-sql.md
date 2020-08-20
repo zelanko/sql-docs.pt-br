@@ -1,4 +1,5 @@
 ---
+description: IHpublishercolumns (Transact-SQL)
 title: IHpublishercolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221586cec5acaf94954454076fcf948cc62cf577
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5d3f4b833d6d5183c888dba9a4a3a39ac42598d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492759"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85890258"
 |**publisher_id**|**smallint**|Identifica o Editor não SQL Server do qual a coluna está sendo publicada.|  
 |**name**|**sysname**|O nome da coluna publicada.|  
 |**column_ordinal**|**int**|Identifica a coluna por ordem.|  
-|**type**|**varchar(255)**|O tipo de dados de coluna da coluna de origem no Publicador.|  
+|**tipo**|**varchar(255)**|O tipo de dados de coluna da coluna de origem no Publicador.|  
 |**length**|**bigint**|O comprimento da coluna de origem no Publicador.|  
 |**prec**|**int**|A precisão da coluna de origem no Publicador.|  
 |**scale**|**int**|A escala da coluna de origem no Publicador.|  
@@ -46,10 +47,10 @@ ms.locfileid: "85890258"
 |**iscaptured**|**bit**|Indica se um gatilho existe ou não na coluna, que pode existir mesmo se a coluna não for publicada em um artigo. Um valor de **1** significa que o gatilho existe na coluna.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sysarticlecolumns &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
- [&#41;sysarticlecolumns &#40;Transact-SQL](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
+ [&#41;sysarticlecolumns &#40;Transact-SQL ](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   
   

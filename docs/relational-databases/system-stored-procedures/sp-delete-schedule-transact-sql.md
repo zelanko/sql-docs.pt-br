@@ -1,4 +1,5 @@
 ---
+description: sp_delete_schedule (Transact-SQL)
 title: sp_delete_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe6f851ffb3ab15781d5a2ffbbcaca3bf15829f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0746a5039d27cb03edd379b5dee9b69525125156
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493291"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id`O número de identificação do agendamento a ser excluído. *schedule_id* é **int**, com um padrão de NULL.  
+`[ @schedule_id = ] schedule_id` O número de identificação do agendamento a ser excluído. *schedule_id* é **int**, com um padrão de NULL.  
   
 > **Observação:** *Schedule_id* ou *schedule_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @schedule_name = ] 'schedule_name'`O nome do agendamento a ser excluído. *schedule_name* é **sysname**, com um padrão de NULL.  
+`[ @schedule_name = ] 'schedule_name'` O nome do agendamento a ser excluído. *schedule_name* é **sysname**, com um padrão de NULL.  
   
 > **Observação:** *Schedule_id* ou *schedule_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @force_delete = ] force_delete`Especifica se o procedimento deve falhar se a agenda estiver anexada a um trabalho. *Force_delete* é bit, com um padrão de **0**. Quando *force_delete* for **0**, o procedimento armazenado falhará se a agenda estiver anexada a um trabalho. Quando *force_delete* é **1**, a agenda é excluída independentemente de a agenda estar anexada a um trabalho.  
+`[ @force_delete = ] force_delete` Especifica se o procedimento deve falhar se a agenda estiver anexada a um trabalho. *Force_delete* é bit, com um padrão de **0**. Quando *force_delete* for **0**, o procedimento armazenado falhará se a agenda estiver anexada a um trabalho. Quando *force_delete* é **1**, a agenda é excluída independentemente de a agenda estar anexada a um trabalho.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

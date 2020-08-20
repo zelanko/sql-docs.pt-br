@@ -1,4 +1,5 @@
 ---
+description: sp_dropapprole (Transact-SQL)
 title: sp_dropapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 86aa6e39cd8086b906f3bf2c8c0dc9e80bc33034
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e02da3e5507b1376dba5ac170922a2bb9230054
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493301"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85860019"
   Remove uma função de aplicativo do banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [drop Application role](../../t-sql/statements/drop-application-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [drop Application role](../../t-sql/statements/drop-application-role-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`É a função de aplicativo a ser removida. *role* é um **sysname**, sem padrão. a *função* deve existir no banco de dados atual.  
+`[ @rolename = ] 'role'` É a função de aplicativo a ser removida. *role* é um **sysname**, sem padrão. a *função* deve existir no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -64,10 +65,10 @@ EXEC sp_dropapprole 'SalesApp';
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addapprole ](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [Descartar função de aplicativo &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_setapprole](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changeobjectowner ](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_setapprole ](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

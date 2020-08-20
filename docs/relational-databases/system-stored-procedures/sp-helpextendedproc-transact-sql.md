@@ -1,4 +1,5 @@
 ---
+description: sp_helpextendedproc (Transact-SQL)
 title: sp_helpextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68bc88bdaddc873c0f272ffef37d6465cddb45af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493216"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881579"
   Relata os procedimentos armazenados estendidos atualmente definidos e o nome da biblioteca de vínculo dinâmico (DLL) à qual o procedimento (função) pertence.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a [integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a [integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @funcname = ] 'procedure'`É o nome do procedimento armazenado estendido para o qual as informações são relatadas. o *procedimento* é **sysname**, com um padrão de NULL.  
+`[ @funcname = ] 'procedure'` É o nome do procedimento armazenado estendido para o qual as informações são relatadas. o *procedimento* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -52,7 +53,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do procedimento armazenado estendido.|  
-|**dll**|**nvarchar (255)**|O nome da DLL.|  
+|**dll**|**nvarchar(255)**|O nome da DLL.|  
   
 ## <a name="remarks"></a>Comentários  
  Quando o *procedimento* é especificado, **sp_helpextendedproc** relatórios sobre o procedimento armazenado estendido especificado. Quando esse parâmetro não é fornecido, **sp_helpextendedproc** retorna todos os nomes de procedimentos armazenados estendidos e os nomes de dll aos quais cada procedimento armazenado estendido pertence.  
@@ -83,8 +84,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addextendedproc](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropextendedproc](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addextendedproc ](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropextendedproc ](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

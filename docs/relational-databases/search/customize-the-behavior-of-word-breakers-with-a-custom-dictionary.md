@@ -1,4 +1,5 @@
 ---
+description: Personalizar o comportamento de separadores de palavras com um dicionário personalizado (Pesquisa do SQL Server)
 title: Personalizar o comportamento de separadores de palavras com um dicionário personalizado
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d9a3f034312dcb6be52534968034fe526cfa5955
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38626888302f4644a8cdc36c1c370cf43a8134cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493839"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>Personalizar o comportamento de separadores de palavras com um dicionário personalizado (Pesquisa do SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

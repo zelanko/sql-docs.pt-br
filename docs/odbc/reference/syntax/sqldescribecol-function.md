@@ -1,4 +1,5 @@
 ---
+description: Função SQLDescribeCol
 title: Função SQLDescribeCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c727f6b36930b0d2ad0d5a61592b83bcd4995426
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4007d5edbd400e65ea92d8c5dcab947a53779ec4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491321"
 ---
 # <a name="sqldescribecol-function"></a>Função SQLDescribeCol
 **Conformidade**  
@@ -65,14 +66,14 @@ SQLRETURN SQLDescribeCol(
  Entrada Comprimento do buffer **ColumnName* , em caracteres.  
   
  *NameLengthPtr*  
- Der Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo a terminação nula) disponíveis para retornar \*em *ColumnName*. Se o número de caracteres disponíveis para retornar for maior ou igual a *BufferLength*, o nome da coluna em \* *ColumnName* será truncado para *BufferLength* menos o comprimento de um caractere de terminação nula.  
+ Der Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo a terminação nula) disponíveis para retornar em \* *ColumnName*. Se o número de caracteres disponíveis para retornar for maior ou igual a *BufferLength*, o nome da coluna em \* *ColumnName* será truncado para *BufferLength* menos o comprimento de um caractere de terminação nula.  
   
  *DataTypePtr*  
  Der Ponteiro para um buffer no qual retornar o tipo de dados SQL da coluna. Esse valor é lido no campo SQL_DESC_CONCISE_TYPE do IRD. Esse será um dos valores em tipos de [dados SQL](../../../odbc/reference/appendixes/sql-data-types.md)ou um tipo de dados SQL específico do driver. Se o tipo de dados não puder ser determinado, o driver retornará SQL_UNKNOWN_TYPE.  
   
- No ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME ou SQL_TYPE_TIMESTAMP é retornado em * \*DataTypePtr* para dados de data, hora ou timestamp, respectivamente; no ODBC 2. *x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP é retornado. O Gerenciador de driver executa os mapeamentos necessários quando um ODBC 2. o aplicativo *x* está trabalhando com um ODBC 3. *x* driver ou quando um ODBC 3. o aplicativo *x* está funcionando com um ODBC 2. Driver *x* .  
+ No ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME ou SQL_TYPE_TIMESTAMP é retornado em * \* DataTypePtr* para dados de data, hora ou timestamp, respectivamente; no ODBC 2.* x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP é retornado. O Gerenciador de driver executa os mapeamentos necessários quando um ODBC 2. o aplicativo *x* está trabalhando com um ODBC 3. *x* driver ou quando um ODBC 3. o aplicativo *x* está funcionando com um ODBC 2. Driver *x* .  
   
- Quando *ColumnNumber* é igual a 0 (para uma coluna de indicador), SQL_BINARY é retornado em * \*DataTypePtr* para indicadores de comprimento variável. (SQL_INTEGER será retornado se os indicadores forem usados por um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. Driver *x* ou por um ODBC 2. *x* aplicativo trabalhando com um ODBC 3. Driver *x* .)  
+ Quando *ColumnNumber* é igual a 0 (para uma coluna de indicador), SQL_BINARY é retornado em * \* DataTypePtr* para indicadores de comprimento variável. (SQL_INTEGER será retornado se os indicadores forem usados por um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. Driver *x* ou por um ODBC 2. *x* aplicativo trabalhando com um ODBC 3. Driver *x* .)  
   
  Para obter mais informações sobre esses tipos de dados, consulte [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md) no Apêndice D: tipos de dados. Para obter informações sobre tipos de dados do SQL específicos do driver, consulte a documentação do driver.  
   
@@ -94,7 +95,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLDescribeCol** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLDescribeCol** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -104,7 +105,7 @@ SQLRETURN SQLDescribeCol(
 |07005|Instrução preparada não é uma *especificação de cursor*|A instrução associada ao *StatementHandle* não retornou um conjunto de resultados. Não havia colunas para descrever.|  
 |07009|Índice de descritor inválido|(DM) o valor especificado para o argumento *ColumnNumber* era igual a 0 e a opção de instrução SQL_ATTR_USE_BOOKMARKS foi SQL_UB_OFF.<br /><br /> O valor especificado para o argumento *ColumnNumber* era maior que o número de colunas no conjunto de resultados.|  
 |08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado falhou antes da função concluir o processamento.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Falha de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando **SQLDescribeCol** foi chamado.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *StatementHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) a função foi chamada antes de chamar **SQLPrepare**, **SQLExecute**ou uma função de catálogo no identificador de instrução.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.|  

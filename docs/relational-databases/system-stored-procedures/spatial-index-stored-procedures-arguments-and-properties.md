@@ -1,4 +1,5 @@
 ---
+description: Argumentos e propriedades de procedimentos armazenados de índice espacial
 title: Argumentos e propriedades de procedimentos armazenados de índice espacial | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9525434eb17f33700f819ef45a8be4392bbfd69a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492862"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procedimentos armazenados de índice espacial – argumentos e propriedades
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,22 +32,22 @@ ms.locfileid: "85626590"
 ## <a name="syntax"></a>Sintaxe  
  Para a sintaxe de procedimentos armazenados de índice espacial específicos, consulte os seguintes tópicos:  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index ](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index_xml ](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index ](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index_xml ](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'tabname'`É o nome qualificado ou não qualificado da tabela para a qual o índice espacial foi especificado.  
+`[ @tabname = ] 'tabname'` É o nome qualificado ou não qualificado da tabela para a qual o índice espacial foi especificado.  
   
  As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* é **nvarchar**(776), sem padrão.  
   
-`[ @indexname = ] 'indexname'`É o nome do índice espacial especificado. *IndexName* é **sysname** sem padrão.  
+`[ @indexname = ] 'indexname'` É o nome do índice espacial especificado. *IndexName* é **sysname** sem padrão.  
   
-`[ @verboseoutput = ] 'verboseoutput'`É o intervalo de nomes de propriedade e valores a serem retornados.  
+`[ @verboseoutput = ] 'verboseoutput'` É o intervalo de nomes de propriedade e valores a serem retornados.  
   
  0 = propriedades principais  
   
@@ -54,9 +55,9 @@ ms.locfileid: "85626590"
   
  *verboseoutput* é **tinyint** sem padrão.  
   
-`[ @query_sample = ] 'query_sample'`É um exemplo de consulta representativo que pode ser usado para testar a utilidade do índice. Pode ser um objeto representativo ou uma janela de consulta. *query_sample* é **Geometry** sem padrão.  
+`[ @query_sample = ] 'query_sample'` É um exemplo de consulta representativo que pode ser usado para testar a utilidade do índice. Pode ser um objeto representativo ou uma janela de consulta. *query_sample* é **Geometry** sem padrão.  
   
-`[ @xml_output = ] 'xml_output'`É um parâmetro de saída que retorna o conjunto de resultados em um fragmento XML. *xml_output* é **XML** sem padrão.  
+`[ @xml_output = ] 'xml_output'` É um parâmetro de saída que retorna o conjunto de resultados em um fragmento XML. *xml_output* é **XML** sem padrão.  
   
 ## <a name="properties"></a>Propriedades  
  Defina ** \@ verboseoutput** = 0 para retornar propriedades de núcleo, conforme mostrado na tabela abaixo; ** \@ verboseoutput** > 0 para retornar todas as propriedades do índice espacial.  
@@ -306,19 +307,19 @@ ms.locfileid: "85626590"
 ## <a name="examples"></a>Exemplos  
  Para obter exemplos, consulte os tópicos a seguir:  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index ](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index_xml ](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index ](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [&#41;&#40;Transact-SQL de sp_help_spatial_geography_index_xml ](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de índice espacial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index ](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Visão geral dos índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Noções básicas do XQuery](../../xquery/xquery-basics.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

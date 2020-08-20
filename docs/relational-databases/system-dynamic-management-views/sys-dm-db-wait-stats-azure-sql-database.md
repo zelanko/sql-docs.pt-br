@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_wait_stats (Banco de Dados SQL do Azure)
 title: sys. dm_db_wait_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8932754b69fab7086f0eb6a98d979e93669daff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493736"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85677585"
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no servidor.  
   
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipos de esperas  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Tipos de esperas  
  Esperas de recurso  
  As esperas de recurso ocorrem quando um trabalhador solicita acesso a um recurso que não está disponível porque esse recurso está sendo usado por outro trabalhador ou ainda não foi disponibilizado. Exemplos de esperas de recurso são bloqueios, travas, rede e esperas de E/S de disco. Bloqueio e trava são esperas em objetos de sincronização.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "85677585"
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
   
-|Tipo de espera|Description|  
+|Tipo de espera|Descrição|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Ocorre durante o acesso exclusivo ao carregamento do assembly.|  
@@ -255,7 +256,7 @@ ms.locfileid: "85677585"
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS|Usado para aguardar enquanto os processos do usuário são finalizados em um banco de dados que passou por transição usando a cláusula de término ALTER DATABASE. Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|PRINT_ROLLBACK_PROGRESS|Usado para aguardar enquanto os processos do usuário são finalizados em um banco de dados que passou por transição usando a cláusula de término ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Ocorre quando uma tarefa em segundo plano está aguardando a conclusão de uma tarefa em segundo plano que recebe (via sondagem) as notificações do Windows Server Failover Clustering.  Somente para uso interno.|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|Uma operação de acréscimo, substituição e/ou remoção está aguardando para obter um bloqueio de gravação em uma Always On lista interna (como uma lista de redes, endereços de rede ou ouvintes de grupo de disponibilidade).  Somente para uso interno.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Uma operação Always On remover grupo de disponibilidade está aguardando o grupo de disponibilidade de destino ficar offline antes de destruir os objetos de clustering de failover do Windows Server.|  

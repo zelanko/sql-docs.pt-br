@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplicationdboption (Transact-SQL)
 title: sp_helpreplicationdboption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a09f31e6dca74e00248cb13801d9c5acec11bb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493135"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,17 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`É o nome do banco de dados. *dbname* é **sysname**, com um padrão de **%** . Se **%** , em seguida, o conjunto de resultados contiver todos os bancos de dados no Publicador, caso contrário, apenas as informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
+`[ @dbname = ] 'dbname'` É o nome do banco de dados. *dbname* é **sysname**, com um padrão de **%** . Se **%** , em seguida, o conjunto de resultados contiver todos os bancos de dados no Publicador, caso contrário, apenas as informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
   
-`[ @type = ] 'type'`Restringe o conjunto de resultados para conter somente os bancos de dados nos quais o valor do *tipo* de opção de replicação especificado foi habilitado. o *tipo* é **sysname**e pode ser um dos valores a seguir.  
+`[ @type = ] 'type'` Restringe o conjunto de resultados para conter somente os bancos de dados nos quais o valor do *tipo* de opção de replicação especificado foi habilitado. o *tipo* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**publicou**|Replicação transacional permitida.|  
 |**publicação de mesclagem**|Replicação de mesclagem permitida.|  
 |**replicação permitida** (padrão)|Replicação transacional ou replicação de mesclagem permitida.|  
   
-`[ @reserved = ] reserved`Especifica se as informações sobre publicações e assinaturas existentes são retornadas. *reservado* é um **bit**, com um valor padrão de 0. Se **1**, o conjunto de resultados incluirá informações sobre se o banco de dados especificado tem alguma publicação ou assinatura existente.  
+`[ @reserved = ] reserved` Especifica se as informações sobre publicações e assinaturas existentes são retornadas. *reservado* é um **bit**, com um valor padrão de 0. Se **1**, o conjunto de resultados incluirá informações sobre se o banco de dados especificado tem alguma publicação ou assinatura existente.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -74,7 +75,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  Os membros da função de servidor fixa **sysadmin** podem executar **sp_helpreplicationdboption** para qualquer banco de dados. Os membros da função de banco de dados fixa **db_owner** podem executar **sp_helpreplicationdboption** para esse banco de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_replicationdboption ](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

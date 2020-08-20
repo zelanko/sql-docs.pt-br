@@ -1,4 +1,5 @@
 ---
+description: sp_delete_backuphistory (Transact-SQL)
 title: sp_delete_backuphistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5b2d16d3a6131d6c579a7f4f3c422ac003da73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493361"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @oldest_date = ] 'oldest\_date'`É a data mais antiga retida nas tabelas de histórico de backup e restauração. *oldest_date* é **DateTime**, sem padrão.  
+`[ @oldest_date = ] 'oldest\_date'` É a data mais antiga retida nas tabelas de histórico de backup e restauração. *oldest_date* é **DateTime**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -84,7 +85,7 @@ EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_database_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_database_backuphistory ](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

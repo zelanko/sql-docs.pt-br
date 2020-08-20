@@ -1,4 +1,5 @@
 ---
+description: sp_table_privileges_ex (Transact-SQL)
 title: sp_table_privileges_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e8529a1a3be2bed8ddbea1ff475b21801a34424
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e748ece19ff0d4dadaf966529ed40e0ac9a69be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492944"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'`É o nome do servidor vinculado para o qual retornar informações. *table_server* é **sysname**, sem padrão.  
+`[ @table_server = ] 'table_server'` É o nome do servidor vinculado para o qual retornar informações. *table_server* é **sysname**, sem padrão.  
   
-`[ @table_name = ] 'table_name']`É o nome da tabela para a qual fornecer informações de privilégio de tabela. *table_name* é **sysname**, com um padrão de NULL.  
+`[ @table_name = ] 'table_name']` É o nome da tabela para a qual fornecer informações de privilégio de tabela. *table_name* é **sysname**, com um padrão de NULL.  
   
-`[ @table_schema = ] 'table_schema'`É o esquema de tabela. Em alguns ambientes DBMS, é o proprietário da tabela. *table_schema* é **sysname**, com um padrão de NULL.  
+`[ @table_schema = ] 'table_schema'` É o esquema de tabela. Em alguns ambientes DBMS, é o proprietário da tabela. *table_schema* é **sysname**, com um padrão de NULL.  
   
-`[ @table_catalog = ] 'table_catalog'`É o nome do banco de dados no qual o *table_name* especificado reside. *TABLE_CATALOG* é **sysname**, com um padrão de NULL.  
+`[ @table_catalog = ] 'table_catalog'` É o nome do banco de dados no qual o *table_name* especificado reside. *TABLE_CATALOG* é **sysname**, com um padrão de NULL.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se os caracteres ' _ ', '% ', ' [' e '] ' são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres ' _ ', '% ', ' [' e '] ' são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -85,8 +86,8 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_column_privileges_ex](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados de consultas distribuídas &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_column_privileges_ex ](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados de consultas distribuídas &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

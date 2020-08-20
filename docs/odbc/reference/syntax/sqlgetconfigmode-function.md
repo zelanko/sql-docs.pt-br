@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetConfigMode
 title: Função SQLGetConfigMode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc11bec24ede3352dd43f3645fb8c720b77fdabe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75093ddb5b33427ac2dc86c3d31fa635a2899118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491241"
 ---
 # <a name="sqlgetconfigmode-function"></a>Função SQLGetConfigMode
 **Conformidade**  
  Versão introduzida: ODBC 3,0  
   
  **Resumo**  
- **SQLGetConfigMode** recupera o modo de configuração que indica onde a entrada ODBC. ini que lista os valores de DSN está nas informações do sistema.  
+ **SQLGetConfigMode** recupera o modo de configuração que indica onde os valores de DSN da listagem de Odbc.ini de entrada estão nas informações do sistema.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +44,7 @@ BOOL SQLGetConfigMode(
   
 ## <a name="arguments"></a>Argumentos  
  *pwConfigMode*  
- Der Ponteiro para o buffer que contém o modo de configuração. (Consulte "Comentários".) O valor em * \*pwConfigMode* pode ser:  
+ Der Ponteiro para o buffer que contém o modo de configuração. (Consulte "Comentários".) O valor em * \* pwConfigMode* pode ser:  
   
  ODBC_USER_DSN  
   
@@ -54,15 +55,15 @@ BOOL SQLGetConfigMode(
 ## <a name="returns"></a>Retornos  
  A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLGetConfigMode** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLGetConfigMode** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- Essa função é usada para determinar onde a entrada ODBC. ini que lista os valores de DSN está nas informações do sistema. Se * \*pwConfigMode* for ODBC_USER_DSN, o DSN será um DSN de usuário e a função lerá da entrada ODBC. ini no HKEY_CURRENT_USER. Se for ODBC_SYSTEM_DSN, o DSN será um DSN de sistema e a função lerá da entrada ODBC. ini no HKEY_LOCAL_MACHINE. Se for ODBC_BOTH_DSN, HKEY_CURRENT_USER será tentado e, se falhar, HKEY_LOCAL_MACHINE será usado.  
+ Essa função é usada para determinar onde os valores de DSN da listagem de Odbc.ini de entrada estão nas informações do sistema. Se * \* pwConfigMode* for ODBC_USER_DSN, o DSN será um DSN de usuário e a função lerá da entrada Odbc.ini em HKEY_CURRENT_USER. Se for ODBC_SYSTEM_DSN, o DSN será um DSN de sistema e a função lerá da entrada Odbc.ini no HKEY_LOCAL_MACHINE. Se for ODBC_BOTH_DSN, HKEY_CURRENT_USER será tentado e, se falhar, HKEY_LOCAL_MACHINE será usado.  
   
  Por padrão, **SQLGetConfigMode** retorna ODBC_BOTH_DSN. Quando um DSN de usuário ou um DSN de sistema é criado por uma chamada para **SQLConfigDataSource**, a função define o modo de configuração como ODBC_USER_DSN ou ODBC_SYSTEM_DSN para distinguir os DSNs do usuário e do sistema ao modificar um DSN. Antes de retornar, **SQLConfigDataSource** redefine o modo de configuração para ODBC_BOTH_DSN.  
   

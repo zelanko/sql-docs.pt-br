@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados de coletor de dados (Transact-SQL)
 title: Procedimentos armazenados do coletor de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 710f9f13450eff01ab54eaf3ae3aa4ff03bd8524
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 7f89f82689677fbd43a1fdf3e66c189f19de4bb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493525"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Procedimentos armazenados de coletor de dados (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

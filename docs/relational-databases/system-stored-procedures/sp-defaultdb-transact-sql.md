@@ -1,4 +1,5 @@
 ---
+description: sp_defaultdb (Transact-SQL)
 title: sp_defaultdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c153f9de2f5f1db662c851926a83d51ed4b8b515
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 649f107e29f68d03e47daa07251a2da40a4c2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493346"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85865125"
   Altera o banco de dados padrão para um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`É o nome de logon. o *logon* é **sysname**, sem padrão. o *logon* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon existente ou um usuário ou grupo do Windows. Se não existir um logon para o usuário ou grupo do Windows no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele é adicionado automaticamente.  
+`[ @loginame = ] 'login'` É o nome de logon. o *logon* é **sysname**, sem padrão. o *logon* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon existente ou um usuário ou grupo do Windows. Se não existir um logon para o usuário ou grupo do Windows no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele é adicionado automaticamente.  
   
-`[ @defdb = ] 'database'`É o nome do novo banco de dados padrão. o *banco de dados* é **sysname**, sem padrão. o *banco de dados* já deve existir.  
+`[ @defdb = ] 'database'` É o nome do novo banco de dados padrão. o *banco de dados* é **sysname**, sem padrão. o *banco de dados* já deve existir.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -67,9 +68,9 @@ EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_grantdbaccess](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droplogin ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grantdbaccess ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

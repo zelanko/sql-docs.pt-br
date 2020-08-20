@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_add_job (Transact-SQL)
 title: sys. sp_cdc_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e301fe1ef2251a5c5814074864ccf566791ccc8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88172895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492866"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_type = ] 'job\_type'`Tipo de trabalho a ser adicionado. *job_type* é **nvarchar (20)** e não pode ser NULL. As entradas válidas são **"Capture"** e **"Cleanup"**.  
+`[ @job_type = ] 'job\_type'` Tipo de trabalho a ser adicionado. *job_type* é **nvarchar (20)** e não pode ser NULL. As entradas válidas são **"Capture"** e **"Cleanup"**.  
   
-`[ @start_job = ] start_job`Sinalizador que indica se o trabalho deve ser iniciado imediatamente após ser adicionado. *start_job* é **bit** com um padrão de 1.  
+`[ @start_job = ] start_job` Sinalizador que indica se o trabalho deve ser iniciado imediatamente após ser adicionado. *start_job* é **bit** com um padrão de 1.  
   
-`[ @maxtrans ] = max_trans`Número máximo de transações a serem processadas em cada ciclo de verificação. *max_trans* é **int** com um padrão de 500. Se especificado, o valor deve ser um inteiro positivo.  
+`[ @maxtrans ] = max_trans` Número máximo de transações a serem processadas em cada ciclo de verificação. *max_trans* é **int** com um padrão de 500. Se especificado, o valor deve ser um inteiro positivo.  
   
  *max_trans* é válido somente para trabalhos de captura.  
   
-`[ @maxscans ] = max\_scans_`Número máximo de ciclos de verificação a serem executados para extrair todas as linhas do log. *max_scans* é **int** com um padrão de 10.  
+`[ @maxscans ] = max\_scans_` Número máximo de ciclos de verificação a serem executados para extrair todas as linhas do log. *max_scans* é **int** com um padrão de 10.  
   
  *max_scan* é válido somente para trabalhos de captura.  
   
-`[ @continuous ] = continuous_`Indica se o trabalho de captura deve ser executado continuamente (1) ou ser executado apenas uma vez (0). *continuou* é **bit** com um padrão de 1.  
+`[ @continuous ] = continuous_` Indica se o trabalho de captura deve ser executado continuamente (1) ou ser executado apenas uma vez (0). *continuou* é **bit** com um padrão de 1.  
   
  Quando *Continuous* = 1, o trabalho de [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina o log e processa até (*max_trans* \* *max_scans*) transações. Em seguida, ele aguarda o número de segundos especificado em *polling_interval* antes de iniciar a próxima verificação de log.  
   
@@ -68,15 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *contínuo* é válido somente para trabalhos de captura.  
   
-`[ @pollinginterval ] = polling\_interval_`Número de segundos entre os ciclos de verificação de log. *polling_interval* é **bigint** com um padrão de 5.  
+`[ @pollinginterval ] = polling\_interval_` Número de segundos entre os ciclos de verificação de log. *polling_interval* é **bigint** com um padrão de 5.  
   
  *polling_interval* é válido somente para trabalhos de captura quando a *contínua* é definida como 1. Se especificado, o valor deve ser maior ou igual a 0 e menor que 24 horas (máx: 86399 segundos). Se um valor 0 estiver especificado, não haverá espera entre os exames de log.  
   
-`[ @retention ] = retention_`Número de minutos que as linhas de dados de alteração devem ser retidas em tabelas de alterações. a *retenção* é **bigint** com um padrão de 4320 (72 horas). O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
+`[ @retention ] = retention_` Número de minutos que as linhas de dados de alteração devem ser retidas em tabelas de alterações. a *retenção* é **bigint** com um padrão de 4320 (72 horas). O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
   
  a *retenção* é válida somente para trabalhos de limpeza.  
   
-`[ @threshold = ] 'delete\_threshold'`Número máximo de entradas de exclusão que podem ser excluídas usando uma única instrução na limpeza. *delete_threshold* é **bigint** com um padrão de 5000.  
+`[ @threshold = ] 'delete\_threshold'` Número máximo de entradas de exclusão que podem ser excluídas usando uma única instrução na limpeza. *delete_threshold* é **bigint** com um padrão de 5000.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -121,7 +122,7 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [o dbo. cdc_jobs &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [o dbo. cdc_jobs &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

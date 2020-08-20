@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tcp_listener_states (Transact-SQL)
 title: sys. dm_tcp_listener_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 185a125c2197a7f5788c69a432315b46b1969369
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c313a61e673bb6885e1a6f0f8ecacf53bcda3f36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493551"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85716638"
 |**ip_address**|**nvarchar (48)**|O endereço IP do ouvinte que está online e está sendo escutando no momento. IPv4 ou IPv6 é permitido. Se um ouvinte possuir os dois tipos de endereços, eles serão listados separadamente. Um curinga IPv4, é exibido como "0.0.0.0". Um curinga IPv6, é exibido como "::".<br /><br /> Não permite valor nulo.|  
 |**is_ipv4**|**bit**|Tipo de endereço IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|O número da porta na qual o ouvinte está escutando. Não permite valor nulo.|  
-|**type**|**tinyint**|Tipo de ouvinte, um dos seguintes:<br /><br /> 0 =[!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Espelhamento do banco de dados<br /><br /> Não permite valor nulo.|  
+|**tipo**|**tinyint**|Tipo de ouvinte, um dos seguintes:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Espelhamento do banco de dados<br /><br /> Não permite valor nulo.|  
 |**type_desc**|**nvarchar (20)**|Descrição do **tipo**, uma das:<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> Não permite valor nulo.|  
 |**state**|**tinyint**|O estado do ouvinte do grupo de disponibilidade, um dos seguintes:<br /><br /> 1 = Online. O ouvinte está escutando e processando solicitações.<br /><br /> 2 = Reinício pendente. o ouvinte está offline, pendente de uma reinicialização.<br /><br /> Se o ouvinte do grupo de disponibilidade estiver escutando na mesma porta que a instância do servidor, esses dois ouvintes sempre terão o mesmo estado.<br /><br /> Não permite valor nulo.<br /><br /> Observação: os valores nesta coluna são provenientes do objeto TSD_listener. A coluna não dá suporte a um estado offline porque, quando o TDS_listener está offline, ele não pode ser consultado para obter o estado.|  
 |**state_desc**|**nvarchar (16)**|Descrição do **estado**, um de:<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> Não permite valor nulo.|  
@@ -54,7 +55,7 @@ ms.locfileid: "85716638"
   
 ## <a name="see-also"></a>Consulte Também  
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [Always On exibições de catálogo de grupos de disponibilidade &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Exibições de catálogo de grupos de disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Funções e exibições de gerenciamento dinâmico de Grupos de Disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

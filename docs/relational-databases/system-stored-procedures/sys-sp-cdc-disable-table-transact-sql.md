@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_disable_table (Transact-SQL)
 title: sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492830"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_schema = ] 'source\_schema'`É o nome do esquema no qual a tabela de origem está contida. *source_schema* é **sysname**, sem padrão, e não pode ser nulo.  
+`[ @source_schema = ] 'source\_schema'` É o nome do esquema no qual a tabela de origem está contida. *source_schema* é **sysname**, sem padrão, e não pode ser nulo.  
   
  *source_schema* deve existir no banco de dados atual.  
   
-`[ @source_name = ] 'source\_name'`É o nome da tabela de origem da qual a captura de dados de alteração deve ser desabilitada. *source_name* é **sysname**, sem padrão, e não pode ser nulo.  
+`[ @source_name = ] 'source\_name'` É o nome da tabela de origem da qual a captura de dados de alteração deve ser desabilitada. *source_name* é **sysname**, sem padrão, e não pode ser nulo.  
   
  *source_name* deve existir no banco de dados atual.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`É o nome da instância de captura a ser desabilitada para a tabela de origem especificada. *capture_instance* é **sysname** e não pode ser nulo.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` É o nome da instância de captura a ser desabilitada para a tabela de origem especificada. *capture_instance* é **sysname** e não pode ser nulo.  
   
  Quando ' all' é especificado, todas as instâncias de captura definidas para *source_name* são desabilitadas.  
   

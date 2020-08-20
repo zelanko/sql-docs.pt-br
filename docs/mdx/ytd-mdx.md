@@ -1,4 +1,5 @@
 ---
+description: Ytd (MDX)
 title: Acumulado no ano (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14f286a304e03624a9ce20c1bd7b045dffc38688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491364"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 

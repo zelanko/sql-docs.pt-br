@@ -1,4 +1,5 @@
 ---
+description: Propriedades do Assinante
 title: Propriedades do assinante| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9aa569f9e96dea8bbc5788ec1de0a47ed4e67628
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 366740d950e249d6ad18e97af3094208d4d849fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493869"
 ---
 # <a name="subscriber-properties"></a>Propriedades do Assinante
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_browsereplcmds (Transact-SQL)
 title: sp_browsereplcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3e84bf24563d8d22728cb0b09f348829f6c0e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493441"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,21 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @xact_seqno_start = ] 'xact_seqno_start'`Especifica o número de sequência exato mais baixo valor a ser retornado. *xact_seqno_start* é **nchar (22)**, com um padrão de 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica o número de sequência exato mais baixo valor a ser retornado. *xact_seqno_start* é **nchar (22)**, com um padrão de 0x00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'`Especifica o número de sequência mais alto exato a ser retornado. *xact_seqno_end* é **nchar (22)**, com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica o número de sequência mais alto exato a ser retornado. *xact_seqno_end* é **nchar (22)**, com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
   
-`[ @originator_id = ] 'originator_id'`Especifica se os comandos com o *originator_id* especificado são retornados. *originator_id* é **int**, com um padrão de NULL.  
+`[ @originator_id = ] 'originator_id'` Especifica se os comandos com o *originator_id* especificado são retornados. *originator_id* é **int**, com um padrão de NULL.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'`Especifica se os comandos com o *publisher_database_id* especificado são retornados. *publisher_database_id* é **int**, com um padrão de NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Especifica se os comandos com o *publisher_database_id* especificado são retornados. *publisher_database_id* é **int**, com um padrão de NULL.  
   
-`[ @article_id = ] 'article_id'`Especifica se os comandos com o *article_id* especificado são retornados. *article_id* é **int**, com um padrão de NULL.  
+`[ @article_id = ] 'article_id'` Especifica se os comandos com o *article_id* especificado são retornados. *article_id* é **int**, com um padrão de NULL.  
   
-`[ @command_id = ] command_id`É o local do comando em [MSrepl_commands &#40;&#41;Transact-SQL](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) a ser decodificado. *command_id* é **int**, com um padrão de NULL. Se especificado, todos os outros parâmetros também devem ser especificados e *xact_seqno_start*deve ser idêntico a *xact_seqno_end*.  
+`[ @command_id = ] command_id` É o local do comando em [MSrepl_commands &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) a ser decodificado. *command_id* é **int**, com um padrão de NULL. Se especificado, todos os outros parâmetros também devem ser especificados e *xact_seqno_start*deve ser idêntico a *xact_seqno_end*.  
   
-`[ @agent_id = ] agent_id`Especifica que somente os comandos para um agente de replicação específico são retornados. *agent_id* é **int**, com um valor padrão de NULL.  
+`[ @agent_id = ] agent_id` Especifica que somente os comandos para um agente de replicação específico são retornados. *agent_id* é **int**, com um valor padrão de NULL.  
   
-`[ @compatibility_level = ] compatibility_level`É a versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual o *COMPATIBILITY_LEVEL* é **int**, com um valor padrão de 9 milhões.  
+`[ @compatibility_level = ] compatibility_level` É a versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual o *COMPATIBILITY_LEVEL* é **int**, com um valor padrão de 9 milhões.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -71,7 +72,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|Servidor onde a transação originou.|  
 |**originator_db**|**sysname**|Banco de dados onde a transação originou.|  
 |**article_id**|**int**|ID do artigo.|  
-|**type**|**int**|Tipo de comando.|  
+|**tipo**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica se esse é um comando parcial ou não.|  
 |**hashkey**|**int**|Somente para uso interno.|  
 |**originator_publication_id**|**int**|ID da publicação de origem da transação.|  
@@ -89,8 +90,8 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Somente os membros da função de servidor fixa **sysadmin** ou os membros das funções de banco de dados fixas **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_replshowcmds](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_replshowcmds ](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

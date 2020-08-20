@@ -1,4 +1,5 @@
 ---
+description: Dimensions (MDX)
 title: Dimensões (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98167516f9e01525ecd351389c885c48626636e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491413"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 
@@ -44,7 +45,7 @@ Dimensions(Hierarchy_Name)
  Se um nome de hierarquia for especificado, a função **Dimensions** retornará a hierarquia especificada. Normalmente, você usa essa versão de cadeia de caracteres da função **Dimensions** com funções definidas pelo usuário.  
   
 > [!NOTE]  
->  A dimensão **medidas** é sempre representada por `Dimensions(0)`.  
+>  A dimensão **medidas** é sempre representada por `Dimensions(0)` .  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir usam a função **Dimensions** para retornar o nome, a contagem de níveis e a contagem de membros de uma hierarquia especificada, usando uma expressão numérica e uma expressão de cadeia de caracteres.  

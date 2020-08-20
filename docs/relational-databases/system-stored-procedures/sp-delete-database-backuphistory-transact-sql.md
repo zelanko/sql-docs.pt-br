@@ -1,4 +1,5 @@
 ---
+description: sp_delete_database_backuphistory (Transact-SQL)
 title: sp_delete_database_backuphistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493313"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database_name = ] database_name`Especifica o nome do banco de dados envolvido em operações de backup e restauração. *database_name* é **sysname**, sem padrão.  
+`[ @database_name = ] database_name` Especifica o nome do banco de dados envolvido em operações de backup e restauração. *database_name* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -69,7 +70,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exclui todas as entradas para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nas tabelas de histórico de backup e restauração.  
@@ -82,7 +83,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_backuphistory ](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_certify_removable (Transact-SQL)
 title: sp_certify_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f5bf1f0fd8a73948c2cc85937af4bc4c5ec7ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493400"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`Especifica o banco de dados a ser verificado. *dbname* é **sysname**.  
+`[ @dbname = ] 'dbname'` Especifica o banco de dados a ser verificado. *dbname* é **sysname**.  
   
-`[ @autofix = ] 'auto'`Fornece a propriedade do banco de dados e todos os objetos de banco de dados para o administrador do sistema e descarta quaisquer usuários de banco de dados criados pelo usuário e permissões não padrão. *auto* é **nvarchar (4)**, com um padrão de NULL.  
+`[ @autofix = ] 'auto'` Fornece a propriedade do banco de dados e todos os objetos de banco de dados para o administrador do sistema e descarta quaisquer usuários de banco de dados criados pelo usuário e permissões não padrão. *auto* é **nvarchar (4)**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -91,9 +92,9 @@ EXEC sp_certify_removable inventory, AUTO;
   
 ## <a name="see-also"></a>Consulte Também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_create_removable](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_create_removable ](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbremove](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbremove ](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
