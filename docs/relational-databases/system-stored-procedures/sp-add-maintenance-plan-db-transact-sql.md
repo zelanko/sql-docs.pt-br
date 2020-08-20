@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_db (Transact-SQL)
 title: sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b3f28d23925e76383b30a82e907394e05b2b7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474605"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] 'plan_id'`Especifica a ID do plano do plano de manutenção. *plan_id* é **uniqueidentifier**e deve ser uma ID válida.  
+`[ @plan_id = ] 'plan_id'` Especifica a ID do plano do plano de manutenção. *plan_id* é **uniqueidentifier**e deve ser uma ID válida.  
   
-`[ @db_name = ] 'database_name'`Especifica o nome do banco de dados a ser adicionado ao plano de manutenção. O banco de dados deve ser criado ou existir antes de ser adicionado ao plano. *database_name* é **sysname**.  
+`[ @db_name = ] 'database_name'` Especifica o nome do banco de dados a ser adicionado ao plano de manutenção. O banco de dados deve ser criado ou existir antes de ser adicionado ao plano. *database_name* é **sysname**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

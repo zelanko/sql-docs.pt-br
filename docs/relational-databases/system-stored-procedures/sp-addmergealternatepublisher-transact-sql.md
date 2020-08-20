@@ -1,4 +1,5 @@
 ---
+description: sp_addmergealternatepublisher (Transact-SQL)
 title: sp_addmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474501"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,21 +46,21 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'`É o nome do Publicador alternativo. *alternate_synchronization_partner* é **sysname**, sem padrão.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` É o nome do Publicador alternativo. *alternate_synchronization_partner* é **sysname**, sem padrão.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`É o nome do banco de dados de publicação no Publicador alternativo. *alternate_publisher_db* é **sysname**, sem padrão.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` É o nome do banco de dados de publicação no Publicador alternativo. *alternate_publisher_db* é **sysname**, sem padrão.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'`É o nome da publicação no parceiro de sincronização alternativo. *alternate_synchronization_partner* é **sysname**, sem padrão.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` É o nome da publicação no parceiro de sincronização alternativo. *alternate_synchronization_partner* é **sysname**, sem padrão.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'`É o nome do distribuidor para o parceiro de sincronização alternativo. *alternate_distributor* é **sysname**, sem padrão.  
+`[ @alternate_distributor = ] 'alternate_distributor'` É o nome do distribuidor para o parceiro de sincronização alternativo. *alternate_distributor* é **sysname**, sem padrão.  
   
-`[ @friendly_name = ] 'friendly_name'`É um nome de exibição pelo qual a associação de editor, publicação e distribuidor que compõe um parceiro de sincronização alternativo pode ser identificada. *friendly_name* é **nvarchar (255)**, com um padrão de NULL.  
+`[ @friendly_name = ] 'friendly_name'` É um nome de exibição pelo qual a associação de editor, publicação e distribuidor que compõe um parceiro de sincronização alternativo pode ser identificada. *friendly_name* é **nvarchar (255)**, com um padrão de NULL.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -73,7 +74,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addmergealternatepublisher**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_dropmergealternatepublisher](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergealternatepublisher ](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

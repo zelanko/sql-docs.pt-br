@@ -1,4 +1,5 @@
 ---
+description: Verificações de transição de estado
 title: Verificações de transição de estado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7dc1ddc126a2d652dfdb038cbb0e510f9735d7b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50a845f2b83ada7c9d4f03f252b6d2bc3d3eff3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476368"
 ---
 # <a name="state-transition-checks"></a>Verificações de transição de estado
 O Gerenciador de driver verifica se o estado do ambiente, da conexão ou da instrução é apropriado para a função que está sendo chamada. Por exemplo, uma conexão deve estar em um estado alocado quando **SQLConnect** for chamado; uma instrução deve estar em um estado preparado quando **SQLExecute** é chamado. O Gerenciador de driver retorna SQL_ERROR para erros de transição de estado.

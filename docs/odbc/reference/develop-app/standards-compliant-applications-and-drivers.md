@@ -1,4 +1,5 @@
 ---
+description: Drivers e aplicativos em conformidade com padrões
 title: Aplicativos e drivers em conformidade com os padrões | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b4daf2e777b20b1b84c090757d0d84796a4cae1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6733afa5281f86d8dd425e6157832ee0680d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476378"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Drivers e aplicativos em conformidade com padrões
 Um aplicativo ou driver em conformidade com os padrões é aquele que está de acordo com a especificação CAE do grupo aberto "Gerenciamento de Dados: CLI (interface de nível de chamada) do SQL," e a interface de nível de chamada (SQL/CLI) do ISO/IEC 9075-3:1995 (E).  

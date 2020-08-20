@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_dms_workers (Transact-SQL)
 title: sys. dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,26 +13,26 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 43b471634efc60a2beb4abd982b04437bdebb2af
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 886b96bebe2d7535694dc724d7ad236ae1c2b5f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474753"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contém informações sobre todos os trabalhos concluindo as etapas de DMS.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Consulta de que esse trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Etapa de consulta para a qual este trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte step_index em [Sys. dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Etapa no plano DMS que esse trabalho está executando.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.||  
 |pdw_node_id|**int**|Nó no qual o trabalho está sendo executado.|Consulte node_id em [Sys. dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|A distribuição em que o trabalho está sendo executado, se houver.|Consulte distribution_id em [Sys. pdw_distributions &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|tipo|**nvarchar(32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' GRAVADOR '|  
+|type|**nvarchar(32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' GRAVADOR '|  
 |status|**nvarchar(32)**|Status do trabalho do DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Taxa de transferência de leitura ou gravação no último segundo.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  
 |bytes_processed|**bigint**|Total de bytes processados por este trabalhador.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  

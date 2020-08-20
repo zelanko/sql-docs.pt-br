@@ -1,4 +1,5 @@
 ---
+description: Função SQLFetch
 title: Função SQLFetch | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e2da6996d8d6b2ee66befdc90794efec5617b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f13aabcf19968873683bf12bcde5bb006422e260
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476094"
 ---
 # <a name="sqlfetch-function"></a>Função SQLFetch
 **Conformidade**  
@@ -49,7 +50,7 @@ SQLRETURN SQLFetch(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLFetch** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando a [função SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLFetch** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário. Se ocorrer um erro em uma única coluna, [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) poderá ser chamado com um *DiagIdentifier* de SQL_DIAG_COLUMN_NUMBER para determinar a coluna em que o erro ocorreu; e **SQLGetDiagField** podem ser chamados com um *DiagIdentifier* de SQL_DIAG_ROW_NUMBER para determinar a linha que contém essa coluna.  
   
  Para todos os sqlestaduais que podem retornar SQL_SUCCESS_WITH_INFO ou SQL_ERROR (exceto 01xxx sqlstates), SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em uma ou mais, mas não em todas as linhas de uma operação multirow, e SQL_ERROR será retornado se ocorrer um erro em uma operação de linha única.  
@@ -73,9 +74,9 @@ SQLRETURN SQLFetch(
 |24.000|Estado de cursor inválido|O *StatementHandle* estava em um estado executado, mas nenhum conjunto de resultados foi associado ao *StatementHandle*.|  
 |40001|Falha de serialização|A transação na qual a busca foi executada foi encerrada para evitar o deadlock.|  
 |40003|Conclusão de instrução desconhecida|A conexão associada falhou durante a execução dessa função, e o estado da transação não pode ser determinado.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
-|HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função **SQLFetch** foi chamada e antes de concluída a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função **SQLFetch** foi chamada novamente no *StatementHandle*.<br /><br /> Ou, a função **SQLFetch** foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
+|HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função **SQLFetch** foi chamada e antes de concluída a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função **SQLFetch** foi chamada novamente no *StatementHandle*.<br /><br /> Ou, a função  **SQLFetch** foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLFetch** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *StatementHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) o *StatementHandle* especificado não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute** ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) **SQLFetch** foi chamado para *StatementHandle* depois que **SQLExtendedFetch** foi chamado e antes de **SQLFreeStmt** com a opção SQL_CLOSE foi chamado.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY090|Comprimento de cadeia de caracteres ou buffer inválido|O atributo da instrução SQL_ATTR_USE_BOOKMARK foi definido como SQL_UB_VARIABLE e a coluna 0 foi associada a um buffer cujo comprimento não era igual ao tamanho máximo do indicador para esse conjunto de resultados. (Esse comprimento está disponível no campo SQL_DESC_OCTET_LENGTH do IRD e pode ser obtido chamando **SQLDescribeCol**, **SQLColAttribute**ou **SQLGetDescField**.)|  
@@ -107,8 +108,8 @@ SQLRETURN SQLFetch(
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
 |Antes de iniciar|1|  
-|*CurrRowsetStart* \<CurrRowsetStart =  *LastResultRow-conjunto de*linhas [1]|*CurrRowsetStart* + de*conjunto*de linhas [2]|  
-|*CurrRowsetStart* > *LastResultRow-conjunto de*linhas [1]|Após o término|  
+|*CurrRowsetStart* \< CurrRowsetStart =  *LastResultRow-conjunto de*linhas [1]|*CurrRowsetStart*  +  *Conjunto*de linhas [2]|  
+|*CurrRowsetStart*  >  *LastResultRow-conjunto de*linhas [1]|Após o término|  
 |Após o término|Após o término|  
   
  [1] se o tamanho do conjunto de linhas for alterado entre buscas, esse será o tamanho do conjunto de linhas que foi usado com a busca anterior.  
@@ -191,7 +192,7 @@ SQLRETURN SQLFetch(
   
  [2] alguns drivers não podem detectar atualizações nos dados e, portanto, não podem retornar esse valor. Para determinar se um driver pode detectar atualizações para linhas rebuscadas, um aplicativo chama **SQLGetInfo** com a opção SQL_ROW_UPDATES.  
   
- [3] **SQLFetch** pode retornar esse valor somente quando ele é misturado com chamadas para **SQLFetchScroll**. Isso ocorre porque o **SQLFetch** avança pelo conjunto de resultados e, quando é usado exclusivamente, não rebusca nenhuma linha. Como nenhuma linha é rebuscada, **SQLFetch** não detecta alterações que foram feitas em linhas previamente buscadas. No entanto, se **SQLFetchScroll** posicionar o cursor antes de qualquer linha previamente buscada e **SQLFetch** for usado para buscar essas linhas, **SQLFetch** poderá detectar qualquer alteração nessas linhas.  
+ [3]   **SQLFetch** pode retornar esse valor somente quando ele é misturado com chamadas para **SQLFetchScroll**. Isso ocorre porque o **SQLFetch** avança pelo conjunto de resultados e, quando é usado exclusivamente, não rebusca nenhuma linha. Como nenhuma linha é rebuscada, **SQLFetch** não detecta alterações que foram feitas em linhas previamente buscadas. No entanto, se **SQLFetchScroll** posicionar o cursor antes de qualquer linha previamente buscada e **SQLFetch** for usado para buscar essas linhas, **SQLFetch** poderá detectar qualquer alteração nessas linhas.  
   
  [4] retornado somente por SQLBulkOperations. Não definido por **SQLFetch** ou **SQLFetchScroll**.  
   
@@ -232,16 +233,16 @@ SQLRETURN SQLFetch(
   
 |Campo do descritor|Crescente.|Campo em|Definir por|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|cabeçalho|Atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE|  
-|SQL_DESC_ARRAY_STATUS_PTR|IRD|cabeçalho|Atributo de instrução SQL_ATTR_ROW_STATUS_PTR|  
-|SQL_DESC_BIND_OFFSET_PTR|ARD|cabeçalho|Atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_DESC_BIND_TYPE|ARD|cabeçalho|Atributo de instrução SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_DESC_COUNT|ARD|cabeçalho|Argumento *ColumnNumber* de **SQLBindCol**|  
+|SQL_DESC_ARRAY_SIZE|ARD|header|Atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE|  
+|SQL_DESC_ARRAY_STATUS_PTR|IRD|header|Atributo de instrução SQL_ATTR_ROW_STATUS_PTR|  
+|SQL_DESC_BIND_OFFSET_PTR|ARD|header|Atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR|  
+|SQL_DESC_BIND_TYPE|ARD|header|Atributo de instrução SQL_ATTR_ROW_BIND_TYPE|  
+|SQL_DESC_COUNT|ARD|header|Argumento *ColumnNumber* de **SQLBindCol**|  
 |SQL_DESC_DATA_PTR|ARD|records|Argumento *TargetValuePtr* de **SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|ARD|records|*StrLen_or_IndPtr* argumento em **SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH|ARD|records|Argumento *BufferLength* em **SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH_PTR|ARD|records|*StrLen_or_IndPtr* argumento em **SQLBindCol**|  
-|SQL_DESC_ROWS_PROCESSED_PTR|IRD|cabeçalho|Atributo de instrução SQL_ATTR_ROWS_FETCHED_PTR|  
+|SQL_DESC_ROWS_PROCESSED_PTR|IRD|header|Atributo de instrução SQL_ATTR_ROWS_FETCHED_PTR|  
 |SQL_DESC_TYPE|ARD|records|Argumento *TargetType* em **SQLBindCol**|  
   
  Todos os campos de descritor também podem ser definidos por meio de **SQLSetDescField**.  

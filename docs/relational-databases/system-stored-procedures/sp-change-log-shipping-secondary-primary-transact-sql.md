@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_primary (Transact-SQL)
 title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94ee2f67f0f496a5dffc515c0145de127e823863
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474474"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,25 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @primary_server = ] 'primary_server'`O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* é **sysname** e não pode ser nulo.  
+`[ @primary_server = ] 'primary_server'` O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* é **sysname** e não pode ser nulo.  
   
-`[ @primary_database = ] 'primary_database'`É o nome do banco de dados no servidor primário. *primary_database* é **sysname**, sem padrão.  
+`[ @primary_database = ] 'primary_database'` É o nome do banco de dados no servidor primário. *primary_database* é **sysname**, sem padrão.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'`O diretório em que os arquivos de backup de log de transações do servidor primário são armazenados. *backup_source_directory* é **nvarchar (500)** e não pode ser NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` O diretório em que os arquivos de backup de log de transações do servidor primário são armazenados. *backup_source_directory* é **nvarchar (500)** e não pode ser NULL.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'`O diretório no servidor secundário para onde os arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` O diretório no servidor secundário para onde os arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser NULL.  
   
-`[ @file_retention_period = ] 'file_retention_period'`É o período em minutos em que o histórico será retido. *history_retention_period* é **int**, com um padrão de NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
+`[ @file_retention_period = ] 'file_retention_period'` É o período em minutos em que o histórico será retido. *history_retention_period* é **int**, com um padrão de NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`O modo de segurança usado para se conectar ao servidor monitor.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` O modo de segurança usado para se conectar ao servidor monitor.  
   
  1 = Autenticação do Windows;  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *monitor_server_security_mode* é **bit** e não pode ser nulo.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`É o nome de usuário da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_login = ] 'monitor_server_login'` É o nome de usuário da conta usada para acessar o servidor monitor.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`É a senha da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_password = ] 'monitor_server_password'` É a senha da conta usada para acessar o servidor monitor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

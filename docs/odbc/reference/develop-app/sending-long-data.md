@@ -1,4 +1,5 @@
 ---
+description: Enviar dados Long
 title: Enviando dados longos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aeeeb716aa2f9a72338f3aeb586dffce86f84069
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6a0ec1a7e8dc703d3e7a3ed5332d20e6539eafe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476458"
 ---
 # <a name="sending-long-data"></a>Enviar dados Long
 DBMSs definem *dados longos* como qualquer caractere ou dados binários em um determinado tamanho, como 254 caracteres. Talvez não seja possível armazenar um item inteiro de dados longos na memória, como quando o item representa um documento de texto longo ou um bitmap. Como esses dados não podem ser armazenados em um único buffer, a fonte de dados o envia para o driver em partes com **SQLPutData** quando a instrução é executada. Os parâmetros para os quais os dados são enviados no momento da execução são conhecidos como *parâmetros de dados em execução*.  

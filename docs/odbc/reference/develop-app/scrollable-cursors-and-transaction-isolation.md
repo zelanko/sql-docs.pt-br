@@ -1,4 +1,5 @@
 ---
+description: Cursores roláveis e isolamento da transação
 title: Cursores roláveis e isolamento de transação | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e40278bd209132736aee2788b5648ffa84a44e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 790b2d0c4d80c821645c3a4360d1295cc55a8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476498"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursores roláveis e isolamento da transação
 A tabela a seguir lista os fatores que regem a visibilidade das alterações.  

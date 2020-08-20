@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Database Object Management
 title: Classe de evento Audit Database Object Management | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,23 +13,23 @@ ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a09428b2554e240e0caef03077ff357c02bb48ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7222928fabac19df648cea9d059d6657e8bd3c9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475973"
 ---
 # <a name="audit-database-object-management-event-class"></a>Classe de evento Audit Database Object Management
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Audit Database Object Management** ocorre quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas.  
+   A classe de evento **Audit Database Object Management** ocorre quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, tais como esquemas.  
   
 > [!NOTE]  
 >  As ações relacionadas à chave pública não são auditadas.  
   
 ## <a name="audit-database-object-management-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Object Management  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  

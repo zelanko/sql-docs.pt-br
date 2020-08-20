@@ -1,4 +1,5 @@
 ---
+description: SQLSTATEs
 title: Sqlstates | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be4bca929b8d48c301c6e71917503387004a6ec5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b32a965779da1669452e9361e38723e29cfb11ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476388"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 Os sqlstates fornecem informações detalhadas sobre a causa de um aviso ou erro. Os hiperestados neste manual se baseiam naqueles encontrados na especificação da CLI ISO/IEF, embora esses sqlestados que começam com IM sejam específicos do ODBC.  

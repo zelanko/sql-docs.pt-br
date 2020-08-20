@@ -1,4 +1,5 @@
 ---
+description: Transições de estado
 title: Transições de estado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a480b7ff8953ef94f0efc4886a09731730a61b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947be49fc0a77f94c1641bb7c735db3276b49f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476358"
 ---
 # <a name="state-transitions"></a>Transições de estado
 O ODBC define *Estados* discretos para cada ambiente, cada conexão e cada instrução. Por exemplo, o ambiente tem três estados possíveis: não alocado (no qual nenhum ambiente é alocado), alocado (no qual um ambiente é alocado, mas nenhuma conexão é alocada) e conexão (em que um ambiente e uma ou mais conexões são alocadas). As conexões têm sete Estados possíveis; as instruções têm 13 estados possíveis.  

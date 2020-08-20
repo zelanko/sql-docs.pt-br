@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
 title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -20,12 +21,12 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbe9d8a69a9bbe788c082cf2d684e0dd6763b1e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d7ab860dbb8dc850e8586f691dc2e83fb32e56da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474998"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -46,11 +47,11 @@ ms.locfileid: "87442683"
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  
 |used_bytes|**bigint**|Bytes usados por este consumidor. Aplica-se somente a varheap.|  
 |allocation_count|**int**|Número de alocações.|  
-|partition_count|**int**|Apenas para uso interno.|  
-|sizeclass_count|**int**|Apenas para uso interno.|  
-|min_sizeclass|**int**|Apenas para uso interno.|  
-|max_sizeclass|**int**|Apenas para uso interno.|  
-|memory_consumer_address|**varbinary**|Endereço interno do consumidor. Apenas para uso interno.|  
+|partition_count|**int**|Somente para uso interno.|  
+|sizeclass_count|**int**|Somente para uso interno.|  
+|min_sizeclass|**int**|Somente para uso interno.|  
+|max_sizeclass|**int**|Somente para uso interno.|  
+|memory_consumer_address|**varbinary**|Endereço interno do consumidor. Somente para uso interno.|  
 |xtp_object_id|**bigint**|A ID de objeto OLTP na memória que corresponde à tabela com otimização de memória.|  
   
 ## <a name="remarks"></a>Comentários  

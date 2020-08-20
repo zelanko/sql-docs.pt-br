@@ -1,4 +1,5 @@
 ---
+description: Criando um destino com o componente Script
 title: Criando um destino com o componente Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb6991c66aba8561c3f886f6f1f605e9d93a10f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 416f9721802690688d82838bd477aa028e1301fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477243"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
 

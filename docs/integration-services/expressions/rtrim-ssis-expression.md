@@ -1,4 +1,5 @@
 ---
+description: RTRIM (Expressão SSIS)
 title: RTRIM (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c58da8b33c431f62f4567379beca8b5b12beea4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 52365eef1d07aa2a41c2ece8e10dbdfc30f1b6d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477403"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (Expressão SSIS)
 

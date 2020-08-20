@@ -1,4 +1,5 @@
 ---
+description: Cursores controlados por conjunto de chaves
 title: Cursores controlados por conjunto de chaves | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 814fca7d48f50aab51b6b4f7e34835be8c412e9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c34432481eeafd6bed938dcd1275e33583d33cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476588"
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de chaves
 Um cursor controlado por conjunto de chaves está entre um cursor estático e um curso dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele nem sempre detecta alterações à associação e à ordem do conjunto de resultados. Como um cursor dinâmico, ele detecta alterações nos valores de linhas no conjunto de resultados (sujeito ao nível de isolamento da transação, conforme definido pelo atributo de conexão SQL_ATTR_TXN_ISOLATION).  

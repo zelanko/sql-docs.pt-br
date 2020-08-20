@@ -1,4 +1,5 @@
 ---
+description: Execução direta ODBC
 title: Execução direta ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5d942ac0c2af54168248d8e416ca233b2c69e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9be03c4f20a82e134481f8fd9bb849ffd830567a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476698"
 ---
 # <a name="direct-execution-odbc"></a>Execução direta ODBC
 A execução direta é a maneira mais simples de executar uma instrução. Quando a instrução é enviada para execução, a fonte de dados a compila em um plano de acesso e, em seguida, executa esse plano de acesso.  

@@ -1,4 +1,5 @@
 ---
+description: fn_syscollector_get_execution_details (Transact-SQL)
 title: fn_syscollector_get_execution_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2442148dbb8f9db45f5b80ba8b2a4fdd90ef5c29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474644"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,13 +58,13 @@ fn_syscollector_get_execution_details ( log_id )
 |endtime|**datetime**|A hora em que o pacote foi concluído.|  
 |datacode|**int**|Um valor inteiro que identifica o evento associado à entrada do log. "0" indica que o evento não forneceu nenhum identificador.|  
 |databytes|**imagem**|Uma matriz de bytes que identifica um valor de retorno.|  
-|message|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
+|mensagem|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão SELECT para **dc_operator**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Habilitar log de pacote no SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

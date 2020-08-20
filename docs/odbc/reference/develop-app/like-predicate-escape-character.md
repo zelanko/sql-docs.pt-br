@@ -1,4 +1,5 @@
 ---
+description: Caractere de escape de predicado LIKE
 title: Caractere de escape de predicado LIKE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e4f04b12911145eede3354532736cb92f1ae413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5304068e21dd6faf0e737a94add0cce177c4dabc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476548"
 ---
 # <a name="like-predicate-escape-character"></a>Caractere de escape de predicado LIKE
 Em um predicado **like** , o sinal de porcentagem (%) corresponde a zero ou mais de qualquer caractere e o sublinhado (_) corresponde a qualquer caractere. Para corresponder a um sinal de porcentagem real ou sublinhado em um predicado **like** , um caractere de escape deve vir antes do sinal de porcentagem ou sublinhado. A sequência de escape que define o caractere de escape de predicado **like** é:  

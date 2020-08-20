@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-SQL)
 title: CAMINHO mais curto (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,11 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475829"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -86,7 +88,7 @@ Para atributos de projeto do último nó do caminho percorrido, LAST_VALUE funç
 
 **Último nó**: o último nó refere-se ao nó que aparece por último no caminho atravessado, independentemente da direção da seta no predicado Match. Por exemplo: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Aqui, o último nó no caminho será o último nó P visitado. 
 
-Enquanto que o último nó é o último nó enésimo no caminho do grafo de saída para esse padrão:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Enquanto que o último nó é o último nó enésimo no caminho do grafo de saída para esse padrão: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Essa função retorna a soma dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
@@ -101,10 +103,10 @@ Essa função retorna o número de valores não nulos do atributo de nó/borda d
 ### <a name="avg"></a>AVG
 Retorna a média de valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
-### <a name="min"></a>MÍN.
+### <a name="min"></a>MIN
 Retorna o valor mínimo dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
-### <a name="max"></a>MÁX.
+### <a name="max"></a>MAX
 Retorna o valor máximo dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
 ## <a name="remarks"></a>Comentários  

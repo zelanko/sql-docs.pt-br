@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_os_performance_counters (Transact-SQL)
 title: sys. dm_pdw_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 72164d23d8f2dbd27bb30f1341b288c96ab44cc0
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 08ef29f6fe47099bcbbdeb87fce0dfb5aa25a42a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474723"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys. dm_pdw_os_performance_counters (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

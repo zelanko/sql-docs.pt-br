@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 title: sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
@@ -12,12 +13,12 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475351"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -26,8 +27,8 @@ ms.locfileid: "87394041"
   
 |Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|A ID de objeto do banco de dados. Observe que esse valor não é o mesmo que um database_id na exibição de [&#41;sys. databases &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
-|physical_name|**sysname**|O nome físico do banco de dados nos nós de shell/computação. Esse valor é o mesmo que um valor na coluna physical_name no modo de exibição [pdw_database_mappings &#40;do Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
+|database_id|**int**|A ID de objeto do banco de dados. Observe que esse valor não é o mesmo que um database_id na exibição de [&#41;sys. databases &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
+|physical_name|**sysname**|O nome físico do banco de dados nos nós de shell/computação. Esse valor é o mesmo que um valor na coluna physical_name no modo de exibição [pdw_database_mappings &#40;do Transact-&#41;SQL ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
 |pdw_node_id|**int**|ID numérica exclusiva associada ao nó.|  
   
 ## <a name="examples-sspdw"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_query_stats_xe (Transact-SQL)
 title: sys. dm_pdw_query_stats_xe (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 220661cd5573d6160f69130760ef3046c986ae1e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1c141fef15f052b87db4c09d735c0217d45cb10a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474677"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

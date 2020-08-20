@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_volume_stats (Transact-SQL)
 title: sys. dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474808"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "82829320"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  *database_id*  
  ID do banco de dados. *database_id* é **int**, sem padrão. Não pode ser NULL.  
   
@@ -49,7 +50,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Coluna**|**Tipo de dados**|**Descrição**|  
+|**Coluna**|**Data type**|**Descrição**|  
 |**database_id**|**int**|ID do banco de dados. Não pode ser nulo.|  
 |**file_id**|**int**|ID do arquivo. Não pode ser nulo.|  
 |**volume_mount_point**|**nvarchar(512)**|Ponto de montagem no qual o volume está na raiz. Pode retornar uma cadeia de caracteres vazia.|  

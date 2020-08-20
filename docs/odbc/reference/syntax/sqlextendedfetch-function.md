@@ -1,4 +1,5 @@
 ---
+description: Função SQLExtendedFetch
 title: Função SQLExtendedFetch | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc832e5a20b1d3c0a1ad63b3e2a070563de2b46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac19d017baf4a3f0e873be64cd2eb812ca1b05e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476106"
 ---
 # <a name="sqlextendedfetch-function"></a>Função SQLExtendedFetch
 **Conformidade**  
@@ -72,7 +73,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLExtendedFetch** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SqlError**. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLExtendedFetch** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário. Se ocorrer um erro em uma única coluna, **SQLGetDiagField** poderá ser chamado com um *DiagIdentifier* de SQL_DIAG_COLUMN_NUMBER para determinar a coluna em que o erro ocorreu; e **SQLGetDiagField** podem ser chamados com um *DiagIdentifier* de SQL_DIAG_ROW_NUMBER para determinar a linha que contém essa coluna.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -92,7 +93,7 @@ SQLRETURN SQLExtendedFetch(
 |22015|Estouro no campo de intervalo|A atribuição de um tipo de SQL numérico ou de intervalo exato para um tipo de intervalo C causou uma perda de dígitos significativos no campo à esquerda.<br /><br /> Ao buscar dados para um tipo de intervalo C, não havia nenhuma representação do valor do tipo SQL no tipo de intervalo C.<br /><br /> (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |22018|Valor de caractere inválido para especificação de conversão|O tipo C era um tipo de dados numérico exato ou aproximado, um DateTime ou um intervalo; o tipo SQL da coluna era um tipo de dados de caractere; e o valor na coluna não era um literal válido do tipo associado de C.<br /><br /> (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |24.000|Estado de cursor inválido|O *StatementHandle* estava em um estado executado, mas nenhum conjunto de resultados foi associado ao *StatementHandle*.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SqlError** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SqlError** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado em *StatementHandle*e, em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLExtendedFetch** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *StatementHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) o *StatementHandle* especificado não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute**ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) **SQLExtendedFetch** foi chamado para o *StatementHandle* após **SQLFetch** ou **SQLFetchScroll** ser chamado e antes de **SQLFreeStmt** ser chamado com a opção SQL_CLOSE.<br /><br /> (DM) **SQLBulkOperations** foi chamado para uma instrução antes de **SQLFetch**, **SQLFetchScroll**ou **SQLExtendedFetch** ser chamado e, em seguida, **SQLExtendedFetch** foi chamado antes de **SQLFreeStmt** ser chamado com a opção SQL_CLOSE.|  
@@ -109,7 +110,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>Comentários  
  O comportamento de **SQLExtendedFetch** é idêntico ao de **SQLFetchScroll**, com as seguintes exceções:  
   
--   **SQLExtendedFetch** e **SQLFetchScroll** usam métodos diferentes para retornar o número de linhas buscadas. **SQLExtendedFetch** retorna o número de linhas buscadas em * \*RowCountPtr*; **SQLFetchScroll** retorna o número de linhas buscadas diretamente no buffer apontado por SQL_ATTR_ROWS_FETCHED_PTR. Para obter mais informações, consulte o argumento *RowCountPtr* .  
+-   **SQLExtendedFetch** e **SQLFetchScroll** usam métodos diferentes para retornar o número de linhas buscadas. **SQLExtendedFetch** retorna o número de linhas buscadas em * \* RowCountPtr*; **SQLFetchScroll** retorna o número de linhas buscadas diretamente no buffer apontado por SQL_ATTR_ROWS_FETCHED_PTR. Para obter mais informações, consulte o argumento *RowCountPtr* .  
   
 -   **SQLExtendedFetch** e **SQLFetchScroll** retornam o status de cada linha em matrizes diferentes. Para obter mais informações, consulte o argumento *RowStatusArray* .  
   

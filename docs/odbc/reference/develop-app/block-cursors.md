@@ -1,4 +1,5 @@
 ---
+description: Cursores em bloco
 title: Cursors de bloco | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dece0e3ecfc5ef4f3116361a202cfa2d10863ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476818"
 ---
 # <a name="block-cursors"></a>Cursores em bloco
 Muitos aplicativos passam uma quantidade significativa de tempo levando os dados pela rede. Parte desse tempo é gasto na verdade, colocando os dados na rede e parte dele é gasto na sobrecarga da rede, como a chamada feita pelo driver para solicitar uma linha de dados. A última vez pode ser reduzida se o aplicativo faz uso eficiente de *bloco,* ou *Fat,* *cursores* , que podem retornar mais de uma linha por vez.  

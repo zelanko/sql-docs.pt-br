@@ -1,4 +1,5 @@
 ---
+description: Configurar operações de índice paralelo
 title: Configurar operações de índice paralelo | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffd74e1cf495ef3cfc1784011fb1d7c18b5ab15d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f4226d3fac66ec20f5012a15bb092b666cf86f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475795"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operações de índice paralelo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

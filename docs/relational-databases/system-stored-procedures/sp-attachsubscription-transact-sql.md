@@ -1,4 +1,5 @@
 ---
+description: sp_attachsubscription (Transact-SQL)
 title: sp_attachsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c039ce9a5f54f3c0498ef613df15353217d91036
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30b8e2577238dd0514c96709f0ed1d9b7c9a24a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474519"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,51 +54,51 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`É a cadeia de caracteres que especifica o banco de dados de assinatura de destino por nome. *dbname* é **sysname**, sem padrão.  
+`[ @dbname = ] 'dbname'` É a cadeia de caracteres que especifica o banco de dados de assinatura de destino por nome. *dbname* é **sysname**, sem padrão.  
   
-`[ @filename = ] 'filename'`É o nome e o local físico do MDF principal (arquivo de dados**mestre** ). *filename* é **nvarchar (260)**, sem padrão.  
+`[ @filename = ] 'filename'` É o nome e o local físico do MDF principal (arquivo de dados**mestre** ). *filename* é **nvarchar (260)**, sem padrão.  
   
-`[ @subscriber_security_mode = ] 'subscriber_security_mode'`É o modo de segurança do assinante a ser usado ao se conectar a um Assinante durante a sincronização. *subscriber_security_mode* é **int**, com um padrão de NULL.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` É o modo de segurança do assinante a ser usado ao se conectar a um Assinante durante a sincronização. *subscriber_security_mode* é **int**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Autenticação do Windows deve ser usada. Se *subscriber_security_mode* não for **1** (autenticação do Windows), um erro será retornado.  
   
-`[ @subscriber_login = ] 'subscriber_login'`É o nome de logon do assinante a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_login* é **sysname**, com um padrão de NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` É o nome de logon do assinante a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_login* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e só é mantido para compatibilidade com versões anteriores de scripts. Se *subscriber_security_mode* não for **1** e *subscriber_login* for especificado, um erro será retornado.  
   
-`[ @subscriber_password = ] 'subscriber_password'`É a senha do Assinante. *subscriber_password* é **sysname**, com um padrão de NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` É a senha do Assinante. *subscriber_password* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e só é mantido para compatibilidade com versões anteriores de scripts. Se *subscriber_security_mode* não for **1** e *subscriber_password* for especificado, um erro será retornado.  
   
-`[ @distributor_security_mode = ] distributor_security_mode`É o modo de segurança a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_security_mode* é **int**, com um padrão de **0**. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` É o modo de segurança a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_security_mode* é **int**, com um padrão de **0**. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'`É o logon do distribuidor a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_login* será necessário se *distributor_security_mode* for definido como **0**. *distributor_login* é **sysname**, com um padrão de NULL.  
+`[ @distributor_login = ] 'distributor_login'` É o logon do distribuidor a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_login* será necessário se *distributor_security_mode* for definido como **0**. *distributor_login* é **sysname**, com um padrão de NULL.  
   
-`[ @distributor_password = ] 'distributor_password'`É a senha do distribuidor. *distributor_password* será necessário se *distributor_security_mode* for definido como **0**. *distributor_password* é **sysname**, com um padrão de NULL. O valor de *distributor_password* deve ter menos de 120 caracteres Unicode.  
-  
-> [!IMPORTANT]  
->  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
-  
-`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de **1**. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
-  
-`[ @publisher_login = ] 'publisher_login'`É o logon a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_login* é **sysname**, com um padrão de NULL.  
-  
-`[ @publisher_password = ] 'publisher_password'`É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão de NULL. O valor de *publisher_password* deve ter menos de 120 caracteres Unicode.  
+`[ @distributor_password = ] 'distributor_password'` É a senha do distribuidor. *distributor_password* será necessário se *distributor_security_mode* for definido como **0**. *distributor_password* é **sysname**, com um padrão de NULL. O valor de *distributor_password* deve ter menos de 120 caracteres Unicode.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+`[ @publisher_security_mode = ] publisher_security_mode` É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de **1**. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão. O valor de *job_password* deve ter menos de 120 caracteres Unicode.  
+`[ @publisher_login = ] 'publisher_login'` É o logon a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_login* é **sysname**, com um padrão de NULL.  
+  
+`[ @publisher_password = ] 'publisher_password'` É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão de NULL. O valor de *publisher_password* deve ter menos de 120 caracteres Unicode.  
+  
+> [!IMPORTANT]  
+>  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
+  
+`[ @job_login = ] 'job_login'` É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão. O valor de *job_password* deve ter menos de 120 caracteres Unicode.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'`É a senha de uma chave mestra de banco de dados definida pelo usuário. *db_master_key_password* é **nvarchar (524)**, com um valor padrão de NULL. Se *db_master_key_password* não for especificado, uma chave mestra de banco de dados existente será descartada e recriada.  
+`[ @db_master_key_password = ] 'db_master_key_password'` É a senha de uma chave mestra de banco de dados definida pelo usuário. *db_master_key_password* é **nvarchar (524)**, com um valor padrão de NULL. Se *db_master_key_password* não for especificado, uma chave mestra de banco de dados existente será descartada e recriada.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  

@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_environment (Banco de Dados SSISDB)
 title: catalog.rename_environment (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 400b93128b19ca12550816889c732793c0e9e5d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6641ff60f49534a303d3f60110dbdd63aab2ed29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477098"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (Banco de Dados SSISDB)
 
@@ -42,7 +43,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
  O nome original da variável de ambiente. O *environment_name* é **nvarchar(128)** .  
   
  [ @new_environment_name = ] *new_environment_name*  
- O novo nome do ambiente. O *new_environment_name* é **nvarchar(128)** .  
+ O novo nome do ambiente. O *new_environment_name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

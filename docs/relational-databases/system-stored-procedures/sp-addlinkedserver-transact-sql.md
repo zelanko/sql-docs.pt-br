@@ -1,4 +1,5 @@
 ---
+description: sp_addlinkedserver (Transact-SQL)
 title: sp_addlinkedserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 401fd85dec1370f81845b77de6e078ea18269891
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 5bb18a45998661d3252c41da4222dfd24a585237
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474548"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -325,13 +326,13 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de consultas distribuídas &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados de consultas distribuídas &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropserver](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_setnetname](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addserver ](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropserver ](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_serveroption ](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_setnetname ](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

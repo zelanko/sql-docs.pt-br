@@ -1,4 +1,5 @@
 ---
+description: sp_addlogin (Transact-SQL)
 title: sp_addlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 477393f34743ba0643384762164697b845cadde4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474549"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877376"
   Cria um novo logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a um usuário se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [Create login](../../t-sql/statements/create-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [Create login](../../t-sql/statements/create-login-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -74,7 +75,7 @@ sp_addlogin [ @loginame = ] 'login'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|NULO|A senha é passada sem-criptografia. Este é o padrão.|  
+|NULO|A senha é passada sem-criptografia. Esse é o padrão.|  
 |**skip_encryption**|A senha já tem hash. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve armazenar o valor sem hash.|  
 |**skip_encryption_old**|A senha foi fornecida com hash por uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve armazenar o valor sem hash. Essa opção só é fornecida com a finalidade de atualização.|  
   
@@ -139,10 +140,10 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR logon &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpuser](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_revokelogin](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de xp_logininfo](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droplogin ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpuser ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_revokelogin ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de xp_logininfo ](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

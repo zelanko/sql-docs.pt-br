@@ -1,4 +1,5 @@
 ---
+description: sys.sysservers (Transact-SQL)
 title: sys.sysservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fa61b7122849a1c3d380a39beb4da947d52d35f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea79d90f7ccb75243246cc64713c746e05c8996c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475088"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85893968"
 |**schemadate**|**datetime**|Data da última atualização da linha.|  
 |**topologyx**|**int**|Não usado.|  
 |**topologyy**|**int**|Não usado.|  
-|**catálogo**|**sysname**|Catálogo que é usado quando uma conexão é feita a um provedor OLE DB.|  
+|**catalog**|**sysname**|Catálogo que é usado quando uma conexão é feita a um provedor OLE DB.|  
 |**srvcollation**|**sysname**|A ordenação do servidor.|  
 |**ConnectTimeout**|**int**|Configuração de tempo limite para a conexão de servidor.|  
 |**QueryTimeout**|**int**|Configuração de tempo limite para a consultas no servidor.|  

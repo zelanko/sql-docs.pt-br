@@ -1,4 +1,5 @@
 ---
+description: sp_changemergesubscription (Transact-SQL)
 title: sp_changemergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51ae948e546d616e6fd17a5b37501f112907560
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474448"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser alterada. a *publicação* é **sysname**, com um padrão de NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser alterada. a *publicação* é **sysname**, com um padrão de NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de NULL.  
   
-`[ @property = ] 'property'`É a propriedade a ser alterada para a publicação fornecida. a *Propriedade* é **sysname**e pode ser um dos valores na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para a publicação fornecida. a *Propriedade* é **sysname**e pode ser um dos valores na tabela.  
   
-`[ @value = ] 'value'`É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (255)** e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'` É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (255)** e pode ser um dos valores na tabela.  
   
 |Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -84,9 +85,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergesubscription](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergesubscription ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergesubscription ](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergesubscription ](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

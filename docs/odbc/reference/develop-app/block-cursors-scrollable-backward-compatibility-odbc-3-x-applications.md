@@ -1,4 +1,5 @@
 ---
+description: Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores para aplicativos 3.x ODBC
 title: Compatibilidade de cursores de bloqueio e rolável para ODBC 3. x Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c526eff6e19014c923f05ad91551a7d7c66f5294
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96645f91d52f4141aacf4f2e171ef809a639f73c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476828"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores para aplicativos 3.x ODBC
 A existência de **SQLFetchScroll** e **SQLExtendedFetch** representa a primeira divisão clara em ODBC entre a API (interface de programação de aplicativo), que é o conjunto de funções que o aplicativo chama e a SPI (interface do provedor de serviços), que é o conjunto de funções que o Driver implementa. Essa divisão é necessária para balancear o requisito no ODBC *3. x*, que usa **SQLFetchScroll**, para se alinhar com os padrões e ser compatível com o ODBC *2. x*, que usa **SQLExtendedFetch**.  

@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_primary_database (Transact-SQL)
 title: sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 81a6a9fc318534df9f2ce9c2e89fb978fb15b260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474481"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,15 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`É o nome do banco de dados no servidor primário. *primary_database* é **sysname**, sem padrão.  
+`[ @database = ] 'database'` É o nome do banco de dados no servidor primário. *primary_database* é **sysname**, sem padrão.  
   
-`[ @backup_directory = ] 'backup_directory'`É o caminho para a pasta de backup no servidor primário. *backup_directory* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` É o caminho para a pasta de backup no servidor primário. *backup_directory* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
   
-`[ @backup_share = ] 'backup_share'`É o caminho de rede para o diretório de backup no servidor primário. *backup_share* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_share = ] 'backup_share'` É o caminho de rede para o diretório de backup no servidor primário. *backup_share* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
   
-`[ @backup_retention_period = ] 'backup_retention_period'`É o período de tempo, em minutos, para reter o arquivo de backup de log no diretório de backup no servidor primário. *backup_retention_period* é **int**, sem padrão, e não pode ser NULL.  
+`[ @backup_retention_period = ] 'backup_retention_period'` É o período de tempo, em minutos, para reter o arquivo de backup de log no diretório de backup no servidor primário. *backup_retention_period* é **int**, sem padrão, e não pode ser NULL.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`O modo de segurança usado para se conectar ao servidor monitor.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` O modo de segurança usado para se conectar ao servidor monitor.  
   
  1 = Autenticação do Windows.  
   
@@ -66,15 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* é **bit** e não pode ser nulo.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`É o nome de usuário da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_login = ] 'monitor_server_login'` É o nome de usuário da conta usada para acessar o servidor monitor.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`É a senha da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_password = ] 'monitor_server_password'` É a senha da conta usada para acessar o servidor monitor.  
   
-`[ @backup_threshold = ] 'backup_threshold'`É o período de tempo, em minutos, após o último backup antes que um erro de *threshold_alert* seja gerado. *backup_threshold* é **int**, com um padrão de 60 minutos.  
+`[ @backup_threshold = ] 'backup_threshold'` É o período de tempo, em minutos, após o último backup antes que um erro de *threshold_alert* seja gerado. *backup_threshold* é **int**, com um padrão de 60 minutos.  
   
-`[ @threshold_alert = ] 'threshold_alert'`O alerta a ser gerado quando o limite de backup for excedido. *threshold_alert* é **int** e não pode ser NULL.  
+`[ @threshold_alert = ] 'threshold_alert'` O alerta a ser gerado quando o limite de backup for excedido. *threshold_alert* é **int** e não pode ser NULL.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Especifica se um alerta é gerado quando *backup_threshold* é excedido.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica se um alerta é gerado quando *backup_threshold* é excedido.  
   
  1 = habilitado.  
   
@@ -82,15 +83,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* é **bit** e não pode ser nulo.  
   
-`[ @history_retention_period = ] 'history_retention_period'`É o período de tempo em minutos em que o histórico é retido. *history_retention_period* é **int**. Um valor de 14420 será usado se nenhum for especificado.  
+`[ @history_retention_period = ] 'history_retention_period'` É o período de tempo em minutos em que o histórico é retido. *history_retention_period* é **int**. Um valor de 14420 será usado se nenhum for especificado.  
   
-`[ @backup_compression = ] backup_compression_option`Especifica se uma configuração de envio de logs usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
+`[ @backup_compression = ] backup_compression_option` Especifica se uma configuração de envio de logs usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
   
  0 = Desabilitado. Nunca compacte backups de log.  
   
  1 = Habilitado. Sempre compacte backups de log.  
   
- 2 = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Esse é o valor padrão.  
+ 2 = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Este é o valor padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -129,7 +130,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

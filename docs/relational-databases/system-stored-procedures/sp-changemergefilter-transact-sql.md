@@ -1,4 +1,5 @@
 ---
+description: sp_changemergefilter (Transact-SQL)
 title: sp_changemergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b5ea4ccea0f314e17cfa5dca8a4f3db6d2c9c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64922bb6150d7d3b637984a740abbb9e9f825854
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474435"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. o *artigo* é **sysname**, sem padrão.  
   
-`[ @filtername = ] 'filtername'`É o nome atual do filtro. *FilterName* é **sysname**, sem padrão.  
+`[ @filtername = ] 'filtername'` É o nome atual do filtro. *FilterName* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'`É o nome da propriedade a ser alterada. a *Propriedade* é **sysname**, sem padrão.  
+`[ @property = ] 'property'` É o nome da propriedade a ser alterada. a *Propriedade* é **sysname**, sem padrão.  
   
-`[ @value = ] 'value'`É o novo valor para a propriedade especificada. o *valor*é **nvarchar (1000)**, sem padrão.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. o *valor*é **nvarchar (1000)**, sem padrão.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -66,13 +67,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|A junção está em uma chave exclusiva|  
 ||**false**|A junção não está em uma chave exclusiva.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** especifica que as alterações no artigo de mesclagem não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** significa que as alterações no artigo de mesclagem podem fazer com que o instantâneo seja inválido e, se houver assinaturas existentes que exijam um novo instantâneo, dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo gerado.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo de mesclagem não fazem com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -93,9 +94,9 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [&#41;&#40;Transact-SQL de sp_addmergefilter](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergefilter](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergefilter](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergefilter ](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergefilter ](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergefilter ](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

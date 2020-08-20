@@ -1,4 +1,5 @@
 ---
+description: Mapeamentos de SQLSTATE
 title: Mapeamentos SQLSTATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec58c0e41869529bbba5fd31ad534976923a990d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14be1946b34433b0ff094cb79e2a1ec2ee849cd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476398"
 ---
 # <a name="sqlstate-mappings"></a>Mapeamentos de SQLSTATE
 Este tópico discute os valores SQLSTATE para ODBC *2. x* e ODBC *3. x*. Para obter mais informações sobre valores SQLSTATE ODBC *3. x* , consulte [o apêndice A: códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  

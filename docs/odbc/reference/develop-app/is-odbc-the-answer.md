@@ -1,4 +1,5 @@
 ---
+description: O ODBC é a resposta?
 title: O ODBC é a resposta? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3716acbcc1b8ea648b5edc03e277983936da557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a51c4248a041d65f00ec1846f60788cded68f7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476598"
 ---
 # <a name="is-odbc-the-answer"></a>O ODBC é a resposta?
 Antes de se aprofundar na pergunta da interoperabilidade, considere a seguinte pergunta: se o aplicativo usa ODBC? Isso pode parecer uma pergunta estranha de fazer um guia para o ODBC, mas é, na verdade, um legítimo. O ODBC não foi projetado para substituir completamente as APIs do banco de dados nativo, nem foi projetado para fornecer acesso ao banco de dados em todas as circunstâncias. Ele foi projetado para fornecer uma interface comum aos bancos de dados e foi destinado a liberar programadores de aplicativos de ter que aprender e manter links para vários bancos de dados.  

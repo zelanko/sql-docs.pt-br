@@ -1,4 +1,5 @@
 ---
+description: Como os metadados são usados?
 title: Como os metadados são usados? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbbba96fa2e99a2ccc0618f31e3b29e7d479f703
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca61677b0001ba4c39f81f80f6e3cbce26f27910
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476628"
 ---
 # <a name="how-is-metadata-used"></a>Como os metadados são usados?
 Os aplicativos exigem metadados para a maioria das operações de conjunto de resultados. Por exemplo, o aplicativo usa o tipo de dados de uma coluna para determinar que tipo de variável associar a essa coluna. Ele usa o comprimento em bytes de uma coluna de caracteres para determinar quanto espaço ele precisa para exibir dados dessa coluna. Como um aplicativo determina os metadados para uma coluna depende do tipo do aplicativo.  

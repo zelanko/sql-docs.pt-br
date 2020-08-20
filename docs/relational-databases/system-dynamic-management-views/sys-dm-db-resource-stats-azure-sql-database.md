@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 title: sys. dm_db_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2020
@@ -19,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475008"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

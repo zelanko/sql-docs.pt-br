@@ -1,4 +1,5 @@
 ---
+description: Função SQLFetchScroll
 title: Função SQLFetchScroll | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6c65ef71f5c2cb9202ab788cac5e00357674f4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476081"
 ---
 # <a name="sqlfetchscroll-function"></a>Função SQLFetchScroll
 **Conformidade**  
@@ -79,7 +80,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLFetchScroll** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um HandleType de SQL_HANDLE_STMT e um identificador de StatementHandle. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLFetchScroll** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário. Se ocorrer um erro em uma única coluna, **SQLGetDiagField** poderá ser chamado com um DiagIdentifier de SQL_DIAG_COLUMN_NUMBER para determinar a coluna em que o erro ocorreu; e **SQLGetDiagField** podem ser chamados com um DiagIdentifier de SQL_DIAG_ROW_NUMBER para determinar a linha que contém essa coluna.  
   
  Para todos os sqlestaduais que podem retornar SQL_SUCCESS_WITH_INFO ou SQL_ERROR (exceto 01xxx sqlstates), SQL_SUCCESS_WITH_INFO será retornado se ocorrer um erro em uma ou mais, mas não em todas as linhas de uma operação multirow, e SQL_ERROR será retornado se ocorrer um erro em uma operação de linha única.  
@@ -104,7 +105,7 @@ SQLRETURN SQLFetchScroll(
 |24.000|Estado de cursor inválido|O *StatementHandle* estava em um estado executado, mas nenhum conjunto de resultados foi associado ao *StatementHandle*.|  
 |40001|Falha de serialização|A transação na qual a busca foi executada foi encerrada para evitar o deadlock.|  
 |40003|Conclusão de instrução desconhecida|A conexão associada falhou durante a execução dessa função, e o estado da transação não pode ser determinado.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLFetchScroll** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *StatementHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) o *StatementHandle* especificado não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute** ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) **SQLFetch** foi chamado para *StatementHandle* depois que **SQLExtendedFetch** foi chamado e antes de **SQLFreeStmt** com a opção SQL_CLOSE foi chamado.|  
@@ -164,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
 |*Antes de iniciar*|1|  
-|*CurrRowsetStart + conjunto*de linhas [1] * \<= LastResultRow*|*CurrRowsetStart + conjunto*de linhas [1]|  
+|*CurrRowsetStart + conjunto*de linhas [1] * \< = LastResultRow*|*CurrRowsetStart + conjunto*de linhas [1]|  
 |*CurrRowsetStart + conjunto*[1]*> LastResultRow*|*Após o término*|  
 |*Após o término*|*Após o término*|  
   
@@ -182,7 +183,7 @@ SQLRETURN SQLFetchScroll(
 |*Após end e LastResultRow < o conjunto de* linhas <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Após end e LastResultRow >= conjunto de* linhas <sup>[2]</sup>|*LastResultRow-conjunto de linhas + 1* <sup>[2]</sup>|  
   
- [1] **SQLFetchScroll** retorna SQLSTATE 01S06 (tentativa de busca antes de o conjunto de resultados ter retornado o primeiro conjunto de linhas) e SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** retorna SQLSTATE 01S06 (tentativa de busca antes de o conjunto de resultados ter retornado o primeiro conjunto de linhas) e SQL_SUCCESS_WITH_INFO.  
   
  [2] se o tamanho do conjunto de linhas tiver sido alterado desde a chamada anterior para buscar linhas, esse será o novo tamanho do conjunto de linhas.  
   
@@ -196,13 +197,13 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart = 1 e FetchOffset < 0*|*Antes de iniciar*|  
 |*CurrRowsetStart > 1 e CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; > conjunto* de linhas <sup>[3]</sup>|*Antes de iniciar*|  
 |*CurrRowsetStart > 1 e CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; <= conjunto* de linhas <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
+|*1 <= CurrRowsetStart + FetchOffset \< = LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Após o término*|  
 |*Após end e FetchOffset >= 0*|*Após o término*|  
   
- [1] ***SQLFetchScroll*** retorna o mesmo conjunto de linhas como se ele fosse chamado com FetchOrientation definido como SQL_FETCH_ABSOLUTE. Para obter mais informações, consulte a seção "SQL_FETCH_ABSOLUTE".  
+ [1]   ***SQLFetchScroll*** retorna o mesmo conjunto de linhas como se ele fosse chamado com FetchOrientation definido como SQL_FETCH_ABSOLUTE. Para obter mais informações, consulte a seção "SQL_FETCH_ABSOLUTE".  
   
- [2] **SQLFetchScroll** retorna SQLSTATE 01S06 (tentativa de busca antes de o conjunto de resultados ter retornado o primeiro conjunto de linhas) e SQL_SUCCESS_WITH_INFO.  
+ [2]   **SQLFetchScroll** retorna SQLSTATE 01S06 (tentativa de busca antes de o conjunto de resultados ter retornado o primeiro conjunto de linhas) e SQL_SUCCESS_WITH_INFO.  
   
  [3] se o tamanho do conjunto de linhas tiver sido alterado desde a chamada anterior para buscar linhas, esse será o novo tamanho do conjunto de linhas.  
   
@@ -215,10 +216,10 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LASTRESULTROW e &#124; FetchOffset &#124; > conjunto* de linhas <sup>[2]</sup>|*Antes de iniciar*|  
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow e &#124; FetchOffset &#124; <= conjunto de* linhas <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Antes de iniciar*|  
-|*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
+|*1 <= FetchOffset \< = LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Após o término*|  
   
- [1] **SQLFetchScroll** retorna SQLSTATE 01S06 (tentativa de busca antes de o conjunto de resultados ter retornado o primeiro conjunto de linhas) e SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** retorna SQLSTATE 01S06 (tentativa de busca antes de o conjunto de resultados ter retornado o primeiro conjunto de linhas) e SQL_SUCCESS_WITH_INFO.  
   
  [2] se o tamanho do conjunto de linhas tiver sido alterado desde a chamada anterior para buscar linhas, esse será o novo tamanho do conjunto de linhas.  
   
@@ -247,7 +248,7 @@ SQLRETURN SQLFetchScroll(
 |Condição|Primeira linha do novo conjunto de linhas|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Antes de iniciar*|  
-|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 <= BookmarkRow + FetchOffset \< = LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Após o término*|  
   
  Para obter informações sobre indicadores, consulte [indicadores (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -257,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  Se o cursor detectar linhas adicionadas ao conjunto de resultados ou remover linhas excluídas do conjunto de resultados, ele aparecerá como se detectar essas alterações somente quando buscar dados. Isso inclui o caso em que **SQLFetchScroll** é chamado com FetchOrientation definido como SQL_FETCH_RELATIVE e FetchOffset definido como 0 para buscar novamente o mesmo conjunto de linhas, mas não inclui o caso quando SQLSetPos é chamado com fOption definido como SQL_REFRESH. No último caso, os dados nos buffers de conjunto de linhas são atualizados, mas não rebuscados, e as linhas excluídas não são removidas do conjunto de resultados. Assim, quando uma linha é excluída ou inserida no conjunto de linhas atual, o cursor não modifica os buffers de conjunto de linhas. Em vez disso, ele detecta a alteração quando busca qualquer conjunto de linhas que anteriormente incluía a linha excluída ou agora inclui a linha inserida.  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```cpp  
 // Fetch the next rowset.  

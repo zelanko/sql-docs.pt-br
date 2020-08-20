@@ -1,4 +1,5 @@
 ---
+description: Cursores roláveis
 title: Cursores roláveis | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c347dcb130a2f1f899f2e1b83ae28289ff0a923
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476478"
 ---
 # <a name="scrollable-cursors"></a>Cursores roláveis
 Em aplicativos modernos baseados em tela, o usuário rola para trás e para frente pelos dados. Para esses aplicativos, retornar a uma linha previamente buscada é um problema. Uma possibilidade é fechar e reabrir o cursor e, em seguida, buscar linhas até que o cursor atinja a linha necessária. Outra possibilidade é ler o conjunto de resultados, armazená-lo em cache localmente e implementar a rolagem no aplicativo. Ambas as possibilidades funcionam bem apenas com pequenos conjuntos de resultados e a última possibilidade é difícil de implementar. Uma solução melhor é usar um *cursor rolável,* que pode voltar e avançar no conjunto de resultados.  

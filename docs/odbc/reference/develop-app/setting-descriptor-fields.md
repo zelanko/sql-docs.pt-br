@@ -1,4 +1,5 @@
 ---
+description: Configurar campos de descritor
 title: Configurando campos de descritor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04f9520e2ef462df481bb104e389aeb57b5dd457
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6625db69709098f3a3db1a1d40f9ab583eee4030
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476428"
 ---
 # <a name="setting-descriptor-fields"></a>Configurar campos de descritor
 Para modificar os campos de um descritor, um aplicativo pode chamar **SQLSetDescField**. Alguns campos são somente leitura e não podem ser definidos. (Consulte a descrição da função [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .)  

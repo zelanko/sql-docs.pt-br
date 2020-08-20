@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_index_keywords (Transact-SQL)
 title: sys. dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3b95ce96f126249da124ea5830e7cc898fa9f8b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e57cb14d48f23235971b3adacb656277aa2d1626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474926"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  O **document_count** retornado por **Sys. dm_fts_index_keywords** pode ser menos preciso para um documento específico do que a contagem retornada por **Sys. dm_fts_index_keywords_by_document** ou uma consulta **Contains** . Estima-se que a imprecisão em potencial seja inferior a 1%. Essa inexatidão pode ocorrer porque uma **document_id** pode ser contada duas vezes quando continua em mais de uma linha no fragmento de índice, ou quando ela aparece mais de uma vez na mesma linha. Para obter uma contagem mais precisa de um documento específico, use **Sys. dm_fts_index_keywords_by_document** ou uma consulta **Contains** .  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
   
