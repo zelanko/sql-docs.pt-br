@@ -1,4 +1,5 @@
 ---
+description: Precedência dos operadores (Transact-SQL)
 title: Precedência do operador (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4670ef04301bb8dc75828db97ee42d3379ecbfb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d95c22ef26f7e0cbecad3c0f2e6b04f2ac8c8b37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467568"
 ---
 # <a name="operator-precedence-transact-sql"></a>Precedência dos operadores (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

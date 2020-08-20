@@ -1,4 +1,5 @@
 ---
+description: Tipos espaciais – geografia
 title: geografia (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46489eadd2c56fbccca62dfe415611e0f8f66a2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467460"
 ---
 # <a name="spatial-types---geography"></a>Tipos espaciais – geografia
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  O tipo de dados espaciais de geografia, **geography**, é implementado como um tipo de dados CLR (Common Language Runtime) do .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse tipo representa dados em um sistema de coordenadas de terra redonda. O tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography**do** armazena dados elipsoidais (terra redonda), como coordenadas de latitude e longitude de GPS.  
+  O tipo de dados espaciais de geografia, **geography**, é implementado como um tipo de dados CLR (Common Language Runtime) do .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse tipo representa dados em um sistema de coordenadas de terra redonda. O tipo de dados  **geography** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena dados elipsoidais (terra redonda), como coordenadas de latitude e longitude de GPS.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é compatível com um conjunto de métodos do tipo de dados espaciais de **geografia**. Estão inclusos métodos de **geografia** que são definidos pelo padrão OGC (Open Geospatial Consortium) e um conjunto de extensões da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para esse padrão.  
  
