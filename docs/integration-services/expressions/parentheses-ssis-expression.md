@@ -1,4 +1,5 @@
 ---
+description: () (Parênteses) (Expressão SSIS)
 title: () (Parênteses) (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57ea5cbdea10a71049e17527b64dbf2c126a90be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 970ac5479d0d09276aae8eb095199abbbee910c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477506"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Parênteses) (Expressão SSIS)
 

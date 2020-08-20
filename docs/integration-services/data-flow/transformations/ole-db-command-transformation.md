@@ -1,4 +1,5 @@
 ---
+description: transformação Comando OLE DB
 title: Transformação Comando OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3e85168ae32063ba938205f2612c5af6a95eed4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477618"
 ---
 # <a name="ole-db-command-transformation"></a>transformação Comando OLE DB
 
@@ -47,7 +48,7 @@ ms.locfileid: "86919542"
   
  Essa transformação tem uma entrada, uma saída comum e uma saída de erro.  
   
-## <a name="logging"></a>Registro em log  
+## <a name="logging"></a>Registrando em log  
  Você poderá fazer log das chamadas que a transformação Comando OLE DB fizer a provedores de dados externos. Você pode usar esse recurso de log para solucionar problemas de conexões e comandos das fontes de dados externos executados pela transformação Comando OLE DB. Para fazer log das chamadas que a transformação Comando OLE DB fizer aos provedores de dados externos, habilite o log do pacote e selecione o evento **Diagnóstico** no nível de pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  

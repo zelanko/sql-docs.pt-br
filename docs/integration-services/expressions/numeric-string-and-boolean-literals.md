@@ -1,4 +1,5 @@
 ---
+description: Literais boolianos, de cadeia de caracteres e numéricos
 title: Literais (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8405bd4cb76470eb415dc058caff3931a6b4624
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2ae5d096a90d4e755a57842fb9fb242f7d863eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477481"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Literais boolianos, de cadeia de caracteres e numéricos
 
@@ -38,7 +39,7 @@ ms.locfileid: "86918622"
   
  A tabela a seguir lista sufixos para literais numéricos.  
   
-|Sufixo|DESCRIÇÃO|  
+|Sufixo|Descrição|  
 |------------|-----------------|  
 |L ou l|Um longo literal numérico.|  
 |U ou u|Um literal numérico não assinado.|  
@@ -46,7 +47,7 @@ ms.locfileid: "86918622"
   
  A tabela a seguir lista elementos de expressão numérica e suas expressões regulares.  
   
-|Elemento Expression|Expressão regular|DESCRIÇÃO|  
+|Elemento Expression|Expressão regular|Descrição|  
 |------------------------|------------------------|-----------------|  
 |Dígitos expressos como D.|[0-9]|Qualquer dígito.|  
 |Notação científica expressa como E.|[Ee][+-]?{D}+|Letras maiúsculas ou minúsculas e, opcionalmente + ou -, e um ou mais dígitos como definido em D.|  
@@ -56,7 +57,7 @@ ms.locfileid: "86918622"
   
  A tabela a seguir descreve literais numéricos válidos que usam a linguagem de expressão regular.  
   
-|Expressão regular|DESCRIÇÃO|  
+|Expressão regular|Descrição|  
 |------------------------|-----------------|  
 |{D}+{IS}|Um literal numérico integral com pelo menos um dígito (D) e, opcionalmente, o sufixo longo e/ou não assinado (IS).  Exemplos: 457, 785u, 986L e 7945ul.|  
 |{D}+{E}{FS}|Um literal numérico não integral com pelo menos um dígito (D), notação científica, e o sufixo flutuante ou longo.  Exemplos: 4E8l, 13e-2f e 5E+L.|  
@@ -100,7 +101,7 @@ ms.locfileid: "86918622"
   
  As cadeias de caracteres podem incluir outros caracteres que requerem uma sequência de escape. A tabela a seguir lista sequências de escape para literais de cadeia de caracteres.  
   
-|Sequência de escape|DESCRIÇÃO|  
+|Sequência de escape|Descrição|  
 |---------------------|-----------------|  
 |\a|Alerta|  
 |\b|Backspace|  

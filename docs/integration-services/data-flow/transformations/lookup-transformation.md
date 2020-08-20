@@ -1,4 +1,5 @@
 ---
+description: transformação Pesquisa
 title: Transformação Pesquisa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1c65cf892c36f04ac0669d5e011c6c54c434c09
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477690"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
 
@@ -90,7 +91,7 @@ ms.locfileid: "86919256"
   
  A seguir, veja alguns benefícios adicionais da persistência de cache para um arquivo:  
   
--   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, confira*** [Implementar uma transformação de pesquisa no modo de cache cheio usando o gerenciador de conexões do cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte***  [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Implante o arquivo de cache com um pacote. ***Você pode usar os dados em vários computadores.*** Para obter mais informações, consulte [Criar e implantar um cache para a Transformação de Pesquisa](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -124,11 +125,11 @@ ms.locfileid: "86919256"
 ## <a name="related-tasks"></a>Related Tasks  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente. Para obter mais detalhes, consulte os tópicos a seguir.  
   
--   [Implementar uma pesquisa no modo Sem cache ou Cache parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementar uma transformação Pesquisa em modo de cache cheio por meio do Gerenciador de conexões OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   

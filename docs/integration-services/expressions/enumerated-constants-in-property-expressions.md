@@ -1,4 +1,5 @@
 ---
+description: Constantes enumeradas em expressões de propriedade
 title: Constantes enumeradas em expressões de propriedade | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477578"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
 
@@ -65,7 +66,7 @@ ms.locfileid: "86922745"
   
 |Nome amigável em DTSCheckpointUsage|Valor numérico|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|Nunca|0|  
 |IfExists|1|  
 |Sempre|2|  
   
@@ -275,7 +276,7 @@ ms.locfileid: "86922745"
   
 |Nome amigável em TransferAction|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Cópia|0|  
+|Copiar|0|  
 |Mover|1|  
   
  Propriedade **Method** – definida usando valores da enumeração **TransferMethod**.  
@@ -292,7 +293,7 @@ ms.locfileid: "86922745"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignorar|2|  
   
 ### <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos  
  Propriedade **IfObjectExists** – definida usando valores da enumeração **IfObjectExists**.  
@@ -301,7 +302,7 @@ ms.locfileid: "86922745"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignorar|2|  
   
 ### <a name="transfer-logins-task"></a>Tarefa Transferir Logons  
  Propriedade **IfObjectExists** – definida usando valores da enumeração **IfObjectExists**.  
@@ -310,7 +311,7 @@ ms.locfileid: "86922745"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignorar|2|  
   
  Propriedade **LoginsToTransfer** – definida usando valores da enumeração **LoginsToTransfer**.  
   
@@ -327,7 +328,7 @@ ms.locfileid: "86922745"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Ignorar|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server  
  Propriedade **ExistingData** – definida pelos valores da enumeração **ExistingData**.  
@@ -492,7 +493,7 @@ ms.locfileid: "86922745"
 |Nome amigável em DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
 |Nenhum|0|  
-|Todos|1|  
+|Tudo|1|  
 |Sistema|2|  
 |Usuário|3|  
 |Específicas|4|  
@@ -502,7 +503,7 @@ ms.locfileid: "86922745"
 |Nome amigável em TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
 |Nenhum|0|  
-|Todos|1|  
+|Tudo|1|  
 |Específicas|2|  
   
  Propriedade **ObjectTypeSelection** – definida usando valores da enumeração **ObjectType**.  
@@ -510,7 +511,7 @@ ms.locfileid: "86922745"
 |Nome amigável em ObjectType|Valor numérico|  
 |---------------------------------|-------------------|  
 |Tabela|0|  
-|Visualizar|1|  
+|Exibir|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Tarefa de Backup de Banco de Dados  
@@ -561,7 +562,7 @@ ms.locfileid: "86922745"
 |Dia|0|  
 |Semana|1|  
 |Month|2|  
-|Ano|3|  
+|Year|3|  
   
 ### <a name="update-statistics-task"></a>Tarefa Atualizar Estatísticas  
  Propriedade **UpdateType** – definida usando valores de SMO (Gerenciamento de Objetos) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enumeração **StatisticsTarget**.  
@@ -570,7 +571,7 @@ ms.locfileid: "86922745"
 |---------------------------------------|-------------------|  
 |Coluna|1|  
 |Índice|2|  
-|Todos|3|  
+|Tudo|3|  
   
 ##  <a name="common-properties"></a><a name="CommonProperties"></a> Propriedades comuns  
  Pacotes, tarefas e os contêineres Loop Foreach, Loop For e Sequência podem usar as enumerações a seguir para definir as propriedades especificadas.  
@@ -599,7 +600,7 @@ ms.locfileid: "86922745"
 |Nome amigável em DTSTransactionOption|Valor numérico|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Suportado|1|  
+|Com suporte|1|  
 |Obrigatório|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  

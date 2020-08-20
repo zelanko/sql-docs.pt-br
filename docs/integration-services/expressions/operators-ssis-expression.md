@@ -1,4 +1,5 @@
 ---
+description: Operadores (Expressão SSIS)
 title: Operadores (Expressão SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cce2d53a48a55dad2f8d8120e8a7fd091b062ebe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f2c4ddb9dad3a1b6c922201906628ad3b6d25f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477472"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (Expressão SSIS)
 
@@ -31,7 +32,7 @@ ms.locfileid: "86921104"
   
  A tabela a seguir lista os tópicos sobre os operadores desta seção.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |[Conversão &#40;Expressão SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md)|Converte uma expressão de um tipo de dados para um tipo de dados diferente.|  
 |[&#40;&#41; &#40;Parênteses&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/parentheses-ssis-expression.md)|Identifica a ordem de avaliação de expressões.|  
@@ -53,8 +54,8 @@ ms.locfileid: "86921104"
 |[\!= &#40;Diferente&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Executará uma comparação para determinar se duas expressões não forem iguais.|  
 |[&#62; &#40;Maior que&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é maior que a segunda.|  
 |[&#60; &#40;Menor que&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é menor que a segunda.|  
-|[&#62;= &#40;Maior que ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é maior que ou igual à segunda.|  
-|[&#60;= &#40;Menor que ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é menor que ou igual à segunda.|  
+|[&#62;= &#40;Maior ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é maior que ou igual à segunda.|  
+|[&#60;= &#40;Menor ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é menor que ou igual à segunda.|  
 |[? : &#40;Condicional&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/conditional-ssis-expression.md)|Retorna uma de duas expressões baseadas na avaliação de uma expressão booliana.|  
   
  Para obter informações sobre a colocação de cada operador na hierarquia de precedência, consulte [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md).  

@@ -1,4 +1,5 @@
 ---
+description: Precedência de operador e capacidade de associação
 title: Precedência de operador e capacidade de associação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 801f0358ce5dd6b68e42aff37e7135ec813b3bc0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda01c12856bff3e28b06c9cfddccb368e6a3e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477479"
 ---
 # <a name="operator-precedence-and-associativity"></a>Precedência de operador e capacidade de associação
 
