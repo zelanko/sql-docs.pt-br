@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setevent (Transact-SQL)
 title: sp_trace_setevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480952"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id`É a ID do rastreamento a ser modificado. *trace_id* é **int**, sem padrão. O usuário emprega esse *trace_id* valor para identificar, modificar e controlar o rastreamento.  
+`[ @traceid = ] trace_id` É a ID do rastreamento a ser modificado. *trace_id* é **int**, sem padrão. O usuário emprega esse *trace_id* valor para identificar, modificar e controlar o rastreamento.  
   
-`[ @eventid = ] event_id`É a ID do evento a ser ativado. *event_id* é **int**, sem padrão.  
+`[ @eventid = ] event_id` É a ID do evento a ser ativado. *event_id* é **int**, sem padrão.  
   
  Esta tabela lista os eventos que podem ser adicionados ou removidos de um rastreamento.  
   
@@ -236,7 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Guia de plano malsucedido|Indica que o SQL Server não pôde produzir um plano de execução, para uma consulta ou lote, que continha um guia de plano. O SQL Server tentou gerar um plano de execução para esta consulta ou lote sem aplicar o guia de plano. Um guia de plano inválido pode ser a causa deste problema. Você pode validar o guia de plano usando a função de sistema sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`É a ID da coluna a ser adicionada ao evento. *column_id* é **int**, sem padrão.  
+`[ @columnid = ] column_id` É a ID da coluna a ser adicionada ao evento. *column_id* é **int**, sem padrão.  
   
  A tabela a seguir lista as colunas que podem ser adicionadas a um evento.  
   
@@ -316,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Esta tabela ilustra a interação entre ** \@ on** e ** \@ columnid**.  
   
-|\@no|\@columnid|Resultado|  
+|\@no|\@columnid|Result|  
 |---------|---------------|------------|  
 |ON (**1**)|NULO|Evento é definido como ON.<br /><br /> Todas as colunas são limpas.|  
 ||NOT NULL|A coluna é definida como ON para o evento especificado.|  
@@ -358,8 +359,8 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_generateevent ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

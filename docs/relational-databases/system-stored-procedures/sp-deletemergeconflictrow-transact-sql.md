@@ -1,4 +1,5 @@
 ---
+description: sp_deletemergeconflictrow (Transact-SQL)
 title: sp_deletemergeconflictrow (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ab3528c496722877310c13d073158bd20969bc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65a0b2b039d94ca425bb6e93a067e8fcc0ddd2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481318"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Exclui linhas de uma tabela de conflitos ou a [MSmerge_conflicts_info &#40;tabela&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) . Esse procedimento armazenado é executado ao computador onde a tabela de conflitos é armazenada, em qualquer banco de dados.  
+  Exclui linhas de uma tabela de conflitos ou a [MSmerge_conflicts_info &#40;tabela&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) . Esse procedimento armazenado é executado ao computador onde a tabela de conflitos é armazenada, em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,15 +42,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @conflict_table = ] 'conflict_table'`É o nome da tabela de conflitos. *conflict_table* é **sysname**, com um padrão de **%** . Se a *conflict_table* for especificada como nula ou **%** , o conflito será considerado como um conflito de exclusão e a linha correspondente *rowguid* e *origin_datasource* e *source_object* será excluída do MSmerge_conflicts_info &#40;tabela de [&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
+`[ @conflict_table = ] 'conflict_table'` É o nome da tabela de conflitos. *conflict_table* é **sysname**, com um padrão de **%** . Se a *conflict_table* for especificada como nula ou **%** , o conflito será considerado como um conflito de exclusão e a linha correspondente *rowguid* e *origin_datasource* e *source_object* será excluída do MSmerge_conflicts_info &#40;tabela de [&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
   
-`[ @source_object = ] 'source_object'`É o nome da tabela de origem. *source_object* é **nvarchar (386)**, com um padrão de NULL.  
+`[ @source_object = ] 'source_object'` É o nome da tabela de origem. *source_object* é **nvarchar (386)**, com um padrão de NULL.  
   
-`[ @rowguid = ] 'rowguid'`É o identificador de linha para o conflito de exclusão. *ROWGUID* é **uniqueidentifier**, sem padrão.  
+`[ @rowguid = ] 'rowguid'` É o identificador de linha para o conflito de exclusão. *ROWGUID* é **uniqueidentifier**, sem padrão.  
   
-`[ @origin_datasource = ] 'origin_datasource'`É a origem do conflito. *origin_datasource* é **varchar (255)**, sem padrão.  
+`[ @origin_datasource = ] 'origin_datasource'` É a origem do conflito. *origin_datasource* é **varchar (255)**, sem padrão.  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'`É um sinalizador que indica que a *conflict_table* será descartada se estiver vazia. *drop_table_if_empty* é **varchar (10)**, com um padrão de false.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` É um sinalizador que indica que a *conflict_table* será descartada se estiver vazia. *drop_table_if_empty* é **varchar (10)**, com um padrão de false.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,7 +58,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="remarks"></a>Comentários  
  **sp_deletemergeconflictrow** é usado na replicação de mesclagem.  
   
- [MSmerge_conflicts_info &#40;tabela de&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) é uma tabela do sistema e não é excluída do banco de dados, mesmo que esteja vazia.  
+ [MSmerge_conflicts_info &#40;tabela de&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) é uma tabela do sistema e não é excluída do banco de dados, mesmo que esteja vazia.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_deletemergeconflictrow**.  

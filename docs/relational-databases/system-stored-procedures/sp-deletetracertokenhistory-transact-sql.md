@@ -1,4 +1,5 @@
 ---
+description: sp_deletetracertokenhistory (Transact-SQL)
 title: sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4912611e79e4d6d3431cce7facb04af06a206211
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481319"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Remove registros de token de rastreamento das [MStracer_tokens &#40;Transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) e MStracer_history &#40;tabelas do sistema [de&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação, ou no Distribuidor, no banco de dados de distribuição.
+Remove registros de token de rastreamento das [MStracer_tokens &#40;Transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) e MStracer_history &#40;tabelas do sistema [de&#41;Transact-SQL ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação, ou no Distribuidor, no banco de dados de distribuição.
 
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -75,7 +76,7 @@ Ocorrerá um erro se você especificar os parâmetros *tracer_id* e *cutoff_date
 
 Se você não executar **sp_deletetracertokenhistory** para excluir os metadados do token de rastreamento, as informações serão excluídas quando ocorrer a limpeza do histórico agendado regularmente.
 
-As IDs de token de rastreamento podem ser determinadas executando [sp_helptracertokens &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) ou consultando a tabela do sistema [&#40;MStracer_tokens&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
+As IDs de token de rastreamento podem ser determinadas executando [sp_helptracertokens &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) ou consultando a tabela do sistema [&#40;MStracer_tokens&#41;Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
 
 ## <a name="permissions"></a>Permissões
 
@@ -88,6 +89,6 @@ Somente a equipe a seguir tem autoridade para executar **sp_deletetracertokenhis
 
 ## <a name="see-also"></a>Consulte Também
 
-[Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+[Medir a latência e validar conexões para replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
-[&#41;&#40;Transact-SQL de sp_helptracertokenhistory](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)
+[&#41;&#40;Transact-SQL de sp_helptracertokenhistory ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

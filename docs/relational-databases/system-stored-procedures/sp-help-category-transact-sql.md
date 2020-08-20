@@ -1,4 +1,5 @@
 ---
+description: sp_help_category (Transact-SQL)
 title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481226"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'`A classe sobre a qual as informações são solicitadas. a *classe* é **varchar (8)**, com um valor padrão de **trabalho**. a *classe* pode ser um desses valores.  
+`[ @class = ] 'class'` A classe sobre a qual as informações são solicitadas. a *classe* é **varchar (8)**, com um valor padrão de **trabalho**. a *classe* pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -50,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERTA**|Fornece informações sobre uma categoria de alerta.|  
 |**OPERADOR**|Fornece informações sobre uma categoria de operador.|  
   
-`[ @type = ] 'type'`O tipo de categoria para o qual as informações são solicitadas. o *tipo* é **varchar (12)**, com um padrão de NULL e pode ser um desses valores.  
+`[ @type = ] 'type'` O tipo de categoria para o qual as informações são solicitadas. o *tipo* é **varchar (12)**, com um padrão de NULL e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -58,9 +59,9 @@ sp_help_category [ [ @class = ] 'class' ]
 |**MULTI -SERVER**|Categoria de trabalho multisservidor.|  
 |**NONE**|Categoria para uma classe que não seja **trabalho**.|  
   
-`[ @name = ] 'name'`O nome da categoria para a qual as informações são solicitadas. o *nome* é **sysname**, com um padrão de NULL.  
+`[ @name = ] 'name'` O nome da categoria para a qual as informações são solicitadas. o *nome* é **sysname**, com um padrão de NULL.  
   
-`[ @suffix = ] suffix`Especifica se a coluna **category_type** no conjunto de resultados é uma ID ou um nome. o *sufixo* é **bit**, com um padrão de **0**. **1** mostra o **category_type** como um nome e **0** o mostra como uma ID.  
+`[ @suffix = ] suffix` Especifica se a coluna **category_type** no conjunto de resultados é uma ID ou um nome. o *sufixo* é **bit**, com um padrão de **0**. **1** mostra o **category_type** como um nome e **0** o mostra como uma ID.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -126,9 +127,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_category](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_category ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_category ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_category ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

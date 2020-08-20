@@ -1,4 +1,5 @@
 ---
+description: Sinônimos de tipo de dados (Transact-SQL)
 title: Sinônimos de tipo de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f689cdae7253c43ca39c06dc09953c4db02d0def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479919"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Sinônimos de tipo de dados (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,17 +35,17 @@ Os sinônimos de tipos de dados são incluídos no [!INCLUDE[ssNoVersion](../../
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** _n_ **)**|**char(n)**|  
-|**character varying(** _n_ **)**|**varchar(n)**|  
-|**Dec**|**decimal**|  
+|**character(**_n_**)**|**char(n)**|  
+|**character varying(**_n_**)**|**varchar(n)**|  
+|**Dez**|**decimal**|  
 |**Precisão dupla**|**float**|  
 |**float**[ **(** _n_ **)** ] para _n_ = 1-7|**real**|  
 |**float**[ **(** _n_ **)** ] para _n_ = 8-15|**float**|  
 |**inteiro**|**int**|  
-|**national character(** _n_ **)**|**nchar(n)**|  
-|**national char(** _n_ **)**|**nchar(n)**|  
-|**national character varying(** _n_ **)**|**nvarchar(n)**|  
-|**national char varying(** _n_ **)**|**nvarchar(n)**|  
+|**national character(**_n_**)**|**nchar(n)**|  
+|**national char(**_n_**)**|**nchar(n)**|  
+|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
@@ -62,7 +63,7 @@ Por exemplo, você pode criar uma tabela especificando `national character varyi
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol` é atribuído a um tipo de dados **nvarchar(10)** , e todas as funções de metadados seguintes relatarão a coluna como **nvarchar(10)** . As funções de metadados nunca serão informadas como uma coluna **national character varying(10)** .
+`VarCharCol` é atribuído a um tipo de dados **nvarchar(10)**, e todas as funções de metadados seguintes relatarão a coluna como **nvarchar(10)**. As funções de metadados nunca serão informadas como uma coluna **national character varying(10)**.
   
 ## <a name="see-also"></a>Confira também
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

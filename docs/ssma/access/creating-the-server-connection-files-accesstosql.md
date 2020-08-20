@@ -1,4 +1,5 @@
 ---
+description: Criando os arquivos de conexão do servidor (AccessToSQL)
 title: Criando os arquivos de conexão do servidor (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 207aa406df3f426658afa569d434ea71db5eba1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480502"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Criando os arquivos de conexão do servidor (AccessToSQL)
 As informações do servidor podem ser especificadas na seção servidores do arquivo de script. As informações do servidor também podem ser especificadas em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão do servidor é `-c <serverconnectionfile>` . Se a mesma ID do servidor estiver presente nos arquivos de conexão do servidor e do script, a definição do servidor no arquivo de script será considerada.  
@@ -66,6 +67,6 @@ O usuário pode facilmente validar seu arquivo de conexão de servidor com o arq
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa na operação do console é [executar o console do SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Executando o console do SSMA (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

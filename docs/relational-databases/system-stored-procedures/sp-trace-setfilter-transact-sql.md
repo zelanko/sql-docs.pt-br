@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setfilter (Transact-SQL)
 title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480966"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Aplica um filtro a um rastreamento. **sp_trace_setfilter** pode ser executado somente em rastreamentos existentes que são interrompidos (*status* é **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]retornará um erro se este procedimento armazenado for executado em um rastreamento que não existe ou cujo *status* não é **0**.  
+  Aplica um filtro a um rastreamento. **sp_trace_setfilter** pode ser executado somente em rastreamentos existentes que são interrompidos (*status* é **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro se este procedimento armazenado for executado em um rastreamento que não existe ou cujo *status* não é **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use Eventos Estendidos.  
@@ -46,13 +47,13 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id`É a ID do rastreamento para o qual o filtro está definido. *trace_id* é **int**, sem padrão. O usuário emprega esse *trace_id* valor para identificar, modificar e controlar o rastreamento.  
+`[ @traceid = ] trace_id` É a ID do rastreamento para o qual o filtro está definido. *trace_id* é **int**, sem padrão. O usuário emprega esse *trace_id* valor para identificar, modificar e controlar o rastreamento.  
   
-`[ @columnid = ] column_id`É a ID da coluna na qual o filtro é aplicado. *column_id* é **int**, sem padrão. Se *column_id* for NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limpará todos os filtros para o rastreamento especificado.  
+`[ @columnid = ] column_id` É a ID da coluna na qual o filtro é aplicado. *column_id* é **int**, sem padrão. Se *column_id* for NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limpará todos os filtros para o rastreamento especificado.  
   
-`[ @logical_operator = ] logical_operator`Especifica se o operador AND (**0**) ou or (**1**) é aplicado. *logical_operator* é **int**, sem padrão.  
+`[ @logical_operator = ] logical_operator` Especifica se o operador AND (**0**) ou or (**1**) é aplicado. *logical_operator* é **int**, sem padrão.  
   
-`[ @comparison_operator = ] comparison_operator`Especifica o tipo de comparação a ser feita. *comparison_operator* é **int**, sem padrão. A tabela contém os operadores de comparação e os valores representativos dos mesmos.  
+`[ @comparison_operator = ] comparison_operator` Especifica o tipo de comparação a ser feita. *comparison_operator* é **int**, sem padrão. A tabela contém os operadores de comparação e os valores representativos dos mesmos.  
   
 |Valor|Operador de comparação|  
 |-----------|-------------------------|  
@@ -65,7 +66,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Não semelhante a|  
   
-`[ @value = ] value`Especifica o valor no qual filtrar. O tipo de dados do *valor* deve corresponder ao tipo de dados da coluna a ser filtrada. Por exemplo, se o filtro for definido em uma coluna de ID de objeto que é um tipo de dados **int** , o *valor* deverá ser **int**. Se *Value* for **nvarchar** ou **varbinary**, ele poderá ter um comprimento máximo de 8000.  
+`[ @value = ] value` Especifica o valor no qual filtrar. O tipo de dados do *valor* deve corresponder ao tipo de dados da coluna a ser filtrada. Por exemplo, se o filtro for definido em uma coluna de ID de objeto que é um tipo de dados **int** , o *valor* deverá ser **int**. Se *Value* for **nvarchar** ou **varbinary**, ele poderá ter um comprimento máximo de 8000.  
   
  Quando o operador de comparação for LIKE ou NOT LIKE, o operador lógico poderá incluir "%" ou outro filtro apropriado para a operação LIKE.  
   
@@ -112,7 +113,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

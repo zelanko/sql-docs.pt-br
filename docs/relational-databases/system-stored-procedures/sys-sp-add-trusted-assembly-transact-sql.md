@@ -1,4 +1,5 @@
 ---
+description: sys.sp_add_trusted_assembly (Transact-SQL)
 title: sys. sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb34a814780a46c12c65948bd0b552effaacda4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e59cd1836a838294904970f00a677a0fdfe6c03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72452880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480878"
 ---
 # <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
@@ -42,23 +43,23 @@ sp_add_trusted_assembly
 
 ## <a name="remarks"></a>Comentários  
 
-Este procedimento adiciona um assembly a [Sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
+Este procedimento adiciona um assembly a  [Sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Argumentos
 
-[ @hash = ] '*valor*'  
+[ @hash =] '*valor*'  
 O SHA2_512 valor de hash do assembly a ser adicionado à lista de assemblies confiáveis para o servidor. Os assemblies confiáveis podem ser carregados quando a [segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md) estiver habilitada, mesmo se o assembly não estiver assinado ou se o banco de dados não estiver marcado como confiável.
 
-[ @description = ] '*Descrição*'  
+[ @description =] '*Descrição*'  
 Descrição opcional definida pelo usuário do assembly. A Microsoft recomenda usar o nome canônico que codifica o nome simples, o número de versão, a cultura, a chave pública e a arquitetura do assembly para confiar. Esse valor identifica exclusivamente o assembly no lado Common Language Runtime (CLR) e é o mesmo que o valor de clr_name em sys. assemblies. 
 
 ## <a name="permissions"></a>Permissões
 
-Requer a associação à `sysadmin` função de servidor fixa `CONTROL SERVER` ou à permissão.
+Requer a associação à `sysadmin` função de servidor fixa ou à `CONTROL SERVER` permissão.
 
 ## <a name="examples"></a>Exemplos  
 
-O exemplo a seguir adiciona um assembly `pointudt` chamado à lista de assemblies confiáveis para o servidor. Esses valores estão disponíveis em [Sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
+O exemplo a seguir adiciona um assembly chamado `pointudt` à lista de assemblies confiáveis para o servidor. Esses valores estão disponíveis em  [Sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
 EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 

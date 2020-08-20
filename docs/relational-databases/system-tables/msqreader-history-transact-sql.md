@@ -1,4 +1,5 @@
 ---
+description: MSqreader_history (Transact-SQL)
 title: MSqreader_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ee889df3e29f486c12393870858fa0af2ea6546
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64e6041c37c70359c645f1a0f6027503b185772c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480764"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,20 +38,20 @@ ms.locfileid: "85889548"
 |**start_time**|**datetime**|A data e hora de início da sessão do agente.|  
 |**time**|**datetime**|A data e a hora da última mensagem registrada.|  
 |**duration**|**int**|O tempo decorrido da atividade de sessão registrada, em segundos.|  
-|**feitos**|**nvarchar (255)**|O texto descritivo.|  
+|**feitos**|**nvarchar(255)**|O texto descritivo.|  
 |**transaction_id**|**nvarchar(40)**|A ID da transação armazenada com a mensagem, se aplicável.|  
 |**transaction_status**|**int**|O status da transação.|  
 |**transactions_processed**|**int**|O número acumulado de transações processadas na sessão.|  
 |**commands_processed**|**int**|O número acumulado de comandos processados na sessão.|  
-|**delivery_rate**|**float (53)**|O número médio de comandos entregues por segundo.|  
-|**transaction_rate**|**float (53)**|A taxa de transações processadas.|  
+|**delivery_rate**|**float(53)**|O número médio de comandos entregues por segundo.|  
+|**transaction_rate**|**float(53)**|A taxa de transações processadas.|  
 |**farão**|**sysname**|O nome do Assinante.|  
 |**SubscriberDB**|**sysname**|O nome do banco de dados de assinatura.|  
 |**error_id**|**int**|Se não for zero, o número representará uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de erro.|  
 |**timestamp**|**timestamp**|A coluna de carimbo de data e hora para a tabela.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

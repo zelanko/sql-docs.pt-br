@@ -1,4 +1,5 @@
 ---
+description: STGeomFromText (tipo de dados geometry)
 title: STGeomFromText (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6d8a79e1bc9ddbbfc86243df0be1caf4f8d8b1c8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0917ef0900d317eeaeb916604cd8e1dc53387b03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479323"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *geometry_tagged_text*  
- É a representação WKT da instância de **geometry** que você deseja retornar. *geometry_tagged_text* é uma expressão **nvarchar(max)** .  
+ É a representação WKT da instância de **geometry** que você deseja retornar. *geometry_tagged_text* é uma expressão **nvarchar(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometry** que você deseja retornar.  
@@ -65,7 +66,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

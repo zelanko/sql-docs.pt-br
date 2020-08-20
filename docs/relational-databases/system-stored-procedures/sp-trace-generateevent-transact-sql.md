@@ -1,4 +1,5 @@
 ---
+description: sp_trace_generateevent (Transact-SQL)
 title: sp_trace_generateevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00952b8059aed7325fdeab449bbb29e302a0373f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480995"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +45,18 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @eventid = ] event_id`É a ID do evento a ser ativado. *event_id* é **int**, sem padrão. A ID deve ser um dos números de evento de 82 a 91, que representam eventos definidos pelo usuário, conforme definido com [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` É a ID do evento a ser ativado. *event_id* é **int**, sem padrão. A ID deve ser um dos números de evento de 82 a 91, que representam eventos definidos pelo usuário, conforme definido com [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
-`[ @userinfo = ] 'user_info'`É a cadeia de caracteres opcional definida pelo usuário que identifica o motivo do evento. *user_info* é **nvarchar (128)**, com um padrão de NULL.  
+`[ @userinfo = ] 'user_info'` É a cadeia de caracteres opcional definida pelo usuário que identifica o motivo do evento. *user_info* é **nvarchar (128)**, com um padrão de NULL.  
   
-`[ @userdata = ] user_data`São os dados opcionais especificados pelo usuário para o evento. *user_data* é **varbinary (8000)**, com um padrão de NULL.  
+`[ @userdata = ] user_data` São os dados opcionais especificados pelo usuário para o evento. *user_data* é **varbinary (8000)**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
-|**0**|Nenhum erro.|  
+|**0**|Sem erros.|  
 |**1**|Erro desconhecido.|  
 |**3**|O evento especificado não é válido. O evento pode não existir ou não é um apropriado para o procedimento de loja.|  
 |**13**|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
@@ -96,7 +97,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
   
 ## <a name="see-also"></a>Confira também  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

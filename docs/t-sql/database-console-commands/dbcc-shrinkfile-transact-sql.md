@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKFILE (Transact-SQL)
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 32ce225096e6a232c824a9fc360cb2c3a282f4b2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479764"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +99,7 @@ Suprime todas as mensagens informativas.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as colunas do conjunto de resultados.
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |---|---|
 |**DbId**|Número de identificação do banco de dados do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
 |**FileId**|O número de identificação do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
@@ -133,7 +134,7 @@ Considere as seguintes informações ao planejar a redução de arquivos:
 
 -   Reduza vários arquivos no mesmo banco de dados sequencialmente, e não simultaneamente. A contenção em tabelas do sistema pode causar o bloqueio e gerar atrasos.  
   
-## <a name="troubleshooting"></a>solução de problemas  
+## <a name="troubleshooting"></a>Solução de problemas  
 Esta seção descreve como diagnosticar e corrigir problemas que podem ocorrer ao executar o comando DBCC SHRINKFILE.
   
 ### <a name="the-file-doesnt-shrink"></a>O arquivo não é reduzido

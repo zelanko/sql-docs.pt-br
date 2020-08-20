@@ -1,4 +1,5 @@
 ---
+description: sp_vupgrade_replication (Transact-SQL)
 title: sp_vupgrade_replication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa15ada3a85a828133ca68a3c3c8ee43e365b344
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8630a02b31f7589a54cf8b9428f4fbb6a1980be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480918"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,12 +42,12 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login = ] 'login'`É o logon de administrador do sistema a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não será necessário se *security_mode* for definido como **1**, que é a autenticação do Windows.  
+`[ @login = ] 'login'` É o logon de administrador do sistema a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não será necessário se *security_mode* for definido como **1**, que é a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você está atualizando para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
-`[ @password = ] 'password'`É a senha de administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de distribuição. a *senha* é **sysname**, com um padrão de **' '** (cadeia de caracteres vazia). Esse parâmetro não será necessário se *security_mode* for definido como **1**, que é a autenticação do Windows.  
+`[ @password = ] 'password'` É a senha de administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de distribuição. a *senha* é **sysname**, com um padrão de **' '** (cadeia de caracteres vazia). Esse parâmetro não será necessário se *security_mode* for definido como **1**, que é a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você está atualizando para o SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
@@ -57,7 +58,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`É o modo de segurança de logon a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *security_mode* é **bit** com um valor padrão de **0**. Se for **0**, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, a autenticação do Windows será usada.  
+`[ @security_mode = ] 'security_mode'` É o modo de segurança de logon a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *security_mode* é **bit** com um valor padrão de **0**. Se for **0**, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, a autenticação do Windows será usada.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você está atualizando para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  

@@ -1,4 +1,5 @@
 ---
+description: ALTER INDEX (índices XML seletivos)
 title: ALTER INDEX (índices XML seletivos) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11aa4f80e391644c796280e2d236c710e70bee2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85761865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479061"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (índices XML seletivos)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +138,9 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  Você só pode especificar \<index_options> quando usa ALTER INDEX sem a cláusula FOR. Quando você usar ALTER INDEX para adicionar ou remover caminhos no índice, as opções de índice não serão argumentos válidos. Para obter informações sobre as opções de índice, veja [CREATE XML INDEX &#40;índices XML seletivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Comentários  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentários
   
 > [!IMPORTANT]  
 >  Quando você executa uma instrução ALTER INDEX, o índice XML seletivo é sempre recriado. Considere o impacto desse processo em recursos do servidor.  

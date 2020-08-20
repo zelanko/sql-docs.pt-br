@@ -1,4 +1,5 @@
 ---
+description: sp_droplogin (Transact-SQL)
 title: sp_droplogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e28c02cb5816b65d5cc1bb1d196683a9bdf47e4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb6e3055c886760f51e8dcd303774a2fc76a61c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481320"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85858542"
   Remove um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso impede o acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com esse nome de logon.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [drop login](../../t-sql/statements/drop-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [drop login](../../t-sql/statements/drop-login-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`É o logon a ser removido. o *logon* é **sysname**, sem padrão. o *logon* já deve existir no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+`[ @loginame = ] 'login'` É o logon a ser removido. o *logon* é **sysname**, sem padrão. o *logon* já deve existir no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

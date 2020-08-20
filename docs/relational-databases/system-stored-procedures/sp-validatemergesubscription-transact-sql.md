@@ -1,4 +1,5 @@
 ---
+description: sp_validatemergesubscription (Transact-SQL)
 title: sp_validatemergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27bb4de88fcdde6dfe32729a5a68f53fba79f9b2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 37fef06e747e3b0ee870f4781e42bab7c6d63d28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480890"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
   
-`[ @level = ] 'level'`É o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
+`[ @level = ] 'level'` É o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
   
 |Valor de nível|Descrição|  
 |-----------------|-----------------|  
@@ -66,6 +67,6 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Validar dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [&#41;&#40;Transact-SQL de sp_validatemergepublication](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_validatemergepublication ](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_properties (Transact-SQL)
 title: MSsubscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d63855b5619392ba2c2bd7c286e4aec7b10a43db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5c19b5f70df96e4288a3d5e68dd5f2309e115a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480745"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,8 +47,8 @@ ms.locfileid: "85889341"
 |**ftp_port**|**int**|O número da porta do serviço FTP do Distribuidor.|  
 |**ftp_login**|**sysname**|O nome de usuário usado para se conectar ao serviço FTP.|  
 |**ftp_password**|**nvarchar (524)**|A senha de usuário usada para se conectar ao serviço FTP.|  
-|**alt_snapshot_folder**|**nvarchar (255)**|Especifica o local da pasta alternativa para o instantâneo.|  
-|**working_directory**|**nvarchar (255)**|O nome do diretório de trabalho usado para armazenar dados e arquivos de esquema.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|Especifica o local da pasta alternativa para o instantâneo.|  
+|**working_directory**|**nvarchar(255)**|O nome do diretório de trabalho usado para armazenar dados e arquivos de esquema.|  
 |**use_ftp**|**bit**|Especifica o uso do FTP em vez do protocolo regular para recuperar instantâneos. Se for **1**, o FTP será usado.|  
 |**dts_package_name**|**sysname**|Especifica o nome do pacote DTS (Data Transformation Services).|  
 |**dts_package_password**|**nvarchar (524)**|Especifica a senha no pacote.|  
@@ -55,7 +56,7 @@ ms.locfileid: "85889341"
 |**enabled_for_syncmgr**|**bit**|Especifica se a assinatura pode ou não ser sincronizada pelo Gerenciador de Sincronização da [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> **0** = a assinatura não está registrada com o Gerenciador de sincronização.<br /><br /> **1** = a assinatura é registrada com o Gerenciador de sincronização e pode ser sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .|  
 |**offload_agent**|**bit**|Especifica se o agente pode ser ativado remotamente ou não. Se for **0**, o agente não poderá ser ativado remotamente.|  
 |**offload_server**|**sysname**|Especifica o nome da rede do servidor usado para ativação remota.|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|Especifica o caminho para a pasta onde os arquivos de instantâneo são salvos.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|Especifica o caminho para a pasta onde os arquivos de instantâneo são salvos.|  
 |**use_web_sync**|**bit**|Especifica se a assinatura pode ser sincronizada pelo HTTP ou não. Um valor de **1** significa que esse recurso está habilitado.|  
 |**internet_url**|**nvarchar(260)**|O URL que representa o local do Replication Listener para sincronização da Web.|  
 |**internet_login**|**sysname**|O logon que o Agente de Mesclagem usa ao se conectar ao servidor Web que está hospedando a sincronização da Web usando a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação do.|  
@@ -65,10 +66,10 @@ ms.locfileid: "85889341"
 |**hostname**|**sysname**|Especifica o valor para **HOST_NAME** quando essa função é usada na cláusula **Where** de um filtro de junção ou relação de registro lógico.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helppullsubscription ](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription ](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2296050c41b774e2180532c79b816d112c6e2a7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479166"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -60,8 +61,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 > [!WARNING]  
 >  Nunca passe valores de CEK de texto não criptografado nesta instrução. Fazer isso comprometerá o benefício desse recurso.  
-  
-## <a name="remarks"></a>Comentários  
+
+## <a name="remarks"></a>Comentários
 Normalmente, uma chave de criptografia de coluna é criada com apenas um valor criptografado. Quando uma chave mestra de coluna precisar ser girada (a chave mestra de coluna atual precisa ser substituída pela nova chave mestra de coluna), adicione um novo valor da chave de criptografia de coluna, criptografado com a nova chave mestra de coluna. Esse fluxo de trabalho permitirá que você garanta que os aplicativos cliente possam acessar dados criptografados com a chave de criptografia de coluna enquanto a nova chave mestra de coluna está sendo disponibilizada para os aplicativos cliente. Um driver habilitado para Always Encrypted em um aplicativo cliente que não tem acesso à nova chave mestra poderá usar o valor de chave de criptografia de coluna criptografado com a chave mestra de coluna antiga para acessar dados confidenciais. Os algoritmos de criptografia, compatíveis com o Always Encrypted, exigem que o valor de texto sem formatação tenha 256 bits. 
  
 É recomendável usar ferramentas, como o SSMS (SQL Server Management Studio) ou o PowerShell para alternar chaves mestras de coluna. Confira [Alternar chaves do Always Encrypted usando o SQL Server Management Studio](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) e [Alternar chaves do Always Encrypted usando o PowerShell](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md).

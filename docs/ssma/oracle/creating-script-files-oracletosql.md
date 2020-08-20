@@ -1,4 +1,5 @@
 ---
+description: Criar arquivos de script (OracleToSQL)
 title: Criando arquivos de script (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ce9479bd7cb7be5516cd1c87a5f6a2c20649347f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0c6bca3c9c185f4b6affea004e59c996f214a1e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480488"
 ---
 # <a name="creating-script-files-oracletosql"></a>Criar arquivos de script (OracleToSQL)
 A primeira etapa antes de iniciar o aplicativo do console do SSMA é criar o arquivo de script e, se necessário, criar o arquivo de valor da variável e o arquivo de conexão do servidor.  

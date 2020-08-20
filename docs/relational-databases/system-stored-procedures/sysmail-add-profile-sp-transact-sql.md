@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profile_sp (Transact-SQL)
 title: sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f78f4ea075f04c4deb447ad9b68e3707b4e19ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480850"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,14 +42,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_name = ] 'profile\_name'`O nome do novo perfil. *profile_name* é **sysname**, sem padrão.  
+`[ @profile_name = ] 'profile\_name'` O nome do novo perfil. *profile_name* é **sysname**, sem padrão.  
  
    > [!NOTE]
    > O nome do perfil que usa o Azure SQL Instância Gerenciada SQL Agent deve ser chamado **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`A descrição opcional para o novo perfil. a *Descrição* é **nvarchar (256)**, sem padrão.  
+`[ @description = ] 'description'` A descrição opcional para o novo perfil. a *Descrição* é **nvarchar (256)**, sem padrão.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`Retorna a ID do novo perfil. *new_profile_id* é **int**, com um padrão de NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` Retorna a ID do novo perfil. *new_profile_id* é **int**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

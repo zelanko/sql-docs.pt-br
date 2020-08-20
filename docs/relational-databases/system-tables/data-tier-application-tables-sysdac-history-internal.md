@@ -1,4 +1,5 @@
 ---
+description: Tabelas de aplicativo da camada de dados – sysdac_history_internal
 title: sysdac_history_internal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480838"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelas de aplicativo da camada de dados – sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87123013"
 |**dac_object_type_name**|**varchar (8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância DAC<br /><br /> **entrar**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = falha|  
 |**action_status_name**|**varchar (11)**|Status atual da ação:<br /><br /> **pendente**<br /><br /> **êxito**<br /><br /> **recuperação**|  
-|**Necessária**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
+|**Necessário**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nome do objeto antes que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**dac_object_name_posttran**|**sysname**|Nome do objeto depois que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa uma ação em um banco de dados ou logon.|  
@@ -81,6 +82,6 @@ WHERE instance_id NOT IN
 ## <a name="see-also"></a>Consulte Também  
  [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [&#41;&#40;Transact-SQL de sysdac_instances_internal](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [&#41;&#40;Transact-SQL de sysdac_instances_internal ](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

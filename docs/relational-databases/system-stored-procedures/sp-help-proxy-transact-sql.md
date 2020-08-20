@@ -1,4 +1,5 @@
 ---
+description: sp_help_proxy (Transact-SQL)
 title: sp_help_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481167"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id`O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão de NULL. A *ID* ou a *proxy_name* pode ser especificada.  
   
-`[ @subsystem_name = ] 'subsystem_name'`O nome do subsistema para o qual listar proxies. O *subsystem_name* é **sysname**, com um padrão de NULL. Quando *subsystem_name* for especificado, o *nome* também deverá ser especificado.  
+`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema para o qual listar proxies. O *subsystem_name* é **sysname**, com um padrão de NULL. Quando *subsystem_name* for especificado, o *nome* também deverá ser especificado.  
   
  A tabela a seguir lista os valores padrão para cada subsistema.  
   
@@ -65,7 +66,7 @@ sp_help_proxy
 |Dts|Execução do pacote SSIS|  
 |PowerShell|Scripts PowerShell|  
   
-`[ @name = ] 'name'`O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon para listar proxies para. O nome é **nvarchar (256)**, com um padrão de NULL. Quando *Name* é especificado, *subsystem_name* também deve ser especificado.  
+`[ @name = ] 'name'` O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon para listar proxies para. O nome é **nvarchar (256)**, com um padrão de NULL. Quando *Name* é especificado, *subsystem_name* também deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -78,7 +79,7 @@ sp_help_proxy
 |**name**|**sysname**|O nome do proxy.|  
 |**credential_identity**|**sysname**|O nome de domínio de Microsoft Windows e o nome de usuário para a credencial associada ao proxy.|  
 |**habilitado**|**tinyint**|Se esse proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
-|**ndescrição**|**nvarchar(1024)**|A descrição para esse proxy.|  
+|**descrição**|**nvarchar(1024)**|A descrição para esse proxy.|  
 |**user_sid**|**varbinary (85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
 |**credential_id**|**int**|O identificador para a credencial associada a esse proxy.|  
 |**credential_identity_exists**|**int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  
@@ -123,7 +124,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_proxy](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_add_proxy ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_proxy ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

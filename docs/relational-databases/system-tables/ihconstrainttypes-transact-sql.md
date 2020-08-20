@@ -1,4 +1,5 @@
 ---
+description: IHconstrainttypes (Transact-SQL)
 title: IHconstrainttypes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: efb9a64b6c6b875430cea7fcd5bb834f64bb413c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d03babf8250ee41f15fa5f06cd32318873ec276d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480798"
 ---
 # <a name="ihconstrainttypes-transact-sql"></a>IHconstrainttypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,11 +32,11 @@ ms.locfileid: "85890323"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**tipo**|**nvarchar (255)**|O nome de um tipo de restrição com suporte não SQL Server.|  
+|**tipo**|**nvarchar(255)**|O nome de um tipo de restrição com suporte não SQL Server.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

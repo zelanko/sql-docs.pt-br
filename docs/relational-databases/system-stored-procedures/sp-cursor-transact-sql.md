@@ -1,4 +1,5 @@
 ---
+description: sp_cursor (Transact-SQL)
 title: sp_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481336"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -174,8 +175,8 @@ sp_cursor  cursor, optype, rownum, table
 >  É possível enviar um parâmetro como um parâmetro nomeado, isto é, "`@VALUES`". Neste caso, nenhum outro parâmetro nomeado pode ser usado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_cursorfetch](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursoropen ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursorfetch ](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

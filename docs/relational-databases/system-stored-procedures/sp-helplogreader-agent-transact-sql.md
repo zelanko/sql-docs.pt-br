@@ -1,4 +1,5 @@
 ---
+description: sp_helplogreader_agent (Transact-SQL)
 title: sp_helplogreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b83ce376482210c99179ea501f2c1e4c07fb0bf6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4a5830f73e58925e3935fe554d7467b0582b2b28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481170"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -62,8 +63,8 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
  Somente os membros da função de servidor fixa **sysadmin** no Publicador ou membros da função de banco de dados fixa **db_owner** no banco de dados de publicação podem ser executados **sp_helplogreader_agent**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar as configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [&#41;&#40;Transact-SQL de sp_addlogreader_agent](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
+ [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [&#41;&#40;Transact-SQL de sp_addlogreader_agent ](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changelogreader_agent ](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
   
   

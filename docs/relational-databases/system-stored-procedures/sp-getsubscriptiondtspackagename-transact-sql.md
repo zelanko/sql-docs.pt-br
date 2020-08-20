@@ -1,4 +1,5 @@
 ---
+description: sp_getsubscriptiondtspackagename (Transact-SQL)
 title: sp_getsubscriptiondtspackagename (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b52cc85ed5576ab40599141b551382a288c537f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e21e0ffd1815e56f50f09f08460657a37271ac9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481229"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. **'***publication***'** é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. **'***publication***'** é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é sysname, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é sysname, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

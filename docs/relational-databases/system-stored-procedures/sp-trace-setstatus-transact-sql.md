@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setstatus (Transact-SQL)
 title: sp_trace_setstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16c47007b5b6b2d31f4cc575e9ad2b8b50526a4a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 464bf489f8e0d62ea0096b917b29d1bcc099c811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480916"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id`É a ID do rastreamento a ser modificado. *trace_id* é **int**, sem padrão. O usuário emprega esse *trace_id* valor para identificar, modificar e controlar o rastreamento. Para obter informações sobre como recuperar o *trace_id*, consulte [sys. fn_trace_getinfo &#40;&#41;do Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` É a ID do rastreamento a ser modificado. *trace_id* é **int**, sem padrão. O usuário emprega esse *trace_id* valor para identificar, modificar e controlar o rastreamento. Para obter informações sobre como recuperar o *trace_id*, consulte [sys. fn_trace_getinfo &#40;&#41;do Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-`[ @status = ] status`Especifica a ação a ser implementada no rastreamento. o *status* é **int**, sem padrão.  
+`[ @status = ] status` Especifica a ação a ser implementada no rastreamento. o *status* é **int**, sem padrão.  
   
  A tabela a seguir descreve o status que pode ser especificado.  
   
@@ -62,7 +63,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
-|**0**|Nenhum erro.|  
+|**0**|Sem erros.|  
 |**1**|Erro desconhecido.|  
 |**8**|O status especificado não é válido.|  
 |**9**|O Identificador de Rastreamento especificado não é válido.|  
@@ -81,9 +82,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="see-also"></a>Consulte Também  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_trace_setfilter](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_generateevent ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setfilter ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

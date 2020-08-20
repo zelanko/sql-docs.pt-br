@@ -1,4 +1,5 @@
 ---
+description: sp_scriptsubconflicttable (Transact-SQL)
 title: sp_scriptsubconflicttable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93656ff6bec2acc3c3f6f7ee189b1c45db75a7d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1c6d2a6ea66f0e2d937e1564d4abed36bd4af44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481045"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação que contém o artigo. O nome deve ser exclusivo no banco de dados. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. O nome deve ser exclusivo no banco de dados. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo da assinatura. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo da assinatura. o *artigo* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

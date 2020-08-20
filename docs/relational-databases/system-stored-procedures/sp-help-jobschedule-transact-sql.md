@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobschedule (Transact-SQL)
 title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07a07efac0a8908d0916049df594c273594ed4d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 002534c38b5060dca0457d0c704194db037b93b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481227"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name*é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name*é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]
 > *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.
 
-`[ @schedule_name = ] 'schedule_name'`O nome do item de agenda para o trabalho. *schedule_name*é **sysname**, com um padrão de NULL.  
+`[ @schedule_name = ] 'schedule_name'` O nome do item de agenda para o trabalho. *schedule_name*é **sysname**, com um padrão de NULL.  
   
-`[ @schedule_id = ] schedule_id`O número de identificação do item de agendamento para o trabalho. *schedule_id*é **int**, com um padrão de NULL.  
+`[ @schedule_id = ] schedule_id` O número de identificação do item de agendamento para o trabalho. *schedule_id*é **int**, com um padrão de NULL.  
   
-`[ @include_description = ] include_description`Especifica se a descrição do agendamento deve ser incluída no conjunto de resultados. *include_description* é **bit**, com um padrão de **0**. Quando *include_description* é **0**, a descrição da agenda não é incluída no conjunto de resultados. Quando *include_description* é **1**, a descrição da agenda é incluída no conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica se a descrição do agendamento deve ser incluída no conjunto de resultados. *include_description* é **bit**, com um padrão de **0**. Quando *include_description* é **0**, a descrição da agenda não é incluída no conjunto de resultados. Quando *include_description* é **1**, a descrição da agenda é incluída no conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -77,7 +78,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Hora do dia em que a agenda é iniciada.|  
 |**active_end_time**|**int**|Hora do dia em que a agenda é encerrada.|  
 |**date_created**|**datetime**|Data em que a agenda foi criada.|  
-|**schedule_description**|**nvarchar(4000)**|Uma descrição em inglês da agenda que é derivada de valores em **agendas demsdb.dbo.sys**. Quando *include_description* é **0**, essa coluna contém texto informando que a descrição não foi solicitada.|  
+|**schedule_description**|**nvarchar(4000)**|Uma descrição em inglês da agenda que é derivada de valores em ** agendas demsdb.dbo.sys**. Quando *include_description* é **0**, essa coluna contém texto informando que a descrição não foi solicitada.|  
 |**next_run_date**|**int**|Próxima data em que a agenda fará com que o trabalho seja executado.|  
 |**next_run_time**|**int**|Próxima hora em que a agenda fará com que o trabalho seja executado.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador da agenda.|  
@@ -89,7 +90,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Os parâmetros de **sp_help_jobschedule** podem ser usados somente em determinadas combinações. Se *schedule_id* for especificado, nem *job_id* nem *job_name* poderão ser especificados. Caso contrário, os parâmetros *job_id* ou *job_name* podem ser usados com *schedule_name*.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** . Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Exige associação à função de servidor fixa **sysadmin** . Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -143,7 +144,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_schedule](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_schedule ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_schedule ](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

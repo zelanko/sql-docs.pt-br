@@ -1,4 +1,5 @@
 ---
+description: sp_lock (Transact-SQL)
 title: sp_lock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5cb05c50ce37434161c04bf26083990b319fafc3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f8fee809f67de959c7d168ceaac2016b5cddddd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481135"
 ---
 # <a name="sp_lock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85899389"
   Reporta informações sobre bloqueios.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Para obter informações sobre bloqueios no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , use a exibição de gerenciamento dinâmico [sys. dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) .  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Para obter informações sobre bloqueios no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , use a exibição de gerenciamento dinâmico [sys. dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @spid1 = ] 'session ID1'`É um [!INCLUDE[ssDE](../../includes/ssde-md.md)] número de ID de sessão de **sys. dm_exec_sessions** para o qual o usuário deseja informações de bloqueio. a *sessão ID1* é **int** com um valor padrão de NULL. Execute **sp_who** para obter informações de processo sobre a sessão. Se a *sessão ID1* não for especificada, serão exibidas informações sobre todos os bloqueios.  
+`[ @spid1 = ] 'session ID1'` É um [!INCLUDE[ssDE](../../includes/ssde-md.md)] número de ID de sessão de **sys. dm_exec_sessions** para o qual o usuário deseja informações de bloqueio. a *sessão ID1* é **int** com um valor padrão de NULL. Execute **sp_who** para obter informações de processo sobre a sessão. Se a *sessão ID1* não for especificada, serão exibidas informações sobre todos os bloqueios.  
   
-`[ @spid2 = ] 'session ID2'`É outro [!INCLUDE[ssDE](../../includes/ssde-md.md)] número de ID de sessão de **sys. dm_exec_sessions** que pode ter um bloqueio ao mesmo tempo que a *sessão ID1* e sobre o qual o usuário também deseja informações. a *sessão ID2* é **int** com um valor padrão de NULL.  
+`[ @spid2 = ] 'session ID2'` É outro [!INCLUDE[ssDE](../../includes/ssde-md.md)] número de ID de sessão de **sys. dm_exec_sessions** que pode ter um bloqueio ao mesmo tempo que a *sessão ID1* e sobre o qual o usuário também deseja informações. a *sessão ID2* é **int** com um valor padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito)  
@@ -54,7 +55,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**SPID**|**smallint**|A identificação da sessão [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o processo solicitando o bloqueio.|  
+|**spid**|**smallint**|A identificação da sessão [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o processo solicitando o bloqueio.|  
 |**DBID**|**smallint**|O número de identificação do banco de dados no qual o bloqueio é mantido. Você pode usar a função DB_NAME() para identificar o banco de dados.|  
 |**ObjId**|**int**|O número de identificação do objeto no qual o bloqueio é mantido. Você pode usar a função OBJECT_NAME() no banco de dados relacionado para identificar o objeto. Um valor de 99 é um caso especial que indica um bloqueio em uma das páginas do sistema usada para registrar a alocação de páginas em um banco de dados.|  
 |**IndId**|**smallint**|O número de identificação do índice no qual o bloqueio é mantido.|  
@@ -98,12 +99,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [&#41;&#40;Transact-SQL de DB_NAME](../../t-sql/functions/db-name-transact-sql.md)   
- [KILL &#40;&#41;Transact-SQL](../../t-sql/language-elements/kill-transact-sql.md)   
- [&#41;&#40;Transact-SQL de OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de DB_NAME ](../../t-sql/functions/db-name-transact-sql.md)   
+ [KILL &#40;&#41;Transact-SQL ](../../t-sql/language-elements/kill-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de OBJECT_NAME ](../../t-sql/functions/object-name-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_who ](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  
   

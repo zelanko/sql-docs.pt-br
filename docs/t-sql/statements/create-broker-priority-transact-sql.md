@@ -1,4 +1,5 @@
 ---
+description: CREATE BROKER PRIORITY (Transact-SQL)
 title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c753f9dc977f94064161ee340ebced685dd9f6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478978"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +96,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Especifica o nome de um serviço a ser usado como critério para determinar se a prioridade de conversa é aplicável a um ponto de extremidade de conversa.  
   
- *RemoteServiceName* é um literal do tipo **nvarchar(256)** . O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder à cadeia de caracteres *RemoteServiceName*. A comparação diferencia maiúsculas de minúsculas e não considera a ordenação atual. O serviço de destino pode estar na instância atual do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou em uma instância remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* é um literal do tipo **nvarchar(256)**. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder à cadeia de caracteres *RemoteServiceName*. A comparação diferencia maiúsculas de minúsculas e não considera a ordenação atual. O serviço de destino pode estar na instância atual do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou em uma instância remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Especifica que a prioridade de conversa pode ser se aplicada a:  

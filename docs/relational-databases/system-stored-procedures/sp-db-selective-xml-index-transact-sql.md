@@ -1,4 +1,5 @@
 ---
+description: sp_db_selective_xml_index (Transact-SQL)
 title: sp_db_selective_xml_index (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 787750b0b69f70989d6a060f82e754573189d708
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481395"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "85728210"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ db_name = ] 'db_name'`O nome do banco de dados para habilitar ou desabilitar o índice XML seletivo. Se *db_name* for NULL, o banco de dados atual será assumido.  
+`[ @ db_name = ] 'db_name'` O nome do banco de dados para habilitar ou desabilitar o índice XML seletivo. Se *db_name* for NULL, o banco de dados atual será assumido.  
   
-`[ @action = ] 'action'`Determina se o índice deve ser habilitado ou desabilitado. Se outro valor, exceto ' on ', ' true ', ' off ' ou ' false ' for passado, um erro será gerado.  
+`[ @action = ] 'action'` Determina se o índice deve ser habilitado ou desabilitado. Se outro valor, exceto ' on ', ' true ', ' off ' ou ' false ' for passado, um erro será gerado.  
   
 ```  
   

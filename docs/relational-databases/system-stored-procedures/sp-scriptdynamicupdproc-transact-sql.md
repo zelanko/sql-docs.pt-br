@@ -1,4 +1,5 @@
 ---
+description: sp_scriptdynamicupdproc (Transact-SQL)
 title: sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 381e2b7ad6c8b463cb410b6d40a6cd6c6b3addec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481097"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @artid = ] artid`É a ID do artigo. *artid* é **int**, sem padrão.  
+`[ @artid = ] artid` É a ID do artigo. *artid* é **int**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna um conjunto de resultados que consiste em uma única coluna **nvarchar (4000)** . O conjunto de resultados forma a instrução completa CREATE PROCEDURE usada para criar o procedimento armazenado personalizado.  

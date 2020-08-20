@@ -1,4 +1,5 @@
 ---
+description: DECOMPRESS (Transact-SQL)
 title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4c4309a12f3db14af0d38f9e98e73b7e8c4e6b1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f6390d157ab7d352e7ecb355fec4c16114333ea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479708"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,14 +36,12 @@ Esta função descompactará um valor de expressão de entrada usando o algoritm
 DECOMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>Argumentos
  *expressão*  
 Um valor **varbinary(** _n_ **)** , **varbinary(max)** ou **binary(** _n_ **)** . Para saber mais, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
-Um valor de tipo de dados **varbinary (max)** . `DECOMPRESS` usará o algoritmo ZIP para descompactar o argumento de entrada. O usuário deve converter explicitamente o resultado em um tipo de destino, se necessário.  
+Um valor de tipo de dados **varbinary (max)**. `DECOMPRESS` usará o algoritmo ZIP para descompactar o argumento de entrada. O usuário deve converter explicitamente o resultado em um tipo de destino, se necessário.  
   
 ## <a name="remarks"></a>Comentários  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy (Transact-SQL)
 title: sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481004"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`É o nome da política que você deseja renomear. *Name* é **sysname**e deve ser especificado se *policy_id* for NULL.  
+`[ @name = ] 'name'` É o nome da política que você deseja renomear. *Name* é **sysname**e deve ser especificado se *policy_id* for NULL.  
   
-`[ @policy_id = ] policy_id`É o identificador da política que você deseja renomear. *policy_id* é **int**e deverá ser especificado se *Name* for NULL.  
+`[ @policy_id = ] policy_id` É o identificador da política que você deseja renomear. *policy_id* é **int**e deverá ser especificado se *Name* for NULL.  
   
-`[ @new_name = ] 'new_name'`É o novo nome da política. *new_name* é **sysname**e é obrigatório. Não pode ser NULL ou uma cadeia de caracteres vazia.  
+`[ @new_name = ] 'new_name'` É o novo nome da política. *new_name* é **sysname**e é obrigatório. Não pode ser NULL ou uma cadeia de caracteres vazia.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -1,4 +1,5 @@
 ---
+description: sp_foreignkeys (Transact-SQL)
 title: sp_foreignkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481279"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,19 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'`É o nome do servidor vinculado para o qual retornar informações de tabela. *table_server* é **sysname**, sem padrão.  
+`[ @table_server = ] 'table_server'` É o nome do servidor vinculado para o qual retornar informações de tabela. *table_server* é **sysname**, sem padrão.  
   
-`[ @pktab_name = ] 'pktab_name'`É o nome da tabela com uma chave primária. *pktab_name* é **sysname**, com um padrão de NULL.  
+`[ @pktab_name = ] 'pktab_name'` É o nome da tabela com uma chave primária. *pktab_name* é **sysname**, com um padrão de NULL.  
   
-`[ @pktab_schema = ] 'pktab_schema'`É o nome do esquema com uma chave primária. *pktab_schema*é **sysname**, com um padrão de NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do proprietário.  
+`[ @pktab_schema = ] 'pktab_schema'` É o nome do esquema com uma chave primária. *pktab_schema*é **sysname**, com um padrão de NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do proprietário.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`É o nome do catálogo com uma chave primária. *pktab_catalog*é **sysname**, com um padrão de NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do banco de dados.  
+`[ @pktab_catalog = ] 'pktab_catalog'` É o nome do catálogo com uma chave primária. *pktab_catalog*é **sysname**, com um padrão de NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do banco de dados.  
   
-`[ @fktab_name = ] 'fktab_name'`É o nome da tabela com uma chave estrangeira. *fktab_name*é **sysname**, com um padrão de NULL.  
+`[ @fktab_name = ] 'fktab_name'` É o nome da tabela com uma chave estrangeira. *fktab_name*é **sysname**, com um padrão de NULL.  
   
-`[ @fktab_schema = ] 'fktab_schema'`É o nome do esquema com uma chave estrangeira. *fktab_schema*é **sysname**, com um padrão de NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` É o nome do esquema com uma chave estrangeira. *fktab_schema*é **sysname**, com um padrão de NULL.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`É o nome do catálogo com uma chave estrangeira. *fktab_catalog*é **sysname**, com um padrão de NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` É o nome do catálogo com uma chave estrangeira. *fktab_catalog*é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -100,13 +101,13 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_catalogs](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_column_privileges](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_indexes](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_linkedservers](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_primarykeys](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_table_privileges](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_catalogs ](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_column_privileges ](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_indexes ](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_primarykeys ](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_tables_ex ](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_table_privileges ](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

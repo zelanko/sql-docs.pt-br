@@ -1,4 +1,5 @@
 ---
+description: cdc.change_tables (Transact-SQL)
 title: CDC. change_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5cada1c85156a1f6e3c0822813fb79825a7d1c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6938dffda791dc77e8e304e25e705189b82e2ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480845"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

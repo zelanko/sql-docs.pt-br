@@ -1,4 +1,5 @@
 ---
+description: sp_script_synctran_commands (Transact-SQL)
 title: sp_script_synctran_commands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 697cba4e04483e28fe0099096916391057c1568a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e49e8cd0155ca5266e9953628799a132c7f7608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481068"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser inserida no script. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser inserida no script. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo a ser inserido no script. o *artigo* é **sysname**, com um padrão de **todos**, que especifica que todos os artigos são incluídos no script.  
+`[ @article = ] 'article'` É o nome do artigo a ser inserido no script. o *artigo* é **sysname**, com um padrão de **todos**, que especifica que todos os artigos são incluídos no script.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,8 +58,8 @@ sp_script_synctran_commands [@publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_script_synctran_commands**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addsynctriggers](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addqueued_artinfo](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addsynctriggers ](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addqueued_artinfo ](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

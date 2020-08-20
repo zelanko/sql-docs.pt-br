@@ -1,4 +1,5 @@
 ---
+description: Configurações do projeto (migração) (AccessToSQL)
 title: Configurações do projeto (migração) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480520"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
 As configurações do projeto de migração permitem que você configure como os dados são migrados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -77,7 +78,7 @@ Especifica se o SSMA bloqueia as tabelas quando adiciona dados a tabelas durante
 **Substituir datas sem suporte**  
 Especifica se o SSMA deve corrigir as datas de acesso anteriores à data de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DateTime mais antiga (01 de janeiro de 1753).  
   
--   Para manter os valores de data atuais, selecione **não fazer nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]não aceitará datas antes de 1º de janeiro de 1753 em uma coluna DateTime. Se você usar datas mais antigas, deverá converter os valores DateTime em valores de caracteres.  
+-   Para manter os valores de data atuais, selecione **não fazer nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não aceitará datas antes de 1º de janeiro de 1753 em uma coluna DateTime. Se você usar datas mais antigas, deverá converter os valores DateTime em valores de caracteres.  
   
 -   Para converter datas antes de 1º de janeiro de 1753 a NULL, selecione **substituir por NULL**.  
   

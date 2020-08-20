@@ -1,4 +1,5 @@
 ---
+description: MSrepl_queuedtraninfo (Transact-SQL)
 title: MSrepl_queuedtraninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcefa2680dd5126c9d3cd378d6e71f527681f12e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e95ac3bb96d726b1b02d0258f9364cc48a3af09d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480718"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889486"
 |**commandcount**|**bigint**|Interno-somente uso.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

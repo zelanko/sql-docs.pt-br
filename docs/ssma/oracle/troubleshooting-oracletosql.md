@@ -1,4 +1,5 @@
 ---
+description: Solução de problemas (OracleToSQL)
 title: Solução de problemas (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: bdc600dd84dad777f54ca41bd7f4c76db9434b5d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 30983c2468a4e0f4a2969084c9043cff48c6bfe9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480385"
 ---
 # <a name="troubleshooting-oracletosql"></a>Solução de problemas (OracleToSQL)
 Não é incomum encontrar problemas de migração no centro da execução dos scripts ou comandos do console.  

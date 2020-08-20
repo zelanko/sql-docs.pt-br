@@ -1,5 +1,6 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Microsoft Docs
+description: ERROR_STATE (Transact-SQL)
+title: ERROR_STATE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479728"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Retorna o número de estado do erro que fez o bloco CATCH de um constructo TRY…CATCH ser executado.  
@@ -43,7 +45,9 @@ ms.locfileid: "87393953"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>Tipos de retorno  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipos de retorno
  **int**  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -52,7 +56,7 @@ ERROR_STATE ( )
  Retorna NULL se for chamado fora do escopo de um bloco CATCH.  
   
 ## <a name="remarks"></a>Comentários  
- Algumas mensagens de erro podem ser acionadas em vários pontos no código para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, um erro "1105" pode ser gerado para várias condições diferentes. Cada condição específica que gera o erro atribui um código de estado exclusivo.  
+ Algumas mensagens de erro podem ser geradas em vários pontos no código para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, um erro "1105" pode ser gerado para várias condições diferentes. Cada condição específica que gera o erro atribui um código de estado exclusivo.  
   
  Ao exibir bancos de dados de problemas conhecidos, como a Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)], é possível usar o número de estado para determinar se o problema registrado é o mesmo do erro que você encontrou. Por exemplo, se um Artigo da Base de Dados de Conhecimento descreve uma mensagem de erro 1105 com um estado 2, e a mensagem de erro 1105 que você recebeu tinha um estado 3, o erro provavelmente tem uma causa diferente daquela informada no artigo.  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_scriptpublicationcustomprocs (Transact-SQL)
 title: sp_scriptpublicationcustomprocs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19a7b793a1bd7a72941a8f07baba44c584e5d8f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d31a6f58b62d242fd6fe056eaac198fb0a7b7738
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481048"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication_name'`É o nome da publicação. *publication_name* é **sysname** sem padrão.  
+`[ @publication = ] 'publication_name'` É o nome da publicação. *publication_name* é **sysname** sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
