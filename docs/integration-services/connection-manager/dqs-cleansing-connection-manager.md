@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de Conexões de Limpeza DQS
 title: Gerenciador de conexões de Limpeza DQS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a6bec5c9eb1227276da8cab130c287dafd0150a9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 051a2c558675d4d80b0b414668fcd3c4cb824478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477926"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gerenciador de Conexões de Limpeza DQS
 

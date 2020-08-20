@@ -1,4 +1,5 @@
 ---
+description: Transformação Divisão Condicional
 title: Transformação Divisão Condicional | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477746"
 ---
 # <a name="conditional-split-transformation"></a>Transformação Divisão Condicional
 
@@ -79,7 +80,7 @@ ms.locfileid: "86923192"
 >  A transformação Divisão Condicional direciona cada fila de entrada para uma única de saída. Se você digitar condições múltiplas, a transformação enviará cada fila à primeira saída para a qual a condição é verdadeira e desconsiderará condições subsequentes para aquela fila. Se for necessário avaliar várias condições sucessivamente, você poderá ter que concatenar transformações de Divisão Condicional múltiplas no fluxo de dados.  
   
 ### <a name="options"></a>Opções  
- **Order**  
+ **Ordem**  
  Selecione uma fila e use as teclas de seta à direita para alterar a ordem de avaliação de expressões.  
   
  **Nome de Saída**  
@@ -90,7 +91,7 @@ ms.locfileid: "86923192"
   
  O valor dessa propriedade pode ser especificado com uma expressão de propriedades.  
   
- **Tópicos relacionados:**  [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;SSIS Expressão&#41;](../../../integration-services/expressions/operators-ssis-expression.md) e [Funções &#40;SSIS Expressão&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **Tópicos relacionados: **  [Expressões do Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;Expressão SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) e [Funções &#40;Expressão SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Nome de saída padrão**  
  Digite um nome para a saída padrão ou use o padrão.  

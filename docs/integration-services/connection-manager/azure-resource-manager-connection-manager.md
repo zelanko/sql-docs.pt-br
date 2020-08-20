@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de Conexões do Azure Resource Manager
 title: Gerenciador de Conexões do Azure Resource Manager | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 06cf645c41c27ec3a2275e19856c8ba935da73c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34accd71d7bd173b49ae9ee046e0eb5acdda220f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477954"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Gerenciador de Conexões do Azure Resource Manager
 

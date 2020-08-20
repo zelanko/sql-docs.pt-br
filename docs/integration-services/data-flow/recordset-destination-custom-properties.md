@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas do destino Conjunto de Registros
 title: Propriedades personalizadas de destino do conjunto de registros | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3cc9691c3ed3f894a5231e76870f8075d6d08f4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d8494479e14516ac9448498e8ec09301c6493aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477820"
 ---
 # <a name="recordset-destination-custom-properties"></a>Propriedades personalizadas do destino Conjunto de Registros
 
@@ -26,7 +27,7 @@ ms.locfileid: "86916005"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Conjunto de Registros. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|O nome da variável que mantém o conjunto de registros ADO.|  
   

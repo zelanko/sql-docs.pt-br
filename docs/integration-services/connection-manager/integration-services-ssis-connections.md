@@ -1,4 +1,5 @@
 ---
+description: Conexões do SSIS (Integration Services)
 title: Conexões do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29ecedb74759b3290ff5fb391b95048aeaba5e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07b2ffa19412e46b555c9ef8b77372f1b401ea57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477919"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
 
@@ -83,7 +84,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 ### <a name="built-in-connection-managers"></a>Gerenciadores de conexões internos  
  A tabela a seguir lista os tipos de gerenciadores de conexões fornecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Type|DESCRIÇÃO|Tópico|  
+|Type|Descrição|Tópico|  
 |----------|-----------------|-----------|  
 |ADO|Conecta-se a objetos ActiveX Data Objects (ADO).|[Gerenciador de conexões ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Conecta-se a uma fonte de dados usando um provedor .NET.|[Gerenciador de conexões ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -111,7 +112,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 > [!IMPORTANT]  
 >  Os gerenciadores de conexões listados na tabela a seguir funcionam apenas com o [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e o [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Type|DESCRIÇÃO|Tópico|  
+|Type|Descrição|Tópico|  
 |----------|-----------------|-----------|  
 |ORACLE|Conecta-se a um servidor \<version info\> da Oracle.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
 |SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  

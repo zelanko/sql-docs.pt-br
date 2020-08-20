@@ -1,4 +1,5 @@
 ---
+description: Destino do Excel
 title: Destino do Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 399d5c52a2224dbd3d61832f5ec078d5b7339566
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2abf3c8a09ead6369a5201a2d582623f05bc2f79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477833"
 ---
 # <a name="excel-destination"></a>Destino do Excel
 

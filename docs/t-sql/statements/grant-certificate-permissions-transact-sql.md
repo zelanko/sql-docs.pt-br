@@ -1,4 +1,5 @@
 ---
+description: Permissões de certificado GRANT (Transact-SQL)
 title: Permissões GRANT de certificado (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95efb94cd955a822ac9b07cce0b20063283d35f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0236a6ac037233446a1b6a2103daaa260875c064
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478782"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>Permissões de certificado GRANT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

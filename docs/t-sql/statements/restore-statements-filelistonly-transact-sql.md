@@ -1,4 +1,5 @@
 ---
+description: Instruções RESTORE – FILELISTONLY (Transact-SQL)
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -22,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f72bc6a3a67f73fc7ab44e94514f7db7b6a905a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478758"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Instruções RESTORE – FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -86,7 +87,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Um cliente pode usar RESTORE FILELISTONLY para obter uma lista dos arquivos contidos em um conjunto de backups. Essas informações são retornadas como um conjunto de resultados que contém uma linha para cada arquivo.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Nome lógico do arquivo.|  
 |PhysicalName|**nvarchar(260)**|Nome do arquivo físico ou do sistema operacional.|  

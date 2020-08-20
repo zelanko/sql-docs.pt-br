@@ -1,4 +1,5 @@
 ---
+description: Converter tipo de dados com a transformação Conversão de Dados
 title: Converter tipo de dados com a transformação Conversão de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb9eeaab778b314d8084ec739a1364d40e19c3b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477731"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>Converter tipo de dados com a transformação Conversão de Dados
 

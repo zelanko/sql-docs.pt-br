@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de conexões do cache
 title: Gerenciador de Conexões do Cache | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477922"
 ---
 # <a name="cache-connection-manager"></a>Gerenciador de conexões do cache
 
@@ -131,6 +132,6 @@ ms.locfileid: "86920822"
  Especifica a página de código para o tipo de coluna. Se aplicável ao tipo de dados, você pode atualizar a **Página de Código**.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

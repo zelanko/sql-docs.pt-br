@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de Conexões da Assinatura do Azure
 title: Gerenciador de Conexões da Assinatura do Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 556c72d71b15c790714aabf26755054d908af571
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5940e7b45288913bbda4930c267f1f806ed4937d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477968"
 ---
 # <a name="azure-subscription-connection-manager"></a>Gerenciador de Conexões da Assinatura do Azure
 
