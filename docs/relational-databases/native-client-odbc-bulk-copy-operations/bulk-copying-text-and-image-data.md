@@ -1,4 +1,5 @@
 ---
+description: Copiando em massa dados de texto e imagem
 title: Cópia de dados de texto e imagem em massa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -16,11 +17,12 @@ ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ad6e41b5f290a0f76c369ab454f68f3779e7737
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 55635292fab4a720e706cb62797bce4d1a1ce378
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455932"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copiando em massa dados de texto e imagem
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +32,6 @@ ms.locfileid: "86009581"
  **bcp_moretext** não tem nenhum parâmetro para identificar uma coluna. Quando há várias colunas **Text**, **ntext**ou **image** em uma linha, **bcp_moretext** opera nas colunas **Text**, **ntext**ou **Image** , começando com a coluna que tem o número ordinal mais baixo e prosseguindo para a coluna com o número ordinal mais alto. **bcp_moretext** vai de uma coluna para a próxima quando a soma dos comprimentos de dados enviados for igual ao comprimento especificado no **bcp_collen** ou **bcp_bind** mais recente da coluna atual.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Executando operações de cópia em massa &#40;&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Executando operações de cópia em massa &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

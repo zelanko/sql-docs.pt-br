@@ -1,4 +1,5 @@
 ---
+description: bcp_colfmt
 title: bcp_colfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d01e3c08ea1554fcc10c986bb6e6b9bbd9570d54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7b5ae01aef91edd1a7fe45c9203be407dbf7620c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455908"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +56,7 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  É o tipo de dados desta coluna no arquivo de usuário. Se diferente do tipo de dados da coluna correspondente na tabela do banco de dados (*idxServerColumn*), a cópia em massa converterá os dados, caso seja possível.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu o suporte para os tokens de tipo de dados SQLXML e SQLUDT no parâmetro *eUserDataType* .  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o suporte para os tokens de tipo de dados SQLXML e SQLUDT no parâmetro *eUserDataType* .  
   
  O parâmetro *eUserDataType* é enumerado pelos tokens de tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em sqlncli.h e não pelos enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, o tipo ODBC SQL_C_CHAR, usando o tipo SQLCHARACTER específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -131,9 +133,9 @@ RETCODE bcp_colfmt (
   
  A função **bcp_columns** deve ser chamada antes de qualquer chamada de **bcp_colfmt**.  
   
- Chame **bcp_colfmt** uma vez para cada coluna no arquivo de usuário.  
+ Você deve chamar **bcp_colfmt** uma vez para cada coluna no arquivo de usuário.  
   
- Chamar **bcp_colfmt** mais de uma vez para qualquer coluna do arquivo de usuário gera um erro.  
+ Chamar **bcp_colfmt** mais de uma vez para qualquer coluna de arquivo de usuário causa um erro.  
   
  Você não precisa copiar todos os dados de um arquivo de usuário para a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ignorar uma coluna, especifique o formato dos dados para a coluna, definindo o parâmetro *idxServerCol* como 0. Se desejar ignorar uma coluna, especifique seu tipo.  
   

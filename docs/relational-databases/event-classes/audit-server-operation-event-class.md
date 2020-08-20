@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Audit Server Operation
 title: Classe de evento Audit Server Operation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,20 +13,20 @@ ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26a5d250c36cf95fd0a5b6497299e2494281d3e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7863db40c910960935ffb9c2cb90c996fbdc131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456095"
 ---
 # <a name="audit-server-operation-event-class"></a>Classe de evento Audit Server Operation
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Audit Server Operation** ocorre quando operações de Auditoria de Segurança, como configurações de alteração, recursos, acesso externo ou autorização, são usadas.  
+   A classe de evento **Audit Server Operation** ocorre quando operações de auditoria de segurança, tais como configurações de alteração, recursos, acesso externo ou autorização, são usadas.  
   
 ## <a name="audit-server-operation-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Server Operation  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  

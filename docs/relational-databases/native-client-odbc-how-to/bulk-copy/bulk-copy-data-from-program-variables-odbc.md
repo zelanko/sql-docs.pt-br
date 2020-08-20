@@ -1,4 +1,5 @@
 ---
+description: Copiar dados em massa de variáveis de programa (ODBC)
 title: Copiar Dados em massa de variáveis de programa (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4928c4b4cc06b4ad7824f1b581c972369eb8c7cc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4934409d9403d2edc956f6efd436a3d2abd6833
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455856"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar dados em massa de variáveis de programa (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

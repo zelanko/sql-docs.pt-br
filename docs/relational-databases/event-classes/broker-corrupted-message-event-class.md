@@ -1,4 +1,5 @@
 ---
+description: classe de evento Broker:Corrupted Message
 title: Classe de evento Broker:Corrupted Message | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e0683676a34393b787e1a2ee57069fb8939dbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d54abb31cfe2f7541edb459f1d55356c7ae643db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456008"
 ---
 # <a name="brokercorrupted-message-event-class"></a>classe de evento Broker:Corrupted Message
 
@@ -27,7 +28,7 @@ ms.locfileid: "85679252"
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Corrupted Message  
   
-|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Type|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BigintData1**|**bigint**|O número de sequência da mensagem.|52|Não|  
@@ -48,7 +49,7 @@ ms.locfileid: "85679252"
 |**ObjectName**|**nvarchar**|O nome do serviço do outro lado da conversa e a cadeia de caracteres de conexão que o banco de dados remoto usou para se conectar a esse banco de dados.|34|Não|  
 |**RoleName**|**nvarchar**|A função do ponto de extremidade que recebe essa mensagem. Um dos seguintes valores:<br /><br /> **initiator**: o ponto de extremidade receptor é o iniciador da conversa.<br /><br /> **target**: o ponto de extremidade receptor é o destino da conversa.|38|Não|  
 |**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
-|**Severity**|**int**|A severidade do erro que fez com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descartasse a mensagem.|29|Não|  
+|**Gravidade**|**int**|A severidade do erro que fez com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descartasse a mensagem.|29|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |**State**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  

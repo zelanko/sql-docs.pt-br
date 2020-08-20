@@ -1,4 +1,5 @@
 ---
+description: Copiar em massa sem um arquivo de formato (ODBC)
 title: Cópia em massa sem um arquivo de formato (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02b758dfed2a18815dc039550a7e63bd69f0daa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 919326cf57fe17296daebdcdefc8df8980f323be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455853"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Copiar em massa sem um arquivo de formato (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
