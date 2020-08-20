@@ -1,4 +1,5 @@
 ---
+description: Criar uma hierarquia explícita (Master Data Services)
 title: Criar uma hierarquia explícita
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461803"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Criar uma hierarquia explícita (Master Data Services)
 
@@ -58,10 +59,10 @@ ms.locfileid: "85813052"
 ## <a name="grid-columns"></a>Colunas da grade  
  Para cada hierarquia explícita que você criar, uma linha com sete colunas será adicionada à grade. A seguir está uma descrição das colunas.  
   
-|Name|Descrição|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone para atualizar o status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone para status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone para status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK")|  
-|Name|O nome da hierarquia explícita.|  
+|Nome|O nome da hierarquia explícita.|  
 |É obrigatório|Especifica se a hierarquia explícita é obrigatória.|  
 |Criado por|O nome do usuário que criou a hierarquia explícita.|  
 |Criado em|A data e a hora de criação da hierarquia explícita.|  

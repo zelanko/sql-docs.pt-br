@@ -1,4 +1,5 @@
 ---
+description: Instruções de atualização e exclusão posicionadas
 title: Instruções UPDATE e DELETE posicionadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd100ac674aedf8dfd652c3d48e0f2dea1226019
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461388"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Instruções de atualização e exclusão posicionadas
 Os aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultados com uma instrução UPDATE ou DELETE posicionada. As instruções UPDATE e DELETE posicionadas têm suporte de algumas fontes de dados, mas não todas. Para determinar se uma fonte de dados dá suporte a instruções UPDATE e DELETE posicionadas, um aplicativo chama **SQLGetInfo** com o SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (dependendo do tipo do cursor). Observe que a biblioteca de cursores ODBC simula as instruções UPDATE e DELETE posicionadas.  
@@ -41,7 +42,7 @@ Os aplicativos podem atualizar ou excluir a linha atual em um conjunto de result
   
  **Definir** *coluna-identificador* **=** {*expressão* &#124; **NULL**}  
   
- [**,** **=** o *identificador de coluna* {*expression* &#124; **NULL**}]...  
+ [**,** *identificador* **=** de coluna {*expression* &#124; **NULL**}] ...  
   
  **Onde atual do nome do** *cursor*  
   

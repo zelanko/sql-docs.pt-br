@@ -1,4 +1,5 @@
 ---
+description: Alterações comportamentais
 title: Alterações comportamentais | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e4a433531d90eb0f89d9a5e446464b13fd02526
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb5501d362cb46f3616e58c5a4994bab86e00ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461618"
 ---
 # <a name="behavioral-changes"></a>Alterações comportamentais
 Alterações comportamentais são aquelas alterações para as quais a *sintaxe* da interface permanece a mesma, mas a *semântica* mudou. Para essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente da mesma funcionalidade no ODBC 3. *x*.  

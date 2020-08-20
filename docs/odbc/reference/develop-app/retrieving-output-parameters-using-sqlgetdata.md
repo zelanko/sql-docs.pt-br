@@ -1,4 +1,5 @@
 ---
+description: Recuperar parâmetros de saída usando SQLGetData
 title: Recuperando parâmetros de saída usando SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a31cb6baa015e2a90977d0112e770ce66fa8e62f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461378"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Recuperar parâmetros de saída usando SQLGetData
 Antes do ODBC 3,8, um aplicativo poderia recuperar apenas os parâmetros de saída de uma consulta com um buffer de saída associado. No entanto, é difícil alocar um buffer muito grande quando o tamanho do valor do parâmetro é muito grande (por exemplo, uma imagem grande). O ODBC 3,8 apresenta uma nova maneira de recuperar parâmetros de saída em partes. Um aplicativo agora pode chamar **SQLGetData** com um pequeno buffer várias vezes para recuperar um valor de parâmetro grande. Isso é semelhante à recuperação de dados de coluna grandes.  
@@ -37,7 +38,7 @@ Antes do ODBC 3,8, um aplicativo poderia recuperar apenas os parâmetros de saí
   
 3.  Chame **SQLParamData** para obter o parâmetro que está disponível para recuperação. **SQLParamData** retornará SQL_PARAM_DATA_AVAILABLE com o token do primeiro parâmetro disponível, que é definido em **SQLBindParameter** (etapa 1). O token é retornado no buffer para o qual o *ValuePtrPtr* aponta.  
   
-4.  Chame **SQLGetData** com o argumento *Col*_or\_*Param_Num* definido como o ordinal do parâmetro para recuperar os dados do primeiro parâmetro disponível. Se **SQLGetData** retornar SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dados truncados) e o tipo for de comprimento variável no cliente e no servidor, haverá mais dados a serem recuperados do primeiro parâmetro disponível. Você pode continuar a chamar **SQLGetData** até que ele retorne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO com um **SQLSTATE**diferente.  
+4.  Chame **SQLGetData** com o argumento *Col*_or \_ *Param_Num* definido como o ordinal do parâmetro para recuperar os dados do primeiro parâmetro disponível. Se **SQLGetData** retornar SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dados truncados) e o tipo for de comprimento variável no cliente e no servidor, haverá mais dados a serem recuperados do primeiro parâmetro disponível. Você pode continuar a chamar **SQLGetData** até que ele retorne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO com um **SQLSTATE**diferente.  
   
 5.  Repita a etapa 3 e a etapa 4 para recuperar o parâmetro atual.  
   
@@ -75,13 +76,13 @@ Antes do ODBC 3,8, um aplicativo poderia recuperar apenas os parâmetros de saí
   
  Após **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** retornar SQL_PARAM_DATA_AVAILABLE, um erro de sequência de função ocorrerá se um aplicativo chamar uma função que não está na seguinte lista:  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **SQLAllocHandle**  /  **SQLAllocHandleStd**  
   
--   **SQLDataSources** / **SQLDrivers**  
+-   **SQLDataSources**  /  **Sqldriveres**  
   
--   **SQLGetInfo** / **SQLGetFunctions**  
+-   **SQLGetInfo**  /  **SQLGetFunctions**  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr**SQLGetEnvAttr / **SQLGetDescField**SQLGetDescField / **SQLGetDescRec**  
+-   **SQLGetConnectAttr**  /  **SQLGetEnvAttr**  /  **SQLGetDescField**  /  **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -93,7 +94,7 @@ Antes do ODBC 3,8, um aplicativo poderia recuperar apenas os parâmetros de saí
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec**  
+-   **SQLGetDiagField**  /  **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   

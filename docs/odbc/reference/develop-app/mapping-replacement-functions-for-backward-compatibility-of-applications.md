@@ -1,4 +1,5 @@
 ---
+description: Mapear funções de substituição para compatibilidade com versões anteriores de aplicativos
 title: Mapeando funções de substituição para compatibilidade de aplicativos-ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18669fe9b6edbd39859166e382ad18d1b04a99a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461408"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapear funções de substituição para compatibilidade com versões anteriores de aplicativos
 Um aplicativo ODBC *3. x* funcionando por meio do Gerenciador de driver ODBC *3. x* funcionará em um driver ODBC *2. x* , desde que nenhum novo recurso seja usado. No entanto, a funcionalidade duplicada e as alterações comportamentais afetam a maneira como o aplicativo ODBC *3. x* funciona em um driver ODBC *2. x* . Ao trabalhar com um driver ODBC *2. x* , o Gerenciador de driver mapeia as seguintes funções ODBC *3. x* , que substituíram uma ou mais funções ODBC *2. x* nas funções ODBC *2* . x correspondentes.  

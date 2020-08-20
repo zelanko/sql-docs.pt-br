@@ -1,4 +1,5 @@
 ---
+description: Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
 title: Criar um trabalho do SQL Server Agent para arquivar mensagens e eventos do Database Mail
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73139f22c3a69494f6a8e27df22aa4bf26c3cf87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461037"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

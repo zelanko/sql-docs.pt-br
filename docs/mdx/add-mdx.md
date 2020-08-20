@@ -1,4 +1,5 @@
 ---
+description: + Agrega LINGUAGEM
 title: + Agrega (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9cb5ddf37104c0de00e17bdec5946d9b39d60020
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04a744eee7c62171ee2e60f2137aa667d08dc9e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461708"
 ---
 # <a name="-add-mdx"></a>+ (Adição) (MDX)
 
@@ -31,13 +32,13 @@ Numeric_Expression + Numeric_Expression
  *Expressão numérica*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor com o tipo de dados do parâmetro com prioridade maior.  
   
 ## <a name="remarks"></a>Comentários  
  As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se uma expressão avaliar a um valor nulo, o operador retornará o resultado da outra expressão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Referência de operador MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Ancestors (MDX)
 title: Ancestrais (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92f15f20c872fbe63db09a55356b5d1e35ff0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461678"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Uma função que retorna o conjunto de todos os ancestrais de um membro especificado em um nível especificado, ou à distância especificada, a partir do membro. Com [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]o, o conjunto retornado sempre consistirá em um único membro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -não dá suporte a vários pais para um único membro.  
+  Uma função que retorna o conjunto de todos os ancestrais de um membro especificado em um nível especificado, ou à distância especificada, a partir do membro. Com [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o, o conjunto retornado sempre consistirá em um único membro-não dá [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] suporte a vários pais para um único membro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +39,7 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
- *Distância*  
+ *Alcance*  
  Uma expressão numérica válida que especifica a distância do membro especificado.  
   
 ## <a name="remarks"></a>Comentários  

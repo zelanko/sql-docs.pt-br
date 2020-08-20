@@ -1,4 +1,5 @@
 ---
+description: Lição 2-1 – compilar o utilitário de implantação
 title: 'Etapa 1: compilar o utilitário de implantação | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47d98801dd722f1727a7cdf3a982bf63cbd9974e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf91bcb1f0f9db399980c7650ae9b7491c47c78a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461949"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lição 2-1 – compilar o utilitário de implantação
 
@@ -65,7 +66,7 @@ Antes de compilar o utilitário de implantação, você deve modificar as propri
 5.  No menu **Arquivo** , clique em **Sair**. Se for solicitado que você salve as alterações dos itens do Tutorial de Implantação, clique em **Sim**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[Etapa 2: Verificar o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criar um utilitário de implantação](../integration-services/packages/create-a-deployment-utility.md)  

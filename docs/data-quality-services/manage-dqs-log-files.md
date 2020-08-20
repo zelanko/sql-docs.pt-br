@@ -1,4 +1,5 @@
 ---
+description: Gerenciar arquivos de log do DQS
 title: Gerenciar arquivos de log do DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e4b5864129d25754fb2177376e011be1972078e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46ff924c7dcbd2d11b2b54721d11945a74026e33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462085"
 ---
 # <a name="manage-dqs-log-files"></a>Gerenciar arquivos de log do DQS
 
@@ -28,10 +29,10 @@ ms.locfileid: "85898126"
   
  Você pode usar o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] para definir a configuração de severidade de log para recursos e módulos do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Adicionalmente, você também pode definir outras configurações (avançadas) para os arquivos de log do DQS, alterando manualmente os parâmetros de configuração de log DQS no banco de dados DQS_MAIN e um arquivo XML no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a>Arquivo de log do Data Quality Server  
+##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a> Arquivo de log do Data Quality Server  
  O arquivo de log [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , DQServerLog.DQS_MAIN.log, inclui logs de atividades que são executadas no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Se você tiver instalado a instância padrão do SQL Server, o arquivo DQServerLog.DQS_MAIN.log estará disponível em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log. O arquivo de log [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] contém as seguintes informações, delimitadas por uma barra (|):  
   
--   Data e Hora  
+-   Data e hora  
   
 -   Nome do thread  
   
@@ -60,12 +61,12 @@ ms.locfileid: "85898126"
   
  O arquivo DQServerLog.DQS_MAIN.log é um arquivo rolante; um novo arquivo de log é criado quando o arquivo de log existente excede o limite de tamanho do arquivo rolante especificado nos parâmetros de configuração de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Para obter mais informações, consulte [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a>Data Quality Client arquivo de log  
+##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a> Data Quality Client arquivo de log  
  O arquivo de log [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , DQClientLog.log, inclui logs do lado do cliente. O arquivo de log [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] está disponível em %APPDATA%\SSDQS\Log. O arquivo de log [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] contém um conjunto de informações semelhante ao do arquivo de log de servidor, mas para o lado do cliente.  
   
  Assim como no arquivo de log [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , o arquivo de log [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] também é um arquivo rolante; um novo arquivo de log é criado quando o arquivo de log existente excede o limite de tamanho do arquivo rolante especificado nos parâmetros de configuração de log do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Para obter mais informações, consulte [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a>Arquivo de log do componente de limpeza DQS  
+##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a> Arquivo de log do componente de limpeza DQS  
  O arquivo de log [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] , DQSSSISLog.log, inclui logs de atividades executados usando o [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. O arquivo de log de componente [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] está disponível em %APPDATA%\SSDQS\Log. O arquivo de log [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] contém um conjunto de informações semelhante ao do arquivo de log de servidor, mas para o [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
 ##  <a name="related-tasks"></a><a name="RT"></a> Tarefas relacionadas  

@@ -1,4 +1,5 @@
 ---
+description: Configurações globais (caixas de diálogo) (OracleToSQL)
 title: Configurações globais (caixas de diálogo) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 715bc5d1a407380d47c05313954adab5cdf53dc6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0a0b888c594a46543f3cdec8e9c70bf9b511ed91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463188"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Configurações globais (caixas de diálogo) (OracleToSQL)
 Use a página diálogos da caixa de diálogo **configurações globais** para especificar as configurações de ação e aviso do usuário padrão para o SSMA.  

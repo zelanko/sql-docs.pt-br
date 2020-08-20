@@ -1,4 +1,5 @@
 ---
+description: Recuperar resultados (avançado)
 title: Recuperando resultados (avançado) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca02b4ff911c8edff06b38d5341eeaa288cc194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12f5c2ddd1e04b1aef96b7ef1544db9b58a9a58e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461368"
 ---
 # <a name="retrieving-results-advanced"></a>Recuperar resultados (avançado)
 Um aplicativo pode especificar que um deslocamento seja adicionado aos endereços de buffer de dados vinculados e os endereços de buffer de comprimento/indicador correspondentes quando **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**ou **SQLSetPos** for chamado. Os resultados dessas adições determinam os endereços usados nessas operações.  

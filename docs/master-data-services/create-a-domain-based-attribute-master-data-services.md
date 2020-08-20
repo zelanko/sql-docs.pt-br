@@ -1,4 +1,5 @@
 ---
+description: Criar um atributo baseado em domínio (Master Data Services)
 title: Criar um atributo baseado em domínio
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461833"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Criar um atributo baseado em domínio (Master Data Services)
 
@@ -44,9 +45,9 @@ ms.locfileid: "85813113"
 |Coluna|Descrição|
 |------------|-----------------|
 |Status|O status do atributo.<br /><br /> Quando você clica em salvar, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|
-|Name|O nome do atributo.|
+|Nome|O nome do atributo.|
 |Nome de exibição|O nome de exibição do atributo.|
-|Description|A descrição do atributo.|
+|Descrição|A descrição do atributo.|
 |Exibir Largura em Pixels|A largura do atributo.|
 |Tipo e Propriedades|As informações de tipo e de tipo de dados do atributo.|
 |Habilitar Controle de Alterações|Especifica se o atributo está habilitado para o controle de alterações e mostra o número do grupo entre parênteses.|
@@ -95,7 +96,7 @@ ms.locfileid: "85813113"
 
      Para obter informações sobre como restringir os valores permitidos, consulte [como filtrar listas suspensas de atributos com base em domínio](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/), no blog do Master Data Services.
 
-12. **Adicional.** Selecione **Enable change tracking** para acompanhar as alterações feitas em grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
+12. **Opcional.** Selecione **Enable change tracking** para acompanhar as alterações feitas em grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
 13. Clique em **Save** (Salvar).
 

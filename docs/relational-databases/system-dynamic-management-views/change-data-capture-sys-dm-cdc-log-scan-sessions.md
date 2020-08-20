@@ -1,4 +1,5 @@
 ---
+description: Captura de dados de alterações-sys. dm_cdc_log_scan_sessions
 title: sys. dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d70c211c388fca8e0ab26ba69083378924e5bdc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f2e520a40c3f4b130d403ff30eae68b0b2c06b0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460477"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Captura de dados de alterações-sys. dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

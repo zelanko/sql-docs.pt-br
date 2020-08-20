@@ -1,4 +1,5 @@
 ---
+description: Gerenciamento de senhas (MySQLToSQL)
 title: Gerenciando senhas (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 55e387cf1f45f557b2e1bbbdce8a119bba03f6f8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2caaa5f0a7fca36dcd5cf7aebcadaee4c8f715e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463338"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Gerenciamento de senhas (MySQLToSQL)
 Este artigo trata da proteção de senhas de banco de dados e do procedimento para importá-las ou exportá-las entre servidores.

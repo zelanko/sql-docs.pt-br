@@ -1,4 +1,5 @@
 ---
+description: Exibições de catálogo da pesquisa de texto completo e pesquisa semântica (Transact-SQL)
 title: Exibições do catálogo de pesquisa de texto completo e de semântica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0272ab778c538b2fa8690493606a346d713fa6d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af1960d9fa36dd770ad11a16b0689737037b4a60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460708"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>Exibições de catálogo da pesquisa de texto completo e pesquisa semântica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85764808"
   Esta seção descreve as exibições de catálogo que fornecem informações sobre índices de texto completo e índices semânticos.  
   
 ## <a name="full-text-search-catalog-views"></a>Exibições do catálogo de pesquisa de texto completo  
- [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
+ [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
  Contém uma linha para cada catálogo de texto completo.  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
@@ -73,8 +74,8 @@ ms.locfileid: "85764808"
  Retorna uma linha para cada idioma cujo modelo de estatística está registrado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando um modelo de idioma está registrado, o idioma é habilitado para indexação semântica.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições do sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Exibições e funções de gerenciamento dinâmico de pesquisa de texto completo e de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

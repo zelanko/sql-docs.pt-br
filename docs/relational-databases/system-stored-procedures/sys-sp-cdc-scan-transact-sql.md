@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_scan (Transact-SQL)
 title: sys. sp_cdc_scan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463918"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @maxtrans = ] max_trans`Número máximo de transações a serem processadas em cada ciclo de verificação. *max_trans* é **int** com um padrão de 500.  
+`[ @maxtrans = ] max_trans` Número máximo de transações a serem processadas em cada ciclo de verificação. *max_trans* é **int** com um padrão de 500.  
   
-`[ @maxscans = ] max_scans`Número máximo de ciclos de verificação a serem executados para extrair todas as linhas do log. *max_scans* é **int** com um padrão de 10.  
+`[ @maxscans = ] max_scans` Número máximo de ciclos de verificação a serem executados para extrair todas as linhas do log. *max_scans* é **int** com um padrão de 10.  
   
-`[ @continuous = ] continuous`Indica se o procedimento armazenado deve terminar após a execução de um ciclo de verificação único (0) ou ser executado continuamente, pausando o tempo especificado pelo *polling_interval* antes de executar novamente o ciclo de verificação (1). *continuou* é **tinyint** com um padrão de 0.  
+`[ @continuous = ] continuous` Indica se o procedimento armazenado deve terminar após a execução de um ciclo de verificação único (0) ou ser executado continuamente, pausando o tempo especificado pelo *polling_interval* antes de executar novamente o ciclo de verificação (1). *continuou* é **tinyint** com um padrão de 0.  
   
-`[ @pollinginterval = ] polling_interval`Número de segundos entre os ciclos de verificação de log. *polling_interval* é **bigint** com um padrão de 0.  
+`[ @pollinginterval = ] polling_interval` Número de segundos entre os ciclos de verificação de log. *polling_interval* é **bigint** com um padrão de 0.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -65,6 +66,6 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  Requer associação na função de banco de dados fixa db_owner.  
   
 ## <a name="see-also"></a>Consulte Também  
- [o dbo. cdc_jobs &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [o dbo. cdc_jobs &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

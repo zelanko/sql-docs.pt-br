@@ -1,4 +1,5 @@
 ---
+description: Habilitar e desabilitar o Change Data Capture (SQL Server)
 title: Habilitar e desabilitar o Change Data Capture
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aefc7bb8f812951d7b8fcdac7b28549984faa7fb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 83e4d748032d4744480d90a977432c70b418ce8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463713"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar e desabilitar o Change Data Capture (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

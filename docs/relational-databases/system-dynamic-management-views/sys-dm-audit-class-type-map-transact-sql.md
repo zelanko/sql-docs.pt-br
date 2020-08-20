@@ -1,4 +1,5 @@
 ---
+description: sys.dm_audit_class_type_map (Transact-SQL)
 title: sys. dm_audit_class_type_map (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 646d3510a347e22ccf68701f5e89d57642323a71
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ed8b45fcd8650d47c2acbce23a5e9033b65d58e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460500"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87394429"
  A entidade de segurança deve ter a permissão **Select** . Por padrão, é concedida a Público.  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR auditoria de servidor &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CRIAR auditoria de servidor &#40;&#41;Transact-SQL ](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

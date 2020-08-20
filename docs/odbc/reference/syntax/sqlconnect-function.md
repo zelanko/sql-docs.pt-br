@@ -1,4 +1,5 @@
 ---
+description: Função SQLConnect
 title: Função SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461198"
 ---
 # <a name="sqlconnect-function"></a>Função SQLConnect
 **Conformidade**  
@@ -57,7 +58,7 @@ SQLRETURN SQLConnect(
  *NameLength1*  
  Entrada Comprimento de **ServerName* em caracteres.  
   
- *Usu*  
+ *UserName*  
  Entrada Identificador de usuário.  
   
  *NameLength2*  
@@ -72,7 +73,7 @@ SQLRETURN SQLConnect(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando o **SQLConnect** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados pelo **SQLConnect** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -84,7 +85,7 @@ SQLRETURN SQLConnect(
 |08004|O servidor rejeitou a conexão|A fonte de dados rejeitou o estabelecimento da conexão para motivos definidos pela implementação.|  
 |08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver estava tentando se conectar falhou antes da função concluir o processamento.|  
 |28000|Especificação de autorização inválida|O valor especificado para o argumento *username* ou o valor especificado para a *autenticação* de argumento violou restrições definidas pela fonte de dados.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|(DM) o Gerenciador de driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *ConnectionHandle*. A função **SQLConnect** foi chamada e, antes de concluir a execução, a [função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) foi chamada no *ConnectionHandle*e, em seguida, a função **SQLConnect** foi chamada novamente no *ConnectionHandle*.<br /><br /> Ou, a função **SQLConnect** foi chamada e, antes de concluir a execução, **SQLCancelHandle** foi chamado no *ConnectionHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona (não esta) foi chamada para o *ConnectionHandle* e ainda estava em execução quando essa função foi chamada.|  
@@ -100,7 +101,7 @@ SQLRETURN SQLConnect(
 |IM005|Falha no SQLAllocHandle do driver em SQL_HANDLE_DBC|(DM) durante o **SQLConnect**, o Gerenciador de driver chamou a função **SQLAllocHandle** do driver com um *HandleType* de SQL_HANDLE_DBC e o driver retornou um erro.|  
 |IM006|Falha no SQLSetConnectAttr do driver|Durante o **SQLConnect**, o Gerenciador de driver chamou a função **SQLSetConnectAttr** do driver e o driver retornou um erro. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |IM009|Não é possível conectar à DLL de tradução|O driver não pôde se conectar à DLL de tradução que foi especificada para a fonte de dados.|  
-|IM010|O nome da fonte de dados é muito longo|(DM) * \*ServerName* foi maior do que SQL_MAX_DSN_LENGTH caracteres.|  
+|IM010|O nome da fonte de dados é muito longo|(DM) * \* ServerName* foi maior do que SQL_MAX_DSN_LENGTH caracteres.|  
 |IM014|O DSN especificado contém uma incompatibilidade de arquitetura entre o driver e o aplicativo|(DM) 32-o aplicativo de bits usa um DSN que se conecta a um driver de 64 bits; ou vice-versa.|  
 |IM015|Falha na SQL_HANDLE_DBC_INFO_HANDLE do SQLConnect do driver|Se um driver retornar SQL_ERROR, o Gerenciador de driver retornará SQL_ERROR ao aplicativo e a conexão falhará.<br /><br /> Para obter mais informações sobre SQL_HANDLE_DBC_INFO_TOKEN, consulte [desenvolvendo o reconhecimento do pool de conexões em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|A sondagem está desabilitada no modo de notificação assíncrona|Sempre que o modelo de notificação for usado, a sondagem será desabilitada.|  

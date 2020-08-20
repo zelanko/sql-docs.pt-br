@@ -1,4 +1,5 @@
 ---
+description: SELECT (DMX)
 title: SELECT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1e44c7d2f4bf872a7629a48c305114f09f98ee66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462025"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -112,7 +113,7 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
   
  [SELECIONAR DISTINCT do modelo de &#60;&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [Selecione do modelo de &#60;&#62;.&#41;DE CONTEÚDO &#40;DMX](../dmx/select-from-model-content-dmx.md)  
+ [Selecione do modelo de &#60;&#62;.&#41;DE CONTEÚDO &#40;DMX ](../dmx/select-from-model-content-dmx.md)  
   
  [Selecione do modelo de &#60;&#62;. CASOS &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   

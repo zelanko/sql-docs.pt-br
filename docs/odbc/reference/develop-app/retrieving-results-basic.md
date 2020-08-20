@@ -1,4 +1,5 @@
 ---
+description: Recuperar resultados (básico)
 title: Recuperando resultados (básico) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43064703e7ee448de89396135fa610e972e2679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461358"
 ---
 # <a name="retrieving-results-basic"></a>Recuperar resultados (básico)
 Um *conjunto de resultados* é um conjunto de linhas na fonte de dados que corresponde a determinados critérios. É uma tabela conceitual que resulta de uma consulta e que está disponível para um aplicativo em formato de tabela. As instruções **Select** , Catalog Functions e alguns procedimentos criam conjuntos de resultados. No exemplo a seguir, a primeira instrução SQL cria um conjunto de resultados que contém todas as linhas e todas as colunas na tabela Orders, e a segunda instrução SQL cria um conjunto de resultados contendo colunas OrderID, SalesPerson e status para as linhas na tabela Orders na qual o status é aberto:  
@@ -47,6 +48,6 @@ SELECT * FROM Orders WHERE 1 = 2
   
 -   [Colunas de associação](../../../odbc/reference/develop-app/binding-columns.md)  
   
--   [Buscar dados](../../../odbc/reference/develop-app/fetching-data.md)  
+-   [Buscando dados](../../../odbc/reference/develop-app/fetching-data.md)  
   
 -   [Fechar o cursor](../../../odbc/reference/develop-app/closing-the-cursor.md)

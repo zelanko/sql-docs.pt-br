@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_category (Transact-SQL)
 title: sp_syspolicy_delete_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83d08b5261d6657a2bddbf494eb6f5e9ade3b065
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb0df2c440f1198dfe18d4615ab9e8962d93a37e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463970"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`É o nome da categoria de política. *Name* é **sysname**e deve ser especificado se *policy_category_id* for NULL.  
+`[ @name = ] 'name'` É o nome da categoria de política. *Name* é **sysname**e deve ser especificado se *policy_category_id* for NULL.  
   
-`[ @policy_category_id = ] policy_category_id`É o identificador para a categoria de política. *policy_category_id* é **int**e deverá ser especificado se *Name* for NULL.  
+`[ @policy_category_id = ] policy_category_id` É o identificador para a categoria de política. *policy_category_id* é **int**e deverá ser especificado se *Name* for NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -70,7 +71,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do gerenciamento baseado em políticas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_add_policy_category](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syspolicy_update_policy_category](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_syspolicy_add_policy_category ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_syspolicy_update_policy_category ](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
   
   

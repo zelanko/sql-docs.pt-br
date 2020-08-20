@@ -1,4 +1,5 @@
 ---
+description: Criar um perfil do Database Mail
 title: Criar um perfil do Database Mail | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 466fa0d08af2fa91aefa4d206037080a5aa8f0b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461089"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](database-mail-configuration-objects.md).
   
--   **Antes de começar:** [Pré-requisitos](#Prerequisites), [Segurança](#Security)  
+-   **Antes de começar:** [Pré-requisitos](#Prerequisites), , [Segurança](#Security)  
   
--   **Para criar um perfil privado do Database Mail usando:**  [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Para criar um perfil privado do Database Mail usando:**  [Assistente para Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Para criar um perfil público do Database Mail usando:**  [Assistente de Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Para criar um perfil público do Database Mail usando:**  [Assistente para Configuração do Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   

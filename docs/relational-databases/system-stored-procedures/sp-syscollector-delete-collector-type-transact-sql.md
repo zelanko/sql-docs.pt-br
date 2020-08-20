@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collector_type (Transact-SQL)
 title: sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5e24b7cce5992df21e11edf5aff4202abb67f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464006"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collector_type_uid = ] 'collector_type_uid'`É o GUID para o tipo de coletor. *collector_type_uid* é **uniqueidentifier** e deve ter um valor se *Name* for NULL.  
+`[ @collector_type_uid = ] 'collector_type_uid'` É o GUID para o tipo de coletor. *collector_type_uid* é **uniqueidentifier** e deve ter um valor se *Name* for NULL.  
   
-`[ @name = ] 'name'`É o nome do tipo de coletor. o *nome* é **sysname** e deve ter um valor se *collector_type_uid* for NULL.  
+`[ @name = ] 'name'` É o nome do tipo de coletor. o *nome* é **sysname** e deve ter um valor se *collector_type_uid* for NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,7 +67,7 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

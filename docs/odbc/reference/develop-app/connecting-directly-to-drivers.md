@@ -1,4 +1,5 @@
 ---
+description: Conectar-se diretamente a drivers
 title: Conectando-se diretamente aos drivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6aacb5d3df985949e04cdd47a9fe460cddbde6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dbf1d7a11f0ca4d6e7d049d425451b5f0e26c2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461518"
 ---
 # <a name="connecting-directly-to-drivers"></a>Conectar-se diretamente a drivers
 Como foi discutido na [escolha de uma fonte de dados ou driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md), anteriormente nesta seção, alguns aplicativos não desejam usar uma fonte de dados. Em vez disso, eles querem se conectar diretamente a um driver. O **SQLDriverConnect** fornece uma maneira para o aplicativo se conectar diretamente a um driver sem especificar uma fonte de dados. Conceitualmente, uma fonte de dados temporária é criada em tempo de execução.  

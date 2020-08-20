@@ -1,4 +1,5 @@
 ---
+description: Implementar SQLGetDiagRec e SQLGetDiagField
 title: Implementando SQLGetDiagRec e SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91e43252aea4ebf12dedcb14bb1b7fb34f75df6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461428"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementar SQLGetDiagRec e SQLGetDiagField
 **SQLGetDiagRec** e **SQLGetDiagField** são implementados pelo Gerenciador de driver e por cada driver. O Gerenciador de driver e cada driver mantêm registros de diagnóstico para cada ambiente, conexão, instrução e identificador de descritor e liberam esses registros somente quando outra função é chamada com esse identificador ou o identificador é liberado.  

@@ -1,4 +1,5 @@
 ---
+description: Mapeamento SQLFreeConnect
 title: Mapeamento de SQLFreeConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20da205d53acbebca1fee12134c04f17fb8b2db3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ad5c2e5b1f519986ec59535699320aa8c11595c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461628"
 ---
 # <a name="sqlfreeconnect-mapping"></a>Mapeamento SQLFreeConnect
 Quando um aplicativo chama **SQLFreeConnect** por meio de um driver ODBC *3. x* , a chamada para  

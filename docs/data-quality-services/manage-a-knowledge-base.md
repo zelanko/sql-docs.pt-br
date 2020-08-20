@@ -1,4 +1,5 @@
 ---
+description: Gerenciar uma base de dados de conhecimento
 title: Gerenciar uma base de dados de conhecimento
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462078"
 ---
 # <a name="manage-a-knowledge-base"></a>Gerenciar uma base de dados de conhecimento
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882748"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para abrir uma base de dados de conhecimento.  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>Gerenciar uma base de dados de conhecimento  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> Gerenciar uma base de dados de conhecimento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882748"
   
         8.  **Data de Criação**: data em que a criação foi realizada  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>Acompanhamento: depois de gerenciar uma base de dados de conhecimento  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> Acompanhamento: depois de gerenciar uma base de dados de conhecimento  
  Depois que você gerenciar uma base de dados de conhecimento, a próxima etapa dependerá da ação executada na base de dados de conhecimento:  
   
 -   Se você abriu a base de dados de conhecimento, continuará na atividade que selecionou.  

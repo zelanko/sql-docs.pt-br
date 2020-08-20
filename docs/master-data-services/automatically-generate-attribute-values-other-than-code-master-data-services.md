@@ -1,4 +1,5 @@
 ---
+description: Gerar automaticamente valores de atributo diferentes de código (Master Data Services)
 title: Gerar automaticamente valores de atributo
 titleSuffix: Master Data Services
 ms.custom: seo-lt-2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 165820bfea62fe1172aaad4f6a18f4d3b5e5eed4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 85339e8fb742bfa6e8545e72ac1ff70dc5bde6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461942"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Gerar automaticamente valores de atributo diferentes de código (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Desanexando e anexando bancos de dados do DQS
 title: Desanexando e anexando bancos de dados do DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fdd977cf886512c7d8ef19bfa5580ec689acb91b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d59c5c92b41176cfb6a664bdf1617c164d23d30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462110"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Desanexando e anexando bancos de dados do DQS
 
@@ -43,7 +44,7 @@ ms.locfileid: "85882822"
   
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
-##  <a name="detach-dqs-databases"></a><a name="Detach"></a>Desanexar bancos de dados DQS  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a> Desanexar bancos de dados DQS  
  Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados do DQS geralmente estão disponíveis no seguinte local no computador do Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>* \MSSQL\DATA.  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
@@ -58,7 +59,7 @@ ms.locfileid: "85882822"
   
  Você também pode desanexar bancos de dados DQS usando as instruções Transact-SQL usando o procedimento armazenado sp_detach_db. Para obter mais informações sobre como desanexar bancos de dados usando instruções Transact-SQL, consulte [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) em [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="attach-dqs-databases"></a><a name="Attach"></a>Anexar bancos de dados DQS  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a> Anexar bancos de dados DQS  
  Use as instruções a seguir para anexar um banco de dados DQS na mesma instância do SQL Server (de onde você desanexou) ou a uma instância diferente do SQL Server em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
@@ -85,14 +86,13 @@ ms.locfileid: "85882822"
   
 9. Na janela Editor de Consultas, copie as seguintes instruções SQL:  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
-    RECONFIGURE WITH OVERRIDE  
-    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
+    RECONFIGURE WITH OVERRIDE;  
+    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER;  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##];  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##];  
     ```  
   
 10. Pressione F5 para executar as instruções. Consulte o painel Resultados para verificar se as instruções foram executadas com êxito. Você verá a seguinte mensagem: `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

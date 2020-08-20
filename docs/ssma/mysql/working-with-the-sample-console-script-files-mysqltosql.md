@@ -1,4 +1,5 @@
 ---
+description: Trabalhando com os arquivos de script de console de exemplo (MySQLToSQL)
 title: Trabalhando com os arquivos de script de console de exemplo (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 35041f234a28100c19baa9091e127b35f2a8364d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6c60c48b2c22dfb414710e305986b16d3ee31e17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463285"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Trabalhando com os arquivos de script de console de exemplo (MySQLToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência e o uso do usuário. Esta seção descreve a maneira de personalizar facilmente esses scripts para atender às necessidades do usuário final.  
@@ -81,7 +82,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    -   `source-schema:`Especifica o banco de dados de origem que exige a conversão.  
+    -   `source-schema:` Especifica o banco de dados de origem que exige a conversão.  
   
     -   `sql-server-schema`: Especifica o banco de dados de destino que deve ser migrado para  
   
@@ -95,7 +96,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    `object-name`: Especifique o nome do banco de dados/objeto de origem que exige a conversão. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
+    `object-name`: Especifique o nome do banco de dados/objeto de origem que exige a conversão. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no `object-name`  
   
     **Nome do comando**  
   
@@ -107,7 +108,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    `object-name:`Especifique o nome do banco de dados/objeto do SQL Server que requer a criação. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
+    `object-name:` Especifique o nome do banco de dados/objeto do SQL Server que requer a criação. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no `object-name`  
   
     **Nome do comando**  
   
@@ -119,7 +120,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     **Atributo**  
   
-    `object-name:`Especifica o nome do banco de dados/tabelas de origem que exige a migração. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
+    `object-name:` Especifica o nome do banco de dados/tabelas de origem que exige a migração. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no `object-name`  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando arquivos de valor de variável &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  

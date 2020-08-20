@@ -1,4 +1,5 @@
 ---
+description: Projetos de qualidade de dados (DQS)
 title: Projetos de qualidade de dados (DQS)
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8cc17bac7bca3907ffecc0e39e454889194f7a93
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6dfb68d73ba01f343660cef328f8cb8b4dbbd3b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462216"
 ---
 # <a name="data-quality-projects-dqs"></a>Projetos de qualidade de dados (DQS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85899103"
   
 -   Fornece um assistente para orientá-lo nas atividades de limpeza e correspondência, e na exportação dos dados de acordo com sua seleção para um banco de dados do SQL Server ou para um arquivo .csv. O administrador de dados pode usar o projeto de qualidade de dados para executar e controlar as etapas assistidas por computador/interativas de limpeza e correspondência de dados.  
   
-##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a>Projeto de qualidade de dados: atividade de limpeza  
+##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a> Projeto de qualidade de dados: atividade de limpeza  
  Um projeto de qualidade de dados de limpeza permite que você limpe os dados de origem com base em uma base de dados de conhecimento. A atividade de limpeza de dados no DQS é um processo de duas etapas:  
   
 1.  Um processo de limpeza de dados *assistido por computador* que analisa dados de origem em relação ao conhecimento da base de dados de conhecimento e propõe alterações. Os dados processados são categorizados (sugerido, novo, inválido, corrigido) pelo DQS e exibidos para o usuário para processamento adicional.  

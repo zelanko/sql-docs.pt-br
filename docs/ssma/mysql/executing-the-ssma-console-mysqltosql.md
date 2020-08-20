@@ -1,4 +1,5 @@
 ---
+description: Executar o console do SSMA (MySQLToSQL)
 title: Executando o console do SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 59a0075dfcee23c5e005853b0befd4b3eb0f39c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463447"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o console do SSMA (MySQLToSQL)
 A Microsoft fornece um conjunto robusto de comandos de arquivo de script para executar e controlar atividades do SSMA.  
@@ -39,9 +40,9 @@ Os comandos de projeto lidam com a criação de projetos, abertura, salvamento e
   
 **Script**  
   
-1.  `project-folder`indica a pasta do projeto que está sendo criado.  
+1.  `project-folder` indica a pasta do projeto que está sendo criado.  
   
-2.  `project-name`indica o nome do projeto. {string}  
+2.  `project-name` indica o nome do projeto. {string}  
   
 3.  `overwrite-if-exists`Atributo opcional indica se um projeto existente deve ser substituído. Boolean  
   
@@ -73,9 +74,9 @@ projeto aberto:
   
 **Script**  
   
-1.  `project-folder`indica a pasta do projeto que está sendo criado. O comando falhará se a pasta especificada não existir.  {string}  
+1.  `project-folder` indica a pasta do projeto que está sendo criado. O comando falhará se a pasta especificada não existir.  {string}  
   
-2.  `project-name`indica o nome do projeto. O comando falhará se o projeto especificado não existir.  {string}  
+2.  `project-name` indica o nome do projeto. O comando falhará se o projeto especificado não existir.  {string}  
   
 **Exemplo de sintaxe:**  
   
@@ -244,25 +245,25 @@ gerar-avaliação-relatório
   
 **Script**  
   
-1.  `assessment-report-folder:`Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
+1.  `assessment-report-folder:` Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
   
-2.  `object-name:`Especifica os objetos considerados para geração de relatórios de avaliação (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+2.  `object-name:` Especifica os objetos considerados para geração de relatórios de avaliação (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-3.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+3.  `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-4.  `assessment-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+4.  `assessment-report-overwrite:` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-5.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
+5.  `write-summary-report-to:` Especifica o caminho onde o relatório de resumo será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **AssessmentReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -285,7 +286,7 @@ gerar-avaliação-relatório
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <generate-assessment-report  
@@ -318,25 +319,25 @@ converter esquema
   
 **Script**  
   
-1.  `conversion-report-folder:`Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
+1.  `conversion-report-folder:` Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
   
-2.  `object-name:`Especifica os objetos considerados para converter o esquema (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+2.  `object-name:` Especifica os objetos considerados para converter o esquema (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-3.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+3.  `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-4.  `conversion-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+4.  `conversion-report-overwrite:` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-5.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
+5.  `write-summary-report-to:` Especifica o caminho onde o relatório de resumo será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **SchemaConversionReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação do relatório de resumo tem duas subcategorias adicionais:  
   
-    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -359,7 +360,7 @@ converter esquema
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <convert-schema  
@@ -382,19 +383,19 @@ migrar-dados
   
 **Script**  
   
-1.  `object-name:`Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+1.  `object-name:` Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
+3.  `write-summary-report-to:` Especifica o caminho onde o relatório de resumo será gerado.  
   
     Se apenas o caminho da pasta for mencionado, clique em arquivo por nome **DataMigrationReport &lt; n &gt; . XML** é criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais:  
   
-    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -419,7 +420,7 @@ migrar-dados
   
 </migrate-data>  
 ```  
-ou o  
+ou  
   
 ```xml  
 <migrate-data  
@@ -444,9 +445,9 @@ Mapeamento de esquema do banco de dados de origem para o esquema de destino.
   
 **Script**  
   
-1.  `source-schema`Especifica o esquema de origem que pretendemos migrar.  
+1.  `source-schema` Especifica o esquema de origem que pretendemos migrar.  
   
-2.  `sql-server-schema`Especifica o esquema de destino onde queremos que ele seja migrado.  
+2.  `sql-server-schema` Especifica o esquema de destino onde queremos que ele seja migrado.  
   
 **Exemplo de sintaxe:**  
   
@@ -476,11 +477,11 @@ sincronizar destino
   
 **Script**  
   
-1.  `object-name:`Especifica os objetos considerados para sincronização com o banco de dados de destino (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+1.  `object-name:` Especifica os objetos considerados para sincronização com o banco de dados de destino (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `on-error:`Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
+3.  `on-error:` Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
   
     -   relatório-total-como-aviso  
   
@@ -488,7 +489,7 @@ sincronizar destino
   
     -   script de falha  
   
-4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
+4.  `report-errors-to:` Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport.XML** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -507,7 +508,7 @@ sincronizar destino
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <synchronize-target  
@@ -516,7 +517,7 @@ ou o
   
   object-type="<object-category>"/>  
 ```  
-ou o  
+ou  
   
 ```xml  
 <synchronize-target>  
@@ -539,11 +540,11 @@ atualizar-do-banco de dados
   
 **Script**  
   
-1.  `object-name:`Especifica os objetos de origem considerados para atualização do banco de dados de origem (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+1.  `object-name:` Especifica os objetos de origem considerados para atualização do banco de dados de origem (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `on-error:`Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
+3.  `on-error:` Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
   
     -   relatório-total-como-aviso  
   
@@ -551,7 +552,7 @@ atualizar-do-banco de dados
   
     -   script de falha  
   
-4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
+4.  `report-errors-to:` Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport.XML** será criado.  
   
 Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
@@ -572,7 +573,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <refresh-from-database  
@@ -581,7 +582,7 @@ ou o
   
    object-type="<object-category>"/>  
 ```  
-ou o  
+ou  
   
 ```xml  
 <refresh-from-database>  
@@ -604,15 +605,15 @@ Usado para salvar os scripts dos objetos em um arquivo mencionado quando metabas
   
 Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
-1.  `object-name:`Especifica os objetos cujos scripts devem ser salvos. (Ele pode ter nomes de objetos individuais ou um nome de objeto de grupo)  
+1.  `object-name:` Especifica os objetos cujos scripts devem ser salvos. (Ele pode ter nomes de objetos individuais ou um nome de objeto de grupo)  
   
-2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:` Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `metabase:`Especifica se é a metabase de origem ou de destino.  
+3.  `metabase:` Especifica se é a metabase de origem ou de destino.  
   
-4.  `destination:`Especifica o caminho ou a pasta em que o script deve ser salvo, se o nome do arquivo não for fornecido, em seguida, um nome de arquivo no formato (object_name valor do atributo). out  
+4.  `destination:` Especifica o caminho ou a pasta em que o script deve ser salvo, se o nome do arquivo não for fornecido, em seguida, um nome de arquivo no formato (object_name valor do atributo). out  
   
-5.  `overwrite:`Se for true, ele substituirá se o mesmo nome de arquivo existir. Ele pode ter os valores (true/false).  
+5.  `overwrite:` Se for true, ele substituirá se o mesmo nome de arquivo existir. Ele pode ter os valores (true/false).  
   
 **Exemplo de sintaxe:**  
   
@@ -631,7 +632,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou o  
+ou  
   
 ```xml  
 <save-as-script  
@@ -650,25 +651,25 @@ ou o
   
 instrução Convert-SQL-  
   
-1.  `context`Especifica o nome do esquema.  
+1.  `context` Especifica o nome do esquema.  
   
-2.  `destination`Especifica se a saída deve ser armazenada em um arquivo.  
+2.  `destination` Especifica se a saída deve ser armazenada em um arquivo.  
   
     Se esse atributo não for especificado, a instrução T-SQL convertida será exibida no console do. (atributo opcional)  
   
-3.  `conversion-report-folder`Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
+3.  `conversion-report-folder` Especifica a pasta onde o relatório de avaliação está armazenado. (atributo opcional)  
   
-4.  `conversion-report-overwrite`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
+4.  `conversion-report-overwrite` Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-5.  `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta em que o T-SQL convertido será armazenado. Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem terá um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
+5.  `write-converted-sql-to` Especifica o arquivo (ou) caminho da pasta em que o T-SQL convertido será armazenado. Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem terá um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
   
-6.  `sql`Especifica as instruções SQL do MySQL a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
+6.  `sql` Especifica as instruções SQL do MySQL a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
   
-7.  `sql-files`Especifica o caminho dos arquivos SQL que deve ser convertido em código T-SQL.  
+7.  `sql-files` Especifica o caminho dos arquivos SQL que deve ser convertido em código T-SQL.  
   
-8.  `write-summary-report-to`Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport.XML** será criado. (atributo opcional)  
+8.  `write-summary-report-to` Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport.XML** será criado. (atributo opcional)  
   
     A criação de relatório tem duas subcategorias adicionais, aula sobre visualização..,:  
   
@@ -707,7 +708,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou o  
+ou  
   
 ```  
 <convert-sql-statement  
@@ -732,7 +733,7 @@ ou o
   
 />  
 ```  
-ou o  
+ou  
   
 ```  
 <convert-sql-statement  

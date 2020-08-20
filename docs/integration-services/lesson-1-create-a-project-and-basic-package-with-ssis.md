@@ -1,4 +1,5 @@
 ---
+description: 'Lição 1: Criar um projeto e pacote básico com o SSIS'
 title: 'Lição 1: Criar um projeto e pacote básico com o SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aeeac3c8033bfde5a528dd791e7b23b4f9973e1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461982"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lição 1: Criar um projeto e pacote básico com o SSIS
 
@@ -88,7 +89,7 @@ Nossa análise dos formatos de dados de origem e destino indicam que as pesquisa
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Criar um projeto do Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Etapa 1: criar um projeto do Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [Etapa 2: Adicionar e configurar um gerenciador de conexões de Arquivo Simples](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

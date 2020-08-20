@@ -1,4 +1,5 @@
 ---
+description: Argumentos do identificador
 title: Argumentos de identificador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efb295c9c27dbfc5edc2b1d7a46d6ca166e2c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461447"
 ---
 # <a name="identifier-arguments"></a>Argumentos do identificador
 Se uma cadeia de caracteres em um argumento de identificador estiver entre aspas, o driver removerá espaços em branco à esquerda e à direita e tratará literalmente a cadeia de caracteres entre aspas. Se a cadeia de caracteres não estiver entre aspas, o driver removerá os espaços em branco à direita e dobrará a cadeia de caracteres para letras maiúsculas. Definir um argumento de identificador para um ponteiro nulo retorna SQL_ERROR e SQLSTATE HY009 (uso inválido de ponteiro NULL), a menos que o argumento seja um nome de catálogo e os catálogos não tenham suporte.  

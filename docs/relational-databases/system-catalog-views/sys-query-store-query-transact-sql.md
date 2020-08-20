@@ -1,4 +1,5 @@
 ---
+description: sys. query_store_query (Transact-SQL)
 title: sys. query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
@@ -21,12 +22,12 @@ ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 676c7a8c20c6374d9ceff521622f030c8f8fb983
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0908c3ad3995510eb7e5cf1509941b735235005e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460615"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys. query_store_query (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87396375"
 |**initial_compile_start_time**|**datetimeoffset**|Hora de início da compilação.|  
 |**last_compile_start_time**|**datetimeoffset**|Hora de início da compilação.|  
 |**last_execution_time**|**datetimeoffset**|A hora da última execução refere-se à última hora de término da consulta/plano.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|Identificador do último lote SQL no qual a consulta foi usada pela última vez. Ele pode ser fornecido como entrada para [Sys. dm_exec_sql_text &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) para obter o texto completo do lote.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará *NULL*.|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|Identificador do último lote SQL no qual a consulta foi usada pela última vez. Ele pode ser fornecido como entrada para [Sys. dm_exec_sql_text &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) para obter o texto completo do lote.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará *NULL*.|  
 |**last_compile_batch_offset_start**|**bigint**|Informações que podem ser fornecidas para sys. dm_exec_sql_text junto com last_compile_batch_sql_handle.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|
 |**last_compile_batch_offset_end**|**bigint**|Informações que podem ser fornecidas para sys. dm_exec_sql_text junto com last_compile_batch_sql_handle.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**count_compiles**|**bigint**|Estatísticas de compilação.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará um (1).|  

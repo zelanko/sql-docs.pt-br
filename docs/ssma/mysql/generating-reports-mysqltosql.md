@@ -1,4 +1,5 @@
 ---
+description: Geração de relatórios (MySQLToSQL)
 title: Gerando relatórios (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f61387e6ca77ed93b7b23f335fc5b1f46c343ff2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 641edbb3db15387543645fcab7a375b2985a01d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463424"
 ---
 # <a name="generating-reports-mysqltosql"></a>Geração de relatórios (MySQLToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  

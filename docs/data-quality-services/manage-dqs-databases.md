@@ -1,4 +1,5 @@
 ---
+description: Gerenciar bancos de dados do DQS
 title: Gerenciar bancos de dados do DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b9f779ded8b13c209e3c490c2a7c0cdbef71e779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462101"
 ---
 # <a name="manage-dqs-databases"></a>Gerenciar bancos de dados do DQS
 

@@ -1,4 +1,5 @@
 ---
+description: Table Properties - SSMS
 title: Tabela de propriedades – SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e476076084e23d3381f08a2e10dc130bee25b93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463767"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87928667"
 4.  [Página Armazenamento](#Storage)  
 
 ##  <a name="general-page"></a><a name="GeneralPage"></a> Página Geral  
- **Backup de banco de dados**  
+ **Banco de dados**  
  O nome do banco de dados que contém esta tabela.  
   
  **Servidor**  
@@ -163,7 +164,7 @@ ms.locfileid: "87928667"
  **Esquema de partição**  
  Nome do esquema de partição se a tabela estiver particionada. Se a tabela não for particionada, o campo fica em branco.  
   
- **Número de partições**  
+ **Número of partições**  
  O número de partições da tabela.  
   
  **Esquema de partição FILESTREAM**  

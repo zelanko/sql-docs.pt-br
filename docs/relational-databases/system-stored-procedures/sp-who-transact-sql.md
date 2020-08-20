@@ -1,4 +1,5 @@
 ---
+description: sp_who (Transact-SQL)
 title: sp_who (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bfcf04c0f6dd7455bac9beaa65b29eb1b2a8f9cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a3d3af35b9d886e41d43e0c480c49a7e593e00f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463968"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login' | session ID | 'ACTIVE'`É usado para filtrar o conjunto de resultados.  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` É usado para filtrar o conjunto de resultados.  
   
  o *logon* é **sysname** que identifica os processos que pertencem a um logon específico.  
   
@@ -57,9 +58,9 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 |Coluna|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
-|**SPID**|**smallint**|ID da sessão.|  
+|**spid**|**smallint**|ID da sessão.|  
 |**ecid**|**smallint**|ID do contexto de execução de determinado thread associado a uma ID de sessão específica.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, em que 0 sempre representa o thread principal ou pai, e {1, 2, 3,... *n*} representa os subsegmentos.|  
-|**status**|**nchar(30)**|Status do processo. Os valores possíveis são:<br /><br /> **inativo**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reiniciando a sessão.<br /><br /> **em execução**. A sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, consulte [usando vários conjuntos de resultados ativos &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **plano de fundo**. A sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **reversão**. A sessão tem uma reversão de transação em processo.<br /><br /> **pendente**. A sessão está aguardando que um thread de trabalho seja disponibilizado.<br /><br /> **executável**. A tarefa da sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de hora.<br /><br /> **spinloop**. A tarefa da sessão está aguardando que um spinlock seja liberado.<br /><br /> **suspenso**. A sessão está aguardando que um evento, como E/S, seja concluído.|  
+|**status**|**nchar(30)**|Status do processo. Os valores possíveis são:<br /><br /> **inativo**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reiniciando a sessão.<br /><br /> **em execução**. A sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, confira [Usando o MARS &#40;conjunto de resultados ativos múltiplos&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **plano de fundo**. A sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **reversão**. A sessão tem uma reversão de transação em processo.<br /><br /> **pendente**. A sessão está aguardando que um thread de trabalho seja disponibilizado.<br /><br /> **executável**. A tarefa da sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de hora.<br /><br /> **spinloop**. A tarefa da sessão está aguardando que um spinlock seja liberado.<br /><br /> **suspenso**. A sessão está aguardando que um evento, como E/S, seja concluído.|  
 |**loginame**|**nchar(128)**|Nome de logon associado a determinado processo.|  
 |**hostname**|**nchar(128)**|Nome do host ou computador de cada processo.|  
 |**blk**|**Char (5)**|ID de sessão do processo de bloqueio, se houver. Caso contrário, essa coluna será zero.<br /><br /> Quando uma transação associada a uma ID de sessão especificada for bloqueada por uma transação distribuída órfã, essa coluna retornará um '-2' para o bloqueio da transação órfã.|  
@@ -120,8 +121,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_lock](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [Processos desys.sys&#40;&#41;de Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [ Processos desys.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

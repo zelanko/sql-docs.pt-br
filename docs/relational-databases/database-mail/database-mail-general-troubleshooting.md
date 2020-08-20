@@ -1,4 +1,5 @@
 ---
+description: Etapas de solução de problemas gerais do Database Mail
 title: Solução de problemas gerais do Database Mail
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 92496d6c02903ad6c7c14c5b2fd134797f608997
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 524b2cb81b5c50eadfefd607f4bb62a7ac3bd6cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461020"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Etapas de solução de problemas gerais do Database Mail 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

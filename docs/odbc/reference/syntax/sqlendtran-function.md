@@ -1,4 +1,5 @@
 ---
+description: Função SQLEndTran
 title: Função SQLEndTran | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cce7792e52fce4984f3da41e11d79c34b6b79e53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fea27beb03c19dd9499175678ecfdcb7759a73f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461126"
 ---
 # <a name="sqlendtran-function"></a>Função SQLEndTran
 **Conformidade**  
@@ -62,7 +63,7 @@ SQLRETURN SQLEndTran(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLEndTran** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com o *identificador* e *identificador*apropriados. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLEndTran** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -75,7 +76,7 @@ SQLRETURN SQLEndTran(
 |25S03|A transação é revertida|O driver não pôde garantir que todo o trabalho na transação global pudesse ser concluído atomicamente, e todo o trabalho na transação ativa no *identificador* foi revertido.|  
 |40001|Falha de serialização|A transação foi revertida devido a um deadlock de recurso com outra transação.|  
 |40002|Violação de restrição de integridade|O *complettype* foi SQL_COMMIT e o compromisso das alterações causou a violação da restrição de integridade. Como resultado, a transação foi revertida.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*szMessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* szMessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *ConnectionHandle*. A função foi chamada e antes de concluir a execução da [função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) foi chamada no *ConnectionHandle*. Em seguida, a função foi chamada novamente no *ConnectionHandle*.<br /><br /> A função foi chamada e antes de concluir a execução de **SQLCancelHandle** foi chamada no *ConnectionHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para um identificador de instrução associado ao *ConnectionHandle* e ainda estava em execução quando **SQLEndTran** foi chamado.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *ConnectionHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para um identificador de instrução associado ao *ConnectionHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *identificador* com *HandleType* definido como SQL_HANDLE_DBC e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados a *Handle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  

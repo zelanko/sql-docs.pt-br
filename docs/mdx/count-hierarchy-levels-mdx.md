@@ -1,4 +1,5 @@
 ---
+description: Count (Níveis de hierarquia) (MDX)
 title: Contagem (níveis de hierarquia) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 17fe804de8bf2c20581ca5c00bee3a28dbce4d55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5ebf525df144b0fd1dd81ba5b223045b2ecfd88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461638"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (Níveis de hierarquia) (MDX)
 

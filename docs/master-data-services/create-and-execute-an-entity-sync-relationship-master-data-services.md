@@ -1,4 +1,5 @@
 ---
+description: Criar e executar um relacionamento de sincronização de entidade (Master Data Services)
 title: Criar e executar um relacionamento de sincronização de entidade
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6e96975fbd7946c53f60af29a91cec938b0ffeb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461788"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Criar e executar um relacionamento de sincronização de entidade (Master Data Services)
 

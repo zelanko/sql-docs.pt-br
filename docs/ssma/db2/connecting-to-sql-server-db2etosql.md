@@ -1,4 +1,5 @@
 ---
+description: Conectando-se ao SQL Server (DB2eToSQL)
 title: Conectando-se ao SQL Server (DB2eToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d04d44abe758ffb15e57944a624ac5b7a87546d4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e8c231223beea2d29e3af06527fdcf1627e381e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463530"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Conectando-se ao SQL Server (DB2eToSQL)
 Para migrar bancos de dados do DB2 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou o Azure SQL Database, você deve se conectar a qualquer uma dessas instâncias de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando você se conecta, o SSMA obtém metadados sobre todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exibe os metadados do banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados. O SSMA armazena informações sobre a qual instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] você está conectado, mas não armazena senhas.  
@@ -28,7 +29,7 @@ A conta usada para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 -   Para converter objetos do DB2 em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe, para atualizar metadados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou para salvar a sintaxe convertida em scripts, a conta deve ter permissão para fazer logon na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Para carregar objetos de banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a conta deve ser membro da função de servidor **sysadmin** . Isso é necessário para instalar assemblies CLR.  
+-   Para carregar objetos de banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a conta deve ser membro da função de servidor   **sysadmin** . Isso é necessário para instalar assemblies CLR.  
   
 -   Para migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, a conta deve ser membro da função de servidor **sysadmin** . Isso é necessário para executar os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pacotes de migração de dados do agente.  
   
@@ -78,11 +79,11 @@ Ao definir as propriedades de conexão, você também especifica o banco de dado
   
 -   Você poderá se conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for SQL Server 2012.  
   
-|TIPO de projeto versus versão do servidor de destino|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Versão: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Versão: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versão: 13. x)|Banco de Dados SQL do Azure|  
+|TIPO de projeto versus versão do servidor de destino|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Versão: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Versão: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versão: 13. x)|Banco de Dados SQL do Azure|  
 |-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Sim|Sim|Sim||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||Sim|Sim||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||Sim||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||Sim|Sim||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||Sim||  
 |Banco de Dados SQL do Azure||||Sim|  
   
 > [!IMPORTANT]  

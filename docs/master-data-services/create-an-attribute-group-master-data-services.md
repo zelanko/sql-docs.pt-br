@@ -1,4 +1,5 @@
 ---
+description: Criar um grupo de atributo (Master Data Services)
 title: Criar um grupo de atributo
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2075a9b9faddf7028f0b0b27b52cf34db20a17ba
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ffe84797d519961ab26e6d43fb48a5c4c2dd3e13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461822"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Criar um grupo de atributo (Master Data Services)
 

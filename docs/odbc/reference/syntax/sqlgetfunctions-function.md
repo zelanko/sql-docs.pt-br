@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetFunctions
 title: Função SQLGetFunctions | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15537b28ff2bae8a4fcd3e7be82426eb53aa83a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 396c677c6052176240afaa86e02c5f52ba4739b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460979"
 ---
 # <a name="sqlgetfunctions-function"></a>Função SQLGetFunctions
 **Conformidade**  
@@ -65,14 +66,14 @@ SQLRETURN SQLGetFunctions(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLGetFunctions** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetFunctions** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
 |--------|-----|-----------|  
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado falhou antes da função concluir o processamento.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) **SQLGetFunctions** foi chamado antes de **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** foi chamado para o *ConnectionHandle* e retornou SQL_NEED_DATA. Essa função foi chamada antes de **SQLBrowseConnect** retornar SQL_SUCCESS_WITH_INFO ou SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *ConnectionHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
@@ -137,7 +138,7 @@ SQLRETURN SQLGetFunctions(
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** será retornado como com suporte apenas se o driver der suporte a **SQLCancel** e **SQLCancelHandle**. Se **SQLCancel** for suportado, mas **SQLCancelHandle** não for, o aplicativo ainda poderá chamar **SQLCancelHandle** em um identificador de instrução, pois ele será mapeado para **SQLCancel**.  
+ [2]   **SQLCancelHandle** será retornado como com suporte apenas se o driver der suporte a **SQLCancel** e **SQLCancelHandle**. Se **SQLCancel** for suportado, mas **SQLCancelHandle** não for, o aplicativo ainda poderá chamar **SQLCancelHandle** em um identificador de instrução, pois ele será mapeado para **SQLCancel**.  
   
 ## <a name="sql_func_exists-macro"></a>SQL_FUNC_EXISTS macro  
  A macro SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) é usada para determinar o suporte de funções ODBC 3 *. x* ou anteriores após **SQLGetFunctions** ter sido chamado com um argumento *FunctionID* de SQL_API_ODBC3_ALL_FUNCTIONS. O aplicativo chama SQL_FUNC_EXISTS com o argumento *SupportedPtr* definido como o *SupportedPtr* passado em *SQLGetFunctions*e com o argumento *FunctionID* definido como o **#define** para a função. SQL_FUNC_EXISTS retornará SQL_TRUE se a função tiver suporte e SQL_FALSE caso contrário.  

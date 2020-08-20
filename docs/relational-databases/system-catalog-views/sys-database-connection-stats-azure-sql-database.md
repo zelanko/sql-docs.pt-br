@@ -1,4 +1,5 @@
 ---
+description: sys.database_connection_stats (Banco de Dados SQL do Azure)
 title: sys.database_connection_stats
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55bfc4c575cae194b45e6aa7dbd01fbe38562a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460658"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Banco de Dados SQL do Azure)
 
@@ -33,10 +34,10 @@ ms.locfileid: "85787137"
 
   Contém estatísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] eventos de **conectividade** de banco de dados, fornecendo uma visão geral dos sucessos e falhas de conexão de banco de dados. Para obter mais informações sobre eventos de conectividade, consulte tipos de evento em [Sys. event_log &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Estatística|Tipo|Description|  
+|Estatística|Type|Descrição|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados.|  
-|**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo: <br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e hora UTC do término do intervalo de agregação. **End_time** sempre é exatamente 5 minutos depois do **start_time** correspondente na mesma linha.|  
 |**success_count**|**int**|Número de conexões bem-sucedidas.|  
 |**total_failure_count**|**int**|Número total de conexões com falha. Esta é a soma de **connection_failure_count**, **terminated_connection_count**e **throttled_connection_count**e não inclui eventos de deadlock.|  

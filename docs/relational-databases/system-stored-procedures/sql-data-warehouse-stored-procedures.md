@@ -1,4 +1,5 @@
 ---
+description: SQL Data Warehouse procedimentos armazenados
 title: SQL Data Warehouse procedimentos armazenados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,17 +13,17 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 97026172f23768f1393ab2b97d25b8b0b51fd1ad
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 50bb122223d9b2727f2d87fb076ac00fd46d0943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463898"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse procedimentos armazenados
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]fornece procedimentos internos que você pode usar para executar operações relacionadas a funções de banco de dados. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]inclui os seguintes procedimentos de sistema:  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] fornece procedimentos internos que você pode usar para executar operações relacionadas a funções de banco de dados. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inclui os seguintes procedimentos de sistema:  
   
 ##  <a name="sp_datatype_info_90-40sql-data-warehouse41"></a><a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
@@ -42,7 +43,7 @@ ms.locfileid: "87396249"
 >  Alguns procedimentos armazenados adicionais do sistema são usados somente dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou por meio de APIs de cliente e não se destinam a uso geral do cliente. Esses procedimentos estão listados em [procedimentos armazenados do sistema (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Esses procedimentos estão sujeitos a alterações e a compatibilidade não é garantida. Todos os procedimentos da lista não estão disponíveis no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções armazenadas do sistema &#40;&#41;Transact-SQL](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
+ [Funções armazenadas do sistema &#40;&#41;Transact-SQL ](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Trabalhar com o console do SSMA para Oracle (OracleToSQL)
 title: Trabalhando com o console do SSMA para Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +11,15 @@ ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d99fb680e6b2ca9b8ce044d8f8c322c6bce06cec
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c0a49116d5f48d2f832cb4c647934951373efaea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463199"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Trabalhar com o console do SSMA para Oracle (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Assistente de Migração (SSMA) versão para Oracle agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console, o SSMA permite a interface do nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Assistente de Migração (SSMA) versão para Oracle agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console, o SSMA permite a interface do nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
   
 Esta seção explica o procedimento para migrar o banco de dados Oracle usando o aplicativo de console do SSMA.  
   

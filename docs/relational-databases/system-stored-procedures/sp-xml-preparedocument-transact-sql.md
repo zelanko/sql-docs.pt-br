@@ -1,4 +1,5 @@
 ---
+description: sp_xml_preparedocument (Transact-SQL)
 title: sp_xml_preparedocument (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48a414d4987d5b10349c6c4b2babe2d964875cb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463932"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

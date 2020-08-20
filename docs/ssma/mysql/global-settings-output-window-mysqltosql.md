@@ -1,4 +1,5 @@
 ---
+description: Configurações globais (Janela de Saída) (MySQLToSQL)
 title: Configurações globais (Janela de Saída) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5fbea045dfb7ffbd2d7ac370e9b37b961f825710
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7776ed791dc0ee1cf40525e3fefa68e9717abe55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463354"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>Configurações globais (Janela de Saída) (MySQLToSQL)
 Use a caixa de diálogo **configurações globais** para especificar as configurações do SSMA.  

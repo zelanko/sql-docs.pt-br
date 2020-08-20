@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 6: Desconectar-se da fonte de dados'
 title: 'Etapa 6: desconectar da fonte de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ad759ba-4721-4d8f-9b26-de976d4fc1a0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df8cd94435d74bf813b0b64be0753a0beb44d354
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06b3b50653578388ca3d4e20b598f63879f38e88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461338"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>Etapa 6: Desconectar-se da fonte de dados
 A etapa final é desconectar da fonte de dados, conforme mostrado na ilustração a seguir. Primeiro, o aplicativo libera qualquer identificador de instrução chamando **SQLFreeHandle**. Para obter mais informações, consulte [liberando um identificador de instrução](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  

@@ -1,4 +1,5 @@
 ---
+description: Mover um banco de dados usando desanexação e anexação (Transact-SQL)
 title: Mover um banco de dados usando desanexação e anexação (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e26ca45fb3851926959795675e1dd38a7f3f3a14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5696940a7b2eb5d633d6077217ff30b259876e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460994"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover um banco de dados usando desanexação e anexação (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

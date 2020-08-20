@@ -1,4 +1,5 @@
 ---
+description: Propriedades da coluna de tabela (SQL Server Management Studio)
 title: Propriedades da coluna de tabela (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -15,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463808"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriedades da coluna de tabela (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "87396990"
  Exibe informações sobre uma coluna computada. O valor mostrado para propriedade é igual ao valor da propriedade filho **Fórmula** e exibe a fórmula para a coluna computada.  
   
 > [!NOTE]  
->  Para alterar o valor mostrado para a propriedade **Especificação de Coluna Computada** , você deve expandi-la e editar a propriedade filho **Fórmula** .  
+>   Para alterar o valor mostrado para a propriedade **Especificação de Coluna Computada** , você deve expandi-la e editar a propriedade filho **Fórmula** .  
   
 -   A**Fórmula** exibe a fórmula para a coluna computada. Para editar essa propriedade, digite diretamente uma fórmula nova.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "87396990"
  Exibe informações sobre se e como a coluna impõe exclusividade em seus valores. O valor da propriedade indica se esta coluna é ou não uma coluna de identidade e se é igual ao valor da propriedade filho **É identidade**.  
   
 > [!NOTE]  
->  Para alterar o valor mostrado para a propriedade **Especificação de identidade** , é necessário expandir e editar a propriedade filho **É identidade** .  
+>   Para alterar o valor mostrado para a propriedade **Especificação de identidade** , é necessário expandir e editar a propriedade filho **É identidade** .  
   
 -   **É identidade** Indica se a coluna é ou não uma coluna de identidade. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   

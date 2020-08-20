@@ -1,4 +1,5 @@
 ---
+description: Alterar a ordem dos atributos
 title: Alterar a ordem dos atributos
 ms.custom: ''
 ms.date: 03/15/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 345b397026cbf4fe4ed993ecd9f8eb349d6bbef5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 629c42658b16f9ff64c4ba3d8d62004fe13840aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461978"
 ---
 # <a name="change-the-order-of-attributes"></a>Alterar a ordem dos atributos
 

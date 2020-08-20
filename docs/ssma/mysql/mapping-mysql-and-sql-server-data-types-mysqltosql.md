@@ -1,4 +1,5 @@
 ---
+description: Mapear os tipos de dados do SQL Server e MySQL (MySQLToSQL)
 title: Mapeando MySQLToSQL (tipos de dados MySQL e SQL Server) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0df267807ff824cebac580fb3454d63de8dfe31b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463379"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapear os tipos de dados do SQL Server e MySQL (MySQLToSQL)
 Tipos de banco de dados MySQL diferem dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados SQL ou do Azure Ao converter objetos do banco de dados MySQL em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do ou SQL Azure, você deve especificar como mapear tipos de dado de MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão ou pode personalizar os mapeamentos, conforme mostrado nos procedimentos a seguir.  

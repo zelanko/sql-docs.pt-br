@@ -1,4 +1,5 @@
 ---
+description: 'Lição 1-6: Adicionar e configurar as transformações de Pesquisa'
 title: 'Etapa 6: Adicionar e configurar as transformações de Pesquisa | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/19/2019
@@ -9,12 +10,12 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
-ms.openlocfilehash: f3c7a1f28e32a426b32edc397725a1495e562bdd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462021"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lição 1-6: Adicionar e configurar as transformações de Pesquisa
 
@@ -96,7 +97,7 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
     1.  Na caixa de diálogo **Gerenciador de conexões OLE DB**, verifique se **localhost.AdventureWorksDW2012** é exibido.  
   
-    2.  Na caixa **Usar uma tabela ou exibição**, insira ou selecione **[dbo].[DimDate]** .  
+    2.  Na caixa **Usar uma tabela ou exibição**, insira ou selecione **[dbo].[DimDate]**.  
   
 8.  Na página **Colunas** , faça as seguintes seleções:  
   

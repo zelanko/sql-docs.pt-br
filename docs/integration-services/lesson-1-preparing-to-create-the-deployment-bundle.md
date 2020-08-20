@@ -1,4 +1,5 @@
 ---
+description: 'Lição 1: Preparando-se para criar o pacote de implantação'
 title: 'Lição 1: preparando-se para criar o pacote de implantação | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e13cbefc2c46acf07ad3d1d412b652089fe72adb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c5ef2363d07fc6560199154633fc45d93eb10c13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461981"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Lição 1: Preparando-se para criar o pacote de implantação
 
@@ -35,18 +36,18 @@ Depois que você adicionar as configurações, deverá abrir os pacotes no Desig
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Criando pastas de trabalho e variáveis de ambiente](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [Etapa 1: Criar pastas de trabalho e variáveis de ambiente](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
--   [Etapa 2: Criando o projeto de implantação](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+-   [Etapa 2: Criar o projeto de implantação](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [Etapa 3: Adicionando pacotes e outros arquivos](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [Etapa 3: Adicionar pacotes e outros arquivos](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [Etapa 4: Adicionando configurações de pacote](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [Etapa 4: Adicionar configurações de pacote](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
--   [Etapa 5: Testando os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+-   [Etapa 5: Testar os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
-[Etapa 1: Criando pastas de trabalho e variáveis de ambiente](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+[Etapa 1: Criar pastas de trabalho e variáveis de ambiente](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
   
   

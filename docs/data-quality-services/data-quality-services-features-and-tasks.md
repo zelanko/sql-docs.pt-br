@@ -1,4 +1,5 @@
 ---
+description: Recursos e tarefas do Data Quality Services
 title: Recursos e tarefas do Data Quality Services
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f18a988a010026b3aeca3d23fc5616c5a7b685b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68ac5a3101426d159b75035b6203ff4f8b8f6cda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462153"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Recursos e tarefas do Data Quality Services
 
@@ -29,7 +30,7 @@ ms.locfileid: "85882899"
   
  [Projetos de qualidade de dados &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)  
   
- [Data Cleansing](../data-quality-services/data-cleansing.md)  
+ [Limpeza de dados](../data-quality-services/data-cleansing.md)  
   
  [Correspondência de dados](../data-quality-services/data-matching.md)  
   

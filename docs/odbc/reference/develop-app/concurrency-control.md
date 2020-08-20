@@ -1,4 +1,5 @@
 ---
+description: Controle de simultaneidade
 title: Controle de simultaneidade | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8afba3b3b8c8fee1307473c790186d509b37d982
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e47308cc0224ef73689a3b82d1ab4186fd0c823a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461548"
 ---
 # <a name="concurrency-control"></a>Controle de simultaneidade
 A *simultaneidade* é a capacidade de duas transações usarem os mesmos dados ao mesmo tempo e, com o maior isolamento da transação, geralmente vem com uma simultaneidade reduzida. Isso ocorre porque o isolamento de transação é geralmente implementado por linhas de bloqueio e, à medida que mais linhas são bloqueadas, menos transações podem ser concluídas sem serem bloqueadas pelo menos temporariamente por uma linha bloqueada. Embora a simultaneidade reduzida seja geralmente aceita como uma compensação para os níveis de isolamento de transação mais altos necessários para manter a integridade do banco de dados, ela pode se tornar um problema em aplicativos interativos com alta atividade de leitura/gravação que usa cursores.  

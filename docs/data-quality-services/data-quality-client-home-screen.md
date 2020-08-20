@@ -1,4 +1,5 @@
 ---
+description: Tela inicial do Cliente Data Quality
 title: Tela inicial do Cliente Data Quality
 ms.date: 02/29/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4b1a25fc4bee5c66838c7e29f7c34dc67a572b79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aaca3245731102ad667f8507761f57da0adb1437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462394"
 ---
 # <a name="data-quality-client-home-screen"></a>Tela inicial do Cliente Data Quality
 

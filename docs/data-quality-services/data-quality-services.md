@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services
 title: Data Quality Services
 ms.date: 10/12/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 138086e898617da8e14714dd97e74568bcd57c0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc765b9cca33e249e4efda60bad08781eee35b15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462132"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 

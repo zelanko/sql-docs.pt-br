@@ -1,4 +1,5 @@
 ---
+description: Escolher uma fonte de dados ou um driver
 title: Escolhendo uma fonte de dados ou um driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b10aafad95463f56ec0f5a029eac59a02cff003b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215e249fe354396239118394d4e792ced67bc82d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461598"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Escolher uma fonte de dados ou um driver
 A fonte de dados ou o driver usado por um aplicativo, às vezes, é embutido em código no aplicativo. Por exemplo, um aplicativo personalizado escrito por um departamento de MIS para transferir dados de uma fonte de dados para outra conteria os nomes dessas fontes de dados: o aplicativo simplesmente não funcionaria com nenhuma outra fonte de dados. Outro exemplo é um aplicativo vertical, como um usado para a entrada de pedidos. Esse aplicativo sempre usa a mesma fonte de dados, que tem um esquema predefinido conhecido pelo aplicativo.  

@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_sessions (Transact-SQL)
 title: sys. server_event_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5821e5a64670bec6f9129ee98bd343f176048db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c98eece7a34af4ceb0693007690ec1499d91cef4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460567"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,8 +51,8 @@ ms.locfileid: "85885983"
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições de catálogo de eventos estendidos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de eventos estendidos &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

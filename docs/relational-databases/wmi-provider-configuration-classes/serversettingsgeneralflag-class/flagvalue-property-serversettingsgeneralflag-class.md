@@ -1,4 +1,5 @@
 ---
+description: Propriedade FlagValue (classe ServerSettingsGeneralFlag)
 title: Propriedade FlagValue (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98619c6531d77749e067d4a2f43a69707fcdc800
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9602d0c524b8c71be5969c7e1f95978c48d04090
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463553"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>Propriedade FlagValue (classe ServerSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o valor do sinalizador.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

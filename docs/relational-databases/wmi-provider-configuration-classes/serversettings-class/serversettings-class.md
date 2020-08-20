@@ -1,4 +1,5 @@
 ---
+description: Classe ServerSettings
 title: Classe ServerSettings
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbead3497dbbbed3c6c47f629549d7e4627fc72c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c4e7362cb68e37fe90c63c11501d525b61c83ced
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463570"
 ---
 # <a name="serversettings-class"></a>Classe ServerSettings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

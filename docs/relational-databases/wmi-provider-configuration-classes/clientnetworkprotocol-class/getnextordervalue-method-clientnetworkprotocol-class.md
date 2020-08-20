@@ -1,4 +1,5 @@
 ---
+description: Método GetNextOrderValue (classe ClientNetworkProtocol)
 title: Método GetNextOrderValue (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a68422d64510c25415c4f578573916d055247611
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b0ce809d245550b8dcc0b38e23415ff42257a476
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463659"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>Método GetNextOrderValue (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Seleciona o protocolo que está na próxima posição na lista de protocolos.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   

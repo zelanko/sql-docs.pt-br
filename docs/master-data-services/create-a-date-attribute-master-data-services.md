@@ -1,4 +1,5 @@
 ---
+description: Criar um atributo de data (Master Data Services)
 title: Criar um atributo de data
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5b2bb59ff72884649feb2167c41c5d838b9779d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461891"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Criar um atributo de data (Master Data Services)
 

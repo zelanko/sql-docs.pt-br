@@ -1,4 +1,5 @@
 ---
+description: 'Lição 1-7: Adicionar e configurar o destino OLE DB'
 title: 'Etapa 7: Adicionar e configurar o destino OLE DB | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c72ac0393733511f63844ae50b20a40e4c12ea4a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462058"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lição 1-7: Adicionar e configurar o destino OLE DB
 
@@ -41,7 +42,7 @@ Nesta tarefa, você adiciona e configura um destino OLE DB para usar o gerenciad
   
 6.  Na caixa de diálogo **Editor de Destino do OLE DB**, verifique se **localhost.AdventureWorksDW2012** está selecionado na caixa **Gerenciador de Conexões OLE DB**.  
   
-7.  Na caixa **Nome da tabela ou da exibição**, insira ou selecione **[dbo].[FactCurrencyRate]** .  
+7.  Na caixa **Nome da tabela ou da exibição**, insira ou selecione **[dbo].[FactCurrencyRate]**.  
   
 8.  Selecione o botão **Novo** para criar uma nova tabela.  Altere o nome da tabela no script de **Destino OLE DB de Exemplo** para **NewFactCurrencyRate**.  Selecione **OK**.  
   
