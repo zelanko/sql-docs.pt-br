@@ -1,4 +1,5 @@
 ---
+description: Objetos do sistema de mensagens do Database Mail
 title: Objetos do sistema de mensagens do Database Mail | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e627bd6505d43737061d8fab34cc819d52c22106
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494539"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos do sistema de mensagens do Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85726477"
   
  Esses objetos são a interface para o Database Mail dentro do banco de dados de host de correio. Outros objetos estão instalados para implementar a funcionalidade oferecida pelos objetos listados acima. No entanto, esses objetos são reservados para uso interno.  
   
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Exibir**|Lista todas as mensagens submetidas ao Database Mail.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Exibir**|Lista mensagens sobre o comportamento do [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  

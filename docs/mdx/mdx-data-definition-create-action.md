@@ -1,4 +1,5 @@
 ---
+description: Definição de dados MDX – CREATE ACTION
 title: CRIAR instrução de ação (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7132c28e93dbc11eee1c5a4e4d53126f280fa74a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494899"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definição de dados MDX – CREATE ACTION
 
@@ -75,14 +76,14 @@ FOR
  Os aplicativos cliente podem criar e executar ações que não são seguras, além de usar funções que não são seguras. Para evitar essas situações, use a propriedade **Opções de segurança** . Para obter mais informações, consulte as Propriedade de Opções de Segurança.  
   
 > [!NOTE]  
->  Esta instrução é incluída para compatibilidade com versões anteriores. Não há suporte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]para ações novas para, como ações de detalhamento ou de relatório.  
+>  Esta instrução é incluída para compatibilidade com versões anteriores. Não há suporte para ações novas para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , como ações de detalhamento ou de relatório.  
   
 ## <a name="action-types"></a>Tipos de ação  
- A tabela a seguir descreve os diferentes tipos de ações disponíveis [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no.  
+ A tabela a seguir descreve os diferentes tipos de ações disponíveis no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 |Tipo de ação|Descrição|  
 |-----------------|-----------------|  
-|**URL**|A cadeia de caracteres de ação retornada é uma URL que deve ser aberto usando um navegador de Internet.<br /><br /> Observação: se essa ação não iniciar `https://` com ou `https://`, a ação não estará disponível para o navegador, a menos que **safetyoptions** esteja definido como **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|A cadeia de caracteres de ação retornada é uma URL que deve ser aberto usando um navegador de Internet.<br /><br /> Observação: se essa ação não iniciar com `https://` ou `https://` , a ação não estará disponível para o navegador, a menos que **SafetyOptions** esteja definido como **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|A cadeia de caracteres de ação retornada é um script HTML. A cadeia de caracteres deve ser salva em um arquivo e o arquivo deve ser processado com um navegador de Internet. Neste caso, um script inteiro pode ser executado como parte do HTML gerado.|  
 |**PRIVACIDADE**|A cadeia de caracteres de ação retornada é uma instrução que precisa ser executada definindo o método **ICommand:: SetText** de um objeto de comando para a cadeia de caracteres e chamando o método **ICommand:: execute**. Se o comando não tiver êxito, um erro será retornado.|  
 |**DATASET**|A cadeia de caracteres de ação retornada é uma instrução MDX que precisa ser executada definindo o método **ICommand:: SetText** de um objeto de comando para a cadeia de caracteres e chamando o método **ICommand:: execute** . A ID de interface solicitada (IID) deve ser **IDataset**. O comando terá êxito se um conjunto de dados tiver sido criado. O aplicativo cliente deve permitir que o usuário navegue pelo conjunto de dados retornado.|  

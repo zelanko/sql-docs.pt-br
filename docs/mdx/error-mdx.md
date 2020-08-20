@@ -1,4 +1,5 @@
 ---
+description: Função Error (MDX)
 title: Erro (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 91d07c6bbb4eb4731c9a802e47cd8f4c71aa5aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f95ee71586f5571d91221fe8889198a44a1252b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68031232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494919"
 ---
 # <a name="error-mdx"></a>Função Error (MDX)
 

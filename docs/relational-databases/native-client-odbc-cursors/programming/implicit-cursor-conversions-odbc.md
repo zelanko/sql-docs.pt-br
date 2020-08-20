@@ -1,4 +1,5 @@
 ---
+description: Conversões implícitas de cursor (ODBC)
 title: Conversões implícitas de cursor (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,11 +16,12 @@ ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d480ef151f53c434c9df44f12ca0a4865a73a55b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1528271f151e915bfa5b6f075f6920778f1bd443
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494091"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Conversões implícitas de cursor (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,6 +36,6 @@ szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"
  O aplicativo pode determinar que tipo de cursor está sendo usado agora chamando **SQLGetStmtOption** definido como SQL_CURSOR_TYPE. A conversão do tipo de cursor se aplica somente a uma instrução. O próximo **SQLExecDirect** ou **SQLExecute** será feito usando as configurações de cursor da instrução original.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detalhes de programação do cursor &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [Detalhes de programação do cursor &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Processamento do Graph com o SQL Server e o Banco de Dados SQL do Azure
 title: Processamento de grafo
 titleSuffix: SQL Server and Azure SQL Database
 ms.date: 06/26/2019
@@ -15,17 +16,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494183"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento do Graph com o SQL Server e o Banco de Dados SQL do Azure
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oferece recursos de banco de dados de grafo para modelar relações muitos para muitos. As relações de grafo são integradas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e recebem os benefícios de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o sistema de gerenciamento de banco de dados básico.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece recursos de banco de dados de grafo para modelar relações muitos para muitos. As relações de grafo são integradas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e recebem os benefícios de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o sistema de gerenciamento de banco de dados básico.
 
 
 ## <a name="what-is-a-graph-database"></a>O que é um banco de dados de grafo?  
@@ -42,12 +43,12 @@ Um banco de dados relacional pode obter qualquer coisa que um banco de dados de 
 -    Seu aplicativo tem relacionamentos muitos-para-muitos complexos; à medida que o aplicativo evolui, novas relações são adicionadas.
 -    É necessário analisar as relações e os dados interconectados.
 
-## <a name="graph-features-introduced-in-sssqlv14"></a>Recursos de grafo introduzidos no[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>Recursos de grafo introduzidos no [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Estamos começando a adicionar extensões de grafo ao SQL Server, para facilitar o armazenamento e a consulta de dados de grafo. Os recursos a seguir são introduzidos na primeira versão. 
 
 
 ### <a name="create-graph-objects"></a>Criar objetos de grafo
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]as extensões permitirão que os usuários criem tabelas de nó ou borda. Os nós e as bordas podem ter propriedades associadas a eles. Como os nós e as bordas são armazenados como tabelas, todas as operações com suporte em tabelas relacionais têm suporte na tabela de nó ou borda. Veja um exemplo:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] as extensões permitirão que os usuários criem tabelas de nó ou borda. Os nós e as bordas podem ter propriedades associadas a eles. Como os nós e as bordas são armazenados como tabelas, todas as operações com suporte em tabelas relacionais têm suporte na tabela de nó ou borda. Veja um exemplo:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -58,7 +59,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Os nós e as bordas são armazenados como tabelas  
 
 ### <a name="query-language-extensions"></a>Extensões de linguagem de consulta  
-A nova `MATCH` cláusula é introduzida para dar suporte à correspondência de padrões e à navegação de vários saltos por meio do grafo. A `MATCH` função usa sintaxe de estilo de arte ASCII para correspondência de padrões. Por exemplo:  
+A nova `MATCH` cláusula é introduzida para dar suporte à correspondência de padrões e à navegação de vários saltos por meio do grafo. A `MATCH` função usa sintaxe de estilo de arte ASCII para correspondência de padrões. Por exemplo:   
 
 ```   
 -- Find friends of John

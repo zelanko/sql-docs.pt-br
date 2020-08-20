@@ -1,4 +1,5 @@
 ---
+description: Exists (MDX)
 title: Exists (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494909"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
   Retorna o conjunto de tuplas do primeiro conjunto especificado que existe com uma ou mais tuplas do segundo conjunto especificado. Essa função executa manualmente o que o auto exists executa automaticamente. Para obter mais informações sobre a existência automática, consulte os [principais conceitos em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Se o nome \<do grupo de medidas opcional> for fornecido, a função retornará tuplas que existem com uma ou mais tuplas do segundo conjunto e as tuplas que têm linhas associadas na tabela de fatos do grupo de medidas especificado.  
+ Se o opcional \<Measure Group Name> for fornecido, a função retornará tuplas que existem com uma ou mais tuplas do segundo conjunto e as tuplas que têm linhas associadas na tabela de fatos do grupo de medidas especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -93,10 +94,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [&#41;de &#40;MDX interjunção](../mdx/crossjoin-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [&#41;de &#40;MDX interjunção ](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin&#41;MDX &#40;](../mdx/nonemptycrossjoin-mdx.md)   
- [&#41;&#40;MDX não vazios](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;&#41;MDX](../mdx/isempty-mdx.md)  
+ [&#41;&#40;MDX não vazios ](../mdx/nonempty-mdx.md)   
+ [IsEmpty &#40;&#41;MDX ](../mdx/isempty-mdx.md)  
   
   

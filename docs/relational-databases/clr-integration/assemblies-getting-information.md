@@ -1,4 +1,5 @@
 ---
+description: Obtendo informações sobre assemblies
 title: Obtendo informações sobre assemblies | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a26ef36810a1c3ed188d6457ecb02e7e0411c9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8ecfa4daa78bcdb2d9ae3d2304ff30f84e626a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494717"
 ---
 # <a name="assemblies---getting-information"></a>Assemblies – obter informações
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

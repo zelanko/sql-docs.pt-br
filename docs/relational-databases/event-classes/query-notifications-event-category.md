@@ -1,4 +1,5 @@
 ---
+description: Categoria de eventos Query Notifications
 title: Categoria de evento Query Notifications | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,16 +13,16 @@ ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e2362d5d106d8605c1c7d7f45a60d8d5d4b044
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 366cab7b22913a45085d358607e3e6d656a4728f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494266"
 ---
 # <a name="query-notifications-event-category"></a>Categoria de eventos Query Notifications
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A categoria de evento **Notificações de Consultas** contém classes de eventos que relatam informações que os desenvolvedores e administradores podem usar para monitorar e solucionar problemas de notificações de consulta.  
+   A categoria de evento **Notificações de Consultas** contém classes de eventos que relatam informações que os desenvolvedores e administradores podem usar para monitorar e solucionar problemas de notificações de consulta.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Classe de evento QN:Dynamics](../../relational-databases/event-classes/qn-dynamics-event-class.md)  

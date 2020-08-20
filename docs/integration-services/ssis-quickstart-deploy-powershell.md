@@ -1,4 +1,5 @@
 ---
+description: Implantar um projeto do SSIS com o PowerShell
 title: Implantar um projeto do SSIS com o PowerShell | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2d9a8e6cc8d071ee6f4c4d7557a437d7806f3d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fba08ada042e526f4f6321f328d67a55dd149b2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495472"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implantar um projeto do SSIS com o PowerShell
 
@@ -22,11 +23,11 @@ ms.locfileid: "86921894"
 
 Este guia de início rápido demonstra como usar um script do PowerShell para se conectar a um servidor de banco de dados e implantar um projeto do SSIS no Catálogo do SSIS.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
-## <a name="supported-platforms"></a>Plataformas compatíveis
+## <a name="supported-platforms"></a>Plataformas com suporte
 
 Você pode usar as informações neste guia de início rápido para implantar um projeto do SSIS nas seguintes plataformas:
 
@@ -49,7 +50,7 @@ Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informaçõe
 
 ## <a name="supported-authentication-method"></a>Método de autenticação compatível
 
-Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Confira os [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="ssis-powershell-provider"></a>Provedor do PowerShell do SSIS
 Forneça os valores adequados para as variáveis na parte superior do script a seguir e, em seguida, execute o script para implantar o projeto do SSIS.

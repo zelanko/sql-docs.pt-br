@@ -1,4 +1,5 @@
 ---
+description: Tarefa de Reorganização de Índice (Plano de Manutenção)
 title: Tarefa Reorganizar Índice (plano de manutenção) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c6615df0fafc2190eece4aa74c7bf36e57a2d80a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494158"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tarefa de Reorganização de Índice (Plano de Manutenção)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use a caixa de diálogo **Tarefa de Reorganização de Índice** para mover as páginas de índice em uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX REORGANIZE` com bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+   Use a caixa de diálogo **Tarefa de Reorganização de Índice** para mover as páginas de índice em uma ordem de pesquisa mais eficiente. Esta tarefa usa a instrução `ALTER INDEX REORGANIZE` com bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="options"></a>Opções  
  **Conexão**  

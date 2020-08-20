@@ -1,4 +1,5 @@
 ---
+description: Categoria de evento TSQL
 title: Categoria de evento TSQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca72015d0d10ff33b250a96c539f36c85f1a5cef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 585e69e546489f4130e7200f819244f89620492b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494245"
 ---
 # <a name="tsql-event-category"></a>Categoria de evento TSQL
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85789528"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento Exec Prepared SQL](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library executou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.|  
 |[Classe de evento Prepare SQL](../../relational-databases/event-classes/prepare-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library preparou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para uso.|  

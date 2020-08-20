@@ -1,4 +1,5 @@
 ---
+description: classe de evento CursorImplicitConversion
 title: Classe de evento CursorImplicitConversion | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f10d8be98d0eda99da5873f6b8e4799d64d01bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b7821fed8b960d98c2ef070ef21103b0d727207
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494422"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>classe de evento CursorImplicitConversion
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **CursorImplicitConversion** descreve eventos de conversão cursor-implícitos que acontecem em interfaces de programação de aplicativo (APIs) ou cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] . Eventos de conversão cursor-implícitos ocorrem quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] executa uma instrução Transact-SQL que não é suportada por cursores de servidor do tipo solicitado. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro que indica que o tipo de cursor foi alterado.  
+   A classe de evento **CursorImplicitConversion** descreve eventos de conversão cursor-implícitos que acontecem em interfaces de programação de aplicativo (APIs) ou cursores [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eventos de conversão cursor-implícitos ocorrem quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] executa uma instrução Transact-SQL que não é suportada por cursores de servidor do tipo solicitado. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro que indica que o tipo de cursor foi alterado.  
   
  Inclua a classe de evento **CursorImplicitConversion** em rastreamentos que estão registrando o desempenho de cursores.  
   
@@ -29,7 +30,7 @@ ms.locfileid: "85726287"
   
 ## <a name="cursorimplicitconversion-event-class-data-columns"></a>Colunas de dados de classe de evento CursorImplicitConversion  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BinaryData**|**imagem**|Tipo de cursor resultante. Os valores são:<br /><br /> 1 = Keyset<br /><br /> 2 = Dinâmico<br /><br /> 4 = Somente avanço<br /><br /> 8 = Estático<br /><br /> 16 = De avanço rápido|2|Sim|  

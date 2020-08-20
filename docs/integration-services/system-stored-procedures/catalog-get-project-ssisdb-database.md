@@ -1,4 +1,5 @@
 ---
+description: catalog.get_project (Banco de Dados SSISDB)
 title: catalog.get_project (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c9cf4af9eb84c725b8807329713a3cd62e42558a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d26de0736fc41d3b39f0f6c3e149b044c538ba41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495382"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (Banco de Dados SSISDB)
 
@@ -34,16 +35,16 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)** .  
+ O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- O nome do projeto. *project_name* é **nvarchar(128)** .  
+ O nome do projeto. *project_name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- O fluxo binário do projeto é retornado como **varbinary(MAX)** . Nenhum resultado será retornado se a pasta ou o projeto não for localizado.  
+ O fluxo binário do projeto é retornado como **varbinary(MAX)**. Nenhum resultado será retornado se a pasta ou o projeto não for localizado.  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

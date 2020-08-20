@@ -1,4 +1,5 @@
 ---
+description: Registrar um banco de dados como um DAC
 title: Registrar um banco de dados como um DAC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 431745d461d6977cf873cbdb83eebe5929694043
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b328f2fc32cf784caef1192bc8143b3ed9d1ffbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494723"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

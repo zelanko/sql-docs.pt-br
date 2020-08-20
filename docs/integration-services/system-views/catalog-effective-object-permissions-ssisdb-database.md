@@ -1,4 +1,5 @@
 ---
+description: catalog.effective_object_permissions (Banco de Dados SSISDB)
 title: catalog.effective_object_permissions (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af72db9d78859f9065673aa145bc4b763199b298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4af26b86804bd8717bfd3772442980483fbd2d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495275"
 ---
 # <a name="catalogeffective_object_permissions-ssisdb-database"></a>catalog.effective_object_permissions (Banco de Dados SSISDB)
 
@@ -29,7 +30,7 @@ ms.locfileid: "86912666"
 
   Exibe as permissões efetivas da entidade de segurança atual para todos os objetos no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`).|  
 |object_id|**bigint**|O ID (identificador exclusivo) ou a chave primária do objeto.|  

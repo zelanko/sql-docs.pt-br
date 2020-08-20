@@ -1,4 +1,5 @@
 ---
+description: Adicionar e modificar fontes de dados usando a instalação
 title: Adicionando e modificando fontes de dados usando a instalação | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494736"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Adicionar e modificar fontes de dados usando a instalação
 > [!IMPORTANT]  
@@ -57,7 +58,7 @@ ms.locfileid: "81281406"
   
 1.  As opções de clique fazem mais especificações sobre a configuração do ODBC driver for Oracle:  
   
-    -   **Tradução** -clique em selecionar para escolher um tradutor de dados carregado. O padrão é \<nenhum> de conversor.  
+    -   **Tradução** -clique em selecionar para escolher um tradutor de dados carregado. O padrão é \<No Translator>.  
   
     -   **Desempenho** – a caixa de seleção incluir comentários em funções de catálogo especifica se o driver retorna colunas de comentários para o conjunto de resultados [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . O ODBC driver for Oracle fornece acesso mais rápido quando esse valor não é definido.  
   

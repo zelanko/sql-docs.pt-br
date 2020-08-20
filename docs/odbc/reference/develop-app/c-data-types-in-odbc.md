@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados do C em ODBC
 title: Tipos de dados C no ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e1efba2187e2c1f2d813d43640fc9259ad4f2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 395f60860dd3179326687a6c2fb10bbaf027ca3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494756"
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de dados do C em ODBC
 O ODBC define os tipos de dados do C que são usados por variáveis de aplicativo e seus identificadores de tipo correspondentes. Eles são usados pelos buffers associados às colunas do conjunto de resultados e aos parâmetros de instrução. Por exemplo, suponha que um aplicativo queira recuperar dados de uma coluna de conjunto de resultados no formato de caractere. Ele declara uma variável com o tipo de dados SQLCHAR * e associa essa variável à coluna do conjunto de resultados com um identificador de tipo de SQL_C_CHAR. Para obter uma lista completa de tipos de dados C e identificadores de tipo, consulte o [Apêndice D: tipos de dados](../../../odbc/reference/appendixes/appendix-d-data-types.md).  

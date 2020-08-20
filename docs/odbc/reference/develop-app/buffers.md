@@ -1,4 +1,5 @@
 ---
+description: Buffers
 title: Buffers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c49e83e12463665f86f8cc15dc595e6ba2c506f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1c82927c122197249b02a2d327364e68bd851a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494776"
 ---
 # <a name="buffers"></a>Buffers
 Um buffer é qualquer parte da memória do aplicativo usada para passar dados entre o aplicativo e o driver. Por exemplo, os buffers de aplicativo podem ser associados ou *vinculados a* colunas de conjunto de resultados com **SQLBindCol**. À medida que cada linha é buscada, os dados são retornados para cada coluna nesses buffers. Os *buffers de entrada* são usados para passar dados do aplicativo para o driver; os *buffers de saída* são usados para retornar dados do driver para o aplicativo.  

@@ -1,4 +1,5 @@
 ---
+description: Associação de coluna
 title: Associação de coluna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494676"
 ---
 # <a name="column-wise-binding"></a>Associação de coluna
 Ao usar a associação de coluna, um aplicativo associa um ou dois casos de matrizes a cada coluna para a qual os dados serão retornados. A primeira matriz contém os valores de dados, e a segunda matriz contém buffers de comprimento/indicador. Os indicadores e os valores de comprimento podem ser armazenados em buffers separados definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR com valores diferentes; Se isso for feito, uma terceira matriz será associada. Cada matriz contém tantos elementos quantos houver linhas no conjunto de linhas.  

@@ -1,4 +1,5 @@
 ---
+description: Microsoft ODBC (Open Database Connectivity)
 title: ODBC (Microsoft Open Database Connectivity) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c51822e347c606d586238f84711797e63f6aa563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ccf7a5ceb15d61bc61bf3434a239c130bc5fcf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494789"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft ODBC (Open Database Connectivity)
 A interface ODBC (Microsoft Open Database Connectivity) é uma interface de linguagem de programação C que possibilita que os aplicativos acessem dados de uma variedade de DBMS (sistemas de gerenciamento de banco de dados). O ODBC é uma interface de nível baixo e de alto desempenho projetada especificamente para armazenamentos de dados relacionais.  
@@ -27,7 +28,7 @@ A interface ODBC (Microsoft Open Database Connectivity) é uma interface de ling
   
  Documentação de interfaces e métodos ODBC.  
   
- [Administrador de fonte de dados ODBC](../odbc/admin/odbc-data-source-administrator.md)  
+ [Administrador de Fonte de Dados ODBC](../odbc/admin/odbc-data-source-administrator.md)  
   
  O administrador de fonte de dados ODBC da Microsoft gerencia drivers de banco de dados e fontes  
   
@@ -43,7 +44,7 @@ A interface ODBC (Microsoft Open Database Connectivity) é uma interface de ling
   
  Define os termos relevantes para o ODBC.  
   
- [ODBCCONF. EXE](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  Descreve o utilitário de linha de comando para configurar drivers e nomes de fontes de dados.  
   

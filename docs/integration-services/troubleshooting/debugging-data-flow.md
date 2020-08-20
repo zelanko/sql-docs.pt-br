@@ -1,4 +1,5 @@
 ---
+description: Depurando fluxo de dados
 title: Depurando o fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 663ecd4dba689f394af61c4a26ff8edc1c241703
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 227414c3527633c941f7db123cd75083e1b6207b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86899859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495159"
 ---
 # <a name="debugging-data-flow"></a>Depurando fluxo de dados
 

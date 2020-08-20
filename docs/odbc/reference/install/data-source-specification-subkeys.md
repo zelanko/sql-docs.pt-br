@@ -1,4 +1,5 @@
 ---
+description: Subchaves de especificação de fonte de dados
 title: Subchaves de especificação da fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 281377c307f3f3750e87bf5dc988beb7660067af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fabfd07779f74945bf647d20075de0cc057710b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494561"
 ---
 # <a name="data-source-specification-subkeys"></a>Subchaves de especificação de fonte de dados
 Cada fonte de dados listada na subchave de fontes de dados ODBC tem uma subchave própria. Essa subchave tem o mesmo nome que o valor correspondente na subchave fontes de dados ODBC. Os valores nessa subchave devem listar a DLL do driver e podem listar uma descrição da fonte de dados. Se o driver oferecer suporte a tradutores, os valores poderão listar o nome de um tradutor padrão, a DLL de tradução padrão e a opção de conversão padrão. Os valores também podem listar outras informações exigidas pelo driver para se conectar à fonte de dados. Por exemplo, o driver pode exigir um nome de servidor, nome de banco de dados ou nome de esquema.  
@@ -28,7 +29,7 @@ Cada fonte de dados listada na subchave de fontes de dados ODBC tem uma subchave
   
 |Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|Descrição|REG_SZ|*ndescrição*|  
+|Descrição|REG_SZ|*descrição*|  
 |Driver|REG_SZ|*Driver-DLL-caminho*|  
 |TranslationDLL|REG_SZ|*Tradutor-DLL-caminho*|  
 |Conversão de|REG_SZ|*nome do Tradutor*|  

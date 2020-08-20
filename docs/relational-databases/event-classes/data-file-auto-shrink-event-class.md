@@ -1,4 +1,5 @@
 ---
+description: classe de evento Data File Auto Shrink
 title: Classe de evento Data File Auto Shrink | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,22 +13,22 @@ ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a70af7f66197bb4c9ee2df82fbf95c99a3fe31cf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4c533b2a75b072c3b715db73fda76f32c198bf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494348"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>classe de evento Data File Auto Shrink
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  A classe de evento **Data File Auto Shrink** indica que o arquivo de dados pode ser reduzido. Esse evento não será acionado se o arquivo de dados for reduzido devido a uma instrução ALTER DATABASE explícita. Inclua a classe de evento **Data File Auto Shrink** nos rastreamentos que monitoram as alterações de tamanho do arquivo de dados.  
+   A classe de evento **Data File Auto Shrink** indica que o arquivo de dados pode ser reduzido. Esse evento não será acionado se o arquivo de dados for reduzido devido a uma instrução ALTER DATABASE explícita. Inclua a classe de evento **Data File Auto Shrink** nos rastreamentos que monitoram as alterações de tamanho do arquivo de dados.  
   
  Quando a classe de evento **Data File Auto Shrink** é incluída no rastreamento, a quantidade de sobrecarga incorrida é baixa, a menos que o arquivo de dados seja reduzido frequentemente.  
   
 ## <a name="data-file-auto-shrink-event-class-data-columns"></a>Colunas de dados da classe de evento Data File Auto Shrink  
   
-|Nome da coluna de dados|Tipo de Dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**Int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  

@@ -1,4 +1,5 @@
 ---
+description: catalog.event_messages
 title: catalog.event_messages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e19ca7fac23979ecd691ed6cab45fa2cfec9564
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fcb7e924f444b44435b6c46dcdf76a88ebeec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495256"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
@@ -26,14 +27,14 @@ ms.locfileid: "86912623"
 
   Exibe informações sobre mensagens que foram registradas em log durante operações.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|A ID exclusiva da mensagem de evento.|  
 |Operation_id|BIGINT|O tipo de operação.<br /><br /> Para ver uma lista completa dos tipos de operação, consulte [catalog.operations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|A hora em que a mensagem foi criada.|  
 |Message_type|SMALLINT|O tipo da mensagem exibida. Para obter mais informações sobre tipos de mensagem, consulte [catalog.operation_messages &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
 |Message_source_type|SMALLINT|A origem da mensagem.|  
-|message|nvarchar(max)|O texto da mensagem.|  
+|mensagem|nvarchar(max)|O texto da mensagem.|  
 |Extended_info_id|BIGINT|A ID de informações adicionais relacionadas à mensagem da operação, localizada na exibição [catalog.extended_operation_info &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|O nome do arquivo do pacote.|  
 |Event_name|nvarchar(1024)|O evento em tempo de execução associado ao tipo de mensagem.|  
@@ -48,7 +49,7 @@ ms.locfileid: "86912623"
 ## <a name="remarks"></a>Comentários  
  Esta exibição exibe os tipos de origem de mensagem a seguir.  
   
-|**message_source_type**|DESCRIÇÃO|  
+|**message_source_type**|Descrição|  
 |-------------------------------|-----------------|  
 |10|APIs de entrada, como os procedimentos armazenados T-SQL e CLR|  
 |20|O processo externo usado para executar pacote (ISServerExec.exe)|  

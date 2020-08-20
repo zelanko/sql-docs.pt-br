@@ -1,4 +1,5 @@
 ---
+description: ValidMeasure (MDX)
 title: ValidMeasure (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd2bc2385a3445076636fb1b4001120463d1cd89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494820"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 

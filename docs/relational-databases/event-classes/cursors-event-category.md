@@ -1,4 +1,5 @@
 ---
+description: Categoria de evento Cursors
 title: Categoria de evento Cursors | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e845b69f6093507898e674ab8f3d87bdea5a3b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37c73c51856643b346a176f9a0a8b5b3c41cc47a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494382"
 ---
 # <a name="cursors-event-category"></a>Categoria de evento Cursors
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85719878"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classe de evento CursorClose](../../relational-databases/event-classes/cursorclose-event-class.md)|Descreve eventos de fechamento de cursor que ocorrem em cursores de interface de programação de aplicativo (API).|  
 |[Classe de evento CursorExecute](../../relational-databases/event-classes/cursorexecute-event-class.md)|Descreve eventos de execução de cursor que ocorrem em cursores de API.|  
