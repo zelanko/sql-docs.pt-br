@@ -1,4 +1,5 @@
 ---
+description: sp_grantdbaccess (Transact-SQL)
 title: sp_grantdbaccess (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 4fa8894b5c7ac33d8847bc28f2fac7a3c1020362
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0425c6f4108ae48dadcead271814d99c212e8a2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469341"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85891818"
   Adiciona um usuário ao banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login_ '`É o nome do grupo do Windows, logon ou logon do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser mapeado para o novo usuário de banco de dados. Os nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato logon de *domínio* \\ *login*; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. o *logon* é um **sysname**, sem padrão.  
+`[ @loginame = ] 'login_ '` É o nome do grupo do Windows, logon ou logon do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser mapeado para o novo usuário de banco de dados. Os nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato logon de *domínio* \\ *login*; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. o *logon* é um **sysname**, sem padrão.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``É o nome do novo usuário de banco de dados. *name_in_db* é uma variável de saída com um tipo de dados **sysname**e um padrão de NULL. Se não for especificado, o *logon* será usado. Se especificado como uma variável de saída com um valor de NULL, ** \@ name_in_db** será definido como *logon*. *name_in_db* ainda não deve existir no banco de dados atual.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` É o nome do novo usuário de banco de dados. *name_in_db* é uma variável de saída com um tipo de dados **sysname**e um padrão de NULL. Se não for especificado, o *logon* será usado. Se especificado como uma variável de saída com um valor de NULL, ** \@ name_in_db** será definido como *logon*. *name_in_db* ainda não deve existir no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -68,8 +69,8 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CRIAR usuário &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [&#41;descartar &#40;Transact-SQL do usuário](../../t-sql/statements/drop-user-transact-sql.md)   
+ [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

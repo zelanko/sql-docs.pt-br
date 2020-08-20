@@ -1,4 +1,5 @@
 ---
+description: LIKE (Transact-SQL)
 title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -31,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467650"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,10 +68,10 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  É qualquer [expression](../../t-sql/language-elements/expressions-transact-sql.md) válida do tipo de dados de caractere.  
   
- *pattern*  
+ *padrão*  
  É a cadeia de caracteres específica a ser pesquisada em *match_expression* e pode incluir os caracteres curinga válidos a seguir. *pattern* pode ter um máximo de 8.000 bytes.  
   
-|Caractere curinga|DESCRIÇÃO|Exemplo|  
+|Caractere curinga|Descrição|Exemplo|  
 |------------------------|-----------------|-------------|  
 |%|Qualquer cadeia de zero ou mais caracteres.|WHERE title LIKE '%computer%' localiza todos os títulos de livro com a palavra 'computer' em qualquer lugar no título do livro.|  
 |_ (sublinhado)|Qualquer caractere único.|WHERE au_fname LIKE '_ean' localiza todos os nomes de quatro letras que terminam com ean (Dean, Sean e assim por diante).|  
@@ -200,7 +201,7 @@ GO
   
  Se não houver caractere depois de um caractere de escape no padrão de LIKE, o padrão não será válido e LIKE retornará FALSE. Se o caractere após um caractere de escape não for um caractere curinga, o caractere de escape será descartado e o caractere seguinte será tratado como um caractere normal no padrão. Esses caracteres curinga incluem o sinal de percentual (%), sublinhado (_) e colchete esquerdo ([) quando estão entre colchetes duplos ([ ]). Os caracteres de escape podem ser usados em caracteres de colchete duplo ([ ]), inclusive para escape de acento circunflexo (^), hífen (-) ou colchete direito (]).  
   
- 0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em LIKE.  
+ 0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em LIKE.  
   
 ## <a name="examples"></a>Exemplos  
   

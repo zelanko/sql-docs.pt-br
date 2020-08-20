@@ -1,4 +1,5 @@
 ---
+description: funções de metadados (Transact-SQL)
 title: Funções de metadados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05d75e3c02953c637eb338e11ceb0a92475ea352
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 96843a684493b7b945a976e06221b558fb6856b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467935"
 ---
 # <a name="metadata-functions-transact-sql"></a>funções de metadados (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

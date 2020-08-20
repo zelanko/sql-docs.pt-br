@@ -1,4 +1,5 @@
 ---
+description: sp_grant_proxy_to_subsystem (Transact-SQL)
 title: sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469393"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -41,11 +42,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id`O número de identificação de proxy do proxy para o qual conceder acesso. O *proxy_id* é **int**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
+`[ @proxy_id = ] id` O número de identificação de proxy do proxy para o qual conceder acesso. O *proxy_id* é **int**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy para o qual conceder acesso. O *proxy_name* é **sysname**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy para o qual conceder acesso. O *proxy_name* é **sysname**, com um padrão de NULL. *Proxy_id* ou *proxy_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @subsystem_id = ] id`O número de ID do subsistema ao qual conceder acesso. O *subsystem_id* é **int**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_id = ] id` O número de ID do subsistema ao qual conceder acesso. O *subsystem_id* é **int**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -62,7 +63,7 @@ sp_grant_proxy_to_subsystem
 |**12**|Scripts PowerShell|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'`O nome do subsistema ao qual conceder acesso. O **subsystem_name** é **sysname**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
+`[ @subsystem_name = ] 'subsystem_name'` O nome do subsistema ao qual conceder acesso. O **subsystem_name** é **sysname**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -71,7 +72,7 @@ sp_grant_proxy_to_subsystem
 |**Instantâneo**|Replication Snapshot Agent|  
 |**LogReader**|Replication Agente de Leitor de Log|  
 |**Distribuição**|Agente de Distribuição de replicação|  
-|**Mesclar**|Replication Merge Agent|  
+|**Mesclagem**|Replication Merge Agent|  
 |**QueueReader**|Agente de Leitor de Fila de Replicação|  
 |**ANALYSISQUERY**|Consulta do Analysis Services|  
 |**ANALYSISCOMMAND**|Comando do Analysis Services|  
@@ -115,9 +116,9 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Implementar segurança de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)   
- [&#41;&#40;Transact-SQL de sp_revoke_proxy_from_subsystem](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_proxy](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_proxy](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_revoke_proxy_from_subsystem ](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_proxy ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_proxy ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_proxy ](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

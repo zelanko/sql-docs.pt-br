@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (maior ou igual a) (Transact-SQL)'
 title: '&gt;= (maior ou igual a) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -24,12 +25,12 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76874ea201a280386091f4d827b0a2a19332a9a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d8774e928cb7487cd05132242aad0d678e8d6240
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467648"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (maior ou igual a) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ expression >= expression
  É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Ambas as expressões devem ter tipos de dados implicitamente conversíveis. A conversão depende das regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
- Boolean  
+ Booliano  
   
 ## <a name="remarks"></a>Comentários  
  Ao comparar expressões não nulas, o resultado será TRUE se o operando da esquerda tiver um valor maior ou igual ao do operando da direita; caso contrário, o resultado será FALSE.  

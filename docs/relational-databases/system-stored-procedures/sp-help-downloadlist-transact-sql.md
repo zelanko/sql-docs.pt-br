@@ -1,4 +1,5 @@
 ---
+description: sp_help_downloadlist (Transact-SQL)
 title: sp_help_downloadlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469372"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,14 +47,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho para o qual retornar informações. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho para o qual retornar informações. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @operation = ] 'operation'`A operação válida para o trabalho especificado. a *operação* é **varchar (64)**, com um padrão de NULL e pode ser um desses valores.  
+`[ @operation = ] 'operation'` A operação válida para o trabalho especificado. a *operação* é **varchar (64)**, com um padrão de NULL e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -67,17 +68,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Operação de servidor que faz com que o servidor de destino sincronize seu relógio de sistema com o domínio multisservidor. Como esta é uma operação cara, execute-a de maneira limitada e infrequente.|  
 |**UPDATE**|Operação de trabalho que atualiza apenas as informações de **sysjobs** de um trabalho, não as etapas ou agendas de trabalho. É chamado automaticamente pelo **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'`O tipo de objeto para o trabalho especificado. *object_type* é **varchar (64)**, com um padrão de NULL. *object_type* pode ser um trabalho ou servidor. Para obter mais informações sobre valores de *object_type*válidos, consulte [sp_add_category &#40;&#41;do Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` O tipo de objeto para o trabalho especificado. *object_type* é **varchar (64)**, com um padrão de NULL. *object_type* pode ser um trabalho ou servidor. Para obter mais informações sobre valores de *object_type*válidos, consulte [sp_add_category &#40;&#41;do Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'`O nome do objeto. *object_name* é **sysname**, com um padrão de NULL. Se *object_type* for trabalho, *object_name*será o nome do trabalho. Se *object_type*for SERVER, *object_name*será o nome do servidor.  
+`[ @object_name = ] 'object_name'` O nome do objeto. *object_name* é **sysname**, com um padrão de NULL. Se *object_type* for trabalho, *object_name*será o nome do trabalho. Se *object_type*for SERVER, *object_name*será o nome do servidor.  
   
-`[ @target_server = ] 'target_server'`O nome do servidor de destino. *target_server* é **nvarchar (128)**, com um padrão de NULL.  
+`[ @target_server = ] 'target_server'` O nome do servidor de destino. *target_server* é **nvarchar (128)**, com um padrão de NULL.  
   
-`[ @has_error = ] has_error`É se o trabalho deve confirmar erros. *has_error* é **tinyint**, com um padrão de NULL, que indica que nenhum erro deve ser confirmado. **1** indica que todos os erros devem ser confirmados.  
+`[ @has_error = ] has_error` É se o trabalho deve confirmar erros. *has_error* é **tinyint**, com um padrão de NULL, que indica que nenhum erro deve ser confirmado. **1** indica que todos os erros devem ser confirmados.  
   
-`[ @status = ] status`O status do trabalho. o *status* é **tinyint**, com um valor padrão de NULL.  
+`[ @status = ] status` O status do trabalho. o *status* é **tinyint**, com um valor padrão de NULL.  
   
-`[ @date_posted = ] date_posted`A data e a hora em que todas as entradas feitas em ou após a data e hora especificadas devem ser incluídas no conjunto de resultados. *date_posted* é **DateTime**, com um padrão de NULL.  
+`[ @date_posted = ] date_posted` A data e a hora em que todas as entradas feitas em ou após a data e hora especificadas devem ser incluídas no conjunto de resultados. *date_posted* é **DateTime**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

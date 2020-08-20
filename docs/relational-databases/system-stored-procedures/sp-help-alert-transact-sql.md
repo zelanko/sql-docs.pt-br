@@ -1,4 +1,5 @@
 ---
+description: sp_help_alert (Transact-SQL)
 title: sp_help_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cca6c1730343a038b24e17d6aaa0156cb99c13b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce66505585fa7e7ed49919c5cb54b94ffd205500
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469328"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert_name'`O nome do alerta. *alert_name* é **nvarchar (128)**. Se *alert_name* não for especificado, serão retornadas informações sobre todos os alertas.  
+`[ @alert_name = ] 'alert_name'` O nome do alerta. *alert_name* é **nvarchar (128)**. Se *alert_name* não for especificado, serão retornadas informações sobre todos os alertas.  
   
-`[ @order_by = ] 'order_by'`A ordem de classificação a ser usada para produzir os resultados. *order_by*é **sysname**, com um padrão de N '*Name*'.  
+`[ @order_by = ] 'order_by'` A ordem de classificação a ser usada para produzir os resultados. *order_by*é **sysname**, com um padrão de N '*Name*'.  
   
-`[ @alert_id = ] alert_id`O número de identificação do alerta sobre o qual relatar informações. *alert_id*é **int**, com um padrão de NULL.  
+`[ @alert_id = ] alert_id` O número de identificação do alerta sobre o qual relatar informações. *alert_id*é **int**, com um padrão de NULL.  
   
-`[ @category_name = ] 'category'`A categoria do alerta. a *categoria* é **sysname**, com um padrão de NULL.  
+`[ @category_name = ] 'category'` A categoria do alerta. a *categoria* é **sysname**, com um padrão de NULL.  
   
-`[ @legacy_format = ] legacy_format`É se um conjunto de resultados herdado deve ser produzido. *legacy_format* é **bit**, com um padrão de **0**. Quando *legacy_format* é **1**, **sp_help_alert** retorna o conjunto de resultados retornado por **sp_help_alert** no Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` É se um conjunto de resultados herdado deve ser produzido. *legacy_format* é **bit**, com um padrão de **0**. Quando *legacy_format* é **1**, **sp_help_alert** retorna o conjunto de resultados retornado por **sp_help_alert** no Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -89,7 +90,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] sempre será '[Uncategorized]' para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**wmi_namespace**|**sysname**|Se **Type** for **3**, essa coluna mostrará o namespace para o evento WMI.|  
 |**wmi_query**|**nvarchar(512)**|Se **Type** for **3**, essa coluna mostrará a consulta para o evento WMI.|  
-|**type**|**int**|Tipo do evento:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
+|**tipo**|**int**|Tipo do evento:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
   
  Quando ** \@ legacy_format** é **1**, **sp_help_alert** produz o seguinte conjunto de resultados.  
   
@@ -120,8 +121,8 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|Diferente de zero se um ou mais operadores forem notificados para este alerta. O valor é um ou mais dos seguintes (unidos por OR):<br /><br /> **1**= tem notificação por email<br /><br /> **2**= tem notificação por pager<br /><br /> **4**= tem notificação **net send** .|  
 |**sinalizadores**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Se o **tipo** for **2**, essa coluna mostrará a definição da condição de desempenho. Se **Type** for **3**, essa coluna mostrará a consulta para o evento WMI. Caso contrário, a coluna será NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Será sempre '**[Não categorizado]**' para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
-|**type**|**int**|Tipo de alerta:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Será sempre '**[Não categorizado]**' para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
+|**tipo**|**int**|Tipo de alerta:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_help_alert** deve ser executado do banco de dados **msdb** .  
@@ -143,8 +144,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_alert](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_alert ](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
