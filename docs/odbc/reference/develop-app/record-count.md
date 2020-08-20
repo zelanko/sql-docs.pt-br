@@ -1,4 +1,5 @@
 ---
+description: Contagem de registros
 title: Contagem de registros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28e503ae4602d87fc9138ed018ee1e95f135ec57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d329ca3638f964244cea8c28f7e07e171887fb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465666"
 ---
 # <a name="record-count"></a>Contagem de registros
 O campo de cabeçalho de SQL_DESC_COUNT de um descritor é o índice baseado em um do registro de numeração mais alto que contém dados. Esse campo não é uma contagem de todas as colunas ou parâmetros associados. Quando um descritor é alocado, o valor inicial de SQL_DESC_COUNT é 0.  

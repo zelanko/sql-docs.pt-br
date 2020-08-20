@@ -1,4 +1,5 @@
 ---
+description: Solicitar o usuário para informações de conexão
 title: Solicitando informações de conexão ao usuário | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b0f120a1076f14f5e67d506e52a446e0a3d4713
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f52e0d120fb150fe58b850107847d7ef5df20e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465708"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Solicitar o usuário para informações de conexão
 Se o aplicativo usar o **SQLConnect** e precisar solicitar informações de conexão ao usuário, como um nome de usuário e senha, ele deverá fazer isso por conta própria. Embora isso permita que o aplicativo controle sua "aparência", ele pode forçar o aplicativo a conter código específico do driver. Isso ocorre quando o aplicativo precisa solicitar informações de conexão específicas do driver ao usuário. Isso apresenta uma situação impossível para aplicativos genéricos, que são projetados para trabalhar com qualquer e todos os drivers, incluindo drivers que não existem quando o aplicativo é gravado.  

@@ -1,4 +1,5 @@
 ---
+description: Mensagens de erro nativas do Driver ODBC do Visual FoxPro
 title: Mensagens de erro nativo do driver ODBC do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56d65221ba90b217521fa6a7563d70b7fc44f940
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a4f4a57bc85e33708bd190aae833327e226d34ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466308"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensagens de erro nativas do Driver ODBC do Visual FoxPro
 As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visual FoxPro.  
@@ -186,7 +187,7 @@ As tabelas a seguir listam mensagens de erro nativas para o driver ODBC do Visua
 |528|Ponto de entrada ODBC ausente, *valor*.|  
 |530|Busca cancelada; a tabela remota está fechada.|  
 |532|Não há suporte para conversão de tipo.|  
-|533|Essa propriedade é somente leitura.|  
+|533|Esta propriedade é somente para leitura.|  
 |536|Não há suporte para a função em tabelas nativas.|  
 |538|Um procedimento armazenado está em execução.|  
 |540|O número de sessão é inválido.|  

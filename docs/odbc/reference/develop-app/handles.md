@@ -1,4 +1,5 @@
 ---
+description: Alças
 title: Identificadores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e9d2445dbbd676e8d48be519c1649d550fd89c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465758"
 ---
 # <a name="handles"></a>Alças
 Os identificadores são valores opacos de 32 bits que identificam um item específico; no ODBC, esse item pode ser um ambiente, uma conexão, uma instrução ou um descritor. Quando o aplicativo chama **SQLAllocHandle**, o Driver Manager ou driver cria um novo item do tipo especificado e retorna seu identificador para o aplicativo. Posteriormente, o aplicativo usa o identificador para identificar esse item ao chamar funções ODBC. O driver e o Gerenciador de driver usam o identificador para localizar informações sobre o item.  

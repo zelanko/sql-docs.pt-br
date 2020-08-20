@@ -1,4 +1,5 @@
 ---
+description: Buscando dados de resultados
 title: Buscando dados de resultado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,11 +24,12 @@ ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83a9c039a5da06a63261f8d062d0f4da5ddf8a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f30630a170463fdf7b45fb5fee851416a24889d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465295"
 ---
 # <a name="fetching-result-data"></a>Buscando dados de resultados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,6 +65,6 @@ ms.locfileid: "86007471"
  Essa otimização pode ser aplicada a aplicativos para que nenhum dado de **Text**, **ntext**ou **Image** seja exibido enquanto um usuário estiver rolando para cima e abaixando um cursor. Depois que o usuário seleciona uma linha, o aplicativo pode chamar **SQLGetData** para recuperar os dados **Text**, **ntext**ou **Image** . Isso salva a transmissão dos dados **Text**, **ntext**ou **Image** para qualquer uma das linhas que o usuário não seleciona e pode salvar a transmissão de grandes quantidades de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Processando resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Processando resultados &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

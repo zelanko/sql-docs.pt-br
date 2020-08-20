@@ -1,4 +1,5 @@
 ---
+description: Comprimento de dados, comprimento do buffer e truncamento
 title: Comprimento dos dados, comprimento do buffer e truncamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e7b8d1e60cd83594509c2ab5cbc24e04546eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9a9651f39c1ff4d2c6dc9b691453fb5354c9e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465828"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Comprimento de dados, comprimento do buffer e truncamento
 O *comprimento dos dados* é o comprimento de bytes dos dados, pois ele seria armazenado no buffer de dados do aplicativo, não como ele é armazenado na fonte de dados. Essa distinção é importante porque os dados geralmente são armazenados em tipos diferentes no buffer de dados do que na fonte de dados. Portanto, para dados enviados para a fonte de dados, esse é o comprimento de bytes dos dados antes da conversão para o tipo da fonte de dados. Para os dados que estão sendo recuperados da fonte de dados, esse é o comprimento de bytes dos dados após a conversão para o tipo do buffer de dados e antes de qualquer truncamento ser feito.  

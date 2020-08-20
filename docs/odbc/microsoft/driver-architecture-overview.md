@@ -1,4 +1,5 @@
 ---
+description: Visão geral de arquitetura do driver
 title: Visão geral da arquitetura do driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd55290e09fbd35f5a1559ce4209693ef8eaaf73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d71a2c28825ee8c7d4e12e047234f3e336b339e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466438"
 ---
 # <a name="driver-architecture-overview"></a>Visão geral de arquitetura do driver
 O driver ODBC do Microsoft Visual FoxPro é um driver de 32 bits que permite abrir e consultar um banco de dados do Microsoft Visual FoxPro ou tabelas do FoxPro por meio da interface ODBC (Open Database Connectivity). Você pode acessar dados do FoxPro usando os seguintes tipos de aplicativos:  

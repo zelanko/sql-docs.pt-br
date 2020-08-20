@@ -1,4 +1,5 @@
 ---
+description: Criar perfil dos dados de desempenho do driver ODBC – Consultas de longa duração de log
 title: Consultas de execução longa de log (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80757fcbaf0548b520f8357de4eb5cc23db86386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 650ce0033a09913c8f30b8ff51534f31c628a6e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465325"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Criar perfil dos dados de desempenho do driver ODBC – Consultas de longa duração de log
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +47,7 @@ ms.locfileid: "86005832"
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Para registrar dados de consultas de execução demorada via programação  
   
-1.  Chame [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_QUERY_LOG e o caminho completo e o nome de arquivo do arquivo de log de consulta de longa execução. Por exemplo:  
+1.  Chame [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_QUERY_LOG e o caminho completo e o nome de arquivo do arquivo de log de consulta de longa execução. Por exemplo:   
   
     ```  
     C:\\Odbcqry.log  

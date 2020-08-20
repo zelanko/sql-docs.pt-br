@@ -1,4 +1,5 @@
 ---
+description: Verificações de valor de argumento
 title: Verificações de valor de argumento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c6e4de16c4a1a80be893acbc7a1993b375f2fee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dac29eea6c9a2b5f178aa233520674ea466cf48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465948"
 ---
 # <a name="argument-value-checks"></a>Verificações de valor de argumento
 O Gerenciador de driver verifica os seguintes tipos de argumentos. Salvo indicação em contrário, o Gerenciador de driver retorna SQL_ERROR para erros em valores de argumento.  

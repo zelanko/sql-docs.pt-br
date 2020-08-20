@@ -1,4 +1,5 @@
 ---
+description: Identificadores e descritores de tipo de dados
 title: Identificadores e descritores de tipo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f65bc86213f99112daf17c67a4ca522490d32149
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dce52118099ff4be572231e7f44f28a4cfca5ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466216"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Identificadores e descritores de tipo de dados
 Os tipos de dados listados nas seções [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md) e [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) , anteriormente neste apêndice, são tipos de dados "concisos": cada identificador refere-se a um único tipo de dados. Há uma correspondência um-para-um entre o identificador e o tipo de dados. Os descritores, no entanto, não em todos os casos usam um único valor para identificar tipos de dados. Em alguns casos, eles usam um tipo de dados "detalhado" e um subcódigo de tipo. Para todos os tipos de dados, exceto os tipos de dados DateTime e Interval, o identificador de tipo detalhado é o mesmo que o identificador de tipo conciso e o valor em SQL_DESC_DATETIME_INTERVAL_CODE é igual a 0. No entanto, para os tipos de dados DateTime e Interval, um tipo Detalhado (SQL_DATETIME ou SQL_INTERVAL) é armazenado em SQL_DESC_TYPE, um tipo conciso é armazenado em SQL_DESC_CONCISE_TYPE e um subcódigo para cada tipo conciso é armazenado em SQL_DESC_DATETIME_INTERVAL_CODE. Definir um desses campos afeta os outros. Para obter mais informações sobre esses campos, consulte a descrição da função [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .  

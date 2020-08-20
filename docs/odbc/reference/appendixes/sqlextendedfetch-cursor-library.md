@@ -1,4 +1,5 @@
 ---
+description: SQLExtendedFetch (Biblioteca de cursores)
 title: SQLExtendedFetch (biblioteca de cursores) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe39b2d2cbbaf72ce3844c35187040589d1dac58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab7d091dc6cee3630b5ed9b8bf3a3a479c0613e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466008"
 ---
 # <a name="sqlextendedfetch-cursor-library"></a>SQLExtendedFetch (Biblioteca de cursores)
 > [!IMPORTANT]  

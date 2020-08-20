@@ -1,4 +1,5 @@
 ---
+description: Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
 title: Configurar e gerenciar arquivos do dicionário de sinônimos para pesquisa de texto completo
 ms.date: 07/01/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465046"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-As consultas da Pesquisa de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem pesquisar sinônimos de termos especificados pelo usuário por meio do uso de um *dicionário de sinônimos* da Pesquisa de Texto Completo. Cada dicionário de sinônimos define um conjunto de sinônimos para um idioma específico. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As consultas da Pesquisa de Texto Completo do  podem pesquisar sinônimos de termos especificados pelo usuário por meio do uso de um *dicionário de sinônimos* da Pesquisa de Texto Completo. Cada dicionário de sinônimos define um conjunto de sinônimos para um idioma específico. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados.
 
 A correspondência com o dicionário de sinônimos ocorre para todas as consultas [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) e para quaisquer consultas [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) que especifiquem a cláusula `FORMSOF THESAURUS`.
   

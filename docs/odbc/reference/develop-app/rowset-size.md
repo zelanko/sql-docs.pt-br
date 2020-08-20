@@ -1,4 +1,5 @@
 ---
+description: Tamanho do conjunto de linhas
 title: Tamanho do conjunto de linhas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 11b95768934f96e1587b3c570b2510f3c2849239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d915d6e11fc7678312eab60c3316815cfabab38e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465604"
 ---
 # <a name="rowset-size"></a>Tamanho do conjunto de linhas
 O tamanho do conjunto de linhas a ser usado depende do aplicativo. Aplicativos baseados em tela normalmente seguem uma das duas estratégias. A primeira é definir o tamanho do conjunto de linhas para o número de linhas exibidas na tela; Se o usuário redimensionar a tela, o aplicativo alterará o tamanho do conjunto de linhas de acordo. A segunda é definir o tamanho do conjunto de linhas para um número maior, como 100, que reduz o número de chamadas para a fonte de dados. O aplicativo rola localmente no conjunto de linhas quando possível e busca novas linhas somente quando rola para fora do conjunto de linhas.  

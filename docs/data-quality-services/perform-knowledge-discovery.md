@@ -1,4 +1,5 @@
 ---
+description: Executar a descoberta da base de dados de conhecimento
 title: Executar a descoberta da base de dados de conhecimento
 ms.date: 06/04/2013
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65bde5805bbe3e768b56094d165b385d01f68439
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466731"
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
 
@@ -39,7 +40,7 @@ ms.locfileid: "85883396"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma base de dados de conhecimento.  
   
-##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a>Primeira etapa: iniciar descoberta de conhecimento  
+##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a> Primeira etapa: iniciar descoberta de conhecimento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -202,7 +203,7 @@ ms.locfileid: "85883396"
   
     -   Clique em **Voltar** para retornar à página **Descobrir** . Depois de clicar em **Fechar**para executar a atividade de Gerenciamento de Domínio, você precisará clicar em **Descoberta da Base de Dados de Conhecimento** na tela **Abrir base de dados de conhecimento** , prosseguir para a tela **Gerenciamento da Base de Dados de Conhecimento: Gerenciar Termos do Domínio** , clicar em **Concluir**e, em seguida, clicar em **Sim** para publicar a base de dados de conhecimento ou em **Não** para salvar o trabalho na base de dados de conhecimento e sair.  
   
-##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a>Acompanhamento: depois de executar a descoberta de conhecimento  
+##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a> Acompanhamento: depois de executar a descoberta de conhecimento  
  Após adicionar conhecimento ao caso de conhecimento no processo de descoberta de conhecimento assistido por computador, você poderá usar a base de dados de conhecimento para um projeto de limpeza imediatamente ou poderá executar o gerenciamento de domínio antes da limpeza. Para obter mais informações sobre a limpeza de dados ou o gerenciamento de domínio, consulte [Limpeza de dados](../data-quality-services/data-cleansing.md) ou [Gerenciando um domínio](../data-quality-services/managing-a-domain.md).  
   
 ##  <a name="the-meaning-of-correct-error-and-invalid-values"></a><a name="Meaning"></a> O significado dos valores corretos, com erro e inválidos  
@@ -233,7 +234,7 @@ ms.locfileid: "85883396"
   
 -   Clique no botão **Mostrar/Ocultar o Painel de Histórico de Alterações de Valores de Domínio** para exibir uma visualização pop-up na parte inferior da tabela de valores que mostra as alterações recentes feitas na coleção de valores de domínio.  
   
-##  <a name="profiler-statistics"></a><a name="Profiler"></a>Estatísticas do criador de perfil  
+##  <a name="profiler-statistics"></a><a name="Profiler"></a> Estatísticas do criador de perfil  
  A guia Criador de Perfil fornece estatísticas que indicam a qualidade dos dados de origem. Essas estatísticas não medem a qualidade da base de dados de conhecimento. A criação de perfil na descoberta da base de dados de conhecimento fornece ideias sobre a integridade e a exclusividade. A criação de perfil na descoberta da base de dados de conhecimento não está medindo a exatidão. A criação de perfil no gerenciamento de conhecimento ajuda você a avaliar até que ponto a fonte de dados é valiosa para compilar e aprimorar o conhecimento em uma base de dados de conhecimento.  
   
  A guia **Criador de Perfil** fornece as seguintes estatísticas para o processo de descoberta, por campo e domínio:  

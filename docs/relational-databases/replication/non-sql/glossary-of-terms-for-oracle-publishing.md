@@ -1,4 +1,5 @@
 ---
+description: Glossário de termos para publicações Oracle
 title: Glossário de termos para publicações Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 259ddd0128350fef480d4d25429808571d23ef11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dae5a66a762e53a4748bf43732aed70c5c0edfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465123"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossário de termos para publicações Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85892442"
  Um objeto de banco de dados usado para gerar números exclusivos. A replicação usa sequências para ordenar alterações feitas a tabelas publicadas.  
   
 #### <a name="sqlplus"></a>SQL\*Plus  
- Um aplicativo usado para acessar e consultar bancos de dados Oracle. É semelhante ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sqlcmd**do**.  
+ Um aplicativo usado para acessar e consultar bancos de dados Oracle. É semelhante ao  **sqlcmd** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="synonym"></a>Sinônimo  
  Um alias para um objeto. O sinônimo público especial **MSSQLSERVERDISTRIBUTOR** é criado automaticamente quando um Editor Oracle é configurado. O sinônimo usa como referência a tabela **HREPL_Distributor** e fornece um ponteiro lógico ao Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que serve ao Editor.  

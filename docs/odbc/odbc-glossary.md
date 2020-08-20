@@ -1,4 +1,5 @@
 ---
+description: Glossário do ODBC
 title: Glossário do ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac454a8c57fe6e2f12724440dc37c3a1953e4c85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b08d48944ee288b4eba849917828b6fe1d4396
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466248"
 ---
 # <a name="odbc-glossary"></a>Glossário do ODBC
 ## <a name="a"></a>Um  
@@ -78,7 +79,7 @@ ms.locfileid: "81302897"
  **Tipos de dados do C**  
  O tipo de dados de uma variável em um programa C, neste caso, o aplicativo.  
   
- **Catalog**  
+ **catalog**  
  O conjunto de tabelas do sistema em um banco de dados que descreve a forma do banco de dados. Também conhecido como um *esquema* ou *dicionário de dados*.  
   
  **função de catálogo**  
@@ -90,7 +91,7 @@ ms.locfileid: "81302897"
  **cliente/servidor**  
  Uma estratégia de acesso ao banco de dados na qual um ou mais clientes acessam os dados por meio de um servidor. Os clientes geralmente implementam a interface do usuário enquanto o servidor controla o acesso ao banco de dados.  
   
- **pilha**  
+ **column**  
  O contêiner de um único item de informações em uma linha. Também conhecido como *campo*.  
   
  **compromisso**  
@@ -255,7 +256,7 @@ ms.locfileid: "81302897"
  Organização/International Electrotechnical Commission de padrões internacionais. A API ODBC é baseada na interface de nível de chamada ISO/IEC.  
   
 ## <a name="j"></a>J  
- **em**  
+ **join**  
  Uma operação em um banco de dados relacional que vincula as linhas em duas ou mais tabelas, combinando valores em colunas especificadas.  
   
 ## <a name="k"></a>K  
@@ -295,7 +296,7 @@ ms.locfileid: "81302897"
  **Valor nulo**  
  Sem valor atribuído explicitamente. Em particular, um valor nulo é diferente de zero ou em branco.  
   
-## <a name="o"></a>O   
+## <a name="o"></a>O  
  **byte**  
  Oito bits ou um byte. *Consulte também* byte.  
   
@@ -333,7 +334,7 @@ ms.locfileid: "81302897"
  **matriz de status de parâmetro**  
  Uma matriz que contém o status de um parâmetro após uma chamada para **SQLExecDirect** ou **SQLExecute**.  
   
- **simultaneidade pessimista**  
+ **Simultaneidade pessimista**  
  Uma estratégia para implementar serialização, em que as linhas são bloqueadas para que outras transações não possam alterá-las. *Consulte também* simultaneidade otimista *e* serialização.  
   
  **operação posicionada**  
@@ -351,7 +352,7 @@ ms.locfileid: "81302897"
  **chave primária**  
  Uma coluna ou colunas que identifica exclusivamente uma linha em uma tabela.  
   
- **Procedure**  
+ **procedimento**  
  Um grupo de uma ou mais instruções SQL pré-compiladas que são armazenadas como um objeto nomeado em um banco de dados.  
   
  **coluna de procedimento**  
@@ -408,7 +409,7 @@ ms.locfileid: "81302897"
  **função escalar**  
  Uma função que gera um único valor de um único valor. Por exemplo, uma função que altera o caso de dados de caractere.  
   
- **esquema**  
+ **schema**  
  *Consulte* catálogo.  
   
  **cursor rolável**  
@@ -453,7 +454,7 @@ ms.locfileid: "81302897"
  **transição de estado**  
  A movimentação de um item de um estado para outro. O ODBC define transições de estado rigorosas para ambientes, conexões e instruções.  
   
- **privacidade**  
+ **instrução**  
  Um contêiner para todas as informações relacionadas a uma instrução SQL. As instruções não devem ser confundidas com instruções SQL.  
   
  **identificador de instrução**  
@@ -475,7 +476,7 @@ ms.locfileid: "81302897"
  **conversão**  
  A conversão de endereços de 16 bits em endereços de 32 bits, ou vice-versa, quando os aplicativos de 16 bits são usados com drivers ODBC de 32 bits.  
   
- **aciona**  
+ **transaction**  
  Uma unidade atômica de trabalho. O trabalho em uma transação deve ser concluído como um todo; se qualquer parte da transação falhar, a transação inteira falhará.  
   
  **isolamento de transação**  
@@ -490,7 +491,7 @@ ms.locfileid: "81302897"
  **DLL de instalação do Tradutor**  
  Uma DLL que contém funções de instalação e configuração específicas do tradutor.  
   
- **protocolo 2PC**  
+ **confirmação de duas fases**  
  O processo de confirmar uma transação distribuída em duas fases. Na primeira fase, o processador de transação verifica se todas as partes da transação podem ser confirmadas. Na segunda fase, todas as partes da transação são confirmadas. Se qualquer parte da transação indicar na primeira fase que ela não pode ser confirmada, a segunda fase não ocorrerá. O ODBC não dá suporte a confirmações de duas fases.  
   
  **indicador de tipo**  

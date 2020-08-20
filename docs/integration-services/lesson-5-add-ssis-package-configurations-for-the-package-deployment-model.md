@@ -1,4 +1,5 @@
 ---
+description: 'Lição 5: Adicionar configurações do pacote SSIS ao Modelo de Implantação de Pacotes'
 title: 'Lição 5: Adicionar configurações do pacote SSIS ao Modelo de Implantação de Pacotes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 770cd336ff96cdc4d3833e48845ba4954bf9c866
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c50bdc080ca6437cdb2291f901c429526976ab88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466598"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>Lição 5: Adicionar configurações do pacote SSIS ao Modelo de Implantação de Pacotes
 

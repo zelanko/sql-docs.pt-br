@@ -1,4 +1,5 @@
 ---
+description: Considerar os recursos de banco de dados a serem usados
 title: Considerando os recursos de banco de dados a serem usados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2abaed3806514a161c5c506d8bad89b4d3b75153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465888"
 ---
 # <a name="considering-database-features-to-use"></a>Considerar os recursos de banco de dados a serem usados
 Depois que o nível básico de interoperabilidade é conhecido, os recursos de banco de dados usados pelo aplicativo devem ser considerados. Por exemplo, quais instruções SQL serão executadas pelo aplicativo? O aplicativo usará cursores roláveis? Transações? Aos? Dados longos? Para obter ideias sobre quais recursos podem não ser suportados por todos os DBMSs, consulte as descrições da função [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) e o [Apêndice C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Os recursos exigidos por um aplicativo podem eliminar alguns DBMSs da lista de DBMSs de destino. Eles também podem mostrar que o aplicativo pode facilmente ter como alvo muitos DBMSs.  

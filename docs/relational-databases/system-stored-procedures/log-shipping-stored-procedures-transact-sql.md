@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados de envio de logs (Transact-SQL)
 title: Procedimentos armazenados de envio de logs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0dfcabddc59948e524168095666dfb6ce041b1fc
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 9eac82bbc30eee3419560b14055685738ed84927
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464702"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Procedimentos armazenados de envio de logs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

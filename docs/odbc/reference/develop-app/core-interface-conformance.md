@@ -1,4 +1,5 @@
 ---
+description: Conformidade de interface de núcleo
 title: Conformidade da interface principal | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ca38e2b616c39839cfe813dad984f7eba3796a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465838"
 ---
 # <a name="core-interface-conformance"></a>Conformidade de interface de núcleo
 Todos os drivers ODBC devem apresentar pelo menos a conformidade da interface de nível de núcleo. Como os recursos no nível de núcleo são aqueles exigidos pela maioria dos aplicativos interoperáveis genéricos, o driver pode trabalhar com tais aplicativos. Os recursos no nível de núcleo também correspondem aos recursos definidos na especificação CLI ISO e aos recursos não-opcional definidos na especificação CLI do grupo aberto. Um driver ODBC compatível com a interface de nível de núcleo permite que o aplicativo faça todos os seguintes procedimentos:  

@@ -1,4 +1,5 @@
 ---
+description: Limitações da instrução CREATE INDEX
 title: Limitações da instrução CREATE INDEX | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 053287d5087b377429221c31dd4e6b20f24248e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db2b346afa13e7f7f37151d6d4fa8efdca9fa230
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466448"
 ---
 # <a name="create-index-statement-limitations"></a>Limitações da instrução CREATE INDEX
 Não há suporte para a instrução CREATE INDEX para os drivers de texto ou do Microsoft Excel.  
@@ -27,7 +28,7 @@ Não há suporte para a instrução CREATE INDEX para os drivers de texto ou do 
   
  O driver do dBASE não pode criar um índice em uma coluna lógica.  
   
- Quando o driver do dBASE é usado, o tempo de resposta em arquivos grandes pode ser melhorado com a criação de um índice. MDX (ou. ndx) na coluna (campo) especificada nas cláusulas WHERE de uma instrução SELECT. Os índices. MDX existentes serão aplicados automaticamente para os operadores =, \<>,, >=, =< e between em uma cláusula WHERE e como predicados, bem como em predicados de junção.  
+ Quando o driver do dBASE é usado, o tempo de resposta em arquivos grandes pode ser melhorado com a criação de um índice. MDX (ou. ndx) na coluna (campo) especificada nas cláusulas WHERE de uma instrução SELECT. Os índices. MDX existentes serão aplicados automaticamente para os operadores =, >, \<, > =, =< e entre em uma cláusula WHERE e como predicados, bem como em predicados de junção.  
   
  Quando o driver do dBASE é usado, o índice criado por uma instrução CREATE UNIQUE INDEX é, na verdade, não exclusivo, e valores duplicados podem ser inseridos na coluna indexada. Somente um registro de um conjunto com valores de chave idênticos pode ser adicionado ao índice.  
   

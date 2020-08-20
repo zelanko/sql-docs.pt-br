@@ -1,4 +1,5 @@
 ---
+description: sys.database_event_sessions (Banco de Dados SQL do Azure)
 title: sys. database_event_sessions (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -9,12 +10,12 @@ ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2246ea5cb32aed2c49aa5d7a609362c9dffd1d73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3d5d5e8dcb91253d43ed5d85919d8e3e5e6b14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464803"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

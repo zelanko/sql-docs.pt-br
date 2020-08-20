@@ -1,4 +1,5 @@
 ---
+description: Comando SET EXACT
 title: Definir comando exato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e754fff35b6b948ac63d19361067b2d65a07fdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bae23ef0677061f92d0466564619e85d4ae1630
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466358"
 ---
 # <a name="set-exact-command"></a>Comando SET EXACT
 Especifica as regras para comparar duas cadeias de caracteres de comprimentos diferentes.  

@@ -1,4 +1,5 @@
 ---
+description: Children (MDX)
 title: Filhos (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a37bc27564baf9d75e10af78fb477ea08be092e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466508"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -42,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir retorna todos os membros da dimensão **medidas** no eixo de coluna, incluindo todos os membros calculados e o conjunto de todos os filhos `[Product].[Model Name]` da hierarquia de atributo no eixo de linha do cubo **Adventure Works** .  
+ O exemplo a seguir retorna todos os membros da dimensão **medidas** no eixo de coluna, incluindo todos os membros calculados e o conjunto de todos os filhos da `[Product].[Model Name]` hierarquia de atributo no eixo de linha do cubo **Adventure Works** .  
   
 ```  
 SELECT  

@@ -1,4 +1,5 @@
 ---
+description: Uso do tipo de dados
 title: Uso do tipo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,11 +20,12 @@ ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a20fcafe79f5ba0ddb3a5cc98208158967aafb3b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4a2e5fce7a76c22ac89f324cc69010311ab01883
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465359"
 ---
 # <a name="data-type-usage"></a>Uso do tipo de dados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +51,6 @@ ms.locfileid: "86002886"
 |XML|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converterá automaticamente XML em um texto Unicode. O tipo XML é mapeado como SQL_SS_XML.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Processando resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Processando resultados &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

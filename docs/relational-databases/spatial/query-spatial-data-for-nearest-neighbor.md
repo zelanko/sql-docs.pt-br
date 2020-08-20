@@ -1,4 +1,5 @@
 ---
+description: Consultar dados espaciais de vizinho mais próximo
 title: Consultar dados espaciais do vizinho mais próximo | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e53b816b25c991e7dafb891a0006b256979cb298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464906"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +72,7 @@ SELECT TOP ( number )
 7.  Todas as linhas para as quais `STDistance` retorna **NULL** devem ser filtradas.  
   
 > [!WARNING]  
->  Os métodos que usam **geography** ou tipos de dados **geometry** como argumentos retornarão **NULL** se as SRIDs não forem as mesmas dos tipos.  
+>   Os métodos que levam **geography** ou tipos de dados **geometry** como argumentos retornarão **NULL** se o SRIDs não forem o mesmo para os tipos.  
   
  É recomendado que os novos mosaicos de índice espaciais sejam usados para índices usados em consultas de Vizinhos Mais Próximos. Para obter mais informações sobre mosaicos de índice espacial, veja [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   

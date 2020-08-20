@@ -1,4 +1,5 @@
 ---
+description: 'Lição 4: Adicionar o redirecionamento de fluxo de erro com o SSIS'
 title: 'Lição 4: Adicionar o redirecionamento de fluxo de erro com o SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8858494792a8acd9d1af7aee887c24e45d8829f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d7ef0a6862e334221fd497a5adc44ffd0ab7990d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466558"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lição 4: Adicionar o redirecionamento de fluxo de erro com o SSIS
 

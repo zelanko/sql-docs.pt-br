@@ -1,4 +1,5 @@
 ---
+description: Executar um projeto de correspondência
 title: Executar um projeto de correspondência
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466661"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
 
@@ -43,7 +44,7 @@ ms.locfileid: "85883329"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para executar um projeto de correspondência.  
   
-##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a>Primeira etapa: iniciar um projeto de correspondência  
+##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a> Primeira etapa: iniciar um projeto de correspondência  
  Você executa a atividade de correspondência em um projeto de qualidade de dados criado no aplicativo cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -75,7 +76,7 @@ ms.locfileid: "85883329"
     > [!NOTE]  
     >  Clique em **Fechar** para salvar o estágio do projeto correspondente e retornar à página inicial do DQS. Na próxima vez que abrir este projeto, você iniciará no mesmo estágio. Clique em **Cancelar** para terminar a atividade de correspondência, perder seu trabalho e retornar à página inicial do DQS.  
   
-##  <a name="matching-stage"></a><a name="MatchingStage"></a>Estágio de correspondência  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a> Estágio de correspondência  
  Neste estágio, você executa um processo de correspondência assistido por computador que mostra quantas correspondências existem nos dados de origem com base nas regras de correspondência. Este processo gerará uma tabela de resultados correspondentes que mostra os clusters identificados pelo DQS, cada registro no cluster com sua ID de registro e sua pontuação de correspondência e o registro principal inicial para o cluster. O registro principal no cluster é selecionado aleatoriamente. Você determina o registro sobrevivente selecionando a regra de sobrevivência na página **Exportar** ao executar o projeto de correspondência. Cada linha adicional em um cluster é considerada uma correspondência; sua pontuação correspondente (em comparação com o registro principal) é fornecida na tabela de resultados. O número do cluster é igual à ID do registro principal no cluster.  
   
  Nos resultados correspondentes, você pode filtrar os dados desejados e rejeitar as correspondências não desejadas. Também é possível exibir os dados de criação de perfil do processo de correspondência como um todo, as especificações sobre as regras de correspondência que se aplicam e as estatísticas sobre os resultados correspondentes como um todo. O processo de correspondência pode identificar clusters sobrepostos e não sobrepostos e, se for executado várias vezes, pode ser executado em dados recém-copiados da origem e reindexados, ou em dados anteriores.  
@@ -166,10 +167,10 @@ ms.locfileid: "85883329"
     > [!NOTE]  
     >  Se você concluiu um projeto de correspondência e o utilizou novamente, ele usará a base de dados de conhecimento existente quando ele foi publicado. Ele não usará as alterações feitas na base de dados de conhecimento desde a conclusão do projeto. Para usar essas alterações, ou para usar uma nova base de dados de conhecimento, você terá que criar um novo projeto de correspondência. Por outro lado, se ele já foi criado, mas não concluído, um projeto de correspondência, quaisquer alterações publicadas na política de correspondência serão usados se você executar a correspondência no projeto.  
   
-##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a>Acompanhamento: depois de executar um projeto de correspondência  
+##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a> Acompanhamento: depois de executar um projeto de correspondência  
  Depois executar uma projeto de correspondência, você pode alterar a política de correspondência na base de dados de conhecimento, e criar e executar outro projeto de correspondência com base na política de correspondência atualizada. Para obter mais informações, consulte [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Guias criador de perfil e resultados  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a> Guias criador de perfil e resultados  
  As guias Criador de Perfil e Resultados contêm estatísticas para o processo de correspondência.  
   
 ### <a name="profiler-tab"></a>Guia Criador de perfil  

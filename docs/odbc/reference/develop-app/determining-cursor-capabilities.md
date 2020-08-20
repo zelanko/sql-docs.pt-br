@@ -1,4 +1,5 @@
 ---
+description: Determinar os recursos de cursor
 title: Determinando os recursos do cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 984ad8302f2e1695c8df84a64a18042f4cc9e364
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3390f83a30f6f462148d477ec018d1209ee6e098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465818"
 ---
 # <a name="determining-cursor-capabilities"></a>Determinar os recursos de cursor
 As quatro opções a seguir em **SQLGetInfo** descrevem quais tipos de cursores têm suporte e quais são seus recursos:  

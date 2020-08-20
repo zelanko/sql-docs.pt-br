@@ -1,4 +1,5 @@
 ---
+description: Associação de linha
 title: Associação de linha | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30d2426a8fb2a2bd0f0cb89c2de5bc326b67dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465616"
 ---
 # <a name="row-wise-binding"></a>Associação de linha
 Ao usar a associação de linha, um aplicativo define uma estrutura que contém uma ou duas, ou, em alguns casos, três, elementos para cada coluna para a qual os dados serão retornados. O primeiro elemento contém o valor de dados e o segundo elemento contém o buffer de comprimento/indicador. Os indicadores e os valores de comprimento podem ser armazenados em buffers separados definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR com valores diferentes; Se isso for feito, a estrutura conterá um terceiro elemento. Em seguida, o aplicativo aloca uma matriz dessas estruturas, que contém tantos elementos quanto há linhas no conjunto de linhas.  

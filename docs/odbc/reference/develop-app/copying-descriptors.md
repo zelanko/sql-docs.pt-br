@@ -1,4 +1,5 @@
 ---
+description: Copiar descritores
 title: Copiando descritores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e2e5897afc3673a21396e256df04d25008c8cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90f3acb5ccb479ba5c1d1eb4c405a486f7032f3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465859"
 ---
 # <a name="copying-descriptors"></a>Copiar descritores
 A função **SQLCopyDesc** é chamada para copiar os campos de um descritor para outro descritor. Os campos podem ser copiados somente para um descritor de aplicativo ou um IPD, mas não para um IRD. Os campos podem ser copiados de qualquer tipo de descritor. Somente os campos que são definidos para os descritores de origem e de destino são copiados. **SQLCopyDesc** não copia o campo SQL_DESC_ALLOC_TYPE, porque o tipo de alocação de um descritor não pode ser alterado. Os campos copiados substituem os campos existentes.  

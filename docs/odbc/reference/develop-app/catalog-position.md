@@ -1,4 +1,5 @@
 ---
+description: Posição de catálogo
 title: Posição do catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0305d978dc4ecd21892a0be3916fa5072b7be95a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 513c2449d296d167c499942636cbb94d637a2ede
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465958"
 ---
 # <a name="catalog-position"></a>Posição de catálogo
-A posição de um nome de catálogo em um identificador e como ele é separado do restante do identificador varia de fonte de dados para fonte de dados. Por exemplo, em uma fonte de dados Xbase, o nome do catálogo é um diretório e, no Microsoft® Windows®, é separado do nome da tabela (que é um nome de arquivo) por uma\\barra invertida (). A ilustração a seguir demonstra essa condição.  
+A posição de um nome de catálogo em um identificador e como ele é separado do restante do identificador varia de fonte de dados para fonte de dados. Por exemplo, em uma fonte de dados Xbase, o nome do catálogo é um diretório e, no Microsoft® Windows®, é separado do nome da tabela (que é um nome de arquivo) por uma barra invertida ( \\ ). A ilustração a seguir demonstra essa condição.  
   
  ![Posição de catálogo: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
@@ -36,7 +37,7 @@ A posição de um nome de catálogo em um identificador e como ele é separado d
   
  Para determinar o separador de catálogo e o local do nome do catálogo, um aplicativo chama **SQLGetInfo** com as opções SQL_CATALOG_NAME_SEPARATOR e SQL_CATALOG_LOCATION. Aplicativos interoperáveis devem construir identificadores de acordo com esses valores.  
   
- Ao citar identificadores que contêm mais de uma parte, os aplicativos devem ter cuidado para fazer uma cotação de cada parte separadamente e não citar o caractere que separa os identificadores. Por exemplo, a instrução a seguir para selecionar todas as linhas e colunas de uma tabela Xbase aspas os nomes de catálogo (\XBASE\SALES\CORP) e tabela (Parts. dbf), mas não o separador de catálogo (\\):  
+ Ao citar identificadores que contêm mais de uma parte, os aplicativos devem ter cuidado para fazer uma cotação de cada parte separadamente e não citar o caractere que separa os identificadores. Por exemplo, a instrução a seguir para selecionar todas as linhas e colunas de uma tabela Xbase aspas os nomes de catálogo (\XBASE\SALES\CORP) e tabela (Parts. dbf), mas não o separador de catálogo ( \\ ):  
   
 ```  
 SELECT * FROM "\XBASE\SALES\CORP"\"PARTS.DBF"  

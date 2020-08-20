@@ -1,4 +1,5 @@
 ---
+description: Substituir a precisão e a escala padrão para tipos de dados numéricos
 title: Substituindo a precisão e a escala padrão para tipos de dados numéricos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 798e607ff6584bde27791a29e4b20aeb1d7bb3cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466078"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Substituir a precisão e a escala padrão para tipos de dados numéricos
 Quando o campo SQL_DESC_TYPE em um ARD é definido como SQL_C_NUMERIC, chamando **SQLBindCol** ou **SQLSetDescField**, o campo SQL_DESC_SCALE no ARD é definido como 0 e o campo SQL_DESC_PRECISION é definido como uma precisão padrão definida pelo driver. Isso também é verdadeiro quando o campo de SQL_DESC_TYPE em um APD é definido como SQL_C_NUMERIC, chamando **SQLBindParameter** ou **SQLSetDescField**. Isso é verdadeiro para parâmetros de entrada, entrada/saída ou saída.  

@@ -1,4 +1,5 @@
 ---
+description: Latência (DMX)
 title: Retardo (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4e7aa504c3afd236ddd748a7ee81cbbb6cf90b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466554"
 ---
 # <a name="lag-dmx"></a>Latência (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,7 +44,7 @@ WHERE Lag() < 12
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

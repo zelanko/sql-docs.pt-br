@@ -1,4 +1,5 @@
 ---
+description: Atualizar dados com SQLBulkOperations
 title: Atualizando dados com o SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c8626a0925d0f30792ed92332c0f96efd23f62e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465530"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>Atualizar dados com SQLBulkOperations
 Os aplicativos podem executar operações de atualização, exclusão, busca ou inserção em massa na tabela subjacente na fonte de dados com uma chamada para **SQLBulkOperations**. Chamar **SQLBulkOperations** é uma alternativa conveniente para construir e executar uma instrução SQL. Ele permite que um driver ODBC dê suporte a atualizações posicionadas mesmo quando a fonte de dados não oferece suporte a instruções SQL posicionadas. Ele faz parte do paradigma da obtenção de acesso completo ao banco de dados por meio de chamadas de função.  

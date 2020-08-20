@@ -1,4 +1,5 @@
 ---
+description: Comando SET COLLATE
 title: Comando SET COLLATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466378"
 ---
 # <a name="set-collate-command"></a>Comando SET COLLATE
 Especifica uma sequência de agrupamento para campos de caracteres em operações subsequentes de indexação e classificação.  
@@ -33,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Especifica uma sequência de agrupamento. As opções de sequência de agrupamento disponíveis são descritas na tabela a seguir.  
   
-|Opções|Linguagem|  
+|Opções|Language|  
 |-------------|--------------|  
 |Holandês|Holandês|  
 |GENERAL|Inglês, francês, alemão, espanhol moderno, Português e outros idiomas da Europa Ocidental|  

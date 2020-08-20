@@ -1,4 +1,5 @@
 ---
+description: Parâmetros de procedimento
 title: Parâmetros do procedimento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35d43ca7cf6e603d7dabca9eacf1e026daa753b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b21780cc4a6670c76e60daa69cf7933b4182b44e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465718"
 ---
 # <a name="procedure-parameters"></a>Parâmetros de procedimento
 Parâmetros em chamadas de procedimento podem ser parâmetros de entrada, entrada/saída ou saída. Isso é diferente dos parâmetros em todas as outras instruções SQL, que são sempre parâmetros de entrada.  
   
- Os parâmetros de entrada são usados para enviar valores para o procedimento. Por exemplo, suponha que a tabela de partes tenha as colunas partid, descrição e preço. O procedimento InsertPart pode ter um parâmetro de entrada para cada coluna na tabela. Por exemplo:  
+ Os parâmetros de entrada são usados para enviar valores para o procedimento. Por exemplo, suponha que a tabela de partes tenha as colunas partid, descrição e preço. O procedimento InsertPart pode ter um parâmetro de entrada para cada coluna na tabela. Por exemplo:   
   
 ```  
 {call InsertPart(?, ?, ?)}  

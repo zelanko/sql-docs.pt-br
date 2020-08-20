@@ -1,4 +1,5 @@
 ---
+description: 'Lição 6-1: Copiar o pacote da Lição 5'
 title: 'Etapa 1: Copiar o pacote da Lição 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a8df0901617b22317b2a87616be7b769c749d298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 820c8022c68dfb95874230698769926fdfaedc70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466541"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>Lição 6-1: Copiar o pacote da Lição 5
 

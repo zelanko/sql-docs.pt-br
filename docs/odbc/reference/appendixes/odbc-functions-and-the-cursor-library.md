@@ -1,4 +1,5 @@
 ---
+description: Funções ODBC e a biblioteca de cursores
 title: Funções ODBC e a biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aa156a1fe4a6ebecb33b0c0401ae116226a80e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466121"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>Funções ODBC e a biblioteca de cursores
 > [!IMPORTANT]  

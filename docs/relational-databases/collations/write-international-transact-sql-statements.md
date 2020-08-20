@@ -1,4 +1,5 @@
 ---
+description: Gravar instruções Transact-SQL internacionais
 title: Escrever instruções Transact-SQL internacionais | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465506"
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "86003936"
 
     Isso evita problemas de conversão de página de código. Para acessar outras considerações, confira [Diferenças de armazenamento entre UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], substitua todos os usos dos tipos de dados **char**, **varchar** e **varchar (max)** por **nchar**, **nvarchar** e **nvarchar (max)** . Se você estiver usando uma ordenação habilitada para [SC (caractere suplementar)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), os dados serão codificados usando UTF-16. O uso de uma ordenação não SC resulta na codificação de dados usando o UCS-2. Isso evita problemas de conversão de página de código. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], substitua todos os usos dos tipos de dados **char**, **varchar** e **varchar (max)** por **nchar**, **nvarchar** e **nvarchar (max)**. Se você estiver usando uma ordenação habilitada para [SC (caractere suplementar)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), os dados serão codificados usando UTF-16. O uso de uma ordenação não SC resulta na codificação de dados usando o UCS-2. Isso evita problemas de conversão de página de código. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
 
     > [!IMPORTANT]
-    > O tipo de dados **texto** foi preterido e não deve ser usado em novos trabalhos de desenvolvimento. Planeje converter dados de **texto** em **varchar(max)** .
+    > O tipo de dados **texto** foi preterido e não deve ser usado em novos trabalhos de desenvolvimento. Planeje converter dados de **texto** em **varchar(max)**.
   
 -   Ao realizar comparações e operações de mês e dia da semana, use as partes de data numérica em vez de cadeias de caracteres de nomes. Configurações de linguagem diferentes retornam nomes diferentes para os meses e dias de semana. Por exemplo, `DATENAME(MONTH,GETDATE())` retorna `May` quando o idioma é definido como inglês dos EUA, retorna `Mai` quando o idioma é definido como alemão e retorna `mai` quando o idioma é definido como francês. No lugar, use uma função como [DATEPART](../../t-sql/functions/datepart-transact-sql.md) que usa o número do mês ao invés do nome. Use os nomes DATEPART quando for construir conjuntos de resultados a serem exibidos a um usuário, pois os nomes de datas geralmente são mais significativos que uma representação numérica. Porém, não codifique nenhuma lógica que dependa dos nomes exibidos sendo modificados em um idioma específico.  
   

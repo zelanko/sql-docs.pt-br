@@ -1,4 +1,5 @@
 ---
+description: Bases de Dados de Conhecimento DQS e domínios
 title: Bases de Dados de Conhecimento DQS e domínios
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466733"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de Dados de Conhecimento DQS e domínios
 
@@ -40,7 +41,7 @@ ms.locfileid: "87362479"
   
  ![Base de Dados de Conhecimento e Domínios do DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Base de Dados de Conhecimento e Domínios do DQS")  
   
-##  <a name="how-to-create-and-build-a-dqs-knowledge-base"></a><a name="How"></a>Como criar e compilar uma base de dados de conhecimento do DQS  
+##  <a name="how-to-create-and-build-a-dqs-knowledge-base"></a><a name="How"></a> Como criar e compilar uma base de dados de conhecimento do DQS  
  Criar uma base de dados de conhecimento do DQS envolve os processos e componentes a seguir:  
   
  **Descoberta da Base de Dados de Conhecimento**  
@@ -55,7 +56,7 @@ ms.locfileid: "87362479"
  **Política de Correspondência**  
  Uma política que define como o DQS processa registros para identificar duplicatas potenciais e não correspondências, que se integra à base de dados de conhecimento em um processo interativo e assistido por computador.  
   
-##  <a name="knowledge-discovery"></a><a name="Discovery"></a>Descoberta de conhecimento  
+##  <a name="knowledge-discovery"></a><a name="Discovery"></a> Descoberta de conhecimento  
  A criação da base de dados de conhecimento é inicialmente um processo guiado por computador. A atividade de descoberta de conhecimento cria uma base de dados de conhecimento analisando um exemplo de dados por meio de critérios de qualidade de dados, com a procura de inconsistências de dados e erros de sintaxe, e a proposição de alterações nos dados. Esta análise é baseada em algoritmos criados no DQS.  
   
  O administrador de dados prepara o processo com a vinculação de uma base de conhecimento a uma tabela ou exibição de banco de dados do SQL Server que contêm dados de exemplo similares aos dados que a base de conhecimento será usada para analisar. Em seguida, o administrador de dados mapeia um domínio da base de conhecimento para cada coluna dos dados de exemplo a serem analisados. Um domínio pode ser um domínio único que é mapeado para um campo único ou pode ser um domínio composto que consiste em vários domínios únicos, cada um dos quais mapeado para parte dos dados em um único campo (consulte "Domínios Compostos" abaixo). Quando você executa a descoberta da base de dados de conhecimento, o DQS extrai informações de qualidade de dados dos dados de exemplo nos domínios da base de conhecimento. Quando você tiver executado a análise de descoberta de conhecimento, terá uma base de dados de conhecimento com a qual será possível realizar a correção de dados.  
@@ -138,7 +139,7 @@ ms.locfileid: "87362479"
   
  A correspondência pode ser executada nos domínios únicos que compõem o domínio composto, mas não no próprio domínio composto.  
   
-##  <a name="data-matching"></a><a name="Matching"></a>Correspondência de dados  
+##  <a name="data-matching"></a><a name="Matching"></a> Correspondência de dados  
  Além de fazer alterações manuais a uma base de dados de conhecimento por meio do gerenciamento de domínio, você poderá adicionar conhecimento correspondente a uma base de dados de conhecimento. Para preparar o DQS para o processo de eliminação de duplicação de dados, você deverá criar uma política compatível que o DQS usará para calcular a probabilidade de uma correspondência. A política inclui uma ou mais regras correspondentes que o administrador de dados cria para identificar como o DQS deve comparar linhas de dados. O administrador de dados determina quais campos de dados na linha devem ser comparados e quanto peso cada campo deve ter na comparação. O administrador de dados também determinará quanto de probabilidade será considerada uma correspondência. O DQS adiciona as regras de correspondência à base de dados de conhecimento para serem usadas para executar a atividade de correspondência no projeto de qualidade de dados.  
   
  Para obter mais informações sobre a base de dados de conhecimento e a correspondência de dados, consulte [Correspondência de dados](../data-quality-services/data-matching.md).  

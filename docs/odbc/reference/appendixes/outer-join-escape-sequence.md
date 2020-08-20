@@ -1,4 +1,5 @@
 ---
+description: Sequência de escape de junção externa
 title: Sequência de escape de junção externa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37ce446328d263f492cdfd369f6e8f9f64fe6dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22517e676f9f8ac80622d368edcdb5a0ce1b283f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466088"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequência de escape de junção externa
 O ODBC usa sequências de escape para junções externas. A sintaxe dessa sequência de escape é a seguinte:  

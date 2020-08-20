@@ -1,4 +1,5 @@
 ---
+description: Selecione do &lt; modelo &gt; . CASOS (DMX)
 title: Selecione do &lt; modelo &gt; . CASOS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466518"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Selecione do &lt; modelo &gt; . CASOS (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -56,7 +57,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="remarks"></a>Comentários  
  Se o detalhamento for habilitado no modelo e na estrutura de mineração, os usuários que foram membros de uma função com permissão de detalhamento no modelo e na estrutura poderão acessar as colunas da estrutura de mineração que não foram incluídas no modelo e mineração. Portanto, para proteger dados confidenciais ou informações pessoais, você deve construir sua exibição da fonte de dados para mascarar informações pessoais e conceder a permissão **AllowDrillThrough** em uma estrutura de mineração somente quando for necessário.  
   
- A função [Lag &#40;&#41;DMX](../dmx/lag-dmx.md) pode ser usada com modelos de série temporal para retornar ou filtrar o intervalo de tempo entre cada caso e a hora inicial.  
+ A função [Lag &#40;&#41;DMX ](../dmx/lag-dmx.md) pode ser usada com modelos de série temporal para retornar ou filtrar o intervalo de tempo entre cada caso e a hora inicial.  
   
  Usar a função [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) na cláusula **Where** retorna apenas os casos associados ao nó especificado pela coluna NODE_UNIQUE_NAME do conjunto de linhas de esquema.  
   
@@ -87,7 +88,7 @@ AND IsInNode('002')
 >  Nem todos os modelos de mineração suportam o detalhamento. Para obter informações sobre os modelos que dão suporte ao detalhamento, consulte [consultas de detalhamento &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## <a name="see-also"></a>Consulte Também  
- [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
+ [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

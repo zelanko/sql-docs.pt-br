@@ -1,4 +1,5 @@
 ---
+description: Requisitos do sistema (Driver ODBC do Visual FoxPro)
 title: Requisitos do sistema (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48f5ddf105d8ecc315387c0c42c3cb84c104bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466318"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisitos do sistema (Driver ODBC do Visual FoxPro)
 Os requisitos de sistema para a instalação fornecem o sistema operacional mínimo e o espaço em disco necessários para instalar o driver com êxito. Depois de instalar o driver, você pode selecionar o software de aplicativo específico que deseja usar para acessar os dados do Visual FoxPro.  

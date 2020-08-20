@@ -1,4 +1,5 @@
 ---
+description: Criar conjunto de coleta personalizado – Tipo de coletor de consultas T-SQL genérico
 title: Criar conjunto de coleta personalizado – Tipo de coletor de consultas T-SQL genérico
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ca7e286d5e6d754bfa13c1e10907b7c040b86a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42ede39d7c0e247b0cd8939ed831533aeec293e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465471"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Criar conjunto de coleta personalizado – Tipo de coletor de consultas T-SQL genérico
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -175,6 +176,6 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Gerenciar Agendas](../../ssms/agent/manage-schedules.md)   
- [Iniciar ou parar um conjunto de coleta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
+ [Iniciar ou interromper um conjunto de coleta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
   

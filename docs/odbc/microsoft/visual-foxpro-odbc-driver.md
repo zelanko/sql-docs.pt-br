@@ -1,4 +1,5 @@
 ---
+description: Driver ODBC do Visual FoxPro
 title: Driver ODBC do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7bfe59fd2b4a5b290fe34c3496ac4a76aeaaad76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5e7e9ccd0e71b8fe798b1b8f1cca7a7c3097d1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466268"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Driver ODBC do Visual FoxPro
 O Microsoft Visual FoxPro é um ambiente poderoso orientado a objeto para construção de banco de dados e desenvolvimento de aplicativos. O driver ODBC do Microsoft Visual FoxPro permite que os aplicativos abram, consultem e atualizem dados no Visual FoxPro e em versões anteriores do FoxPro por meio da interface ODBC (Open Database Connectivity).  

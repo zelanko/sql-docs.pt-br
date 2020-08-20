@@ -1,4 +1,5 @@
 ---
+description: SELECT – comando SQL
 title: SELECT-comando SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466418"
 ---
 # <a name="select---sql-command"></a>SELECT – comando SQL
 Recupera dados de uma ou mais tabelas.  
@@ -113,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   Se você incluir duas tabelas em uma consulta e não especificar uma condição de junção, todos os registros na primeira tabela serão adicionados a todos os registros na segunda tabela, desde que as condições de filtro sejam atendidas. Essa consulta pode produzir resultados longos.  
   
--   Tenha cuidado ao unir tabelas com campos vazios porque o Visual FoxPro corresponde a campos vazios. Por exemplo, se você ingressar no cliente. ZIP e fatura. O ZIP e, se o cliente contiver 100 códigos postais vazios e a fatura contiver 400 códigos postais vazios, a saída da consulta conterá 40.000 registros extras resultantes dos campos vazios. Use a função **Empty ()** para eliminar registros vazios da saída da consulta.  
+-   Tenha cuidado ao unir tabelas com campos vazios porque o Visual FoxPro corresponde a campos vazios. Por exemplo, se você ingressar em CUSTOMER.ZIP e INVOICE.ZIP e se o cliente contiver 100 códigos postais vazios e a fatura contiver 400 códigos postais vazios, a saída da consulta conterá 40.000 registros extras resultantes dos campos vazios. Use a função **Empty ()** para eliminar registros vazios da saída da consulta.  
   
 -   Você deve usar o operador AND para conectar várias condições de junção. Cada condição de junção tem o seguinte formato:  
   
@@ -126,7 +127,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |=|Igual a|  
 |==|Exatamente igual|  
 |LIKE|COMO SQL|  
-|<>,! =, #|Não igual|  
+|<>,! =, #|Diferente de|  
 |>|Mais de|  
 |>=|Mais de ou igual a|  
 |<|Menor que|  

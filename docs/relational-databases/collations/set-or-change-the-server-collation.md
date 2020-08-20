@@ -1,4 +1,5 @@
 ---
+description: Definir ou alterar a ordenação do servidor
 title: Definir ou alterar a ordenação do servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2020
@@ -12,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbcfa1ad33ef986bcd8e6cfc621758f632118ba0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465544"
 ---
 # <a name="set-or-change-the-server-collation"></a>Definir ou alterar a ordenação do servidor
 

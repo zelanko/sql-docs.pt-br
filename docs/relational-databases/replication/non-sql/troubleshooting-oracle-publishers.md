@@ -1,4 +1,5 @@
 ---
+description: Solucionando problemas de Publicadores Oracle
 title: Solução de problemas de Publicadores Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a2bbbbc6bb18e3239091e0d2902bf65b85deec2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5c1a23fd1a9c6b5091ab2e005f9f824cbcb5b30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465083"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionando problemas de Publicadores Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
