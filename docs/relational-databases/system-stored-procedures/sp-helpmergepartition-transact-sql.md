@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepartition (Transact-SQL)
 title: sp_helpmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 276e1a886a999858585533ee35b6c5f3cf109657
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e7824eb6e547b8bacec2cae297e5f236376d0aa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474011"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @suser_sname = ] 'suser_sname'`É o valor SUSER_SNAME usado para definir uma partição. *SUSER_SNAME* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
+`[ @suser_sname = ] 'suser_sname'` É o valor SUSER_SNAME usado para definir uma partição. *SUSER_SNAME* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
   
 > [!NOTE]  
 >  Quando *SUSER_SNAME* é fornecido, *HOST_NAME* deve ser nulo  
   
-`[ @host_name = ] 'host_name'`É o valor HOST_NAME usado para definir uma partição. *HOST_NAME* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
+`[ @host_name = ] 'host_name'` É o valor HOST_NAME usado para definir uma partição. *HOST_NAME* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
   
 > [!NOTE]  
 >  Quando *SUSER_SNAME* é fornecido, *HOST_NAME* deve ser nulo  
@@ -58,7 +59,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
 |**particion**|**int**|Identifica a partição do Assinante.|  
 |**host_name**|**sysname**|Valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) no Assinante.|  
 |**suser_sname**|**sysname**|Valor usado ao criar a partição para uma assinatura que é filtrada pelo valor da função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) no Assinante.|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|Local do instantâneo de dados filtrado para a partição do Assinante.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|Local do instantâneo de dados filtrado para a partição do Assinante.|  
 |**date_refreshed**|**datetime**|Último data em que o trabalho de instantâneo foi executado para gerar o instantâneo de dados filtrado para a partição.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica o trabalho que cria o instantâneo de dados filtrado para uma partição.|  
   
@@ -72,7 +73,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** e a função de banco de dados fixa **db_owner** podem executar **sp_helpmergepartition**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergepartition](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addmergepartition ](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergepartition ](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

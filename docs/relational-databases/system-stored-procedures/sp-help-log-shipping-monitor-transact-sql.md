@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_monitor (Transact-SQL)
 title: sp_help_log_shipping_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b687131739188c811347aa032c0eb941124eb665
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa34a789b4993b8eaf14123b2f9a4bffb477ed39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474204"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +69,7 @@ sp_help_log_shipping_monitor
  **sp_help_log_shipping_monitor** deve ser executado do banco de dados **mestre** no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** .  
+ Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

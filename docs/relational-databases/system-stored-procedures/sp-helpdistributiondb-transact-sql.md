@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistributiondb (Transact-SQL)
 title: sp_helpdistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f592b7f3f5c864fba493327cb2b5cda1e44998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474068"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database_name'`É o nome do banco de dados para o qual as propriedades são retornadas. *database_name* é **sysname**, com um padrão de **%** para todos os bancos de dados associados ao distribuidor e em que o usuário tem permissões.  
+`[ @database = ] 'database_name'` É o nome do banco de dados para o qual as propriedades são retornadas. *database_name* é **sysname**, com um padrão de **%** para todos os bancos de dados associados ao distribuidor e em que o usuário tem permissões.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -50,11 +51,11 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history_cleanup_agent**|**sysname**|Nome do agente de limpeza do histórico.|  
 |**distribution_cleanup_agent**|**sysname**|Nome do agente de limpeza da Distribuição.|  
 |**status**|**int**|Somente para uso interno.|  
-|**data_folder**|**nvarchar (255)**|Nome do diretório usado para armazenar os arquivos de banco de dados.|  
-|**data_file**|**nvarchar (255)**|Nome do arquivo de banco de dados.|  
+|**data_folder**|**nvarchar(255)**|Nome do diretório usado para armazenar os arquivos de banco de dados.|  
+|**data_file**|**nvarchar(255)**|Nome do arquivo de banco de dados.|  
 |**data_file_size**|**int**|Tamanho de arquivo de dados inicial em megabytes.|  
-|**log_folder**|**nvarchar (255)**|Nome do diretório para o arquivo de log de banco de dados.|  
-|**log_file**|**nvarchar (255)**|Nome do arquivo de log.|  
+|**log_folder**|**nvarchar(255)**|Nome do diretório para o arquivo de log de banco de dados.|  
+|**log_file**|**nvarchar(255)**|Nome do arquivo de log.|  
 |**log_file_size**|**int**|Tamanho de arquivo de log inicial em megabytes.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -67,10 +68,10 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  Os membros da função de banco de dados fixa **db_owner** ou a função **replmonitor** em um banco de dados de distribuição e os usuários na lista de acesso à publicação de uma publicação usando o banco de dados de distribuição podem executar **sp_helpdistributiondb** para retornar informações relacionadas ao arquivo. Os membros da função **pública** podem executar **sp_helpdistributiondb** para retornar informações não relacionadas a arquivos para bancos de dados de distribuição aos quais eles têm acesso.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar as propriedades do distribuidor e do Publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [&#41;&#40;Transact-SQL de sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changedistributiondb](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [&#41;&#40;Transact-SQL de sp_adddistributiondb ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changedistributiondb ](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropdistributiondb ](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

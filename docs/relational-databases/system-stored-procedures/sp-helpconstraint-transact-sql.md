@@ -1,4 +1,5 @@
 ---
+description: sp_helpconstraint (Transact-SQL)
 title: sp_helpconstraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4da545089c2fba177c25c6ea00b49efa6464426c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d743730b70559d928f4fd46db67e9602168c139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474095"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'table'`É a tabela sobre a qual as informações de restrição são retornadas. A tabela especificada deve ser local ao banco de dados atual. *Table* é **nvarchar (776)**, sem padrão.  
+`[ @objname = ] 'table'` É a tabela sobre a qual as informações de restrição são retornadas. A tabela especificada deve ser local ao banco de dados atual. *Table* é **nvarchar (776)**, sem padrão.  
   
-`[ @nomsg = ] 'no_message'`É um parâmetro opcional que imprime o nome da tabela. *no_message* é **varchar (5)**, com um padrão de **msg**. **nomsg** suprime a impressão.  
+`[ @nomsg = ] 'no_message'` É um parâmetro opcional que imprime o nome da tabela. *no_message* é **varchar (5)**, com um padrão de **msg**. **nomsg** suprime a impressão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -71,7 +72,7 @@ EXEC sp_helpconstraint 'Production.Product';
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys. check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
  [sys. default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  

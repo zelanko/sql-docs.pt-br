@@ -1,4 +1,5 @@
 ---
+description: sp_helpdb (Transact-SQL)
 title: sp_helpdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c94db417a7257d38f5b607854beeeb5663c30ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474120"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'name'`É o nome do banco de dados para o qual as informações são relatadas. o *nome* é **sysname**, sem padrão. Se o *nome* não for especificado, **sp_helpdb** relatórios em todos os bancos de dados na exibição de catálogo **Sys. databases** .  
+`[ @dbname = ] 'name'` É o nome do banco de dados para o qual as informações são relatadas. o *nome* é **sysname**, sem padrão. Se o *nome* não for especificado, **sp_helpdb** relatórios em todos os bancos de dados na exibição de catálogo **Sys. databases** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -53,7 +54,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**proprietário**|**sysname**|Proprietário do banco de dados, como **SA**.|  
 |**DBID**|**smallint**|ID do banco de dados.|  
 |**created**|**nvarchar(11)**|A data em que o banco de dados foi criado.|  
-|**status**|**nvarchar (600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. As opções não booleanas são listadas com seus valores correspondentes na forma de *option_name* = *valor*.<br /><br /> Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**status**|**nvarchar (600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. As opções não booleanas são listadas com seus valores correspondentes na forma de *option_name* = *valor*.<br /><br /> Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Nível de compatibilidade do banco de dados: 60, 65, 70, 80 ou 90.|  
   
  Se *Name* for especificado, haverá um conjunto de resultados adicional que mostra a alocação de arquivo para o banco de dados especificado.  
@@ -63,10 +64,10 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar(128)**|Nome do arquivo lógico.|  
 |**FileID**|**smallint**|ID do arquivo.|  
 |**nome do arquivo**|**nchar (260)**|Nome do arquivo do -sistema operacional (nome do arquivo físico).|  
-|**grupo de arquivos**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
+|**arquivos**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
 |**size**|**nvarchar (18)**|Tamanho do arquivo em megabytes.|  
 |**MaxSize**|**nvarchar (18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
-|**growth**|**nvarchar (18)**|Incremento de crescimento do arquivo. Indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço for necessário.|  
+|**crescimento**|**nvarchar (18)**|Incremento de crescimento do arquivo. Indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço for necessário.|  
 |**usos**|**varchar (9)**|Uso do arquivo Para um arquivo de dados, o valor é **' somente dados '** e, para o arquivo de log, o valor é **' log only '**.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -99,8 +100,8 @@ GO
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [os grupos de sys. File&#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_primary_database (Transact-SQL)
 title: sp_delete_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f1b5625ed09cb3c5e9d753477b61fdd1e898590
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b7a1e58188a9b9f3a845e465139e5a24d3fad88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474360"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`É o nome do banco de dados primário de envio de logs. o *banco de dados* é **sysname**, sem padrão, e não pode ser nulo.  
+`[ @database = ] 'database'` É o nome do banco de dados primário de envio de logs. o *banco de dados* é **sysname**, sem padrão, e não pode ser nulo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

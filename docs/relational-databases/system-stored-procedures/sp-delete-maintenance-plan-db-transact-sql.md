@@ -1,4 +1,5 @@
 ---
+description: sp_delete_maintenance_plan_db (Transact-SQL)
 title: sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 114240ad0916a664e95dbc980093b857ecd500a6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9997758701897aa5fa37afb85cac053e22b0e5c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474349"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +49,9 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] 'plan\_id'`Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**.  
+`[ @plan_id = ] 'plan\_id'` Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**.  
   
-`[ @db_name = ] 'database\_name'`Especifica o nome do banco de dados a ser excluído do plano de manutenção. *database_name* é **sysname**.  
+`[ @db_name = ] 'database\_name'` Especifica o nome do banco de dados a ser excluído do plano de manutenção. *database_name* é **sysname**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

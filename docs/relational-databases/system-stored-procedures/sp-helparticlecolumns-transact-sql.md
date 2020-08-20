@@ -1,4 +1,5 @@
 ---
+description: sp_helparticlecolumns (Transact-SQL)
 title: sp_helparticlecolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ab8250e12f5b553a9c2c080b0a1e4efe9eb1657
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eed4538f2ffe43faf6ef83685ba3b5984198663c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474160"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação que contém o artigo. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo que tem suas colunas retornadas. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo que tem suas colunas retornadas. o *artigo* é **sysname**, sem padrão.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser especificado quando o artigo solicitado é publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -57,7 +58,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**ID da coluna**|**int**|Identificador para a coluna.|  
 |**column**|**sysname**|Nome da coluna.|  
-|**Checked**|**bit**|Se a coluna for publicada:<br /><br /> **0** = não<br /><br /> **1** = Sim|  
+|**Checked**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
 |**tipo de editor**|**sysname**|Tipo de dados da coluna no Publicador.|  
 |**tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
   
@@ -71,11 +72,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Definir e modificar um filtro de coluna](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [&#41;&#40;Transact-SQL de sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droparticle](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droppublication](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_articlecolumn ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changearticle ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droparticle ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droppublication ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetsvrgrp_member (Transact-SQL)
 title: sp_delete_targetsvrgrp_member (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51846fabc42e99ab82bd3a9d6312ba6316c9c651
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b5bfbe079f5004f7d0da8b42093068ebb57ea74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474308"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @group_name = ] 'group_name'`O nome do grupo. *group_name* é **sysname**, sem padrão.  
+`[ @group_name = ] 'group_name'` O nome do grupo. *group_name* é **sysname**, sem padrão.  
   
-`[ @server_name = ] 'server_name'`O nome do servidor a ser removido do grupo especificado. *server_name* é **nvarchar (30)**, sem padrão.  
+`[ @server_name = ] 'server_name'` O nome do servidor a ser removido do grupo especificado. *server_name* é **nvarchar (30)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_targetsvrgrp_member](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_targetsvrgrp_member ](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

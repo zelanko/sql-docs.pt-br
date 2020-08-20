@@ -1,4 +1,5 @@
 ---
+description: sp_helpdatatypemap (Transact-SQL)
 title: sp_helpdatatypemap (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 266098010f7da11f431c3bb334761209c7049cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474097"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,31 +44,31 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_dbms = ] 'source_dbms'`É o nome do DBMS do qual os tipos de dados são mapeados. *source_dbms* é **sysname**e pode ser um dos valores a seguir.  
+`[ @source_dbms = ] 'source_dbms'` É o nome do DBMS do qual os tipos de dados são mapeados. *source_dbms* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|A origem é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|A origem é um banco de dados Oracle.|  
   
-`[ @source_version = ] 'source_version'`É a versão do produto do DBMS de origem. *source_version*é **varchar (10)** e, se não for especificado, os mapeamentos de tipo de dados para todas as versões do DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de fonte do DBMS.  
+`[ @source_version = ] 'source_version'` É a versão do produto do DBMS de origem. *source_version*é **varchar (10)** e, se não for especificado, os mapeamentos de tipo de dados para todas as versões do DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de fonte do DBMS.  
   
-`[ @source_type = ] 'source_type'`É o tipo de dados listado no DBMS de origem. *source_type* é **sysname**e, se não for especificado, os mapeamentos para todos os tipos de dados no DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de origem.  
+`[ @source_type = ] 'source_type'` É o tipo de dados listado no DBMS de origem. *source_type* é **sysname**e, se não for especificado, os mapeamentos para todos os tipos de dados no DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de origem.  
   
-`[ @destination_dbms = ] 'destination_dbms'`É o nome do DBMS de destino. *destination_dbms* é **sysname**e pode ser um dos valores a seguir.  
+`[ @destination_dbms = ] 'destination_dbms'` É o nome do DBMS de destino. *destination_dbms* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|O destino é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|O destino é um banco de dados Oracle.|  
 |**DB2**|O destino é um banco de dados IBM DB2.|  
 |**SYBASE**|O destino é um banco de dados Sybase.|  
   
-`[ @destination_version = ] 'destination_version'`É a versão do produto do DBMS de destino. *destination_version*é **varchar (10)** e, se não for especificado, os mapeamentos para todas as versões do DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de destino do DBMS.  
+`[ @destination_version = ] 'destination_version'` É a versão do produto do DBMS de destino. *destination_version*é **varchar (10)** e, se não for especificado, os mapeamentos para todas as versões do DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de destino do DBMS.  
   
-`[ @destination_type = ] 'destination_type'`É o tipo de dados listado no DBMS de destino. *destination_type*é **sysname**e, se não for especificado, os mapeamentos para todos os tipos de dados no DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de destino.  
+`[ @destination_type = ] 'destination_type'` É o tipo de dados listado no DBMS de destino. *destination_type*é **sysname**e, se não for especificado, os mapeamentos para todos os tipos de dados no DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de destino.  
   
-`[ @defaults_only = ] defaults_only`É se apenas os mapeamentos de tipo de dados padrão forem retornados. *defaults_only* é **bit**, com um padrão de **0**. **1** significa que somente os mapeamentos de tipo de dados padrão são retornados. **0** significa que o padrão e os mapeamentos de tipo de dados definidos pelo usuário são retornados.  
+`[ @defaults_only = ] defaults_only` É se apenas os mapeamentos de tipo de dados padrão forem retornados. *defaults_only* é **bit**, com um padrão de **0**. **1** significa que somente os mapeamentos de tipo de dados padrão são retornados. **0** significa que o padrão e os mapeamentos de tipo de dados definidos pelo usuário são retornados.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -92,7 +93,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  Somente os membros da função de servidor fixa **sysadmin** no distribuidor ou membros da função de banco de dados fixa **db_owner** no banco de dados de distribuição podem executar **sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_setdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_getdefaultdatatypemapping ](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_setdefaultdatatypemapping ](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

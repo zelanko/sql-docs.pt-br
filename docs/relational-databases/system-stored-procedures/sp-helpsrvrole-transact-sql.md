@@ -1,4 +1,5 @@
 ---
+description: sp_helpsrvrole (Transact-SQL)
 title: sp_helpsrvrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9319cc35d3059bc1efafa3c4640b164c39d8bbfa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9686de531821bc5b143caac7f756f9cae5af8ac0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473991"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'`É o nome da função de servidor fixa. *role* é **sysname**, com um padrão de NULL. a *função* pode ser um dos valores a seguir.  
+`[ @srvrolename = ] 'role'` É o nome da função de servidor fixa. *role* é **sysname**, com um padrão de NULL. a *função* pode ser um dos valores a seguir.  
   
 |Função de servidor fixa|Descrição|  
 |-----------------------|-----------------|  
@@ -100,9 +101,9 @@ sp_helpsrvrole 'diskadmin' ;
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [&#41;&#40;Transact-SQL de sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropsrvrolemember](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsrvrolemember](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addsrvrolemember ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsrvrolemember ](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsrvrolemember ](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

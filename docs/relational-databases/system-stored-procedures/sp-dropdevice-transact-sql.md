@@ -1,4 +1,5 @@
 ---
+description: sp_dropdevice (Transact-SQL)
 title: sp_dropdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4c4a02e581b743b780db715b61f06ef7f22413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474288"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Remove um dispositivo de banco de dados ou um dispositivo de backup de uma instância do [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , excluindo a entrada de **dispositivosmaster.dbo.sys**.  
+  Remove um dispositivo de banco de dados ou um dispositivo de backup de uma instância do [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , excluindo a entrada de ** dispositivosmaster.dbo.sys**.  
    
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,9 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @logicalname = ] 'device'`É o nome lógico do dispositivo de banco de dados ou dispositivo de backup, conforme listado em **master.dbo.sysDevices.Name**. o *dispositivo* é **sysname**, sem padrão.  
+`[ @logicalname = ] 'device'` É o nome lógico do dispositivo de banco de dados ou dispositivo de backup, conforme listado em **master.dbo.sysDevices.Name**. o *dispositivo* é **sysname**, sem padrão.  
   
-`[ @delfile = ] 'delfile'`Especifica se o arquivo do dispositivo de backup físico deve ser excluído. *parâmetro delfile* é **varchar (7)**. Se especificado como **parâmetro delfile**, o arquivo de disco do dispositivo de backup físico será excluído.  
+`[ @delfile = ] 'delfile'` Especifica se o arquivo do dispositivo de backup físico deve ser excluído. *parâmetro delfile* é **varchar (7)**. Se especificado como **parâmetro delfile**, o arquivo de disco do dispositivo de backup físico será excluído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -68,8 +69,8 @@ EXEC sp_dropdevice 'tapedump1';
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Excluir um dispositivo de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdb](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdevice](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpdb ](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpdevice ](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

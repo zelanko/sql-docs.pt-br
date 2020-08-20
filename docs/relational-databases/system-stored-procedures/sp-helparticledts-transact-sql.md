@@ -1,4 +1,5 @@
 ---
+description: sp_helparticledts (Transact-SQL)
 title: sp_helparticledts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfacdd363e66401bc9cfbf494f6cb64ab12446fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6340460ff9bc1c8d0454d7ad0e4f05637df772bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474134"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome de um artigo na publicação. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome de um artigo na publicação. o *artigo* é **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

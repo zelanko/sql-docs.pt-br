@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_alert_job (Transact-SQL)
 title: sp_delete_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd6fe49ce56f5df6dffd8616b1ddc6015ed25fb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad73b718f2f8f59a4ae7dedd5f5f1cf1e4ee1504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474370"
 ---
 # <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

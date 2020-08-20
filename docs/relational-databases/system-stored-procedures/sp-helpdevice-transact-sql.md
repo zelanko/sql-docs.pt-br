@@ -1,4 +1,5 @@
 ---
+description: sp_helpdevice (Transact-SQL)
 title: sp_helpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cda03415378577a061bb308c0b19e7fcd0659d49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474106"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893598"
   Relata informações sobre dispositivos de backup do Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]É recomendável usar a exibição de catálogo [Sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) em vez disso  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável usar a exibição de catálogo [Sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) em vez disso  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @devname = ] 'name'`É o nome do dispositivo de backup para o qual as informações são relatadas. O valor de *Name* sempre é **sysname**.  
+`[ @devname = ] 'name'` É o nome do dispositivo de backup para o qual as informações são relatadas. O valor de *Name* sempre é **sysname**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -53,7 +54,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nome do dispositivo lógico.|  
 |**physical_name**|**nvarchar(260)**|Nome do arquivo físico.|  
-|**ndescrição**|**nvarchar (255)**|A descrição do dispositivo.|  
+|**descrição**|**nvarchar(255)**|A descrição do dispositivo.|  
 |**status**|**int**|Um número que corresponde à descrição do status na coluna **Descrição** .|  
 |**cntrltype**|**smallint**|Tipo de controlador do dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de fita|  
 |**size**|**int**|Tamanho do dispositivo em páginas de 2 KB.|  

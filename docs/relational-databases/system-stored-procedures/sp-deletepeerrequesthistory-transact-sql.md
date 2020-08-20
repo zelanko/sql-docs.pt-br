@@ -1,4 +1,5 @@
 ---
+description: sp_deletepeerrequesthistory (Transact-SQL)
 title: sp_deletepeerrequesthistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe3a7edbb00eb7d3a4da1aa78689685a54e56277
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11773aa1e2a03ccc9b729c902a99cda10088c718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474334"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Nome da publicação para a qual a solicitação de status foi feita. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` Nome da publicação para a qual a solicitação de status foi feita. a *publicação* é **sysname**, sem padrão.  
   
-`[ @request_id = ] request_id`Especifica uma solicitação de status individual para que todas as respostas a essa solicitação sejam excluídas. *request_id* é **int**, com um valor padrão de NULL.  
+`[ @request_id = ] request_id` Especifica uma solicitação de status individual para que todas as respostas a essa solicitação sejam excluídas. *request_id* é **int**, com um valor padrão de NULL.  
   
-`[ @cutoff_date = ] cutoff_date`Especifica uma data de corte, antes da qual todos os registros de resposta anteriores são excluídos. *cutoff_date* é **DateTime**, com um valor padrão de NULL.  
+`[ @cutoff_date = ] cutoff_date` Especifica uma data de corte, antes da qual todos os registros de resposta anteriores são excluídos. *cutoff_date* é **DateTime**, com um valor padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,8 +58,8 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_deletepeerrequesthistory**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helppeerresponses](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_requestpeerresponse](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_helppeerrequests ](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helppeerresponses ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_requestpeerresponse ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  
   
   

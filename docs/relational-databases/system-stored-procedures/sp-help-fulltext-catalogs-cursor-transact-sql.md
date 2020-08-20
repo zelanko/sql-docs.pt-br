@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_catalogs_cursor (Transact-SQL)
 title: sp_help_fulltext_catalogs_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9ab95a6e2d4b44c42735c5ffd9fe084a2a85854
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c9fb8cc87cf3221aff60cb492540d377e2f89b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474215"
 ---
 # <a name="sp_help_fulltext_catalogs_cursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85728169"
   Usa um cursor para retornar a ID, o nome, o diretório raiz, o status e o número de tabelas indexadas de texto completo para o catálogo de texto completo especificado.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a exibição de catálogo [Sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a exibição de catálogo [Sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @cursor_return = ] @cursor_variable OUTPUT`É a variável de saída do tipo **cursor**. O cursor é somente leitura, rolável e dinâmico.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` É a variável de saída do tipo **cursor**. O cursor é somente leitura, rolável e dinâmico.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`É o nome do catálogo de texto completo. *fulltext_catalog_name* é **sysname**. Se este parâmetro for omitido ou for NULL, serão retornadas informações sobre todos os catálogos de texto completo associados ao banco de dados atual.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` É o nome do catálogo de texto completo. *fulltext_catalog_name* é **sysname**. Se este parâmetro for omitido ou for NULL, serão retornadas informações sobre todos os catálogos de texto completo associados ao banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -57,7 +58,7 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|Identificador do catálogo de texto completo.|  
 |**NOME**|**sysname**|Nome do catálogo de texto completo.|  
-|**Multi-Path**|**nvarchar(260)**|A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta cláusula não tem nenhum efeito.|  
+|**PATH**|**nvarchar(260)**|A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta cláusula não tem nenhum efeito.|  
 |**STATUS**|**int**|Status de população do índice de texto completo do catálogo:<br /><br /> 0 = Ocioso<br /><br /> 1 = População completa em andamento<br /><br /> 2 = Pausado<br /><br /> 3 = Acelerado<br /><br /> 4 = Recuperando<br /><br /> 5 = Desligado<br /><br /> 6 = População incremental em andamento<br /><br /> 7 = Construindo índice<br /><br /> 8 = O disco está cheio. Em Pausa<br /><br /> 9 = Controle de alterações|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|Número de tabelas de texto completo indexadas associadas ao catálogo.|  
   
@@ -83,9 +84,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;FULLTEXTCATALOGPROPERTY &#40;Transact-SQL](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_fulltext_catalog](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_fulltext_catalogs](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [&#41;FULLTEXTCATALOGPROPERTY &#40;Transact-SQL ](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_fulltext_catalog ](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_fulltext_catalogs ](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

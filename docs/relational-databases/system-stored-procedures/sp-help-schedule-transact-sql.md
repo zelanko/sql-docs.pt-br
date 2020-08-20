@@ -1,4 +1,5 @@
 ---
+description: sp_help_schedule (Transact-SQL)
 title: sp_help_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 516314123b6555f7e079471b88384e586bdc5cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474191"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] id`O identificador da agenda a ser listada. *schedule_name* é **int**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_id = ] id` O identificador da agenda a ser listada. *schedule_name* é **int**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
   
-`[ @schedule_name = ] 'schedule_name'`O nome da agenda a ser listada. *schedule_name* é **sysname**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
+`[ @schedule_name = ] 'schedule_name'` O nome da agenda a ser listada. *schedule_name* é **sysname**, sem padrão. *Schedule_id* ou *schedule_name* pode ser especificado.  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]`Especifica se é para mostrar apenas os agendamentos aos quais um trabalho está anexado. *attached_schedules_only* é **bit**, com um padrão de **0**. Quando *attached_schedules_only* é **0**, todas as agendas são mostradas. Quando *attached_schedules_only* é **1**, o conjunto de resultados contém apenas os agendamentos anexados a um trabalho.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Especifica se é para mostrar apenas os agendamentos aos quais um trabalho está anexado. *attached_schedules_only* é **bit**, com um padrão de **0**. Quando *attached_schedules_only* é **0**, todas as agendas são mostradas. Quando *attached_schedules_only* é **1**, o conjunto de resultados contém apenas os agendamentos anexados a um trabalho.  
   
-`[ @include_description = ] include_description`Especifica se as descrições devem ser incluídas no conjunto de resultados. *include_description* é **bit**, com um padrão de **0**. Quando *include_description* é **0**, a coluna *schedule_description* do conjunto de resultados contém um espaço reservado. Quando *include_description* é **1**, a descrição da agenda é incluída no conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica se as descrições devem ser incluídas no conjunto de resultados. *include_description* é **bit**, com um padrão de **0**. Quando *include_description* é **0**, a coluna *schedule_description* do conjunto de resultados contém um espaço reservado. Quando *include_description* é **1**, a descrição da agenda é incluída no conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -119,9 +120,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_attach_schedule](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_detach_schedule](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_attach_schedule ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_schedule ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_detach_schedule ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

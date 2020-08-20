@@ -1,4 +1,5 @@
 ---
+description: sp_helpdbfixedrole (Transact-SQL)
 title: sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b029430388e1f58a725e5eb15795fa47380eda7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f7d2518a14ba15a7cd91ea4c9a41d6710d9572e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474071"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`É o nome de uma função de banco de dados fixa. *role* é **sysname**, com um padrão de NULL. Se a *função* for especificada, somente as informações sobre essa função serão retornadas; caso contrário, uma lista e uma descrição de todas as funções de banco de dados fixas são retornadas.  
+`[ @rolename = ] 'role'` É o nome de uma função de banco de dados fixa. *role* é **sysname**, com um padrão de NULL. Se a *função* for especificada, somente as informações sobre essa função serão retornadas; caso contrário, uma lista e uma descrição de todas as funções de banco de dados fixas são retornadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -89,11 +90,11 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helprolemember](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addrolemember ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbfixedrolepermission ](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droprolemember ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprole ](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprolemember ](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

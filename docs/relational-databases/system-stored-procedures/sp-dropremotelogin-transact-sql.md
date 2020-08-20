@@ -1,4 +1,5 @@
 ---
+description: sp_dropremotelogin (Transact-SQL)
 title: sp_dropremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 183e7ce052e4ec9b5eba625f5e5e21fb16f1a5e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6ccb8f6c4bbf5795784c8ad3712c5fe8163ff0e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474211"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85881777"
   Remove um logon remoto mapeado para um logon local usado ao executar procedimentos armazenados remotos em um servidor local que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Em vez disso, use servidores vinculados e procedimentos armazenados de servidor vinculado.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Em vez disso, use servidores vinculados e procedimentos armazenados de servidor vinculado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +45,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @remoteserver = ] 'remoteserver'`É o nome do servidor remoto mapeado para o logon remoto que deve ser removido. o *servidor_remoto* é **sysname**, sem padrão. o *servidor_remoto* já deve existir.  
+`[ @remoteserver = ] 'remoteserver'` É o nome do servidor remoto mapeado para o logon remoto que deve ser removido. o *servidor_remoto* é **sysname**, sem padrão. o *servidor_remoto* já deve existir.  
   
-`[ @loginame = ] 'login'`É o nome de logon opcional no servidor local que está associado ao servidor remoto. *login* é **sysname**, com um padrão de NULL. o *logon* já deve existir se especificado.  
+`[ @loginame = ] 'login'` É o nome de logon opcional no servidor local que está associado ao servidor remoto. *login* é **sysname**, com um padrão de NULL. o *logon* já deve existir se especificado.  
   
-`[ @remotename = ] 'remote_name'`É o nome opcional do logon remoto que é mapeado para *logon* ao fazer logon do servidor remoto. *remote_name* é **sysname**, com um padrão de NULL.  
+`[ @remotename = ] 'remote_name'` É o nome opcional do logon remoto que é mapeado para *logon* ao fazer logon do servidor remoto. *remote_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -90,13 +91,13 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpremotelogin](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addremotelogin ](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addserver ](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droplinkedsrvlogin ](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droplogin ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpremotelogin ](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

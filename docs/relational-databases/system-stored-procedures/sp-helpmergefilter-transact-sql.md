@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergefilter (Transact-SQL)
 title: sp_helpmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc32ca9d211ea818c8a0febdd5dda2e46b1b7fcf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7051213a6543a1dc964fe011f95f48d15cd788ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474000"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um padrão de **%** , que retorna os nomes de todos os artigos.  
+`[ @article = ] 'article'` É o nome do artigo. o *artigo* é **sysname**, com um padrão de **%** , que retorna os nomes de todos os artigos.  
   
-`[ @filtername = ] 'filtername'`É o nome do filtro sobre o qual retornar informações. *FilterName* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os filtros definidos no artigo ou na publicação.  
+`[ @filtername = ] 'filtername'` É o nome do filtro sobre o qual retornar informações. *FilterName* é **sysname**, com um padrão de **%** , que retorna informações sobre todos os filtros definidos no artigo ou na publicação.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -71,9 +72,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** e a função de banco de dados fixa **db_owner** podem executar **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addmergefilter](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergefilter](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergefilter](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergefilter ](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergefilter ](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergefilter ](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

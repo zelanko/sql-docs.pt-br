@@ -1,4 +1,5 @@
 ---
+description: sp_helptracertokenhistory (Transact-SQL)
 title: sp_helptracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9242f547d8f44e09341183a30a49afef4d2c4f52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6db181cfddbbde9730fba0ac9b0ddfc7264d433
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473996"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,16 +41,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação na qual o token de rastreamento foi inserido. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual o token de rastreamento foi inserido. a *publicação* é **sysname**, sem padrão.  
   
-`[ @tracer_id = ] tracer_id`É a ID do token de rastreamento no [MStracer_tokens &#40;tabela de&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para a qual as informações de histórico são retornadas. *tracer_id* é **int**, sem padrão.  
+`[ @tracer_id = ] tracer_id` É a ID do token de rastreamento no [MStracer_tokens &#40;tabela de&#41;Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para a qual as informações de histórico são retornadas. *tracer_id* é **int**, sem padrão.  
   
-`[ @publisher = ] 'publisher'`O nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` O nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]
 >  Esse parâmetro só deve ser especificado para não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`O nome do banco de dados de publicação. *publisher_db* é **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
+`[ @publisher_db = ] 'publisher_db'` O nome do banco de dados de publicação. *publisher_db* é **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -67,7 +68,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_helptracertokenhistory** é usado na replicação transacional.  
   
- Execute [sp_helptracertokens &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obter uma lista de tokens de rastreamento para a publicação.  
+ Execute [sp_helptracertokens &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obter uma lista de tokens de rastreamento para a publicação.  
   
  Um valor NULL no conjunto de resultados significa que não podem ser calculadas estatísticas de latência. Isso porque o token de rastreamento não foi recebido no Distribuidor ou em um dos Assinantes.  
   
@@ -79,6 +80,6 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Medir a latência e validar conexões para replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [&#41;&#40;Transact-SQL de sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_deletetracertokenhistory ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

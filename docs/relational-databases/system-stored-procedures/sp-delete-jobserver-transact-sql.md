@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobserver (Transact-SQL)
 title: sp_delete_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474335"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho do qual o servidor de destino especificado será removido. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho do qual o servidor de destino especificado será removido. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho do qual o servidor de destino especificado será removido. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho do qual o servidor de destino especificado será removido. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  O *job_id* ou *job_name* deve ser especificado; Não é possível especificar ambos.  
   
-`[ @server_name = ] 'server'`O nome do servidor de destino a ser removido do trabalho especificado. o *servidor* é **nvarchar (30)**, sem padrão. o *servidor* pode ser **(local)** ou o nome de um servidor de destino remoto.  
+`[ @server_name = ] 'server'` O nome do servidor de destino a ser removido do trabalho especificado. o *servidor* é **nvarchar (30)**, sem padrão. o *servidor* pode ser **(local)** ou o nome de um servidor de destino remoto.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -75,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_jobserver](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_jobserver](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_jobserver ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_jobserver ](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

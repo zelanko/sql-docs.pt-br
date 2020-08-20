@@ -1,4 +1,5 @@
 ---
+description: sp_detach_db (Transact-SQL)
 title: sp_detach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474293"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database_name'`É o nome do banco de dados a ser desanexado. *database_name* é um valor de **sysname** , com um valor padrão de NULL.  
+`[ @dbname = ] 'database_name'` É o nome do banco de dados a ser desanexado. *database_name* é um valor de **sysname** , com um valor padrão de NULL.  
   
-`[ @skipchecks = ] 'skipchecks'`Especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
+`[ @skipchecks = ] 'skipchecks'` Especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
   
  Por padrão, UPDATE STATISTICS é executado para atualizar as informações sobre os dados nas tabelas e os índices. A execução de UPDATE STATISTICS é útil para bancos de dados que serão movidos para mídias somente leitura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
   
 > [!IMPORTANT]
 >  O parâmetro ** \@ keepfulltextindexfile** será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
@@ -112,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para forçar os usuários atuais do banco de dados imediatamente ou dentro de um determinado número de segundos, use também a opção de reversão: ALTER DATABASE *database_name* SET SINGLE_USER com reversão *rollback_option*. Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Para forçar os usuários atuais do banco de dados imediatamente ou dentro de um determinado número de segundos, use também a opção de reversão: ALTER DATABASE *database_name* SET SINGLE_USER com reversão *rollback_option*. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Reanexando um banco de dados  
  Os arquivos desanexados permanecem e podem ser anexados novamente com o uso de CREATE DATABASE (com a opção FOR ATTACH ou FOR ATTACH_REBUILD_LOG). Os arquivos podem ser movidos para outro servidor, onde podem ser anexados.  

@@ -1,4 +1,5 @@
 ---
+description: sp_lookupcustomresolver (Transact-SQL)
 title: sp_lookupcustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75f030013417d3cb5f68f8349d36cb26f9971a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473945"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @article_resolver = ] 'article_resolver'`Especifica o nome da lógica de negócios personalizada que está sendo cancelada. *article_resolver* é **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
+`[ @article_resolver = ] 'article_resolver'` Especifica o nome da lógica de negócios personalizada que está sendo cancelada. *article_resolver* é **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT`É o valor de CLSID do objeto COM associado ao nome da lógica de negócios personalizada especificada no parâmetro *article_resolver* . *resolver_clsid* é **nvarchar (50)**, com um padrão de NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` É o valor de CLSID do objeto COM associado ao nome da lógica de negócios personalizada especificada no parâmetro *article_resolver* . *resolver_clsid* é **nvarchar (50)**, com um padrão de NULL.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT`Especifica o tipo de lógica de negócios personalizada que está sendo registrada. *is_dotnet_assembly* é **bit**, com um padrão de 0. **1** indica que a lógica de negócios personalizada que está sendo registrada é um assembly de manipulador de lógica de negócios; **0** indica que se trata de um componente com.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Especifica o tipo de lógica de negócios personalizada que está sendo registrada. *is_dotnet_assembly* é **bit**, com um padrão de 0. **1** indica que a lógica de negócios personalizada que está sendo registrada é um assembly de manipulador de lógica de negócios; **0** indica que se trata de um componente com.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* é **nvarchar (255)**, com um valor padrão de NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* é **nvarchar (255)**, com um valor padrão de NULL.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* é **nvarchar (255)**, com um valor padrão de NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* é **nvarchar (255)**, com um valor padrão de NULL.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, com um valor padrão de NULL. Use este parâmetro quando o procedimento armazenado não é chamado do Publicador. Se não for especificado, será assumido que o servidor local é o Publicador.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um valor padrão de NULL. Use este parâmetro quando o procedimento armazenado não é chamado do Publicador. Se não for especificado, será assumido que o servidor local é o Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -68,12 +69,12 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  Somente os membros da função de banco de dados fixa **db_owner** no banco de dados de publicação podem executar **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detecção e resolução de conflitos de replicação de mesclagem avançada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecção e resolução de conflito de replicação de mesclagem avançada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Executar lógica de negócios durante a sincronização de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Especificar um resolvedor de artigo de mesclagem](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [&#41;&#40;Transact-SQL de sp_registercustomresolver](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_unregistercustomresolver](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_registercustomresolver ](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_unregistercustomresolver ](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

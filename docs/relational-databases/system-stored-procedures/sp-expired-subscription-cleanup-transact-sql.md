@@ -1,4 +1,5 @@
 ---
+description: sp_expired_subscription_cleanup (Transact-SQL)
 title: sp_expired_subscription_cleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 279334fee40c24cbc0423eca58cd5386dbdb4bdc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f01368f50ce4a7a6116f58bfedee187648a8302d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474222"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome de um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. a *publicação* é **sysname**, com um valor padrão de NULL. Esse parâmetro não deve ser especificado para um Editor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @publisher = ] 'publisher'` É o nome de um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. a *publicação* é **sysname**, com um valor padrão de NULL. Esse parâmetro não deve ser especificado para um Editor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -51,8 +52,8 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_expired_subscription_cleanup**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_mergesubscription_cleanup](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_subscription_cleanup](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_mergesubscription_cleanup ](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_subscription_cleanup ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

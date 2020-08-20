@@ -1,4 +1,5 @@
 ---
+description: sp_dropmessage (Transact-SQL)
 title: sp_dropmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474221"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msgnum = ] message_number`É o número da mensagem a ser descartada. *message_number* deve ser uma mensagem definida pelo usuário que tenha um número de mensagem maior que 50000. *message_number* é **int**, com um padrão de NULL.  
+`[ @msgnum = ] message_number` É o número da mensagem a ser descartada. *message_number* deve ser uma mensagem definida pelo usuário que tenha um número de mensagem maior que 50000. *message_number* é **int**, com um padrão de NULL.  
   
-`[ @lang = ] 'language'`É o idioma da mensagem a ser descartada. Se **All** for especificado, todas as versões de idioma do *message_number* serão descartadas. o *idioma* é **sysname**, com um padrão de NULL.  
+`[ @lang = ] 'language'` É o idioma da mensagem a ser descartada. Se **All** for especificado, todas as versões de idioma do *message_number* serão descartadas. o *idioma* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -133,7 +134,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_altermessage ](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

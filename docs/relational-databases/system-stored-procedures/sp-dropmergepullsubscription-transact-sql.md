@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepullsubscription (Transact-SQL)
 title: sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dab181e38d9c072f5e25dc8db490a7538bbe615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474242"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. Este parâmetro é necessário. Especifique um valor de **todos** para remover assinaturas para todas as publicações  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de NULL. Este parâmetro é necessário. Especifique um valor de **todos** para remover assinaturas para todas as publicações  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador*é **sysname**, com um padrão de NULL. Este parâmetro é necessário.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador*é **sysname**, com um padrão de NULL. Este parâmetro é necessário.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de NULL. Este parâmetro é necessário.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de NULL. Este parâmetro é necessário.  
   
-`[ @reserved = ] 'reserved'`É reservado para uso futuro. *reservado* é **bit**, com um padrão de **0**.  
+`[ @reserved = ] 'reserved'` É reservado para uso futuro. *reservado* é **bit**, com um padrão de **0**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -64,9 +65,9 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Excluir uma assinatura pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [&#41;&#40;Transact-SQL de sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergesubscription](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addmergepullsubscription ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergepullsubscription ](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergesubscription ](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergepullsubscription ](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
   
   
