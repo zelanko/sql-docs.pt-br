@@ -1,4 +1,5 @@
 ---
+description: Tarefas específicas de programação
 title: Tarefas específicas de programação
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e3c7296ee1eb0401fce59094750471139a46967
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68b952ed0497f9c5c94b9ef71b8e06e495900616
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455474"
 ---
 # <a name="programming-specific-tasks"></a>Tarefas específicas de programação
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

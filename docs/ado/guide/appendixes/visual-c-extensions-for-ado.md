@@ -1,4 +1,5 @@
 ---
+description: Extensões do Visual C++ para ADO
 title: Extensões de Visual C++ para ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f623bd3eb0c0c4cdde47c6fea7e7cd8af2ad0de6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f9fa962d4710811cf376634dcc299707f6b0e654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453928"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Extensões do Visual C++ para ADO
 O método preferencial de programação do ADO com o Visual C++ é usar a diretiva **#import** , conforme discutido em [Microsoft Visual C++ Programação ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md). No entanto, as versões anteriores do ADO vêm com um método alternativo de programação usando Visual C++: as extensões de Visual C++. Esta seção documenta esse recurso para aqueles que devem manter o código de extensões de Visual C++, mas o novo código ADO deve ser escrito usando #**Import**.

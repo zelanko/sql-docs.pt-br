@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profile_sp (Transact-SQL)
 title: sysmail_update_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c795b604538a26fc7602ea245bd4d1d8c9c52d33
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454732"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`A ID do perfil a ser atualizada. *profile_id* é **int**, com um padrão de NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
+`[ @profile_id = ] profile_id` A ID do perfil a ser atualizada. *profile_id* é **int**, com um padrão de NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
   
-`[ @profile_name = ] 'profile_name'`O nome do perfil a ser atualizado ou o novo nome do perfil. *profile_name* é **sysname**, com um padrão de NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
+`[ @profile_name = ] 'profile_name'` O nome do perfil a ser atualizado ou o novo nome do perfil. *profile_name* é **sysname**, com um padrão de NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
   
-`[ @description = ] 'description'`A nova descrição para o perfil. a *Descrição* é **nvarchar (256)**, com um padrão de NULL.  
+`[ @description = ] 'description'` A nova descrição para o perfil. a *Descrição* é **nvarchar (256)**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

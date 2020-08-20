@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 title: sys. dm_resource_governor_resource_pool_affinity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 649bb3d5278337db4bda4b3f3622823bd3b35a17
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7aefd457e99626a1c16ce04b6ecbc579d2de1ed6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454834"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

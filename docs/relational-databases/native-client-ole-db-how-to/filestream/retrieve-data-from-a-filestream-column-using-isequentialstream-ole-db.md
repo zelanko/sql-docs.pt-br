@@ -1,4 +1,5 @@
 ---
+description: Recuperar dados de uma coluna FILESTREAM usando ISequentialStream no SQL Server Native Client (OLE DB)
 title: FILESTREAM usando ISequentialStream (OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
@@ -11,12 +12,12 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 736bf5aa1c40e824731eb630b6c64d74d72ad9e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7a2eb8976fe40c1f24861d511c8afc636566dcda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455703"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-in-sql-server-native-client-ole-db"></a>Recuperar dados de uma coluna FILESTREAM usando ISequentialStream no SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

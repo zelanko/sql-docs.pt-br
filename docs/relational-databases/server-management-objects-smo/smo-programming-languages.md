@@ -1,4 +1,5 @@
 ---
+description: Linguagens de programação de SMO
 title: Linguagens de programação | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -18,11 +19,12 @@ ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed3e7bb0f116cb24b100d6b4e660bbc11046655a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d7789390d045ccf9eff918a4157129c7b9d01c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455503"
 ---
 # <a name="smo-programming-languages"></a>Linguagens de programação de SMO
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

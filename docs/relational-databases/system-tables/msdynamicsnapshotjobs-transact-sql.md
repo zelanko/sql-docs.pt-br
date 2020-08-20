@@ -1,4 +1,5 @@
 ---
+description: MSdynamicsnapshotjobs (Transact-SQL)
 title: MSdynamicsnapshotjobs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b391da6a409043949453b1ce0b6ce0029d0ca95a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d9e7a86050d2bdf7f30c896ad2567f390955b5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454658"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889940"
 |**agent_id**|**int**|A ID do SQL Server Agent.|  
 |**dynamic_filter_login**|**sysname**|O valor usado para avaliar a função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) em filtros de linha com parâmetros definidos para a publicação.|  
 |**dynamic_filter_hostname**|**sysname**|O valor usado para avaliar a função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) em filtros de linha com parâmetros definidos para a publicação.|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|O caminho da pasta onde os arquivos de instantâneo serão lidos se um instantâneo de dados filtrado for usado.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|O caminho da pasta onde os arquivos de instantâneo serão lidos se um instantâneo de dados filtrado for usado.|  
 |**partition_id**|**int**|A ID da partição de dados à qual o trabalho pertence.|  
   
 ## <a name="see-also"></a>Consulte Também  

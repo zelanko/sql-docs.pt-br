@@ -1,4 +1,5 @@
 ---
+description: Sessões (provedor de OLE DB de cliente nativo)
 title: Sessões (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f75c9fec32105561ce3c07ba29aeec9b4779324
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce9c18021d474bfcb4af0e1418e432d779b9376a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455714"
 ---
 # <a name="sessions-native-client-ole-db-provider"></a>Sessões (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -181,7 +182,7 @@ EXIT:
 }  
 ```  
   
- Conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão de provedor de OLE DB de cliente nativo a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerar uma sobrecarga significativa para aplicativos que criam e liberam continuamente objetos de sessão. A sobrecarga pode ser minimizada Gerenciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão de provedor de OLE DB de cliente nativo com eficiência. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os aplicativos do provedor de OLE DB de clientes nativos podem manter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão de um objeto de sessão ativo mantendo uma referência em pelo menos uma interface do objeto.  
+ Conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão de provedor de OLE DB de cliente nativo a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerar uma sobrecarga significativa para aplicativos que criam e liberam continuamente objetos de sessão. A sobrecarga pode ser minimizada Gerenciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão de provedor de OLE DB de cliente nativo com eficiência. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os aplicativos do provedor de OLE DB de clientes nativos podem manter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão de um objeto de sessão ativo mantendo uma referência em pelo menos uma interface do objeto.  
   
  Por exemplo, manter um pool de referências a objeto de criação de comando mantém ativas as conexões a esses objetos de sessão no pool. Como os objetos de sessão são necessários, o código de manutenção do pool passa um ponteiro de interface **IDBCreateCommand** válido para o método de aplicativo que solicita a sessão. Quando o método do aplicativo não necessita mais da sessão, o método retorna o ponteiro de interface para o código de manutenção do pool em vez de liberar a referência do aplicativo ao objeto de criação de comando.  
   

@@ -1,4 +1,5 @@
 ---
+description: URLs absolutas e relativas
 title: URLs absolutas e relativas | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453908"
 ---
 # <a name="absolute-and-relative-urls"></a>URLs absolutas e relativas
 Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante.  
@@ -35,13 +36,13 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
  *esquema*  
  Especifica como o *recurso* deve ser acessado.  
   
- *servidor*  
+ *server*  
  Especifica o nome do computador em que o *recurso* está localizado.  
   
  *path*  
  Especifica a sequência de diretórios que levam ao destino. Se o *recurso* for omitido, o destino será o último diretório no *caminho*.  
   
- *recurso*  
+ *Kit*  
  Se incluído, *recurso* é o destino e normalmente é o nome de um arquivo. Pode ser um *arquivo simples,* contendo um único fluxo binário de bytes ou um *documento estruturado,* contendo um ou mais armazenamentos e fluxos binários de bytes.  
   
 ## <a name="url-scheme-registration"></a>Registro de esquema de URL  
@@ -64,7 +65,7 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
   
  Uma URL relativa pode ser especificada no parâmetro *CommandText* ou *Source* . Na verdade, a URL relativa não representa um comando, como um comando SQL; Ele simplesmente especifica os parâmetros. O contexto da conexão ativa deve ser uma URL absoluta e o parâmetro de *opção* deve ser definido como **adCmdTableDirect**.  
   
- Por exemplo, o exemplo de código a seguir mostra como abrir um **conjunto de registros** no arquivo Readme25. txt do diretório WinNT/system32:  
+ Por exemplo, o exemplo de código a seguir mostra como abrir um **conjunto de registros** no arquivo de Readme25.txt do diretório WinNT/system32:  
   
 ```  
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

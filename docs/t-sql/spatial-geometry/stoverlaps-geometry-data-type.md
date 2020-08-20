@@ -1,4 +1,5 @@
 ---
+description: STOverlaps (tipo de dados geometry)
 title: STOverlaps (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454228"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

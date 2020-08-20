@@ -1,4 +1,5 @@
 ---
+description: Usar o Microsoft SDK para Java
 title: Usando o Microsoft SDK para Java | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453968"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Usar o Microsoft SDK para Java
 
@@ -27,7 +28,7 @@ ms.locfileid: "82761554"
 
 O Microsoft SDK para Java é o kit para desenvolvedores do ambiente do Microsoft Internet Explorer. Ferramentas, informações e exemplos são fornecidos para ajudá-lo a desenvolver programas e applets Java com base no JDK 1,1 e na máquina virtual Microsoft Win32 (Microsoft VM). O Microsoft SDK para Java não está vinculado ao Microsoft Visual J++. Para baixar esse SDK, clique aqui.  
   
- O utilitário Jactivex. exe gera classes de uma biblioteca de tipos, mas só pode ser invocado na linha de comando. Esse recurso não está integrado ao ambiente de desenvolvimento do Visual J++. Ao contrário das classes geradas pelo assistente de biblioteca de tipos Java, você pode entrar nos wrappers de classe criados pelo SDK. Isso é útil para depurar como seu código usa as classes de wrapper do ADO.  
+ O utilitário Jactivex.exe gera classes de uma biblioteca de tipos, mas só pode ser invocada na linha de comando. Esse recurso não está integrado ao ambiente de desenvolvimento do Visual J++. Ao contrário das classes geradas pelo assistente de biblioteca de tipos Java, você pode entrar nos wrappers de classe criados pelo SDK. Isso é útil para depurar como seu código usa as classes de wrapper do ADO.  
   
  Esse mecanismo lê a biblioteca de tipos do ADO e gera classes que você pode instanciar dentro de seu aplicativo. Ele gera essas classes no seguinte local: \\<diretório do Windows \> \Java\trustlib\msado15.  
   

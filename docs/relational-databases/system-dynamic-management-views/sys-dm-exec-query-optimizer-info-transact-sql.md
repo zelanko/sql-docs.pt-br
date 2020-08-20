@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_optimizer_info (Transact-SQL)
 title: sys. dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ca14221b1d7c8555c03cfc2a976cd09ec562687
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454975"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,22 +38,22 @@ ms.locfileid: "86005226"
   
 |Nome|Tipo de dados|Descrição|  
 |----------|---------------|-----------------|  
-|**contador**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
+|**neutraliza**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
 |**occurrence**|**bigint**|Número de ocorrências do evento de otimização para este contador.|  
 |**value**|**float**|Valor de propriedade médio por ocorrência de evento.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
     
 ## <a name="remarks"></a>Comentários  
  **Sys. dm_exec_query_optimizer_info** contém as seguintes propriedades (contadores). Todos os valores de ocorrência são cumulativos, e são definidos em 0 na reinicialização de sistema. Todos os valores dos campos de valores são definidos em NULL, na reinicialização de sistema. Todos os valores da coluna de valor especificam um uso médio do valor de ocorrência da mesma linha como o denominador no cálculo da média. Todas as otimizações de consulta são medidas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o determina alterações no **dm_exec_query_optimizer_info**, incluindo consultas geradas pelo usuário e pelo sistema. A execução de um plano já armazenado em cache não altera valores em **dm_exec_query_optimizer_info**, somente otimizações são significativas.  
   
 |Contador|Ocorrência|Valor|  
 |-------------|----------------|-----------|  
-|otimizações|Número total de otimizações.|Não Aplicável|  
+|otimizações|Número total de otimizações.|Não aplicável|  
 |tempo decorrido|Número total de otimizações.|Tempo médio decorrido por otimização de uma instrução individual (consulta), em segundos.|  
 |custo final|Número total de otimizações.|Custo estimado médio para um plano otimizado em unidades de custo interno.|  
 |plano trivial|Somente interno|Somente interno|  
@@ -70,26 +72,26 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 |estágio de ganho 1 para estágio 2|Somente interno|Somente interno|  
 |tempo limite|Somente interno|Somente interno|  
 |limite de memória excedido|Somente interno|Somente interno|  
-|insert stmt|Número de otimizações existentes para instruções INSERT.|Não Aplicável|  
-|delete stmt|Número de otimizações existentes para instruções DELETE.|Não Aplicável|  
-|update stmt|Número de otimizações existentes para instruções UPDATE.|Não Aplicável|  
-|contém subconsulta|Número de otimizações para uma consulta que contém ao menos uma subconsulta.|Não Aplicável|  
+|insert stmt|Número de otimizações existentes para instruções INSERT.|Não aplicável|  
+|delete stmt|Número de otimizações existentes para instruções DELETE.|Não aplicável|  
+|update stmt|Número de otimizações existentes para instruções UPDATE.|Não aplicável|  
+|contém subconsulta|Número de otimizações para uma consulta que contém ao menos uma subconsulta.|Não aplicável|  
 |unnest falhou|Somente interno|Somente interno|  
 |tabelas|Número total de otimizações.|Calcule o número médio de tabelas referenciadas por consulta otimizada.|  
-|dicas|Número de vezes que alguma dica foi especificada. Dicas contadas incluem: dicas de consulta JOIN, GROUP, UNION e FORCE ORDER, a opção definida FORCE PLAN e dicas de associação.|Não Aplicável|  
-|dica order|Número de vezes que dica de ordem de força foi especificada.|Não Aplicável|  
-|dica de associação|Número de vezes que o algoritmo de junção foi forçado por uma dica de associação.|Não Aplicável|  
-|exibir referência|Número de vezes que uma exibição foi referenciada em uma consulta.|Não Aplicável|  
-|consulta remota|Número de otimizações em que a consulta referencia ao menos uma fonte de dados remota, como uma tabela com um nome de quatro partes ou um resultado OPENROWSET.|Não Aplicável|  
+|dicas|Número de vezes que alguma dica foi especificada. Dicas contadas incluem: dicas de consulta JOIN, GROUP, UNION e FORCE ORDER, a opção definida FORCE PLAN e dicas de associação.|Não aplicável|  
+|dica order|Número de vezes que dica de ordem de força foi especificada.|Não aplicável|  
+|dica de associação|Número de vezes que o algoritmo de junção foi forçado por uma dica de associação.|Não aplicável|  
+|exibir referência|Número de vezes que uma exibição foi referenciada em uma consulta.|Não aplicável|  
+|consulta remota|Número de otimizações em que a consulta referencia ao menos uma fonte de dados remota, como uma tabela com um nome de quatro partes ou um resultado OPENROWSET.|Não aplicável|  
 |DOP máximo|Número total de otimizações.|Valor efetivo médio MAXDOP para um plano otimizado. Por padrão, MAXDOP efetivo é determinado pela opção de configuração de servidor **grau máximo de paralelismo** e pode ser substituído por uma consulta específica pelo valor da dica de consulta MAXDOP.|  
 |nível máximo de recursão|Número de otimizações em que um nível MAXRECURSION maior que 0 foi especificado com a dica de consulta.|Nível MAXRECURSION médio em otimizações onde um nível máximo de recursão especificado com a dica de consulta.|  
 |exibições indexadas carregadas|Somente interno|Somente interno|  
 |exibições indexadas correspondentes|Número de otimizações em que uma ou mais exibições indexadas foram correspondidas.|Número médio de exibições correspondentes.|  
 |exibições indexadas usadas|Número de otimizações em que uma ou mais exibições indexadas são usadas no plano de saída depois de correspondidas.|Número médio de exibições usadas.|  
 |exibições indexadas atualizadas|Número de otimizações de uma instrução DML que produzem um plano que mantém uma ou mais exibições indexadas.|Número médio de exibições mantidas.|  
-|solicitação de cursor dinâmico|Número de otimizações em que uma solicitação de cursor dinâmico foi especificada.|Não Aplicável|  
-|solicitação de cursor de avanço rápido|Número de otimizações em que uma solicitação de cursor de avanço rápido foi especificada.|Não Aplicável|  
-|merge stmt|Número de otimizações existentes para instruções MERGE.|Não Aplicável|  
+|solicitação de cursor dinâmico|Número de otimizações em que uma solicitação de cursor dinâmico foi especificada.|Não aplicável|  
+|solicitação de cursor de avanço rápido|Número de otimizações em que uma solicitação de cursor de avanço rápido foi especificada.|Não aplicável|  
+|merge stmt|Número de otimizações existentes para instruções MERGE.|Não aplicável|  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -127,7 +129,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

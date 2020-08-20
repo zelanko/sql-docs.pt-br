@@ -1,4 +1,5 @@
 ---
+description: Otimizar o Rastreamento do SQL
 title: Otimizar o rastreamento do SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 275e2c1b26608cbca2835dbe43efd72058fc998f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 444ef217e226a035b0ddfda00ec969a6bf05dff9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455343"
 ---
 # <a name="optimize-sql-trace"></a>Otimizar o Rastreamento do SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

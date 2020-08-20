@@ -1,4 +1,5 @@
 ---
+description: Referência de erros ADO
 title: Referência de erro ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453858"
 ---
 # <a name="ado-errors"></a>Erros ADO
 A constante **ErrorValueEnum** descreve os valores de erro do ADO. Para obter uma lista completa dessas constantes enumeradas, incluindo valores, consulte o [Apêndice B: erros do ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Esta seção examinará alguns dos erros mais interessantes e explicará algumas situações específicas que podem gerar essas informações ou soluções para corrigir o problema. A constante **ErrorValueEnum** e o número decimal positivo curto são listados.
@@ -53,8 +54,8 @@ A constante **ErrorValueEnum** descreve os valores de erro do ADO. Para obter um
 |**3714**|**adErrInvalidTransaction**|A transação de coordenação é inválida ou não foi iniciada.|
 |**3715**|**adErrNotExecuting**|Não é possível executar a operação enquanto não estiver em execução.|
 |**3716**|**adErrUnsafeOperation**|As configurações de segurança neste computador proíbem o acesso a uma fonte de dados em outro domínio.|
-|**3717**|**adWrnSecurityDialog**|Apenas para uso interno. Não use. (A entrada foi incluída para fins de integridade. Esse erro não deve aparecer no seu código.)|
-|**3718**|**adWrnSecurityDialogHeader**|Apenas para uso interno. Não use. (Entrada incluída para fins de integridade. Esse erro não deve aparecer no seu código.)|
+|**3717**|**adWrnSecurityDialog**|Somente para uso interno. Não use. (A entrada foi incluída para fins de integridade. Esse erro não deve aparecer no seu código.)|
+|**3718**|**adWrnSecurityDialogHeader**|Somente para uso interno. Não use. (Entrada incluída para fins de integridade. Esse erro não deve aparecer no seu código.)|
 |**3719**|**adErrIntegrityViolation**|O valor dos dados está em conflito com as restrições de integridade do campo. Um novo valor para um **campo** poderia causar uma chave duplicada. Um valor que forma um lado de uma relação entre dois registros pode não ser atualizável.|
 |**3720**|**adErrPermissionDenied**|Permissão insuficiente impede a gravação no campo. O usuário nomeado na cadeia de conexão não tem as permissões adequadas para gravar em um **campo**.|
 |**3721**|**adErrDataOverflow**|O valor dos dados é muito grande para ser representado pelo tipo de dados Field. Um valor numérico muito grande para o campo pretendido foi atribuído. Por exemplo, um valor inteiro longo foi atribuído a um campo inteiro curto.|

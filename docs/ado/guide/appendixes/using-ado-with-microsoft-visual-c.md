@@ -1,4 +1,5 @@
 ---
+description: Usar o ADO com o Microsoft Visual C++
 title: Usando o ADO com Microsoft Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 952bfcc5359d088e9e3e2557b990f803a4c3aafd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d4c383eec4ac09c41aef6953f63e5accbab40ff7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453998"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Usar o ADO com o Microsoft Visual C++
 Para obter informações sobre como usar o ADO com Visual C++, consulte as seguintes seções:  

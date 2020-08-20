@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_master_switch (Transact-SQL)
 title: managed_backup. sp_backup_master_switch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb140e5ff831373d2725bca82c70655c5745a658
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 193125f68cb5282e2aece4b00a3d41e1d3690464
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454745"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  @state  
  Defina o estado do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. O @state parâmetro é **bit**. Quando definido como um valor 0, as operações serão pausadas; quando definido como um valor 1, a operação será retomada.  
   

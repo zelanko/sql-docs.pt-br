@@ -1,4 +1,5 @@
 ---
+description: exibições do catálogo de eventos estendidos (Transact-SQL)
 title: Exibições do catálogo de eventos estendidos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 114958d9701b784ef3c8a4dd950e6cd62a0ca9ba
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 867905fb26fb6d2cf38c64f36655bb4966779981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455291"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>exibições do catálogo de eventos estendidos (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client OLE DB (objetos de fonte de dados)
 title: Objetos de fonte de dados (provedor de OLE DB de cliente nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,21 +20,21 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d0fb6b31376118fca3f2458c21b61c35beec618
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: abcad20ac1866e33f07d3b65f3a804949da9e2fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455773"
 ---
 #  <a name="sql-server-native-client-data-source-objects-ole-db"></a>SQL Server Native Client OLE DB (objetos de fonte de dados)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Native Client usa a fonte de dados do termo para o conjunto de interfaces OLE DB usadas para estabelecer um link para um armazenamento de dados, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A criação de uma instância do objeto de fonte de dados do provedor é a primeira tarefa de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor cliente nativo.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Native Client usa a fonte de dados do termo para o conjunto de interfaces OLE DB usadas para estabelecer um link para um armazenamento de dados, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A criação de uma instância do objeto de fonte de dados do provedor é a primeira tarefa de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor cliente nativo.  
   
  Todo provedor do OLE DB declara um identificador de classe (CLSID) para si mesmo. O CLSID para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo é o CLSID_SQLNCLI10 de GUID C/C++ (o símbolo SQLNCLI_CLSID será resolvido para o ProgID correto no arquivo sqlncli. h que você referencia). Com o CLSID, o consumidor usa a função **CoCreateInstance** do OLE para produzir uma instância do objeto de fonte de dados.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Native Client é um servidor em processo. Instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do provedor de OLE DB de clientes nativos são criadas usando a macro CLSCTX_INPROC_SERVER para indicar o contexto do executável.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Native Client é um servidor em processo. Instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do provedor de OLE DB de clientes nativos são criadas usando a macro CLSCTX_INPROC_SERVER para indicar o contexto do executável.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de fonte de dados do provedor de OLE DB de cliente nativo expõe as interfaces de inicialização OLE DB que permitem que o consumidor se conecte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados existentes.  
   
@@ -84,7 +85,7 @@ else
   
 -   [Propriedades de inicialização e autorização](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)  
   
--   [Das](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md)  
+-   [Sessões](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md)  
   
 -   [Propriedades da sessão – Provedor OLE DB do SQL Server Native Client](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
   

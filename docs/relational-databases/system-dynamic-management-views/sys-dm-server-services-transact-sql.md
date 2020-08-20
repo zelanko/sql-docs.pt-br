@@ -1,4 +1,5 @@
 ---
+description: sys.dm_server_services (Transact-SQL)
 title: sys. dm_server_services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 728eb088f02d338d5ac9d22f2b0cb5f2127450e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d281809133228d4af21c92ed06544a6143509e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454792"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85898612"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nome do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serviço, de texto completo ou de SQL Server Agent. Não pode ser nulo.|  
-|startup_type|**int**|Indica o modo inicial do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> 0: outro<br />1: outro<br />2: automático<br />3: manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
+|startup_type|**int**|Indica o modo de início do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> 0: outro<br />1: outro<br />2: automático<br />3: manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
 |startup_type_desc|**nvarchar(256)**|Descreve o modo inicial do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> Outro: outro (inicialização inicial)<br />Outro: outro (início do sistema)<br />Automático: início automático<br />Manual: início da demanda<br />Desabilitado: desabilitado<br /><br /> Não pode ser nulo.|  
 |status|**int**|Indica o status atual do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> 1: parado<br />2: outro (início pendente)<br />3: outro (parar pendente)<br />4: executando<br />5: outro (continuar pendente)<br />6: outro (pausa pendente)<br />7: em pausa<br /><br /> Permite valor nulo.|  
 |status_desc|**nvarchar(256)**|Descreve o status atual do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> Parado: o serviço está parado.<br />Outro (Iniciar operação pendente): o serviço está em processo de início.<br />Outro (parar operação pendente): o serviço está em processo de interrupção.<br />Em execução: o serviço está em execução.<br />Outro (continuar as operações pendentes): o serviço está em um estado pendente.<br />Outro (pausa pendente): o serviço está em processo de pausar.<br />Em pausa: o serviço está em pausa.<br /><br /> Não pode ser nulo.|  

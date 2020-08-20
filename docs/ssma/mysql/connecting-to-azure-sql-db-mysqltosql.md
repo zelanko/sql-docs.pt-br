@@ -1,4 +1,5 @@
 ---
+description: Conectando-se ao banco de dados SQL do Azure (MySQLToSQL)
 title: Conectando-se ao banco de dados SQL do Azure (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0f02c136251a45e27267ca89292d6bb5b39ffc75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454138"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>Conectando-se ao banco de dados SQL do Azure (MySQLToSQL)
 Para migrar bancos de dados MySQL para SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conecta, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados do banco de dados no SQL Azure Gerenciador de metadados. O SSMA armazena informações da instância do SQL Azure ao qual você está conectado, mas não armazena senhas.  

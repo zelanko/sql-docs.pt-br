@@ -1,4 +1,5 @@
 ---
+description: STGeometryType (tipo de dados geometry)
 title: STGeometryType (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a842e3ee2dcfb86f293e8ae3feba1a30665ffbe0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b297708cbd8820967463f395d765474c9881189b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454277"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

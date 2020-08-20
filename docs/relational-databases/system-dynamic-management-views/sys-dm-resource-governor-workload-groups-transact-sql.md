@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups (Transact-SQL)
 title: sys. dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2020
@@ -20,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dfcbcaceeb4e60a88f1ba00fa7a116629945c7e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454871"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,10 +67,10 @@ ms.locfileid: "87397109"
 |effective_max_dop|**int**|**Aplica-se a: a**partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Grau máximo de paralelismo efetivo para o grupo de carga de trabalho. Não permite valor nulo.| 
 |total_cpu_usage_preemptive_ms|**bigint**|**Aplica-se a: a**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Tempo total de CPU usado durante o agendamento do modo preemptivo para o grupo de carga de trabalho, medido em MS. Não permite valor nulo.<br /><br />Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo.| 
 |request_max_memory_grant_percent_numeric|**float**|**Aplica-se a: a**partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Configuração atual da concessão de memória máxima, como uma porcentagem, para uma única solicitação. Não permite valor nulo.| 
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa exibição de gerenciamento dinâmico mostra a configuração na memória. Para ver os metadados de configuração armazenados, use a exibição de catálogo de [&#41;de &#40;resource_governor_workload_groups do Transact-SQL](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
+ Essa exibição de gerenciamento dinâmico mostra a configuração na memória. Para ver os metadados de configuração armazenados, use a exibição de catálogo de [&#41;de &#40;resource_governor_workload_groups do Transact-SQL ](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
  Quando `ALTER RESOURCE GOVERNOR RESET STATISTICS` é executado com êxito, os seguintes contadores são redefinidos:,,,,,,,, `statistics_start_time` `total_request_count` ,, `total_queued_request_count` `total_cpu_limit_violation_count` `total_cpu_usage_ms` `max_request_cpu_time_ms` `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` e `max_request_grant_memory_kb` . O contador `statistics_start_time` é definido como a data e hora atuais do sistema e os outros contadores são definidos como zero (0).  
   

@@ -1,4 +1,5 @@
 ---
+description: Enviar dados para FILESTREAM no SQL Server Native Client-ISequentialStream associado a ICommandText
 title: Dados FILESTREAM, ISequentialStream ICommandText
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efdc485c139e6b35a025b87b39c2bfd7c21caf9e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce919a10aaca50b8b86368b54ad0f584a3264957
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455750"
 ---
 # <a name="send-data-to-filestream-in-sql-server-native-client---isequentialstream-bound-to-icommandtext"></a>Enviar dados para FILESTREAM no SQL Server Native Client-ISequentialStream associado a ICommandText
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

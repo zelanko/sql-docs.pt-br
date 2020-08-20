@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromWKB (tipo de dados geometry)
 title: STGeomCollFromWKB (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 746c6f3564af7084b86babe54be88c6f25947260
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f780e521ba80822eac4de95e91b8495521e07f60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454293"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_geometrycollection*  
- É a representação WKB da instância de **geometrycollection** que você deseja retornar. *WKB_geometrycollection* é uma expressão **varbinary(max)** .  
+ É a representação WKB da instância de **geometrycollection** que você deseja retornar. *WKB_geometrycollection* é uma expressão **varbinary(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometry** que você deseja retornar.  
@@ -65,5 +66,5 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   

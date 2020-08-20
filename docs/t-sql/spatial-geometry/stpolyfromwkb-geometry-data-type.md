@@ -1,4 +1,5 @@
 ---
+description: STPolyFromWKB (tipo de dados geometry)
 title: STPolyFromWKB (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b46ac4b887c28cd5ad7600ff19cb0a694da79550
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0e15bc16518c9b5dbc53369a4919f3e289a7d261
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454198"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_polygon*  
- É a representação WKB da instância de **geometryPolygon** que você deseja retornar. *WKB_polygon* é uma expressão **varbinary(max)** .  
+ É a representação WKB da instância de **geometryPolygon** que você deseja retornar. *WKB_polygon* é uma expressão **varbinary(max)**.  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryPolygon** que você deseja retornar.  
@@ -65,7 +66,7 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Métodos de geometria estática do OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

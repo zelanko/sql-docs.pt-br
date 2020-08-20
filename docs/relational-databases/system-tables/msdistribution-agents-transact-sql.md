@@ -1,4 +1,5 @@
 ---
+description: MSdistribution_agents (Transact-SQL)
 title: MSdistribution_agents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04f9019a77638d11572c11a097cd290ed5406ef4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9802c60aed31ec8e5cb04f7d053761382e5f90df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454671"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85889988"
 |**local_job**|**bit**|Indica se há um trabalho de SQL Server Agent no Distribuidor local.|  
 |**job_id**|**binary(16)**|O número de identificação do trabalho.|  
 |**subscription_guid**|**binary(16)**|A ID de assinaturas desse agente.|  
-|**profile_id**|**int**|A ID de configuração do [MSagent_profiles &#40;tabela&#41;Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
+|**profile_id**|**int**|A ID de configuração do [MSagent_profiles &#40;tabela&#41;Transact-SQL ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
 |**anonymous_subid**|**uniqueidentifier**|A ID de um agente anônimo.|  
 |**subscriber_name**|**sysname**|O nome do Assinante, só usada por agentes anônimos.|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

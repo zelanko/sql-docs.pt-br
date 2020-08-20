@@ -1,4 +1,5 @@
 ---
+description: Programação ADO do Visual C++
 title: Visual C++ Programação ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453948"
 ---
 # <a name="visual-c-ado-programming"></a>Programação ADO do Visual C++
 A referência da API do ADO descreve a funcionalidade da API (interface de programação de aplicativo) do ADO usando uma sintaxe semelhante à do Microsoft Visual Basic. Embora o público-alvo seja todos os usuários, os programadores do ADO empregam diversas linguagens, como Visual Basic, Visual C++ (com e sem a diretiva de **#import** ) e Visual J++ (com o pacote de classe ADO/WFC).  
@@ -35,7 +36,7 @@ A referência da API do ADO descreve a funcionalidade da API (interface de progr
  As seções a seguir resumem os detalhes dos programadores C e C++ usando o ADO e a diretiva **#import** . Ele se concentra em tipos de dados específicos para COM (**Variant**, **BSTR**e **SafeArray**) e tratamento de erro (_com_error).  
   
 ## <a name="using-the-import-compiler-directive"></a>Usando a diretiva de compilador #import  
- A diretiva de compilador **#import** Visual C++ simplifica o trabalho com os métodos e as propriedades do ADO. A diretiva usa o nome de um arquivo que contém uma biblioteca de tipos, como o ADO. dll (MsADO15. dll), e gera arquivos de cabeçalho contendo declarações de typedef, apontadores inteligentes para interfaces e constantes enumeradas. Cada interface é encapsulada, ou encapsulada, em uma classe.  
+ A diretiva de compilador **#import** Visual C++ simplifica o trabalho com os métodos e as propriedades do ADO. A diretiva usa o nome de um arquivo que contém uma biblioteca de tipos, como o ADO. dll (Msado15.dll), e gera arquivos de cabeçalho contendo declarações de typedef, ponteiros inteligentes para interfaces e constantes enumeradas. Cada interface é encapsulada, ou encapsulada, em uma classe.  
   
  Para cada operação dentro de uma classe (ou seja, um método ou uma chamada de propriedade), há uma declaração para chamar a operação diretamente (ou seja, a forma "bruta" da operação) e uma declaração para chamar a operação bruta e gerar um erro COM se a operação não for executada com êxito. Se a operação for uma propriedade, geralmente há uma diretiva de compilador que cria uma sintaxe alternativa para a operação que tem sintaxe como Visual Basic.  
   
@@ -222,7 +223,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- – ou –  
+ - ou -  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -241,14 +242,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- – ou –  
+ - ou -  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- – ou –  
+ - ou -  
   
 ```cpp
 _RecordsetPtr  rs;  

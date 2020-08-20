@@ -1,4 +1,5 @@
 ---
+description: Configurar Topologia (replicação ponto a ponto)
 title: Configurar Topologia (replicação ponto a ponto) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e06e271f8f75fea1cf98c9d8f9697cbfe49c412e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 632cdd88b0f56b0518789f1887b13facaed07e1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455626"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar Topologia (replicação ponto a ponto)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,12 +30,12 @@ ms.locfileid: "85773980"
 ## <a name="options"></a>Opções  
  A página **Configurar topologia** contém elementos de interface e opções disponíveis ao clicar com o botão direito do mouse em um elemento. A tabela a seguir descreve cada elemento de interface.  
   
-|Elemento de interface|DESCRIÇÃO|  
+|Elemento de interface|Descrição|  
 |-----------------------|-----------------|  
 |Superfície de design|Exibe outros elementos de interface. Para adicionar elementos, clique com o botão direito do mouse na superfície de design.|  
 |![O primeiro nó em uma topologia](../../relational-databases/replication/media/p2pwizard-firstnode.gif "O primeiro nó em uma topologia")|O nó original na topologia. Novos nós são iniciados usando uma cópia do banco de dados de publicação do nó original.|  
 |![Um nó para o qual temos informações completas](../../relational-databases/replication/media/p2pwizard-complete.gif "Um nó para o qual temos informações completas")|Um nó que está sendo executado em uma instância do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou em uma versão posterior, para o qual a replicação tem informações completas. Para especificar opções de configuração, clique com o botão direito do mouse no nó.|  
-|![Um nó para o qual temos informações incompletas](../../relational-databases/replication/media/p2pwizard-incomplete.gif "Um nó para o qual temos informações incompletas")|Um nó para o qual a replicação tem informações incompletas. Para especificar opções de configuração, clique com o botão direito do mouse no nó.<br /><br /> A replicação tem informações incompletas por um dos seguintes motivos:<br /><br /> \- O nó está executando uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], que não armazena todos os metadados exigidos pelo assistente.<br /><br /> \- O nó está executando uma versão posterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas a replicação não consegue recuperar informações de assinatura do nó. Para solucionar essa situação:<br /><br /> Verifique se o banco de dados do nó está online e se você pode se conectar a ele usando as mesmas credenciais que os Agente de Distribuiçãos que se conectaram ao nó.<br /><br /> Verifique se o Agente de Leitor de Log e todos os Agente de Distribuiçãos conectados ao nó estão em execução.<br /><br /> Verifique se a definição do tempo limite de atualização é suficientemente alta para coletar todas as informações de topologia. Para definir o tempo limite, clique com o botão direito do mouse na superfície de design e clique em **Selecionar Tempo Limite de Atualização**.|  
+|![Um nó para o qual temos informações incompletas](../../relational-databases/replication/media/p2pwizard-incomplete.gif "Um nó para o qual temos informações incompletas")|Um nó para o qual a replicação tem informações incompletas. Para especificar opções de configuração, clique com o botão direito do mouse no nó.<br /><br /> A replicação tem informações incompletas por um dos seguintes motivos:<br /><br /> - O nó está executando uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], que não armazena todos os metadados exigidos pelo assistente.<br /><br /> - O nó está executando uma versão posterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas a replicação não consegue recuperar informações de assinatura do nó. Para solucionar essa situação:<br /><br /> Verifique se o banco de dados do nó está online e se você pode se conectar a ele usando as mesmas credenciais que os Agente de Distribuiçãos que se conectaram ao nó.<br /><br /> Verifique se o Agente de Leitor de Log e todos os Agente de Distribuiçãos conectados ao nó estão em execução.<br /><br /> Verifique se a definição do tempo limite de atualização é suficientemente alta para coletar todas as informações de topologia. Para definir o tempo limite, clique com o botão direito do mouse na superfície de design e clique em **Selecionar Tempo Limite de Atualização**.|  
 |Linhas cinza com setas|Conexão entre dois nós. Para adicionar uma conexão, clique com o botão direito do mouse em um dos nós que você quer conectar. Para remover uma conexão, clique com o botão direito do mouse na conexão.<br /><br /> Se a linha tiver uma única seta, a replicação terá informações incompletas para um dos nós.|  
   
 ### <a name="options-for-the-design-surface"></a>Opções para a superfície de design  

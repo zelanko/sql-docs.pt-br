@@ -1,4 +1,5 @@
 ---
+description: Provedor de persistência do Microsoft OLE DB (provedor de serviços ADO)
 title: Provedor de persistência do Microsoft OLE DB (provedor de serviços ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454108"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Visão geral do provedor de persistência da Microsoft OLE DB
 O provedor de persistência da Microsoft OLE DB permite que você salve um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo e, posteriormente, restaure esse objeto **Recordset** a partir do arquivo. Informações de esquema, dados e alterações pendentes são preservadas.
@@ -36,7 +37,7 @@ O provedor de persistência da Microsoft OLE DB permite que você salve um objet
 ## <a name="errors"></a>Errors
  Os seguintes erros emitidos por esse provedor podem ser detectados em seu aplicativo.
 
-|Constante|Description|
+|Constante|DESCRIÇÃO|
 |--------------|-----------------|
 |E_BADSTREAM|O arquivo aberto não tem um formato válido (ou seja, o formato não é ADTG ou XML).|
 |E_CANTPERSISTROWSET|O objeto **Recordset** salvo tem características que impedem que ele seja armazenado.|

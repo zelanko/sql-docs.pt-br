@@ -1,4 +1,5 @@
 ---
+description: Visão geral do provedor do Microsoft OLE DB para SQL Server
 title: Provedor de OLE DB da Microsoft para SQL Server | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454038"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Visão geral do provedor do Microsoft OLE DB para SQL Server
 O provedor de OLE DB da Microsoft para SQL Server, SQLOLEDB, permite que o ADO acesse Microsoft SQL Server.

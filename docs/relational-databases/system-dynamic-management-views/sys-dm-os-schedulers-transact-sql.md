@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_schedulers (Transact-SQL)
 title: sys. dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee5f6aca36766edd915b4b1b53c54a83c6b5a63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2d89c460dd3e69e3fe0020463be750e9528de951
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454908"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,14 +63,14 @@ ms.locfileid: "86012040"
 |task_memory_object_address|**varbinary (8)**|Endereço de memória do objeto de memória da tarefa. Não permite valor nulo. Para obter mais informações, consulte [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expõe o quantum do agendador usado por SQLOS.|  
 | total_cpu_usage_ms |**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior <br><br> Total de CPU consumida por este Agendador conforme relatado por trabalhadores não preemptivos. Não permite valor nulo.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Indica a limitação com base no [objetivo de nível de serviço](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sempre será 0 para versões não Azure do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Permite valor nulo.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indica a limitação com base no [objetivo de nível de serviço](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sempre será 0 para versões não Azure do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Permite valor nulo.|
 |total_scheduler_delay_ms|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior <br><br> O tempo entre um trabalho alternando e outro alternando. Pode ser causado por trabalhos preventivos atrasando o agendamento do próximo trabalho não preemptivo ou devido aos threads de agendamento do sistema operacional de outros processos. Não permite valor nulo.|
 |ideal_workers_limit|**int**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior <br><br> Quantos trabalhadores devem ser ideais no Agendador. Se os trabalhos atuais excederem o limite devido à carga de tarefa desbalanceada, quando eles ficarem ociosos, eles serão cortados. Não permite valor nulo.|
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="examples"></a>Exemplos  
   
@@ -136,7 +138,7 @@ active_workers_count work_queue_count
   
 -   O agendador `255` representando DAC possui `3` trabalhadores associados. Esses trabalhadores são alocados na inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não são alterados. Esses trabalhadores são usados para processar somente consultas DAC. As duas tarefas neste agendador representam um gerenciador de conexões e um trabalhador inativo.  
   
--   `active_workers_count`representa todos os trabalhos que têm tarefas associadas e estão sendo executados sob o modo não Preemptive. Algumas tarefas, como escutas de rede, são executadas sob planejamento preemptivo.  
+-   `active_workers_count` representa todos os trabalhos que têm tarefas associadas e estão sendo executados sob o modo não Preemptive. Algumas tarefas, como escutas de rede, são executadas sob planejamento preemptivo.  
   
 -   Agendadores ocultos não processam solicitações comuns de usuário. O agendador DAC é a exceção. Ele possui um thread para processar solicitações.  
   
@@ -190,4 +192,4 @@ current_workers_count active_workers_count work_queue_count
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

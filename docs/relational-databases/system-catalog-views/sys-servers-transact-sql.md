@@ -1,4 +1,5 @@
 ---
+description: sys.servers (Transact-SQL)
 title: sys. Servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/16/2020
@@ -20,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455186"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85894935"
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
 |**local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
 |**provider_string**|**nvarchar(4000)**|Propriedade de conexão da cadeia de caracteres de provedor OLE DB.<br /><br /> É NULL, a menos que o chamador tenha a `ALTER ANY LINKED SERVER` permissão.|  
-|**catálogo**|**sysname**|OLE DB propriedade de conexão do catálogo. NULL se nenhum.|  
+|**catalog**|**sysname**|OLE DB propriedade de conexão do catálogo. NULL se nenhum.|  
 |**connect_timeout**|**int**|Tempo de limite de conexão em segundos, 0 se nenhum.|  
 |**query_timeout**|**int**|Tempo de limite  de consulta em segundos, 0 se nenhum.|  
 |**is_linked**|**bit**|0 = é um servidor de estilo antigo adicionado usando **sp_addserver**, com comportamento de RPC e de transação distribuída diferente.<br /><br /> 1 = Servidor vinculado padrão.|  
@@ -74,9 +75,9 @@ ms.locfileid: "85894935"
 - Associação nas funções de servidor fixas **setupadmin** ou **sysadmin**  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições de catálogo de servidores vinculados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de servidores vinculados &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
  

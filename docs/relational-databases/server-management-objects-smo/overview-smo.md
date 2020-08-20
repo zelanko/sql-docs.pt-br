@@ -1,4 +1,5 @@
 ---
+description: Visão geral (SMO)
 title: Visão geral (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -11,11 +12,12 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455523"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +104,7 @@ ms.locfileid: "86012323"
   
  A execução de captura permite capturar os lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)] que seriam executados normalmente. Dessa forma, o programador de SMO pode adiar o script, armazená-lo para execução posterior ou fornecer uma visualização para o usuário final. Por exemplo, uma instrução **create database**, um **create table**e **create index** podem ser enviadas em um lote e ser executadas como três etapas sequenciais. Essa funcionalidade é controlada pelo usuário com o objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
- **Provedor de WMI**  
+ **Provedor WMI**  
   
  Os objetos do Provedor WMI são quebrados pelo SMO. Isso fornece ao programador de SMO um modelo de objeto simples que é muito similar a classes de SMO, sem a necessidade de compreender o modelo de programação representado pelo namespace e os detalhes do Provedor WMI do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Provedor WMI permite configurar serviços, aliases e bibliotecas de rede do servidor e do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

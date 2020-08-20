@@ -1,4 +1,5 @@
 ---
+description: Provedor de comunicação remota do Microsoft OLE DB (provedor de serviços ADO)
 title: Provedor de comunicação remota do Microsoft OLE DB (provedor de serviços ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1576cedd9352b5f134f3886ee901d40cebeccb33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454028"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Visão geral do provedor de comunicação remota do Microsoft OLE DB
 O provedor de comunicação remota do Microsoft OLE DB permite que um usuário local em um computador cliente invoque provedores de dados em um computador remoto. Especifique os parâmetros do provedor de dados para o computador remoto como você faria se fosse um usuário local no computador remoto. Em seguida, especifique os parâmetros usados pelo provedor de comunicação remota para acessar o computador remoto. Em seguida, você pode acessar o computador remoto como se você fosse um usuário local.
 
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).
 
 ## <a name="provider-keyword"></a>Palavra-chave Provider
  Para invocar o provedor de comunicação remota OLE DB, especifique a palavra-chave e o valor a seguir na cadeia de conexão. (Observe o espaço em branco no nome do provedor.)
@@ -39,7 +40,7 @@ O provedor de comunicação remota do Microsoft OLE DB permite que um usuário l
 
 |Palavra-chave|Descrição|
 |-------------|-----------------|
-|**Fonte de Dados**|Especifica o nome da fonte de dados remota. Ele é passado para o provedor de comunicação remota OLE DB para processamento.<br /><br /> Essa palavra-chave é equivalente ao [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) do objeto DataControl.|
+|**Fonte de Dados**|Especifica o nome da fonte de dados remota. Ele é passado para o provedor de comunicação remota OLE DB para processamento.<br /><br /> Essa palavra-chave é equivalente ao [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) do objeto DataControl.|
 
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
  Quando esse provedor de serviços é invocado, as propriedades dinâmicas a seguir são adicionadas à coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md).
@@ -52,7 +53,7 @@ O provedor de comunicação remota do Microsoft OLE DB permite que um usuário l
 |**Manipulador**|Indica o nome de um programa de personalização do lado do servidor (ou manipulador) que estende a funcionalidade do [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)e quaisquer parâmetros usados pelo manipulador, todos separados por vírgulas (","). Um valor de **cadeia de caracteres** .|
 |**Tempo limite da Internet**|Indica o número máximo de milissegundos para aguardar uma solicitação de viagem de e para o servidor. (O padrão é 5 minutos.)|
 |**Provedor remoto**|Indica o nome do provedor de dados a ser usado no servidor remoto.|
-|**Servidor remoto**|Indica o nome do servidor e o protocolo de comunicação a ser usado por essa conexão. Essa propriedade é equivalente ao [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Propriedade [do servidor](../../../ado/reference/rds-api/server-property-rds.md) de objetos DataContro.|
+|**Servidor remoto**|Indica o nome do servidor e o protocolo de comunicação a ser usado por essa conexão. Essa propriedade é equivalente ao [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Propriedade [do servidor](../../../ado/reference/rds-api/server-property-rds.md) de objetos DataContro.|
 |**Atualizações do Transact**|Quando definido como **true**, esse valor indica que quando [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) é executado no servidor, ele será feito dentro de uma transação. O valor padrão para essa propriedade dinâmica booliana é **false**.|
 
  Você também pode definir propriedades dinâmicas graváveis especificando seus nomes como palavras-chave na cadeia de conexão. Por exemplo, defina a propriedade dinâmica **tempo limite da Internet** como cinco segundos, especificando:
@@ -72,7 +73,7 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="remarks"></a>Comentários
  No ADO 2,0, o provedor de comunicação remota OLE DB só podia ser especificado no parâmetro *ActiveConnection* do método **Open** do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . A partir do ADO 2,1, o provedor também pode ser especificado no parâmetro *ConnectionString* do método **Open** do objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .
 
- O equivalente do **RDS. **A propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) do objeto DataControl não está disponível. Em vez disso, o argumento de *origem* do método **Open** do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) é usado.
+ O equivalente do **RDS. ** A propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) do objeto DataControl não está disponível. Em vez disso, o argumento de *origem* do método **Open** do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) é usado.
 
  **Observação** Especificando "...; Provedor remoto = MS remoto;... " criaria um cenário de quatro camadas. Os cenários além de três camadas não foram testados e não devem ser necessários.
 

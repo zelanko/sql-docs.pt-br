@@ -1,4 +1,5 @@
 ---
+description: Exemplo de extensões do Visual C++
 title: Exemplo de extensões de Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453938"
 ---
 # <a name="visual-c-extensions-example"></a>Exemplo de extensões do Visual C++
 Este programa mostra como os valores são recuperados de campos e convertidos em variáveis C/C++.  

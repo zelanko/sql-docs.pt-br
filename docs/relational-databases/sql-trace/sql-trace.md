@@ -1,4 +1,5 @@
 ---
+description: Rastreamento do SQL
 title: Rastreamento do SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455319"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +125,7 @@ O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descre
 |**RowCounts**|48|O número de linhas no lote.|  
 |**ServerName**|26|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|  
 |**SessionLoginName**|64|O nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **Login1** e executar uma instrução como **Login2**, **SessionLoginName** irá exibir **Login1**, enquanto que **LoginName** exibirá **Login2**. Esta coluna de dados exibe logons tanto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quanto do Windows.|  
-|**Severity**|20|Nível de severidade do evento de exceção.|  
+|**Gravidade**|20|Nível de severidade do evento de exceção.|  
 |**SourceDatabaseID**|62|ID do banco de dados em que se encontra a origem do objeto.|  
 |**SPID**|12|ID de processo de servidor (SPID) atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|  
 |**SqlHandle**|63|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado a **sys.dm_exec_sql_text()** para recuperar o texto SQL associado.|  
@@ -158,7 +159,7 @@ O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descre
 |Descreve como usar funções internas para exibir um rastreamento salvo.|[Exibir um rastreamento salvo &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)|  
 |Descreve como usar funções internas para exibir informações de filtro de rastreamento.|[Exibir informações de filtro &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)|  
 |Descreve como usar procedimentos armazenados para excluir um rastreamento.|[Excluir um rastreamento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)|  
-|Descreve como minimizar os custos de desempenho devidos a um rastreamento.|[Otimizar o rastreamento do SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|  
+|Descreve como minimizar os custos de desempenho devidos a um rastreamento.|[Otimizar o Rastreamento do SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|  
 |Descreve como filtrar um rastreamento para minimizar a sobrecarga incorrida durante um rastreamento.|[Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)|  
 |Descreve como minimizar a quantidade de dados que o rastreamento coleta.|[Limitar o tamanho de arquivos e tabelas do rastreamento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Descreve os dois modos de agendar rastreamento no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Agendar rastreamentos](../../relational-databases/sql-trace/schedule-traces.md)|  

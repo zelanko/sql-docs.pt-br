@@ -1,4 +1,5 @@
 ---
+description: 'Instanciação de evento ADO: ADO e WFC'
 title: 'Instanciação de evento ADO: ADO e WFC | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86c48e9cb3d34eb4ac499ff5f58df77367faeec0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453828"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciação de evento ADO: ADO e WFC
 O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento ADO e apresenta uma interface de programação de aplicativo simplificada. Em geral, o ADO/WFC intercepta eventos ADO, consolida os parâmetros de evento em uma única classe de evento e, em seguida, chama o manipulador de eventos.  
