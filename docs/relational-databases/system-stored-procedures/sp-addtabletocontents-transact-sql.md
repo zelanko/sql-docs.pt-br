@@ -1,4 +1,5 @@
 ---
+description: sp_addtabletocontents (Transact-SQL)
 title: sp_addtabletocontents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469747"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table_name'`É o nome da tabela. *table_name* é **sysname**, sem padrão.  
+`[ @table_name = ] 'table_name'` É o nome da tabela. *table_name* é **sysname**, sem padrão.  
   
-`[ @owner_name = ] 'owner_name'`É o nome do proprietário da tabela. *owner_name* é **sysname**, com um padrão de NULL.  
+`[ @owner_name = ] 'owner_name'` É o nome do proprietário da tabela. *owner_name* é **sysname**, com um padrão de NULL.  
   
-`[ @filter_clause = ] 'filter_clause'`Especifica uma cláusula de filtro que controla quais linhas dos dados carregados recentemente devem ser adicionadas às tabelas de controle de mesclagem. *filter_clause* é **nvarchar (4000)**, com um valor padrão de NULL. Se *filter_clause* for **NULL**, todas as linhas carregadas em massa serão adicionadas.  
+`[ @filter_clause = ] 'filter_clause'` Especifica uma cláusula de filtro que controla quais linhas dos dados carregados recentemente devem ser adicionadas às tabelas de controle de mesclagem. *filter_clause* é **nvarchar (4000)**, com um valor padrão de NULL. Se *filter_clause* for **NULL**, todas as linhas carregadas em massa serão adicionadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

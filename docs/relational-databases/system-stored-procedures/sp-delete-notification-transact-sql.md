@@ -1,4 +1,5 @@
 ---
+description: sp_delete_notification (Transact-SQL)
 title: sp_delete_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65a8442c4f957cda4db9c33e0988ba5dca05ca88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469607"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert'`O nome do alerta. o *alerta* é **sysname**, sem padrão.  
+`[ @alert_name = ] 'alert'` O nome do alerta. o *alerta* é **sysname**, sem padrão.  
   
-`[ @operator_name = ] 'operator'`O nome do operador. o *operador* é **sysname**, sem padrão.  
+`[ @operator_name = ] 'operator'` O nome do operador. o *operador* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -71,14 +72,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_alert](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_notification](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_add_operator](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_alert](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_alert](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_notification](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_operator](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_notification](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_notification ](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_operator ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_alert ](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_alert ](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_notification ](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_operator ](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_notification ](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

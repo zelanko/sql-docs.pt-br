@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobsteplog (Transact-SQL)
 title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1ae68a2c09ca79917288381db0a0f9c92d4e33c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b50fb6987fe43e78ae205f620fffa06750172a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469623"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] 'job_id'`O número de identificação do trabalho que contém o log da etapa de trabalho a ser removido. *job_id* é **int**, com um padrão de NULL.  
+`[ @job_id = ] 'job_id'` O número de identificação do trabalho que contém o log da etapa de trabalho a ser removido. *job_id* é **int**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
   
 > **Observação:** *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @step_id = ] step_id`O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho no trabalho serão excluídos, a menos que ** \@ older_than** ou ** \@ larger_than** sejam especificados. *step_id* é **int**, com um padrão de NULL.  
+`[ @step_id = ] step_id` O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho no trabalho serão excluídos, a menos que ** \@ older_than** ou ** \@ larger_than** sejam especificados. *step_id* é **int**, com um padrão de NULL.  
   
-`[ @step_name = ] 'step_name'`O nome da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. *step_name* é **sysname**, com um padrão de NULL.  
+`[ @step_name = ] 'step_name'` O nome da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. *step_name* é **sysname**, com um padrão de NULL.  
   
 > **Observação:** *Step_id* ou *step_name* pode ser especificado, mas ambos não podem ser especificados.  
   
-`[ @older_than = ] 'date'`A data e a hora do log de etapa de trabalho mais antigo que você deseja manter. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *Date* é **DateTime**, com um padrão de NULL. Tanto ** \@ older_than** quanto ** \@ larger_than** podem ser especificados.  
+`[ @older_than = ] 'date'` A data e a hora do log de etapa de trabalho mais antigo que você deseja manter. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *Date* é **DateTime**, com um padrão de NULL. Tanto ** \@ older_than** quanto ** \@ larger_than** podem ser especificados.  
   
-`[ @larger_than = ] 'size_in_bytes'`O tamanho em bytes do maior log de etapa de trabalho que você deseja manter. Todos os logs de etapa de trabalho maiores que esse serão removidos. Tanto ** \@ larger_than** quanto ** \@ older_than** podem ser especificados.  
+`[ @larger_than = ] 'size_in_bytes'` O tamanho em bytes do maior log de etapa de trabalho que você deseja manter. Todos os logs de etapa de trabalho maiores que esse serão removidos. Tanto ** \@ larger_than** quanto ** \@ older_than** podem ser especificados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -125,7 +126,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_help_jobsteplog](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_jobsteplog ](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

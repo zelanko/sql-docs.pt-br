@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetserver (Transact-SQL)
 title: sp_delete_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 290da3e982e98287305e2e9f277037fea0e8f86a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469595"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'`O nome do servidor a ser removido como um servidor de destino disponível. o *servidor* é **nvarchar (30)**, sem padrão.  
+`[ @server_name = ] 'server'` O nome do servidor a ser removido como um servidor de destino disponível. o *servidor* é **nvarchar (30)**, sem padrão.  
   
-`[ @clear_downloadlist = ] clear_downloadlist`Especifica se a lista de downloads do servidor de destino deve ser desmarcada. *clear_downloadlist* é de tipo **bit**, com um padrão de **1**. Quando *clear_downloadlist* é **1**, o procedimento limpa a lista de download do servidor antes de excluir o servidor. Quando *clear_downloadlist* for **0**, a lista de download não será desmarcada.  
+`[ @clear_downloadlist = ] clear_downloadlist` Especifica se a lista de downloads do servidor de destino deve ser desmarcada. *clear_downloadlist* é de tipo **bit**, com um padrão de **1**. Quando *clear_downloadlist* é **1**, o procedimento limpa a lista de download do servidor antes de excluir o servidor. Quando *clear_downloadlist* for **0**, a lista de download não será desmarcada.  
   
-`[ @post_defection = ] post_defection`Especifica se uma instrução de defeito deve ser postada no servidor de destino. *post_defection* é de tipo **bit**, com um padrão de 1. Quando *post_defection* é **1**, o procedimento posta uma instrução de defeito no servidor de destino antes de excluir o servidor. Quando *post_defection* é **0**, o procedimento não publica uma instrução de defeito no servidor de destino.  
+`[ @post_defection = ] post_defection` Especifica se uma instrução de defeito deve ser postada no servidor de destino. *post_defection* é de tipo **bit**, com um padrão de 1. Quando *post_defection* é **1**, o procedimento posta uma instrução de defeito no servidor de destino antes de excluir o servidor. Quando *post_defection* é **0**, o procedimento não publica uma instrução de defeito no servidor de destino.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -72,8 +73,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Confira também  
- [&#41;&#40;Transact-SQL de sp_help_targetserver](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_msx_defect](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_targetserver ](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_msx_defect ](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

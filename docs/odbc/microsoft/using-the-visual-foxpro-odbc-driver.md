@@ -1,4 +1,5 @@
 ---
+description: Usar o driver ODBC do Visual FoxPro
 title: Usando o driver ODBC do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ce3cb5e16aca2587a7dc892763f194f54e085ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c85c4e412e07670b3a5d0d139cd29dacf39310e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471278"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Usar o driver ODBC do Visual FoxPro
 Nesta seção, os tópicos a seguir discutem como usar o driver ODBC do Microsoft® Visual FoxPro®:  

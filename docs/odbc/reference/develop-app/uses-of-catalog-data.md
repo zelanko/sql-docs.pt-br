@@ -1,4 +1,5 @@
 ---
+description: Usos de dados do catálogo
 title: Usos de dados do catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 429d42d4a82d0f9f34e33eb4f5f3293100505da9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e03dff0a8c5715a86f1bcdff65b74f55409889a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471193"
 ---
 # <a name="uses-of-catalog-data"></a>Usos de dados do catálogo
 Os aplicativos usam dados de catálogo de várias maneiras. Aqui estão alguns usos comuns:  

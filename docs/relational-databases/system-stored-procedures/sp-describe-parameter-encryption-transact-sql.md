@@ -1,4 +1,5 @@
 ---
+description: sp_describe_parameter_encryption (Transact-SQL)
 title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
@@ -18,11 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469578"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -47,7 +49,7 @@ sp_describe_parameter_encryption
   
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados na instrução devem ser definidos em * \@ params*. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote na instrução não contiver parâmetros, * \@ params* não será necessário. O valor padrão para este parâmetro é NULL.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  0 indica êxito. Qualquer outra coisa indica falha.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -63,7 +65,7 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|ID da linha no ResultSet.|  
 |**database_id**|**int**|ID do banco de dados.|  
-|**column_encryption_key_id**|**int**|A ID da chave de criptografia da coluna. Observação: essa ID denota uma linha na exibição de catálogo de [&#41;sys. column_encryption_keys &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
+|**column_encryption_key_id**|**int**|A ID da chave de criptografia da coluna. Observação: essa ID denota uma linha na exibição de catálogo de [&#41;sys. column_encryption_keys &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
 |**column_encryption_key_version**|**int**|Reservado para uso futuro. Atualmente, sempre contém 1.|  
 |**column_encryption_key_metadata_version**|**binário (8)**|Um carimbo de data/hora que representa o horário de criação da chave de criptografia da coluna.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|O valor criptografado da chave de criptografia da coluna.|  

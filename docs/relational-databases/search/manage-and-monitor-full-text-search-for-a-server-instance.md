@@ -1,4 +1,5 @@
 ---
+description: Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
 title: Gerenciar e monitorar a pesquisa de texto completo em uma Instância do SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ad414772e61a0100b52e9e665255922e5b908e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470103"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "85629459"
   
  A tabela a seguir lista propriedades de texto completo de uma instância de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e suas funções [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
   
-|Propriedade|DESCRIÇÃO|Função|  
+|Propriedade|Descrição|Função|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|Se o componente de texto completo está instalado com a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

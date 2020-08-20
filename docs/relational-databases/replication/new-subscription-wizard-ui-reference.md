@@ -1,4 +1,5 @@
 ---
+description: Assistente para Nova Assinatura (referência de interface do usuário)
 title: Assistente para nova assinatura (referência da interface do usuário) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 01e2797b760c8fd5a31b05cd5a16f02df889ca20
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e4bef2f1c7d5ff091e1efb6978fb6ebef0794ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470131"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistente para Nova Assinatura (referência de interface do usuário)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ Esta seção fornece informações sobre as páginas seguintes do Assistente par
   
 -   [Publicadores](../../relational-databases/replication/subscribers.md)  
   
--   [Add Non-SQL Server Subscriber (Adicionar assinante não SQL Server)](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
+-   [Adicionar Assinante não SQL Server](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
   
 -   [&#60;AgentName&#62; Agent Security (Segurança do agente &#60;AgentName&#62;)](../../relational-databases/replication/agentname-agent-security.md)  
   

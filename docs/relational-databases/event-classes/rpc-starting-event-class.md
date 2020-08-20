@@ -1,4 +1,5 @@
 ---
+description: classe de evento RPC:Starting
 title: Classe de Evento RPC:Starting | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9443bec67004b6c0bd6bf5bfe961852d8ae8fc6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2a3360ae8bc9aada352f0fdcd22ddfc4a59f4bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470729"
 ---
 # <a name="rpcstarting-event-class"></a>classe de evento RPC:Starting
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85767798"
   
 ## <a name="rpcstarting-event-class-data-columns"></a>Colunas de dados da classe de evento do RPC:Starting  
   
-|Nome da coluna de dados|**Data type**|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|**Data type**|Descrição|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Valor binário dependente da classe de evento capturada no rastreamento.|2|Sim|  

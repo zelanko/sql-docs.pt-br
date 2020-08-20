@@ -1,4 +1,5 @@
 ---
+description: sp_dropdistributor (Transact-SQL)
 title: sp_dropdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 404ef0654abde8b9d41659d7dd25bf80ac5b3bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469561"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,13 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @no_checks = ] no_checks`Indica se é para verificar se há objetos dependentes antes de descartar o distribuidor. *no_checks* é **bit**, com um padrão de 0.  
+`[ @no_checks = ] no_checks` Indica se é para verificar se há objetos dependentes antes de descartar o distribuidor. *no_checks* é **bit**, com um padrão de 0.  
   
  Se for **0**, o **sp_dropdistributor** verificará se todos os objetos de publicação e distribuição além do distribuidor foram descartados.  
   
  Se **1**, **sp_dropdistributor** descartará todos os objetos de publicação e de distribuição antes de desinstalar o distribuidor.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**.  
   
  Se **0**, **sp_dropdistributor** se conectar ao distribuidor e remover todos os objetos de replicação. Se **sp_dropdistributor** não puder se conectar ao distribuidor, o procedimento armazenado falhará.  
   
@@ -67,10 +68,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_dropdistributor**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Desabilitar publicação e distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [&#41;&#40;Transact-SQL de sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changedistributor_property](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdistributor](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [&#41;&#40;Transact-SQL de sp_adddistributor ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changedistributor_property ](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

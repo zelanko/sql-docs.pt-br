@@ -1,4 +1,5 @@
 ---
+description: Configurações do Banco de Dados Secundário.
 title: Configurações do Banco de Dados Secundário | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471118"
 ---
 # <a name="secondary-database-settings"></a>Configurações do Banco de Dados Secundário.
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,7 @@ ms.locfileid: "85759010"
  Deixe o banco de dados secundário em modo STANDBY. Esse modo permitirá a execução de operações somente leitura no banco de dados.  
   
 > [!IMPORTANT]  
->  Se você alterar o modo de recuperação de um banco de dados secundário existente, por exemplo, de **Nenhum modo de recuperação** para **Modo de espera**, a alteração terá efeito somente depois do próximo backup de log ser restaurado no banco de dados.  
+>   Se você alterar o modo de recuperação de um banco de dados secundário existente, por exemplo, de **Nenhum modo de recuperação** para **Modo de espera**, a alteração entrará em vigor somente depois do próximo backup de log ser restaurado no banco de dados.  
   
  **Atrasar restauração de backups pelo menos**  
  Escolha o atraso antes que os backups de log de transações sejam restaurados para o banco de dados secundário, se houver.  

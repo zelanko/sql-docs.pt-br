@@ -1,4 +1,5 @@
 ---
+description: sp_audit_write (Transact-SQL)
 title: sp_audit_write (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371bbb36abd6362c9724604a102f590869a74cc2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d6d6c6214d4157519454ab4b7eb3eb32ddae360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469716"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +46,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Um parâmetro definido pelo usuário e registrado na coluna **user_defined_event_id** do log de auditoria. * \@ user_defined_event_id* é do tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Um parâmetro passado por usuário para indicar se o evento teve êxito ou não. Isso aparece na coluna Êxito do log de auditoria. `@succeeded`é **bit**.  
+ Um parâmetro passado por usuário para indicar se o evento teve êxito ou não. Isso aparece na coluna Êxito do log de auditoria. `@succeeded` é **bit**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- É o texto definido pelo usuário e registrado na coluna user_defined_event_id do log de auditoria. `@user_defined_information`é **nvarchar (4000)**.  
+ É o texto definido pelo usuário e registrado na coluna user_defined_event_id do log de auditoria. `@user_defined_information` é **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -82,12 +83,12 @@ EXEC sp_audit_write 27, 0;
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CRIAR usuário &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropuser](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_grantdbaccess](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addrole ](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grantdbaccess ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grantlogin ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

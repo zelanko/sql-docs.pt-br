@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados de segurança (Transact-SQL)
 title: Procedimentos armazenados de segurança (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,18 +18,18 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ded4d62aa64ad6c45657924e187a859bfa91b61
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5050644389090e826f7c86593e9c68aea4cc4863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469788"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Procedimentos armazenados de segurança (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para gerenciar a segurança. Alguns desses procedimentos armazenados são substituídos, mas continuam disponíveis para dar suporte à compatibilidade com versões anteriores. Os tópicos sobre procedimentos substituídos listarão a substituição desses procedimentos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para gerenciar a segurança. Alguns desses procedimentos armazenados são substituídos, mas continuam disponíveis para dar suporte à compatibilidade com versões anteriores. Os tópicos sobre procedimentos substituídos listarão a substituição desses procedimentos.  
 
 :::row:::
     :::column:::
@@ -277,7 +278,7 @@ ms.locfileid: "87245583"
 :::row-end:::
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

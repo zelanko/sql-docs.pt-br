@@ -1,4 +1,5 @@
 ---
+description: Usar aplicativos de 32 bits com drivers de 32 bits
 title: Usando aplicativos de 32 bits com drivers de 32 bits | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31512f9339b9d46225bb4f1198cb617a48509acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69005071c83047471e76f38160265bc35cdccd4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471360"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Usar aplicativos de 32 bits com drivers de 32 bits
 Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativos de 32 bits e os drivers de 32 bits usam a API de® do Win32.  
@@ -39,8 +40,8 @@ Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativo
   
 |Nome do arquivo|Descrição|  
 |---------------|-----------------|  
-|Odbc32. dll|Gerenciador de driver de 32 bits|  
-|Odbccp32. dll|DLL do instalador de 32 bits|  
-|Odbcad32. exe|programa de Administrador ODBC de 32 bits|  
+|Odbc32.dll|Gerenciador de driver de 32 bits|  
+|Odbccp32.dll|DLL do instalador de 32 bits|  
+|Odbcad32.exe|programa de Administrador ODBC de 32 bits|  
 |Odbcinst. hlp|Arquivo de ajuda do instalador|  
-|Msvcrt40. dll|Biblioteca de tempo de execução C|
+|Msvcrt40.dll|Biblioteca de tempo de execução C|

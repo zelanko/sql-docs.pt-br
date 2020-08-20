@@ -1,4 +1,5 @@
 ---
+description: Práticas recomendadas para filtros de linha baseados em tempo
 title: Práticas recomendadas para filtros de linha com base em hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 285b005393c29a81b90a749a89ebf83af8e9c271
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad3264079a3bf4c28a9e1420cf17ed1018510c3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470278"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

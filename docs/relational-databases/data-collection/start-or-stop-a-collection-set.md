@@ -1,4 +1,5 @@
 ---
+description: Iniciar ou interromper um conjunto de coleta
 title: Iniciar ou interromper um conjunto de coleta | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8c9a4b009c562e3af594aa7adbe081f46a37f32a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1d62c72e43d9495874881ba3c029640626f129c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471359"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Iniciar ou interromper um conjunto de coleta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

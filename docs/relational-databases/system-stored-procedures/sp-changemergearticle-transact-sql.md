@@ -1,4 +1,5 @@
 ---
+description: sp_changemergearticle (Transact-SQL)
 title: sp_changemergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469720"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação na qual o artigo existe. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual o artigo existe. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo a ser alterado. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo a ser alterado. o *artigo* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'`É a propriedade a ser alterada para o artigo e a publicação fornecidos. a *Propriedade* é **nvarchar (30)** e pode ser um dos valores listados na tabela.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para o artigo e a publicação fornecidos. a *Propriedade* é **nvarchar (30)** e pode ser um dos valores listados na tabela.  
   
-`[ @value = ] 'value'`É o novo valor para a propriedade especificada. *Value* é **nvarchar (1000)** e pode ser um dos valores listados na tabela.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *Value* é **nvarchar (1000)** e pode ser um dos valores listados na tabela.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -68,7 +69,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Caminho e nome de um script de esquema de artigo opcional usados para criar o artigo no banco de dados de assinatura.|  
 |**delete_tracking**|**true**|Instruções DELETE são replicadas, o que é o comportamento padrão.|  
 ||**false**|Instruções DELETE não são replicadas.<br /><br /> ** \* \* Importante \* a \* ** configuração **delete_tracking** como **falso** resulta em não convergência e as linhas excluídas precisam ser removidas manualmente.|  
-|**ndescrição**||Entrada descritiva para o artigo.|  
+|**descrição**||Entrada descritiva para o artigo.|  
 |**destination_owner**||Nome do proprietário do objeto no banco de dados de assinatura, se não for **dbo**.|  
 |**identity_range**||**bigint** que especifica o tamanho do intervalo a ser usado ao atribuir novos valores de identidade se o artigo tiver **identityrangemanagementoption** definido como **auto** ou **auto_identity_range** definido como **true**. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manual**|Desabilita gerenciamento automático do intervalo de identidade. Marca colunas de identidade com NOT FOR REPLICATION para ativar o tratamento manual do intervalo de identidade. Para obter mais informações, consulte [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -83,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|A filtragem para o artigo gera partições não sobrepostas exclusivas de cada assinatura.<br /><br /> Observação: se você especificar um valor de **3** para **partition_options**, pode haver apenas uma única assinatura para cada partição de dados nesse artigo. Se uma segunda assinatura for criada na qual o critério de filtragem da nova assinatura for resolvido para a mesma partição como a assinatura existente, a assinatura existente será cancelada.|  
 |**pre_creation_command**|**nenhum**|Se a tabela já existir no Assinante, nenhuma ação será tomada.|  
 ||**delete**|Emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.|  
-||**suspensa**|Cancela a tabela antes de recriá-la.|  
+||**drop**|Cancela a tabela antes de recriá-la.|  
 ||**truncar**|Trunca a tabela de destino.|  
 |**processing_order**||**int** que indica a ordem de processamento dos artigos em uma publicação de mesclagem.|  
 |**pub_identity_range**||**bigint** que especifica o tamanho do intervalo alocado a um assinante com uma assinatura de servidor se o artigo tiver **identityrangemanagementoption** definido como **auto** ou **auto_identity_range** definido como **true**. Esse intervalo de identidade é reservado para um Assinante de republicação para ser alocado a seus próprios Assinantes. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -144,7 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|A assinatura digital em um resolvedor personalizado não é verificada para determinar se é de uma fonte confiável.|  
 |NULL (padrão)||Retorna a lista de valores com suporte para a *Propriedade*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo de mesclagem não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -152,7 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Consulte a seção Comentários das propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo de mesclagem não fazem com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -239,9 +240,9 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades do artigo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [&#41;&#40;Transact-SQL de sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergearticle](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergearticle](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergearticle ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergearticle ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

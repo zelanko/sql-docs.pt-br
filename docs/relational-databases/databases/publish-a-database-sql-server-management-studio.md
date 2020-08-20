@@ -1,4 +1,5 @@
 ---
+description: Publicar um banco de dados (SQL Server Management Studio)
 title: Publicar um banco de dados (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e865731f65b58ab47bbab9a169917f377fa8cd9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471156"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publicar um banco de dados (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Você pode usar o **Assistente para Gerar e Publicar Scripts** para publicar um banco de dados inteiro ou objetos de banco de dados individuais em um provedor de hospedagem Web.  
+   Você pode usar o **Assistente para Gerar e Publicar Scripts** para publicar um banco de dados inteiro ou objetos de banco de dados individuais em um provedor de hospedagem Web.  
   
 > [!NOTE]  
 >  A funcionalidade descrita neste tópico costumava ser fornecida pelo Assistente de Publicação do Banco de Dados. A funcionalidade de publicação foi adicionada ao Assistente para Gerar e Publicar Scripts; o Assistente de Publicação do Banco de Dados foi descontinuado.  
@@ -41,7 +42,7 @@ ms.locfileid: "85728407"
   
     2.  Para especificar opções de publicação avançadas, selecione o botão **Avançado** na seção **Publicar no serviço Web** .  
   
-4.  Na página **Resumo** , revise suas seleções. Clique em **Anterior** para alterar suas seleções. Clique em **Próximo** para publicar os objetos selecionados.  
+4.  Na página **Resumo**, revise suas seleções. Clique em **Anterior** para alterar suas seleções. Clique em **Próximo** para publicar os objetos selecionados.  
   
 5.  Na página **Salvar ou Publicar Scripts** , monitore o progresso da publicação.  
 

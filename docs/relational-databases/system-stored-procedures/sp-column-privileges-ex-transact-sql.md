@@ -1,4 +1,5 @@
 ---
+description: sp_column_privileges_ex (Transact-SQL)
 title: sp_column_privileges_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec17e4482a07d90ccf65e98f6697cc6b12e5fac1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d9d6eee0a85444171ae24d7ac991fb90a451f5d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469732"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'`É o nome do servidor vinculado para o qual retornar informações. *table_server* é **sysname**, sem padrão.  
+`[ @table_server = ] 'table_server'` É o nome do servidor vinculado para o qual retornar informações. *table_server* é **sysname**, sem padrão.  
   
-`[ @table_name = ] 'table_name'`É o nome da tabela que contém a coluna especificada. *table_name* é **sysname**, com um padrão de NULL.  
+`[ @table_name = ] 'table_name'` É o nome da tabela que contém a coluna especificada. *table_name* é **sysname**, com um padrão de NULL.  
   
-`[ @table_schema = ] 'table_schema'`É o esquema de tabela. *table_schema* é **sysname**, com um padrão de NULL.  
+`[ @table_schema = ] 'table_schema'` É o esquema de tabela. *table_schema* é **sysname**, com um padrão de NULL.  
   
-`[ @table_catalog = ] 'table_catalog'`É o nome do banco de dados no qual o *table_name* especificado reside. *TABLE_CATALOG* é **sysname**, com um padrão de NULL.  
+`[ @table_catalog = ] 'table_catalog'` É o nome do banco de dados no qual o *table_name* especificado reside. *TABLE_CATALOG* é **sysname**, com um padrão de NULL.  
   
-`[ @column_name = ] 'column_name'`É o nome da coluna para a qual fornecer informações de privilégio. *column_name* é **sysname**, com um padrão de NULL (todos os comuns).  
+`[ @column_name = ] 'column_name'` É o nome da coluna para a qual fornecer informações de privilégio. *column_name* é **sysname**, com um padrão de NULL (todos os comuns).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A tabela a seguir mostra as colunas do conjunto de resultados. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**, **column_name**e **privilégio**.  
@@ -81,7 +82,7 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_table_privileges_ex](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_table_privileges_ex ](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

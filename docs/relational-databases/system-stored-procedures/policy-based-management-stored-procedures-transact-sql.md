@@ -1,4 +1,5 @@
 ---
+description: Procedimentos armazenados de Gerenciamento Baseado em Políticas (Transact-SQL)
 title: Procedimentos armazenados do gerenciamento baseado em políticas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a8e08f63bc4bb039436c94f0fb678ace795927a
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 1811a67ac9eceb3e6f1fd14d27de2b7d04e07684
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469794"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procedimentos armazenados de Gerenciamento Baseado em Políticas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para o gerenciamento baseado em políticas.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para o gerenciamento baseado em políticas.  
   
 > [!IMPORTANT]  
 >  Há suporte apenas aos procedimentos armazenados de Gerenciamento Baseado em Políticas documentados nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Procedimentos armazenados não documentados são usados por componentes do Gerenciamento Baseado em Políticas e não devem ser usados para administrar o Gerenciamento Baseado em Políticas.  

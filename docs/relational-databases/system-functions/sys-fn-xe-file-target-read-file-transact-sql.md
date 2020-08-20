@@ -1,4 +1,5 @@
 ---
+description: sys.fn_xe_file_target_read_file (Transact-SQL)
 title: sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -22,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469828"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85738568"
   Lê arquivos que são criados pelo destino de arquivos assíncronos do mecanismo de Eventos estendidos. É retornado um evento, em formato XML, por linha.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceite os resultados de rastreamento gerados no formato Xel e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Os eventos estendidos dão suporte apenas a resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceite os resultados de rastreamento gerados no formato Xel e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Os eventos estendidos dão suporte apenas a resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +55,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
  O caminho para o arquivo de metadados que corresponde ao arquivo ou aos arquivos especificados pelo argumento *path* . *mdpath* é **nvarchar (260)**. Não há nenhum padrão. A partir do SQL Server 2016, esse parâmetro pode ser fornecido como nulo.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Não requer o parâmetro *mdpath* . No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Não requer o parâmetro *mdpath* . No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
   
  *initial_file_name*  
  O primeiro arquivo a ser lido a partir do *caminho*. *initial_file_name* é **nvarchar (260)**. Não há nenhum padrão. Se **NULL** for especificado como o argumento, todos os arquivos encontrados no *caminho* serão lidos.  
@@ -95,7 +96,7 @@ SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\meta
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de gerenciamento dinâmico de eventos estendidos](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Exibições de catálogo de eventos estendidos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Exibições de catálogo de eventos estendidos &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

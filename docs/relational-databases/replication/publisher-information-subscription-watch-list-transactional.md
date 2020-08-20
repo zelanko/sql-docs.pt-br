@@ -1,4 +1,5 @@
 ---
+description: Informações sobre o Publicador, Lista de inspeção de Assinaturas (transacional)
 title: Informações sobre o Publicador, Lista de inspeção de Assinaturas (transacional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6289b71f044bc3df3d9bc5306906483c6dd02886
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d335464f07ad5573a2c45fb7258152fc71d930a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470142"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>Informações sobre o Publicador, Lista de inspeção de Assinaturas (transacional)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -79,11 +80,11 @@ ms.locfileid: "85640395"
   
 -   Excelente  
   
--   Bom  
+-   Satisfatório  
   
 -   Razoável  
   
--   Fraco  
+-   Ruim  
   
 -   Crítico  
   

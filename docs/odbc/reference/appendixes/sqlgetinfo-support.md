@@ -1,4 +1,5 @@
 ---
+description: Suporte SQLGetInfo
 title: Suporte a SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cff18a23c7d8c4526fc86904d75375ed5aaaf5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471227"
 ---
 # <a name="sqlgetinfo-support"></a>Suporte SQLGetInfo
 Quando um ODBC 2. *x* o aplicativo chama **SQLGetInfo** para um driver ODBC 3 *. x* , os argumentos *InfoType* na tabela a seguir devem ter suporte.  
   
 |*InfoType*|Retornos|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2,0) **Observação:** esse tipo de informação não é preterido; os bitmasks na coluna à direita são preteridos.|Um bitmask sqlinteiro que enumera as cláusulas na instrução **ALTER TABLE** com suporte da fonte de dados.<br /><br /> As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br /><br /> SQL_AT_DROP_COLUMN = há suporte para a capacidade de descartar colunas. Se isso resulta em cascata ou o comportamento restrito é definido pelo driver. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = há suporte para a capacidade de adicionar várias colunas em uma única instrução ALTER TABLE. Esse bit não é combinado com outros bits de SQL_AT_ADD_COLUMN_XXX ou bits de SQL_AT_CONSTRAINT_XXX. (ODBC 2,0)|  
+|SQL_ALTER_TABLE (ODBC 2,0) **Observação:**  esse tipo de informação não é preterido; os bitmasks na coluna à direita são preteridos.|Um bitmask sqlinteiro que enumera as cláusulas na instrução **ALTER TABLE** com suporte da fonte de dados.<br /><br /> As seguintes bitmasks são usadas para determinar quais cláusulas têm suporte:<br /><br /> SQL_AT_DROP_COLUMN = há suporte para a capacidade de descartar colunas. Se isso resulta em cascata ou o comportamento restrito é definido pelo driver. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = há suporte para a capacidade de adicionar várias colunas em uma única instrução ALTER TABLE. Esse bit não é combinado com outros bits de SQL_AT_ADD_COLUMN_XXX ou bits de SQL_AT_CONSTRAINT_XXX. (ODBC 2,0)|  
 |SQL_FETCH_DIRECTION (ODBC 1,0)<br /><br /> O tipo de informação foi introduzido no ODBC 1,0; cada bitmask é rotulado com a versão na qual foi introduzido.|Um bitmask sqlinteiro que enumera as opções de direção de busca com suporte.<br /><br /> As seguintes bitmasks são usadas em conjunto com o sinalizador para determinar quais opções têm suporte:<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1,0) SQL_FD_FETCH_FIRST (ODBC 1,0) SQL_FD_FETCH_LAST (ODBC 1,0) SQL_FD_FETCH_PRIOR (ODBC 1,0) SQL_FD_FETCH_ABSOLUTE (ODBC 1,0) SQL_FD_FETCH_RELATIVE (ODBC 1,0) SQL_FD_FETCH_BOOKMARK (ODBC 2,0)|  
 |SQL_LOCK_TYPES (ODBC 2,0)|Um bitmask sqlinteiro que enumera os tipos de bloqueio com suporte para o argumento *Flock* em **SQLSetPos**.<br /><br /> As seguintes bitmasks são usadas em conjunto com o sinalizador para determinar quais tipos de bloqueio têm suporte:<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1,0)|Um valor SQLSMALLINT que indica o nível de conformidade ODBC.<br /><br /> SQL_OAC_NONE = nenhum<br /><br /> SQL_OAC_LEVEL1 = nível 1 com suporte<br /><br /> SQL_OAC_LEVEL2 = nível 2 com suporte|  

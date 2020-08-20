@@ -1,4 +1,5 @@
 ---
+description: UPDATE – comando SQL
 title: Atualizar-comando SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 818811c18ed52cef5bdb1c4d97f947bb86e67422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aa25f786448a14da47321c0f5ce1825716c03d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471406"
 ---
 # <a name="update---sql-command"></a>UPDATE – comando SQL
 Atualiza os registros em uma tabela com novos valores.  
@@ -40,7 +41,7 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* Especifica o nome de um banco de dados que não seja o especificado com a fonte que contém a tabela. Você deve incluir o nome do banco de dados que contém a tabela se o banco de dados não for o atual. Inclua o delimitador de ponto de exclamação (!) após o nome do banco de dados e antes do nome da tabela.  
   
- Definir *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ Definir *Column_Name1* =  *eExpression1*[, *Column_Name2* =  *eExpression2*  
  Especifica as colunas que são atualizadas e seus novos valores. Se você omitir a cláusula WHERE, todas as linhas da coluna serão atualizadas com o mesmo valor.  
   
  EM que *FilterCondition1*[e &#124; ou *FilterCondition2*...]  

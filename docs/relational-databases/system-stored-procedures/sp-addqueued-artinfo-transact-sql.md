@@ -1,4 +1,5 @@
 ---
+description: sp_addqueued_artinfo (Transact-SQL)
 title: sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de7f206aea8b536c86333698dd5a557e2f50b84b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469789"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,22 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @artid = ] 'artid'`É o nome da ID do artigo. *artid* é **int**, sem padrão  
+`[ @artid = ] 'artid'` É o nome da ID do artigo. *artid* é **int**, sem padrão  
   
-`[ @article = ] 'article'`É o nome do artigo a ser inserido no script. o *artigo* é **sysname**, sem padrão  
+`[ @article = ] 'article'` É o nome do artigo a ser inserido no script. o *artigo* é **sysname**, sem padrão  
   
-`[ @publisher = ] 'publisher'`É o nome do servidor do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do servidor do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação a ser inserida no script. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser inserida no script. a *publicação* é **sysname**, sem padrão.  
   
-`[ @dest_table = ] _'dest_table'`É o nome da tabela de destino. *dest_table* é **sysname**, sem padrão.  
+`[ @dest_table = ] _'dest_table'` É o nome da tabela de destino. *dest_table* é **sysname**, sem padrão.  
   
  [** @owner =** ] **'**_proprietário_**'**  
  É o proprietário da assinatura. *Owner* é **sysname**, sem padrão.  
   
-`[ @cft_table = ] 'cft_table'`Nome da tabela de conflitos de atualização enfileirada deste artigo. *cft_table*é **sysname**, sem padrão.  
+`[ @cft_table = ] 'cft_table'` Nome da tabela de conflitos de atualização enfileirada deste artigo. *cft_table*é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -78,9 +79,9 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addqueued_artinfo**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [&#41;&#40;Transact-SQL de sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [&#41;&#40;Transact-SQL de MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [&#41;&#40;Transact-SQL de sp_script_synctran_commands ](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de MSsubscription_articles ](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
