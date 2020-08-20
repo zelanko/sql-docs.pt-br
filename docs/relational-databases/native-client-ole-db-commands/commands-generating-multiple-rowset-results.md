@@ -1,4 +1,5 @@
 ---
+description: Comandos que geram resultados de vários conjuntos de linhas (provedor de OLE DB de cliente nativo)
 title: Comandos que geram resultados de vários conjuntos de linhas (provedor de OLE DB de cliente nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9febce09a93e92ff2a344b091fd3cd85d6bdc2b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 791ae266a82168239f7c3a9cf99ef90066e8032f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455793"
 ---
 # <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>Comandos de SQL Server Native Client gerando resultados de vários conjuntos de linhas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
