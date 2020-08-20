@@ -1,4 +1,5 @@
 ---
+description: Buscar uma linha de dados
 title: Buscando uma linha de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a702f561b756d5305020df9f015d3ea4b444caa6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71ced7d7df30f1bb4f784317b76f7b42553951df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499886"
 ---
 # <a name="fetching-a-row-of-data"></a>Buscar uma linha de dados
 Para buscar uma linha de dados, um aplicativo chama **SQLFetch**. **SQLFetch** pode ser chamado com qualquer tipo de cursor, mas move apenas o cursor do conjunto de linhas em uma direção somente de avanço. **SQLFetch** avança o cursor para a próxima linha e retorna os dados para todas as colunas que foram associadas a chamadas para **SQLBindCol**. Quando o cursor atinge o final do conjunto de resultados, **SQLFetch** retorna SQL_NO_DATA. Para obter exemplos de como chamar **SQLFetch**, consulte [usando SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

@@ -1,4 +1,5 @@
 ---
+description: Função SQLSetConnectAttr
 title: Função SQLSetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8424462ddde4f99196e26d633fddfa5bb2ed6ee9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a96652069e485e59ba9eab1be6f6cdf4f286c889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499569"
 ---
 # <a name="sqlsetconnectattr-function"></a>Função SQLSetConnectAttr
 **Conformidade**  
@@ -75,7 +76,7 @@ SQLRETURN SQLSetConnectAttr(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLSetConnectAttr** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLSetConnectAttr** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
  O driver pode retornar SQL_SUCCESS_WITH_INFO para fornecer informações sobre o resultado da definição de uma opção.  
@@ -90,15 +91,15 @@ SQLRETURN SQLSetConnectAttr(
 |24.000|Estado de cursor inválido|O argumento de *atributo* foi SQL_ATTR_CURRENT_CATALOG e um conjunto de resultados estava pendente.|  
 |25000|Operação ilegal durante uma transação local|Uma conexão estava em uma transação local ao tentar inscrever-se em uma conexão de transação distribuída (DTC) definindo o atributo de conexão SQL_ATTR_ENLIST_IN_DTC.<br /><br /> Uma conexão já está inscrito em um DTC.<br /><br /> Uma conexão foi inscrito em uma conexão de transação distribuída e uma transação local foi iniciada definindo SQL_ATTR_AUTOCOMMIT como SQL_AUTOCOMMIT_OFF.|  
 |3D000|Nome de catálogo inválido|O argumento de *atributo* foi SQL_CURRENT_CATALOG e o nome de catálogo especificado era inválido.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
-|HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *ConnectionHandle*. A **função SQLSetConnectAttr** foi chamada e, antes de concluir a execução, [a função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) foi chamada no *ConnectionHandle*e, em seguida, a função **SQLSetConnectAttr** foi chamada novamente no *ConnectionHandle*.<br /><br /> Ou, a função **SQLSetConnectAttr** foi chamada e, antes de concluir a execução, **SQLCancelHandle** foi chamado no *ConnectionHandle* de um thread diferente em um aplicativo multithread.|  
+|HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *ConnectionHandle*. A **função SQLSetConnectAttr** foi chamada e, antes de concluir a execução, [a função SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) foi chamada no *ConnectionHandle*e, em seguida, a função **SQLSetConnectAttr** foi chamada novamente no *ConnectionHandle*.<br /><br /> Ou, a função  **SQLSetConnectAttr** foi chamada e, antes de concluir a execução, **SQLCancelHandle** foi chamado no *ConnectionHandle* de um thread diferente em um aplicativo multithread.|  
 |HY009|Uso inválido de ponteiro nulo|O argumento de *atributo* identificou um atributo de conexão que exigia um valor de cadeia de caracteres e o argumento *ValuePtr* era um ponteiro nulo.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para um *StatementHandle* associado ao *ConnectionHandle* e ainda estava em execução quando **SQLSetConnectAttr** foi chamado.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *ConnectionHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados ao *ConnectionHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para um *StatementHandle* associado ao *ConnectionHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) **SQLBrowseConnect** foi chamado para o *ConnectionHandle* e retornou SQL_NEED_DATA. Essa função foi chamada antes de **SQLBrowseConnect** retornar SQL_SUCCESS_WITH_INFO ou SQL_SUCCESS.|  
 |HY011|O atributo não pode ser definido agora|O argumento de *atributo* foi SQL_ATTR_TXN_ISOLATION e uma transação estava aberta.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY024|Valor de atributo inválido|Dado o valor do *atributo* especificado, um valor inválido foi especificado em *ValuePtr*. (O Gerenciador de driver retorna este SQLSTATE somente para atributos de conexão e instrução que aceitam um conjunto discreto de valores, como SQL_ATTR_ACCESS_MODE ou SQL_ATTR_ASYNC_ENABLE. Para todos os outros atributos de instrução e conexão, o driver deve verificar o valor especificado em *ValuePtr*.)<br /><br /> O argumento de *atributo* foi SQL_ATTR_TRACEFILE ou SQL_ATTR_TRANSLATE_LIB e *ValuePtr* era uma cadeia de caracteres vazia.|  
-|HY090|Comprimento de cadeia de caracteres ou buffer inválido|*(DM) \*ValuePtr* é uma cadeia de caracteres e o argumento *StringLength* era menor que 0, mas não foi SQL_NTS.|  
+|HY090|Comprimento de cadeia de caracteres ou buffer inválido|*(DM) \* ValuePtr* é uma cadeia de caracteres e o argumento *StringLength* era menor que 0, mas não foi SQL_NTS.|  
 |HY092|Identificador de atributo/opção inválido|(DM) o valor especificado para o *atributo* de argumento não era válido para a versão do ODBC com suporte do driver.<br /><br /> (DM) o valor especificado para o *atributo* de argumento era um atributo somente leitura.|  
 |HY114|O driver não dá suporte à execução de função assíncrona no nível de conexão|(DM) um aplicativo tentou habilitar a execução de função assíncrona com SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE para um driver que não oferece suporte a operações de conexão assíncronas.|  
 |HY117|A conexão foi suspensa devido a um estado de transação desconhecido. Somente funções de desconexão e somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -137,33 +138,33 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_ASYNC_ENABLE|[2]|  
 |SQL_ATTR_AUTO_IPD|Você pode usar o|  
 |SQL_ATTR_AUTOCOMMIT|[5]|  
-|SQL_ATTR_CONNECTION_DEAD|After (após)|  
+|SQL_ATTR_CONNECTION_DEAD|Depois|  
 |SQL_ATTR_CONNECTION_TIMEOUT|Você pode usar o|  
 |SQL_ATTR_CURRENT_CATALOG|[1]|  
-|SQL_ATTR_DBC_INFO_TOKEN|After (após)|  
-|SQL_ATTR_ENLIST_IN_DTC|After (após)|  
-|SQL_ATTR_LOGIN_TIMEOUT|Antes de|  
+|SQL_ATTR_DBC_INFO_TOKEN|Depois|  
+|SQL_ATTR_ENLIST_IN_DTC|Depois|  
+|SQL_ATTR_LOGIN_TIMEOUT|Antes|  
 |SQL_ATTR_METADATA_ID|Você pode usar o|  
-|SQL_ATTR_ODBC_CURSORS|Antes de|  
-|SQL_ATTR_PACKET_SIZE|Antes de|  
+|SQL_ATTR_ODBC_CURSORS|Antes|  
+|SQL_ATTR_PACKET_SIZE|Antes|  
 |SQL_ATTR_QUIET_MODE|Você pode usar o|  
 |SQL_ATTR_TRACE|Você pode usar o|  
 |SQL_ATTR_TRACEFILE|Você pode usar o|  
-|SQL_ATTR_TRANSLATE_LIB|After (após)|  
-|SQL_ATTR_TRANSLATE_OPTION|After (após)|  
+|SQL_ATTR_TRANSLATE_LIB|Depois|  
+|SQL_ATTR_TRANSLATE_OPTION|Depois|  
 |SQL_ATTR_TXN_ISOLATION|[3]|  
   
  [1] SQL_ATTR_ACCESS_MODE e SQL_ATTR_CURRENT_CATALOG podem ser definidos antes ou depois da conexão, dependendo do driver. No entanto, os aplicativos interoperáveis os definem antes de se conectar, pois alguns drivers não dão suporte à alteração deles após a conexão.  
   
  [2] SQL_ATTR_ASYNC_ENABLE deve ser definida antes que haja uma instrução ativa.  
   
- [3] SQL_ATTR_TXN_ISOLATION só poderá ser definida se não houver transações abertas na conexão. Alguns atributos de conexão dão suporte à substituição de um valor semelhante se a fonte de dados não oferecer suporte \*ao valor especificado em *ValuePtr*. Nesses casos, o driver retorna SQL_SUCCESS_WITH_INFO e SQLSTATE 01S02 (valor da opção alterado). Por exemplo, se o *atributo* for SQL_ATTR_PACKET_SIZE \*e *ValuePtr* exceder o tamanho máximo do pacote, o driver substituirá o tamanho máximo. Para determinar o valor substituído, um aplicativo chama **SQLGetConnectAttr**.  
+ [3] SQL_ATTR_TXN_ISOLATION só poderá ser definida se não houver transações abertas na conexão. Alguns atributos de conexão dão suporte à substituição de um valor semelhante se a fonte de dados não oferecer suporte ao valor especificado em \* *ValuePtr*. Nesses casos, o driver retorna SQL_SUCCESS_WITH_INFO e SQLSTATE 01S02 (valor da opção alterado). Por exemplo, se o *atributo* for SQL_ATTR_PACKET_SIZE e \* *ValuePtr* exceder o tamanho máximo do pacote, o driver substituirá o tamanho máximo. Para determinar o valor substituído, um aplicativo chama **SQLGetConnectAttr**.  
   
  [4] se SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE for definido antes de uma conexão ser aberta, o Gerenciador de driver definirá o atributo do driver quando o driver for carregado durante uma chamada para **SQLBrowseConnect**, **SQLConnect**ou **SQLDriverConnect**. Antes de uma chamada para **SQLBrowseConnect**, **SQLConnect**ou **SQLDriverConnect**, o Gerenciador de driver não sabe a qual driver se conectar e não sabe se o driver dá suporte a operações de conexão assíncronas. Portanto, o Gerenciador de driver sempre retorna SQL_SUCCESS. Mas, caso o driver não ofereça suporte a operações de conexão assíncrona, a chamada para **SQLBrowseConnect**, **SQLConnect**ou **SQLDriverConnect** falhará.  
   
  [5] quando SQL_ATTR_AUTOCOMMIT for definido como FALSE, os aplicativos deverão chamar SQLEndTran (SQL_ROLLBACK) se qualquer API retornar SQL_ERROR para garantir a consistência transacional.  
   
- O formato das informações definidas no \*buffer *ValuePtr* depende do *atributo*especificado. **SQLSetConnectAttr** aceitará informações de atributo em um dos dois formatos diferentes: uma cadeia de caracteres terminada em nulo ou um valor inteiro. O formato de cada um é observado na descrição do atributo. As cadeias de caracteres apontadas pelo argumento *ValuePtr* de **SQLSetConnectAttr** têm um comprimento de *StringLength* bytes.  
+ O formato das informações definidas no buffer \* *ValuePtr* depende do *atributo*especificado. **SQLSetConnectAttr** aceitará informações de atributo em um dos dois formatos diferentes: uma cadeia de caracteres terminada em nulo ou um valor inteiro. O formato de cada um é observado na descrição do atributo. As cadeias de caracteres apontadas pelo argumento *ValuePtr* de **SQLSetConnectAttr** têm um comprimento de *StringLength* bytes.  
   
  O argumento *StringLength* será ignorado se o comprimento for definido pelo atributo, como é o caso de todos os atributos introduzidos no ODBC 2 *. x* ou anterior.  
   
@@ -180,7 +181,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_CONNECTION_DEAD<br /><br /> (ODBC 3,5)|Um valor SQLUINTEGER somente leitura que indica o estado da conexão. Se SQL_CD_TRUE, a conexão foi perdida. Se SQL_CD_FALSE, a conexão ainda estará ativa.|  
 |SQL_ATTR_CONNECTION_TIMEOUT (ODBC 3,0)|Um valor SQLUINTEGER que corresponde ao número de segundos a aguardar a conclusão de qualquer solicitação na conexão antes de retornar ao aplicativo. O driver deve retornar SQLSTATE HYT00 (timeout expirado) a qualquer momento que seja possível atingir o tempo limite em uma situação não associada à execução ou ao logon da consulta.<br /><br /> Se *ValuePtr* for igual a 0 (o padrão), não haverá nenhum tempo limite.|  
 |SQL_ATTR_CURRENT_CATALOG (ODBC 2,0)|Uma cadeia de caracteres que contém o nome do catálogo a ser usado pela fonte de dados. Por exemplo, em SQL Server, o catálogo é um banco de dados, de modo que o driver envia uma instrução **use** _Database_ para a fonte de dados, em que *Database* é o banco de dado especificado em \* *ValuePtr*. Para um driver de camada única, o catálogo pode ser um diretório, portanto, o driver altera seu diretório atual para o diretório especificado em **ValuePtr*.|  
-|SQL_ATTR_DBC_INFO_TOKEN (ODBC 3,8|Um valor SQLPOINTER usado para definir o token de informações de conexão no manipulador DBC quando o parâmetro de [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)(\**pRating*) não é igual a 100.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN é somente definido. Não é possível usar **SQLGetConnectAttr** ou **SQLGetConnectOption** para recuperar esse valor. O **SQLSetConnectAttr** do Gerenciador de driver não aceitará SQL_ATTR_DBC_INFO_TOKEN, pois um aplicativo não deve definir esse atributo.<br /><br /> Se um driver retornar SQL_ERROR após a configuração SQL_ATTR_DBC_INFO_TOKEN, a conexão que acabou de ser obtida do pool será liberada. O Gerenciador de driver tentará então obter outra conexão do pool. Consulte [desenvolvendo o reconhecimento do pool de conexões em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) para obter mais informações.|  
+|SQL_ATTR_DBC_INFO_TOKEN (ODBC 3,8|Um valor SQLPOINTER usado para definir o token de informações de conexão no manipulador DBC quando o parâmetro de [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)( \* *pRating*) não é igual a 100.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN é somente definido. Não é possível usar **SQLGetConnectAttr** ou **SQLGetConnectOption** para recuperar esse valor. O **SQLSetConnectAttr** do Gerenciador de driver não aceitará SQL_ATTR_DBC_INFO_TOKEN, pois um aplicativo não deve definir esse atributo.<br /><br /> Se um driver retornar SQL_ERROR após a configuração SQL_ATTR_DBC_INFO_TOKEN, a conexão que acabou de ser obtida do pool será liberada. O Gerenciador de driver tentará então obter outra conexão do pool. Consulte [desenvolvendo o reconhecimento do pool de conexões em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) para obter mais informações.|  
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3,0)|Um valor SQLPOINTER que especifica se o driver ODBC deve ser usado em transações distribuídas coordenadas pelos serviços de componentes da Microsoft.<br /><br /> Passe um objeto de transação OLE DTC que especifica a transação a ser exportada para SQL Server ou SQL_DTC_DONE para encerrar a associação DTC da conexão.<br /><br /> O cliente chama o método OLE ITransactionDispenser:: BeginTransaction do Microsoft Coordenador de Transações Distribuídas (MS DTC) para iniciar uma transação do MS DTC e criar um objeto de transação MS DTC que representa a transação. Em seguida, o aplicativo chama SQLSetConnectAttr com a opção SQL_ATTR_ENLIST_IN_DTC para associar o objeto de transação à conexão ODBC. Todas as atividades de banco de dados relacionadas serão executadas sob a proteção da transação do MS DTC. O aplicativo chama SQLSetConnectAttr com SQL_DTC_DONE para encerrar a associação de DTC da conexão. Para obter mais informações, consulte a documentação do MS DTC.|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1,0)|Um valor SQLUINTEGER que corresponde ao número de segundos a aguardar a conclusão de uma solicitação de logon antes de retornar ao aplicativo. O padrão é dependente de driver. Se *ValuePtr* for 0, o tempo limite será desabilitado e uma tentativa de conexão aguardará indefinidamente.<br /><br /> Se o tempo limite especificado exceder o tempo limite máximo de logon na fonte de dados, o driver substituirá esse valor e retornará SQLSTATE 01S02 (valor de opção alterado).|  
 |SQL_ATTR_METADATA_ID (ODBC 3,0)|Um valor SQLUINTEGER que determina como os argumentos de cadeia de caracteres das funções de catálogo são tratados.<br /><br /> Se SQL_TRUE, o argumento de cadeia de caracteres das funções de catálogo será tratado como identificadores. O caso não é significativo. Para cadeias de caracteres não delimitadas, o driver remove espaços à direita e a cadeia de caracteres é dobrada em maiúsculas. Para cadeias de caracteres delimitadas, o driver remove espaços à esquerda ou à direita e, literalmente, o que estiver entre os delimitadores. Se um desses argumentos for definido como um ponteiro NULL, a função retornará SQL_ERROR e SQLSTATE HY009 (uso inválido de ponteiro NULL).<br /><br /> Se SQL_FALSE, os argumentos de cadeia de caracteres das funções de catálogo não serão tratados como identificadores. O caso é significativo. Eles podem conter um padrão de pesquisa de cadeia de caracteres ou não, dependendo do argumento.<br /><br /> O valor padrão é SQL_FALSE.<br /><br /> O argumento *TableName* de **SQLTables**, que usa uma lista de valores, não é afetado por esse atributo.<br /><br /> SQL_ATTR_METADATA_ID também pode ser definido no nível de instrução. (É o único atributo de conexão que também é um atributo de instrução.)<br /><br /> Para obter mais informações, consulte [argumentos em funções de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).|  

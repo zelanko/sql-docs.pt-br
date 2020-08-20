@@ -1,4 +1,5 @@
 ---
+description: Espaço em disco de log de transações para operações de índice
 title: Espaço em disco do log de transações para operações de índice | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8a88bbccbe0fd1a57455343858f463afe072ed99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84c81b849ced12ffaf799c84511ff67649664775
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499316"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Espaço em disco de log de transações para operações de índice
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85722318"
 4.  Não execute a operação de índice online em uma transação explícita. O log não será truncado até que a transação explícita termine.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Requisitos de espaço em disco para operações de DDL de índice](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Exemplo de espaço em disco de índice](../../relational-databases/indexes/index-disk-space-example.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Referência de componentes de instalação e de configuração
 title: Referência de componentes de instalação e configuração | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b7a9c62df89318b32a431146511b9404c2802ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99b8772e823b24a8d88e8d52def5b916fbac4a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499789"
 ---
 # <a name="installation-and-configuration-components-reference"></a>Referência de componentes de instalação e de configuração
 > [!NOTE]  

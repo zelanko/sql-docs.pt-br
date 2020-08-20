@@ -1,4 +1,5 @@
 ---
+description: Agendar rastreamentos
 title: Agendar rastreamentos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bad2aedb9299eb53e4f98e62a5aa48158f9ec457
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d40e02cfccc84e910650dbac4dbeab0b6edd8353
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498449"
 ---
 # <a name="schedule-traces"></a>Agendar rastreamentos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

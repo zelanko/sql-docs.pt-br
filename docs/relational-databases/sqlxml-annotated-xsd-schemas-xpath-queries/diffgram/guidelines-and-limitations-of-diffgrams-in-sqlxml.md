@@ -1,4 +1,5 @@
 ---
+description: Diretrizes e limitações de DiffGrams no SQLXML
 title: Diretrizes e limitações de DiffGrams no SQLXML
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 113090c317e88d3e9a7e7db2bfcb7d4d14b4ea1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a75caa96befa6705d76b5666e3e9a5ef9c131d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498497"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>Diretrizes e limitações de DiffGrams no SQLXML
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

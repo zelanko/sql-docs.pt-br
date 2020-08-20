@@ -1,4 +1,5 @@
 ---
+description: Exemplo de diagnóstico de driver baseado em arquivo
 title: Exemplo de diagnóstico de driver baseado em arquivo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f09e4f4758b6276836b08f02b24fb31dd1fadc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8986ebaa8c4ecf0ac18f4e043eb731df35054884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499856"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>Exemplo de diagnóstico de driver baseado em arquivo
 Um driver baseado em arquivo atua como um driver ODBC e como uma fonte de dados. Portanto, isso pode gerar erros e avisos como um componente em uma conexão ODBC e como uma fonte de dados. Como ele também é o componente que faz interface com o Gerenciador de driver, ele formata e retorna argumentos para **SQLGetDiagRec**.  

@@ -1,4 +1,5 @@
 ---
+description: Fazendo backup e restaurando bancos de dados e logs de transações
 title: Fazendo backup e restaurando bancos de dados e logs de transações
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -20,11 +21,12 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8302596d94cc0b6800919e8c0f72870754c4715c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 75db6b66cfd3a2cd5c0260a00fa2f28b28da49b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498556"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Fazendo backup e restaurando bancos de dados e logs de transações
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

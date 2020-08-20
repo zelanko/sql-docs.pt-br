@@ -1,4 +1,5 @@
 ---
+description: Opção SORT_IN_TEMPDB para índices
 title: Opção SORT_IN_TEMPDB para índices | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2017
@@ -18,12 +19,12 @@ ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80c0651be14f30f14d95b949d5d3f941df5c7cda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 474fee6c8e37a52fbdb273b5fba95910b895f288
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499376"
 ---
 # <a name="sort_in_tempdb-option-for-indexes"></a>Opção SORT_IN_TEMPDB para índices
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,6 +85,6 @@ Quando você criar um índice clusterizado em uma tabela que tem índices não c
   
  [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Requisitos de espaço em disco para operações de DDL de índice](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
   

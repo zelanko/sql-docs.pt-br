@@ -1,4 +1,5 @@
 ---
+description: Associar colunas de conjunto de resultados
 title: Vinculando colunas do conjunto de resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 558ceb79d42d82477b70a028395de82cc023c170
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6a228de81deb5cdfdaa62ee7940185b14bcaef8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499939"
 ---
 # <a name="binding-result-set-columns"></a>Associar colunas de conjunto de resultados
 Os aplicativos podem associar tantas ou poucas colunas do conjunto de resultados que escolherem, incluindo a associação de nenhuma coluna. Quando uma linha de dados é buscada, o driver retorna os dados para as colunas associadas ao aplicativo. Se o aplicativo associa todas as colunas no conjunto de resultados depende do aplicativo. Por exemplo, os aplicativos que geram relatórios geralmente têm um formato fixo; esses aplicativos criam um conjunto de resultados contendo todas as colunas usadas no relatório e, em seguida, associam e recuperam os dados para todas essas colunas. Os aplicativos que exibem telas cheia de dados às vezes permitem que o usuário decida quais colunas exibir; esses aplicativos criam um conjunto de resultados contendo todas as colunas que o usuário pode querer, mas associam e recuperam os dados somente para as colunas escolhidas pelo usuário.  

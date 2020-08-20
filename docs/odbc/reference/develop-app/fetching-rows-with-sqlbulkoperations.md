@@ -1,4 +1,5 @@
 ---
+description: Buscar linhas com SQLBulkOperations
 title: Buscando linhas com SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae0b4c2114059cecaaf8f8825169300f131bd473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4c3cb6a38e3ef9c42f4e853b8c406579b5c0236
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499866"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Buscar linhas com SQLBulkOperations
 Os dados podem ser buscados novamente em um conjunto de linhas usando indicadores por uma chamada para **SQLBulkOperations.** As linhas a serem buscadas são identificadas pelos indicadores em uma coluna de indicador associado. Colunas com um valor de SQL_COLUMN_IGNORE não são buscadas.  

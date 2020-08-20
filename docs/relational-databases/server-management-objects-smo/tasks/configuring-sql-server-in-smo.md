@@ -1,4 +1,5 @@
 ---
+description: Configurando o SQL Server no SMO
 title: Configurando o SQL Server no SMO
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -14,11 +15,12 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e685a8c2980cf3faa375e9fb13b3d6d873f1735
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498536"
 ---
 # <a name="configuring-sql-server-in-smo"></a>Configurando o SQL Server no SMO
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

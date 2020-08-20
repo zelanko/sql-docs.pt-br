@@ -1,4 +1,5 @@
 ---
+description: Função SQLSetConnectInfo
 title: Função SQLSetConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ee3480678d228e26b16cc99e7df8955d45ade9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499541"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Função SQLSetConnectInfo
 **Conformidade**  
@@ -50,7 +51,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength1*  
  Entrada Comprimento de **ServerName* em caracteres.  
   
- *Usu*  
+ *UserName*  
  Entrada Identificador de usuário.  
   
  *NameLength2*  
@@ -65,7 +66,7 @@ SQLRETURN  SQLSetConnectInfo(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  O mesmo que o [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) para erros de validação de entrada, exceto que o Gerenciador de driver usará um **handletype** de SQL_HANDLE_DBC_INFO_TOKEN e um **identificador** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentários  

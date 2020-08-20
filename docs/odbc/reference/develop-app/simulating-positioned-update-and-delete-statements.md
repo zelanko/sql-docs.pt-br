@@ -1,4 +1,5 @@
 ---
+description: Simular instruções de exclusão e atualização posicionadas
 title: Simulando instruções UPDATE e DELETE posicionadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e1eb498a99180d145147e67c8955eeb7a0027024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06f6faad1b5b6cb83616575ea8732cac98b88ed0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499809"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simular instruções de exclusão e atualização posicionadas
 Se a fonte de dados não oferecer suporte a instruções UPDATE e DELETE posicionadas, o driver poderá simular isso. Por exemplo, a biblioteca de cursores ODBC simula as instruções UPDATE e DELETE posicionadas. A estratégia geral para simular as instruções UPDATE e DELETE posicionadas é converter instruções posicionadas em itens pesquisados. Isso é feito substituindo a cláusula **Where Current of** por uma cláusula **Where** pesquisada que identifica a linha atual.  

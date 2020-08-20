@@ -1,4 +1,5 @@
 ---
+description: Função SQLRemoveDSNFromIni
 title: Função SQLRemoveDSNFromIni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499609"
 ---
 # <a name="sqlremovedsnfromini-function"></a>Função SQLRemoveDSNFromIni
 **Conformidade**  
@@ -46,10 +47,10 @@ BOOL SQLRemoveDSNFromIni(
  Entrada Nome da fonte de dados a ser removida.  
   
 ## <a name="returns"></a>Retornos  
- A função retornará TRUE se remover a fonte de dados ou a fonte de dados não estiver no arquivo ODBC. ini. Ele retornará FALSE se falhar ao remover a fonte de dados.  
+ A função retornará TRUE se remover a fonte de dados ou a fonte de dados não estiver no arquivo de Odbc.ini. Ele retornará FALSE se falhar ao remover a fonte de dados.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLRemoveDSNFromIni** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLRemoveDSNFromIni** retorna false, um valor * \* pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \* pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  

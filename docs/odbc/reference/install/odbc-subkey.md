@@ -1,4 +1,5 @@
 ---
+description: Subchave do ODBC
 title: Subchave ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96e9a5f4c3cdac5097686528d3c089d9ec5826f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ec27b40e196f5277307b9a299dd865a1604dc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499721"
 ---
 # <a name="odbc-subkey"></a>Subchave do ODBC
 Os valores na subchave ODBC especificam opções de rastreamento ODBC. Essas opções são definidas por meio da guia rastreamento da caixa de diálogo administrador de fonte de dados ODBC exibida por **SQLManageDataSources**. A própria subchave ODBC é opcional. O formato desses valores é mostrado na tabela a seguir.  
