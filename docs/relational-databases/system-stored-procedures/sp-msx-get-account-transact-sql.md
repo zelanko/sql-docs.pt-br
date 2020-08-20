@@ -1,4 +1,5 @@
 ---
+description: sp_msx_get_account (Transact-SQL)
 title: sp_msx_get_account (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ddb3d983b37bdad5db334073fe168b518aaee77a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe1034dee3f1e2fb3c8647bcce3ad6336fb56f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464087"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [CRIAR CREDENCIAl &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_msx_set_account](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_msx_set_account ](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_log_shipping_monitor (Transact-SQL)
 title: sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464063"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @agent_id = ] 'agent_id'`A ID primária para backup ou a ID secundária para cópia ou restauração. *agent_id* é **uniqueidentifier** e não pode ser NULL.  
+`[ @agent_id = ] 'agent_id'` A ID primária para backup ou a ID secundária para cópia ou restauração. *agent_id* é **uniqueidentifier** e não pode ser NULL.  
   
-`[ @agent_type = ] 'agent_type'`O tipo de trabalho de envio de logs.  
+`[ @agent_type = ] 'agent_type'` O tipo de trabalho de envio de logs.  
   
  0 = Backup.  
   
@@ -55,9 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* é **tinyint** e não pode ser nulo.  
   
-`[ @database = ] 'database'`O banco de dados primário ou secundário usado pelo registro em log por agentes de backup ou restauração.  
+`[ @database = ] 'database'` O banco de dados primário ou secundário usado pelo registro em log por agentes de backup ou restauração.  
   
-`[ @mode ] n`Especifica se os dados do monitor devem ser atualizados ou limpos. O tipo de dados de *m* é tinyint e os valores com suporte são:  
+`[ @mode ] n` Especifica se os dados do monitor devem ser atualizados ou limpos. O tipo de dados de *m* é tinyint e os valores com suporte são:  
   
  1 = atualização (Este é o valor padrão).  
   

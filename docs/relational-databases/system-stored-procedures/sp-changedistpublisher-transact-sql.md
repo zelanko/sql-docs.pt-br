@@ -1,4 +1,5 @@
 ---
+description: sp_changedistpublisher (Transact-SQL)
 title: sp_changedistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 565ca8d7328446435aa584b614014d0ce22cb2c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464501"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do editor. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do editor. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'`É uma propriedade a ser alterada para o Publicador fornecido. a *Propriedade* é **sysname** e pode ser um desses valores.  
+`[ @property = ] 'property'` É uma propriedade a ser alterada para o Publicador fornecido. a *Propriedade* é **sysname** e pode ser um desses valores.  
   
-`[ @value = ] 'value'`É o valor para a propriedade fornecida. o *valor* é **nvarchar (255)**, com um padrão de NULL.  
+`[ @value = ] 'value'` É o valor para a propriedade fornecida. o *valor* é **nvarchar (255)**, com um padrão de NULL.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`É necessário para o SQL Instância Gerenciada, deve corresponder à chave de acesso do volume de armazenamento do banco de dados SQL do Azure. 
+`[ @storage_connection_string = ] 'storage_connection_string'` É necessário para o SQL Instância Gerenciada, deve corresponder à chave de acesso do volume de armazenamento do banco de dados SQL do Azure. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -77,8 +78,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [&#41;&#40;Transact-SQL de sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_adddistpublisher ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropdistpublisher ](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

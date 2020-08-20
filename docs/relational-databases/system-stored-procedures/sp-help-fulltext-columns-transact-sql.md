@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_columns (Transact-SQL)
 title: sp_help_fulltext_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd1b3b6430baa2e1df39373876fbe08a57b9b926
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d487e8d256466eb37d8eca420bfd70dbb6df31c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464284"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893729"
   Retorna as colunas designadas para indexação de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a exibição de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use a exibição de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table\_name'`É o nome da tabela de uma ou duas partes para a qual as informações de índice de texto completo são solicitadas. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo serão recuperadas para cada tabela indexada de texto completo.  
+`[ @table_name = ] 'table\_name'` É o nome da tabela de uma ou duas partes para a qual as informações de índice de texto completo são solicitadas. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo serão recuperadas para cada tabela indexada de texto completo.  
   
-`[ @column_name = ] 'column\_name'`É o nome da coluna para a qual os metadados do índice de texto completo são solicitados. *column_name* é **sysname**, com um valor padrão de NULL. Se *column_name* for omitido ou for NULL, as informações de coluna de texto completo serão retornadas para cada coluna indexada de texto completo para *table_name*. Se *table_name* também for omitido ou for NULL, as informações de coluna de índice de texto completo serão retornadas para cada coluna indexada de texto completo para todas as tabelas no banco de dados.  
+`[ @column_name = ] 'column\_name'` É o nome da coluna para a qual os metadados do índice de texto completo são solicitados. *column_name* é **sysname**, com um valor padrão de NULL. Se *column_name* for omitido ou for NULL, as informações de coluna de texto completo serão retornadas para cada coluna indexada de texto completo para *table_name*. Se *table_name* também for omitido ou for NULL, as informações de coluna de índice de texto completo serão retornadas para cada coluna indexada de texto completo para todas as tabelas no banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -78,8 +79,8 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [COLUNASproperty &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_fulltext_column](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_fulltext_columns_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_fulltext_column ](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_fulltext_columns_cursor ](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

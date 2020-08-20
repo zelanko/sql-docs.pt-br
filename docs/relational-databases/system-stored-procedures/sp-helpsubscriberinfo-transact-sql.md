@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscriberinfo (Transact-SQL)
 title: sp_helpsubscriberinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d843ff86e221a3e007d68f6f6d130f4fceb82f3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db23a3861e20627a829006c22d74a368acfb349f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464158"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de **%** , que retorna todas as informações.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, com um padrão de **%** , que retorna todas as informações.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**e usa como padrão o nome do servidor atual.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**e usa como padrão o nome do servidor atual.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser especificado, exceto quando é um Publicador Oracle.  
@@ -51,7 +52,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**programa**|**sysname**|Nome do Publicador.|  
 |**farão**|**sysname**|Nome do Assinante.|  
-|**type**|**tinyint**|O tipo de Assinante:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database **1** = fonte de dados ODBC|  
+|**tipo**|**tinyint**|O tipo de Assinante:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database **1** = fonte de dados ODBC|  
 |**entrar**|**sysname**|ID de logon para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Não há suporte.|  
@@ -69,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_date**|**int**|Data do último agendamento do Distribution Agent, formatada como YYYYMMDD.|  
 |**retryattempt**|**int**|Não há suporte.|  
 |**retrydelay**|**int**|Não há suporte.|  
-|**ndescrição**|**nvarchar (255)**|Descrição de texto do Assinante.|  
+|**descrição**|**nvarchar(255)**|Descrição de texto do Assinante.|  
 |**security_mode**|**int**|Modo de segurança implementado:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows|  
 |**frequency_type2**|**int**|Frequência de execução do Merge Agent:<br /><br /> **1** = uma vez<br /><br /> **2** = sob demanda<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = relativo mensal<br /><br /> **64** = inicialização automática<br /><br /> **128** = recorrente|  
 |**frequency_interval2**|**int**|Valor aplicado à frequência definida por *frequency_type*.|  
@@ -92,12 +93,12 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
  Somente os membros da função de servidor fixa **sysadmin** , a **db_owner** função de banco de dados fixa ou a lista de acesso à publicação da publicação podem ser executados **sp_helpsubscriberinfo**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropsubscriber](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdistributor](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_adddistpublisher ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpullsubscription ](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changesubscriber ](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsubscriber ](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

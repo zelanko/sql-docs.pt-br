@@ -1,4 +1,5 @@
 ---
+description: sp_attach_schedule (Transact-SQL)
 title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464468"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho para o qual o agendamento é adicionado. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho para o qual o agendamento é adicionado. *job_id*é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho ao qual a agenda é adicionada. *job_name*é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho ao qual a agenda é adicionada. *job_name*é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @schedule_id = ] schedule_id`O número de identificação da agenda a ser definido para o trabalho. *schedule_id*é **int**, com um padrão de NULL.  
+`[ @schedule_id = ] schedule_id` O número de identificação da agenda a ser definido para o trabalho. *schedule_id*é **int**, com um padrão de NULL.  
   
-`[ @schedule_name = ] 'schedule_name'`O nome do agendamento a ser definido para o trabalho. *schedule_name*é **sysname**, com um padrão de NULL.  
+`[ @schedule_name = ] 'schedule_name'` O nome do agendamento a ser definido para o trabalho. *schedule_name*é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  *Schedule_id* ou *schedule_name* deve ser especificado, mas ambos não podem ser especificados.  
@@ -107,8 +108,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_detach_schedule](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_add_schedule ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_detach_schedule ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_schedule ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

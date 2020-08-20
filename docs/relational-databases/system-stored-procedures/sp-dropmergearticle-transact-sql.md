@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergearticle (Transact-SQL)
 title: sp_dropmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4445c622027e4e639c7748010daf97d535a29624
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77762c318d06d1a9c872405a9965e7b018f3eb85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464312"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,27 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação da qual remover um artigo. a *publicação*é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação da qual remover um artigo. a *publicação*é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo a ser solto da publicação fornecida. o *artigo*é **sysname**, sem padrão. Se **todos**, todos os artigos existentes na publicação de mesclagem especificada serão removidos. Mesmo que o *artigo* seja **tudo**, a publicação ainda deve ser descartada separadamente do artigo.  
+`[ @article = ] 'article'` É o nome do artigo a ser solto da publicação fornecida. o *artigo*é **sysname**, sem padrão. Se **todos**, todos os artigos existentes na publicação de mesclagem especificada serão removidos. Mesmo que o *artigo* seja **tudo**, a publicação ainda deve ser descartada separadamente do artigo.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**.  
   
-`[ @reserved = ] reserved`É reservado para uso futuro. *reservado* é **nvarchar (20)**, com um padrão de NULL.  
+`[ @reserved = ] reserved` É reservado para uso futuro. *reservado* é **nvarchar (20)**, com um padrão de NULL.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Habilita ou desabilita a capacidade de um instantâneo ser invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita ou desabilita a capacidade de um instantâneo ser invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** especifica que as alterações no artigo de mesclagem não fazem com que o instantâneo seja inválido.  
   
  **1** significa que as alterações no artigo de mesclagem podem fazer com que o instantâneo seja inválido e, se esse for o caso, um valor de **1** dá permissão para que o novo instantâneo ocorra.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Confirma que a remoção do artigo requer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que a remoção do artigo requer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** especifica que o descarte do artigo não faz com que a assinatura seja reinicializada.  
   
  **1** significa que descartar o artigo faz com que as assinaturas existentes sejam reinicializadas e concede a permissão para que a reinicialização da assinatura ocorra.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`Somente para uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -157,9 +158,9 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Excluir um artigo](../../relational-databases/replication/publish/delete-an-article.md)   
  [Adicionar e remover artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [&#41;&#40;Transact-SQL de sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergearticle](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergearticle ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergearticle ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

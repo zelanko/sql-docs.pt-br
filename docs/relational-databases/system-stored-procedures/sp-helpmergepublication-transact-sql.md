@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepublication (Transact-SQL)
 title: sp_helpmergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0e396b4ee38ddd2c6e76158d9cb8abfb9b601a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e16d7669dd827d1d58bf02851ced72bd89ee804d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464201"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
 |name|**sysname**|Nome da publicação.|  
-|descrição|**nvarchar (255)**|Descrição da publicação.|  
+|descrição|**nvarchar(255)**|Descrição da publicação.|  
 |status|**tinyint**|Indica quando os dados da publicação estão disponíveis.|  
 |retenção|**int**|O tempo para salvar metadados sobre alterações para artigos na publicação. As unidades desse período de tempo podem ser dias, semanas, meses ou anos. Para obter informações sobre unidades, consulte a coluna retention_period_unit.|  
 |sync_mode|**tinyint**|O modo de sincronização dessa publicação:<br /><br /> **0** = programa de cópia em massa nativo (utilitário**bcp** )<br /><br /> **1** = cópia em massa de caractere|  
@@ -83,13 +84,13 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |dynamic_filter|**int**|Indica se um filtro de linha parametrizado é usado. **0** significa que um filtro de linha com parâmetros não é usado.|  
 |has_subscription|**bit**|Indica se a publicação tem alguma assinatura. **0** significa que não há assinaturas para esta publicação no momento.|  
 |snapshot_in_default_folder|**bit**|Especifica se os arquivos de instantâneo são armazenados na pasta padrão.<br /><br /> Se **1**, os arquivos de instantâneo podem ser encontrados na pasta padrão.<br /><br /> Se **0**, os arquivos de instantâneo são armazenados no local alternativo especificado pelo **alt_snapshot_folder**. Os locais alternativos podem ser um outro servidor, uma unidade de rede ou uma mídia removível (como um CD-ROM ou discos removíveis). Você também pode salvar os arquivos de instantâneo em um site de FTP para serem recuperados pelo Assinante posteriormente.<br /><br /> Observação: esse parâmetro pode ser verdadeiro e ainda ter um local no parâmetro **alt_snapshot_folder** . Essa combinação especifica que os arquivos de instantâneo serão armazenados nos locais padrão e alternativo.|  
-|alt_snapshot_folder|**nvarchar (255)**|Especifica o local da pasta alternativa para o instantâneo.|  
-|pre_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um arquivo **. SQL** que o agente de mesclagem é executado antes de qualquer um dos scripts de objeto replicado ao aplicar o instantâneo em um assinante.|  
-|post_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um arquivo **. SQL** que o agente de mesclagem é executado depois que todos os outros scripts e dados de objeto replicados tiverem sido aplicados durante uma sincronização inicial.|  
+|alt_snapshot_folder|**nvarchar(255)**|Especifica o local da pasta alternativa para o instantâneo.|  
+|pre_snapshot_script|**nvarchar(255)**|Especifica um ponteiro para um arquivo **. SQL** que o agente de mesclagem é executado antes de qualquer um dos scripts de objeto replicado ao aplicar o instantâneo em um assinante.|  
+|post_snapshot_script|**nvarchar(255)**|Especifica um ponteiro para um arquivo **. SQL** que o agente de mesclagem é executado depois que todos os outros scripts e dados de objeto replicados tiverem sido aplicados durante uma sincronização inicial.|  
 |compress_snapshot|**bit**|Especifica que o instantâneo gravado no local de **alt_snapshot_folder** é compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB.|  
 |ftp_address|**sysname**|É o endereço de rede do serviço FTP para o Distribuidor. Especifica onde os arquivos de instantâneo de publicação estão localizados para o Agente de Mesclagem a serem coletados.|  
 |ftp_port|**int**|É o número da porta do serviço FTP para o Distribuidor. **ftp_port** tem um padrão de **21**. Especifica onde os arquivos de instantâneo de publicação estão localizados para serem retirados pelo Agente de Mesclagem.|  
-|ftp_subdirectory|**nvarchar (255)**|Especifica onde os arquivos de instantâneo de publicação estão disponíveis para serem retirados pelo Agente de Mesclagem quando o instantâneo é entregue por meio do FTP.|  
+|ftp_subdirectory|**nvarchar(255)**|Especifica onde os arquivos de instantâneo de publicação estão disponíveis para serem retirados pelo Agente de Mesclagem quando o instantâneo é entregue por meio do FTP.|  
 |ftp_login|**sysname**|É o nome de usuário usado para se conectar ao serviço FTP.|  
 |conflict_retention|**int**|Especifica o período de retenção, em dias, durante o qual os conflitos são retidos. Quando o número de dias especificado for ultrapassado, a linha de conflito será limpa na tabela de conflitos.|  
 |keep_partition_changes|**int**|Especifica se otimização de sincronização está ocorrendo para esta publicação. **keep_partition_changes** tem um padrão de **0**. Um valor de **0** significa que a sincronização não é otimizada e as partições enviadas a todos os assinantes são verificadas quando os dados são alterados em uma partição.<br /><br /> **1** significa que a sincronização é otimizada e somente os assinantes que têm linhas na partição alterada são afetados.<br /><br /> Observação: por padrão, as publicações de mesclagem usam partições preputadas, que fornece um nível maior de otimização do que essa opção. Para obter mais informações, consulte [filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e otimizar o [desempenho de filtro com parâmetros com partições de computação](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
@@ -128,9 +129,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [&#41;&#40;Transact-SQL de sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergepublication](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergepublication ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergepublication ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergepublication ](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

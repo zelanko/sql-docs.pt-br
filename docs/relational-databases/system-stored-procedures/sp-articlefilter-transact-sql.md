@@ -1,4 +1,5 @@
 ---
+description: sp_articlefilter (Transact-SQL)
 title: sp_articlefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 037812be8b38c9be107197a72bd7a161e56904c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 263d572d5ef5a65ed2d8c22f7ba1bfd3b16c08c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464554"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,27 +44,27 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação que contém o artigo. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. o *artigo* é **sysname**, sem padrão.  
   
-`[ @filter_name = ] 'filter_name'`É o nome do procedimento armazenado de filtro a ser criado no *filter_name*. *filter_name* é **nvarchar (386)**, com um padrão de NULL. Você deve especificar um nome exclusivo para o filtro de artigo.  
+`[ @filter_name = ] 'filter_name'` É o nome do procedimento armazenado de filtro a ser criado no *filter_name*. *filter_name* é **nvarchar (386)**, com um padrão de NULL. Você deve especificar um nome exclusivo para o filtro de artigo.  
   
-`[ @filter_clause = ] 'filter_clause'`É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave WHERE. *filter_clause* é **ntext**, com um padrão de NULL.  
+`[ @filter_clause = ] 'filter_clause'` É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave WHERE. *filter_clause* é **ntext**, com um padrão de NULL.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** especifica que as alterações no artigo podem fazer com que o instantâneo seja inválido e, se houver assinaturas existentes que exijam um novo instantâneo, concederá permissão para o instantâneo existente ser marcado como obsoleto e um novo instantâneo gerado.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo não causam a reinicialização das assinaturas. Se o procedimento armazenado detectar que a alteração exigiria que as assinaturas fossem reinicializadas, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** especifica que as alterações no artigo fazem com que as assinaturas existentes sejam reinicializadas e concede a permissão para que a reinicialização da assinatura ocorra.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser usado com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -76,9 +77,9 @@ sp_articlefilter [ @publication = ] 'publication'
   
  A execução de **sp_articlefilter** para um artigo com assinaturas existentes requer que essas assinaturas sejam reinicializadas.  
   
- **sp_articlefilter** cria o filtro, insere a ID do procedimento armazenado de filtro na coluna de **filtro** do [sysarticles &#40;tabela de&#41;Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) e insere o texto da cláusula de restrição na coluna **filter_clause** .  
+ **sp_articlefilter** cria o filtro, insere a ID do procedimento armazenado de filtro na coluna de **filtro** do [sysarticles &#40;tabela de&#41;Transact-SQL ](../../relational-databases/system-tables/sysarticles-transact-sql.md) e insere o texto da cláusula de restrição na coluna **filter_clause** .  
   
- Para criar um artigo com um filtro horizontal, execute [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem parâmetro de *filtro* . Execute **sp_articlefilter**, fornecendo todos os parâmetros, incluindo *filter_clause*e, em seguida, execute [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), fornecendo todos os parâmetros, incluindo os *filter_clause*idênticos. Se o filtro já existir e se o **tipo** em **sysarticles** for **1** (artigo baseado em log), o filtro anterior será excluído e um novo filtro será criado.  
+ Para criar um artigo com um filtro horizontal, execute [sp_addarticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem parâmetro de *filtro* . Execute **sp_articlefilter**, fornecendo todos os parâmetros, incluindo *filter_clause*e, em seguida, execute [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), fornecendo todos os parâmetros, incluindo os *filter_clause*idênticos. Se o filtro já existir e se o **tipo** em **sysarticles** for **1** (artigo baseado em log), o filtro anterior será excluído e um novo filtro será criado.  
   
  Se *filter_name* e *filter_clause* não forem fornecidos, o filtro anterior será excluído e a ID do filtro será definida como **0**.  
   
@@ -89,13 +90,13 @@ sp_articlefilter [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_articlefilter**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir e modificar um filtro de linha estático](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [&#41;&#40;Transact-SQL de sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droparticle](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_articleview ](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changearticle ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droparticle ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

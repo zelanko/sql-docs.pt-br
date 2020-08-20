@@ -1,4 +1,5 @@
 ---
+description: sp_addtype (Transact-SQL)
 title: sp_addtype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1b4d469d8afd6946b35cce503efd6db6cdfcb3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e924e286c036f7d26e93d88c18105696835d2f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464613"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876219"
   Cria um tipo de dados de alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [criar tipo](../../t-sql/statements/create-type-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [criar tipo](../../t-sql/statements/create-type-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @typename = ] type`É o nome do tipo de dados do alias. Os nomes de tipo de dados de alias devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e devem ser exclusivos em cada banco de dado. o *tipo* é **sysname**, sem padrão.  
+`[ @typename = ] type` É o nome do tipo de dados do alias. Os nomes de tipo de dados de alias devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e devem ser exclusivos em cada banco de dado. o *tipo* é **sysname**, sem padrão.  
   
-`[ @phystype = ] system_data_type`É o tipo de dados físico, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecido, no qual o tipo de dados do alias se baseia.* system_data_type* é **sysname**, sem padrão, e pode ser um destes valores:  
+`[ @phystype = ] system_data_type` É o tipo de dados físico, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecido, no qual o tipo de dados do alias se baseia.* system_data_type* é **sysname**, sem padrão, e pode ser um destes valores:  
   
 ||||  
 |-|-|-|  
@@ -70,7 +71,7 @@ sp_addtype [ @typename = ] type,
  *&*  
  É um inteiro não negativo indicando o número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal e deve ser menor que ou igual à precisão. Para obter mais informações, consulte [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'`Indica a maneira como o tipo de dados de alias manipula valores nulos. *null_type* é **varchar (** 8 **)**, com um padrão de NULL e deve ser colocado entre aspas simples (' NULL ', ' NOT NULL ' ou ' NONULL '). Se *null_type* não for definido explicitamente pelo **sp_addtype**, ele será definido como a nulidade padrão atual. Use a função de sistema GETANSINULL para determinar a nulabilidade padrão atual. Isso pode ser ajustado usando a instrução SET ou ALTER DATABASE. A nulabilidade deve ser definida explicitamente. Se ** \@ phystype** for **bit**e ** \@ nulltype** não for especificado, o padrão será NOT NULL.  
+`[ @nulltype = ] 'null_type'` Indica a maneira como o tipo de dados de alias manipula valores nulos. *null_type* é **varchar (** 8 **)**, com um padrão de NULL e deve ser colocado entre aspas simples (' NULL ', ' NOT NULL ' ou ' NONULL '). Se *null_type* não for definido explicitamente pelo **sp_addtype**, ele será definido como a nulidade padrão atual. Use a função de sistema GETANSINULL para determinar a nulabilidade padrão atual. Isso pode ser ajustado usando a instrução SET ou ALTER DATABASE. A nulabilidade deve ser definida explicitamente. Se ** \@ phystype** for **bit**e ** \@ nulltype** não for especificado, o padrão será NOT NULL.  
   
 > [!NOTE]  
 >  O parâmetro *null_type* define apenas a nulidade padrão para esse tipo de dados. Se a nulabilidade for explicitamente definida quando o tipo de dados de alias for usado durante a criação da tabela, ela terá precedência sobre a nulabilidade padrão. Para obter mais informações, consulte [ALTER TABLE &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [CREATE TABLE &#40;transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -133,15 +134,15 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CRIAR tipo &#40;&#41;Transact-SQL](../../t-sql/statements/create-type-transact-sql.md)   
+ [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droptype](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_bindefault ](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_bindrule ](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droptype ](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_unbindefault](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_unbindrule](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_unbindefault ](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_unbindrule ](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributiondb (Transact-SQL)
 title: sp_changedistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb52176989ef6e90eb132da21abcd299444aec8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464431"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`É o nome do banco de dados de distribuição. o *banco de dados* é **sysname**, sem padrão.  
+`[ @database = ] 'database'` É o nome do banco de dados de distribuição. o *banco de dados* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'`É a propriedade a ser alterada para o banco de dados especificado. a *Propriedade* é **sysname**e pode ser um desses valores.  
+`[ @property = ] 'property'` É a propriedade a ser alterada para o banco de dados especificado. a *Propriedade* é **sysname**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -50,7 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Período mínimo de retenção de distribuição.|  
 |NULL (padrão)|Todos os valores de *Propriedade* disponíveis são impressos.|  
   
-`[ @value = ] 'value'`É o novo valor para a propriedade especificada. o *valor* é **nvarchar (255)**, com um padrão de NULL.  
+`[ @value = ] 'value'` É o novo valor para a propriedade especificada. o *valor* é **nvarchar (255)**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -65,10 +66,10 @@ sp_changedistributiondb [ @database= ] 'database'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar as propriedades do distribuidor e do Publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [&#41;&#40;Transact-SQL de sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdistributiondb](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [&#41;&#40;Transact-SQL de sp_adddistributiondb ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropdistributiondb ](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

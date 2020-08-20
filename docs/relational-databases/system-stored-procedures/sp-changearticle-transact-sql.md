@@ -1,4 +1,5 @@
 ---
+description: sp_changearticle (Transact-SQL)
 title: sp_changearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464457"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +44,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação que contém o artigo. a *publicação* é **sysname**, com um padrão de NULL.  
+`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. a *publicação* é **sysname**, com um padrão de NULL.  
   
-`[ @article = ] 'article'`É o nome do artigo cuja propriedade deve ser alterada. o *artigo* é **sysname**, com um padrão de NULL.  
+`[ @article = ] 'article'` É o nome do artigo cuja propriedade deve ser alterada. o *artigo* é **sysname**, com um padrão de NULL.  
   
-`[ @property = ] 'property'`É uma propriedade de artigo a ser alterada. a *Propriedade* é **nvarchar (100)**.  
+`[ @property = ] 'property'` É uma propriedade de artigo a ser alterada. a *Propriedade* é **nvarchar (100)**.  
   
-`[ @value = ] 'value'`É o novo valor da Propriedade do artigo. o *valor* é **nvarchar (255)**.  
+`[ @value = ] 'value'` É o novo valor da Propriedade do artigo. o *valor* é **nvarchar (255)**.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -68,7 +69,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**ins_cmd**||Instrução INSERT a ser executada; caso contrário, será construída do log.|  
 |**pre_creation_cmd**||Comando de pré-criação que pode descartar, excluir ou truncar a tabela de destino antes que a sincronização seja aplicada.|  
 ||**nenhum**|Não usa um comando.|  
-||**suspensa**|Descarta a tabela de destino.|  
+||**drop**|Descarta a tabela de destino.|  
 ||**delete**|Exclui a tabela de destino.|  
 ||**truncar**|Trunca a tabela de destino.|  
 |**pub_identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
@@ -141,7 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Instrução UPADTE a ser executada; caso contrário, será construída do log.|  
 |NULO|NULO|Retorna uma lista de propriedades de artigo que podem ser alteradas.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -149,7 +150,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Consulte a seção Comentários das propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_`Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo não fazem com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -157,7 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Consulte a seção Comentários para as propriedades que, quando alteradas, requerem que todas as assinaturas existentes sejam reiniciadas.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  o *Publicador* não deve ser usado ao alterar as propriedades do artigo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
@@ -238,10 +239,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades do artigo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [&#41;&#40;Transact-SQL de sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droparticle](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_articlecolumn ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droparticle ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helparticlecolumns](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_helparticlecolumns ](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_ivindexhasnullcols (Transact-SQL)
 title: sp_ivindexhasnullcols (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 837a589827b4bf4db9d4e7d38e00d56b646e781a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86fef9d3b131770e11edde117ea12e96d336de24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464185"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @viewname = ] 'view_name'`É o nome da exibição a ser verificada. *view_name* é **sysname**, sem padrão.  
+`[ @viewname = ] 'view_name'` É o nome da exibição a ser verificada. *view_name* é **sysname**, sem padrão.  
   
-`[ @fhasnullcols = ] field_has_null_columns OUTPUT`É o sinalizador que indica se o índice de exibição tem colunas que permitem NULL. *view_name* é **sysname**, sem padrão. Retorna um valor de **1** se o índice de exibição tem colunas que permitem NULL. Retornará um valor de **0** se a exibição não contiver colunas que permitam nulos.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` É o sinalizador que indica se o índice de exibição tem colunas que permitem NULL. *view_name* é **sysname**, sem padrão. Retorna um valor de **1** se o índice de exibição tem colunas que permitem NULL. Retornará um valor de **0** se a exibição não contiver colunas que permitam nulos.  
   
 > [!NOTE]  
 >  Se o procedimento armazenado em si retornar um código de retorno **1**, o que significa que a execução do procedimento armazenado teve uma falha, esse valor será **0** e deverá ser ignorado.  

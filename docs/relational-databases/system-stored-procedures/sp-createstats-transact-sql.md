@@ -1,4 +1,5 @@
 ---
+description: sp_createstats (Transact-SQL)
 title: sp_createstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 608f969ab70a0bd9a35b64918a29053caf26c385
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23eef2525deeebd78df824af483fa5db8c7fe2ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464408"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85771160"
   
  sp_createstats é útil para aplicativos como o benckmark, quando os tempos de execução de consulta são críticos e não podem aguardar a geração de estatísticas de coluna única pelo otimizador de consulta. Na maioria dos casos, não é necessário usar sp_createstats; o otimizador de consulta gera estatísticas de coluna única conforme necessário para melhorar os planos de consulta quando a opção de **AUTO_CREATE_STATISTICS** está ativada.  
   
- Para obter mais informações sobre estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte a opção **AUTO_CREATE_STATISTICS** em [Opções ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obter mais informações sobre estatísticas, consulte [Estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte a opção **AUTO_CREATE_STATISTICS** em [Opções ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @indexonly = ] 'indexonly'`Cria estatísticas somente em colunas que estão em um índice existente e não são a primeira coluna em qualquer definição de índice. **indexonly** é **Char (9)**. O padrão é NO.  
+`[ @indexonly = ] 'indexonly'` Cria estatísticas somente em colunas que estão em um índice existente e não são a primeira coluna em qualquer definição de índice. **indexonly** é **Char (9)**. O padrão é NO.  
   
-`[ @fullscan = ] 'fullscan'`Usa a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a opção **FULLSCAN** . **FULLSCAN** é **Char (9)**.  O padrão é NO.  
+`[ @fullscan = ] 'fullscan'` Usa a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a opção **FULLSCAN** . **FULLSCAN** é **Char (9)**.  O padrão é NO.  
   
-`[ @norecompute = ] 'norecompute'`Usa a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a opção **NORECOMPUTE** . **NORECOMPUTE** é **Char (12)**.  O padrão é NO.  
+`[ @norecompute = ] 'norecompute'` Usa a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a opção **NORECOMPUTE** . **NORECOMPUTE** é **Char (12)**.  O padrão é NO.  
   
-`[ @incremental = ] 'incremental'`Usa a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a opção **incremental = on** . **Incremental** é **Char (12)**.  O padrão é NO.  
+`[ @incremental = ] 'incremental'` Usa a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a opção **incremental = on** . **Incremental** é **Char (12)**.  O padrão é NO.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -90,11 +91,11 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Estatística](../../relational-databases/statistics/statistics.md)   
- [CRIAR estatísticas &#40;&#41;Transact-SQL](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [SHOW_STATISTICS DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [ATUALIZAR estatísticas &#40;&#41;Transact-SQL](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

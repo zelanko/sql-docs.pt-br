@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepublication (Transact-SQL)
 title: sp_dropmergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9b2b36484d34396ed573f4b06bd1feb5b0f83b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a28a81d897f9319495963b0f9d049502fe8c7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464328"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser descartada. a *publicação* é **sysname**, sem padrão. Se **tudo**, todas as publicações de mesclagem existentes serão removidas, bem como o trabalho de agente de instantâneo associado a elas. Se você especificar um valor específico para *publicação*, somente essa publicação e seu trabalho agente de instantâneo associado serão removidos.  
+`[ @publication = ] 'publication'` É o nome da publicação a ser descartada. a *publicação* é **sysname**, sem padrão. Se **tudo**, todas as publicações de mesclagem existentes serão removidas, bem como o trabalho de agente de instantâneo associado a elas. Se você especificar um valor específico para *publicação*, somente essa publicação e seu trabalho agente de instantâneo associado serão removidos.  
   
-`[ @ignore_distributor = ] ignore_distributor`Usado para descartar uma publicação sem realizar tarefas de limpeza no distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**. Esse parâmetro também é usado ao reinstalar o Distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` Usado para descartar uma publicação sem realizar tarefas de limpeza no distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**. Esse parâmetro também é usado ao reinstalar o Distribuidor.  
   
-`[ @reserved = ] reserved`É reservado para uso futuro. *reservado* é **bit**, com um padrão de **0**.  
+`[ @reserved = ] reserved` É reservado para uso futuro. *reservado* é **bit**, com um padrão de **0**.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`Somente para uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,9 +67,9 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Excluir uma publicação](../../relational-databases/replication/publish/delete-a-publication.md)   
- [&#41;&#40;Transact-SQL de sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergepublication ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergepublication ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

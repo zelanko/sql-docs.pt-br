@@ -1,4 +1,5 @@
 ---
+description: sp_changeobjectowner (Transact-SQL)
 title: sp_changeobjectowner (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df232018259055697bb6624ee96a8fc980b3bef3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e96c93be7b21deb0966e0a48f5fde3258501ac6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464418"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85871749"
   Altera o proprietário de um objeto no banco de dados atual.  
   
 > [!IMPORTANT]
->  Esse procedimento armazenado funciona apenas com os objetos disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** altera o esquema e o proprietário. Para preservar a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse procedimento armazenado irá alterar proprietários de objetos somente quando o proprietário atual e o novo possuírem esquemas que tenham o mesmo nome que seus nomes de usuário do banco de dados.  
+>  Esse procedimento armazenado funciona apenas com os objetos disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** altera o esquema e o proprietário. Para preservar a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse procedimento armazenado irá alterar proprietários de objetos somente quando o proprietário atual e o novo possuírem esquemas que tenham o mesmo nome que seus nomes de usuário do banco de dados.  
 > 
 > [!IMPORTANT]
 >  Um novo requisito de permissão foi adicionado a esse procedimento armazenado.  
@@ -45,9 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object'`É o nome de uma tabela, exibição, função definida pelo usuário ou procedimento armazenado existente no banco de dados atual. *Object* é um **nvarchar (776)**, sem padrão. o *objeto* pode ser qualificado com o proprietário do objeto existente, no formato _existing_owner_**.** _objeto_ se o esquema e seu proprietário tiverem o mesmo nome.  
+`[ @objname = ] 'object'` É o nome de uma tabela, exibição, função definida pelo usuário ou procedimento armazenado existente no banco de dados atual. *Object* é um **nvarchar (776)**, sem padrão. o *objeto* pode ser qualificado com o proprietário do objeto existente, no formato _existing_owner_**.** _objeto_ se o esquema e seu proprietário tiverem o mesmo nome.  
   
-`[ @newowner = ] 'owner_ '`É o nome da conta de segurança que será o novo proprietário do objeto. *Owner* é **sysname**, sem padrão. o *proprietário* deve ser um usuário de banco de dados, uma função de servidor, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou um grupo do Windows válido com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
+`[ @newowner = ] 'owner_ '` É o nome da conta de segurança que será o novo proprietário do objeto. *Owner* é **sysname**, sem padrão. o *proprietário* deve ser um usuário de banco de dados, uma função de servidor, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou um grupo do Windows válido com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -72,7 +73,7 @@ GO
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_alert_job (Transact-SQL)
 title: sp_add_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5c872f0346cce50ff27e442991efa5e5f4e4391
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464698"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_job_id = ] alert_job_id OUTPUT`A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de trabalho do agente do trabalho de alerta de envio de logs.  
+`[ @alert_job_id = ] alert_job_id OUTPUT` A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de trabalho do agente do trabalho de alerta de envio de logs.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

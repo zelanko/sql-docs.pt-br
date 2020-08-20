@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobstep (Transact-SQL)
 title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 560ab640738ef89d22917bf03e8d6553029eb646
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5ef8fab59553fd203129852961ac33d59498467d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464258"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] 'job_id'`O número de identificação do trabalho para o qual retornar informações do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] 'job_id'` O número de identificação do trabalho para o qual retornar informações do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **sysname**, com um NULL padrão.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* é **sysname**, com um NULL padrão.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @step_id = ] step_id`O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* é **int**, com um padrão de NULL.  
+`[ @step_id = ] step_id` O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* é **int**, com um padrão de NULL.  
   
-`[ @step_name = ] 'step_name'`O nome da etapa no trabalho. *step_name* é **sysname**, com um padrão de NULL.  
+`[ @step_name = ] 'step_name'` O nome da etapa no trabalho. *step_name* é **sysname**, com um padrão de NULL.  
   
-`[ @suffix = ] suffix`Um sinalizador que indica se uma descrição de texto é anexada à coluna **flags** na saída. o *sufixo*é **bit**, com o padrão **0**. Se o *sufixo* for **1**, uma descrição será anexada.  
+`[ @suffix = ] suffix` Um sinalizador que indica se uma descrição de texto é anexada à coluna **flags** na saída. o *sufixo*é **bit**, com o padrão **0**. Se o *sufixo* for **1**, uma descrição será anexada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -130,10 +131,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_jobstep](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_delete_jobstep](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_jobstep ](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_jobstep ](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_job ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_jobstep ](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

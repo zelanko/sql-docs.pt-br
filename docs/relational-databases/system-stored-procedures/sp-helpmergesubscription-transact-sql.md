@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergesubscription (Transact-SQL)
 title: sp_helpmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c1c2ff23ecde51f13270fca3f674c58412858f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464225"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . A publicação já deve existir e estar em conformidade com as regras para identificadores. Se for NULL ou **%** , serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . A publicação já deve existir e estar em conformidade com as regras para identificadores. Se for NULL ou **%** , serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de **%** . Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, com um padrão de **%** . Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados de assinatura.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados de assinatura.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. O Publicador deve ser um servidor válido. o *Publicador*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os Publicadores.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. O Publicador deve ser um servidor válido. o *Publicador*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os Publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados do Publicador.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados do Publicador.  
   
-`[ @subscription_type = ] 'subscription_type'`É o tipo de assinatura. *subscription_type*é **nvarchar (15)** e pode ser um desses valores.  
+`[ @subscription_type = ] 'subscription_type'` É o tipo de assinatura. *subscription_type*é **nvarchar (15)** e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -61,7 +62,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**recebimento**|Assinatura pull|  
 |**mesmo**|Assinaturas push e pull|  
   
-`[ @found = ] 'found'OUTPUT`É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de NULL. **1** indica que a publicação foi encontrada. **0** indica que a publicação não foi encontrada.  
+`[ @found = ] 'found'OUTPUT` É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de NULL. **1** indica que a publicação foi encontrada. **0** indica que a publicação não foi encontrada.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -78,7 +79,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = ambos|  
 |**prioridade**|**float (8)**|Número que indica a prioridade da assinatura.|  
 |**sync_type**|**tinyint**|Tipo de sincronização da Assinatura.|  
-|**ndescrição**|**nvarchar (255)**|Descrição breve da assinatura de mesclagem.|  
+|**descrição**|**nvarchar(255)**|Descrição breve da assinatura de mesclagem.|  
 |**merge_jobid**|**binary(16)**|ID do trabalho do Agente de Mesclagem.|  
 |**full_publication**|**tinyint**|Se a assinatura é para uma publicação completa ou filtrada.|  
 |**offload_enabled**|**bit**|Especifica se execução de descarga de um agente de replicação foi definida para executar no Assinante. Se for NULL, a execução será executada no Publicador.|  
@@ -101,9 +102,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  Somente os membros da função de servidor fixa **sysadmin** , a **db_owner** função de banco de dados fixa ou a lista de acesso à publicação para a publicação à qual a assinatura pertence pode ser executada **sp_helpmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergesubscription](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergesubscription ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergesubscription ](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropmergesubscription ](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

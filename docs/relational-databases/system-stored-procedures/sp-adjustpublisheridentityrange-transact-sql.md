@@ -1,4 +1,5 @@
 ---
+description: sp_adjustpublisheridentityrange (Transact-SQL)
 title: sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac449d2437184695c4d5957fea0788ce40a176ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9315025143c31d6fc1ef76aab4e70578e251694d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464588"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação na qual novos intervalos de identidade são realocados. a *publicação* é **sysname**, com um padrão de NULL.  
+`[ @publication = ] 'publication'` É o nome da publicação na qual novos intervalos de identidade são realocados. a *publicação* é **sysname**, com um padrão de NULL.  
   
-`[ @table_name = ] 'table_name'`É o nome da tabela na qual novos intervalos de identidade são realocados. *table_name* é **sysname**, com um padrão de NULL.  
+`[ @table_name = ] 'table_name'` É o nome da tabela na qual novos intervalos de identidade são realocados. *table_name* é **sysname**, com um padrão de NULL.  
   
-`[ @table_owner = ] 'table_owner'`É o proprietário da tabela no Publicador. *TABLE_OWNER* é **sysname**, com um padrão de NULL. Se *TABLE_OWNER* não for especificado, o nome do usuário atual será usado.  
+`[ @table_owner = ] 'table_owner'` É o proprietário da tabela no Publicador. *TABLE_OWNER* é **sysname**, com um padrão de NULL. Se *TABLE_OWNER* não for especificado, o nome do usuário atual será usado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

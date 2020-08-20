@@ -1,4 +1,5 @@
 ---
+description: sp_changearticlecolumndatatype (Transact-SQL)
 title: sp_changearticlecolumndatatype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98680c9e00fcb5a693ac257eaf6dd1265c3c3d62
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe96b4e0135bc7d1ca7cc3c2987f8f02da0a4475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464493"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação Oracle. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação Oracle. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, sem padrão.  
+`[ @article = ] 'article'` É o nome do artigo. o *artigo* é **sysname**, sem padrão.  
   
-`[ @column = ] 'column'`É o nome da coluna para a qual alterar o mapeamento de tipo de dados. a *coluna* é **sysname**, sem padrão.  
+`[ @column = ] 'column'` É o nome da coluna para a qual alterar o mapeamento de tipo de dados. a *coluna* é **sysname**, sem padrão.  
   
-`[ @type = ] 'type'`É o nome do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. o *tipo* é **sysname**, com um padrão de NULL.  
+`[ @type = ] 'type'` É o nome do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. o *tipo* é **sysname**, com um padrão de NULL.  
   
-`[ @length = ] length`É o comprimento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *Length* é **bigint**, com um padrão de NULL.  
+`[ @length = ] length` É o comprimento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *Length* é **bigint**, com um padrão de NULL.  
   
-`[ @precision = ] precision`É a precisão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. a *precisão* é **bigint**, com um padrão de NULL.  
+`[ @precision = ] precision` É a precisão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. a *precisão* é **bigint**, com um padrão de NULL.  
   
-`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -76,7 +77,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Mapeamento de tipo de dados para Publicadores Oracle](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

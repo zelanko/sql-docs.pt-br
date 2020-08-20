@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobhistory (Transact-SQL)
 title: sp_help_jobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464269"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,44 +54,44 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`O número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
+`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
+`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
   
-`[ @step_id = ] step_id`O número de identificação da etapa. *step_id* é **int**, com um padrão de NULL.  
+`[ @step_id = ] step_id` O número de identificação da etapa. *step_id* é **int**, com um padrão de NULL.  
   
-`[ @sql_message_id = ] sql_message_id`O número de identificação da mensagem de erro retornada por Microsoft SQL Server ao executar o trabalho. *sql_message_id* é **int**, com um padrão de NULL.  
+`[ @sql_message_id = ] sql_message_id` O número de identificação da mensagem de erro retornada por Microsoft SQL Server ao executar o trabalho. *sql_message_id* é **int**, com um padrão de NULL.  
   
-`[ @sql_severity = ] sql_severity`O nível de severidade da mensagem de erro retornada por SQL Server ao executar o trabalho. *sql_severity* é **int**, com um padrão de NULL.  
+`[ @sql_severity = ] sql_severity` O nível de severidade da mensagem de erro retornada por SQL Server ao executar o trabalho. *sql_severity* é **int**, com um padrão de NULL.  
   
-`[ @start_run_date = ] start_run_date`A data em que o trabalho foi iniciado. *start_run_date*é **int**, com um padrão de NULL. *start_run_date* deve ser inserido no formato AAAAMMDD, em que yyyy é um ano de quatro caracteres, mm é um nome de mês de dois caracteres e DD é um nome de dia de dois caracteres.  
+`[ @start_run_date = ] start_run_date` A data em que o trabalho foi iniciado. *start_run_date*é **int**, com um padrão de NULL. *start_run_date* deve ser inserido no formato AAAAMMDD, em que yyyy é um ano de quatro caracteres, mm é um nome de mês de dois caracteres e DD é um nome de dia de dois caracteres.  
   
-`[ @end_run_date = ] end_run_date`A data em que o trabalho foi concluído. *end_run_date* é **int**, com um padrão de NULL. *end_run_date*deve ser inserido no formato AAAAMMDD, em que yyyy é um ano de quatro dígitos, mm é um nome de mês de dois caracteres e DD é um nome de dia de dois caracteres.  
+`[ @end_run_date = ] end_run_date` A data em que o trabalho foi concluído. *end_run_date* é **int**, com um padrão de NULL. *end_run_date*deve ser inserido no formato AAAAMMDD, em que yyyy é um ano de quatro dígitos, mm é um nome de mês de dois caracteres e DD é um nome de dia de dois caracteres.  
   
-`[ @start_run_time = ] start_run_time`A hora em que o trabalho foi iniciado. *start_run_time* é **int**, com um padrão de NULL. *start_run_time*deve ser inserido no formato HHMMSS, em que HH é uma hora de dois caracteres do dia, mm é um minuto de dois caracteres do dia e SS é um segundo de dois caracteres do dia.  
+`[ @start_run_time = ] start_run_time` A hora em que o trabalho foi iniciado. *start_run_time* é **int**, com um padrão de NULL. *start_run_time*deve ser inserido no formato HHMMSS, em que HH é uma hora de dois caracteres do dia, mm é um minuto de dois caracteres do dia e SS é um segundo de dois caracteres do dia.  
   
-`[ @end_run_time = ] end_run_time`A hora em que o trabalho concluiu sua execução. *end_run_time* é **int**, com um padrão de NULL. *end_run_time*deve ser inserido no formato HHMMSS, em que HH é uma hora de dois caracteres do dia, mm é um minuto de dois caracteres do dia e SS é um segundo de dois caracteres do dia.  
+`[ @end_run_time = ] end_run_time` A hora em que o trabalho concluiu sua execução. *end_run_time* é **int**, com um padrão de NULL. *end_run_time*deve ser inserido no formato HHMMSS, em que HH é uma hora de dois caracteres do dia, mm é um minuto de dois caracteres do dia e SS é um segundo de dois caracteres do dia.  
   
-`[ @minimum_run_duration = ] minimum_run_duration`O período mínimo de tempo para a conclusão do trabalho. *minimum_run_duration* é **int**, com um padrão de NULL. *minimum_run_duration*deve ser inserido no formato HHMMSS, em que HH é uma hora de dois caracteres do dia, mm é um minuto de dois caracteres do dia e SS é um segundo de dois caracteres do dia.  
+`[ @minimum_run_duration = ] minimum_run_duration` O período mínimo de tempo para a conclusão do trabalho. *minimum_run_duration* é **int**, com um padrão de NULL. *minimum_run_duration*deve ser inserido no formato HHMMSS, em que HH é uma hora de dois caracteres do dia, mm é um minuto de dois caracteres do dia e SS é um segundo de dois caracteres do dia.  
   
-`[ @run_status = ] run_status`O status de execução do trabalho. *run_status* é **int**, com um padrão de NULL, e pode ser um desses valores.  
+`[ @run_status = ] run_status` O status de execução do trabalho. *run_status* é **int**, com um padrão de NULL, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Falhou|  
-|**1**|Êxito|  
+|**0**|Com falha|  
+|**1**|Com sucesso|  
 |**2**|Repetir (somente a etapa)|  
 |**3**|Canceled|  
 |**4**|Mensagem em andamento|  
 |**5**|Unknown (desconhecido)|  
   
-`[ @minimum_retries = ] minimum_retries`O número mínimo de vezes que um trabalho deve ser executado novamente. *minimum_retries* é **int**, com um padrão de NULL.  
+`[ @minimum_retries = ] minimum_retries` O número mínimo de vezes que um trabalho deve ser executado novamente. *minimum_retries* é **int**, com um padrão de NULL.  
   
-`[ @oldest_first = ] oldest_first`Deve apresentar a saída com os trabalhos mais antigos primeiro. *Oldest_First* é **int**, com um padrão de **0**, que apresenta os trabalhos mais recentes primeiro. **1** apresenta os trabalhos mais antigos primeiro.  
+`[ @oldest_first = ] oldest_first` Deve apresentar a saída com os trabalhos mais antigos primeiro. *Oldest_First* é **int**, com um padrão de **0**, que apresenta os trabalhos mais recentes primeiro. **1** apresenta os trabalhos mais antigos primeiro.  
   
-`[ @server = ] 'server'`O nome do servidor no qual o trabalho foi executado. o *servidor* é **nvarchar (30)**, com um padrão de NULL.  
+`[ @server = ] 'server'` O nome do servidor no qual o trabalho foi executado. o *servidor* é **nvarchar (30)**, com um padrão de NULL.  
   
-`[ @mode = ] 'mode'`É se SQL Server imprime todas as colunas no conjunto de resultados (**completo**) ou um resumo das colunas. o *modo* é **varchar (7)**, com um padrão de **Resumo**.  
+`[ @mode = ] 'mode'` É se SQL Server imprime todas as colunas no conjunto de resultados (**completo**) ou um resumo das colunas. o *modo* é **varchar (7)**, com um padrão de **Resumo**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -164,7 +165,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_purge_jobhistory](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

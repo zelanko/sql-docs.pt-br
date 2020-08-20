@@ -1,4 +1,5 @@
 ---
+description: sp_add_jobstep (Transact-SQL)
 title: sp_add_jobstep (Transact-SQL)
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 97954598f44b5fa66a6558aae4964cc1651f6f70
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: bb8a754ee5e477f0bccce286f8f93193136276e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464726"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -61,18 +62,18 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argumentos
 
-`[ @job_id = ] job_id`O número de identificação do trabalho ao qual adicionar a etapa. *job_id* é **uniqueidentifier**, com um padrão de NULL.
+`[ @job_id = ] job_id` O número de identificação do trabalho ao qual adicionar a etapa. *job_id* é **uniqueidentifier**, com um padrão de NULL.
 
-`[ @job_name = ] 'job_name'`O nome do trabalho ao qual adicionar a etapa. *job_name* é **sysname**, com um padrão de NULL.
+`[ @job_name = ] 'job_name'` O nome do trabalho ao qual adicionar a etapa. *job_name* é **sysname**, com um padrão de NULL.
 
 > [!NOTE]
 > *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.
 
-`[ @step_id = ] step_id`O número de identificação da sequência para a etapa de trabalho. Os números de identificação da etapa começam em **1** e são incrementados sem lacunas. Se uma etapa for inserida na sequência existente, os números da sequência serão ajustados automaticamente. Um valor será fornecido se *step_id* não for especificado. *step_id* é **int**, com um padrão de NULL.
+`[ @step_id = ] step_id` O número de identificação da sequência para a etapa de trabalho. Os números de identificação da etapa começam em **1** e são incrementados sem lacunas. Se uma etapa for inserida na sequência existente, os números da sequência serão ajustados automaticamente. Um valor será fornecido se *step_id* não for especificado. *step_id* é **int**, com um padrão de NULL.
 
-`[ @step_name = ] 'step_name'`O nome da etapa. *step_name* é **sysname**, sem padrão.
+`[ @step_name = ] 'step_name'` O nome da etapa. *step_name* é **sysname**, sem padrão.
 
-`[ @subsystem = ] 'subsystem'`O subsistema usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço Agent para executar o *comando*. *subsistema* é **nvarchar (40)** e pode ser um desses valores.
+`[ @subsystem = ] 'subsystem'` O subsistema usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço Agent para executar o *comando*. *subsistema* é **nvarchar (40)** e pode ser um desses valores.
 
 |Valor|Descrição|
 |-----------|-----------------|
@@ -89,10 +90,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|Scripts PowerShell|  
 |'**TSQL**' (padrão)|Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]|
 
-`[ @command = ] 'command'`Os comandos a serem executados pelo serviço **SQLSERVERAGENT** por meio do *subsistema*. o *comando* é **nvarchar (max)**, com um padrão de NULL. O SQL Server Agent fornece uma substituição de token que propicia a mesma flexibilidade que as variáveis ao escrever programas de software.
+`[ @command = ] 'command'` Os comandos a serem executados pelo serviço **SQLSERVERAGENT** por meio do *subsistema*. o *comando* é **nvarchar (max)**, com um padrão de NULL. O SQL Server Agent fornece uma substituição de token que propicia a mesma flexibilidade que as variáveis ao escrever programas de software.
 
 > [!IMPORTANT]
-> Uma macro de fuga agora deve acompanhar todos os tokens utilizados em etapas de trabalho ou elas falharão. Além disso, deve-se colocar os nomes de token entre parênteses e um sinal de cifrão (`$`) no início da sintaxe do token. Por exemplo:
+> Uma macro de fuga agora deve acompanhar todos os tokens utilizados em etapas de trabalho ou elas falharão. Além disso, deve-se colocar os nomes de token entre parênteses e um sinal de cifrão (`$`) no início da sintaxe do token. Por exemplo: 
 >
 > `$(ESCAPE_` *nome da macro* `(DATE))`  
 
@@ -105,9 +106,9 @@ Para obter mais informações sobre esses tokens e atualizar suas etapas de trab
 
 `[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]os *parâmetros* são **ntext**, com um padrão de NULL.
 
-`[ @cmdexec_success_code = ] code`O valor retornado por um comando de subsistema **CmdExec** para indicar que o *comando* foi executado com êxito. o *código* é **int**, com um padrão de **0**.
+`[ @cmdexec_success_code = ] code` O valor retornado por um comando de subsistema **CmdExec** para indicar que o *comando* foi executado com êxito. o *código* é **int**, com um padrão de **0**.
 
-`[ @on_success_action = ] success_action`A ação a ser executada se a etapa for concluída com sucesso. *success_action* é **tinyint**e pode ser um desses valores.
+`[ @on_success_action = ] success_action` A ação a ser executada se a etapa for concluída com sucesso. *success_action* é **tinyint**e pode ser um desses valores.
   
 |Valor|Descrição (ação)|  
 |-----------|----------------------------|  
@@ -116,9 +117,9 @@ Para obter mais informações sobre esses tokens e atualizar suas etapas de trab
 |**3**|Ir para a próxima etapa|  
 |**4**|Ir para a etapa *on_success_step_id*|  
 
-`[ @on_success_step_id = ] success_step_id`A ID da etapa neste trabalho a ser executada se a etapa for bem sucedido e *success_action* for **4**. *success_step_id* é **int**, com um padrão de **0**.
+`[ @on_success_step_id = ] success_step_id` A ID da etapa neste trabalho a ser executada se a etapa for bem sucedido e *success_action* for **4**. *success_step_id* é **int**, com um padrão de **0**.
 
-`[ @on_fail_action = ] fail_action`A ação a ser executada se a etapa falhar. *fail_action* é **tinyint**e pode ser um desses valores.
+`[ @on_fail_action = ] fail_action` A ação a ser executada se a etapa falhar. *fail_action* é **tinyint**e pode ser um desses valores.
 
 |Valor|Descrição (ação)|  
 |-----------|----------------------------|  
@@ -127,23 +128,23 @@ Para obter mais informações sobre esses tokens e atualizar suas etapas de trab
 |**3**|Ir para a próxima etapa|  
 |**4**|Ir para a etapa *on_fail_step_id*|  
 
-`[ @on_fail_step_id = ] fail_step_id`A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action* for **4**. *fail_step_id* é **int**, com um padrão de **0**.  
+`[ @on_fail_step_id = ] fail_step_id` A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action* for **4**. *fail_step_id* é **int**, com um padrão de **0**.  
 
 `[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]o *servidor* é **nvarchar (30)**, com um padrão de NULL.  
 
-`[ @database_name = ] 'database'`O nome do banco de dados no qual executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *banco de dados* é **sysname**, com um padrão de NULL; nesse caso, o banco de dados **mestre** é usado. Os nomes entre colchetes ([ ]) não são permitidos. Para uma etapa de trabalho do ActiveX, o *banco de dados* é o nome da linguagem de script usada pela etapa.  
+`[ @database_name = ] 'database'` O nome do banco de dados no qual executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *banco de dados* é **sysname**, com um padrão de NULL; nesse caso, o banco de dados **mestre** é usado. Os nomes entre colchetes ([ ]) não são permitidos. Para uma etapa de trabalho do ActiveX, o *banco de dados* é o nome da linguagem de script usada pela etapa.  
 
-`[ @database_user_name = ] 'user'`O nome da conta de usuário a ser usada ao executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *usuário* é **sysname**, com um padrão de NULL. Quando o *usuário* é nulo, a etapa é executada no contexto de usuário do proprietário do trabalho no *banco de dados*.  O SQL Server Agent só incluirá esse parâmetro se o proprietário do trabalho for um sysadmin de SQL Server. Assim, a determinada etapa de Transact-SQL será executada no contexto do determinado nome de usuário do SQL Server. Se o proprietário do trabalho não for um SQL Server sysadmin, a etapa Transact-SQL sempre será executada no contexto do logon que possui esse trabalho, e o @database_user_name parâmetro será ignorado.  
+`[ @database_user_name = ] 'user'` O nome da conta de usuário a ser usada ao executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *usuário* é **sysname**, com um padrão de NULL. Quando o *usuário* é nulo, a etapa é executada no contexto de usuário do proprietário do trabalho no *banco de dados*.  O SQL Server Agent só incluirá esse parâmetro se o proprietário do trabalho for um sysadmin de SQL Server. Assim, a determinada etapa de Transact-SQL será executada no contexto do determinado nome de usuário do SQL Server. Se o proprietário do trabalho não for um SQL Server sysadmin, a etapa Transact-SQL sempre será executada no contexto do logon que possui esse trabalho, e o @database_user_name parâmetro será ignorado.  
 
-`[ @retry_attempts = ] retry_attempts`O número de tentativas de repetição a serem usadas se essa etapa falhar. *retry_attempts* é **int**, com um padrão de **0**, que não indica nenhuma tentativa de repetição.  
+`[ @retry_attempts = ] retry_attempts` O número de tentativas de repetição a serem usadas se essa etapa falhar. *retry_attempts* é **int**, com um padrão de **0**, que não indica nenhuma tentativa de repetição.  
 
-`[ @retry_interval = ] retry_interval`A quantidade de tempo em minutos entre as tentativas de repetição. *retry_interval* é **int**, com um padrão de **0**, que indica um intervalo de **0**minuto.  
+`[ @retry_interval = ] retry_interval` A quantidade de tempo em minutos entre as tentativas de repetição. *retry_interval* é **int**, com um padrão de **0**, que indica um intervalo de **0**minuto.  
 
-`[ @os_run_priority = ] run_priority`Reservado.
+`[ @os_run_priority = ] run_priority` Reservado.
 
-`[ @output_file_name = ] 'file_name'`O nome do arquivo no qual a saída desta etapa é salva. *file_name* é **nvarchar (200)**, com um padrão de NULL. *file_name* pode incluir um ou mais dos tokens listados em *comando*. Esse parâmetro é válido somente com comandos em execução nos [!INCLUDE[tsql](../../includes/tsql-md.md)] subsistemas, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+`[ @output_file_name = ] 'file_name'` O nome do arquivo no qual a saída desta etapa é salva. *file_name* é **nvarchar (200)**, com um padrão de NULL. *file_name* pode incluir um ou mais dos tokens listados em *comando*. Esse parâmetro é válido somente com comandos em execução nos [!INCLUDE[tsql](../../includes/tsql-md.md)] subsistemas, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
 
-`[ @flags = ] flags`É uma opção que controla o comportamento. *flags* é **int**e pode ser um desses valores.  
+`[ @flags = ] flags` É uma opção que controla o comportamento. *flags* é **int**e pode ser um desses valores.  
 
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -155,9 +156,9 @@ Para obter mais informações sobre esses tokens e atualizar suas etapas de trab
 |**32**|Grave todas as saídas no histórico do trabalho|  
 |**64**|Crie um evento do Windows para usar como um sinal para o jobstep de Cmd anular|  
 
-`[ @proxy_id = ] proxy_id`O número de ID do proxy que a etapa de trabalho executa como. *proxy_id* é do tipo **int**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+`[ @proxy_id = ] proxy_id` O número de ID do proxy que a etapa de trabalho executa como. *proxy_id* é do tipo **int**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy que a etapa de trabalho executa como. *proxy_name* é o tipo **sysname**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+`[ @proxy_name = ] 'proxy_name'` O nome do proxy que a etapa de trabalho executa como. *proxy_name* é o tipo **sysname**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
 ## <a name="return-code-values"></a>Valores do código de retorno
 
@@ -216,8 +217,8 @@ GO
 - [Exibir ou modificar trabalhos](../../ssms/agent/view-or-modify-jobs.md)
 - [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)
 - [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)
-- [&#41;&#40;Transact-SQL de sp_delete_jobstep](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)
+- [&#41;&#40;Transact-SQL de sp_delete_jobstep ](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)
 - [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)
-- [&#41;&#40;Transact-SQL de sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)
-- [&#41;&#40;Transact-SQL de sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)
+- [&#41;&#40;Transact-SQL de sp_help_jobstep ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)
+- [&#41;&#40;Transact-SQL de sp_update_jobstep ](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)
 - [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

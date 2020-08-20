@@ -1,4 +1,5 @@
 ---
+description: sp_can_tlog_be_applied (Transact-SQL)
 title: sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e4596cfab5bb7a272e29b2d2749e38c9f38ddaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464458"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @backup_file_name = ] 'backup_file_name'`É o nome de um arquivo de backup. *backup_file_name* é **nvarchar (128)**.  
+`[ @backup_file_name = ] 'backup_file_name'` É o nome de um arquivo de backup. *backup_file_name* é **nvarchar (128)**.  
   
-`[ @database_name = ] 'database_name'`É o nome do banco de dados. *database_name* é **sysname**.  
+`[ @database_name = ] 'database_name'` É o nome do banco de dados. *database_name* é **sysname**.  
   
-`[ @result = ] _result_ OUTPUT`Indica se o log de transações pode ser aplicado ao banco de dados. o *resultado* é **bit**.  
+`[ @result = ] _result_ OUTPUT` Indica se o log de transações pode ser aplicado ao banco de dados. o *resultado* é **bit**.  
   
  1 = O log pode ser aplicado  
   

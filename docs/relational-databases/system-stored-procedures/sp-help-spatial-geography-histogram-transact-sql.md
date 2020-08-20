@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geography_histogram (Transact-SQL)
 title: sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1713bb208fd556b23776fcfc2871879e6aa0d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464233"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'tabname'`É o nome qualificado ou não qualificado da tabela para a qual o índice espacial foi especificado.  
+`[ @tabname = ] 'tabname'` É o nome qualificado ou não qualificado da tabela para a qual o índice espacial foi especificado.  
   
  As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* é **sysname**, sem padrão.  
   
-`[ @colname = ] 'columnname'`É o nome da coluna espacial especificada. *ColumnName* é um **sysname**, sem padrão.  
+`[ @colname = ] 'columnname'` É o nome da coluna espacial especificada. *ColumnName* é um **sysname**, sem padrão.  
   
-`[ @resolution = ] 'resolution'`É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. a *resolução* é um **tinyint**, sem padrão.  
+`[ @resolution = ] 'resolution'` É a resolução da caixa delimitadora. Os valores válidos são de 10 a 5000. a *resolução* é um **tinyint**, sem padrão.  
   
-`[ @sample = ] 'sample'`É a porcentagem da tabela que é usada. Os valores válidos são de 0 a 100. *TABLESAMPLE* é um **float**. O valor padrão é 100.  
+`[ @sample = ] 'sample'` É a porcentagem da tabela que é usada. Os valores válidos são de 0 a 100. *TABLESAMPLE* é um **float**. O valor padrão é 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor de tabela é retornado. A grade a seguir descreve o conteúdo da coluna da tabela.  
@@ -56,7 +57,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa a identificação exclusiva de cada célula, com uma contagem inicial a partir de 1.|  
-|**célula**|**gráfico**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**CÉL**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -71,7 +72,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  A caixa delimitadora para o tipo de **geografia** é o globo inteiro.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir chama **sp_help_spatial_geography_histogram** na `Person.Address` tabela no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
+ O exemplo a seguir chama  **sp_help_spatial_geography_histogram** na `Person.Address` tabela no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

@@ -1,4 +1,5 @@
 ---
+description: sp_drop_agent_parameter (Transact-SQL)
 title: sp_drop_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c284a3cb2601f66d48dd61ad7df6017052964aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 24f037232818ef395bfd52d3734b5de9cce5378b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464372"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`É a ID do perfil para o qual um parâmetro deve ser removido. *profile_id* é **int**, sem padrão.  
+`[ @profile_id = ] profile_id` É a ID do perfil para o qual um parâmetro deve ser removido. *profile_id* é **int**, sem padrão.  
   
-`[ @parameter_name = ] 'parameter_name'`É o nome do parâmetro a ser removido. *parameter_name* é **sysname**, com um padrão de **%** . Se **%** , todos os parâmetros para o perfil especificado serão removidos.  
+`[ @parameter_name = ] 'parameter_name'` É o nome do parâmetro a ser removido. *parameter_name* é **sysname**, com um padrão de **%** . Se **%** , todos os parâmetros para o perfil especificado serão removidos.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -52,8 +53,8 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_help_agent_parameter](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_agent_parameter ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_agent_parameter ](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

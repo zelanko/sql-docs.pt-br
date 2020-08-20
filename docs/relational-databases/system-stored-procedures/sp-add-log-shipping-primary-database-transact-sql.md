@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_database (Transact-SQL)
 title: sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 188a7d3b98021255074ccaf6b954b4c9b2100fd0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464646"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,47 +56,47 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`É o nome do banco de dados primário de envio de logs. o *banco de dados* é **sysname**, sem padrão, e não pode ser nulo.  
+`[ @database = ] 'database'` É o nome do banco de dados primário de envio de logs. o *banco de dados* é **sysname**, sem padrão, e não pode ser nulo.  
   
-`[ @backup_directory = ] 'backup_directory'`É o caminho para a pasta de backup no servidor primário. *backup_directory* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` É o caminho para a pasta de backup no servidor primário. *backup_directory* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
   
-`[ @backup_share = ] 'backup_share'`É o caminho de rede para o diretório de backup no servidor primário. *backup_share* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+`[ @backup_share = ] 'backup_share'` É o caminho de rede para o diretório de backup no servidor primário. *backup_share* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
   
-`[ @backup_job_name = ] 'backup_job_name'`É o nome do trabalho de SQL Server Agent no servidor primário que copia o backup para a pasta de backup. *backup_job_name* é **sysname** e não pode ser nulo.  
+`[ @backup_job_name = ] 'backup_job_name'` É o nome do trabalho de SQL Server Agent no servidor primário que copia o backup para a pasta de backup. *backup_job_name* é **sysname** e não pode ser nulo.  
   
-`[ @backup_retention_period = ] backup_retention_period`É o período de tempo, em minutos, para reter o arquivo de backup de log no diretório de backup no servidor primário. *backup_retention_period* é **int**, sem padrão, e não pode ser NULL.  
+`[ @backup_retention_period = ] backup_retention_period` É o período de tempo, em minutos, para reter o arquivo de backup de log no diretório de backup no servidor primário. *backup_retention_period* é **int**, sem padrão, e não pode ser NULL.  
   
-`[ @monitor_server = ] 'monitor_server'`É o nome do servidor monitor. *Monitor_server* é **sysname**, sem padrão, e não pode ser nulo.  
+`[ @monitor_server = ] 'monitor_server'` É o nome do servidor monitor. *Monitor_server* é **sysname**, sem padrão, e não pode ser nulo.  
   
-`[ @monitor_server_security_mode = ] monitor_server_security_mode`O modo de segurança usado para se conectar ao servidor monitor.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` O modo de segurança usado para se conectar ao servidor monitor.  
   
  1 = Autenticação do Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *monitor_server_security_mode* é **bit** e não pode ser nulo.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`É o nome de usuário da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_login = ] 'monitor_server_login'` É o nome de usuário da conta usada para acessar o servidor monitor.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`É a senha da conta usada para acessar o servidor monitor.  
+`[ @monitor_server_password = ] 'monitor_server_password'` É a senha da conta usada para acessar o servidor monitor.  
   
-`[ @backup_threshold = ] backup_threshold`É o período de tempo, em minutos, após o último backup antes que um erro de *threshold_alert* seja gerado. *backup_threshold* é **int**, com um padrão de 60 minutos.  
+`[ @backup_threshold = ] backup_threshold` É o período de tempo, em minutos, após o último backup antes que um erro de *threshold_alert* seja gerado. *backup_threshold* é **int**, com um padrão de 60 minutos.  
   
-`[ @threshold_alert = ] threshold_alert`O alerta será gerado quando o limite de backup for excedido. *threshold_alert* é **int**, com um padrão de 14.420.  
+`[ @threshold_alert = ] threshold_alert` O alerta será gerado quando o limite de backup for excedido. *threshold_alert* é **int**, com um padrão de 14.420.  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled`Especifica se um alerta será gerado quando *backup_threshold* for excedido. O valor zero (0), o padrão, significa que o alerta está desabilitado e não será aumentado. *threshold_alert_enabled* é **bit**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Especifica se um alerta será gerado quando *backup_threshold* for excedido. O valor zero (0), o padrão, significa que o alerta está desabilitado e não será aumentado. *threshold_alert_enabled* é **bit**.  
   
-`[ @history_retention_period = ] history_retention_period`É o período em minutos em que o histórico será retido. *history_retention_period* é **int**, com um padrão de NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
+`[ @history_retention_period = ] history_retention_period` É o período em minutos em que o histórico será retido. *history_retention_period* é **int**, com um padrão de NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID do trabalho do agente associada ao trabalho de backup no servidor primário. *backup_job_id* é **uniqueidentifier** e não pode ser NULL.  
+`[ @backup_job_id = ] backup_job_id OUTPUT` A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID do trabalho do agente associada ao trabalho de backup no servidor primário. *backup_job_id* é **uniqueidentifier** e não pode ser NULL.  
   
-`[ @primary_id = ] primary_id OUTPUT`A ID do banco de dados primário para a configuração de envio de logs. *primary_id* é **uniqueidentifier** e não pode ser NULL.  
+`[ @primary_id = ] primary_id OUTPUT` A ID do banco de dados primário para a configuração de envio de logs. *primary_id* é **uniqueidentifier** e não pode ser NULL.  
   
-`[ @backup_compression = ] backup_compression_option`Especifica se uma configuração de envio de logs usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
+`[ @backup_compression = ] backup_compression_option` Especifica se uma configuração de envio de logs usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
   
  0 = Desabilitado. Nunca compacte backups de log.  
   
  1 = Habilitado. Sempre compacte backups de log.  
   
- 2 = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Esse é o valor padrão.  
+ 2 = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Este é o valor padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

@@ -1,4 +1,5 @@
 ---
+description: sp_mergemetadataretentioncleanup (Transact-SQL)
 title: sp_mergemetadataretentioncleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e922d92f217cead21116b61ebd828a1dd588abb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7c0a186852c704a5ab21fd31864de9aa019078df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464135"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT`Retorna o número de linhas limpas da tabela [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) . *num_genhistory_rows* é **int**, com um padrão de **0**.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Retorna o número de linhas limpas da tabela [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) . *num_genhistory_rows* é **int**, com um padrão de **0**.  
   
-`[ @num_contents_rows = ] num_contents_rows OUTPUT`Retorna o número de linhas limpas da tabela [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) . *num_contents_rows* é **int**, com um padrão de **0**.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT` Retorna o número de linhas limpas da tabela [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) . *num_contents_rows* é **int**, com um padrão de **0**.  
   
-`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT`Retorna o número de linhas limpas da tabela [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) . *num_tombstone_rows* é **int**, com um padrão de **0**.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Retorna o número de linhas limpas da tabela [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) . *num_tombstone_rows* é **int**, com um padrão de **0**.  
   
-`[ @aggressive_cleanup_only = ] aggressive_cleanup_only`Somente para uso interno.  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` Somente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -54,7 +55,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
->  Se houver várias publicações em um banco de dados e qualquer uma dessas publicações usar um período de retenção de publicação infinito, a execução de **sp_mergemetadataretentioncleanup** não limpará os metadados de controle de alterações da replicação de mesclagem do banco de dados. Por esse motivo, use a retenção de publicação infinita com precaução. Para determinar se uma publicação tem um período de retenção infinito, execute [sp_helpmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) no Publicador e anote todas as publicações no conjunto de resultados com um valor de **0** para **retenção**.  
+>  Se houver várias publicações em um banco de dados e qualquer uma dessas publicações usar um período de retenção de publicação infinito, a execução de **sp_mergemetadataretentioncleanup** não limpará os metadados de controle de alterações da replicação de mesclagem do banco de dados. Por esse motivo, use a retenção de publicação infinita com precaução. Para determinar se uma publicação tem um período de retenção infinito, execute [sp_helpmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) no Publicador e anote todas as publicações no conjunto de resultados com um valor de **0** para **retenção**.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de banco de dados fixa **db_owner** ou usuários na lista de acesso à publicação de um banco de dados publicado podem executar **sp_mergemetadataretentioncleanup**.  

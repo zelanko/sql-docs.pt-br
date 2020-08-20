@@ -1,4 +1,5 @@
 ---
+description: sp_dropdynamicsnapshot_job (Transact-SQL)
 title: sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224de422a7f43b7e2c3ff1dc090eeb3b55c752b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a81b9dac7fd543a1840263da91ec644652cadf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464371"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação da qual o trabalho de instantâneo de dados filtrado está sendo removido. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação da qual o trabalho de instantâneo de dados filtrado está sendo removido. a *publicação* é **sysname**, sem padrão.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`É o nome do trabalho de instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobname*é sysname e, se não for fornecido, o padrão será qualquer nome de trabalho associado a *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` É o nome do trabalho de instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobname*é sysname e, se não for fornecido, o padrão será qualquer nome de trabalho associado a *dynamic_snapshot_jobid*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`É um identificador para o trabalho de instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobid*é **uniqueidentifier**, com o padrão NULL.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` É um identificador para o trabalho de instantâneo de dados filtrado que está sendo removido. *dynamic_snapshot_jobid*é **uniqueidentifier**, com o padrão NULL.  
   
 > [!IMPORTANT]  
 >  Somente *dynamic_snapshot_jobid*ou *dynamic_snapshot_jobname* podem ser especificados. Se os valores não forem fornecidos para *dynamic_snapshot_jobid*ou *dynamic_snapshot_jobname*, todos os trabalhos de instantâneo dinâmico para a publicação serão removidos.  
@@ -61,6 +62,6 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_dropdynamicsnapshot**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_adddynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_adddynamicsnapshot_job ](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   
