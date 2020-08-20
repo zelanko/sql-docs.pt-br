@@ -1,4 +1,5 @@
 ---
+description: Criar uma regra de domínio
 title: Criar uma regra de domínio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487912"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
 
@@ -72,7 +73,7 @@ ms.locfileid: "85900455"
   
 16. Continue o procedimento de teste a seguir.  
   
-##  <a name="test-domain-rules"></a><a name="Test"></a>Regras de domínio de teste  
+##  <a name="test-domain-rules"></a><a name="Test"></a> Regras de domínio de teste  
   
 1.  Com uma regra selecionada, clique no ícone **Executar a regra de domínio selecionada em dados de teste** .  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85900455"
   
 7.  Continue o procedimento de aplicação a seguir.  
   
-##  <a name="apply-domain-rules"></a><a name="Apply"></a>Aplicar regras de domínio  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a> Aplicar regras de domínio  
   
 1.  Clique em **Aplicar Todas as Regras** para aplicar as regras aos valores do domínio. Se você clicar em **Aplicar Todas as Regras**, uma janela pop-up será exibida informando quantos valores em determinados estados serão afetados pela regra. Clique em **Sim** se você ainda desejar aplicar a regra; caso contrário, clique em **Não** . Se você clicar em **Sim**, clique em **OK** para fechar a janela pop-up de resultados.  
   
@@ -99,10 +100,10 @@ ms.locfileid: "85900455"
   
 3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>Acompanhamento: depois de criar uma regra de domínio  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Acompanhamento: depois de criar uma regra de domínio  
  Depois que você criar uma regra de domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>Condições de regra de domínio  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a> Condições de regra de domínio  
  A tabela a seguir descreve as condições que podem ser aplicadas na regra de domínio e fornece um exemplo para ilustrar como as condições podem ser aplicadas.  
   
  Quando uma regra de domínio é aplicada e um valor de domínio não obedece à regra, o valor é designado como Inválido. Um valor designado como Inválido será alterado para Correto se a regra que está fazendo com que ele seja inválido for excluída, for desativada ou se a regra tive sido alterada de modo que o valor não desobedeça mais à regra. Se você tiver designado manualmente um valor como Inválido (na guia Valores de Domínio da atividade de Gerenciamento de Domínio), e uma regra que dite a falha do valor tiver sido excluída, desativada ou alterada, o valor ainda será designado como Inválido, conforme a designação manual.  

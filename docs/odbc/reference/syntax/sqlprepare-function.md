@@ -1,4 +1,5 @@
 ---
+description: Função SQLPrepare
 title: Função SQLPrepare | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b5d68aae8033b0710ee052b001c7942eb1f7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487182"
 ---
 # <a name="sqlprepare-function"></a>Função SQLPrepare
 **Conformidade**  
@@ -56,7 +57,7 @@ SQLRETURN SQLPrepare(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLPrepare** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLPrepare** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -80,7 +81,7 @@ SQLRETURN SQLPrepare(
 |42S12|Índice não encontrado|\**StatementText* continha uma instrução **drop index** e o nome de índice especificado não existia.|  
 |42S21|A coluna já existe|\**StatementText* continha uma instrução **ALTER TABLE** e a coluna especificada na cláusula **Add** não é exclusiva ou identifica uma coluna existente na tabela base.|  
 |42S22|Coluna não encontrada|\**StatementText* continha uma instrução **CREATE INDEX** e um ou mais nomes de coluna especificados na lista de colunas não existiam.<br /><br /> \**StatementText* continha uma instrução **Grant** ou **REVOKE** e um nome de coluna especificado não existia.<br /><br /> \**StatementText* continha uma instrução **Select**, **delete**, **Insert**ou **Update** , e um nome de coluna especificado não existia.<br /><br /> \**StatementText* continha uma instrução **CREATE TABLE** e uma coluna especificada em uma restrição (referenciando uma tabela diferente daquela que está sendo criada) não existia.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado em *StatementHandle*e, em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY009|Uso inválido de ponteiro nulo|(DM) *StatementText* era um ponteiro nulo.|  

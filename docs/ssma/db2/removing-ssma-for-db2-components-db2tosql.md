@@ -1,4 +1,5 @@
 ---
+description: Removendo o SSMA para DB2ToSQL (componentes do DB2)
 title: Removendo os componentes do SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6e5d1cd88027dfa3fb4216c93ab4e660ddcc0dc9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0341869ff5d39ad35fce6ac450d293eaac1feb38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488163"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Removendo o SSMA para DB2ToSQL (componentes do DB2)
 Quando terminar de migrar bancos de dados do DB2 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , talvez você queira desinstalar os componentes do SSMA. Você pode desinstalar os componentes do cliente a qualquer momento. No entanto, você não deve desinstalar o pacote de extensão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a menos que os bancos de dados migrados não usem mais funções no esquema de **ssma_DB2** do **sysdb** .  

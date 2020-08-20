@@ -1,4 +1,5 @@
 ---
+description: Função SQLParamOptions
 title: Função sqlparamoptions | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 209cfe6444918a40f5199af1f1a839050a3a6a57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14ee51c744e05d1f908010657f4de544aa5d0c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487237"
 ---
 # <a name="sqlparamoptions-function"></a>Função SQLParamOptions
 **Conformidade**  

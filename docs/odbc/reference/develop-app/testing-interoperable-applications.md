@@ -1,4 +1,5 @@
 ---
+description: Testar aplicativos interoperáveis
 title: Testando aplicativos interoperáveis | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1d43c7aad2501591c497475f6c250ac33712aa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feebbe5914e9da1e414f5c77a1a69bc0a6e0e7b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487519"
 ---
 # <a name="testing-interoperable-applications"></a>Testar aplicativos interoperáveis
 O teste de aplicativos interoperáveis é o melhor dos negócios demorados e, na pior das hipóteses, porque novos drivers aparecem continuamente no mercado. No entanto, um grau razoável de teste é possível. Aplicativos com interoperabilidade limitada ou baixa só precisam ser testados em relação aos drivers aos quais eles têm garantia de suporte. No entanto, eles devem ser totalmente testados em relação a esses drivers.  

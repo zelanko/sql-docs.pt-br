@@ -1,4 +1,5 @@
 ---
+description: Classe de evento Broker:Message Undeliverable
 title: Classe de evento Broker:Message Undeliverable | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c405bcc285464983f844b386c36f97022428e522
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 828791161e2ca6dd493941e3759284510c2c3bb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486982"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe de evento Broker:Message Undeliverable
 
@@ -27,7 +28,7 @@ ms.locfileid: "85762973"
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Message Undeliverable  
   
-|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Type|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**Nome do Aplicativo**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BigintData1**|**bigint**|O número de sequência da mensagem sem possibilidade de entrega.|52|Não|  
@@ -50,7 +51,7 @@ ms.locfileid: "85762973"
 |**ObjectName**|**nvarchar**|O identificador de conversa do diálogo.|34|Não|  
 |**RoleName**|**nvarchar**|A função do identificador de conversa. É **initiator** (iniciador) ou **target**(destino).|38|Não|  
 |**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
-|**Severity**|**int**|Número de severidade do texto no evento.|29|Não|  
+|**Gravidade**|**int**|Número de severidade do texto no evento.|29|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |**State**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  

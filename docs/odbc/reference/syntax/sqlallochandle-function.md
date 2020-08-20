@@ -1,4 +1,5 @@
 ---
+description: Função SQLAllocHandle
 title: Função SQLAllocHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 178e3fad1ec062dd7f812125da66b7e21a7a4f4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9488e5d8d627feac2877878cc2d10a52ec15e4e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487289"
 ---
 # <a name="sqlallochandle-function"></a>Função SQLAllocHandle
 **Conformidade**  
@@ -77,13 +78,13 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>Erros de alocação de identificador de ambiente  
  A alocação de ambiente ocorre tanto no Gerenciador de driver quanto em cada driver. O erro retornado por **SQLAllocHandle** com um *handletype* de SQL_HANDLE_ENV depende do nível em que o erro ocorreu.  
   
- Se o Gerenciador de driver não puder alocar memória para * \*OutputHandlePtr* quando **SQLAllocHandle** com um *HandleType* de SQL_HANDLE_ENV for chamado ou o aplicativo fornecer um ponteiro nulo para *OutputHandlePtr*, **SQLAllocHandle** retornará SQL_ERROR. O Gerenciador de driver define **OutputHandlePtr* como SQL_NULL_HENV (a menos que o aplicativo tenha fornecido um ponteiro nulo, que retorna SQL_ERROR). Não há nenhum identificador com o qual associar informações de diagnóstico adicionais.  
+ Se o Gerenciador de driver não puder alocar memória para * \* OutputHandlePtr* quando **SQLAllocHandle** com um *HandleType* de SQL_HANDLE_ENV for chamado ou o aplicativo fornecer um ponteiro nulo para *OutputHandlePtr*, **SQLAllocHandle** retornará SQL_ERROR. O Gerenciador de driver define **OutputHandlePtr* como SQL_NULL_HENV (a menos que o aplicativo tenha fornecido um ponteiro nulo, que retorna SQL_ERROR). Não há nenhum identificador com o qual associar informações de diagnóstico adicionais.  
   
  O Gerenciador de driver não chama a função de alocação de identificador de ambiente de nível de driver até que o aplicativo chame **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect**. Se ocorrer um erro na função **SQLAllocHandle** no nível do driver, a função de nível do Gerenciador de driver **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect** retornará SQL_ERROR. A estrutura de dados de diagnóstico contém SQLSTATE IM004 (falha de **SQLAllocHandle** do driver). O erro é retornado em um identificador de conexão.  
   
  Para obter mais informações sobre o fluxo de chamadas de função entre o Gerenciador de driver e um driver, consulte [função SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLAllocHandle** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com o *identificadortype* apropriado e o *identificador* definido como o valor de *InputHandle*. SQL_SUCCESS_WITH_INFO (mas não SQL_ERROR) podem ser retornados para o argumento *OutputHandle* . A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLAllocHandle** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -107,10 +108,10 @@ SQLRETURN SQLAllocHandle(
   
  Mais de um ambiente, conexão ou identificador de instrução podem ser alocados por um aplicativo por vez se várias alocações forem suportadas pelo driver. No ODBC, nenhum limite é definido no número de identificadores de ambiente, conexão, instrução ou descritor que podem ser alocados a qualquer momento. Os drivers podem impor um limite no número de um determinado tipo de identificador que pode ser alocado de cada vez; para obter mais informações, consulte a documentação do driver.  
   
- Se o aplicativo chamar **SQLAllocHandle** com * \*OutputHandlePtr* definido como um ambiente, uma conexão, uma instrução ou um identificador de descritor que já existe, o driver substituirá as informações associadas ao *identificador*, a menos que o aplicativo esteja usando o pool de conexões (consulte "alocando um atributo de ambiente para o pool de conexões" mais adiante nesta seção). O Gerenciador de driver não verifica se o *identificador* inserido no * \*OutputHandlePtr* já está sendo usado, nem verifica o conteúdo anterior de um identificador antes de substituí-lo.  
+ Se o aplicativo chamar **SQLAllocHandle** com * \* OutputHandlePtr* definido como um ambiente, uma conexão, uma instrução ou um identificador de descritor que já existe, o driver substituirá as informações associadas ao *identificador*, a menos que o aplicativo esteja usando o pool de conexões (consulte "alocando um atributo de ambiente para o pool de conexões" mais adiante nesta seção). O Gerenciador de driver não verifica se o *identificador* inserido no * \* OutputHandlePtr* já está sendo usado, nem verifica o conteúdo anterior de um identificador antes de substituí-lo.  
   
 > [!NOTE]  
->  É uma programação de aplicativo ODBC incorreta para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para * \*OutputHandlePtr* sem chamar **SQLFreeHandle** para liberar o identificador antes de realocá-lo. A substituição de identificadores ODBC de forma pode levar a um comportamento inconsistente ou erros na parte de drivers ODBC.  
+>  É uma programação de aplicativo ODBC incorreta para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para * \* OutputHandlePtr* sem chamar **SQLFreeHandle** para liberar o identificador antes de realocá-lo. A substituição de identificadores ODBC de forma pode levar a um comportamento inconsistente ou erros na parte de drivers ODBC.  
   
  Em sistemas operacionais que dão suporte a vários threads, os aplicativos podem usar o mesmo ambiente, conexão, instrução ou identificador de descritor em threads diferentes. Os drivers devem, portanto, dar suporte ao acesso seguro e multithread a essas informações; uma maneira de conseguir isso, por exemplo, é usar uma seção crítica ou um semáforo. Para obter mais informações sobre Threading, consulte [multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
@@ -127,7 +128,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>Alocando um identificador de ambiente  
  Um identificador de ambiente fornece acesso a informações globais, como identificadores de conexão e identificadores de conexão ativos válidos. Para obter informações gerais sobre os identificadores de ambiente, consulte [identificadores de ambiente](../../../odbc/reference/develop-app/environment-handles.md).  
   
- Para solicitar um identificador de ambiente, um aplicativo chama **SQLAllocHandle** com um *handletype* de SQL_HANDLE_ENV e um *InputHandle* de SQL_NULL_HANDLE. O driver aloca memória para as informações de ambiente e passa o valor do identificador associado de volta no argumento * \*OutputHandlePtr* . O aplicativo passa o * \*valor OutputHandle* em todas as chamadas subsequentes que exigem um argumento de identificador de ambiente. Para obter mais informações, consulte [alocando o identificador de ambiente](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+ Para solicitar um identificador de ambiente, um aplicativo chama **SQLAllocHandle** com um *handletype* de SQL_HANDLE_ENV e um *InputHandle* de SQL_NULL_HANDLE. O driver aloca memória para as informações de ambiente e passa o valor do identificador associado de volta no argumento * \* OutputHandlePtr* . O aplicativo passa o valor * \* OutputHandle* em todas as chamadas subsequentes que exigem um argumento de identificador de ambiente. Para obter mais informações, consulte [alocando o identificador de ambiente](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
  Em um identificador de ambiente do Gerenciador de driver, se já existir um identificador de ambiente do driver, **SQLAllocHandle** com um *handletype* de SQL_HANDLE_ENV não será chamado nesse driver quando uma conexão for feita, somente **SQLAllocHandle** com um *HandleType* de SQL_HANDLE_DBC. Se o identificador de ambiente de um driver não existir no identificador de ambiente do Gerenciador de driver, ambos os SQLAllocHandle com um HandleType de SQL_HANDLE_ENV e SQLAllocHandle com um HandleType de SQL_HANDLE_DBC serão chamados no driver quando o primeiro identificador de conexão do ambiente estiver conectado ao driver.  
   
@@ -147,7 +148,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>Alocando um identificador de conexão  
  Um identificador de conexão fornece acesso a informações como os identificadores de instrução e descritores válidos na conexão e se uma transação está aberta no momento. Para obter informações gerais sobre identificadores de conexão, consulte [identificadores de conexão](../../../odbc/reference/develop-app/connection-handles.md).  
   
- Para solicitar um identificador de conexão, um aplicativo chama **SQLAllocHandle** com um *handletype* de SQL_HANDLE_DBC. O argumento *InputHandle* é definido como o identificador de ambiente que foi retornado pela chamada para **SQLAllocHandle** que alocou esse identificador. O driver aloca memória para as informações de conexão e passa o valor do identificador associado de volta no * \*OutputHandlePtr*. O aplicativo passa o * \*valor OutputHandlePtr* em todas as chamadas subsequentes que exigem um identificador de conexão. Para obter mais informações, consulte [alocando um identificador de conexão](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
+ Para solicitar um identificador de conexão, um aplicativo chama **SQLAllocHandle** com um *handletype* de SQL_HANDLE_DBC. O argumento *InputHandle* é definido como o identificador de ambiente que foi retornado pela chamada para **SQLAllocHandle** que alocou esse identificador. O driver aloca memória para as informações de conexão e passa o valor do identificador associado de volta no * \* OutputHandlePtr*. O aplicativo passa o valor * \* OutputHandlePtr* em todas as chamadas subsequentes que exigem um identificador de conexão. Para obter mais informações, consulte [alocando um identificador de conexão](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
   
  O Gerenciador de driver processa a função **SQLAllocHandle** e chama a função **SQLAllocHandle** do driver quando o aplicativo chama **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect**. (Para obter mais informações, consulte [função SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).)  
   
@@ -160,7 +161,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>Alocando um identificador de instrução  
  Um identificador de instrução fornece acesso a informações de instrução, como mensagens de erro, o nome do cursor e informações de status do processamento da instrução SQL. Para obter informações gerais sobre identificadores de instrução, consulte [identificadores de instrução](../../../odbc/reference/develop-app/statement-handles.md).  
   
- Para solicitar um identificador de instrução, um aplicativo se conecta a uma fonte de dados e, em seguida, chama **SQLAllocHandle** antes de enviar instruções SQL. Nesta chamada, *identificadortype* deve ser definido como SQL_HANDLE_STMT e *InputHandle* deve ser definido como o identificador de conexão que foi retornado pela chamada para **SQLAllocHandle** que alocou esse identificador. O driver aloca memória para as informações da instrução, associa o identificador de instrução à conexão especificada e passa o valor do identificador associado de volta em * \*OutputHandlePtr*. O aplicativo passa o * \*valor OutputHandlePtr* em todas as chamadas subsequentes que exigem um identificador de instrução. Para obter mais informações, consulte [alocando um identificador de instrução](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
+ Para solicitar um identificador de instrução, um aplicativo se conecta a uma fonte de dados e, em seguida, chama **SQLAllocHandle** antes de enviar instruções SQL. Nesta chamada, *identificadortype* deve ser definido como SQL_HANDLE_STMT e *InputHandle* deve ser definido como o identificador de conexão que foi retornado pela chamada para **SQLAllocHandle** que alocou esse identificador. O driver aloca memória para as informações da instrução, associa o identificador de instrução à conexão especificada e passa o valor do identificador associado de volta em * \* OutputHandlePtr*. O aplicativo passa o valor * \* OutputHandlePtr* em todas as chamadas subsequentes que exigem um identificador de instrução. Para obter mais informações, consulte [alocando um identificador de instrução](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
   
  Quando o identificador de instrução é alocado, o driver aloca automaticamente um conjunto de quatro descritores e atribui os identificadores para esses descritores aos atributos SQL_ATTR_APP_ROW_DESC, SQL_ATTR_APP_PARAM_DESC, SQL_ATTR_IMP_ROW_DESC e SQL_ATTR_IMP_PARAM_DESC instrução. Eles são chamados de descritores *implicitamente* alocados. Para alocar um descritor de aplicativo explicitamente, consulte a seção a seguir, "alocando um identificador de descritor".  
   

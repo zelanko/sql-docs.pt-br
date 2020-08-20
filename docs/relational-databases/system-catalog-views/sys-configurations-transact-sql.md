@@ -1,4 +1,5 @@
 ---
+description: sys.configurations (Transact-SQL)
 title: sys.configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bfe45a28ba06da888b5b28bbd3c5c404acde2dca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486435"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "85896326"
 |**configuration_id**|**int**|Identificação exclusivo do valor de configuração.|  
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**value**|**sql_variant**|Valor configurado dessa opção.|  
-|**máximo**|**sql_variant**|Valor mínimo para a opção de configuração.|  
-|**maior**|**sql_variant**|Valor máximo para a opção de configuração.|  
+|**minimum**|**sql_variant**|Valor mínimo para a opção de configuração.|  
+|**maximum**|**sql_variant**|Valor máximo para a opção de configuração.|  
 |**value_in_use**|**sql_variant**|Valor de execução atualmente em efeito dessa opção.|  
-|**ndescrição**|**nvarchar (255)**|Descrição da opção de configuração.|  
+|**descrição**|**nvarchar(255)**|Descrição da opção de configuração.|  
 |**is_dynamic**|**bit**|1 = A variável é implementada quando a instrução RECONFIGURE é executada.|  
 |**is_advanced**|**bit**|1 = a variável é exibida somente quando a **exibição advancedoption** é definida.|  
   
@@ -62,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 Se o valor for igual à alteração da opção de configuração que você fez, mas o **value_in_use** não for o mesmo, o comando RECONFIGURE não será executado ou terá falhado ou o mecanismo do servidor deverá ser reiniciado.
 
-Há opções de configuração nas quais o valor e a value_in_use podem não ser iguais e esse é um comportamento esperado. Por exemplo:
+Há opções de configuração nas quais o valor e a value_in_use podem não ser iguais e esse é um comportamento esperado. Por exemplo: 
 
 "Max Server Memory (MB)"-o valor padrão configurado de 0 será exibido como value_in_use = 2147483647 "min Server Memory (MB)"-o valor padrão configurado de 0 pode aparecer como value_in_use = 8 (32 bits) ou 16 (64 bits). 
 
@@ -77,7 +78,7 @@ Para uma opção de configuração que não é dinâmica, não há como saber se
  Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições do catálogo de configuração em todo o servidor &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [Exibições do catálogo de configuração em todo o servidor &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

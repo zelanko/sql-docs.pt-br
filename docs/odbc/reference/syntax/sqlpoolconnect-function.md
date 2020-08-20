@@ -1,4 +1,5 @@
 ---
+description: Função SQLPoolConnect
 title: Função SQLPoolConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5045fe47683529f858b01e69f6af696e2821ca4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e2ce61baf861551e51773aea7ce6dcaf020cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487215"
 ---
 # <a name="sqlpoolconnect-function"></a>Função SQLPoolConnect
 **Conformidade**  
@@ -54,12 +55,12 @@ SQLRETURN  SQLPoolConnect(
  Entrada Comprimento do buffer **wszOutConnectString* , em caracteres.  
   
  *cchConnectStringLen*  
- Der Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo o caractere de terminação nula) disponível para retornar \*em *wszOutConnectString*. Se o número de caracteres disponíveis para retornar for maior ou igual a *cchConnectStringBuffer*, a cadeia de conexão concluída em \* *wszOutConnectString* será truncada para *cchConnectStringBuffer* menos o comprimento de um caractere de terminação nula.  
+ Der Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo o caractere de terminação nula) disponível para retornar em \* *wszOutConnectString*. Se o número de caracteres disponíveis para retornar for maior ou igual a *cchConnectStringBuffer*, a cadeia de conexão concluída em \* *wszOutConnectString* será truncada para *cchConnectStringBuffer* menos o comprimento de um caractere de terminação nula.  
   
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Semelhante a [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) para qualquer erro de validação de entrada, exceto que o Gerenciador de driver usará um **handletype** de SQL_HANDLE_DBC_INFO_TOKEN e um **identificador** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentários  

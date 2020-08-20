@@ -1,4 +1,5 @@
 ---
+description: Exibir um relatório de conjuntos de coleta (SQL Server Management Studio)
 title: Exibir um relatório do conjunto de coleta (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 161fbacb2edc8d73d69bbc501e255ce657f6208c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5132dc4b782cb9af8e5e096ae35f57d8266a27c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487169"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Exibir um relatório de conjuntos de coleta (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85715521"
  Digite uma hora inicial para obter os dados do relatório ou especifique-a clicando nas setas.  
   
  **Duration**  
- Especifique o intervalo de tempo que será incluído no relatório. O valor padrão é 240 minutos. Os valores disponíveis para seleção são 15 minutos, 60 minutos, 240 minutos (4 horas), 720 minutos (12 horas) e 1440 minutos (24 horas).  
+ Especifique o intervalo de tempo que será incluído no relatório. O valor padrão é de 240 minutos. Os valores disponíveis para seleção são 15 minutos, 60 minutos, 240 minutos (4 horas), 720 minutos (12 horas) e 1440 minutos (24 horas).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   

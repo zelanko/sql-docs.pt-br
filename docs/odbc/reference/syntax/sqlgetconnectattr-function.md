@@ -1,4 +1,5 @@
 ---
+description: Função SQLGetConnectAttr
 title: Função SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6076f14ff0c33fec38b99e9c43b8a688970a7a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 457ba462c277ec4b5fa44030557861507823dc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487269"
 ---
 # <a name="sqlgetconnectattr-function"></a>Função SQLGetConnectAttr
 **Conformidade**  
@@ -61,25 +62,25 @@ SQLRETURN SQLGetConnectAttr(
  Se *ValuePtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere de terminação nula para dados de caracteres) disponíveis para retornar no buffer apontado por *ValuePtr*.  
   
  *BufferLength*  
- Entrada Se o *atributo* for um atributo definido pelo ODBC e *ValuePtr* apontar para uma cadeia de caracteres ou um buffer binário, esse argumento deverá ter o \*comprimento de *ValuePtr*. Se o *atributo* for um atributo definido pelo ODBC \*e *ValuePtr* for um inteiro, *BufferLength* será ignorado. Se o valor em * \*ValuePtr* for uma cadeia de caracteres Unicode (ao chamar **SQLGetConnectAttrW**), o argumento *BufferLength* deverá ser um número par.  
+ Entrada Se o *atributo* for um atributo definido pelo ODBC e *ValuePtr* apontar para uma cadeia de caracteres ou um buffer binário, esse argumento deverá ter o comprimento de \* *ValuePtr*. Se o *atributo* for um atributo definido pelo ODBC e \* *ValuePtr* for um inteiro, *BufferLength* será ignorado. Se o valor em * \* ValuePtr* for uma cadeia de caracteres Unicode (ao chamar **SQLGetConnectAttrW**), o argumento *BufferLength* deverá ser um número par.  
   
  Se o *atributo* for um atributo definido por Driver, o aplicativo indicará a natureza do atributo para o Gerenciador de driver, definindo o argumento *BufferLength* . *BufferLength* pode ter os seguintes valores:  
   
--   Se * \*ValuePtr* for um ponteiro para uma cadeia de caracteres, *BufferLength* será o comprimento da cadeia de caracteres.  
+-   Se * \* ValuePtr* for um ponteiro para uma cadeia de caracteres, *BufferLength* será o comprimento da cadeia de caracteres.  
   
--   Se * \*ValuePtr* for um ponteiro para um buffer binário, o aplicativo colocará o resultado da macro SQL_LEN_BINARY_ATTR (*Length*) em *BufferLength*. Isso coloca um valor negativo em *BufferLength*.  
+-   Se * \* ValuePtr* for um ponteiro para um buffer binário, o aplicativo colocará o resultado da macro SQL_LEN_BINARY_ATTR (*Length*) em *BufferLength*. Isso coloca um valor negativo em *BufferLength*.  
   
--   Se * \*ValuePtr* for um ponteiro para um valor diferente de uma cadeia de caracteres ou uma cadeia de caracteres binária, *BufferLength* deverá ter o valor SQL_IS_POINTER.  
+-   Se * \* ValuePtr* for um ponteiro para um valor diferente de uma cadeia de caracteres ou uma cadeia de caracteres binária, *BufferLength* deverá ter o valor SQL_IS_POINTER.  
   
--   Se * \*ValuePtr* contiver um tipo de dados de comprimento fixo, o *BufferLength* será SQL_IS_INTEGER ou SQL_IS_UINTEGER, conforme apropriado.  
+-   Se * \* ValuePtr* contiver um tipo de dados de comprimento fixo, o *BufferLength* será SQL_IS_INTEGER ou SQL_IS_UINTEGER, conforme apropriado.  
   
  *StringLengthPtr*  
- Der Um ponteiro para um buffer no qual retornar o número total de bytes (excluindo o caractere de terminação nula) disponível para retornar \*em *ValuePtr*. Se \* *ValuePtr* for um ponteiro nulo, nenhum comprimento será retornado. Se o valor do atributo for uma cadeia de caracteres e o número de bytes disponíveis para retornar for maior que *BufferLength* menos o comprimento do caractere de terminação de nulo, os dados em * \*ValuePtr* serão truncados para *BufferLength* menos o comprimento do caractere de terminação nula e serão terminados em nulo pelo driver.  
+ Der Um ponteiro para um buffer no qual retornar o número total de bytes (excluindo o caractere de terminação nula) disponível para retornar em \* *ValuePtr*. Se \* *ValuePtr* for um ponteiro nulo, nenhum comprimento será retornado. Se o valor do atributo for uma cadeia de caracteres e o número de bytes disponíveis para retornar for maior que *BufferLength* menos o comprimento do caractere de terminação de nulo, os dados em * \* ValuePtr* serão truncados para *BufferLength* menos o comprimento do caractere de terminação nula e serão terminados em nulo pelo driver.  
   
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLGetConnectAttr** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido na estrutura de dados de diagnóstico chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetConnectAttr** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -92,7 +93,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) **SQLBrowseConnect** foi chamado para o *ConnectionHandle* e retornou SQL_NEED_DATA. Essa função foi chamada antes de **SQLBrowseConnect** retornar SQL_SUCCESS_WITH_INFO ou SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *ConnectionHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY090|Comprimento de cadeia de caracteres ou buffer inválido|(DM) * \*ValuePtr* é uma cadeia de caracteres e BufferLength era menor que zero, mas não igual a SQL_NTS.|  
+|HY090|Comprimento de cadeia de caracteres ou buffer inválido|(DM) * \* ValuePtr* é uma cadeia de caracteres e BufferLength era menor que zero, mas não igual a SQL_NTS.|  
 |HY092|Identificador de atributo/opção inválido|O valor especificado para o *atributo* de argumento não era válido para a versão do ODBC com suporte do driver.|  
 |HY114|O driver não dá suporte à execução de função assíncrona no nível de conexão|(DM) um aplicativo tentou habilitar a execução de função assíncrona com SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE para um driver que não oferece suporte a operações de conexão assíncronas.|  
 |HY117|A conexão foi suspensa devido a um estado de transação desconhecido. Somente funções de desconexão e somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  

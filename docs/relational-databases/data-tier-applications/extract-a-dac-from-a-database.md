@@ -1,4 +1,5 @@
 ---
+description: Extrair um DAC de um banco de dados
 title: Extrair um DAC de um banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52d895380cb76a094b46787b1cbc16cfac6ce39f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487141"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85781685"
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
- **Avançar >** : continua para a página **Escolher Método**.  
+ **Avançar >**: continua para a página **Escolher Método**.  
   
  **Cancelar** – Encerra o assistente sem extrair um aplicativo da camada de dados do banco de dados.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "85781685"
 ###  <a name="select-data-page"></a><a name="SelectData"></a> Select data page  
 Selecione os dados de referência que você deseja incluir em seu arquivo de pacote de DAC (aplicativo da camada de dados). A inclusão de dados em seu pacote de DAC é opcional. O pacote de DAC já incluirá o esquema de todos os objetos de banco de dados com suporte e objetos de instância relacionados a seu banco de dados.  
   
- Você pode incluir até 10 MB de dados de referência em seu arquivo de pacote de DAC. No entanto, para que tabelas sejam incluídas no DAC, elas não podem conter tipos de dados BLOB (objeto binário grande) como **image** ou **varchar(max)** . Para extrair quantidades maiores de dados para transferência para outro banco de dados, use o SQL Server Integration Services, o utilitário de cópia em massa ou um das muitas outras técnicas de migração de dados.  
+ Você pode incluir até 10 MB de dados de referência em seu arquivo de pacote de DAC. No entanto, para que tabelas sejam incluídas no DAC, elas não podem conter tipos de dados BLOB (objeto binário grande) como **image** ou **varchar(max)**. Para extrair quantidades maiores de dados para transferência para outro banco de dados, use o SQL Server Integration Services, o utilitário de cópia em massa ou um das muitas outras técnicas de migração de dados.  
   
  **Tabela de banco de dados** – Marque a caixa de seleção ao lado das tabelas do banco de dados que contêm os dados que você deseja incluir em seu pacote de DAC. Você pode selecionar até dez tabelas com mais ou menos 10.000 linhas.  
   

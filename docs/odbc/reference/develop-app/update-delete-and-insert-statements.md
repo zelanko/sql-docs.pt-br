@@ -1,4 +1,5 @@
 ---
+description: Instruções UPDATE, DELETE e INSERT
 title: Instruções UPDATE, DELETE e INSERT | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b01582594bb54f8feafef3f98118d3e17286fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487419"
 ---
 # <a name="update-delete-and-insert-statements"></a>Instruções UPDATE, DELETE e INSERT
 Os aplicativos baseados em SQL fazem alterações nas tabelas executando as instruções **Update**, **delete**e **Insert** . Essas instruções fazem parte do nível mínimo de conformidade da gramática do SQL e devem ter suporte de todos os drivers e fontes de dados.  
@@ -32,7 +33,7 @@ Os aplicativos baseados em SQL fazem alterações nas tabelas executando as inst
   
  **Definir** _coluna-identificador_ **=** {*expressão* &#124; **NULL**}  
   
- [**,** **=** o _identificador de coluna_ {*expression* &#124; **NULL**}]...  
+ [**,** _identificador_ **=** de coluna {*expression* &#124; **NULL**}] ...  
   
  [**Onde** _condição de pesquisa_]  
   

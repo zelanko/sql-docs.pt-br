@@ -1,4 +1,5 @@
 ---
+description: Execução preparada
 title: Execução preparada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1974bca39ef90357e66467525843ba24b4a0f9cc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 721b2377f5539a4ee047816da6e5ecb5bc2fe213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486770"
 ---
 # <a name="prepared-execution"></a>Execução preparada
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86001381"
   
  Para a maioria dos bancos de dados, a execução preparada é mais rápida que a direta para instruções executadas mais de três ou quatro vezes primariamente, pois a instrução é compilada somente uma vez, enquanto instruções executadas diretamente são compiladas sempre que ocorrem. A execução preparada também pode fornecer uma redução no tráfego de rede, pois o driver pode enviar um identificador do plano de execução e os valores de parâmetro, em vez de toda uma instrução SQL, para a fonte de dados sempre que a instrução for executada.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]reduz a diferença de desempenho entre a execução direta e preparada por meio de algoritmos aprimorados para detectar e reutilizar planos de execução de **SQLExecDirect**. Isso torna alguns dos benefícios de desempenho da execução preparada disponíveis para instruções executadas diretamente. Para obter mais informações, consulte [execução direta](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reduz a diferença de desempenho entre a execução direta e preparada por meio de algoritmos aprimorados para detectar e reutilizar planos de execução de **SQLExecDirect**. Isso torna alguns dos benefícios de desempenho da execução preparada disponíveis para instruções executadas diretamente. Para obter mais informações, consulte [execução direta](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também oferece suporte nativo para execução preparada. Um plano de execução é criado em **SQLPrepare** e executado posteriormente quando **SQLExecute** é chamado. Como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o não é necessário para criar procedimentos armazenados temporários em **SQLPrepare**, não há nenhuma sobrecarga extra nas tabelas do sistema em **tempdb**.  
   
@@ -46,6 +48,6 @@ ms.locfileid: "86001381"
  Alguns aplicativos ODBC iniciais usaram **SQLPrepare** sempre que [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) foi usado. **SQLBindParameter** não requer o uso de **SQLPrepare**, ele pode ser usado com **SQLExecDirect**. Por exemplo, use **SQLExecDirect** com **SQLBindParameter** para recuperar o código de retorno ou os parâmetros de saída de um procedimento armazenado que é executado apenas uma vez. Não use o **SQLPrepare** com **SQLBindParameter** , a menos que a mesma instrução seja executada várias vezes.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Executando instruções &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [Executando instruções &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

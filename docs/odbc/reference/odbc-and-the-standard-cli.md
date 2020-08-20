@@ -1,4 +1,5 @@
 ---
+description: ODBC e a CLI padrão
 title: ODBC e a CLI Standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 844ca219bf912421cf859e0fc459b78d755fe159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487379"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e a CLI padrão
 O ODBC alinha-se com as especificações e os padrões a seguir que lidam com a CLI (interface de nível de chamada). (Os recursos do ODBC são um superconjunto de cada um desses padrões.)  

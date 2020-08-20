@@ -1,4 +1,5 @@
 ---
+description: Desconectando uma fonte de dados
 title: Desconectando de uma fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -24,11 +25,12 @@ ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c7c429b230c068cd2d6b134036ffd1e40053f45
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5a88b2488cbc64e77d0bcc00e3a9f758ab0f4f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486886"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Desconectando uma fonte de dados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

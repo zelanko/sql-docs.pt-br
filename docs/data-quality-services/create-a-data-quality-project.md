@@ -1,4 +1,5 @@
 ---
+description: Criar um projeto de qualidade de dados
 title: Criar um projeto de qualidade de dados
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487945"
 ---
 # <a name="create-a-data-quality-project"></a>Criar um projeto de qualidade de dados
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900459"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para criar um projeto de qualidade de dados.  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>Criar um projeto de qualidade de dados  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> Criar um projeto de qualidade de dados  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85900459"
   
 4.  Clique em **Criar** para criar um projeto de qualidade de dados.  
   
-##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a>Acompanhamento: depois de criar um projeto de qualidade de dados  
+##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a> Acompanhamento: depois de criar um projeto de qualidade de dados  
  Depois que você criar um projeto de qualidade de dados, verá um assistente que deverá ser usado para executar a atividade selecionada: limpeza ou correspondência. Para obter mais informações sobre a limpeza e correspondência de atividades, consulte [Limpeza de dados](../data-quality-services/data-cleansing.md) e [Correspondência de dados](../data-quality-services/data-matching.md).  
   
   

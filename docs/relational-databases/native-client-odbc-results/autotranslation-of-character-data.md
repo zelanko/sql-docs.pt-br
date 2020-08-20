@@ -1,4 +1,5 @@
 ---
+description: Tradução automática de dados de caracteres
 title: Tradução automática de dados de caractere | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,11 +24,12 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c24230b76a08f629f219d23f67771e91ff3486c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8f7c3c16222d1537c250e888e365754fd9d919f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486789"
 ---
 # <a name="autotranslation-of-character-data"></a>Tradução automática de dados de caracteres
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +63,7 @@ ms.locfileid: "86002897"
  Os dados devem sempre ser convertidos quando movidos de caractere para Unicode.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Processando resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
+ [Processando resultados &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
  [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

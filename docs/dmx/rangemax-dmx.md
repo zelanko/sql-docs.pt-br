@@ -1,4 +1,5 @@
 ---
+description: RangeMax (DMX)
 title: RangeMax (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 08882071e142fa97139dc2a89adffaa8e5d5f738
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1f7c3b58dde656e3afa07e9c53f1dca1c8116369
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487703"
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -51,9 +52,9 @@ FROM [TM Decision Tree]
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
- [&#41;&#40;DMX RangeMid](../dmx/rangemid-dmx.md)   
- [&#41;&#40;DMX RangeMin](../dmx/rangemin-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
+ [&#41;&#40;DMX RangeMid ](../dmx/rangemid-dmx.md)   
+ [&#41;&#40;DMX RangeMin ](../dmx/rangemin-dmx.md)  
   
   

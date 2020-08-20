@@ -1,4 +1,5 @@
 ---
+description: Cabeçalho e informações de versão de LocalDB do SQL Server Express
 title: SQL Server Express cabeçalho LocalDB & informações de versão
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b7302e8d81a8e79c3fb54960fad597a47d88872d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28f33fd5b5a69cc2dde37821b02a4cb334b9ed0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486891"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Cabeçalho e informações de versão de LocalDB do SQL Server Express
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

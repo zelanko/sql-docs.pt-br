@@ -1,4 +1,5 @@
 ---
+description: Função SQLAllocStmt
 title: Função SQLAllocStmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b45dd8444d5ca2511672952e0637cc3cc500c5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 28eea4b64b8c94c0db83352a5bcbeafe8263bf60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487279"
 ---
 # <a name="sqlallocstmt-function"></a>Função SQLAllocStmt
 **Conformidade**  

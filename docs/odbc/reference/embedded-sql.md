@@ -1,4 +1,5 @@
 ---
+description: SQL inserido
 title: SQL inserido | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b52c5a87d1df03460a833a27fcb5523b80cd1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487409"
 ---
 # <a name="embedded-sql"></a>SQL inserido
 A primeira técnica para enviar instruções SQL para o DBMS é inserida no SQL. Como o SQL não usa variáveis e instruções de controle de fluxo, ele é frequentemente usado como uma sublinguagem de banco de dados que pode ser adicionada a um programa escrito em uma linguagem de programação convencional, como C ou COBOL. Esta é uma ideia central de SQL inserido: colocando instruções SQL em um programa escrito em uma linguagem de programação de host. Resumidamente, as seguintes técnicas são usadas para inserir instruções SQL em um idioma de host:  

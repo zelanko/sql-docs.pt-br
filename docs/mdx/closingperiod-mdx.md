@@ -1,4 +1,5 @@
 ---
+description: ClosingPeriod (MDX)
 title: ClosingPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f457a941c8967ce6f3c6700760ff95d5c2999d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487629"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 
@@ -81,7 +82,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte Também  
  [OpeningPeriod&#41;MDX &#40;](../mdx/openingperiod-mdx.md)   
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling&#41;MDX &#40;](../mdx/lastsibling-mdx.md)  
   
   

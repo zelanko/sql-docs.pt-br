@@ -1,4 +1,5 @@
 ---
+description: A biblioteca de cursores ODBC
 title: A biblioteca de cursores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b243e8ae2dc931830a249d4392da308e68722cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5e3a01633a19c4ae82596ba1e180c64bcce06c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487509"
 ---
 # <a name="the-odbc-cursor-library"></a>A biblioteca de cursores ODBC
 > [!IMPORTANT]  

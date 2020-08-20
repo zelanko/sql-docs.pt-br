@@ -1,4 +1,5 @@
 ---
+description: Criar um domínio
 title: Criar um domínio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487865"
 ---
 # <a name="create-a-domain"></a>Criar um domínio
 
@@ -48,7 +49,7 @@ ms.locfileid: "85887993"
   
 5.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Se não existir um domínio correspondente, clique no ícone **Criar um Domínio** .  
   
-##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Criar um domínio na atividade de gerenciamento de domínio  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> Criar um domínio na atividade de gerenciamento de domínio  
   
 1.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Abrir base de dados de conhecimento** e selecione uma base de dados de conhecimento ou clique em **Nova base de dados de conhecimento** e insira propriedades para a nova base de dados de conhecimento.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85887993"
   
 3.  Na página **Gerenciamento de Domínio** , clique no ícone **Criar um Domínio** acima da lista de domínios.  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>Definir propriedades de domínio  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> Definir propriedades de domínio  
   
 1.  Na caixa de diálogo **Criar Domínio** , insira um nome que seja exclusivo da base de dados de conhecimento e uma descrição de até 256 caracteres.  
   

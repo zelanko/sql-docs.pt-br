@@ -1,4 +1,5 @@
 ---
+description: Função SQLAllocConnect
 title: Função SQLAllocConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9da06f4fe7f7f3e69a0e3a52c17c38e639caf80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3e9041d4b3f096d86faa5cc7e0f3c485c2e50e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487309"
 ---
 # <a name="sqlallocconnect-function"></a>Função SQLAllocConnect
 **Conformidade**  

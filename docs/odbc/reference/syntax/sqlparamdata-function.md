@@ -1,4 +1,5 @@
 ---
+description: Função SQLParamData
 title: Função SQLParamData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ed149e125e3231d670c6ddbd4569ff5ccee5c15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d44b3bd5017e5ef5cebb40c9bbbaccdde7368bbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487249"
 ---
 # <a name="sqlparamdata-function"></a>Função SQLParamData
 **Conformidade**  
@@ -52,7 +53,7 @@ SQLRETURN SQLParamData(
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_PARAM_DATA_AVAILABLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLParamData** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLParamData** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -63,7 +64,7 @@ SQLRETURN SQLParamData(
 |22026|Incompatibilidade de comprimento de dados String|O tipo de informação SQL_NEED_LONG_DATA_LEN em **SQLGetInfo** era "Y" e menos dados foram enviados para um parâmetro longo (o tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específico da fonte de dados longa) do que foi especificado com o argumento *StrLen_or_IndPtr* em **SQLBindParameter**.<br /><br /> O tipo de informação SQL_NEED_LONG_DATA_LEN em **SQLGetInfo** era "Y" e menos dados foram enviados para uma coluna longa (o tipo de dados era SQL_LONGVARCHAR, SQL_LONGVARBINARY ou um tipo de dados específico da fonte de dados longa) do que foi especificado no buffer de comprimento correspondente a uma coluna em uma linha de dados que foi adicionada ou atualizada com **SQLBulkOperations** ou atualizada com **SQLSetPos**.|  
 |40001|Falha de serialização|A transação foi revertida devido a um deadlock de recurso com outra transação.|  
 |40003|Conclusão de instrução desconhecida|A conexão associada falhou durante a execução dessa função, e o estado da transação não pode ser determinado.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*; a função foi então chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) a chamada de função anterior não era uma chamada para **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**ou **SQLSetPos** em que o código de retorno foi SQL_NEED_DATA ou a chamada de função anterior era uma chamada para **SQLPutData**.<br /><br /> A chamada de função anterior era uma chamada para **SQLParamData**.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLParamData** foi chamada.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para *StatementHandle* e retornou SQL_NEED_DATA. **SQLCancel** foi chamado antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.|  
@@ -79,9 +80,9 @@ SQLRETURN SQLParamData(
 ## <a name="comments"></a>Comentários  
  **SQLParamData** pode ser chamado para fornecer dados em execução para dois usos: dados de parâmetro que serão usados em uma chamada para **SQLExecute** ou **SQLExecDirect**, ou dados de coluna que serão usados quando uma linha for atualizada ou adicionada por uma chamada para **SQLBulkOperations** ou atualizada por uma chamada para **SQLSetPos**. No momento da execução, **SQLParamData** retorna ao aplicativo um indicador de quais dados o driver requer.  
   
- Quando um aplicativo chama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos**, o driver retorna SQL_NEED_DATA se precisar de dados de dados em execução. Em seguida, um aplicativo chama **SQLParamData** para determinar quais dados enviar. Se o driver exigir dados de parâmetro, o driver retornará no buffer de saída * \*ValuePtrPtr* o valor que o aplicativo colocou no buffer do conjunto de linhas. O aplicativo pode usar esse valor para determinar quais dados de parâmetro o driver está solicitando. Se o driver exigir dados de coluna, o driver retornará no buffer * \*ValuePtrPtr* o endereço ao qual a coluna foi vinculada originalmente, da seguinte maneira:  
+ Quando um aplicativo chama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos**, o driver retorna SQL_NEED_DATA se precisar de dados de dados em execução. Em seguida, um aplicativo chama **SQLParamData** para determinar quais dados enviar. Se o driver exigir dados de parâmetro, o driver retornará no buffer de saída * \* ValuePtrPtr* o valor que o aplicativo colocou no buffer do conjunto de linhas. O aplicativo pode usar esse valor para determinar quais dados de parâmetro o driver está solicitando. Se o driver exigir dados de coluna, o driver retornará no buffer * \* ValuePtrPtr* o endereço ao qual a coluna foi vinculada originalmente, da seguinte maneira:  
   
- *Limite* + de*Associação* de endereço associado + ((*número da linha* -1) x tamanho do *elemento*)  
+ *Endereço associado*  +  *Deslocamento de associação* + ((*número da linha* -1) x tamanho do *elemento*)  
   
  onde as variáveis são definidas conforme indicado na tabela a seguir.  
   
@@ -94,7 +95,7 @@ SQLRETURN SQLParamData(
   
  Ele também retorna SQL_NEED_DATA, que é um indicador para o aplicativo que ele deve chamar **SQLPutData** para enviar os dados.  
   
- O aplicativo chama **SQLPutData** quantas vezes forem necessárias para enviar os dados em execução para a coluna ou o parâmetro. Depois que todos os dados forem enviados para a coluna ou parâmetro, o aplicativo chamará **SQLParamData** novamente. Se **SQLParamData** retornar novamente SQL_NEED_DATA, os dados deverão ser enviados para outro parâmetro ou coluna. Portanto, o aplicativo novamente chama **SQLPutData**. Se todos os dados em execução forem enviados para todos os parâmetros ou colunas, **SQLParamData** retornará SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO, o valor em * \*ValuePtrPtr* será indefinido e a instrução SQL poderá ser executada, ou a chamada **SQLBulkOperations** ou **SQLSetPos** poderá ser processada.  
+ O aplicativo chama **SQLPutData** quantas vezes forem necessárias para enviar os dados em execução para a coluna ou o parâmetro. Depois que todos os dados forem enviados para a coluna ou parâmetro, o aplicativo chamará **SQLParamData** novamente. Se **SQLParamData** retornar novamente SQL_NEED_DATA, os dados deverão ser enviados para outro parâmetro ou coluna. Portanto, o aplicativo novamente chama **SQLPutData**. Se todos os dados em execução forem enviados para todos os parâmetros ou colunas, **SQLParamData** retornará SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO, o valor em * \* ValuePtrPtr* será indefinido e a instrução SQL poderá ser executada, ou a chamada **SQLBulkOperations** ou **SQLSetPos** poderá ser processada.  
   
  Se **SQLParamData** fornecer dados de parâmetro para uma instrução UPDATE ou DELETE pesquisada que não afete nenhuma linha na fonte de dados, a chamada para **SQLParamData** retornará SQL_NO_DATA.  
   

@@ -1,4 +1,5 @@
 ---
+description: Função SQLPutData
 title: Função SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c4e704d96924942812904ea63d0e3d4fce8748e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8adda30141a99c1a575d8cc66511f1606e77dcf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487129"
 ---
 # <a name="sqlputdata-function"></a>Função SQLPutData
 **Conformidade**  
@@ -59,12 +60,12 @@ SQLRETURN SQLPutData(
   
 -   O tipo de dados C é SQL_C_DEFAULT e o tipo de dados C padrão para o tipo de dados SQL especificado é SQL_C_CHAR ou SQL_C_BINARY.  
   
- Para todos os outros tipos de dados C, se *StrLen_or_Ind* não for SQL_NULL_DATA ou SQL_DEFAULT_PARAM, o driver pressupõe que o tamanho do \*buffer *DataPtr* é o tamanho do tipo de dados C especificado com *ValueType* ou *TargetType* e envia o valor de dados inteiro. Para obter mais informações, consulte [convertendo dados de tipos de dados C para SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) no Apêndice D: tipos de dados.  
+ Para todos os outros tipos de dados C, se *StrLen_or_Ind* não for SQL_NULL_DATA ou SQL_DEFAULT_PARAM, o driver pressupõe que o tamanho do \* buffer *DataPtr* é o tamanho do tipo de dados C especificado com *ValueType* ou *TargetType* e envia o valor de dados inteiro. Para obter mais informações, consulte [convertendo dados de tipos de dados C para SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) no Apêndice D: tipos de dados.  
   
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLPutData** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLPutData** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
@@ -81,7 +82,7 @@ SQLRETURN SQLPutData(
 |22012|Divisão por zero|Uma expressão aritmética calculada para um parâmetro de entrada/saída ou saída resultou em divisão por zero.|  
 |22015|Estouro no campo de intervalo|Os dados enviados para uma coluna ou parâmetro numérico exato ou de intervalo para um tipo de dados SQL de intervalo causaram uma perda de dígitos significativos.<br /><br /> Os dados foram enviados para uma coluna de intervalo ou parâmetro com mais de um campo, foram convertidos em um tipo de dados numérico e não tinham nenhuma representação no tipo de dados numeric.<br /><br /> Os dados enviados para a coluna ou dados de parâmetro foram atribuídos a um tipo SQL de intervalo, e não havia nenhuma representação do valor do tipo C no tipo SQL de intervalo.<br /><br /> Os dados enviados para uma coluna exata numérica ou de intervalo C ou parâmetro para um tipo de intervalo C causaram uma perda de dígitos significativos.<br /><br /> Os dados enviados para a coluna ou dados de parâmetro foram atribuídos a uma estrutura C de intervalo e não havia nenhuma representação dos dados na estrutura de dados do intervalo.|  
 |22018|Valor de caractere inválido para especificação de conversão|O tipo C era um tipo de dados numérico exato ou aproximado, um DateTime ou um intervalo; o tipo SQL da coluna era um tipo de dados de caractere; e o valor na coluna ou no parâmetro não era um literal válido do tipo ligado de C.<br /><br /> O tipo SQL era um tipo de dados numérico exato ou aproximado, um DateTime ou um intervalo; o tipo C foi SQL_C_CHAR; e o valor na coluna ou no parâmetro não era um literal válido do tipo SQL associado.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle*. Em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY009|Uso inválido de ponteiro nulo|(DM) o argumento *DataPtr* era um ponteiro nulo e o argumento *StrLen_or_Ind* não era 0, SQL_DEFAULT_PARAM ou SQL_NULL_DATA.|  
@@ -103,7 +104,7 @@ SQLRETURN SQLPutData(
   
  Quando um aplicativo chama **SQLParamData** para determinar quais dados ele deve enviar, o driver retorna um indicador que o aplicativo pode usar para determinar quais dados de parâmetro enviar ou onde os dados da coluna podem ser encontrados. Ele também retorna SQL_NEED_DATA, que é um indicador para o aplicativo que ele deve chamar **SQLPutData** para enviar os dados. No argumento *DataPtr* para **SQLPutData**, o aplicativo passa um ponteiro para o buffer que contém os dados reais para o parâmetro ou coluna.  
   
- Quando o driver retorna SQL_SUCCESS para **SQLPutData**, o aplicativo chama **SQLParamData** novamente. **SQLParamData** retornará SQL_NEED_DATA se for necessário enviar mais dados, caso em que o aplicativo chama **SQLPutData** novamente. Ele retornará SQL_SUCCESS se todos os dados em execução forem enviados. O aplicativo então chama **SQLParamData** novamente. Se o driver retornar SQL_NEED_DATA e outro indicador em * \*ValuePtrPtr*, ele exigirá dados para outro parâmetro ou coluna e **SQLPutData** será chamado novamente. Se o driver retornar SQL_SUCCESS, todos os dados em execução serão enviados e a instrução SQL poderá ser executada, ou a chamada **SQLBulkOperations** ou **SQLSetPos** poderá ser processada.  
+ Quando o driver retorna SQL_SUCCESS para **SQLPutData**, o aplicativo chama **SQLParamData** novamente. **SQLParamData** retornará SQL_NEED_DATA se for necessário enviar mais dados, caso em que o aplicativo chama **SQLPutData** novamente. Ele retornará SQL_SUCCESS se todos os dados em execução forem enviados. O aplicativo então chama **SQLParamData** novamente. Se o driver retornar SQL_NEED_DATA e outro indicador em * \* ValuePtrPtr*, ele exigirá dados para outro parâmetro ou coluna e **SQLPutData** será chamado novamente. Se o driver retornar SQL_SUCCESS, todos os dados em execução serão enviados e a instrução SQL poderá ser executada, ou a chamada **SQLBulkOperations** ou **SQLSetPos** poderá ser processada.  
   
  Para obter mais informações sobre como os dados de parâmetro de dados em execução são passados no momento da execução da instrução, consulte "passando valores de parâmetro" em [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) e [enviando dados longos](../../../odbc/reference/develop-app/sending-long-data.md). Para obter mais informações sobre como os dados de coluna de dados em execução são atualizados ou adicionados, consulte a seção "usando SQLSetPos" em [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "executando atualizações em massa usando indicadores" em [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)e [Long data e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   

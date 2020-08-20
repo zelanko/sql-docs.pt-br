@@ -1,4 +1,5 @@
 ---
+description: Função LocalDBGetInstances
 title: Função LocalDBGetInstances | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7804207c887d95a719575406cfc85ae78d1bd7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de9e71560a66fb376d6aab2a6e334173be311aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486898"
 ---
 # <a name="localdbgetinstances-function"></a>Função LocalDBGetInstances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

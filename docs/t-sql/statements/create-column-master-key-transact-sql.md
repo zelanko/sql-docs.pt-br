@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN MASTER KEY (Transact-SQL)
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 02d57df3e018e558f5e8a42a63647aeefdff77ff
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488052"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ A tabela a seguir mostra os nomes de provedores de sistema:
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Repositório de Certificados do Windows| 
     |'MSSQL_CSP_PROVIDER'|Um repositório, como um HSM (módulo de segurança de hardware) compatível com o Microsoft CryptoAPI.|
-    |'MSSQL_CNG_STORE'|Um repositório, como um HSM (módulo de segurança de hardware), compatível com a API Cryptography Next Generation.|  
+    |'MSSQL_CNG_STORE'|Um repositório, como um HSM (módulo de segurança de hardware) (HSM) compatível com a Cryptography API Next Generation.|  
     |'AZURE_KEY_VAULT'|Veja [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
     |'MSSQL_JAVA_KEYSTORE'| Repositório de chaves Java.}
   
@@ -140,7 +141,7 @@ O caminho da chave no repositório de chave mestra de coluna. O caminho da chave
     Em que:  
   
     *ProviderName*  
-    Nome do KSP (Provedor de Armazenamento de Chaves), que implementa a API CNG (Cryptography Next Generation) para o repositório de chave mestra de coluna. Se você usar um HSM como um repositório de chaves, o nome do provedor deverá ser o nome do KSP dado pelo seu fornecedor HSM. O provedor deve ser instalado em um computador cliente.  
+    Nome do KSP (provedor de armazenamento de chaves), que implementa a API Cryptography: Next Generation (CNG) API para o repositório de chaves mestras de coluna. Se você usar um HSM como um repositório de chaves, o nome do provedor deverá ser o nome do KSP dado pelo seu fornecedor HSM. O provedor deve ser instalado em um computador cliente.  
   
     *KeyIdentifier*  
     Identificador da chave, usado como uma chave mestra de coluna, no repositório de chaves.  
@@ -163,11 +164,10 @@ O caminho da chave no repositório de chave mestra de coluna. O caminho da chave
 ENCLAVE_COMPUTATIONS  
 Especifica se a chave mestra da coluna está habilitada para enclave. Você pode compartilhar todas as chaves de criptografia de coluna, criptografadas com a chave mestra de coluna, com um enclave seguro no servidor e usá-las para cálculos dentro do enclave. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-*signature*  
+*assinatura*  
 Um literal binário que é um resultado de assinar digitalmente o *caminho da chave* e a configuração ENCLAVE_COMPUTATIONS com a chave mestra de coluna. A assinatura reflete se ENCLAVE_COMPUTATIONS for especificado ou não. A assinatura protege os valores assinados de serem alterados por usuários não autorizados. Um driver de cliente habilitado para Always Encrypted verificará a assinatura e retornará um erro para o aplicativo se a assinatura for inválida. A assinatura deve ser gerada usando ferramentas do lado do cliente. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-  
-  
-## <a name="remarks"></a>Comentários  
+
+## <a name="remarks"></a>Comentários
 
 Crie uma entrada de metadados de chave mestra de coluna antes de uma entrada de metadados de chave de criptografia de coluna ser criada no banco de dados e antes de qualquer coluna no banco de dados poder ser criptografada usando Always Encrypted. Uma entrada de chave mestra de coluna nos metadados não contém a chave mestra de coluna real. A chave mestra de coluna deve ser armazenada em um repositório de chaves de coluna externo (fora do SQL Server). O nome do provedor de repositório de chaves e o caminho da chave mestra de coluna nos metadados devem ser válidos para um aplicativo cliente. O aplicativo cliente precisa usar a chave mestra de coluna para descriptografar uma chave de criptografia de coluna. A chave de criptografia de coluna é criptografada com a chave mestra de coluna. O aplicativo cliente também precisa consultar colunas criptografadas.
 

@@ -1,4 +1,5 @@
 ---
+description: Criar uma política de correspondência
 title: Criar uma política de correspondência
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c18d8d44bb595e4bfaad66296331d8dab403535e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a899d2117cf3999e93fc95628b6cccea1bbbde1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487866"
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
 
@@ -38,7 +39,7 @@ ms.locfileid: "85881957"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma política de correspondência.  
   
-##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a>Como definir parâmetros de regra de correspondência  
+##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a> Como definir parâmetros de regra de correspondência  
  A criação de uma regra de correspondência é um processo interativo no qual você insere os fatores usados para determinar se um registro é uma correspondência para outro. Você pode inserir condições para qualquer domínio em uma tabela. Quando o DQS executa a correspondência em dois registros, ele comparará os valores nos campos mapeados para os domínios incluídos na regra de correspondência. O DQS analisa os valores em cada campo na regra e, em seguida, usa os fatores inseridos na regra para cada domínio para calcular uma pontuação de correspondência final. Se a pontuação de correspondência dos dois registros comparados for maior que a pontuação de correspondência mínima, os dois campos serão considerados correspondências.  
   
  Os fatores que você insere em uma regra de correspondência incluem os seguintes:  
@@ -57,12 +58,12 @@ ms.locfileid: "85881957"
   
  A criação de perfil fornece ideias sobre a integridade e a exclusividade. Considere a integridade e a exclusividade em tandem. Use os dados de integridade e exclusividade para determinar qual peso atribuir a um campo no processo de correspondência. Se houver um nível alto de exclusividade em um campo, o uso de um campo em uma política de correspondência poderá diminuir os resultados de correspondência, de modo que talvez você queira definir o peso desse campo para um valor relativamente pequeno. Se houver um nível baixo de exclusividade para uma coluna, porém baixa integridade, talvez você não queira incluir um domínio para essa coluna. Com um nível baixo de exclusividade, porém um nível alto de integridade, talvez você queira incluir o domínio. Algumas colunas, como gênero, podem ter um nível de exclusividade baixo naturalmente. Para obter mais informações, consulte [Guias Criador de Perfil e Resultados](#Tabs).  
   
-##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a>Primeira etapa: iniciando uma política de correspondência  
+##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a> Primeira etapa: iniciando uma política de correspondência  
  Execute a atividade de política de correspondência na área de gerenciamento da base de dados de conhecimento do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Nova base de dados de conhecimento** para criar uma política de correspondência em uma nova base de dados de conhecimento. Insira um nome para a base de dados de conhecimento, insira uma descrição e defina **Criar base de dados de conhecimento de** conforme desejar. Clique na **Política de Correspondência** da atividade. Clique em **Próximo** para continuar.  
+2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Nova base de dados de conhecimento** para criar uma política de correspondência em uma nova base de dados de conhecimento. Insira um nome para a base de dados de conhecimento, insira uma descrição e defina **Criar base de dados de conhecimento de** conforme desejar. Clique na **Política de Correspondência** da atividade. Clique em **Avançar** para continuar.  
   
 3.  Clique em **Abrir base de dados de conhecimento** para criar ou modificar a política de correspondência em uma base de dados de conhecimento existente. Selecione a base de dados de conhecimento, selecione **Política de Correspondência**e clique em **Avançar**. Também é possível clicar em uma base de dados de conhecimento em **Base de Dados de Conhecimento Recente**. Se você abrir uma base de dados de conhecimento que foi fechada quando uma política de correspondência estava sendo trabalhada, prosseguirá para o estágio em que a atividade de política de correspondência foi fechada (conforme indicado pela coluna **Estado** da base de dados de conhecimento na tabela de base de dados de conhecimento ou no nome da base de dados de conhecimento em **Base de Dados de Conhecimento Recente**). Se você abrir uma base de dados de conhecimento que inclua uma política de correspondência e foi terminada, a página **Política de Correspondência** será exibida. Se você abrir uma base de dados de conhecimento que não inclua uma política de correspondência e foi terminada, a página **Mapeamento** será exibida.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "85881957"
     > [!NOTE]  
     >  Clique em **Fechar** para salvar o estágio do projeto correspondente e retornar à página inicial do DQS. Na próxima vez que abrir este projeto, você iniciará no mesmo estágio. Clique em **Cancelar** para terminar a atividade de correspondência, perder seu trabalho e retornar à página inicial do DQS.  
   
-##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a>Estágio de política de correspondência  
+##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a> Estágio de política de correspondência  
  Crie regras de correspondência e teste-as separadamente na página Política de Correspondência. Quando testar uma regra de correspondência na página **Política de Correspondência** , você visualizará uma tabela de resultados de correspondência que mostra os clusters que o DQS identificou para a regra selecionada. A tabela mostra cada registro no cluster com os valores de domínio de mapeamento e a pontuação correspondente e o registro dinâmico inicial para o cluster. Também é possível exibir os dados de criação de perfil do processo correspondente como um todo, as condições em cada regra de correspondência e as estatísticas sobre os resultados de cada regra de correspondência separada. Você pode se filtrar com base nos dados da regra mestra desejados.  
   
  Para obter mais informações sobre como as regras de correspondência funcionam, consulte [Como definir parâmetros de regra de correspondência](#MatchingRules).  
@@ -147,7 +148,7 @@ ms.locfileid: "85881957"
   
 18. Clique em **Avançar** para prosseguir para o estágio de resultados de correspondência.  
   
-##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a>Estágio de resultados de correspondência  
+##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a> Estágio de resultados de correspondência  
  Teste todas as suas regras de correspondência de uma vez na página **Resultados de Correspondência** . Antes de fazer isso, especifique se a execução do teste de regra identificará os clusters sobrepostos ou não sobrepostos. Se você estiver executando as regras várias vezes, poderá executar a regra nos dados recarregados com base nos dados de origem ou anteriores.  
   
  Quando testar as regras de correspondência na página **Resultados de Correspondência** , você visualizará uma tabela de resultados de correspondência que mostra os clusters que o DQS identificou para todas as regras. A tabela mostra cada registro no cluster com os valores de domínio de mapeamento e a pontuação correspondente e o registro dinâmico inicial para o cluster. Também é possível exibir os dados de criação de perfil das regras de correspondência como um todo, as condições em cada regra de correspondência e as estatísticas sobre os resultados todas as regras de correspondência.  
@@ -191,10 +192,10 @@ ms.locfileid: "85881957"
 ##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a> Acompanhamento: após a criação de uma Política de Correspondência  
  Depois de criar uma política de correspondência, você pode executar um projeto de correspondência a partir da base de dados de conhecimento que contém a política de correspondência. Para obter mais informações, consulte [Executar um projeto de correspondência](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a>Guias criador de perfil e resultados  
+##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a> Guias criador de perfil e resultados  
  As guias Criador de perfil e Resultados contêm estatísticas para as páginas Política de Correspondência e Resultados de Correspondência.  
   
-###  <a name="profiler-tab"></a><a name="Profiler"></a>Guia criador de perfil  
+###  <a name="profiler-tab"></a><a name="Profiler"></a> Guia criador de perfil  
  Clique na guia **Criador de perfil** para exibir estatísticas sobre o banco de dados de origem e para cada campo incluído na regra de política. As estatísticas serão atualizadas à medida que a regra de política for executada.  
   
  Para obter mais informações sobre como interpretar as estatísticas a seguir, consulte [Como definir parâmetros de regra de correspondência](#MatchingRules).  
@@ -223,7 +224,7 @@ ms.locfileid: "85881957"
   
 -   **Integridade**: a integridade de cada campo de origem mapeado para o exercício de correspondência  
   
-###  <a name="matching-policy-notifications"></a><a name="Notifications"></a>Notificações de política de correspondência  
+###  <a name="matching-policy-notifications"></a><a name="Notifications"></a> Notificações de política de correspondência  
  Para a atividade de política de correspondência, as seguintes condições resultam em notificações:  
   
 -   O campo está vazio em todos os registros; é recomendável eliminá-lo do mapeamento.  
@@ -236,7 +237,7 @@ ms.locfileid: "85881957"
   
 -   Há um nível alto de exclusividade neste campo. O uso desse campo na política de correspondência pode diminuir os resultados correspondentes.  
   
-###  <a name="matching-results-tab"></a><a name="ResultsTab"></a>Guia resultados de correspondência  
+###  <a name="matching-results-tab"></a><a name="ResultsTab"></a> Guia resultados de correspondência  
  Clique na guia **Resultados de Correspondência** para exibir estatísticas para a execução da regra de política de correspondência e a execução da regra anterior. Se você executou a mesma regra mais de uma vez com parâmetros diferentes, a tabela de resultados de correspondência exibirá estatísticas de ambas as execuções, permitindo a comparação delas. Você também poderá restaurar a regra anterior se quiser.  
   
  As estatísticas incluem o seguinte:  

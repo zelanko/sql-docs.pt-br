@@ -1,4 +1,5 @@
 ---
+description: 'TM: Classe de evento Rollback Tran Completed'
 title: 'Classe de evento TM: Rollback Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,20 +13,20 @@ ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c62caf73029c60d6a683ca36333e14518de450c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 729a602d76f55f3a8218aa341ca94d545a3f3f91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486946"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>classe de evento TM: Rollback Tran Completed
+# <a name="tm-rollback-tran-completed-event-class"></a>TM: Classe de evento Rollback Tran Completed
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento TM: Rollback Tran Completed indica que foi concluída uma solicitação ROLLBACK TRANSACTION. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>Colunas de dados de classe de evento TM: Rollback Tran Completed  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

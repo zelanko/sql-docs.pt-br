@@ -1,4 +1,5 @@
 ---
+description: administração do dqs
 title: administração do dqs
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487775"
 ---
 # <a name="dqs-administration"></a>administração do dqs
 
@@ -42,7 +43,7 @@ ms.locfileid: "85888098"
   
 -   Configure log com base no nível de severidade dos eventos.  
   
-##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Atividades de administração usando Data Quality Client  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> Atividades de administração usando Data Quality Client  
  Estas atividades são executadas usando o recurso **Administração** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### <a name="activity-monitoring"></a>Monitoramento de Atividades  
@@ -60,7 +61,7 @@ ms.locfileid: "85888098"
 > [!NOTE]  
 >  A tela **Configuração** só estará disponível para os usuários que tiverem a função dqs_administrator no banco de dados DQS_MAIN.  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Atividades de administração fora do Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Atividades de administração fora do Data Quality Client  
  As atividades são executadas fora do Cliente Data Quality:  
   
 -   **Backup e restauração de bancos de dados do DQS**: o backup e a restauração de bancos de dados do DQS é o mesmo que fazer backup e restauração de qualquer banco de dados do SQL Server com algumas considerações que são específicas do DQS.  

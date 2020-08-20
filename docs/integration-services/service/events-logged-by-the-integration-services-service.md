@@ -1,4 +1,5 @@
 ---
+description: Eventos registrados em log pelo serviço Integration Services Service
 title: Eventos registrados em log pelo serviço Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1a3d0272916814eb8ba9234217d6e7978c8a925e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487685"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados em log pelo serviço Integration Services Service
 

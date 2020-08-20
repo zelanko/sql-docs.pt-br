@@ -1,4 +1,5 @@
 ---
+description: Correspondência de dados
 title: Correspondência de dados
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: faa4c6066af0d7c516434176817d8c7f49672be5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f4fad318bfb0755848e1af3fd7d21b9bc421f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487821"
 ---
 # <a name="data-matching"></a>Correspondência de dados
 
@@ -40,7 +41,7 @@ ms.locfileid: "87363038"
   
  ![Processo de Correspondência no DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processo de Correspondência no DQS")  
   
-##  <a name="how-to-perform-data-matching"></a><a name="How"></a>Como executar a correspondência de dados  
+##  <a name="how-to-perform-data-matching"></a><a name="How"></a> Como executar a correspondência de dados  
  Assim como acontece com outros processos de qualidade de dados no DQS, você executa a correspondência ao criar uma base de dados de conhecimento e ao executar uma atividade de correspondência em um projeto de qualidade de dados nas seguintes etapas:  
   
 1.  Criar uma política de correspondência na base de dados de conhecimento  

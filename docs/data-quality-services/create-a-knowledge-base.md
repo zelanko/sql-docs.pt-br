@@ -1,4 +1,5 @@
 ---
+description: Criar uma base de dados de conhecimento
 title: Criar uma base de dados de conhecimento
 ms.date: 06/04/2013
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: aa740172957e3f0ba08812e298db5621ba43e890
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dd8e0379d25b231de873ccfd1529284e62f0f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487889"
 ---
 # <a name="create-a-knowledge-base"></a>Criar uma base de dados de conhecimento
 
@@ -35,7 +36,7 @@ ms.locfileid: "85887982"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma base de dados de conhecimento.  
   
-##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>Criar uma base de dados de conhecimento  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a> Criar uma base de dados de conhecimento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85887982"
   
 6.  Clique em **Criar**.  
   
-##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>Acompanhamento: depois de criar uma base de dados de conhecimento  
+##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a> Acompanhamento: depois de criar uma base de dados de conhecimento  
  Depois que você criar uma base de dados de conhecimento, verá um assistente para executar a descoberta da base de dados de conhecimento, um assistente para criar uma política de correspondência ou páginas para fazer o gerenciamento do domínio. Para obter mais informações sobre a descoberta de conhecimento, o gerenciamento de domínio ou a política de conciliação, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   
