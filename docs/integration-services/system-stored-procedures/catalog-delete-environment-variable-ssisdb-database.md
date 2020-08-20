@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_environment_variable (Banco de Dados SSISDB)
 title: catalog.delete_environment_variable (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c01a64050f05b6acd2c0bc7431b9891ecca8d5c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daa94bf3d9a5147fff447ba6f88e7fd284514d5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456928"
 ---
 # <a name="catalogdelete_environment_variable-ssisdb-database"></a>catalog.delete_environment_variable (Banco de Dados SSISDB)
 
@@ -42,7 +43,7 @@ catalog.delete_environment_variable [ @folder_name = ] folder_name
  O nome do ambiente que contém a variável. O *environment_name* é **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- O nome da variável que deve ser excluída. O *variable_name* é **nvarchar(128)** .  
+ O nome da variável que deve ser excluída. O *variable_name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

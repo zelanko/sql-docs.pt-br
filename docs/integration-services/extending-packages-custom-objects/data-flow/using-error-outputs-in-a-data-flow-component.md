@@ -1,4 +1,5 @@
 ---
+description: Usando saídas de erro em um componente de fluxo de dados
 title: Usar saídas de erro em um componente de fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 965279f9ae819dfccae3a1f1c161a4681ea0cf40
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1acd9b58a014711ac205dd5ba1ebd5879a7ca351
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457134"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Usando saídas de erro em um componente de fluxo de dados
 

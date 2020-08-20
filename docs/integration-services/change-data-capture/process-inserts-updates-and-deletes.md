@@ -1,4 +1,5 @@
 ---
+description: Processar inserções, atualizações e exclusões
 title: Processar inserções, atualizações e exclusões | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 940e3e9d4ab622ee9913eee4a0c62356542ed8d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f4fddbdaa770c79008d4c4c1cd481a0c6c6eeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457660"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Processar inserções, atualizações e exclusões
 
@@ -33,7 +34,7 @@ ms.locfileid: "86921719"
  Na consulta de exemplo que recupera dados de alteração, a função **cdc.fn_cdc_get_net_changes_<capture_instance>** retorna somente a coluna de metadados chamada **__$operation**. Esta coluna de metadados contém um valor ordinal que indica qual operação causou a alteração.  
   
 > [!NOTE]  
->  Para obter mais informações sobre a consulta que usa chamadas da função **cdc.fn_cdc_get_net_changes_<capture_instance>** , consulte [Criar a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
+>  Para obter mais informações sobre a consulta que usa chamadas da função **cdc.fn_cdc_get_net_changes_<capture_instance>**, consulte [Criar a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
   
  Corresponder um valor ordinal a sua operação correspondente não é tão fácil quanto usar um mnemônico da operação. Por exemplo, 'D' pode representar facilmente uma operação de exclusão e 'I' representar uma operação de inserção. A consulta de exemplo criada no tópico, [Criando a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md), faz essa conversão de um valor ordinal para um valor de cadeia de caracteres amigável que retorna uma nova coluna. O seguinte segmento de código mostra esta conversão:  
   

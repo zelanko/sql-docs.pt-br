@@ -1,4 +1,5 @@
 ---
+description: Cache de biblioteca de cursores
 title: Cache de biblioteca de cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5686bf0c3e261b1df947c02e2edaa419da498ecb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a558ab120d2812e88a4dbbdd8392c997ce423c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456645"
 ---
 # <a name="cursor-library-cache"></a>Cache de biblioteca de cursores
 > [!IMPORTANT]  

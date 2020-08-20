@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION FUNCTION (Transact-SQL)
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 73e9ea60c35fd82d6927901e719aedb2e1745d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458736"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  É o nome da função de partição. Os nomes de funções de partição devem ser exclusivos no banco de dados e estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *input_parameter_type*  
- É o tipo de dados da coluna usada para particionamento. Todos os tipos de dados são válidos para uso como colunas de particionamento, exceto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipos de dados de alias ou tipos de dados CLR definidos pelo usuário.  
+ É o tipo de dados da coluna usada para particionamento. Todos os tipos de dados são válidos para uso como colunas de particionamento, exceto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipos de dados de alias ou tipos de dados CLR definidos pelo usuário.  
   
  A coluna real, conhecida como uma coluna de particionamento, é especificada na instrução CREATE TABLE ou CREATE INDEX.  
   

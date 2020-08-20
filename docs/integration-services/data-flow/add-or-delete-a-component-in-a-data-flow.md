@@ -1,4 +1,5 @@
 ---
+description: Adicionar ou excluir um componente em um fluxo de dados
 title: Adicionar ou excluir um componente em um fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93353b31ff84d1fc48c88c4fdaec1c105d0d5e44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ca8342ac6cbdab99c3314b49cac4c28408fee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457488"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Adicionar ou excluir um componente em um fluxo de dados
 

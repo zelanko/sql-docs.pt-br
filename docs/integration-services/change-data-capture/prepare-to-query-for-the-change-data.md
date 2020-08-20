@@ -1,4 +1,5 @@
 ---
+description: Preparar para consultar os dados de alterações
 title: Preparar para consultar os dados de alterações | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2ab217d81620b28ced334842dcff3643f686a98
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0b2f12bf0ad4b5166e7a206b30264782992f144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457683"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparar para consultar os dados de alterações
 

@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas de arquivo bruto
 title: Propriedades personalizadas de arquivo bruto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed2bc817f446481d228806f5f2ffb3222b79ecf0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45e439343713ac98dfd293a21af90d75e1275847
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457269"
 ---
 # <a name="raw-file-custom-properties"></a>Propriedades personalizadas de arquivo bruto
 
@@ -28,7 +29,7 @@ ms.locfileid: "86916050"
   
  A tabela a seguir descreve as propriedades personalizadas da fonte de Arquivo Bruto. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar os dados brutos. Os valores possíveis são **Nome do arquivo** (0) e **Nome do arquivo da variável** (1). O valor padrão é **Nome do arquivo** (0).|  
 |FileName|String|O caminho e o nome do arquivo do arquivo de origem.|  
@@ -43,7 +44,7 @@ ms.locfileid: "86916050"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Arquivo Bruto. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|Um valor que especifica se a propriedade FileName contém um nome de arquivo ou o nome de uma variável que contenha um nome de arquivo. As opções são **Nome do arquivo** (0) e **Nome do arquivo da variável** (1).|  
 |FileName|String|O nome do arquivo no qual o destino Arquivo Bruto grava.|  

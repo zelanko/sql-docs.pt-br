@@ -1,4 +1,5 @@
 ---
+description: Log do SSIS (Integration Services)
 title: Log do SSIS (Integration Services) | Microsoft Docs
 ms.custom: supportability
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cee8ccf62e9ec8a6497d3515e85b7aeff8f0b479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457118"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
 
@@ -99,7 +100,7 @@ ms.locfileid: "86918330"
 #### <a name="log-schema"></a>Esquema de log  
  A tabela a seguir descreve os elementos no esquema de log.  
   
-|Elemento|DESCRIÇÃO|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |Computador|O nome do computador no qual o evento de log ocorreu.|  
 |Operador|A identidade do usuário que iniciou o pacote.|  
@@ -538,7 +539,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="execute-process-task"></a><a name="ExecuteProcess"></a> Tarefa Executar Processo  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar Processo.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Fornece informações sobre o processo do executável que a tarefa está configurada para executar.<br /><br /> São gravadas duas entradas de log. Uma contém informações sobre o nome e o local do executável que a tarefa executa e o outro registra a saída do executável.|  
 |**ExecuteProcessVariableRouting**|Fornece informações sobre quais variáveis são encaminhadas para a entrada e as saídas do executável. As entradas de log são gravadas em stdin (a entrada), stdout (a saída) e stderr (a saída do erro).|  
@@ -546,21 +547,21 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a> Tarefa Executar SQL  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Executar SQL.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
   
 ####  <a name="file-system-task"></a><a name="FileSystem"></a> Tarefa Sistema de Arquivos  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Sistema de Arquivos.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Informa a operação executada pela tarefa. A entrada de log é gravada quando a operação de sistema de arquivos é iniciada e inclui informações sobre a origem e o destino.|  
   
 ####  <a name="ftp-task"></a><a name="FTP"></a> Tarefa FTP  
  A tabela a seguir relaciona as entradas de log personalizadas da tarefa FTP.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Indica que a tarefa iniciou uma conexão com o servidor FTP.|  
 |**FTPOperation**|Informa o início e o tipo de operação de FTP que a tarefa executa.|  
@@ -568,7 +569,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="message-queue-task"></a><a name="MessageQueue"></a> Tarefa Fila de Mensagens  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|Indica que a tarefa finalizou a abertura da fila de mensagens.|  
 |**MSMQBeforeOpen**|Indica que a tarefa começou a abrir a fila de mensagens.|  
@@ -589,7 +590,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="send-mail-task"></a><a name="SendMail"></a> Tarefa Enviar Email  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Enviar Email.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|Indica que a tarefa começou a enviar uma mensagem de email.|  
 |**SendMailTaskEnd**|Indica que a tarefa terminou de enviar uma mensagem de email.|  
@@ -646,7 +647,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="web-services-task"></a><a name="WebServices"></a> Tarefa Serviços Web  
  A tabela a seguir relaciona as entradas de log personalizadas que podem ser habilitadas para a tarefa Serviços Web.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**WSTaskBegin**|A tarefa começou a acessar um serviço Web.|  
 |**WSTaskEnd**|A tarefa completou um método de serviço Web.|  
@@ -655,7 +656,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a> Tarefa Leitor de Dados do WMI  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Leitor de Dados do WMI.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Indica que a tarefa começou a ser ler os dados do WMI.|  
 |**WMIDataReaderOperation**|Informa a consulta WQL executada pela tarefa.|  
@@ -663,7 +664,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a> Tarefa Detector de Eventos do WMI  
  A tabela a seguir relaciona as entradas de registro personalizadas da tarefa Detector de Eventos do WMI.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**WMIEventWatcherEventOccurred**|Mostra que o evento ocorrido era o que a tarefa estava monitorando.|  
 |**WMIEventWatcherTimedout**|Indica que o tempo limite da tarefa foi esgotado.|  
@@ -672,7 +673,7 @@ O SQL Server Integration Services fornece um conjunto avançado de eventos perso
 ####  <a name="xml-task"></a><a name="XML"></a> XML Task  
  A tabela a seguir descreve a entrada de log personalizada da tarefa XML.  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**XMLOperation**|Fornece informações sobre a operação executada pela tarefa|  
 

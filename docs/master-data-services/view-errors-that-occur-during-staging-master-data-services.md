@@ -1,4 +1,5 @@
 ---
+description: Exibir erros que ocorrem durante o preparo (Master Data Services)
 title: Exiba os erros ocorridos durante o preparo
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af131613399fd45dd363f21f9f92216556be456b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: dea75b433d96aca750f941ef5dda8bb6b2951420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456761"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>Exibir erros que ocorrem durante o preparo (Master Data Services)
 

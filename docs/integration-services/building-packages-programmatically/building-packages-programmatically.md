@@ -1,4 +1,5 @@
 ---
+description: Compilando pacotes programaticamente
 title: Criar pacotes programaticamente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b1405699a93380447535a9f0f5f7ab7f94113a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457798"
 ---
 # <a name="building-packages-programmatically"></a>Compilando pacotes programaticamente
 
@@ -40,43 +41,43 @@ ms.locfileid: "86905432"
 >  Ao usar um pacote existente como modelo e modificar colunas existentes no fluxo de dados, talvez você precise remover colunas existentes e chamar o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> de componentes afetados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criar um pacote programaticamente](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
+ [Criando um pacote programaticamente](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
  Descreve como criar um pacote programaticamente.  
   
  [Adicionar tarefas programaticamente](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
  Descreve como adicionar tarefas ao pacote.  
   
- [Conectar tarefas programaticamente](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
+ [Conectando tarefas programaticamente](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
  Descreve como controlar a execução dos contêineres e tarefas em um pacote com base no resultado da execução de uma tarefa ou contêiner anterior.  
   
- [Adicionar conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
+ [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
  Descreve como adicionar gerenciadores de conexões a um pacote.  
   
- [Trabalhar com variáveis programaticamente](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
+ [Trabalhando com variáveis programaticamente](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
  Descreve como adicionar e usar variáveis durante a execução de pacotes.  
   
- [Manipular eventos programaticamente](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
+ [Manipulando eventos programaticamente](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
  Descreve como tratar eventos de pacotes e tarefas.  
   
- [Habilitar o registro em log programaticamente](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
+ [Habilitando o registro em log programaticamente](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
  Descreve como habilitar o registro de log para um pacote ou tarefa, e como aplicar filtros personalizados em eventos de log.  
   
- [Adicionar a tarefa de Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+ [Adicionando a tarefa Fluxo de Dados programaticamente](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
  Descreve como adicionar e configurar a tarefa Fluxo de Dados e seus componentes.  
   
- [Descobrir componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
+ [Descobrindo componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
  Descreve como detectar os componentes que são instalados no computador local.  
   
- [Adicionar componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
+ [Adicionando componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
  Descreve como adicionar um componente a uma tarefa de fluxo de dados.  
   
- [Conectar componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+ [Conectando componentes de fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
  Descreve como conectar dois componentes de fluxo de dados.  
   
- [Selecionar colunas de entrada programaticamente](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Selecionando colunas de entrada programaticamente](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  Descreve como selecionar colunas de entrada dentre aquelas que são fornecidas a um componente pelos componentes upstream do fluxo de dados.  
   
- [Salvar um pacote programaticamente](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
+ [Salvando um pacote programaticamente](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Descreve como salvar um pacote programaticamente.  
   
 ## <a name="reference"></a>Referência  
@@ -84,13 +85,13 @@ ms.locfileid: "86905432"
  Lista os códigos de erro predefinidos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com seus nomes simbólicos e descrições.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Estender pacotes com scripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estendendo pacotes com scripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Discute como estender o fluxo de controle usando a tarefa Script, e como estender o fluxo de dados usando o componente Script.  
   
  [Estendendo pacotes com objetos personalizados](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Discute como criar tarefas personalizadas de programa, componentes de fluxo de dados e outros objetos de pacote para uso em vários pacotes.  
   
- [Executar e gerenciar pacotes programaticamente](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [Executando e gerenciando pacotes programaticamente](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Discute como enumerar, executar e gerenciar pacotes e as pastas nas quais eles são armazenados.  
   
 ## <a name="external-resources"></a>Recursos externos  

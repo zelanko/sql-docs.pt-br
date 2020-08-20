@@ -1,4 +1,5 @@
 ---
+description: 'SQL para C: caractere'
 title: 'SQL to C: Character | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3486c0fcf5cefc39c4b85af814d7d3c1d609b4e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dff2b456e995aa344fcd928a48a5aaa09c484e89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456524"
 ---
 # <a name="sql-to-c-character"></a>SQL para C: caractere
 

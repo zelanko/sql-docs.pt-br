@@ -1,4 +1,5 @@
 ---
+description: Formatos de exibição de assinatura (Master Data Services)
 title: Formatos de exibição da assinatura
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ac58c9c1edfce6b02f48c31e220d37d842b18527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456725"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de exibição de assinatura (Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85812309"
   
 ## <a name="subscription-view-formats"></a>Formatos de exibição da assinatura  
   
-|Name|Descrição|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |**Membros folha**|Contém membros folha e seus valores de atributo associados.|  
 |**Histórico de Membros Folha**|Contém dados históricos de membros folha e seus valores de atributo associados. O formato de exibição é Dimensão de Alteração Lenta Tipo 4.|  

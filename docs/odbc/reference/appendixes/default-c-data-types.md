@@ -1,4 +1,5 @@
 ---
+description: Tipos de dados do C padrão
 title: Tipos de dados padrão do C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fdb787580e1c79df805f468416ab8993a1d32a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d0ed42971405ca23d5f69f47cbb6ac02e8e5675
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456602"
 ---
 # <a name="default-c-data-types"></a>Tipos de dados do C padrão
 Se um aplicativo especificar SQL_C_DEFAULT em **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**, o driver assumirá que o tipo de dados C do buffer de saída ou de entrada corresponde ao tipo de dados SQL da coluna ou parâmetro ao qual o buffer está associado.  

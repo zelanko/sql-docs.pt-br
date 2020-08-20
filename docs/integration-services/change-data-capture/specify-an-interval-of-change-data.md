@@ -1,4 +1,5 @@
 ---
+description: Especificar um intervalo de dados de alteração
 title: Especificar um intervalo de dados de alteração | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457618"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
 
@@ -109,7 +110,7 @@ ms.locfileid: "86921266"
 ## <a name="next-step"></a>Próxima etapa  
  Depois de calcular o ponto inicial e final para um intervalo de alterações, a próxima etapa é determinar se os dados de alteração estão prontos.  
   
- **Próximo tópico:** [Determinar se os dados de alterações estão protos](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+ **Próximo tópico:** [Determinar se os dados de alteração estão prontos](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   

@@ -1,4 +1,5 @@
 ---
+description: restorefile (Transact-SQL)
 title: restaurarfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82f338a31cf23b6ab151e2dc731f2a15d9f4de66
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82dc6bf152f9ba0a951536357f2d7147ba4e5960
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460308"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,8 +44,8 @@ ms.locfileid: "85881464"
   
 ## <a name="see-also"></a>Consulte Também  
  [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [&#41;restorefilegroup &#40;Transact-SQL](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
- [&#41;RestoreHistory &#40;Transact-SQL](../../relational-databases/system-tables/restorehistory-transact-sql.md)   
+ [&#41;restorefilegroup &#40;Transact-SQL ](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
+ [&#41;RestoreHistory &#40;Transact-SQL ](../../relational-databases/system-tables/restorehistory-transact-sql.md)   
  [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

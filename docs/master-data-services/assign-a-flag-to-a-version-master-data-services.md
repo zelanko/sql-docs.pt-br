@@ -1,4 +1,5 @@
 ---
+description: Atribuir um sinalizador a uma versão (Master Data Services)
 title: Atribuir um sinalizador a uma versão
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 90ffe973c15df9d17eb1080f0e6b681791485681
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: add695750bb5caae36f5c5e6cf0d605709976730
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456783"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>Atribuir um sinalizador a uma versão (Master Data Services)
 

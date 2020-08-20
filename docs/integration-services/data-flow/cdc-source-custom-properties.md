@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas da origem CDC
 title: Propriedades personalizadas da origem CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 187e05e82f3f7452a1a4d542188ab9e96073adac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05315d64b3edfdc994141f6480f81960af39ed01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457411"
 ---
 # <a name="cdc-source-custom-properties"></a>Propriedades personalizadas da origem CDC
 
@@ -24,7 +25,7 @@ ms.locfileid: "86915462"
 
   A tabela a seguir descreve as propriedades personalizadas da origem CDC. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |Conexão|Conexão ADO.Net|Uma conexão ADO.NET com o banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC para acesso às tabelas de alterações.|  
 |StateVariable|String|Uma variável de pacote de cadeia de caracteres SSIS que mantém o estado CDC da execução CDC atual.|  

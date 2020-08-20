@@ -1,4 +1,5 @@
 ---
+description: catalog.create_execution (Banco de dados SSISDB)
 title: catalog.create_execution (Banco de dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168491deaef52217dc47349718869e3b652d2099
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456930"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (Banco de dados SSISDB)
 
@@ -49,7 +50,7 @@ catalog.create_execution [ @folder_name = ] folder_name
  O nome do projeto que contém o pacote a ser executado. O *project_name* é **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- O nome do pacote a ser executado. O *package_name* é **nvarchar(260)** .  
+ O nome do pacote a ser executado. O *package_name* é **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
  Um identificador exclusivo para uma referência do ambiente. Esse parâmetro é opcional. O *reference_id* é **bigint**.  

@@ -1,4 +1,5 @@
 ---
+description: Atribuir permissões de membro de hierarquia (Master Data Services)
 title: Atribuir permissões de membro de hierarquia
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 02b84362699375c82b4e7eead7ad632c03a76c87
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6201fa319ef3f0ae35f1fecd0643954ab814b085
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456772"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Atribuir permissões de membro de hierarquia (Master Data Services)
 

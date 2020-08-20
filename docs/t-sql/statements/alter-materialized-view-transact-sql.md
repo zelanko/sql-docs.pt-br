@@ -1,4 +1,5 @@
 ---
+description: ALTER MATERIALIZED VIEW (Transact-SQL)
 title: ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c9c9ae639a3dce3e697eded9f55af3485118506c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bc7f7f07656f2dc187de013fcb56eada5a997b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458844"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW (Transact-SQL)  
 
@@ -57,7 +58,7 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 Retoma a exibição materializada.
 
 *DISABLE*   
-Suspende a manutenção da exibição materializada, mantendo os metadados e as permissões.  Resolve todas as consultas em relação à exibição materializada em um estado desabilitado em relação às tabelas subjacentes.
+Suspende a manutenção da exibição materializada, mantendo os metadados e as permissões.Resolve todas as consultas em relação à exibição materializada em um estado desabilitado em relação às tabelas subjacentes.
   
 ## <a name="permissions"></a>Permissões
 

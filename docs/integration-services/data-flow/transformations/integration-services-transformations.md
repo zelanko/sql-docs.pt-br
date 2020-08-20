@@ -1,4 +1,5 @@
 ---
+description: Transformações do Integration Services
 title: Transformações do Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1952a15280f2e1779ddc0c53828dd0801acb3827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457258"
 ---
 # <a name="integration-services-transformations"></a>Transformações do Integration Services
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919242"
 ## <a name="business-intelligence-transformations"></a>Transformações de Business Intelligence  
  As transformações a seguir executam operações de business intelligence, como limpeza de dados, mineração de texto e execução de consultas de previsão de mineração de dados.  
   
-|Transformação|DESCRIÇÃO|  
+|Transformação|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Dimensão de Alteração Lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|A transformação que configura a atualização de uma dimensão variável lenta.|  
 |[Transformação Agrupamento Difuso](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|A transformação que padroniza valores em dados de coluna.|  
@@ -51,7 +52,7 @@ ms.locfileid: "86919242"
 ## <a name="row-transformations"></a>Transformações de linha  
  A coluna de atualização de transformações a seguir avalia e cria novas colunas. A transformação é aplicada a cada linha na entrada de transformação.  
   
-|Transformação|DESCRIÇÃO|  
+|Transformação|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Mapa de Caracteres](../../../integration-services/data-flow/transformations/character-map-transformation.md)|A transformação que se aplica às funções de cadeia para dados de caractere.|  
 |[Transformação Copiar Coluna](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|A transformação que adiciona cópias de colunas de entrada à saída de transformação.|  
@@ -65,7 +66,7 @@ ms.locfileid: "86919242"
 ## <a name="rowset-transformations"></a>Transformações de conjunto de linhas  
  As transformações a seguir criam novos conjuntos de linhas. O conjunto de linhas pode incluir valores agregados e classificados, conjuntos de linhas de exemplo, ou conjuntos de linhas dinâmicas e não dinâmicas.  
   
-|Transformação|DESCRIÇÃO|  
+|Transformação|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Agregação](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|A transformação que executa agregações como AVERAGE, SUM e COUNT.|  
 |[Transformação Classificação](../../../integration-services/data-flow/transformations/sort-transformation.md)|A transformação que classifica dados.|  
@@ -77,7 +78,7 @@ ms.locfileid: "86919242"
 ## <a name="split-and-join-transformations"></a>Transformações de divisão e junção  
  As seguintes transformações distribuem linhas para saídas diferentes, cria cópias de entradas de transformação, une várias entradas em uma saída e executa operações de pesquisa.  
   
-|Transformação|DESCRIÇÃO|  
+|Transformação|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Divisão Condicional](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|A transformação que roteia linhas de dados para saídas diferentes.|  
 |[Transformação Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md)|A transformação que distribui conjuntos de dados para várias saídas.|  
@@ -91,7 +92,7 @@ ms.locfileid: "86919242"
 ## <a name="auditing-transformations"></a>Transformações Auditoria  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui as transformações a seguir para adicionar informações de auditoria e linhas de contagem.  
   
-|Transformação|DESCRIÇÃO|  
+|Transformação|Descrição|  
 |--------------------|-----------------|  
 |[Transformação Auditoria](../../../integration-services/data-flow/transformations/audit-transformation.md)|A transformação que cria informações sobre o ambiente disponível para o fluxo de dados em um pacote.|  
 |[Transformação Contagem de Linhas](../../../integration-services/data-flow/transformations/row-count-transformation.md)|A transformação que conta as linhas conforme se move por elas e armazena a contagem final em uma variável.|  

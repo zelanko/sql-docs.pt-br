@@ -1,4 +1,5 @@
 ---
+description: Aprovação Necessária (Master Data Services)
 title: Aprovação Necessária
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 448a8174acef464fa1badb5a25d019891dd53bc6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f93514c1efd561aa989c03373f91edc2d552eba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456813"
 ---
 # <a name="approval-required-master-data-services"></a>Aprovação Necessária (Master Data Services)
 

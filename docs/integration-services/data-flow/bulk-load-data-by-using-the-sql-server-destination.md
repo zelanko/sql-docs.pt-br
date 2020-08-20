@@ -1,4 +1,5 @@
 ---
+description: Carregar dados em massa por meio do destino do SQL Server
 title: Carregar dados em massa por meio do destino do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 38b4b61cecf57f4ce0db7152aff1bc5c08ccf500
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3bce4cae8fc71c93487f65a726bb42f58618d5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457419"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Carregar dados em massa por meio do destino do SQL Server
 

@@ -1,4 +1,5 @@
 ---
+description: Separador de CDC
 title: Divisor de CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457392"
 ---
 # <a name="cdc-splitter"></a>Separador de CDC
 
@@ -26,14 +27,14 @@ ms.locfileid: "86917138"
 
   O separador de CDC divide um único fluxo de linhas de alteração de um fluxo de dados de origem CDC em diferentes fluxos de dados para operações de Inserir, Atualizar e Excluir. O fluxo de dados é dividido com base na coluna necessária de `__$operation` e seus valores padrão em tabelas de alterações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-|Valor da operação|Saída|DESCRIÇÃO|  
+|Valor da operação|Saída|Descrição|  
 |------------------------|------------|-----------------|  
 |1|Excluir|Linha excluída|  
-|2|Insert|Linha inserida (não disponível durante o uso do modo de CDC **Rede com Mesclagem** )|  
+|2|Inserir|Linha inserida (não disponível durante o uso do modo de CDC **Rede com Mesclagem** )|  
 |3|Atualizar|Linha Before-update (disponível apenas durante o uso do modo de CDC **Tudo com Valores Antigos** )|  
 |4|Atualizar|Linha After-update (após Before-update)|  
 |5|Atualizar|Linha Merge (disponível apenas durante o uso do modo CDC **Rede com Mesclagem** )|  
-|Outros|Erro||  
+|Outro|Erro||  
   
  Você pode usar o separador para se conectar a saídas INSERT, DELETE e UPDATE predefinidas para processamento adicional.  
   

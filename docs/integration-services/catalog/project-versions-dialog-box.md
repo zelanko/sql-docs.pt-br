@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Versões do Projeto
 title: Caixa de diálogo Versões do Projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 06a60ad76aff33ddee8e5717fa52b0b678b20270
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afdeac18b14b75461038889fe34b6fd34658991f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457749"
 ---
 # <a name="project-versions-dialog-box"></a>Caixa de diálogo Versões do Projeto
 

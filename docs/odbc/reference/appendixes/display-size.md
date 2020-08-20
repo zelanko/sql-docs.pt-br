@@ -1,4 +1,5 @@
 ---
+description: Tamanho de exibição
 title: Tamanho de exibição | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 578bf0cbdf2dd1dbd06dd4a248f4efa5eb839916
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 747c2076c528df8c312c9b3ed45e45a165299d59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456581"
 ---
 # <a name="display-size"></a>Tamanho de exibição
 O tamanho de exibição de uma coluna é o número máximo de caracteres necessários para exibir dados no formato de caractere. A tabela a seguir define o tamanho de exibição para cada tipo de dados ODBC SQL.  

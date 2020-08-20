@@ -1,4 +1,5 @@
 ---
+description: CREATE RULE (Transact-SQL)
 title: CREATE RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2615c5d5d75191067d64d7c562f50b330dfdc830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458751"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ AS condition_expression
 ## <a name="remarks"></a>Comentários  
  CREATE RULE não pode ser combinada com outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um único lote. As regras não se aplicam a dados já existentes no banco de dados no momento da criação das regras, e as regras não podem ser associadas a tipos de dados do sistema.  
   
- A regra só pode ser criada no banco de dados atual. Depois de criar uma regra, execute **sp_bindrule** para associá-la ao tipo de dados de coluna ou de alias. A regra deve ser compatível com o tipo de dados de coluna. Por exemplo, "\@value LIKE A% " não pode ser usado como regra para uma coluna numérica. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
+ A regra só pode ser criada no banco de dados atual. Depois de criar uma regra, execute **sp_bindrule** para associá-la ao tipo de dados de coluna ou de alias. A regra deve ser compatível com o tipo de dados de coluna. Por exemplo, "\@value LIKE A% " não pode ser usado como regra para uma coluna numérica. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
   
  Inclua as constantes de caractere e data entre aspas ('), precedendo as constantes binárias com 0x. Se a regra não for compatível com a coluna à qual está associada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará uma mensagem de erro quando o valor for inserido, mas não quando a regra for associada.  
   

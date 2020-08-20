@@ -1,4 +1,5 @@
 ---
+description: Fluxo de Controle
 title: Fluxo de Controle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 789a0f51697c1a605a2c5e0b08f98ccc87d78b1d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457563"
 ---
 # <a name="control-flow"></a>Fluxo de Controle
 
@@ -71,6 +72,6 @@ ms.locfileid: "86915782"
   
 -   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
--   [Agrupar ou desagrupar componentes](../../integration-services/group-or-ungroup-components.md)  
+-   [Agrupa ou desagrupa componentes](../../integration-services/group-or-ungroup-components.md)  
   
   

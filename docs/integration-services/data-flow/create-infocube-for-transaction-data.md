@@ -1,4 +1,5 @@
 ---
+description: Criar InfoCube para os dados da transação
 title: Criar InfoCube para os dados da transação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc7e124f0220a5d7dcd1a146479a82801f83a3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457383"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Criar InfoCube para os dados da transação
 
@@ -64,7 +65,7 @@ ms.locfileid: "86923572"
  **Tipo**  
  Exibe o tipo do InfoObject associado à coluna de fluxo de dados. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |CHA|Características|  
 |UNI|Unidades|  

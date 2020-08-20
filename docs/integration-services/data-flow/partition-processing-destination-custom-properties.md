@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas do destino Processamento de Partições
 title: Propriedades personalizadas do destino de processamento de partição | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9bd6dff6e35b4fa78d69dc1c6703ca6a098f6c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87f70b54a0f43252bd6ebc2f28b32371715760cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457317"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propriedades personalizadas do destino Processamento de Partições
 
@@ -26,7 +27,7 @@ ms.locfileid: "86920402"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Processamento de Partições. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|A cadeia de conexão com um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |KeyDuplicate|Inteiro (enumeração)|Quando UseDefaultConfiguration é **False**, um valor que indica como tratar erros de chave duplicada. Os valores possíveis são **IgnoreError** (0), **ReportAndContinue** (1) e **ReportAndStop** (2). O valor padrão dessa propriedade é **IgnoreError** (0).|  
@@ -38,7 +39,7 @@ ms.locfileid: "86920402"
 |NullKeyConvertedToUnknown|Inteiro (enumeração)|Quando UseDefaultConfiguration é **False**, um valor que indica como tratar chaves nulas convertidas para o valor desconhecido. Os valores possíveis são **IgnoreError** (0), **ReportAndContinue** (1) e **ReportAndStop** (2). O valor padrão dessa propriedade é **IgnoreError** (0).|  
 |NullKeyNotAllowed|Inteiro (enumeração)|Quando UseDefaultConfiguration é **False**, um valor que indica como tratar nulos não permitidos. Os valores possíveis são **IgnoreError** (0), **ReportAndContinue** (1) e **ReportAndStop** (2). O valor padrão dessa propriedade é **ReportAndContinue** (1).|  
 |ProcessType|Inteiro (enumeração)|O tipo de processamento de partições usado pela transformação. Os valores possíveis são **ProcessAdd** (1) (incremental), **ProcessFull** (0) e **ProcessUpdate** (2).|  
-|UseDefaultConfiguration|Boolean|Um valor que especifica se a transformação usa a configuração de erro padrão. Se essa propriedade for **False**, a transformação usará os valores das propriedades personalizadas de tratamento de erros listadas nesta tabela, incluindo KeyDuplicate, KeyErrorAction e assim por diante.|  
+|UseDefaultConfiguration|Booliano|Um valor que especifica se a transformação usa a configuração de erro padrão. Se essa propriedade for **False**, a transformação usará os valores das propriedades personalizadas de tratamento de erros listadas nesta tabela, incluindo KeyDuplicate, KeyErrorAction e assim por diante.|  
   
  A entrada e as colunas de entrada do destino Processamento de Partições não têm nenhuma propriedade personalizada.  
   

@@ -1,4 +1,5 @@
 ---
+description: Cluster (DMX)
 title: Cluster (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e0722e53752cfa01ffee086cb8cf1f6a84f82fd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457835"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,7 +40,7 @@ Cluster()
  O **cluster** também pode ser usado como uma `<` referência `>` de coluna de cluster para uma função **PredictHistogram** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa uma consulta singleton com as funções de cluster e de [&#41;de PredictHistogram &#40;DMX](../dmx/predicthistogram-dmx.md) para retornar a distância do caso individual de cada cluster do modelo de mineração de clustering TM e a probabilidade de que o caso individual exista em cada cluster.  
+ O exemplo a seguir usa uma consulta singleton com as funções de cluster e de [&#41;de PredictHistogram &#40;DMX ](../dmx/predicthistogram-dmx.md) para retornar a distância do caso individual de cada cluster do modelo de mineração de clustering TM e a probabilidade de que o caso individual exista em cada cluster.  
   
 ```  
 SELECT  
@@ -55,9 +56,9 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;DMX ClusterProbability](../dmx/clusterprobability-dmx.md)   
+ [&#41;&#40;DMX ClusterProbability ](../dmx/clusterprobability-dmx.md)   
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Edições e recursos compatíveis do SQL Server 2019 no Linux
 title: Edições e recursos com suporte do SQL Server 2019 – Linux
 ms.date: 01/08/2020
 ms.prod: sql
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 66e354a23b88c2f6843b6180eabbff5b5a19f038
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aca10f1cb7d6b3bef1cd44b58f2f68ba01d57a22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456831"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edições e recursos compatíveis do SQL Server 2019 no Linux
 

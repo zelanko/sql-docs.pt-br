@@ -1,4 +1,5 @@
 ---
+description: Elementos usados em instruções SQL
 title: Elementos usados em instruções SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49a1cd54957426d4d14d84d43df670c8c3d96189
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c24f5dd55530e38ea47ed9a2b846d549bb26d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456569"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementos usados em instruções SQL
 Os elementos a seguir são usados nas instruções SQL listadas anteriormente.  
@@ -41,7 +42,7 @@ Os elementos a seguir são usados nas instruções SQL listadas anteriormente.
   
  *nome da coluna* :: = [*nome-da-tabela*.] *identificador de coluna*  
   
- *comparação-operador* :: = < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *comparação-operador* :: = < &#124; > &#124; \<= &#124; > = &#124; = &#124; <>  
   
  *comparação-predicado* :: = expressão de comparação-operador de *expressão*  
   
@@ -53,7 +54,7 @@ Os elementos a seguir são usados nas instruções SQL listadas anteriormente.
   
  *expressão* :: = Term &#124; expressão {+&#124;-} termo  
   
- *fator* :: = [*+*&#124;*-*]*primário*  
+ *fator* :: = [ *+*&#124;*-* ]*primário*  
   
  *Inserir valor* :: =  
   
@@ -97,7 +98,7 @@ Os elementos a seguir são usados nas instruções SQL listadas anteriormente.
   
  *tabela-referência-lista* :: = *tabela-* referência [,*tabela-referência*]...  
   
- *termo* :: = *factor* &#124; *termo* {\*&#124;*/*} *fator*  
+ *termo* :: = *factor* &#124; *termo* { \*&#124;*/* } *fator*  
   
  *sem sinal-inteiro* :: = {*digit*}  
   

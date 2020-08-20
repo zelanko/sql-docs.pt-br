@@ -1,4 +1,5 @@
 ---
+description: Alocar um identificador de conexão ODBC
 title: Alocando um identificador de conexão ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12e9f65ee81612e269c1f86ebabd049588443cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6c17003ed3746f2953eb167f2dc3d944659e352
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456432"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Alocar um identificador de conexão ODBC
 Antes que o aplicativo possa se conectar a uma fonte de dados ou driver, ele deve alocar um identificador de conexão, da seguinte maneira:  
   
-1.  O aplicativo declara uma variável do tipo SQLHDBC. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável, o identificador do ambiente no qual alocar a conexão e a opção SQL_HANDLE_DBC. Por exemplo:  
+1.  O aplicativo declara uma variável do tipo SQLHDBC. Em seguida, ele chama **SQLAllocHandle** e passa o endereço dessa variável, o identificador do ambiente no qual alocar a conexão e a opção SQL_HANDLE_DBC. Por exemplo:   
   
     ```  
     SQLHDBC hdbc1;  

@@ -1,4 +1,5 @@
 ---
+description: Referência de configuração da Web (Master Data Services)
 title: Referência de configuração da Web
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b8524a4dde301d274bf17176b7a683fe1b183922
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 34e3e849a86cb23c3974b32b9d3d8c0721601274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456745"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Referência de configuração da Web (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85811669"
 ## <a name="webconfig-elements"></a>Elementos do Web.Config  
  O arquivo de Web.config contém um [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] elemento personalizado, além dos **\<masterDataServices>** elementos de configuração padrão IIS, .NET Framework, ASP.NET e Windows Communication Foundation (WCF). A tabela a seguir descreve os elementos incluídos no arquivo Web.config.  
   
-|Elemento de configuração|Description|  
+|Elemento de configuração|Descrição|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Elemento personalizado. Conecta o serviço Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**connectionStrings**|Elemento ASP.NET. Para obter mais informações, consulte [Elemento connectionStrings (Esquema de Configuração do ASP.NET)](https://go.microsoft.com/fwlink/?LinkId=178347) na Biblioteca MSDN.|  
@@ -45,7 +46,7 @@ ms.locfileid: "85811669"
 ## <a name="masterdataservices-element"></a>Elemento masterDataServices  
  O **\<masterDataServices>** elemento é um elemento personalizado que é usado para conectar um [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] serviço Web a um [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
   
-### <a name="syntax"></a>Syntax  
+### <a name="syntax"></a>Sintaxe  
   
 ```  
 <masterDataServices>  

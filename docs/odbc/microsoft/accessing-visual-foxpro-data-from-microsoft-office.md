@@ -1,4 +1,5 @@
 ---
+description: Acessar dados do Visual FoxPro do Microsoft Office
 title: Acessando dados do Visual FoxPro de Microsoft Office | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 116efee6-2cd1-4d54-a6e4-1ee7b2fe82e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6be620ed83e3f181bf0c2695140d2afd177dd44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee19000a1180a0673aad2a1772156d37d67feb85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456656"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Acessar dados do Visual FoxPro do Microsoft Office
 Você pode usar o driver ODBC do Microsoft Visual FoxPro para acessar dados do Visual FoxPro de seu Microsoft Office para aplicativos do Windows 95 ou do Windows 98.  

@@ -1,4 +1,5 @@
 ---
+description: Novidades do Integration Services no SQL Server 2016
 title: Novidades do Integration Services no SQL Server 2016 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456864"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novidades do Integration Services no SQL Server 2016
 
@@ -73,9 +74,9 @@ Essas novas funcionalidades exigem o SSDT (SQL Server Data Tools) versão 17.2 o
   
         -   [Experiência aprimorada para atualização de projeto](#ProjectUpgrade)  
   
-        -   [A propriedade AutoAdjustBufferSize calcula automaticamente o tamanho do buffer do fluxo de dados](#BufferSize)  
+        -   [A propriedade AutoAdjustBufferSize calcula automaticamente o tamanho do buffer de fluxo de dados](#BufferSize)  
   
-        -   [Modelos de fluxo de controle reutilizáveis](#Templates)  
+        -   [Modelos de fluxo de controle reutilizável](#Templates)  
   
         -   [Novos modelos renomeados como partes](#Parts)  
   
@@ -91,17 +92,17 @@ Essas novas funcionalidades exigem o SSDT (SQL Server Data Tools) versão 17.2 o
   
         -   [Suporte expandido para Hadoop e HDFS](#more_hadoop)  
   
-        -   [O Destino do Arquivo do HDFS agora dá suporte ao formato de arquivo ORC](#hdfsORC)  
+        -   [O Destino do Arquivo HDFS agora dá suporte ao formato de arquivo ORC](#hdfsORC)  
   
         -   [Componentes ODBC atualizados para o SQL Server 2016](#odbc2016)  
   
         -   [Suporte explícito para fontes de dados do Excel 2016](#Excel2016)  
   
-        -   [Conector para SAP BW para SQL Server 2016 liberado](#SAPBW)
+        -   [Connector para SAP BW para SQL Server 2016 lançado](#SAPBW)
         
-        -   [Conectores v4.0 para Oracle e Teradata liberados](#oracleteradata)
+        -   [Conectores v4.0 para Oracle e Teradata lançado](#oracleteradata)
         
-        -   [Conectores para a Atualização 5 do Dispositivo do Analytics Platform System (PDW) liberados](#pdwau5)
+        -   [Conectores para a Atualização 5 do Dispositivo do sistema de plataforma de análise (PDW) lançado](#pdwau5)
   
     -   Conectividade expandida com a nuvem  
   
@@ -117,27 +118,27 @@ Essas novas funcionalidades exigem o SSDT (SQL Server Data Tools) versão 17.2 o
   
     -   Melhor experiência de instalação  
   
-        -   [Atualização bloqueada quando o SSISDB pertence a um Grupo de Disponibilidade](#Upgrade)  
+        -   [Atualização bloqueada quando o SSISDB pertence a um grupo de disponibilidade](#Upgrade)  
   
     -   Melhor experiência de design  
   
-        -   [O Designer do SSIS cria e mantém os pacotes para o SQL Server 2016, 2014 ou 2012](#OneDesigner)  
+        -   [O Designer SSIS cria e mantém os pacotes para o SQL Server 2016, 2014 ou 2012](#OneDesigner)  
   
         -   Várias correções de bug e aperfeiçoamentos do designer.  
   
     -   Melhor experiência de gerenciamento no SQL Server Management Studio
   
-        -   [Desempenho aprimorado para exibições do Catálogo do SSIS](#CatViews)  
+        -   [Desempenho aprimorado para exibições de Catálogo do SSIS](#CatViews)  
   
     -   Outros aprimoramentos  
   
-        -   [A transformação do Distribuidor de Dados Equilibrado agora faz parte do SSIS](#BDDinbox)  
+        -   [A transformação do Distribuidor de Dados Equilibrado é agora parte do SSIS](#BDDinbox)  
   
-        -   [Os componentes de publicação de feed de dados agora fazem parte do SSIS](#ComplexFeedinbox)  
+        -   [Componentes de publicação de feed de dados agora fazem parte do SSIS](#ComplexFeedinbox)  
   
-        -   [Suporte para o Armazenamento de Blobs do Azure no Assistente de Importação e Exportação do SQL Server](#AzureBlob)  
+        -   [Suporte para Armazenamento de Blobs do Azure no Assistente de Importação e Exportação do SQL Server](#AzureBlob)  
   
-        -   [Change Data Capture Designer e Service para Oracle para Microsoft SQL Server 2016 liberados](#CDCOracle)  
+        -   [Change Data Capture Designer e Service for Oracle para Microsoft SQL Server® 2016 lançados](#CDCOracle)  
   
         -   [Componentes CDC atualizados para o SQL Server 2016](#cdc2016)  
   
@@ -145,9 +146,9 @@ Essas novas funcionalidades exigem o SSDT (SQL Server Data Tools) versão 17.2 o
   
         -   [As tarefas do Analysis Services dão suporte a modelos de tabela](#ssasrc0)  
   
-        -   [Suporte para R Services interno](#builtinR)  
+        -   [Suporte para os serviços do R internos](#builtinR)  
   
-        -   [Saída de validação de XML avançada na Tarefa XML](#ValidateXML)  
+        -   [Saída de validação de XML completa na tarefa XML](#ValidateXML)  
   
 ## <a name="manageability"></a>Capacidade de gerenciamento  
 
@@ -189,7 +190,7 @@ O recurso de implantação de pacotes incremental permite que você implante um 
   
 -   [SSIS com Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Transformação de pesquisa com Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
+-   [Transformação de pesquisa com o Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### <a name="better-debugging"></a>Melhor depuração
 
@@ -375,4 +376,4 @@ A versão mais recente do Feature Pack do Azure inclui a tarefa de Upload do Azu
 
 ## <a name="see-also"></a>Consulte Também  
  [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Edições e recursos com suporte para SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Edições e recursos com suporte do SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)

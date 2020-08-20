@@ -1,4 +1,5 @@
 ---
+description: 'Lição 4-3: Adicionar redirecionamento de fluxo de erro'
 title: 'Etapa 3: Adicionar redirecionamento de fluxo de erro | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 852a614576780e27512e5fb234fd0905ef41a9ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457119"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lição 4-3: Adicionar redirecionamento de fluxo de erro
 
@@ -51,11 +52,11 @@ Por padrão as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnovers
   
 8.  Na página **Entradas e Saídas**, expanda **Saída 0**, selecione **Colunas de Saída** e selecione **Adicionar Coluna**.  
   
-9. Na propriedade **Name**, insira *ErrorDescription* e defina a propriedade **DataType** como **Cadeia de caracteres Unicode [DT_WSTR]** .  
+9. Na propriedade **Name**, insira *ErrorDescription* e defina a propriedade **DataType** como **Cadeia de caracteres Unicode [DT_WSTR]**.  
   
-10. Na página **Script**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)** .
+10. Na página **Script**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)**.
   
-11. Selecione **Editar Script** para abrir o [!INCLUDE[msCoName](../includes/msconame-md.md)] VSTA ([!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications). No método **Input0_ProcessInputRow**, insira ou cole o código a seguir:  
+11. Selecione **Editar Script** para abrir o  VSTA ([!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications). No método **Input0_ProcessInputRow**, insira ou cole o código a seguir:  
   
     [Visual Basic]  
   

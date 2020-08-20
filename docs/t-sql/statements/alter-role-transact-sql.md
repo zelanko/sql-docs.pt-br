@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE (Transact-SQL)
 title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc9f49a8a21ef4582f6f951a9301f33fe66002aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458886"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,14 +64,16 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *role_name*  
- **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2008 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **APLICA-SE A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2008 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica a função de banco de dados a ser alterada.  
   
  ADD MEMBER *database_principal*  
- **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2012 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **APLICA-SE A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2012 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica para adicionar a entidade de segurança do banco de dados à associação de uma função de banco de dados.  
   
@@ -79,7 +82,7 @@ ALTER ROLE role_name
 -   *database_principal* não pode ser uma função de banco de dados fixa ou uma entidade de segurança do servidor.  
   
 DROP MEMBER *database_principal*  
- **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2012 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **APLICA-SE A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2012 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica para remover uma entidade de segurança do banco de dados da associação a uma função de banco de dados.  
   
@@ -88,7 +91,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* não pode ser uma função de banco de dados fixa ou uma entidade de segurança do servidor.  
   
 WITH NAME = *new_name*  
- **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2008 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **APLICA-SE A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2008 em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica para alterar o nome de uma função de banco de dados definida pelo usuário. O novo nome ainda não deve existir no banco de dados.  
   
@@ -118,7 +121,7 @@ Além disso, para alterar a associação em uma função de banco de dados fixa,
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>a. Alterar o nome de uma função de banco de dados  
- **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2008 em diante), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **APLICA-SE A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2008 em diante), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  O exemplo a seguir altera o nome da função `buyers` para `purchasing`.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
@@ -127,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. Adicionar ou remover membros da função  
- **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2012 em diante), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **APLICA-SE A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (na versão 2012 em diante), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Esse exemplo cria uma função de banco de dados chamada `Sales`. Ele adiciona um usuário de banco de dados chamado Carlos à associação e, em seguida, mostra como remover o membro Carlos.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   

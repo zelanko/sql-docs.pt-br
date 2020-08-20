@@ -1,4 +1,5 @@
 ---
+description: Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados
 title: Propriedades personalizadas do destino do treinamento do modelo de mineração de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ffa0b82f393172f92b17e7bbe78302372c9b8ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6427b808d31c9b1938b093da2bdf14d59bec90cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457358"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados
 
@@ -26,7 +27,7 @@ ms.locfileid: "86916771"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|O identificador exclusivo do gerenciador de conexões.|  
 |ASConnectionString|String|A cadeia de caracteres de conexão com uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou com um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  

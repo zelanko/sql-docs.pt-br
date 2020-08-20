@@ -1,4 +1,5 @@
 ---
+description: 'SSIS: Como criar um pacote ETL'
 title: SSIS – Como criar um pacote ETL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0365939d33b1ef6e0a4c179cdedddb4c3981763
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457020"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS: Como criar um pacote ETL
 
@@ -41,7 +42,7 @@ O SSIS ([!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](.
 ## <a name="what-you-learn"></a>O que você aprenderá  
 A melhor maneira de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é usando-os. Este tutorial explicará como usar o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer para criar um pacote de ETL simples com looping, configurações, lógica de fluxo de erros e registro de logs.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Este tutorial destina-se aos usuários que já estão familiarizados com as operações básicas de banco de dados, mas que tiveram exposição limitada aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 Para executar esse tutorial, os seguintes componentes devem estar instalados:  

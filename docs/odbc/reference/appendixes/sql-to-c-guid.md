@@ -1,4 +1,5 @@
 ---
+description: 'SQL para C: GUID'
 title: 'SQL to C: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f0f247bc4cb411d535050d7c78e0ea42cc144b0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a0285850372d78bbe0a24c8707e14e4f5672fb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456497"
 ---
 # <a name="sql-to-c-guid"></a>SQL para C: GUID
 O identificador para o tipo de dados SQL ODBC GUID é:  

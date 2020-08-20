@@ -1,4 +1,5 @@
 ---
+description: Análise de dados
 title: Análise de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee41fd4f9fa7074117f6e4a84307e8e31a10da84
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457332"
 ---
 # <a name="parsing-data"></a>Análise de dados
 
@@ -44,7 +45,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
  Se o fluxo de dados no pacote requer análise sensível a localidade, a análise padrão é recomendada em lugar da análise rápida. Por exemplo, a análise rápida não reconhece dados sensíveis ao local, que incluem símbolos decimais como a vírgula, formatos de data que não sejam ano-mês-dia e símbolos de moeda.  
   
- Representações truncadas que implicam em uma ou mais partes da data, como um século, um ano ou um mês, não são reconhecidas pela análise rápida. Por exemplo, a análise rápida não reconhece o formato ' **-YYMM**', que especifica um ano e um mês em um século implícito, nem ' **--MM**', que especifica um mês em um ano implícito. Porém, algumas representações com precisão reduzida são reconhecidas. Por exemplo, a análise rápida reconhece o formato 'hhmm;', que indica somente hora e minuto e '**YYYY**', que indica somente o ano.  
+ Representações truncadas que implicam em uma ou mais partes da data, como um século, um ano ou um mês, não são reconhecidas pela análise rápida. Por exemplo, a análise rápida não reconhece o formato '**-YYMM**', que especifica um ano e um mês em um século implícito, nem '**--MM**', que especifica um mês em um ano implícito. Porém, algumas representações com precisão reduzida são reconhecidas. Por exemplo, a análise rápida reconhece o formato 'hhmm;', que indica somente hora e minuto e '**YYYY**', que indica somente o ano.  
   
  A análise rápida é especificada ao nível de coluna. Na fonte Flat File e na transformação de Conversão de Dados, você pode especificar a Análise rápida nas colunas de saída. Entradas e saídas podem incluir colunas sensíveis a local e colunas não sensíveis a local.  
  
@@ -90,7 +91,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos ISO 8601, como listados na seguinte tabela:  
   
-    |Formatar|DESCRIÇÃO|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |AAAAMMDD<br /><br /> AAAA-MM-DD|Os formatos básico e estendido para um ano de quatro dígitos, um mês de dois dígitos e um dia de dois dígitos. No formato estendido, as datas são separadas por um hífen (-).|  
     |AAAA-MM|Os formatos básico e estendido de precisão reduzida para um ano de quatro dígitos e um mês de dois dígitos. No formato estendido, as datas são separadas por um hífen (-).|  
@@ -121,7 +122,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos de hora ISO 8601, como listados na seguinte tabela:  
   
-    |Formatar|DESCRIÇÃO|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Os formatos básico e estendido para uma hora de dois dígitos, um minuto de dois dígitos e um segundo de dois dígitos. No formato estendido, a hora é separada por dois pontos (:).|  
     |HHMI<br /><br /> HH:MI|Os formatos básico e estendido truncados para uma hora de dois dígitos e um minuto de dois dígitos. No formato estendido, a hora é separada por dois pontos (:).|  
@@ -130,7 +131,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos de hora que especificam um fuso horário, como listados na seguinte tabela:  
   
-    |Formatar|DESCRIÇÃO|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Os formatos básico e estendido que indicam o número de horas e minutos que são adicionados ao tempo universal coordenado (UTC) para obter a hora local.|  
     |-HH:MI<br /><br /> -HHMI|Os formatos básico e estendido que indicam o número de horas e minutos que são subtraídos do UTC para obter a hora local.|  
@@ -148,7 +149,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos de hora que incluem uma fração decimal, como listados na seguinte tabela:  
   
-    |Formatar|DESCRIÇÃO|  
+    |Formatar|Descrição|  
     |------------|-----------------|  
     |HH [.nnnnnnn]|n é um valor entre 0 e 9999999 que representa uma fração de horas. As chaves indicam que esse valor é opcional.<br /><br /> Por exemplo, o valor 12.750 indica 12:45.|  
     |HHMI [.nnnnnnn]<br /><br /> HH:MI [.nnnnnnn]|n é um valor entre 0 e 9999999 que representa uma fração de minutos. As chaves indicam que esse valor é opcional.<br /><br /> Por exemplo, o valor 1220.500 indica 12:20:30.|  

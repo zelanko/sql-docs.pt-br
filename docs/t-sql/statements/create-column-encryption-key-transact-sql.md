@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 473d41dcc61113a331597a6de8f103517378bfdd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9527007eb54e07747f3e6d12b9fdf98bc50ed3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458787"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -74,8 +75,8 @@ O BLOB do valor da chave de criptografia de coluna criptografado.
   
 > [!WARNING]  
 >  Nunca passe valores de chave de criptografia de coluna em texto simples nesta instrução. Fazer isso comprometerá o benefício desse recurso.  
-  
-## <a name="remarks"></a>Comentários  
+
+## <a name="remarks"></a>Comentários
 A instrução `CREATE COLUMN ENCRYPTION KEY` deve incluir pelo menos um ou dois valores. Você pode usar [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) para adicionar um segundo valor mais tarde. Você também pode usar a instrução `ALTER COLUMN ENCRYPTION KEY` para remover um valor.  
   
 Normalmente, uma chave de criptografia de coluna é criada com apenas um valor criptografado. Às vezes, é preciso alternar uma chave mestra de coluna para substituir a chave mestra de coluna atual pela nova chave mestra de coluna. Quando for necessário alternar a chave, adicione um novo valor de chave de criptografia de coluna, criptografado com a nova chave mestra de coluna. Essa rotação permite garantir que os aplicativos cliente consigam acessar os dados criptografados com a chave de criptografia de coluna enquanto a nova chave mestra de coluna é disponibilizada para os aplicativos cliente. Um driver habilitado para Always Encrypted em um aplicativo cliente que não tem acesso à nova chave mestra usará o valor de chave de criptografia de coluna criptografado com a chave mestra de coluna antiga para acessar dados confidenciais.  

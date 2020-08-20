@@ -1,4 +1,5 @@
 ---
+description: Transições de descritor
 title: Transições de descritor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec5c26bdde8a0d470f2d93e753504bf1c51edcc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168df441e2e7e785f7dfc89894ec7aa9caf8207c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456592"
 ---
 # <a name="descriptor-transitions"></a>Transições de descritor
 Os descritores ODBC têm os três Estados a seguir.  
@@ -34,7 +35,7 @@ Os descritores ODBC têm os três Estados a seguir.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícita|  
 |------------------------|----------------------|----------------------|  
 |D1i [1]|--|--|  
 |D1E [2]|--|--|  
@@ -45,13 +46,13 @@ Os descritores ODBC têm os três Estados a seguir.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícita|  
 |------------------------|----------------------|----------------------|  
 |Ih|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícita|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
 |Ih 2|(HY017)|D0|  
@@ -62,13 +63,13 @@ Os descritores ODBC têm os três Estados a seguir.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField e SQLGetDescRec  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícita|  
 |------------------------|----------------------|----------------------|  
 |Ih|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField e SQLSetDescRec  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícita|  
 |------------------------|----------------------|----------------------|  
 |Ih uma|--|--|  
   
@@ -76,6 +77,6 @@ Os descritores ODBC têm os três Estados a seguir.
   
 ## <a name="all-other-odbc-functions"></a>Todas as outras funções ODBC  
   
-|D0<br /><br /> Não alocado|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
+|D0<br /><br /> Não alocado|D1i<br /><br /> Implícita|D1e<br /><br /> Explícita|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

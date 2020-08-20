@@ -1,4 +1,5 @@
 ---
+description: Componentes de fluxo CDC
 title: Componentes de fluxo CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dc246a311a8c5488d78067adb6772bd0b399988
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457409"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
 
@@ -38,7 +39,7 @@ ms.locfileid: "86915499"
   
  [Origem CDC](../../integration-services/data-flow/cdc-source.md)  
   
- [Divisor de CDC](../../integration-services/data-flow/cdc-splitter.md)  
+ [Separador de CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
 ## <a name="installation"></a>Instalação  
  Esta seção descreve os procedimentos de instalação para os Componentes CDC para o Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -111,7 +112,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  Para obter mais informações sobre o Separador de CDC, consulte:  
   
- [Divisor de CDC](../../integration-services/data-flow/cdc-splitter.md)  
+ [Separador de CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
  Um dos problemas básicos que exigem atenção ao criar pacotes de CDC é como o processamento de alterações interage com o carregamento inicial (ou processamento inicial) dos dados.  
   
@@ -137,7 +138,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  O valor da variável de estado de CDC precisa ser mantido no armazenamento persistente. Ele deve ser lido antes de iniciar o processamento de CDC e deve ser salvo com o estado atual após a conclusão do processamento. A tarefa de carregar e armazenar o estado de CDC pode ser tratada pelo desenvolvedor de SSIS, mas o componente de Controle de CDC pode automatizar esta tarefa mantendo o valor do Estado de CDC em uma tabela de banco de dados.  
   
-## <a name="security-considerations"></a>Considerações de segurança  
+## <a name="security-considerations"></a>Considerações sobre segurança  
  Esta seção lista algumas considerações de segurança relacionadas ao uso dos componentes de CDC no SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorização de acesso a dados de alteração  
@@ -173,7 +174,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
 ## <a name="cdc-state"></a>Estado CDC  
  Cada grupo de CDC tem um estado associado a ele, que é representado por uma cadeia de caracteres com um formato específico. Para obter mais informações, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). A tabela a seguir mostra os valores possíveis de estado de CDC.  
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |0-(INITIAL)|O estado que existe antes que qualquer pacote seja executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Este é o estado que existe quando o pacote de carga inicial é iniciado. Isto ocorre depois da chamada da operação **MarkInitialLoadStart** para a tarefa Controle CDC.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
@@ -196,7 +197,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
 -   [Origem CDC](../../integration-services/data-flow/cdc-source.md)  
   
--   [Divisor de CDC](../../integration-services/data-flow/cdc-splitter.md)  
+-   [Separador de CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

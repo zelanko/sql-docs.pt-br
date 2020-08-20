@@ -1,4 +1,5 @@
 ---
+description: Exportar uma base de dados de conhecimento para um arquivo .dqs
 title: Exportar uma base de dados de conhecimento para um arquivo .dqs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1ebfecaead83e845bc95dd9e8fa32316e1d2e9c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 946b1192b314c5303cd529c176e93ebf1fb0204f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457918"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Exportar uma base de dados de conhecimento para um arquivo .dqs
 
@@ -36,7 +37,7 @@ ms.locfileid: "85895335"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para exportar uma base de dados de conhecimento para um arquivo de dados .dqs.  
   
-##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a>Exportar uma base de dados de conhecimento para um arquivo. DQS  
+##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a> Exportar uma base de dados de conhecimento para um arquivo. DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

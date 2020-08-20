@@ -1,4 +1,5 @@
 ---
+description: Atribuir permissões de área funcional (Master Data Services)
 title: Atribuir permissões de área funcional
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0f7e4e7bc0118849f452d4bccbb7d07706a4c411
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: fe973a6b5c67a9550a9c7cf687c4be0060be9da4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456782"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Atribuir permissões de área funcional (Master Data Services)
 
