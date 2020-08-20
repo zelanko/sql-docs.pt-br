@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_waiting_tasks (Transact-SQL)
 title: sys. dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1336e65374bace69e0b929d2571a62276bed45b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fedd70dd33cb49e98d243461bcbd51427db5eec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481923"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +48,7 @@ ms.locfileid: "86010973"
 |**blocking_session_id**|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada devido a transições internas de estado da trava.|  
 |**blocking_exec_context_id**|**int**|ID do contexto de execução da tarefa de bloqueio.|  
 |**resource_description**|**nvarchar (3072)**|Descrição do recurso que está sendo consumido. Para obter mais informações, consulte a lista a seguir.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="resource_description-column"></a>Coluna resource_description  
  A coluna resource_description tem os valores possíveis a seguir.  
@@ -77,9 +79,9 @@ ms.locfileid: "86010973"
   
  **Proprietário do recurso de bloqueio:**  
   
--   \<type-specific-description>ID = modo de bloqueio \<lock-hex-address> = \<mode> associatedObjectId =\<associated-obj-id>  
+-   \<type-specific-description> ID = modo de bloqueio \<lock-hex-address> = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<type-specific-description>pode ser:**  
+     **\<type-specific-description> pode ser:**  
   
     -   Para o banco de dados: databaselock subresource = \<databaselock-subresource> DBID =\<db-id>  
   
@@ -103,7 +105,7 @@ ms.locfileid: "86010973"
   
     -   Para ALLOCATION_UNIT: allocunitlock hobtid = \<hobt-id> subresource = \<alloc-unit-subresource> DBID =\<db-id>  
   
-     **\<mode>pode ser:**  
+     **\<mode> pode ser:**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
@@ -136,7 +138,7 @@ ms.locfileid: "86010973"
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
  
 ## <a name="example"></a>Exemplo
 ### <a name="a-identify-tasks-from-blocked-sessions"></a>a. Identificar tarefas de sessões bloqueadas. 
@@ -179,7 +181,7 @@ GO
 ```
   
 ## <a name="see-also"></a>Consulte Também  
-[SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
-[Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md)     
+[SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+[Guia de arquitetura de thread e tarefa](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  
