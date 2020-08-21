@@ -1,8 +1,8 @@
 ---
-description: Conectar-se com o SQLDriverConnect
 title: Conectando-se ao SQLDriverConnect | Microsoft Docs
+description: O SQLDriverConnect fornece funcionalidade de conexão adicional sobre o SQLConnect, incluindo opções para solicitar ao usuário mais informações.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -21,28 +21,33 @@ helpviewer_keywords:
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 298461f5a1cb4758b3dc3d7bbddb1bb9f04ac577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78186e903405aa1b59cfac185e62646dbda6e77a
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424808"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746166"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Conectar-se com o SQLDriverConnect
-**SQLDriverConnect** é usado para se conectar a uma fonte de dados usando uma cadeia de conexão. **SQLDriverConnect** é usado em vez de **SQLConnect** pelos seguintes motivos:  
+
+**SQLDriverConnect** é usado para se conectar a uma fonte de dados usando uma cadeia de conexão. **SQLDriverConnect** é usado em vez do **SQLConnect** para os seguintes cenários:  
   
--   Para permitir que o aplicativo use informações de conexão específicas do driver.  
+- Estabeleça uma conexão usando uma cadeia de conexão que contenha o nome da fonte de dados, uma ou mais IDs de usuário, uma ou mais senhas e outras informações exigidas pela fonte de dados.  
   
--   Para solicitar que o driver instrua o usuário a fornecer informações de conexão.  
+- Estabelecer uma conexão usando uma cadeia de conexão parcial ou nenhuma informação adicional; Nesse caso, o Gerenciador de driver e o driver podem solicitar informações de conexão ao usuário.  
   
--   Para se conectar sem especificar uma fonte de dados.  
+- Estabeleça uma conexão com uma fonte de dados que não esteja definida nas informações do sistema. Se o aplicativo fornecer uma cadeia de conexão parcial, o driver poderá solicitar informações de conexão ao usuário.  
   
- Esta seção contém os seguintes tópicos.  
+- Estabeleça uma conexão com uma fonte de dados usando uma cadeia de conexão construída com as informações em um arquivo. DSN.  
   
--   [Informações de conexão específicas de driver](../../../odbc/reference/develop-app/driver-specific-connection-information.md)  
+Depois que uma conexão é estabelecida, **SQLDriverConnect** retorna a cadeia de conexão concluída. O aplicativo pode usar essa cadeia de caracteres para solicitações de conexão subsequentes.
+
+Esta seção contém os seguintes tópicos.  
   
--   [Solicitar o usuário para informações de conexão](../../../odbc/reference/develop-app/prompting-the-user-for-connection-information.md)  
+- [Informações de conexão específicas de driver](driver-specific-connection-information.md)  
   
--   [Conectar-se usando fontes de dados de arquivo](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)  
+- [Solicitar o usuário para informações de conexão](prompting-the-user-for-connection-information.md)  
   
--   [Conectar-se diretamente a drivers](../../../odbc/reference/develop-app/connecting-directly-to-drivers.md)
+- [Conectar-se usando fontes de dados de arquivo](connecting-using-file-data-sources.md)  
+  
+- [Conectar-se diretamente a drivers](connecting-directly-to-drivers.md)

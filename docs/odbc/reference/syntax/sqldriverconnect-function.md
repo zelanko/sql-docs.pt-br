@@ -1,8 +1,8 @@
 ---
-description: Função SQLDriverConnect
 title: Função SQLDriverConnect | Microsoft Docs
+description: A função SQLDriverConnect faz parte do padrão de API ODBC e esta documentação de referência fornece informações sobre sua sintaxe.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476139"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745896"
 ---
 # <a name="sqldriverconnect-function"></a>Função SQLDriverConnect
 **Conformidade**  
  Versão introduzida: conformidade de padrões do ODBC 1,0: ODBC  
   
  **Resumo**  
- **SQLDriverConnect** é uma alternativa ao **SQLConnect**. Ele dá suporte a fontes de dados que exigem mais informações de conexão do que os três argumentos em **SQLConnect**, caixas de diálogo para solicitar ao usuário todas as informações de conexão e fontes de dados que não estão definidas nas informações do sistema.  
-  
- O **SQLDriverConnect** fornece os seguintes atributos de conexão:  
-  
--   Estabeleça uma conexão usando uma cadeia de conexão que contenha o nome da fonte de dados, uma ou mais IDs de usuário, uma ou mais senhas e outras informações exigidas pela fonte de dados.  
-  
--   Estabelecer uma conexão usando uma cadeia de conexão parcial ou nenhuma informação adicional; Nesse caso, o Gerenciador de driver e o driver podem solicitar informações de conexão ao usuário.  
-  
--   Estabeleça uma conexão com uma fonte de dados que não esteja definida nas informações do sistema. Se o aplicativo fornecer uma cadeia de conexão parcial, o driver poderá solicitar informações de conexão ao usuário.  
-  
--   Estabeleça uma conexão com uma fonte de dados usando uma cadeia de conexão construída com as informações em um arquivo. DSN.  
-  
- Depois que uma conexão é estabelecida, **SQLDriverConnect** retorna a cadeia de conexão concluída. O aplicativo pode usar essa cadeia de caracteres para solicitações de conexão subsequentes. Para obter mais informações, consulte [conectando-se com SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
-  
+ **SQLDriverConnect** é uma alternativa ao **SQLConnect**. Ele dá suporte a fontes de dados que exigem mais informações de conexão do que os três argumentos em **SQLConnect**, caixas de diálogo para solicitar ao usuário todas as informações de conexão e fontes de dados que não estão definidas nas informações do sistema. Para obter mais informações, consulte [conectando-se com SQLDriverConnect](../develop-app/connecting-with-sqldriverconnect.md).  
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
@@ -98,7 +86,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLDriverConnect** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *FHandleType* de SQL_HANDLE_DBC e um *hHandle* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLDriverConnect** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Erro|Descrição|  
+|SQLSTATE|Erro do|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres, truncados à direita|O buffer \* *outconnectstring* não era grande o suficiente para retornar a cadeia de conexão inteira, portanto, a cadeia de conexão foi truncada. O comprimento da cadeia de conexão não truncada é retornado em **StringLength2Ptr*. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
