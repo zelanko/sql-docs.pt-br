@@ -8443,6 +8443,8 @@
           items:
             - name: Conectar-se ao SQL Server e consultá-lo
               href: ssms/tutorials/connect-query-sql-server.md
+            - name: Importar arquivo simples
+              href: relational-databases/import-export/import-flat-file-wizard.md
         - name: Conceitos
           items:
             - name: Janelas de Ferramentas no SSMS
@@ -9869,6 +9871,12 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: Tutoriais
       items:
+        - name: Novidades nos documentos do SQL Server
+          href: linux/new-to-sql-learning-resources.yml
+        - name: Novidades nos documentos do Linux
+          href: linux/new-to-linux-learning-resources.yml
+        - name: Novidades nos recursos do Linux
+          href: linux/new-to-linux-resources.md
         - name: Migrar do Windows
           href: linux/sql-server-linux-migrate-restore-database.md
         - name: Migrar para o Docker
@@ -11872,6 +11880,8 @@
               href: relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md
             - name: sys.pdw_nodes_tables
               href: relational-databases/system-catalog-views/sys-pdw-nodes-tables-transact-sql.md
+            - name: sys.pdw_permanent_table_mappings
+              href: relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md
             - name: sys.pdw_replicated_table_cache_state
               href: relational-databases/system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md
             - name: sys.pdw_table_distribution_properties
