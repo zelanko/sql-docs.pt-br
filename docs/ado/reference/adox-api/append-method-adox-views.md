@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e022afd65b6ea37eda07f6ddb4d35ab135664a8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74432aa3bb610b1cd5688e1f52c7d7ea81166f75
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440448"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771355"
 ---
 # <a name="append-method-adox-views"></a>Método Append (Exibições do ADOX)
-Cria um novo objeto de [exibição](../../../ado/reference/adox-api/view-object-adox.md) e o anexa à coleção [views](../../../ado/reference/adox-api/views-collection-adox.md) .  
+Cria um novo objeto de [exibição](./view-object-adox.md) e o anexa à coleção [views](./views-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Views.Append Name, Command
  Um valor de **cadeia de caracteres** que especifica o nome da exibição a ser criada.  
   
  *Comando*  
- Um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO que representa a exibição a ser criada.  
+ Um objeto de [comando](../ado-api/command-object-ado.md) ADO que representa a exibição a ser criada.  
   
 ## <a name="remarks"></a>Comentários  
  Cria uma nova exibição na fonte de dados com o nome e os atributos especificados no objeto **Command** .  
@@ -50,14 +50,14 @@ Views.Append Name, Command
 >  Ao usar o provedor de OLE DB para o Microsoft Jet, o método de **acréscimo** da coleção **views** permitirá que você especifique um **procedimento** em vez de uma **exibição** no parâmetro *Command* . O **procedimento** será adicionado à fonte de dados e será adicionado à coleção **views** . Após o **acréscimo**, se as coleções de **procedimentos** e **exibições** forem atualizadas, o **procedimento** não estará mais na coleção **views** e aparecerá na coleção **procedures** .  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Coleção Views (ADOX)](./views-collection-adox.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo do método Append views (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Método Append (colunas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Método Append (grupos ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Método Append (índices ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Método Append (chaves ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Método Append (procedimentos do ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Método Append (tabelas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Método Append (Usuários do ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)
+ [Exemplo do método Append views (VB)](./views-append-method-example-vb.md)   
+ [Método Append (colunas ADOX)](./append-method-adox-columns.md)   
+ [Método Append (grupos ADOX)](./append-method-adox-groups.md)   
+ [Método Append (índices ADOX)](./append-method-adox-indexes.md)   
+ [Método Append (chaves ADOX)](./append-method-adox-keys.md)   
+ [Método Append (procedimentos do ADOX)](./append-method-adox-procedures.md)   
+ [Método Append (tabelas ADOX)](./append-method-adox-tables.md)   
+ [Método Append (Usuários do ADOX)](./append-method-adox-users.md)

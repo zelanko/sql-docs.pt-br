@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8a69e5ad4f31891ec93e84e835a6c0d1ffdcdce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95755659875371a04511b1e48b4967ad07d6b93b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451638"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760293"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Exemplo das propriedades ActualSize e DefinedSize (VC + +)
-Este exemplo usa as propriedades [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) para exibir o tamanho definido e o tamanho real de um campo.  
+Este exemplo usa as propriedades [ActualSize](./actualsize-property-ado.md) e [DefinedSize](./definedsize-property.md) para exibir o tamanho definido e o tamanho real de um campo.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -148,5 +148,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **Tamanho definido: 40**  
 **Tamanho real: 8**   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [Propriedade DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)
+ [Propriedade ActualSize (ADO)](./actualsize-property-ado.md)   
+ [Propriedade DefinedSize](./definedsize-property.md)

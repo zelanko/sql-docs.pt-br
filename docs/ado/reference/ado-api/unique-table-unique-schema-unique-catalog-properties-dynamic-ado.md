@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441668"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777035"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabela exclusiva, esquema exclusivo, propriedades de catálogo exclusivas – dinâmico (ADO)
-Permite que você controle precisamente as modificações em uma tabela base específica em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que foi formado por uma operação de junção em várias tabelas base.  
+Permite que você controle precisamente as modificações em uma tabela base específica em um [conjunto de registros](./recordset-object-ado.md) que foi formado por uma operação de junção em várias tabelas base.  
   
 -   **Tabela exclusiva** especifica o nome da tabela base na qual são permitidas atualizações, inserções e exclusões.  
   
@@ -40,16 +40,16 @@ Permite que você controle precisamente as modificações em uma tabela base esp
   
  A chave primária da **tabela exclusiva** é tratada como a chave primária do **conjunto de registros**inteiro. Essa é a chave usada para qualquer método que exija uma chave primária.  
   
- Enquanto a **tabela exclusiva** é definida, o método [delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) afeta apenas a tabela nomeada. Os métodos [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Ressync](../../../ado/reference/ado-api/resync-method.md), [Update](../../../ado/reference/ado-api/update-method.md)e [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) afetam as tabelas base subjacentes apropriadas do **conjunto de registros**.  
+ Enquanto a **tabela exclusiva** é definida, o método [delete](./delete-method-ado-recordset.md) afeta apenas a tabela nomeada. Os métodos [AddNew](./addnew-method-ado.md), [Ressync](./resync-method.md), [Update](./update-method.md)e [UpdateBatch](./updatebatch-method.md) afetam as tabelas base subjacentes apropriadas do **conjunto de registros**.  
   
- A **tabela exclusiva** deve ser especificada antes de fazer quaisquer ressincronizações personalizadas. Se a **tabela exclusiva** não tiver sido especificada, a propriedade de [comando Ressync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) não terá nenhum efeito.  
+ A **tabela exclusiva** deve ser especificada antes de fazer quaisquer ressincronizações personalizadas. Se a **tabela exclusiva** não tiver sido especificada, a propriedade de [comando Ressync](./resync-command-property-dynamic-ado.md) não terá nenhum efeito.  
   
  Um erro de tempo de execução resultará se uma tabela base exclusiva não puder ser encontrada.  
   
- Essas propriedades dinâmicas são todas acrescentadas à coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto **Recordset** quando a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) é definida como **adUseClient**.  
+ Essas propriedades dinâmicas são todas acrescentadas à coleção de [Propriedades](./properties-collection-ado.md) do objeto **Recordset** quando a propriedade [CursorLocation](./cursorlocation-property-ado.md) é definida como **adUseClient**.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442168"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777535"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-Especifica o tipo de **conjunto de registros** de esquema que o método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera.  
+Especifica o tipo de **conjunto de registros** de esquema que o método [OpenSchema](./openschema-method.md) recupera.  
   
 ## <a name="remarks"></a>Comentários  
- Informações adicionais sobre a função e as colunas retornadas para cada constante ADO podem ser encontradas em tópicos no [Apêndice B: conjuntos](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de linhas de esquema da referência do programador de OLE DB. O nome de cada tópico é listado entre parênteses na seção Descrição da tabela a seguir.  
+ Informações adicionais sobre a função e as colunas retornadas para cada constante ADO podem ser encontradas em tópicos no [Apêndice B: conjuntos](/previous-versions/windows/desktop/ms712921(v=vs.85)) de linhas de esquema da referência do programador de OLE DB. O nome de cada tópico é listado entre parênteses na seção Descrição da tabela a seguir.  
   
- Informações adicionais sobre a função e as colunas retornadas para cada constante ADO MD podem ser encontradas em tópicos em [OLE DB para objetos OLAP e conjuntos](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) de linhas de esquema no OLE DB para documentação do processamento analítico online (OLAP). O nome de cada tópico é listado entre parênteses na coluna Descrição da tabela a seguir.  
+ Informações adicionais sobre a função e as colunas retornadas para cada constante ADO MD podem ser encontradas em tópicos em [OLE DB para objetos OLAP e conjuntos](/previous-versions/windows/desktop/ms723056(v=vs.85)) de linhas de esquema no OLE DB para documentação do processamento analítico online (OLAP). O nome de cada tópico é listado entre parênteses na coluna Descrição da tabela a seguir.  
   
- Você pode converter os tipos de dados de colunas na documentação do OLE DB em tipos de dados do ADO referindo-se à coluna Descrição do tópico ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) . Por exemplo, um tipo de dados OLE DB de **DBTYPE_WSTR** é equivalente a um tipo de dados ADO de **adWChar**.  
+ Você pode converter os tipos de dados de colunas na documentação do OLE DB em tipos de dados do ADO referindo-se à coluna Descrição do tópico ADO [DataTypeEnum](./datatypeenum.md) . Por exemplo, um tipo de dados OLE DB de **DBTYPE_WSTR** é equivalente a um tipo de dados ADO de **adWChar**.  
   
- O ADO gera resultados semelhantes a esquema para as constantes, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. O ADO cria um **conjunto de registros**e, em seguida, preenche cada linha com os valores retornados respectivamente pelos métodos **IDBInfo:: GetKeywords** e **IDBInfo:: GetLiteralInfo** . Informações adicionais sobre esses métodos podem ser encontradas na seção [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) da referência do programador de OLE DB.  
+ O ADO gera resultados semelhantes a esquema para as constantes, **adSchemaDBInfoKeywords** e **adSchemaDBInfoLiterals**. O ADO cria um **conjunto de registros**e, em seguida, preenche cada linha com os valores retornados respectivamente pelos métodos **IDBInfo:: GetKeywords** e **IDBInfo:: GetLiteralInfo** . Informações adicionais sobre esses métodos podem ser encontradas na seção [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) da referência do programador de OLE DB.  
   
 |Constante|Valor|Descrição|Colunas de restrição|  
 |--------------|-----------|-----------------|------------------------|  
@@ -127,4 +127,4 @@ Especifica o tipo de **conjunto de registros** de esquema que o método [OpenSch
 |AdoEnums. Schema. VIEWTABLEUSAGE|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
+ [Método OpenSchema](./openschema-method.md)

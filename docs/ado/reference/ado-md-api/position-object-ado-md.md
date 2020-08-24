@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61b30ea92756de6f2ff4c9cf3d0e0b56cdedf155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f1d8dce821fe0b287477ca603b71e93f789f016
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440768"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777885"
 ---
 # <a name="position-object-ado-md"></a>Objeto Position (ADO MD)
 Representa um conjunto de um ou mais membros de dimensões diferentes que define um ponto ao longo de um eixo.  
@@ -29,17 +29,17 @@ Representa um conjunto de um ou mais membros de dimensões diferentes que define
 ## <a name="remarks"></a>Comentários  
  Com as propriedades e coleções de um objeto **Position** , você pode fazer o seguinte:  
   
--   Use a propriedade **ordinal** para retornar a posição ordinal da **posição** ao longo do [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+-   Use a propriedade **ordinal** para retornar a posição ordinal da **posição** ao longo do [eixo](./axis-object-ado-md.md).  
   
--   Use a coleção [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) para retornar os membros que compõem a posição ao longo do **eixo**.  
+-   Use a coleção [Members](./members-collection-ado-md.md) para retornar os membros que compõem a posição ao longo do **eixo**.  
   
  Esta seção contém o tópico a seguir.  
   
--   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos](./position-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de eixo (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Coleção Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
- [Coleção Positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)
+ [Exemplo de eixo (VBScript)](./axis-example-vbscript.md)   
+ [Objeto Axis (ADO MD)](./axis-object-ado-md.md)   
+ [Objeto Cell (ADO MD)](./cell-object-ado-md.md)   
+ [Coleção Members (ADO MD)](./members-collection-ado-md.md)   
+ [Coleção Positions (ADO MD)](./positions-collection-ado-md.md)

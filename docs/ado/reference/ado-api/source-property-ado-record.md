@@ -21,36 +21,36 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8fb7ece2d2046706df91814b2d098e0a900d18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e755fb4a34e170efea760428021b540a182156c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442038"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777405"
 ---
 # <a name="source-property-ado-record"></a>Propriedade Source (Registro ADO)
-Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md).  
+Indica a fonte de dados ou o objeto representado pelo [registro](./record-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um valor **Variant** que indica a entidade representada pelo **registro**.  
   
 ## <a name="remarks"></a>Comentários  
- A propriedade **Source** retorna o argumento de *origem* do método **Record** [Open](../../../ado/reference/ado-api/open-method-ado-record.md) Object. Ele pode conter uma cadeia de caracteres de URL absoluta ou relativa. Uma URL absoluta pode ser usada sem definir a propriedade [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) para abrir diretamente o objeto **Record** . Um objeto de **conexão** implícita é criado nesse caso.  
+ A propriedade **Source** retorna o argumento de *origem* do método **Record** [Open](./open-method-ado-record.md) Object. Ele pode conter uma cadeia de caracteres de URL absoluta ou relativa. Uma URL absoluta pode ser usada sem definir a propriedade [ActiveConnection](./activeconnection-property-ado.md) para abrir diretamente o objeto **Record** . Um objeto de **conexão** implícita é criado nesse caso.  
   
  A propriedade **Source** também pode conter uma referência a um conjunto de **registros**já aberto, que abre um objeto de **registro** que representa a linha atual no **conjunto de registros**.  
   
- A propriedade **Source** também pode conter uma referência a um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) que retorna uma única linha de dados do provedor.  
+ A propriedade **Source** também pode conter uma referência a um objeto [Command](./command-object-ado.md) que retorna uma única linha de dados do provedor.  
   
  Se a propriedade **ActiveConnection** também for definida, a propriedade **Source** deverá apontar para algum objeto que existe dentro do escopo dessa conexão. Por exemplo, em namespaces estruturados em árvore, se a propriedade **Source** contiver uma URL absoluta, ela deverá apontar para um nó que existe dentro do escopo do nó identificado pela URL na cadeia de conexão. Se a propriedade **Source** contiver uma URL relativa, ela será validada dentro do contexto definido pela propriedade **ActiveConnection** .  
   
  A propriedade de **origem** é leitura/gravação enquanto o objeto de **registro** é fechado e é somente leitura enquanto o objeto de **registro** está aberto.  
   
 > [!NOTE]
->  As URLs que usam o esquema http invocarão automaticamente o [provedor do Microsoft OLE DB para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [URLs absolutas e relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  As URLs que usam o esquema http invocarão automaticamente o [provedor do Microsoft OLE DB para publicação na Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [URLs absolutas e relativas](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Objeto Record (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade Source (erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Propriedade Source (erro ADO)](./source-property-ado-error.md)   
+ [Propriedade Source (Conjunto de registros ADO)](./source-property-ado-recordset.md)

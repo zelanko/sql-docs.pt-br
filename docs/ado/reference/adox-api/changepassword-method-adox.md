@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d23920fff14bfa04020223ad0150f480f6073723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ddd75bddf8845012fe0845826eea264718cc91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440368"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771165"
 ---
 # <a name="changepassword-method-adox"></a>Método ChangePassword (ADOX)
-Altera a senha de uma conta de [usuário](../../../ado/reference/adox-api/user-object-adox.md) .  
+Altera a senha de uma conta de [usuário](./user-object-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ User.ChangePassword OldPassword, NewPassword
  Ocorrerá um erro se o provedor não oferecer suporte à administração de propriedades de confiança.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [Objeto User (ADOX)](./user-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo dos métodos Groups e Users Append, ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
+ [Exemplo dos métodos Groups e Users Append, ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)

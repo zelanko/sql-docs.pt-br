@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765137d5b04c2077e113cb5eb1f515b569311161
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70719d77ce00cac42af05d7e42ce98c2b2c485af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440318"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771125"
 ---
 # <a name="clustered-property-example-vc"></a>Exemplo da propriedade Clustered (VC++)
-Este exemplo demonstra a propriedade [clusterizada](../../../ado/reference/adox-api/clustered-property-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). Observe que os bancos de dados do Microsoft Jet não dão suporte a índices clusterizados, portanto, este exemplo retornará **false** para a propriedade **clusterizada** de todos os índices no banco de dados *Northwind* .  
+Este exemplo demonstra a propriedade [clusterizada](./clustered-property-adox.md) de um [índice](./index-object-adox.md). Observe que os bancos de dados do Microsoft Jet não dão suporte a índices clusterizados, portanto, este exemplo retornará **false** para a propriedade **clusterizada** de todos os índices no banco de dados *Northwind* .  
   
 ```  
 // BeginClusteredCpp.cpp  
@@ -89,5 +89,5 @@ void ClusteredX() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade Clustered (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Propriedade Clustered (ADOX)](./clustered-property-adox.md)   
+ [Objeto Index (ADOX)](./index-object-adox.md)

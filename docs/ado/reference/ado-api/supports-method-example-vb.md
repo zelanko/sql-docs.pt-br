@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4042f1a7bffc935333232a6267d06d905a34545f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e644bc69ec4d77dfdb280a263836784eebc39df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441768"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777145"
 ---
 # <a name="supports-method-example-vb"></a>Exemplo do método Supports (VB)
-Este exemplo usa o método de [suporte](../../../ado/reference/ado-api/supports-method.md) para exibir as opções com suporte de um conjunto de registros aberto com tipos de cursor diferentes. O procedimento DisplaySupport é necessário para que este procedimento seja executado.  
+Este exemplo usa o método de [suporte](./supports-method.md) para exibir as opções com suporte de um conjunto de registros aberto com tipos de cursor diferentes. O procedimento DisplaySupport é necessário para que este procedimento seja executado.  
   
 ```  
 'BeginSupportsVB  
@@ -163,5 +163,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Método Supports](../../../ado/reference/ado-api/supports-method.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Método Supports](./supports-method.md)

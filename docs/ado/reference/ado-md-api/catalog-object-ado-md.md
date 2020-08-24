@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fe8cb849b5b770f23fab92da84bc3bc58fdf55d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b198e9765a8d0e68e61ecd3f9ed334e34c714ea8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441268"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778335"
 ---
 # <a name="catalog-object-ado-md"></a>Objeto Catalog (ADO MD)
 Contém informações de esquema multidimensional (ou seja, cubos e dimensões subjacentes, hierarquias, níveis e membros) específicas para um provedor de dados multidimensional (MDP).  
@@ -29,17 +29,17 @@ Contém informações de esquema multidimensional (ou seja, cubos e dimensões s
 ## <a name="remarks"></a>Comentários  
  Com as coleções e propriedades de um objeto de **Catálogo** , você pode fazer o seguinte:  
   
--   Abra o catálogo definindo a propriedade [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) como um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ADO padrão ou como uma cadeia de conexão válida.  
+-   Abra o catálogo definindo a propriedade [ActiveConnection](./activeconnection-property-ado-md.md) como um objeto de [conexão](../ado-api/connection-object-ado.md) ADO padrão ou como uma cadeia de conexão válida.  
   
--   Identifique o **Catálogo** com a propriedade [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
+-   Identifique o **Catálogo** com a propriedade [Name](./name-property-ado-md.md) .  
   
--   Itere pelos cubos em um catálogo usando a coleção [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) .  
+-   Itere pelos cubos em um catálogo usando a coleção [CubeDefs](./cubedefs-collection-ado-md.md) .  
   
  Esta seção contém o tópico a seguir.  
   
--   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
+-   [Propriedades, métodos e eventos](./catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Coleção CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+ [Exemplo de catálogo (VB)](./catalog-example-vb.md)   
+ [Objeto de conexão (ADO)](../ado-api/connection-object-ado.md)   
+ [Coleção CubeDefs (ADO MD)](./cubedefs-collection-ado-md.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452498"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758416"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Cenário de persistência do conjunto de registros XML
 Nesse cenário, você criará um aplicativo de páginas de Active Server (ASP) que salva o conteúdo de um objeto Recordset diretamente no objeto de resposta ASP.  
@@ -26,7 +26,7 @@ Nesse cenário, você criará um aplicativo de páginas de Active Server (ASP) q
 > [!NOTE]
 >  Este cenário requer que o servidor tenha o Internet Information Server 5,0 (IIS) ou posterior instalado.  
   
- O conjunto de registros retornado é exibido no Internet Explorer usando um [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+ O conjunto de registros retornado é exibido no Internet Explorer usando um [objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md).  
   
  As etapas a seguir são necessárias para criar este cenário:  
   
@@ -85,12 +85,12 @@ Nesse cenário, você criará um aplicativo de páginas de Active Server (ASP) q
 %>  
 ```  
   
- Observe que o objeto de resposta ASP é especificado como o destino para o [método Save](../../../ado/reference/ado-api/save-method.md)do conjunto de registros. O destino do método Save pode ser qualquer objeto que dê suporte à interface IStream, como um [ADO (objeto de fluxo ADO)](../../../ado/reference/ado-api/stream-object-ado.md)ou um nome de arquivo que inclua o caminho completo para o qual o conjunto de registros deve ser salvo.  
+ Observe que o objeto de resposta ASP é especificado como o destino para o [método Save](../../reference/ado-api/save-method.md)do conjunto de registros. O destino do método Save pode ser qualquer objeto que dê suporte à interface IStream, como um [ADO (objeto de fluxo ADO)](../../reference/ado-api/stream-object-ado.md)ou um nome de arquivo que inclua o caminho completo para o qual o conjunto de registros deve ser salvo.  
   
  Salve e feche xmlresponse. asp antes de ir para a próxima etapa. Copie também o arquivo adovbs. Inc da pasta de instalação padrão da biblioteca do ADO para a mesma pasta em que você salvou o arquivo xmlresponse. ASP.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>Etapa 4: receber e exibir os dados  
- Nesta etapa, você criará um arquivo HTML com um objeto de [controle de objeto de DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) inserido que aponta para o arquivo xmlresponse. asp para obter o conjunto de registros. Abra default.htm com um editor de texto, como o bloco de notas e adicione o código a seguir. Substitua "SqlServer" na URL pelo nome do seu servidor.  
+ Nesta etapa, você criará um arquivo HTML com um objeto de [controle de objeto de DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md) inserido que aponta para o arquivo xmlresponse. asp para obter o conjunto de registros. Abra default.htm com um editor de texto, como o bloco de notas e adicione o código a seguir. Substitua "SqlServer" na URL pelo nome do seu servidor.  
   
 ```  
 <HTML>  
@@ -114,5 +114,5 @@ Nesse cenário, você criará um aplicativo de páginas de Active Server (ASP) q
  Feche o arquivo default.htm e salve-o na mesma pasta em que você salvou xmlresponse. ASP. Usando o Internet Explorer 4,0 ou posterior, abra a URL https://*SqlServer*/XMLPersist/default.htm e observe os resultados. Os dados são exibidos em uma tabela de DHTML associada. Agora, abra a URL https:// *SqlServer* /XMLPersist/XMLResponse.asp e observe os resultados. O XML é exibido.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Salvar método](../../../ado/reference/ado-api/save-method.md)   
- [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Salvar método](../../reference/ado-api/save-method.md)   
+ [Persistência de registros em formato XML](./persisting-records-in-xml-format.md)

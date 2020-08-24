@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440958"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778065"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriedade Item (conjunto de células do ADO MD)
-Recupera uma célula de um [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando suas coordenadas.  
+Recupera uma célula de um [células](./cellset-object-ado-md.md) usando suas coordenadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ Cell = Cellset.Item ( Positions)
 -   A posição ordinal  
   
 ## <a name="remarks"></a>Comentários  
- Use a propriedade **Item** para retornar um objeto de [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) dentro de um objeto [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . Se a propriedade **Item** não puder localizar a célula correspondente ao argumento *Positions* , ocorrerá um erro.  
+ Use a propriedade **Item** para retornar um objeto de [célula](./cell-object-ado-md.md) dentro de um objeto [células](./cellset-object-ado-md.md) . Se a propriedade **Item** não puder localizar a célula correspondente ao argumento *Positions* , ocorrerá um erro.  
   
  A propriedade **Item** é a propriedade padrão para o objeto **células** . As seguintes formas de sintaxe são intercambiáveis:  
   
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  A recuperação de células por nome de membro pode não ser suportada pelo seu provedor de dados. Consulte a documentação do seu provedor para obter mais informações.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Objeto Cellset (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Objeto Cell (ADO MD)](./cell-object-ado-md.md)   
+ [Objeto Cellset (ADO MD)](./cellset-object-ado-md.md)

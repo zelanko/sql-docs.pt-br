@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c367d9e8926d04852bde756a430116f25bfc3b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f21ac9577b45bbeca2d57a3c54c40d542fe5220
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452028"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759416"
 ---
 # <a name="remote-data-service-rds"></a>RDS (Serviço de Dados Remotos)
 O RDS (serviço de dados remotos) é um recurso do ADO, com o qual você pode mover dados de um servidor para um aplicativo cliente ou página da Web, manipular os dados no cliente e retornar atualizações para o servidor em uma única viagem de ida e volta.  
@@ -29,30 +29,8 @@ O RDS (serviço de dados remotos) é um recurso do ADO, com o qual você pode mo
   
  O guia do programador RDS contém os seguintes capítulos:  
   
--   [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [Conceitos básicos do RDS](./rds-fundamentals.md)  
   
--   [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [Tutorial RDS](./rds-tutorial.md)  
   
--   [Segurança e uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-   [Segurança e uso RDS](./rds-usage-and-security.md)

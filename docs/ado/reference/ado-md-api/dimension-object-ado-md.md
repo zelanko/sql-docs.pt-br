@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73feb1e20320a418804666e11cb2410ab4451c52
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441108"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778195"
 ---
 # <a name="dimension-object-ado-md"></a>Objeto Dimension (ADO MD)
 Representa uma das dimensões de um cubo multidimensional que contém uma ou mais hierarquias de membros.  
@@ -29,13 +29,13 @@ Representa uma das dimensões de um cubo multidimensional que contém uma ou mai
 ## <a name="remarks"></a>Comentários  
  Com as coleções e propriedades de um objeto **Dimension** , você pode fazer o seguinte:  
   
--   Identifique a **dimensão** com as propriedades [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) e [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
+-   Identifique a **dimensão** com as propriedades [Name](./name-property-ado-md.md) e [UniqueName](./uniquename-property-ado-md.md) .  
   
--   Retorne uma cadeia de caracteres significativa que descreva a **dimensão** com a propriedade [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) .  
+-   Retorne uma cadeia de caracteres significativa que descreva a **dimensão** com a propriedade [Description](./description-property-ado-md.md) .  
   
--   Retornar os objetos de [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) que compõem a **dimensão** com a coleção de [hierarquias](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) .  
+-   Retornar os objetos de [hierarquia](./hierarchy-object-ado-md.md) que compõem a **dimensão** com a coleção de [hierarquias](./hierarchies-collection-ado-md.md) .  
   
--   Use a coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) padrão do ADO para obter informações adicionais sobre o objeto **Dimension** .  
+-   Use a coleção de [Propriedades](../ado-api/properties-collection-ado.md) padrão do ADO para obter informações adicionais sobre o objeto **Dimension** .  
   
  A coleção **Properties** contém propriedades fornecidas pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades real pode diferir dependendo da implementação do provedor. Consulte a documentação do seu provedor para obter uma lista mais completa das propriedades disponíveis.  
   
@@ -56,11 +56,11 @@ Representa uma das dimensões de um cubo multidimensional que contém uma ou mai
   
  Esta seção contém o tópico a seguir.  
   
--   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos](./dimension-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Objeto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [Coleção Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Coleção de hierarquias (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Exemplo de CubeDef (VBScript)](./cubedef-example-vbscript.md)   
+ [Objeto CubeDef (ADO MD)](./cubedef-object-ado-md.md)   
+ [Coleção Dimensions (ADO MD)](./dimensions-collection-ado-md.md)   
+ [Coleção de hierarquias (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Coleção Properties (ADO)](../ado-api/properties-collection-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1992c8c5796052e46719c34ecbc43d6b94553b6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440348"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771135"
 ---
 # <a name="clustered-property-example-vb"></a>Exemplo da propriedade Clustered (VB)
-Este exemplo demonstra a propriedade [clusterizada](../../../ado/reference/adox-api/clustered-property-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). Observe que os bancos de dados do Microsoft Jet não dão suporte a índices clusterizados, portanto, este exemplo retornará **false** para a propriedade **clusterizada** de todos os índices no banco de dados **Northwind** .  
+Este exemplo demonstra a propriedade [clusterizada](./clustered-property-adox.md) de um [índice](./index-object-adox.md). Observe que os bancos de dados do Microsoft Jet não dão suporte a índices clusterizados, portanto, este exemplo retornará **false** para a propriedade **clusterizada** de todos os índices no banco de dados **Northwind** .  
   
 ```  
 ' BeginClusteredVB  
@@ -74,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Propriedade Clustered (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Objeto de catálogo (ADOX)](./catalog-object-adox.md)   
+ [Propriedade Clustered (ADOX)](./clustered-property-adox.md)   
+ [Objeto Index (ADOX)](./index-object-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)

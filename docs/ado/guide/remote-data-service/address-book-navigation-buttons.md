@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03959b22d0b64f2932326c42f5bb0117441b9051
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452318"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758646"
 ---
 # <a name="address-book-navigation-buttons"></a>Botões de navegação do catálogo de endereços
 O aplicativo de catálogo de endereços exibe os botões de navegação na parte inferior da página da Web. Você pode usar os botões de navegação para navegar pelos dados na exibição da grade HTML selecionando a primeira ou a última linha de dados ou linhas adjacentes à seleção atual.  
@@ -30,7 +30,7 @@ O aplicativo de catálogo de endereços exibe os botões de navegação na parte
 ## <a name="navigation-sub-procedures"></a>Procedimentos sub de navegação  
  O aplicativo de catálogo de endereços contém vários procedimentos que permitem aos usuários clicar nos **primeiros**botões, **próximo**, **anterior**e **último** para mover-se pelos dados.  
   
- Por exemplo, clicar no **primeiro** botão ativa o procedimento Sub First_OnClick do VBScript. O procedimento executa um método [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , que torna a primeira linha de dados a seleção atual. Clicar no botão **último** ativa o procedimento Last_OnClick sub, que invoca o método [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , tornando a última linha de dados a seleção atual. Os botões de navegação restantes funcionam de maneira semelhante.  
+ Por exemplo, clicar no **primeiro** botão ativa o procedimento Sub First_OnClick do VBScript. O procedimento executa um método [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , que torna a primeira linha de dados a seleção atual. Clicar no botão **último** ativa o procedimento Last_OnClick sub, que invoca o método [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , tornando a última linha de dados a seleção atual. Os botões de navegação restantes funcionam de maneira semelhante.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -63,8 +63,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Métodos MoveFirst, MoveLast, MoveNext e MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
-
-
+ [Objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Métodos MoveFirst, MoveLast, MoveNext e MovePrevious (RDS)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

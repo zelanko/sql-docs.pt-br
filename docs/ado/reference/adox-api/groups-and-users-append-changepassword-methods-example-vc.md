@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51601cc45aa0c595b3df617848ce66f114e1df63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6776783df8ae47cdd15eb1a6a116f25ff038277
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439968"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770345"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Exemplo dos métodos Groups e Users Append, ChangePassword (VC++)
-Este exemplo demonstra o método [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) de [grupos](../../../ado/reference/adox-api/groups-collection-adox.md), bem como o método [Append](../../../ado/reference/adox-api/append-method-adox-users.md) de [usuários](../../../ado/reference/adox-api/users-collection-adox.md) , adicionando um novo [grupo](../../../ado/reference/adox-api/group-object-adox.md) e um novo [usuário](../../../ado/reference/adox-api/user-object-adox.md) ao sistema. O novo **grupo** é acrescentado à coleção de **grupos** do novo **usuário**. Consequentemente, o novo **usuário** é adicionado ao **grupo**. Além disso, o método [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) é usado para especificar a senha do **usuário** .  
+Este exemplo demonstra o método [Append](./append-method-adox-groups.md) de [grupos](./groups-collection-adox.md), bem como o método [Append](./append-method-adox-users.md) de [usuários](./users-collection-adox.md) , adicionando um novo [grupo](./group-object-adox.md) e um novo [usuário](./user-object-adox.md) ao sistema. O novo **grupo** é acrescentado à coleção de **grupos** do novo **usuário**. Consequentemente, o novo **usuário** é adicionado ao **grupo**. Além disso, o método [ChangePassword](./changepassword-method-adox.md) é usado para especificar a senha do **usuário** .  
   
 > [!NOTE]
 >  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique **Trusted_Connection = Sim** ou **segurança integrada = SSPI** , em vez de ID de usuário e informações de senha na cadeia de conexão.  

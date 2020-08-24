@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 144e230b10ac6a73f88be7ab85e779bcda5f2cd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3856bb797417909b2491bf3d5adcd7c5f18bc203
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441178"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778275"
 ---
 # <a name="children-property-ado-md"></a>Propriedade Children (ADO MD)
-Retorna uma coleção de [Membros](../../../ado/reference/ado-md-api/members-collection-ado-md.md) para a qual o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) atual é o pai na hierarquia.  
+Retorna uma coleção de [Membros](./members-collection-ado-md.md) para a qual o [membro](./member-object-ado-md.md) atual é o pai na hierarquia.  
   
 ## <a name="return-values"></a>Valores de retorno  
  Retorna uma coleção de **Membros** e é somente leitura.  
   
 ## <a name="remarks"></a>Comentários  
- A propriedade **Children** contém uma coleção **Members** para a qual o **membro** atual é o pai hierárquico. Os objetos de **membro** de nível folha não têm membros filho na coleção de **Membros** . Só há suporte para essa propriedade em objetos **Membros** que pertencem a um objeto de [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos **Membros** que pertencem a um objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
+ A propriedade **Children** contém uma coleção **Members** para a qual o **membro** atual é o pai hierárquico. Os objetos de **membro** de nível folha não têm membros filho na coleção de **Membros** . Só há suporte para essa propriedade em objetos **Membros** que pertencem a um objeto de [nível](./level-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos **Membros** que pertencem a um objeto [Position](./position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Objeto Member (ADO MD)](./member-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade ChildCount (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)
+ [Propriedade ChildCount (ADO MD)](./childcount-property-ado-md.md)

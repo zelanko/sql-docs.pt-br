@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a0558bf005ed06f508e7c5656a6a7aa51b79dc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 478dd68affe54fe1dddb7ede744e07454e6bcff6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439588"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769585"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Propriedades, Métodos e Eventos da coleção Procedures
 ## <a name="properties"></a>Propriedades  
- [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propriedade Count](../ado-api/count-property-ado.md)  
   
- [Propriedade do item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade do item](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Método Append (procedimentos)](../../../ado/reference/adox-api/append-method-adox-procedures.md)  
+ [Método Append (procedimentos)](./append-method-adox-procedures.md)  
   
- [Método Delete (coleções)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Método Delete (coleções)](./delete-method-adox-collections.md)  
   
- [Método de atualização](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Método de atualização](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Coleção Procedures (ADOX)](./procedures-collection-adox.md)

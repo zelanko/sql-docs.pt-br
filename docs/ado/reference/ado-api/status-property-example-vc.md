@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad20679059706d9349fd6e4fd37dd6c6b5a8ea2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a060f6fb7ac635368e92651d2e286d68c0f299eb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441898"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777275"
 ---
 # <a name="status-property-example-vc"></a>Exemplo da propriedade Status (VC++)
-Este exemplo usa a propriedade [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) para exibir quais registros foram modificados em uma operação em lote antes que uma atualização do lote tenha ocorrido.  
+Este exemplo usa a propriedade [status](./status-property-ado-recordset.md) para exibir quais registros foram modificados em uma operação em lote antes que uma atualização do lote tenha ocorrido.  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -188,4 +188,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade Status (Conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Propriedade Status (Conjunto de registros ADO)](./status-property-ado-recordset.md)

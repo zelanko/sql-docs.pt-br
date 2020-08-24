@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00878f5caddcbd8060c9c85222bc061533542bf8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 446a220868a2cf0b0a518bde95897b9d1f41a3b3
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451618"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760271"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-Para um objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do RDS, especifica a prioridade de execução do thread assíncrono que recupera dados.  
+Para um objeto de [conjunto de registros](./recordset-object-ado.md) do RDS, especifica a prioridade de execução do thread assíncrono que recupera dados.  
   
- Use essas constantes com a propriedade dinâmica "**prioridade de thread em segundo plano**" do **conjunto de registros** , que é referenciada no índice de propriedade dinâmica do ADO para OLE DB e documentada no [serviço de cursor da Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
+ Use essas constantes com a propriedade dinâmica "**prioridade de thread em segundo plano**" do **conjunto de registros** , que é referenciada no índice de propriedade dinâmica do ADO para OLE DB e documentada no [serviço de cursor da Microsoft para OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  

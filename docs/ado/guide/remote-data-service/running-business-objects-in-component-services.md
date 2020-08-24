@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52e90a1913a0500a174e335c178ea8a556d9659a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6732724e842d4183aa7e663994df34c57f366933
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452008"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759356"
 ---
 # <a name="running-business-objects-in-component-services"></a>Executar objetos de negócios nos serviços de componentes
 > [!IMPORTANT]
@@ -28,12 +28,10 @@ ms.locfileid: "88452008"
   
 -   Os objetos comerciais criados como arquivos. exe podem ser chamados por meio do DCOM. Se esses objetos comerciais forem usados por meio do Serviços de Informações da Internet (IIS), eles estarão sujeitos a marshaling adicional de dados, o que reduzirá o desempenho do cliente.  
   
--   Os objetos comerciais criados como arquivos. dll podem ser usados por meio do IIS e, portanto, também por HTTP. Eles também podem ser usados sobre DCOM somente por meio de serviços de componentes, ou por meio do Microsoft Transaction Server, se você estiver usando o Windows NT. As DLLs de objeto comercial precisarão ser registradas no computador do servidor IIS para acessá-las por meio do IIS. Para obter informações sobre como configurar uma DLL para ser executada no DCOM, consulte a seção [habilitando uma dll para ser executada no DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
+-   Os objetos comerciais criados como arquivos. dll podem ser usados por meio do IIS e, portanto, também por HTTP. Eles também podem ser usados sobre DCOM somente por meio de serviços de componentes, ou por meio do Microsoft Transaction Server, se você estiver usando o Windows NT. As DLLs de objeto comercial precisarão ser registradas no computador do servidor IIS para acessá-las por meio do IIS. Para obter informações sobre como configurar uma DLL para ser executada no DCOM, consulte a seção [habilitando uma dll para ser executada no DCOM](./enabling-a-dll-to-run-on-dcom.md).  
   
 > [!NOTE]
->  Quando os objetos comerciais na camada intermediária são implementados como componentes de serviços de componentes usando **getObjectContext**, **SetComplete**e **SetAbort**, os objetos de negócios podem usar os serviços de componentes (ou MTS, se você estiver usando o Windows NT) objetos de contexto para manter seu estado entre várias chamadas de cliente. Esse cenário é possível com o DCOM, que normalmente é implementado entre clientes e servidores confiáveis em uma intranet. Nesse caso, o [RDS. O objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) e o método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) no lado do cliente são substituídos pelo método **CreateInstance** e pelo objeto de contexto da transação, que são fornecidos pela interface **ITransactionContext** e implementados pelos serviços de componentes.  
+>  Quando os objetos comerciais na camada intermediária são implementados como componentes de serviços de componentes usando **getObjectContext**, **SetComplete**e **SetAbort**, os objetos de negócios podem usar os serviços de componentes (ou MTS, se você estiver usando o Windows NT) objetos de contexto para manter seu estado entre várias chamadas de cliente. Esse cenário é possível com o DCOM, que normalmente é implementado entre clientes e servidores confiáveis em uma intranet. Nesse caso, o [RDS. O objeto DataSpace](../../reference/rds-api/dataspace-object-rds.md) e o método [CreateObject](../../reference/rds-api/createobject-method-rds.md) no lado do cliente são substituídos pelo método **CreateInstance** e pelo objeto de contexto da transação, que são fornecidos pela interface **ITransactionContext** e implementados pelos serviços de componentes.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Conceitos básicos do RDS](./rds-fundamentals.md)

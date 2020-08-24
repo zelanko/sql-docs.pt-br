@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36d5deae232c609473b2cd81b203559343df2d00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441888"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777255"
 ---
 # <a name="stayinsync-property-example-vc"></a>Exemplo da propriedade StayInSync (VC++)
-Este exemplo demonstra como a propriedade [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilita o acesso a linhas em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)hierárquico.  
+Este exemplo demonstra como a propriedade [StayInSync](./stayinsync-property.md) facilita o acesso a linhas em um [conjunto de registros](./recordset-object-ado.md)hierárquico.  
   
- O loop externo exibe o nome e o sobrenome de cada autor, o estado e a identificação. O conjunto de **registros** acrescentado para cada linha é recuperado da coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) e automaticamente atribuído a **rstTitleAuthor** pela propriedade **StayInSync** sempre que o **conjunto de registros** pai é movido para uma nova linha. O loop interno exibe quatro campos de cada linha no conjunto de registros anexado.  
+ O loop externo exibe o nome e o sobrenome de cada autor, o estado e a identificação. O conjunto de **registros** acrescentado para cada linha é recuperado da coleção [Fields](./fields-collection-ado.md) e automaticamente atribuído a **rstTitleAuthor** pela propriedade **StayInSync** sempre que o **conjunto de registros** pai é movido para uma nova linha. O loop interno exibe quatro campos de cada linha no conjunto de registros anexado.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -145,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propriedade StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Coleção Fields (ADO)](./fields-collection-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Propriedade StayInSync](./stayinsync-property.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452388"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758766"
 ---
 # <a name="working-with-multidimensional-data"></a>Manipular dados multidimensionais
 Um *células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, geralmente não mais do que quatro eixos e geralmente apenas dois ou três. Um *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  
@@ -29,7 +29,7 @@ Um *células* é o resultado de uma consulta em dados multidimensionais. Ele con
   
  Uma *célula* é um objeto posicionado na interseção de coordenadas do eixo. Cada célula tem várias informações associadas a ela, incluindo os dados em si, uma cadeia de caracteres formatada (a forma de exibição de dados da célula) e o valor ordinal da célula. (Cada célula é um valor ordinal exclusivo no células. O valor ordinal da primeira célula no células é zero, enquanto a célula mais à esquerda na segunda linha de um células com oito colunas teria um valor ordinal de oito.)  
   
- Por exemplo, um cubo tem as seis dimensões a seguir (Observe que esse esquema de cubos difere ligeiramente do exemplo fornecido em [visão geral dos dados e esquemas multidimensionais](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
+ Por exemplo, um cubo tem as seis dimensões a seguir (Observe que esse esquema de cubos difere ligeiramente do exemplo fornecido em [visão geral dos dados e esquemas multidimensionais](./overview-of-multidimensional-schemas-and-data.md)):  
   
 -   Salesperson  
   
@@ -76,11 +76,11 @@ Um *células* é o resultado de uma consulta em dados multidimensionais. Ele con
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Células, Cells, Axes e Positions são todos representados em ADO MD por objetos correspondentes: [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)e [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Células, Cells, Axes e Positions são todos representados em ADO MD por objetos correspondentes: [células](../../reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../reference/ado-md-api/cell-object-ado-md.md), [Axis](../../reference/ado-md-api/axis-object-ado-md.md)e [Position](../../reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Visão geral de esquemas multidimensionais e dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Programando com ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Usar o ADO com ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [Modelo de objeto ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (Multidimensional) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Visão geral de esquemas multidimensionais e dados](./overview-of-multidimensional-schemas-and-data.md)   
+ [Programando com ADO MD](./programming-with-ado-md.md)   
+ [Usar o ADO com ADO MD](./using-ado-with-ado-md.md)

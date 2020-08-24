@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289744"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777725"
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
 Você pode adotar várias precauções para ajudar a proteger o banco de dados, como a criação de um sistema seguro, a criptografia de ativos confidenciais e a criação de um firewall em torno de servidores de bancos de dados. No entanto, para um cenário no qual a mídia física (como unidades ou fitas de backup) seja roubada, uma parte mal-intencionada pode apenas restaurar ou anexar o banco de dados e procurar os mesmos. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
@@ -54,7 +54,7 @@ Para usar a TDE, execute estes procedimentos. As três primeiras etapas são fei
   
 7.  Use a `ALTER DATABASE` instrução para criptografar o banco de dados usando TDE.  
   
-O exemplo a seguir ilustra a criptografia `AdventureWorksPDW2012` do banco de dados usando `MyServerCert`um certificado chamado, criado no SQL Server PDW.  
+O exemplo a seguir ilustra a criptografia do `AdventureWorksPDW2012` banco de dados usando um certificado chamado `MyServerCert` , criado no SQL Server PDW.  
   
 **Primeiro: habilite TDE no SQL Server PDW.** Essa ação é necessária apenas uma vez.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-As operações de criptografia e descriptografia são agendadas em threads em segundo plano por SQL Server. Você pode exibir o status dessas operações usando as exibições de catálogo e de gerenciamento dinâmico na lista que aparece mais adiante neste artigo.  
+As operações de criptografia e descriptografia são agendadas em threads em segundo plano pelo SQL Server. Você pode exibir o status dessas operações usando as exibições de catálogo e de gerenciamento dinâmico na lista que aparece mais adiante neste artigo.  
   
 > [!CAUTION]  
 > Os arquivos de backup de bancos de dados com TDE habilitada também são criptografados usando a chave de criptografia do banco de dados. Como resultado, quando você restaura esses backups, o certificado que protege a chave de criptografia do banco de dados deve estar disponível. Isso significa que, além de fazer backup do banco de dados, você deve assegurar que os backups dos certificados de servidor sejam mantidos para evitar perda de dados. Se o certificado não estiver mais disponível, haverá perda de dados.  
@@ -123,7 +123,7 @@ A tabela a seguir fornece links e explicações de comandos e funções da TDE.
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Cria uma chave usada para criptografar um banco de dados.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Altera a chave usada para criptografar um banco de dados.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Remove a chave usada para criptografar um banco de dados.|  
-|[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica a opção **ALTER DATABASE** usada para habilitar TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Exibições do catálogo e exibições de gerenciamento dinâmico  
 A tabela a seguir mostra exibições do catálogo de TDE e exibições de gerenciamento dinâmico.  
@@ -137,7 +137,7 @@ A tabela a seguir mostra exibições do catálogo de TDE e exibições de gerenc
 ## <a name="permissions"></a>Permissões  
 Cada recurso e comando da TDE têm requisitos individuais de permissões, descritos nas tabelas anteriores.  
   
-A exibição dos metadados envolvidos com TDE requer `CONTROL SERVER` a permissão.  
+A exibição dos metadados envolvidos com TDE requer a `CONTROL SERVER` permissão.  
   
 ## <a name="considerations"></a>Considerações  
 Quando um exame de recriptografia para uma operação de criptografia de banco de dados está em andamento, as operações de manutenção no banco de dados são desabilitadas.  
@@ -145,7 +145,7 @@ Quando um exame de recriptografia para uma operação de criptografia de banco d
 Você pode encontrar o estado da criptografia de banco de dados usando a exibição de gerenciamento dinâmico **Sys. dm_pdw_nodes_database_encryption_keys** . Para obter mais informações, consulte a seção *exibições de catálogo e exibições de gerenciamento dinâmico* anteriormente neste artigo.  
   
 ### <a name="restrictions"></a>Restrições  
-As operações a seguir não são permitidas `CREATE DATABASE ENCRYPTION KEY`durante `ALTER DATABASE ENCRYPTION KEY`as `DROP DATABASE ENCRYPTION KEY`instruções, `ALTER DATABASE...SET ENCRYPTION` , ou.  
+As operações a seguir não são permitidas durante as `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` instruções,, `DROP DATABASE ENCRYPTION KEY` ou `ALTER DATABASE...SET ENCRYPTION` .  
   
 -   Descartando o banco de dados.  
   
@@ -155,7 +155,7 @@ As operações a seguir não são permitidas `CREATE DATABASE ENCRYPTION KEY`dur
   
 -   Iniciando uma restauração de banco de dados.  
   
-As seguintes operações ou condições impedirão `CREATE DATABASE ENCRYPTION KEY`as `ALTER DATABASE ENCRYPTION KEY`instruções `DROP DATABASE ENCRYPTION KEY`,, `ALTER DATABASE...SET ENCRYPTION` ou.  
+As seguintes operações ou condições impedirão `CREATE DATABASE ENCRYPTION KEY` as `ALTER DATABASE ENCRYPTION KEY` instruções,, `DROP DATABASE ENCRYPTION KEY` ou `ALTER DATABASE...SET ENCRYPTION` .  
   
 -   Um `ALTER DATABASE` comando está em execução.  
   
@@ -173,7 +173,7 @@ Os dados protegidos pelo TDE são descriptografados quando colocados na memória
 O banco de dados mestre não é protegido pelo TDE. Apesar de o banco de dados mestre não contiver dado de usuário, ele contém informações como nomes de logon.  
   
 ### <a name="transparent-data-encryption-and-transaction-logs"></a>Transparent Data Encryption e logs de transação  
-Habilitar um banco de dados para usar TDE tem o efeito de zerar a parte restante do log de transações virtuais para forçar o próximo log de transações virtuais. Isso garante que nenhum texto não criptografado seja deixado nos logs de transações depois que o banco de dados for definido para criptografia. Você pode encontrar o status da criptografia do arquivo de log em cada nó do PDW exibindo a `encryption_state` coluna `sys.dm_pdw_nodes_database_encryption_keys` na exibição, como neste exemplo:  
+Habilitar um banco de dados para usar TDE tem o efeito de zerar a parte restante do log de transações virtuais para forçar o próximo log de transações virtuais. Isso garante que nenhum texto não criptografado seja deixado nos logs de transações depois que o banco de dados for definido para criptografia. Você pode encontrar o status da criptografia do arquivo de log em cada nó do PDW exibindo a `encryption_state` coluna na `sys.dm_pdw_nodes_database_encryption_keys` exibição, como neste exemplo:  
   
 ```sql  
 WITH dek_encryption_state AS   
@@ -207,7 +207,7 @@ A DEK (chave de criptografia de banco de dados) é protegida pelos certificados 
   
 O sistema pode acessar as chaves sem exigir intervenção humana (como fornecer uma senha). Se o certificado não estiver disponível, o sistema produzirá um erro explicando que o DEK não pode ser descriptografado até que o certificado apropriado esteja disponível.  
   
-Ao mover um banco de dados de um dispositivo para outro, o certificado usado para proteger seu ' DEK ' deve ser restaurado primeiro no servidor de destino. Em seguida, o banco de dados pode ser restaurado como de costume. Para obter mais informações, consulte a documentação padrão do SQL Server, em [mover um banco de dados protegido por TDE para outro SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
+Ao mover um banco de dados de um dispositivo para outro, o certificado usado para proteger seu ' DEK ' deve ser restaurado primeiro no servidor de destino. Em seguida, o banco de dados pode ser restaurado como de costume. Para obter mais informações, consulte a documentação padrão do SQL Server, em [mover um banco de dados protegido por TDE para outro SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
   
 Os certificados usados para criptografar DEKs devem ser retidos desde que haja backups de banco de dados que os utilizem. Os backups de certificado devem incluir a chave privada do certificado, porque sem a chave privada, um certificado não pode ser usado para a restauração do banco de dados. Esses backups de chave privada de certificado são armazenados em um arquivo separado, protegido por uma senha que deve ser fornecida para a restauração do certificado.  
   
@@ -244,7 +244,7 @@ Exemplo da ação para substituir uma máquina virtual.
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-Durante a atualização, se um banco de usuários do usuário estiver criptografado e a senha DMK não for fornecida, a ação de atualização falhará. Durante a substituição, se a senha correta não for fornecida quando existir uma DMK, a operação ignorará a etapa de recuperação DMK. Todas as outras etapas serão concluídas no final da ação substituir VM, no entanto, a ação relatará falha no final para indicar que etapas adicionais são necessárias. Nos logs de instalação (localizados em **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\<carimbo de hora> \detail-setup**), o seguinte aviso será mostrado próximo ao final.  
+Durante a atualização, se um banco de usuários do usuário estiver criptografado e a senha DMK não for fornecida, a ação de atualização falhará. Durante a substituição, se a senha correta não for fornecida quando existir uma DMK, a operação ignorará a etapa de recuperação DMK. Todas as outras etapas serão concluídas no final da ação substituir VM, no entanto, a ação relatará falha no final para indicar que etapas adicionais são necessárias. Nos logs de instalação (localizados em **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<carimbo de hora> \detail-setup**), o seguinte aviso será mostrado próximo ao final.  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
@@ -265,7 +265,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ```  
   
 ## <a name="performance-impact"></a>Impacto do Desempenho  
-O impacto no desempenho do TDE varia de acordo com o tipo de dados que você tem, como ele é armazenado e o tipo de atividade de carga de trabalho no SQL Server PDW. Quando protegido por TDE, a e/s de leitura e descriptografia de dados ou a criptografia e a gravação de dados é uma atividade intensiva de CPU e terá mais impacto quando outras atividades com uso intensivo de CPU estiverem ocorrendo ao mesmo tempo. Como o TDE criptografa `tempdb`, o TDE pode afetar o desempenho dos bancos de dados que não estão criptografados. Para obter uma ideia precisa do desempenho, você deve testar todo o sistema com os dados e a atividade de consulta.  
+O impacto no desempenho do TDE varia de acordo com o tipo de dados que você tem, como ele é armazenado e o tipo de atividade de carga de trabalho no SQL Server PDW. Quando protegido por TDE, a e/s de leitura e descriptografia de dados ou a criptografia e a gravação de dados é uma atividade intensiva de CPU e terá mais impacto quando outras atividades com uso intensivo de CPU estiverem ocorrendo ao mesmo tempo. Como o TDE criptografa `tempdb` , o TDE pode afetar o desempenho dos bancos de dados que não estão criptografados. Para obter uma ideia precisa do desempenho, você deve testar todo o sistema com os dados e a atividade de consulta.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
 Os links a seguir contêm informações gerais sobre como SQL Server gerencia a criptografia. Esses artigos podem ajudá-lo a entender SQL Server criptografia, mas esses artigos não têm informações específicas para SQL Server PDW e discutem recursos que não estão presentes no SQL Server PDW.  
@@ -278,8 +278,8 @@ Os links a seguir contêm informações gerais sobre como SQL Server gerencia a 
 
   
 ## <a name="see-also"></a>Consulte Também  
-[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[CRIAR CHAVE MESTRA](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
@@ -287,4 +287,3 @@ Os links a seguir contêm informações gerais sobre como SQL Server gerencia a 
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
 [sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
-  

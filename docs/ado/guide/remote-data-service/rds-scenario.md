@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452088"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759556"
 ---
 # <a name="rds-scenario"></a>Cenário RDS
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452088"
   
  Esse cenário contém os tópicos a seguir.  
   
--   [Requisitos de sistema para o aplicativo de catálogo de endereços](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [Requisitos de sistema para o aplicativo de catálogo de endereços](./system-requirements-for-the-address-book-application.md)  
   
--   [Executar o script SQL do catálogo de endereços](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [Executar o script SQL do catálogo de endereços](./running-the-address-book-sql-script.md)  
   
--   [Executar o aplicativo de exemplo do catálogo de endereços](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [Executar o aplicativo de exemplo do catálogo de endereços](./running-the-address-book-sample-application.md)  
   
--   [Objeto de associação de dados do catálogo de endereço](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [Objeto de associação de dados do catálogo de endereço](./address-book-data-binding-object.md)  
   
--   [Botões de comando do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [Botões de comando do catálogo de endereços](./address-book-command-buttons.md)  
   
--   [Botões de navegação do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [Botões de navegação do catálogo de endereços](./address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Requisitos do sistema para o aplicativo de catálogo de endereços](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [Requisitos do sistema para o aplicativo de catálogo de endereços](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Conceitos básicos do RDS](./rds-fundamentals.md)   
+ [Tutorial RDS](./rds-tutorial.md)
