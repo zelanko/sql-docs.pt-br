@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401355"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767205"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 
@@ -24,7 +24,7 @@ Descreve como o backup e a restauração de dados funcionam para o PDW (data war
 
 Um *backup de banco de dados* PDW é uma cópia de um banco de dados de dispositivo, armazenado em um formato para que possa ser usado para restaurar o banco de dados original para um dispositivo.  
   
-Um backup de banco de dados do PDW é criado com a instrução t-SQL do [banco de dados de backup](../t-sql/statements/backup-database-parallel-data-warehouse.md) e formatado para uso com a instrução [Restore Database](../t-sql/statements/restore-database-parallel-data-warehouse.md) ; Ele não pode ser usado para nenhuma outra finalidade. O backup só pode ser restaurado para um dispositivo com o mesmo número ou um número maior de nós de computação.  
+Um backup de banco de dados do PDW é criado com a instrução t-SQL do [banco de dados de backup](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) e formatado para uso com a instrução [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) ; Ele não pode ser usado para nenhuma outra finalidade. O backup só pode ser restaurado para um dispositivo com o mesmo número ou um número maior de nós de computação.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -82,7 +82,7 @@ O processo de backup funciona da seguinte maneira:
   
     -   Um backup só pode ser restaurado para um dispositivo PDW que tenha um número igual ou maior de nós de computação.  
   
-    -   Você não pode alterar o nome do backup antes de executar uma restauração. O nome do diretório de backup deve corresponder ao nome do nome original do backup. O nome original do backup está localizado no arquivo backup. xml dentro do diretório de backup. Para restaurar um banco de dados para um nome diferente, você pode especificar o novo nome no comando Restore. Por exemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
+    -   Você não pode alterar o nome do backup antes de executar uma restauração. O nome do diretório de backup deve corresponder ao nome do nome original do backup. O nome original do backup está localizado no arquivo de backup.xml dentro do diretório de backup. Para restaurar um banco de dados para um nome diferente, você pode especificar o novo nome no comando Restore. Por exemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
 ## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Modos de restauração de banco de dados
 
@@ -104,7 +104,7 @@ Ao restaurar dados, o dispositivo detecta o número de nós de computação no d
   
 1.  O backup do banco de dados a ser restaurado está disponível em um compartilhamento de arquivos do Windows em um servidor de backup que não seja de dispositivo. Para obter o melhor desempenho, esse servidor está conectado à rede InfiniBand do dispositivo.  
   
-2.  O usuário envia uma instrução TSQL do [banco de dados de restauração](../t-sql/statements/restore-database-parallel-data-warehouse.md) para o nó de controle.  
+2.  O usuário envia uma instrução TSQL do [banco de dados de restauração](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) para o nó de controle.  
   
     -   A restauração é uma restauração completa ou uma restauração de cabeçalho. A restauração completa restaura um backup completo e, opcionalmente, restaura um backup diferencial.  
   
@@ -133,8 +133,8 @@ Após a redistribuição, cada nó de computação conterá menos dados reais e 
 |Tarefa de backup e restauração|Descrição|  
 |---------------------------|---------------|  
 |Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md)|  
-|Fazer backup de um banco de dados.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restaurar um banco de dados.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Fazer backup de um banco de dados.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
+|Restaurar um banco de dados.|[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
 
 <!-- MISSING LINKS
 

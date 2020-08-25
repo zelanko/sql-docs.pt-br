@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c92b70fdee1fb492b55b18e613284d25277f55b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50cc4c05319ed146882145e42469ab27c0dec0ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443358"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774605"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
-Especifica o caractere usado como separador de linha em objetos de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) de texto.  
+Especifica o caractere usado como separador de linha em objetos de [fluxo](./stream-object-ado.md) de texto.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -36,4 +36,4 @@ Especifica o caractere usado como separador de linha em objetos de [fluxo](../..
  Essas constantes não têm equivalentes ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Propriedade LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
+ [Propriedade LineSeparator (ADO)](./lineseparator-property-ado.md)

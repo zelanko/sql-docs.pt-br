@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c7eeb5999a42cfe8b82e570cc5ada1222f87441
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e7a5b667d7735296a338a6a2259b7691f4fbeda
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443468"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774855"
 ---
 # <a name="idsoshapeextensions-interface"></a>Interface IDSOShapeExtensions
 Obtém o objeto de fonte de dados de OLE DB subjacente para o provedor de forma.  
@@ -39,7 +39,7 @@ public:
   
 |Método|Descrição|  
 |-|-|  
-|[Método GetDataProviderDSO](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Recupera o objeto de fonte de dados subjacente OLE DB do provedor de forma.|  
+|[Método GetDataProviderDSO](./getdataproviderdso-method.md)|Recupera o objeto de fonte de dados subjacente OLE DB do provedor de forma.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Versão:** ADO 2,0 e posterior  

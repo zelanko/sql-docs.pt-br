@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b72860215018a9a869aed8f0a06e280a601947e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444378"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775775"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
-Copia uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
+Copia uma entidade representada por um [registro](./record-object-ado.md) para outro local.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parâmetros  
  *Origem*  
- Opcional. Um valor de **cadeia de caracteres** que contém uma URL que especifica a entidade a ser copiada (por exemplo, um arquivo ou diretório). Se a *origem* for omitida ou especificar uma cadeia de caracteres vazia, o arquivo ou diretório representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md) atual será copiado.  
+ Opcional. Um valor de **cadeia de caracteres** que contém uma URL que especifica a entidade a ser copiada (por exemplo, um arquivo ou diretório). Se a *origem* for omitida ou especificar uma cadeia de caracteres vazia, o arquivo ou diretório representado pelo [registro](./record-object-ado.md) atual será copiado.  
   
  *Destino*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL especificando o local onde a *fonte* será copiada.  
@@ -48,7 +48,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  Opcional. Um valor de **cadeia de caracteres** que contém a senha que, se necessário, verifica o *nome de usuário*.  
   
  *Opções*  
- Opcional. Um valor de [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) que tem um valor padrão de **adCopyUnspecified**. Especifica o comportamento desse método.  
+ Opcional. Um valor de [CopyRecordOptionsEnum](./copyrecordoptionsenum.md) que tem um valor padrão de **adCopyUnspecified**. Especifica o comportamento desse método.  
   
  *Async*  
  Opcional. Um valor **booliano** que, quando **true**, especifica que essa operação deve ser assíncrona.  
@@ -67,7 +67,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  Use a opção **adCopyOverWrite** criteriosamente. Por exemplo, especificar essa opção ao copiar um arquivo para um diretório *excluirá* o diretório e o substituirá pelo arquivo.  
   
 > [!NOTE]
->  As URLs que usam o esquema http invocarão automaticamente o [provedor do Microsoft OLE DB para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [URLs absolutas e relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  As URLs que usam o esquema http invocarão automaticamente o [provedor do Microsoft OLE DB para publicação na Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [URLs absolutas e relativas](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Objeto Record (ADO)](./record-object-ado.md)

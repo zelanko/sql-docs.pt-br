@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60bf64f57c4373d814f2b207808aa2d7dbe7c497
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da88b8e5a98e7d3ae105cc6e826804158f4bf7c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443128"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774165"
 ---
 # <a name="name-property-ado"></a>Propriedade Name (ADO)
 Indica o nome de um objeto.  
@@ -35,9 +35,9 @@ Indica o nome de um objeto.
   
  O valor é leitura/gravação em um objeto de **comando** e somente leitura em um objeto de **Propriedade** .  
   
- Para um objeto **Field** , **Name** normalmente é somente leitura. No entanto, para novos objetos **Field** que foram acrescentados à coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um [registro](../../../ado/reference/ado-api/record-object-ado.md), **Name** é Read/Write only após a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do **campo** ter sido especificada e o provedor de dados adicionou com êxito o novo **campo** chamando o método [Update](../../../ado/reference/ado-api/update-method.md) da coleção **Fields** .  
+ Para um objeto **Field** , **Name** normalmente é somente leitura. No entanto, para novos objetos **Field** que foram acrescentados à coleção [Fields](./fields-collection-ado.md) de um [registro](./record-object-ado.md), **Name** é Read/Write only após a propriedade [Value](./value-property-ado.md) do **campo** ter sido especificada e o provedor de dados adicionou com êxito o novo **campo** chamando o método [Update](./update-method.md) da coleção **Fields** .  
   
- Para objetos de **parâmetro** ainda não acrescentados à coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) , a propriedade **Name** é de leitura/gravação. Para objetos de **parâmetro** acrescentados e todos os outros objetos, a propriedade **Name** é somente leitura. Os nomes não precisam ser exclusivos em uma coleção.  
+ Para objetos de **parâmetro** ainda não acrescentados à coleção de [parâmetros](./parameters-collection-ado.md) , a propriedade **Name** é de leitura/gravação. Para objetos de **parâmetro** acrescentados e todos os outros objetos, a propriedade **Name** é somente leitura. Os nomes não precisam ser exclusivos em uma coleção.  
   
  Você pode recuperar a propriedade **Name** de um objeto por uma referência ordinal, após o qual você pode fazer referência ao objeto diretamente por nome. Por exemplo, se `rstMain.Properties(20).Name` o produz `Updatability` , você pode posteriormente fazer referência a essa propriedade como `rstMain.Properties("Updatability")` .  
   
@@ -45,15 +45,15 @@ Indica o nome de um objeto.
 
 :::row:::
     :::column:::
-        [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
+        [Objeto Command (ADO)](./command-object-ado.md)  
+        [Objeto Campo](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
-        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Objeto Parameter](./parameter-object.md)  
+        [Objeto Property (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de propriedades Attributes e Name (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Exemplo de propriedades Attributes e Name (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Exemplo de propriedades Attributes e Name (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Exemplo de propriedades Attributes e Name (VC + +)](./attributes-and-name-properties-example-vc.md)

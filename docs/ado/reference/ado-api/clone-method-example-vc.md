@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bbca002bc1fe03f072aeeec844c08fcd6f92936
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e21ebe312534dc74221c52919cc2428abe77b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450958"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776225"
 ---
 # <a name="clone-method-example-vc"></a>Exemplo do método Clone (VC++)
-Este exemplo usa o método [clone](../../../ado/reference/ado-api/clone-method-ado.md) para criar cópias de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e, em seguida, permite que o usuário posicione o ponteiro de registro de cada cópia de forma independente.  
+Este exemplo usa o método [clone](./clone-method-ado.md) para criar cópias de um [conjunto de registros](./recordset-object-ado.md) e, em seguida, permite que o usuário posicione o ponteiro de registro de cada cópia de forma independente.  
   
 ```  
 // BeginCloneCpp.cpp  
@@ -221,4 +221,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

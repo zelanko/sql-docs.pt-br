@@ -13,66 +13,66 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cedd465dd752f1f1757b0467abc755fb96c93020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67113c23a84ceaa3ed261efdd98b643d1408228a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444498"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775945"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Connection
 ## <a name="propertiescollections"></a>Propriedades/coleções  
- [Propriedade Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Propriedade Attributes](./attributes-property-ado.md)  
   
- [Propriedade CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [Propriedade CommandTimeout](./commandtimeout-property-ado.md)  
   
- [Propriedade ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)  
+ [Propriedade ConnectionString](./connectionstring-property-ado.md)  
   
- [Propriedade ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
+ [Propriedade ConnectionTimeout](./connectiontimeout-property-ado.md)  
   
- [Propriedade CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [Propriedade CursorLocation](./cursorlocation-property-ado.md)  
   
- [Propriedade DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)  
+ [Propriedade DefaultDatabase](./defaultdatabase-property.md)  
   
- [Coleção de erros](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [Coleção de erros](./errors-collection-ado.md)  
   
- [Propriedade IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)  
+ [Propriedade IsolationLevel](./isolationlevel-property.md)  
   
- [Propriedade Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Propriedade Mode](./mode-property-ado.md)  
   
- [Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Coleção de propriedades](./properties-collection-ado.md)  
   
- [Propriedade do provedor](../../../ado/reference/ado-api/provider-property-ado.md)  
+ [Propriedade do provedor](./provider-property-ado.md)  
   
- [Propriedade State](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propriedade State](./state-property-ado.md)  
   
- [Propriedade Version](../../../ado/reference/ado-api/version-property-ado.md)  
+ [Propriedade Version](./version-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Métodos BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [Métodos BeginTrans, CommitTrans e RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
- [Método Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Método Cancel](./cancel-method-ado.md)  
   
- [Método Close](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Método Close](./close-method-ado.md)  
   
- [Método Execute (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+ [Método Execute (conexão ADO)](./execute-method-ado-connection.md)  
   
- [Método Open (conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)  
+ [Método Open (conexão ADO)](./open-method-ado-connection.md)  
   
- [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)  
+ [Método OpenSchema](./openschema-method.md)  
   
 ## <a name="events"></a>Eventos  
- [Eventos BeginTransComplete, CommitTransComplete e RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+ [Eventos BeginTransComplete, CommitTransComplete e RollbackTransComplete](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [Eventos ConnectComplete e Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [Eventos ConnectComplete e Disconnect](./connectcomplete-and-disconnect-events-ado.md)  
   
- [Evento ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
+ [Evento ExecuteComplete](./executecomplete-event-ado.md)  
   
- [Evento InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [Evento InfoMessage](./infomessage-event-ado.md)  
   
- [Evento WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+ [Evento WillConnect](./willconnect-event-ado.md)  
   
- [Evento WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+ [Evento WillExecute](./willexecute-event-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Objeto Connection (ADO)](./connection-object-ado.md)

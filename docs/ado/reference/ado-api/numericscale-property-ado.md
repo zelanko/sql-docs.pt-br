@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce13556c013c527ec16f183001b6042ed501398d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57375b89595c6ed3e5c377692709deacd8f0ff28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443048"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773965"
 ---
 # <a name="numericscale-property-ado"></a>Propriedade NumericScale (ADO)
-Indica a escala de valores numéricos em um objeto de [campo](../../../ado/reference/ado-api/field-object.md) ou [parâmetro](../../../ado/reference/ado-api/parameter-object.md) .  
+Indica a escala de valores numéricos em um objeto de [campo](./field-object.md) ou [parâmetro](./parameter-object.md) .  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um valor de **byte** que indica o número de casas decimais para as quais os valores numéricos serão resolvidos.  
@@ -35,20 +35,20 @@ Indica a escala de valores numéricos em um objeto de [campo](../../../ado/refer
   
  Para objetos de **parâmetro** , a propriedade **NumericScale** é leitura/gravação.  
   
- Para um objeto **Field**, **NumericScale** normalmente é somente leitura. No entanto, para novos objetos de **campo** que foram acrescentados à coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um [registro](../../../ado/reference/ado-api/record-object-ado.md), **NumericScale** é leitura/gravação somente depois que a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do **campo** tiver sido especificada e o provedor de dados tiver adicionado com êxito o novo **campo** chamando o método [Update](../../../ado/reference/ado-api/update-method.md) da coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) .  
+ Para um objeto **Field**, **NumericScale** normalmente é somente leitura. No entanto, para novos objetos de **campo** que foram acrescentados à coleção [Fields](./fields-collection-ado.md) de um [registro](./record-object-ado.md), **NumericScale** é leitura/gravação somente depois que a propriedade [Value](./value-property-ado.md) do **campo** tiver sido especificada e o provedor de dados tiver adicionado com êxito o novo **campo** chamando o método [Update](./update-method.md) da coleção [Fields](./fields-collection-ado.md) .  
   
 ## <a name="applies-to"></a>Aplica-se A  
 
 :::row:::
     :::column:::
-        [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
+        [Objeto Campo](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Parameter](./parameter-object.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades NumericScale e Precision (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [Exemplo das propriedades NumericScale e Precision (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
- [Propriedade Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Exemplo das propriedades NumericScale e Precision (VB)](./numericscale-and-precision-properties-example-vb.md)   
+ [Exemplo das propriedades NumericScale e Precision (VC + +)](./numericscale-and-precision-properties-example-vc.md)   
+ [Propriedade Precision (ADO)](./precision-property-ado.md)

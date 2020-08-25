@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34985cfbec4a146f0d171d361b9ffc54a28113d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 088132a44afe50218b824ecc25e2a55bda491c66
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444528"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776035"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Conexão (Sintaxe do ADO para Visual C++)
 ## <a name="methods"></a>Métodos  
@@ -78,4 +78,4 @@ WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, lo
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Objeto Connection (ADO)](./connection-object-ado.md)

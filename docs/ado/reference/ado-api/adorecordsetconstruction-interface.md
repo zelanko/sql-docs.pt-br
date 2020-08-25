@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451318"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776635"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interface ADORecordsetConstruction
 A interface **ADORecordsetConstruction** é usada para construir um objeto **Recordset** ado de um objeto **conjunto de linhas** OLE DB em um aplicativo C/C++.  
@@ -32,9 +32,9 @@ A interface **ADORecordsetConstruction** é usada para construir um objeto **Rec
   
 |Propriedade|Descrição|  
 |-|-|  
-|[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **capítulo** de/neste objeto ADO **Recordset** .|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **função** de/neste objeto ADO **Recordset** .|  
-|[Conjunto de linhas](../../../ado/reference/ado-api/rowset-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **conjunto de linhas** de/neste objeto ADO **Recordset** .|  
+|[Capítulo](./chapter-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **capítulo** de/neste objeto ADO **Recordset** .|  
+|[RowPosition](./rowposition-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **função** de/neste objeto ADO **Recordset** .|  
+|[Conjunto de linhas](./rowset-property-ado.md)|Leitura/gravação.<br />Obtém/define um OLE DB objeto de **conjunto de linhas** de/neste objeto ADO **Recordset** .|  
   
 ## <a name="methods"></a>Métodos  
  Nenhum.  
@@ -80,5 +80,5 @@ A interface **ADORecordsetConstruction** é usada para construir um objeto **Rec
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propriedade Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Propriedade Rowset (ADO)](./rowset-property-ado.md)

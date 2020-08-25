@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbb9fc1c9d6f2a86a6f047b20962e5513798a26e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59894d6632cd5dae3887099db2d6e71b1174af43
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444358"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775705"
 ---
 # <a name="copyto-method-ado"></a>Método CopyTo (ADO)
-Copia o número especificado de caracteres ou bytes (dependendo do [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) no [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) para outro objeto de **fluxo** .  
+Copia o número especificado de caracteres ou bytes (dependendo do [tipo](./type-property-ado-stream.md)) no [fluxo](./stream-object-ado.md) para outro objeto de **fluxo** .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,14 +42,14 @@ Stream.CopyTo DestStream, NumChars
 >  O parâmetro *DestStream* não pode ser um proxy de objeto de **fluxo** porque isso requer acesso a uma interface privada no objeto de **fluxo** que não pode ser remoto para o cliente.  
   
  *NumChars*  
- Opcional. Um valor **inteiro** que especifica o número de bytes ou caracteres a serem copiados da posição atual no **fluxo** de origem para o **fluxo**de destino. O valor padrão é-1, que especifica que todos os caracteres ou bytes são copiados da posição atual para [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ Opcional. Um valor **inteiro** que especifica o número de bytes ou caracteres a serem copiados da posição atual no **fluxo** de origem para o **fluxo**de destino. O valor padrão é-1, que especifica que todos os caracteres ou bytes são copiados da posição atual para [EOS](./eos-property.md).  
   
 ## <a name="remarks"></a>Comentários  
- Esse método copia o número especificado de caracteres ou bytes, começando da posição atual especificada pela propriedade [Position](../../../ado/reference/ado-api/position-property-ado.md) . Se o número especificado for maior do que o número disponível de bytes até **EOS**, somente os caracteres ou bytes da posição atual para **EOS** serão copiados. Se o valor de *NUMCHARS* for-1, ou omitido, todos os caracteres ou bytes iniciados a partir da posição atual serão copiados.  
+ Esse método copia o número especificado de caracteres ou bytes, começando da posição atual especificada pela propriedade [Position](./position-property-ado.md) . Se o número especificado for maior do que o número disponível de bytes até **EOS**, somente os caracteres ou bytes da posição atual para **EOS** serão copiados. Se o valor de *NUMCHARS* for-1, ou omitido, todos os caracteres ou bytes iniciados a partir da posição atual serão copiados.  
   
- Se houver caracteres ou bytes existentes no fluxo de destino, todo o conteúdo além do ponto em que a cópia termina e não será truncado. A **posição** se torna o byte imediatamente após o último byte copiado. Se você quiser truncar esses bytes, chame [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ Se houver caracteres ou bytes existentes no fluxo de destino, todo o conteúdo além do ponto em que a cópia termina e não será truncado. A **posição** se torna o byte imediatamente após o último byte copiado. Se você quiser truncar esses bytes, chame [SetEOS](./seteos-method.md).  
   
- **CopyTo** deve ser usado para copiar dados para um **fluxo** de destino do mesmo tipo que o **fluxo** de origem (suas configurações de propriedade de **tipo** são **adTypeText** ou ambos **adTypeBinary**). Para objetos de **fluxo** de texto, você pode alterar a configuração da propriedade [charset](../../../ado/reference/ado-api/charset-property-ado.md) do **fluxo** de destino para traduzir de um conjunto de caracteres para outro. Além disso, objetos de **fluxo** de texto podem ser copiados com êxito em objetos de **fluxo** binários, mas objetos de **fluxo** binários não podem ser copiados em objetos de **fluxo** de texto.  
+ **CopyTo** deve ser usado para copiar dados para um **fluxo** de destino do mesmo tipo que o **fluxo** de origem (suas configurações de propriedade de **tipo** são **adTypeText** ou ambos **adTypeBinary**). Para objetos de **fluxo** de texto, você pode alterar a configuração da propriedade [charset](./charset-property-ado.md) do **fluxo** de destino para traduzir de um conjunto de caracteres para outro. Além disso, objetos de **fluxo** de texto podem ser copiados com êxito em objetos de **fluxo** binários, mas objetos de **fluxo** binários não podem ser copiados em objetos de **fluxo** de texto.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Objeto Stream (ADO)](./stream-object-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 635f091b668c8b0a0a8d654a65055e72c835d987
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1771eb7d0c6ed2609b5dea506e71aa4180e2370
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442018"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777385"
 ---
 # <a name="source-property-example-vb"></a>Exemplo da propriedade Source (VB)
-Este exemplo demonstra a propriedade [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) abrindo três objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) com base em fontes de dados diferentes.  
+Este exemplo demonstra a propriedade [Source](./source-property-ado-recordset.md) abrindo três objetos [Recordset](./recordset-object-ado.md) com base em fontes de dados diferentes.  
   
 ```  
 'BeginSourceVB  
@@ -128,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Propriedade Source (Conjunto de registros ADO)](./source-property-ado-recordset.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451098"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776355"
 ---
 # <a name="cachesize-property-ado"></a>Propriedade CacheSize (ADO)
-Indica o número de registros de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que são armazenados em cache localmente na memória.  
+Indica o número de registros de um objeto [Recordset](./recordset-object-ado.md) que são armazenados em cache localmente na memória.  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um valor **longo** que deve ser maior que 0. O padrão é UTF-1.  
@@ -41,14 +41,14 @@ Indica o número de registros de um objeto [Recordset](../../../ado/reference/ad
   
  Uma configuração de **CacheSize** zero não é permitida e retorna um erro.  
   
- Os registros recuperados do cache não refletem as alterações simultâneas feitas por outros usuários nos dados de origem. Para forçar uma atualização de todos os dados armazenados em cache, use o método [Ressync](../../../ado/reference/ado-api/resync-method.md) .  
+ Os registros recuperados do cache não refletem as alterações simultâneas feitas por outros usuários nos dados de origem. Para forçar uma atualização de todos os dados armazenados em cache, use o método [Ressync](./resync-method.md) .  
   
- Se **CacheSize** for definido como um valor maior que um, os métodos de navegação ([move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) poderão resultar na navegação para um registro excluído, se a exclusão ocorrer depois que os registros forem recuperados. Após a busca inicial, as exclusões subsequentes não serão refletidas no cache de dados até que você tente acessar um valor de dados de uma linha excluída. No entanto, a definição de **CacheSize** como um elimina esse problema, pois as linhas excluídas não podem ser buscadas.  
+ Se **CacheSize** for definido como um valor maior que um, os métodos de navegação ([move](./move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) poderão resultar na navegação para um registro excluído, se a exclusão ocorrer depois que os registros forem recuperados. Após a busca inicial, as exclusões subsequentes não serão refletidas no cache de dados até que você tente acessar um valor de dados de uma linha excluída. No entanto, a definição de **CacheSize** como um elimina esse problema, pois as linhas excluídas não podem ser buscadas.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade CacheSize (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [Exemplo da propriedade CacheSize (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [Exemplo da propriedade CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [Exemplo da propriedade CacheSize (VB)](./cachesize-property-example-vb.md)   
+ [Exemplo da propriedade CacheSize (VC + +)](./cachesize-property-example-vc.md)   
+ [Exemplo da propriedade CacheSize (JScript)](./cachesize-property-example-jscript.md)

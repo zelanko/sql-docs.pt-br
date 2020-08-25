@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a285aec87cd2bbdf832d071c99be4a70c5d53a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd196830ad1212d495778d037c915b2f4d86874
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444328"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775645"
 ---
 # <a name="count-property-example-vc"></a>Exemplo da propriedade Count (VC++)
-Este exemplo demonstra a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) com duas coleções no banco de dados ***Employee*** . A propriedade Obtém o número de objetos em cada coleção e define o limite superior para loops que enumeram essas coleções.  
+Este exemplo demonstra a propriedade [Count](./count-property-ado.md) com duas coleções no banco de dados ***Employee*** . A propriedade Obtém o número de objetos em cada coleção e define o limite superior para loops que enumeram essas coleções.  
   
 ```  
 // BeginCountCpp.cpp  
@@ -132,4 +132,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
+ [Propriedade Count (ADO)](./count-property-ado.md)

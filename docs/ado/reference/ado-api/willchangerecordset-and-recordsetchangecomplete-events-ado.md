@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa7ec524d950a45dd11e1bc62a983810ab2550ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c88cd48a16907e67813f90c06dd9ce69d11ed30
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441508"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776885"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventos WillChangeRecordset e RecordsetChangeComplete (ADO)
-O evento **WillChangeRecordset** é chamado antes de uma operação pendente Alterar o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). O evento **RecordsetChangeComplete** é chamado depois que o **conjunto de registros** é alterado.  
+O evento **WillChangeRecordset** é chamado antes de uma operação pendente Alterar o [conjunto de registros](./recordset-object-ado.md). O evento **RecordsetChangeComplete** é chamado depois que o **conjunto de registros** é alterado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +40,10 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parâmetros  
  *adReason*  
- Um valor [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) que especifica o motivo para esse evento. Seu valor pode ser **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
+ Um valor [EventReasonEnum](./eventreasonenum.md) que especifica o motivo para esse evento. Seu valor pode ser **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
   
  *adStatus*  
- Um valor de status de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
+ Um valor de status de [EventStatusEnum](./eventstatusenum.md) .  
   
  Quando **WillChangeRecordset** for chamado, esse parâmetro será definido como **adStatusOK** se a operação que causou o evento tiver sido bem-sucedida. Ele será definido como **adStatusCantDeny** se esse evento não puder solicitar o cancelamento da operação pendente.  
   
@@ -54,18 +54,18 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  Antes de **WillChangeRecordset** ou **RecordsetChangeComplete** retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
  *pError*  
- Um objeto de [erro](../../../ado/reference/ado-api/error-object.md) . Ele descreve o erro que ocorreu se o valor de *adStatus* for **adStatusErrorsOccurred**; caso contrário, ele não será definido.  
+ Um objeto de [erro](./error-object.md) . Ele descreve o erro que ocorreu se o valor de *adStatus* for **adStatusErrorsOccurred**; caso contrário, ele não será definido.  
   
  *pRecordset*  
  Um objeto **Recordset** . O **conjunto de registros** para o qual esse evento ocorreu.  
   
 ## <a name="remarks"></a>Comentários  
- Um evento **WillChangeRecordset** ou **RecordsetChangeComplete** pode ocorrer devido à [repetição](../../../ado/reference/ado-api/requery-method.md) do **conjunto de registros** ou aos métodos [abertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) .  
+ Um evento **WillChangeRecordset** ou **RecordsetChangeComplete** pode ocorrer devido à [repetição](./requery-method.md) do **conjunto de registros** ou aos métodos [abertos](./open-method-ado-recordset.md) .  
   
  Se o provedor não oferecer suporte a indicadores, uma notificação de evento **RecordsetChange** ocorrerá toda vez que novas linhas forem recuperadas do provedor. A frequência desse evento depende da propriedade **RecordsetCacheSize** .  
   
  Você deve definir o parâmetro **adStatus** como **adStatusUnwantedEvent** para cada valor de **adReason** possível parar completamente a notificação de eventos para qualquer evento que inclua um parâmetro **adReason** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo do modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)
+ [Exemplo do modelo de eventos ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Resumo do manipulador de eventos ADO](../../guide/data/ado-event-handler-summary.md)

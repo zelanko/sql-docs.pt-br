@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b00d145dfd718c64bbd3a87d6df353114afcb2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97f378e1be87be95682bf2eeb05e112abfb96f9d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441838"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777205"
 ---
 # <a name="stream-property"></a>Propriedade Stream
 Obtém ou define um objeto de **fluxo** de OLE DB de/em um objeto **ADOStreamConstruction** .  
@@ -50,4 +50,4 @@ HRESULT put_Stream([in] IUnknown* pStream);
  Esse método de propriedade retorna os valores de HRESULT padrão. Isso inclui S_OK e E_FAIL.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [ADOStreamConstruction Interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)
+ [ADOStreamConstruction Interface](./adostreamconstruction-interface.md)

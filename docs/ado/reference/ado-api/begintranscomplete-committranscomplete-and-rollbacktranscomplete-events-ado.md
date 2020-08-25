@@ -23,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 515202cd8313c2e553d416a726c21c6cdc0f1994
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47f559f839c4dcb6b73b273cd09a0289468f9046
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451158"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776415"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>Eventos BeginTransComplete, CommitTransComplete e RollbackTransComplete (ADO)
-Esses eventos serão chamados depois que a operação associada no objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) terminar a execução.  
+Esses eventos serão chamados depois que a operação associada no objeto de [conexão](./connection-object-ado.md) terminar a execução.  
   
--   **BeginTransComplete** é chamado após a operação [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
+-   **BeginTransComplete** é chamado após a operação [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
--   **CommitTransComplete** é chamado após a operação de [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
+-   **CommitTransComplete** é chamado após a operação de [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
--   **RollbackTransComplete** é chamado após a operação [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
+-   **RollbackTransComplete** é chamado após a operação [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,10 +53,10 @@ RollbackTransComplete pError, adStatus, pConnection
  Um valor **longo** que contém o novo nível de transação do **BeginTrans** que causou esse evento.  
   
  *pError*  
- Um objeto de [erro](../../../ado/reference/ado-api/error-object.md) . Ele descreve o erro que ocorreu se o valor de EventStatusEnum for **adStatusErrorsOccurred**; caso contrário, ele não será definido.  
+ Um objeto de [erro](./error-object.md) . Ele descreve o erro que ocorreu se o valor de EventStatusEnum for **adStatusErrorsOccurred**; caso contrário, ele não será definido.  
   
  *adStatus*  
- Um valor de status de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Quando qualquer um desses eventos for chamado, esse parâmetro será definido como **adStatusOK** se a operação que causou o êxito do evento ou **adStatusErrorsOccurred** se a operação falhou.  
+ Um valor de status de [EventStatusEnum](./eventstatusenum.md) . Quando qualquer um desses eventos for chamado, esse parâmetro será definido como **adStatusOK** se a operação que causou o êxito do evento ou **adStatusErrorsOccurred** se a operação falhou.  
   
  Esses eventos podem impedir notificações subsequentes definindo esse parâmetro como **adStatusUnwantedEvent** antes que o evento seja retornado.  
   
@@ -66,10 +66,10 @@ RollbackTransComplete pError, adStatus, pConnection
 ## <a name="remarks"></a>Comentários  
  No Visual C++, várias **conexões** podem compartilhar o mesmo método de manipulação de eventos. O método usa o objeto de **conexão** retornado para determinar qual objeto causou o evento.  
   
- Se a propriedade [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) for definida como **adXactCommitRetaining** ou **adXactAbortRetaining**, uma nova transação será iniciada depois de confirmar ou reverter uma transação. Use o evento **BeginTransComplete** para ignorar tudo, exceto o primeiro evento de início de transação.  
+ Se a propriedade [Attributes](./attributes-property-ado.md) for definida como **adXactCommitRetaining** ou **adXactAbortRetaining**, uma nova transação será iniciada depois de confirmar ou reverter uma transação. Use o evento **BeginTransComplete** para ignorar tudo, exceto o primeiro evento de início de transação.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo do modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Exemplo dos métodos BeginTrans, CommitTrans e RollbackTrans (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Métodos BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)
+ [Exemplo do modelo de eventos ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Exemplo dos métodos BeginTrans, CommitTrans e RollbackTrans (VB)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [Resumo do manipulador de eventos do ADO](../../guide/data/ado-event-handler-summary.md)   
+ [Métodos BeginTrans, CommitTrans e RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bf45e2d458784972d7057e95878c9db3526ffac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c3ed02109806232f8301b33e8b0387ea78b6ef4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444318"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775605"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
-Cria um novo objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) com as propriedades especificadas.  
+Cria um novo objeto de [parâmetro](./parameter-object.md) com as propriedades especificadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +42,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Opcional. Um valor de **cadeia de caracteres** que contém o nome do objeto de **parâmetro** .  
   
  *Tipo*  
- Opcional. Um valor de [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) que especifica o tipo de dados do objeto de **parâmetro** .  
+ Opcional. Um valor de [DataTypeEnum](./datatypeenum.md) que especifica o tipo de dados do objeto de **parâmetro** .  
   
  *Direção*  
- Opcional. Um valor [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) que especifica o tipo de objeto de **parâmetro** .  
+ Opcional. Um valor [ParameterDirectionEnum](./parameterdirectionenum.md) que especifica o tipo de objeto de **parâmetro** .  
   
  *Tamanho*  
  Opcional. Um valor **longo** que especifica o comprimento máximo para o valor do parâmetro em caracteres ou bytes.  
@@ -56,18 +56,18 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## <a name="remarks"></a>Comentários  
  Use o método **CreateParameter** para criar um novo objeto de **parâmetro** com um nome, tipo, direção, tamanho e valor especificados. Todos os valores que você passa nos argumentos são gravados nas propriedades do **parâmetro** correspondente.  
   
- Esse método não acrescenta automaticamente o objeto de **parâmetro** à coleção de **parâmetros** de um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) . Isso permite que você defina propriedades adicionais cujos valores serão validados ao acrescentar o objeto de **parâmetro** à coleção.  
+ Esse método não acrescenta automaticamente o objeto de **parâmetro** à coleção de **parâmetros** de um objeto de [comando](./command-object-ado.md) . Isso permite que você defina propriedades adicionais cujos valores serão validados ao acrescentar o objeto de **parâmetro** à coleção.  
   
- Se você especificar um tipo de dados de comprimento variável no argumento *Type* , deverá passar um argumento *size* ou definir a propriedade [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) do objeto **Parameter** antes de acrescentá-lo à coleção **Parameters** ; caso contrário, ocorrerá um erro.  
+ Se você especificar um tipo de dados de comprimento variável no argumento *Type* , deverá passar um argumento *size* ou definir a propriedade [size](./size-property-ado-parameter.md) do objeto **Parameter** antes de acrescentá-lo à coleção **Parameters** ; caso contrário, ocorrerá um erro.  
   
- Se você especificar um tipo de dados numérico (**adNumeric** ou **adDecimal**) no argumento *Type* , também deverá definir as propriedades [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [Precision](../../../ado/reference/ado-api/precision-property-ado.md) .  
+ Se você especificar um tipo de dados numérico (**adNumeric** ou **adDecimal**) no argumento *Type* , também deverá definir as propriedades [NumericScale](./numericscale-property-ado.md) e [Precision](./precision-property-ado.md) .  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Objeto Command (ADO)](./command-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo dos métodos Append e CreateParameter (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Exemplo dos métodos Append e CreateParameter (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Objeto de parâmetro](../../../ado/reference/ado-api/parameter-object.md)   
- [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Exemplo dos métodos Append e CreateParameter (VB)](./append-and-createparameter-methods-example-vb.md)   
+ [Exemplo dos métodos Append e CreateParameter (VC + +)](./append-and-createparameter-methods-example-vc.md)   
+ [Método Append (ADO)](./append-method-ado.md)   
+ [Objeto de parâmetro](./parameter-object.md)   
+ [Coleção Parameters (ADO)](./parameters-collection-ado.md)

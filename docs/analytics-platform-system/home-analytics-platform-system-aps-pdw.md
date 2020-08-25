@@ -9,12 +9,12 @@ ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6f8aa2351837c43454656d468e93818adfb7ccf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401090"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767005"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -51,4 +51,4 @@ Além de alcançar o desempenho de consulta inovador, o PDW facilita:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre os benefícios do PDW, consulte o white paper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/dn520808%28v=msdn.10%29) (Uma plataforma inovadora para soluções de Big Data e de data warehouse da próxima geração) no MSDN.
+Para obter mais informações sobre os benefícios do PDW, consulte o white paper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](/previous-versions/sql/sql-server-2012/dn520808(v=msdn.10)) (Uma plataforma inovadora para soluções de Big Data e de data warehouse da próxima geração) no MSDN.

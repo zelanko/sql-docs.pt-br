@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444448"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775895"
 ---
 # <a name="connectionstring-property-ado"></a>Propriedade ConnectionString (ADO)
 Indica as informações usadas para estabelecer uma conexão com uma fonte de dados.  
@@ -42,9 +42,9 @@ Indica as informações usadas para estabelecer uma conexão com uma fonte de da
 |*Servidor remoto =*|Especifica o nome do caminho do servidor a ser usado ao abrir uma conexão do lado do cliente. (Somente serviço de dados remotos.)|  
 |*URL =*|Especifica a cadeia de conexão como uma URL absoluta que identifica um recurso, como um arquivo ou diretório.|  
   
- Depois de definir a propriedade **ConnectionString** e abrir o objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) , o provedor pode alterar o conteúdo da propriedade, por exemplo, mapeando os nomes de argumento definidos pelo ADO para seus equivalentes para o provedor específico.  
+ Depois de definir a propriedade **ConnectionString** e abrir o objeto [Connection](./connection-object-ado.md) , o provedor pode alterar o conteúdo da propriedade, por exemplo, mapeando os nomes de argumento definidos pelo ADO para seus equivalentes para o provedor específico.  
   
- A propriedade **ConnectionString** automaticamente herda o valor usado para o argumento *ConnectionString* do método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) , de modo que você pode substituir a propriedade **ConnectionString** atual durante a chamada do método **Open** .  
+ A propriedade **ConnectionString** automaticamente herda o valor usado para o argumento *ConnectionString* do método [Open](./open-method-ado-connection.md) , de modo que você pode substituir a propriedade **ConnectionString** atual durante a chamada do método **Open** .  
   
  Como o argumento de *nome de arquivo* faz com que o ADO carregue o provedor associado, você não pode passar os argumentos do *provedor* e do *nome do arquivo* .  
   
@@ -63,9 +63,9 @@ Indica as informações usadas para estabelecer uma conexão com uma fonte de da
 |Sem padrão.<br /><br /> Quando um aplicativo ADO é executado nos sistemas operacionais a seguir e não especifica explicitamente o provedor, o ADO retorna o seguinte erro: "ADODB. Conexão: o provedor não foi especificado e não há um provedor padrão designado "|Windows 2000 (64 bits)<br /><br /> Windows XP (64 bits)<br /><br /> Windows 2003 Server (64 bits)<br /><br /> Windows Vista (64 bits)|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Objeto Connection (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Apêndice A: Provedores](../../guide/appendixes/appendix-a-providers.md)

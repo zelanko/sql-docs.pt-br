@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439548"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769445"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Especifica os direitos ou permissões para um grupo ou usuário em um objeto.  
@@ -37,7 +37,7 @@ Especifica os direitos ou permissões para um grupo ou usuário em um objeto.
 |**adRightInsert**|32768 (&H8000)|O usuário ou grupo tem permissão para inserir o objeto. Para objetos como **tabelas**, o usuário tem permissão para inserir dados na tabela.|  
 |**adRightMaximumAllowed**|33554432 (&H2000000)|O usuário ou grupo tem o número máximo de permissões permitido pelo provedor. Permissões específicas são dependentes do provedor.|  
 |**adRightNone**|0|O usuário ou grupo não tem permissões para o objeto.|  
-|**adRightRead**|-2147483648 (&H80000000)|O usuário ou grupo tem permissão para ler o objeto. Para objetos como [tabelas](../../../ado/reference/adox-api/table-object-adox.md), o usuário tem permissão para ler os dados na tabela.|  
+|**adRightRead**|-2147483648 (&H80000000)|O usuário ou grupo tem permissão para ler o objeto. Para objetos como [tabelas](./table-object-adox.md), o usuário tem permissão para ler os dados na tabela.|  
 |**adRightReadDesign**|1024 (&H400)|O usuário ou grupo tem permissão para ler o design do objeto.|  
 |**adRightReadPermissions**|131072 (&H20000)|O usuário ou grupo pode exibir, mas não alterar, as permissões específicas para um objeto no catálogo.|  
 |**adRightReference**|8192 (&H2000)|O usuário ou grupo tem permissão para fazer referência ao objeto.|  
@@ -51,9 +51,9 @@ Especifica os direitos ou permissões para um grupo ou usuário em um objeto.
 
 :::row:::
     :::column:::
-        [Método GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [Método GetPermissions (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [Método SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [Método SetPermissions (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

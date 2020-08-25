@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb315cfe0a46e3d3c5ba6bbf4f34044ae0f8fa9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 254829dcc26a0a73503b7ef79763c05c61c2f8ca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442798"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773295"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Parameters
 ## <a name="properties"></a>Propriedades  
- [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propriedade Count](./count-property-ado.md)  
   
- [Propriedade do item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade do item](./item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Método Append](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Método Append](./append-method-ado.md)  
   
- [Método Delete (Coleção de parâmetros ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+ [Método Delete (Coleção de parâmetros ADO)](./delete-method-ado-parameters-collection.md)  
   
- [Método de atualização](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Método de atualização](./refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Coleção Parameters (ADO)](./parameters-collection-ado.md)

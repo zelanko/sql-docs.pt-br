@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fe5d8c9533bf1c2b2e371b680ee67b3b8a86aa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa050f7e99115ca13bf8871378ffa21b1f326d94
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442858"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773535"
 ---
 # <a name="pagecount-property-ado"></a>Propriedade PageCount (ADO)
-Indica quantas páginas de dados o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contém.  
+Indica quantas páginas de dados o objeto [Recordset](./recordset-object-ado.md) contém.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um valor **longo** que indica o número de páginas no **conjunto de registros**.  
   
 ## <a name="remarks"></a>Comentários  
- Use a propriedade **PageCount** para determinar quantas páginas de dados estão no objeto **Recordset** . *Páginas* são grupos de registros cujo tamanho é igual à configuração da propriedade [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) . Mesmo que a última página esteja incompleta porque há menos registros do que o valor **PageSize** , ele conta como uma página adicional no valor **PageCount** . Se o objeto **Recordset** não oferecer suporte a essa propriedade, o valor será-1 para indicar que **PageCount** é interminável.  
+ Use a propriedade **PageCount** para determinar quantas páginas de dados estão no objeto **Recordset** . *Páginas* são grupos de registros cujo tamanho é igual à configuração da propriedade [PageSize](./pagesize-property-ado.md) . Mesmo que a última página esteja incompleta porque há menos registros do que o valor **PageSize** , ele conta como uma página adicional no valor **PageCount** . Se o objeto **Recordset** não oferecer suporte a essa propriedade, o valor será-1 para indicar que **PageCount** é interminável.  
   
- Consulte as propriedades **PageSize** e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) para obter mais informações sobre a funcionalidade da página.  
+ Consulte as propriedades **PageSize** e [AbsolutePage](./absolutepage-property-ado.md) para obter mais informações sobre a funcionalidade da página.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades AbsolutePage, PageCount e PageSize (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [Exemplo das propriedades AbsolutePage, PageCount e PageSize (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
- [Propriedade AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [Propriedade PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Propriedade RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)
+ [Exemplo das propriedades AbsolutePage, PageCount e PageSize (VB)](./absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [Exemplo das propriedades AbsolutePage, PageCount e PageSize (VC + +)](./absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [Propriedade AbsolutePage (ADO)](./absolutepage-property-ado.md)   
+ [Propriedade PageSize (ADO)](./pagesize-property-ado.md)   
+ [Propriedade RecordCount (ADO)](./recordcount-property-ado.md)

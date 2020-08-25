@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d38d132e4e61f7b26d97450d41cc4f291789257
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b851fb2fc8624b8c2d7fb5e717552b97e80b756
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451148"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776405"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Exemplo das propriedades BOF, EOF e Bookmark (VB)
-Este exemplo usa as propriedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) para exibir uma mensagem se um usuário tentar mover o primeiro ou o último registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa a propriedade [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) para permitir que o usuário sinalize um registro em um **conjunto de registros** e retorne a ele mais tarde.  
+Este exemplo usa as propriedades [BOF](./bof-eof-properties-ado.md) e [EOF](./bof-eof-properties-ado.md) para exibir uma mensagem se um usuário tentar mover o primeiro ou o último registro de um [conjunto de registros](./recordset-object-ado.md). Ele usa a propriedade [Bookmark](./bookmark-property-ado.md) para permitir que o usuário sinalize um registro em um **conjunto de registros** e retorne a ele mais tarde.  
   
 ```  
 'BeginBOFVB  
@@ -130,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- Este exemplo usa as propriedades **Bookmark** e [Filter](../../../ado/reference/ado-api/filter-property.md) para criar uma exibição limitada do **conjunto de registros**. Somente os registros referenciados pela matriz de indicadores podem ser acessados.  
+ Este exemplo usa as propriedades **Bookmark** e [Filter](./filter-property.md) para criar uma exibição limitada do **conjunto de registros**. Somente os registros referenciados pela matriz de indicadores podem ser acessados.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Propriedade Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propriedades BOF, EOF (ADO)](./bof-eof-properties-ado.md)   
+ [Propriedade Bookmark (ADO)](./bookmark-property-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

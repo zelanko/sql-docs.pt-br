@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b562d480cfbebefdee82703e0c953854de07d064
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad540a13fbad480f795049df0d0150188df4283
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443738"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775445"
 ---
 # <a name="fieldenum"></a>FieldEnum
-Especifica os campos especiais referenciados na coleção de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
+Especifica os campos especiais referenciados na coleção de [campos](./fields-collection-ado.md) de um objeto de [registro](./record-object-ado.md) .  
   
 ## <a name="remarks"></a>Comentários  
- Essas constantes fornecem um "atalho" para acessar campos especiais associados a um **registro**. Recupere o objeto [Field](../../../ado/reference/ado-api/field-object.md) da coleção **Fields** e, em seguida, obtenha seu conteúdo com a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do objeto **Field** .  
+ Essas constantes fornecem um "atalho" para acessar campos especiais associados a um **registro**. Recupere o objeto [Field](./field-object.md) da coleção **Fields** e, em seguida, obtenha seu conteúdo com a propriedade [Value](./value-property-ado.md) do objeto **Field** .  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
-|**adDefaultStream**|-1|Faz referência ao campo que contém o objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) padrão associado a um **registro**.|  
+|**adDefaultStream**|-1|Faz referência ao campo que contém o objeto de [fluxo](./stream-object-ado.md) padrão associado a um **registro**.|  
 |**adRecordURL**|-2|Faz referência ao campo que contém a cadeia de caracteres de URL absoluta para o **registro**atual.|

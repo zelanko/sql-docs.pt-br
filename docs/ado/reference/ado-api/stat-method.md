@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441988"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777355"
 ---
 # <a name="stat-method"></a>Método Stat
-Recupera informações sobre um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Recupera informações sobre um objeto de [fluxo](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  Se STATFLAG_NONAME não tiver sido especificado no parâmetro StatFlag e não houver nenhum nome disponível para o fluxo atual, esse valor será E_NOTIMPL.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Objeto Stream (ADO)](./stream-object-ado.md)

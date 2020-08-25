@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4dc81b24afa52e16103028cd0491af452824415
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de91c32d62a0180ccab263ececd9e2f9e0442aed
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441858"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777225"
 ---
 # <a name="stream-object-ado"></a>Objeto Stream (ADO)
 Representa um fluxo de dados ou texto binários.  
   
- Em hierarquias estruturadas em árvore, como um sistema de arquivos ou um sistema de email, um [registro](../../../ado/reference/ado-api/record-object-ado.md) pode ter um fluxo binário padrão de bits associado a ele que contém o conteúdo do arquivo ou do email. Um objeto de **fluxo** pode ser usado para manipular campos ou registros que contêm esses fluxos de dados. Um objeto de **fluxo** pode ser obtido das seguintes maneiras:  
+ Em hierarquias estruturadas em árvore, como um sistema de arquivos ou um sistema de email, um [registro](./record-object-ado.md) pode ter um fluxo binário padrão de bits associado a ele que contém o conteúdo do arquivo ou do email. Um objeto de **fluxo** pode ser usado para manipular campos ou registros que contêm esses fluxos de dados. Um objeto de **fluxo** pode ser obtido das seguintes maneiras:  
   
 -   De uma URL apontando para um objeto (normalmente um arquivo) contendo dados binários ou de texto. Esse objeto pode ser um documento simples, um objeto de **registro** que representa um documento estruturado ou uma pasta.  
   
@@ -36,46 +36,46 @@ Representa um fluxo de dados ou texto binários.
   
  Com os métodos e as propriedades de um objeto de **fluxo** , você pode fazer o seguinte:  
   
--   Abra um objeto de **fluxo** de um **registro** ou URL com o método [Open](../../../ado/reference/ado-api/open-method-ado-stream.md) .  
+-   Abra um objeto de **fluxo** de um **registro** ou URL com o método [Open](./open-method-ado-stream.md) .  
   
--   Feche um **fluxo** com o método [Close](../../../ado/reference/ado-api/close-method-ado.md) .  
+-   Feche um **fluxo** com o método [Close](./close-method-ado.md) .  
   
--   Bytes de entrada ou texto para um **fluxo** com os métodos [Write](../../../ado/reference/ado-api/write-method.md) e [WriteText](../../../ado/reference/ado-api/writetext-method.md) .  
+-   Bytes de entrada ou texto para um **fluxo** com os métodos [Write](./write-method.md) e [WriteText](./writetext-method.md) .  
   
--   Bytes de leitura do **fluxo** com os métodos [Read](../../../ado/reference/ado-api/read-method.md) e [READTEXT](../../../ado/reference/ado-api/readtext-method.md) .  
+-   Bytes de leitura do **fluxo** com os métodos [Read](./read-method.md) e [READTEXT](./readtext-method.md) .  
   
--   Grave todos os dados de **fluxo** ainda no buffer do ADO para o objeto subjacente com o método [flush](../../../ado/reference/ado-api/flush-method-ado.md) .  
+-   Grave todos os dados de **fluxo** ainda no buffer do ADO para o objeto subjacente com o método [flush](./flush-method-ado.md) .  
   
--   Copie o conteúdo de um **fluxo** para outro **fluxo** com o método [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) .  
+-   Copie o conteúdo de um **fluxo** para outro **fluxo** com o método [CopyTo](./copyto-method-ado.md) .  
   
--   Controle como as linhas são lidas do arquivo de origem com o método de [ignorar](../../../ado/reference/ado-api/skipline-method.md)e a propriedade [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) .  
+-   Controle como as linhas são lidas do arquivo de origem com o método de [ignorar](./skipline-method.md)e a propriedade [LineSeparator](./lineseparator-property-ado.md) .  
   
--   Determine o fim da posição do fluxo com a propriedade [EOS](../../../ado/reference/ado-api/eos-property.md)e o método [SetEOS](../../../ado/reference/ado-api/seteos-method.md) .  
+-   Determine o fim da posição do fluxo com a propriedade [EOS](./eos-property.md)e o método [SetEOS](./seteos-method.md) .  
   
--   Salve e restaure dados em arquivos com os métodos [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)e [loaddefile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) .  
+-   Salve e restaure dados em arquivos com os métodos [SaveToFile](./savetofile-method.md)e [loaddefile](./loadfromfile-method-ado.md) .  
   
--   Especifique o conjunto de caracteres usado para armazenar o **fluxo** com a propriedade [charset](../../../ado/reference/ado-api/charset-property-ado.md) .  
+-   Especifique o conjunto de caracteres usado para armazenar o **fluxo** com a propriedade [charset](./charset-property-ado.md) .  
   
--   Pare uma operação de **fluxo** assíncrona com o método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
+-   Pare uma operação de **fluxo** assíncrona com o método [Cancel](./cancel-method-ado.md) .  
   
--   Determine o número de bytes em um **fluxo** com a propriedade [size](../../../ado/reference/ado-api/size-property-ado-stream.md) .  
+-   Determine o número de bytes em um **fluxo** com a propriedade [size](./size-property-ado-stream.md) .  
   
--   Controle a posição atual dentro de um **fluxo** com a propriedade [Position](../../../ado/reference/ado-api/position-property-ado.md) .  
+-   Controle a posição atual dentro de um **fluxo** com a propriedade [Position](./position-property-ado.md) .  
   
--   Determine o tipo de dados em um **fluxo** com a propriedade [Type](../../../ado/reference/ado-api/type-property-ado-stream.md) .  
+-   Determine o tipo de dados em um **fluxo** com a propriedade [Type](./type-property-ado-stream.md) .  
   
--   Determine o estado atual do **fluxo** (fechado, aberto ou em execução) com a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) .  
+-   Determine o estado atual do **fluxo** (fechado, aberto ou em execução) com a propriedade [State](./state-property-ado.md) .  
   
--   Especifique o modo de acesso para o **fluxo** com a propriedade [Mode](../../../ado/reference/ado-api/mode-property-ado.md) .  
+-   Especifique o modo de acesso para o **fluxo** com a propriedade [Mode](./mode-property-ado.md) .  
   
 > [!NOTE]
->  As URLs que usam o esquema http invocarão automaticamente o [provedor do Microsoft OLE DB para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [URLs absolutas e relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  As URLs que usam o esquema http invocarão automaticamente o [provedor do Microsoft OLE DB para publicação na Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [URLs absolutas e relativas](../../guide/data/absolute-and-relative-urls.md).  
   
  O objeto de **fluxo** é seguro para scripts.  
   
  Esta seção contém os seguintes tópicos.  
   
--   [Propriedades, métodos e eventos do objeto Stream](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos do objeto Stream](./stream-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Registros e fluxos](../../../ado/guide/data/records-and-streams.md)
+ [Registros e fluxos](../../guide/data/records-and-streams.md)

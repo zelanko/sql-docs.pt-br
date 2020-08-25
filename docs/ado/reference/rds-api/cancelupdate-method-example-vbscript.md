@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21d940642388c516ddf9c0048e255e441b9076b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 08691f0ae8f707f79a1725dfb466266ca45efdcb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439238"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768775"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Exemplo do método CancelUpdate (VBScript)
 > [!IMPORTANT]
@@ -119,7 +119,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
-
-
-
+ [Método CancelUpdate (ADO)](../ado-api/cancelupdate-method-ado.md)
