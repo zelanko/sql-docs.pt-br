@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c5febeb8727348525a9fe4a4dd5f8e22a17678b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddd21ab22fb018004673e1a9655117d913e27a7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451408"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771835"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para índice de sintaxe do Visual C++ para COM
 Esse índice é uma referência cruzada para a referência da linguagem ADO com base em Microsoft Visual C++.  
@@ -33,24 +33,24 @@ Esse índice é uma referência cruzada para a referência da linguagem ADO com 
   
  A sintaxe de método e propriedade em Visual C++ é listada para os seguintes elementos:  
   
--   [Coleções](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [Coleções](./collections-ado-for-visual-c-syntax.md)  
   
--   [Objeto de comando](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
+-   [Objeto de comando](./command-ado-for-visual-c-syntax.md)  
   
--   [Objeto de conexão](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
+-   [Objeto de conexão](./connection-ado-for-visual-c-syntax.md)  
   
--   [Objeto Error](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
+-   [Objeto Error](./error-ado-for-visual-c-syntax.md)  
   
--   [Objeto Field](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
+-   [Objeto Field](./field-ado-for-visual-c-syntax.md)  
   
--   [Objeto de parâmetro](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
+-   [Objeto de parâmetro](./parameter-ado-for-visual-c-syntax.md)  
   
--   [Objeto de registro](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [Objeto de registro](./record-ado-for-visual-c-syntax.md)  
   
--   [Objeto Recordset](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
+-   [Objeto Recordset](./recordset-ado-for-visual-c-syntax.md)  
   
--   [Objeto Stream](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
+-   [Objeto Stream](./stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Índice de sintaxe ADO for Visual C++ com #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Microsoft ADO (ActiveX Data Objects)](../../../ado/microsoft-activex-data-objects-ado.md)
+ [Índice de sintaxe ADO for Visual C++ com #import](./ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Microsoft ADO (ActiveX Data Objects)](../../microsoft-activex-data-objects-ado.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5730ca6a0d0bae791dce9327e365a9a38a9857f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4f83189a241b396cba613d9df0d6c0b1aa1328e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442728"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773215"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
-Especifica o formato no qual salvar um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Especifica o formato no qual salvar um [conjunto de registros](./recordset-object-ado.md).  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -42,4 +42,4 @@ Especifica o formato no qual salvar um [conjunto de registros](../../../ado/refe
 |AdoEnums.PersistFormat.XML|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método Save](../../../ado/reference/ado-api/save-method.md)
+ [Método Save](./save-method.md)

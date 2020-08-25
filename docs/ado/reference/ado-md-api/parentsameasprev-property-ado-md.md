@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bed95b3ce856b8636131da50ad8230a0a203add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8a184501616588cd7da8a74f713dd692531b6dd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440778"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777895"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>Propriedade ParentSameAsPrev (ADO MD)
-Indica se o pai deste [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) da posição é o mesmo que o pai do membro imediatamente anterior.  
+Indica se o pai deste [membro](./member-object-ado-md.md) da posição é o mesmo que o pai do membro imediatamente anterior.  
   
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um valor **booliano** e é somente leitura.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade tem suporte apenas em objetos [Membros](../../../ado/reference/ado-md-api/member-object-ado-md.md) que pertencem a um objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos de **membro** que pertencem a um objeto de [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
+ Essa propriedade tem suporte apenas em objetos [Membros](./member-object-ado-md.md) que pertencem a um objeto [Position](./position-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos de **membro** que pertencem a um objeto de [nível](./level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Objeto Member (ADO MD)](./member-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade DrilledDown (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)
+ [Propriedade DrilledDown (ADO MD)](./drilleddown-property-ado-md.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d20e44a46309580f85a6d35e609cdade2b4f31c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438948"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768125"
 ---
 # <a name="handler-property-rds"></a>Propriedade Handler (RDS)
-Indica o nome de um programa de personalização do lado do servidor (manipulador) que estende a funcionalidade do [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)e quaisquer parâmetros usados pelo *manipulador*.  
+Indica o nome de um programa de personalização do lado do servidor (manipulador) que estende a funcionalidade do [RDSServer. datafactory](./datafactory-object-rdsserver.md)e quaisquer parâmetros usados pelo *manipulador*.  
   
- **Aplica-se a:** [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **Aplica-se a:** [objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -38,26 +38,24 @@ DataControl.Handler = String
   
 #### <a name="parameters"></a>Parâmetros  
  *DataControl*  
- Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Uma variável de objeto que representa um [RDS. Objeto DataControl](./datacontrol-object-rds.md) .  
   
  *Cadeia de caracteres*  
  Um valor de **cadeia de caracteres** que contém o nome do manipulador e quaisquer parâmetros, todos separados por vírgulas (por exemplo, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade dá suporte à [personalização](../../../ado/guide/remote-data-service/datafactory-customization.md), uma funcionalidade que requer a definição da propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) como **adUseClient**.  
+ Essa propriedade dá suporte à [personalização](../../guide/remote-data-service/datafactory-customization.md), uma funcionalidade que requer a definição da propriedade [CursorLocation](../ado-api/cursorlocation-property-ado.md) como **adUseClient**.  
   
  O nome do manipulador e seus parâmetros, se houver, são separados por vírgulas (","). O comportamento imprevisível ocorrerá se um ponto-e-vírgula (";") aparecer em qualquer lugar dentro da *cadeia de caracteres*. Você pode escrever seu próprio manipulador, desde que ele dê suporte à interface **IDataFactoryHandler** .  
   
  O nome do manipulador padrão é **MSDFMAP. E seu**parâmetro padrão é um arquivo de personalização chamado **MSDFMAP.INI**. Use essa propriedade para invocar arquivos de personalização alternativos criados pelo administrador do servidor.  
   
- A alternativa para definir a propriedade do **manipulador** é especificar um manipulador e parâmetros na propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) ; ou seja, "**Handler =**_handlename, parâmetro1, parâmetro2,...;_".  
+ A alternativa para definir a propriedade do **manipulador** é especificar um manipulador e parâmetros na propriedade [ConnectionString](../ado-api/connectionstring-property-ado.md) ; ou seja, "**Handler =**_handlename, parâmetro1, parâmetro2,...;_".  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade Handler (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
- [Personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Exemplo da propriedade Handler (VB)](./handler-property-example-vb.md)   
+ [Personalização de datafactory](../../guide/remote-data-service/datafactory-customization.md)   
+ [Objeto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

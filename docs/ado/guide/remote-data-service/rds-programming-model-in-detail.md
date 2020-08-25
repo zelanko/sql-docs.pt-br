@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad3cd950c958fce95c0264533040fbe9e1df634b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 310bcdad8358120a47cf01ec6734325ca5fa425d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452118"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759656"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo de programação do RDS em detalhes
 Veja a seguir os principais elementos do modelo de programação RDS:  
@@ -37,18 +37,18 @@ Veja a seguir os principais elementos do modelo de programação RDS:
 ## <a name="rdsdataspace"></a>RDS.DataSpace  
  O aplicativo cliente deve especificar o servidor e o programa de servidor a serem invocados. Em retorno, seu aplicativo recebe uma referência para o programa do servidor e pode tratar a referência como se fosse o próprio programa do servidor.  
   
- O modelo de objeto RDS incorpora essa funcionalidade com o [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) .  
+ O modelo de objeto RDS incorpora essa funcionalidade com o [RDS. Objeto DataSpace](../../reference/rds-api/dataspace-object-rds.md) .  
   
  O programa de servidor é especificado com um identificador de programa ou *ProgID*. O servidor usa o *ProgID* e o registro da máquina do servidor para localizar informações sobre o programa real a ser iniciado.  
   
  O RDS faz uma distinção interna, dependendo se o programa do servidor está em um servidor remoto na Internet ou em uma intranet; um servidor em uma rede local; ou não em um servidor, mas em uma DLL (biblioteca de vínculo dinâmico) local. Essa distinção determina como as informações são trocadas entre o cliente e o servidor e faz uma diferença tangível no tipo de referência retornado ao aplicativo cliente. No entanto, do ponto de vista, essa distinção não tem um significado especial. Tudo o que importa é que você receba uma referência de programa utilizável.  
   
 ## <a name="rdsserverdatafactory"></a>RDSServer.DataFactory  
- O RDS fornece um programa de servidor padrão que pode executar uma consulta SQL na fonte de dados e retornar um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou pegar um objeto **Recordset** e atualizar a fonte de dados.  
+ O RDS fornece um programa de servidor padrão que pode executar uma consulta SQL na fonte de dados e retornar um objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) ou pegar um objeto **Recordset** e atualizar a fonte de dados.  
   
- O modelo de objeto RDS incorpora essa funcionalidade ao objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
+ O modelo de objeto RDS incorpora essa funcionalidade ao objeto [RDSServer. datafactory](../../reference/rds-api/datafactory-object-rdsserver.md) .  
   
- Além disso, esse objeto tem um método para criar um objeto **Recordset** vazio que você pode preencher programaticamente ([createrecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) e outro método para converter um objeto **Recordset** em uma cadeia de texto para criar uma página da Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ Além disso, esse objeto tem um método para criar um objeto **Recordset** vazio que você pode preencher programaticamente ([createrecordset](../../reference/rds-api/createrecordset-method-rds.md)) e outro método para converter um objeto **Recordset** em uma cadeia de texto para criar uma página da Web ([ConvertToString](../../reference/rds-api/converttostring-method-rds.md)).  
   
  Com o ADO, você pode substituir alguns dos comportamentos padrão de conexão e comando do **RDSServer. datafactory** por um manipulador **DataFactory** e um arquivo de personalização que contém parâmetros de conexão, comando e segurança.  
   
@@ -57,7 +57,7 @@ Veja a seguir os principais elementos do modelo de programação RDS:
 ## <a name="rdsdatacontrol"></a>RDS.DataControl  
  O RDS fornece um meio de combinar a funcionalidade do **RDS. DataSpace** e **RDSServer. datafactory**e também permitem que os controles visuais usem facilmente o objeto **Recordset** retornado por uma consulta de uma fonte de dados. Tentativas de RDS, para o caso mais comum, para fazer o máximo possível para obter acesso automaticamente a informações em um servidor e exibi-las em um controle visual.  
   
- O modelo de objeto RDS incorpora essa funcionalidade com o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ O modelo de objeto RDS incorpora essa funcionalidade com o [RDS. Objeto DataControl](../../reference/rds-api/datacontrol-object-rds.md) .  
   
  O **RDS. O DataControl** tem dois aspectos. Um aspecto refere-se à fonte de dados. Se você definir as informações de conexão e de comando usando as propriedades **Connect** e **SQL** do **RDS. O DataControl**, ele usará automaticamente o **RDS. DataSpace** para criar uma referência ao objeto padrão **RDSServer. datafactory** . Em seguida, o **RDSServer. datafactory** usará o valor da propriedade **Connect** para se conectar à fonte de dados, usará o valor da propriedade **SQL** para obter um **conjunto de registros** da fonte de dados e retornará o objeto **Recordset** para o **RDS. Controle**de data.  
   
@@ -66,19 +66,16 @@ Veja a seguir os principais elementos do modelo de programação RDS:
  O **RDS. O objeto DataControl** também tem seus próprios métodos para navegar, classificar e filtrar as linhas do objeto **Recordset** associado. Esses métodos são semelhantes, mas não os mesmos que os métodos no objeto **Recordset** do ADO.  
   
 ## <a name="events"></a>Eventos  
- O RDS dá suporte a dois de seus próprios eventos, que são independentes do modelo de evento ADO. O evento [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) é chamado sempre que o **RDS. A propriedade DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) muda, notificando você quando uma operação assíncrona tiver sido concluída com êxito, encerrada ou sofreu um erro. O evento [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) é chamado sempre que ocorrer um erro, mesmo se o erro ocorrer durante uma operação assíncrona.  
+ O RDS dá suporte a dois de seus próprios eventos, que são independentes do modelo de evento ADO. O evento [onReadyStateChange](../../reference/rds-api/onreadystatechange-event-rds.md) é chamado sempre que o **RDS. A propriedade DataControl** [ReadyState](../../reference/rds-api/readystate-property-rds.md) muda, notificando você quando uma operação assíncrona tiver sido concluída com êxito, encerrada ou sofreu um erro. O evento [OnError](../../reference/rds-api/onerror-event-rds.md) é chamado sempre que ocorrer um erro, mesmo se o erro ocorrer durante uma operação assíncrona.  
   
 > [!NOTE]
 >  O Microsoft Internet Explorer fornece dois eventos adicionais para RDS: **ondatasetchanged**, que indica que o **conjunto de registros** é funcional, mas ainda recupera linhas e **onDataSetComplete**, o que indica que o conjunto de **registros** concluiu a recuperação de linhas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelo de programação de RDS com objetos](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Objeto datafactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Cenário de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial do RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Segurança e uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
+ [Modelo de programação de RDS com objetos](./rds-programming-model-with-objects.md)   
+ [Objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Objeto datafactory (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   
+ [Objeto DataSpace (RDS)](../../reference/rds-api/dataspace-object-rds.md)   
+ [Cenário de RDS](./rds-scenario.md)   
+ [Tutorial do RDS](./rds-tutorial.md)   
+ [Segurança e uso RDS](./rds-usage-and-security.md)

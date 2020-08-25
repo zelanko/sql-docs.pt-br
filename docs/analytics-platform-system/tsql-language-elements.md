@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399831"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778405"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos da linguagem T-SQL para data warehouse paralelos
 Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Server data warehouse paralelo (PDW).
@@ -23,11 +23,11 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [convenções de sintaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [regras de nomenclatura de objeto](../relational-databases/databases/database-identifiers.md)
 * [Palavras-chave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [agrupamentos](https://msdn.microsoft.com/library/ff848763.aspx)
+* [agrupamentos](../t-sql/statements/collations.md?view=sql-server-ver15)
 * [feitos](../t-sql/language-elements/comment-transact-sql.md)
 * [:](../t-sql/data-types/constants-transact-sql.md)
 * [tipos de dados](../t-sql/data-types/data-types-transact-sql.md)
-* [Execute](../t-sql/language-elements/execute-transact-sql.md)
+* [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [expressões](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Solução alternativa da propriedade IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
@@ -37,7 +37,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 ## <a name="batches-control-of-flow-and-variables"></a>Lotes, controle de fluxo e variáveis
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
-* [Claro@local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
+* [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
 * [IF...ELSE](../t-sql/language-elements/if-else-transact-sql.md)
 * [RAISERROR](../t-sql/language-elements/raiserror-transact-sql.md)
 * [SET@local_variable](../t-sql/language-elements/set-local-variable-transact-sql.md)
@@ -47,19 +47,19 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 
 ## <a name="operators"></a>Operadores
 * [+ (Somar)](../t-sql/language-elements/add-transact-sql.md)
-* [+ (Concatenação de cadeia de caracteres)](../t-sql/language-elements/string-concatenation-transact-sql.md)
+* [+ (Concatenação de cadeias de caracteres)](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [-(Negativo)](../t-sql/language-elements/unary-operators-negative.md)
-* [-(Subtrair)](../t-sql/language-elements/subtract-transact-sql.md)
+* [- (Subtrair)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Multiplicar)](../t-sql/language-elements/multiply-transact-sql.md)
 * [/ (dividir)](../t-sql/language-elements/divide-transact-sql.md)
 * [Módulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Caracteres curinga para correspondência
 * [= (Igual a)](../t-sql/language-elements/equals-transact-sql.md)
-* [> (Maior que)](../t-sql/language-elements/greater-than-transact-sql.md)
-* [< (Menor que)](../t-sql/language-elements/less-than-transact-sql.md)
+* [> (maior que)](../t-sql/language-elements/greater-than-transact-sql.md)
+* [< (menor que)](../t-sql/language-elements/less-than-transact-sql.md)
 * [>= (Maior ou igual a)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
-* [>= (Menor ou igual a)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
+* [<= (menor ou igual a)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<>  (diferente de)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Diferente de)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
@@ -69,7 +69,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [NÃO É](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OU](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Operadores bit a bit
 * [& (AND bit a bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -154,7 +154,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [LOWER](../t-sql/functions/lower-transact-sql.md)
 * [LTRIM](../t-sql/functions/ltrim-transact-sql.md)
 * [MAX](../t-sql/functions/max-transact-sql.md)
-* [MÍN.](../t-sql/functions/min-transact-sql.md)
+* [MIN](../t-sql/functions/min-transact-sql.md)
 * [MONTH](../t-sql/functions/month-transact-sql.md)
 * [NCHAR](../t-sql/functions/nchar-transact-sql.md)
 * [NTILE](../t-sql/functions/ntile-transact-sql.md)

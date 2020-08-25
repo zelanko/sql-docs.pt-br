@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440228"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770905"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Método Connection Close, Exemplo da propriedade Table Type (VB)
-Definir a propriedade [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) como **Nothing** deve fechar a conexão com o catálogo. As coleções associadas estarão vazias. Todos os objetos que foram criados a partir de objetos de esquema no catálogo ficarão órfãos. Todas as propriedades nesses objetos que foram armazenados em cache ainda estarão disponíveis, mas uma tentativa de ler propriedades que exigem uma chamada para o provedor falhará.  
+Definir a propriedade [ActiveConnection](./activeconnection-property-adox.md) como **Nothing** deve fechar a conexão com o catálogo. As coleções associadas estarão vazias. Todos os objetos que foram criados a partir de objetos de esquema no catálogo ficarão órfãos. Todas as propriedades nesses objetos que foram armazenados em cache ainda estarão disponíveis, mas uma tentativa de ler propriedades que exigem uma chamada para o provedor falhará.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -67,17 +67,17 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- Fechar um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) que foi usado para abrir o catálogo deve ter o mesmo efeito que definir a propriedade **ActiveConnection** como **Nothing**.  
+ Fechar um objeto de [conexão](../ado-api/connection-object-ado.md) que foi usado para abrir o catálogo deve ter o mesmo efeito que definir a propriedade **ActiveConnection** como **Nothing**.  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Propriedade Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [Propriedade ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Objeto de catálogo (ADOX)](./catalog-object-adox.md)   
+ [Objeto Column (ADOX)](./column-object-adox.md)   
+ [Coleção Columns (ADOX)](./columns-collection-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)   
+ [Coleção Tables (ADOX)](./tables-collection-adox.md)   
+ [Propriedade Type (Table) (ADOX)](./type-property-table-adox.md)

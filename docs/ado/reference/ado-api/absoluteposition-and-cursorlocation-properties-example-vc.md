@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6f35365fc81696faddd90e71c657c7138adb5c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d09009e973c6d72d8c0bbc39744c107d99f5bfc9
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451758"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759946"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Exemplo das propriedades AbsolutePosition e CursorLocation (VC + +)
-Este exemplo demonstra como a propriedade [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) pode acompanhar o progresso de um loop que enumera todos os registros de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) para habilitar a propriedade **AbsolutePosition** definindo o cursor como um cursor do cliente.  
+Este exemplo demonstra como a propriedade [AbsolutePosition](./absoluteposition-property-ado.md) pode acompanhar o progresso de um loop que enumera todos os registros de um [conjunto de registros](./recordset-object-ado.md). Ele usa a propriedade [CursorLocation](./cursorlocation-property-ado.md) para habilitar a propriedade **AbsolutePosition** definindo o cursor como um cursor do cliente.  
   
 ```  
 // BeginAbsolutePositionCpp.cpp  
@@ -259,6 +259,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [Propriedade CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propriedade AbsolutePosition (ADO)](./absoluteposition-property-ado.md)   
+ [Propriedade CursorLocation (ADO)](./cursorlocation-property-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

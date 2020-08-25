@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452238"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759820"
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
 A seção **SQL** pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL na seção, a seção será ignorada.  
@@ -52,12 +52,10 @@ SQL = " "
 |***sqlString***|Uma cadeia de caracteres SQL que substitui a cadeia de caracteres do cliente.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Seção conexão de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Seção de logs de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Seção UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configurações do cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escrever seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [Seção conexão de arquivo de personalização](./customization-file-connect-section.md)   
+ [Seção de logs de arquivo de personalização](./customization-file-logs-section.md)   
+ [Seção UserList do arquivo de personalização](./customization-file-userlist-section.md)   
+ [Personalização de datafactory](./datafactory-customization.md)   
+ [Configurações do cliente necessárias](./required-client-settings.md)   
+ [Noções básicas sobre o arquivo de personalização](./understanding-the-customization-file.md)   
+ [Escrever seu próprio manipulador personalizado](./writing-your-own-customized-handler.md)

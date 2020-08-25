@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea2a4f39b16fe2f8b23d6a6a229ce9b936e6e6d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401010"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766755"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carregar dados com Integration Services em paralelo data warehouse
 Fornece informações de referência e implantação para carregar dados em SQL Server paralelo data warehouse usando pacotes do SQL Server Integration Services (SSIS).  
@@ -54,12 +54,12 @@ Por padrão, o BIDS executa pacotes usando binários de 64 bits. Isso é determi
 Para executar o pacote de dentro do SQL Server Data Tools, clique com o botão direito do mouse no pacote e escolha **executar pacote**.  
   
 ### <a name="run-from-powershell"></a>Executar do PowerShell  
-Para executar o pacote do Windows PowerShell, usando o utilitário **dtexec** :`dtexec /FILE <packagePath>`  
+Para executar o pacote do Windows PowerShell, usando o utilitário **dtexec** : `dtexec /FILE <packagePath>`  
   
 Por exemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Executar a partir de um prompt de comando do Windows 
-Para executar o pacote de um prompt de comando do Windows, usando o utilitário **dtexec** :`dtexec /FILE <packagePath>`  
+Para executar o pacote de um prompt de comando do Windows, usando o utilitário **dtexec** : `dtexec /FILE <packagePath>`  
   
 Por exemplo: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -97,7 +97,7 @@ Em seguida, os dados são mapeados de Integration Services para SQL Server PDW t
   
 O PDW gera um erro de validação se você mapear uma DT_NUMERIC ou DT_DECIMAL coluna de entrada que contenha um valor com precisão maior que 28.  
   
-**Tipos de dados sem suporte**  
+**Tipos de dados sem-suporte**  
   
 SQL Server PDW não oferece suporte aos seguintes tipos de dados de Integration Services:  
   
@@ -174,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-Em preparação para a carga, crie o arquivo `exampleLoad.txt`simples, contendo os dados de carga:  
+Em preparação para a carga, crie o arquivo simples `exampleLoad.txt` , contendo os dados de carga:  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -184,7 +184,7 @@ id,city,lastUpdateDate,orderDate
   
 Primeiro, crie um pacote de Integration Services executando estas etapas:  
   
-1.  Em SQL Server Data Tools \(SSDT\), selecione **arquivo**, **novo**e **projeto**. Selecione **Integration Services projeto** nas opções listadas. Nomeie este projeto `ExampleLoad`e clique em **OK**.  
+1.  Em SQL Server Data Tools \( SSDT \) , selecione **arquivo**, **novo**e **projeto**. Selecione **Integration Services projeto** nas opções listadas. Nomeie este projeto `ExampleLoad` e clique em **OK**.  
   
 2.  Clique na guia **fluxo de controle** e arraste a **tarefa fluxo de dados** da **caixa de ferramentas** para o painel fluxo de **controle** .  
   
@@ -192,9 +192,9 @@ Primeiro, crie um pacote de Integration Services executando estas etapas:
   
 4.  Clique em **Gerenciador de conexões** e em **novo**.  
   
-5.  Na caixa **nome do Gerenciador de conexões** , insira um nome amigável para a conexão. Para este exemplo, `Example Load Flat File CM`.  
+5.  Na caixa **nome do Gerenciador de conexões** , insira um nome amigável para a conexão. Para este exemplo, `Example Load Flat File CM` .  
   
-6.  Clique em **procurar** e selecione `ExampleLoad.txt` o arquivo no computador local.  
+6.  Clique em **procurar** e selecione o `ExampleLoad.txt` arquivo no computador local.  
   
 7.  Como o arquivo simples contém uma linha com nomes de coluna, clique nos **nomes de coluna na primeira caixa de linha de dados** .  
   
@@ -228,7 +228,7 @@ Especifique o destino para o fluxo de dados.
   
     **Banco de dados de destino:**`LoadExampleDB`  
   
-6.  Selecione a tabela de destino `Orders`:.  
+6.  Selecione a tabela de destino: `Orders` .  
   
 7.  Selecione **acrescentar** como o modo de carregamento e clique em **OK**.  
   
@@ -242,7 +242,7 @@ Especifique o fluxo de dados da origem para o destino.
   
 Execute o pacote no seu computador Integration Services.  
   
-1.  Na**Gerenciador de Soluções** Integration Services (coluna direita), clique `Package.dtsx` com o botão direito do mouse e selecione **executar**.  
+1.  Na**Gerenciador de Soluções** Integration Services (coluna direita), clique com o botão direito do mouse `Package.dtsx` e selecione **executar**.  
   
 2.  O pacote será executado e o progresso mais quaisquer erros serão mostrados no painel **progresso** . Use um cliente SQL para confirmar a carga ou monitore a carga por meio do console do administrador do SQL Server PDW.  
   
@@ -253,10 +253,10 @@ Execute o pacote no seu computador Integration Services.
 [Tutorial: Criando um pacote básico usando um assistente](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Introdução (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Exemplo de geração de pacote dinâmico](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[Projetando seus pacotes SSIS para o paralelismo (vídeo do SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Projetando seus pacotes SSIS para o paralelismo (vídeo do SQL Server)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Exemplos da comunidade Microsoft SQL Server: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Melhorando cargas incrementais com o Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
-[transformação Dimensão de Alteração Lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+[Transformação Dimensão de Alteração Lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [Tarefa Inserção em Massa](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 039a881d0d38e6dc58661c92f59ba74bd9ea2bb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0da62851a5cab542a64e219aecc70a13720570f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452098"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759626"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>O RDS retorna o &quot; erro de fluxo não lido &quot;
 "Não foi possível ler o objeto de fluxo porque ele está vazio ou a posição atual está no final do fluxo. Para fluxos não vazios, defina a posição atual com a propriedade Position. Para determinar se um fluxo está vazio, verifique a propriedade Size. "  
@@ -29,6 +29,4 @@ ms.locfileid: "88452098"
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Conceitos básicos do RDS](./rds-fundamentals.md)

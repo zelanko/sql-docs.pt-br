@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4be9c3ae7e9f4cc8ac7f90b78b80ee96b64eaf5d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59a42a7f577ae8f4712e679853d53939fd6f6ed1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442698"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773135"
 ---
 # <a name="precision-property-ado"></a>Propriedade Precision (ADO)
-Indica o grau de precisão para valores numéricos em um objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) ou para objetos de [campo](../../../ado/reference/ado-api/field-object.md) numérico.  
+Indica o grau de precisão para valores numéricos em um objeto de [parâmetro](./parameter-object.md) ou para objetos de [campo](./field-object.md) numérico.  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um valor de **byte** que indica o número máximo de dígitos usados para representar valores.  
@@ -35,20 +35,20 @@ Indica o grau de precisão para valores numéricos em um objeto de [parâmetro](
   
  O valor é leitura/gravação em um objeto de **parâmetro** .  
   
- Para um objeto **Field**, **Precision** normalmente é somente leitura. No entanto, para novos objetos **Field** que foram acrescentados à coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um [registro](../../../ado/reference/ado-api/record-object-ado.md), **Precision** é Read/Write only após a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do **campo** ter sido especificada e o provedor de dados adicionou com êxito o novo **campo** chamando o método [Update](../../../ado/reference/ado-api/update-method.md) da coleção **Fields** .  
+ Para um objeto **Field**, **Precision** normalmente é somente leitura. No entanto, para novos objetos **Field** que foram acrescentados à coleção [Fields](./fields-collection-ado.md) de um [registro](./record-object-ado.md), **Precision** é Read/Write only após a propriedade [Value](./value-property-ado.md) do **campo** ter sido especificada e o provedor de dados adicionou com êxito o novo **campo** chamando o método [Update](./update-method.md) da coleção **Fields** .  
   
 ## <a name="applies-to"></a>Aplica-se A  
 
 :::row:::
     :::column:::
-        [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
+        [Objeto Campo](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Parameter](./parameter-object.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades NumericScale e Precision (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [Exemplo das propriedades NumericScale e Precision (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
- [Propriedade NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)
+ [Exemplo das propriedades NumericScale e Precision (VB)](./numericscale-and-precision-properties-example-vb.md)   
+ [Exemplo das propriedades NumericScale e Precision (VC + +)](./numericscale-and-precision-properties-example-vc.md)   
+ [Propriedade NumericScale (ADO)](./numericscale-property-ado.md)

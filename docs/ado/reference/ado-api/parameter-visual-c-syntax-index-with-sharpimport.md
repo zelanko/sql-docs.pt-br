@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 678e7cb1ce09539bfc1c73989fde2702649c2070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 421be6cd81a556d2e3a835abba125a90772e02ad
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442788"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773395"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>Parâmetro (Visual C++ índice de sintaxe com #import)
 ## <a name="methods"></a>Métodos  
@@ -71,4 +71,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Objeto Parameter](./parameter-object.md)

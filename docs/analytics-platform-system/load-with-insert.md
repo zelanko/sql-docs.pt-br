@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c28d15febb08855b914e4cd6ed04a97850ffe02c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401026"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766855"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Carregar dados com inserção em data warehouse paralelo
 
@@ -93,7 +93,7 @@ A tabela a seguir define os formatos e as regras aceitas para inserir valores li
 |Tipo literal|format|Regras de conversão|  
 |----------------|----------|--------------------|  
 |Literal de cadeia de caracteres no formato **inteiro**|'nnnnnnnnnn'<br /><br />Exemplo: ' 1 ' ou ' 321 '|Um valor inteiro formatado como um literal de cadeia de caracteres não pode conter um valor negativo. Por exemplo, o valor '-123 ' gera um erro.<br /><br />Um valor maior que 1 é convertido em 1. Por exemplo, o valor ' 123 ' é convertido em 1.|  
-|Literal de cadeia de caracteres|' TRUE ' ou ' FALSE '<br /><br />Exemplo: ' true '|O valor ' TRUE ' é convertido em 1; o valor ' FALSE ' é convertido em 0.|  
+|Cadeia de caracteres literal|' TRUE ' ou ' FALSE '<br /><br />Exemplo: ' true '|O valor ' TRUE ' é convertido em 1; o valor ' FALSE ' é convertido em 0.|  
 |Literal inteiro|nnnnnnnn<br /><br />Exemplo: 1 ou 321|Um valor maior que 1 ou menor que 0 é convertido em 1. Por exemplo, os valores 123 e-123 são convertidos em 1.|  
 |Literal decimal|NNNNN. nnnn<br /><br />Exemplo: 1234,5678|Um valor maior que 1 ou menor que 0 é convertido em 1. Por exemplo, os valores 123,45 e-123,45 são convertidos em 1.|  
   
@@ -148,7 +148,7 @@ A tabela a seguir define os formatos e as regras aceitas para inserir valores li
   
 |Tipo de literal|Formatar|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Literal de cadeia de caracteres|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| Nenhum|  
+|Cadeia de caracteres literal|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| Nenhum|  
 |Literal de cadeia de caracteres Unicode|Formato: cadeia de caracteres N'character '<br /><br />Exemplo: N'abc '|  Nenhum |  
 |Literal inteiro|Formato: nnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhum |  
 |Literal decimal|Formato: nnnnnn. nnnnnnn<br /><br />Exemplo: 12344,34455| Nenhum |  
@@ -157,7 +157,7 @@ A tabela a seguir define os formatos e as regras aceitas para inserir valores li
   
 ## <a name="see-also"></a>Consulte Também  
  
-[Dados distribuídos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
+[Dados distribuídos](/azure/synapse-analytics/sql-data-warehouse/massively-parallel-processing-mpp-architecture)  
 [INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS

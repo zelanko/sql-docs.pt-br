@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442558"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772865"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-Especifica os atributos de um objeto de [Propriedade](../../../ado/reference/ado-api/property-object-ado.md) .  
+Especifica os atributos de um objeto de [Propriedade](./property-object-ado.md) .  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -46,4 +46,4 @@ Especifica os atributos de um objeto de [Propriedade](../../../ado/reference/ado
 |AdoEnums.PropertyAttributes.WRITE|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Propriedade Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Propriedade Attributes (ADO)](./attributes-property-ado.md)

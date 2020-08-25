@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cafd18a7701ed5de5018a3e8dc23bc8d5d9640fa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401212"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767035"
 ---
 # <a name="determine-polling-frequency"></a>Determinar a frequência de sondagem
 Este artigo explica como determinar a frequência de sondagem para alertas do dispositivo do sistema de plataforma de análise.  
@@ -32,9 +32,8 @@ Como o PDW atualmente não dá suporte a notificações proativas quando ocorrem
   
 Um intervalo comum para sondar alertas, que também é usado pelo System Center, é a **cada 15 minutos**.  Obviamente, você pode consultar mais ou menos frequentemente, mas não é recomendável sondar menos do que a cada seis horas.  
   
-A sondagem com mais frequência é aceitável, mas a sondagem com muita frequência pode truncar a DMV [Sys. dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) .  A sondagem com muita frequência pode dificultar para os usuários o diagnóstico de problemas de desempenho de consulta quando eles se sobreprimem rapidamente.  
+A sondagem com mais frequência é aceitável, mas a sondagem com muita frequência pode truncar a DMV [Sys. dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=sql-server-ver15) .  A sondagem com muita frequência pode dificultar para os usuários o diagnóstico de problemas de desempenho de consulta quando eles se sobreprimem rapidamente.  
   
 ## <a name="see-also"></a>Consulte Também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Monitoramento de dispositivo &#40;o sistema de plataforma de análise&#41;](appliance-monitoring.md)  
-  
