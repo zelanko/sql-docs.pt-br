@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453618"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806265"
 ---
 # <a name="creating-a-connection-string"></a>Criando uma cadeia de conexão
-Uma cadeia de conexão consiste em uma lista de pares de argumento/valor (ou seja, parâmetros), separados por ponto e vírgula. Por exemplo:   
+Uma cadeia de conexão consiste em uma lista de pares de argumento/valor (ou seja, parâmetros), separados por ponto e vírgula. Por exemplo:  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
@@ -42,7 +42,7 @@ Uma cadeia de conexão consiste em uma lista de pares de argumento/valor (ou sej
   
  Outros argumentos são passados para o provedor chamado no argumento do *provedor* , sem nenhum processamento pelo ADO.  
   
- O aplicativo HelloData em [HelloData: um aplicativo ADO simples](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usou a seguinte cadeia de conexão:  
+ O aplicativo HelloData em [HelloData: um aplicativo ADO simples](./hellodata-a-simple-ado-application.md) usou a seguinte cadeia de conexão:  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

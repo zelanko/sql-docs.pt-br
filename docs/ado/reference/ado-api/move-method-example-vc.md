@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b37c4ef22e44f1b7686d7b0313b07531f85540a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f273fb32b41b54e696544719df5f7c50a32f4acb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443208"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774275"
 ---
 # <a name="move-method-example-vc"></a>Exemplo do método Move (VC++)
-Este exemplo usa o método [move](../../../ado/reference/ado-api/move-method-ado.md) para posicionar o ponteiro de registro com base na entrada do usuário.  
+Este exemplo usa o método [move](./move-method-ado.md) para posicionar o ponteiro de registro com base na entrada do usuário.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -259,4 +259,4 @@ Enter number of records to Move
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)
+ [Método Move (ADO)](./move-method-ado.md)

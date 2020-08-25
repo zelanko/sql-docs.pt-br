@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e38dbfbf8b0a92a0d1a8a2eff1b8b8d4d5374057
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453878"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806709"
 ---
 # <a name="adding-records-to-a-recordset"></a>Adicionando registros a um conjunto de registros
 Use o método **AddNew** para criar e inicializar um novo registro em um **conjunto de registros**existente. Você pode usar o método com **suporte** com um valor **CursorOptionEnum** de **adAddNew** para verificar se você pode adicionar registros ao objeto **Recordset** atual.
@@ -32,10 +32,10 @@ Use o método **AddNew** para criar e inicializar um novo registro em um **conju
 
  Esta seção contém os seguintes tópicos.
 
--   [Adicionando registros usando AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Adicionar registros usando AddNew](./adding-records-using-addnew.md)
 
--   [Adicionar vários campos](../../../ado/guide/data/adding-multiple-fields.md)
+-   [Adicionar vários campos](./adding-multiple-fields.md)
 
--   [Determinar o modo de edição](../../../ado/guide/data/determining-edit-mode.md)
+-   [Determinar o modo de edição](./determining-edit-mode.md)
 
--   [Usar AddNew em modos de lote e imediatos](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
+-   [Usar AddNew em modos de lote e imediatos](./using-addnew-in-immediate-and-batch-modes.md)

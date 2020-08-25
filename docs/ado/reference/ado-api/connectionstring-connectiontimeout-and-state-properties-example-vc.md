@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7efad01088e4151d37dea9d71c1662a228e0c822
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444458"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775925"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Exemplo das propriedades ConnectionString, ConnectionTimeout e State (VC + +)
-Este exemplo demonstra diferentes maneiras de usar a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) para abrir um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) . Ele também usa a propriedade [connectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) para definir um período de tempo limite de conexão e a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) para verificar o estado das conexões. A função GetState é necessária para que este procedimento seja executado.  
+Este exemplo demonstra diferentes maneiras de usar a propriedade [ConnectionString](./connectionstring-property-ado.md) para abrir um objeto de [conexão](./connection-object-ado.md) . Ele também usa a propriedade [connectionTimeout](./connectiontimeout-property-ado.md) para definir um período de tempo limite de conexão e a propriedade [State](./state-property-ado.md) para verificar o estado das conexões. A função GetState é necessária para que este procedimento seja executado.  
   
 > [!NOTE]
 >  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique **Trusted_Connection = Sim** ou **segurança integrada = SSPI** , em vez de ID de usuário e informações de senha na cadeia de conexão.  
@@ -168,7 +168,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [Propriedade ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [Propriedade State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Objeto de conexão (ADO)](./connection-object-ado.md)   
+ [Propriedade ConnectionString (ADO)](./connectionstring-property-ado.md)   
+ [Propriedade ConnectionTimeout (ADO)](./connectiontimeout-property-ado.md)   
+ [Propriedade State (ADO)](./state-property-ado.md)

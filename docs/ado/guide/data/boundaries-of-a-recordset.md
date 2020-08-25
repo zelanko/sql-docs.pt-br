@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453708"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806373"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites de um conjunto de registros
 O **conjunto de registros** dá suporte às propriedades **BOF** e **EOF** para delinear o início e o fim, respectivamente, do conjunto de linhas. Você pode considerar **BOF** e **EOF** como registros "fantasma" posicionados no início e no final do **conjunto de registros**. Contando **BOF** e **EOF**, nosso **conjunto de registros** de exemplo terá a seguinte aparência:  
@@ -70,4 +70,4 @@ else
   
  Esse esquema funciona para todos os tipos de cursor e é independente dos provedores subjacentes. Se você tentar determinar a desmarcação de um objeto **Recordset** verificando se o valor da propriedade **RecordCount** é zero (0) ou não, deverá tomar precauções para usar um cursor e um provedor apropriados que ofereçam suporte ao retorno do número de registros no resultado.  
   
- Se você excluir o último registro restante no objeto **Recordset** , o cursor será deixado em um estado indeterminado. As propriedades **BOF** e **EOF** podem permanecer **falsas** até que você tente reposicionar o registro atual, dependendo do provedor. Para obter mais informações, consulte [excluindo registros usando o método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Se você excluir o último registro restante no objeto **Recordset** , o cursor será deixado em um estado indeterminado. As propriedades **BOF** e **EOF** podem permanecer **falsas** até que você tente reposicionar o registro atual, dependendo do provedor. Para obter mais informações, consulte [excluindo registros usando o método Delete](./deleting-records-using-the-delete-method.md).

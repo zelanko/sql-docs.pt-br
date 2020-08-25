@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26d148aff616f36f3244cbe65b315378573278
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf807a1883aaaa85b8485a9f58a1414248f02075
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451278"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776525"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Exemplo dos métodos Append e CreateParameter (VB)
-Este exemplo usa os métodos [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para executar um procedimento armazenado com um parâmetro de entrada.  
+Este exemplo usa os métodos [Append](./append-method-ado.md) e [CreateParameter](./createparameter-method-ado.md) para executar um procedimento armazenado com um parâmetro de entrada.  
   
 ```  
 'BeginAppendVB  
@@ -121,8 +121,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Método Append (ADO)](./append-method-ado.md)   
+ [Método CreateParameter (ADO)](./createparameter-method-ado.md)   
+ [Objeto Field](./field-object.md)   
+ [Coleção Fields (ADO)](./fields-collection-ado.md)   
+ [Objeto Parameter](./parameter-object.md)

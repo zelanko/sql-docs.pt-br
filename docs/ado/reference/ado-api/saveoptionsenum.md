@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27284d84bb89c0e742c5166589a60fdc949e7b2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: edac11f61b003307703ec13daed8022b8af31bae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442188"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777555"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-Especifica se um arquivo deve ser criado ou substituído ao salvar de um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) . Os valores podem ser **adSaveCreateNotExist** ou **adSaveCreateOverWrite**..  
+Especifica se um arquivo deve ser criado ou substituído ao salvar de um objeto de [fluxo](./stream-object-ado.md) . Os valores podem ser **adSaveCreateNotExist** ou **adSaveCreateOverWrite**..  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -35,4 +35,4 @@ Especifica se um arquivo deve ser criado ou substituído ao salvar de um objeto 
  Essas constantes não têm equivalentes ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
+ [Método SaveToFile](./savetofile-method.md)

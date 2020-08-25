@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65f6583206ce48a0f2ee2508e369ce6256b4cdaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f76532e3904da2723f59afbf1f719f7cc212954
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451038"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776325"
 ---
 # <a name="cancel-method-example-vb"></a>Exemplo do método Cancel (VB)
-Este exemplo usa o método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) para cancelar um comando em execução em um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) se a conexão estiver ocupada.  
+Este exemplo usa o método [Cancel](./cancel-method-ado.md) para cancelar um comando em execução em um objeto de [conexão](./connection-object-ado.md) se a conexão estiver ocupada.  
   
 ```  
 'BeginCancelVB  
@@ -104,5 +104,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Método Cancel (ADO)](./cancel-method-ado.md)   
+ [Objeto Connection (ADO)](./connection-object-ado.md)

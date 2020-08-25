@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453558"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806177"
 ---
 # <a name="data-shaping-example"></a>Exemplo de data shaping
 O comando de formatação de dados a seguir demonstra como criar um **conjunto de registros** hierárquico das tabelas **Customers** e **Orders** no banco de dados Northwind.  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Quando esse comando é usado para abrir um objeto **Recordset** (conforme mostrado na [Visual Basic exemplo de data Shaping](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), ele cria um capítulo (**chapOrders**) para cada registro retornado da tabela **Customers** . Este capítulo consiste em um subconjunto do conjunto de **registros** retornado da tabela **Orders** . O capítulo **chapOrders** contém todas as informações solicitadas sobre os pedidos feitos pelo cliente determinado. Neste exemplo, o capítulo consiste em três colunas: **OrderID**, **OrderDate**e **CustomerID**.  
+ Quando esse comando é usado para abrir um objeto **Recordset** (conforme mostrado na [Visual Basic exemplo de data Shaping](./visual-basic-example-of-data-shaping.md)), ele cria um capítulo (**chapOrders**) para cada registro retornado da tabela **Customers** . Este capítulo consiste em um subconjunto do conjunto de **registros** retornado da tabela **Orders** . O capítulo **chapOrders** contém todas as informações solicitadas sobre os pedidos feitos pelo cliente determinado. Neste exemplo, o capítulo consiste em três colunas: **OrderID**, **OrderDate**e **CustomerID**.  
   
  As duas primeiras entradas do **conjunto de registros** moldado resultante são as seguintes:  
   
@@ -42,10 +42,10 @@ RELATE customerID TO customerID)
   
  Há uma segunda maneira de usar comandos de forma: ou seja, para gerar um **conjunto de registros** pai de um **conjunto de registros**filho. Os registros no conjunto de **registros** filho são agrupados, normalmente usando a cláusula by, e uma linha é adicionada ao conjunto de **registros** pai para cada grupo resultante no filho. Se a cláusula BY for omitida, o **conjunto de registros** filho formará um único grupo e o **conjunto de registros** pai conterá exatamente uma linha. Isso é útil para computar agregações "total geral" em todo o **conjunto de registros**filho.  
   
- A construção de comando SHAPE também permite criar programaticamente um **conjunto de registros**moldado. Você pode acessar os componentes do conjunto de **registros** programaticamente ou por meio de um controle visual apropriado. Um comando de forma é emitido como qualquer outro texto de comando do ADO. Para obter mais informações, consulte os [comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md).  
+ A construção de comando SHAPE também permite criar programaticamente um **conjunto de registros**moldado. Você pode acessar os componentes do conjunto de **registros** programaticamente ou por meio de um controle visual apropriado. Um comando de forma é emitido como qualquer outro texto de comando do ADO. Para obter mais informações, consulte os [comandos de forma em geral](./shape-commands-in-general.md).  
   
  Independentemente da forma como o **conjunto de registros** pai é formado, ele conterá uma coluna de capítulo que é usada para relacioná-la a um **conjunto de registros**filho. Se desejar, o conjunto de **registros** pai também poderá ter colunas que contêm agregações (Sum, min, Max e assim por diante) nas linhas filhas. O **conjunto de registros** pai e filho pode ter colunas que contêm uma expressão na linha no conjunto de **registros**, bem como colunas novas e inicialmente vazias.  
   
  Esta seção continua com o tópico a seguir.  
   
--   [Exemplo de data shaping do Visual Basic](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [Exemplo de data shaping do Visual Basic](./visual-basic-example-of-data-shaping.md)

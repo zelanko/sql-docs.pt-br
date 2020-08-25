@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7eaab32f14ce653d766cfe38408118cc37b763
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453938"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806779"
 ---
 # <a name="visual-c-extensions-example"></a>Exemplo de extensões do Visual C++
 Este programa mostra como os valores são recuperados de campos e convertidos em variáveis C/C++.  
@@ -111,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usando extensões de Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Cabeçalho de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Usando extensões de Visual C++](./using-visual-c-extensions.md)   
+ [Cabeçalho de extensões do Visual C++](./visual-c-extensions-header.md)

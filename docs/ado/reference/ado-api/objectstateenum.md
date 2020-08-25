@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c387240e36225f03c8ba1287618ab59a98fb63c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43e511329ba2b32784718d6edb381e6b7085aeb9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443018"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773905"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Especifica se um objeto está aberto ou fechado, conectando-se a uma fonte de dados, executando um comando ou recuperando dados.  
@@ -49,9 +49,9 @@ Especifica se um objeto está aberto ou fechado, conectando-se a uma fonte de da
 
 :::row:::
     :::column:::
-        [Propriedade State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+        [Propriedade State (ADO)](./state-property-ado.md)  
     :::column-end:::
     :::column:::
-        [Propriedade State (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+        [Propriedade State (ADO MD)](../ado-md-api/state-property-ado-md.md)  
     :::column-end:::
 :::row-end:::

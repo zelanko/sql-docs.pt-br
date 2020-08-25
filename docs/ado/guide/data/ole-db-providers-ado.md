@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 227c3ead2744c475a54f129078b5674587ae3849
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fb247f62173a0c622a08eb2d55af005efcb2669
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453118"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805676"
 ---
 # <a name="ole-db-providers-ado"></a>Provedores OLE DB (ADO)
 OLE DB define um conjunto de interfaces COM para fornecer aos aplicativos acesso uniforme aos dados armazenados em diversas fontes de informações. Essa abordagem permite que uma fonte de dados Compartilhe seus dados por meio das interfaces que dão suporte à quantidade de funcionalidade de DBMS apropriada à fonte de dados. Por design, a arquitetura de alto desempenho do OLE DB é baseada no uso de um modelo de serviços flexível baseado em componentes. Em vez de ter um número prescrito de camadas intermediárias entre o aplicativo e os dados, OLE DB requer apenas quantos componentes forem necessários para realizar uma tarefa específica.  
@@ -42,6 +42,6 @@ OLE DB define um conjunto de interfaces COM para fornecer aos aplicativos acesso
   
  Esta seção contém os seguintes tópicos.  
   
--   [Provedores de dados](../../../ado/guide/data/data-providers.md)  
+-   [Provedores de Dados](./data-providers.md)  
   
--   [Provedores de serviços e componentes](../../../ado/guide/data/service-providers-and-components.md)
+-   [Provedores de serviços e componentes](./service-providers-and-components.md)

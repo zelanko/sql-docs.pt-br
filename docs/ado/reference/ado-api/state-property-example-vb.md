@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ee0adf7b308ada45eee0c21c44f2a38a2e8a0b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1927de05ec73d58474460d5b90773289cc149865
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441968"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777335"
 ---
 # <a name="state-property-example-vb"></a>Exemplo da propriedade State (VB)
-Este exemplo usa a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) para exibir uma mensagem enquanto as conexões assíncronas são abertas e os comandos assíncronos são executados.  
+Este exemplo usa a propriedade [State](./state-property-ado.md) para exibir uma mensagem enquanto as conexões assíncronas são abertas e os comandos assíncronos são executados.  
   
 ```  
 'BeginStateVB  
@@ -109,5 +109,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propriedade State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Propriedade State (ADO)](./state-property-ado.md)

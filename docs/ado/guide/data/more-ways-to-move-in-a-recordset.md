@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453158"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805817"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Mais maneiras de se mover em um conjunto de registros
-Os quatro métodos a seguir são usados para mover-se, ou rolar, no **conjunto de registros**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Alguns desses métodos não estão disponíveis em cursores de somente avanço.)  
+Os quatro métodos a seguir são usados para mover-se, ou rolar, no **conjunto de registros**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Alguns desses métodos não estão disponíveis em cursores de somente avanço.)  
   
  O **MoveFirst** altera a posição do registro atual para o primeiro registro no **conjunto de registros**. **MoveLast** altera a posição do registro atual para o último registro no **conjunto de registros**. Para usar o **MoveFirst** ou **MoveLast**, o objeto **Recordset** deve dar suporte a indicadores ou movimento de cursor para trás; caso contrário, a chamada do método gerará um erro.  
   

@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 051185b9b40b1f7d4472e957f3a09a8f6416c8b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3888cf881fd1b6cdb0ccc2c5985fe4a6e08ae581
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454088"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806591"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Visão geral do provedor do Microsoft OLE DB para publicação na Internet
 O provedor de OLE DB da Microsoft para publicação na Internet permite que o ADO acesse recursos servidos pelo Microsoft FrontPage ou pelo Microsoft Internet Information Server. Os recursos incluem arquivos de origem da Web, como arquivos HTML, ou pastas da Web do Windows 2000.
 
 ## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
- Para se conectar a esse provedor, defina o argumento do *provedor* da propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
+ Para se conectar a esse provedor, defina o argumento do *provedor* da propriedade [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
 MSDAIPP.DSO
 ```
 
- Esse valor também pode ser definido ou lido usando a propriedade [Provider](../../../ado/reference/ado-api/provider-property-ado.md) .
+ Esse valor também pode ser definido ou lido usando a propriedade [Provider](../../reference/ado-api/provider-property-ado.md) .
 
 ## <a name="typical-connection-string"></a>Cadeia de conexão típica
  Uma cadeia de conexão típica para esse provedor é:
@@ -62,7 +62,7 @@ MSDAIPP.DSO
  Se você definir o valor de *ResourceURL* de "URL =" na cadeia de conexão com um valor inválido, por padrão, o provedor de publicação na Internet gerará uma caixa de diálogo para solicitar um valor válido. Isso é um comportamento indesejável para um componente na camada intermediária de um aplicativo, pois ele suspende a execução do programa até que a caixa de diálogo seja desmarcada e o cliente pareça congelar, pois não recebeu uma resposta do componente.
 
 > [!NOTE]
->  Se MSDAIPP. O DSO é explicitamente especificado como o valor do provedor, seja com a palavra-chave da cadeia de conexão do *provedor* ou com a propriedade do **provedor** , você não pode usar "URL =" na cadeia de conexão. Se você fizer isso, ocorrerá um erro. Em vez disso, basta especificar a URL, conforme mostrado no tópico [usando o ADO com o provedor de OLE DB para publicação na Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md).
+>  Se MSDAIPP. O DSO é explicitamente especificado como o valor do provedor, seja com a palavra-chave da cadeia de conexão do *provedor* ou com a propriedade do **provedor** , você não pode usar "URL =" na cadeia de conexão. Se você fizer isso, ocorrerá um erro. Em vez disso, basta especificar a URL, conforme mostrado no tópico [usando o ADO com o provedor de OLE DB para publicação na Internet](../data/the-ole-db-provider-for-internet-publishing.md).
 
 ## <a name="see-also"></a>Consulte Também
- [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md) [o provedor de OLE DB para publicação na Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+ [Cenário de publicação na Internet](../data/internet-publishing-scenario.md) [o provedor de OLE DB para publicação na Internet](../data/the-ole-db-provider-for-internet-publishing.md)

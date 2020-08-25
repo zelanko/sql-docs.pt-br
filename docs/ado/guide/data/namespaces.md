@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805779"
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os quatro namespaces a seguir.  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  O usuário pode definir isso como qualquer nome, desde que esse nome seja usado consistentemente em todo o documento XML. O ADO sempre grava "s", "RS", "DT" e "z", mas esses nomes de prefixo não são embutidos em código no componente de carregamento.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistência de registros em formato XML](./persisting-records-in-xml-format.md)

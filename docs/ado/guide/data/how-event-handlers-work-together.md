@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453248"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805976"
 ---
 # <a name="how-event-handlers-work-together"></a>Como os manipuladores de eventos funcionam em conjunto
-A menos que você esteja programando em Visual Basic, todos os manipuladores de eventos para eventos de **conexão** e **conjunto de registros** devem ser implementados, independentemente de você realmente processar todos os eventos. A quantidade de trabalho de implementação que você precisa fazer depende da linguagem de programação. Para obter mais informações, consulte [instanciação de evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+A menos que você esteja programando em Visual Basic, todos os manipuladores de eventos para eventos de **conexão** e **conjunto de registros** devem ser implementados, independentemente de você realmente processar todos os eventos. A quantidade de trabalho de implementação que você precisa fazer depende da linguagem de programação. Para obter mais informações, consulte [instanciação de evento ADO por idioma](./ado-event-instantiation-by-language.md).  
   
 ## <a name="paired-event-handlers"></a>Manipuladores de eventos emparelhados  
  Cada manipulador de eventos terá um manipulador de eventos **completo** associado. Por exemplo, quando seu aplicativo altera o valor de um campo, o manipulador de eventos **WillChangeField** é chamado. Se a alteração for aceitável, o aplicativo deixará o parâmetro **adStatus** inalterado e a operação será executada. Quando a operação for concluída, um evento **FieldChangeComplete** notificará seu aplicativo de que a operação foi concluída. Se for concluído com êxito, **adStatus** conterá **adStatusOK**; caso contrário, **adStatus** conterá **adStatusErrorsOccurred** e você deverá verificar o objeto de **erro** para determinar a causa do erro.  
@@ -46,7 +46,7 @@ A menos que você esteja programando em Visual Basic, todos os manipuladores de 
   
  Manipuladores de eventos de **execução** única podem ser úteis para gerenciar operações assíncronas. Cada operação assíncrona tem um evento de **conclusão** apropriado.  
   
- Por exemplo, pode levar muito tempo para popular um grande objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Se seu aplicativo for gravado corretamente, você poderá iniciar uma `Recordset.Open(...,adAsyncExecute)` operação e continuar com outro processamento. Eventualmente, você será notificado quando o **conjunto de registros** for preenchido por um evento **ExecuteComplete** .  
+ Por exemplo, pode levar muito tempo para popular um grande objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) . Se seu aplicativo for gravado corretamente, você poderá iniciar uma `Recordset.Open(...,adAsyncExecute)` operação e continuar com outro processamento. Eventualmente, você será notificado quando o **conjunto de registros** for preenchido por um evento **ExecuteComplete** .  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Manipuladores de eventos únicos e vários objetos  
  A flexibilidade de uma linguagem de programação como Microsoft Visual C++® permite que um manipulador de eventos processe eventos de vários objetos. Por exemplo, você poderia ter um manipulador de eventos de **desconexão** que processa eventos de vários objetos de **conexão** . Se uma das conexões terminar, o manipulador de eventos de **desconexão** será chamado. Você pode informar qual conexão causou o evento porque o parâmetro do objeto manipulador de eventos seria definido como o objeto de **conexão** correspondente.  
@@ -55,7 +55,7 @@ A menos que você esteja programando em Visual Basic, todos os manipuladores de 
 >  Essa técnica não pode ser usada em Visual Basic porque essa linguagem pode correlacionar apenas um objeto a um manipulador de eventos.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Instanciação de evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Parâmetros do evento](../../../ado/guide/data/event-parameters.md)   
- [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
+ [Resumo do manipulador de eventos do ADO](./ado-event-handler-summary.md)   
+ [Instanciação de evento ADO por idioma](./ado-event-instantiation-by-language.md)   
+ [Parâmetros do evento](./event-parameters.md)   
+ [Tipos de eventos](./types-of-events.md)

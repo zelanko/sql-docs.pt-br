@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453728"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806407"
 ---
 # <a name="anticipating-errors"></a>Antecipar erros
 A prevenção de erros é pelo menos tão importante quanto o tratamento de erros. Esta seção final contém uma pequena lista de precauções que seu aplicativo pode tomar para ajudar a tornar os erros menos prováveis.  
@@ -29,7 +29,7 @@ A prevenção de erros é pelo menos tão importante quanto o tratamento de erro
   
 -   Qualquer programa que aceite dados de um usuário deve incluir o código para validar esses dados antes de enviá-los para o armazenamento de dados. Você não pode contar com o armazenamento de dados, o provedor, o ADO ou até mesmo sua linguagem de programação para notificá-lo de problemas. Você deve verificar cada byte inserido por seus usuários, verificando se os dados são do tipo correto para seu campo e se os campos obrigatórios não estão vazios.  
   
- Verifique os dados antes de tentar gravar dados no armazenamento de dados. A maneira mais fácil de fazer isso é manipular o evento **WillMove** ou o evento **WillUpdateRecordset** . Para obter uma discussão mais completa sobre como lidar com eventos ADO, consulte [manipulando eventos ADO](../../../ado/guide/data/handling-ado-events.md).  
+ Verifique os dados antes de tentar gravar dados no armazenamento de dados. A maneira mais fácil de fazer isso é manipular o evento **WillMove** ou o evento **WillUpdateRecordset** . Para obter uma discussão mais completa sobre como lidar com eventos ADO, consulte [manipulando eventos ADO](./handling-ado-events.md).  
   
  Verifique se os objetos **Recordset** não estão além dos limites do **conjunto de registros** antes de tentar mover o ponteiro de registro. Se você tentar **MoveNext** quando **EOF** for true ou **MovePrev** quando **BOF** for true, ocorrerá um erro. Se você executar qualquer um dos métodos de **movimentação** quando **EOF** e **BOF** forem verdadeiros, um erro será gerado.  
   

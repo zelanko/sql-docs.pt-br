@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb5b72579313f538ca763079787f2aba640d692
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e38c2d3ffdf7ac088611f6a260224f46f80a7d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444368"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775746"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
-Especifica o comportamento do método [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
+Especifica o comportamento do método [CopyRecord](./copyrecord-method-ado.md) .  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -37,4 +37,4 @@ Especifica o comportamento do método [CopyRecord](../../../ado/reference/ado-ap
  Essas constantes não têm equivalentes ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)
+ [Método CopyRecord (ADO)](./copyrecord-method-ado.md)

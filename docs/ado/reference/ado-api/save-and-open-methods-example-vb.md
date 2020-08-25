@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442218"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777595"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Exemplo dos métodos Save e Open (VB)
-Esses três exemplos demonstram como os métodos [Save](../../../ado/reference/ado-api/save-method.md) e [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) podem ser usados juntos.  
+Esses três exemplos demonstram como os métodos [Save](./save-method.md) e [Open](./open-method-ado-recordset.md) podem ser usados juntos.  
   
- Suponha que você esteja passando por uma viagem de negócios e queira levar uma tabela de um banco de dados. Antes de começar, você acessa os dados como um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e salva-os em um formulário transportável. Ao chegar ao seu destino, você acessa o **conjunto** de registros como um conjunto de **registros**local e desconectado. Faça alterações no conjunto de **registros**e salve-o novamente. Por fim, ao retornar Home, você se conecta ao banco de dados novamente e o atualiza com as alterações feitas em trânsito.  
+ Suponha que você esteja passando por uma viagem de negócios e queira levar uma tabela de um banco de dados. Antes de começar, você acessa os dados como um [conjunto de registros](./recordset-object-ado.md) e salva-os em um formulário transportável. Ao chegar ao seu destino, você acessa o **conjunto** de registros como um conjunto de **registros**local e desconectado. Faça alterações no conjunto de **registros**e salve-o novamente. Por fim, ao retornar Home, você se conecta ao banco de dados novamente e o atualiza com as alterações feitas em trânsito.  
   
  Primeiro, acesse e salve a tabela ***autores*** .  
   
@@ -98,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Mais sobre persistência de conjunto de registros](../../../ado/guide/data/more-about-recordset-persistence.md)   
- [Método Save](../../../ado/reference/ado-api/save-method.md)
+ [Método Open (conjunto de registros ADO)](./open-method-ado-recordset.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Mais sobre persistência de conjunto de registros](../../guide/data/more-about-recordset-persistence.md)   
+ [Método Save](./save-method.md)

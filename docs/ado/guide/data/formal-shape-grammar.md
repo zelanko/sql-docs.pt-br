@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453368"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806830"
 ---
 # <a name="formal-shape-grammar"></a>Gramática de forma formal
 Essa é a gramática formal para a criação de qualquer comando de forma:  
@@ -69,10 +69,10 @@ Essa é a gramática formal para a criação de qualquer comando de forma:
 |\<expression>|Uma Visual Basic for Applications expressão cujos operandos são outras colunas não CALC na mesma linha.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Acessando linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Visão geral do data Shaping](../../../ado/guide/data/data-shaping-overview.md)   
- [Provedores necessários para o Shaping de dados](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Cláusula de ANEXAção de forma](../../../ado/guide/data/shape-append-clause.md)   
- [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
- [Cláusula COMPUTE de forma](../../../ado/guide/data/shape-compute-clause.md)   
- [Funções do Visual Basic for Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Acessando linhas em um conjunto de registros hierárquico](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Visão geral do data Shaping](./data-shaping-overview.md)   
+ [Provedores necessários para o Shaping de dados](./required-providers-for-data-shaping.md)   
+ [Cláusula de ANEXAção de forma](./shape-append-clause.md)   
+ [Comandos de forma em geral](./shape-commands-in-general.md)   
+ [Cláusula COMPUTE de forma](./shape-compute-clause.md)   
+ [Funções do Visual Basic for Applications](./visual-basic-for-applications-functions.md)

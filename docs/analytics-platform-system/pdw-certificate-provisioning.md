@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 676335fb8ee4aac5906c61084c28cd94cf8ea815
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400888"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisionamento de certificado PDW-análise de plataforma do Analytics
@@ -38,7 +38,7 @@ Embora a conexão por meio do certificado autoassinado criptografe dados em trâ
   
 O caminho de certificação deve conter o nome de domínio totalmente qualificado que mapeia para o endereço IP do cluster do nó de controle (recomendado) ou o nome que os usuários digitam em suas barras de endereço do navegador para acessar o **console de administração**.  
   
-Use o**Configuration Manager** do sistema de plataforma de análise para adicionar ou remover o certificado confiável. Não há suporte para o uso direto da ferramenta de configuração de certificado do Microsoft Windows HTTP Services (**winHttpCertCfg. exe**) para gerenciar o certificado.  
+Use o**Configuration Manager** do sistema de plataforma de análise para adicionar ou remover o certificado confiável. Não há suporte para o uso direto da ferramenta de configuração de certificado do Microsoft Windows HTTP Services (**winHttpCertCfg.exe**) para gerenciar o certificado.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importar ou remover o certificado  
 As instruções a seguir mostram como importar ou remover o certificado do dispositivo.

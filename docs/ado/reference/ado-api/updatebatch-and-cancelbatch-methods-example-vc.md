@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 848c798a92c2075cdfff04551b17a46d2d90fc76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98130e528428817f6bd43323f47d2ef4e1191dc0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441618"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776972"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>Exemplo dos métodos UpdateBatch CancelBatch (VC++)
-Este exemplo demonstra o método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) em conjunto com o método [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
+Este exemplo demonstra o método [UpdateBatch](./updatebatch-method.md) em conjunto com o método [CancelBatch](./cancelbatch-method-ado.md) .  
   
 ```  
 // BeginUpdateBatchCpp.cpp  
@@ -212,5 +212,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
+ [Método CancelBatch (ADO)](./cancelbatch-method-ado.md)   
+ [Método UpdateBatch](./updatebatch-method.md)

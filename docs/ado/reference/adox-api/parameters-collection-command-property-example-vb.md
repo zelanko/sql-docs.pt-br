@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bfbf83c3b10a97593810e5160f585f61e2fdec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439738"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769885"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Exemplo da propriedade Command, coleção Parameters (VB)
-O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) com o objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) para recuperar informações de parâmetro para o procedimento.  
+O código a seguir demonstra como usar a propriedade [Command](./command-property-adox.md) com o objeto [Command](../ado-api/command-object-ado.md) para recuperar informações de parâmetro para o procedimento.  
   
 ```  
 ' BeginParametersVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Propriedade Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Propriedade ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Objeto de catálogo (ADOX)](./catalog-object-adox.md)   
+ [Propriedade Command (ADOX)](./command-property-adox.md)   
+ [Objeto Procedure (ADOX)](./procedure-object-adox.md)   
+ [Coleção Procedures (ADOX)](./procedures-collection-adox.md)

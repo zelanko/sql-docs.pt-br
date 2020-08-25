@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79cc1b0b69914e8f2a00c3e8cf4557ac89c54c6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83b78ff80ab428daf616014a316c14e2e3185c27
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451068"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776535"
 ---
 # <a name="cachesize-property-example-vc"></a>Exemplo da propriedade CacheSize (VC++)
-Este exemplo usa a propriedade [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença no desempenho de uma operação executada com e sem um cache de 30 registros.  
+Este exemplo usa a propriedade [CacheSize](./cachesize-property-ado.md) para mostrar a diferença no desempenho de uma operação executada com e sem um cache de 30 registros.  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -162,5 +162,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propriedade CacheSize (ADO)](./cachesize-property-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

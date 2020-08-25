@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4d2f7ef20e5fb67450dccee7e7fb29b32d46286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92926461a9ec7f3e8efcff5edad8950d791b7d25
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440118"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770685"
 ---
 # <a name="definedsize-property-example-vc"></a>Exemplo da propriedade DefinedSize (VC++)
-Este exemplo demonstra a propriedade [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md). O código redefinirá o tamanho da coluna FirstName da tabela **Employees** do banco de dados *Northwind* . Em seguida, a alteração nos valores do [campo](../../../ado/reference/ado-api/field-object.md) FirstName de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base na tabela **Employees** é exibida. Observe que, por padrão, o campo FirstName torna-se preenchido com espaços depois que você redefine a propriedade **DefinedSize** .  
+Este exemplo demonstra a propriedade [DefinedSize](./definedsize-property-adox.md) de uma [coluna](./column-object-adox.md). O código redefinirá o tamanho da coluna FirstName da tabela **Employees** do banco de dados *Northwind* . Em seguida, a alteração nos valores do [campo](../ado-api/field-object.md) FirstName de um [conjunto de registros](../ado-api/recordset-object-ado.md) com base na tabela **Employees** é exibida. Observe que, por padrão, o campo FirstName torna-se preenchido com espaços depois que você redefine a propriedade **DefinedSize** .  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -164,5 +164,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Propriedade DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
+ [Objeto Column (ADOX)](./column-object-adox.md)   
+ [Propriedade DefinedSize (ADOX)](./definedsize-property-adox.md)

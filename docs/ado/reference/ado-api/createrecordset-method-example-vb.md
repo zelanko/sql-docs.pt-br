@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e91e1c0801cb8062bca89968d0345f5bbcee1220
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4934fc5e5d0f7b5c65db6d36edf27282afb50c60
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444308"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775595"
 ---
 # <a name="createrecordset-method-example-vb"></a>Exemplo do método CreateRecordset (VB)
-Você pode criar um objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e especificar as informações da coluna. Em seguida, você pode inserir dados no objeto **Recordset** ; o conjunto de linhas subjacente armazena em buffer as inserções.  
+Você pode criar um objeto de [conjunto de registros](./recordset-object-ado.md) e especificar as informações da coluna. Em seguida, você pode inserir dados no objeto **Recordset** ; o conjunto de linhas subjacente armazena em buffer as inserções.  
   
- O exemplo de código a seguir mostra como definir um **conjunto de registros** usando o objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . Você também pode fazer isso com o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ O exemplo de código a seguir mostra como definir um **conjunto de registros** usando o objeto [RDSServer. datafactory](../rds-api/datafactory-object-rdsserver.md) . Você também pode fazer isso com o [RDS. Objeto DataControl](../rds-api/datacontrol-object-rds.md) .  
   
 ```  
 'BeginRsDefineShapeVB  

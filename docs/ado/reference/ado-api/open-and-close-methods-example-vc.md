@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cabdbee513ab42111710520358a66f5f42122f77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 151802a801afe8d9b8b4ca9d46301f738d79fa1a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442988"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773815"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Exemplo dos métodos Open e Close (VC++)
-Este exemplo usa os métodos **Open** e [Close](../../../ado/reference/ado-api/close-method-ado.md) nos objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [Connection](../../../ado/reference/ado-api/connection-object-ado.md) que foram abertos.  
+Este exemplo usa os métodos **Open** e [Close](./close-method-ado.md) nos objetos [Recordset](./recordset-object-ado.md) e [Connection](./connection-object-ado.md) que foram abertos.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -207,8 +207,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Método Open (conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Método Close (ADO)](./close-method-ado.md)   
+ [Objeto de conexão (ADO)](./connection-object-ado.md)   
+ [Método Open (conexão ADO)](./open-method-ado-connection.md)   
+ [Método Open (conjunto de registros ADO)](./open-method-ado-recordset.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

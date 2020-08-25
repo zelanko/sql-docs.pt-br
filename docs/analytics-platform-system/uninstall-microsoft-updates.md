@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399461"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Desinstalar as atualizações da Microsoft no Analytics Platform System
@@ -26,11 +26,11 @@ Para executar essas etapas, será necessário:
   
 -   Um logon do sistema de plataforma de análise com permissões para acessar o console de administração para monitorar o dispositivo.  
   
--   Conhecimento da conta do administrador de domínio da malha para fazer logon <em> <Fabric Domain> </em>no nó **-HST01** .  
+-   Conhecimento da conta do administrador de domínio da malha para fazer logon no <em> <Fabric Domain> </em> nó **-HST01** .  
   
 ## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>Para desinstalar as atualizações da Microsoft  
   
-1.  Faça logon no nó **-HST01** como administrador de domínio de malha. <em> <Fabric Domain> </em>  
+1.  Faça logon no <em> <Fabric Domain> </em> nó **-HST01** como administrador de domínio de malha.  
   
 2.  Para desinstalar todas as atualizações aprovadas para desinstalar o WSUS, abra uma janela de prompt de comando e insira o comando a seguir. Substitua os itens de espaço reservado *<  >* com as informações apropriadas.  
   

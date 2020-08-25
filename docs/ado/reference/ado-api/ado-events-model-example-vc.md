@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451428"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776695"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemplo do modelo de eventos ADO (VC++)
-A seção Visual C++ da [instanciação do evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como instanciar o modelo de evento ADO. Veja a seguir um exemplo específico de instanciação do modelo de evento dentro do ambiente criado pela diretiva **#import** .  
+A seção Visual C++ da [instanciação do evento ADO por linguagem](../../guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como instanciar o modelo de evento ADO. Veja a seguir um exemplo específico de instanciação do modelo de evento dentro do ambiente criado pela diretiva **#import** .  
   
  A descrição geral usa **adoint. h** como uma referência para assinaturas de método. No entanto, alguns detalhes na descrição geral mudam um pouco como resultado do uso da diretiva **#import** :  
   

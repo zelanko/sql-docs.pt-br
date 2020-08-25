@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453568"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806198"
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas junto com quaisquer atualizações, inserções ou exclusões pendentes. A seção de dados pode conter zero ou mais linhas. Ele só pode conter dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas sem dados podem ser omitidas. Se um atributo ou subelemento for usado na seção de dados e essa construção não tiver sido definida na seção de esquema, ela será silenciosamente ignorada.  
@@ -86,4 +86,4 @@ A seção de dados define os dados do conjunto de linhas junto com quaisquer atu
  Uma atualização sempre contém os dados de linha originais completos seguidos pelos dados de linha alterados. A linha alterada pode conter todas as colunas ou apenas as colunas que realmente foram alteradas. No exemplo anterior, a linha do transportadora 2 não é alterada e somente a coluna telefone tem valores alterados para o transportador 3 e, portanto, é a única coluna incluída na linha alterada. As linhas inseridas para as transportadoras 12, 13 e 14 são agrupadas em uma marca RS: INSERT. Observe que as linhas excluídas também podem ser agrupadas em lote, embora isso não seja mostrado no exemplo anterior.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistência de registros em formato XML](./persisting-records-in-xml-format.md)

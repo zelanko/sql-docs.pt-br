@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400540"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidade de processamento e armazenamento no Analytics Platform System
@@ -100,7 +100,7 @@ Explica
   
 -   **Armazenamento de dados máximo físico por rack** = (armazenamento de dados físicos por nó de computação) * (nós de computação máximo por rack).  
   
--   **Armazenamento máximo de dados de usuário estimado por rack** = (armazenamento de dados máximo físico por rack) * (5 para uma \* taxa de compactação 5:1) (50% para logs e tempdb). Essa é uma estimativa conservadora para os dados de usuário não compactados que podem ser carregados e armazenados no dispositivo. Essa é uma estimativa e não é imposta pelo software. O armazenamento real de dados do usuário depende de seus dados e de sua configuração.  
+-   **Armazenamento máximo de dados de usuário estimado por rack** = (armazenamento de dados máximo físico por rack) * (5 para uma taxa de compactação 5:1) \* (50% para logs e tempdb). Essa é uma estimativa conservadora para os dados de usuário não compactados que podem ser carregados e armazenados no dispositivo. Essa é uma estimativa e não é imposta pelo software. O armazenamento real de dados do usuário depende de seus dados e de sua configuração.  
   
 -   O **máximo de racks** é específico para cada fornecedor de hardware.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453098"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805636"
 ---
 # <a name="operation-of-parameterized-commands"></a>Operação de comandos parametrizados
 Se você estiver trabalhando com um conjunto de **registros**filho grande, especialmente comparado ao tamanho do **conjunto de registros**pai, mas precisar acessar apenas alguns capítulos filhos, poderá achar mais eficiente usar um comando com parâmetros.  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  As tabelas pai e filho têm um nome de coluna em comum, *Cust_ID*. O *comando filho* tem um espaço reservado "?", ao qual a cláusula relate se refere (ou seja, "... PARÂMETRO 0 ").  
   
 > [!NOTE]
->  A cláusula de parâmetro pertence exclusivamente à sintaxe de comando de forma. Ele não está associado ao objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) do ADO ou à coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
+>  A cláusula de parâmetro pertence exclusivamente à sintaxe de comando de forma. Ele não está associado ao objeto de [parâmetro](../../reference/ado-api/parameter-object.md) do ADO ou à coleção de [parâmetros](../../reference/ado-api/parameters-collection-ado.md) .  
   
  Quando o comando de forma com parâmetros é executado, ocorre o seguinte:  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  Quando a coluna de capítulo de uma linha pai é acessada, o *comando filho* é executado usando o valor de customer. Cust_ID como o valor do parâmetro.  
   
-4.  Todas as linhas no conjunto de linhas do provedor de dados criado na etapa 3 são usadas para preencher o **conjunto de registros**filho. Neste exemplo, são todas as linhas na tabela Orders em que o cust_id é igual ao valor de Customer. cust_id. Por padrão, os s **conjuntos de registros**filho serão armazenados em cache no cliente até que todas as referências ao **conjunto de registros** pai sejam liberadas. Para alterar esse comportamento, defina as **linhas filho do cache** de [propriedade dinâmica](../../../ado/reference/ado-api/ado-dynamic-property-index.md) do **conjunto de registros** como **false**.  
+4.  Todas as linhas no conjunto de linhas do provedor de dados criado na etapa 3 são usadas para preencher o **conjunto de registros**filho. Neste exemplo, são todas as linhas na tabela Orders em que o cust_id é igual ao valor de Customer. cust_id. Por padrão, os s **conjuntos de registros**filho serão armazenados em cache no cliente até que todas as referências ao **conjunto de registros** pai sejam liberadas. Para alterar esse comportamento, defina as **linhas filho do cache** de [propriedade dinâmica](../../reference/ado-api/ado-dynamic-property-index.md) do **conjunto de registros** como **false**.  
   
 5.  Uma referência às linhas filho recuperadas (ou seja, o capítulo do conjunto de **registros**filho) é colocada na coluna capítulo da linha atual do **conjunto de registros**pai.  
   
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Usando uma hierarquia sem parâmetros, não há como relacionar as tabelas de equipes e jogos de forma que o **conjunto de registros** filho de cada equipe contenha sua programação completa. Você pode criar capítulos que contenham a agenda inicial ou a agenda de estrada, mas não ambos. Isso ocorre porque a cláusula relate limita você a relações pai-filho do formulário (Altova = cc1) e (PC2 = PC2). Portanto, se o comando tiver incluído "RELACIONAr team_id a home_team, team_id para visiting_team", você obterá apenas jogos em que a equipe estava jogando. O que você deseja é "(team_id = home_team) ou (team_id = visiting_team)", mas o provedor de forma não oferece suporte à cláusula OR.  
   
- Para obter o resultado desejado, você pode usar um comando com parâmetros. Por exemplo:   
+ Para obter o resultado desejado, você pode usar um comando com parâmetros. Por exemplo:  
   
 ```  
 SHAPE {SELECT * FROM teams}   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  Ao usar cláusulas WHERE, os parâmetros não podem usar os tipos de dados do SQL para Text, ntext e Image, ou um erro resultará em conter a seguinte descrição: `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de formatação de dados](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)
+ [Exemplo de formatação de dados](./data-shaping-example.md)   
+ [Gramática forma formal](./formal-shape-grammar.md)   
+ [Modelar comandos em geral](./shape-commands-in-general.md)

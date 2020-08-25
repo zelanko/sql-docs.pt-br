@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fef2189af66c6777e2c337026db76e85b2cb42d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28c548316ebb6ede317f13d20ff82de0b802659e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453408"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806117"
 ---
 # <a name="examining-data"></a>Examinar dados
-A seção [obtendo dados](../../../ado/guide/data/getting-data.md) explicou como recuperar dados de uma fonte de dados como um ou mais objetos **Recordset** . Esta seção discutirá o **conjunto de registros** em mais detalhes, incluindo como navegar pelo conjunto de **registros** e exibir seus dados.  
+A seção [obtendo dados](./getting-data.md) explicou como recuperar dados de uma fonte de dados como um ou mais objetos **Recordset** . Esta seção discutirá o **conjunto de registros** em mais detalhes, incluindo como navegar pelo conjunto de **registros** e exibir seus dados.  
   
- O **conjunto de registros** dá suporte a várias [Propriedades e métodos](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) para você navegar e examinar os dados contidos no. Esses recursos são dependentes do provedor. Alguns provedores podem não dar suporte a algumas propriedades ou métodos.  
+ O **conjunto de registros** dá suporte a várias [Propriedades e métodos](../../reference/ado-api/recordset-object-properties-methods-and-events.md) para você navegar e examinar os dados contidos no. Esses recursos são dependentes do provedor. Alguns provedores podem não dar suporte a algumas propriedades ou métodos.  
   
  Esta seção contém os seguintes tópicos.  
   
--   [Registro atual e o tamanho do conjunto de registros](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
+-   [Registro atual e o tamanho do conjunto de registros](./current-record-and-size-of-recordset.md)  
   
--   [Navegar pelos dados](../../../ado/guide/data/navigating-through-data.md)  
+-   [Navegar pelos dados](./navigating-through-data.md)  
   
--   [Noções básicas sobre a estrutura do conjunto de registros](../../../ado/guide/data/understanding-recordset-structure.md)  
+-   [Noções básicas sobre a estrutura do conjunto de registros](./understanding-recordset-structure.md)  
   
--   [Conjunto de registros de exemplo para examinar dados](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
+-   [Conjunto de registros de exemplo para examinar dados](./sample-recordset-for-examining-data.md)  
   
--   [Limites de um conjunto de registros](../../../ado/guide/data/boundaries-of-a-recordset.md)
+-   [Limites de um conjunto de registros](./boundaries-of-a-recordset.md)
