@@ -5,17 +5,17 @@ description: Saiba como gerenciar pacotes do Python ou do R no banco de dados co
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 234c7493852afb4667f9c97b2cb4bb81e119af63
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 0fdd781e26597e1c188ce08c1df9852c39aaecec
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352393"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745476"
 ---
 # <a name="manage-packages-in-database-with-machine-learning-extension-preview-for-azure-data-studio"></a>Gerenciar pacotes no banco de dados com a extensão de Machine Learning (versão prévia) para Azure Data Studio
 

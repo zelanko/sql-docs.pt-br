@@ -3,18 +3,18 @@ title: Extensão de Servidores de Gerenciamento Central do SQL Server
 description: Saiba como instalar e usar a extensão dos Servidores de Gerenciamento Central do SQL Server (versão prévia), uma extensão para agrupar servidores e aplicar ações ao grupo.
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 6f28601245c239b9ffed0379b43123a300d23d30
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 3024a9c61fb51063b50f8fde769e7bdbb5608fbf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522490"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766045"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Extensão de Servidores de Gerenciamento Central do SQL Server (versão prévia)
 
@@ -34,6 +34,4 @@ Atualmente, essa experiência está na versão prévia inicial. Informe problema
  Os Servidores de Gerenciamento Central podem ser exibidos clicando no ícone de Conexões (Ctrl/Cmd + G). Na primeira vez que você baixar a extensão, a exibição do CMS será minimizada e você poderá abri-la clicando em **Servidores de Gerenciamento Central**
 
 ## <a name="next-steps"></a>Próximas etapas
-Para saber mais sobre os Servidores de Gerenciamento Central do ponto de vista conceitual, [leia mais aqui](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group).
-
-
+Para saber mais sobre os Servidores de Gerenciamento Central do ponto de vista conceitual, [leia mais aqui](../ssms/register-servers/create-a-central-management-server-and-server-group.md).

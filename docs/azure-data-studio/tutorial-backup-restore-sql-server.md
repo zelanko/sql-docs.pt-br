@@ -2,19 +2,19 @@
 title: Fazer backup e restaurar um banco de dados
 description: Siga este tutorial para saber como fazer backup e restaurar bancos de dados usando o Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522420"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765795"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Fazer backup e restaurar bancos de dados usando o Azure Data Studio
 
@@ -32,7 +32,7 @@ Este tutorial requer o *TutorialDB* do SQL Server. Para criar o banco de dados *
 
 * [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-Este tutorial requer a conexão com um banco de dados do SQL Server. O Banco de Dados SQL do Azure tem backups automatizados, portanto, o Azure Data Studio não executa o backup e a restauração do Banco de Dados SQL do Azure. Para obter detalhes, confira [Saiba mais sobre backups automáticos do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+Este tutorial requer a conexão com um banco de dados do SQL Server. O Banco de Dados SQL do Azure tem backups automatizados, portanto, o Azure Data Studio não executa o backup e a restauração do Banco de Dados SQL do Azure. Para obter detalhes, confira [Saiba mais sobre backups automáticos do Banco de Dados SQL](/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="back-up-a-database"></a>Fazer o backup de um banco de dados
 

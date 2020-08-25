@@ -6,15 +6,15 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d6e2c33cfc76736c3678ff9c802e3059f53baa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920484"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767815"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>Usar Jupyter Notebooks no Azure Data Studio
 
@@ -22,7 +22,7 @@ ms.locfileid: "86920484"
 
 O Jupyter Notebook é um aplicativo Web de código-fonte aberto que permite que criar e compartilhar documentos que contêm código ao vivo, equações, visualizações e texto narrativo. O uso inclui limpeza de dados e transformação, simulação numérica, modelagem estatística, visualização de dados e aprendizado de máquina.
 
-Este artigo descreve como criar um notebook na versão mais recente do [**Azure Data Studio**](../azure-data-studio/download.md) e como começar a criar seus próprios notebooks usando diferentes kernels.
+Este artigo descreve como criar um notebook na versão mais recente do [**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15) e como começar a criar seus próprios notebooks usando diferentes kernels.
 
 Assista a este vídeo breve de 5 minutos para ver uma introdução sobre notebooks no Azure Data Studio:
 
@@ -51,7 +51,7 @@ Os notebooks do Azure Data Studio dão suporte a vários kernels diferentes, inc
 **Anexar a** fornece o contexto do kernel. Por exemplo, se estiver usando o Kernel do SQL, você poderá usar anexar a qualquer uma de suas instâncias do SQL Server.
 Se estiver usando o Kernel do Python3, anexe a **localhost** e você poderá usar esse kernel para desenvolvimento de Python local.
 
-O Kernel do SQL também pode ser usado para se conectar a instâncias do servidor PostgreSQL. Se você for um desenvolvedor de PostgreSQL e quiser conectar os notebooks ao Servidor PostgreSQL, baixe a [**extensão do PostgreSQL**](../azure-data-studio/postgres-extension.md) no Marketplace de extensões do Azure Data Studio e se conecte ao servidor PostgreSQL.
+O Kernel do SQL também pode ser usado para se conectar a instâncias do servidor PostgreSQL. Se você for um desenvolvedor de PostgreSQL e quiser conectar os notebooks ao Servidor PostgreSQL, baixe a [**extensão do PostgreSQL**](./postgres-extension.md) no Marketplace de extensões do Azure Data Studio e se conecte ao servidor PostgreSQL.
 
 Se você estiver conectado ao cluster de Big Data do SQL Server 2019, o valor padrão de **Anexar a** será o ponto de extremidade do cluster. Você pode enviar o código Python, Scala e R usando a computação de Spark do cluster.
 

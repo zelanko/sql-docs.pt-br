@@ -2,19 +2,19 @@
 title: Conectar-se ao SQL Data Warehouse do Azure e consultá-lo
 description: Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se a um SQL Data Warehouse do Azure e executar uma consulta
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728009"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766365"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início Rápido: Use o Azure Data Studio para conectar-se ao SQL Data Warehouse do Azure e consultá-lo
 
@@ -23,9 +23,9 @@ Este guia de início rápido demonstra como usar o Azure Data Studio para se con
 ## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este guia de início rápido, você precisa do Azure Data Studio e do SQL Data Warehouse do Azure.
 
-- [Instale o Azure Data Studio](download.md).
+- [Instale o Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Se você ainda não tiver um SQL data warehouse, confira [Criar um SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Se você ainda não tiver um SQL data warehouse, confira [Criar um SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Lembre-se do nome do servidor e das credenciais de logon.
 
@@ -52,7 +52,7 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do SQL Data
 
    ![Ícone de Nova Conexão](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Se o servidor não tiver uma regra de firewall que permita que o Azure Data Studio se conecte, o formulário **Criar nova regra de firewall** será aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, confira [Regras de firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Se o servidor não tiver uma regra de firewall que permita que o Azure Data Studio se conecte, o formulário **Criar nova regra de firewall** será aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, confira [Regras de firewall](/azure/sql-database/sql-database-firewall-configure).
 
    ![Nova regra de firewall](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ O editor de consultas ainda está conectado ao banco de dados *mestre*, mas quer
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
 Outros artigos nesta coleção se baseiam neste guia de início rápido. Se você planeja continuar trabalhando com guias de início rápido subsequentes, não limpe os recursos criados neste guia de início rápido. Se você não planeja continuar, use as etapas a seguir para excluir os recursos criados por este guia de início rápido no portal do Azure.
-Limpe os recursos excluindo os grupos de recursos de que você não precisa mais. Para obter detalhes, confira [Limpar recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Limpe os recursos excluindo os grupos de recursos de que você não precisa mais. Para obter detalhes, confira [Limpar recursos](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 
 ## <a name="next-steps"></a>Próximas etapas

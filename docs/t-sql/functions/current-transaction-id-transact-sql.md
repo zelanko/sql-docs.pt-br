@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7dfe1927254c29b4a6f0d80adeef7652c7fd9477
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80ef65ccfbd26b74c31ed36adc95730315d2943a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468105"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645952"
 ---
 # <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Essa função retorna a ID da transação atual na sessão atual.
   

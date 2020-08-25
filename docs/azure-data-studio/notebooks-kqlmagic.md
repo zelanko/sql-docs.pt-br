@@ -6,19 +6,19 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f05030869b66ca0d2f57000aa85f02c93079f08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920464"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766825"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Extensão Kqlmagic no Azure Data Studio
 
-**Kqlmagic** é um comando que estende os recursos do kernel de Python nos **[Notebooks do Azure Data Studio](notebooks-guidance.md)** . Você pode combinar o Python e o **[KQL (linguagem de consulta Kusto)](https://docs.microsoft.com/azure/data-explorer/kusto/query)** para consultar e visualizar dados usando a avançada biblioteca Plot.ly integrada com comandos `render`. O Kqlmagic traz o benefício dos notebooks, da análise de dados e dos recursos avançados de Python, tudo isso no mesmo lugar. As fontes de dados com suporte para Kqlmagic incluem o **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)** , o **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)** e os **[Logs do Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)** .
+**Kqlmagic** é um comando que estende os recursos do kernel de Python nos **[Notebooks do Azure Data Studio](notebooks-guidance.md)** . Você pode combinar o Python e o **[KQL (linguagem de consulta Kusto)](/azure/data-explorer/kusto/query)** para consultar e visualizar dados usando a avançada biblioteca Plot.ly integrada com comandos `render`. O Kqlmagic traz o benefício dos notebooks, da análise de dados e dos recursos avançados de Python, tudo isso no mesmo lugar. As fontes de dados com suporte para Kqlmagic incluem o **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** , o **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** e os **[Logs do Azure Monitor](/azure/azure-monitor/platform/data-platform-logs)** .
 
 Este artigo mostra como criar e executar um notebook no Azure Data Studio usando a extensão Kqlmagic para um cluster do Azure Data Explorer, um log do Application Insights e logs do Azure Monitor.
 
@@ -114,7 +114,7 @@ Esta seção explica como executar a análise de dados usando Kqlmagic com um cl
 
 ### <a name="query-and-visualize-for-azure-data-explorer"></a>Consultar e visualizar no Azure Data Explorer
 
-Consulte de dados usando o [operador renderizar](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) e visualize dados usando a biblioteca ploy.ly. Essa consulta e visualização fornece uma experiência integrada que usa um KQL nativo.
+Consulte de dados usando o [operador renderizar](/azure/data-explorer/kusto/query/renderoperator) e visualize dados usando a biblioteca ploy.ly. Essa consulta e visualização fornece uma experiência integrada que usa um KQL nativo.
 
 1. Analise os 10 principais eventos de tempestade por estado e frequência:
 
@@ -179,7 +179,7 @@ Consulte de dados usando o [operador renderizar](https://docs.microsoft.com/azur
 
 ### <a name="query-and-visualize-for-application-insights"></a>Consultar e visualizar no Application Insights
 
-Consulte de dados usando o [operador renderizar](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) e visualize dados usando a biblioteca ploy.ly. Essa consulta e visualização fornece uma experiência integrada que usa um KQL nativo.
+Consulte de dados usando o [operador renderizar](/azure/data-explorer/kusto/query/renderoperator) e visualize dados usando a biblioteca ploy.ly. Essa consulta e visualização fornece uma experiência integrada que usa um KQL nativo.
 
 1. Mostrar as Exibições de Página:
 
@@ -234,7 +234,7 @@ Consulte de dados usando o [operador renderizar](https://docs.microsoft.com/azur
 
 ### <a name="query-and-visualize-for-azure-monitor-logs"></a>Consultar e visualizar nos Logs do Azure Monitor
 
-Consulte de dados usando o [operador renderizar](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) e visualize dados usando a biblioteca ploy.ly. Essa consulta e visualização fornece uma experiência integrada que usa um KQL nativo.
+Consulte de dados usando o [operador renderizar](/azure/data-explorer/kusto/query/renderoperator) e visualize dados usando a biblioteca ploy.ly. Essa consulta e visualização fornece uma experiência integrada que usa um KQL nativo.
 
 1. Exiba um gráfico de linha do tempo:
 
@@ -251,7 +251,7 @@ Consulte de dados usando o [operador renderizar](https://docs.microsoft.com/azur
 
 Saiba mais sobre os notebooks e Kqlmagic:
 
-- [Usar um Jupyter Notebook e a extensão Kqlmagic para analisar dados no Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
+- [Usar um Jupyter Notebook e a extensão Kqlmagic para analisar dados no Azure Data Explorer](/azure/data-explorer/Kqlmagic)
 - [Extensão (Magic) para o Jupyter Notebook e o Jupyter Lab, que habilita a experiência de notebook trabalhando com o uso de dados do Kusto, do Application Insights e do LogAnalytics](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)

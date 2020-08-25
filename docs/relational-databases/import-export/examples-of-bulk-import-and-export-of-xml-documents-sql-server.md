@@ -19,28 +19,29 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012452"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646047"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-    
-##  <a name="top"></a>
- Você pode importar documentos XML em massa no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportá-los em massa a partir de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico fornece exemplos de ambas as operações.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+## <a name="top"></a>
+
+Você pode importar documentos XML em massa no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportá-los em massa a partir de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico fornece exemplos de ambas as operações.
+
+Para importar dados em massa de em arquivo de dados para uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode usar o seguinte:  
   
- Para importar dados em massa de em arquivo de dados para uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode usar o seguinte:  
+- utilitário**bcp**  
+   Você também pode usar o utilitário **bcp** para exportar dados de qualquer lugar de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que a instrução SELECT funcionar, incluindo exibições particionadas.  
+
+- BULK INSERT  
   
--   utilitário**bcp**  
-    Você também pode usar o utilitário **bcp** para exportar dados de qualquer lugar de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que a instrução SELECT funcionar, incluindo exibições particionadas.  
-  
--   BULK INSERT  
-  
--   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
+- INSERT ... SELECT * FROM OPENROWSET(BULK...)  
 
 Para obter mais informações, consulte os tópicos a seguir.
 - [Importar e exportar dados em massa usando o utilitário bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

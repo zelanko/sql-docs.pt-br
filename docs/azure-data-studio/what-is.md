@@ -2,19 +2,19 @@
 title: O que é o Azure Data Studio
 description: O Azure Data Studio é uma ferramenta gratuita e leve que é executada no Windows, no macOS e no Linux para gerenciar o SQL Server, o Banco de Dados SQL do Azure e o SQL Data Warehouse do Azure.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771926"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765505"
 ---
 # <a name="what-is-azure-data-studio"></a>O que é o Azure Data Studio?
 
@@ -24,7 +24,7 @@ O Azure Data Studio oferece uma experiência de editor moderna com IntelliSense,
 
 O código-fonte do Azure Data Studio e de seus provedores de dados está disponível no GitHub em um EULA de código-fonte que fornece direitos de modificação e de uso do software, mas não sua redistribuição ou hospedagem em um serviço de nuvem. Para saber mais, confira [Perguntas frequentes sobre o Azure Data Studio](faq.md).
 
-**[Baixar e instalar o Azure Data Studio](download.md)**
+**[Baixar e instalar o Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>Editor de código SQL com IntelliSense
 
@@ -165,7 +165,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Baixar e instalar o Azure Data Studio](download.md)
+- [Baixar e instalar o Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 - [Conectar e consultar o SQL Server](quickstart-sql-server.md)
 - [Conectar e consultar o Banco de Dados SQL do Azure](quickstart-sql-database.md)
 

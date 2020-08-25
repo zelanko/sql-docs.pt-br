@@ -16,15 +16,16 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86a6b67d0393c9bac6e5ad3b9713c89796df3db4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427448"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645769"
 ---
 # <a name="rename-tables-database-engine"></a>Renomear tabelas (Mecanismo de Banco de Dados)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Renomear uma tabela no Banco de Dados do SQL Server ou SQL do Azure.
 

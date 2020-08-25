@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 8/12/2020
-ms.openlocfilehash: a92bc4b19adc4322852f19ddabe3d98e20174e40
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: bacfbe7df36b9222a4297ced95a0ffed2733fed6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746056"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778455"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixar e instalar o Azure Data Studio
 
@@ -31,7 +31,7 @@ Baixe e instale a versão mais recente:
 | macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | 12 de agosto de 2020 | 1.21.0 |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 12 de agosto de 2020| 1.21.0 |
 
-Para obter detalhes sobre a versão mais recente, confira as [notas sobre a versão](release-notes.md).
+Para obter detalhes sobre a versão mais recente, confira as [notas sobre a versão](./release-notes-azure-data-studio.md?view=sql-server-ver15).
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obter o Azure Data Studio para Windows
 

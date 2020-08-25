@@ -2,19 +2,19 @@
 title: 'Início Rápido: Conectar e consultar o SQL Server'
 description: Faça um início rápido no qual você usa o Azure Data Studio para conectar-se ao SQL Server e usa instruções T-SQL (Transact-SQL) para criar um banco de dados.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411282"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766355"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Início Rápido: Usar o Azure Data Studio para conectar e consultar o SQL Server
 
@@ -24,13 +24,13 @@ Este guia de início rápido mostra como usar o Azure Data Studio para se conect
 
 Para concluir este início rápido, você precisa do Azure Data Studio e de acesso ao SQL Server.
 
-- [Instale o Azure Data Studio](download.md).
+- [Instale o Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
 Se você não tiver acesso a um SQL Server, selecione a plataforma dentre os links a seguir (lembre-se do Logon e da Senha do SQL):
 
 - [Windows – Baixar o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS – Baixar o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux – Baixar SQL Server 2017 Developer](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) Edition – você só precisa seguir as etapas para *Criar e Consultar Dados*.
+- [macOS – Baixar o SQL Server 2017 no Docker](../linux/quickstart-install-connect-docker.md)
+- [Linux – Baixar SQL Server 2017 Developer](../linux/sql-server-linux-overview.md#install) Edition – você só precisa seguir as etapas para *Criar e Consultar Dados*.
 
 ## <a name="connect-to-a-sql-server"></a>Conectar a um SQL Server
 

@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988597"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778475"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Painel da Instância Gerenciada de SQL do Azure para o Azure Data Studio (versão prévia)
 
-A extensão da Instância Gerenciada de SQL do Azure fornece um painel para trabalhar com uma [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) no [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Essa extensão fornece os seguintes recursos:
+A extensão da Instância Gerenciada de SQL do Azure fornece um painel para trabalhar com uma [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance-index) no [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Essa extensão fornece os seguintes recursos:
 
 - Mostra as propriedades da Instância Gerenciada de SQL, incluindo os vCores e o armazenamento usado
 - Monitora o uso de CPU e de armazenamento nas duas horas anteriores
@@ -29,7 +29,7 @@ A extensão da Instância Gerenciada de SQL do Azure fornece um painel para trab
 
 ## <a name="install"></a>Instalar
 
-Você pode instalar a versão oficial dessa extensão. Siga as etapas na [documentação do Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Você pode instalar a versão oficial dessa extensão. Siga as etapas na [documentação do Azure Data Studio](./extensions.md).
 No painel **Extensões**, pesquise "Instância Gerenciada" e instale-a nele. Depois da instalação, você será notificado automaticamente sobre atualizações futuras de extensão.
 
 Com a extensão instalada, você verá uma guia **Instância Gerenciada** no Azure Data Studio. Aqui, é possível encontrar informações específicas para sua instância gerenciada.
@@ -58,8 +58,8 @@ Você pode ver algumas das seguintes recomendações:
 - **Atingindo o limite de espaço de armazenamento**. Exclua dados desnecessários ou aumente o tamanho do armazenamento da instância. Os bancos de dados que atingem o limite de armazenamento podem falhar ao processar até mesmo consultas lidas.
 - **Atingindo o limite de taxa de transferência da instância**. Notifica quando você está chegando perto do limite de sua camada de serviço: 22 MB/s para uso geral ou 48 MB/s para comercialmente crítico. Sua instância gerenciada limitará a carga para garantir que os backups possam ser feitos.
 - **Pressão de memória**. Baixa duração prevista da página ou muitas estatísticas de espera de `PAGEIOLATCH` podem indicar que sua instância está removendo páginas da memória e tentando constantemente carregar mais páginas do disco.
-- **Limites do arquivo de log**. Caso os arquivos de logs estejam se aproximando dos [limites de E/S de arquivo na camada de serviço de uso geral](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), talvez seja necessário aumentar o tamanho do arquivo de log para melhorar o desempenho.
-- **Limites do arquivo de dados**. Caso os arquivos de dados estejam se aproximando dos [limites de E/S de arquivo na camada de serviço de uso geral](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), talvez seja necessário aumentar o tamanho do arquivo para melhorar o desempenho. Esse problema pode causar demanda de memória e reduzir os backups.
+- **Limites do arquivo de log**. Caso os arquivos de logs estejam se aproximando dos [limites de E/S de arquivo na camada de serviço de uso geral](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), talvez seja necessário aumentar o tamanho do arquivo de log para melhorar o desempenho.
+- **Limites do arquivo de dados**. Caso os arquivos de dados estejam se aproximando dos [limites de E/S de arquivo na camada de serviço de uso geral](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), talvez seja necessário aumentar o tamanho do arquivo para melhorar o desempenho. Esse problema pode causar demanda de memória e reduzir os backups.
 - **Problemas de disponibilidade**. Um grande número de arquivos de log virtuais pode afetar o desempenho. Se houver uma falha de processo, esses problemas poderão resultar em uma recuperação de banco de dados mais longa na camada de serviço de uso geral.
 
 Examine periodicamente essas recomendações, investigue as causas raiz e adote ações corretivas. A extensão da Instância Gerenciada de SQL fornece scripts que você pode executar para atenuar alguns dos problemas relatados.

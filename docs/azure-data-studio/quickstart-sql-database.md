@@ -2,19 +2,19 @@
 title: Conectar e consultar um Banco de Dados SQL do Azure
 description: Faça um início rápido no qual você usa o Azure Data Studio para conectar-se a um servidor do Banco de Dados SQL do Azure e criar e consultar um banco de dados.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411292"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766435"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Início Rápido: use o Azure Data Studio para se conectar e consultar e o Banco de Dados SQL do Azure
 
@@ -24,13 +24,13 @@ Neste guia de início rápido, você usará o Azure Data Studio para conectar-se
 
 Para concluir este guia de início rápido, você precisa do Azure Data Studio e do servidor do Banco de Dados SQL do Azure.
 
-- [Instalar o Azure Data Studio](download.md)
+- [Instalar o Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 
 Se você não tiver um SQL Server do Azure, conclua um dos seguintes guias de início rápido do Banco de Dados SQL do Azure. Lembre-se do nome do servidor totalmente qualificado e das credenciais de entrada para etapas posteriores:
 
-- [Criar BD – Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Criar BD – CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Criar BD – PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [Criar BD – Portal](/azure/sql-database/sql-database-get-started-portal)
+- [Criar BD – CLI](/azure/sql-database/sql-database-get-started-cli)
+- [Criar BD – PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Conectar-se a seu servidor do Banco de Dados SQL do Azure
@@ -57,7 +57,7 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Banco de
 
 3. Selecione **Conectar**.
 
-4. Se o servidor não tiver uma regra de firewall que permita que o Azure Data Studio se conecte, o formulário **Criar nova regra de firewall** será aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, confira [Regras de firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. Se o servidor não tiver uma regra de firewall que permita que o Azure Data Studio se conecte, o formulário **Criar nova regra de firewall** será aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, confira [Regras de firewall](/azure/sql-database/sql-database-firewall-configure).
 
    ![Nova regra de firewall](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +150,7 @@ Os resultados da consulta são exibidos:
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Artigos de início rápido posteriores desenvolvem os recursos criados aqui. Se você planeja trabalhar com esses artigos, não exclua esses recursos. Caso contrário, no portal do Azure, exclua os recursos de que não precisa mais. Para obter detalhes, confira [Limpar recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Artigos de início rápido posteriores desenvolvem os recursos criados aqui. Se você planeja trabalhar com esses artigos, não exclua esses recursos. Caso contrário, no portal do Azure, exclua os recursos de que não precisa mais. Para obter detalhes, confira [Limpar recursos](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Próximas etapas
 

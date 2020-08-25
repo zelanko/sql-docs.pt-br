@@ -2,19 +2,19 @@
 title: Criar extensões
 description: É possível adicionar funcionalidade ao Azure Data Studio com uma extensão. Saiba como criar uma e publicá-la na galeria de extensões.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411122"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778415"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Estender a funcionalidade criando extensões do Azure Data Studio
 
@@ -40,7 +40,7 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-Para obter um guia detalhado de como começar a usar seu modelo de extensão, confira [Criando uma extensão](https://docs.microsoft.com/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15), que orienta você durante a criação de uma extensão de mapa de teclas.
+Para obter um guia detalhado de como começar a usar seu modelo de extensão, confira [Criando uma extensão](./tutorial-create-extension.md?view=sql-server-ver15), que orienta você durante a criação de uma extensão de mapa de teclas.
 
 **Referências de Extensibilidade**
 
