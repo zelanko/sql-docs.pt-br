@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d8a29f2e1f35ddddc28e4aa3fb3c52c649e3056
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2f6f3fa47c53a5a6873024284e58604a8e8a2c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453528"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806916"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Excluir registros usando o método Delete
-O uso do método **delete** marca o registro atual ou um grupo de registros em um objeto **Recordset** para exclusão. Se o objeto **Recordset** não permitir a exclusão de registros, ocorrerá um erro. Se você estiver no modo de atualização imediata, as exclusões ocorrerão imediatamente no banco de dados. Se um registro não puder ser excluído com êxito (devido a violações de integridade do banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada para **Atualizar.** Isso significa que você deve cancelar a atualização usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de sair do registro atual (por exemplo, usando [fechar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md)ou [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+O uso do método **delete** marca o registro atual ou um grupo de registros em um objeto **Recordset** para exclusão. Se o objeto **Recordset** não permitir a exclusão de registros, ocorrerá um erro. Se você estiver no modo de atualização imediata, as exclusões ocorrerão imediatamente no banco de dados. Se um registro não puder ser excluído com êxito (devido a violações de integridade do banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada para **Atualizar.** Isso significa que você deve cancelar a atualização usando [CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md) antes de sair do registro atual (por exemplo, usando [fechar](../../reference/ado-api/close-method-ado.md), [mover](../../reference/ado-api/move-method-ado.md)ou [NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)).  
   
  Se você estiver no modo de atualização do lote, os registros serão marcados para exclusão do cache e a exclusão real ocorrerá quando você chamar o método **UpdateBatch** . (Para exibir os registros excluídos, defina a propriedade de **filtro** para **AdFilterAffectedRecords** após a **exclusão** ser chamada.)  
   

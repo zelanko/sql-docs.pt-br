@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092af21c57b733e12c233cb201304cbc27930c80
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439058"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768375"
 ---
 # <a name="dataspace-object-rds"></a>Objeto DataSpace (RDS)
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "88439058"
   
  Cria proxies do lado do cliente para objetos comerciais personalizados localizados na camada intermediária.  
   
- O serviço de dados remoto precisa de proxies de objeto de negócios para que os componentes do lado do cliente possam se comunicar com objetos comerciais localizados na camada intermediária. Os proxies facilitam o empacotamento, o empacotamento e o transporte (marshaling) dos dados do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do aplicativo entre os limites do processo ou da máquina.  
+ O serviço de dados remoto precisa de proxies de objeto de negócios para que os componentes do lado do cliente possam se comunicar com objetos comerciais localizados na camada intermediária. Os proxies facilitam o empacotamento, o empacotamento e o transporte (marshaling) dos dados do [conjunto de registros](../ado-api/recordset-object-ado.md) do aplicativo entre os limites do processo ou da máquina.  
   
- O serviço de dados remotos usa o **RDS. ** Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace para criar proxies de objeto comercial. O proxy de objeto comercial é criado dinamicamente sempre que uma instância de seu equivalente de objeto comercial de camada intermediária é criada. O serviço de dados remoto oferece suporte aos seguintes protocolos: HTTP, HTTPS (soquetes de segurança HTTP), DCOM e em processo (os componentes cliente e o objeto comercial residem no mesmo computador).  
+ O serviço de dados remotos usa o **RDS. ** Método [CreateObject](./createobject-method-rds.md) do objeto DataSpace para criar proxies de objeto comercial. O proxy de objeto comercial é criado dinamicamente sempre que uma instância de seu equivalente de objeto comercial de camada intermediária é criada. O serviço de dados remoto oferece suporte aos seguintes protocolos: HTTP, HTTPS (soquetes de segurança HTTP), DCOM e em processo (os componentes cliente e o objeto comercial residem no mesmo computador).  
   
 > [!NOTE]
 >  O RDS se comporta de maneira "sem estado" quando o **RDS. O objeto DataSpace** usa os protocolos http ou HTTPS. Ou seja, todas as informações internas sobre uma solicitação do cliente são descartadas depois que o servidor retorna uma resposta.  
@@ -46,9 +46,7 @@ ms.locfileid: "88439058"
   
  Esta seção contém o tópico a seguir.  
   
--   [Propriedades, métodos e eventos do objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos do objeto DataSpace (RDS)](./dataspace-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo do método CreateObject e objeto DataSpace (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
-
+ [Exemplo do método CreateObject e objeto DataSpace (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)

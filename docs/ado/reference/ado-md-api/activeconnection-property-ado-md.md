@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea9319e89c44b9cbb66b3acecdcbea4afa3e61c4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441438"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776771"
 ---
 # <a name="activeconnection-property-ado-md"></a>Propriedade ActiveConnection (ADO MD)
-Indica a qual objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ADO o células ou o catálogo atual pertence atualmente.  
+Indica a qual objeto de [conexão](../ado-api/connection-object-ado.md) ADO o células ou o catálogo atual pertence atualmente.  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna uma **variante** que contém uma cadeia de caracteres que define um objeto Connection ou **Connection** . O padrão é vazio.  
@@ -34,9 +34,9 @@ Indica a qual objeto de [conexão](../../../ado/reference/ado-api/connection-obj
 ## <a name="remarks"></a>Comentários  
  Você pode definir essa propriedade como um objeto de **conexão** ADO válido ou uma cadeia de conexão válida. Quando essa propriedade é definida como uma cadeia de conexão, o provedor cria um novo objeto de **conexão** usando essa definição e abre a conexão.  
   
- Se você usar o argumento *ActiveConnection* do método [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) para abrir um objeto [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , a propriedade **ActiveConnection** irá herdar o valor do argumento.  
+ Se você usar o argumento *ActiveConnection* do método [Open](./open-method-ado-md.md) para abrir um objeto [células](./cellset-object-ado-md.md) , a propriedade **ActiveConnection** irá herdar o valor do argumento.  
   
- Definir a **propriedade ActiveConnection** de um objeto de [Catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) como **Nothing** libera os dados associados, incluindo dados na coleção [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) e quaisquer objetos de [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md)e [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) relacionados. Fechar um objeto de **conexão** que foi usado para abrir um **Catálogo** tem o mesmo efeito que definir a propriedade **ActiveConnection** como **Nothing**.  
+ Definir a **propriedade ActiveConnection** de um objeto de [Catálogo](./catalog-object-ado-md.md) como **Nothing** libera os dados associados, incluindo dados na coleção [CubeDefs](./cubedefs-collection-ado-md.md) e quaisquer objetos de [dimensão](./dimension-object-ado-md.md), [hierarquia](./hierarchy-object-ado-md.md), [nível](./level-object-ado-md.md)e [membro](./member-object-ado-md.md) relacionados. Fechar um objeto de **conexão** que foi usado para abrir um **Catálogo** tem o mesmo efeito que definir a propriedade **ActiveConnection** como **Nothing**.  
   
  A alteração do banco de dados padrão da conexão referenciada pela propriedade **ActiveConnection** de um objeto de **Catálogo** invalida o conteúdo do **Catálogo**.  
   
@@ -61,14 +61,14 @@ Indica a qual objeto de [conexão](../../../ado/reference/ado-api/connection-obj
 
 :::row:::
     :::column:::
-        [Objeto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [Objeto Catalog (ADO MD)](./catalog-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+        [Objeto Cellset (ADO MD)](./cellset-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Método Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [Exemplo de células (VB)](./cellset-example-vb.md)   
+ [Objeto de conexão (ADO)](../ado-api/connection-object-ado.md)   
+ [Método Open (ADO MD)](./open-method-ado-md.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de6f23eb8f04bf8a71f828af9303c66d86859f10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7d6a356fb188cdd8507bdb80d79e4c9ceb6a1a5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438828"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767855"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Exemplos de código RDS no Visual Basic
 > [!IMPORTANT]
@@ -34,8 +34,6 @@ ms.locfileid: "88438828"
   
 ## <a name="properties"></a>Propriedades  
   
--   [Exemplo da propriedade Handler](../../../ado/reference/rds-api/handler-property-example-vb.md)  
+-   [Exemplo da propriedade Handler](./handler-property-example-vb.md)  
   
--   [Exemplo da propriedade InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)
-
-
+-   [Exemplo da propriedade InternetTimeout](./internettimeout-property-example-vb.md)

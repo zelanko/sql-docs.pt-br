@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438908"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768045"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Retorna um ponteiro para a interface solicitada em uma versão mais compatível do objeto.  
@@ -54,9 +54,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  A implementação do mecanismo de cursor do RDS de **InvokeService** usa o conjunto de linhas de entrada (ou um objeto de resultados múltiplos), popula o mecanismo de cursor do conjunto de linhas de entrada e, em seguida, retorna um ponteiro para si mesmo.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Interface IRDSService (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [Interface IRDSService (RDS)](./irdsservice-interface-rds.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos RDS](../../../ado/reference/rds-api/rds-methods.md)
-
-
+ [Métodos RDS](./rds-methods.md)

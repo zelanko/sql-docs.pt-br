@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e8ae929c5606de2a0f58981affb403948e81b4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cb2c1ba329537acd5b9ffe2008f334b34a45c2f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438628"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767475"
 ---
 # <a name="sortcolumn-property-rds"></a>Propriedade SortColumn (RDS)
 Indica por qual coluna classificar os registros.  
@@ -36,25 +36,20 @@ DataControl.SortColumn = String
   
 #### <a name="parameters"></a>Parâmetros  
  *DataControl*  
- Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Uma variável de objeto que representa um [RDS. Objeto DataControl](./datacontrol-object-rds.md) .  
   
  *Cadeia de caracteres*  
  Um valor de **cadeia de caracteres** que representa o nome ou alias da coluna pela qual classificar os registros.  
   
 ## <a name="remarks"></a>Comentários  
- As propriedades **SortColumn**, [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fornecem funcionalidade de classificação e filtragem no cache do lado do cliente. A funcionalidade de classificação ordena registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em critérios de localização, enquanto o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo é mantido no cache. O método [Reset](../../../ado/reference/rds-api/reset-method-rds.md) executará os critérios e substituirá o **conjunto** de registros atual por um **conjunto de registros**atualizável.  
+ As propriedades **SortColumn**, [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)e [FilterColumn](./filtercolumn-property-rds.md) fornecem funcionalidade de classificação e filtragem no cache do lado do cliente. A funcionalidade de classificação ordena registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em critérios de localização, enquanto o [conjunto de registros](../ado-api/recordset-object-ado.md) completo é mantido no cache. O método [Reset](./reset-method-rds.md) executará os critérios e substituirá o **conjunto** de registros atual por um **conjunto de registros**atualizável.  
   
- Para classificar em um **conjunto de registros**, você deve primeiro salvar as alterações pendentes. Se você estiver usando o **RDS. DataControl**, você pode usar o método [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) . Por exemplo, se o seu **RDS. O DataControl** é chamado de ADC1, o seu código seria `ADC1.SubmitChanges` . Se você estiver usando um **conjunto de registros**ADO, poderá usar seu método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . O uso de **UpdateBatch** é o método recomendado para objetos **Recordset** criados com o método [createrecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) . Por exemplo, seu código pode ser `myRS.UpdateBatch` ou `ADC1.Recordset.UpdateBatch` .  
+ Para classificar em um **conjunto de registros**, você deve primeiro salvar as alterações pendentes. Se você estiver usando o **RDS. DataControl**, você pode usar o método [SubmitChanges](./submitchanges-method-rds.md) . Por exemplo, se o seu **RDS. O DataControl** é chamado de ADC1, o seu código seria `ADC1.SubmitChanges` . Se você estiver usando um **conjunto de registros**ADO, poderá usar seu método [UpdateBatch](../ado-api/updatebatch-method.md) . O uso de **UpdateBatch** é o método recomendado para objetos **Recordset** criados com o método [createrecordset](./createrecordset-method-rds.md) . Por exemplo, seu código pode ser `myRS.UpdateBatch` ou `ADC1.Recordset.UpdateBatch` .  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades FilterColumn, FilterCriterion, FilterValue, SortColumn e SortDirection e Método Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [Propriedade de classificação](../../../ado/reference/ado-api/sort-property.md)   
- [Propriedade SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
-
-
-
+ [Exemplo das propriedades FilterColumn, FilterCriterion, FilterValue, SortColumn e SortDirection e Método Reset (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [Propriedade de classificação](../ado-api/sort-property.md)   
+ [Propriedade SortDirection (RDS)](./sortdirection-property-rds.md)

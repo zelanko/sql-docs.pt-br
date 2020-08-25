@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400988"
 ---
 # <a name="monitor-appliance-health-state"></a>Monitorar estado de integridade do dispositivo
@@ -22,7 +22,7 @@ Este artigo explica como monitorar o estado de um dispositivo de sistema de plat
 ## <a name="to-monitor-the-appliance-state"></a>Para monitorar o estado do dispositivo  
 Um administrador de sistema pode usar o console de administração do ou as DMVs (exibições de gerenciamento dinâmico) do SQL Server PDW para recuperar a hierarquia completa de nós, componentes e software. O diagrama a seguir fornece uma compreensão de alto nível dos componentes que SQL Server PDW monitores.  
   
-![Visão geral de monitoramento](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Visão geral do monitoramento](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
 ### <a name="monitor-component-status-by-using-the-admin-console"></a>Monitorar o status do componente usando o console de administração  
 Para recuperar o status do componente usando o console de administração:  
@@ -83,7 +83,7 @@ Os valores possíveis retornados para a propriedade status são:
   
 -   Irrecuperável  
   
-Para ver todas as propriedades de todos os componentes, remova `WHERE  p.property_name = 'Status'` a cláusula.  
+Para ver todas as propriedades de todos os componentes, remova a `WHERE  p.property_name = 'Status'` cláusula.  
   
 A coluna **[update_time]** mostra a última vez em que o componente foi sondado pelos agentes de integridade SQL Server PDW.  
   

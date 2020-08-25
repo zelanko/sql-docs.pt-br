@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b92cb5f1d2ba02b58237f9c7776a4bf243d73a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28aca75b9bf0abba7a87a035ebcf565edb0b5fa5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442028"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777375"
 ---
 # <a name="source-property-example-vc"></a>Exemplo da propriedade Source (VC++)
-Este exemplo demonstra a propriedade [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) abrindo três objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) com base em fontes de dados diferentes.  
+Este exemplo demonstra a propriedade [Source](./source-property-ado-recordset.md) abrindo três objetos [Recordset](./recordset-object-ado.md) com base em fontes de dados diferentes.  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -158,5 +158,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Propriedade Source (Conjunto de registros ADO)](./source-property-ado-recordset.md)

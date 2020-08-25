@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399440"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no Analytics Platform System
@@ -31,7 +31,7 @@ Por exemplo, com as técnicas de gerenciamento de carga de trabalho no SQL Serve
 ## <a name="workload-management-basics"></a><a name="Basics"></a>Noções básicas de gerenciamento de carga de trabalho  
   
 ### <a name="key-terms"></a>Principais termos  
-Gerenciamento da Carga de Trabalho  
+Gerenciamento de carga de trabalho  
 O *Gerenciamento de carga de trabalho* é a capacidade de entender e ajustar a utilização de recursos do sistema a fim de obter o melhor desempenho para solicitações simultâneas.  
   
 Classe de recurso  
@@ -62,8 +62,8 @@ A tabela a seguir descreve as classes de recurso e suas alocações de recursos 
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |default|Médio|400 MB|1|Por padrão, cada logon é permitido uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe tem precedência. Quando um logon é Descartado de todas as classes de recurso, o logon reverte para a alocação de recursos padrão.|  
 |MediumRC|Médio|1200 MB|3|Exemplos de solicitações que podem precisar da classe de recurso médio:<br /><br />Operações CTAS que têm grandes junções de hash.<br /><br />Selecione operações que precisam de mais memória para evitar o cache em disco.<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
-|Largerc|Alta|2,8 GB|7|Exemplos de solicitações que podem precisar da classe de recurso grande:<br /><br />Operações CTAS muito grandes que têm enormes junções de hash ou que contêm grandes agregações, como cláusulas grandes ORDER BY ou GROUP BY.<br /><br />Selecione operações que exigem quantidades muito grandes de memória para operações como junções de hash ou agregações, como cláusulas ORDENAr por ou GROUP BY<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
-|xlargerc|Alta|8,4 GB|22|A classe extra grande de recursos é para solicitações que podem exigir consumo extra de recursos grandes em tempo de execução.|  
+|Largerc|Alto|2,8 GB|7|Exemplos de solicitações que podem precisar da classe de recurso grande:<br /><br />Operações CTAS muito grandes que têm enormes junções de hash ou que contêm grandes agregações, como cláusulas grandes ORDER BY ou GROUP BY.<br /><br />Selecione operações que exigem quantidades muito grandes de memória para operações como junções de hash ou agregações, como cláusulas ORDENAr por ou GROUP BY<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
+|xlargerc|Alto|8,4 GB|22|A classe extra grande de recursos é para solicitações que podem exigir consumo extra de recursos grandes em tempo de execução.|  
   
 <sup>*</sup>O uso máximo de memória é uma aproximação.  
   

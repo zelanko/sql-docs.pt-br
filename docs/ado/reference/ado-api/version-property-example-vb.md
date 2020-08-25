@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 839137cb2787ec35f8a49d6f66a8577e4d9d959a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1f7441fe32e361d15f80a6368065548e7fe39ae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441548"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776915"
 ---
 # <a name="version-property-example-vb"></a>Exemplo da propriedade Version (VB)
-Este exemplo usa a propriedade [version](../../../ado/reference/ado-api/version-property-ado.md) de um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) para exibir a versão atual do ADO. Ele também usa várias propriedades dinâmicas para mostrar:  
+Este exemplo usa a propriedade [version](./version-property-ado.md) de um objeto de [conexão](./connection-object-ado.md) para exibir a versão atual do ADO. Ele também usa várias propriedades dinâmicas para mostrar:  
   
 -   o nome e a versão do DBMS atual.  
   
@@ -79,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propriedade Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Objeto de conexão (ADO)](./connection-object-ado.md)   
+ [Propriedade Version (ADO)](./version-property-ado.md)

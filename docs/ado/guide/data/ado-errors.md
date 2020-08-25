@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 279352e2ad99d57b3f1e019358962ff301cde182
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f753e66e6711c3abcf59e2541b9bad6cd390e71a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453848"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806691"
 ---
 # <a name="ado-run-time-errors"></a>Erros de tempo de execução do ADO
 Os erros do ADO são relatados para seu programa como erros de tempo de execução. Você pode usar o mecanismo de interceptação de erros da sua linguagem de programação para interceptar e tratá-los. Por exemplo, em Visual Basic, use a instrução **On Error** . Em Visual C++, depende do método que você está usando para acessar as bibliotecas do ADO. Com #import, use um bloco **try-catch** . Caso contrário, os programadores do C++ precisam recuperar explicitamente o objeto de erro chamando **GetErrorInfo**. O procedimento a seguir Visual Basic sub demonstra o trapping de um erro ADO:
@@ -90,7 +90,7 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  A mensagem de erro inclui cada informação fornecida pelo objeto Visual Basic **Err** , exceto pelo valor **LastDllError** , que não se aplica aqui. O número do erro informa qual erro ocorreu. A descrição é útil em casos em que você não deseja manipular o erro por conta própria. Você pode simplesmente passá-lo ao usuário. Embora você geralmente queira usar mensagens personalizadas para seu aplicativo, não é possível prever todos os erros; a descrição dá algum indício sobre o que deu errado. No código de exemplo, o erro foi relatado pelo objeto de **conexão** . Você verá o tipo ou a ID programática do objeto aqui-não é um nome de variável.
 
 > [!NOTE]
->  O objeto Visual Basic **Err** contém apenas informações sobre o erro mais recente. A coleção de **erros** ADO do objeto de **conexão** contém um objeto de **erro** para cada erro gerado pela operação ADO mais recente. Use a coleção de **erros** em vez do objeto **Err** para lidar com vários erros. Para obter mais informações sobre a coleção de **erros** , consulte [erros do provedor](../../../ado/guide/data/provider-errors.md). No entanto, se não houver um objeto de **conexão** válido, o objeto **Err** será a única fonte para obter informações sobre erros do ADO.
+>  O objeto Visual Basic **Err** contém apenas informações sobre o erro mais recente. A coleção de **erros** ADO do objeto de **conexão** contém um objeto de **erro** para cada erro gerado pela operação ADO mais recente. Use a coleção de **erros** em vez do objeto **Err** para lidar com vários erros. Para obter mais informações sobre a coleção de **erros** , consulte [erros do provedor](./provider-errors.md). No entanto, se não houver um objeto de **conexão** válido, o objeto **Err** será a única fonte para obter informações sobre erros do ADO.
 
  Que tipos de operações provavelmente causarão erros do ADO? Os erros comuns do ADO podem envolver a abertura de um objeto, como uma **conexão** ou **conjunto de registros**, a tentativa de atualizar dados ou a chamada de um método ou propriedade que não tem suporte no seu provedor.
 
@@ -98,4 +98,4 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 
  O tópico a seguir fornece mais informações sobre erros do ADO.
 
--   [Referência de erros ADO](../../../ado/guide/data/ado-error-reference.md)
+-   [Referência de erros ADO](./ado-error-reference.md)

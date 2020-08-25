@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400928"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes data warehouse paralelos – Analytics Platform System
@@ -66,8 +66,8 @@ O serviço de movimentação de dados (DMS) faz parte do "segredo ingrediente" d
 ### <a name="admin-console"></a>Console de administração  
 O console de administração é um aplicativo Web que apresenta as informações de estado, integridade e desempenho do dispositivo.  
   
-### <a name="configuration-manager"></a>Configuration Manager  
-O Configuration Manager (dwconfig. exe), é a ferramenta que os administradores de dispositivo usam para configurar o sistema de plataforma de análise.  
+### <a name="configuration-manager"></a>Gerenciador de Configurações  
+A Configuration Manager (dwconfig.exe), é a ferramenta que os administradores de dispositivos usam para configurar o sistema de plataforma de análise.  
   
 ### <a name="control-node-databases"></a>Bancos de dados do nó de controle  
 SQL Server gerencia todos os bancos de dados no nó de controle.  
@@ -138,7 +138,7 @@ A tecnologia polybase integra dados de SQL Server PDW com dados do Hadoop extern
   
 ## <a name="query-tools"></a>Ferramentas de consulta   
   
-As consultas são gravadas\-com o Transact SQL modificado para se ajustar à natureza do MPP das consultas. Todas as consultas são enviadas para o nó de controle, que gera um plano de consulta paralelo para executar a consulta nos nós de computação.  
+As consultas são gravadas com \- o Transact SQL modificado para se ajustar à natureza do MPP das consultas. Todas as consultas são enviadas para o nó de controle, que gera um plano de consulta paralelo para executar a consulta nos nós de computação.  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 O SQL Server Data Tools é executado dentro do Visual Studio e é nossa ferramenta de GUI recomendada para enviar consultas para SQL Server PDW. É semelhante a SQL Server Management Studio, permitindo que você navegue por um pesquisador de objetos.  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>Ferramenta de consulta de linha de comando sqlcmd  
-o sqlcmd é a ferramenta de linha de comando SQL Server para\-executar instruções Transact SQL e comandos do sistema. Ele funciona com SQL Server PDW e é nossa ferramenta de linha de comando recomendada para consultar SQL Server PDW. Com o sqlcmd, você pode\-executar instruções Transact SQL interativamente a partir da linha de comando, como um arquivo em lotes ou do Windows PowerShell.  
+o sqlcmd é a ferramenta de linha de comando SQL Server para executar \- instruções Transact SQL e comandos do sistema. Ele funciona com SQL Server PDW e é nossa ferramenta de linha de comando recomendada para consultar SQL Server PDW. Com o sqlcmd, você pode executar \- instruções Transact SQL interativamente a partir da linha de comando, como um arquivo em lotes ou do Windows PowerShell.  
   
 <!-- MISSING LINKS
 
@@ -165,14 +165,14 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>Servidor vinculado  
-Usando uma conexão de servidor vinculado SQL Server, você pode usar SQL Server para enviar instruções\-Transact SQL para SQL Server PDW. 
+Usando uma conexão de servidor vinculado SQL Server, você pode usar SQL Server para enviar \- instruções Transact SQL para SQL Server PDW. 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 
   
 ## <a name="business-intelligence-tools"></a>Ferramentas de Business Intelligence
   
-### <a name="analysis-services"></a>Serviços de análise  
+### <a name="analysis-services"></a>Analysis Services  
 O SQL Server PDW é uma fonte de dados válida para os modelos de Analysis Services de bancos de dados e PowerPivot do Excel. Usando o provedor de OLE DB, você pode configurar um cubo de Analysis Services para usar o processamento analítico online multidimensional (MOLAP) ou o armazenamento de ROLAP (processamento analítico online) relacional.  
   
 <!-- MISSING LINKS

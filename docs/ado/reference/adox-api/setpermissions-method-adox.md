@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d5af996442e0451a80265b7fbd9fb31450f9475
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a13e1dc23556888c2d4ee5c013472614b764d57
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439518"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769395"
 ---
 # <a name="setpermissions-method-adox"></a>Método SetPermissions (ADOX)
-Especifica as permissões para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) ou [usuário](../../../ado/reference/adox-api/user-object-adox.md) em um objeto.  
+Especifica as permissões para um [grupo](./group-object-adox.md) ou [usuário](./user-object-adox.md) em um objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,16 +41,16 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Um valor de **cadeia de caracteres** que especifica o nome do objeto para o qual definir permissões.  
   
  *ObjectType*  
- Um valor **longo** que pode ser uma das constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , que especifica o tipo do objeto para o qual obter permissões.  
+ Um valor **longo** que pode ser uma das constantes [ObjectTypeEnum](./objecttypeenum.md) , que especifica o tipo do objeto para o qual obter permissões.  
   
  *Ação*  
- Um valor **longo** que pode ser uma das constantes [ActionEnum](../../../ado/reference/adox-api/actionenum.md) que especifica o tipo de ação a ser executada ao definir permissões.  
+ Um valor **longo** que pode ser uma das constantes [ActionEnum](./actionenum.md) que especifica o tipo de ação a ser executada ao definir permissões.  
   
  *Direitos*  
- Um valor **longo** que pode ser um bitmask de uma ou mais constantes [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) , que indica os direitos a serem definidos.  
+ Um valor **longo** que pode ser um bitmask de uma ou mais constantes [RightsEnum](./rightsenum.md) , que indica os direitos a serem definidos.  
   
  *Herd*  
- Opcional. Um valor **longo** que pode ser uma das constantes [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) , que especifica como os objetos herdarão essas permissões. O valor padrão é **adInheritNone**.  
+ Opcional. Um valor **longo** que pode ser uma das constantes [InheritTypeEnum](./inherittypeenum.md) , que especifica como os objetos herdarão essas permissões. O valor padrão é **adInheritNone**.  
   
  *ObjectTypeId*  
  Opcional. Um valor **Variant** que especifica o GUID para um tipo de objeto de provedor que não é definido pela especificação de OLE DB. Esse parâmetro será necessário se *objecttype* for definido como **adPermObjProviderSpecific**; caso contrário, ele não será usado.  
@@ -65,14 +65,14 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 
 :::row:::
     :::column:::
-        [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Objeto Group (ADOX)](./group-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [Objeto User (ADOX)](./user-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo dos métodos getPermissions e SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Método getPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [Propriedade Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
+ [Exemplo dos métodos getPermissions e SetPermissions (VB)](./getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Método getPermissions (ADOX)](./getpermissions-method-adox.md)   
+ [Propriedade Name (ADOX)](./name-property-adox.md)

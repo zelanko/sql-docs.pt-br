@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66592f099b5d125acb92cbcb85bf7e8964aeda8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441758"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777125"
 ---
 # <a name="supports-method-example-vc"></a>Exemplo do método Supports (VC++)
-Este exemplo usa o método de [suporte](../../../ado/reference/ado-api/supports-method.md) para exibir as opções com suporte de um conjunto de registros aberto com tipos de cursor diferentes. A função DisplaySupport é necessária para que este exemplo seja executado.  
+Este exemplo usa o método de [suporte](./supports-method.md) para exibir as opções com suporte de um conjunto de registros aberto com tipos de cursor diferentes. A função DisplaySupport é necessária para que este exemplo seja executado.  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -227,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Método Supports](../../../ado/reference/ado-api/supports-method.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Método Supports](./supports-method.md)

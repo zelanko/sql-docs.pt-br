@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439028"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768305"
 ---
 # <a name="executeoptions-property-rds"></a>Propriedade ExecuteOptions (RDS)
 Indica se a execução assíncrona está habilitada.  
@@ -32,24 +32,22 @@ Indica se a execução assíncrona está habilitada.
   
 |Constante|DESCRIÇÃO|  
 |--------------|-----------------|  
-|**adcExecSync**|Executa a próxima atualização do conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de forma síncrona.|  
+|**adcExecSync**|Executa a próxima atualização do conjunto de [registros](../ado-api/recordset-object-ado.md) de forma síncrona.|  
 |**adcExecAsync**|Padrão. Executa a próxima atualização do conjunto de **registros** de forma assíncrona.|  
   
 > [!NOTE]
 >  Cada arquivo executável que usa essas constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constante desejadas do arquivo Adcvbs. Inc, localizadas na pasta de instalação padrão da biblioteca do RDS.  
   
 ## <a name="remarks"></a>Comentários  
- Se **executeoptions** for definido como **adcExecAsync**, isso executará de forma assíncrona a próxima chamada de **atualização** no [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Conjunto de registros**do objeto DataControl.  
+ Se **executeoptions** for definido como **adcExecAsync**, isso executará de forma assíncrona a próxima chamada de **atualização** no [RDS. ](./datacontrol-object-rds.md) **Conjunto de registros**do objeto DataControl.  
   
- Se você tentar chamar [redefine](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)ou [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) enquanto outra operação assíncrona pode alterar o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) O **conjunto de registros** do objeto DataControl está em execução, ocorre um erro.  
+ Se você tentar chamar [redefine](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)ou [Recordset](./recordset-sourcerecordset-properties-rds.md) enquanto outra operação assíncrona pode alterar o [RDS. ](./datacontrol-object-rds.md) O **conjunto de registros** do objeto DataControl está em execução, ocorre um erro.  
   
- Se ocorrer um erro durante uma operação assíncrona, o **RDS. ** O valor [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) do objeto DataControl é alterado de **adcReadyStateLoaded** para **adcReadyStateComplete**, e o valor da propriedade **Recordset** permanece como *Nothing*.  
+ Se ocorrer um erro durante uma operação assíncrona, o **RDS. ** O valor [ReadyState](./readystate-property-rds.md) do objeto DataControl é alterado de **adcReadyStateLoaded** para **adcReadyStateComplete**, e o valor da propriedade **Recordset** permanece como *Nothing*.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades executeoptions e FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [Exemplo das propriedades executeoptions e FetchOptions (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Método Cancel (RDS)](./cancel-method-rds.md)

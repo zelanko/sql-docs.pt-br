@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400721"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar o polybase para acessar dados externos no armazenamento de BLOBs do Azure
@@ -66,7 +66,7 @@ Para consultar os dados em seu armazenamento de BLOBs do Azure, você deve defin
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Crie uma fonte de dados externa com [criar fonte de dados externa](../t-sql/statements/create-external-data-source-transact-sql.md)..
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -153,7 +153,7 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### <a name="exporting-data"></a>Exportando dados  
+### <a name="exporting-data"></a>Como exportar dados  
 
 A consulta a seguir exporta dados de APS para o armazenamento de BLOBs do Azure. Ele pode ser usado para arquivar dados relacionais no armazenamento de BLOBs do Azure e ainda conseguir consultá-los.
 

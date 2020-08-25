@@ -22,32 +22,32 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8306a1031600ccf03236a09249ed9b5f3d0bfc20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 29ce12027267918822ed49185f06ab28a6448190
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441998"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777395"
 ---
 # <a name="source-property-ado-recordset"></a>Propriedade Source (Conjunto de registros ADO)
-Indica a fonte de dados para um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Indica a fonte de dados para um objeto [Recordset](./recordset-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
- Define um valor de **cadeia de caracteres** ou uma referência de objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) ; retorna apenas um valor de **cadeia de caracteres** que indica a origem do **conjunto de registros**.  
+ Define um valor de **cadeia de caracteres** ou uma referência de objeto de [comando](./command-object-ado.md) ; retorna apenas um valor de **cadeia de caracteres** que indica a origem do **conjunto de registros**.  
   
 ## <a name="remarks"></a>Comentários  
  Use a propriedade **Source** para especificar uma fonte de dados para um objeto **Recordset** usando um dos seguintes: uma variável de objeto **Command** , uma instrução SQL, um procedimento armazenado ou um nome de tabela.  
   
- Se você definir a **Propriedade Source** como um objeto **Command** , a propriedade [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) do objeto **Recordset** herdará o valor da propriedade **ActiveConnection** para o objeto **Command** especificado. No entanto, a leitura da propriedade **Source** não retorna um objeto **Command** ; em vez disso, ele retorna a propriedade [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) do objeto **Command** para o qual você define a propriedade **Source** .  
+ Se você definir a **Propriedade Source** como um objeto **Command** , a propriedade [ActiveConnection](./activeconnection-property-ado.md) do objeto **Recordset** herdará o valor da propriedade **ActiveConnection** para o objeto **Command** especificado. No entanto, a leitura da propriedade **Source** não retorna um objeto **Command** ; em vez disso, ele retorna a propriedade [CommandText](./commandtext-property-ado.md) do objeto **Command** para o qual você define a propriedade **Source** .  
   
- Se a propriedade **Source** for uma instrução SQL, um procedimento armazenado ou um nome de tabela, você poderá otimizar o desempenho passando o argumento *Options* apropriado com a chamada do método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) .  
+ Se a propriedade **Source** for uma instrução SQL, um procedimento armazenado ou um nome de tabela, você poderá otimizar o desempenho passando o argumento *Options* apropriado com a chamada do método [Open](./open-method-ado-recordset.md) .  
   
  A propriedade **Source** é leitura/gravação para objetos **Recordset** fechados e somente leitura para objetos Open **Recordset** .  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade Source (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
- [Propriedade Source (erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Propriedade Source (Registro ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)
+ [Exemplo da propriedade Source (VB)](./source-property-example-vb.md)   
+ [Propriedade Source (erro ADO)](./source-property-ado-error.md)   
+ [Propriedade Source (Registro ADO)](./source-property-ado-record.md)

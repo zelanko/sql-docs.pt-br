@@ -20,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bd35cbd24dadef9d6a9468f65bc85f95169d0cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8da28769a68cf95e727e61114235e76218f1bae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441878"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777245"
 ---
 # <a name="stayinsync-property"></a>Propriedade StayInSync
-Indica, em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) hierárquico, se a referência aos registros filho subjacentes (ou seja, o *capítulo*) é alterada quando a posição da linha pai é alterada.  
+Indica, em um objeto [Recordset](./recordset-object-ado.md) hierárquico, se a referência aos registros filho subjacentes (ou seja, o *capítulo*) é alterada quando a posição da linha pai é alterada.  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um valor **booliano** . O valor padrão é **True**. Se **for true**, o capítulo será atualizado se o objeto do **conjunto de registros** pai alterar a posição da linha; Se **for false**, o capítulo continuará a se referir aos dados no capítulo anterior, mesmo que o objeto **Recordset** pai tenha alterado a posição da linha.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade se aplica a conjuntos de registros hierárquicos, como aqueles com suporte do [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve ser definida no **conjunto de registros** pai antes da recuperação do **conjunto de registros** filho. Essa propriedade simplifica a navegação de conjuntos de registros hierárquicos.  
+ Essa propriedade se aplica a conjuntos de registros hierárquicos, como aqueles com suporte do [Microsoft Data Shaping Service para OLE DB](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve ser definida no **conjunto de registros** pai antes da recuperação do **conjunto de registros** filho. Essa propriedade simplifica a navegação de conjuntos de registros hierárquicos.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade StayInSync (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
- [Serviço de modelagem de dados da Microsoft para OLE DB (provedor de serviços ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+ [Exemplo da propriedade StayInSync (VB)](./stayinsync-property-example-vb.md)   
+ [Serviço de modelagem de dados da Microsoft para OLE DB (provedor de serviços ADO)](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

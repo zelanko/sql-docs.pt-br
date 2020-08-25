@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453258"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806021"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros hierárquicos em XML
 O ADO permite a persistência de objetos de conjunto de registros hierárquicos em XML. Com objetos de conjunto de registros hierárquicos, o valor de um campo no conjunto de registros pai é outro conjunto de registros. Esses campos são representados como elementos filho no fluxo XML, em vez de um atributo.  
@@ -126,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   Se um registro filho tiver referências a mais de um registro pai, na reabertura do conjunto de registros, o conjunto de registros filho poderá conter registros duplicados. No entanto, essas duplicatas só estarão visíveis se o usuário trabalhar diretamente com o conjunto de linhas filho subjacente. Se um capítulo for usado para navegar no conjunto de registros filho (que é a única maneira de navegar pelo ADO), as duplicatas não serão visíveis.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistência de registros em formato XML](./persisting-records-in-xml-format.md)

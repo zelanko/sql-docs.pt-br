@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15680dc29e8731d03978d32f9b21ba33cb74794e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e8d5d9ee99bc1c055846d8f8882ed15907ee3f9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440028"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770465"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>Exemplo dos métodos GetPermissions e SetPermissions (VC++)
-Este exemplo demonstra os métodos [getPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . O código a seguir fornece acesso completo à tabela Orders para o usuário administrador.  
+Este exemplo demonstra os métodos [getPermissions](./getpermissions-method-adox.md) e [SetPermissions](./setpermissions-method-adox.md) . O código a seguir fornece acesso completo à tabela Orders para o usuário administrador.  
   
 ```  
 // BeginGrantPermissionCpp.cpp  

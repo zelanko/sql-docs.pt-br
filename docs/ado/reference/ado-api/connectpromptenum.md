@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48d5cdb61cee2051d3469b7cfeee85629521d71e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444408"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775795"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Especifica se uma caixa de diálogo deve ser exibida para solicitar parâmetros ausentes ao abrir uma conexão com uma fonte de dados.  
@@ -44,4 +44,4 @@ Especifica se uma caixa de diálogo deve ser exibida para solicitar parâmetros 
 |AdoEnums. ConnectPrompt. NEVEr|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Solicitar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
+ [Solicitar a propriedade dinâmica (ADO)](./prompt-property-dynamic-ado.md)

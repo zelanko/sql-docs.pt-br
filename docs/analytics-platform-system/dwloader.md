@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942338"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767045"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando dwloader para data warehouse paralelos
 **dwloader** é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente. Ao carregar linhas, você pode adicionar todas as linhas ao final da tabela (modo de*acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo Upsert*) ou excluir todas as linhas existentes antes do carregamento e, em seguida, inserir todas as linhas em uma tabela vazia (*modo de recarregamento*).  
@@ -528,7 +528,7 @@ Os dados carregados podem exigir mais ou menos espaço no dispositivo do que no 
 Embora **dwloader** seja um processo de transação e seja revertido normalmente em caso de falha, ele não poderá ser revertido depois que o carregamento em massa for concluído com êxito. Para cancelar um processo **dwloader** ativo, digite CTRL + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
-O tamanho total de todas as cargas que ocorrem simultaneamente deve ser menor que LOG_SIZE para o banco de dados e é recomendável que o tamanho total de todas as cargas simultâneas seja menor que 50% do LOG_SIZE. Para obter essa limitação de tamanho, você pode dividir grandes cargas em vários lotes. Para obter mais informações sobre LOG_SIZE, consulte [criar banco de dados](../t-sql/statements/create-database-parallel-data-warehouse.md)  
+O tamanho total de todas as cargas que ocorrem simultaneamente deve ser menor que LOG_SIZE para o banco de dados e é recomendável que o tamanho total de todas as cargas simultâneas seja menor que 50% do LOG_SIZE. Para obter essa limitação de tamanho, você pode dividir grandes cargas em vários lotes. Para obter mais informações sobre LOG_SIZE, consulte [criar banco de dados](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)  
   
 Ao carregar vários arquivos com um comando de carregamento, todas as linhas rejeitadas são gravadas no mesmo arquivo de rejeição. O arquivo de rejeição não mostra qual arquivo de entrada contém cada linha rejeitada.  
   
@@ -552,7 +552,7 @@ O acréscimo pode ser executado no modo de várias transacionais (usando o argum
   
 O modo de acréscimo carrega dados em duas fases. A fase 1 carrega os dados do arquivo de origem em uma tabela de preparo simultaneamente (a fragmentação pode ocorrer). A fase dois carrega dados da tabela de preparo para a tabela final. A segunda fase executa uma **inserção em... Selecione WITH (TABLOCK)** operação. A tabela a seguir mostra o comportamento de bloqueio na tabela final e o comportamento de log ao usar o modo de acréscimo:  
   
-|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registro em log|  
+|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registrando em log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Pilha|Sim|Sim|Sim|Minimal|  
 |Pilha|Sim|Não|Sim|Minimal|  
@@ -704,4 +704,3 @@ Descrição dos parâmetros de linha de comando:
 [Common Metadata Query Examples](metadata-query-examples.md)  
 
 -->
-  

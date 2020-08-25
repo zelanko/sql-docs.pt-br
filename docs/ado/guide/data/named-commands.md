@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453148"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805797"
 ---
 # <a name="named-commands"></a>Comandos nomeados
-[Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: você pode torná-lo um comando nomeado e, em seguida, chamar esse comando nomeado diretamente no objeto de **conexão** (atribuído à propriedade **ActiveConnection** do objeto **Command** ). Nomear um comando significa atribuir um nome à propriedade **Name** de um objeto **Command** . Por exemplo,  
+[Criar e executar um comando simples](./creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: você pode torná-lo um comando nomeado e, em seguida, chamar esse comando nomeado diretamente no objeto de **conexão** (atribuído à propriedade **ActiveConnection** do objeto **Command** ). Nomear um comando significa atribuir um nome à propriedade **Name** de um objeto **Command** . Por exemplo,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -91,4 +91,4 @@ ErrHandler:
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Objeto Connection (ADO)](../../reference/ado-api/connection-object-ado.md)

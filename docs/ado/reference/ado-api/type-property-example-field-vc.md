@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50b8465e5f7f816007526b66d8cc0696e0c47fca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441708"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777065"
 ---
 # <a name="type-property-example-field-vc"></a>Exemplo da propriedade Type (Campo) (VC++)
-Este exemplo demonstra a propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) exibindo o nome da constante que corresponde ao valor da propriedade **Type** de todos os objetos [Field](../../../ado/reference/ado-api/field-object.md) na tabela ***Employees*** . A função FieldType é necessária para que este procedimento seja executado.  
+Este exemplo demonstra a propriedade [Type](./type-property-ado.md) exibindo o nome da constante que corresponde ao valor da propriedade **Type** de todos os objetos [Field](./field-object.md) na tabela ***Employees*** . A função FieldType é necessária para que este procedimento seja executado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -172,5 +172,5 @@ void PrintComError(_com_error &e) {
  **Nome: hire_date**  
  **Tipo: adDBTimeStamp**   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Objeto Field](./field-object.md)   
+ [Propriedade Type (ADO)](./type-property-ado.md)

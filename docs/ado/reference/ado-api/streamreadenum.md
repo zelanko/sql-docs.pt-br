@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1aa8ff80f02d84aaa69904d914e0e40da44da930
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0a0e8d93742574e9a2975b99d15c18500684e60
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441808"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777175"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-Especifica se o fluxo inteiro ou a próxima linha deve ser lido a partir de um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Especifica se o fluxo inteiro ou a próxima linha deve ser lido a partir de um objeto de [fluxo](./stream-object-ado.md) .  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|Padrão. Lê todos os bytes do fluxo, da posição atual em diante para o marcador de [EOS](../../../ado/reference/ado-api/eos-property.md) . Esse é o único valor de **StreamReadEnum** válido com fluxos binários (o[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) é **adTypeBinary**).|  
-|**adReadLine**|-2|Lê a próxima linha do fluxo (designada pela propriedade [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) ).|  
+|**adReadAll**|-1|Padrão. Lê todos os bytes do fluxo, da posição atual em diante para o marcador de [EOS](./eos-property.md) . Esse é o único valor de **StreamReadEnum** válido com fluxos binários (o[tipo](./type-property-ado-stream.md) é **adTypeBinary**).|  
+|**adReadLine**|-2|Lê a próxima linha do fluxo (designada pela propriedade [LineSeparator](./lineseparator-property-ado.md) ).|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Essas constantes não têm equivalentes ADO/WFC.  
@@ -38,9 +38,9 @@ Especifica se o fluxo inteiro ou a próxima linha deve ser lido a partir de um o
 
 :::row:::
     :::column:::
-        [Método Read](../../../ado/reference/ado-api/read-method.md)  
+        [Método Read](./read-method.md)  
     :::column-end:::
     :::column:::
-        [Método ReadText](../../../ado/reference/ado-api/readtext-method.md)  
+        [Método ReadText](./readtext-method.md)  
     :::column-end:::
 :::row-end:::
