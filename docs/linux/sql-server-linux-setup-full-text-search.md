@@ -1,6 +1,6 @@
 ---
 title: Instalar a pesquisa de texto completo do SQL Server no Linux
-description: Este artigo descreve como instalar a Pesquisa de Texto Completo do SQL Server no Linux.
+description: Saiba como instalar a pesquisa de texto completo do SQL Server no Linux. A Pesquisa de Texto Completo permite que você execute consultas de texto completo em dados baseados em caracteres em tabelas SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895280"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088773"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar a pesquisa de texto completo do SQL Server no Linux
 
@@ -86,7 +86,7 @@ Se você precisar de uma instalação offline, localize o download do pacote de 
 
 A Pesquisa de Texto Completo usa [separadores de palavras](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) que determinam como identificar palavras individuais com base no idioma. Você pode obter uma lista de separadores de palavras registrados consultando a exibição do catálogo **sys.fulltext_languages**. Os separadores de palavras para os seguintes idiomas são instalados com o SQL Server:
 
-| Linguagem | ID do idioma |
+| Idioma | ID do idioma |
 |---|---|
 | Neutro | 0 |
 | Árabe | 1025 |
@@ -99,7 +99,7 @@ A Pesquisa de Texto Completo usa [separadores de palavras](../relational-databas
 | Chinês (RAE de Hong Kong, RPC) | 3076 |
 | Chinese (Macao SAR) | 5124 |
 | Chinês (Singapura) | 4100 |
-| Croata | 1\.050 |
+| Croata | 1.050 |
 | Tcheco | 1029 |
 | Dinamarquês | 1030 |
 | Holandês | 1043 |
@@ -146,7 +146,7 @@ A Pesquisa de Texto Completo usa [separadores de palavras](../relational-databas
 
 A Pesquisa de Texto Completo também funciona com texto armazenado em arquivos binários. Mas, nesse caso, um filtro instalado é necessário para processar o arquivo. Para obter mais informações, confira [Configurar e gerenciar filtros para pesquisa](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Você pode ver uma lista de filtros instalados chamando **sp_help_fulltext_system_components 'filter'** . Para o SQL Server, os filtros a seguir são instalados:
+Você pode ver uma lista de filtros instalados chamando **sp_help_fulltext_system_components 'filter'**. Para o SQL Server, os filtros a seguir são instalados:
 
 | Nome do Componente | ID da Classe | Versão |
 |---|---|---|

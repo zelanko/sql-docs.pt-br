@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7831d7be2df28d31c88216e67e16efbf611b858
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90c6214caa0adc1c11cdc0660b65795624919e51
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441778"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777135"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
-Especifica o formato ao recuperar um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como uma cadeia de caracteres.  
+Especifica o formato ao recuperar um [conjunto de registros](./recordset-object-ado.md) como uma cadeia de caracteres.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|Delimita as linhas por @ *Delimiter*, colunas por *ColumnDelimiter*e valores nulos por *NullExpr*. Esses três parâmetros do método [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) são válidos somente com um *StringFormat* de **adClipString**.|  
+|**adClipString**|2|Delimita as linhas por @ *Delimiter*, colunas por *ColumnDelimiter*e valores nulos por *NullExpr*. Esses três parâmetros do método [GetString](./getstring-method-ado.md) são válidos somente com um *StringFormat* de **adClipString**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com. ms. wfc. Data**  
@@ -38,4 +38,4 @@ Especifica o formato ao recuperar um [conjunto de registros](../../../ado/refere
 |AdoEnums.StringFormat.CLIPSTRING|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)
+ [Método GetString (ADO)](./getstring-method-ado.md)

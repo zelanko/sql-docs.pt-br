@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 527e510979afd81a5e90ea207027479cde5c5f63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aba3aed53a3640ff76b2d46b221265d1505e020a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439878"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770145"
 ---
 # <a name="indexnulls-property-example-vb"></a>Exemplo da propriedade IndexNulls (VB)
-Este exemplo demonstra a propriedade [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário (de uma caixa de listagem denominada List1). Em seguida, o **índice** é anexado à tabela **Employees** [Table](../../../ado/reference/adox-api/table-object-adox.md) no catálogo *Northwind* [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). O novo **índice** é aplicado a um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) baseado na tabela **Employees** e o **conjunto de registros** é aberto. Um novo registro é adicionado à tabela **Employees** , com um valor **nulo** no campo indexado. Se esse novo registro é exibido depende da configuração da propriedade **IndexNulls** .  
+Este exemplo demonstra a propriedade [IndexNulls](./indexnulls-property-adox.md) de um [índice](./index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário (de uma caixa de listagem denominada List1). Em seguida, o **índice** é anexado à tabela **Employees** [Table](./table-object-adox.md) no catálogo *Northwind* [Catalog](./catalog-object-adox.md). O novo **índice** é aplicado a um [conjunto de registros](../ado-api/recordset-object-ado.md) baseado na tabela **Employees** e o **conjunto de registros** é aberto. Um novo registro é adicionado à tabela **Employees** , com um valor **nulo** no campo indexado. Se esse novo registro é exibido depende da configuração da propriedade **IndexNulls** .  
   
 ```  
 ' BeginIndexNullsVB  
@@ -110,5 +110,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Propriedade IndexNulls (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
+ [Objeto Index (ADOX)](./index-object-adox.md)   
+ [Propriedade IndexNulls (ADOX)](./indexnulls-property-adox.md)

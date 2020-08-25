@@ -1,6 +1,6 @@
 ---
 title: Instalar o SQL Server Integration Services em Linux
-description: Este artigo descreve como instalar o SQL Server Integration Services no Linux.
+description: Este artigo descreve como instalar o SQL Server Integration Services no Linux. Você pode instalar o SSIS no Ubuntu 16.04 e no Red Hat Enterprise Linux.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882521"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088766"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar o SSIS (SQL Server Integration Services) no Linux
 
@@ -214,7 +214,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Variáveis de ambiente para instalação autônoma
 
-| Variável de ambiente | DESCRIÇÃO |
+| Variável de ambiente | Descrição |
 |---|---|
 | ACCEPT_EULA | Aceita os termos de licença SQL Server quando definidos para qualquer valor como "Y".|
 | SSIS_PID | Define a edição do SQL Server ou a chave do produto (Product Key). Estes são os valores possíveis:<ul><li>Avaliação</li><li>Desenvolvedor</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>Uma chave do produto (Product Key)</li></ul>Se você especificar uma chave do produto (Product Key), ela deverá estar no formato *#####* - *#####* - *#####* - *#####* - *#####* , em que *#* é uma letra ou um dígito.  |

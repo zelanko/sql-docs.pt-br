@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472672"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216771"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,21 +163,20 @@ Não há suporte para o Always Encrypted para as colunas com as características
 - Colunas com a propriedade `IDENTITY`.  
 - Colunas com propriedade `ROWGUIDCOL`.  
 - Colunas de cadeia de caracteres (`varchar`, `char` etc.) com ordenações não bin2.  
-- Colunas que são chaves para índices não clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas).  
-- Colunas que são chaves para índices clusterizados usando uma coluna criptografada de forma aleatória como uma coluna de chave (colunas criptografadas de forma determinística são permitidas).  
-- Colunas que são chaves para índices de texto completo contendo colunas criptografadas, aleatórias e determinísticas.  
+- Colunas que são chaves para índices clusterizados e não clusterizados ao usar a criptografia aleatória (há suporte para criptografia determinística).
+- Colunas que são chaves para índices de texto completo ao usar a criptografia aleatória (há suporte para criptografia determinística).  
 - Colunas computadas.
 - Colunas referenciadas por colunas computadas (quando a expressão realiza operações sem suporte para o Always Encrypted).  
 - Conjunto de colunas esparsas.  
-- Colunas referenciadas por estatísticas.  
-- Colunas que usam o tipo de alias.  
+- Colunas referenciadas por estatísticas ao usar a criptografia aleatória (há suporte para a criptografia determinística).  
+- Colunas que usam os tipos de alias.  
 - Colunas de particionamento.  
 - Colunas com restrições padrão.  
 - Colunas referenciadas por restrições exclusivas ao usar a criptografia aleatória (há suporte para a criptografia determinística).  
 - Colunas de chave primária ao usar a criptografia aleatória (há suporte para a criptografia determinística).  
 - Fazer referência a colunas em restrições de chave estrangeira ao usar a criptografia aleatória (ou ao usar a criptografia determinística) se as colunas referenciadas e de referência usarem algoritmos ou chaves diferentes.  
 - Colunas referenciadas por restrições de verificação.  
-- Colunas em tabelas que usam a captura de dados de alterações.  
+- Colunas capturadas/controladas usando a captura de dados de alterações.  
 - Colunas de chave primária em tabelas com controle de alterações.  
 - Colunas mascaradas (usando a Máscara de Dados Dinâmicos).  
 - Colunas em tabelas Stretch Database. (Tabelas com colunas criptografadas com o Sempre Criptografado podem ser habilitadas para Stretch.)  

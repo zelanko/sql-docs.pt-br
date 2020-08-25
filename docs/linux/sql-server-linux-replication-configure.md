@@ -1,6 +1,6 @@
 ---
 title: Configurar replicação (SSMS)
-description: Este artigo descreve como configurar a Replicação do SQL Server em Linux.
+description: Saiba como configurar a replicação do SQL Server no Linux. Configure a replicação com os procedimentos armazenados do SSMS (SQL Server Management Studio) ou do Transact-SQL.
 ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,12 +12,12 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f367f7d6c41600ddb26d12b28ae14d0fc1cdffc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61943baf9083d3ca33bd37e0fe9759a4c530dfe2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882689"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088833"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurar a Replicação do SQL Server em Linux
 
@@ -73,7 +73,7 @@ Para configurar o distribuidor:
 
 1. No SSMS, conecte-se à sua instância do SQL Server no Pesquisador de Objetos.
 
-1. Clique com o botão direito do mouse em **Replicação** e em **Configurar Distribuição...** .
+1. Clique com o botão direito do mouse em **Replicação** e em **Configurar Distribuição...**.
 
 1. Siga as instruções no **Assistente para Configurar Distribuição**.
 

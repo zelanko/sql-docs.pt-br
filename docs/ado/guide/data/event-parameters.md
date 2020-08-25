@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453428"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806855"
 ---
 # <a name="event-parameters"></a>Parâmetros de evento
-Cada manipulador de eventos tem um parâmetro de status que controla o manipulador de eventos. Para eventos completos, esse parâmetro também é usado para indicar o êxito ou a falha da operação que gerou o evento. Os eventos mais completos também têm um parâmetro de erro para fornecer informações sobre qualquer erro que possa ter ocorrido e um ou mais parâmetros de objeto que se referem aos objetos ADO usados para executar a operação. Por exemplo, o evento [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) inclui parâmetros de objeto para o **comando**, **conjunto de registros**e objetos de **conexão** associados ao evento. No exemplo a seguir do Microsoft® Visual Basic®, você pode ver os objetos pCommand, precaboset e pConnection que representam o **comando**, o **conjunto de registros**e os objetos de **conexão** usados pelo método **Execute** .  
+Cada manipulador de eventos tem um parâmetro de status que controla o manipulador de eventos. Para eventos completos, esse parâmetro também é usado para indicar o êxito ou a falha da operação que gerou o evento. Os eventos mais completos também têm um parâmetro de erro para fornecer informações sobre qualquer erro que possa ter ocorrido e um ou mais parâmetros de objeto que se referem aos objetos ADO usados para executar a operação. Por exemplo, o evento [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) inclui parâmetros de objeto para o **comando**, **conjunto de registros**e objetos de **conexão** associados ao evento. No exemplo a seguir do Microsoft® Visual Basic®, você pode ver os objetos pCommand, precaboset e pConnection que representam o **comando**, o **conjunto de registros**e os objetos de **conexão** usados pelo método **Execute** .  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -60,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Solicitação de cancelamento da operação que está prestes a ocorrer.|  
   
 ## <a name="error-parameter"></a>Parâmetro de erro  
- O parâmetro de *erro* é uma referência a um objeto de [erro](../../../ado/reference/ado-api/error-object.md) ADO. Quando o parâmetro *status* é definido como **adStatusErrorsOccurred**, o objeto **Error** contém detalhes sobre o motivo da falha da operação. Se o evento a ser associado a um evento completo tiver cancelado a operação definindo o parâmetro *status* como **adStatusCancel**, o objeto de erro será sempre definido como **adErrOperationCancelled**.  
+ O parâmetro de *erro* é uma referência a um objeto de [erro](../../reference/ado-api/error-object.md) ADO. Quando o parâmetro *status* é definido como **adStatusErrorsOccurred**, o objeto **Error** contém detalhes sobre o motivo da falha da operação. Se o evento a ser associado a um evento completo tiver cancelado a operação definindo o parâmetro *status* como **adStatusCancel**, o objeto de erro será sempre definido como **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Parâmetro de objeto  
  Cada evento recebe um ou mais objetos que representam os objetos envolvidos na operação. Por exemplo, o evento **ExecuteComplete** recebe um objeto de **comando** , um objeto **Recordset** e um objeto **Connection** .  
@@ -88,7 +88,7 @@ End Sub
  Por outro lado, você precisa definir *adStatus* como **adStatusUnwantedEvent** apenas uma vez para solicitar que um manipulador de eventos sem um parâmetro **adReason** pare de receber notificações de eventos.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Instanciação de evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Como os manipuladores de eventos funcionam juntos](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
+ [Resumo do manipulador de eventos do ADO](./ado-event-handler-summary.md)   
+ [Instanciação de evento ADO por idioma](./ado-event-instantiation-by-language.md)   
+ [Como os manipuladores de eventos funcionam juntos](./how-event-handlers-work-together.md)   
+ [Tipos de eventos](./types-of-events.md)

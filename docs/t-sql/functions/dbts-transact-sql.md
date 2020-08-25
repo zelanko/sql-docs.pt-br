@@ -1,5 +1,6 @@
 ---
-title: '@@DBTS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;DBTS (Transact-SQL)'
+title: DBTS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -18,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f11adca5f8a3fe72a0365e84a746cdec2d5e049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417402"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta função retorna o valor do tipo de dados **timestamp** atual para o banco de dados atual. O banco de dados atual terá um valor de carimbo do carimbo de data/hora exclusivo garantido.
@@ -34,10 +36,12 @@ Esta função retorna o valor do tipo de dados **timestamp** atual para o banco 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```
+```syntaxsql
 @@DBTS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   

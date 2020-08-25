@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456705"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147737"
 ---
 # <a name="statistics"></a>Estatísticas
 
@@ -113,16 +113,25 @@ ORDER BY s.name;
     * Se a cardinalidade da tabela era de 500 ou menos quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 modificações.
     * Se a cardinalidade da tabela era inferior a 500 quando as estatísticas foram avaliadas, é necessário atualizar a cada 500 + 20% de modificações.
 
-* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Isso é calculado como a raiz quadrada do produto de 1000 e da cardinalidade da tabela atual. Por exemplo, se a tabela contiver 2 milhões de linhas, o cálculo será sqrt (1000 * 2000000) = 44721,359. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
+* Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [nível de compatibilidade de banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um limite de atualização de estatística dinâmico e decrescente, ajustado de acordo com o número de linhas da tabela. Isso é calculado como a raiz quadrada do produto de 1000 e da cardinalidade da tabela atual. Por exemplo, se a tabela contiver 2 milhões de linhas, o cálculo será sqrt(1000 * 2000000) = 44721,359. Com essa alteração, as estatísticas em tabelas grandes serão atualizadas com mais frequência. No entanto, quando um banco de dados tem um nível de compatibilidade inferior a 130, aplica-se o limite do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> No [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] em diante até o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior no [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inferior a 130, use o [sinalizador de rastreamento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará um limite de atualização de estatística dinâmico e decrescente que se ajusta de acordo com o número de linhas da tabela.
+> Do [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] até o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versões posteriores, em [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferior, habilite o [sinalizador de rastreamento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use um limite de atualização de estatísticas dinâmico e decrescente.
+
+Você pode usar as seguintes diretrizes para habilitar o sinalizador de rastreamento 2371 em seu ambiente pré-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]:
+
+ - Se você não observar problemas de desempenho devido a estatísticas desatualizadas, não será necessário habilitar esse sinalizador de rastreamento.
+ - Se você estiver em sistemas SAP, habilite o sinalizador de rastreamento.  Confira mais informações neste [blog](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
+ - Se for necessário contar com o trabalho noturno para atualizar estatísticas porque a atualização automática atual não é disparada com uma frequência suficiente, considere habilitar o sinalizador de rastreamento 2371 para reduzir o limite.
   
 O otimizador de consulta procura estatísticas desatualizadas antes de compilar uma consulta e antes de executar um plano de consulta em cache. Antes de compilar uma consulta, o otimizador usa as colunas, tabelas e exibições indexadas no predicado de consulta para determinar quais estatísticas podem estar desatualizadas. Antes de executar um plano de consulta em cache, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se o plano de consulta faz referência a estatísticas atualizadas.  
   
 A opção AUTO_UPDATE_STATISTICS se aplica a objetos de estatísticas criados para índices, colunas únicas em predicados de consulta e estatísticas criadas com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Essa opção também se aplica a estatísticas filtradas.  
  
-Para saber mais sobre como controlar AUTO_UPDATE_STATISTICS, confira [Controlando o comportamento das atualizações automáticas de estatísticas (AUTO_UPDATE_STATISTICS) no SQL Server](https://support.microsoft.com/help/2754171).
+Você pode usar [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) para controlar com precisão o número de linhas alteradas em uma tabela e decidir se deseja atualizar manualmente as estatísticas.
+
+
+
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  A opção de atualização de estatísticas assíncrona, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se o otimizador de consulta usa atualizações de estatísticas síncronas ou assíncronas. Por padrão, a opção de atualização de estatísticas assíncrona está desativada e o otimizador de consulta atualiza estatísticas de forma síncrona. A opção AUTO_UPDATE_STATISTICS_ASYNC se aplica a objetos de estatísticas criados para índices, colunas únicas em predicados de consulta e estatísticas criadas com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  

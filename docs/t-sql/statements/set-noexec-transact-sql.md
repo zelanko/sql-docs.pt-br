@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356622"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765773"
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Comentários  
- Quando SET NOEXEC é ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila cada lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não as executa. Quando SET NOEXEC é OFF, todos os lotes são executados depois de compilação.  
+ Quando SET NOEXEC está como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analisa e compila cada lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não as executa. Quando SET NOEXEC é OFF, todos os lotes são executados depois de compilação.  NOEXEC dá suporte à resolução de nomes adiada; se um ou mais objetos referenciados no lote não existirem, nenhum erro será gerado.
   
  A execução de instruções no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem duas fases: compilação e execução. Esta configuração é útil para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide a sintaxe e os nomes de objeto no código [!INCLUDE[tsql](../../includes/tsql-md.md)] durante a execução. Também é útil para depurar instruções que geralmente fariam parte de um lote maior de instruções.  
   

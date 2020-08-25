@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c383eec4ac09c41aef6953f63e5accbab40ff7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0669f8c4762717311cab83d35c80c5b35e791f59
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453998"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806507"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Usar o ADO com o Microsoft Visual C++
 Para obter informações sobre como usar o ADO com Visual C++, consulte as seguintes seções:  
   
--   [Programação ADO do Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
+-   [Programação ADO do Visual C++](./visual-c-ado-programming.md)  
   
--   [Extensões do Visual C++ para ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)  
+-   [Extensões do Visual C++ para ADO](./visual-c-extensions-for-ado.md)  
   
--   [Usando as extensões do Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)  
+-   [Usar as extensões do Visual C++](./using-visual-c-extensions.md)  
   
--   [Cabeçalho de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)  
+-   [Cabeçalho de extensões do Visual C++](./visual-c-extensions-header.md)  
   
--   [Exemplo de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
+-   [Exemplo de extensões do Visual C++](./visual-c-extensions-example.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [ADO para índice de sintaxe Visual C++ para COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [Índice de sintaxe ADO for Visual C++ com #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Usando o ADO com o Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Usando o ADO com linguagens de script](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
- [Extensões do Visual C++ para ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [ADO para índice de sintaxe Visual C++ para COM](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [Índice de sintaxe ADO for Visual C++ com #import](../../reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Usando o ADO com o Microsoft Visual Basic](./using-ado-with-microsoft-visual-basic.md)   
+ [Usando o ADO com linguagens de script](./using-ado-with-scripting-languages.md)   
+ [Extensões do Visual C++ para ADO](./visual-c-extensions-for-ado.md)

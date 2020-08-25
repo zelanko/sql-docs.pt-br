@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453168"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805850"
 ---
 # <a name="keyset-cursors"></a>Cursores do conjunto de chaves
 O cursor do conjunto de chaves fornece funcionalidade entre um cursor estático e um curso dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele nem sempre detecta alterações à associação e à ordem do conjunto de resultados. Como um cursor dinâmico, ele detecta alterações aos valores de linhas no conjunto de resultados.  
@@ -39,6 +39,6 @@ O cursor do conjunto de chaves fornece funcionalidade entre um cursor estático 
  O cursor controlado por conjunto de chaves é difícil de usar corretamente porque a sensibilidade às alterações de dados depende de muitas circunstâncias diferentes, conforme descrito acima. No entanto, se seu aplicativo não estiver preocupado com atualizações simultâneas, o pode manipular chaves inadequadas de forma programática e deve acessar diretamente determinadas linhas com chave, o cursor controlado por conjunto de chaves pode funcionar para você. Use o **AdOpenKeyset CursorTypeEnum** para indicar que você deseja usar um cursor de conjunto de chaves no ADO.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Cursores de somente avanço](../../../ado/guide/data/forward-only-cursors.md)   
- [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
- [Cursores dinâmicos](../../../ado/guide/data/dynamic-cursors.md)
+ [Cursores de somente avanço](./forward-only-cursors.md)   
+ [Cursores estáticos](./static-cursors.md)   
+ [Cursores dinâmicos](./dynamic-cursors.md)

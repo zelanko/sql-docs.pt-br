@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1505d27dfa186999d1730eece740b711d87ae0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40d7c10127efa14000a3f91f2cf003bf52d95b2c
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659670"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200963"
 ---
 # <a name="compatibility-certification"></a>Certificação de compatibilidade
 
@@ -100,6 +100,7 @@ Para atualizar o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] para a versão m
 >
 > - A nova versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (destino) é executada no hardware que é comparável ao hardware em que a versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (origem) estava em execução.
 > - O mesmo [nível de compatibilidade do banco de dados compatível](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) é usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de origem.
+> - Os **mesmos** banco de dados e carga de trabalho são usados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de origem. 
 >
 > Qualquer regressão de forma do plano de consulta (em comparação com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de origem) que ocorre nas condições acima será tratada. Entre em contato com o atendimento ao cliente da Microsoft se esse for o caso.
   

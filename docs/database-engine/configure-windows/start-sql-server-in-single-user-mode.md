@@ -2,7 +2,7 @@
 title: Iniciar o SQL Server no modo de usuário único | Microsoft Docs
 description: Saiba mais sobre o modo de usuário único no SQL Server. Veja quando ele é útil e como usar a opção de inicialização "-m" para iniciar uma instância do SQL Server nesse modo.
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764003"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147297"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar o SQL Server no modo de usuário único
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ Por exemplo, **-m"SQLCMD"** limita as conexões a uma única conexão e essa con
   
 > [!IMPORTANT]  
 >  Não use essa opção como um recurso de segurança. O aplicativo cliente fornece o nome do aplicativo cliente e pode fornecer um nome falso como parte da cadeia de conexão.  
-  
+
+O exemplo a seguir inicia a instância do SQL Server no modo de usuário único e permite somente a conexão por meio do Editor de Consultas do SQL Server Management Studio.
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>Observação sobre instalações clusterizadas  
  Para instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente clusterizado, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for iniciado em modo de usuário único, a dll de recurso de cluster usará a conexão disponível, bloqueando quaisquer outras conexões com o servidor. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver nesse estado e você tentar colocar o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent online, ele poderá realizar o failover do recurso SQL em outro nó, caso o recurso esteja configurado para afetar o grupo.  
   

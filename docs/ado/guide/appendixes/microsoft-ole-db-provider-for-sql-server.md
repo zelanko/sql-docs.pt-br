@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffb627b0994afbe2b51f946e4ab7dca881e9a9a4
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454038"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806543"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Visão geral do provedor do Microsoft OLE DB para SQL Server
 O provedor de OLE DB da Microsoft para SQL Server, SQLOLEDB, permite que o ADO acesse Microsoft SQL Server.
@@ -29,13 +29,13 @@ O provedor de OLE DB da Microsoft para SQL Server, SQLOLEDB, permite que o ADO a
 > O provedor de OLE DB da Microsoft para SQL Server (SQLOLEDB) permanece preterido e não é recomendável usá-lo para novos trabalhos de desenvolvimento. Em vez disso, use o novo [Driver do Microsoft OLE DB para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), que será atualizado com os recursos de servidor mais recentes.
 
 ## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
- Para se conectar a esse provedor, defina o argumento do *provedor* como a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
+ Para se conectar a esse provedor, defina o argumento do *provedor* como a propriedade [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
 SQLOLEDB
 ```
 
- Esse valor também pode ser definido ou lido usando a propriedade [Provider](../../../ado/reference/ado-api/provider-property-ado.md) .
+ Esse valor também pode ser definido ou lido usando a propriedade [Provider](../../reference/ado-api/provider-property-ado.md) .
 
 ## <a name="typical-connection-string"></a>Cadeia de conexão típica
  Uma cadeia de conexão típica para esse provedor é:
@@ -60,11 +60,11 @@ User ID=MyUserID;Password=MyPassword;"
 >  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique **Trusted_Connection = Sim** ou **segurança integrada = SSPI** , em vez de ID de usuário e informações de senha na cadeia de conexão.
 
 ## <a name="provider-specific-connection-parameters"></a>Parâmetros de conexão específicos do provedor
- O provedor dá suporte a vários parâmetros de conexão específicos do provedor, além daqueles definidos pelo ADO. Assim como acontece com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio da coleção [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) de uma [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou podem ser definidas como parte de **ConnectionString**.
+ O provedor dá suporte a vários parâmetros de conexão específicos do provedor, além daqueles definidos pelo ADO. Assim como acontece com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio da coleção [Properties](../../reference/ado-api/properties-collection-ado.md) de uma [conexão](../../reference/ado-api/connection-object-ado.md) ou podem ser definidas como parte de **ConnectionString**.
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|Trusted_Connection|Indica o modo de autenticação do usuário. Isso pode ser definido como **Sim** ou **não**. O valor padrão é **no**. Se essa propriedade for definida como **Sim**, SQLOLEDB usará o modo de autenticação do Microsoft Windows NT para autorizar o acesso do usuário ao banco de dados de SQL Server especificado pelos valores de propriedade **local** e [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Se essa propriedade for definida como **não**, SQLOLEDB usará o modo misto para autorizar o acesso do usuário ao banco de dados de SQL Server. O logon de SQL Server e a senha são especificados nas propriedades **ID de usuário** e **senha** .|
+|Trusted_Connection|Indica o modo de autenticação do usuário. Isso pode ser definido como **Sim** ou **não**. O valor padrão é **no**. Se essa propriedade for definida como **Sim**, SQLOLEDB usará o modo de autenticação do Microsoft Windows NT para autorizar o acesso do usuário ao banco de dados de SQL Server especificado pelos valores de propriedade **local** e [DataSource](../../reference/ado-api/datasource-property-ado.md) . Se essa propriedade for definida como **não**, SQLOLEDB usará o modo misto para autorizar o acesso do usuário ao banco de dados de SQL Server. O logon de SQL Server e a senha são especificados nas propriedades **ID de usuário** e **senha** .|
 |Idioma Atual|Indica um nome de idioma SQL Server. Identifica o idioma usado para seleção de mensagem de sistema e formatação. O idioma deve ser instalado na SQL Server, caso contrário, abrir a conexão falhará.|
 |Endereço de Rede|Indica o endereço de rede do SQL Server especificado pela propriedade **Location** .|
 |Biblioteca de rede|Indica o nome da biblioteca de rede (DLL) usada para se comunicar com o SQL Server. O nome não deve incluir o caminho ou a extensão de nome de arquivo .dll. O padrão é fornecido pela configuração do cliente SQL Server.|
@@ -109,7 +109,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```
 
 ## <a name="sql-server-features"></a>Recursos de SQL Server
- Com o SQL Server, o ADO pode usar XML para entrada de **comando** e recuperar resultados em formato de fluxo XML em vez de em objetos **Recordset** . Para obter mais informações, consulte [usando fluxos para entrada de comando](../../../ado/guide/data/command-streams.md) e [recuperando conjuntos de resultados em fluxos](../../../ado/guide/data/retrieving-resultsets-into-streams.md).
+ Com o SQL Server, o ADO pode usar XML para entrada de **comando** e recuperar resultados em formato de fluxo XML em vez de em objetos **Recordset** . Para obter mais informações, consulte [usando fluxos para entrada de comando](../data/command-streams.md) e [recuperando conjuntos de resultados em fluxos](../data/retrieving-resultsets-into-streams.md).
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Acessando dados sql_variant usando MDAC 2,7, MDAC 2,8 ou Windows DAC 6,0
  Microsoft SQL Server tem um tipo de dados chamado **sql_variant**. Semelhante ao **DBTYPE_VARIANT**do OLE DB, o tipo de dados **sql_variant** pode armazenar dados de vários tipos diferentes. No entanto, há algumas diferenças importantes entre **DBTYPE_VARIANT** e **sql_variant**. O ADO também manipula os dados armazenados como um valor **sql_variant** de forma diferente de como ele lida com outros tipos de dados. A lista a seguir descreve os problemas a serem considerados quando você acessa SQL Server dados armazenados em colunas do tipo **sql_variant**.
@@ -134,9 +134,9 @@ EXECUTE SalesByCategory 'Produce', '1995'
  Os conjuntos de registros SQLOLEDB que podem ser rolados são suportados pelos cursores SQL Server. SQL Server impõe limitações em cursores que são sensíveis a alterações feitas por outros usuários do banco de dados. Especificamente, as linhas em alguns cursores não podem ser ordenadas e a tentativa de criar um conjunto de registros usando um comando que contém uma cláusula SQL ORDER BY pode falhar.
 
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
- O provedor de OLE DB da Microsoft para SQL Server insere várias propriedades dinâmicas na coleção **Properties** dos objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [Command](../../../ado/reference/ado-api/command-object-ado.md) não abertos.
+ O provedor de OLE DB da Microsoft para SQL Server insere várias propriedades dinâmicas na coleção **Properties** dos objetos [Connection](../../reference/ado-api/connection-object-ado.md), [Recordset](../../reference/ado-api/recordset-object-ado.md)e [Command](../../reference/ado-api/command-object-ado.md) não abertos.
 
- As tabelas a seguir são um índice cruzado dos nomes do ADO e do OLE DB para cada propriedade dinâmica. A referência do programador de OLE DB refere-se a um nome de propriedade ADO pelo termo "Descrição". Você pode encontrar mais informações sobre essas propriedades na referência do programador de OLE DB. Procure o nome da propriedade OLE DB no índice ou veja o [Apêndice C: OLE DB Propriedades](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ As tabelas a seguir são um índice cruzado dos nomes do ADO e do OLE DB para cada propriedade dinâmica. A referência do programador de OLE DB refere-se a um nome de propriedade ADO pelo termo "Descrição". Você pode encontrar mais informações sobre essas propriedades na referência do programador de OLE DB. Procure o nome da propriedade OLE DB no índice ou veja o [Apêndice C: OLE DB Propriedades](/previous-versions/windows/desktop/ms723130(v=vs.85)).
 
 ## <a name="connection-dynamic-properties"></a>Propriedades dinâmicas da conexão
  As propriedades a seguir são adicionadas à coleção **Properties** do objeto **Connection** .
@@ -356,7 +356,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Raiz XML|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- Para obter detalhes de implementação específicos e informações funcionais sobre o provedor de OLE DB de Microsoft SQL Server, consulte o [provedor de SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
+ Para obter detalhes de implementação específicos e informações funcionais sobre o provedor de OLE DB de Microsoft SQL Server, consulte o [provedor de SQL Server](/previous-versions/windows/desktop/ms720897(v=vs.85)).
 
 ## <a name="see-also"></a>Consulte Também
- Propriedade [ConnectionString (](../../../ado/reference/ado-api/connectionstring-property-ado.md) ADO) provedor de conjunto de [Propriedades](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)
+ Propriedade [ConnectionString (](../../reference/ado-api/connectionstring-property-ado.md) ADO) provedor de conjunto de [Propriedades](../../reference/ado-api/provider-property-ado.md) (ADO) [Recordset (](../../reference/ado-api/recordset-object-ado.md) ADO)

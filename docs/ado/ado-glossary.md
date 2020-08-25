@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355452"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805556"
 ---
 # <a name="ado-glossary-terms"></a>Termos do glossário do ADO
 Este tópico define os termos relevantes para o ADO.
@@ -133,7 +133,7 @@ Este tópico define os termos relevantes para o ADO.
 
  Conjunto de registros hierárquico um **conjunto** de registros que contém outro **conjunto de registros**. Consulte também data Shaping, capítulo.
 
- Para obter mais informações, consulte [acessando linhas em um conjunto de registros hierárquico](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ Para obter mais informações, consulte [acessando linhas em um conjunto de registros hierárquico](./guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
  hierarquia em geral, uma hierarquia é uma estrutura classificada com níveis de nível superior e subordinado. No ADO, os **conjuntos de registros** hierárquicos são usados para representar a relação pai-filho entre um registro e um capítulo. Além disso, os objetos ADO, **Record** e **Stream** podem ser usados para acessar estruturas hierárquicas de árvore, como uma pasta e documentos. ADO MD também inclui objetos de **hierarquia** para representar uma relação entre os níveis de uma dimensão em um cubo OLAP. Consulte também conjuntos de registros hierárquicos, relação pai-filho, capítulo, árvore.
 

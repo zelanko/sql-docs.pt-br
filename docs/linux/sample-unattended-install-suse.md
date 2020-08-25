@@ -1,19 +1,19 @@
 ---
 title: Instalação autônoma para SQL Server no SUSE Linux Enterprise Server
 titleSuffix: SQL Server
-description: Exemplo de script do SQL Server – Instalação autônoma no SUSE Linux Enterprise Server
+description: Use um script Bash de exemplo para instalar o SQL Server 2017 no SLES (SUSE Linux Enterprise Server) v12 SP2 sem entrada interativa.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9944a6065d89a49e5bf1a0ccec2d4d681fbae748
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6562d01d615b4aac929b01d1e28985b5adddea42
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900157"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089006"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemplo: Script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
 

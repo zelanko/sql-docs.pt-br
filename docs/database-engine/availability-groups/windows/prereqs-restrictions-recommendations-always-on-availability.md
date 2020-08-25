@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362975"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092016"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "87362975"
 >  Antes de implantar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], é altamente recomendável que você leia cada seção deste tópico.  
     
 ##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Hotfixes do .NET que dão suporte a grupos de disponibilidade  
- Dependendo dos componentes e recursos do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usados com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], você poderá precisar instalar hotfixes .Net adicionais identificados na tabela seguinte. Os hotfixes podem ser instalados em qualquer ordem.  
+ Dependendo dos componentes e recursos do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usados com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], você poderá precisar instalar hotfixes do .NET adicionais identificados na tabela a seguir. Os hotfixes podem ser instalados em qualquer ordem.  
   
 |Recurso dependente|Hotfix|Link|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|O hotfix para o .NET 3.5 SP1 adiciona suporte a recursos do Cliente SQL para AlwaysOn de intenção de Leitura, somente leitura e multisubnetfailover. O hotfix precisa ser instalado em cada servidor de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix para .NET 3.5 SP1 para adição de suporte aos recursos Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|O hotfix para o .NET 3.5 SP1 adiciona suporte aos recursos Always On de intenção de Leitura, somente leitura e multisubnetfailover no Cliente do SQL. O hotfix precisa ser instalado em cada servidor de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix para .NET 3.5 SP1 para adição de suporte aos recursos Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Lista de verificação: requisitos (sistema Windows)  
@@ -162,7 +162,9 @@ ms.locfileid: "87362975"
   
     -   Cada réplica primária usa 1 thread de captura de log para cada banco de dados primário. Além de isso, ela usa 1 thread de envio de log para cada banco de dados secundário. Os threads de envio de log são liberados após ~15 segundos de inatividade.    
   
-    -   Um backup em uma réplica secundária mantém um thread na réplica primária durante a operação de backup.  
+    -   Um backup em uma réplica secundária mantém um thread na réplica primária durante a operação de backup. 
+
+-  O SQL Server 2019 apresentou a fase refazer paralela para bancos de dados do grupo de disponibilidade com otimização de memória. No SQL Server 2016 e 2017, as tabelas baseadas em disco não usarão a fase refazer paralela se um banco de dados em um grupo de disponibilidade também tiver otimização de memória. 
   
  Para obter mais informações, confira [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (AlwaysOn – Série de Aprendizado do HADRON: Uso do pool de trabalho para bancos de dados habilitados para HADRON) (blog dos Engenheiros do CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   

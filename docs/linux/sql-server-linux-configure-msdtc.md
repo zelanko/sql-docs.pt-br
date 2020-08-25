@@ -1,18 +1,18 @@
 ---
 title: Como configurar o MSDTC no Linux
-description: Este artigo fornece um passo a passo para configurar o MSDTC no Linux.
+description: Neste artigo, saiba como configurar o MSDTC (Coordenador de Transações Distribuídas da Microsoft) no Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900109"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180010"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Como configurar o MSDTC (Coordenador de Transações Distribuídas da Microsoft) no Linux
 
@@ -36,19 +36,21 @@ O MSDTC usa dois parâmetros de configuração para o utilitário mssql-conf:
 
 Para obter mais informações sobre essas configurações e outras configurações relacionadas do MSDTC, confira [Configurar o SQL Server em Linux com a ferramenta mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-## <a name="supported-msdtc-configurations"></a>Configurações do MSDTC compatíveis
+## <a name="supported-transaction-standards"></a>Padrões de transação com suporte
 
 As configurações do MSDTC a seguir são compatíveis:
 
-- Transações distribuídas OLE-TX em SQL Server em Linux para provedores ODBC.
+| Padrão de transação | Fontes de dados | Driver ODBC | Driver JDBC|
+|---|---|---|---|
+| Transações OLE-TX | SQL Server no Linux | Sim | Não|
+| Transações distribuídas XA | SQL Server, outras fontes de dados ODBC e JDBC que dão suporte a XA | Sim (requer a versão 17.3 ou posterior) | Sim |
+| Transações distribuídas no servidor vinculado | SQL Server | Sim | Não
 
-- Transações distribuídas XA em SQL Server em Linux usando provedores ODBC e JDBC. Para transações XA a serem executadas usando o provedor ODBC, você precisa usar o Microsoft ODBC Driver for SQL Server versão 17.3 ou superior. Para saber mais, confira [Noções básicas sobre Transações XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
-
-- Transações distribuídas no servidor vinculado.
+Para saber mais, confira [Noções básicas sobre Transações XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
 
 ## <a name="msdtc-configuration-steps"></a>Etapas de configuração do MSDTC
 
-Há três etapas para configurar a comunicação e a funcionalidade do MSDTC. Se as etapas de configuração necessárias não forem cumpridas, o SQL Server não habilitará a funcionalidade do MSDTC.
+Há três etapas para configurar a comunicação e a funcionalidade do MSDTC. Se as etapas de configuração necessárias não forem executadas, o SQL Server não habilitará a funcionalidade do MSDTC.
 
 - Configure **network.rpcport** e **distributedtransaction.servertcpport** usando mssql-conf.
 - Configure o firewall para permitir a comunicação em **distributedtransaction.servertcpport** e na porta 135.
@@ -165,7 +167,7 @@ Neste ponto, o SQL Server deve ser capaz de participar de transações distribu�
 sudo netstat -tulpn | grep sqlservr
 ```
 
-Será exibida uma saída semelhante à seguinte:
+Você deverá ver uma saída semelhante à seguinte:
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr
@@ -184,7 +186,7 @@ No entanto, após uma reinicialização, o SQL Server não começa a escutar em 
 
 O MSDTC para SQL Server em Linux não usa autenticação na comunicação RPC por padrão. No entanto, quando o computador host é ingressado em um domínio do AD (Active Directory), é possível configurar o MSDTC para usar a comunicação RPC autenticada usando as seguintes configurações de **mssql-conf**:
 
-| Configuração | DESCRIÇÃO |
+| Configuração | Descrição |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | Configure chamadas RPC somente seguras para transações distribuídas. O valor padrão é 0. |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure chamadas RPC somente de segurança para transações distribuídas. O valor padrão é 0. |

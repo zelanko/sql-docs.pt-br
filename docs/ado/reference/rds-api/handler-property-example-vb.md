@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a4667b6524cef6694340d917dad04fad04ad3f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438968"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768135"
 ---
 # <a name="handler-property-example-vb"></a>Exemplo da propriedade Handler (VB)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este exemplo demonstra a propriedade do [manipulador](../../../ado/reference/rds-api/handler-property-rds.md) de objeto de [DataControl do RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Consulte [personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md) para obter mais detalhes.)  
+ Este exemplo demonstra a propriedade do [manipulador](./handler-property-rds.md) de objeto de [DataControl do RDS](./datacontrol-object-rds.md) . (Consulte [personalização de datafactory](../../guide/remote-data-service/datafactory-customization.md) para obter mais detalhes.)  
   
  Suponha que as seções a seguir no arquivo de parâmetro, Msdfmap.ini, estejam localizadas no servidor:  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Seu código é semelhante ao seguinte. O comando atribuído à propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) corresponderá ao identificador de ***AuthorById*** e recuperará uma linha para o autor de Michael Leary. A propriedade **Recordset** do objeto **DataControl** é atribuída a um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) desconectado puramente como uma conveniência de codificação.  
+ Seu código é semelhante ao seguinte. O comando atribuído à propriedade [SQL](./sql-property.md) corresponderá ao identificador de ***AuthorById*** e recuperará uma linha para o autor de Michael Leary. A propriedade **Recordset** do objeto **DataControl** é atribuída a um objeto [Recordset](../ado-api/recordset-object-ado.md) desconectado puramente como uma conveniência de codificação.  
   
 ```  
 'BeginHandlerVB  
@@ -80,7 +80,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Propriedade Handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Propriedade Handler (RDS)](./handler-property-rds.md)

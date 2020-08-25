@@ -1,6 +1,6 @@
 ---
 title: Configurar o SQL Server Agent no Linux
-description: Este artigo descreve como habilitar ou instalar o SQL Server Agent no Linux.
+description: Saiba como habilitar ou instalar o SQL Server Agent em Linux. Do SQL Server 2017 CU4 em diante, o SQL Server Agent está incluído no pacote mssql-server.
 author: VanMSFT
 ms.author: vanto
 ms.date: 12/05/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 85869c797e8f91ca28d468c6a4a52dd52ea45a92
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882528"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088781"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Instalar o SQL Server Agent no Linux
 

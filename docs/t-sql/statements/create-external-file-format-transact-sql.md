@@ -1,4 +1,5 @@
 ---
+description: CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2020
@@ -20,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3d2bd6b1d69b04bb67879572d37a16f35d48c8
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ce343447b770a5a8f0cd0c1499c3b8ff236adf17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426738"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -51,26 +52,32 @@ Para criar uma tabela externa, confira [CREATE EXTERNAL TABLE &#40;Transact-SQL&
   
 ## <a name="syntax"></a>Sintaxe
   
+### <a name="delimited-text"></a>[Texto delimitado](#tab/delimited)
 ```syntaxsql
--- Create an external file format for PARQUET files.  
+-- Create an external file format for DELIMITED (CSV/TSV) files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
-    FORMAT_TYPE = PARQUET  
-     [ , DATA_COMPRESSION = {  
-        'org.apache.hadoop.io.compress.SnappyCodec'  
-      | 'org.apache.hadoop.io.compress.GzipCodec'      }  
-    ]);  
-  
---Create an external file format for ORC files.  
-CREATE EXTERNAL FILE FORMAT file_format_name  
-WITH (  
-    FORMAT_TYPE = ORC  
-     [ , DATA_COMPRESSION = {  
-        'org.apache.hadoop.io.compress.SnappyCodec'  
-      | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
-    ]);  
-  
---Create an external file format for RCFILE.  
+        FORMAT_TYPE = DELIMITEDTEXT  
+    [ , FORMAT_OPTIONS ( <format_options> [ ,...n  ] ) ]  
+    [ , DATA_COMPRESSION = {  
+           'org.apache.hadoop.io.compress.GzipCodec'  
+         | 'org.apache.hadoop.io.compress.DefaultCodec'  
+        }  
+     ]);
+
+<format_options> ::=  
+{  
+    FIELD_TERMINATOR = field_terminator  
+    | STRING_DELIMITER = string_delimiter 
+    | First_Row = integer -- ONLY AVAILABLE SQL DW
+    | DATE_FORMAT = datetime_format  
+    | USE_TYPE_DEFAULT = { TRUE | FALSE } 
+    | Encoding = {'UTF8' | 'UTF16'} 
+}
+```
+### <a name="rc"></a>[RC](#tab/rc)
+```syntaxsql
+--Create an external file format for RC files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
     FORMAT_TYPE = RCFILE,  
@@ -78,19 +85,32 @@ WITH (
         'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
       | 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'  
     }  
-    [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);  
-  
---Create an external file format for DELIMITED TEXT files.  
+    [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
+```
+### <a name="orc"></a>[ORC](#tab/orc)
+```syntaxsql  
+--Create an external file format for ORC file.  
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (
+         FORMAT_TYPE = ORC  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
+    ]);  
+```
+### <a name="parquet"></a>[Parquet](#tab/parquet)
+```syntaxsql
+--Create an external file format for PARQUET files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
-    FORMAT_TYPE = DELIMITEDTEXT  
-    [ , FORMAT_OPTIONS ( <format_options> [ ,...n  ] ) ]  
-    [ , DATA_COMPRESSION = {  
-           'org.apache.hadoop.io.compress.GzipCodec'  
-         | 'org.apache.hadoop.io.compress.DefaultCodec'  
-        }  
-     ]);  
-
+         FORMAT_TYPE = PARQUET  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      }  
+    ]);    
+```
+### <a name="json"></a>[JSON](#tab/json)
+```syntaxsql
 -- Create an external file format for JSON files.
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
@@ -100,23 +120,17 @@ WITH (
       | 'org.apache.hadoop.io.compress.GzipCodec'      
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
- 
-<format_options> ::=  
-{  
-    FIELD_TERMINATOR = field_terminator  
-    | STRING_DELIMITER = string_delimiter 
-    | First_Row = integer -- ONLY AVAILABLE SQL DW
-    | DATE_FORMAT = datetime_format  
-    | USE_TYPE_DEFAULT = { TRUE | FALSE } 
-    | Encoding = {'UTF8' | 'UTF16'} 
-}  
-```  
+```
+---
   
 ## <a name="arguments"></a>Argumentos  
 *file_format_name*  
 Especifica um nome para o formato de arquivo externo.
-  
-FORMAT_TYPE = [ PARQUET \| ORC \| RCFILE \| DELIMITEDTEXT] Especifica o formato dos dados externos.
+ 
+### <a name="format_type"></a>FORMAT_TYPE 
+`FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]`
+
+Especifica o formato dos dados externos.
   
 - PARQUET Especifica um formato Parquet.
   
@@ -134,8 +148,43 @@ FORMAT_TYPE = [ PARQUET \| ORC \| RCFILE \| DELIMITEDTEXT] Especifica o formato 
 - DELIMITEDTEXT Especifica um formato de texto com delimitadores de coluna, também chamado de terminadores de campo.
    
 - O JSON especifica um formato JSON. Aplica-se somente ao SQL do Azure no Edge. 
+
+### <a name="data_compression"></a>DATA\_COMPRESSION
+ `DATA_COMPRESSION = *data_compression_method*`  
+ Especifica o método de compactação de dados para os dados externos. Quando DATA_COMPRESSION não for especificado, o padrão será dados não compactados.
+Para funcionar corretamente, os arquivos compactados pelo Gzip precisam ter a extensão de arquivo ".gz".
+ 
+ #### <a name="delimited-text"></a>[Texto delimitado](#tab/delimited)
+ O tipo de formato DELIMITEDTEXT é compatível com estes métodos de compactação:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+
+#### <a name="rc"></a>[RC](#tab/rc)
+ O tipo de formato RCFILE é compatível com este método de compactação:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
-FIELD_TERMINATOR = *field_terminator*  
+#### <a name="orc"></a>[ORC](#tab/orc)
+ O tipo de formato de arquivo ORC é compatível com este método de compactação:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+#### <a name="parquet"></a>[Parquet](#tab/parquet)
+ O tipo de formato de arquivo PARQUET é compatível com este método de compactação:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+#### <a name="json"></a>[JSON](#tab/json)
+ O tipo de formato de arquivo JSON é compatível com os seguintes métodos de compactação:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+---  
+### <a name="delimited-text-format-options"></a>Opções de formato de texto delimitado
+
+As opções de formato descritas nesta seção são opcionais e só se aplicam a arquivos de texto delimitado.
+
+#### <a name="field_terminator"></a>FIELD_TERMINATOR
+`FIELD_TERMINATOR = *field_terminator*`  
 Aplica-se somente a arquivos de texto delimitado. O terminador de campo especifica um ou mais caracteres que marcam o final de cada campo (coluna) no arquivo de texto delimitado. O padrão é o caractere barra vertical ꞌ|ꞌ. Para garantir o suporte, é recomendável usar um ou mais caracteres ASCII.
   
   
@@ -149,7 +198,9 @@ Exemplos:
   
 -   FIELD_TERMINATOR = '~|~'  
   
-STRING_DELIMITER = *string_delimiter*  
+#### <a name="string_delimiter"></a>STRING_DELIMITER
+`STRING_DELIMITER = *string_delimiter*`
+
 Especifica o terminador de campo dos dados da cadeia de caracteres de tipo no arquivo de texto delimitado. O delimitador de cadeia de caracteres tem um ou mais caracteres de comprimento e está entre aspas simples. O padrão é a cadeia de caracteres vazia "". Para garantir o suporte, é recomendável usar um ou mais caracteres ASCII.
  
   
@@ -165,13 +216,16 @@ Especifica o terminador de campo dos dados da cadeia de caracteres de tipo no ar
   
 -   STRING_DELIMITER = '0x7E0x7E' – dois tils (por exemplo, ~~)
  
- FIRST_ROW = *First_row_int*  
+#### <a name="first_row"></a>FIRST_ROW
+ `FIRST_ROW = *First_row_int*`  
 Especifica o número de linha lido primeiro em todos os arquivos durante o carregamento do PolyBase. Esse parâmetro pode assumir valores de 1 a 15. Se o valor for definido como dois, a primeira linha em todos os arquivos (linha de cabeçalho) será ignorada quando os dados forem carregados. As linhas são ignoradas com base na existência de terminadores de linhas (/r/n, /r, /n). Quando essa opção é usada para exportação, as linhas são adicionadas aos dados para garantir que o arquivo possa ser lido sem perda de dados. Se o valor for definido como >2, a primeira linha exportada será a de nomes de colunas da tabela externa.
 
- DATE\_FORMAT = *datetime_format*  
+#### <a name="date_format"></a>DATE\_FORMAT
+ `DATE_FORMAT = *datetime_format*`  
 Especifica um formato personalizado para todos os dados de data e hora que podem aparecer em um arquivo de texto delimitado. Se o arquivo de origem usar os formatos datetime padrão, essa opção não será necessária. Apenas um formato datetime personalizado é permitido por arquivo. Não é possível especificar mais de um formato datetime personalizado por arquivo. No entanto, você poderá usar mais de um formato datetime se cada um deles estiver no formato padrão do tipo de dados respectivo na definição da tabela externa.
 
-O PolyBase só usa o formato de data personalizado para importar os dados. Ele não usa o formato personalizado para gravar dados em um arquivo externo.
+> [!IMPORTANT]
+> O PolyBase só usa o formato de data personalizado para importar os dados. Ele não usa o formato personalizado para gravar dados em um arquivo externo.
 
  Quando DATE_FORMAT não for especificado ou for a cadeia de caracteres vazia, o PolyBase usará os seguintes formatos padrão:
   
@@ -186,7 +240,10 @@ O PolyBase só usa o formato de data personalizado para importar os dados. Ele n
 -   DateTimeOffset: 'aaaa-MM-dd HH:mm:ss'  
   
 -   Time: 'HH:mm:ss'  
-  
+
+> [!IMPORTANT]
+> A especificação de `DATE_FORMAT` personalizado substituirá todos os formatos de tipo padrão. Ou seja, você precisará ter os mesmos formatos de data em todas as células de datetime, data e hora em seus arquivos. Com o `DATE_FORMAT` substituído, não é possível ter valores de data e hora em formato diferente.
+
 **Há exemplos de formatos de data** na tabela a seguir:
   
 Observações sobre a tabela:  
@@ -211,7 +268,9 @@ Observações sobre a tabela:
 |DateTimeOffset|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt zzz'|Além de ano, mês e dia, esse formato de data inclui 00 a 11 horas, 00 a 59 minutos, 00 a 59 segundos, 7 dígitos para milissegundos, (AM, am, PM ou pm) e a diferença de fuso horário. Veja a descrição na linha anterior.|  
 |Hora|DATE_FORMAT = 'HH:mm:ss'|Não há nenhum valor de data, apenas de 00 a 23 horas, 00 a 59 minutos e 00 a 59 segundos.|  
   
- Todos os formatos de data compatíveis:
+ ##### <a name="supported-date-and-time-formats"></a>Formatos de data e hora com suporte
+ 
+ O formato de arquivo externo pode descrever um grande número de formatos de data e hora:
   
 |DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
@@ -241,8 +300,10 @@ Observações sobre a tabela:
 -   As letras 'tt' designam [AM|PM|am|pm]. AM é o padrão. Quando 'tt' for especificado, o valor de hora (hh) precisará estar no intervalo de 0 a 12.
   
 -   As letras 'zzz' designam a diferença do fuso horário atual do sistema no formato {+|-}HH:ss].
-  
- USE_TYPE_DEFAULT = { TRUE | **FALSE** }  
+ 
+#### <a name="use_type_default"></a>USE_TYPE_DEFAULT 
+ `USE_TYPE_DEFAULT = { TRUE | FALSE }`
+ 
  Especifica como tratar valores ausentes em arquivos de texto delimitados quando o PolyBase recuperar dados do arquivo de texto.
   
  TRUE  
@@ -254,46 +315,15 @@ Observações sobre a tabela:
   
 -   1900-01-01 se a coluna for uma coluna de data.
   
- FALSE  
+ **FALSE**  
  Armazene todos os valores ausentes como NULL. Todos os valores NULL que estão armazenados usando a palavra NULL no arquivo de texto delimitado são importados como a cadeia de caracteres 'NULL'.
-  
-   Codificação = {'UTF8' | 'UTF16'}  
- No SQL Data Warehouse do Azure e o PDW (APS CU7.4), o PolyBase pode ler arquivos de texto delimitados codificados em UTF8 e UTF16-LE. No SQL Server, o PolyBase não dá suporte à leitura de arquivos codificados em UTF16.
-  
- DATA_COMPRESSION = *data_compression_method*  
- Especifica o método de compactação de dados para os dados externos. Quando DATA_COMPRESSION não for especificado, o padrão será dados não compactados.
- Para funcionar corretamente, os arquivos compactados pelo Gzip precisam ter a extensão de arquivo ".gz".
  
- O tipo de formato DELIMITEDTEXT é compatível com estes métodos de compactação:
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+#### <a name="encoding"></a>ENCODING
+   `Encoding = {'UTF8' | 'UTF16'}`
+   
+ No SQL Data Warehouse do Azure e o PDW (APS CU7.4), o PolyBase pode ler arquivos de texto delimitados codificados em UTF8 e UTF16-LE. No SQL Server, o PolyBase não dá suporte à leitura de arquivos codificados em UTF16.
 
- O tipo de formato RCFILE é compatível com este método de compactação:
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
-  
- O tipo de formato de arquivo ORC é compatível com este método de compactação:
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-  
- O tipo de formato de arquivo PARQUET é compatível com este método de compactação:
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
 
- O tipo de formato de arquivo JSON é compatível com os seguintes métodos de compactação:
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
-  
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
-  
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY EXTERNAL FILE FORMAT.
   
@@ -331,7 +361,7 @@ Observações sobre a tabela:
   
  Para um arquivo de texto delimitado, o método de compactação de dados pode ser o Codec padrão, 'org.apache.hadoop.io.compress.DefaultCodec' ou o Codec do Gzip, 'org.apache.hadoop.io.compress.GzipCodec'.
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT textdelimited1  
 WITH (  
     FORMAT_TYPE = DELIMITEDTEXT,  
@@ -345,7 +375,7 @@ WITH (
 ### <a name="b-create-an-rcfile-external-file-format"></a>B. Criar um formato de arquivo externo RCFile  
  Este exemplo cria um formato de arquivo externo para um RCFile que usa o método de serialização/desserialização org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Ela também especifica o uso do Codec padrão para o método de compactação de dados. Se DATA_COMPRESSION não for especificado, o padrão será sem compactação.
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT rcfile1  
 WITH (  
     FORMAT_TYPE = RCFILE,  
@@ -357,7 +387,7 @@ WITH (
 ### <a name="c-create-an-orc-external-file-format"></a>C. Criar um formato de arquivo externo ORC  
  Este exemplo cria um formato de arquivo externo para um arquivo ORC que compacta os dados com o método de compactação de dados org.apache.io.compress.SnappyCodec. Se DATA_COMPRESSION não for especificado, o padrão será sem compactação.
   
-```  
+```sql 
 CREATE EXTERNAL FILE FORMAT orcfile1  
 WITH (  
     FORMAT_TYPE = ORC,  
@@ -368,7 +398,7 @@ WITH (
 ### <a name="d-create-a-parquet-external-file-format"></a>D. Criar um formato de arquivo externo PARQUET  
  Este exemplo cria um formato de arquivo externo para um arquivo Parquet que compacta os dados com o método de compactação de dados org.apache.io.compress.SnappyCodec. Se DATA_COMPRESSION não for especificado, o padrão será sem compactação.  
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT parquetfile1  
 WITH (  
     FORMAT_TYPE = PARQUET,  
@@ -378,7 +408,7 @@ WITH (
 ### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-sql-dw-only"></a>E. Criar um arquivo de texto delimitado, ignorando a linha de cabeçalho (somente SQL DW do Azure)
  Este exemplo cria um formato de arquivo externo para o arquivo CSV com uma única linha de cabeçalho. 
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT skipHeader_CSV
 WITH (FORMAT_TYPE = DELIMITEDTEXT,
       FORMAT_OPTIONS(
@@ -391,7 +421,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
 ### <a name="f-create-a-json-external-file-format"></a>F. Criar um formato de arquivo externo do JSON  
  Este exemplo cria um formato de arquivo externo para um arquivo JSON que compacta os dados com o método de compactação de dados org.apache.io.compress.SnappyCodec. Se DATA_COMPRESSION não for especificado, o padrão será sem compactação. Este exemplo se aplica ao SQL do Azure no Edge e atualmente não é compatível com outros produtos SQL. 
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT jsonFileFormat  
 WITH (  
     FORMAT_TYPE = JSON,  

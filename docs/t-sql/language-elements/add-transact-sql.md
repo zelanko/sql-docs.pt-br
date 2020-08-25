@@ -1,4 +1,5 @@
 ---
+description: + (Adição) (Transact-SQL)
 title: + (Adição) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 261c22abe760ae720c4bc691f0549ccc5491e3e9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 12b531d2f8615e9ff2cb9bbfc33973e6aab5d33f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361872"
 ---
 # <a name="-addition-transact-sql"></a>+ (Adição) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -113,7 +114,7 @@ SELECT '125127' + @addvalue;
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D: Como usar o operador de adição para calcular o número total de horas de afastamento do trabalho para cada funcionário  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D: Usando o operador de adição para calcular o número total de horas de ausência do trabalho para cada funcionário  
  O exemplo a seguir localiza o número total de horas de ausência do trabalho para cada funcionário, adicionando o número de horas usadas para férias e o número de horas usadas como ausência por motivo de doença e classifica os resultados em ordem ascendente.  
   
 ```  

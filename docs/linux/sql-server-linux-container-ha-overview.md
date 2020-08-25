@@ -1,6 +1,6 @@
 ---
 title: Alta disponibilidade para contêineres do SQL Server
-description: Este artigo apresenta a alta disponibilidade para contêineres do SQL Server
+description: Saiba mais sobre a alta disponibilidade para contêineres do SQL Server. Saiba mais também sobre a implantação de um contêiner com o SQL Server no Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 688db496825af348183e195bfd4003cfcfb53d81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00665a8306dbf586b92cfec14a8fe21f631f96c9
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69653383"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088891"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Alta disponibilidade para contêineres do SQL Server
 

@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 5: testar o pacote de tutorial da Lição 4'
 title: 'Etapa 5: Testar o pacote de tutoriais da Lição 4 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c209aea67a04d7f602ec2015bdb3e7535c9bc8dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd458d09c43a97693c620b9498ad1d593751905
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457123"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Lição 4-5: Testar o pacote da Lição 4
 
@@ -49,7 +50,7 @@ Antes de testar o pacote, verifique se que o fluxo de controle e o fluxo de dado
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>Exibir o conteúdo do arquivo ErrorOutput.txt  
   
-No Bloco de Notas ou qualquer outro editor de texto, abra o arquivo **ErrorOutput.txt**. A ordem padrão das colunas é: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
+No Bloco de Notas ou qualquer outro editor de texto, abra o arquivo **ErrorOutput.txt**. A ordem de colunas padrão é: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
  
 Todas as linhas no arquivo contêm o valor sem correspondência CurrencyID "BAD", o valor ErrorCode -1071607778, o valor ErrorColumn 0 e o valor ErrorDescription "A linha não gerou correspondência durante a pesquisa". O valor de ErrorColumn é 0 porque o erro não é específico de coluna, em vez disso, a operação de pesquisa falhou.
   

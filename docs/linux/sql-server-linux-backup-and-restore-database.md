@@ -1,6 +1,6 @@
 ---
 title: Fazer backup dos bancos de dados do SQL Server no Linux e restaurá-los
-description: Aprenda a backup dos bancos de dados do SQL Server no Linux e restaurá-los.
+description: Aprenda a backup dos bancos de dados do SQL Server no Linux e restaurá-los. Saiba também como fazer backup e restauração com o SSMS (SQL Server Management Studio).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882338"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088939"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Fazer backup dos bancos de dados do SQL Server no Linux e restaurá-los
 
@@ -87,7 +87,7 @@ As etapas a seguir demonstram como fazer um backup com o SSMS.
 
 1. Inicie o SSMS e conecte-se ao servidor no SQL Server 2017 em Linux.
 
-1. No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados, clique em **Tarefas** e clique na página **Fazer Backup...** .
+1. No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados, clique em **Tarefas** e clique na página **Fazer Backup...**.
 
 1. Na caixa de diálogo **Fazer Backup de Banco de Dados**, verifique os parâmetros e as opções e clique em **OK**.
  
@@ -97,7 +97,7 @@ O SQL Server conclui o backup do banco de dados.
 
 As etapas a seguir orientarão você pela restauração de um banco de dados com o SSMS.
 
-1. No SSMS, clique com o botão direito do mouse em **Bancos de Dados** e clique em **Restaurar Bancos de Dados...** . 
+1. No SSMS, clique com o botão direito do mouse em **Bancos de Dados** e clique em **Restaurar Bancos de Dados...**. 
 
 1. Em **Origem**, clique em **Dispositivo:** e, em seguida, clique nas reticências (...).
 

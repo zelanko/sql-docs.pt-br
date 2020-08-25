@@ -1,4 +1,5 @@
 ---
+description: catalog.move_project (Banco de dados SSISDB)
 title: catalog.move_project (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57e63a057c99c7f2e8f24b5d02a20a55da92f0db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c9e003b76cfbf6e563fc41a47e4b9aabfeecf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430058"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project – Banco de Dados SSISDB
 
@@ -36,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_folder = ] *source_folder*  
- O nome da pasta de origem, onde o projeto reside antes da movimentação. O *source_folder* é **nvarchar(128)** .  
+ O nome da pasta de origem, onde o projeto reside antes da movimentação. O *source_folder* é **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
  O nome do projeto a ser movido. O *project_name* é **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- O nome da pasta de destino, onde o projeto reside após a movimentação. O *destination_folder* é **nvarchar(128)** .  
+ O nome da pasta de destino, onde o projeto reside após a movimentação. O *destination_folder* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

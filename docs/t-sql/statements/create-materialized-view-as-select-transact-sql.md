@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444826"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -108,7 +109,7 @@ Quando as agregações MIN/MAX são usadas na lista SELECT da definição da exi
   
 ## <a name="remarks"></a>Comentários
 
-Uma exibição materializada no data warehouse do Azure é semelhante a uma exibição indexada no SQL Server.  Ela compartilha quase as mesmas restrições que a exibição indexada (confira [Criar exibições indexadas](/sql/relational-databases/views/create-indexed-views) para obter detalhes), exceto pelo fato de que uma exibição materializada dá suporte a funções de agregação.   
+Uma exibição materializada no data warehouse do Azure é semelhante a uma exibição indexada no SQL Server.Ela compartilha quase as mesmas restrições que a exibição indexada (confira [Criar exibições indexadas](/sql/relational-databases/views/create-indexed-views) para obter detalhes), exceto pelo fato de que uma exibição materializada dá suporte a funções de agregação.   
 
 Somente o CLUSTERED COLUMNSTORE INDEX é compatível com a exibição materializada. 
 
@@ -142,7 +143,8 @@ Para descobrir se uma instrução SQL pode se beneficiar da nova exibição mate
 
 ## <a name="permissions"></a>Permissões
 
-Requer a permissão CREATE VIEW no banco de dados e a permissão ALTER no esquema no qual a exibição está sendo criada. 
+Requer 1) REFERENCES e a permissão CREATE VIEW OU 2) a permissão CONTROL no esquema de criação da exibição. 
+
   
 ## <a name="see-also"></a>Confira também
 

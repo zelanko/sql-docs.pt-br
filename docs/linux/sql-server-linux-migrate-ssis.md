@@ -1,6 +1,6 @@
 ---
 title: Extrair, transformar e carregar dados no Linux com o SSIS
-description: Este artigo descreve o SSIS (SQL Server Integration Services) para computadores Linux
+description: Saiba como executar pacotes do SSIS (SQL Server Integration Services) no Linux. Saiba também onde encontrar mais informações sobre os recursos do SSIS.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882716"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088864"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrair, transformar e carregar dados no Linux com o SSIS
 
@@ -25,7 +25,7 @@ Os pacotes SSIS em execução no Linux podem conectar-se ao Microsoft SQL Server
 
 Para obter mais informações sobre as funcionalidades do SSIS, confira o [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para executar pacotes SSIS em um computador Linux, primeiro é necessário instalar o SQL Server Integration Services. O SSIS não está incluído na instalação do SQL Server para computadores Linux. Para obter instruções sobre a instalação, confira [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -36,7 +36,7 @@ Você também precisar ter um computador Windows para criar e manter pacotes. As
 Para executar um pacote SSIS em um computador Linux, faça o seguinte:
 
 1.  Copie o pacote SSIS para o computador Linux.
-2.  Execute o comando a seguir:
+2.  Execute o seguinte comando:
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```
