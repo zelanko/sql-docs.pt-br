@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49fc6e3a6e91908e1fd549a60efa751769d61bd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eaa3f7aace505092b147fc3d15c2890de50c5958
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450828"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776105"
 ---
 # <a name="commandtimeout-property-ado"></a>Propriedade CommandTimeout (ADO)
 Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tentativa e gerar um erro.  
@@ -30,7 +30,7 @@ Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tent
  Define ou retorna um valor **longo** que indica, em segundos, por quanto tempo aguardar a execução de um comando. O padrão é 30.  
   
 ## <a name="remarks"></a>Comentários  
- Use a propriedade **CommandTimeout** em um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) para permitir o cancelamento de uma chamada de método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) , devido a atrasos do tráfego de rede ou uso intenso do servidor. Se o intervalo definido na propriedade **CommandTimeout** expirar antes que o comando conclua a execução, ocorre um erro e o ADO cancela o comando. Se você definir a propriedade como zero, o ADO aguardará indefinidamente até que a execução seja concluída. Verifique se o provedor e a fonte de dados para os quais você está escrevendo código dão suporte à funcionalidade **CommandTimeout** .  
+ Use a propriedade **CommandTimeout** em um objeto de [conexão](./connection-object-ado.md) ou objeto de [comando](./command-object-ado.md) para permitir o cancelamento de uma chamada de método [Execute](./execute-method-ado-command.md) , devido a atrasos do tráfego de rede ou uso intenso do servidor. Se o intervalo definido na propriedade **CommandTimeout** expirar antes que o comando conclua a execução, ocorre um erro e o ADO cancela o comando. Se você definir a propriedade como zero, o ADO aguardará indefinidamente até que a execução seja concluída. Verifique se o provedor e a fonte de dados para os quais você está escrevendo código dão suporte à funcionalidade **CommandTimeout** .  
   
  A configuração **CommandTimeout** em um objeto de **conexão** não tem efeito sobre a configuração **CommandTimeout** em um objeto de **comando** na mesma **conexão**; ou seja, a propriedade **CommandTimeout** do objeto de **comando** não herda o valor do valor **CommandTimeout** do objeto de **conexão** .  
   
@@ -40,15 +40,15 @@ Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tent
 
 :::row:::
     :::column:::
-        [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [Objeto Command (ADO)](./command-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Objeto Connection (ADO)](./connection-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [Propriedade ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)
+ [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VB)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VC + +)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (JScript)](./activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [Propriedade ConnectionTimeout (ADO)](./connectiontimeout-property-ado.md)

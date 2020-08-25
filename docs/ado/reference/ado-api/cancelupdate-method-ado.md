@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6482336ceed00e131da38b151a8b6ffe33b3638c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e845757f510c6e81260fbd735fd1e1c05ac87fb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451018"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776285"
 ---
 # <a name="cancelupdate-method-ado"></a>Método CancelUpdate (ADO)
-Cancela as alterações feitas na linha atual ou nova de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou na coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) , antes de chamar o método [Update](../../../ado/reference/ado-api/update-method.md) .  
+Cancela as alterações feitas na linha atual ou nova de um objeto [Recordset](./recordset-object-ado.md) ou na coleção [Fields](./fields-collection-ado.md) de um objeto [Record](./record-object-ado.md) , antes de chamar o método [Update](./update-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,33 +36,33 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="recordset"></a>Conjunto de registros  
- Use o método **CancelUpdate** para cancelar as alterações feitas na linha atual ou para descartar uma linha recém-adicionada. Não é possível cancelar as alterações na linha atual ou em uma nova linha depois de chamar o método **Update** , a menos que as alterações façam parte de uma transação que você possa reverter com o método [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) ou parte de uma atualização do lote. No caso de uma atualização em lotes, você pode cancelar a **atualização** com o método **CancelUpdate** ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
+ Use o método **CancelUpdate** para cancelar as alterações feitas na linha atual ou para descartar uma linha recém-adicionada. Não é possível cancelar as alterações na linha atual ou em uma nova linha depois de chamar o método **Update** , a menos que as alterações façam parte de uma transação que você possa reverter com o método [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) ou parte de uma atualização do lote. No caso de uma atualização em lotes, você pode cancelar a **atualização** com o método **CancelUpdate** ou [CancelBatch](./cancelbatch-method-ado.md) .  
   
- Se você estiver adicionando uma nova linha ao chamar o método **CancelUpdate** , a linha atual se tornará a linha que era atual antes da chamada [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) .  
+ Se você estiver adicionando uma nova linha ao chamar o método **CancelUpdate** , a linha atual se tornará a linha que era atual antes da chamada [AddNew](./addnew-method-ado.md) .  
   
- Se você estiver no modo de edição e quiser sair do registro atual (por exemplo, usando os métodos [move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)ou [Close](../../../ado/reference/ado-api/close-method-ado.md) ), poderá usar o **CancelUpdate** para cancelar as alterações pendentes. Talvez seja necessário fazer isso se a atualização não puder ser postada com êxito à fonte de dados. Por exemplo, uma tentativa de exclusão que falha devido a violações de integridade referencial deixará o **conjunto de registros** no modo de edição após uma chamada para [delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
+ Se você estiver no modo de edição e quiser sair do registro atual (por exemplo, usando os métodos [move](./move-method-ado.md), [NextRecordset](./nextrecordset-method-ado.md)ou [Close](./close-method-ado.md) ), poderá usar o **CancelUpdate** para cancelar as alterações pendentes. Talvez seja necessário fazer isso se a atualização não puder ser postada com êxito à fonte de dados. Por exemplo, uma tentativa de exclusão que falha devido a violações de integridade referencial deixará o **conjunto de registros** no modo de edição após uma chamada para [delete](./delete-method-ado-recordset.md).  
   
 ## <a name="record"></a>Record  
- O método **CancelUpdate** cancela todas as inserções ou exclusões pendentes de objetos de [campo](../../../ado/reference/ado-api/field-object.md) e cancela atualizações pendentes de campos existentes e os restaura aos valores originais. A propriedade [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de todos os campos na coleção **Fields** é definida como **adFieldOK**.  
+ O método **CancelUpdate** cancela todas as inserções ou exclusões pendentes de objetos de [campo](./field-object.md) e cancela atualizações pendentes de campos existentes e os restaura aos valores originais. A propriedade [status](./status-property-ado-recordset.md) de todos os campos na coleção **Fields** é definida como **adFieldOK**.  
   
 ## <a name="applies-to"></a>Aplica-se A  
 
 :::row:::
     :::column:::
-        [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Coleção Fields (ADO)](./fields-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Objeto Recordset (ADO)](./recordset-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo dos métodos Update e CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Exemplo dos métodos Update e CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
- [Método AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Método Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Método CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Propriedade EditMode](../../../ado/reference/ado-api/editmode-property.md)   
- [Método Update](../../../ado/reference/ado-api/update-method.md)
+ [Exemplo dos métodos Update e CancelUpdate (VB)](./update-and-cancelupdate-methods-example-vb.md)   
+ [Exemplo dos métodos Update e CancelUpdate (VC + +)](./update-and-cancelupdate-methods-example-vc.md)   
+ [Método AddNew (ADO)](./addnew-method-ado.md)   
+ [Método Cancel (ADO)](./cancel-method-ado.md)   
+ [Método Cancel (RDS)](../rds-api/cancel-method-rds.md)   
+ [Método CancelBatch (ADO)](./cancelbatch-method-ado.md)   
+ [Método CancelUpdate (RDS)](../rds-api/cancelupdate-method-rds.md)   
+ [Propriedade EditMode](./editmode-property.md)   
+ [Método Update](./update-method.md)

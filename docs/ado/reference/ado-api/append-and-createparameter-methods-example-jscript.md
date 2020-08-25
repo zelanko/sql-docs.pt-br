@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0701577bbd569e1b7c01239bd3613591864696d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 177ba5a63cb8503c51e3264ac5fea48ebf44a3e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451298"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776545"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Exemplo dos métodos Append e CreateParameter (JScript)
-Este exemplo usa os métodos [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para executar um procedimento armazenado com um parâmetro de entrada. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **AppendJS. asp**.  
+Este exemplo usa os métodos [Append](./append-method-ado.md) e [CreateParameter](./createparameter-method-ado.md) para executar um procedimento armazenado com um parâmetro de entrada. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **AppendJS. asp**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -143,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Método Append (ADO)](./append-method-ado.md)   
+ [Método CreateParameter (ADO)](./createparameter-method-ado.md)   
+ [Objeto Field](./field-object.md)   
+ [Coleção Fields (ADO)](./fields-collection-ado.md)   
+ [Objeto Parameter](./parameter-object.md)

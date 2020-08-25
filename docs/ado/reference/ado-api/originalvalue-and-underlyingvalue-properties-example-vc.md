@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442888"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773575"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Exemplo das propriedades OriginalValue e subdependvalue (VC + +)
-Este exemplo demonstra as propriedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [subdependentes](../../../ado/reference/ado-api/underlyingvalue-property.md) exibindo uma mensagem se os dados subjacentes de um registro foram alterados durante uma atualização de lote do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Este exemplo demonstra as propriedades [OriginalValue](./originalvalue-property-ado.md) e [subdependentes](./underlyingvalue-property.md) exibindo uma mensagem se os dados subjacentes de um registro foram alterados durante uma atualização de lote do [conjunto de registros](./recordset-object-ado.md) .  
   
 ## <a name="example"></a>Exemplo  
   
@@ -221,6 +221,6 @@ void PrintComError(_com_error &e) {
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**    
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propriedade UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [Propriedade OriginalValue (ADO)](./originalvalue-property-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Propriedade UnderlyingValue](./underlyingvalue-property.md)

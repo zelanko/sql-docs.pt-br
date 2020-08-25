@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861abb0066f4b9f32ff8f9071c1520a1dec73016
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994fe5eb0cf10189477e11154b8814f5e73c9194
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450818"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776075"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Especifica como um argumento de comando deve ser interpretado.  
@@ -31,12 +31,12 @@ Especifica como um argumento de comando deve ser interpretado.
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Não especifica o argumento de tipo de comando.|  
-|**adCmdText**|1|Avalia [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) como uma definição textual de um comando ou uma chamada de procedimento armazenado.|  
+|**adCmdText**|1|Avalia [CommandText](./commandtext-property-ado.md) como uma definição textual de um comando ou uma chamada de procedimento armazenado.|  
 |**adCmdTable**|2|Avalia **CommandText** como um nome de tabela cujas colunas são todas retornadas por uma consulta SQL gerada internamente.|  
 |**adCmdStoredProc**|4|Avalia **CommandText** como um nome de procedimento armazenado.|  
 |**adCmdUnknown**|8|Padrão. Indica que o tipo de comando na propriedade **CommandText** não é conhecido.<br /><br /> Quando o tipo de comando não é conhecido, o ADO fará várias tentativas de interpretar o **CommandText**.<br /><br /> -   **CommandText** é interpretado como uma definição textual de um comando ou uma chamada de procedimento armazenado. Esse é o mesmo comportamento que **adCmdText**.<br />-   **CommandText** é o nome de um procedimento armazenado. Esse é o mesmo comportamento que **adCmdStoredProc**.<br />-   **CommandText** é interpretado como o nome de uma tabela. Todas as colunas são retornadas por uma consulta SQL gerada internamente. Esse é o mesmo comportamento que **adCmdTable**.|  
-|**adCmdFile**|256|Avalia **CommandText** como o nome de arquivo de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)armazenado de forma persistente. Usado com o **conjunto de registros.** [Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) ou somente [consulta](../../../ado/reference/ado-api/requery-method.md) .|  
-|**adCmdTableDirect**|512|Avalia **CommandText** como um nome de tabela cujas colunas são todas retornadas. Usado com **Recordset. Open** ou **Requery** somente. Para usar o método [Seek](../../../ado/reference/ado-api/seek-method.md) , o **conjunto de registros** deve ser aberto com **adCmdTableDirect**.<br /><br /> Esse valor não pode ser combinado com o valor de [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) **adAsyncExecute**.|  
+|**adCmdFile**|256|Avalia **CommandText** como o nome de arquivo de um [conjunto de registros](./recordset-object-ado.md)armazenado de forma persistente. Usado com o **conjunto de registros.** [Abrir](./open-method-ado-recordset.md) ou somente [consulta](./requery-method.md) .|  
+|**adCmdTableDirect**|512|Avalia **CommandText** como um nome de tabela cujas colunas são todas retornadas. Usado com **Recordset. Open** ou **Requery** somente. Para usar o método [Seek](./seek-method.md) , o **conjunto de registros** deve ser aberto com **adCmdTableDirect**.<br /><br /> Esse valor não pode ser combinado com o valor de [ExecuteOptionEnum](./executeoptionenum.md) **adAsyncExecute**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com. ms. wfc. Data**  
@@ -55,14 +55,14 @@ Especifica como um argumento de comando deve ser interpretado.
 
 :::row:::
     :::column:::
-        [Propriedade CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
-        [Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Propriedade CommandType (ADO)](./commandtype-property-ado.md)  
+        [Método Execute (comando ADO)](./execute-method-ado-command.md)  
     :::column-end:::
     :::column:::
-        [Método Execute (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
-        [Método Open (Conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Método Execute (conexão ADO)](./execute-method-ado-connection.md)  
+        [Método Open (Conjunto de registros ADO)](./open-method-ado-recordset.md)  
     :::column-end:::
     :::column:::
-        [Método Requery](../../../ado/reference/ado-api/requery-method.md)  
+        [Método Requery](./requery-method.md)  
     :::column-end:::
 :::row-end:::

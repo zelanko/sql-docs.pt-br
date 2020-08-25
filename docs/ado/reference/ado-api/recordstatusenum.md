@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442379"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772125"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-Especifica o [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de um registro em relação às atualizações em lotes e outras operações em massa.  
+Especifica o [status](./status-property-ado-recordset.md) de um registro em relação às atualizações em lotes e outras operações em massa.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -74,4 +74,4 @@ Especifica o [status](../../../ado/reference/ado-api/status-property-ado-records
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Propriedade Status (Conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Propriedade Status (Conjunto de registros ADO)](./status-property-ado-recordset.md)

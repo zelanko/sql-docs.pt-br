@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6e5c4fd54b5784e76067231096752a68dd52a6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e75e5077ac82b1ae2095683cf87d2d969540dbdf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451338"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776555"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO – Índice de sintaxe WFC
 A referência da linguagem ADO usa a linguagem de programação do Microsoft Visual Basic para ilustrar a sintaxe do método e da Propriedade do ADO. Esse índice é uma referência cruzada para os tópicos de referência da linguagem ADO, com base no ADO para classes do Windows Foundation (ADO/WFC). Quando surgirem diferenças na sintaxe, use as assinaturas de função neste índice, em oposição às listagens de sintaxe no tópico de referência de linguagem.  
@@ -29,26 +29,26 @@ A referência da linguagem ADO usa a linguagem de programação do Microsoft Vis
   
 ## <a name="activex-data-objects"></a>ActiveX Data Objects  
   
--   [Coleções ADO](../../../ado/reference/ado-api/collections-ado-wfc-syntax.md)  
+-   [Coleções ADO](./collections-ado-wfc-syntax.md)  
   
--   [Objeto de comando](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
+-   [Objeto de comando](./command-ado-wfc-syntax.md)  
   
--   [Objeto de conexão](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
+-   [Objeto de conexão](./connection-ado-wfc-syntax.md)  
   
--   [Objeto Error](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
+-   [Objeto Error](./error-ado-wfc-syntax.md)  
   
--   [Objeto Field](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
+-   [Objeto Field](./field-ado-wfc-syntax.md)  
   
--   [Objeto de parâmetro](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
+-   [Objeto de parâmetro](./parameter-ado-wfc-syntax.md)  
   
--   [Objeto Recordset](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
+-   [Objeto Recordset](./recordset-ado-wfc-syntax.md)  
   
 ## <a name="remote-data-service"></a>Serviço de Dados Remotos  
   
--   [Espaço](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
+-   [Espaço](./dataspace-ado-wfc-syntax.md)  
   
--   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
+-   [ObjectProxy](./objectproxy-ado-wfc-syntax.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Manipulando eventos ADO](../../../ado/guide/data/handling-ado-events.md)   
- [Microsoft ADO (ActiveX Data Objects)](../../../ado/microsoft-activex-data-objects-ado.md)
+ [Manipulando eventos ADO](../../guide/data/handling-ado-events.md)   
+ [Microsoft ADO (ActiveX Data Objects)](../../microsoft-activex-data-objects-ado.md)

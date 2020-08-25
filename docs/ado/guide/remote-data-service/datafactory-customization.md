@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7ec3707df187e09de92fa42d7ed2b1c1b8e1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452218"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759800"
 ---
 # <a name="datafactory-customization"></a>Personalização do DataFactory
-O RDS (serviço de dados remotos) fornece uma maneira de executar facilmente o acesso a dados em um sistema cliente/servidor de três camadas. Um controle de dados do cliente especifica parâmetros de conexão e de cadeia de caracteres de comando para executar uma consulta em uma fonte de dados remota, ou parâmetros de objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e de cadeia de conexão para executar uma atualização.  
+O RDS (serviço de dados remotos) fornece uma maneira de executar facilmente o acesso a dados em um sistema cliente/servidor de três camadas. Um controle de dados do cliente especifica parâmetros de conexão e de cadeia de caracteres de comando para executar uma consulta em uma fonte de dados remota, ou parâmetros de objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) e de cadeia de conexão para executar uma atualização.  
   
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Os parâmetros são passados para um programa de servidor, que executa a operação de acesso a dados na fonte de dados remota. O RDS fornece um programa de servidor padrão chamado objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . O objeto **RDSServer. datafactory** retorna qualquer objeto **Recordset** produzido por uma consulta ao cliente.  
+ Os parâmetros são passados para um programa de servidor, que executa a operação de acesso a dados na fonte de dados remota. O RDS fornece um programa de servidor padrão chamado objeto [RDSServer. datafactory](../../reference/rds-api/datafactory-object-rdsserver.md) . O objeto **RDSServer. datafactory** retorna qualquer objeto **Recordset** produzido por uma consulta ao cliente.  
   
  No entanto, o **RDSServer. datafactory** é limitado à execução de consultas e atualizações. Ele não pode executar nenhuma validação ou processamento nas cadeias de caracteres de conexão ou de comando.  
   
@@ -36,18 +36,16 @@ O RDS (serviço de dados remotos) fornece uma maneira de executar facilmente o a
   
  Os tópicos a seguir fornecem mais informações sobre como personalizar o objeto **DataFactory** .  
   
--   [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
+-   [Noções básicas sobre o arquivo de personalização](./understanding-the-customization-file.md)  
   
--   [Seção Conexão do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)  
+-   [Seção Conexão do arquivo de personalização](./customization-file-connect-section.md)  
   
--   [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)  
+-   [Seção SQL do arquivo de personalização](./customization-file-sql-section.md)  
   
--   [Seção UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)  
+-   [Seção UserList do arquivo de personalização](./customization-file-userlist-section.md)  
   
--   [Seção Logs do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)  
+-   [Seção Logs do arquivo de personalização](./customization-file-logs-section.md)  
   
--   [Configurações necessárias de cliente](../../../ado/guide/remote-data-service/required-client-settings.md)  
+-   [Configurações necessárias de cliente](./required-client-settings.md)  
   
--   [Escrever seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+-   [Escrever seu próprio manipulador personalizado](./writing-your-own-customized-handler.md)

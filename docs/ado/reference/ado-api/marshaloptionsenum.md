@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6243621ad7127e475f89052dc0d860fba6bad510
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9569d73bd7ec403fa50a400f84a5189a3eb10cdb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443287"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774435"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Especifica quais registros devem ser retornados ao servidor.  
@@ -40,4 +40,4 @@ Especifica quais registros devem ser retornados ao servidor.
 |AdoEnums. Marshaloptions. MODIFIEDONLY|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Propriedade MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [Propriedade MarshalOptions (ADO)](./marshaloptions-property-ado.md)

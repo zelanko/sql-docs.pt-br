@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a70c445858b24dfe8cffc44c2dea70e9d007ab9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 004a875656b9dc772985f965ec8c2c2910b127ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443488"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774875"
 ---
 # <a name="getstring-method-example-vc"></a>Exemplo do método GetString (VC++)
-Este exemplo demonstra o método [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
+Este exemplo demonstra o método [GetString](./getstring-method-ado.md) .  
   
- Suponha que você esteja Depurando um problema de acesso a dados e queira uma maneira rápida e simples de imprimir o conteúdo atual de um pequeno [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Suponha que você esteja Depurando um problema de acesso a dados e queira uma maneira rápida e simples de imprimir o conteúdo atual de um pequeno [conjunto de registros](./recordset-object-ado.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -185,5 +185,5 @@ Sylvia   Panteley   1956 Arlington Pl.   Rockville
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Método GetString (ADO)](./getstring-method-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

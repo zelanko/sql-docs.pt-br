@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cc23406c3c9ad7c2455d0efc7f11aeee107bb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9579e5314bb298eed65145548d848e31bf47c1b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451178"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776425"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Exemplo dos métodos BeginTrans, CommitTrans e RollbackTrans (VB)
-Este exemplo altera o tipo de livro de todos os livros de psicologia na tabela ***títulos*** do banco de dados. Depois que o método [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) inicia uma transação que isola todas as alterações feitas na tabela de ***títulos*** , o método [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) salva as alterações. Você pode usar o método [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) para desfazer alterações que você salvou usando o método [Update](../../../ado/reference/ado-api/update-method.md) .  
+Este exemplo altera o tipo de livro de todos os livros de psicologia na tabela ***títulos*** do banco de dados. Depois que o método [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) inicia uma transação que isola todas as alterações feitas na tabela de ***títulos*** , o método [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) salva as alterações. Você pode usar o método [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) para desfazer alterações que você salvou usando o método [Update](./update-method.md) .  
   
 ```  
 'BeginBeginTransVB  
@@ -133,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos BeginTrans, CommitTrans e RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Métodos BeginTrans, CommitTrans e RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Objeto Connection (ADO)](./connection-object-ado.md)

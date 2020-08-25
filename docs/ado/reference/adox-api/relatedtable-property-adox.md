@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe412b89b4aee37252db62e9a58b3a11c9d2b88e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac92921f32197eb07372e9e63147869bdca202af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439558"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769485"
 ---
 # <a name="relatedtable-property-adox"></a>Propriedade RelatedTable (ADOX)
 Indica o nome da tabela relacionada.  
@@ -39,7 +39,7 @@ Indica o nome da tabela relacionada.
  Se a chave for uma chave estrangeira, **RELATEDTABLE** será o nome da tabela que contém a chave.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Objeto Key (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

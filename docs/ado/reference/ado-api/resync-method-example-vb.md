@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb942aac538e73697435d94c77530ed1531a7325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7bbad7f16191b6ff9d1c3b5c497995733ab10b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442288"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777665"
 ---
 # <a name="resync-method-example-vb"></a>Exemplo do método Resync (VB)
-Este exemplo demonstra como usar o método [Ressync](../../../ado/reference/ado-api/resync-method.md) para atualizar dados em um conjunto de registros estático.  
+Este exemplo demonstra como usar o método [Ressync](./resync-method.md) para atualizar dados em um conjunto de registros estático.  
   
 ```  
 'BeginResyncVB  
@@ -105,5 +105,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Método Resync](../../../ado/reference/ado-api/resync-method.md)
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Método Resync](./resync-method.md)

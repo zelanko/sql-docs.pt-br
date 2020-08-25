@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443138"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774175"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-Especifica o comportamento do método [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) do objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
+Especifica o comportamento do método [MoveRecord](./moverecord-method-ado.md) do objeto de [registro](./record-object-ado.md) .  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -37,4 +37,4 @@ Especifica o comportamento do método [MoveRecord](../../../ado/reference/ado-ap
  Essas constantes não têm equivalentes ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [Método MoveRecord (ADO)](./moverecord-method-ado.md)

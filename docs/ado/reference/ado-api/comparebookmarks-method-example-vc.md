@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca1a9f62d293e3be0c7c27ce8dec8bc58e7d5c43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 921fccf29a823be169f16a0144aa0cdb0cabe232
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450768"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776045"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Exemplo do método CompareBookmarks (VC++)
-Este exemplo demonstra o método [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . O valor relativo dos indicadores raramente é necessário, a menos que um indicador específico seja de alguma forma especial.  
+Este exemplo demonstra o método [CompareBookmarks](./comparebookmarks-method-ado.md) . O valor relativo dos indicadores raramente é necessário, a menos que um indicador específico seja de alguma forma especial.  
   
- Designe uma linha aleatória de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) derivado da tabela ***autores*** como o destino de uma pesquisa. Em seguida, exiba a posição de cada linha relativa a esse destino.  
+ Designe uma linha aleatória de um [conjunto de registros](./recordset-object-ado.md) derivado da tabela ***autores*** como o destino de uma pesquisa. Em seguida, exiba a posição de cada linha relativa a esse destino.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -171,5 +171,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Método CompareBookmarks (ADO)](./comparebookmarks-method-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

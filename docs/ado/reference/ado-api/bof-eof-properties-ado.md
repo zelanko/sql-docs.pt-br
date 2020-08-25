@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451119"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776395"
 ---
 # <a name="bof-eof-properties-ado"></a>Propriedades BOF, EOF (ADO)
--   **BOF** Indica que a posição atual do registro é anterior ao primeiro registro em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+-   **BOF** Indica que a posição atual do registro é anterior ao primeiro registro em um objeto [Recordset](./recordset-object-ado.md) .  
   
 -   **EOF** Indica que a posição atual do registro é posterior ao último registro em um objeto **Recordset** .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88451119"
   
  Se a propriedade **BOF** ou **EOF** for **true**, não haverá registro atual.  
   
- Se você abrir um objeto **Recordset** que não contém nenhum registro, as propriedades **BOF** e **EOF** serão definidas como **true** (consulte a propriedade [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para obter mais informações sobre esse estado de um **conjunto de registros**). Quando você abre um objeto **Recordset** que contém pelo menos um registro, o primeiro registro é o registro atual e as propriedades **BOF** e **EOF** são **false**.  
+ Se você abrir um objeto **Recordset** que não contém nenhum registro, as propriedades **BOF** e **EOF** serão definidas como **true** (consulte a propriedade [RecordCount](./recordcount-property-ado.md) para obter mais informações sobre esse estado de um **conjunto de registros**). Quando você abre um objeto **Recordset** que contém pelo menos um registro, o primeiro registro é o registro atual e as propriedades **BOF** e **EOF** são **false**.  
   
  Se você excluir o último registro restante no objeto **Recordset** , as propriedades **BOF** e **EOF** poderão permanecer **falsas** até que você tente reposicionar o registro atual.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "88451119"
 |**MoveNext**, **mover** > 0|Nenhuma alteração|Definir como **true**|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades BOF, EOF e Bookmark (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [Exemplo das propriedades BOF, EOF e Bookmark (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [Exemplo das propriedades BOF, EOF e Bookmark (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [Exemplo das propriedades BOF, EOF e Bookmark (VC + +)](./bof-eof-and-bookmark-properties-example-vc.md)

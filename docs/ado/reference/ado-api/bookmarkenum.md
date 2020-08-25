@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47a35f2f0c756d1dfde36a42900d83e1e9677b43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0de6b1bfef3f7c036fda8102757e63b8d7049189
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451118"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776365"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 Especifica um indicador que indica onde a operação deve começar.  
@@ -45,9 +45,9 @@ Especifica um indicador que indica onde a operação deve começar.
 
 :::row:::
     :::column:::
-        [Método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)  
+        [Método GetRows (ADO)](./getrows-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)  
+        [Método Move (ADO)](./move-method-ado.md)  
     :::column-end:::
 :::row-end:::

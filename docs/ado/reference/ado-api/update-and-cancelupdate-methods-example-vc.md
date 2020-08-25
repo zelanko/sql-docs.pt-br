@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25347b53dbb1b489ce66deb045fec780172ad360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60f63706057acffa4e00954c6ff92d77503ec14f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441648"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777015"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Exemplo dos métodos Update e CancelUpdate (VC++)
-Este exemplo demonstra o método [Update](../../../ado/reference/ado-api/update-method.md) em conjunto com o método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
+Este exemplo demonstra o método [Update](./update-method.md) em conjunto com o método [CancelUpdate](./cancelupdate-method-ado.md) .  
   
 ```  
 // Update_CancelUpdate_Methods_Sample.cpp  
@@ -311,5 +311,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Método Update](../../../ado/reference/ado-api/update-method.md)
+ [Método CancelUpdate (ADO)](./cancelupdate-method-ado.md)   
+ [Método Update](./update-method.md)

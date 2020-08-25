@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 562b10fa67b04926e512833248c99ecb7b55a1fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 56148afcd3c7d3e18e856c6e50a44f35aaa1bc64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443598"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775125"
 ---
 # <a name="get_oledbcommand-method"></a>Método get_OLEDBCommand
 Retorna o comando OLE DB subjacente, primeiro propagando todas as informações de parâmetro definidas no comando ADO para o comando OLE DB.  
@@ -37,4 +37,4 @@ HRESULT get_OLEDBCommand(
  fora Um ponteiro para um local de ponteiro em que o ponteiro IUnknown do comando OLE DB subjacente será gravado.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [IADOCommandConstruction](https://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)
+ [IADOCommandConstruction](/previous-versions/windows/desktop/aa965677(v=vs.85))

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f07bd7bc6b04dac8c5b352cc6281ce4eb851d3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0da662437c19f9c5105b7602035c5bcc519ea2d0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443348"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774585"
 ---
 # <a name="loadfromfile-method-ado"></a>Método LoadFromFile (ADO)
-Carrega o conteúdo de um arquivo existente em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md).  
+Carrega o conteúdo de um arquivo existente em um [fluxo](./stream-object-ado.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,11 +42,11 @@ Stream.LoadFromFileFileName
   
  O objeto de **fluxo** já deve estar aberto antes de chamar **loaddofile**. Esse método não altera a associação do objeto de **fluxo** ; Ele ainda será associado ao objeto especificado pela URL ou pelo **registro** com o qual o **fluxo** foi aberto originalmente.  
   
- **Loaddofile** substitui o conteúdo atual do objeto de **fluxo** por dados lidos do arquivo. Todos os bytes existentes no **fluxo** são substituídos pelo conteúdo do arquivo. Todos os bytes anteriores e restantes existentes após o [EOS](../../../ado/reference/ado-api/eos-property.md) criado por **LoadFromFile**serão truncados.  
+ **Loaddofile** substitui o conteúdo atual do objeto de **fluxo** por dados lidos do arquivo. Todos os bytes existentes no **fluxo** são substituídos pelo conteúdo do arquivo. Todos os bytes anteriores e restantes existentes após o [EOS](./eos-property.md) criado por **LoadFromFile**serão truncados.  
   
- Após uma chamada para **LoadFromFile**, a posição atual é definida como o início do **fluxo** (a[posição](../../../ado/reference/ado-api/position-property-ado.md) é 0).  
+ Após uma chamada para **LoadFromFile**, a posição atual é definida como o início do **fluxo** (a[posição](./position-property-ado.md) é 0).  
   
  Como 2 bytes podem ser adicionados ao início do fluxo para codificação, o tamanho do fluxo pode não corresponder exatamente ao tamanho do arquivo do qual ele foi carregado.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Objeto Stream (ADO)](./stream-object-ado.md)

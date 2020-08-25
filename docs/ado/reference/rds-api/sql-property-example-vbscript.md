@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd2d1079e8718d7c863bb3d23c6ce96b28464cf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b9c17b11fce3d99f49b682d035214c95e7d3e91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438608"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767445"
 ---
 # <a name="sql-property-example-vbscript"></a>Exemplo da propriedade SQL (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O código a seguir mostra como definir o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Parâmetro SQL do DataControl no momento do design e associe-o a um controle com reconhecimento de dados usando o banco de dado chamado *pubs*, que é fornecido com Microsoft SQL Server. Para testar o exemplo, copie o código a seguir em um documento ASP normal chamado **SQLDesignVBS. asp** no servidor Web.  
+ O código a seguir mostra como definir o [RDS. ](./datacontrol-object-rds.md) Parâmetro SQL do DataControl no momento do design e associe-o a um controle com reconhecimento de dados usando o banco de dado chamado *pubs*, que é fornecido com Microsoft SQL Server. Para testar o exemplo, copie o código a seguir em um documento ASP normal chamado **SQLDesignVBS. asp** no servidor Web.  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -176,8 +176,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Propriedade SQL](../../../ado/reference/rds-api/sql-property.md)
-
-
-
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Propriedade SQL](./sql-property.md)

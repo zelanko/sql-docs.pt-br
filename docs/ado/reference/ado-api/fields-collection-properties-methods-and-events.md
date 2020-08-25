@@ -13,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0e77444c95e90344ba1fc3786b8b5307c86b22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ca0d0c4a655c4f3b188788b0f0d7b2f54a7e710
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443718"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775335"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Fields
 ## <a name="properties"></a>Propriedades  
- [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propriedade Count](./count-property-ado.md)  
   
- [Propriedade do item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade do item](./item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Método Append](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Método Append](./append-method-ado.md)  
   
- [Método CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [Método CancelUpdate](./cancelupdate-method-ado.md)  
   
- [Método Delete (Coleção de campos ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
+ [Método Delete (Coleção de campos ADO)](./delete-method-ado-fields-collection.md)  
   
- [Método de atualização](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Método de atualização](./refresh-method-ado.md)  
   
- [Método Resync](../../../ado/reference/ado-api/resync-method.md)  
+ [Método Resync](./resync-method.md)  
   
- [Método Update](../../../ado/reference/ado-api/update-method.md)  
+ [Método Update](./update-method.md)  
   
 ## <a name="events"></a>Eventos  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)
+ [Coleção Fields (ADO)](./fields-collection-ado.md)

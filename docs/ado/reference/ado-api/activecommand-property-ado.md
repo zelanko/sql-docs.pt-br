@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38c0a0955e934b4f303937d978f739e00ac6c120
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e8c969c8e611c8e2bff76dc045a28a9c6d6ab96
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451738"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759936"
 ---
 # <a name="activecommand-property-ado"></a>Propriedade ActiveCommand (ADO)
-Indica o objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) que criou o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) associado.  
+Indica o objeto de [comando](./command-object-ado.md) que criou o objeto [Recordset](./recordset-object-ado.md) associado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Retorna uma **variante** que contém um objeto de **comando** . O padrão é uma referência de objeto nulo.  
@@ -37,10 +37,10 @@ Indica o objeto de [comando](../../../ado/reference/ado-api/command-object-ado.m
  Use essa propriedade para localizar o objeto de **comando** associado quando você receber apenas o objeto **Recordset** resultante.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade ActiveCommand (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
- [Exemplo da propriedade ActiveCommand (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [Exemplo da propriedade ActiveCommand (VC + +)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Exemplo da propriedade ActiveCommand (VB)](./activecommand-property-example-vb.md)   
+ [Exemplo da propriedade ActiveCommand (JScript)](./activecommand-property-example-jscript.md)   
+ [Exemplo da propriedade ActiveCommand (VC + +)](./activecommand-property-example-vc.md)   
+ [Objeto Command (ADO)](./command-object-ado.md)

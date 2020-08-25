@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68a63c48615dabb7bc33e71818e4e03eee214b4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65629afe45d9906a423582cd904ade17726bf504
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451498"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760136"
 ---
 # <a name="ado-code-examples-vbscript"></a>Exemplos do código ADO VBScript
 Use os exemplos de código a seguir para saber mais sobre como usar os métodos do ADO ao escrever no Microsoft® Visual Basic® Scripting Edition (VBScript).  
@@ -31,21 +31,21 @@ Use os exemplos de código a seguir para saber mais sobre como usar os métodos 
   
 ## <a name="methods"></a>Métodos  
   
--   [Exemplo do método AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)  
+-   [Exemplo do método AddNew](./addnew-method-example-vbscript.md)  
   
--   [Exemplo do método clone](../../../ado/reference/ado-api/clone-method-example-vbscript.md)  
+-   [Exemplo do método clone](./clone-method-example-vbscript.md)  
   
--   [Exemplo do método Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md)  
+-   [Exemplo do método Delete](./delete-method-example-vbscript.md)  
   
--   [Exemplo dos métodos Execute, Requery e Clear](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)  
+-   [Exemplo dos métodos Execute, Requery e Clear](./execute-requery-and-clear-methods-example-vbscript.md)  
   
--   [Exemplo do método move](../../../ado/reference/ado-api/move-method-example-vbscript.md)  
+-   [Exemplo do método move](./move-method-example-vbscript.md)  
   
--   [Exemplo dos métodos MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
+-   [Exemplo dos métodos MoveFirst, MoveLast, MoveNext e MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
   
--   [Exemplo dos métodos Open e close](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)  
+-   [Exemplo dos métodos Open e close](./open-and-close-methods-example-vbscript.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplos de código ADO no Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Exemplos de código ADO no Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Apêndice D: Exemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Exemplos de código ADO no Visual Basic](./ado-code-examples-in-visual-basic.md)   
+ [Exemplos de código ADO no Visual C++](./ado-code-examples-in-visual-c.md)   
+ [Apêndice D: Exemplos de ADO](../../guide/appendixes/appendix-d-ado-samples.md)

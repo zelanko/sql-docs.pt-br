@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6fc0eca4668aeaff00b8add8532ce633517eb64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9648445435cc1f26a28c43110584fb6280739f64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439168"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768625"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>Exemplo do método CreateRecordset (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este exemplo de código cria um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) no lado do servidor. Ele tem duas colunas com quatro linhas cada. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **CreateRecordsetVBS. asp**.  
+ Este exemplo de código cria um [conjunto de registros](../ado-api/recordset-object-ado.md) no lado do servidor. Ele tem duas colunas com quatro linhas cada. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **CreateRecordsetVBS. asp**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -169,7 +169,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método createrecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
+ [Método createrecordset (RDS)](./createrecordset-method-rds.md)   
+ [Objeto Recordset (ADO)](../ado-api/recordset-object-ado.md)

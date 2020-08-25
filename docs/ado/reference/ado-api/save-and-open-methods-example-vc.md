@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442198"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777585"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Exemplo dos métodos Save e Open (VC + +)
-Esses três exemplos demonstram como os métodos [Save](../../../ado/reference/ado-api/save-method.md) e **Open** podem ser usados juntos.  
+Esses três exemplos demonstram como os métodos [Save](./save-method.md) e **Open** podem ser usados juntos.  
   
- Suponha que você está passando por uma viagem de negócios e deseja pegar uma tabela de um banco de dados. Antes de começar, você acessa os dados como um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e salva-os em um formulário transportável. Ao chegar ao seu destino, você acessa o **conjunto** de registros como um conjunto de **registros**local e desconectado. Faça alterações no conjunto de **registros**e salve-o novamente. Por fim, ao retornar Home, você se conecta ao banco de dados novamente e o atualiza com as alterações feitas em trânsito.  
+ Suponha que você está passando por uma viagem de negócios e deseja pegar uma tabela de um banco de dados. Antes de começar, você acessa os dados como um [conjunto de registros](./recordset-object-ado.md) e salva-os em um formulário transportável. Ao chegar ao seu destino, você acessa o **conjunto** de registros como um conjunto de **registros**local e desconectado. Faça alterações no conjunto de **registros**e salve-o novamente. Por fim, ao retornar Home, você se conecta ao banco de dados novamente e o atualiza com as alterações feitas em trânsito.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -262,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Método Save](../../../ado/reference/ado-api/save-method.md)
+ [Método Open (conjunto de registros ADO)](./open-method-ado-recordset.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)   
+ [Método Save](./save-method.md)
