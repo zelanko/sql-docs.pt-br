@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453178"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805841"
 ---
 # <a name="more-about-recordset-persistence"></a>Mais informações sobre a persistência do conjunto de registros
-O objeto Recordset ADO dá suporte ao armazenamento do conteúdo de um objeto **Recordset** em um arquivo usando seu método [Save](../../../ado/reference/ado-api/save-method.md) . O arquivo armazenado persistente pode existir em uma unidade local, servidor ou como uma URL em um site da Web. Posteriormente, o arquivo pode ser restaurado com o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) do objeto **Recordset** ou o método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) do objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
+O objeto Recordset ADO dá suporte ao armazenamento do conteúdo de um objeto **Recordset** em um arquivo usando seu método [Save](../../reference/ado-api/save-method.md) . O arquivo armazenado persistente pode existir em uma unidade local, servidor ou como uma URL em um site da Web. Posteriormente, o arquivo pode ser restaurado com o método [Open](../../reference/ado-api/open-method-ado-recordset.md) do objeto **Recordset** ou o método [Execute](../../reference/ado-api/execute-method-ado-connection.md) do objeto [Connection](../../reference/ado-api/connection-object-ado.md) .  
   
- Além disso, o método [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) converte um objeto **Recordset** em um formulário no qual as colunas e linhas são delimitadas por caracteres especificados.  
+ Além disso, o método [GetString](../../reference/ado-api/getstring-method-ado.md) converte um objeto **Recordset** em um formulário no qual as colunas e linhas são delimitadas por caracteres especificados.  
   
- Para persistir um **conjunto de registros**, comece convertendo-o em um formulário que possa ser armazenado em um arquivo. Os objetos **Recordset** podem ser armazenados no formato TableGram de dados avançados (ADTG) proprietário ou no formato Open linguagem XML (XML). Os exemplos de ADTG são mostrados na próxima seção. Para obter mais informações sobre persistência XML, consulte [Persisteting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Para persistir um **conjunto de registros**, comece convertendo-o em um formulário que possa ser armazenado em um arquivo. Os objetos **Recordset** podem ser armazenados no formato TableGram de dados avançados (ADTG) proprietário ou no formato Open linguagem XML (XML). Os exemplos de ADTG são mostrados na próxima seção. Para obter mais informações sobre persistência XML, consulte [Persisteting Records in XML Format](./persisting-records-in-xml-format.md).  
   
  Salve as alterações pendentes no arquivo persistente. Isso permite que você emita uma consulta que retorne um objeto **Recordset** , edite o **conjunto de registros**, salve-o e as alterações pendentes, posteriormente, restaura o **conjunto de registros**e, em seguida, atualiza a fonte de dados com as alterações pendentes salvas.  
   
- Para obter informações sobre como armazenar objetos de **fluxo** de forma persistente, consulte [fluxos e persistência](../../../ado/guide/data/streams-and-persistence.md).  
+ Para obter informações sobre como armazenar objetos de **fluxo** de forma persistente, consulte [fluxos e persistência](./streams-and-persistence.md).  
   
  Para obter um exemplo de persistência do **conjunto de registros** , consulte o cenário de persistência do conjunto de registros XML.  
   
@@ -79,7 +79,7 @@ dc.Refresh
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Provedor de persistência do Microsoft OLE DB (provedor de serviços ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Fluxos e persistência](../../../ado/guide/data/streams-and-persistence.md)
+ [Método GetString (ADO)](../../reference/ado-api/getstring-method-ado.md)   
+ [Provedor de persistência do Microsoft OLE DB (provedor de serviços ADO)](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Objeto Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Fluxos e persistência](./streams-and-persistence.md)

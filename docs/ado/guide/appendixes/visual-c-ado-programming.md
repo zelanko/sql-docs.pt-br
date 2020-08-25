@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453948"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806768"
 ---
 # <a name="visual-c-ado-programming"></a>Programação ADO do Visual C++
 A referência da API do ADO descreve a funcionalidade da API (interface de programação de aplicativo) do ADO usando uma sintaxe semelhante à do Microsoft Visual Basic. Embora o público-alvo seja todos os usuários, os programadores do ADO empregam diversas linguagens, como Visual Basic, Visual C++ (com e sem a diretiva de **#import** ) e Visual J++ (com o pacote de classe ADO/WFC).  
@@ -29,7 +29,7 @@ A referência da API do ADO descreve a funcionalidade da API (interface de progr
 > [!NOTE]
 > A Microsoft terminou o suporte para Visual J++ em 2004.
 
- Para acomodar essa diversidade, o [ADO para Visual C++ índices de sintaxe](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) fornece Visual C++ sintaxe específica à linguagem com links para descrições comuns de funcionalidade, parâmetros, comportamentos excepcionais e assim por diante, na referência da API.  
+ Para acomodar essa diversidade, o [ADO para Visual C++ índices de sintaxe](./using-ado-with-microsoft-visual-c.md) fornece Visual C++ sintaxe específica à linguagem com links para descrições comuns de funcionalidade, parâmetros, comportamentos excepcionais e assim por diante, na referência da API.  
   
  O ADO é implementado com as interfaces COM (Component Object Model). No entanto, é mais fácil para os programadores trabalharem com com em determinadas linguagens de programação do que outros. Por exemplo, quase todos os detalhes do uso de COM são tratados implicitamente para programadores de Visual Basic, enquanto Visual C++ programadores devem participar desses detalhes.  
   
@@ -205,7 +205,7 @@ pRecordset->NextRecordset(NULL);
   
  Lembre-se de que são erros do ADO: eles resultam da falha da operação do ADO. Os erros retornados pelo provedor subjacente aparecem como objetos de **erro** na coleção de **erros** do objeto de **conexão** .  
   
- A diretiva **#import** cria apenas rotinas de tratamento de erros para métodos e propriedades declarados no ADO. dll. No entanto, você pode aproveitar esse mesmo mecanismo de tratamento de erros escrevendo sua própria macro de verificação de erro ou função embutida. Consulte o tópico, [Visual C++ Extensions](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)ou o código nas seções a seguir para obter exemplos.  
+ A diretiva **#import** cria apenas rotinas de tratamento de erros para métodos e propriedades declarados no ADO. dll. No entanto, você pode aproveitar esse mesmo mecanismo de tratamento de erros escrevendo sua própria macro de verificação de erro ou função embutida. Consulte o tópico, [Visual C++ Extensions](./visual-c-extensions-for-ado.md)ou o código nas seções a seguir para obter exemplos.  
   
 ## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual C++ equivalentes de convenções de Visual Basic  
  Veja a seguir um resumo de várias convenções na documentação do ADO, codificados em Visual Basic, bem como seus equivalentes no Visual C++.  

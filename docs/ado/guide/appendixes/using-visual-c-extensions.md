@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ca7d66c7748658c5ba720b8664d824551da47bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa5ed351f150aa913a9a454f42bd11c9fcb7ac00
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453978"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806470"
 ---
 # <a name="visual-c-extensions"></a>Extensões de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A interface IADORecordBinding
- As extensões de Microsoft Visual C++ para ADO associado ou associam campos de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a variáveis C/C++. Sempre que a linha atual do **conjunto de registros** associado for alterada, todos os campos associados no **conjunto de registros** serão copiados para as variáveis C/C++. Se necessário, os dados copiados são convertidos no tipo de dados declarado da variável C/C++.
+ As extensões de Microsoft Visual C++ para ADO associado ou associam campos de um objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) a variáveis C/C++. Sempre que a linha atual do **conjunto de registros** associado for alterada, todos os campos associados no **conjunto de registros** serão copiados para as variáveis C/C++. Se necessário, os dados copiados são convertidos no tipo de dados declarado da variável C/C++.
 
  O método **BindToRecordset** da interface **IADORecordBinding** associa campos a variáveis C/C++. O método **AddNew** adiciona uma nova linha ao conjunto de **registros**associado. O método **Update** popula campos em novas linhas do conjunto de **registros**ou atualiza campos em linhas existentes, com o valor das variáveis C/C++.
 
  A interface **IADORecordBinding** é implementada pelo objeto **Recordset** . Você não codifica a implementação por conta própria.
 
 ## <a name="binding-entries"></a>Entradas de associação
- As extensões de Visual C++ para campos de mapa ADO de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para as variáveis C/C++. A definição de um mapeamento entre um campo e uma variável é chamada de *entrada de associação*. As macros fornecem entradas de associação para dados numéricos, de comprimento fixo e de comprimento variável. As entradas de associação e as variáveis C/C++ são declaradas em uma classe derivada da classe de extensões de Visual C++, **CADORecordBinding**. A classe **CADORecordBinding** é definida internamente pelas macros de entrada de associação.
+ As extensões de Visual C++ para campos de mapa ADO de um objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) para as variáveis C/C++. A definição de um mapeamento entre um campo e uma variável é chamada de *entrada de associação*. As macros fornecem entradas de associação para dados numéricos, de comprimento fixo e de comprimento variável. As entradas de associação e as variáveis C/C++ são declaradas em uma classe derivada da classe de extensões de Visual C++, **CADORecordBinding**. A classe **CADORecordBinding** é definida internamente pelas macros de entrada de associação.
 
- O ADO mapeia internamente os parâmetros dessas macros para uma estrutura OLE DB **DBBINDING** e cria um objeto **acessador** de OLE DB para gerenciar a movimentação e a conversão de dados entre campos e variáveis. OLE DB define os dados como consistentes em três partes: um *buffer* onde os dados são armazenados; um *status* que indica se um campo foi armazenado com êxito no buffer ou como a variável deve ser restaurada para o campo; e o *comprimento* dos dados. (Consulte [obter e definir dados (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)na referência do programador de OLE DB, para obter mais informações.)
+ O ADO mapeia internamente os parâmetros dessas macros para uma estrutura OLE DB **DBBINDING** e cria um objeto **acessador** de OLE DB para gerenciar a movimentação e a conversão de dados entre campos e variáveis. OLE DB define os dados como consistentes em três partes: um *buffer* onde os dados são armazenados; um *status* que indica se um campo foi armazenado com êxito no buffer ou como a variável deve ser restaurada para o campo; e o *comprimento* dos dados. (Consulte [obter e definir dados (OLE DB)](/previous-versions/windows/desktop/ms713700(v=vs.85))na referência do programador de OLE DB, para obter mais informações.)
 
 ## <a name="header-file"></a>Arquivos de cabeçalho
  Inclua o seguinte arquivo em seu aplicativo para usar as extensões de Visual C++ para ADO:
@@ -55,25 +55,25 @@ ms.locfileid: "88453978"
 
 3.  Em seu aplicativo, crie uma instância da classe derivada de **CADORecordBinding**. Obtenha a interface **IADORecordBinding** do **conjunto de registros**. Em seguida, chame o método **BindToRecordset** para associar os campos do **conjunto de registros** às variáveis C/C++.
 
- Para obter mais informações, consulte o [exemplo de extensões de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md).
+ Para obter mais informações, consulte o [exemplo de extensões de Visual C++](./visual-c-extensions-example.md).
 
 ## <a name="interface-methods"></a>Métodos de interface
  A interface **IADORecordBinding** tem três métodos: **BindToRecordset**, **AddNew**e **Update**. O único argumento para cada método é um ponteiro para uma instância da classe derivada de **CADORecordBinding**. Portanto, os métodos **AddNew** e **Update** não podem especificar nenhum dos parâmetros de seu método ADO namesakes.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
  O método **BindToRecordset** associa os campos do **conjunto de registros** às variáveis C/C++.
 
 ```cpp
 BindToRecordset(CADORecordBinding *binding)
 ```
 
- O método **AddNew** invoca seu nome, o método ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) , para adicionar uma nova linha ao conjunto de **registros**.
+ O método **AddNew** invoca seu nome, o método ADO [AddNew](../../reference/ado-api/addnew-method-ado.md) , para adicionar uma nova linha ao conjunto de **registros**.
 
 ```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
- O método **Update** invoca seu nome, o método [Update](../../../ado/reference/ado-api/update-method.md) do ADO, para atualizar o **conjunto de registros**.
+ O método **Update** invoca seu nome, o método [Update](../../reference/ado-api/update-method.md) do ADO, para atualizar o **conjunto de registros**.
 
 ```cpp
 Update(CADORecordBinding *binding)
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  Famílias de macros são fornecidas para dados de comprimento fixo, como **adDate** ou **adBoolean**; dados numéricos, como **adTinyInt**, **adInteger**ou **adDouble**; e dados de comprimento variável, como **adChar**, **adVarChar** ou **adVarBinary**. Todos os tipos numéricos, exceto para **adVarNumeric**, também são tipos de comprimento fixo. Cada família tem conjuntos de parâmetros diferentes para que você possa excluir informações de associação sem interesse.
 
- Para obter mais informações, consulte o [Apêndice a: tipos de dados](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), da referência do programador de OLE DB.
+ Para obter mais informações, consulte o [Apêndice a: tipos de dados](/previous-versions/windows/desktop/ms723969(v=vs.85)), da referência do programador de OLE DB.
 
 ### <a name="begin-binding-entries"></a>Iniciar entradas de associação
  **BEGIN_ADO_BINDING**(*Class*)
@@ -115,7 +115,7 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*Classe*|Classe na qual as entradas de associação e as variáveis C/C++ são definidas.|
 |*Numera*|Número ordinal, contando de um, do campo **conjunto de registros** correspondente à sua variável C/C++.|
-|*DataType*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor do campo **conjunto de registros** será convertido nesse tipo de dados, se necessário.|
+|*DataType*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor do campo **conjunto de registros** será convertido nesse tipo de dados, se necessário.|
 |*Buffer*|Nome da variável C/C++ em que o campo do **conjunto de registros** será armazenado.|
 |*Tamanho*|Tamanho máximo em bytes de *buffer*. Se o *buffer* contiver uma cadeia de caracteres de comprimento variável, deixe espaço para um zero de terminação.|
 |*Status*|Nome de uma variável que indicará se o conteúdo do *buffer* é válido e se a conversão do campo em *DataType* foi bem-sucedida.<br /><br /> Os dois valores mais importantes para essa variável são **adFldOK**, o que significa que a conversão foi bem-sucedida; e **adFldNull**, o que significa que o valor do campo seria uma variante do tipo VT_NULL e não apenas vazio.<br /><br /> Os valores possíveis para *status* são listados na tabela a seguir, "valores de status".|
@@ -147,4 +147,4 @@ Update(CADORecordBinding *binding)
 |**adFldDefault**|13|Ao atualizar, um valor padrão foi usado.|
 
 ## <a name="see-also"></a>Consulte Também
- [Exemplo de extensões de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ cabeçalho de extensões](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Exemplo de extensões de Visual C++](./visual-c-extensions-example.md) [Visual C++ cabeçalho de extensões](./visual-c-extensions-header.md)

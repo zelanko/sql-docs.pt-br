@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453828"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806446"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciação de evento ADO: ADO e WFC
 O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento ADO e apresenta uma interface de programação de aplicativo simplificada. Em geral, o ADO/WFC intercepta eventos ADO, consolida os parâmetros de evento em uma única classe de evento e, em seguida, chama o manipulador de eventos.  
@@ -53,7 +53,7 @@ O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento AD
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     O primeiro argumento é o tipo de objeto que enviou o evento ([conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)) e o segundo argumento é o objeto de evento ADO/wfc (**ConnectionEvent** ou **RecordsetEvent**).  
+     O primeiro argumento é o tipo de objeto que enviou o evento ([conexão](../../reference/ado-api/connection-object-ado.md) ou [conjunto de registros](../../reference/ado-api/recordset-object-ado.md)) e o segundo argumento é o objeto de evento ADO/wfc (**ConnectionEvent** ou **RecordsetEvent**).  
   
      A assinatura do manipulador de eventos é mais simples do que um evento ADO. No entanto, você ainda deve entender o modelo de evento ADO para saber quais parâmetros se aplicam a um evento e como responder.  
   
@@ -62,8 +62,8 @@ O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento AD
 7.  Quando você terminar de processar, remova seu manipulador da lista de manipuladores de eventos ADO/WFC. Use o método com um nome como **remover**_EventName_(*manipulador*).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Índice de sintaxe ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Parâmetros do evento](../../../ado/guide/data/event-parameters.md)   
- [Como os manipuladores de eventos funcionam juntos](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
+ [Resumo do manipulador de eventos do ADO](./ado-event-handler-summary.md)   
+ [Índice de sintaxe ADO-WFC](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [Parâmetros do evento](./event-parameters.md)   
+ [Como os manipuladores de eventos funcionam juntos](./how-event-handlers-work-together.md)   
+ [Tipos de eventos](./types-of-events.md)

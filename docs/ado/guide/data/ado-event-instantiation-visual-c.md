@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453778"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806437"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Instanciação de evento ADO: Visual C++
-Esta é uma descrição esquemático de como instanciar eventos ADO no Microsoft® Visual C++®. Consulte [exemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) para obter uma descrição completa.  
+Esta é uma descrição esquemático de como instanciar eventos ADO no Microsoft® Visual C++®. Consulte [exemplo de modelo de eventos ADO (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) para obter uma descrição completa.  
   
  Crie classes derivadas das interfaces **ConnectionEventsVt** e **RecordsetEventsVt** encontradas no arquivo adoint. h.  
   
@@ -68,7 +68,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  As classes de evento herdam de **IUnknown**, portanto, você também deve implementar os métodos **QueryInterface**, **AddRef**e **Release** . Implemente também construtores e destruidores de classe. Escolha as ferramentas de Visual C++ com as quais você está mais familiarizado para simplificar essa parte da tarefa.  
   
- Torne-o conhecido que os manipuladores de eventos estão disponíveis emitindo **QueryInterface** no [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e objetos de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) para as interfaces **IConnectionPointContainer** e **IConnectionPoint** . Em seguida, emita **IConnectionPoint:: Advise** para cada classe.  
+ Torne-o conhecido que os manipuladores de eventos estão disponíveis emitindo **QueryInterface** no [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) e objetos de [conexão](../../reference/ado-api/connection-object-ado.md) para as interfaces **IConnectionPointContainer** e **IConnectionPoint** . Em seguida, emita **IConnectionPoint:: Advise** para cada classe.  
   
  Por exemplo, suponha que você esteja usando uma função booliana que retorna **true** se informar com êxito um objeto **Recordset** que você tem manipuladores de eventos disponíveis.  
   

@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c7756449d2e203fce0a40613c1b9279fd947bd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0593c95944c7109acb1d30f675a2375a5e20a668
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453648"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806332"
 ---
 # <a name="comments-on-hellodata"></a>Comentários sobre o HelloData
 O aplicativo HelloData percorre as operações básicas de um aplicativo ADO típico: obtendo, examinando, editando e atualizando dados. Ao iniciar o aplicativo, clique no primeiro botão, **obtenha dados**. Isso executará a sub-rotina **GetData** .  
   
 ## <a name="getdata"></a>GetData  
- **GetData** coloca uma cadeia de conexão válida em uma variável em nível de módulo, *m_sConnStr*. Para obter mais informações sobre cadeias de conexão, consulte [criando a cadeia de conexão](../../../ado/guide/data/creating-a-connection-string.md).  
+ **GetData** coloca uma cadeia de conexão válida em uma variável em nível de módulo, *m_sConnStr*. Para obter mais informações sobre cadeias de conexão, consulte [criando a cadeia de conexão](./creating-a-connection-string.md).  
   
- Atribua um manipulador de erro usando uma instrução Visual Basic **OnError** . Para obter mais informações sobre o tratamento de erros no ADO, consulte [tratamento de erros](../../../ado/guide/data/error-handling.md). Um novo objeto de **conexão** é criado e a propriedade **CursorLocation** é definida como **adUseClient** porque o exemplo HelloData cria um *conjunto de registros desconectado*. Isso significa que assim que os dados são buscados da fonte de dados, a conexão física com a fonte de dados é interrompida, mas você ainda pode trabalhar com os dados armazenados em cache localmente no seu objeto **Recordset** .  
+ Atribua um manipulador de erro usando uma instrução Visual Basic **OnError** . Para obter mais informações sobre o tratamento de erros no ADO, consulte [tratamento de erros](./error-handling.md). Um novo objeto de **conexão** é criado e a propriedade **CursorLocation** é definida como **adUseClient** porque o exemplo HelloData cria um *conjunto de registros desconectado*. Isso significa que assim que os dados são buscados da fonte de dados, a conexão física com a fonte de dados é interrompida, mas você ainda pode trabalhar com os dados armazenados em cache localmente no seu objeto **Recordset** .  
   
  Depois que a conexão for aberta, atribua uma cadeia de caracteres SQL a uma variável (sSQL). Em seguida, crie uma instância de um novo objeto **Recordset** , `m_oRecordset1` . Na próxima linha de código, abra o **conjunto de registros** sobre a **conexão**existente, passando `sSQL` como a origem do **conjunto de registros**. Você ajuda o ADO em fazer a determinação de que a cadeia de caracteres SQL passada como a origem do **conjunto de registros** é uma definição textual de um comando, passando **adCmdText** no argumento final para o método Open do **conjunto de registros** . Essa linha também define o **LockType** e o **CursorType** associados ao **conjunto de registros**.  
   
- A próxima linha de código define a propriedade **marshaloptions** igual a **adMarshalModifiedOnly**. **Marshaloptions** indica quais registros devem ser empacotados para a camada intermediária (ou servidor Web). Para obter mais informações sobre marshaling, consulte a documentação COM. Quando você usa **adMarshalModifiedOnly** com um cursor do lado do cliente ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  =  **adUseClient**), somente os registros que foram modificados no cliente são gravados novamente na camada intermediária. Definir **marshaloptions** para **adMarshalModifiedOnly** pode melhorar o desempenho porque menos linhas são empacotadas.  
+ A próxima linha de código define a propriedade **marshaloptions** igual a **adMarshalModifiedOnly**. **Marshaloptions** indica quais registros devem ser empacotados para a camada intermediária (ou servidor Web). Para obter mais informações sobre marshaling, consulte a documentação COM. Quando você usa **adMarshalModifiedOnly** com um cursor do lado do cliente ([CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)  =  **adUseClient**), somente os registros que foram modificados no cliente são gravados novamente na camada intermediária. Definir **marshaloptions** para **adMarshalModifiedOnly** pode melhorar o desempenho porque menos linhas são empacotadas.  
   
- Em seguida, desconecte o **conjunto de registros** definindo sua propriedade **ActiveConnection** igual a **Nothing**. Para obter mais informações, consulte a seção "desconectando e reconectando o conjunto de registros" em [atualizando e mantendo dados](../../../ado/guide/data/updating-and-persisting-data.md).  
+ Em seguida, desconecte o **conjunto de registros** definindo sua propriedade **ActiveConnection** igual a **Nothing**. Para obter mais informações, consulte a seção "desconectando e reconectando o conjunto de registros" em [atualizando e mantendo dados](./updating-and-persisting-data.md).  
   
  Feche a conexão com a fonte de dados e destrua o objeto de **conexão** existente. Isso libera os recursos consumidos.  
   
@@ -47,14 +47,14 @@ O aplicativo HelloData percorre as operações básicas de um aplicativo ADO tí
   
  Por fim, **ExamineData** usa a propriedade **Filter** do **conjunto de registros** para fazer a tela apenas para os registros com uma **CategoryID** igual a 2. O resultado da aplicação desse filtro é imediatamente visível na grade de exibição no formulário.  
   
- Para obter mais informações sobre a funcionalidade mostrada na sub-rotina **ExamineData** , consulte [examinando dados](../../../ado/guide/data/examining-data.md).  
+ Para obter mais informações sobre a funcionalidade mostrada na sub-rotina **ExamineData** , consulte [examinando dados](./examining-data.md).  
   
  Em seguida, clique no terceiro botão, **edite dados**. Isso executará a sub-rotina **EditData** .  
   
 ## <a name="editdata"></a>EditData  
  Quando o código entra na sub-rotina **EditData** , o **conjunto de registros** ainda é filtrado em **CategoryID** igual a 2, para que somente os itens que atendem aos critérios de filtro fiquem visíveis. Ele primeiro percorre o conjunto de **registros** e aumenta o preço de cada item visível no **conjunto de registros** em 10%. O valor do campo **preço** é alterado definindo a propriedade **valor** para esse campo igual a um valor novo e válido.  
   
- Lembre-se de que o **conjunto de registros** está desconectado da fonte de dados. As alterações feitas no **EditData** são feitas apenas para a cópia armazenada em cache localmente dos dados. Para obter mais informações, consulte [editando dados](../../../ado/guide/data/editing-data.md).  
+ Lembre-se de que o **conjunto de registros** está desconectado da fonte de dados. As alterações feitas no **EditData** são feitas apenas para a cópia armazenada em cache localmente dos dados. Para obter mais informações, consulte [editando dados](./editing-data.md).  
   
  As alterações não serão feitas na fonte de dados até você clicar no quarto botão, **atualizar dados**. Isso executará a sub-rotina **UpdateData** .  
   
@@ -63,7 +63,7 @@ O aplicativo HelloData percorre as operações básicas de um aplicativo ADO tí
   
  Em seguida, o código verifica se você pode retroceder no **conjunto de registros** usando o método com **suporte** com o argumento **adMovePrevious** .  
   
- A rotina é movida para o primeiro registro usando o método **MoveFirst** e exibe os valores originais e atuais do campo, usando as propriedades **OriginalValue** e **valor** do objeto **Field** . Essas propriedades, juntamente com a propriedade **subdependent** (não usada aqui), são discutidas na [atualização e persistência de dados](../../../ado/guide/data/updating-and-persisting-data.md).  
+ A rotina é movida para o primeiro registro usando o método **MoveFirst** e exibe os valores originais e atuais do campo, usando as propriedades **OriginalValue** e **valor** do objeto **Field** . Essas propriedades, juntamente com a propriedade **subdependent** (não usada aqui), são discutidas na [atualização e persistência de dados](./updating-and-persisting-data.md).  
   
  Em seguida, um novo objeto de **conexão** é criado e usado para restabelecer uma conexão com a fonte de dados. Reconecte o **conjunto de registros** à fonte de dados definindo a nova **conexão** como o **ActiveConnection** para o **conjunto de registros**. Para enviar as atualizações para o servidor, o código chama **UpdateBatch** no **conjunto de registros**.  
   
@@ -71,7 +71,7 @@ O aplicativo HelloData percorre as operações básicas de um aplicativo ADO tí
   
  Por fim, o código volta para o primeiro registro no **conjunto de registros** e exibe os valores original e atual. Os valores são os mesmos após a chamada para **UpdateBatch**.  
   
- Para obter informações detalhadas sobre como atualizar dados, incluindo o que fazer quando os dados no servidor são alterados enquanto o **conjunto de registros** é desconectado, consulte [atualizando e mantendo dados](../../../ado/guide/data/updating-and-persisting-data.md).  
+ Para obter informações detalhadas sobre como atualizar dados, incluindo o que fazer quando os dados no servidor são alterados enquanto o **conjunto de registros** é desconectado, consulte [atualizando e mantendo dados](./updating-and-persisting-data.md).  
   
 ## <a name="form_unload"></a>Form_Unload  
  A sub-rotina **Form_Unload** é importante por vários motivos. Primeiro, como esse é um aplicativo de exemplo, Form_Unload limpa as alterações feitas no banco de dados antes do encerramento do aplicativo. Em segundo lugar, o código mostra como um comando pode ser executado diretamente de um objeto de **conexão** aberta usando o método **Execute** . Por fim, ele mostra um exemplo de execução de uma consulta de retorno que não é de linha (uma consulta de atualização) na fonte de dados.

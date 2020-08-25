@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400902"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Redefinição de senha-sistema de plataforma de análise
@@ -33,18 +33,18 @@ A conta de **administrador** local nos computadores que hospedam as máquinas vi
 > [!IMPORTANT]  
 > Para a atualização 1 do dispositivo, **Configuration Manager** não altera corretamente a senha das contas de administrador local em todas as VMs do PDW. Se isso for necessário, entre em contato com o CSS para obter instruções adicionais.  
   
-**sa**  
+**administrador**  
 O logon do **SA** no SQL Server. **SA** é um membro da função de servidor fixa **sysadmin** e é um administrador de SQL Server. A senha do logon **SA** também pode ser alterada usando a instrução **ALTER LOGIN** .  
   
 ## <a name="password-requirements"></a>Requisitos de senha  
 As credenciais de administrador de domínio e as credenciais de administrador do sistema aderem às políticas de força de senha para cada tipo de credencial. Ao alterar as credenciais de administrador de domínio, a nova senha é atualizada para o domínio onde necessário durante SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW não dá suporte ao caractere de cifrão (**$**) nas senhas de administrador de domínio ou de administrador local. Os caracteres **^% &** são permitidos em senhas, no entanto, o PowerShell considera como caracteres especiais. Se qualquer um desses caracteres for usado em senhas para o administrador do sistema ou SQL Server contas**SA** (os parâmetros **AdminPassword** e **PdwSAPassword** durante a instalação), a instalação, incluindo instalação, atualização, REPLACENODE e aplicação de patches, falhará. Para garantir uma atualização bem-sucedida quando as senhas atuais contiverem caracteres sem suporte, altere essas senhas para que elas não contenham esses caracteres antes de executar a atualização. Após a conclusão da atualização, você pode definir essas senhas de volta para seus valores originais. Para obter mais informações sobre os requisitos de senha, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW não dá suporte ao caractere de cifrão ( **$** ) nas senhas de administrador de domínio ou de administrador local. Os caracteres **^% &** são permitidos em senhas, no entanto, o PowerShell considera como caracteres especiais. Se qualquer um desses caracteres for usado em senhas para o administrador do sistema ou SQL Server contas**SA** (os parâmetros **AdminPassword** e **PdwSAPassword** durante a instalação), a instalação, incluindo instalação, atualização, REPLACENODE e aplicação de patches, falhará. Para garantir uma atualização bem-sucedida quando as senhas atuais contiverem caracteres sem suporte, altere essas senhas para que elas não contenham esses caracteres antes de executar a atualização. Após a conclusão da atualização, você pode definir essas senhas de volta para seus valores originais. Para obter mais informações sobre os requisitos de senha, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Para redefinir uma senha  
   
-1.  Conecte-se ao nó de controle e inicie o **Configuration Manager** (**dwconfig. exe**). Para obter mais informações, consulte [iniciar o Configuration Manager &#40;&#41;do sistema de plataforma de análise ](launch-the-configuration-manager.md).  
+1.  Conecte-se ao nó de controle e inicie o **Configuration Manager** (**dwconfig.exe**). Para obter mais informações, consulte [iniciar o Configuration Manager &#40;&#41;do sistema de plataforma de análise ](launch-the-configuration-manager.md).  
   
 2.  No painel esquerdo da **Configuration Manager**, clique em **redefinição de senha**.  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400358"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentários de telemetria para a Microsoft para o Analytics Platform System
@@ -35,9 +35,9 @@ Para fornecer a proteção máxima de privacidade, o APS é fornecido sem habili
   
 1.  Usando uma conta de administrador de domínio de dispositivo, conecte-se ao nó de controle (<strong>*appliance_domain*-CTL01</strong>) e abra um prompt de comando usando suas credenciais de administrador do Windows.  
   
-2.  Navegue até o seguinte diretório: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Navegue até o seguinte diretório: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importar o módulo`Configure-RemoteMonitoring.ps1`  
+3.  Importar o módulo `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Para importar, você deve usar dois pontos no comando.  
@@ -53,7 +53,7 @@ Para fornecer a proteção máxima de privacidade, o APS é fornecido sem habili
     > [!NOTE]  
     > O script supõe que a conexão com a Internet está funcionando corretamente e não valida a conexão com a Internet.  
   
-    1.  Na primeira vez que você habilitar a telemetria, use o comando a seguir para garantir que todos os encaminhadores DNS estejam configurados corretamente. Neste exemplo, substitua o endereço `xx.xx.xx.xx` IP encaminhado DNS pelo endereço IP do encaminhador de DNS em seu ambiente.  
+    1.  Na primeira vez que você habilitar a telemetria, use o comando a seguir para garantir que todos os encaminhadores DNS estejam configurados corretamente. Neste exemplo, substitua o endereço IP encaminhado DNS `xx.xx.xx.xx` pelo endereço IP do encaminhador de DNS em seu ambiente.  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring -SetupDnsForwarder -DnsForwarderIp xx.xx.xx.xx  
@@ -85,9 +85,9 @@ Desabilitar a telemetria interromperá todas as operações que comunicam inform
   
 1.  Usando uma conta de administrador de domínio de dispositivo, conecte-se ao nó de controle (<strong>*appliance_domain*-CTL01</strong>) e abra uma janela do PowerShell com privilégios de administrador.  
   
-2.  Navegue até o seguinte diretório: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Navegue até o seguinte diretório: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importar o módulo`Configure-RemoteMonitoring.ps1`  
+3.  Importar o módulo `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Para importar, você deve usar dois pontos no comando.  

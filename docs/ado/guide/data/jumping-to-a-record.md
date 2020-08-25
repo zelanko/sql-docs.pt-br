@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4196c0be69292e7e915c5fe24ca995645133fabc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcbdf68a7d79b64e25dcb700b989628a6a72b8e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453188"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805860"
 ---
 # <a name="jumping-to-a-record"></a>Saltar para um registro
-O método [move](../../../ado/reference/ado-api/move-method-ado.md) permite que você avance ou regressiva no **conjunto** de registros um número especificado de registro usando a seguinte sintaxe:  
+O método [move](../../reference/ado-api/move-method-ado.md) permite que você avance ou regressiva no **conjunto** de registros um número especificado de registro usando a seguinte sintaxe:  
   
 ```  
 oRs.Move NumRecords, Start  
@@ -39,6 +39,6 @@ oRs.Move NumRecords, Start
   
  Chamar o método **move** de um objeto **Recordset** vazio gera um erro.  
   
- Se você passar um indicador no argumento *Start* , a movimentação será relativa ao registro com esse indicador, supondo que o objeto **Recordset** dê suporte a indicadores. Um indicador é obtido usando a propriedade [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) . Se não for especificado, a movimentação será relativa ao registro atual.  
+ Se você passar um indicador no argumento *Start* , a movimentação será relativa ao registro com esse indicador, supondo que o objeto **Recordset** dê suporte a indicadores. Um indicador é obtido usando a propriedade [Bookmark](../../reference/ado-api/bookmark-property-ado.md) . Se não for especificado, a movimentação será relativa ao registro atual.  
   
  Se você estiver usando a propriedade **CacheSize** para armazenar localmente os registros do provedor, passar um argumento *NumRecords* que move a posição do registro atual para fora do grupo atual de registros em cache força o ADO a recuperar um novo grupo de registros, a partir do registro de destino. A propriedade **CacheSize** determina o tamanho do grupo recuperado recentemente e o registro de destino é o primeiro registro recuperado.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c510bd71d8b81eae9f86e48c398cc6ff7e81cea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27dd38482ffc197235b6c20c0d4ae8cb098d07b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453688"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806359"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Chamar um procedimento armazenado com um comando
 Você pode usar um comando para chamar um procedimento armazenado. O exemplo de código no final deste tópico refere-se a um procedimento armazenado no banco de dados de exemplo Northwind, chamado CustOrdersOrders, que é definido da seguinte maneira.  
@@ -35,13 +35,13 @@ ORDER BY OrderID
   
  Consulte a documentação do SQL Server para obter mais informações sobre como definir e chamar procedimentos armazenados.  
   
- Esse procedimento armazenado é semelhante ao comando usado em [parâmetros de objeto de comando](../../../ado/guide/data/command-object-parameters.md). Ele usa um parâmetro de ID do cliente e retorna informações sobre os pedidos desse cliente. O exemplo de código a seguir usa esse procedimento armazenado como a origem de um **conjunto de registros**ADO.  
+ Esse procedimento armazenado é semelhante ao comando usado em [parâmetros de objeto de comando](./command-object-parameters.md). Ele usa um parâmetro de ID do cliente e retorna informações sobre os pedidos desse cliente. O exemplo de código a seguir usa esse procedimento armazenado como a origem de um **conjunto de registros**ADO.  
   
  O uso do procedimento armazenado permite que você acesse outro recurso do ADO: o método de **atualização** da coleção **Parameters** . Usando esse método, o ADO pode preencher automaticamente todas as informações sobre os parâmetros exigidos pelo comando em tempo de execução. Há uma penalidade de desempenho no uso dessa técnica, porque o ADO deve consultar a fonte de dados para obter as informações sobre os parâmetros.  
   
- Existem outras diferenças importantes entre o exemplo de código a seguir e o código em [parâmetros de objeto de comando](../../../ado/guide/data/command-object-parameters.md), em que os parâmetros foram inseridos manualmente. Primeiro, esse código não define a propriedade **preparada** como **true** porque é um procedimento armazenado SQL Server e é pré-compilado por definição. Em segundo lugar, a propriedade **CommandType** do objeto **Command** foi alterada para **adCmdStoredProc** no segundo exemplo para informar ao ADO que o comando era um procedimento armazenado.  
+ Existem outras diferenças importantes entre o exemplo de código a seguir e o código em [parâmetros de objeto de comando](./command-object-parameters.md), em que os parâmetros foram inseridos manualmente. Primeiro, esse código não define a propriedade **preparada** como **true** porque é um procedimento armazenado SQL Server e é pré-compilado por definição. Em segundo lugar, a propriedade **CommandType** do objeto **Command** foi alterada para **adCmdStoredProc** no segundo exemplo para informar ao ADO que o comando era um procedimento armazenado.  
   
- Por fim, no segundo exemplo, o parâmetro deve ser referenciado pelo índice ao definir o valor, porque talvez você não saiba o nome do parâmetro em tempo de design. Se você souber o nome do parâmetro, poderá definir a nova propriedade [namedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) do objeto **Command** como true e se referir ao nome da propriedade. Você deve estar imaginando por que a posição do primeiro parâmetro mencionado no procedimento armazenado ( @CustomerID ) é 1 em vez de 0 ( `objCmd(1) = "ALFKI"` ). Isso ocorre porque o parâmetro 0 contém um valor de retorno do procedimento armazenado SQL Server.  
+ Por fim, no segundo exemplo, o parâmetro deve ser referenciado pelo índice ao definir o valor, porque talvez você não saiba o nome do parâmetro em tempo de design. Se você souber o nome do parâmetro, poderá definir a nova propriedade [namedParameters](../../reference/ado-api/namedparameters-property-ado.md) do objeto **Command** como true e se referir ao nome da propriedade. Você deve estar imaginando por que a posição do primeiro parâmetro mencionado no procedimento armazenado ( @CustomerID ) é 1 em vez de 0 ( `objCmd(1) = "ALFKI"` ). Isso ocorre porque o parâmetro 0 contém um valor de retorno do procedimento armazenado SQL Server.  
   
 ```  
 'BeginAutoParamCmd  

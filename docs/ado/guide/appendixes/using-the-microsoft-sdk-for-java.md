@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453968"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806487"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Usar o Microsoft SDK para Java
 
@@ -32,7 +32,7 @@ O Microsoft SDK para Java é o kit para desenvolvedores do ambiente do Microsoft
   
  Esse mecanismo lê a biblioteca de tipos do ADO e gera classes que você pode instanciar dentro de seu aplicativo. Ele gera essas classes no seguinte local: \\<diretório do Windows \> \Java\trustlib\msado15.  
   
- A criação de um aplicativo ADO em Java usando o SDK da Microsoft para Java é fundamentalmente idêntica, da perspectiva do código-fonte, ao uso do assistente da biblioteca de tipos Java. Para obter o código de exemplo, consulte [wrappers de classe Java do ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). A única diferença real é como você gera as classes de wrapper em primeiro lugar, conforme demonstrado nas etapas a seguir.  
+ A criação de um aplicativo ADO em Java usando o SDK da Microsoft para Java é fundamentalmente idêntica, da perspectiva do código-fonte, ao uso do assistente da biblioteca de tipos Java. Para obter o código de exemplo, consulte [wrappers de classe Java do ADO](./ado-java-class-wrappers.md). A única diferença real é como você gera as classes de wrapper em primeiro lugar, conforme demonstrado nas etapas a seguir.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Para criar um projeto do ADO com o Microsoft SDK para Java  
   
@@ -51,4 +51,4 @@ O Microsoft SDK para Java é o kit para desenvolvedores do ambiente do Microsoft
 3.  Para usar esses arquivos, abra o projeto no Visual J++. No menu **projeto** , escolha **Adicionar ao projeto**. Selecione **arquivos**e adicione todos os. Arquivos JAVA gerados no diretório trustlib\msado15 para seu projeto.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Wrappers de classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+ [Wrappers de classe Java ADO](./ado-java-class-wrappers.md)

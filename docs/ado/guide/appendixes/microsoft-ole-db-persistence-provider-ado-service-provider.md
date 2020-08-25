@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454108"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806610"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Visão geral do provedor de persistência da Microsoft OLE DB
-O provedor de persistência da Microsoft OLE DB permite que você salve um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo e, posteriormente, restaure esse objeto **Recordset** a partir do arquivo. Informações de esquema, dados e alterações pendentes são preservadas.
+O provedor de persistência da Microsoft OLE DB permite que você salve um objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) em um arquivo e, posteriormente, restaure esse objeto **Recordset** a partir do arquivo. Informações de esquema, dados e alterações pendentes são preservadas.
 
  Você pode salvar o **conjunto de registros** no formato de ADTG (grama de tabela de dados avançada) proprietário ou no formato de linguagem XML aberto (XML).
 
@@ -47,9 +47,9 @@ O provedor de persistência da Microsoft OLE DB permite que você salve um objet
 
  No momento, somente objetos **Recordset** hierárquicos com parâmetros não podem ser salvos.
 
- Para obter mais informações sobre o armazenamento persistente de objetos do **conjunto de registros** , consulte persistência do [conjunto de registros](../../../ado/guide/data/more-about-recordset-persistence.md).
+ Para obter mais informações sobre o armazenamento persistente de objetos do **conjunto de registros** , consulte persistência do [conjunto de registros](../data/more-about-recordset-persistence.md).
 
  Quando um fluxo é usado para abrir um **conjunto de registros,** não deve haver nenhum parâmetro especificado além do parâmetro de *origem* do método **Open** .
 
 ## <a name="see-also"></a>Consulte Também
-[Provedor de persistência do Microsoft OLE DB (provedor de serviços ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Provedor de persistência do Microsoft OLE DB (provedor de serviços ADO)]()

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c61e40220b99bd68c92e2651d58ea13ee10be29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d0acedc118c2789945f3b02a438655176179ef0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454098"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806638"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Visão geral do Microsoft Data Shaping Service para OLE DB
 > [!IMPORTANT]
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, os aplicativos devem usar XML.
 
- O serviço de modelagem de dados da Microsoft para o provedor de serviços OLE DB oferece suporte à construção de objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) hierárquicos (moldados) de um provedor de dados.
+ O serviço de modelagem de dados da Microsoft para o provedor de serviços OLE DB oferece suporte à construção de objetos [Recordset](../../reference/ado-api/recordset-object-ado.md) hierárquicos (moldados) de um provedor de dados.
 
 ## <a name="provider-keyword"></a>Palavra-chave Provider
  Para invocar o data Shaping Service para OLE DB, especifique a palavra-chave e o valor a seguir na cadeia de conexão.
@@ -35,7 +35,7 @@ ms.locfileid: "88454098"
 ```
 
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
- Quando esse provedor de serviços é invocado, as propriedades dinâmicas a seguir são adicionadas à coleção [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto de[conexão](../../../ado/reference/ado-api/connection-object-ado.md) .
+ Quando esse provedor de serviços é invocado, as propriedades dinâmicas a seguir são adicionadas à coleção [Properties](../../reference/ado-api/properties-collection-ado.md) do objeto de[conexão](../../reference/ado-api/connection-object-ado.md) .
 
 |Nome da propriedade dinâmica|Descrição|
 |---------------------------|-----------------|
@@ -49,7 +49,7 @@ Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- Você também pode definir ou recuperar uma propriedade dinâmica especificando seu nome como o índice para a propriedade [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) . Por exemplo, o exemplo de código a seguir obtém e imprime o valor atual da propriedade dinâmica **provedor de dados** e, em seguida, define um novo valor, se CN. DataProvider foi definido como "MSDataShape" (direta ou indiretamente por meio da cadeia de conexão) e a conexão não foi aberta:
+ Você também pode definir ou recuperar uma propriedade dinâmica especificando seu nome como o índice para a propriedade [Properties](../../reference/ado-api/properties-collection-ado.md) . Por exemplo, o exemplo de código a seguir obtém e imprime o valor atual da propriedade dinâmica **provedor de dados** e, em seguida, define um novo valor, se CN. DataProvider foi definido como "MSDataShape" (direta ou indiretamente por meio da cadeia de conexão) e a conexão não foi aberta:
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  A propriedade dinâmica, **provedor de dados**, pode ser definida somente em um objeto de **conexão** não aberto. Depois que a conexão é aberta, a propriedade **provedor de dados** torna-se somente leitura.
 
- Para obter mais informações sobre o formato de dados, consulte [Data Shaping](../../../ado/guide/data/data-shaping-overview.md).
+ Para obter mais informações sobre o formato de dados, consulte [Data Shaping](../data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Consulte Também
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apêndice A: Provedores](./appendix-a-providers.md)
