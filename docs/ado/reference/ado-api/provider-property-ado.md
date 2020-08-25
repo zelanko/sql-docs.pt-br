@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4e8b5f57a9d6ba15a12c8da8bb4e85012b53da9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d96acadcd4b2df0eca5ff9655d9bcdd31cabe0f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442578"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772785"
 ---
 # <a name="provider-property-ado"></a>Propriedade Provider (ADO)
-Indica o nome do provedor para um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Indica o nome do provedor para um objeto de [conexão](./connection-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um valor de **cadeia de caracteres** que indica o nome do provedor.  
   
 ## <a name="remarks"></a>Comentários  
- Use a propriedade **Provider** para definir ou retornar o nome do provedor para uma conexão. Essa propriedade também pode ser definida pelo conteúdo da propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) ou do argumento *ConnectionString* do método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) ; no entanto, a especificação de um provedor em mais de um local ao chamar o método **Open** pode ter resultados imprevisíveis. Se nenhum provedor for especificado, a propriedade será padronizada para MSDASQL ([provedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
+ Use a propriedade **Provider** para definir ou retornar o nome do provedor para uma conexão. Essa propriedade também pode ser definida pelo conteúdo da propriedade [ConnectionString](./connectionstring-property-ado.md) ou do argumento *ConnectionString* do método [Open](./open-method-ado-connection.md) ; no entanto, a especificação de um provedor em mais de um local ao chamar o método **Open** pode ter resultados imprevisíveis. Se nenhum provedor for especificado, a propriedade será padronizada para MSDASQL ([provedor Microsoft OLE DB para ODBC](../../guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
   
- A propriedade do **provedor** é de leitura/gravação quando a conexão é fechada e somente leitura quando ela está aberta. A configuração não terá efeito até que você abra o objeto de **conexão** ou acesse a coleção [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto de **conexão** . Se a configuração não for válida, ocorrerá um erro.  
+ A propriedade do **provedor** é de leitura/gravação quando a conexão é fechada e somente leitura quando ela está aberta. A configuração não terá efeito até que você abra o objeto de **conexão** ou acesse a coleção [Propriedades](./properties-collection-ado.md) do objeto de **conexão** . Se a configuração não for válida, ocorrerá um erro.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Objeto Connection (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades Provider e DefaultDatabase (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Exemplo das propriedades Provider e DefaultDatabase (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Provedor do Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
- [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Exemplo das propriedades Provider e DefaultDatabase (VB)](./provider-and-defaultdatabase-properties-example-vb.md)   
+ [Exemplo das propriedades Provider e DefaultDatabase (VB)](./provider-and-defaultdatabase-properties-example-vb.md)   
+ [Provedor do Microsoft OLE DB para ODBC](../../guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
+ [Apêndice A: Provedores](../../guide/appendixes/appendix-a-providers.md)

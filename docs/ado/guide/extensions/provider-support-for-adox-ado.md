@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f18a02557783f972203a05019bb96d11ce50c744
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 286c2b199c83feca11a69e8d4d137ad5691f5362
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452448"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758796"
 ---
 # <a name="provider-support-for-adox-ado"></a>Suporte do provedor para ADOX (ADO)
-Alguns recursos do ADOX não têm suporte, dependendo do seu provedor de dados de OLE DB. O ADOX tem suporte total com o [provedor de OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Os recursos sem suporte com o [provedor de OLE DB da Microsoft para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o [provedor de OLE DB da Microsoft para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)ou o [provedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) estão listados nas tabelas a seguir. O ADOX não tem suporte em nenhum outro provedor do Microsoft OLE DB.  
+Alguns recursos do ADOX não têm suporte, dependendo do seu provedor de dados de OLE DB. O ADOX tem suporte total com o [provedor de OLE DB para Microsoft Jet](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Os recursos sem suporte com o [provedor de OLE DB da Microsoft para SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md), o [provedor de OLE DB da Microsoft para ODBC](../appendixes/microsoft-ole-db-provider-for-odbc.md)ou o [provedor Microsoft OLE DB para Oracle](../appendixes/microsoft-ole-db-provider-for-oracle.md) estão listados nas tabelas a seguir. O ADOX não tem suporte em nenhum outro provedor do Microsoft OLE DB.  
   
 ## <a name="microsoft-ole-db-provider-for-sql-server"></a>Provedor Microsoft OLE DB para SQL Server  
   

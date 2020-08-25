@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 262d83f37157af43a91c508daaa31127247588d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acc3d3554e4046321b1fe76beebc9dddc942b5ac
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441118"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778215"
 ---
 # <a name="description-property-ado-md"></a>Propriedade Description (ADO MD)
 Retorna uma explicação de texto do objeto atual.  
@@ -35,22 +35,22 @@ Retorna uma explicação de texto do objeto atual.
  Retorna uma **cadeia de caracteres** e é somente leitura.  
   
 ## <a name="remarks"></a>Comentários  
- Para objetos de [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) , a **Descrição** aplica-se somente aos membros de fórmula e de medida. **Descrição** retorna uma cadeia de caracteres vazia ("") para todos os outros tipos de membros. Para obter mais informações sobre os vários tipos de membros, consulte a propriedade [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) .  
+ Para objetos de [membro](./member-object-ado-md.md) , a **Descrição** aplica-se somente aos membros de fórmula e de medida. **Descrição** retorna uma cadeia de caracteres vazia ("") para todos os outros tipos de membros. Para obter mais informações sobre os vários tipos de membros, consulte a propriedade [Type](./type-property-ado-md.md) .  
   
- Essa propriedade só tem suporte em objetos **Membros** que pertencem a um objeto de [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos **Membros** que pertencem a um objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
+ Essa propriedade só tem suporte em objetos **Membros** que pertencem a um objeto de [nível](./level-object-ado-md.md) . Um erro ocorre quando essa propriedade é referenciada de objetos **Membros** que pertencem a um objeto [Position](./position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Aplica-se A  
 
 :::row:::
     :::column:::
-        [Objeto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
-        [Objeto Dimension (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
+        [Objeto CubeDef (ADO MD)](./cubedef-object-ado-md.md)  
+        [Objeto Dimension (ADO MD)](./dimension-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
-        [Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Objeto Hierarchy (ADO MD)](./hierarchy-object-ado-md.md)  
+        [Objeto Level (ADO MD)](./level-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Objeto Member (ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::

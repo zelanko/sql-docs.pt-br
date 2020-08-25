@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cdd0e393c7fc5214866142150c7ff497e48e7122
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442778"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773325"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-Especifica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md) representa um parâmetro de entrada, um parâmetro de saída, um parâmetro de entrada e de saída ou o valor de retorno de um procedimento armazenado.  
+Especifica se o [parâmetro](./parameter-object.md) representa um parâmetro de entrada, um parâmetro de saída, um parâmetro de entrada e de saída ou o valor de retorno de um procedimento armazenado.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -49,9 +49,9 @@ Especifica se o [parâmetro](../../../ado/reference/ado-api/parameter-object.md)
 
 :::row:::
     :::column:::
-        [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [Método CreateParameter (ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Propriedade Direction](../../../ado/reference/ado-api/direction-property.md)  
+        [Propriedade Direction](./direction-property.md)  
     :::column-end:::
 :::row-end:::

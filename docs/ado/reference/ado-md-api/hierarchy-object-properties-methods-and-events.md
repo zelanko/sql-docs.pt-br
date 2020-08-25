@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7457b43a186ba30409a34cf415c5ca0889b1f96e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c643870386988ee22d729c1352dfe3683571fac5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440968"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778075"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Hierarchy
 ## <a name="propertiescollections"></a>Propriedades/coleções  
- [Propriedade Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Propriedade Description](./description-property-ado-md.md)  
   
- [Coleção de níveis](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+ [Coleção de níveis](./levels-collection-ado-md.md)  
   
- [Propriedade Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Propriedade Name](./name-property-ado-md.md)  
   
- [Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Coleção de propriedades](../ado-api/properties-collection-ado.md)  
   
- [Propriedade UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [Propriedade UniqueName](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Métodos  
  Nenhum.  
@@ -39,4 +39,4 @@ ms.locfileid: "88440968"
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)
+ [Objeto Hierarchy (ADO MD)](./hierarchy-object-ado-md.md)

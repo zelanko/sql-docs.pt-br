@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 404efeb169291e8c29da95f5c4d7690ef8dfd6ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ebbf64deba331308826eb7fe31c4148fd95ad1f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452148"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759727"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marcar objetos de negócios como seguros para script
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para ajudar a garantir um ambiente de Internet seguro, você precisa marcar todos os objetos comerciais instanciados com o [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md) Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do objeto DataSpace como "seguro para scripts". Você precisa garantir que eles sejam marcados como tal na área de licença do registro do sistema antes que possam ser usados no DCOM.  
+ Para ajudar a garantir um ambiente de Internet seguro, você precisa marcar todos os objetos comerciais instanciados com o [RDS. ](../../reference/rds-api/dataspace-object-rds.md) Método [CreateObject](../../reference/rds-api/createobject-method-rds.md) do objeto DataSpace como "seguro para scripts". Você precisa garantir que eles sejam marcados como tal na área de licença do registro do sistema antes que possam ser usados no DCOM.  
   
 > [!NOTE]
 >  Os objetos comerciais marcados como "seguros para criação de scripts" ou seguros para inicialização podem ser instanciados e inicializados por qualquer pessoa na rede. A marcação de um objeto de negócios "seguro para scripts" não o torna seguro. É vitalmente importante garantir que os objetos comerciais sejam codificados com a segurança mais alta para garantir que esses objetos não apresentem um ponto de acesso desprotegido para dados confidenciais.  
@@ -45,5 +45,3 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  Na última etapa, o assistente de instalação do aplicativo cria um arquivo. htm e um. cab. Em seguida, você pode copiar esses dois arquivos para o computador de destino e clicar duas vezes no arquivo. htm para carregar a página e registrar corretamente o servidor.  
   
  Como o objeto comercial será instalado no diretório Windows\System32\Occache por padrão, mova-o para o diretório Windows\System32 e altere a chave do registro **HKEY_CLASSES_ROOT \CLSID \\ ** \<*MyActiveXGUID*> \\ **InprocServer32** para corresponder ao caminho correto.
-
-

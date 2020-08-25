@@ -13,40 +13,40 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb4b686c0fd2366b0bd229603414fb70c2d60ba1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b12131ae069b9be362aebb93c90272d81de1d036
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440888"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777985"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Member
 ## <a name="propertiescollections"></a>Propriedades/coleções  
- [Propriedade Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
+ [Propriedade Caption](./caption-property-ado-md.md)  
   
- [Propriedade ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
+ [Propriedade ChildCount](./childcount-property-ado-md.md)  
   
- [Propriedade Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)  
+ [Propriedade Children](./children-property-ado-md.md)  
   
- [Propriedade Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Propriedade Description](./description-property-ado-md.md)  
   
- [Propriedade DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)  
+ [Propriedade DrilledDown](./drilleddown-property-ado-md.md)  
   
- [Propriedade LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)  
+ [Propriedade LevelDepth](./leveldepth-property-ado-md.md)  
   
- [Propriedade LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)  
+ [Propriedade LevelName](./levelname-property-ado-md.md)  
   
- [Propriedade Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Propriedade Name](./name-property-ado-md.md)  
   
- [Propriedade pai](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
+ [Propriedade pai](./parent-property-ado-md.md)  
   
- [Propriedade ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [Propriedade ParentSameAsPrev](./parentsameasprev-property-ado-md.md)  
   
- [Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Coleção de propriedades](../ado-api/properties-collection-ado.md)  
   
- [Propriedade Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
+ [Propriedade Type](./type-property-ado-md.md)  
   
- [Propriedade UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [Propriedade UniqueName](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Métodos  
  Nenhum.  
@@ -55,4 +55,4 @@ ms.locfileid: "88440888"
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+ [Objeto Member (ADO MD)](./member-object-ado-md.md)

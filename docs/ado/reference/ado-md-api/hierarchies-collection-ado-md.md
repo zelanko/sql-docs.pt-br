@@ -17,30 +17,30 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81161819bd03b4261a0da321579f6df32dd824ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2a8bee4258be5d4f457a54b35840e19de97a289
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440998"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778105"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Coleção Hierarchies (ADO MD)
-Contém o conjunto de objetos de [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) de uma dimensão.  
+Contém o conjunto de objetos de [hierarquia](./hierarchy-object-ado-md.md) de uma dimensão.  
   
 ## <a name="remarks"></a>Comentários  
  **Hierarquias** é uma coleção ADO padrão. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
   
--   Obtenha o número de objetos na coleção com a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Obtenha o número de objetos na coleção com a propriedade [Count](../ado-api/count-property-ado.md) .  
   
--   Retornar um objeto da coleção com a propriedade de [Item](../../../ado/reference/ado-api/item-property-ado.md) padrão.  
+-   Retornar um objeto da coleção com a propriedade de [Item](../ado-api/item-property-ado.md) padrão.  
   
--   Atualize os objetos na coleção do provedor com o método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Atualize os objetos na coleção do provedor com o método [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Esta seção contém o tópico a seguir.  
   
--   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/hierarchies-collection-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos](./hierarchies-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Objeto Dimension (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
- [Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)
+ [Exemplo de catálogo (VB)](./catalog-example-vb.md)   
+ [Objeto Dimension (ADO MD)](./dimension-object-ado-md.md)   
+ [Objeto Hierarchy (ADO MD)](./hierarchy-object-ado-md.md)

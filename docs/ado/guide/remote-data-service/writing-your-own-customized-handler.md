@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451838"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760066"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escrever seu próprio manipulador personalizado
 Talvez você queira escrever seu próprio manipulador se você for um administrador do servidor IIS que deseja o suporte do RDS padrão, mas mais controle sobre as solicitações de usuário e os direitos de acesso.  
@@ -30,12 +30,12 @@ Talvez você queira escrever seu próprio manipulador se você for um administra
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="idatafactoryhandler-interface"></a>Interface IDataFactoryHandler  
- Essa interface tem dois métodos, **GetRecordset** e **reconnect**. Ambos os métodos exigem que a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) seja definida como **adUseClient**.  
+ Essa interface tem dois métodos, **GetRecordset** e **reconnect**. Ambos os métodos exigem que a propriedade [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) seja definida como **adUseClient**.  
   
  Ambos os métodos usam argumentos que aparecem após a primeira vírgula na palavra-chave "**Handler =**". Por exemplo, `"Handler=progid,arg1,arg2;"` passará uma cadeia de argumentos de `"arg1,arg2"` e `"Handler=progid"` passará um argumento nulo.  
   
 ## <a name="getrecordset-method"></a>Método GetRecordset  
- Esse método consulta a fonte de dados e cria um novo objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) usando os argumentos fornecidos. O **conjunto de registros** deve ser aberto com **adLockBatchOptimistic** e não deve ser aberto de forma assíncrona.  
+ Esse método consulta a fonte de dados e cria um novo objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) usando os argumentos fornecidos. O **conjunto de registros** deve ser aberto com **adLockBatchOptimistic** e não deve ser aberto de forma assíncrona.  
   
 ### <a name="arguments"></a>Argumentos  
  ***Conn***  A cadeia de conexão.  
@@ -47,7 +47,7 @@ Talvez você queira escrever seu próprio manipulador se você for um administra
  ***ppRS***  O ponteiro onde o **conjunto de registros** deve ser retornado.  
   
 ## <a name="reconnect-method"></a>Reconectar método  
- Esse método atualiza a fonte de dados. Ele cria um novo objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) e anexa o **conjunto de registros**fornecido.  
+ Esse método atualiza a fonte de dados. Ele cria um novo objeto de [conexão](../../reference/ado-api/connection-object-ado.md) e anexa o **conjunto de registros**fornecido.  
   
 ### <a name="arguments"></a>Argumentos  
  ***Conn***  A cadeia de conexão.  
@@ -101,12 +101,10 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Seção conexão de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Seção de logs de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Seção UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configurações do cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
-
+ [Seção conexão de arquivo de personalização](./customization-file-connect-section.md)   
+ [Seção de logs de arquivo de personalização](./customization-file-logs-section.md)   
+ [Seção SQL do arquivo de personalização](./customization-file-sql-section.md)   
+ [Seção UserList do arquivo de personalização](./customization-file-userlist-section.md)   
+ [Personalização de datafactory](./datafactory-customization.md)   
+ [Configurações do cliente necessárias](./required-client-settings.md)   
+ [Noções básicas sobre o arquivo de personalização](./understanding-the-customization-file.md)

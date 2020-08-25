@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 582014342380ed5ec77c8a6f0e2adacba52bbdcc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f620dd4c8c8c5b3e00c8875b18686259d71429d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440338"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771115"
 ---
 # <a name="column-object-adox"></a>Objeto Column (ADOX)
 Representa uma coluna de uma tabela, índice ou chave.  
@@ -33,25 +33,25 @@ Representa uma coluna de uma tabela, índice ou chave.
   
  Com as propriedades e coleções de um objeto de **coluna** , você pode:  
   
--   Identifique a coluna com a propriedade [Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) .  
+-   Identifique a coluna com a propriedade [Name (ADOX)](./name-property-adox.md) .  
   
--   Especifique o tipo de dados da coluna com a propriedade [(chave) do tipo Propriedade (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md) .  
+-   Especifique o tipo de dados da coluna com a propriedade [(chave) do tipo Propriedade (ADOX)](./type-property-key-adox.md) .  
   
--   Determine se a coluna tem comprimento fixo ou se ela pode conter valores nulos com a propriedade de [propriedade Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md) .  
+-   Determine se a coluna tem comprimento fixo ou se ela pode conter valores nulos com a propriedade de [propriedade Attributes (ADOX)](./attributes-property-adox.md) .  
   
--   Especifique o tamanho máximo da coluna com a propriedade da [Propriedade DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md) .  
+-   Especifique o tamanho máximo da coluna com a propriedade da [Propriedade DefinedSize (ADOX)](./definedsize-property-adox.md) .  
   
--   Para valores de dados numéricos, especifique a escala com a propriedade da [Propriedade NumericScale (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md) .  
+-   Para valores de dados numéricos, especifique a escala com a propriedade da [Propriedade NumericScale (ADOX)](./numericscale-property-adox.md) .  
   
--   Para valor de dados numéricos, especifique a precisão máxima com a propriedade de [propriedade de precisão (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md) .  
+-   Para valor de dados numéricos, especifique a precisão máxima com a propriedade de [propriedade de precisão (ADOX)](./precision-property-adox.md) .  
   
--   Especifique o [objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md) que possui a coluna com a propriedade [ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) .  
+-   Especifique o [objeto de catálogo (ADOX)](./catalog-object-adox.md) que possui a coluna com a propriedade [ParentCatalog (ADOX)](./parentcatalog-property-adox.md) .  
   
--   Para colunas de chave, especifique o nome da coluna relacionada na tabela relacionada com a propriedade [RelatedColumn (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md) .  
+-   Para colunas de chave, especifique o nome da coluna relacionada na tabela relacionada com a propriedade [RelatedColumn (ADOX)](./relatedcolumn-property-adox.md) .  
   
--   Para colunas de índice, especifique se a ordem de classificação é crescente ou decrescente com a propriedade [OrdemDeClassificação (Propriedade SortOrder)](../../../ado/reference/adox-api/sortorder-property-adox.md) .  
+-   Para colunas de índice, especifique se a ordem de classificação é crescente ou decrescente com a propriedade [OrdemDeClassificação (Propriedade SortOrder)](./sortorder-property-adox.md) .  
   
--   Acesse propriedades específicas do provedor com a coleção de [Propriedades Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) .  
+-   Acesse propriedades específicas do provedor com a coleção de [Propriedades Collection (ADO)](../ado-api/properties-collection-ado.md) .  
   
 > [!NOTE]
 >  Nem todas as propriedades de objetos de **coluna** podem ser suportadas pelo seu provedor de dados. Ocorrerá um erro se você tiver definido um valor para uma propriedade para a qual o provedor não oferece suporte. Para novos objetos de **coluna** , o erro ocorrerá quando o objeto for anexado à coleção. Para objetos existentes, o erro ocorrerá ao definir a propriedade.  
@@ -60,14 +60,14 @@ Representa uma coluna de uma tabela, índice ou chave.
   
  Esta seção contém o tópico a seguir.  
   
--   [Propriedades, Métodos e Eventos do objeto Column](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
+-   [Propriedades, Métodos e Eventos do objeto Column](./column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade Name e métodos de acréscimo de colunas e tabelas (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Método Connection Close, exemplo da propriedade de tipo Table (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Exemplo das propriedades método, tipo de chave, RelatedColumn, RELATEDTABLE e UpdateRule da tecla Append (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Exemplo de código ADOX: exemplo de propriedades NumericScale e Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Exemplo da propriedade ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Exemplo da propriedade SortOrder (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Exemplo da propriedade Name e métodos de acréscimo de colunas e tabelas (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Método Connection Close, exemplo da propriedade de tipo Table (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Exemplo das propriedades método, tipo de chave, RelatedColumn, RELATEDTABLE e UpdateRule da tecla Append (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Exemplo de código ADOX: exemplo de propriedades NumericScale e Precision (VB)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Exemplo da propriedade ParentCatalog (VB)](./parentcatalog-property-example-vb.md)   
+ [Exemplo da propriedade SortOrder (VB)](./sortorder-property-example-vb.md)   
+ [Coleção Columns (ADOX)](./columns-collection-adox.md)   
+ [Coleção Properties (ADO)](../ado-api/properties-collection-ado.md)

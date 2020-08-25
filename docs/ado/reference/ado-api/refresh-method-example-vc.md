@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b99e08e689e9e37ae489f61c742819e9d8a8afca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442328"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771955"
 ---
 # <a name="refresh-method-example-vc"></a>Exemplo do método Refresh (VC++)
-Este exemplo demonstra o uso do método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para atualizar a coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimento armazenado.  
+Este exemplo demonstra o uso do método [Refresh](./refresh-method-ado.md) para atualizar a coleção de [parâmetros](./parameters-collection-ado.md) para um objeto de [comando](./command-object-ado.md) de procedimento armazenado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -235,6 +235,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Objeto Command (ADO)](./command-object-ado.md)   
+ [Coleção Parameters (ADO)](./parameters-collection-ado.md)   
+ [Método Refresh (ADO)](./refresh-method-ado.md)

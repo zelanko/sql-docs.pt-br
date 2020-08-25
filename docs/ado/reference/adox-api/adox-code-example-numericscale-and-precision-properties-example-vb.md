@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 919ad2763a711382cc9f472f34c791807cdd29e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71bd5eb4ba0768f91ccf145933067164e668c942
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440638"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777755"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Exemplo de código ADOX: NumericScale e exemplo de propriedades Precision (VB)
-Este exemplo demonstra as propriedades [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [Precision](../../../ado/reference/adox-api/precision-property-adox.md) do objeto [Column](../../../ado/reference/adox-api/column-object-adox.md) . Esse código exibe seu valor para a tabela **detalhes do pedido** do banco de dados *Northwind* .  
+Este exemplo demonstra as propriedades [NumericScale](./numericscale-property-adox.md) e [Precision](./precision-property-adox.md) do objeto [Column](./column-object-adox.md) . Esse código exibe seu valor para a tabela **detalhes do pedido** do banco de dados *Northwind* .  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -77,6 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Propriedade NumericScale (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
- [Propriedade Precision (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)
+ [Objeto Column (ADOX)](./column-object-adox.md)   
+ [Propriedade NumericScale (ADOX)](./numericscale-property-adox.md)   
+ [Propriedade Precision (ADOX)](./precision-property-adox.md)

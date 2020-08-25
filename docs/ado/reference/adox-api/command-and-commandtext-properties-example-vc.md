@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 907636b5d883fcca57a9ea1211ea54078a5e312d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 235b62a10bb5ae2012e336362da3c05299a66319
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440248"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770929"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Exemplo das propriedades Command e CommandText (VC++)
-O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) para atualizar o texto de um procedimento.  
+O código a seguir demonstra como usar a propriedade [Command](./command-property-adox.md) para atualizar o texto de um procedimento.  
   
 ```  
 // BeginCommandTextCpp  
@@ -92,4 +92,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)
+ [Propriedade Command (ADOX)](./command-property-adox.md)

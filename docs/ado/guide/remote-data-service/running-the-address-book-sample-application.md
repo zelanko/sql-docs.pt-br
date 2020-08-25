@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fddb0d0fb2d7a49c7b9983c03157922862f5d96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451998"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759346"
 ---
 # <a name="running-the-address-book-sample-application"></a>Executar o aplicativo de exemplo do catálogo de endereços
 > [!IMPORTANT]
@@ -43,8 +43,4 @@ ms.locfileid: "88451998"
 3.  Em seguida, você pode experimentar vários cenários no aplicativo de exemplo do catálogo de endereços, como Pesquisar por uma pessoa com base em seu nome de email, listando todas as pessoas com o título "gerente de programas" ou editando registros existentes. Clique em **Localizar** para preencher a grade de dados com todos os nomes disponíveis.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto de associação de dados do catálogo de endereço](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+ [Objeto de associação de dados do catálogo de endereço](./address-book-data-binding-object.md)

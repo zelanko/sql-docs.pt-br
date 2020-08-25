@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506c20cddf6527e0d8c61a9a9c7133cefef0b1c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 744bb7a701207ef92bc23fa2d9728c0b86092fd0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451848"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760076"
 ---
 # <a name="using-related-technologies-with-rds"></a>Usar tecnologias relacionadas com RDS
 Esta seção contém os seguintes tópicos.  
   
--   [Usar RDS com pool de conexões ODBC](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
+-   [Usar RDS com pool de conexões ODBC](./using-rds-with-odbc-connection-pooling.md)  
   
--   [Executar objetos de negócios nos serviços de componentes](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
+-   [Executar objetos de negócios nos serviços de componentes](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -45,7 +45,4 @@ Esta seção contém os seguintes tópicos.
  **Servidor do Microsoft Windows NT Server/windows 2000** Para obter mais informações sobre segurança no Microsoft Windows NT Server ou no Windows 2000 Server, consulte o site do Microsoft Windows.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [Conceitos básicos do RDS](./rds-fundamentals.md)

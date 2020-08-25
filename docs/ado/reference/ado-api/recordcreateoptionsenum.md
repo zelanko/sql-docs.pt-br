@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ef305aefbd3c606f433bfd85b1b10ac2dd94db1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fba315867e49935557d7bd6b3abe04c942e5a0a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442468"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772445"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-Especifica se um **registro** existente deve ser aberto ou um novo **registro** criado para o método [Open](../../../ado/reference/ado-api/open-method-ado-record.md) do objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) . Os valores podem ser combinados com um operador AND.  
+Especifica se um **registro** existente deve ser aberto ou um novo **registro** criado para o método [Open](./open-method-ado-record.md) do objeto [Record](./record-object-ado.md) . Os valores podem ser combinados com um operador AND.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Cria um novo **registro** no nó especificado pelo parâmetro de *origem* , em vez de abrir um **registro**existente. Se a origem apontar para um nó existente, ocorrerá um erro em tempo de execução, a menos que **adCreateCollection** seja combinado com **adOpenIfExists** ou **adCreateOverwrite**.|  
-|**adCreateNonCollection**|0|Cria um novo **registro** do tipo [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
+|**adCreateNonCollection**|0|Cria um novo **registro** do tipo [adSimpleRecord](./recordtypeenum.md).|  
 |**adCreateOverwrite**|0x4000000|Modifica os sinalizadores de criação **adCreateCollection**, **adCreateNonCollection**e **adCreateStructDoc**. Quando ou é usado com esse valor e um dos valores do sinalizador de criação, se a URL de origem apontar para um nó ou **registro**existente, o **registro** existente será substituído e um novo será criado em seu lugar. Esse valor não pode ser usado junto com **adOpenIfExists**.|  
-|**adCreateStructDoc**|0x80000000|Cria um novo **registro** do tipo [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), em vez de abrir um **registro**existente.|  
+|**adCreateStructDoc**|0x80000000|Cria um novo **registro** do tipo [adStructDoc](./recordtypeenum.md), em vez de abrir um **registro**existente.|  
 |**adFailIfNotExists**|-1|Padrão. Resultará em um erro de tempo de execução se a *origem* apontar para um nó não existente.|  
 |**adOpenIfExists**|0x2000000|Modifica os sinalizadores de criação **adCreateCollection**, **adCreateNonCollection**e **adCreateStructDoc**. Quando ou é usado com esse valor e um dos valores do sinalizador de criação, se a URL de origem apontar para um objeto de **registro** ou nó existente, o provedor deverá abrir o **registro** existente em vez de criar um novo. Esse valor não pode ser usado junto com **adCreateOverwrite**.|  
   
@@ -39,4 +39,4 @@ Especifica se um **registro** existente deve ser aberto ou um novo **registro** 
  Essas constantes não têm equivalentes ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método Open (Registro do ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Método Open (Registro do ADO)](./open-method-ado-record.md)

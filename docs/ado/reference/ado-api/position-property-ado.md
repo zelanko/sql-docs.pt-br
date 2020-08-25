@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3402ebd39375957a224a020d441abbdc3379d71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be31e95a3929243602baaa10c5a36a9348f812b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442718"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773175"
 ---
 # <a name="position-property-ado"></a>Propriedade Position (ADO)
-Indica a posição atual em um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Indica a posição atual em um objeto de [fluxo](./stream-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um valor **longo** que especifica o deslocamento, em número de bytes, da posição atual do início do fluxo. O padrão é 0, que representa o primeiro byte no fluxo.  
   
 ## <a name="remarks"></a>Comentários  
- A posição atual pode ser movida para um ponto após o fim do fluxo. Se você especificar a posição atual além do fim do fluxo, o [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) do objeto de **fluxo** será aumentado de acordo. Todos os novos bytes adicionados dessa maneira serão nulos.  
+ A posição atual pode ser movida para um ponto após o fim do fluxo. Se você especificar a posição atual além do fim do fluxo, o [tamanho](./size-property-ado-stream.md) do objeto de **fluxo** será aumentado de acordo. Todos os novos bytes adicionados dessa maneira serão nulos.  
   
 > [!NOTE]
 >  **Position** sempre mede bytes. Para fluxos de texto usando conjuntos de caracteres multibyte, multiplique a posição pelo tamanho do caractere para determinar o número do caractere. Por exemplo, para um conjunto de caracteres de dois bytes, o primeiro caractere está na posição 0, o segundo caractere na posição 2, o terceiro caractere na posição 4 e assim por diante.  
@@ -42,7 +42,7 @@ Indica a posição atual em um objeto de [fluxo](../../../ado/reference/ado-api/
 >  Para objetos de **fluxo** somente leitura, o ADO não retornará um erro se a **posição** for definida como um valor maior que o **tamanho** do **fluxo**. Isso não altera o tamanho do **fluxo**nem altera o conteúdo do **fluxo** de forma alguma. No entanto, isso deve ser evitado porque resulta em um valor de **posição**sem sentido.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Objeto Stream (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade Charset (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)
+ [Propriedade Charset (ADO)](./charset-property-ado.md)

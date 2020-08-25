@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23110157445da6c776de7582682992ab55a97ac8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452278"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759874"
 ---
 # <a name="configuring-rds"></a>Configurar o RDS
 > [!IMPORTANT]
@@ -26,27 +26,25 @@ ms.locfileid: "88452278"
   
  Para implementar o RDS com eficiência, verifique se você está familiarizado com as várias configurações disponíveis para você. Esta seção inclui informações importantes sobre a segurança e a escalabilidade em sua implementação do RDS. Consulte os tópicos a seguir para obter informações sobre como configurar seus computadores para usar o RDS.  
   
--   [Concedendo privilégios de convidado para um computador do servidor Web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
+-   [Conceder privilégios de convidado para um computador do servidor Web](./granting-guest-privileges-to-a-web-server-computer.md)  
   
--   [Registrando um objeto de negócios personalizado](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
+-   [Registrar um objeto de negócios personalizado](./registering-a-custom-business-object.md)  
   
--   [Marcando objetos de negócios como seguros para script](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
+-   [Marcar objetos de negócios como seguros para script](./marking-business-objects-as-safe-for-scripting.md)  
   
--   [Registrar objetos de negócios no cliente para uso com DCOM](../../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)  
+-   [Registrar objetos de negócios no cliente para uso com DCOM](./registering-business-objects-on-the-client-for-use-with-dcom.md)  
   
--   [Configurar o formato de marshaling de fluxo DCOM](../../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)  
+-   [Configurar o formato de marshaling de fluxo DCOM](./setting-dcom-stream-marshaling-format.md)  
   
--   [Habilitar um DLL para ser executado no DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)  
+-   [Habilitar um DLL para ser executado no DCOM](./enabling-a-dll-to-run-on-dcom.md)  
   
--   [Configurar servidores virtuais no IIS](../../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)  
+-   [Configurar servidores virtuais no IIS](./configuring-virtual-servers-on-iis.md)  
   
--   [Proteger aplicativos RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md)  
+-   [Proteger aplicativos RDS](./securing-rds-applications.md)  
   
--   [Configurar o DataFactory para modos seguros ou irrestritos](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
+-   [Configurar o DataFactory para modos seguros ou irrestritos](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usando tecnologias relacionadas com o RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
- [Personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Solução de problemas do RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
-
+ [Usando tecnologias relacionadas com o RDS](./using-related-technologies-with-rds.md)   
+ [Personalização de datafactory](./datafactory-customization.md)   
+ [Solução de problemas do RDS](./troubleshooting-rds.md)

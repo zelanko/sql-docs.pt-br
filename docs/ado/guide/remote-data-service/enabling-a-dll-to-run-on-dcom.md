@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452198"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759779"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Habilitar um DLL para ser executado no DCOM
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452198"
   
      - ou -  
   
-     Importe o objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) para o pacote.  
+     Importe o objeto [RDSServer. datafactory](../../reference/rds-api/datafactory-object-rdsserver.md) para o pacote.  
   
 3.  Defina o atributo de ativação para o pacote como **no processo do criador** (aplicativo de biblioteca).  
   
      Para tornar o. dll acessível por meio do DCOM e do IIS no mesmo computador, você deve definir o atributo de ativação do componente no snap-in do MMC dos serviços de componentes. Depois de definir o atributo como **no processo do criador**, você observará que uma chave de servidor **InProc** no registro foi adicionada que aponta para um componente dos serviços de componentes substituto. dll.  
   
  Para obter mais informações sobre os serviços de componentes (ou o Microsoft Transaction Service, se você estiver usando o Windows NT) e como executar essas etapas, visite o site do Microsoft Transaction Server.
-
-

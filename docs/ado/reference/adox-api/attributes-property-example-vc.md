@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84ca29160d8d26930a3edb644b9317392dc0603f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b850e6b64c5acc8a504c5d684e4472a05f4eeef
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440418"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771315"
 ---
 # <a name="attributes-property-example-vc"></a>Exemplo da propriedade Attributes (VC++)
-Este exemplo demonstra a propriedade [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md). Configurá-lo como **adColNullable** permite que o usuário defina o valor de um [campo](../../../ado/reference/ado-api/field-object.md) de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro em que os dados não são conhecidos e um registro em que os dados não se aplicam.  
+Este exemplo demonstra a propriedade [Attributes](./attributes-property-adox.md) de uma [coluna](./column-object-adox.md). Configurá-lo como **adColNullable** permite que o usuário defina o valor de um [campo](../ado-api/field-object.md) de [conjunto de registros](../ado-api/recordset-object-ado.md) como uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro em que os dados não são conhecidos e um registro em que os dados não se aplicam.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -204,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Propriedade Attributes (ADOX)](./attributes-property-adox.md)   
+ [Objeto Column (ADOX)](./column-object-adox.md)

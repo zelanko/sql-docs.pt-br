@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452158"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759716"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimizar o uso de espaço de arquivo de log
 Um arquivo de log pode ser preenchido rapidamente (o que interrompe o servidor), se houver um grande volume de atividade em um banco de dados SQL Server. Você pode definir o arquivo de log para **truncar no ponto de verificação** para estender significativamente a vida útil do arquivo de log para um banco de dados.  
@@ -47,6 +47,4 @@ Um arquivo de log pode ser preenchido rapidamente (o que interrompe o servidor),
  Para obter mais informações sobre o recurso **truncar no ponto de verificação** , consulte a documentação do Microsoft SQL Server.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Conceitos básicos do RDS](./rds-fundamentals.md)

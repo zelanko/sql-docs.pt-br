@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba02a22b987384e48a750705fa3c2baf6965f920
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452308"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758746"
 ---
 # <a name="basic-rds-programming-model"></a>Modelo de programação básica do RDS
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "88452308"
   
 -   Invocar o programa do servidor. Passe parâmetros para o programa do servidor que identifica a fonte de dados e o comando a ser emitido. (O programa de servidor realmente usa o ADO para obter acesso à fonte de dados. O ADO faz uma conexão com um dos parâmetros especificados e, em seguida, emite o comando especificado no outro parâmetro.)  
   
--   O programa de servidor Obtém um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) da fonte de dados. Opcionalmente, o objeto **Recordset** é processado no servidor.  
+-   O programa de servidor Obtém um objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) da fonte de dados. Opcionalmente, o objeto **Recordset** é processado no servidor.  
   
 -   O programa de servidor retorna o objeto **Recordset** final para o aplicativo cliente.  
   
@@ -45,10 +45,8 @@ ms.locfileid: "88452308"
  Por fim, se suas necessidades estiverem em algum lugar entre elas, o ADO agora dará suporte à personalização do comportamento do programa servidor padrão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelo de programação de RDS em detalhes](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [Cenário de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial do RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Segurança e uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Modelo de programação de RDS em detalhes](./rds-programming-model-in-detail.md)   
+ [Cenário de RDS](./rds-scenario.md)   
+ [Tutorial do RDS](./rds-tutorial.md)   
+ [Objeto Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Segurança e uso RDS](./rds-usage-and-security.md)

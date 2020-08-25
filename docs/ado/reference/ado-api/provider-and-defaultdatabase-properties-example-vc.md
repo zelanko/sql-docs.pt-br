@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ad64de17b67acfba0948398fbec7ba5e853eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49d1e08e421c520238573cd802a592cc970b19da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442608"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772795"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Exemplo das propriedades Provider e DefaultDatabase (VC++)
-Este exemplo demonstra a propriedade do [provedor](../../../ado/reference/ado-api/provider-property-ado.md) abrindo três objetos de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) usando provedores diferentes. Ele também usa a propriedade [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) para definir o banco de dados padrão para o provedor ODBC da Microsoft.  
+Este exemplo demonstra a propriedade do [provedor](./provider-property-ado.md) abrindo três objetos de [conexão](./connection-object-ado.md) usando provedores diferentes. Ele também usa a propriedade [DefaultDatabase](./defaultdatabase-property.md) para definir o banco de dados padrão para o provedor ODBC da Microsoft.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -135,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto de conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propriedade DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Propriedade Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Objeto de conexão (ADO)](./connection-object-ado.md)   
+ [Propriedade DefaultDatabase](./defaultdatabase-property.md)   
+ [Propriedade Provider (ADO)](./provider-property-ado.md)

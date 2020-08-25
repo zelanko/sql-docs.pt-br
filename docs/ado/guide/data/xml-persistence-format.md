@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452508"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758976"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistência XML
 O ADO usa a codificação UTF-8 para o fluxo XML que ele mantém.  
@@ -72,4 +72,4 @@ xmlns:z="#RowsetSchema">
  A seção de dados tem três linhas que contêm informações sobre transportadoras. Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas as \<rs:data> marcas devem estar presentes. Sem dados, você pode escrever a tag de forma abreviada como simplesmente \<rs:data/> . Qualquer marca prefixada com "RS" indica que está no namespace definido por urn: schemas-microsoft-com: Rowset.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistência de registros em formato XML](./persisting-records-in-xml-format.md)

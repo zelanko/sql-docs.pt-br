@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce5e13641afa757f2c0ccea4ec760c4fa70b3ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452108"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759636"
 ---
 # <a name="rds-programming-model-with-objects"></a>Modelo de programação do RDS com objetos
 O objetivo do RDS é obter acesso e atualizar fontes de dados por meio de um intermediário, como o IIS. O modelo de programação especifica a sequência de atividades necessárias para atingir essa meta. O modelo de objeto especifica os objetos cujos métodos e propriedades afetam o modelo de programação.  
@@ -29,11 +29,11 @@ O objetivo do RDS é obter acesso e atualizar fontes de dados por meio de um int
   
  O RDS fornece os meios para executar a seguinte sequência de ações:  
   
--   Especifique o programa a ser invocado no servidor e obtenha uma maneira (proxy) para referir-se a ele do cliente ([RDS. Espaço de disco](../../../ado/reference/rds-api/dataspace-object-rds.md)).  
+-   Especifique o programa a ser invocado no servidor e obtenha uma maneira (proxy) para referir-se a ele do cliente ([RDS. Espaço de disco](../../reference/rds-api/dataspace-object-rds.md)).  
   
--   Invocar o programa do servidor. Passe parâmetros para o programa do servidor que identifica a fonte de dados e o comando a ser emitido (proxy ou [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
+-   Invocar o programa do servidor. Passe parâmetros para o programa do servidor que identifica a fonte de dados e o comando a ser emitido (proxy ou [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md)).  
   
--   O programa de servidor Obtém um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) da fonte de dados, normalmente usando o ADO. Opcionalmente, o objeto **Recordset** é processado no servidor ([RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)).  
+-   O programa de servidor Obtém um objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) da fonte de dados, normalmente usando o ADO. Opcionalmente, o objeto **Recordset** é processado no servidor ([RDSServer. datafactory](../../reference/rds-api/datafactory-object-rdsserver.md)).  
   
 -   O programa de servidor retorna o objeto **Recordset** final para o aplicativo cliente (proxy).  
   
@@ -42,13 +42,11 @@ O objetivo do RDS é obter acesso e atualizar fontes de dados por meio de um int
 -   As alterações no objeto **Recordset** são enviadas de volta para o servidor e usadas para atualizar a fonte de dados (**RDS. DataControl** ou **RDSServer. datafactory**).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resumo do modelo de objeto RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Objeto datafactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Cenário de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial do RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Segurança e uso RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Resumo do modelo de objeto RDS](./rds-object-model-summary.md)   
+ [Objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Objeto datafactory (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   
+ [Objeto DataSpace (RDS)](../../reference/rds-api/dataspace-object-rds.md)   
+ [Cenário de RDS](./rds-scenario.md)   
+ [Tutorial do RDS](./rds-tutorial.md)   
+ [Objeto Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Segurança e uso RDS](./rds-usage-and-security.md)

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8e60a13b723f5004168e410c611d48c68e7da2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db7d3e459304fc9328deac193a9ca1f59cf83098
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452408"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758366"
 ---
 # <a name="programming-with-ado-md"></a>Programar com o ADO MD
 Para usar ADO MD com sua ferramenta de desenvolvimento, você deve estabelecer uma referência à biblioteca de tipos de ADO MD. A descrição da biblioteca de ADO MD é a biblioteca do Microsoft ActiveX Data Objects (Multidimensional). O nome do arquivo da biblioteca de ADO MD é msadomd.dll e a ID do programa (ProgID) é "ADOMD". Para obter mais informações sobre como estabelecer referências a bibliotecas, consulte a documentação da sua ferramenta de desenvolvimento.  
   
 ## <a name="see-also"></a>Consulte Também  
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Visão geral de esquemas multidimensionais e dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Usando o ADO com ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [Manipular dados multidimensionais](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [ADO (Multidimensional) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Visão geral de esquemas multidimensionais e dados](./overview-of-multidimensional-schemas-and-data.md)   
+ [Usando o ADO com ADO MD](./using-ado-with-ado-md.md)   
+ [Manipular dados multidimensionais](./working-with-multidimensional-data.md)

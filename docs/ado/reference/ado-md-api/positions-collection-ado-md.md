@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e1e50fbfa6697f3f05a8cc9cf7a9ada98b9031
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d52b99182f34b5cefec46d210821dbcfb18388c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440698"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777875"
 ---
 # <a name="positions-collection-ado-md"></a>Coleção Positions (ADO MD)
-Contém os objetos [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) que definem um ponto em um eixo.  
+Contém os objetos [Position](./position-object-ado-md.md) que definem um ponto em um eixo.  
   
 ## <a name="remarks"></a>Comentários  
  **Positions** é uma coleção ADO padrão. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
   
--   Obtenha o número de objetos na coleção com a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Obtenha o número de objetos na coleção com a propriedade [Count](../ado-api/count-property-ado.md) .  
   
--   Retornar um objeto da coleção com a propriedade de [Item](../../../ado/reference/ado-api/item-property-ado.md) padrão.  
+-   Retornar um objeto da coleção com a propriedade de [Item](../ado-api/item-property-ado.md) padrão.  
   
--   Atualize os objetos na coleção do provedor com o método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Atualize os objetos na coleção do provedor com o método [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Esta seção contém o tópico a seguir.  
   
--   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
+-   [Propriedades, métodos e eventos](./positions-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Objeto Position (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+ [Exemplo de células (VB)](./cellset-example-vb.md)   
+ [Objeto Axis (ADO MD)](./axis-object-ado-md.md)   
+ [Objeto Cell (ADO MD)](./cell-object-ado-md.md)   
+ [Objeto Position (ADO MD)](./position-object-ado-md.md)

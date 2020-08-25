@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a376fadab993daa556265db7146c7823b1db5249
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a18d7aecb619afa2d820f2ce2d70ac9b6e6f38e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440988"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778095"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Hierarchies
 ## <a name="properties"></a>Propriedades  
- [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propriedade Count](../ado-api/count-property-ado.md)  
   
- [Propriedade do item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade do item](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Método de atualização](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Método de atualização](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleção Hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)
+ [Coleção Hierarchies (ADO MD)](./hierarchies-collection-ado-md.md)

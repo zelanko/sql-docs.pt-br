@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b291651caa93e93999d87a926c9abe391e71d21e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5add8972d95413841a6c9c45de2dcc26d8cbb24
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440208"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770835"
 ---
 # <a name="create-method-adox"></a>Método Create (ADOX)
 Cria um novo catálogo.  
@@ -39,13 +39,13 @@ Catalog.Create ConnectString
  Um valor de **cadeia de caracteres** usado para se conectar à fonte de dados.  
   
 ## <a name="remarks"></a>Comentários  
- O método **Create** cria e abre uma nova [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ADO com a fonte de dados especificada em *ConnectString*. Se for bem-sucedido, o novo objeto de **conexão** será atribuído à propriedade [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) .  
+ O método **Create** cria e abre uma nova [conexão](../ado-api/connection-object-ado.md) ADO com a fonte de dados especificada em *ConnectString*. Se for bem-sucedido, o novo objeto de **conexão** será atribuído à propriedade [ActiveConnection](./activeconnection-property-adox.md) .  
   
  Ocorrerá um erro se o provedor não oferecer suporte à criação de novos catálogos.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo do método Create (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
- [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [Exemplo do método Create (VB)](./create-method-example-vb.md)   
+ [Propriedade ActiveConnection (ADOX)](./activeconnection-property-adox.md)

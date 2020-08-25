@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6600c02af5c24fc1ce27a04422678f8a3f40a179
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c2b2b1579beb967ec75b5a0b32532b846640b01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442548"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772715"
 ---
 # <a name="read-method"></a>Método Read
-Lê um número especificado de bytes de um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) binário.  
+Lê um número especificado de bytes de um objeto de [fluxo](./stream-object-ado.md) binário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Parâmetros  
  *NumBytes*  
- Opcional. Um valor **longo** que especifica o número de bytes a serem lidos do arquivo ou o valor de [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) **adReadAll**, que é o padrão.  
+ Opcional. Um valor **longo** que especifica o número de bytes a serem lidos do arquivo ou o valor de [StreamReadEnum](./streamreadenum.md) **adReadAll**, que é o padrão.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O método **Read** lê um número especificado de bytes ou o fluxo inteiro de um objeto de **fluxo** e retorna os dados resultantes como uma **variante**.  
@@ -44,10 +44,10 @@ Variant = Stream.Read ( NumBytes)
  Se *NumBytes* for maior que o número de bytes restante no **fluxo**, somente os bytes restantes serão retornados. A leitura de dados não é preenchida para corresponder ao comprimento especificado por *NumBytes*. Se não houver nenhum byte restante para leitura, será retornada uma variante com um valor nulo. A **leitura** não pode ser usada para ler versões anteriores.  
   
 > [!NOTE]
->  *NumBytes* sempre mede bytes. Para objetos de **fluxo** de texto (o[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) é **adTypeText**), use [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
+>  *NumBytes* sempre mede bytes. Para objetos de **fluxo** de texto (o[tipo](./type-property-ado-stream.md) é **adTypeText**), use [ReadText](./readtext-method.md).  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Objeto Stream (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método ReadText](../../../ado/reference/ado-api/readtext-method.md)
+ [Método ReadText](./readtext-method.md)
