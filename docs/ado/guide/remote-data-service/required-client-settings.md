@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452018"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759376"
 ---
 # <a name="required-client-settings"></a>Configurações necessárias de cliente
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452018"
   
  Especifique as configurações a seguir para usar um manipulador de **DataFactory** personalizado.  
   
--   Especifique "provedor = MS remoto" na Propriedade do [objeto de conexão (](../../../ado/reference/ado-api/connection-object-ado.md) ADO [) ou](../../../ado/reference/ado-api/provider-property-ado.md) a palavra-chave da cadeia de conexão do objeto de **conexão** "**Provider**=".  
+-   Especifique "provedor = MS remoto" na Propriedade do [objeto de conexão (](../../reference/ado-api/connection-object-ado.md) ADO [) ou](../../reference/ado-api/provider-property-ado.md) a palavra-chave da cadeia de conexão do objeto de **conexão** "**Provider**=".  
   
--   Defina a propriedade [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) como **adUseClient**.  
+-   Defina a propriedade [CursorLocation (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) como **adUseClient**.  
   
--   Especifique o nome do manipulador a ser usado na Propriedade do **manipulador** do objeto [DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) ou a palavra-chave "**Handler**=" da cadeia de conexão do objeto [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) . (Não é possível definir o manipulador na cadeia de conexão do objeto **Connection** .)  
+-   Especifique o nome do manipulador a ser usado na Propriedade do **manipulador** do objeto [DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md) ou a palavra-chave "**Handler**=" da cadeia de conexão do objeto [Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md) . (Não é possível definir o manipulador na cadeia de conexão do objeto **Connection** .)  
   
  O RDS fornece um manipulador padrão no servidor chamado **MSDFMAP. Manipulador**. (O arquivo de personalização padrão é denominado MSDFMAP.INI.)  
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Especifique a propriedade ou palavra-chave da [Propriedade do manipulador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) ; a propriedade ou palavra-chave da [Propriedade do provedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) ; e os identificadores *CustomerById* e *CustomerDatabase* . Em seguida, abra o objeto **Recordset**  
+ Especifique a propriedade ou palavra-chave da [Propriedade do manipulador (RDS)](../../reference/rds-api/handler-property-rds.md) ; a propriedade ou palavra-chave da [Propriedade do provedor (ADO)](../../reference/ado-api/provider-property-ado.md) ; e os identificadores *CustomerById* e *CustomerDatabase* . Em seguida, abra o objeto **Recordset**  
   
  RS. Abra "CustomerById (4)", "Handler = MSDFMAP. Handler; "& _  
   
@@ -77,11 +77,10 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Seção conexão de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Seção UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configurações do cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escrever seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Seção conexão de arquivo de personalização](./customization-file-connect-section.md)   
+ [Seção SQL do arquivo de personalização](./customization-file-sql-section.md)   
+ [Seção UserList do arquivo de personalização](./customization-file-userlist-section.md)   
+ [Personalização de datafactory](./datafactory-customization.md)   
+ [Configurações do cliente necessárias]()   
+ [Noções básicas sobre o arquivo de personalização](./understanding-the-customization-file.md)   
+ [Escrever seu próprio manipulador personalizado](./writing-your-own-customized-handler.md)

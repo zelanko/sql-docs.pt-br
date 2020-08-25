@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02a439fbe6c5ce483c3a3391421fdfcf7766a579
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 199a60ca21f7109ce1fdd181d8fa9dfcd7c70341
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451538"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760176"
 ---
 # <a name="addnew-method-example-vc"></a>Exemplo do método AddNew (VC++)
-Este exemplo usa o método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) para criar um novo registro com o nome especificado.  
+Este exemplo usa o método [AddNew](./addnew-method-ado.md) para criar um novo registro com o nome especificado.  
   
 ```  
 // BeginAddNewCpp.cpp  
@@ -215,5 +215,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Método AddNew (ADO)](./addnew-method-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

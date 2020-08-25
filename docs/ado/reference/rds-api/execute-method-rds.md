@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439078"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768435"
 ---
 # <a name="execute-method-rds"></a>Método Execute (RDS)
 Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2,5 e posterior.  
@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  Indica o tipo de busca assíncrona.  
   
- Para obter mais informações, consulte [Propriedades de FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
+ Para obter mais informações, consulte [Propriedades de FetchOptions (RDS)](./fetchoptions-property-rds.md).  
   
  *TableID*  
  Uma **variante** do tipo VT_EMPTY ou VT_BSTR. Se esse valor for do tipo VT_EMPTY, ele será ignorado. Se for do tipo VT_BSTR, o conjunto de registros será criado usando **adCmdTableDirect** e o valor especificado aqui e o parâmetro *QueryString* será ignorado.  
@@ -82,6 +82,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  O parâmetro *handlerString* pode ser nulo. O que acontece nesse caso depende de como o servidor RDS está configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP. Handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP. Handler, sample.ini" indica que o manipulador de Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. MSDFMAP.dll irá interpretar o argumento como uma direção para usar a sample.ini para verificar a conexão e as cadeias de caracteres de consulta.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Objeto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

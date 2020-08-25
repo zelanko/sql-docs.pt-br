@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 492c385252085b440c536081e569a4a732f10c32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 645dd3602c97f8ca4bb4fd7df832352bb4cdded0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439288"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768905"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Coleção Views, exemplo da propriedade CommandText (VB)
-O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) para atualizar o texto de uma exibição.  
+O código a seguir demonstra como usar a propriedade [Command](./command-property-adox.md) para atualizar o texto de uma exibição.  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -78,8 +78,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Propriedade Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Propriedade ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Objeto de catálogo (ADOX)](./catalog-object-adox.md)   
+ [Propriedade Command (ADOX)](./command-property-adox.md)   
+ [Objeto View (ADOX)](./view-object-adox.md)   
+ [Coleção Views (ADOX)](./views-collection-adox.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4abe8e9f72ced67a23113bee61452f372bbb1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b2a106dadcb8af11dcdd5865472fce1fa2e1be2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438768"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767735"
 ---
 # <a name="rds-properties"></a>Propriedades RDS
 > [!IMPORTANT]
@@ -27,40 +27,18 @@ ms.locfileid: "88438768"
   
 |Propriedade|Descrição|  
 |-|-|  
-|[Conectar (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|Indica o nome do banco de dados do qual as operações de consulta e atualização são executadas.|  
-|[Executeoptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Indica se a execução assíncrona está habilitada.|  
-|[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|Indica o tipo de busca assíncrona.|  
-|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Indica a coluna na qual os critérios de filtro são avaliados.|  
-|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Indica o operador de avaliação a ser usado no valor do filtro.|  
-|[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Indica o valor para filtrar os registros.|  
-|[Handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Indica o nome de um programa de personalização do lado do servidor (*manipulador*) que estende a funcionalidade do **RDSServer. datafactory**e quaisquer parâmetros usados pelo *manipulador*.|  
-|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Indica o número de milissegundos a aguardar antes que uma solicitação expire.|  
-|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Indica o progresso de um objeto **DataControl** , pois ele busca dados em seu objeto **Recordset** .|  
-|[Conjunto de registros e SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Indica o objeto **Recordset** retornado de um objeto comercial personalizado.|  
-|[Servidor (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Indica o nome do Serviços de Informações da Internet (IIS) e o protocolo de comunicação.|  
-|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica por qual coluna classificar os registros.|  
-|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica se uma ordem de classificação é crescente ou decrescente.|  
-|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Indica a cadeia de caracteres de consulta usada para recuperar o **conjunto de registros**.|  
-|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Indica uma cadeia de caracteres que contém uma URL relativa ou absoluta.|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|[Conectar (RDS)](./connect-property-rds.md)|Indica o nome do banco de dados do qual as operações de consulta e atualização são executadas.|  
+|[Executeoptions (RDS)](./executeoptions-property-rds.md)|Indica se a execução assíncrona está habilitada.|  
+|[FetchOptions (RDS)](./fetchoptions-property-rds.md)|Indica o tipo de busca assíncrona.|  
+|[FilterColumn (RDS)](./filtercolumn-property-rds.md)|Indica a coluna na qual os critérios de filtro são avaliados.|  
+|[FilterCriterion (RDS)](./filtercriterion-property-rds.md)|Indica o operador de avaliação a ser usado no valor do filtro.|  
+|[FilterValue (RDS)](./filtervalue-property-rds.md)|Indica o valor para filtrar os registros.|  
+|[Handler (RDS)](./handler-property-rds.md)|Indica o nome de um programa de personalização do lado do servidor (*manipulador*) que estende a funcionalidade do **RDSServer. datafactory**e quaisquer parâmetros usados pelo *manipulador*.|  
+|[InternetTimeout (RDS)](./internettimeout-property-rds.md)|Indica o número de milissegundos a aguardar antes que uma solicitação expire.|  
+|[ReadyState (RDS)](./readystate-property-rds.md)|Indica o progresso de um objeto **DataControl** , pois ele busca dados em seu objeto **Recordset** .|  
+|[Conjunto de registros e SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)|Indica o objeto **Recordset** retornado de um objeto comercial personalizado.|  
+|[Servidor (RDS)](./server-property-rds.md)|Indica o nome do Serviços de Informações da Internet (IIS) e o protocolo de comunicação.|  
+|[SortColumn (RDS)](./sortcolumn-property-rds.md)|Indica por qual coluna classificar os registros.|  
+|[SortDirection (RDS)](./sortdirection-property-rds.md)|Indica se uma ordem de classificação é crescente ou decrescente.|  
+|[SQL (RDS)](./sql-property.md)|Indica a cadeia de caracteres de consulta usada para recuperar o **conjunto de registros**.|  
+|[URL (RDS)](./url-property-rds.md)|Indica uma cadeia de caracteres que contém uma URL relativa ou absoluta.|

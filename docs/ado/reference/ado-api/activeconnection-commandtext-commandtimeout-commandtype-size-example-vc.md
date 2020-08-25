@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38404272494acfb911d19598ae2358ede14feaae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc4e7ee20e4233f5db32a2a80c9eb849fdf6c86a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451678"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760046"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VC + +)
-Este exemplo usa as propriedades [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)e [Direction](../../../ado/reference/ado-api/direction-property.md) para executar um procedimento armazenado.  
+Este exemplo usa as propriedades [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [size](./size-property-ado-parameter.md)e [Direction](./direction-property.md) para executar um procedimento armazenado.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -212,9 +212,9 @@ Authors With  25  Percent Royalty
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade ActiveConnection (ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
- [Propriedade CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [Propriedade CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [Propriedade CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Propriedade Direction](../../../ado/reference/ado-api/direction-property.md)   
- [Propriedade Size (Parâmetro ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [Propriedade ActiveConnection (ADO)](./activeconnection-property-ado.md)   
+ [Propriedade CommandText (ADO)](./commandtext-property-ado.md)   
+ [Propriedade CommandTimeout (ADO)](./commandtimeout-property-ado.md)   
+ [Propriedade CommandType (ADO)](./commandtype-property-ado.md)   
+ [Propriedade Direction](./direction-property.md)   
+ [Propriedade Size (Parâmetro ADO)](./size-property-ado-parameter.md)

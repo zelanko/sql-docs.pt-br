@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401492"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767155"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de backup para data warehouse paralelos
 Este artigo descreve como configurar um sistema Windows que não seja de dispositivo como um servidor de backup para uso com os recursos de backup e restauração no sistema de plataforma de análise (PAS) e data warehouse em paralelo (PDW).  
@@ -50,7 +50,7 @@ Recomendamos o Windows Server 2012 ou posterior para:
   
 -   Obtenha o benefício de desempenho da pré-alocação de arquivos em relação ao SMB.  
   
--   Use a IFI (inicialização instantânea de arquivo) para operações de backup. Sua equipe de ti gerencia essa configuração no servidor de backup. O Configuration Manager do PDW (dwconfig. exe) não define ou controla IFI no servidor de backup. As versões anteriores do Windows não têm IFI, mas ainda podem ser usadas como servidores de backup.  
+-   Use a IFI (inicialização instantânea de arquivo) para operações de backup. Sua equipe de ti gerencia essa configuração no servidor de backup. O Configuration Manager do PDW (dwconfig.exe) não define ou controla IFI no servidor de backup. As versões anteriores do Windows não têm IFI, mas ainda podem ser usadas como servidores de backup.  
   
 ### <a name="networking-requirements"></a>Requisitos de rede  
 Embora não seja necessário, o InfiniBand é o tipo de conexão recomendado para servidores de backup. Para se preparar para conectar o servidor de carregamento à rede InfiniBand do dispositivo:  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Para obter mais informações, consulte: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Avisos de segurança  
 O servidor de backup não está ingressado no domínio privado do dispositivo. Ele está em sua própria rede e não há nenhuma relação de confiança entre seu próprio domínio e domínio de dispositivo privado.  
@@ -150,5 +150,4 @@ As operações no servidor de carregamento podem usar um caminho UNC para efetua
 - No servidor de carregamento, defina a seguinte opção de política de grupo em segurança \ Opções de instalação: cliente de rede da Microsoft: assinar digitalmente as comunicações (sempre): habilitada.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Backup e restauração](backup-and-restore-overview.md)  
-  
+[Backup e Restauração](backup-and-restore-overview.md)  

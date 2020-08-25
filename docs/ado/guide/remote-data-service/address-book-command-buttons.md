@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452328"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758606"
 ---
 # <a name="address-book-command-buttons"></a>Botões de comando do catálogo de endereços
 O aplicativo de catálogo de endereços inclui os seguintes botões de comando:  
@@ -52,7 +52,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Se a consulta foi bem-sucedida, todas as pessoas com um sobrenome que contém o texto "Berge" (como Berge e Bergeron) e com um título contendo as palavras "gerente de programa" (por exemplo, gerente de programa, tecnologias avançadas) são exibidas na grade de dados HTML.  
   
 ## <a name="preparing-and-sending-the-query"></a>Preparando e enviando a consulta  
- A última parte do procedimento Find_OnClick sub consiste em duas instruções. A primeira instrução atribui a propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) do [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) igual à consulta SQL criada dinamicamente. A segunda instrução faz com que o **RDS. Objeto DataControl** ( `DC1` ) para consultar o banco de dados e exibir os novos resultados da consulta na grade.  
+ A última parte do procedimento Find_OnClick sub consiste em duas instruções. A primeira instrução atribui a propriedade [SQL](../../reference/rds-api/sql-property.md) do [RDS. Objeto DataControl](../../reference/rds-api/datacontrol-object-rds.md) igual à consulta SQL criada dinamicamente. A segunda instrução faz com que o **RDS. Objeto DataControl** ( `DC1` ) para consultar o banco de dados e exibir os novos resultados da consulta na grade.  
   
 ```vb
 Sub Find_OnClick  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Botão Atualizar perfil  
- Clicar no botão **Atualizar perfil** ativa o procedimento Sub Update_OnClick do VBScript, que executa o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1` Métodos [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) do objeto DataControl.  
+ Clicar no botão **Atualizar perfil** ativa o procedimento Sub Update_OnClick do VBScript, que executa o [RDS. ](../../reference/rds-api/datacontrol-object-rds.md) `DC1` Métodos [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../reference/rds-api/refresh-method-rds.md) do objeto DataControl.  
   
 ```vb
 Sub Update_OnClick  
@@ -75,7 +75,7 @@ End Sub
  Quando `DC1.SubmitChanges` o é executado, o serviço de dados remoto empacota todas as informações de atualização e as envia para o servidor via http. A atualização é tudo ou nada; se uma parte da atualização não for bem-sucedida, nenhuma das alterações será feita e uma mensagem de status será retornada. `DC1.Refresh` Não é necessário após **SubmitChanges** com o Remote Data Service, mas garante dados atualizados.  
   
 ## <a name="cancel-changes-button"></a>Botão cancelar alterações  
- Clicar em **cancelar alterações** ativa o procedimento Sub Cancel_OnClick do VBScript, que executa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) (método `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  
+ Clicar em **cancelar alterações** ativa o procedimento Sub Cancel_OnClick do VBScript, que executa o [RDS. Objeto DataControl](../../reference/rds-api/datacontrol-object-rds.md) (método `DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md) .  
   
 ```vb
 Sub Cancel_OnClick  
@@ -86,7 +86,5 @@ End Sub
  Quando `DC1.CancelUpdate` é executado, ele descarta todas as edições feitas por um usuário em um registro de funcionário na grade de dados desde a última consulta ou atualização. Ele restaura os valores originais.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Botões de navegação do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [Botões de navegação do catálogo de endereços](./address-book-navigation-buttons.md)   
+ [Objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

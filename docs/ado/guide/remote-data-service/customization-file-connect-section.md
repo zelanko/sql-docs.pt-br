@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452258"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759842"
 ---
 # <a name="customization-file-connect-section"></a>Seção Conexão do arquivo de personalização
 O comportamento padrão do manipulador é negar todas as conexões. A seção **conectar** especifica exceções para esse comportamento. Por exemplo, se todas as seções de **conexão** estiverem ausentes ou vazias, por padrão, nenhuma conexão poderá ser feita.  
@@ -64,13 +64,10 @@ connectionString
  Se você quiser permitir qualquer conexão (na verdade, desabilitando o comportamento do manipulador padrão), defina a entrada de acesso na seção **conectar padrão** como `Access=ReadWrite` e exclua ou comente qualquer outra seção do _identificador_ de **conexão** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Seção de logs de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Seção UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configurações do cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escrever seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+ [Seção de logs de arquivo de personalização](./customization-file-logs-section.md)   
+ [Seção SQL do arquivo de personalização](./customization-file-sql-section.md)   
+ [Seção UserList do arquivo de personalização](./customization-file-userlist-section.md)   
+ [Personalização de datafactory](./datafactory-customization.md)   
+ [Configurações do cliente necessárias](./required-client-settings.md)   
+ [Noções básicas sobre o arquivo de personalização](./understanding-the-customization-file.md)   
+ [Escrever seu próprio manipulador personalizado](./writing-your-own-customized-handler.md)

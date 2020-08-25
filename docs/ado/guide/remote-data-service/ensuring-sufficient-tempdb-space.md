@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452188"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759769"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantir espaço suficiente de TempDB
-Se ocorrerem erros durante o tratamento de objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que precisam de espaço de processamento no Microsoft SQL Server 6,5, talvez seja necessário aumentar o tamanho do tempdb. (Algumas consultas exigem espaço de processamento temporário; por exemplo, uma consulta com uma cláusula ORDER BY requer um tipo de **conjunto de registros**, que requer algum espaço temporário.)  
+Se ocorrerem erros durante o tratamento de objetos [Recordset](../../reference/ado-api/recordset-object-ado.md) que precisam de espaço de processamento no Microsoft SQL Server 6,5, talvez seja necessário aumentar o tamanho do tempdb. (Algumas consultas exigem espaço de processamento temporário; por exemplo, uma consulta com uma cláusula ORDER BY requer um tipo de **conjunto de registros**, que requer algum espaço temporário.)  
   
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -57,6 +57,4 @@ Se ocorrerem erros durante o tratamento de objetos [Recordset](../../../ado/refe
  Para obter mais informações sobre este tópico, pesquise o arquivo de ajuda do Microsoft SQL Server Enterprise Manager para a caixa de diálogo "expandir banco de dados".  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Conceitos básicos do RDS](./rds-fundamentals.md)

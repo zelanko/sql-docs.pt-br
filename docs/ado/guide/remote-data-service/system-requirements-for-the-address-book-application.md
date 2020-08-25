@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59913c457702e39b9009cd2a8a138b2dbc5f9032
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451888"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759896"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisitos de sistema para o aplicativo de catálogo de endereços
 Para configurar o aplicativo de exemplo do catálogo de endereços, você precisa atender aos seguintes requisitos de software e banco de dados:  
@@ -52,8 +52,6 @@ Para configurar o aplicativo de exemplo do catálogo de endereços, você precis
  Se você não tiver privilégios, o administrador do banco de dados poderá precisar configurar o sistema e conceder a você permissão de acesso ao banco de dados ou configurar o banco de dados para você.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Executando o script SQL do catálogo de endereços](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Executar o aplicativo de exemplo do catálogo de endereços](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [Executando o script SQL do catálogo de endereços](./running-the-address-book-sql-script.md)   
+ [Objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Executar o aplicativo de exemplo do catálogo de endereços](./running-the-address-book-sample-application.md)

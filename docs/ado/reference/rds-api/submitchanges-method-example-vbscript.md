@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f31eb54efbf1901471fc48b7499b7ab6190b680
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8be18e18b890dbe438a0aced23503e690985b5c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438588"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767365"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Exemplo do método SubmitChanges (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O fragmento de código a seguir mostra como usar o método [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) com um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ O fragmento de código a seguir mostra como usar o método [SubmitChanges](./submitchanges-method-rds.md) com um [RDS. Objeto DataControl](./datacontrol-object-rds.md) .  
   
  Para testar este exemplo, recorte e cole esse código em um documento ASP normal e nomeie-o **SubmitChangesCtrlVBS. asp**. O script ASP identificará seu servidor.  
   
@@ -118,7 +118,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Método SubmitChanges (RDS)](./submitchanges-method-rds.md)

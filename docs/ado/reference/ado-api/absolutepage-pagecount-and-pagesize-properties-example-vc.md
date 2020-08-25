@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce6c0042c92611c65bf243da7bbbf59bbeb748be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80c5d3666c4b3b60aa622874dfec2388fa008898
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451798"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759996"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>Exemplo das propriedades AbsolutePage, PageCount e PageSize (VC + +)
-Este exemplo usa as propriedades [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)e [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) para exibir nomes e datas de contratação da tabela ***Employee*** , cinco registros de cada vez.  
+Este exemplo usa as propriedades [AbsolutePage](./absolutepage-property-ado.md), [PageCount](./pagecount-property-ado.md)e [PageSize](./pagesize-property-ado.md) para exibir nomes e datas de contratação da tabela ***Employee*** , cinco registros de cada vez.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -180,7 +180,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedade AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [Propriedade PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [Propriedade PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propriedade AbsolutePage (ADO)](./absolutepage-property-ado.md)   
+ [Propriedade PageCount (ADO)](./pagecount-property-ado.md)   
+ [Propriedade PageSize (ADO)](./pagesize-property-ado.md)   
+ [Objeto Recordset (ADO)](./recordset-object-ado.md)

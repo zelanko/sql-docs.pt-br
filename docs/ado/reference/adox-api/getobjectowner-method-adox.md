@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4acea759ba213eac4365d79fa040c20e5a673cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c68adc866ce3ee73ca184a1e5e2851b3545329d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440038"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770505"
 ---
 # <a name="getobjectowner-method-adox"></a>Método GetObjectOwner (ADOX)
-Retorna o proprietário de um objeto em um [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md).  
+Retorna o proprietário de um objeto em um [Catálogo](./catalog-object-adox.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,14 +35,14 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um valor de **cadeia de caracteres** que especifica o [nome](../../../ado/reference/adox-api/name-property-adox.md) do [usuário](../../../ado/reference/adox-api/user-object-adox.md) ou [grupo](../../../ado/reference/adox-api/group-object-adox.md) que possui o objeto.  
+ Retorna um valor de **cadeia de caracteres** que especifica o [nome](./name-property-adox.md) do [usuário](./user-object-adox.md) ou [grupo](./group-object-adox.md) que possui o objeto.  
   
 #### <a name="parameters"></a>Parâmetros  
  *ObjectName*  
  Um valor de **cadeia de caracteres** que especifica o nome do objeto para o qual retornar o proprietário.  
   
  *ObjectType*  
- Um valor **longo** que pode ser uma das constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , que especifica o tipo do objeto para o qual obter o proprietário.  
+ Um valor **longo** que pode ser uma das constantes [ObjectTypeEnum](./objecttypeenum.md) , que especifica o tipo do objeto para o qual obter o proprietário.  
   
  *ObjectTypeId*  
  Opcional. Um valor de **variante** que especifica o GUID para um tipo de objeto de provedor não definido pela especificação de OLE DB. Esse parâmetro será necessário se *objecttype* for definido como **adPermObjProviderSpecific**; caso contrário, ele não será usado.  
@@ -51,8 +51,8 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  Ocorrerá um erro se o provedor não der suporte ao retorno de proprietários de objeto.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo dos métodos GetObjectOwner e SetObjectOwner (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
- [Método SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)
+ [Exemplo dos métodos GetObjectOwner e SetObjectOwner (VB)](./getobjectowner-and-setobjectowner-methods-example-vb.md)   
+ [Método SetObjectOwner](./setobjectowner-method.md)

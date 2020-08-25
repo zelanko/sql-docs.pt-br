@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451858"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760036"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Usar RDS com pool de conexões ODBC
 Se você estiver usando uma fonte de dados ODBC, poderá usar a opção de pooling de conexão no Serviços de Informações da Internet (IIS) para obter o tratamento de alto desempenho da carga do cliente. O pool de conexões é um Gerenciador de recursos para conexões, mantendo o estado aberto em conexões usadas com frequência.  
@@ -125,26 +125,4 @@ Se você estiver usando uma fonte de dados ODBC, poderá usar a opção de pooli
 5.  Clique em OK e em OK novamente para sair do utilitário.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Conceitos básicos do RDS](./rds-fundamentals.md)

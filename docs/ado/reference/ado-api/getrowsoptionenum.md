@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76926e0190ad8cfe1d7451d89182a365a6c59993
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c071ba19a974f1ac63a31c8d01a4ed42f56804a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443538"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774935"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-Especifica quantos registros recuperar de um conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Especifica quantos registros recuperar de um conjunto de [registros](./recordset-object-ado.md).  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|Recupera o restante dos registros no conjunto de **registros**, da posição atual ou de um indicador especificado pelo parâmetro *Start* do método [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) .|  
+|**adGetRowsRest**|-1|Recupera o restante dos registros no conjunto de **registros**, da posição atual ou de um indicador especificado pelo parâmetro *Start* do método [GetRows](./getrows-method-ado.md) .|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com. ms. wfc. Data**  
@@ -38,4 +38,4 @@ Especifica quantos registros recuperar de um conjunto de [registros](../../../ad
 |AdoEnums. GetRowsOption. REST|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
+ [Método GetRows (ADO)](./getrows-method-ado.md)

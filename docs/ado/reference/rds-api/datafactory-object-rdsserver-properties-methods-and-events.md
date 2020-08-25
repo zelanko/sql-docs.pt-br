@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43143be9bbe538059da8fac1bb44dedbb4b2ad64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afc3b34dec0360930acdd333a97a62577ce334c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439108"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768465"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -31,19 +31,17 @@ ms.locfileid: "88439108"
   
 |Método|Descrição|  
 |-|-|  
-|[Método ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converte um conjunto de registros em uma cadeia de caracteres MIME64.|  
-|[Método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Cria e retorna um conjunto de registros vazio.|  
-|[Método Execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Execute a solicitação e crie um conjunto de linhas de dados avançado (para uso com ADO 2,5 ou posterior).|  
-|[Método Execute21 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Execute a solicitação e crie um conjunto de linhas de dados avançado (para uso com ADO 2,1).|  
-|[Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Execute a solicitação e crie um conjunto de linhas de dados avançado.|  
-|[Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Dado um conjunto de registros com alterações pendentes, esse método os envia para o banco de dados identificado na cadeia de conexão.|  
-|[Método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2,5 ou posterior).|  
-|[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com ADO 2,1).|  
+|[Método ConvertToString (RDS)](./converttostring-method-rds.md)|Converte um conjunto de registros em uma cadeia de caracteres MIME64.|  
+|[Método CreateRecordset (RDS)](./createrecordset-method-rds.md)|Cria e retorna um conjunto de registros vazio.|  
+|[Método Execute (RDS)](./execute-method-rds.md)|Execute a solicitação e crie um conjunto de linhas de dados avançado (para uso com ADO 2,5 ou posterior).|  
+|[Método Execute21 (RDS)](./execute21-method-rds.md)|Execute a solicitação e crie um conjunto de linhas de dados avançado (para uso com ADO 2,1).|  
+|[Método Query (RDS)](./query-method-rds.md)|Execute a solicitação e crie um conjunto de linhas de dados avançado.|  
+|[Método SubmitChanges (RDS)](./submitchanges-method-rds.md)|Dado um conjunto de registros com alterações pendentes, esse método os envia para o banco de dados identificado na cadeia de conexão.|  
+|[Método Synchronize (RDS)](./synchronize-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2,5 ou posterior).|  
+|[Método Synchronize21 (RDS)](./synchronize21-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com ADO 2,1).|  
   
 ## <a name="events"></a>Eventos  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Objeto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

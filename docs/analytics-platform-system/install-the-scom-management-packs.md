@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401069"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766975"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Instalar os pacotes de gerenciamento do SQL Server Operations Manager (SCOM) para o Analytics Platform System
 Siga estas etapas para baixar e instalar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para SQL Server PDW. Os pacotes de gerenciamento são necessários para monitorar SQL Server PDW do SCOM.  
@@ -27,7 +27,7 @@ System Center Operations Manager deve estar instalado e em execução. SQL Serve
 ## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>Etapa 1: baixar os pacotes de gerenciamento  
 Para a carga de trabalho de PDW do APS, baixe o [pacote de gerenciamento do System Center para o Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-Para o gerenciamento de dispositivos, baixe o [pacote de gerenciamento básico do dispositivo SQL Server](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10)).  
+Para o gerenciamento de dispositivos, baixe o [pacote de gerenciamento básico do dispositivo SQL Server](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
 Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do System Center para Microsoft SQL Server dispositivo de data warehouse paralela 2012](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
@@ -51,7 +51,7 @@ Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do Sy
   
     ![Confirmar a instalação](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
     ![Clique em fechar](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do Sy
   
     ![Confirmar a instalação](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
     ![Instalação concluída](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
@@ -80,4 +80,3 @@ Agora que você tem os pacotes de gerenciamento instalados, vá para a próxima 
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

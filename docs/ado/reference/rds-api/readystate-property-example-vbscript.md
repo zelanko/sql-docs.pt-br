@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bccf1feaf95417943194eed6e1faccbc83f1060
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438758"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767675"
 ---
 # <a name="readystate-property-example-vbscript"></a>Exemplo do método ReadyState (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O exemplo a seguir mostra como ler a propriedade [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) do [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) em tempo de execução no código VBScript. **ReadyState** é uma propriedade somente leitura.  
+ O exemplo a seguir mostra como ler a propriedade [ReadyState](./readystate-property-rds.md) do [RDS. Objeto DataControl](./datacontrol-object-rds.md) em tempo de execução no código VBScript. **ReadyState** é uma propriedade somente leitura.  
   
  Para testar este exemplo, recorte e cole esse código entre \<Body> as \</Body> marcas e em um documento HTML normal e nomeie-o **RDSReadySt. asp**. Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. O script ASP identificará seu servidor.  
   
@@ -111,7 +111,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Propriedade ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
-
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Propriedade ReadyState (RDS)](./readystate-property-rds.md)

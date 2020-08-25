@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 700be4586a1e7808113b6ff20bf5459af3cb1f81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bde14ad286e54505cb5476a38cd4080ae43d2e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439418"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769175"
 ---
 # <a name="type-property-table-adox"></a>Propriedade Type (Table) (ADOX)
 Indica o tipo de uma tabela.  
@@ -35,11 +35,11 @@ Indica o tipo de uma tabela.
  Esta propriedade é somente para leitura.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+ [Objeto Table (ADOX)](./table-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade ActiveConnection do catálogo (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Método Connection Close, exemplo da propriedade de tipo Table (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Propriedade Type (coluna) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Propriedade Type (chave) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Exemplo da propriedade ActiveConnection do catálogo (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Método Connection Close, exemplo da propriedade de tipo Table (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Propriedade Type (coluna) (ADOX)](./type-property-column-adox.md)   
+ [Propriedade Type (chave) (ADOX)](./type-property-key-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)

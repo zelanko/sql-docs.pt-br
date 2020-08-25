@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451828"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760026"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO (ActiveX Data Objects)
 
@@ -50,21 +50,19 @@ Cada seção neste artigo descreve um componente do ADO.
  O ADOX é uma biblioteca complementar para os principais objetos do ADO. Ele expõe objetos adicionais para criar, modificar e excluir objetos de esquema, como tabelas e procedimentos. Ele também inclui objetos de segurança para manter usuários e grupos e conceder e revogar permissões em objetos.  
   
 ## <a name="documentation"></a>Documentação  
- [Problemas de design de segurança ADO](../ado/guide/ado-security-design-issues.md)  
+ [Problemas de design de segurança de ADO](./guide/ado-security-design-issues.md)  
   
- [Guia do programador do ADO](../ado/guide/ado-programmer-s-guide.md)  
+ [Guia do programador do ADO](./guide/ado-programmer-s-guide.md)  
   
  Uma introdução ao uso do ADO, do RDS, do ADO MD e do ADOX.  
   
- [Referência do programador do ADO](../ado/reference/ado-programmer-s-reference.md)  
+ [Referência do programador do ADO](./reference/ado-programmer-s-reference.md)  
   
  Esta seção da documentação do ADO contém tópicos para cada objeto ADO, RDS, ADO MD e ADOX, coleção, propriedade, propriedade dinâmica, método, evento e enumeração.  
   
- [Glossário ADO](../ado/ado-glossary.md)  
+ [Glossário ADO](./ado-glossary.md)  
   
 ## <a name="support"></a>Suporte  
  Para obter ajuda gratuita com problemas do ADO, tente postar no grupo de notícias público do ADO. Este grupo de notícias é monitorado pelos profissionais de suporte do PSS (Atendimento Microsoft) que abordam o ADO e por outros desenvolvedores experientes do ADO.  
   
  Mais informações sobre as opções de suporte podem ser encontradas no site de ajuda e suporte da Microsoft.
-
-

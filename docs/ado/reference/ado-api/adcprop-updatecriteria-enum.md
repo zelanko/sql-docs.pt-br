@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31205bbe32dd3c09d70fe4baeb41261be985096c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451598"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760250"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
-Especifica quais campos podem ser usados para detectar conflitos durante uma atualização otimista de uma linha da fonte de dados com um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Especifica quais campos podem ser usados para detectar conflitos durante uma atualização otimista de uma linha da fonte de dados com um objeto [Recordset](./recordset-object-ado.md) .  
   
- Use essas constantes com a propriedade dinâmica "**Atualizar critérios**" do **conjunto de registros** , que é referenciada no índice de [propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) e documentada no [serviço de cursor da Microsoft para obter OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
+ Use essas constantes com a propriedade dinâmica "**Atualizar critérios**" do **conjunto de registros** , que é referenciada no índice de [propriedades dinâmicas do ADO](./ado-dynamic-property-index.md) e documentada no [serviço de cursor da Microsoft para obter OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  

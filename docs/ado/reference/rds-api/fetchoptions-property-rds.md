@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439018"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768275"
 ---
 # <a name="fetchoptions-property-rds"></a>Propriedade FetchOptions (RDS)
 Indica o tipo de busca assíncrona.  
@@ -32,9 +32,9 @@ Indica o tipo de busca assíncrona.
   
 |Constante|DESCRIÇÃO|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|Todos os registros do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) são buscados antes do controle ser retornado para o aplicativo. O **conjunto de registros** completo é buscado antes que o aplicativo tenha permissão para fazer qualquer coisa com ele.|  
+|**adcFetchUpFront**|Todos os registros do [conjunto de registros](../ado-api/recordset-object-ado.md) são buscados antes do controle ser retornado para o aplicativo. O **conjunto de registros** completo é buscado antes que o aplicativo tenha permissão para fazer qualquer coisa com ele.|  
 |**adcFetchBackground**|O controle pode retornar ao aplicativo assim que o primeiro lote de registros for obtido. Uma leitura subsequente do **conjunto de registros** que tenta acessar um registro não buscado no primeiro lote será atrasada até que o registro procurado seja realmente buscado, quando o controle de tempo retornar ao aplicativo.|  
-|**adcFetchAsync**|Padrão. O controle retorna imediatamente para o aplicativo enquanto os registros são buscados em segundo plano. Se o aplicativo tentar ler um registro que ainda não foi buscado, o registro mais próximo do registro procurado será lido e o controle retornará imediatamente, indicando que a extremidade atual do **conjunto de registros** foi atingida. Por exemplo, uma chamada para [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá a posição do registro atual para o último registro realmente buscado, embora mais registros continuem a preencher o **conjunto de registros**.|  
+|**adcFetchAsync**|Padrão. O controle retorna imediatamente para o aplicativo enquanto os registros são buscados em segundo plano. Se o aplicativo tentar ler um registro que ainda não foi buscado, o registro mais próximo do registro procurado será lido e o controle retornará imediatamente, indicando que a extremidade atual do **conjunto de registros** foi atingida. Por exemplo, uma chamada para [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá a posição do registro atual para o último registro realmente buscado, embora mais registros continuem a preencher o **conjunto de registros**.|  
   
 > [!NOTE]
 >  Cada arquivo executável do lado do cliente que usa essas constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constante desejadas do arquivo Adcvbs. Inc, localizadas na pasta de instalação padrão da biblioteca do RDS.  
@@ -43,10 +43,8 @@ Indica o tipo de busca assíncrona.
  Em um aplicativo Web, geralmente você desejará usar **adcFetchAsync** (o valor padrão), pois ele fornece um melhor desempenho. Em um aplicativo cliente compilado, geralmente você desejará usar o **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo das propriedades executeoptions e FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [Exemplo das propriedades executeoptions e FetchOptions (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Método Cancel (RDS)](./cancel-method-rds.md)

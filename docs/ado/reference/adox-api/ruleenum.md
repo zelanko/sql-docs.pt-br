@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87460f060af7f3367147dd56f6bb599d260d09be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da49bbacf8ba59ba12f59fb072e9b5ec8c2ec2ea
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439538"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769455"
 ---
 # <a name="ruleenum"></a>RuleEnum
-Especifica a regra a ser seguida quando uma [chave](../../../ado/reference/adox-api/key-object-adox.md) é excluída.  
+Especifica a regra a ser seguida quando uma [chave](./key-object-adox.md) é excluída.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
@@ -34,4 +34,4 @@ Especifica a regra a ser seguida quando uma [chave](../../../ado/reference/adox-
 |**adRISetNull**|2|O valor da chave estrangeira está definido como nulo.|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Propriedade DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
+ [Propriedade DeleteRule (ADOX)](./deleterule-property-adox.md)

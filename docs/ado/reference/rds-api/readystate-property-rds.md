@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3bd2f05a90acbbade46e6897cabdee49246a68c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438748"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767655"
 ---
 # <a name="readystate-property-rds"></a>Propriedade ReadyState (RDS)
-Indica o progresso de um objeto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) à medida que ele recupera dados em seu objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Indica o progresso de um objeto [DataControl](./datacontrol-object-rds.md) à medida que ele recupera dados em seu objeto [Recordset](../ado-api/recordset-object-ado.md) .  
   
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -40,16 +40,14 @@ Indica o progresso de um objeto [DataControl](../../../ado/reference/rds-api/dat
 >  Cada arquivo executável do lado do cliente que usa essas constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constante desejadas do arquivo Adcvbs. Inc, localizadas na pasta de instalação padrão da biblioteca do RDS.  
   
 ## <a name="remarks"></a>Comentários  
- Use o evento [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) para monitorar as alterações na propriedade **ReadyState** durante uma operação de consulta assíncrona. Isso é mais eficiente do que verificar periodicamente o valor da propriedade.  
+ Use o evento [onReadyStateChange](./onreadystatechange-event-rds.md) para monitorar as alterações na propriedade **ReadyState** durante uma operação de consulta assíncrona. Isso é mais eficiente do que verificar periodicamente o valor da propriedade.  
   
- Se ocorrer um erro durante uma operação assíncrona, a propriedade **readyly** será alterada para **adcReadyStateComplete**, a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) mudará de **adStateExecuting** para **adStateClosed**e a propriedade [Value](../../../ado/reference/ado-api/value-property-ado.md) do objeto **Recordset** permanecerá *Nothing*.  
+ Se ocorrer um erro durante uma operação assíncrona, a propriedade **readyly** será alterada para **adcReadyStateComplete**, a propriedade [State](../ado-api/state-property-ado.md) mudará de **adStateExecuting** para **adStateClosed**e a propriedade [Value](../ado-api/value-property-ado.md) do objeto **Recordset** permanecerá *Nothing*.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo da propriedade ReadyState (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
- [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [Propriedade ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
-
+ [Exemplo da propriedade ReadyState (VBScript)](./readystate-property-example-vbscript.md)   
+ [Método Cancel (RDS)](./cancel-method-rds.md)   
+ [Propriedade ExecuteOptions (RDS)](./executeoptions-property-rds.md)

@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f7844278460859de4ef3c5a0ee5cf073548ec81
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438738"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767665"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Exemplo de propriedades Recordeset e SourceRecordset (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O exemplo a seguir mostra como definir os parâmetros necessários do objeto comercial padrão [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) em tempo de execução.  
+ O exemplo a seguir mostra como definir os parâmetros necessários do objeto comercial padrão [RDSServer. datafactory](./datafactory-object-rdsserver.md) em tempo de execução.  
   
  Para testar este exemplo, recorte e cole esse código entre \<Body> as \</Body> marcas e em um documento HTML normal e nomeie-o **RecordsetVBS. asp**. O script ASP identificará seu servidor.  
   
@@ -129,8 +129,5 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto datafactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Conjunto de registros, propriedades SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
-
-
-
+ [Objeto datafactory (RDSServer)](./datafactory-object-rdsserver.md)   
+ [Conjunto de registros, propriedades SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)

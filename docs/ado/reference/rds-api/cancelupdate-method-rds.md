@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3f7180b812aab47f9388e25a64d9445e9b5c9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0234a240d863f52d33fe1eb230bcfc11eadf06
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439228"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768745"
 ---
 # <a name="cancelupdate-method-rds"></a>Método CancelUpdate (RDS)
-Cancela as alterações feitas na linha atual ou nova de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Cancela as alterações feitas na linha atual ou nova de um objeto [Recordset](../ado-api/recordset-object-ado.md) .  
   
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -36,22 +36,20 @@ DataControl.CancelUpdate
   
 #### <a name="parameters"></a>Parâmetros  
  *DataControl*  
- Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Uma variável de objeto que representa um [RDS. Objeto DataControl](./datacontrol-object-rds.md) .  
   
 ## <a name="remarks"></a>Comentários  
  O serviço de cursor para OLE DB mantém uma cópia dos valores originais e um cache de alterações. Quando você chama **CancelUpdate**, o cache de alterações é redefinido para vazio e todos os controles vinculados são atualizados com os dados originais.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplo do método CancelUpdate (VBScript)](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
- [Botões de comando do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [Método Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Método de atualização (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Exemplo do método CancelUpdate (VBScript)](./cancelupdate-method-example-vbscript.md)   
+ [Botões de comando do catálogo de endereços](../../guide/remote-data-service/address-book-command-buttons.md)   
+ [Método Cancel (ADO)](../ado-api/cancel-method-ado.md)   
+ [Método Cancel (RDS)](./cancel-method-rds.md)   
+ [Método CancelBatch (ADO)](../ado-api/cancelbatch-method-ado.md)   
+ [Método CancelUpdate (ADO)](../ado-api/cancelupdate-method-ado.md)   
+ [Método de atualização (RDS)](./refresh-method-rds.md)   
+ [Método SubmitChanges (RDS)](./submitchanges-method-rds.md)

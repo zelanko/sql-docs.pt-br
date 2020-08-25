@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd844ce2a7443180e9a16f3d3e7a392c09b7b8f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5de15074d8fc9a5005e20a36ce4f2a0b3771aa5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439488"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769305"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 Especifica a sequência de classificação para uma coluna indexada.  
@@ -32,4 +32,4 @@ Especifica a sequência de classificação para uma coluna indexada.
 |**adSortDescending**|2|A sequência de classificação para a coluna é decrescente.|  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Propriedade SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [Propriedade SortOrder (ADOX)](./sortorder-property-adox.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3112670df34b0e74e359ef0e514d9acdc8620788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03e46b4f449f0a937c21c436049692f0c95695cc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439268"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768835"
 ---
 # <a name="views-refresh-method-example-vb"></a>Exemplo do método Refresh de exibições (VB)
-O código a seguir mostra como atualizar a coleção [views](../../../ado/reference/adox-api/views-collection-adox.md) de um [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Isso é necessário antes que os objetos de [exibição](../../../ado/reference/adox-api/view-object-adox.md) do **Catálogo** possam ser acessados.  
+O código a seguir mostra como atualizar a coleção [views](./views-collection-adox.md) de um [Catálogo](./catalog-object-adox.md). Isso é necessário antes que os objetos de [exibição](./view-object-adox.md) do **Catálogo** possam ser acessados.  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -57,5 +57,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Método Refresh (ADO)](../ado-api/refresh-method-ado.md)   
+ [Coleção Views (ADOX)](./views-collection-adox.md)
