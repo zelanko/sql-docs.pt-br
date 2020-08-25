@@ -2,19 +2,19 @@
 title: APIs de extensibilidade
 description: Saiba mais sobre as APIs de extensibilidade do Azure Data Studio, que permitem que extensões interajam com outras partes do Azure Data Studio (como o Pesquisador de Objetos).
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0ef95d4b77e91bcd950b2d8aa5dddf5bb95b3841
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c5f8788c0f182a2fe3ff2750303966eed7505dbf
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411132"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745906"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>APIs de extensibilidade do Azure Data Studio
 

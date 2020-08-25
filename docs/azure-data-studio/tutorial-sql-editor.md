@@ -2,19 +2,19 @@
 title: Usar o editor de Transact-SQL para criar objetos de banco de dados
 description: Siga este tutorial para saber como usar o editor do Transact-SQL para executar tarefas de banco de dados principais, incluindo criação e pesquisa de objetos de banco de dados.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 172eee223f04ee37cc7b530cdb4db891afad36d8
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522410"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745706"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutorial: Usar o editor Transact-SQL para criar objetos de banco de dados – Azure Data Studio
 

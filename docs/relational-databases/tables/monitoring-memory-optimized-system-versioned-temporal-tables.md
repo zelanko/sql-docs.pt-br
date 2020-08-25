@@ -12,16 +12,18 @@ ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57ef17e8580246a56ce0582e4a0fa69a013de2d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 386a4d1f3119744244d71a22355be643531a0b56
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418980"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646407"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>Monitorando tabelas temporais com controle da versão do sistema com otimização de memória
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Você pode usar modos de exibição existentes para controlar o consumo de memória resumido e detalhado para cada tabela com controle da versão do sistema com otimização de memória.
 

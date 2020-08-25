@@ -5,17 +5,17 @@ description: A extensão de Machine Learning para Azure Data Studio permite que 
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
-ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
+ms.openlocfilehash: 5b54ec71ec3debaf39b0788cac0c1534300a4a72
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051105"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745546"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Extensão de Machine Learning (versão prévia) para Azure Data Studio
 
