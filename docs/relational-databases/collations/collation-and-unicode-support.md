@@ -276,7 +276,7 @@ A seguinte tabela mostra as designações de ordenação padrão conforme determ
 |Lituano (Lituânia)|0x0427|0x0427|Lithuanian_CI_AS|
 |Sorábio baixo (Alemanha)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxemburguês (Luxemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedônio (Macedônia do Norte, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedônio (Macedônia do Norte)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malaio (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malaio (Malásia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malaiala (Índia)|0x044c|0x0439|Indisponível no nível do servidor|
