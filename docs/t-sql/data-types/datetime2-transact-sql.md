@@ -2,7 +2,7 @@
 description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445968"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760326"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -49,7 +49,7 @@ Define uma data combinada com uma hora do dia que se baseia em um período de 24
 |Intervalos de elementos|AAAA é um número de quatro dígitos, variando de 0001 a 9.999, que representa um ano.<br /><br /> MM é um número de dois dígitos, variando de 01 a 12 e representa um mês no ano especificado.<br /><br /> DD é um número de dois dígitos, variando de 01 a 31, dependendo do mês e representa um dia do mês especificado.<br /><br /> hh é um número de dois dígitos, variando de 00 a 23, que representa a hora.<br /><br /> mm é um número de dois dígitos, variando de 00 a 59, que representa o minuto.<br /><br /> ss é um número de dois dígitos, variando de 00 a 59, que representa o segundo.<br /><br /> n* é um número de zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. No Informatica, os segundos fracionários serão truncados quando n > 3.|  
 |Comprimento de caracteres|19 posições no mínimo (YYYY-MM-DD hh:mm:ss ) a 27 no máximo (YYYY-MM-DD hh:mm:ss.0000000)|  
 |Precisão, escala|0 a 7 dígitos, com exatidão de 100ns. A precisão padrão é 7 dígitos.|  
-|Tamanho de armazenamento|6 bytes para precisão menor que 3.<br/>7 bytes para precisão de 3 ou 4.<br/>Todas as outras precisões exigem 8 bytes.<sup>1</sup>|  
+|Tamanho de armazenamento <sup>1</sup>|6 bytes para precisão menor que 3.<br/>7 bytes para precisão de 3 ou 4.<br/>Todas as outras precisões exigem 8 bytes.<sup>2</sup>|  
 |Precisão|100 nanossegundos|  
 |Valor padrão|1900-01-01 00:00:00|  
 |Calendário|Gregoriano|  
@@ -57,7 +57,9 @@ Define uma data combinada com uma hora do dia que se baseia em um período de 24
 |Preservação e reconhecimento de deslocamento de fuso horário|Não|  
 |Reconhecimento de horário de verão|Não|  
 
-<sup>1</sup> O primeiro byte de um valor **datetime2** armazena a precisão do valor, o que significa que o armazenamento real necessário para um valor **datetime2** é o tamanho de armazenamento indicado na tabela acima mais 1 byte adicional para armazenar a precisão.  Isso faz com que o tamanho máximo de um valor **datetime2** seja 9 bytes – 1 byte para armazenamento de precisão e 8 bytes para armazenamento de dados em precisão máxima.
+<sup>1</sup> Os valores fornecidos são para rowstore descompactada. O uso de [compactação de dados](../../relational-databases/data-compression/data-compression.md) ou [columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) pode alterar o tamanho do armazenamento de cada precisão. Além disso, o tamanho do armazenamento em disco e em memória pode ser diferente. Por exemplo, valores **datetime2** sempre exigem 8 bytes em memória quando é usado o modo de lote.
+
+<sup>2</sup> Quando um valor **datetime2** é convertido em um valor **varbinary**, um byte extra é adicionado ao valor **varbinary** para armazenar a precisão.
 
 Para obter os metadados de tipo de dados, consulte [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) ou [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precisão e escala são variáveis para alguns tipos de data e data/hora. Para obter a precisão e escala de uma coluna, consulte [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) ou [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

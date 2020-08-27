@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1545722c9a2cb46bc42cb6a0e697c111e4e7f3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5c3daa848ced9eb6ca784e68d14a66a9bea53aa
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424338"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618103"
 ---
 # <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,5 +52,5 @@ Alguns cenários nos quais esse problema pode acontecer incluem os seguintes:
 O processo de restauração nessa situação está claramente envolvido e só é usado em último caso. Para obter mais informações, consulte “[Não é possível restaurar backups de banco de dados do sistema em um build diferente do SQL Server](https://support.microsoft.com/kb/264474)”.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
+[Limitações ao restaurar bancos de dados de sistema no &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)  
   

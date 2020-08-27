@@ -1,21 +1,21 @@
 ---
 title: Extensão do PowerShell
-description: Saiba como instalar e usar a extensão do Azure Data Studio PowerShell, que fornece suporte avançado ao editor do PowerShell para escrever e depurar scripts.
+description: Saiba como instalar e usar a extensão do PowerShell para Azure Data Studio, que fornece suporte avançado ao editor do PowerShell para escrever e depurar scripts.
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411312"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766535"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Suporte do Editor do PowerShell para Azure Data Studio
 
@@ -39,7 +39,7 @@ Agora você pode escrever e depurar scripts do PowerShell usando a excelente int
 
 ## <a name="installing-the-extension"></a>Instalar a extensão
 
-Você pode instalar a versão oficial da extensão do PowerShell seguindo as etapas na [documentação do Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Você pode instalar a versão oficial da extensão do PowerShell seguindo as etapas na [documentação do Azure Data Studio](./extensions.md).
 No painel Extensões, pesquise a extensão “PowerShell” e instale-a lá.  Você será notificado automaticamente sobre atualizações futuras de extensão!
 
 Você também pode instalar um pacote VSIX na página nossa [página Versões](https://github.com/PowerShell/vscode-powershell/releases) instalá-lo usando a linha de comando:
@@ -63,8 +63,8 @@ Se você estiver executando o Azure Data Studio no macOS ou no Linux, talvez pre
 O PowerShell Core é um projeto de software livre no [GitHub](https://github.com/powershell/powershell).
 Para saber mais sobre como instalar o PowerShell Core em plataformas macOS ou Linux, confira os seguintes artigos:
 
-- [Instalar o PowerShell Core no Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Instalar o PowerShell Core no macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Instalar o PowerShell Core no Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Instalar o PowerShell Core no macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>Scripts de exemplo
 

@@ -2,23 +2,23 @@
 title: Notas de versão
 description: Este artigo tem notas sobre a versão para versões do Azure Data Studio de novembro de 2017 até agora. Para muitos dos problemas resumidos, há links para detalhes adicionais.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 08/12/2020
-ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147197"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766185"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
-**[Baixe e instale a versão mais recente!](download.md)**
+**[Baixe e instale a versão mais recente!](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="august-2020"></a>Agosto de 2020
 
@@ -76,7 +76,7 @@ ms.locfileid: "88147197"
 | :----- | :------ |
 | Adição do Azure Data Studio à integração do portal do Azure | Agora, os usuários podem iniciar diretamente no portal do Azure por meio de uma conexão do Banco de Dados SQL do Azure, do Postgres do Azure, entre outros. |
 | Novos recursos de notebook | &bull; &nbsp; Nova barra de ferramentas do Notebook <br/> &bull; &nbsp; Nova barra de ferramentas Editar Célula <br/> &bull; &nbsp; Atualizações de UX do assistente de dependências do Python <br/> &bull; &nbsp; Melhor espaçamento entre notebooks |
-| Anúncio da extensão da API Avaliação do SQL | Essa extensão adiciona a avaliação de melhores práticas do SQL Server no ADS. Ela expõe a API Avaliação do SQL, que anteriormente estava disponível para uso somente no módulo SqlServer do PowerShell e no SMO, para permitir que você avalie as instâncias de SQL Server e receba recomendações feitas pela equipe do SQL Server. Saiba mais sobre a API Avaliação do SQL e do que ela é capaz [neste artigo.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
+| Anúncio da extensão da API Avaliação do SQL | Essa extensão adiciona a avaliação de melhores práticas do SQL Server no ADS. Ela expõe a API Avaliação do SQL, que anteriormente estava disponível para uso somente no módulo SqlServer do PowerShell e no SMO, para permitir que você avalie as instâncias de SQL Server e receba recomendações feitas pela equipe do SQL Server. Saiba mais sobre a API Avaliação do SQL e do que ela é capaz [neste artigo.](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15) |
 | [Aprimoramentos na Extensão de Machine Learning](https://go.microsoft.com/fwlink/?linkid=2129918) | Agora é compatível com a Instância Gerenciada de SQL do Azure. |
 | Aprimoramentos na extensão de Virtualização de Dados | Agora é compatível com MongoDB e Teradata |
 | Correções de bug da extensão do Postgres | Correção do MFA do Azure |
@@ -149,7 +149,7 @@ ms.locfileid: "88147197"
 | :----- | :------ |
 | Adição de suporte a gráficos em Notebooks SQL | Ao executar uma consulta SQL em uma célula de código, agora os usuários podem criar e salvar gráficos. |
 | Adição da experiência Criar Jupyter Book | Agora, os usuários podem criar os próprios Jupyter Books usando um notebook. |
-| Adição do suporte do AAD para a extensão de Postgres | |
+| Adição do suporte do Azure AD para a extensão de Postgres | |
 | Correção de vários bugs de acessibilidade | [Lista de bugs de acessibilidade](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
 | Mesclagem do VS Code com o 1.42 | Essa versão inclui atualizações no VS Code das três versões anteriores do VS Code. [Leia as notas sobre a versão](https://code.visualstudio.com/updates/v1_42) para saber mais. |
 | Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
@@ -314,7 +314,7 @@ ms.locfileid: "88147197"
 | Lançamento da extensão SandDance 1.3.1 | &bull; &nbsp; Detecção de gráfico inteligente <br/>&bull; &nbsp; Visualizações 3D <br/> &bull; &nbsp; Filtragem de dados |
 | Melhorias ao Notebook | &bull; &nbsp; Adicionar código ou célula de texto na linha <br/>&bull; &nbsp; Adição da capacidade de clicar com o botão direito do mouse na grade de resultados do SQL para salvar o resultado como CSV, JSON etc. <br/> &bull; &nbsp; Melhoria no desempenho de carregamento de notebook para um carregamento mais rápido de JSON <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
 | Suporte ao SQL Server 2019 |  Esta versão inclui suporte para recursos adicionais de Cluster de Big Data do SQL Server 2019, incluindo: <br/> &bull; &nbsp; Redução do tempo necessário para carregar as informações de tabela e de coluna na página de mapeamento de objeto. <br/> &bull; &nbsp; Correção de um bug com o carregamento das credenciais no escopo do banco de dados na página de detalhes da conexão. <br/> &bull; &nbsp; Aumento no tamanho de amostra padrão usado para análise PROSE. | 
-| A extensão Dacpac agora dá suporte a AAD | 
+| A extensão Dacpac agora é compatível com o Azure AD | 
 | Mesclagem na versão de julho do Visual Studio Code 1.37 | Os aprimoramentos mais recentes podem ser encontrados [aqui](https://code.visualstudio.com/updates/v1_37). |
 | Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
@@ -345,7 +345,7 @@ ms.locfileid: "88147197"
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Lançamento da extensão CMS (Servidores de Gerenciamento Central) | Os servidores de gerenciamento central armazenam uma lista de instâncias do SQL Server que é organizada em um ou mais grupos de servidores de gerenciamento central. Os usuários podem se conectar aos seus próprios servidores de CMS existentes e gerenciá-los, como adicionar e remover servidores. Para saber mais, você pode ler [aqui](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Lançamento da extensão CMS (Servidores de Gerenciamento Central) | Os servidores de gerenciamento central armazenam uma lista de instâncias do SQL Server que é organizada em um ou mais grupos de servidores de gerenciamento central. Os usuários podem se conectar aos seus próprios servidores de CMS existentes e gerenciá-los, como adicionar e remover servidores. Para saber mais, você pode ler [aqui](../relational-databases/administer-multiple-servers-using-central-management-servers.md) |
 | Lançamento das extensões da Ferramenta de Administração de Banco de Dados para Windows | Essa extensão inicializa duas das experiências mais usadas no SQL Server Management Studio por meio do Azure Data Studio. Os usuários podem clicar com o botão direito do mouse em muitos objetos diferentes (como Bancos de Dados, Tabelas, Colunas, Exibições e muito mais) e selecionar Propriedades para exibir a caixa de diálogo de propriedades do SSMS para aquele objeto. Além disso, os usuários podem clicar com o botão direito do mouse em um banco de dados e selecionar Gerar Scripts para iniciar o conhecido Assistente para Gerar Scripts do SSMS. 
 | Melhorias na Comparação de Esquemas | &bull; &nbsp; Adição das opções Excluir/Incluir <br/>&bull; &nbsp; A opção Gerar Script é aberta após a geração do script <br/>&bull; &nbsp; Remoção das barras de rolagem duplas  <br/>&bull; &nbsp; Melhorias de formatação e layout <br/>&bull; &nbsp; Encontre as alterações completas [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Seção Mensagens movida para a própria guia | Quando os usuários executavam consultas SQL, os resultados e as mensagens ficavam em painéis empilhados. Agora eles estão em guias separadas em um painel como no SSMS. |
@@ -361,7 +361,7 @@ ms.locfileid: "88147197"
     - Não é possível iniciar propriedades de servidores do Azure
     - Nem todos os objetos têm caixas de diálogo de propriedades
     - As caixas de diálogo levam muito tempo para iniciar
-    - Erros ao iniciar servidores com alguns tipos de conexões (como o AAD)
+    - Erros ao iniciar servidores com alguns tipos de conexões (como o Azure AD)
 - Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Permitir que usuários usem o Python do sistema para Notebooks
 - Comparação de Esquemas
@@ -446,7 +446,7 @@ ms.locfileid: "88147197"
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Extensão **Pacote de administração para SQL Server** adicionada. | Isso facilita instalar extensões relacionadas ao administrador do SQL Server. Isso inclui:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Extensão **Pacote de administração para SQL Server** adicionada. | Isso facilita instalar extensões relacionadas ao administrador do SQL Server. Isso inclui:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Adicionado suporte de filtragem de evento estendido na extensão Profiler. | &nbsp; |
 | Adicionado o recurso Salvar como XML que pode salvar resultados de T-SQL como XML. | &nbsp; |
 | Aprimoramentos adicionados ao Assistente de Aplicativo da Camada de Dados. | &bull; &nbsp; Adição do botão Gerar script<br/>&bull; &nbsp; Adição de uma exibição para fornecer avisos de possível perda de dados durante a implantação. |
@@ -498,7 +498,7 @@ ms.locfileid: "88147197"
 | Introdução à extensão de consultas High Color, incluindo o tema do editor do SSMS. | &nbsp; |
 | Correções no SQL Server Agent, no Profiler e nas extensões de Importação. | &nbsp; |
 | Correção no problema de manutenção de atividade do soquete do .NET Core que causava quedas de conexões inativas no macOS. | &nbsp; |
-| Atualização do serviço de Ferramentas SQL para o .NET Core 2.2 Preview 3 (para suporte eventual ao AAD). | &nbsp; |
+| Atualize o Serviço de Ferramentas SQL para a Versão Prévia 3 do .NET Core 2.2 (para eventual suporte do Azure AD). | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>Correções de bugs, novembro de 2018

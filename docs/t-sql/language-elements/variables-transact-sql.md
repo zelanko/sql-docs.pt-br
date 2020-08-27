@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459243"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807023"
 ---
 # <a name="variables-transact-sql"></a>Variáveis (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Uma variável local Transact-SQL é um objeto que pode conter um único valor de
 * Para salvar um valor de dados a ser retornado por um código de retorno de procedimento armazenado ou valor de retorno de função.
 
 > [!NOTE]
-> Os nomes de algumas funções do sistema Transact-SQL começam com dois sinais de *arroba* (\@\@). Embora nas versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as funções \@\@ tenham sido referidas como variáveis globais, elas não são variáveis e não têm os mesmos comportamentos de variáveis. As funções \@\@ são funções de sistema, e o uso de sua sintaxe segue as regras das funções.
-
-> [!NOTE]
-> As variáveis não podem ser usadas em exibições.
+> - Os nomes de algumas funções do sistema Transact-SQL começam com dois sinais de *arroba* (\@\@). Embora nas versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as funções \@\@ sejam conhecidas como variáveis globais, as funções \@\@ não são variáveis e não têm os mesmos comportamentos de variáveis. As funções \@\@ são funções de sistema, e o uso de sua sintaxe segue as regras das funções.
+> - Você não pode usar variáveis em uma exibição.
+> - As alterações nas variáveis não são afetadas pela reversão de uma transação.
 
 O script seguinte cria uma tabela de teste pequena e a popula com 26 linhas. O script usa uma variável para fazer três coisas: 
 

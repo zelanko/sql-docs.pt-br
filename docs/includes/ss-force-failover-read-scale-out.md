@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122343"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655276"
 ---
 Cada grupo de disponibilidade tem apenas uma réplica primária. A réplica primária permite leituras e gravações. Para alterar qual réplica é a primária, faça failover. Em um grupo de disponibilidade para alta disponibilidade, o gerenciador de cluster automatiza o processo de failover. Em um grupo de disponibilidade com o tipo de cluster NONE, o processo de failover é manual. 
 
@@ -43,7 +43,7 @@ Use esse método quando a réplica primária estiver disponível, mas você prec
 
 Para fazer failover manualmente sem perda de dados:
 
-1. Crie a réplica secundária de destino `SYNCHRONOUS_COMMIT`.
+1. Torne a réplica atual primária e a de destino secundária do `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ Para fazer failover manualmente sem perda de dados:
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. Atualize a função da antiga primária para `SECONDARY`, execute o seguinte comando na instância do SQL Server que hospeda a réplica primária:
+1. Atualize a função da réplica primária antiga para `SECONDARY` e execute o seguinte comando na instância do SQL Server que hospeda a réplica primária antiga:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ Para fazer failover manualmente sem perda de dados:
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. Crie novamente qualquer ouvinte criado para fins de escala de leitura e que não seja gerenciado por um gerenciador de clusters. Se o ouvinte original apontar para a réplica primária antiga, descarte-o e crie-o novamente para apontar para a nova réplica primária.

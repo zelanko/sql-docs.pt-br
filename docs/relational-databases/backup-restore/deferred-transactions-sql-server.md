@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748412"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618124"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transações adiadas (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748412"
 |Refazer espelhamento de banco de dados|transação adiada|  
 |O grupo de arquivos está offline|transação adiada|  
   
+### <a name="requirements-and-limitations"></a>Requisitos e limitações
+
+ - O banco de dados deve usar o modelo de recuperação FULL ou BULK-LOGGED.
+ - Pelo menos um backup de banco de dados e de log devem ter sido concluídos para o banco de dados
+ - As transações adiadas não se aplicam a erros encontrados durante a reversão de uma transação depois que o banco de dados está online (por exemplo, um erro de runtime)
+ - As transações não podem ser adiadas para falhas de recuperação ocorridas durante a anexação de um banco de dados
+ - Algumas transações, como as transações de sistema (por exemplo, alocação de página), não podem ser adiadas
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Removendo uma transação do estado DEFERRED  
   
 > [!IMPORTANT]  

@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455489"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760186"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referência de operadores físicos e lógicos de plano de execução
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -188,7 +188,7 @@ Um contador relacionado, **ActualEndOfScans**, só está disponível quando a sa
   
 |Ícone do plano de execução gráfica|Operador de plano de execução|Descrição|  
 |-----------------------------------|-----------------------|-----------------|  
-|![Ícone do operador Adaptive Join](../relational-databases/media/AdaptiveJoin.gif "Ícone do operador Adaptive Join")|**Junção Adaptável**|O operador de **Junção Adaptável** habilita que as opções de método de junção hash ou de junção de loop aninhado sejam adiadas até após a verificação da primeira entrada. O operador de **Junção Adaptável** é um operador físico. Para obter mais informações, confira [Noções básicas sobre junções adaptáveis](../relational-databases/performance/joins.md#adaptive). | 
+|![Ícone do operador Adaptive Join](../relational-databases/media/AdaptiveJoin.gif "Ícone do operador Adaptive Join")|**Junção Adaptável**|O operador de **Junção Adaptável** permite que a escolha do método de junção hash ou de loops aninhados seja adiada até depois do exame da primeira entrada. O operador de **Junção Adaptável** é um operador físico. Para obter mais informações, confira [Noções básicas sobre junções adaptáveis](../relational-databases/performance/joins.md#adaptive). | 
 |Nenhum|**Aggregate**|O operador **Aggregate** calcula uma expressão que contém MIN, MAX, SUM, COUNT ou AVG. O operador **Aggregate** pode ser um operador lógico ou um operador físico.| 
 |![Ícone do operador Arithmetic expression](../relational-databases/media/arithmetic-expression-32x-2.gif "Ícone do operador Arithmetic expression")|**Arithmetic Expression**|O operador **Arithmetic Expression** computa um valor novo de valores existentes em uma linha. **Expressão Aritmética** não é usada no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].| 
 |Nenhum|**Async Concat**|O operador **Async Concat** só é usado em consultas remotas (consultas distribuídas). Ele tem *n* filhos e um nó pai. Normalmente, alguns dos filhos são computadores remotos que participam de uma consulta distribuída. O **Async Concat** emite `open()` chamadas simultaneamente a todos os filhos e aplica um bitmap para cada filho. Para cada bit que é um 1, **Async Concat** envia linhas de saída para o nó pai sob demanda.| 
@@ -259,7 +259,7 @@ Um contador relacionado, **ActualEndOfScans**, só está disponível quando a sa
 |![Ícone do operador de cursor Population query](../relational-databases/media/poulation-query-32x.gif "Ícone do operador de cursor Population query")|**Population Query**|O operador **Population Query** popula a tabela de trabalho de um cursor quando o cursor é aberto.| 
 |![Ícone do operador de cursor Refresh query](../relational-databases/media/refresh-query-32x.gif "Ícone do operador de cursor Refresh query")|**Refresh Query**|O operador **Refresh Query** busca dados atuais para linhas do buffer de busca.| 
 |![Ícone do operador Remote delete](../relational-databases/media/remote-delete-32x.gif "Ícone do operador Remote delete")|**Remote Delete**|O operador **Remote Delete** exclui as linhas de entrada a partir de um objeto remoto. **Remote Delete** é um operador lógico e físico.| 
-|![Operador remote index seek showplan](../relational-databases/media/remote-index-scan-32x.gif "operador remote index seek showplan")|**Remote Index Scan**|O operador **Remote Index Scan** examina o índice remoto especificado na coluna Argument. **Verificação de Índice Remoto** é um operador lógico e físico.| 
+|![Operador do plano de execução Remote Index Scan](../relational-databases/media/remote-index-scan-32x.gif "operador do plano de execução Remote Index Scan")|**Remote Index Scan**|O operador **Remote Index Scan** examina o índice remoto especificado na coluna Argument. **Verificação de Índice Remoto** é um operador lógico e físico.| 
 |![Operador remote index seek showplan](../relational-databases/media/remote-index-seek-32x.gif "operador remote index seek showplan")|**Remote Index Seek**|O operador de **Busca de Índice Remoto** usa a busca de um objeto de índice remoto para recuperar linhas. A coluna **Argument** contém o nome do índice remoto que está sendo usado e o predicado SEEK:(). **Busca de Índice Remoto** é um operador lógico e físico.| 
 |![Ícone do operador Remote insert](../relational-databases/media/remote-insert-32x.gif "Ícone do operador Remote insert")|**Remote Insert**|O operador **Remote Insert** insere linhas de entrada em um objeto remoto. O**Remote Insert** é um operador lógico e físico.| 
 |![Ícone do operador Remote query](../relational-databases/media/remote-query-32x.gif "Ícone do operador Remote query")|**Remote Query**|O operador **Remote Query** submete uma consulta a uma fonte remota. O texto da consulta enviado ao servidor remoto aparece na coluna **Argument** . **Remote Query** é um operador lógico e físico.| 

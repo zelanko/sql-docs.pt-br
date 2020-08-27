@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444822"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602191"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  Força que todas as instruções de modificação de dados sejam executadas em relação à exibição para seguir o conjunto de critérios dentro da *select_statement*. Quando uma linha é modificada através de uma exibição, WITH CHECK OPTION verifica se os dados permanecem visíveis na exibição depois que a modificação é confirmada.  
   
-> [!NOTE]  
->  Qualquer atualização executada diretamente em tabelas subjacentes de uma exibição não são verificadas na exibição, mesmo que CHECK OPTION seja especificada.  
+> [!NOTE]
+>  A CHECK OPTION só se aplica a atualizações feitas por meio da exibição. Ela não se aplica a nenhuma atualização executada diretamente nas tabelas subjacentes de uma exibição.  
   
  ENCRYPTION  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

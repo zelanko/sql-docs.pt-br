@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772502"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564656"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 
@@ -123,6 +123,10 @@ Se estiver usando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio do 
 9. Clique com o botão direito do mouse no certificado importado, aponte para **Todas as Tarefas**e clique em **Gerenciar Chaves Privadas**. Na caixa de diálogo **Segurança**, adicione a permissão de leitura para a conta de usuário usada pela conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 10. Complete o **Assistente para Importação de Certificados**, para adicionar um certificado ao computador e feche o console MMC. Para obter mais informações sobre como adicionar um certificado a um computador, consulte sua documentação do Windows.  
+
+> [!IMPORTANT]
+> Para ambientes de produção, é recomendável obter um certificado emitido por uma Autoridade de Certificação.    
+> Para fins de teste, o certificado autoassinado também pode ser usado. Para criar um certificado autoassinado, confira o [cmdlet do Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) ou o [comando certreq](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Instalar entre vários servidores
 
@@ -141,7 +145,7 @@ Se estiver usando o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio d
 Configure o servidor para forçar conexões criptografadas.
 
 > [!IMPORTANT]
-> A conta de serviço do SQL Server precisa ter permissões de leitura no certificado usado para forçar a criptografia no SQL Server. Para uma conta de serviço sem privilégios, as permissões de leitura precisarão ser adicionadas ao certificado. A falha em fazer isso pode fazer com que a reinicialização do serviço do SQL Server falhe.
+> A conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa ter permissões de leitura no certificado usado para forçar a criptografia no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para uma conta de serviço sem privilégios, as permissões de leitura precisarão ser adicionadas ao certificado. Deixar de fazer isso pode resultar na falha da reinicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 1. No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos para** _\<server instance>_ e selecione **Propriedades**.  
   
@@ -168,7 +172,7 @@ Configure o cliente para solicitar conexões criptografadas.
   
 ## <a name="use-sql-server-management-studio"></a>Usar o SQL Server Management Studio
   
-Para criptografar uma conexão do SQL Server Management Studio:  
+Para criptografar uma conexão de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
 
 1. Na barra de ferramentas do Pesquisador de Objetos, clique em **Conectar**e clique em **Mecanismo de Banco de Dados**.  
   
@@ -183,3 +187,4 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser criptografa
 
 + [Suporte a TLS 1.2 para o Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Cmdlet do Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
