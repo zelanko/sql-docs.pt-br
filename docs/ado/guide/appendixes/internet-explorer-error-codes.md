@@ -3,7 +3,7 @@ description: Códigos de erro do Internet Explorer para o serviço de dados remo
 title: Códigos de erro do Internet Explorer | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52372f652b66a87dfc569213401e3c200c03b2ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9a45a80374d323d8c9efde3833eae2b23ef323a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426428"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991117"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Códigos de erro do Internet Explorer para o serviço de dados remoto
 A tabela a seguir lista os códigos de erro do Microsoft® Internet Explorer relacionados ao uso do serviço de dados remoto. A tradução decimal positiva dos dois bytes baixos, a conversão decimal negativa do código de erro completo e os valores hexadecimais são mostrados.

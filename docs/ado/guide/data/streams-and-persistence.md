@@ -3,7 +3,7 @@ description: Fluxos e persistência
 title: Fluxos e persistência | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60e006733fd8ef5bd958328420ab43c1cbabc50e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452768"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979417"
 ---
 # <a name="streams-and-persistence"></a>Fluxos e persistência
 O método [Save](../../../ado/reference/ado-api/save-method.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) armazena, ou *persiste*, um **conjunto de registros** em um arquivo e o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) restaura o **conjunto de registros** desse arquivo.  

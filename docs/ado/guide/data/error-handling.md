@@ -3,7 +3,7 @@ description: Tratamento de erros no ADO
 title: Tratamento de erro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 092f1a767e614b3426db63c95ca8bf4e14954dd0
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: dd91a11798b292fffcb0cdc96ad7eec8504029fa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806865"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991317"
 ---
 # <a name="error-handling-in-ado"></a>Tratamento de erros no ADO
 O ADO usa vários métodos diferentes para notificar uma aplicação de erros que ocorrem. Esta seção aborda os tipos de erros que podem ocorrer quando você está usando o ADO e como seu aplicativo é notificado. Ele conclui fazendo sugestões sobre como lidar com esses erros.  

@@ -3,7 +3,7 @@ description: Objetos ADOX
 title: Objetos ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca5131235b4c34c05f4cc3b783087f25dc027e95
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c38b184164109ee3e6fed18a439cd904119a3ec6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771575"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985657"
 ---
 # <a name="adox-objects"></a>Objetos ADOX
 ## <a name="adox-object-summary"></a>Resumo do objeto ADOX  
@@ -31,7 +31,7 @@ ms.locfileid: "88771575"
 |[Grupo](./group-object-adox.md)|Representa uma conta de grupo que tem permissões de acesso em um banco de dados protegido.|  
 |[Index](./index-object-adox.md)|Representa um índice de uma tabela de banco de dados.|  
 |[Chave](./key-object-adox.md)|Representa um campo de chave primária, estrangeira ou exclusiva de uma tabela de banco de dados.|  
-|[Procedure](./procedure-object-adox.md)|Representa um procedimento armazenado.|  
+|[Procedimento](./procedure-object-adox.md)|Representa um procedimento armazenado.|  
 |[Table](./table-object-adox.md)|Representa uma tabela de banco de dados, incluindo colunas, índices e chaves.|  
 |[Usuário](./user-object-adox.md)|Representa uma conta de usuário que tem permissões de acesso em um banco de dados protegido.|  
 |[Exibir](./view-object-adox.md)|Representa um conjunto filtrado de registros ou uma tabela virtual.|  

@@ -3,7 +3,7 @@ description: Exemplo do método Find (VB)
 title: Exemplo do método Find (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76da795bcb373126b2e22ad57e5f7369c119829
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 88d21354042ccccae5e165823fa738fa071db3e5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775155"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972877"
 ---
 # <a name="find-method-example-vb"></a>Exemplo do método Find (VB)
 Este exemplo usa o método [Find](./find-method-ado.md) do objeto [Recordset](./recordset-object-ado.md) para localizar e contar o número de títulos comerciais no banco de dados ***pubs*** . O exemplo supõe que o provedor subjacente não oferece suporte à funcionalidade semelhante.  

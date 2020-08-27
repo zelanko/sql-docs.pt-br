@@ -3,7 +3,7 @@ description: Exemplo do método GetString (VB)
 title: Exemplo do método GetString (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d5baaab530a1d693a5f31f998e6aa6893b6cdfa
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4f7d0c7d205db8f9b8d756f8bfd6fb6e219b7ce7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774895"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990827"
 ---
 # <a name="getstring-method-example-vb"></a>Exemplo do método GetString (VB)
 Este exemplo demonstra o método [GetString](./getstring-method-ado.md) .  

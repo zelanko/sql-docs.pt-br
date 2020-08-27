@@ -3,7 +3,7 @@ description: Exemplo do método Move (VB)
 title: Exemplo do método Move (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d440d529a1f62fd239e81bb6ae408082d3a6f643
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 23640ae4d6613c3502b8021af5efebe16c9d6161
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774345"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990577"
 ---
 # <a name="move-method-example-vb"></a>Exemplo do método Move (VB)
 Este exemplo usa o método [move](./move-method-ado.md) para posicionar o ponteiro de registro com base na entrada do usuário.  

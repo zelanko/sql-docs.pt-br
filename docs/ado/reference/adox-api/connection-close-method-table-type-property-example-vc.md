@@ -3,7 +3,7 @@ description: Método Connection Close, exemplo da propriedade Table Type (VC++)
 title: Método Connection Close, exemplo da propriedade de tipo Table (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0f907cd2976e53b6942ff9d33da0a2a4712e61
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8f49a6456e9d2a461be1e4f51f3030da2b1ff015
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770895"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984847"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Método Connection Close, exemplo da propriedade Table Type (VC++)
 Definir a propriedade [ActiveConnection](./activeconnection-property-adox.md) como **Nothing** deve "fechar" o catálogo. As coleções associadas estarão vazias. Todos os objetos que foram criados a partir de objetos de esquema no catálogo ficarão órfãos. Todas as propriedades nesses objetos que foram armazenados em cache ainda estarão disponíveis, mas a tentativa de ler propriedades que exigem uma chamada para o provedor falhará.  

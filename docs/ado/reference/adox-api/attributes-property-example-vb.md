@@ -3,7 +3,7 @@ description: Exemplo da propriedade Attributes (VB)
 title: Exemplo da propriedade Attributes (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 28015a4a457ddb4a64c047675d670cbdf4ce0a47
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771325"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985287"
 ---
 # <a name="attributes-property-example-vb"></a>Exemplo da propriedade Attributes (VB)
 Este exemplo demonstra a propriedade [Attributes](./attributes-property-adox.md) de uma [coluna](./column-object-adox.md). Configurá-lo como **adColNullable** permite que o usuário defina o valor de um [campo](../ado-api/field-object.md) de [conjunto de registros](../ado-api/recordset-object-ado.md) como uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro em que os dados não são conhecidos e um registro em que os dados não se aplicam.  

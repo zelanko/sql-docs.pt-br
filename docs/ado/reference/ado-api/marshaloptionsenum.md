@@ -3,7 +3,7 @@ description: MarshalOptionsEnum
 title: MarshalOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9569d73bd7ec403fa50a400f84a5189a3eb10cdb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 134bf880c762e5b57d6a0ff270c65ef750c4255a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774435"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990627"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Especifica quais registros devem ser retornados ao servidor.  

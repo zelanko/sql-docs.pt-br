@@ -3,7 +3,7 @@ description: Suporte do provedor para ADOX (ADO)
 title: Suporte do provedor para ADOX (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 286c2b199c83feca11a69e8d4d137ad5691f5362
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: cbc2b4821ac5c57c2302892caff1afa742e829b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758796"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978687"
 ---
 # <a name="provider-support-for-adox-ado"></a>Suporte do provedor para ADOX (ADO)
 Alguns recursos do ADOX não têm suporte, dependendo do seu provedor de dados de OLE DB. O ADOX tem suporte total com o [provedor de OLE DB para Microsoft Jet](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Os recursos sem suporte com o [provedor de OLE DB da Microsoft para SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md), o [provedor de OLE DB da Microsoft para ODBC](../appendixes/microsoft-ole-db-provider-for-odbc.md)ou o [provedor Microsoft OLE DB para Oracle](../appendixes/microsoft-ole-db-provider-for-oracle.md) estão listados nas tabelas a seguir. O ADOX não tem suporte em nenhum outro provedor do Microsoft OLE DB.  

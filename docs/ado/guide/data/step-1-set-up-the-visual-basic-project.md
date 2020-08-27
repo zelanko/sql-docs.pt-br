@@ -3,7 +3,7 @@ description: 'Etapa 1: Configurar o projeto do Visual Basic'
 title: 'Etapa 1: configurar o projeto de Visual Basic | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d168a136d4cc80999591f0e36cb65abefa9c6c79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c0c8208fa8e5352a720ef057bb54d2d0b51b923
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452808"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979537"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>Etapa 1: Configurar o projeto do Visual Basic
 Nesse cenário, supõe-se que você tenha o Microsoft Visual Basic 6,0, ADO 2,5 ou posterior e o provedor de OLE DB da Microsoft para publicação na Internet instalado no seu sistema. Primeiro, você criará um novo projeto e, em seguida, adicionará alguns controles ao formulário padrão no projeto.  

@@ -3,7 +3,7 @@ description: Cláusula APPEND de forma
 title: Cláusula de ANEXAção de forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452858"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979617"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
 A cláusula comando de forma APPEND acrescenta uma coluna ou colunas a um **conjunto de registros**. Frequentemente, essas colunas são colunas de capítulo, que se referem a um **conjunto de registros**filho.  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  A cláusula após a palavra-chave APPEND é, na verdade, uma lista, em que cada cláusula é separada por uma vírgula e define outra coluna a ser acrescentada ao pai.  
   
-## <a name="remarks"></a>Comentários  
- Quando você constrói comandos de provedor da entrada do usuário como parte de um comando de forma, a forma tratará o comando de provedor fornecido pelo usuário como uma cadeia de caracteres opaca e os passará de maneira precisa para o provedor. Por exemplo, no comando de forma a seguir,  
+Quando você constrói comandos de provedor da entrada do usuário como parte de um comando de forma, a forma tratará o comando de provedor fornecido pelo usuário como uma cadeia de caracteres opaca e os passará de maneira precisa para o provedor. Por exemplo, no comando de forma a seguir,  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

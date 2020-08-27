@@ -3,7 +3,7 @@ title: Propriedade de descrição | Microsoft Docs
 description: Saiba mais sobre a propriedade Description do objeto Error no ADO que retorna um valor de cadeia de caracteres que contém uma descrição do erro.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5bbaa998c419ba1a0af49ffa28e32fe91ffc96b9
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 7060810eba49ad5e1b9385a090788690b43e07eb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880542"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973907"
 ---
 # <a name="description-property"></a>Propriedade Description
 Descreve um objeto de [erro](../../../ado/reference/ado-api/error-object.md) .  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um valor de **cadeia de caracteres** que contém uma descrição do erro.  
   
 ## <a name="remarks"></a>Comentários  
@@ -37,7 +37,7 @@ Descreve um objeto de [erro](../../../ado/reference/ado-api/error-object.md) .
  Os provedores são responsáveis por passar o texto de erro específico para o ADO. O ADO adiciona um objeto de [erro](../../../ado/reference/ado-api/error-object.md) à coleção de **erros** para cada erro de provedor ou aviso recebido. Enumere a coleção de **erros** para rastrear os erros que o provedor passa.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto de erro](../../../ado/reference/ado-api/error-object.md)  
+ [Objeto Error](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

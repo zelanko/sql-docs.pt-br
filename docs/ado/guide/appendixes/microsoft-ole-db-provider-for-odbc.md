@@ -3,7 +3,7 @@ description: Visão geral do provedor de OLE DB da Microsoft para ODBC
 title: Provedor do Microsoft OLE DB para ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806645"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991017"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Visão geral do provedor de OLE DB da Microsoft para ODBC
 Para um programador de ADO ou RDS, um mundo ideal seria aquele em que cada fonte de dados expõe uma interface OLE DB, para que o ADO pudesse chamar diretamente para a fonte de dados. Embora cada vez mais fornecedores de banco de dados estejam implementando interfaces OLE DB, algumas fontes de dados ainda não são expostas dessa maneira. No entanto, a maioria dos sistemas DBMS usados atualmente pode ser acessada por meio do ODBC.
