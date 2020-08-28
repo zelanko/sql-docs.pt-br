@@ -3,7 +3,7 @@ description: Exemplo do método Refresh de procedimentos (VB)
 title: Exemplo do método Refresh de procedimentos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bc0bd69e4b184b91c1d337d6b9e1b9c490b3116
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 757c410982f43258f25729f5e88a5705c1ca814d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769555"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983487"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Exemplo do método Refresh de procedimentos (VB)
 O código a seguir mostra como atualizar a coleção de [procedimentos](./procedures-collection-adox.md) de um [Catálogo](./catalog-object-adox.md). Isso é necessário antes que os objetos de [procedimento](./procedure-object-adox.md) do **Catálogo** possam ser acessados.  

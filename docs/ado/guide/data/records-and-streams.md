@@ -3,7 +3,7 @@ description: Registros e fluxos
 title: Registros e fluxos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afaae4221c57a7f7d832c34f0a374981e081cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38bf8e44ec6b9521a1608c6081697295e6d9aedf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452978"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979907"
 ---
 # <a name="records-and-streams"></a>Registros e fluxos
 Atualmente, o ADO fornece o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) como o principal meio de acesso às informações em fontes de dados, como bancos de dado relacionais. No entanto, alguns provedores dão suporte aos objetos [Record](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) como objetos alternativos ou complementares com os quais os dados dos provedores podem ser manipulados. Para obter informações específicas sobre o comportamento do **registro** , consulte a documentação do provedor.  

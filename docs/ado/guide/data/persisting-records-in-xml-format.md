@@ -3,7 +3,7 @@ description: Persistência de registros em formato XML
 title: Persistência de registros em formato XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453038"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980057"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistência de registros em formato XML
 Como o formato ADTG, a persistência do **conjunto de registros** em formato XML é implementada com o provedor de persistência do Microsoft OLE DB. Esse provedor gera um conjunto de linhas somente de encaminhamento, somente leitura, de um arquivo XML salvo ou fluxo que contém as informações de esquema geradas pelo ADO. Da mesma forma, ele pode pegar um **conjunto de registros**ADO, gerar XML e salvá-lo em um arquivo ou em qualquer objeto que implemente a interface com **IStream** . (Na verdade, um arquivo é apenas outro exemplo de um objeto que dá suporte a **IStream**.) Para as versões 2,5 e posteriores, o ADO depende do Microsoft XML Parser (MSXML) para carregar o XML no **conjunto de registros**; Portanto, msxml.dll é necessário.  
@@ -85,7 +85,7 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Transformações XSLT](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Salvando no objeto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Salvar no objeto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
 -   [Considerações sobre segurança XML](../../../ado/guide/data/xml-security-considerations.md)  
   

@@ -3,7 +3,7 @@ description: Receber resultados
 title: Recebendo resultados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3317441322d0f1be94ee1c897946d83f6291143c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fb6a86cb976d8ed8a3c96a10cdca9fd786a5128
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452988"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979957"
 ---
 # <a name="receiving-results"></a>Receber resultados
 No ADO, a maioria dos comandos resulta em algumas informações retornadas ao chamador. Para comandos que retornam o conjunto de linhas, os resultados são recebidos em um objeto **Recordset** , que provavelmente é o mais usado dos objetos ADO.  

@@ -3,7 +3,7 @@ description: Registros e campos fornecidos pelo provedor
 title: Registros e campos fornecidos pelo provedor | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452998"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979947"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros e campos fornecidos pelo provedor
 Quando um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) é aberto, sua origem pode ser a linha atual de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)aberto, uma URL absoluta ou uma URL relativa em conjunto com um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) aberta.  
@@ -56,7 +56,7 @@ Quando um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.
 ## <a name="resource-recordset-columns"></a>Colunas do conjunto de registros de recursos  
  Um *conjunto de registros de recurso* consiste nas colunas a seguir.  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Somente leitura. Indica a URL do recurso.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Somente leitura. Indica a URL absoluta do registro pai.|  

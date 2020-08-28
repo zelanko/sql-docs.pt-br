@@ -3,7 +3,7 @@ description: Namespaces
 title: Namespaces | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 03d70d1e5df026e13e23c9759462f53114f4d2af
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805779"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980257"
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os quatro namespaces a seguir.  

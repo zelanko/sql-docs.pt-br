@@ -18,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474964"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042469"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -57,44 +57,42 @@ Os *plan_handle* podem ser obtidos nos seguintes objetos de gerenciamento dinâm
 |Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|
 |**DBID**|**smallint**|A ID do banco de dados de contexto em vigor quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente a esse plano foi compilada. Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.<br /><br /> A coluna é anulável.|  
-|**ObjectID**|**int**|A identificação do objeto (por exemplo, procedimento armazenado ou função definida pelo usuário) para este plano de consulta. Para lotes ad hoc e preparados, essa coluna é **null**.<br /><br /> A coluna é anulável.|  
+|**objectid**|**int**|A identificação do objeto (por exemplo, procedimento armazenado ou função definida pelo usuário) para este plano de consulta. Para lotes ad hoc e preparados, essa coluna é **null**.<br /><br /> A coluna é anulável.|  
 |**number**|**smallint**|Inteiro de procedimento armazenado numerado. Por exemplo, um grupo de procedimentos para o aplicativo de ** pedidos** pode ser nomeado **orderproc;1**, **orderproc;2** e assim por diante. Para lotes ad hoc e preparados, essa coluna é **null**.<br /><br /> A coluna é anulável.|  
 |**criptografados**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
 |**query_plan**|**xml**|Contém a última representação de SHOWPLAN de tempo de execução conhecida do plano de execução de consulta real que é especificado com *plan_handle*. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.| 
 
 ## <a name="remarks"></a>Comentários
-Essa função de sistema está disponível a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4.
-
-Esse é um recurso opcional e requer que o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esteja habilitado. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 em diante, para fazer isso no nível do banco de dados, veja a opção LAST_QUERY_PLAN_STATS em [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Esse é um recurso de opção de aceitação. Para habilitar no nível do servidor, use o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Para habilitar no nível de banco de dados, use a opção LAST_QUERY_PLAN_STATS em [ALTER DATABASE scopeed CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Essa função do sistema funciona na infraestrutura de criação de perfil de estatísticas de execução de consulta **leve** . Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-A saída Showplan por sys. dm_exec_query_plan_stats contém as seguintes informações:
+A saída Showplan `sys.dm_exec_query_plan_stats` contém as seguintes informações:
 -  Todas as informações de tempo de compilação encontradas no plano em cache
 -  Informações de tempo de execução, como o número real de linhas por operador, o tempo total de CPU de consulta e o tempo de execução, avisos de despejo, DOP real, a memória máxima usada e a memória concedida
 
-Sob as condições a seguir, uma saída Showplan **equivalente a um plano de execução real** é retornada na coluna **query_plan** da tabela retornada para **Sys. dm_exec_query_plan_stats**:  
+Sob as condições a seguir, uma saída Showplan **equivalente a um plano de execução real** é retornada na coluna **query_plan** da tabela retornada para `sys.dm_exec_query_plan_stats` :  
 
 -   O plano pode ser encontrado em [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **E**    
+    **AND**    
 -   A consulta que está sendo executada é complexa ou consumida por recursos.
 
-Sob as condições a seguir, uma saída **simplificada de <sup>1</sup> ** plano de segundo é retornada na coluna **query_plan** da tabela retornada para **Sys. dm_exec_query_plan_stats**:  
+Sob as condições a seguir, uma saída **simplificada de <sup>1</sup> ** plano de segundo é retornada na coluna **query_plan** da tabela retornada para `sys.dm_exec_query_plan_stats` :  
 
 -   O plano pode ser encontrado em [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **E**    
+    **AND**    
 -   A consulta é simples o suficiente, normalmente categorizada como parte de uma carga de trabalho OLTP.
 
-<sup>1</sup> a partir [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] do CTP 2,5, isso se refere a um Showplan que contém apenas o operador de nó raiz (SELECT). Para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] o CTP 2,4, isso se refere ao plano armazenado em cache como disponível por meio do `sys.dm_exec_cached_plans` .
+<sup>1</sup> refere-se a um Showplan que contém apenas o operador de nó raiz (SELECT).
 
-Sob as condições a seguir, **nenhuma saída é retornada** de **Sys. dm_exec_query_plan_stats**:
+Sob as seguintes condições, **nenhuma saída é retornada** de `sys.dm_exec_query_plan_stats` :
 
--   O plano de consulta especificado usando *plan_handle* foi removido do cache de planos.     
+-   O plano de consulta especificado usando `plan_handle` o foi removido do cache de planos.     
     **OR**    
 -   O plano de consulta não estava armazenado em cache em primeiro lugar. Para obter mais informações, consulte [cache e reutilização do plano de execução ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Devido a uma limitação no número de níveis aninhados permitido no tipo de dados **XML** , **Sys. dm_exec_query_plan** não pode retornar planos de consulta que atendam ou ultrapassem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa condição impediu que o plano de consulta retornasse e gerasse o [erro 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, a coluna **QUERY_PLAN** retorna NULL.  
+> Devido a uma limitação no número de níveis aninhados permitido no tipo de dados **XML** , o `sys.dm_exec_query_plan` não pode retornar planos de consulta que atendam ou ultrapassem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa condição impediu que o plano de consulta retornasse e gerasse o [erro 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, a `query_plan` coluna retorna NULL.  
 
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE` no servidor.  

@@ -3,7 +3,7 @@ description: Cenário de persistência do conjunto de registros XML
 title: Cenário de persistência do conjunto de registros XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 91066d8dd42d1bcd4a11aab093661a9061a7d7d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758416"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978817"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Cenário de persistência do conjunto de registros XML
 Nesse cenário, você criará um aplicativo de páginas de Active Server (ASP) que salva o conteúdo de um objeto Recordset diretamente no objeto de resposta ASP.  

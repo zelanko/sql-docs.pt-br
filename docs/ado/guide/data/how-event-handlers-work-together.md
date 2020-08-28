@@ -3,7 +3,7 @@ description: Como os manipuladores de eventos funcionam em conjunto
 title: Como os manipuladores de eventos funcionam juntos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 37e1c5d081ccbcacaf50aa385a87afa9555ad2ca
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805976"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980517"
 ---
 # <a name="how-event-handlers-work-together"></a>Como os manipuladores de eventos funcionam em conjunto
 A menos que você esteja programando em Visual Basic, todos os manipuladores de eventos para eventos de **conexão** e **conjunto de registros** devem ser implementados, independentemente de você realmente processar todos os eventos. A quantidade de trabalho de implementação que você precisa fazer depende da linguagem de programação. Para obter mais informações, consulte [instanciação de evento ADO por idioma](./ado-event-instantiation-by-language.md).  

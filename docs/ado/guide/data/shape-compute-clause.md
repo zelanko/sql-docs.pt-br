@@ -3,7 +3,7 @@ description: Cláusula COMPUTE de forma
 title: Cláusula de computação de forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452838"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979597"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula de computação de forma gera um **conjunto de registros**pai, cujas colunas consistem em uma referência ao conjunto de **registros**filho; colunas opcionais cujo conteúdo são colunas de capítulo, novo ou calculadas ou o resultado da execução de funções de agregação no **conjunto de registros** filho ou em um **conjunto de registros**com formato anterior; e quaisquer colunas do conjunto de **registros** filho listadas na cláusula opcional by.  
@@ -62,7 +62,7 @@ SHAPE child-command [AS] child-alias
   
  Se a cláusula BY for omitida, o **conjunto de registros** filho inteiro será tratado como um único grupo e o **conjunto de registros** pai conterá exatamente uma linha. Essa linha fará referência a todo o **conjunto de registros**filho. Omitir a cláusula BY permite que você calcule agregações "total geral" em todo o **conjunto de registros**filho.  
   
- Por exemplo:   
+ Por exemplo:  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         

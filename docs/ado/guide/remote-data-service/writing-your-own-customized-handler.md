@@ -3,7 +3,7 @@ description: Escrever seu próprio manipulador personalizado
 title: Escrevendo seu próprio manipulador personalizado | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e421b128faa5a7d90ec658a7c42e246110d921fb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760066"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977337"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escrever seu próprio manipulador personalizado
 Talvez você queira escrever seu próprio manipulador se você for um administrador do servidor IIS que deseja o suporte do RDS padrão, mas mais controle sobre as solicitações de usuário e os direitos de acesso.  

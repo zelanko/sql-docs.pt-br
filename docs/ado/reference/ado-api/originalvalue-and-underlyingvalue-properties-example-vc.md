@@ -3,7 +3,7 @@ description: Exemplo das propriedades OriginalValue e subdependvalue (VC + +)
 title: Exemplo das propriedades OriginalValue e subdependvalue (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f8a9a9a7296ac87f733d8626f0c425071c5d8671
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773575"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990227"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Exemplo das propriedades OriginalValue e subdependvalue (VC + +)
 Este exemplo demonstra as propriedades [OriginalValue](./originalvalue-property-ado.md) e [subdependentes](./underlyingvalue-property.md) exibindo uma mensagem se os dados subjacentes de um registro foram alterados durante uma atualização de lote do [conjunto de registros](./recordset-object-ado.md) .  
