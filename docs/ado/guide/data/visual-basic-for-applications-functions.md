@@ -3,7 +3,7 @@ description: Funções do Visual Basic for Applications
 title: Funções de Visual Basic for Applications | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452548"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978927"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funções do Visual Basic for Applications
 As seguintes funções de Visual Basic for Applications podem ser usadas em expressões de cálculo de data Shaping:  
@@ -60,10 +60,10 @@ As seguintes funções de Visual Basic for Applications podem ser usadas em expr
         DateValue  
         Dia  
         DDB  
-        Erro  
+        Erro do  
         Error$  
         Exp  
-        Correção  
+        Fix  
         Formatar  
         Format$  
         FV  
@@ -133,7 +133,7 @@ As seguintes funções de Visual Basic for Applications podem ser usadas em expr
         StrConv  
     :::column-end:::
     :::column:::
-        String  
+        Cadeia de caracteres  
         String$  
         SYD  
         Tan  
@@ -150,7 +150,7 @@ As seguintes funções de Visual Basic for Applications podem ser usadas em expr
         Val  
         VarType  
         Weekday  
-        Ano  
+        Year  
     :::column-end:::
 :::row-end:::
 

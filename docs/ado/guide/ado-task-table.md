@@ -6,7 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [ADO]
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29aaeac82cc4853e0cd89d0179c988db9748e44e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805425"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991197"
 ---
 # <a name="ado-programming-task-table"></a>Tabela de tarefas de programação ADO
 A tabela a seguir lista as tarefas de programação contidas no *Guia do programador do ADO* e fornece referências para cada tarefa. Essas referências podem ser descrições textuais ou exemplos de código nos quais você pode encontrar informações sobre o recurso ADO que executa a tarefa.

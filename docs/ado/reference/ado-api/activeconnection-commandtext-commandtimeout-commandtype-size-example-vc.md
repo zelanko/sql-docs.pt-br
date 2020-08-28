@@ -3,7 +3,7 @@ description: Exemplo das propriedades ActiveConnection, CommandText, CommandTime
 title: Exemplo de propriedades de procedimento armazenado (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc4e7ee20e4233f5db32a2a80c9eb849fdf6c86a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 608d6258f0f8b458e346c4e56166439dd7ba934e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760046"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977037"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>Exemplo das propriedades ActiveConnection, CommandText, CommandTimeout, CommandType, size e Direction (VC + +)
 Este exemplo usa as propriedades [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [size](./size-property-ado-parameter.md)e [Direction](./direction-property.md) para executar um procedimento armazenado.  

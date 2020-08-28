@@ -3,7 +3,7 @@ description: Método Append (Colunas do ADOX)
 title: Método Append (colunas ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d17c6823acc945f50e5d8d0543448c997dadc5fe
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1c959f6d822724ee6e7480cf00941aaa1fc8012a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771515"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985497"
 ---
 # <a name="append-method-adox-columns"></a>Método Append (Colunas do ADOX)
 Adiciona um novo objeto de [coluna](./column-object-adox.md) à coleção de [colunas](./columns-collection-adox.md) .  

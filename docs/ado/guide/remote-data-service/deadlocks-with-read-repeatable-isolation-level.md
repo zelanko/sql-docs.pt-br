@@ -3,7 +3,7 @@ description: Deadlocks com o nível de isolamento repetível de leitura
 title: Deadlocks com nível de isolamento replicável de leitura | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d37567639158e9d9d18e305e74ac4d5d93e95fa3
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9d404533b950aea7549a64b7863d2c1623118594
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759790"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978147"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Deadlocks com o nível de isolamento repetível de leitura
 Se um objeto comercial personalizado usar um nível de isolamento de leitura reproduzível para acessar um SQL Server e o objeto comercial for chamado simultaneamente por dois clientes que enviam uma consulta e são atualizados na mesma transação, um deadlock é possível. O serviço de dados remoto foi projetado para permitir que um dos processos expire para liberar o deadlock, mas a atualização falhará para esse cliente.  

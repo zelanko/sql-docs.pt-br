@@ -3,7 +3,7 @@ description: Exemplo dos métodos Open e Close (VC++)
 title: Exemplo dos métodos Open e Close (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 151802a801afe8d9b8b4ca9d46301f738d79fa1a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d2d1846203e4650048378d5fb41c4d2ff198f462
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773815"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990347"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Exemplo dos métodos Open e Close (VC++)
 Este exemplo usa os métodos **Open** e [Close](./close-method-ado.md) nos objetos [Recordset](./recordset-object-ado.md) e [Connection](./connection-object-ado.md) que foram abertos.  

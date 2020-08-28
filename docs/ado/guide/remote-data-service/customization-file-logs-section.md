@@ -3,7 +3,7 @@ description: Seção Logs do arquivo de personalização
 title: Seção logs de arquivo de personalização | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f478a1e1c18e9182d2effe77d37c0c329ba22c54
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 890ba32615cdd78d9b999958f3ce3cb1e0755b81
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759830"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978237"
 ---
 # <a name="customization-file-logs-section"></a>Seção Logs do arquivo de personalização
 A seção **logs** contém uma entrada de arquivo de log, que especifica o nome de um arquivo que registra erros durante a operação do **DataFactory**.  

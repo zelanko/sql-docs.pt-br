@@ -3,7 +3,7 @@ description: Usar as extensões do Visual C++
 title: Usando extensões de Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa5ed351f150aa913a9a454f42bd11c9fcb7ac00
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0419311c4d8e952a5212f60dee055c7b37aed5f4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806470"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990927"
 ---
 # <a name="visual-c-extensions"></a>Extensões de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A interface IADORecordBinding
@@ -60,7 +60,7 @@ ms.locfileid: "88806470"
 ## <a name="interface-methods"></a>Métodos de interface
  A interface **IADORecordBinding** tem três métodos: **BindToRecordset**, **AddNew**e **Update**. O único argumento para cada método é um ponteiro para uma instância da classe derivada de **CADORecordBinding**. Portanto, os métodos **AddNew** e **Update** não podem especificar nenhum dos parâmetros de seu método ADO namesakes.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
  O método **BindToRecordset** associa os campos do **conjunto de registros** às variáveis C/C++.
 
 ```cpp

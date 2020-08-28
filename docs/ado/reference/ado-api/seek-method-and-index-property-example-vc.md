@@ -3,7 +3,7 @@ description: Exemplo da propriedade Index e do método Seek (VC++)
 title: Exemplo da propriedade index e do método Seek (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8d13a3d1ce8db32e01e20608dd1d7b3b3fb5be6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4b1e9f5822260259e34761cc8cb05d80b962fed2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777505"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989187"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Exemplo da propriedade Index e do método Seek (VC++)
 Este exemplo usa o método [Seek](./seek-method.md) do objeto [Recordset](./recordset-object-ado.md) e a propriedade [index](./index-property.md) em conjunto com uma determinada ***ID de funcionário***, para localizar o nome do funcionário na tabela ***Employees*** do banco de dados Nwind. mdb.  
