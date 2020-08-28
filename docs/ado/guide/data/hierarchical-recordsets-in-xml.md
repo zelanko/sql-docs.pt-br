@@ -3,7 +3,7 @@ description: Conjuntos de registros hierárquicos em XML
 title: Conjuntos de registros hierárquicos em XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a9563782851575970d9f2ab9a5fcabce5efa32d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806021"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980527"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros hierárquicos em XML
 O ADO permite a persistência de objetos de conjunto de registros hierárquicos em XML. Com objetos de conjunto de registros hierárquicos, o valor de um campo no conjunto de registros pai é outro conjunto de registros. Esses campos são representados como elementos filho no fluxo XML, em vez de um atributo.  

@@ -3,7 +3,7 @@ description: Seção de esquema
 title: Seção de esquema | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1f294e9c0258f1cc9d108d1eb9a47087b456ca8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452888"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979717"
 ---
 # <a name="schema-section"></a>Seção de esquema
 A seção de esquema é necessária. Como mostra o exemplo anterior, o ADO grava metadados detalhados sobre cada coluna para preservar a semântica dos valores de dados tanto quanto possível para atualização. No entanto, para carregar no XML, o ADO requer apenas os nomes das colunas e do conjunto de linhas ao qual elas pertencem. Aqui está um exemplo de um esquema mínimo:  

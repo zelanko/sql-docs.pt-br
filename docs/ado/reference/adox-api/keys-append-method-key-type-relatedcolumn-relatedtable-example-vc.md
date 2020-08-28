@@ -3,7 +3,7 @@ description: Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, 
 title: Criar um novo exemplo de chave estrangeira (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 078e3078f57dea91cd5f73b6cce504545771f59e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9175c3675a9db808a1a1327555daf4e901e3a201
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439818"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984007"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VC++)
 O código a seguir demonstra como criar uma nova chave estrangeira. Ele pressupõe que existem duas tabelas (clientes e pedidos).  

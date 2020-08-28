@@ -3,7 +3,7 @@ description: Exemplos das propriedades PrimaryKey e Unique (VB)
 title: Exemplo de PrimaryKey e propriedades exclusivas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa548ea37ffe3c91e8d36febac9f90cf9498d258
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d857dfca2b690b06f43b9be50520b4530645128f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769745"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983667"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>Exemplos das propriedades PrimaryKey e Unique (VB)
 Este exemplo demonstra a [PrimaryKey](./primarykey-property-adox.md) e as propriedades [exclusivas](./unique-property-adox.md) de um [índice](./index-object-adox.md). O código cria uma nova tabela com duas colunas. As propriedades **PrimaryKey** e **Unique** são usadas para tornar uma coluna a chave primária para a qual valores duplicados não são permitidos.  

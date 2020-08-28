@@ -3,7 +3,7 @@ description: Operação de comandos não parametrizados
 title: Operação de comandos não parametrizados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: c4e1187a319b086f7a28d3b282869271cd444ab5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805665"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980157"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Operação de comandos não parametrizados
 Para comandos não parametrizados, todos os comandos do provedor são executados e os **conjuntos de registros** são criados durante a execução do comando. Se o comando for executado de forma síncrona, todos os **conjuntos de registros** serão totalmente preenchidos. Se um modo de população assíncrona tiver sido selecionado, o estado preenchido dos **conjuntos de registros** dependerá do modo de população e do tamanho dos **conjuntos de registros**.  

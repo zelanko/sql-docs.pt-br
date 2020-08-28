@@ -3,7 +3,7 @@ description: Remodelagem
 title: Reshaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b0173b04e64365d1dad08ecc5f8d26880d05504
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04c43b9fcca56959aec242f344da6ec81a825030
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452928"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979767"
 ---
 # <a name="reshaping"></a>Remodelagem
 Um **conjunto de registros** criado por uma cláusula de um comando Shape pode ser atribuído a um nome de *alias* (normalmente com a palavra-chave as). O alias de um **conjunto de registros** moldado pode ser referenciado em um comando completamente diferente. Ou seja, você pode reutilizar ou *remodelar*um conjunto de **registros** moldado anteriormente em um comando de nova forma. Para dar suporte a esse recurso, o ADO fornece uma propriedade, [reformando o nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

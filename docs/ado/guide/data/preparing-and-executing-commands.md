@@ -3,7 +3,7 @@ description: Preparar e executar comandos
 title: Preparando e executando comandos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19539844381f38de4700925a0ecdbc0f8e74fb0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a4265124c2f86870d84ee703d228d5a760c4735
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453028"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979987"
 ---
 # <a name="preparing-and-executing-commands"></a>Preparar e executar comandos
 Comandos são instruções emitidas para um provedor para executar algumas operações na fonte de dados subjacente. Uma instrução SQL, por exemplo, é um comando para o Microsoft SQL Provedor de Dados. No ADO, os comandos são normalmente representados por objetos de **comando** , embora comandos simples também possam ser emitidos por meio de objetos de **conexão** ou **conjunto de registros** .  
@@ -38,7 +38,7 @@ Comandos são instruções emitidas para um provedor para executar algumas opera
   
 -   [Parâmetros do objeto Command](../../../ado/guide/data/command-object-parameters.md)  
   
--   [Chamando um procedimento armazenado com um comando](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
+-   [Chamar um procedimento armazenado com um comando](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
 -   [Chamando um procedimento armazenado como um método em um objeto de conexão](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
