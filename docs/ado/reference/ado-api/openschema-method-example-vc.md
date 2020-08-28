@@ -3,7 +3,7 @@ description: Exemplo do método OpenSchema (VC++)
 title: Exemplo do método OpenSchema (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25f4cea4278421ee79c65c3784f74d36cc35e3c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4cb98b791f35a122643402344b6195246c19226f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773715"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990287"
 ---
 # <a name="openschema-method-example-vc"></a>Exemplo do método OpenSchema (VC++)
 Este exemplo usa o método [OpenSchema](./openschema-method.md) para exibir o nome e o tipo de cada tabela no banco de dados ***pubs*** .  

@@ -3,7 +3,7 @@ description: Exemplo das propriedades CursorType, LockType e EditMode (VB)
 title: Exemplo das propriedades CursorType, LockType e EditMode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 859fca56653250ee1070981db048aafeb2e4011a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2980b26402b1db1b9b0e634a4acd0dcdeec2be30
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775505"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974327"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Exemplo das propriedades CursorType, LockType e EditMode (VB)
 Este exemplo demonstra como definir as propriedades [CursorType](./cursortype-property-ado.md) e [LockType](./locktype-property-ado.md) antes de abrir um [conjunto de registros](./recordset-object-ado.md). Ele também mostra o valor da propriedade [EditMode](./editmode-property.md) em várias condições. A função EditModeOutput é necessária para que este procedimento seja executado.  

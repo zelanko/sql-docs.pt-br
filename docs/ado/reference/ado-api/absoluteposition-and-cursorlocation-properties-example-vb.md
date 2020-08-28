@@ -3,7 +3,7 @@ description: Exemplo das propriedades AbsolutePosition e CursorLocation (VB)
 title: Exemplo das propriedades AbsolutePosition e CursorLocation (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5869e8203ca5e07564a6d3c6bc7767bccfd9d553
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a693873e674a0a12dc523994faa1eded7e52a3ed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759956"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977187"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Exemplo das propriedades AbsolutePosition e CursorLocation (VB)
 Este exemplo demonstra como a propriedade [AbsolutePosition](./absoluteposition-property-ado.md) pode acompanhar o progresso de um loop que enumera todos os registros de um [conjunto de registros](./recordset-object-ado.md). Ele usa a propriedade [CursorLocation](./cursorlocation-property-ado.md) para habilitar a propriedade **AbsolutePosition** definindo o cursor como um cursor do cliente.  

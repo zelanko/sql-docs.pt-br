@@ -3,7 +3,7 @@ description: Exemplo do método AddNew (VB)
 title: Exemplo do método AddNew (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 581f05f696a0a5076d6f06fc4a1816cffddb73ef
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 574bea63894ac304f1b382c5b70b40554c8e5540
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760208"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976717"
 ---
 # <a name="addnew-method-example-vb"></a>Exemplo do método AddNew (VB)
 Este exemplo usa o método [AddNew](./addnew-method-ado.md) para criar um novo registro com o nome especificado.  

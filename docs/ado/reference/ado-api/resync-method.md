@@ -3,7 +3,7 @@ description: Método Resync
 title: Método de ressincronização | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e64c2f297e4628f04f99a7e97a6b9df00f6efa1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 79a43a36fb68063c2f0c880f0d8d086714dcfffe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777645"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989477"
 ---
 # <a name="resync-method"></a>Método Resync
 Atualiza os dados no objeto [Recordset](./recordset-object-ado.md) atual ou na coleção [Fields](./fields-collection-ado.md) de um objeto [Record](./record-object-ado.md) , do banco de dados subjacente.  

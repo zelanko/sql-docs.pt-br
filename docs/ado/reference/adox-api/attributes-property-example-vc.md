@@ -3,7 +3,7 @@ description: Exemplo da propriedade Attributes (VC++)
 title: Exemplo da propriedade Attributes (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b850e6b64c5acc8a504c5d684e4472a05f4eeef
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c0c7f2a8fef9d392497744e92b3a2120d742bc9f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771315"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985275"
 ---
 # <a name="attributes-property-example-vc"></a>Exemplo da propriedade Attributes (VC++)
 Este exemplo demonstra a propriedade [Attributes](./attributes-property-adox.md) de uma [coluna](./column-object-adox.md). Configurá-lo como **adColNullable** permite que o usuário defina o valor de um [campo](../ado-api/field-object.md) de [conjunto de registros](../ado-api/recordset-object-ado.md) como uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro em que os dados não são conhecidos e um registro em que os dados não se aplicam.  

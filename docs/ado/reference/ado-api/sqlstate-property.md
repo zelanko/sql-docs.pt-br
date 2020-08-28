@@ -3,7 +3,7 @@ description: Propriedade SQLState
 title: Propriedade SQLState | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65d72fed54723f525f4e1426ed04886e9d474985
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbc849f19c91f7b2387df5e0e71b3455efa0db09
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777365"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988857"
 ---
 # <a name="sqlstate-property"></a>Propriedade SQLState
 Indica o estado SQL de um determinado objeto de [erro](./error-object.md) .  
